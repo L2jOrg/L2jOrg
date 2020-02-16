@@ -127,7 +127,7 @@
 	</item>
 
 	<item id="71717" name="ADEN Gacha Ticket" type="NONE" icon="icon.bm_jewel_ticket">
-	<!-- Obtain 300 L2 Coins through the Dimensional Merchant. Additionally, obtain 1 of various items. -->
+	<!-- Obtain 300 L2 Coins through the Store Manager. Additionally, obtain 1 of various items. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -270,12 +270,12 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="71741" name="Dragon Scroll" type="SCROLL" icon="icon.ev_charge_scroll">
-	<!-- For 20 min., P./M. Atk. +150, P./M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P./M. Def. +200, Max HP/MP/CP +500. The effect remains active even after death. Cooldown 1 minute. -->
+	<item id="71741" name="Battle Scroll" type="NONE" icon="icon.ev_charge_scroll">
+	<!-- For 20 minutes, P. Atk./M. Atk. +150, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE" weight="5" immediate-effect="true" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="59634"/> <!-- Dragon Scroll (Event) -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="59634" level="1" value="-1"/>  <!-- Dragon Scroll - Event -->
 		</skill-reducer>
 	</item>
 
@@ -507,7 +507,7 @@
 			<stat type="randomDamage" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -604,8 +604,8 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="71769" name="B-grade Weapon Exchange Coupon" type="NONE" icon="icon.etc_exchange_ticket_i01">
-	<!-- Exchange for a B-grade weapon through the Dimensional Merchant. -->
+	<item id="71769" name="B-grade Weapon Exchange Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">
+	<!-- Exchange for a B-grade weapon through the Store Manager. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -635,13 +635,13 @@
 	</item>
 
 	<item id="71774" name="Aden Supply Box" type="NONE" icon="icon.etc_treasure_box_i00">
-	<!-- Double-click to obtain one of the following: Baium's Talisman, Zaken's Earring, Queen Ant's Ring, Top-grade Jewel Box, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Buff Scroll. -->
+	<!-- Double-click to obtain one of the following: Talisman of Baium, Zaken's Earring, Queen Ant's Ring, Top-grade Jewel Box, XP Boost Scroll, Battle Scroll, Sayha's Buff Scroll. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71775" name="Golden Ticket" type="NONE" icon="icon.bm_royal_gold_ticket_all">
-	<!-- Reward that can be obtained by completing the missions during the Golden Week event period. Exchange for various items through the Dimensional Merchant. -->
+	<!-- Reward that can be obtained by completing the missions during the Golden Week event period. Exchange for various items through the Store Manager. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>

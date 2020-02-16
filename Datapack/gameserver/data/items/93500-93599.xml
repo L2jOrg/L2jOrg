@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<item id="93500" name="B-grade Enchant Armor Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_ench_ticket">
+	<!-- Exchange for a B-grade armor through the Store Manager. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93501" name="Zubei's Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t64_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="7970" price="2080000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93502" name="Blue Wolf Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t68_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="7820" price="3220000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93503" name="Zubei's Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t64_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="3570" price="1300000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93504" name="Avadon Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t66_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="7920" price="2080000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93505" name="Avadon Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t66_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="3520" price="1300000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93506" name="Blue Wolf Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t68_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="3370" price="2010000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93507" name="Doom Plate Armor" type="HEAVY" body-part="FULL_ARMOR" icon="icon.armor_t71_ul_i00">
+	<!-- Full body armor. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="9980" price="4710000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93508" name="Zubei's Leather Shirt" type="LIGHT" body-part="CHEST" icon="icon.armor_t65_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="4330" price="1560000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93509" name="Zubei's Leather Gaiters" type="LIGHT" body-part="LEGS" icon="icon.armor_t65_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1480" price="973000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93510" name="Avadon Leather Armor" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t67_ul_i00">
+	<!-- Full body armor. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5600" price="2280000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93511" name="Blue Wolf Leather Armor" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t69_ul_i00">
+	<!-- Full body armor. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5500" price="3530000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93512" name="Leather Armor of Doom" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t72_ul_i00">
+	<!-- Full body armor. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5500" price="3530000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93513" name="Tunic of Zubei" type="MAGIC" body-part="CHEST" icon="icon.armor_t56_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1960" price="1560000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93514" name="Blue Wolf Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t70_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1920" price="2410000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93515" name="Tunic of Doom" type="MAGIC" body-part="CHEST" icon="icon.armor_t73_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1900" price="2410000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93516" name="Stockings of Zubei" type="MAGIC" body-part="LEGS" icon="icon.armor_t56_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="940" price="973000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93517" name="Blue Wolf Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t70_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="920" price="1510000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93518" name="Stockings of Doom" type="MAGIC" body-part="LEGS" icon="icon.armor_t73_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="910" price="1510000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93519" name="Avadon Robe" type="MAGIC" body-part="FULL_ARMOR" icon="icon.armor_t59_ul_i00">
+	<!-- Full body armor. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2540" price="2280000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93520" name="Zubei's Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t64_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93521" name="Zubei's Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t65_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93522" name="Zubei's Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t56_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93523" name="Avadon Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t66_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93524" name="Avadon Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t67_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93525" name="Avadon Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t59_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93526" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t68_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93527" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t69_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93528" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t70_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93529" name="Doom Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t71_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93530" name="Doom Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t72_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93531" name="Doom Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t73_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93532" name="Zubei's Boots" type="NONE" body-part="FEET" icon="icon.armor_t64_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93533" name="Zubei's Boots" type="NONE" body-part="FEET" icon="icon.armor_t65_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93534" name="Zubei's Boots" type="NONE" body-part="FEET" icon="icon.armor_t56_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93535" name="Avadon Boots" type="NONE" body-part="FEET" icon="icon.armor_t66_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93536" name="Avadon Boots" type="NONE" body-part="FEET" icon="icon.armor_t67_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93537" name="Avadon Boots" type="NONE" body-part="FEET" icon="icon.armor_t59_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="519000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93538" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t68_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93539" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t69_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93540" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t70_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93541" name="Doom Boots" type="NONE" body-part="FEET" icon="icon.armor_t71_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93542" name="Doom Boots" type="NONE" body-part="FEET" icon="icon.armor_t72_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93543" name="Doom Boots" type="NONE" body-part="FEET" icon="icon.armor_t73_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" price="804000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93544" name="Avadon Circlet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="778000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93545" name="Avadon Circlet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="778000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93546" name="Avadon Circlet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="778000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93547" name="Zubei's Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="778000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93548" name="Zubei's Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="778000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93549" name="Zubei's Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" price="778000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93550" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="1210000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93551" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="1210000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93552" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="1210000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93553" name="Doom Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="1210000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93554" name="Doom Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="1210000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93555" name="Doom Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" price="1210000" />
+		<crystal type="B"/>
+	</armor>
+
+	<item id="93556" name="+0 - +5 Random Enchant Armor Pack - Zubei's Breastplate" type="NONE" icon="icon.armor_t64_u_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Breastplate at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93557" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Breastplate" type="NONE" icon="icon.armor_t68_u_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Breastplate at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93558" name="+0 - +5 Random Enchant Armor Pack - Zubei's Gaiters" type="NONE" icon="icon.armor_t64_l_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Gaiters at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93559" name="+0 - +5 Random Enchant Armor Pack - Avadon Breastplate" type="NONE" icon="icon.armor_t66_u_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Breastplate at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93560" name="+0 - +5 Random Enchant Armor Pack - Avadon Gaiters" type="NONE" icon="icon.armor_t66_l_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Gaiters at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93561" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Gaiters" type="NONE" icon="icon.armor_t68_l_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Gaiters at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93562" name="+0 - +5 Random Enchant Armor Pack - Doom Plate Armor" type="NONE" icon="icon.armor_t71_ul_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Doom Plate Armor at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93563" name="+0 - +5 Random Enchant Armor Pack - Zubei's Leather Shirt" type="NONE" icon="icon.armor_t65_u_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Leather Shirt at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93564" name="+0 - +5 Random Enchant Armor Pack - Zubei's Leather Gaiters" type="NONE" icon="icon.armor_t65_l_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Leather Gaiters at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93565" name="+0 - +5 Random Enchant Armor Pack - Avadon Leather Armor" type="NONE" icon="icon.armor_t67_ul_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Leather Armor at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93566" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Leather Armor" type="NONE" icon="icon.armor_t69_ul_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Leather Armor at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93567" name="+0 - +5 Random Enchant Armor Pack - Leather Armor of Doom" type="NONE" icon="icon.armor_t72_ul_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Leather Armor of Doom at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93568" name="+0 - +5 Random Enchant Armor Pack - Tunic of Zubei" type="NONE" icon="icon.armor_t56_u_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Tunic of Zubei at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93569" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Tunic" type="NONE" icon="icon.armor_t70_u_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Tunic at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93570" name="+0 - +5 Random Enchant Armor Pack - Tunic of Doom" type="NONE" icon="icon.armor_t73_u_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Tunic of Doom at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93571" name="+0 - +5 Random Enchant Armor Pack - Stockings of Zubei" type="NONE" icon="icon.armor_t56_l_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Stockings of Zubei at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93572" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Stockings" type="NONE" icon="icon.armor_t70_l_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Stockings at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93573" name="+0 - +5 Random Enchant Armor Pack - Stockings of Doom" type="NONE" icon="icon.armor_t73_l_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Stockings of Doom at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93574" name="+0 - +5 Random Enchant Armor Pack - Avadon Robe" type="NONE" icon="icon.armor_t59_ul_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Robe at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93575" name="+0 - +5 Random Enchant Armor Pack - Zubei's Gauntlets (Heavy Armor)" type="NONE" icon="icon.armor_t64_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Gauntlets (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93576" name="+0 - +5 Random Enchant Armor Pack - Zubei's Gauntlets (Light Armor)" type="NONE" icon="icon.armor_t65_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Gauntlets (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93577" name="+0 - +5 Random Enchant Armor Pack - Zubei's Gauntlets (Robe)" type="NONE" icon="icon.armor_t56_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Gauntlets (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93578" name="+0 - +5 Random Enchant Armor Pack - Avadon Gloves (Heavy Armor)" type="NONE" icon="icon.armor_t66_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Gloves (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93579" name="+0 - +5 Random Enchant Armor Pack - Avadon Gloves (Light Armor)" type="NONE" icon="icon.armor_t67_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Gloves (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93580" name="+0 - +5 Random Enchant Armor Pack - Avadon Gloves (Robe)" type="NONE" icon="icon.armor_t59_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Gloves (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93581" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Gloves (Heavy Armor)" type="NONE" icon="icon.armor_t68_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Gloves (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93582" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Gloves (Light Armor)" type="NONE" icon="icon.armor_t69_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Gloves (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93583" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Gloves (Robe)" type="NONE" icon="icon.armor_t70_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Gloves (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93584" name="+0 - +5 Random Enchant Armor Pack - Doom Gloves (Heavy Armor)" type="NONE" icon="icon.armor_t71_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Doom Gloves (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93585" name="+0 - +5 Random Enchant Armor Pack - Doom Gloves (Light Armor)" type="NONE" icon="icon.armor_t72_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Doom Gloves (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93586" name="+0 - +5 Random Enchant Armor Pack - Doom Gloves (Robe)" type="NONE" icon="icon.armor_t73_g_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Doom Gloves (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93587" name="+0 - +5 Random Enchant Armor Pack - Zubei's Boots (Heavy Armor)" type="NONE" icon="icon.armor_t64_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Boots (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93588" name="+0 - +5 Random Enchant Armor Pack - Zubei's Boots (Light Armor)" type="NONE" icon="icon.armor_t65_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Boots (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93589" name="+0 - +5 Random Enchant Armor Pack - Zubei's Boots (Robe)" type="NONE" icon="icon.armor_t56_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Zubei's Boots (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93590" name="+0 - +5 Random Enchant Armor Pack - Avadon Boots (Heavy Armor)" type="NONE" icon="icon.armor_t66_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Boots (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93591" name="+0 - +5 Random Enchant Armor Pack - Avadon Boots (Light Armor)" type="NONE" icon="icon.armor_t67_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Boots (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93592" name="+0 - +5 Random Enchant Armor Pack - Avadon Boots (Robe)" type="NONE" icon="icon.armor_t59_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Boots (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93593" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Boots (Heavy Armor)" type="NONE" icon="icon.armor_t68_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Boots (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93594" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Boots (Light Armor)" type="NONE" icon="icon.armor_t69_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Boots (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93595" name="+0 - +5 Random Enchant Armor Pack - Blue Wolf Boots (Robe)" type="NONE" icon="icon.armor_t70_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Blue Wolf Boots (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93596" name="+0 - +5 Random Enchant Armor Pack - Doom Boots (Heavy Armor)" type="NONE" icon="icon.armor_t71_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Doom Boots (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93597" name="+0 - +5 Random Enchant Armor Pack - Doom Boots (Light Armor)" type="NONE" icon="icon.armor_t72_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Doom Boots (Light Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93598" name="+0 - +5 Random Enchant Armor Pack - Doom Boots (Robe)" type="NONE" icon="icon.armor_t73_b_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Doom Boots (Robe) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93599" name="+0 - +5 Random Enchant Armor Pack - Avadon Circlet (Heavy Armor)" type="NONE" icon="icon.armor_leather_helmet_i00">
+	<!-- Double-click to obtain a +0 - +5 enchanted Avadon Circlet (Heavy Armor) at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+</list>

@@ -25,32 +25,32 @@
 	</item>
 
 	<item id="90204" name="Inventory Book" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- List of materials requested by Harry.\\nWooden pole, wooden door panels, Stone Powder -->
+	<!-- List of materials requested by Harry.\nWooden pole, wooden door panels, Stone Powder -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
 	</item>
 
 	<item id="90205" name="Wooden pole" type="NONE" icon="icon.etc_squares_wood_i00">
-	<!-- A wooden pole stolen by an Orc Captain and his Lieutenant.\\nHow about we put this pole on fire? -->
+	<!-- A wooden pole stolen by an Orc Captain and his Lieutenant.\nHow about we put this pole on fire? -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90206" name="Wooden door panel" type="NONE" icon="icon.etc_squares_gray_i00">
-	<!-- All what's left of a door taken by a Werewolf.\\nJust what did he need it for? -->
+	<!-- All what's left of a door taken by a Werewolf.\nJust what did he need it for? -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90207" name="Stone Powder" type="NONE" icon="icon.etc_powder_black_i00">
-	<!-- Stone powder taken from Stone Golems and Destroyers.\\nUsed for building stone walls. -->
+	<!-- Stone powder taken from Stone Golems and Destroyers.\nUsed for building stone walls. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90208" name="Lector's Notes" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- List of materials requested by Lector.\\nEssence of Water, Spider's Silk. -->
+	<!-- List of materials requested by Lector.\nEssence of Water, Spider's Silk. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -69,7 +69,7 @@
 	</item>
 
 	<item id="90211" name="Lector's Notes" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- List of materials requested by Lector.\\nEssence of Water, Spider's Silk. -->
+	<!-- List of materials requested by Lector.\nEssence of Water, Spider's Silk. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -88,7 +88,7 @@
 	</item>
 
 	<item id="90214" name="Lector's Note" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- List of materials requested by Lector.\\nEssence of Water, Spider's Silk. -->
+	<!-- List of materials requested by Lector.\nEssence of Water, Spider's Silk. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -177,7 +177,7 @@
 	</armor>
 
 	<item id="90228" name="Medications Research" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Herbiel's research of a method of instant suppression of bleeding.\\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
+	<!-- Herbiel's research of a method of instant suppression of bleeding.\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -196,7 +196,7 @@
 	</item>
 
 	<item id="90231" name="Medications Research" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Herbiel's research of a method of instant suppression of bleeding.\\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
+	<!-- Herbiel's research of a method of instant suppression of bleeding.\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -215,7 +215,7 @@
 	</item>
 
 	<item id="90234" name="Medications Research" type="NONE" icon="icon.etc_paper_white_i00">
-	<!-- Herbiel's research of a method of instant suppression of bleeding.\\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
+	<!-- Herbiel's research of a method of instant suppression of bleeding.\nThese notes list necessary ingredients and various information, but the handwriting is really unreadable. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -271,7 +271,7 @@
 	</item>
 
 	<item id="90243" name="Armor Design" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- Payne's documents that contain designs of a new armor and lists of required materials.\\nThat armor is absolutely new, and nobody knows what kind of look it's going to have. -->
+	<!-- Payne's documents that contain designs of a new armor and lists of required materials.\nThat armor is absolutely new, and nobody knows what kind of look it's going to have. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -564,7 +564,7 @@
 	</item>
 
 	<item id="90290" name="Temple Reconstruction Request" type="NONE" icon="icon.etc_paper_blue_i00">
-	<!-- List of things for repairs of an inner room of Maphr's Temple -->
+	<!-- List of things for repairs of an inner room of Maphr's Temple. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
 		<action handler="Bypass"/>
@@ -594,7 +594,7 @@
 		<attributes quest-item="true"/>
 	</item>
 
-	<item id="90296" name="Maintenance Request" type="NONE" icon="icon.etc_paper_white_i00">
+	<item id="90296" name="Statue Repair Request" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Materials required for the restoration of the broken Maphr's statue. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
@@ -613,7 +613,7 @@
 		<attributes quest-item="true"/>
 	</item>
 
-	<item id="90299" name="Maintenance Request" type="NONE" icon="icon.etc_paper_white_i00">
+	<item id="90299" name="Statue Repair Request" type="NONE" icon="icon.etc_paper_white_i00">
 	<!-- Completed order for materials required for the restoration of the broken Maphr's statue. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>

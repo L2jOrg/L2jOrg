@@ -130,7 +130,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="600" price="2300" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2078" level="1"/>  <!-- Soulshot Compressed Package (No-grade) -->
+			<skill id="2078" level="1" value="-1"/>  <!-- Soulshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -139,7 +139,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="3300" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2079" level="1"/>  <!-- Soulshot Compressed Package (D-grade) -->
+			<skill id="2079" level="1" value="-1"/>  <!-- Soulshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -148,7 +148,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="4950" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2080" level="1"/>  <!-- Soulshot Compressed Package (C-grade) -->
+			<skill id="2080" level="1" value="-1"/>  <!-- Soulshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -157,7 +157,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="16500" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2081" level="1"/>  <!-- Soulshot Compressed Package (B-grade) -->
+			<skill id="2081" level="1" value="-1"/>  <!-- Soulshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -166,7 +166,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="26400" commission-type="SOULSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2082" level="1"/>  <!-- Soulshot Compressed Package (A-grade) -->
+			<skill id="2082" level="1" value="-1"/>  <!-- Soulshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -175,7 +175,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="4950" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2084" level="1"/>  <!-- Spiritshot Compressed Package (No-grade) -->
+			<skill id="2084" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -184,7 +184,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="5940" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2085" level="1"/>  <!-- Spiritshot Compressed Package (D-grade) -->
+			<skill id="2085" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -193,7 +193,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="11550" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2086" level="1"/>  <!-- Spiritshot Compressed Package (C-grade) -->
+			<skill id="2086" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -202,7 +202,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="33000" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2087" level="1"/>  <!-- Spiritshot Compressed Package (B-grade) -->
+			<skill id="2087" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -211,7 +211,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="39600" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2088" level="1"/>  <!-- Spiritshot Compressed Package (A-grade) -->
+			<skill id="2088" level="1" value="-1"/>  <!-- Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -220,7 +220,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="11550" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2090" level="1"/>  <!-- Blessed Spiritshot Compressed Package (No-grade) -->
+			<skill id="2090" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -229,7 +229,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="750" price="14850" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2091" level="1"/>  <!-- Blessed Spiritshot Compressed Package (D-grade) -->
+			<skill id="2091" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -238,7 +238,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="29700" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2092" level="1"/>  <!-- Blessed Spiritshot Compressed Package (C-grade) -->
+			<skill id="2092" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -247,7 +247,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="450" price="80850" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2093" level="1"/>  <!-- Blessed Spiritshot Compressed Package (B-grade) -->
+			<skill id="2093" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -256,7 +256,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes weight="200" price="95700" commission-type="SPIRITSHOT" immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2094" level="1"/>  <!-- Blessed Spiritshot Compressed Package (A-grade) -->
+			<skill id="2094" level="1" value="-1"/>  <!-- Blessed Spiritshot Compressed Package (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -379,7 +379,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="70" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2065" level="1"/>  <!-- Box Key -->
+			<skill id="2065" level="1" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
 
@@ -388,7 +388,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="760" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2065" level="2"/>  <!-- Box Key -->
+			<skill id="2065" level="2" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
 
@@ -397,7 +397,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1200" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2065" level="3"/>  <!-- Box Key -->
+			<skill id="2065" level="3" value="-1"/>  <!-- Box Key -->
 		</skill-reducer>
 	</item>
 

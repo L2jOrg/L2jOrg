@@ -474,7 +474,7 @@
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55248" level="1"/>  <!-- Bracelet of Duty - Lv. 1 -->
+			<skill id="55248" level="1" value="-1"/>  <!-- Bracelet of Duty - Lv. 1 -->
 		</skills>
 	</armor>
 
@@ -484,7 +484,7 @@
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55249" level="1"/>  <!-- Bracelet of Duty - Lv. 2 -->
+			<skill id="55249" level="1" value="-1"/>  <!-- Bracelet of Duty - Lv. 2 -->
 		</skills>
 	</armor>
 
@@ -494,7 +494,7 @@
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55250" level="1"/>  <!-- Bracelet of Duty - Lv. 3 -->
+			<skill id="55250" level="1" value="-1"/>  <!-- Bracelet of Duty - Lv. 3 -->
 		</skills>
 	</armor>
 
@@ -504,7 +504,7 @@
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55251" level="1"/>  <!-- Bracelet of Duty - Lv. 4 -->
+			<skill id="55251" level="1" value="-1"/>  <!-- Bracelet of Duty - Lv. 4 -->
 		</skills>
 	</armor>
 
@@ -514,7 +514,7 @@
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55252" level="1"/>  <!-- Bracelet of Duty - Lv. 5 -->
+			<skill id="55252" level="1" value="-1"/>  <!-- Bracelet of Duty - Lv. 5 -->
 		</skills>
 	</armor>
 
@@ -536,30 +536,30 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="29986" name="Lineage II Chest" type="NONE" icon="icon.ev_10th_present2">
+	<item id="29986" name="LineageII Box" type="NONE" icon="icon.ev_10th_present2">
 	<!-- A reward box given for collecting all the letters of the word “Lineage II”. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55319" level="1"/>  <!-- Lineage II Chest -->
+			<skill id="55319" level="1" value="-1"/>  <!-- Lineage II Chest -->
 		</skill-reducer>
 	</item>
 
-	<item id="29987" name="Chronicle Chest" type="NONE" icon="icon.ev_10th_present2">
-	<!-- A reward box given for collecting all the letters of the word “Chronicle”. There must be something interesting in there! Double-click to find out. -->
+	<item id="29987" name="Memories Box" type="NONE" icon="icon.ev_10th_present2">
+	<!-- A reward box given for collecting all the letters of the word “Chronicle”. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55321" level="1"/>  <!-- Chronicle Chest -->
+			<skill id="55321" level="1" value="-1"/>  <!-- Chronicle Chest -->
 		</skill-reducer>
 	</item>
 
-	<item id="29988" name="Memories Chest" type="NONE" icon="icon.ev_10th_present2">
-	<!-- A reward box given for collecting all the letters of the word “Memories”. There must be something interesting in there! Double-click to find out. -->
+	<item id="29988" name="Chronicle Box" type="NONE" icon="icon.ev_10th_present2">
+	<!-- A reward box given for collecting all the letters of the word “Memories”. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55320" level="1"/>  <!-- Memories Chest -->
+			<skill id="55320" level="1" value="-1"/>  <!-- Memories Chest -->
 		</skill-reducer>
 	</item>
 

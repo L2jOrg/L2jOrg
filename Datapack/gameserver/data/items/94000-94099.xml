@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<armor id="94000" name="Death Armor - A-grade" type="NONE" body-part="ALL_DRESS" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+		<restriction sellable="false"/>
+		<attributes />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="94001" name="Death Armor - B-grade" type="NONE" body-part="ALL_DRESS" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+		<restriction sellable="false"/>
+		<attributes />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="94002" name="Death Armor - C-grade" type="NONE" body-part="ALL_DRESS" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+		<restriction sellable="false"/>
+		<attributes />
+		<crystal type="C"/>
+	</armor>
+
+	<armor id="94003" name="Death Knight Cloak" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i01">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="220" />
+		<crystal />
+	</armor>
+
+	<armor id="94004" name="Death Knight Ranker Cloak" type="NONE" body-part="BACK" icon="icon.bm_2018_sayha_cloak_back_i01">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="220" />
+		<crystal />
+	</armor>
+
+	<weapon id="94005" name="Character Creation Window Rapier" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_infinity_rapier_i00">
+		<restriction/>
+		<attributes weight="1300"/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<weapon id="94006" name="Character Creation Window Ancient Sword" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_infinity_sword_i00">
+		<restriction/>
+		<attributes weight="1530"/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<armor id="94007" name="Character Creation Window Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="570" />
+		<crystal />
+	</armor>
+
+	<armor id="94008" name="Character Creation Window Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t901_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="7700" />
+		<crystal />
+	</armor>
+
+	<armor id="94009" name="Character Creation Window Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t901_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="3320" />
+		<crystal />
+	</armor>
+
+	<armor id="94010" name="Character Creation Window Gauntlets" type="NONE" body-part="GLOVES" icon="icon.armor_t901_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" />
+		<crystal />
+	</armor>
+
+	<armor id="94011" name="Character Creation Window Boots" type="NONE" body-part="FEET" icon="icon.armor_t901_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1110" />
+		<crystal />
+	</armor>
+
+	<weapon id="94012" name="Character Creation Window Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.weapon_r110_shield">
+		<restriction/>
+		<attributes weight="1190"/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<armor id="94013" name="Character Creation Window Leather Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="570" />
+		<crystal />
+	</armor>
+
+	<armor id="94014" name="Character Creation Window Leather Armor" type="LIGHT" body-part="CHEST" icon="icon.armor_t902_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="4300" />
+		<crystal />
+	</armor>
+
+	<armor id="94015" name="Character Creation Window Leather Leggings" type="LIGHT" body-part="LEGS" icon="icon.armor_t902_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1480" />
+		<crystal />
+	</armor>
+
+	<armor id="94016" name="Character Creation Window Leather Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t902_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" />
+		<crystal />
+	</armor>
+
+	<armor id="94017" name="Character Creation Window Leather Boots" type="NONE" body-part="FEET" icon="icon.armor_t902_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1110" />
+		<crystal />
+	</armor>
+
+	<armor id="94018" name="Character Creation Window Circlet" type="NONE" body-part="HEAD" icon="icon.armor_circlet_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="570" />
+		<crystal />
+	</armor>
+
+	<armor id="94019" name="Character Creation Window Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t903_u_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1860" />
+		<crystal />
+	</armor>
+
+	<armor id="94020" name="Character Creation Window Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t903_l_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="920" />
+		<crystal />
+	</armor>
+
+	<armor id="94021" name="Character Creation Window Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t903_g_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" />
+		<crystal />
+	</armor>
+
+	<armor id="94022" name="Character Creation Window Shoes" type="NONE" body-part="FEET" icon="icon.armor_t903_b_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" />
+		<crystal />
+	</armor>
+
+	<armor id="94023" name="Character Creation Window Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
+		<restriction/>
+		<attributes weight="1180" />
+		<crystal />
+	</armor>
+
+	<item id="94024" name="Little Pig Coin Bank Lv. 2" type="NONE" icon="icon.etc_piggy_bank">
+	<!-- Little Pig’s coin bank containing the Little Pig’s coins. Double-click to obtain 1 of the following: Talisman - Speed, Random Crafting 1 Time Recharge Stone. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="94025" name="Little Pig Coin Bank Lv. 3" type="NONE" icon="icon.etc_piggy_bank">
+	<!-- Little Pig’s precious coin bank. Double-click to obtain 1 of the following: Talisman - Speed, Random Crafting 1 Time Recharge Stone, Cloth Piece. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+</list>

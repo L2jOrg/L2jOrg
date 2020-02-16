@@ -17,7 +17,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="9620" level="1"/>  <!-- Yummy Gift Box -->
+			<skill id="9620" level="1" value="-1"/>  <!-- Yummy Gift Box -->
 		</skill-reducer>
 	</item>
 

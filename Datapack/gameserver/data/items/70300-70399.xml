@@ -19,7 +19,7 @@
 	</item>
 
 	<item id="70303" name="Monkey Bait" type="LURE" icon="icon.etc_gludio_fish_lure_i00">
-	<!-- Fishing Time: 20 seconds\\nFishing Standby Time: 10 seconds\\n\\nFish bait bought from Chef Monkey. Fish using this bait to catch Tuna.  -->
+	<!-- Fishing Time: 20 seconds\nFishing Standby Time: 10 seconds\n\nFish bait bought from Chef Monkey. Fish using this bait to catch Tuna.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
@@ -37,47 +37,47 @@
 	</item>
 
 	<item id="70306" name="Mysterious Blessed Soulshot (No-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_white_i00">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a No-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="55384" level="1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
+			<skill id="55384" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="70307" name="Mysterious Blessed Soulshot (D-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_blue_i00">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a D-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="55385" level="1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
+			<skill id="55385" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="70308" name="Mysterious Blessed Soulshot (C-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_green_i00">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a C-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="55386" level="1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
+			<skill id="55386" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="70309" name="Mysterious Blessed Soulshot (B-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_red_i00">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a B-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="55387" level="1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
+			<skill id="55387" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="70310" name="Mysterious Blessed Soulshot (A-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_silver_i00">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with an A-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with an A-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="55388" level="1"/>  <!-- Mysterious Blessed Soulshot (A-grade) -->
+			<skill id="55388" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -170,7 +170,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55397" level="3"/>  <!-- Olympiad Commemorative Amulet - 100% -->
+			<skill id="55397" level="3" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
@@ -224,15 +224,15 @@
 	</armor>
 
 	<armor id="70333" name="Agathion - Cheerleader Mae" type="NONE" body-part="UNDERWEAR" icon="BranchSys.icon.br_aga_local2009_g_i00">
-	<!-- Bracelet that summons Agathion - Cheerleader Mae. \\n\\n<Agathion's Effect>\\n1. Cheerleader Mae's Support: P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage ++3%. -->
+	<!-- Bracelet that summons Agathion - Cheerleader Mae. \n\n<Agathion's Effect>\n1. Cheerleader Mae's Support: P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage ++3%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55403" level="1"/>  <!-- Summon Agathion Cheerleader Mae -->
-			<skill id="55404" level="1"/>  <!-- Agathion Cute Trick - Cheerleader Mae -->
-			<skill id="55405" level="1"/>  <!-- Cheerleader Mae's Support -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55403" level="1" value="-1"/>  <!-- Summon Agathion - Cheerleader Mae -->
+			<skill id="55404" level="1" value="-1"/>  <!-- Agathion Cute Trick - Cheerleader Mae -->
+			<skill id="55405" level="1" value="-1"/>  <!-- Cheerleader Mae's Support -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
@@ -354,8 +354,8 @@
 	<!-- Transforms you into Pirate for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55412"/> <!-- Transformation Scroll: Pirate -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55412" level="1" value="-1"/>  <!-- Transformation Scroll: Pirate -->
 		</skill-reducer>
 	</item>
 
@@ -363,8 +363,8 @@
 	<!-- Transforms you into Dark Assassin for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55413"/> <!-- Transformation Scroll: Dark Assassin -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55413" level="1" value="-1"/>  <!-- Transformation Scroll: Dark Assassin -->
 		</skill-reducer>
 	</item>
 
@@ -372,13 +372,13 @@
 	<!-- Transforms you into White Assassin for 30 min. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55692"/> <!-- Transformation Scroll: White Assassin -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55692" level="1" value="-1"/>  <!-- Transformation Scroll: White Assassin -->
 		</skill-reducer>
 	</item>
 
 	<item id="70356" name="Scroll: Enchant Armor (A-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i04">
-	<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. Starting at +4 armor, HP increases depending on the enchant value. -->
+	<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
@@ -620,7 +620,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="39025" level="1"/>  <!-- Adventurer's Scroll of Escape -->
+			<skill id="39025" level="1" value="-1"/>  <!-- Adventurer's Scroll of Escape -->
 		</skills>
 	</armor>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="49300" name="Steel Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_iron_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
 		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -18,7 +18,7 @@
 	</weapon>
 
 	<weapon id="49301" name="Steel Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_iron_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 183 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -35,7 +35,7 @@
 	</weapon>
 
 	<weapon id="49302" name="Lesser Giant's Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_giants_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 75. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 75. -->
 		<restriction freightable="false"/>
 		<attributes weight="2020" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -52,7 +52,7 @@
 	</weapon>
 
 	<weapon id="49303" name="Lesser Giant's Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_giants_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 9%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
 		<attributes weight="2020" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -69,7 +69,7 @@
 	</weapon>
 
 	<weapon id="49304" name="Lesser Giant's Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_giants_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 183 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 183 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="2020" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -86,7 +86,7 @@
 	</weapon>
 
 	<weapon id="49305" name="Dagger of Mana" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_mana_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -104,7 +104,7 @@
 	</weapon>
 
 	<weapon id="49306" name="Dagger of Mana" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_mana_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -122,7 +122,7 @@
 	</weapon>
 
 	<weapon id="49307" name="Dagger of Mana" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_mana_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -140,7 +140,7 @@
 	</weapon>
 
 	<weapon id="49308" name="Mystic Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mystic_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="760" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -158,7 +158,7 @@
 	</weapon>
 
 	<weapon id="49309" name="Mystic Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mystic_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="760" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -176,7 +176,7 @@
 	</weapon>
 
 	<weapon id="49310" name="Mystic Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_mystic_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="760" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -194,7 +194,7 @@
 	</weapon>
 
 	<weapon id="49311" name="Conjurer's Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_conjure_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -212,7 +212,7 @@
 	</weapon>
 
 	<weapon id="49312" name="Conjurer's Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_conjure_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -230,7 +230,7 @@
 	</weapon>
 
 	<weapon id="49313" name="Conjurer's Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_conjure_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -248,7 +248,7 @@
 	</weapon>
 
 	<weapon id="49314" name="Shilen Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_o'_silenus_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -266,7 +266,7 @@
 	</weapon>
 
 	<weapon id="49315" name="Shilen Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_o'_silenus_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -284,7 +284,7 @@
 	</weapon>
 
 	<weapon id="49316" name="Shilen Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_o'_silenus_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -302,7 +302,7 @@
 	</weapon>
 
 	<weapon id="49317" name="Sword of Magic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="970" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -319,7 +319,7 @@
 	</weapon>
 
 	<weapon id="49318" name="Sword of Magic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="970" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -336,7 +336,7 @@
 	</weapon>
 
 	<weapon id="49319" name="Sword of Magic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="970" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -353,7 +353,7 @@
 	</weapon>
 
 	<weapon id="49320" name="Scroll of Wisdom" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_scroll_of_wisdom_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="610" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -370,7 +370,7 @@
 	</weapon>
 
 	<weapon id="49321" name="Scroll of Wisdom" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_scroll_of_wisdom_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="610" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -387,7 +387,7 @@
 	</weapon>
 
 	<weapon id="49322" name="Scroll of Wisdom" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_scroll_of_wisdom_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="610" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -404,7 +404,7 @@
 	</weapon>
 
 	<weapon id="49323" name="Sword of Mystic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_mystic_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="980" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -421,7 +421,7 @@
 	</weapon>
 
 	<weapon id="49324" name="Sword of Mystic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_mystic_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="980" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -438,7 +438,7 @@
 	</weapon>
 
 	<weapon id="49325" name="Sword of Mystic" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_mystic_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="980" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -455,7 +455,7 @@
 	</weapon>
 
 	<weapon id="49326" name="Sword of Occult" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_occult_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="970" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -472,7 +472,7 @@
 	</weapon>
 
 	<weapon id="49327" name="Sword of Occult" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_occult_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="970" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -489,7 +489,7 @@
 	</weapon>
 
 	<weapon id="49328" name="Sword of Occult" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_occult_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="970" price="716000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -506,7 +506,7 @@
 	</weapon>
 
 	<weapon id="49329" name="Branch of Life" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_branch_of_life_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="620" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -523,7 +523,7 @@
 	</weapon>
 
 	<weapon id="49330" name="Branch of Life" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_branch_of_life_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="620" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -540,7 +540,7 @@
 	</weapon>
 
 	<weapon id="49331" name="Branch of Life" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_branch_of_life_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="620" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -557,7 +557,7 @@
 	</weapon>
 
 	<weapon id="49332" name="Temptation of Abyss" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_temptation_of_abyss_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="610" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -574,7 +574,7 @@
 	</weapon>
 
 	<weapon id="49333" name="Temptation of Abyss" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_temptation_of_abyss_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="610" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -591,7 +591,7 @@
 	</weapon>
 
 	<weapon id="49334" name="Temptation of Abyss" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_temptation_of_abyss_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="610" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -608,7 +608,7 @@
 	</weapon>
 
 	<weapon id="49335" name="Proof of Revenge" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_proof_of_revenge_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="600" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -625,7 +625,7 @@
 	</weapon>
 
 	<weapon id="49336" name="Proof of Revenge" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_proof_of_revenge_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="600" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -642,7 +642,7 @@
 	</weapon>
 
 	<weapon id="49337" name="Proof of Revenge" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_proof_of_revenge_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="600" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -659,7 +659,7 @@
 	</weapon>
 
 	<weapon id="49338" name="Divine Tome" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_divine_tome_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="570" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -676,7 +676,7 @@
 	</weapon>
 
 	<weapon id="49339" name="Divine Tome" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_divine_tome_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="570" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -693,7 +693,7 @@
 	</weapon>
 
 	<weapon id="49340" name="Divine Tome" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_divine_tome_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="570" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -710,7 +710,7 @@
 	</weapon>
 
 	<weapon id="49341" name="Sage's Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_blood_of_saints_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="580" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -727,7 +727,7 @@
 	</weapon>
 
 	<weapon id="49342" name="Sage's Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_blood_of_saints_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="580" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -744,7 +744,7 @@
 	</weapon>
 
 	<weapon id="49343" name="Sage's Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_blood_of_saints_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="580" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -761,7 +761,7 @@
 	</weapon>
 
 	<weapon id="49344" name="Tome of Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tome_of_blood_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="570" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -778,7 +778,7 @@
 	</weapon>
 
 	<weapon id="49345" name="Tome of Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tome_of_blood_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="570" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -795,7 +795,7 @@
 	</weapon>
 
 	<weapon id="49346" name="Tome of Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tome_of_blood_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="570" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -812,7 +812,7 @@
 	</weapon>
 
 	<weapon id="49347" name="Crucifix of Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_crucifix_of_blood_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="540" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -829,7 +829,7 @@
 	</weapon>
 
 	<weapon id="49348" name="Crucifix of Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_crucifix_of_blood_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="540" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -846,7 +846,7 @@
 	</weapon>
 
 	<weapon id="49349" name="Crucifix of Blood" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_crucifix_of_blood_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="540" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -863,7 +863,7 @@
 	</weapon>
 
 	<weapon id="49350" name="Eye of Infinity" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -880,7 +880,7 @@
 	</weapon>
 
 	<weapon id="49351" name="Eye of Infinity" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -897,7 +897,7 @@
 	</weapon>
 
 	<weapon id="49352" name="Eye of Infinity" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -914,7 +914,7 @@
 	</weapon>
 
 	<weapon id="49353" name="Blue Crystal Skull" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1520000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -931,7 +931,7 @@
 	</weapon>
 
 	<weapon id="49354" name="Blue Crystal Skull" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1520000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -948,7 +948,7 @@
 	</weapon>
 
 	<weapon id="49355" name="Blue Crystal Skull" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1520000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -965,7 +965,7 @@
 	</weapon>
 
 	<weapon id="49356" name="Demon's Fangs" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_demon_fangs_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1520000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -982,7 +982,7 @@
 	</weapon>
 
 	<weapon id="49357" name="Demon's Fangs" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_demon_fangs_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1520000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -999,7 +999,7 @@
 	</weapon>
 
 	<weapon id="49358" name="Demon's Fangs" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_demon_fangs_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1520000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1016,7 +1016,7 @@
 	</weapon>
 
 	<weapon id="49359" name="Vajra Wand" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1033,7 +1033,7 @@
 	</weapon>
 
 	<weapon id="49360" name="Vajra Wand" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1050,7 +1050,7 @@
 	</weapon>
 
 	<weapon id="49361" name="Vajra Wand" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1067,7 +1067,7 @@
 	</weapon>
 
 	<weapon id="49362" name="Ancient Reagent" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1084,7 +1084,7 @@
 	</weapon>
 
 	<weapon id="49363" name="Ancient Reagent" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1101,7 +1101,7 @@
 	</weapon>
 
 	<weapon id="49364" name="Ancient Reagent" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_spellbook_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1600" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1118,7 +1118,7 @@
 	</weapon>
 
 	<weapon id="49365" name="Priest Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_priest_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1135,7 +1135,7 @@
 	</weapon>
 
 	<weapon id="49366" name="Priest Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_priest_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1152,7 +1152,7 @@
 	</weapon>
 
 	<weapon id="49367" name="Priest Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_priest_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1169,7 +1169,7 @@
 	</weapon>
 
 	<weapon id="49368" name="Sword of Magic Fog" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_fog_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1450" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1186,7 +1186,7 @@
 	</weapon>
 
 	<weapon id="49369" name="Sword of Magic Fog" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_fog_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1450" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1203,7 +1203,7 @@
 	</weapon>
 
 	<weapon id="49370" name="Sword of Magic Fog" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_magic_fog_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1450" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1220,7 +1220,7 @@
 	</weapon>
 
 	<weapon id="49371" name="Mace of Prayer" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_prayer_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1300" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1238,7 +1238,7 @@
 	</weapon>
 
 	<weapon id="49372" name="Mace of Prayer" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_prayer_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1300" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1256,7 +1256,7 @@
 	</weapon>
 
 	<weapon id="49373" name="Mace of Prayer" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_prayer_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1300" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1274,7 +1274,7 @@
 	</weapon>
 
 	<weapon id="49374" name="Mace of Judgment" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_judgment_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1280" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1292,7 +1292,7 @@
 	</weapon>
 
 	<weapon id="49375" name="Mace of Judgment" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_judgment_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1280" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1310,7 +1310,7 @@
 	</weapon>
 
 	<weapon id="49376" name="Mace of Judgment" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_judgment_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1280" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1328,7 +1328,7 @@
 	</weapon>
 
 	<weapon id="49377" name="Mace of Miracle" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_miracle_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1250" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1346,7 +1346,7 @@
 	</weapon>
 
 	<weapon id="49378" name="Mace of Miracle" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_miracle_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1250" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1364,7 +1364,7 @@
 	</weapon>
 
 	<weapon id="49379" name="Mace of Miracle" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_miracle_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1250" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1382,7 +1382,7 @@
 	</weapon>
 
 	<weapon id="49380" name="Doom Hammer" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_doom_hammer_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1200" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1400,7 +1400,7 @@
 	</weapon>
 
 	<weapon id="49381" name="Doom Hammer" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_doom_hammer_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1200" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1418,7 +1418,7 @@
 	</weapon>
 
 	<weapon id="49382" name="Doom Hammer" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_doom_hammer_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1200" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1436,7 +1436,7 @@
 	</weapon>
 
 	<weapon id="49383" name="Staff of Life" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_life_stick_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1180" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1454,7 +1454,7 @@
 	</weapon>
 
 	<weapon id="49384" name="Staff of Life" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_life_stick_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1180" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1472,7 +1472,7 @@
 	</weapon>
 
 	<weapon id="49385" name="Staff of Life" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_life_stick_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1180" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1490,7 +1490,7 @@
 	</weapon>
 
 	<weapon id="49386" name="Priest Mace" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_priest_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1508,7 +1508,7 @@
 	</weapon>
 
 	<weapon id="49387" name="Priest Mace" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_priest_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1526,7 +1526,7 @@
 	</weapon>
 
 	<weapon id="49388" name="Priest Mace" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_mace_of_priest_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1544,7 +1544,7 @@
 	</weapon>
 
 	<weapon id="49389" name="Goat Head Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_goathead_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1000" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1562,7 +1562,7 @@
 	</weapon>
 
 	<weapon id="49390" name="Goat Head Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_goathead_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1000" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1580,7 +1580,7 @@
 	</weapon>
 
 	<weapon id="49391" name="Goat Head Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_goathead_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1000" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1598,7 +1598,7 @@
 	</weapon>
 
 	<weapon id="49392" name="Bone Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_apprentices_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1060" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1616,7 +1616,7 @@
 	</weapon>
 
 	<weapon id="49393" name="Bone Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_apprentices_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1060" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1634,7 +1634,7 @@
 	</weapon>
 
 	<weapon id="49394" name="Bone Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_apprentices_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1060" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1652,7 +1652,7 @@
 	</weapon>
 
 	<weapon id="49395" name="Mystic Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_mystic_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1040" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1670,7 +1670,7 @@
 	</weapon>
 
 	<weapon id="49396" name="Mystic Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_mystic_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1040" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1688,7 +1688,7 @@
 	</weapon>
 
 	<weapon id="49397" name="Mystic Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_mystic_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 20%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 20%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1040" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1706,7 +1706,7 @@
 	</weapon>
 
 	<weapon id="49398" name="Conjuror's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_conjure_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 20. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 20. -->
 		<restriction freightable="false"/>
 		<attributes weight="1030" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1724,7 +1724,7 @@
 	</weapon>
 
 	<weapon id="49399" name="Conjuror's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_conjure_staff_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 6%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 6%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1030" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>

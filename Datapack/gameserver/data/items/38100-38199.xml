@@ -5,7 +5,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes price="28" immediate-effect="true" action="FISHINGSHOT"/>
 		<skill-reducer type="FishShots">
-			<skill id="17386" level="1"/>  <!-- Normal Fishing Shot -->
+			<skill id="17386" level="1" value="-1"/>  <!-- Normal Fishing Shot -->
 		</skill-reducer>
 	</item>
 

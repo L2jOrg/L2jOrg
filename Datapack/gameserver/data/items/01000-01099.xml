@@ -250,55 +250,55 @@
 	</item>
 
 	<item id="1048" name="Spellbook: Might" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Might. Used by Human Mystics, Elven Mystics and Dark Mystics.\\nRequired level: 7 -->
+	<!-- Spellbook needed to learn Might. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1049" name="Spellbook: Ice Bolt" type="NONE" icon="icon.etc_spell_books_element_i00">
-	<!-- Spellbook needed to learn Ice Bolt. Used by Human Mystics, Elven Mystics and Dark Mystics.\\nRequired level: 7 -->
+	<!-- Spellbook needed to learn Ice Bolt. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1050" name="Spellbook: Battle Heal" type="NONE" icon="icon.etc_spell_books_white_i00">
-	<!-- Spellbook needed to learn Battle Heal. Used by Human Mystics, Elven Mystics and Dark Mystics.\\nRequired level: 14 -->
+	<!-- Spellbook needed to learn Battle Heal. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 14 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1051" name="Spellbook: Vampiric Touch" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Vampiric Touch. Used by Human Mystics and Dark Mystics.\\nRequired level: 14 -->
+	<!-- Spellbook needed to learn Vampiric Touch. Used by Human Mystics and Dark Mystics.\nRequired level: 14 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1052" name="Spellbook: Flame Strike" type="NONE" icon="icon.etc_spell_books_element_i00">
-	<!-- Spellbook needed to learn Flame Strike. Used by Human Wizards, Elven Wizards and Dark Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Flame Strike. Used by Human Wizards, Elven Wizards and Dark Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1053" name="Spellbook: Cure Poison" type="NONE" icon="icon.etc_spell_books_white_i00">
-	<!-- Spellbook needed to learn Cure Poison. Used by Human Mystics, Elven Mystics and Dark Mystics.\\nRequired level: 7 -->
+	<!-- Spellbook needed to learn Cure Poison. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1054" name="Spellbook: Group Heal" type="NONE" icon="icon.etc_spell_books_white_i00">
-	<!-- Spellbook needed to learn Group Heal. Used by Human Mystics, Elven Mystics and Dark Mystics.\\nRequired level: 14 -->
+	<!-- Spellbook needed to learn Group Heal. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 14 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1055" name="Spellbook: Curse Poison" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Curse Poison. Used by Human Mystics and Dark Mystics.\\nRequired level: 7 -->
+	<!-- Spellbook needed to learn Curse Poison. Used by Human Mystics and Dark Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1056" name="Spellbook: Curse Weakness" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Curse Weakness. Used by Human Mystics and Elven Mystics.\\nRequired level: 14 -->
+	<!-- Spellbook needed to learn Curse Weakness. Used by Human Mystics and Elven Mystics.\nRequired level: 14 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -310,7 +310,7 @@
 	</item>
 
 	<item id="1058" name="Spellbook: Shield" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Shield. Used by Human Mystics, Elven Mystics and Dark Mystics.\\nRequired level: 7 -->
+	<!-- Spellbook needed to learn Shield. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -321,27 +321,21 @@
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
-	<item id="1060" name="HP  Potion" type="POTION" icon="icon.etc_reagent_white_i00">
+	<item id="1060" name="HP Potion - Exchangeable" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" price="90" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2031" level="1"/>  <!-- Healing Potion -->
+			<skill id="2031" level="1" value="-1"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="1061" name="Major HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" price="330" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2032" level="1"/>  <!-- Greater Healing Potion -->
+			<skill id="2032" level="1" value="-1"/>  <!-- Greater HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -386,7 +380,7 @@
 		<restriction freightable="false" olympiad-restricted="true" coc-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" reuse-delay="10000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2031" level="1"/>  <!-- Healing Potion -->
+			<skill id="2031" level="1" value="-1"/>  <!-- HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -505,31 +499,31 @@
 	</item>
 
 	<item id="1095" name="Spellbook: Attack Aura" type="NONE" icon="icon.etc_spell_books_defighter_i00">
-	<!-- Spellbook needed to learn Attack Aura. Used by Elven Fighters and Dark Fighters.\\nRequired level: 10 -->
+	<!-- Spellbook needed to learn Attack Aura. Used by Elven Fighters and Dark Fighters.\nRequired level: 10 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="75" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1096" name="Spellbook: Elemental Heal" type="NONE" icon="icon.etc_spell_books_efighter_i00">
-	<!-- Spellbook needed to learn Elemental Heal. Used by Elven Fighters.\\nRequired level: 15 -->
+	<!-- Spellbook needed to learn Elemental Heal. Used by Elven Fighters.\nRequired level: 15 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="550" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1097" name="Spellbook: Drain Energy" type="NONE" icon="icon.etc_spell_books_defighter_i00">
-	<!-- Spellbook needed to learn Drain Energy. Used by Human Knights and Dark Fighters.\\nRequired level: Human Knight - 20, Dark Fighter - 13 -->
+	<!-- Spellbook needed to learn Drain Energy. Used by Human Knights and Dark Fighters.\nRequired level: Human Knight - 20, Dark Fighter - 13 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1098" name="Spellbook: Wind Walk" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Wind Walk. Used by Clerics, Elven Oracles and Shillien Oracles.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Wind Walk. Used by Clerics, Elven Oracles and Shillien Oracles.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1099" name="Spellbook: Wind Shackle" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Wind Shackle. Used by Elven Mage and Dark Mage.\\nRequired level: 14 -->
+	<!-- Spellbook needed to learn Wind Shackle. Used by Elven Mage and Dark Mage.\nRequired level: 14 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>

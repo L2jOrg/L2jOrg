@@ -12,38 +12,32 @@
 	</armor>
 
 	<armor id="70101" name="Refined Romantic Chapeau: Gold" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_gold">
-	<!-- A 7-day item. Requires 2 hair accessory slots. \\n\\n<Active Skills>\\n1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Cooldown: 30 min.\\n2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Cooldown: 60 min.\\n3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 min. -->
+	<!-- A 7-day item. Requires 2 hair accessory slots. \n\n<Active Skills>\n1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Cooldown: 30 min.\n2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Cooldown: 60 min.\n3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 min. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="39043" level="1"/>  <!-- Side Effect -->
-			<skill id="39044" level="1"/>  <!-- Holiday Hat -->
-			<skill id="39045" level="1"/>  <!-- Overwhelming Power of a Holiday Hat -->
+			<skill id="39043" level="1" value="-1"/>  <!-- Chapeau's Side Effect -->
+			<skill id="39044" level="1" value="-1"/>  <!-- Holy Chapeau -->
+			<skill id="39045" level="1" value="-1"/>  <!-- Chapeau's Authority -->
 		</skills>
 	</armor>
 
 	<item id="70102" name="Adventurer’s Potion - Atk. Spd." type="POTION" icon="icon.etc_reagent_green_i00">
 	<!-- Increases Atk. Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55235"/>  <!-- Adventurer's Potion - Atk. Spd. -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55235" level="1" value="-1"/>  <!-- Adventurer's Haste Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="70103" name="Adventurer’s Potion - Casting Spd." type="POTION" icon="icon.etc_potion_of_acumen2_i00">
 	<!-- Increases Casting Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="POTION" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55236"/>  <!-- Adventurer's Potion - Casting Spd. -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55236" level="1" value="-1"/>  <!-- Adventurer's Potion - Casting Spd. -->
 		</skill-reducer>
 	</item>
 
@@ -51,8 +45,8 @@
 	<!-- Recovers 6% HP from the received physical damage for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55237"/>  <!-- Scroll: Vampiric Rage -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55237" level="1" value="-1"/>  <!-- Scroll: Vampiric Rage -->
 		</skill-reducer>
 	</item>
 
@@ -60,8 +54,8 @@
 	<!-- Increases MP Recovery Rate for 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55241"/>  <!-- Scroll: Mana Regeneration -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55241" level="1" value="-1"/>  <!-- Scroll: Mana Regeneration -->
 		</skill-reducer>
 	</item>
 
@@ -70,7 +64,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55246" level="1"/>  <!-- Rune of Boost -->
+			<skill id="55246" level="1" value="-1"/>  <!-- Rune of Boost -->
 		</skill-reducer>
 	</item>
 
@@ -78,8 +72,8 @@
 	<!-- When used, P. Def. -5%, M. Def. -10%, Evasion -2; P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. Duration: 20 minutes.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55242"/>  <!-- Scroll: Berserker Spirit -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55242" level="1" value="-1"/>  <!-- Scroll: Berserker Spirit -->
 		</skill-reducer>
 	</item>
 
@@ -92,7 +86,7 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55094" level="1"/>  <!-- Fire Dragon Pendant Basic Effect Lv. 3 -->
+			<skill id="55094" level="1" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Basic Effect -->
 		</skills>
 	</armor>
 
@@ -105,7 +99,7 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55104" level="1"/>  <!-- Water Dragon Pendant Basic Effect Lv. 3 -->
+			<skill id="55104" level="1" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Basic Effect -->
 		</skills>
 	</armor>
 
@@ -113,8 +107,8 @@
 	<!-- Provides Dance of the Warrior effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55243"/>  <!-- Scroll: Dance of the Warrior -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55243" level="1" value="-1"/>  <!-- Scroll: Dance of the Warrior -->
 		</skill-reducer>
 	</item>
 
@@ -122,8 +116,8 @@
 	<!-- Provides Dance of the Mystic effect for 10 minutes.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="SCROLL_OTHER" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55244"/>  <!-- Scroll: Dance of the Mystic -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55244" level="1" value="-1"/>  <!-- Scroll: Dance of the Mystic -->
 		</skill-reducer>
 	</item>
 
@@ -133,37 +127,34 @@
 		<attributes commission-type="HAIR_ACCESSORY" duration="10080" />
 		<crystal />
 		<skills>
-			<skill id="35011" level="1"/>  <!-- Refined Romantic Chapeau: Teleport -->
-			<skill id="55047" level="1"/>  <!-- Romantic Chapeau - Blessed Body -->
-			<skill id="55048" level="1"/>  <!-- Romantic Chapeau - Wind Walk -->
-			<skill id="55247" level="1"/>  <!-- Refined Romantic Chapeau -->
+			<skill id="35011" level="1" value="-1"/>  <!-- Return of the Refined Romantic Chapeau -->
+			<skill id="55047" level="1" value="-1"/>  <!-- Romantic Bless the Body -->
+			<skill id="55048" level="1" value="-1"/>  <!-- Romantic Wind Walk -->
+			<skill id="55247" level="1" value="-1"/>  <!-- Refined Romantic Chapeau -->
 		</skills>
 	</armor>
 
 	<item id="70113" name="Scroll of Escape: Town of Aden" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magical scroll that relocates you to the Town of Aden.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2213" level="12"/>  <!-- Scroll of Escape -->
+			<skill id="2213" level="12" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
 		</skill-reducer>
 	</item>
 
-	<armor id="70114" name="Agathion - Singer and Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- A 7-day item. Summons Singer & Dancer Agathion when equipped. \\n<Active Skills>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
+	<armor id="70114" name="Agathion - Singer &amp; Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- A 7-day item. Summons Singer & Dancer Agathion when equipped. \n<Active Skills>\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\n\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\n\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="10800" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
-			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="55270" level="1"/>  <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1"/>  <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1"/>  <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
@@ -174,7 +165,7 @@
 	</item>
 
 	<weapon id="70116" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
-	<!-- A 1-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+	<!-- A 1-day item.  Bobber usage: 1\n\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="1440" enchant-enabled="false"/>
 		<crystal />
@@ -191,7 +182,7 @@
 	</weapon>
 
 	<weapon id="70117" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
-	<!-- A 3-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+	<!-- A 3-day item.  Bobber usage: 1\n\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -208,7 +199,7 @@
 	</weapon>
 
 	<weapon id="70118" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
-	<!-- A 7-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+	<!-- A 7-day item.  Bobber usage: 1\n\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
 		<crystal />
@@ -225,7 +216,7 @@
 	</weapon>
 
 	<weapon id="70119" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
-	<!-- A 30-day item.  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+	<!-- A 30-day item.  Bobber usage: 1\n\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
 		<crystal />
@@ -242,7 +233,7 @@
 	</weapon>
 
 	<weapon id="70120" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
-	<!--  Bobber usage: 1\\n\\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
+	<!--  Bobber usage: 1\n\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -489,17 +480,14 @@
 	<item id="70159" name="Mana Recovery Potion" type="POTION" icon="icon.etc_potion_blue_i00">
 	<!-- Instantly recovers MP without a continuous effect. Cannot be used when MP is full.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" price="10000" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="26030" level="1"/>  <!-- Mana Potion -->
+			<skill id="26030" level="1" value="-1"/>  <!-- Mana Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="70160" name="1st Anniversary Coin" type="NONE" icon="icon.etc_11th_token">
-	<!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen…  -->
+	<!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen… -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -521,7 +509,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55273" level="1"/>  <!-- Energy of Development -->
+			<skill id="55273" level="1" value="-1"/>  <!-- Energy of Development -->
 		</skill-reducer>
 	</item>
 
@@ -530,7 +518,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55273" level="2"/>  <!-- Energy of Development -->
+			<skill id="55273" level="2" value="-1"/>  <!-- Energy of Development -->
 		</skill-reducer>
 	</item>
 
@@ -539,7 +527,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55273" level="3"/>  <!-- Energy of Development -->
+			<skill id="55273" level="3" value="-1"/>  <!-- Energy of Development -->
 		</skill-reducer>
 	</item>
 
@@ -548,7 +536,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55274" level="1"/>  <!-- Energy of Speed -->
+			<skill id="55274" level="1" value="-1"/>  <!-- Energy of Speed -->
 		</skill-reducer>
 	</item>
 
@@ -557,7 +545,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55274" level="2"/>  <!-- Energy of Speed -->
+			<skill id="55274" level="2" value="-1"/>  <!-- Energy of Speed -->
 		</skill-reducer>
 	</item>
 
@@ -566,7 +554,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55274" level="3"/>  <!-- Energy of Speed -->
+			<skill id="55274" level="3" value="-1"/>  <!-- Energy of Speed -->
 		</skill-reducer>
 	</item>
 
@@ -575,7 +563,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55275" level="1"/>  <!-- Energy of Accuracy -->
+			<skill id="55275" level="1" value="-1"/>  <!-- Energy of Accuracy -->
 		</skill-reducer>
 	</item>
 
@@ -584,7 +572,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55275" level="2"/>  <!-- Energy of Accuracy -->
+			<skill id="55275" level="2" value="-1"/>  <!-- Energy of Accuracy -->
 		</skill-reducer>
 	</item>
 
@@ -593,7 +581,7 @@
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55275" level="3"/>  <!-- Energy of Accuracy -->
+			<skill id="55275" level="3" value="-1"/>  <!-- Energy of Accuracy -->
 		</skill-reducer>
 	</item>
 
@@ -666,7 +654,7 @@
 			<stat type="mDef" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="55290" level="1"/>  <!-- Devi's Ring -->
+			<skill id="55290" level="1" value="-1"/>  <!-- Devi's Ring -->
 		</skills>
 	</armor>
 
@@ -712,7 +700,7 @@
 			<stat type="maxMp" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="55294" level="1"/>  <!-- Devi's Necklace -->
+			<skill id="55294" level="1" value="-1"/>  <!-- Devi's Necklace -->
 		</skills>
 	</armor>
 

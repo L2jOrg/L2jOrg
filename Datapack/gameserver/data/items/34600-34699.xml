@@ -5,7 +5,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9293" level="1"/>  <!-- Mysterious No-grade Soulshot -->
+			<skill id="9293" level="1" value="-1"/>  <!-- Mysterious Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -14,7 +14,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9294" level="1"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<skill id="9294" level="1" value="-1"/>  <!-- Mysterious Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -23,7 +23,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9295" level="1"/>  <!-- Mysterious Soulshot (C-grade) -->
+			<skill id="9295" level="1" value="-1"/>  <!-- Mysterious Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -32,7 +32,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9296" level="1"/>  <!-- Mysterious Soulshot (B-grade) -->
+			<skill id="9296" level="1" value="-1"/>  <!-- Mysterious Soulshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -41,7 +41,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="9297" level="1"/>  <!-- Mysterious Soulshot (A-grade) -->
+			<skill id="9297" level="1" value="-1"/>  <!-- Mysterious Soulshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -50,7 +50,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="8910" level="1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
+			<skill id="8910" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -59,7 +59,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="8911" level="1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
+			<skill id="8911" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -68,7 +68,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="8912" level="1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
+			<skill id="8912" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -77,7 +77,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="8913" level="1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
+			<skill id="8913" level="1" value="-1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -86,7 +86,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="8907" level="1"/>  <!-- Mysterious Blessed Spiritshot (A-grade) -->
+			<skill id="8907" level="1" value="-1"/>  <!-- Mysterious Blessed Spiritshot (A-grade) -->
 		</skill-reducer>
 	</item>
 

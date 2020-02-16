@@ -58,7 +58,7 @@ public final class ItemEngine extends GameXmlReader {
     private static Logger LOGGER = LoggerFactory.getLogger(ItemEngine.class);
     private static Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
 
-    private final IntMap<ItemTemplate> items = new HashIntMap<>(12160);
+    private final IntMap<ItemTemplate> items = new HashIntMap<>(13700);
 
     private ItemEngine() {
     }

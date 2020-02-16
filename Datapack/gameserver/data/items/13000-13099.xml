@@ -5,44 +5,44 @@
 		<attributes immediate-effect="true" ex-immediate-effect="true"/>
 	</item>
 
-	<item id="13015" name="My Teleport Book" type="NONE" icon="icon.bookmark_book_i00">
-	<!-- Dimensional Item\\nAdds 3 slots to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
+	<item id="13015" name="My Teleport Book - Exchangeable" type="NONE" icon="icon.bookmark_book_i00">
+	<!-- Adds 3 slots to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="CALL_SKILL"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2587" level="1"/>  <!-- Additional My Teleport slots -->
+			<skill id="2587" level="1" value="-1"/>  <!-- Increase number of teleport slots -->
 		</skill-reducer>
 	</item>
 
 	<item id="13016" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
-	<!-- Dimensional Item\\nThis item is consumed to teleport to a saved location. -->
+	<!-- This consumable item allows you to magically transport yourself to a specific location. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true"/>
 	</item>
 
 	<item id="13021" name="Color Title" type="COLOR_CHANGE" icon="icon.color_name_i00">
-	<!-- A dimensional item\\nAn item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
+	<!-- An item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="NICK_COLOR"/>
 		<action handler="NicknameColor"/>
 	</item>
 
 	<armor id="13025" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Enables to summon Agathion of Joy when equipped.\\n\\n<Skill used>\\n1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min)\\n\\n<Item Skill>\\n1. Search for Evidence: Speed +66 for 15 sec. \\n\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first. -->
+	<!-- Enables to summon Agathion of Joy when equipped.\n\n<Skill used>\n1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min)\n\n<Item Skill>\n1. Search for Evidence: Speed +66 for 15 sec. \n\n<Item Skill>\n2. Hidden Search: monsters don't attack first. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="30" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="8256" level="1"/>  <!-- Release Agathion's Seal - Joy -->
-			<skill id="5955" level="1"/>  <!-- Agathion Cute Trick - Joy -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="39056" level="1"/>  <!-- Agathion Teleport: Oren -->
-			<skill id="39055" level="1"/>  <!-- Agathion Teleport: Giran -->
-			<skill id="39054" level="1"/>  <!-- Agathion Teleport: Dion -->
-			<skill id="39053" level="1"/>  <!-- Agathion Teleport: Gludio -->
-			<skill id="39100" level="1"/>  <!-- Agathion Teleport - Hunters Village -->
-			<skill id="39101" level="1"/>  <!-- Evidence Chase -->
-			<skill id="39102" level="1"/>  <!-- Secret Investigation -->
+			<skill id="8256" level="1" value="-1"/>  <!-- Release Agathion's Seal - Shiny -->
+			<skill id="5955" level="1" value="-1"/>  <!-- Agathion Cute Trick - Joy -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="39056" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Oren -->
+			<skill id="39055" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Giran -->
+			<skill id="39054" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Dion -->
+			<skill id="39053" level="1" value="-1"/>  <!-- Agathion Teleport: Town of Gludio -->
+			<skill id="39100" level="1" value="-1"/>  <!-- Agathion Teleport: Hunter's Village -->
+			<skill id="39101" level="1" value="-1"/>  <!-- Chase Down -->
+			<skill id="39102" level="1" value="-1"/>  <!-- Sneak -->
 		</skills>
 	</armor>
 

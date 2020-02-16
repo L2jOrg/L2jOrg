@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<armor id="49000" name="Agathion - Singer and Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- Summons Singer & Dancer Agathion when equipped. 30-day. \\n<Active Skill>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
+	<armor id="49000" name="Agathion - Singer &amp; Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- Summons Singer & Dancer Agathion when equipped. 30-day. \n<Active Skill>\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\n\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\n\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
-			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="55270" level="1"/>  <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1"/>  <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1"/>  <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
-	<item id="49001" name="Agathion - Singer and Dancer Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<item id="49001" name="Agathion - Singer &amp; Dancer Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain a Singer & Dancer Agathion (30-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49000" chance="100000"/>  <!-- Agathion - Singer and Dancer  -->
+			<item id="49000" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
 		</extract>
 	</item>
 
-	<armor id="49002" name="Agathion - Singer and Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- Summons Singer & Dancer Agathion when equipped. 90-day. \\n<Active Skill>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 90 days. -->
+	<armor id="49002" name="Agathion - Singer &amp; Dancer " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- Summons Singer & Dancer Agathion when equipped. 90-day. \n<Active Skill>\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\n\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\n\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 90 days. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="129600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
-			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="55270" level="1"/>  <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1"/>  <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1"/>  <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
-	<item id="49003" name="Agathion - Singer and Dancer Pack (90-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<item id="49003" name="Agathion - Singer &amp; Dancer Pack (90-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain a Singer & Dancer Agathion (90-day).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49002" chance="100000"/>  <!-- Agathion - Singer and Dancer  -->
+			<item id="49002" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
 		</extract>
 	</item>
 
@@ -96,7 +96,7 @@
 		<attributes weight="4" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
-	<item id="49012" name="HP Potion" type="POTION" icon="icon.etc_reagent_white_i00">
+	<item id="49012" name="HP Potion - Event" type="POTION" icon="icon.etc_reagent_white_i00">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
@@ -108,20 +108,20 @@
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49014" name="Facelifting Potion - A" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
-	<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
+	<item id="49014" name="Facelifting Potion - A - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
+	<!-- Beauty potion that changes one's facial appearance to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49015" name="Facelifting Potion - B" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
-	<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
+	<item id="49015" name="Facelifting Potion - B - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
+	<!-- Beauty potion that changes one's facial appearance to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49016" name="Facelifting Potion - C" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
-	<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
+	<item id="49016" name="Facelifting Potion - C - Exchangeable" type="POTION" icon="icon.etc_lesser_potion_purple_i00">
+	<!-- Beauty potion that changes one's facial appearance to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
@@ -183,60 +183,45 @@
 	<item id="49026" name="Scroll: PK (No-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 1-19. Cannot be sold in the grocery store. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player level-min="21" level-max="85" chaotic="false"/>
-		</condition>
 		<attributes weight="10" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39020" level="1"/>  <!-- Scroll: PK (No-grade) -->
+			<skill id="39020" level="1" value="-1"/>  <!-- Scroll: PK (No-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="49027" name="Scroll: PK (D-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 20-39. Cannot be sold in the grocery store. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player level-min="20" level-max="39" chaotic="false"/>
-		</condition>
 		<attributes weight="10" price="3000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39021" level="1"/>  <!-- Scroll: PK (D-grade) -->
+			<skill id="39021" level="1" value="-1"/>  <!-- Scroll: PK (D-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="49028" name="Scroll: PK (C-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 40-51. Cannot be sold in the grocery store. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player level-min="40" level-max="51" chaotic="false"/>
-		</condition>
 		<attributes weight="10" price="9000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39022" level="1"/>  <!-- Scroll: PK (C-grade) -->
+			<skill id="39022" level="1" value="-1"/>  <!-- Scroll: PK (C-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="49029" name="Scroll: PK (B-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 52-60. Cannot be sold in the grocery store. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player level-min="52" level-max="60" chaotic="false"/>
-		</condition>
 		<attributes weight="10" price="54000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39023" level="1"/>  <!-- Scroll: PK (B-grade) -->
+			<skill id="39023" level="1" value="-1"/>  <!-- Scroll: PK (B-grade) -->
 		</skill-reducer>
 	</item>
 
 	<item id="49030" name="Scroll: PK (A-grade)" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
 	<!-- Double-click to lower PK value by 1. It can only be used when the PK value is greater than or above 1, and reputation is 0. Intended for Lv. 61 and higher. Cannot be sold in the grocery store. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player level-min="61" level-max="75" chaotic="false"/>
-		</condition>
 		<attributes weight="10" price="540000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39024" level="1"/>  <!-- Scroll: PK (A-grade) -->
+			<skill id="39024" level="1" value="-1"/>  <!-- Scroll: PK (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -249,7 +234,7 @@
 			<stat type="mDef" value="14.0"/>
 		</stats>
 		<skills>
-			<skill id="39019" level="1"/>  <!-- Scion Ring -->
+			<skill id="39019" level="1" value="-1"/>  <!-- Chronicle Ring -->
 		</skills>
 	</armor>
 
@@ -259,7 +244,7 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="39025" level="1"/>  <!-- Adventurer's Scroll of Escape -->
+			<skill id="39025" level="1" value="-1"/>  <!-- Adventurer's Scroll of Escape -->
 		</skills>
 	</armor>
 
@@ -284,12 +269,9 @@
 	<item id="49036" name="Adventurer's Wind Walk Potion" type="POTION" icon="icon.etc_potion_green_i00">
 	<!-- Magical potion that increases movement Speed.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39028"/>  <!-- Newbie Wind Walk Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39028" level="1" value="-1"/>  <!-- Adventurer's Wind Walk Potion -->
 		</skill-reducer>
 	</item>
 
@@ -305,7 +287,7 @@
 
 	<armor id="49039" name="Necklace (Novice)" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_knowledge_i00">
 	<!-- Novice Necklace. -->
-		<restriction freightable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -315,7 +297,7 @@
 
 	<armor id="49040" name="Earring (Novice)" type="NONE" body-part="EAR" icon="icon.accessary_mage_earing_i00">
 	<!-- Novice Earring. -->
-		<restriction freightable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -325,7 +307,7 @@
 
 	<armor id="49041" name="Ring (Novice)" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_knowledge_i00">
 	<!-- Novice Ring. -->
-		<restriction freightable="false" sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -591,7 +573,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="39029" level="1"/>  <!-- Mysterious Spiritshot (No-grade) -->
+			<skill id="39029" level="1" value="-1"/>  <!-- Mysterious Spiritshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -600,7 +582,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="39030" level="1"/>  <!-- Mysterious Spiritshot (D-grade) -->
+			<skill id="39030" level="1" value="-1"/>  <!-- Mysterious Spiritshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -609,7 +591,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="39031" level="1"/>  <!-- Mysterious Spiritshot (C-grade) -->
+			<skill id="39031" level="1" value="-1"/>  <!-- Mysterious Spiritshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -632,7 +614,7 @@
 	</item>
 
 	<item id="49068" name="Quick Stone" type="NONE" icon="icon.stone_8_i00">
-	<!-- For 20 min., XP and SP + 10%, and Speed + 20. Cooldown is 10 min. Does not disappear upon death.  Temporary event item. \\n<Note> When the Quick Step buff is applied, the effects of Wind Walk or potions that increase speed will not stack. -->
+	<!-- For 20 min., XP and SP + 10%, and Speed + 20. Cooldown is 10 min. Does not disappear upon death.  Temporary event item. \n<Note> When the Quick Step buff is applied, the effects of Wind Walk or potions that increase speed will not stack. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -703,21 +685,21 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="49080" name="Rice Cake of Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i00">
-	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \\n\\n<Note> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used when Rice Cake of Fighting Spirit is in effect. -->
+	<item id="49080" name="Morale Bean Cake - Exchangeable" type="NONE" icon="icon.bm_rice_cake_i00">
+	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \n\n<Note> The effect changes to the effect of XP Boost Scroll, if it is used when Morale Bean Cake is in effect. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="32000"/>  <!-- Rice Cake of Fighting Spirit -->
+		<skill-reducer type="ItemSkills">
+			<skill id="32000" level="1" value="-1"/>  <!-- Rice Cake of Fighting Spirit -->
 		</skill-reducer>
 	</item>
 
-	<item id="49081" name="Rice Cake of Flaming Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i01">
-	<!-- Increases XP and SP gain by 30% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \\n\\n<Note> The effect does not change if Rice Cake of Fighting Spirit is when Rice Cake of Flaming Fighting Spirit is in effect. -->
+	<item id="49081" name="XP Boost Scroll - Exchangeable" type="NONE" icon="icon.etc_recall_exp_scroll">
+	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="32002"/>  <!-- Rice Cake of Flaming Fighting Spirit -->
+		<skill-reducer type="ItemSkills">
+			<skill id="32002" level="1" value="-1"/>  <!-- XP Boost Scroll - Exchangeable -->
 		</skill-reducer>
 	</item>
 
@@ -728,7 +710,7 @@
 	</item>
 
 	<weapon id="49083" name="Commander's Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_shining_knife_i00">
-	<!-- A dagger, which is both a weapon and a symbol of power. This dagger was made by a blacksmith with the purest heart, and has the power to lead a force of 100,000 warriors. Can use the Power of Commander when equipped. Can be bought from Aden merchants.\\n\\n<Active Skill> 1. Power of Commander: deals 50 points of damage in PvP. Cooldown is 1 minute. -->
+	<!-- A dagger, which is both a weapon and a symbol of power. This dagger was made by a blacksmith with the purest heart, and has the power to lead a force of 100,000 warriors. Can use the Power of Commander when equipped. Can be bought from Aden merchants.\n\n<Active Skill> 1. Power of Commander: deals 50 points of damage in PvP. Cooldown is 1 minute. -->
 		<restriction freightable="false"/>
 		<attributes weight="1150" price="500000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -745,7 +727,7 @@
 		</stats>
 	</weapon>
 
-	<item id="49084" name="Greater Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
+	<item id="49084" name="Greater Scroll of Resurrection - Exchangeable" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
 	<!-- Magic scroll used to resurrect a dead character, restoring 50% of XP. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="100000" action="SKILL_REDUCE"/>
@@ -757,21 +739,21 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49086" name="Rice Cake of Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i00">
-	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 10 minutes. \\n\\n<Note> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used when Rice Cake of Fighting Spirit is in effect. (inc. the one for XP). -->
+	<item id="49086" name="Morale Bean Cake" type="NONE" icon="icon.bm_rice_cake_i00">
+	<!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown is 1 minute. \n\n<Note> The effect changes to the effect of XP Boost Scroll, if it is used when Morale Bean Cake is in effect. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="32000"/> <!-- Rice Cake of Fighting Spirit -->
+		<skill-reducer type="ItemSkills">
+			<skill id="32000" level="1" value="-1"/>  <!-- Rice Cake of Fighting Spirit -->
 		</skill-reducer>
 	</item>
 
-	<item id="49087" name="Greater Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
+	<item id="49087" name="Greater Scroll of Escape - Exchangeable" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
 	<!-- Magic scroll used to quickly teleport the character to the nearest town. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="20000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39075" level="1"/>  <!-- Improved Scroll of Escape -->
+			<skill id="39075" level="1" value="-1"/>  <!-- Advanced Return Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -784,132 +766,99 @@
 	<item id="49089" name="Scroll of Escape: Entrance to Cruma Tower" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magic scroll used to teleport the character to the Entrance to Cruma Tower.  -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32044" level="1"/>  <!-- Teleport: Entrance to Cruma Tower -->
+			<skill id="32044" level="1" value="-1"/>  <!-- Scroll of Espcape: Entrance to Cruma Tower -->
 		</skill-reducer>
 	</item>
 
 	<item id="49090" name="Scroll of Escape: Entrance to Dragon Valley" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magic scroll used to teleport the character to the Entrance to Dragon Valley. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32045" level="1"/>  <!-- Teleport: Entrance to Dragon Valley -->
+			<skill id="32045" level="1" value="-1"/>  <!-- Scroll of Espcape: Entrance to Dragon Valley -->
 		</skill-reducer>
 	</item>
 
 	<item id="49091" name="Scroll of Escape: Dragon Valley Bridge" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magic scroll used to teleport the character to Dragon Valley Bridge. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32046" level="1"/>  <!-- Teleport: Dragon Valley Bridge -->
+			<skill id="32046" level="1" value="-1"/>  <!-- Scroll of Espcape: Dragon Valley Bridge -->
 		</skill-reducer>
 	</item>
 
 	<item id="49092" name="Scroll of Escape: Talking Island Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Talking Island Village. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32031" level="1"/>  <!-- Teleport Stone: Talking Island Village -->
+			<skill id="32031" level="1" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="49093" name="Scroll of Escape: Elven Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Elven Village. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32032" level="1"/>  <!-- Teleport Stone: Elven Village -->
+			<skill id="32032" level="1" value="-1"/>  <!-- Scroll of Escape: Elven Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="49094" name="Scroll of Escape: Dark Elf Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Dark Elf Village. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32033" level="1"/>  <!-- Teleport Stone: Dark Elf Village -->
+			<skill id="32033" level="1" value="-1"/>  <!-- Scroll of Escape: Dark Elf Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="49095" name="Scroll of Escape: Orc Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Orc Village. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32034" level="1"/>  <!-- Teleport Stone: Orc Village -->
+			<skill id="32034" level="1" value="-1"/>  <!-- Scroll of Escape: Orc Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="49096" name="Scroll of Escape: Dwarven Village" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Dwarven Village. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32035" level="1"/>  <!-- Teleport Stone: Dwarven Village -->
+			<skill id="32035" level="1" value="-1"/>  <!-- Scroll of Escape: Dwarven Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="49097" name="Scroll of Escape: Gludin" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Gludin Village. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32036" level="1"/>  <!-- Teleport Stone: Gludin Village -->
+			<skill id="32036" level="1" value="-1"/>  <!-- Scroll of Escape: Gludin Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="49098" name="Scroll of Escape: Gludio" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Gludio. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32037" level="1"/>  <!-- Teleport Stone: Town of Gludio -->
+			<skill id="32037" level="1" value="-1"/>  <!-- Scroll of Escape: Town of Gludio -->
 		</skill-reducer>
 	</item>
 
 	<item id="49099" name="Scroll of Escape: Dion" type="SCROLL" icon="icon.etc_capture_stone_i00">
 	<!-- Magic stone, used to teleport the character to Town of Dion. Cooldown: 60 minutes.  -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32038" level="1"/>  <!-- Teleport Stone: Town of Dion -->
+			<skill id="32038" level="1" value="-1"/>  <!-- Scroll of Espcape: Dion -->
 		</skill-reducer>
 	</item>
 

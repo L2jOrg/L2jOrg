@@ -17,52 +17,52 @@
 	</weapon>
 
 	<item id="71101" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
-	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. \\n -->
+	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. \n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="60"/>
 	</item>
 
 	<item id="71102" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\\nIntended for Lv. 1 - 75 characters. -->
+	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71103" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
-	<!-- 5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. \\nIntended for Lv. 1 - 75 characters.\\n -->
+	<!-- 5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. \nIntended for Lv. 1 - 75 characters.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="300"/>
 	</item>
 
 	<item id="71104" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\\nIntended for Lv. 1 - 75 characters. -->
+	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71105" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
-	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%.\\nIntended for Lv. 1 - 75 characters.\\n -->
+	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%.\nIntended for Lv. 1 - 75 characters.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="71106" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\\nIntended for Lv. 1 - 75 characters. -->
+	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~19.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55999"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55999" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="71108" name="Package: Irene' Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\\nIntended for Lv. 1 - 75 characters.  -->
+	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\nIntended for Lv. 1 - 75 characters.  -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -161,21 +161,21 @@
 	</item>
 
 	<armor id="71121" name="Agathion - Bugbear" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_bugbear_i00">
-	<!--  Equipping it in the main slot summons the Agathion.\\n -->
+	<!--  Equipping it in the main slot summons the Agathion.\n -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71122" name="Agathion - Dryad" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_dryad_i00">
-	<!--  Equipping it in the main slot summons the Agathion.\\n -->
+	<!--  Equipping it in the main slot summons the Agathion.\n -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71123" name="Agathion - Griffin" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.Item_g_rbracelet_griffin">
-	<!--  Equipping it in the main slot summons the Agathion.\\n -->
+	<!--  Equipping it in the main slot summons the Agathion.\n -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -188,7 +188,7 @@
 	</item>
 
 	<item id="71125" name="Legendary Scroll (High-grade)" type="NONE" icon="BranchIcon.icon.g_bm_cloak_legend_scroll">
-	<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+	<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -243,7 +243,7 @@
 	</armor>
 
 	<item id="71134" name="Master's Fishing Coin" type="NONE" icon="icon.etc_coins_blue_i00">
-	<!-- A coin obtainable from Master Fishing. Take the coin to a Dimensional Merchant to exchange for a Fishing XP Box. -->
+	<!-- A coin obtainable from Master Fishing. Take the coin to the Store Manager to exchange for a Fishing XP Box. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -255,13 +255,13 @@
 	</item>
 
 	<item id="71136" name="Mermaid's Trace" type="NONE" icon="icon.etc_oren_fish_scale_i00">
-	<!-- Gather 20 Mermaid's Traces and take them to a Dimensional Merchant to get the Mermaid Agathion Charm. -->
+	<!-- Gather 20 Mermaid's Traces and take them to the Store Manager to get the Mermaid Agathion Charm. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71137" name="Master's Fishing Potion" type="SCROLL" icon="BranchIcon.etc_sign_agathion_feed_blue_i00">
-	<!-- Increases XP/SP gain for successful fishing by 50% for 1 hour when used.\\nApplies to all bait.\\nCan be used together with the Fishing Guild's Support Certificate. -->
+	<!-- Increases XP/SP gain for successful fishing by 50% for 1 hour when used.\nApplies to all bait.\nCan be used together with the Fishing Guild's Support Certificate. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -352,26 +352,26 @@
 		</stats>
 	</armor>
 
-	<armor id="71151" name="Agathion Bracelet - Stage 3" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
-	<!-- 60-day item. Opens 1 main Agathion slot and 2 subslots when equipped. STR/INT/CON/MEN +1.  -->
+	<armor id="71151" name="Agathion Bracelet Lv. 3" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
+	<!-- 60-day item. Opens 1 main Agathion slot and 2 subslots when equipped. STR/INT/CON/MEN +1. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="4"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
 		</skills>
 	</armor>
 
-	<armor id="71152" name="Agathion Bracelet - Stage 5" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
-	<!-- Opens 1 main Agathion slot and 4 subslots when equipped. STR/INT/CON/MEN/DEX/WIT +1, MEN/Stun/Sleep/Paralysis Resistance +8%.  -->
+	<armor id="71152" name="Agathion Bracelet Lv. 5" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
+	<!-- Opens 1 main Agathion slot and 4 subslots when equipped. STR/INT/CON/MEN/DEX/WIT +1, MEN/Stun/Sleep/Paralysis Resistance +8%. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="4"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" level="1"/>  <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
 		</skills>
 	</armor>
 
@@ -531,7 +531,7 @@
 	</item>
 
 	<item id="71181" name="Daily Gift - VIP 5" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i04">
-	<!-- Double-click to obtain the following: 2 Scrolls of Escape, 2 Scrolls of Resurrection, 5 Greater Healing Potions, 5 Soulshot Tickets, and 1 Dragon Scroll. -->
+	<!-- Double-click to obtain the following: 2 Scrolls of Escape, 2 Scrolls of Resurrection, 5 Greater Healing Potions, 5 Soulshot Tickets, and 1 Battle Scroll. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -543,118 +543,118 @@
 	</item>
 
 	<item id="71183" name="Daily Gift - VIP 7" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i06">
-	<!-- Double-click to obtain the following: 5 Scrolls of Escape, 5 Scrolls of Resurrection, 7 Greater Healing Potions, 10 Soulshot Tickets, 2 Dragon Scrolls, and 2 Chef's Fish Stew - Victory. -->
+	<!-- Double-click to obtain the following: 5 Scrolls of Escape, 5 Scrolls of Resurrection, 7 Greater Healing Potions, 10 Soulshot Tickets, 2 Battle Scrolls, and 2 Chef's Fish Stew - Victory. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="71184" name="Meliodas Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Meliodas Agathion +7 to upgrade to Lv. 2. -->
+	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Meliodas Agathion +7 to upgrade to Lv. 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71185" name="Elizabeth Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Elizabeth Agathion +7 to upgrade to Stage 2. -->
+	<!-- An Agathion that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Elizabeth Agathion +7 to upgrade to Stage 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71186" name="Hawk Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Hawk Agathion +7 to upgrade to Lv. 2. -->
+	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Hawk Agathion +7 to upgrade to Lv. 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71187" name="Ban Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Ban Agathion +7 to upgrade to Lv. 2. -->
+	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Ban Agathion +7 to upgrade to Lv. 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71188" name="Diane Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Diane Agathion +7 to upgrade to Lv. 2. -->
+	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Diane Agathion +7 to upgrade to Lv. 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71189" name="King Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> King Agathion +7 to upgrade to Lv. 2. -->
+	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> King Agathion +7 to upgrade to Lv. 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71190" name="Merlin Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Merlin Agathion +7 to upgrade to Lv. 2. -->
+	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Merlin Agathion +7 to upgrade to Lv. 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71191" name="Gowther Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Gowther Agathion +7 to upgrade to Lv. 2. -->
+	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Gowther Agathion +7 to upgrade to Lv. 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71192" name="Escanor Agathion Lv. 1" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Escanor Agathion +7 to upgrade to Stage 2. -->
+	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special Ability option.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Escanor Agathion +7 to upgrade to Stage 2. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71193" name="Meliodas Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Meliodas Agathion +7 to upgrade to Lv. 3. -->
+	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Meliodas Agathion +7 to upgrade to Lv. 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71194" name="Elizabeth Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Elizabeth. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Elizabeth Agathion +7 to upgrade to Stage 3. -->
+	<!-- An Agathion that activates the power of Elizabeth. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Elizabeth Agathion +7 to upgrade to Stage 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71195" name="Hawk Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Hawk Agathion +7 to upgrade to Stag Lv. 3. -->
+	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Hawk Agathion +7 to upgrade to Stag Lv. 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71196" name="Ban Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Ban Agathion +7 to upgrade to Lv. 3. -->
+	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Ban Agathion +7 to upgrade to Lv. 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71197" name="Diane Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Diane Agathion +7 to upgrade to Lv. 3. -->
+	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Diane Agathion +7 to upgrade to Lv. 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71198" name="King Agathion Lv 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> King Agathion +7 to upgrade to Lv. 3. -->
+	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> King Agathion +7 to upgrade to Lv. 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71199" name="Merlin Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Merlin Agathion +7 to upgrade to Lv. 3. -->
+	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Merlin Agathion +7 to upgrade to Lv. 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />

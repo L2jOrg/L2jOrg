@@ -3,26 +3,20 @@
 	<armor id="34925" name="Cloak of Light" type="NONE" body-part="BACK" icon="icon.amor_goodness_cloak">
 	<!-- Max. HP/MP/CP +5%, P. Def. +3%, M. Def. +5%, any Weapon Resistance +3%, P./M. Critical Rate +10, Reflect Damage +3%. Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player chaotic="false"/>
-		</condition>
 		<attributes price="5000000" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="19039" level="1"/>  <!-- Cloak of Light -->
+			<skill id="19039" level="1" value="-1"/>  <!-- Cloak of Light -->
 		</skills>
 	</armor>
 
 	<armor id="34926" name="Cloak of Darkness" type="NONE" body-part="BACK" icon="icon.amor_evilness_cloak">
 	<!-- Max. HP/MP/CP +5%, P. Def. +3%, M. Def. +5%, any Weapon Resistance +3%, P./M. Critical Rate +10, Reflect Damage +3%. Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player chaotic="false"/>
-		</condition>
 		<attributes price="5000000" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="19040" level="1"/>  <!-- Cloak of Darkness -->
+			<skill id="19040" level="1" value="-1"/>  <!-- Cloak of Darkness -->
 		</skills>
 	</armor>
 

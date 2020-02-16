@@ -108,8 +108,8 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="71818" name="Talisman of Fate +1" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using a Fate Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\\n\\n<Note>\\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
+	<armor id="71818" name="Talisman of Fate Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
+	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using a Fate Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -163,6 +163,12 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
+	<item id="71827" name="Hardin's Magic Bag" type="NONE" icon="BranchSys.icon.br_lucky_bag_i00">
+	<!-- Double-click to get a random item. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
 	<item id="71828" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
 	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death.  Available for levels 1-60. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
@@ -194,19 +200,19 @@
 	</item>
 
 	<item id="71833" name="Starter Package (Lv. 1-39)" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain a useful item. \\nFor Lv. 1 - 39 characters. -->
+	<!-- Double-click to obtain a useful item. \nFor Lv. 1 - 39 characters. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71834" name="Starter Package (Lv. 40-51)" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain a useful item. \\nFor Lv. 40-51 characters. -->
+	<!-- Double-click to obtain a useful item. \nFor Lv. 40-51 characters. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71835" name="Starter Package (Lv. 52-61)" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain a useful item. \\nFor Lv. 52-61 characters. -->
+	<!-- Double-click to obtain a useful item. \nFor Lv. 52-61 characters. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -324,6 +330,344 @@
 	<!-- Double-click to obtain 1 +10 Dismantler (15-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+	</item>
+
+	<weapon id="71844" name="Don Quijote Collab Pom Poms" type="DUAL" body-part="TWO_HAND" icon="BranchIcon.Icon.etc_ev_don_jp">
+	<!-- Pom poms to celebrate the collaboration campaign with Don Quijote. Dreams come true. Can use fireworks right away when equipped. -->
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<item id="71845" name="Ancient Imperial Treasure Chest" type="NONE" icon="icon.bm_elmoaden_box">
+	<!-- Double-click to obtain 1 Dragon's Special Elixir, and either an Ancient Imperial Gold Box or Silver Box. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71846" name="Ancient Imperial Gold Box" type="NONE" icon="icon.bm_elmoaden_gold_box">
+	<!-- Double-click to obtain one of the following: S-grade Weapon, A-grade Armor, Stable Weapon Enchant Scroll (S-grade). -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71847" name="Ancient Imperial Silver Box" type="NONE" icon="icon.bm_elmoaden_silver_box">
+	<!-- Double-click to obtain 1 of the following: Rare Accessory Lv. 3, Sealed Rune Lv.11-13, Sayha's Silver Blessing, Sayha's Gold Blessing, Einhasad's Protection. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71848" name="Dragon's Special Elixir" type="SCROLL" icon="icon.bm_dragon_posion">
+	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10 for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution> When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="71849" name="Emerald Lv. 3 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
+	<!-- Double-click to obtain an Emerald Lv. 3.  -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71850" name="Emerald Lv. 4 Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
+	<!-- Double-click to obtain an Emerald Lv. 4.  -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71851" name="Ancient Imperial Gold Box" type="NONE" icon="icon.bm_elmoaden_gold_box">
+	<!-- Double-click to obtain 1 of the following: S-grade Weapon, A-grade Armor, Stable Weapon Enchant Scroll (S-grade). -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71852" name="Ancient Imperial Silver Box" type="NONE" icon="icon.bm_elmoaden_silver_box">
+	<!-- Double-click to obtain 1 of the following: Rare Accessory, Bright Talisman of Power - Lv. 5,  Dragon Pendant Lv. 4. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71853" name="Starter Pack" type="NONE" icon="icon.etc_pi_gift_box_i03">
+	<!-- Double-click to obtain all of the following items.\n\n<Items Obtained>\nScroll: Regular XP/SP Boost x5\nTimed Weapon Exchange Coupon (C-grade) x1\nSoulshot Ticket x50\nPirate's Special Fruit x5\nSayha's Buff Scroll x5\nXP/SP Rune - 50% (7-day) Pack x1\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71854" name="High-grade Starter Pack" type="NONE" icon="icon.etc_pi_gift_box_i02">
+	<!-- Double-click to obtain all of the following items.\n\n<Items Obtained>\nScroll: High-grade XP/SP Boost x30\nHero's Weapon Exchange Ticket - Lv. 54 x2\nSoulshot Ticket x500\nGolden Fruit Buff x30\nSayha's Buff Scroll x30\nXP/SP Rune - 50% (30-day) Pack x1\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71855" name="Agathion's Soul Box" type="NONE" icon="icon.etc_treasure_box_i08">
+	<!-- Double-click to obtain 1 of the following items: Agathion's Soul, Blessed Agathion's Soul, Shining Agathion's Soul. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71856" name="L2 Coin Pouch" type="NONE" icon="icon.etc_golden_spice_new_i00">
+	<!-- Pouch containing L2 Coins. Double-click to obtain 20-100 L2 Coins. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71857" name="Artisan's Goggles Pack" type="NONE" icon="icon.accessory_dwarf_goggle_i00">
+	<!-- Double-click to get an Artisan’s Goggles imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71858" name="Uniform Hat Pack" type="NONE" icon="BranchSys.icon.br_Uniform_Hat_i00">
+	<!-- Double-click to get a Uniform Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71859" name="Assassin's Bamboo Hat Pack" type="NONE" icon="BranchSys.icon.br_Bamboo_Hat_i00">
+	<!-- Double-click to get an Assassin’s Bamboo Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71860" name="Valkyrie Hat Pack" type="NONE" icon="BranchSys.icon.br_valkyrie_cap_i00">
+	<!-- Double-click to get a Valkyrie Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71861" name="Gatekeeper Hat Pack" type="NONE" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
+	<!-- Double-click to get a Gatekeeper Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71862" name="Wedding Veil Pack" type="NONE" icon="BranchSys2.icon.br_wedding_vail_i00">
+	<!-- Double-click to get a Wedding Veil imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71863" name="Maid Hair Accessory Pack" type="NONE" icon="BranchSys3.icon1.g_co_cutie_maid_hair">
+	<!-- Double-click to get a Maid Hair Accessory imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71864" name="Refined Romantic Chapeau: Red Pack" type="NONE" icon="icon.bm_romantic_chaperon_red">
+	<!-- Double-click to get a Refined Romantic Chapeau: Red imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71865" name="Fancy Angel Ring Pack" type="NONE" icon="icon.accessory_angel_ring_i00">
+	<!-- Double-click to get a Fancy Angel Ring imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71866" name="Refined Wizard Hat Pack" type="NONE" icon="icon.accessory_magician_cap2_i00">
+	<!-- Double-click to get a Refined Wizard Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71867" name="Laborer Hat Pack" type="NONE" icon="BranchSys.icon.br_people_cap_i00">
+	<!-- Double-click to get a Laborer Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71868" name="Top Hat Pack" type="NONE" icon="icon.accessory_magicial_cap_i00">
+	<!-- Double-click to get a Top Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71869" name="Vigilante Hat Pack" type="NONE" icon="icon.zorocap">
+	<!-- Double-click to get a Vigilante Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71870" name="White Uniform Hat Pack" type="NONE" icon="BranchSys2.icon2.pi_navy_cap">
+	<!-- Double-click to get a White Uniform Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71871" name="Warrior's Helmet Pack" type="NONE" icon="BranchSys2.icon.br_close_helmet_i00">
+	<!-- Double-click to get a Warrior's Helmet imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71872" name="First Mate Hat Pack" type="NONE" icon="icon.Accessary_middle_ages_i01">
+	<!-- Double-click to get a First Mate Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71873" name="Refined Romantic Chapeau: Blue Pack" type="NONE" icon="icon.bm_romantic_chaperon_blue">
+	<!-- Double-click to get a Refined Romantic Chapeau: Blue imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71874" name="Gold-rimmed Glasses Pack" type="NONE" icon="BranchSys2.icon.br_gold_eyeglass_i00">
+	<!-- Double-click to get a Gold-rimmed Glasses imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71875" name="Horn-rimmed Glasses Pack" type="NONE" icon="BranchSys.icon.br_Eye_Glasses_i00">
+	<!-- Double-click to get a Horn-rimmed Glasses imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71876" name="Stylish Straw Hat Pack" type="NONE" icon="BranchSys3.icon.g_straw_hat">
+	<!-- Double-click to get a Stylish Straw Hat imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71877" name="Chic Silver Chapeau Pack" type="NONE" icon="BranchSys2.icon2.pi_silverchaperon">
+	<!-- Double-click to get a Chic Silver Chapeau imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71878" name="Afro Hair Pack" type="NONE" icon="BranchSys.icon.br_Afro_hair_i00">
+	<!-- Double-click to get a Afro Hair imbued with one of the following options: <STR +1, INT +1> / <DEX +1, WIT +1> / <CON +1, MEN +1>. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71879" name="Eva's Hair Accessory Ticket" type="MATERIAL" icon="BranchSys3.icon1.g_luckygame_card_trade_i00">
+	<!-- Take it to the Store Manager to exchange for various hair accessories with stat options added and Eva's Enhancement Pack. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71880" name="Dragon's Special Elixir" type="SCROLL" icon="icon.bm_dragon_posion">
+	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10 for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="71881" name="Letter Gift Box - LINEAGEII" type="NONE" icon="BranchSys3.icon.g_cash_fortuna_box_r">
+	<!-- Double-click to obtain 1 letter set needed to combine letters into 'LINEAGEII'. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71882" name="Letter Gift Box - NCSOFT" type="NONE" icon="BranchSys.icon.br_fortuna_box_s_i00">
+	<!-- Double-click to obtain 1 letter set needed to combine letters into 'NCSOFT'. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71883" name="Letter Gift Box - TOGETHER" type="NONE" icon="BranchSys3.icon.g_cash_fortuna_cube_r">
+	<!-- Double-click to obtain 1 letter set needed to combine letters into 'TOGETHER'. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71884" name="Imperial Crusader Set" type="NONE" icon="icon.armor_t88_u_i00">
+	<!-- Double-click to obtain the following: Imperial Crusader Breastplate / Imperial Crusader Gaiters / Imperial Crusader Gauntlets / Imperial Crusader Boots / Imperial Crusader Helmet / Imperial Crusader Shield. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71885" name="Draconic Leather Set" type="NONE" icon="icon.armor_t89_ul_i00">
+	<!-- Double-click to obtain the following: Draconic Leather Armor / Draconic Leather Gloves / Draconic Leather Boots / Draconic Leather Helmet. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71886" name="Major Arcana Set" type="NONE" icon="icon.armor_t90_ul_i00">
+	<!-- Double-click to obtain the following: Major Arcana Robe / Major Arcana Gloves / Major Arcana Boots / Major Arcana Circlet. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71887" name="Transformation Sealbook: Normal/Greater" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i00">
+	<!-- Double-click to obtain 1 random Transformation Sealbook: Normal/Greater. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71888" name="Radiant Jewelry Box Lv. 3" type="NONE" icon="icon.bm_special_jewelbox_lv4">
+	<!-- Double-click to obtain 1 of the following: Vital Stone/Diamond/Pearl/Aquamarine/Sapphire/Ruby/Jade/Garnet/Topaz/Red Cat's Eye/Blue Cat's Eye Lv. 3 Jewelry Box. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71889" name="Frintezza's Music Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
+	<!-- Double-click to obtain 1 Irene' Hourglass - 1 Hour and one random item. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="71890" name="Jin Death Knight - China" type="NONE" body-part="ALL_DRESS" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+		<restriction sellable="false"/>
+		<attributes />
+		<crystal />
+	</armor>
+
+	<item id="71891" name="Aden Blessing Box" type="NONE" icon="icon.sayha2017_box_i04">
+	<!-- Double-click to obtain 300 L2 Coins and 1-1000 Sayha's Blessing. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71892" name="Halloween Candy" type="SCROLL" icon="BranchSys.br_hallowinday_candy_i00">
+	<!-- For 20 min., XP/SP Gain while hunting +20%, P. Atk./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="71893" name="Eva’s Treasure Chest" type="NONE" icon="icon.freya_box_i01">
+	<!-- Double-click to obtain a rare accessory or an S-grade Weapon Pack. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71894" name="Dragon's Special Elixir Lv. 2" type="SCROLL" icon="icon.bm_dragon_posion">
+	<!-- When used, for 20 min., XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="71895" name="Battle Box Lv. 1" type="NONE" icon="icon.etc_treasure_box_i04">
+	<!-- Reward for clan members. Double-click to obtain various items.  -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71896" name="Battle Box Lv. 2" type="NONE" icon="icon.etc_treasure_box_i04">
+	<!-- Reward for clan members. Double-click to obtain various items.  -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71897" name="Battle Box Lv. 3" type="NONE" icon="icon.etc_treasure_box_i04">
+	<!-- Reward for clan members. Double-click to obtain various items.  -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71898" name="Battle Box Lv. 4" type="NONE" icon="icon.etc_treasure_box_i04">
+	<!-- Reward for clan members. Double-click to obtain various items.  -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71899" name="Limited Sayha's Blessing" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Double-click to have Limited Sayha effect applied for 30 days, and when you don’t have Sayha's Grace, XP/SP +200%, Adena Drop Rate +30%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
 	</item>
 
 </list>

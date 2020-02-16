@@ -1,10 +1,626 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<weapon id="93000" name="Activation Type: One-handed Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_falchion_i00">
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
+		<attributes weight="1530"/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<weapon id="93001" name="Activation Type: One-handed Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_buzdygan_i00">
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
+		<attributes weight="1800"/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<item id="93002" name="Sayha's Blessing Pouch" type="NONE" icon="icon.pouch_i01">
+	<!-- Double-click to obtain 1-3 Sayha's Blessing. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93003" name="Sayha's Protection" type="NONE" icon="icon.high_stone_i01">
+	<!-- For 20 min., reduces Sayha's Grace consumption by 10%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93004" name="Accessory: A-grade" type="NONE" icon="icon.accessory_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93005" name="Accessory: B-grade" type="NONE" icon="icon.accessory_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93006" name="Accessory: C-grade" type="NONE" icon="icon.accessory_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93007" name="Armor: A-grade" type="NONE" icon="icon.armor_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93008" name="Armor: B-grade" type="NONE" icon="icon.armor_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93009" name="Armor: C-grade" type="NONE" icon="icon.armor_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93010" name="Weapon: A-grade" type="NONE" icon="icon.weapon_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93011" name="Weapon: B-grade" type="NONE" icon="icon.weapon_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93012" name="Weapon: C-grade" type="NONE" icon="icon.weapon_group">
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93013" name="Queen Ant Doll Lv. 1" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
+	<!-- 7-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. \n\n<Queen Ant Doll's Spell Lv. 1>\nP. Atk./P. Critical Damage +8%, Max HP +12% -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93014" name="Baium Doll Lv. 1" type="RUNE" icon="icon.bm_baium_doll_30d">
+	<!-- 7-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. \n\n<Baium Doll's Spell Lv. 1>\nMEN Attack Resistance +40%, Paralysis/Knock Down/Pull Attack Resistance +20%, P. Def/M. Def +12%, and Skill Cooldown -3% -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93015" name="Orfen Doll Lv. 1" type="RUNE" icon="icon.bm_orfen_doll_30d">
+	<!-- 7-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory.\n\n<Orfen Doll's Spell Lv. 1>\nM. Atk./M. Critical Damage +8%, Max MP +12% -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93016" name="Queen Ant Doll Lv. 2" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
+	<!-- 7-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. \n\n<Queen Ant Doll's Spell Lv. 2>\nP. Atk. +12%, P. Critical Damage +10%, MAX HP +15% -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93017" name="Baium Doll Lv. 2" type="RUNE" icon="icon.bm_baium_doll_30d">
+	<!-- 7-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. \n\n<Baium Doll's Spell Lv. 2>\nMEN Atk. Resistance +45%, Paralysis/Knock Down/Pull Resistance +25%, P. Def./M. Def. +15%, Skill Cooldown -4%. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93018" name="Orfen Doll Lv. 2" type="RUNE" icon="icon.bm_orfen_doll_30d">
+	<!-- 7-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory. \n\n<Orfen Doll's Spell Lv. 2>\nM. Atk. +15%, M. Critical Damage +10%, MAX MP +15% -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93019" name="Queen Ant Doll Lv. 1 Pack (7-day)" type="NONE" icon="icon.bm_queen_ant_doll_30d">
+	<!-- Double-click to obtain Queen Ant Doll Lv. 1 (7-day). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93020" name="Baium Doll Lv. 1 Pack (7-day)" type="NONE" icon="icon.bm_baium_doll_30d">
+	<!-- Double-click to obtain Baium Doll Lv. 1 (7-day). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93021" name="Orfen Doll Lv. 1 Pack (7-day)" type="NONE" icon="icon.bm_orfen_doll_30d">
+	<!-- Double-click to obtain Orfen Doll Lv. 1 (7-day). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93022" name="Queen Ant Doll Lv. 2 Pack (7-day)" type="NONE" icon="icon.bm_queen_ant_doll_30d">
+	<!-- Double-click to obtain Queen Ant Doll Lv. 2 (7-day). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93023" name="Baium Doll Lv. 2 Pack (7-day)" type="NONE" icon="icon.bm_baium_doll_30d">
+	<!-- Double-click to obtain Baium Doll Lv. 2 (7-day). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93024" name="Orfen Doll Lv. 2 Pack (7-day)" type="NONE" icon="icon.bm_orfen_doll_30d">
+	<!-- Double-click to obtain Orfen Doll Lv. 2 (7-day). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93025" name="Weapon Supply Box (A-grade)" type="NONE" icon="icon.weapon_group">
+	<!-- Obtain an A-grade weapon. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93026" name="A-grade Armor Supply Box" type="NONE" icon="icon.armor_group">
+	<!-- Obtain an A-grade armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93027" name="Player Commendation Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
+	<!-- A box rewarded for PC Cafe login. Double-click to obtain one of the following items at random: Old Material, Unknown Material, PC Point Recharge Coin, Talisman of Baium, A-grade Weapon Pack, A-grade Armor Pack. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="93028" name="Moonshadow Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_revolution_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1450"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93029" name="Moonshadow Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_maingauche_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1070"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93030" name="Moonshadow Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1820"/>
+		<crystal type="D"/>
+		<consume  soulshots="2" mana="2"/>
+	</weapon>
+
+	<weapon id="93031" name="Moonshadow Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tarbar_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1730"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93032" name="Moonshadow Two-handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_giants_sword_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2020"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93033" name="Moonshadow Two-Handed Blunt Weapon" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_goathead_staff_i00" magic="true">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1000"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93034" name="Moonshadow Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2060"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93035" name="Moonshadow Fist" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1510"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93036" name="Moonshadow Rapier" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1300"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93037" name="Moonshadow Ancient Sword" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1530"/>
+		<crystal type="D"/>
+		<consume />
+	</weapon>
+
+	<item id="93038" name="Enchant Scroll: Moonshadow Weapon" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- When enchanted, P. Atk. +4 for Moonshadow Sword (one-handed), Blunt Weapon (one-handed), Dagger, Spear, other weapons. P. Atk. +5 for Sword (two-handed), Blunt Weapon (two-handed), Dualsword, Fist (two-handed). P. Atk. +8 for Bows. M. Atk. +3 for all weapons. Starting from +4, P./M. Atk. double.\n<Warning>\nCan only be used on Moonshadow weapons, and cannot be enchanted above +4. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
 	<armor id="93039" name="Race Ranker Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
 	<!-- Race Ranker's appearance. Headpieces, weapon and magic armor are not removed.  -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
+
+	<item id="93040" name="Adventurer’s Griffin Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag_2">
+	<!-- Adventurer’s Griffin Agathion Enchant Scroll. M. Def. increases when enchanting Agathion.\n<Warning>\nCan only be used on Adventurer’s Griffin Agathion. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<armor id="93041" name="Adventurer’s Cloak" type="NONE" body-part="BACK" icon="icon.amor_goodness_cloak">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="220" />
+		<crystal />
+	</armor>
+
+	<armor id="93042" name="Adventurer’s Belt" type="LIGHT" body-part="BELT" icon="icon.belt_i00">
+	<!-- Inventory Slot +2 and Weight Limit +1000 when equipped. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="500" />
+		<crystal />
+	</armor>
+
+	<item id="93043" name="Enchant Scroll: Adventurer’s Hair Accessory" type="ENCHANT_ARMOR" icon="icon.scroll_of_unidentify_am_d">
+	<!-- Adventurer’s Sheep Hat Enchant Scroll. M. Def. +2 each time the Adventurer’s Sheep Hat is enchanted. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93044" name="Adventurer’s Sheep Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_sheep_cap_white_i00">
+	<!-- A hat in the shape of a sheep takes two slots for headpieces. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<item id="93045" name="Enchant Scroll: Adventurer’s Cloak" type="ENCHANT_ARMOR" icon="icon.sayha2017_scrl">
+	<!-- Scroll to enchant the Adventurer’s Cloak. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93046" name="Enchant Scroll: Adventurer’s Belt" type="ENCHANT_ARMOR" icon="icon.etc_training_scroll_kalie_i00">
+	<!-- Scroll to enchant the Adventurer’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="93047" name="Samurai Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_samurai_old_longsword_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1380" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93048" name="Demon's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_demons_staff_i00" magic="true">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="990" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93049" name="Ecliptic Axe" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eclipse_axe_i00" magic="true">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1640" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93050" name="Crystal Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_crystal_dagger_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1000" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93051" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1720" price="6130000"/>
+		<crystal type="C"/>
+		<consume  soulshots="2" mana="3"/>
+	</weapon>
+
+	<weapon id="93052" name="Orcish Poleaxe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_orcish_poleaxe_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1950" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93053" name="Katana*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2270" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93054" name="Yaksa Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_yaksa_mace_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1640" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93055" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1380" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93056" name="Great Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_great_pata_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1460" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93057" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1300" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="93058" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1530" price="6130000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<item id="93059" name="Spellbook: Summon Winner’s Glory" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Double-click to learn Summon Winner’s Glory. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93060" name="Spellbook: Summon White Wings" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Double-click to learn Summon White Wings. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93061" name="Spellbook: Summon Silver Saint" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Double-click to learn Summon Silver Saint. Silver Saint can additionally learn Silent Riding. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93062" name="Chapeau of Glory" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_archer_hat_i00">
+	<!-- Fancy hat with a feather. STR +1, INT +1, HP +300. Uses 2 hair accessory slots. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<item id="93063" name="Inventory Expansion Ticket of Glory" type="NONE" icon="icon.etc_ticket_i00">
+	<!-- Double-click to learn Glory Expand Inventory. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93064" name="Weight Increase Ticket of Glory" type="NONE" icon="icon.etc_ticket_i00">
+	<!-- Double-click to learn Glory Expand Limit Weight. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93065" name="Adventurer’s Gem Fragment" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_crystal_piece_i00">
+	<!-- Fragment of an unknown gem. When equipped, it increases a Max HP by 10. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<item id="93066" name="Top-grade Material" type="MATERIAL" icon="icon.etc_artisans_frame_i00">
+	<!-- Recharges 50,000 points in the crafting points gauge. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="100000"/>
+	</item>
+
+	<item id="93067" name="Sayha's Protection" type="NONE" icon="icon.high_stone_i01">
+	<!-- For 20 min., reduces Sayha's Grace consumption by 10%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93068" name="Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
+	<!-- Event item. Recharges 100,000,000 XP and 2,700,000 SP. Cannot be exchanged for activated Arc. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93069" name="Purple Arc" type="SCROLL" icon="icon.r99_soul_stone_i05">
+	<!-- Event item. Recharges 30,000,000 XP and 810,000 SP. Cannot be exchanged for activated Arc. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93070" name="Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
+	<!-- Event item. Recharges 10,000,000 XP and 270,000 SP. Cannot be exchanged for activated Arc. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93071" name="Green Arc" type="SCROLL" icon="icon.r99_soul_stone_i04">
+	<!-- Event item. Recharges 5,000,000 XP and 135,000 SP. Cannot be exchanged for activated Arc. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93072" name="Blessing Star Candy - Event" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
+	<!-- Recharges 10,000 Sayha's Grace Points. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93073" name="Sayha's Storm Lv. 3 - Event" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +200% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 points or higher. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93074" name="Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
+	<!-- Quest item. Recharges 10,000,000 XP and 270,000 SP. Cannot be exchanged for activated Arc. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93075" name="Gloves of Silence" type="NONE" body-part="GLOVES" icon="icon.armor_t94_g_i01">
+	<!-- <Options>\nSTR +1\nINT +1\nMax HP +150\nAtk. Spd. +8%\nCasting Spd. +15%\n\nIncreases P./M. Skill Power and P./M. Silence Activation when enchanted to +5. Mana Burn effect added. -->
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
+		<attributes weight="540" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93076" name="Gloves of Silence" type="NONE" body-part="GLOVES" icon="icon.armor_t94_g_i01">
+	<!-- <Options>\nSTR +1\nINT +1\nMax HP +150\nAtk. Spd. +8%\nCasting Spd. +15%\n\nIncreases P./M. Skill Power and P./M. Silence Activation when enchanted to +5. Mana Burn effect added. -->
+		<restriction tradable="false" dropable="false" private-sellable="false"/>
+		<attributes weight="540" />
+		<crystal type="A"/>
+	</armor>
+
+	<item id="93077" name="Lucky Letter Box" type="NONE" icon="icon.bm_gold_relic_box">
+	<!-- Double-click to obtain a random letter. Collect the letters to obtain a great reward. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93078" name="Masterpiece Special Box" type="NONE" icon="icon.sayha2017_box_i01">
+	<!-- Double-click to obtain Sayha's Buff Scroll, Battle Scroll, Sayha's Storm Lv. 3, XP Boost Scroll - Exchangeable. If you are lucky, you can also gain one of various items. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93079" name="Glorious Treasure Chest" type="NONE" icon="icon.bm_gold_lure_special_box">
+	<!-- Double-click to obtain one of the following rare items at random: Venir's Talisman Lv. 24, +10 Sayha's Supreme Cloak Box, Lilith Rune - Lv. 10, Anakim Rune - Lv. 10, Antharas' Earring Lv. 3. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93080" name="Random Crafting 1 Time Recharge Stone" type="MATERIAL" icon="icon.etc_chaser_stone">
+	<!-- Recharge to get 1 more crafting count. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes price="2000000"/>
+	</item>
+
+	<item id="93081" name="Lv. 90 Achievement Box" type="NONE" icon="icon.etc_question_mark_i00">
+	<!-- Reward for players who reach Lv. 90. Obtain a special reward to celebrate reaching Lv. 90. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93082" name="Stone of Purity" type="MATERIAL" icon="icon.etc_crystal_ball_white_i00">
+	<!-- Stone containing great energy. Fills 1 crafting point when recharged. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="2000000"/>
+	</item>
+
+	<armor id="93083" name="Tree Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.arcana_sigil_i00">
+		<restriction/>
+		<attributes weight="920" price="19350" />
+		<crystal />
+	</armor>
+
+	<armor id="93084" name="Elven Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
+		<restriction/>
+		<attributes weight="1350" price="35000" />
+		<crystal type="D"/>
+	</armor>
+
+	<armor id="93085" name="Chain Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.belleface_i00">
+		<restriction/>
+		<attributes weight="1220" price="375000" />
+		<crystal type="C"/>
+	</armor>
+
+	<armor id="93086" name="Demon’s Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+		<restriction/>
+		<attributes weight="1280" price="156000" />
+		<crystal type="C"/>
+	</armor>
+
+	<armor id="93087" name="Blue Wolf Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.airtoil_i00">
+		<restriction/>
+		<attributes weight="1210" price="545000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93088" name="Avadon Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
+		<restriction/>
+		<attributes weight="1210" price="545000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93089" name="Doom Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.elos_i00">
+		<restriction/>
+		<attributes weight="1200" price="845000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93090" name="Zubei Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
+		<restriction/>
+		<attributes weight="1210" price="545000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93091" name="Dark Crystal Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
+		<restriction/>
+		<attributes weight="1190" price="935000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93092" name="Tallum Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
+		<restriction/>
+		<attributes weight="1190" price="935000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93093" name="Nightmare Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+		<restriction/>
+		<attributes weight="1180" price="1422000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93094" name="Majestic Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
+		<restriction/>
+		<attributes weight="1180" price="1422000" />
+		<crystal type="A"/>
+	</armor>
+
+	<item id="93095" name="Quest Start" type="NONE" icon="icon.etc_crest_blue_i00">
+	<!-- Quest Test Item -->
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="93096" name="Red Libra Merchants Coin " type="MATERIAL" icon="icon.etc_coins_gold_i00">
+	<!-- Coin issued by the Red Libra merchants. Obtain it by completing missions from Bodyguard Blue or from Grocer Pink. Use it to buy items from the Red Libra merchants. -->
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="100000"/>
+	</item>
+
+	<item id="93097" name="Red Libra Merchants Gold Bar " type="MATERIAL" icon="icon.etc_lump_gold_i00">
+	<!-- Gold bar issued by the Red Libra merchants in a very limited quantity. Obtain it by gambling Red Libra Coins through Wealthy Merchant Red. Item needed when exchanging sealed items for regular items through Artisan Black. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="2" price="100000000"/>
+	</item>
+
+	<item id="93098" name="Battle Scroll - Event" type="NONE" icon="icon.ev_charge_scroll">
+	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown is 1 minute. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93099" name="Common Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_special_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 10 Gemstones (B-grade). -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="2" price="1150000"/>
+	</item>
 
 </list>

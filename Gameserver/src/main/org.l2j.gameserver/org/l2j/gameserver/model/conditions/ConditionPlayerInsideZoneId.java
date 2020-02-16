@@ -12,7 +12,7 @@ import org.l2j.gameserver.world.zone.ZoneManager;
  * @author JoeAlisson
  */
 public class ConditionPlayerInsideZoneId extends Condition {
-    private final IntList zones;
+    public final IntList zones;
 
     public ConditionPlayerInsideZoneId(IntList zones) {
         this.zones = zones;

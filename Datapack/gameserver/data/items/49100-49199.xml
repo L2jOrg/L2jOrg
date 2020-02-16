@@ -65,7 +65,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32012" level="1"/>  <!-- High-Quality Dye Chest -->
+			<skill id="32012" level="1" value="-1"/>  <!-- High-grade Dye Chest -->
 		</skill-reducer>
 	</item>
 
@@ -74,7 +74,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32013" level="1"/>  <!-- Wind Dye Pack -->
+			<skill id="32013" level="1" value="-1"/>  <!-- Dye Chest -->
 		</skill-reducer>
 	</item>
 
@@ -300,7 +300,7 @@
 	</item>
 
 	<weapon id="49140" name="Horn of Glory" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_horn_of_glory_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 46. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 46. -->
 		<restriction freightable="false"/>
 		<attributes weight="540" price="2870000" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -317,7 +317,7 @@
 	</weapon>
 
 	<weapon id="49141" name="Horn of Glory" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_horn_of_glory_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 12%. -->
 		<restriction freightable="false"/>
 		<attributes weight="540" price="2870000" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -334,7 +334,7 @@
 	</weapon>
 
 	<weapon id="49142" name="Horn of Glory" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_horn_of_glory_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 16%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 16%. -->
 		<restriction freightable="false"/>
 		<attributes weight="540" price="2870000" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -351,7 +351,7 @@
 	</weapon>
 
 	<weapon id="49143" name="Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_chakram_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 62. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 62. -->
 		<restriction freightable="false"/>
 		<attributes weight="1440" price="7830000" commission-type="OTHER_ITEM"/>
 		<crystal type="B"/>
@@ -369,7 +369,7 @@
 	</weapon>
 
 	<weapon id="49144" name="Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_chakram_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 7%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 7%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1440" price="7830000" commission-type="OTHER_ITEM"/>
 		<crystal type="B"/>
@@ -387,7 +387,7 @@
 	</weapon>
 
 	<weapon id="49145" name="Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_chakram_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 260 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 260 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1440" price="7830000" commission-type="OTHER_ITEM"/>
 		<crystal type="B"/>
@@ -405,7 +405,7 @@
 	</weapon>
 
 	<weapon id="49146" name="Bastard Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_bastard_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1510" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -422,7 +422,7 @@
 	</weapon>
 
 	<weapon id="49147" name="Bastard Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_bastard_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1510" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -439,7 +439,7 @@
 	</weapon>
 
 	<weapon id="49148" name="Bastard Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_bastard_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1510" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -456,7 +456,7 @@
 	</weapon>
 
 	<weapon id="49149" name="Saber" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_saber_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -473,7 +473,7 @@
 	</weapon>
 
 	<weapon id="49150" name="Saber" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_saber_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -490,7 +490,7 @@
 	</weapon>
 
 	<weapon id="49151" name="Saber" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_saber_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1520" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -507,7 +507,7 @@
 	</weapon>
 
 	<weapon id="49152" name="Spinebone Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_spinebone_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1510" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -524,7 +524,7 @@
 	</weapon>
 
 	<weapon id="49153" name="Spinebone Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_spinebone_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1510" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -541,7 +541,7 @@
 	</weapon>
 
 	<weapon id="49154" name="Spinebone Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_spinebone_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1510" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -558,7 +558,7 @@
 	</weapon>
 
 	<weapon id="49155" name="Artisan's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_artisans_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1500" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -575,7 +575,7 @@
 	</weapon>
 
 	<weapon id="49156" name="Artisan's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_artisans_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1500" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -592,7 +592,7 @@
 	</weapon>
 
 	<weapon id="49157" name="Artisan's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_artisans_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1500" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -609,7 +609,7 @@
 	</weapon>
 
 	<weapon id="49158" name="Crimson Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_crimson_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1490" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -626,7 +626,7 @@
 	</weapon>
 
 	<weapon id="49159" name="Crimson Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_crimson_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1490" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -643,7 +643,7 @@
 	</weapon>
 
 	<weapon id="49160" name="Crimson Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_crimson_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1490" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -660,7 +660,7 @@
 	</weapon>
 
 	<weapon id="49161" name="Knight's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_knights_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1500" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -677,7 +677,7 @@
 	</weapon>
 
 	<weapon id="49162" name="Knight's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_knights_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1500" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -694,7 +694,7 @@
 	</weapon>
 
 	<weapon id="49163" name="Knight's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_knights_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1500" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -711,7 +711,7 @@
 	</weapon>
 
 	<weapon id="49164" name="Sword of Revolution" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_revolution_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1450" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -728,7 +728,7 @@
 	</weapon>
 
 	<weapon id="49165" name="Sword of Revolution" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_revolution_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1450" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -745,7 +745,7 @@
 	</weapon>
 
 	<weapon id="49166" name="Sword of Revolution" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_revolution_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1450" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -762,7 +762,7 @@
 	</weapon>
 
 	<weapon id="49167" name="Elven Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elven_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1470" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -779,7 +779,7 @@
 	</weapon>
 
 	<weapon id="49168" name="Elven Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elven_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1470" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -796,7 +796,7 @@
 	</weapon>
 
 	<weapon id="49169" name="Elven Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elven_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1470" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -813,7 +813,7 @@
 	</weapon>
 
 	<weapon id="49170" name="Elven Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elven_long_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1440" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -830,7 +830,7 @@
 	</weapon>
 
 	<weapon id="49171" name="Elven Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elven_long_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1440" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -847,7 +847,7 @@
 	</weapon>
 
 	<weapon id="49172" name="Elven Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elven_long_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1440" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -864,7 +864,7 @@
 	</weapon>
 
 	<weapon id="49173" name="Tomahawk" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tomahawk_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1780" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -882,7 +882,7 @@
 	</weapon>
 
 	<weapon id="49174" name="Tomahawk" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tomahawk_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1780" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -900,7 +900,7 @@
 	</weapon>
 
 	<weapon id="49175" name="Tomahawk" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tomahawk_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1780" price="644000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -918,7 +918,7 @@
 	</weapon>
 
 	<weapon id="49176" name="Morning Star" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_morning_star_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -936,7 +936,7 @@
 	</weapon>
 
 	<weapon id="49177" name="Morning Star" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_morning_star_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -954,7 +954,7 @@
 	</weapon>
 
 	<weapon id="49178" name="Morning Star" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_morning_star_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -972,7 +972,7 @@
 	</weapon>
 
 	<weapon id="49179" name="Hand Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_hand_axe_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1820" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -990,7 +990,7 @@
 	</weapon>
 
 	<weapon id="49180" name="Hand Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_hand_axe_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1820" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1008,7 +1008,7 @@
 	</weapon>
 
 	<weapon id="49181" name="Hand Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_hand_axe_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1820" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1026,7 +1026,7 @@
 	</weapon>
 
 	<weapon id="49182" name="Spiked Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_spike_club_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1044,7 +1044,7 @@
 	</weapon>
 
 	<weapon id="49183" name="Spiked Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_spike_club_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1062,7 +1062,7 @@
 	</weapon>
 
 	<weapon id="49184" name="Spiked Club" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_spike_club_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1750" price="967000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1080,7 +1080,7 @@
 	</weapon>
 
 	<weapon id="49185" name="Tarbar" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tarbar_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1730" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1098,7 +1098,7 @@
 	</weapon>
 
 	<weapon id="49186" name="Tarbar" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tarbar_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1730" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1116,7 +1116,7 @@
 	</weapon>
 
 	<weapon id="49187" name="Tarbar" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tarbar_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1730" price="1400000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1134,7 +1134,7 @@
 	</weapon>
 
 	<weapon id="49188" name="Bonebreaker" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_bonebreaker_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1152,7 +1152,7 @@
 	</weapon>
 
 	<weapon id="49189" name="Bonebreaker" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_bonebreaker_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1170,7 +1170,7 @@
 	</weapon>
 
 	<weapon id="49190" name="Bonebreaker" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_bonebreaker_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1800000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1188,7 +1188,7 @@
 	</weapon>
 
 	<weapon id="49191" name="Heavy Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_heavy_mace_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1800" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1206,7 +1206,7 @@
 	</weapon>
 
 	<weapon id="49192" name="Heavy Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_heavy_mace_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1800" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1224,7 +1224,7 @@
 	</weapon>
 
 	<weapon id="49193" name="Heavy Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_heavy_mace_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1800" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1242,7 +1242,7 @@
 	</weapon>
 
 	<weapon id="49194" name="Scalpel" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_scalpel_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1810" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1260,7 +1260,7 @@
 	</weapon>
 
 	<weapon id="49195" name="Scalpel" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_scalpel_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1810" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1278,7 +1278,7 @@
 	</weapon>
 
 	<weapon id="49196" name="Scalpel" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_scalpel_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1810" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1296,7 +1296,7 @@
 	</weapon>
 
 	<weapon id="49197" name="Work Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_work_hammer_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical Rate by 73. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 73. -->
 		<restriction freightable="false"/>
 		<attributes weight="1790" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1314,7 +1314,7 @@
 	</weapon>
 
 	<weapon id="49198" name="Work Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_work_hammer_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1790" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>
@@ -1332,7 +1332,7 @@
 	</weapon>
 
 	<weapon id="49199" name="Work Hammer" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_work_hammer_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 136 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 136 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1790" price="409000" commission-type="OTHER_ITEM"/>
 		<crystal type="D"/>

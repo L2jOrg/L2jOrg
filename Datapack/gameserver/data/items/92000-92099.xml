@@ -188,14 +188,14 @@
 	</item>
 
 	<armor id="92031" name="Talisman Bracelet Lv. 5" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i04">
-	<!-- Can equip 5 Talismans.\\n\\n<Special Effects>\\nHP Recovery Bonus/MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000. Two Talisman Bracelets of the same level can be combined. -->
+	<!-- Can equip 5 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000. Two Talisman Bracelets of the same level can be combined. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="92032" name="Talisman Bracelet Lv. 6" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i05">
-	<!-- Can equip 6 Talismans.\\n\\n<Special Effects>\\nHP Recovery Bonus/MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000. -->
+	<!-- Can equip 6 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -429,70 +429,70 @@
 		<crystal />
 	</armor>
 
-	<armor id="92066" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92066" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 2% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92067" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92067" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 3% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92068" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92068" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 5% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92069" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92069" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 8% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92070" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92070" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 16% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92071" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92071" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 17% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92072" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92072" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 18% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92073" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92073" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 19% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92074" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92074" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 20% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92075" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_tanzanite">
+	<armor id="92075" name="Onyx" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
 	<!-- When equipped, 21% damage bonus to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
@@ -569,70 +569,70 @@
 		<crystal />
 	</armor>
 
-	<armor id="92086" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92086" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- P./M. Critical Damage +2%. Effect does not stack with additional jewels of the same type.   -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92087" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92087" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- P./M. Critical Damage +4%. Effect does not stack with additional jewels of the same type.   -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92088" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92088" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- P./M. Critical Damage +6%. Effect does not stack with additional jewels of the same type.   -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92089" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92089" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- P./M. Critical Damage +8%. Effect does not stack with additional jewels of the same type.   -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92090" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92090" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- When equipped, P./M. Critical Damage +15%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92091" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92091" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- When equipped, P./M. Critical Damage +16%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92092" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92092" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- When equipped, P./M. Critical Damage +17%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92093" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92093" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- When equipped, P./M. Critical Damage +18%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92094" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92094" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- When equipped, P./M. Critical Damage +19%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="92095" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_onyx_i00">
+	<armor id="92095" name="Zircon" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_bloodstone_i00">
 	<!-- When equipped, P./M. Critical Damage +20%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />

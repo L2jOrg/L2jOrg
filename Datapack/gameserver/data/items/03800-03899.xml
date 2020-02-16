@@ -540,7 +540,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="180" immediate-effect="true" quest-item="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2060" level="1"/>  <!-- Healing Medicine -->
+			<skill id="2060" level="1" value="-1"/>  <!-- Healing Medicine -->
 		</skill-reducer>
 	</item>
 

@@ -377,7 +377,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3005" level="1" type="ON_CRITICAL_SKILL"/>  <!-- Bleed -->
+			<skill id="3005" level="1" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Bleed -->
 		</skills>
 	</weapon>
 
@@ -401,31 +401,31 @@
 	</item>
 
 	<item id="1667" name="Spellbook: Summon Shadow" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Summon Shadow. Used by Dark Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Summon Shadow. Used by Dark Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1668" name="Spellbook: Summon Mew the Cat" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Summon Mew the Cat. Used by Human Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Summon Mew the Cat. Used by Human Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1669" name="Spellbook: Summon Boxer the Unicorn" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Summon Boxer the Unicorn. Used by Elven Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Summon Boxer the Unicorn. Used by Elven Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1670" name="Spellbook: Summon Mirage the Unicorn" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Summon Mirage the Unicorn. Used by Elven Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Summon Mirage the Unicorn. Used by Elven Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1671" name="Spellbook: Summon Silhouette" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Summon Silhouette. Used by Dark Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Summon Silhouette. Used by Dark Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>

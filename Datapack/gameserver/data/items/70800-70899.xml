@@ -4,8 +4,8 @@
 	<!-- Transforms you into White Assassin for 30 minutes. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +20. The effect persists through death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55692"/> <!-- Transformation Scroll: White Assassin -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55692" level="1" value="-1"/>  <!-- Transformation Scroll: White Assassin -->
 		</skill-reducer>
 	</item>
 
@@ -13,8 +13,8 @@
 	<!-- Makes you armor look like Blue Dynasty one. P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, Max. HP/MP +7%, Speed +5, P./ M. Accuracy +2, M. Critical Rate +20. Duration: 60 minutes. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55693"/> <!-- Blue Dynasty Transformation Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55693" level="1" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -22,13 +22,13 @@
 	<!-- Makes you armor look like Red Zubei one. P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P./ M. Accuracy +1, M. Critical Rate +10. Duration: 60 minutes. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55694"/> <!-- Red Zubei Transformation Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55694" level="1" value="-1"/>  <!-- Red Zubei Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="70803" name="Transformation Support Cube" type="COUPON" icon="icon.cube_upgrade">
-	<!-- Double-click to get one of the Transformation Scrolls that remain active for one hour: Transformation Scroll: Pirate, Transformation Scroll: White Assassin, Transformation Scroll: Dark Assassin, Blue Dynasty Transformation Scroll, Red Zubei Transformation Scroll.\\n<Note:> \\nSupport Cube can be used only once a day. A new day starts every day at 6:30 a.m. Duration: 7 days. -->
+	<!-- Double-click to get one of the Transformation Scrolls that remain active for one hour: Transformation Scroll: Pirate, Transformation Scroll: White Assassin, Transformation Scroll: Dark Assassin, Blue Dynasty Transformation Scroll, Red Zubei Transformation Scroll.\n<Note:> \nSupport Cube can be used only once a day. A new day starts every day at 6:30 a.m. Duration: 7 days. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
@@ -46,14 +46,14 @@
 	</item>
 
 	<armor id="70806" name="Penitent's Manacles" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_leash_i00">
-	<!-- Bracelet used to summon Sin Eater Agathion and to activate Hour of Penitence.\\n -->
+	<!-- Bracelet used to summon Sin Eater Agathion and to activate Hour of Penitence.\n -->
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55701" level="1"/>  <!-- Summon Agathion - Sin Eater -->
-			<skill id="3267" level="1"/>  <!-- Seal Agathion -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55701" level="1" value="-1"/>  <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="3267" level="1" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
@@ -69,14 +69,14 @@
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
-	<item id="70809" name="Blessed Scroll: Enchant Weapon (A-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
-	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons.  Starting from +4 and above, Atk./ M. Atk. bonus doubles. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+	<item id="70809" name="Protection Scroll: Enchant Weapon (A-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
+	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="70810" name="Blessed Scroll: Enchant Armor (A-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
-	<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+	<item id="70810" name="Protection Scroll: Enchant Armor (A-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
+	<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. Can be safely enchanted to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
@@ -217,10 +217,10 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55710" level="1" type="ON_EQUIP"/>  <!-- Put on Lv. 4 Brooch -->
-			<skill id="55711" level="1" type="ON_UNEQUIP"/>  <!-- Remove Lv. 4 Brooch -->
-			<skill id="55712" level="1"/>  <!-- Lv. 4 Brooch -->
-			<skill id="55713" level="1"/>  <!-- Lv. 4 Brooch - Additional Effect -->
+			<skill id="55710" level="1" type="ON_EQUIP" value="-1"/>  <!-- Equip Lv. 4 Brooch -->
+			<skill id="55711" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Remove Lv. 4 Brooch -->
+			<skill id="55712" level="1" value="-1"/>  <!-- Lv. 4 Brooch -->
+			<skill id="55713" level="1" value="-1"/>  <!-- Lv. 4 Brooch - Additional Effect -->
 		</skills>
 	</armor>
 
@@ -300,49 +300,49 @@
 	</armor>
 
 	<item id="70844" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
-	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters.  Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\\n -->
+	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters.  Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="60"/>
 	</item>
 
 	<item id="70845" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
+	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70846" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
-	<!-- 5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters. Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\\n  -->
+	<!-- 5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters. Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\n  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="300"/>
 	</item>
 
 	<item id="70847" name="XP/SP Rune - 50% (5-hour) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
+	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70848" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
-	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters. Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\\n -->
+	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 60 characters. Can be combined with Irene' Hourglass effect. The remaining time decreases even when not playing.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="70849" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
+	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70850" name="Package: Irene' Hourglass (1 hour)" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
+	<!-- Double-click to obtain Irene' Hourglass - 1 Hour.\nIntended for Lv. 1 - 60 characters. Can be shared within account through Dimensional Merchant. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70851" name="High-grade Fishing XP Growth Amulet" type="RUNE" icon="icon.fishing_zone_ticket">
-	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%, while fishing. The remaining time decreases even when not playing.\\n -->
+	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%, while fishing. The remaining time decreases even when not playing.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
@@ -354,7 +354,7 @@
 	</item>
 
 	<item id="70853" name="Expertise Rune (C-grade)" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
-	<!-- 7-day item. When in inventory, gives Expertise C Skill. The remaining time decreases even when not playing.\\n -->
+	<!-- 7-day item. When in inventory, gives Expertise C Skill. The remaining time decreases even when not playing.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
@@ -366,7 +366,7 @@
 	</item>
 
 	<item id="70855" name="Rune of Feather" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
-	<!-- 7-day item. If stored in the inventory, increases the weight limit by 20%. The remaining time decreases even when not playing.\\n -->
+	<!-- 7-day item. If stored in the inventory, increases the weight limit by 20%. The remaining time decreases even when not playing.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
@@ -378,23 +378,23 @@
 	</item>
 
 	<armor id="70857" name="Squeaking Shoes" type="NONE" body-part="FEET" icon="icon.armor_t02_b_i00">
-	<!-- Makes a unique sound when walking and running in them. Occupies boots slot. No-grade item, impossible to enchant. Do not appears on charater when equipped.\\n -->
+	<!-- Makes a unique sound when walking and running in them. Occupies boots slot. No-grade item, impossible to enchant. Do not appears on charater when equipped.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="70858" name="Irene' Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP and SP bonus for 1 hour while hunting.\\nIntended for Lv. 1 - 60 characters. Can be combined with XP/SP Runeeffect. Effect remains after death.\\n  -->
+	<!-- When used, provides 50% XP and SP bonus for 1 hour while hunting.\nIntended for Lv. 1 - 60 characters. Can be combined with XP/SP Runeeffect. Effect remains after death.\n  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55720"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55720" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70859" name="Scroll: Summon Storm" type="NONE" icon="icon.scrl_of_storm">
-	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Intended for Lv. 40 - 51 characters. Storm Energy does not disappear after character's death. Can be combined with Irene' Hourglass and XP/SP Runeeffect.\\n -->
+	<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Intended for Lv. 40 - 51 characters. Storm Energy does not disappear after character's death. Can be combined with Irene' Hourglass and XP/SP Runeeffect.\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 	</item>
@@ -502,7 +502,7 @@
 	</item>
 
 	<armor id="70877" name="Elmoreden Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmoreden_cloak_normal">
-	<!-- Cloak with the crest of the ancient Elmoreden Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+	<!-- Cloak with the crest of the ancient Elmoreden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -512,7 +512,7 @@
 	</armor>
 
 	<armor id="70878" name="Aden Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_aden_cloak_normal">
-	<!-- Cloak with the crest of the ancient Aden Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+	<!-- Cloak with the crest of the ancient Aden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -522,7 +522,7 @@
 	</armor>
 
 	<armor id="70879" name="Elmore Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmore_cloak_normal">
-	<!-- Cloak with the crest of the ancient Elmore Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+	<!-- Cloak with the crest of the ancient Elmore Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -532,7 +532,7 @@
 	</armor>
 
 	<armor id="70880" name="Ferios Cloak" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_perios_cloak_normal">
-	<!-- Cloak with the crest of the ancient Ferios Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\\nUse Life Stone - Ancient Empire at +10 to bestow an additional effect. -->
+	<!-- Cloak with the crest of the ancient Ferios Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level.\nUse Life Stone - Ancient Empire at +10 to bestow an additional effect. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -542,7 +542,7 @@
 	</armor>
 
 	<armor id="70881" name="Elmoreden Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmoreden_cloak_normal">
-	<!-- Legendary cloak with the crest of the ancient Elmoreden Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Elmoreden at +15 to add a second effect. -->
+	<!-- Legendary cloak with the crest of the ancient Elmoreden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Elmoreden at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -553,7 +553,7 @@
 	</armor>
 
 	<armor id="70882" name="Aden Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_aden_cloak_normal">
-	<!-- Legendary cloak with the crest of the ancient Aden Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Aden at +15 to add a second effect. -->
+	<!-- Legendary cloak with the crest of the ancient Aden Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Aden at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -564,7 +564,7 @@
 	</armor>
 
 	<armor id="70883" name="Elmore Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_elmore_cloak_normal">
-	<!-- Legendary cloak with the crest of the ancient Elmore Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Elmore at +15 to add a second effect. -->
+	<!-- Legendary cloak with the crest of the ancient Elmore Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Elmore at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -575,7 +575,7 @@
 	</armor>
 
 	<armor id="70884" name="Ferios Cloak - Legendary" type="NONE" body-part="BACK" icon="BranchIcon.icon.g_bm_perios_cloak_normal">
-	<!-- Legendary cloak with the crest of the ancient Ferios Kingdom.\\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Ferios at +15 to add a second effect. -->
+	<!-- Legendary cloak with the crest of the ancient Ferios Kingdom.\nCan be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level\nUse Life Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Life Stone - Ferios at +15 to add a second effect. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
@@ -604,7 +604,7 @@
 	</item>
 
 	<item id="70888" name="Legendary Scroll" type="NONE" icon="BranchIcon.icon.g_bm_cloak_legend_scroll">
-	<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+	<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -666,14 +666,14 @@
 	</item>
 
 	<armor id="70898" name="Red Musketeer Garment" type="HEAVY" body-part="ALL_DRESS" icon="icon.inquisitor_red">
-	<!-- Previous armor is taken off and becomes unavailable when it's equipped.\\n -->
+	<!-- Previous armor is taken off and becomes unavailable when it's equipped.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70899" name="Gatekeeper Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
-	<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots.\\n -->
+	<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />

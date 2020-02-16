@@ -11,7 +11,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55043" level="1"/>  <!-- Rare Accessory Pack -->
+			<skill id="55043" level="1" value="-1"/>  <!-- Rare Accessory Pack -->
 		</skill-reducer>
 	</item>
 
@@ -36,16 +36,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55091" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
-			<skill id="55091" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 1 -->
+			<skill id="55091" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55091" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Fire Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -58,16 +58,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55093" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
-			<skill id="55093" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 2 -->
+			<skill id="55093" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55093" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Fire Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -80,16 +80,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55095" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
-			<skill id="55095" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 3 -->
+			<skill id="55095" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55095" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Fire Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -102,16 +102,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55097" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
-			<skill id="55097" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 4 -->
+			<skill id="55097" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55097" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Fire Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -124,16 +124,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55099" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
-			<skill id="55099" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Fire Dragon Pendant Lv. 5 -->
+			<skill id="55099" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
+			<skill id="55099" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Fire Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -146,16 +146,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55101" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
-			<skill id="55101" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 1 -->
+			<skill id="55101" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55101" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Water Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -168,16 +168,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55103" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
-			<skill id="55103" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 2 -->
+			<skill id="55103" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55103" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Water Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -190,16 +190,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55105" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
-			<skill id="55105" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 3 -->
+			<skill id="55105" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55105" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Water Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -212,16 +212,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55107" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
-			<skill id="55107" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 4 -->
+			<skill id="55107" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55107" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Water Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -234,16 +234,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55109" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
-			<skill id="55109" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Water Dragon Pendant Lv. 5 -->
+			<skill id="55109" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
+			<skill id="55109" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Water Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -256,16 +256,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55111" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
-			<skill id="55111" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 1 -->
+			<skill id="55111" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55111" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Wind Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -278,16 +278,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55113" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
-			<skill id="55113" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 2 -->
+			<skill id="55113" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55113" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Wind Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -300,16 +300,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55115" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
-			<skill id="55115" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 3 -->
+			<skill id="55115" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55115" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Wind Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -322,16 +322,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55117" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
-			<skill id="55117" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 4 -->
+			<skill id="55117" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55117" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Wind Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -344,16 +344,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55119" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
-			<skill id="55119" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Wind Dragon Pendant Lv. 5 -->
+			<skill id="55119" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
+			<skill id="55119" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Wind Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -366,16 +366,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55122" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
-			<skill id="55122" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 1 -->
+			<skill id="55122" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55122" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 1 Earth Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -388,16 +388,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55124" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
-			<skill id="55124" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 2 -->
+			<skill id="55124" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55124" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 2 Earth Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -410,16 +410,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55126" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
-			<skill id="55126" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 3 -->
+			<skill id="55126" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55126" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 3 Earth Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -432,16 +432,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55128" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
-			<skill id="55128" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 4 -->
+			<skill id="55128" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55128" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 4 Earth Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -454,16 +454,16 @@
 			<stat type="pDef" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="55130" level="1" type="ON_ENCHANT" value="1"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="2" type="ON_ENCHANT" value="2"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="3" type="ON_ENCHANT" value="3"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="4" type="ON_ENCHANT" value="4"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="5" type="ON_ENCHANT" value="5"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="6" type="ON_ENCHANT" value="6"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="7" type="ON_ENCHANT" value="7"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="8" type="ON_ENCHANT" value="8"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="9" type="ON_ENCHANT" value="9"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
-			<skill id="55130" level="10" type="ON_ENCHANT" value="10"/>  <!-- Enchantment Effect: Land Dragon Pendant Lv. 5 -->
+			<skill id="55130" level="1" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="2" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="3" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="4" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="5" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="6" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="7" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="8" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="9" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
+			<skill id="55130" level="10" type="ON_ENCHANT" value="-1"/>  <!-- Lv. 5 Earth Dragon's Pendant Enchant Effect -->
 		</skills>
 	</armor>
 
@@ -472,8 +472,8 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29704" chance="100000"/>  <!-- Fire Dragon Pendant Lv. 1 -->
-			<item id="49469" min-count="10" max-count="10" chance="100000"/>  <!-- Pendant Polish -->
+			<item id="29704" chance="100000000"/>  <!-- Fire Dragon Pendant Lv. 1 -->
+			<item id="49469" min-count="10" max-count="10" chance="100000000"/>  <!-- Pendant Polish -->
 		</extract>
 	</item>
 
@@ -500,7 +500,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29724" min-count="10" max-count="10" chance="100000"/>  <!-- Fire Dragon's Pendant Box -->
+			<item id="29724" min-count="10" max-count="10" chance="100000000"/>  <!-- Fire Dragon's Pendant Box -->
 		</extract>
 	</item>
 
@@ -527,8 +527,8 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29724" min-count="30" max-count="30" chance="100000"/>  <!-- Fire Dragon's Pendant Box -->
-			<item id="90138" chance="100000"/>  <!-- Pendant Glittering Varnish -->
+			<item id="29724" min-count="30" max-count="30" chance="100000000"/>  <!-- Fire Dragon's Pendant Box -->
+			<item id="90138" chance="100000000"/>  <!-- Pendant Glittering Varnish -->
 		</extract>
 	</item>
 
@@ -574,26 +574,26 @@
 		<attributes/>
 	</item>
 
-	<item id="29740" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00">
+	<item id="29740" name="Scroll: Enchant Weapon (B-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29741" name="Scroll: Enchant Armor (B-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00">
-	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+	<item id="29741" name="Scroll: Enchant Armor (B-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00">
+	<!-- Increases P. Def. by 1 for B-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29742" name="Blessed Scroll: Enchant Weapon (B-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
+	<item id="29742" name="Protection Scroll: Enchant Weapon (B-grade) - Exchangeable" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29743" name="Blessed Scroll: Enchant Armor (B-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
-	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+	<item id="29743" name="Protection Scroll: Enchant Armor (B-grade) - Exchangeable" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
+	<!-- Increases P. Def. by 1 for B-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
@@ -605,26 +605,26 @@
 	</item>
 
 	<item id="29745" name="Premium Coin" type="NONE" icon="BranchIcon.Icon.g_bm_premium_coin_i00">
-	<!-- Coin received for purchasing promotional items. Exchange through the Dimensional Merchant for various items.  -->
+	<!-- Coin received for purchasing promotional items. Exchange through the Store Manager for various items. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="29746" name="Mysterious Soulshot (B-grade)" type="NONE" icon="icon.bm_spirit_bullet_red">
-	<!-- Soulshot containing the light of Spirits; instantly inflicts a powerful attack on the enemy. Used with B-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- Soulshot containing the light of Spirits; instantly inflicts a powerful attack on the enemy. Used with B-grade weapons. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="55139" level="1"/>  <!-- TODO Skill not found -->
+			<skill id="55139" level="1" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
 	<item id="29747" name="Mysterious Blessed Spiritshot (B-grade)" type="NONE" icon="icon.bm_spell_shot_red">
-	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with B-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with B-grade weapons. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="55140" level="1"/>  <!-- TODO Skill not found -->
+			<skill id="55140" level="1" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
@@ -633,7 +633,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29746" min-count="100" max-count="100" chance="100000"/>  <!-- Mysterious Soulshot (B-grade) -->
+			<item id="29746" min-count="100" max-count="100" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
 		</extract>
 	</item>
 
@@ -642,7 +642,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29747" min-count="100" max-count="100" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="29747" min-count="100" max-count="100" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
 		</extract>
 	</item>
 
@@ -651,9 +651,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29746" min-count="3000" max-count="3000" chance="100000"/>  <!-- Mysterious Soulshot (B-grade) -->
-			<item id="29648" min-count="12" max-count="12" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29012" min-count="15" max-count="15" chance="100000"/>  <!-- 2nd Class Transfer Buff Scroll -->
+			<item id="29746" min-count="3000" max-count="3000" chance="100000000"/>  <!-- Mysterious Soulshot (B-grade) -->
+			<item id="29648" min-count="12" max-count="12" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29012" min-count="15" max-count="15" chance="100000000"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -662,9 +662,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29747" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
-			<item id="29648" min-count="12" max-count="12" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29012" min-count="15" max-count="15" chance="100000"/>  <!-- 2nd Class Transfer Buff Scroll -->
+			<item id="29747" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="29648" min-count="12" max-count="12" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29012" min-count="15" max-count="15" chance="100000000"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -681,7 +681,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3271" level="1"/>  <!-- Blue Talisman - P. Crit. -->
+			<skill id="3271" level="1" value="-1"/>  <!-- Blue Talisman - P. Crit. -->
 		</skills>
 	</armor>
 
@@ -691,7 +691,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3272" level="1"/>  <!-- Blue Talisman - P. Atk. -->
+			<skill id="3272" level="1" value="-1"/>  <!-- Blue Talisman - P. Atk. -->
 		</skills>
 	</armor>
 
@@ -701,7 +701,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3273" level="1"/>  <!-- Blue Talisman - P. Def. -->
+			<skill id="3273" level="1" value="-1"/>  <!-- Blue Talisman - P. Def. -->
 		</skills>
 	</armor>
 
@@ -711,7 +711,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3274" level="1"/>  <!-- Blue Talisman - Physical Skill Evasion Rate -->
+			<skill id="3274" level="1" value="-1"/>  <!-- Blue Talisman - Physical Skill Evasion Rate -->
 		</skills>
 	</armor>
 
@@ -721,7 +721,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3275" level="1"/>  <!-- Blue Talisman - M. Crit. -->
+			<skill id="3275" level="1" value="-1"/>  <!-- Blue Talisman - M. Crit. -->
 		</skills>
 	</armor>
 
@@ -731,7 +731,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3276" level="1"/>  <!-- Blue Talisman - M. Atk. -->
+			<skill id="3276" level="1" value="-1"/>  <!-- Blue Talisman - M. Atk. -->
 		</skills>
 	</armor>
 
@@ -741,7 +741,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3277" level="1"/>  <!-- Blue Talisman - M. Def. -->
+			<skill id="3277" level="1" value="-1"/>  <!-- Blue Talisman - M. Def. -->
 		</skills>
 	</armor>
 
@@ -751,7 +751,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3278" level="1"/>  <!-- Blue Talisman - Magic Skill Evasion Rate -->
+			<skill id="3278" level="1" value="-1"/>  <!-- Blue Talisman - Magic Skill Evasion Rate -->
 		</skills>
 	</armor>
 
@@ -761,7 +761,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3279" level="1"/>  <!-- Blue Talisman - Max. HP -->
+			<skill id="3279" level="1" value="-1"/>  <!-- Blue Talisman - Max. HP -->
 		</skills>
 	</armor>
 
@@ -771,7 +771,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3280" level="1"/>  <!-- Blue Talisman - Max. MP -->
+			<skill id="3280" level="1" value="-1"/>  <!-- Blue Talisman - Max. MP -->
 		</skills>
 	</armor>
 
@@ -781,7 +781,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3281" level="1"/>  <!-- Grey Talisman Box - Guard -->
+			<skill id="3281" level="1" value="-1"/>  <!-- Grey Talisman Box - Guard -->
 		</skills>
 	</armor>
 
@@ -791,7 +791,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3282" level="1"/>  <!-- Grey Talisman - Denial -->
+			<skill id="3282" level="1" value="-1"/>  <!-- Grey Talisman - Denial -->
 		</skills>
 	</armor>
 
@@ -801,7 +801,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3283" level="1"/>  <!-- Grey Talisman - Benefaction -->
+			<skill id="3283" level="1" value="-1"/>  <!-- Grey Talisman - Benefaction -->
 		</skills>
 	</armor>
 
@@ -811,7 +811,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3284" level="1"/>  <!-- Grey Talisman - Block -->
+			<skill id="3284" level="1" value="-1"/>  <!-- Grey Talisman - Block -->
 		</skills>
 	</armor>
 
@@ -821,7 +821,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3285" level="1"/>  <!-- Grey Talisman - Gravity -->
+			<skill id="3285" level="1" value="-1"/>  <!-- Grey Talisman - Gravity -->
 		</skills>
 	</armor>
 
@@ -831,7 +831,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3286" level="1"/>  <!-- Grey Talisman - Bond -->
+			<skill id="3286" level="1" value="-1"/>  <!-- Grey Talisman - Bond -->
 		</skills>
 	</armor>
 
@@ -841,7 +841,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3271" level="1"/>  <!-- Blue Talisman - P. Crit. -->
+			<skill id="3271" level="1" value="-1"/>  <!-- Blue Talisman - P. Crit. -->
 		</skills>
 	</armor>
 
@@ -851,7 +851,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3272" level="1"/>  <!-- Blue Talisman - P. Atk. -->
+			<skill id="3272" level="1" value="-1"/>  <!-- Blue Talisman - P. Atk. -->
 		</skills>
 	</armor>
 
@@ -861,7 +861,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3273" level="1"/>  <!-- Blue Talisman - P. Def. -->
+			<skill id="3273" level="1" value="-1"/>  <!-- Blue Talisman - P. Def. -->
 		</skills>
 	</armor>
 
@@ -871,7 +871,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3274" level="1"/>  <!-- Blue Talisman - Physical Skill Evasion Rate -->
+			<skill id="3274" level="1" value="-1"/>  <!-- Blue Talisman - Physical Skill Evasion Rate -->
 		</skills>
 	</armor>
 
@@ -881,7 +881,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3275" level="1"/>  <!-- Blue Talisman - M. Crit. -->
+			<skill id="3275" level="1" value="-1"/>  <!-- Blue Talisman - M. Crit. -->
 		</skills>
 	</armor>
 
@@ -891,7 +891,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3276" level="1"/>  <!-- Blue Talisman - M. Atk. -->
+			<skill id="3276" level="1" value="-1"/>  <!-- Blue Talisman - M. Atk. -->
 		</skills>
 	</armor>
 
@@ -901,7 +901,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3277" level="1"/>  <!-- Blue Talisman - M. Def. -->
+			<skill id="3277" level="1" value="-1"/>  <!-- Blue Talisman - M. Def. -->
 		</skills>
 	</armor>
 
@@ -911,7 +911,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3278" level="1"/>  <!-- Blue Talisman - Magic Skill Evasion Rate -->
+			<skill id="3278" level="1" value="-1"/>  <!-- Blue Talisman - Magic Skill Evasion Rate -->
 		</skills>
 	</armor>
 
@@ -921,7 +921,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3279" level="1"/>  <!-- Blue Talisman - Max. HP -->
+			<skill id="3279" level="1" value="-1"/>  <!-- Blue Talisman - Max. HP -->
 		</skills>
 	</armor>
 
@@ -931,7 +931,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3280" level="1"/>  <!-- Blue Talisman - Max. MP -->
+			<skill id="3280" level="1" value="-1"/>  <!-- Blue Talisman - Max. MP -->
 		</skills>
 	</armor>
 
@@ -941,7 +941,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3287" level="1"/>  <!-- Yellow Talisman - Guard -->
+			<skill id="3287" level="1" value="-1"/>  <!-- Yellow Talisman - Guard -->
 		</skills>
 	</armor>
 
@@ -951,7 +951,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3288" level="1"/>  <!-- Yellow Talisman - Denial -->
+			<skill id="3288" level="1" value="-1"/>  <!-- Yellow Talisman - Denial -->
 		</skills>
 	</armor>
 
@@ -961,7 +961,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3289" level="1"/>  <!-- Yellow Talisman - Benefaction -->
+			<skill id="3289" level="1" value="-1"/>  <!-- Yellow Talisman - Benefaction -->
 		</skills>
 	</armor>
 
@@ -971,7 +971,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3290" level="1"/>  <!-- Yellow Talisman - Block -->
+			<skill id="3290" level="1" value="-1"/>  <!-- Yellow Talisman - Block -->
 		</skills>
 	</armor>
 
@@ -981,7 +981,7 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3291" level="1"/>  <!-- Yellow Talisman - Gravity -->
+			<skill id="3291" level="1" value="-1"/>  <!-- Yellow Talisman - Gravity -->
 		</skills>
 	</armor>
 
@@ -991,142 +991,142 @@
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3292" level="1"/>  <!-- Yellow Talisman - Bond -->
+			<skill id="3292" level="1" value="-1"/>  <!-- Yellow Talisman - Bond -->
 		</skills>
 	</armor>
 
 	<item id="29785" name="Blue Talisman Box - P. Crit." type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - P. Crit. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - P. Crit. (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29753" chance="100000"/>  <!-- Blue Talisman - P. Crit. -->
+			<item id="29753" chance="100000000"/>  <!-- Blue Talisman - P. Crit. -->
 		</extract>
 	</item>
 
 	<item id="29786" name="Blue Talisman Box - P. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - P. Atk. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - P. Atk. (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29754" chance="100000"/>  <!-- Blue Talisman - P. Atk. -->
+			<item id="29754" chance="100000000"/>  <!-- Blue Talisman - P. Atk. -->
 		</extract>
 	</item>
 
 	<item id="29787" name="Blue Talisman Box - P. Def." type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - P. Def. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - P. Def. (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29755" chance="100000"/>  <!-- Blue Talisman - P. Def. -->
+			<item id="29755" chance="100000000"/>  <!-- Blue Talisman - P. Def. -->
 		</extract>
 	</item>
 
 	<item id="29788" name="Blue Talisman Box - P. Skills Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - P. Skills Evasion (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - P. Skills Evasion (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29756" chance="100000"/>  <!-- Blue Talisman - P. Skills Evasion -->
+			<item id="29756" chance="100000000"/>  <!-- Blue Talisman - P. Skills Evasion -->
 		</extract>
 	</item>
 
 	<item id="29789" name="Blue Talisman Box - M. Crit." type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - M. Crit. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - M. Crit. (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29757" chance="100000"/>  <!-- Blue Talisman - M. Crit. -->
+			<item id="29757" chance="100000000"/>  <!-- Blue Talisman - M. Crit. -->
 		</extract>
 	</item>
 
 	<item id="29790" name="Blue Talisman Box - M. Atk." type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - M. Atk. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - M. Atk. (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29758" chance="100000"/>  <!-- Blue Talisman - M. Atk. -->
+			<item id="29758" chance="100000000"/>  <!-- Blue Talisman - M. Atk. -->
 		</extract>
 	</item>
 
 	<item id="29791" name="Blue Talisman Box - M. Def." type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - M. Def. (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - M. Def. (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29759" chance="100000"/>  <!-- Blue Talisman - M. Def. -->
+			<item id="29759" chance="100000000"/>  <!-- Blue Talisman - M. Def. -->
 		</extract>
 	</item>
 
 	<item id="29792" name="Blue Talisman Box - M. Skills Evasion" type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - M. Skills Evasion (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - M. Skills Evasion (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29760" chance="100000"/>  <!-- Blue Talisman - M. Skills Evasion -->
+			<item id="29760" chance="100000000"/>  <!-- Blue Talisman - M. Skills Evasion -->
 		</extract>
 	</item>
 
 	<item id="29793" name="Blue Talisman Box - Max. HP" type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - Max. HP (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - Max. HP (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29761" chance="100000"/>  <!-- Blue Talisman - Max. HP -->
+			<item id="29761" chance="100000000"/>  <!-- Blue Talisman - Max. HP -->
 		</extract>
 	</item>
 
 	<item id="29794" name="Blue Talisman Box - Max. MP" type="NONE" icon="icon.etc_treasure_box_i01">
-	<!-- By double-clicking it, you will get Blue Talisman - Max. MP (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Blue Talisman - Max. MP (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29762" chance="100000"/>  <!-- Blue Talisman - Max. MP -->
+			<item id="29762" chance="100000000"/>  <!-- Blue Talisman - Max. MP -->
 		</extract>
 	</item>
 
 	<item id="29795" name="Grey Talisman Box - Guard" type="NONE" icon="icon.etc_treasure_box_i05">
-	<!-- By double-clicking it, you will get Grey Talisman - Guard (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Grey Talisman - Guard (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29763" chance="100000"/>  <!-- Grey Talisman - Guard -->
+			<item id="29763" chance="100000000"/>  <!-- Grey Talisman - Guard -->
 		</extract>
 	</item>
 
 	<item id="29796" name="Grey Talisman Box - Denial" type="NONE" icon="icon.etc_treasure_box_i05">
-	<!-- By double-clicking it, you will get Grey Talisman - Denial (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Grey Talisman - Denial (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29764" chance="100000"/>  <!-- Grey Talisman - Denial -->
+			<item id="29764" chance="100000000"/>  <!-- Grey Talisman - Denial -->
 		</extract>
 	</item>
 
 	<item id="29797" name="Grey Talisman Box - Benefaction" type="NONE" icon="icon.etc_treasure_box_i05">
-	<!-- By double-clicking it, you will get Grey Talisman - Benefaction (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Grey Talisman - Benefaction (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29765" chance="100000"/>  <!-- Grey Talisman - Benefaction -->
+			<item id="29765" chance="100000000"/>  <!-- Grey Talisman - Benefaction -->
 		</extract>
 	</item>
 
 	<item id="29798" name="Grey Talisman Box - Blocking" type="NONE" icon="icon.etc_treasure_box_i05">
-	<!-- By double-clicking it, you will get Grey Talisman - Blocking (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Grey Talisman - Blocking (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29766" chance="100000"/>  <!-- Grey Talisman - Blocking -->
+			<item id="29766" chance="100000000"/>  <!-- Grey Talisman - Blocking -->
 		</extract>
 	</item>
 
 	<item id="29799" name="Grey Talisman Box - Gravity" type="NONE" icon="icon.etc_treasure_box_i05">
-	<!-- By double-clicking it, you will get Grey Talisman - Gravity (for 1 hour). \\n\\n<Note:>\\nFor items obtained from a chest, there are restrictions regarding movement. -->
+	<!-- By double-clicking it, you will get Grey Talisman - Gravity (for 1 hour). \n\n<Note:>\nFor items obtained from a chest, there are restrictions regarding movement. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29767" chance="100000"/>  <!-- Grey Talisman - Gravity -->
+			<item id="29767" chance="100000000"/>  <!-- Grey Talisman - Gravity -->
 		</extract>
 	</item>
 

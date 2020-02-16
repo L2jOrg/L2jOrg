@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<item id="92800" name="Lance Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Lance. Can also be sold at ordinary shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1871429"/>
+	</item>
+
+	<item id="92801" name="Deadman's Glory Stone" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Deadman's Glory. Can also be sold at ordinary shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1871429"/>
+	</item>
+
+	<item id="92802" name="Art of Battle Axe Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Art of Battle Axe. Can also be sold at ordinary shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1871429"/>
+	</item>
+
+	<item id="92803" name="Evil Spirit Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make the Staff of Evil Spirits. May also be sold at ordinary shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1871429"/>
+	</item>
+
+	<item id="92804" name="Demon's Dagger Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Demon's Dagger. Can also be sold at ordinary shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1871429"/>
+	</item>
+
+	<item id="92805" name="Bellion Cestus Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Bellion Cestus. Can also be sold at ordinary shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1871429"/>
+	</item>
+
+	<item id="92806" name="Bow of Peril Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make a Bow of Peril. Can also be sold at ordinary shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1871429"/>
+	</item>
+
+	<item id="92807" name="Knuckle Duster Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Knuckle Duster. It can be bought from a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="77858"/>
+	</item>
+
+	<item id="92808" name="Abaddon Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Main ingredient definitely required for a Dwarf to make Abaddon Shield. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="574000"/>
+	</item>
+
+	<item id="92809" name="Sealed Dark Crystal Leather Armor Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Dark Crystal Leather Armor. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="267100"/>
+	</item>
+
+	<item id="92810" name="Sealed Tallum Leather Armor Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Tallum Leather Armor. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="434100"/>
+	</item>
+
+	<item id="92811" name="Sealed Leather Armor of Nightmare Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Leather Armor of Nightmare. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="660300"/>
+	</item>
+
+	<item id="92812" name="Sealed Majestic Leather Armor Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Majestic Leather Armor. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="660300"/>
+	</item>
+
+	<item id="92813" name="Sealed Dark Crystal Legging Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Dark Crystal Leggings. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="167000"/>
+	</item>
+
+	<item id="92814" name="Sealed Tallum Tunic Texture" type="MATERIAL" icon="icon.etc_leather_yellow_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Tallum Tunic. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="267100"/>
+	</item>
+
+	<item id="92815" name="Sealed Dark Crystal Robe Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Dark Crystal Robe. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="434100"/>
+	</item>
+
+	<item id="92816" name="Sealed Robe of Nightmare Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Robe of Nightmare. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="660300"/>
+	</item>
+
+	<item id="92817" name="Sealed Majestic Robe Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Majestic Robe. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="660300"/>
+	</item>
+
+	<item id="92818" name="Sealed Tallum Stocking Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Tallum Stockings. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="167000"/>
+	</item>
+
+	<item id="92819" name="Sealed Dark Crystal Shield Fragment" type="MATERIAL" icon="icon.etc_jewel_box_i00">
+	<!-- Key material that Dwarves need to make a Sealed Dark Crystal Shield. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="93500"/>
+	</item>
+
+	<item id="92820" name="Sealed Shield of Nightmares Fragment" type="MATERIAL" icon="icon.etc_jewel_box_i00">
+	<!-- Key material that Dwarves need to make a Sealed Shield of Nightmares. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="142200"/>
+	</item>
+
+	<item id="92821" name="Sealed Dark Crystal Boot Lining" type="MATERIAL" icon="icon.etc_piece_of_cloth_black_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Dark Crystal Boots. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="89000"/>
+	</item>
+
+	<item id="92822" name="Sealed Tallum Boot Lining" type="MATERIAL" icon="icon.etc_piece_of_cloth_black_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Tallum Boots. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="89000"/>
+	</item>
+
+	<item id="92823" name="Sealed Boots of Nightmare Lining" type="MATERIAL" icon="icon.etc_piece_of_cloth_black_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Boots of Nightmare. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="135500"/>
+	</item>
+
+	<item id="92824" name="Sealed Majestic Boot Lining" type="MATERIAL" icon="icon.etc_piece_of_cloth_black_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Majestic Boots. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="135500"/>
+	</item>
+
+	<item id="92825" name="Sealed Dark Crystal Glove Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Dark Crystal Gloves. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="89000"/>
+	</item>
+
+	<item id="92826" name="Sealed Tallum Glove Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Tallum Gloves. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="89000"/>
+	</item>
+
+	<item id="92827" name="Sealed Gauntlets of Nightmare Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Gauntlets of Nightmare. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="135500"/>
+	</item>
+
+	<item id="92828" name="Sealed Majestic Gauntlet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Majestic Gauntlets. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="135500"/>
+	</item>
+
+	<item id="92829" name="Sealed Dark Crystal Breastplate Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Dark Crystal Breastplate. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="356200"/>
+	</item>
+
+	<item id="92830" name="Sealed Tallum Plate Armor Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Tallum Plate Armor. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="578800"/>
+	</item>
+
+	<item id="92831" name="Sealed Armor of Nightmare Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Armor of Nightmare. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="880400"/>
+	</item>
+
+	<item id="92832" name="Sealed Majestic Plate Armor Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Majestic Plate Armor. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="880400"/>
+	</item>
+
+	<item id="92833" name="Sealed Dark Crystal Gaiter Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Essential ingredient needed by a Dwarf to make Sealed Dark Crystal Gaiters. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="222600"/>
+	</item>
+
+	<item id="92834" name="Sealed Dark Crystal Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Dark Crystal Helmet. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="133600"/>
+	</item>
+
+	<item id="92835" name="Sealed Tallum Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Tallum Helmet. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="133600"/>
+	</item>
+
+	<item id="92836" name="Sealed Helm of Nightmare Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Helm of Nightmare. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="203200"/>
+	</item>
+
+	<item id="92837" name="Sealed Majestic Circlet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Circlet. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="203200"/>
+	</item>
+
+	<item id="92838" name="Dragon Slayer Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Dragon Slayer. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92839" name="Berserker Blade Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Berserker Blade. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1226000"/>
+	</item>
+
+	<item id="92840" name="Heavy Sword Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Heavy Sword. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="136334"/>
+	</item>
+
+	<item id="92841" name="Meteor Shower Head" type="MATERIAL" icon="icon.etc_squares_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Meteor Shower. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92842" name="Elysian Head" type="MATERIAL" icon="icon.etc_squares_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make an Elysian. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92843" name="Soul Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Soul Bow. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92844" name="Carnage Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Carnage Bow. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92845" name="Bloody Orchid Head" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make Bloody Orchid. Can be sold. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92846" name="Soul Separator Head" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make Soul Separator. Can be sold. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92847" name="Dragon Grinder Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Dragon Grinder. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92848" name="Blood Tornado Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Blood Tornado. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92849" name="Tallum Glaive Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Tallum Glaive. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92850" name="Halberd Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Halberd. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92851" name="Dasparion's Staff Head" type="MATERIAL" icon="icon.etc_squares_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Dasparion's Staff. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92852" name="Branch of the Mother Tree Head" type="MATERIAL" icon="icon.etc_squares_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Branch of the Mother Tree. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92853" name="Dark Legion's Edge Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Dark Legion's Edge. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92854" name="Sword of Miracles Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sword of Miracles. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92855" name="Elemental Sword Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make an Elemental Sword. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92856" name="Tallum Blade Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Tallum Blade. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92857" name="Sealed Phoenix Earring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Earring. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="100500"/>
+	</item>
+
+	<item id="92858" name="Sealed Majestic Earring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Earring. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="149800"/>
+	</item>
+
+	<item id="92859" name="Sealed Phoenix Necklace Beads" type="MATERIAL" icon="BranchSys2.icon.etc_sealed_phoenixbeads_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Necklace. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="134000"/>
+	</item>
+
+	<item id="92860" name="Sealed Majestic Necklace Beads" type="MATERIAL" icon="BranchSys2.icon.etc_sealed_majesticbeads_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Necklace. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="199800"/>
+	</item>
+
+	<item id="92861" name="Sealed Phoenix Ring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Ring. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="67000"/>
+	</item>
+
+	<item id="92862" name="Sealed Majestic Ring Gemstone" type="MATERIAL" icon="icon.etc_gem_blue_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Ring. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="99900"/>
+	</item>
+
+	<item id="92863" name="Forgotten Blade Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Forgotten Blade. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92864" name="Basalt Battlehammer Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Basalt Battlehammer. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92865" name="Imperial Staff Head" type="MATERIAL" icon="icon.etc_bark_blue_i00">
+	<!-- Key material that Dwarves need to make an Imperial Staff. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92866" name="Angel Slayer Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Angel Slayer. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92867" name="Dragon Hunter Axe Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Dragon Hunter Axe. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92868" name="Saint Spear Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Saint Spear. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92869" name="Demon Splinter Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Demon Splinter. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92870" name="Heaven's Divider Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Heaven's Divider. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92871" name="Arcana Mace Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Arcana Mace. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92872" name="Sealed Tateossian Earring Part" type="MATERIAL" icon="icon.etc_broken_crystal_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Tateossian Earring. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="327000"/>
+	</item>
+
+	<item id="92873" name="Sealed Tateossian Ring Gem" type="MATERIAL" icon="icon.etc_crystal_ball_gold_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Tateossian Ring. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="218000"/>
+	</item>
+
+	<item id="92874" name="Sealed Tateossian Necklace Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Tateossian Necklace. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="436100"/>
+	</item>
+
+	<item id="92875" name="Sealed Imperial Crusader Breastplate Part" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Imperial Crusader Breastplate. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1278100"/>
+	</item>
+
+	<item id="92876" name="Sealed Imperial Crusader Gaiter Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Imperial Crusader Gaiters. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="798800"/>
+	</item>
+
+	<item id="92877" name="Sealed Imperial Crusader Gauntlet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Imperial Crusader Gauntlets. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="319500"/>
+	</item>
+
+	<item id="92878" name="Sealed Imperial Crusader Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Imperial Crusader Boots. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="319500"/>
+	</item>
+
+	<item id="92879" name="Sealed Imperial Crusader Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Imperial Crusader Shield. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="335500"/>
+	</item>
+
+	<item id="92880" name="Sealed Imperial Crusader Helmet Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Imperial Crusader Helmet. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="479300"/>
+	</item>
+
+	<item id="92881" name="Sealed Draconic Leather Armor Part" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Draconic Leather Armor. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1557700"/>
+	</item>
+
+	<item id="92882" name="Sealed Draconic Leather Glove Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Draconic Leather Gloves. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="319500"/>
+	</item>
+
+	<item id="92883" name="Sealed Draconic Leather Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Draconic Leather Boots. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="319500"/>
+	</item>
+
+	<item id="92884" name="Sealed Draconic Leather Helmet Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Draconic Leather Helmet. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="479300"/>
+	</item>
+
+	<item id="92885" name="Sealed Major Arcana Robe Part" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Major Arcana Robe. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1557700"/>
+	</item>
+
+	<item id="92886" name="Sealed Major Arcana Glove Fabric" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Major Arcana Gloves. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="319500"/>
+	</item>
+
+	<item id="92887" name="Sealed Major Arcana Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Major Arcana Boots. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="319500"/>
+	</item>
+
+	<item id="92888" name="Sealed Major Arcana Circlet Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sealed Major Arcana Circlet. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="479300"/>
+	</item>
+
+	<item id="92889" name="Draconic Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Draconic Bow. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="4275940"/>
+	</item>
+
+	<item id="92890" name="Steel Sword Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Vital material used by Dwarves to make Steel Swords. Available at any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="136334"/>
+	</item>
+
+	<item id="92891" name="Infernal Master Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Infernal Master. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="466667"/>
+	</item>
+
+	<item id="92892" name="Spiritual Eye Piece" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Key material that Dwarves use to make a Spiritual Eye. Can be sold. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92893" name="Flaming Dragon Skull Piece" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Flaming Dragon Skull. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92894" name="Lesser Giant's Hammer Piece" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Vital material used by Dwarves to make Lesser Giant's Hammers. Available at any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2074100"/>
+	</item>
+
+	<item id="92895" name="Destroyer Hammer Piece" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Destroyer Hammer. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92896" name="Doom Crusher Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Doom Crusher. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1409800"/>
+	</item>
+
+	<item id="92897" name="Sirra's Blade Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sirra's Blade. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2696840"/>
+	</item>
+
+	<item id="92898" name="Sword of Ipos Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Sword of Ipos. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2696840"/>
+	</item>
+
+	<item id="92899" name="Barakiel's Axe Piece" type="MATERIAL" icon="icon.etc_bark_gold_i00">
+	<!-- Essential ingredient needed by a Dwarf to make a Barakiel's Axe. It can be sold at a regular store. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="2696840"/>
+	</item>
+
+</list>

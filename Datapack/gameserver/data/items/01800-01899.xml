@@ -87,24 +87,18 @@
 	<item id="1829" name="Scroll of Escape: Clan Hall" type="SCROLL" icon="icon.etc_scroll_of_return_agit_i00">
 	<!-- Scroll that relocates you to your clan hall. If you don't have a clan hall, it will relocate you to the nearest village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2040" level="1"/>  <!-- Scroll of Escape: Clan Hall -->
+			<skill id="2040" level="1" value="-1"/>  <!-- Scroll of Escape: Clan Hall -->
 		</skill-reducer>
 	</item>
 
 	<item id="1830" name="Scroll of Escape: Castle" type="SCROLL" icon="icon.etc_scroll_of_return_castle_i00">
 	<!-- Scroll that relocates you to your castle. If you don't have a castle, it will relocate you to the nearest village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2041" level="1"/>  <!-- Scroll of Escape: Castle -->
+			<skill id="2041" level="1" value="-1"/>  <!-- Scroll of Escape: Castle -->
 		</skill-reducer>
 	</item>
 
@@ -113,7 +107,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2042" level="1"/>  <!-- Antidote -->
+			<skill id="2042" level="1" value="-1"/>  <!-- Antidote -->
 		</skill-reducer>
 	</item>
 
@@ -122,7 +116,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2043" level="1"/>  <!-- Greater Antidote -->
+			<skill id="2043" level="1" value="-1"/>  <!-- Greater Antidote -->
 		</skill-reducer>
 	</item>
 
@@ -131,7 +125,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" price="75" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2044" level="1"/>  <!-- Bandage -->
+			<skill id="2044" level="1" value="-1"/>  <!-- Bandage -->
 		</skill-reducer>
 	</item>
 
@@ -140,7 +134,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="20" price="180" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2045" level="1"/>  <!-- Emergency Dressing -->
+			<skill id="2045" level="1" value="-1"/>  <!-- Emergency Dressing -->
 		</skill-reducer>
 	</item>
 
@@ -149,7 +143,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="3" price="7" commission-type="SOULSHOT" for-npc="true" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2039" level="1"/>  <!-- Soulshot (No-grade) -->
+			<skill id="2039" level="1" value="-1"/>  <!-- Soulshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -274,7 +268,7 @@
 	</item>
 
 	<item id="1856" name="Amulet: Chant of Life" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Chant of Life spell. Used by Orc Shamans.\\nRequired level: 20 -->
+	<!-- Amulet required for the Chant of Life spell. Used by Orc Shamans.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="70900" name="Stylish Straw Hat" type="NONE" body-part="HAIR_ALL" icon="BranchSys3.icon.g_straw_hat">
-	<!-- Uses 2 hair accessory slots.\\n -->
+	<!-- Uses 2 hair accessory slots.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70901" name="Crown" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_comfortspirit_hat_a_i00">
-	<!-- Uses 2 hair accessory slots.\\n -->
+	<!-- Uses 2 hair accessory slots.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70902" name="Party Mask" type="NONE" body-part="HAIR" icon="icon.etc_party_mask_i00">
-	<!-- Uses 1 hair accessory slot.\\n -->
+	<!-- Uses 1 hair accessory slot.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
@@ -55,7 +55,7 @@
 	</item>
 
 	<item id="70908" name="Ancient Kingdom's Coin" type="NONE" icon="icon.bm_nebit_coin">
-	<!-- A coin imbued with the mysterious power of the Ancient Kingdom. Exchange it for a special gift through the Dimensional Merchant. -->
+	<!-- A coin imbued with the mysterious power of the Ancient Kingdom. Exchange it for a special gift through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -85,7 +85,7 @@
 	</item>
 
 	<armor id="70913" name="Fire Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">
-	<!-- A pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +5 Fire Dragon Pendant - Lv. 5.\\n -->
+	<!-- A pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +5 Fire Dragon Pendant - Lv. 5.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
@@ -95,7 +95,7 @@
 	</armor>
 
 	<armor id="70914" name="Water Dragon Pendant - Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-	<!-- A pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +5 Water Dragon Pendant - Lv. 5.\\n -->
+	<!-- A pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +5 Water Dragon Pendant - Lv. 5.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
@@ -121,7 +121,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51038" level="1"/>  <!-- Battle Box Lv. 1 -->
+			<skill id="51038" level="1" value="-1"/>  <!-- Battle Box Lv. 1 -->
 		</skill-reducer>
 	</item>
 
@@ -130,7 +130,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51039" level="1"/>  <!-- Battle Box Lv. 2 -->
+			<skill id="51039" level="1" value="-1"/>  <!-- Battle Box Lv. 2 -->
 		</skill-reducer>
 	</item>
 
@@ -139,7 +139,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51040" level="1"/>  <!-- Battle Box Lv. 3 -->
+			<skill id="51040" level="1" value="-1"/>  <!-- Battle Box Lv. 3 -->
 		</skill-reducer>
 	</item>
 
@@ -148,7 +148,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51041" level="1"/>  <!-- Battle Box Lv. 4 -->
+			<skill id="51041" level="1" value="-1"/>  <!-- Battle Box Lv. 4 -->
 		</skill-reducer>
 	</item>
 
@@ -164,7 +164,7 @@
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55884" level="1"/>  <!-- Bracelet of Duty - Lv. 6 -->
+			<skill id="55884" level="1" value="-1"/>  <!-- Bracelet of Duty - Lv. 6 -->
 		</skills>
 	</armor>
 
@@ -174,7 +174,7 @@
 		<attributes weight="100" duration="1440" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -184,7 +184,7 @@
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -194,7 +194,7 @@
 		<attributes weight="100" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -204,7 +204,7 @@
 		<attributes weight="100" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -214,7 +214,7 @@
 		<attributes weight="100" duration="86400" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -224,7 +224,7 @@
 		<attributes weight="100" duration="129600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -234,7 +234,7 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -244,7 +244,7 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="2"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="2" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -254,8 +254,8 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="3"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="51025" level="3" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
 		</skills>
 	</armor>
 
@@ -265,102 +265,102 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="4"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" level="1"/>  <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
 		</skills>
 	</armor>
 
 	<armor id="70933" name="Agathion - Love (Event)" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- 7-day item. Equipping it in the main slot summons the Agathion.\\n -->
+	<!-- 7-day item. Equipping it in the main slot summons the Agathion.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70934" name="Agathion - Nevit's Herald Kanna" type="NONE" body-part="AGATHION" icon="icon.pi_high_agathion_bracelet_i00">
-	<!-- Equipping it in the main slot summons the Nevit's Herald Kanna Agathion.\\n -->
+	<!-- Equipping it in the main slot summons the Nevit's Herald Kanna Agathion.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70935" name="Agathion - Uthanka" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_uthanka_i00">
-	<!-- Equipping it in the main slot summons the Uthanka Agathion.\\n -->
+	<!-- Equipping it in the main slot summons the Uthanka Agathion.\n -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70960" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- Equipping it in the main slot summons the Singer & Dancer Agathion.\\n -->
+	<armor id="70960" name="Agathion - Singer &amp; Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- Equipping it in the main slot summons the Singer & Dancer Agathion.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
-			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="55270" level="1"/>  <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1"/>  <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1"/>  <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
-	<armor id="70961" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- 7-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
+	<armor id="70961" name="Agathion - Singer &amp; Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- 7-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \n\n<Special Ability>\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\n\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\n\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
-			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
-			<skill id="55270" level="1" /> <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1" /> <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1" /> <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
-	<armor id="70962" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- 30-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
+	<armor id="70962" name="Agathion - Singer &amp; Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- 30-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \n\n<Special Ability>\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\n\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\n\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
-			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
-			<skill id="55270" level="1" /> <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1" /> <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1" /> <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
-	<armor id="70963" name="Agathion - Singer and Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- 90-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\\n\\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\\n\\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
+	<armor id="70963" name="Agathion - Singer &amp; Dancer " type="NONE" body-part="AGATHION" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- 90-day item. Equipping it in the main slot summons the Singer & Dancer Agathion and activates the Special Ability option. \n\n<Special Ability>\n1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes.\n\n2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes.\n\n3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind do not stack.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="129600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
-			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
-			<skill id="55270" level="1" /> <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1" /> <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1" /> <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
 	<armor id="70964" name="Agathion - Griffin" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Equipping it in the main slot summons the Griffin Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\n - STR/ INT +1. -->
+	<!-- Equipping it in the main slot summons the Griffin Agathion and activates the Special Ability option. \n\n<Special Ability>\n - STR/ INT +1. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70965" name="Agathion - Cheerleader Mae" type="NONE" body-part="AGATHION" icon="BranchSys.icon.br_aga_local2009_g_i00">
-	<!-- Equipping it in the main slot summons the Cheerleader Mae Agathion and activates the Special Ability option. \\n\\n<Special Ability>\\nCheerleader Mae's Support : P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage +3%. -->
+	<!-- Equipping it in the main slot summons the Cheerleader Mae Agathion and activates the Special Ability option. \n\n<Special Ability>\nCheerleader Mae's Support : P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage +3%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
@@ -535,70 +535,70 @@
 	</armor>
 
 	<armor id="70990" name="Agathion - Minion Eye" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Equipping it in the main slot summons the Minion Eye Agathion.\\n -->
+	<!-- Equipping it in the main slot summons the Minion Eye Agathion.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70991" name="Agathion - Minion Eye" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- 7-day item. Equipping it in the main slot summons the Minion Eye Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Monster Eye Corage Lv 1\\n - Monster Eye Blessed Resurrection Lv 1 -->
+	<!-- 7-day item. Equipping it in the main slot summons the Minion Eye Agathion and activates the Special Ability option.\n\n\n<Special Ability>\n - Monster Eye Corage Lv 1\n - Monster Eye Blessed Resurrection Lv 1 -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" />
 		<crystal />
 	</armor>
 
 	<armor id="70992" name="Agathion - Minion Eye" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- 30-day item. Equipping it in the main slot summons the Minion Eye Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Monster Eye Courage Lv 1\\n - Monster Eye Blessed Resurrection Lv 1 -->
+	<!-- 30-day item. Equipping it in the main slot summons the Minion Eye Agathion and activates the Special Ability option.\n\n\n<Special Ability>\n - Monster Eye Courage Lv 1\n - Monster Eye Blessed Resurrection Lv 1 -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" />
 		<crystal />
 	</armor>
 
 	<armor id="70993" name="Agathion - Matryoshka" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Equipping it in the main slot summons the Matryoshka Agathion.\\n -->
+	<!-- Equipping it in the main slot summons the Matryoshka Agathion.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70994" name="Agathion - Matryoshka" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- 7-day item. Equipping it in the main slot summons the Matryoshka Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Matryoshka's Blessing Lv 1\\n - Matryoshka's Gift Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
+	<!-- 7-day item. Equipping it in the main slot summons the Matryoshka Agathion and activates the Special Ability option.\n\n\n<Special Ability>\n - Matryoshka's Blessing Lv 1\n - Matryoshka's Gift Lv 1\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" />
 		<crystal />
 	</armor>
 
 	<armor id="70995" name="Agathion - Matryoshka" type="NONE" body-part="AGATHION" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- 30-day item. Equipping it in the main slot summons the Matryoshka Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Matryoshka's Blessing Lv 1\\n - Matryoshka's Gift Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
+	<!-- 30-day item. Equipping it in the main slot summons the Matryoshka Agathion and activates the Special Ability option.\n\n\n<Special Ability>\n - Matryoshka's Blessing Lv 1\n - Matryoshka's Gift Lv 1\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" />
 		<crystal />
 	</armor>
 
 	<armor id="70996" name="Agathion - Babayaga" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.br_babayaga_i00">
-	<!-- Equipping it in the main slot summons the Babayaga Agathion.\\n -->
+	<!-- Equipping it in the main slot summons the Babayaga Agathion.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
 	</armor>
 
 	<armor id="70997" name="Agathion - Babayaga" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.br_babayaga_i00">
-	<!-- 7-day item. Equipping it in the main slot summons the Babayaga Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Babayaga's Courage Lv 1\\n - Babayaga's Serenade Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
+	<!-- 7-day item. Equipping it in the main slot summons the Babayaga Agathion and activates the Special Ability option.\n\n\n<Special Ability>\n - Babayaga's Courage Lv 1\n - Babayaga's Serenade Lv 1\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" />
 		<crystal />
 	</armor>
 
 	<armor id="70998" name="Agathion - Babayaga" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.br_babayaga_i00">
-	<!-- 30-day item. Equipping it in the main slot summons the Babayaga Agathion and activates the Special Ability option.\\n\\n\\n<Special Ability>\\n - Babayaga's Courage Lv 1\\n - Babayaga's Serenade Lv 1\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
+	<!-- 30-day item. Equipping it in the main slot summons the Babayaga Agathion and activates the Special Ability option.\n\n\n<Special Ability>\n - Babayaga's Courage Lv 1\n - Babayaga's Serenade Lv 1\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" />
 		<crystal />
 	</armor>
 
 	<item id="70999" name="Agathion - Love (7-day) Pack - Event" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Double-click to obtain Agathion - Love (7-day) - Event.\\n -->
+	<!-- Double-click to obtain Agathion - Love (7-day) - Event.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>

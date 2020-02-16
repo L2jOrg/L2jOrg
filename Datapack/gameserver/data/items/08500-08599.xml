@@ -27,9 +27,6 @@
 	<armor id="8559" name="Coronet" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_flower_cap_i00">
 	<!-- Hair accessory worn by a bride at her wedding ceremony. Female only.  -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player sex="FEMALE"/>
-		</condition>
 		<attributes weight="10" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 	</armor>

@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<item id="93100" name="Advanced Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_rare_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 5 Gemstones (A-grade). -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="2" price="1500000"/>
+	</item>
+
+	<item id="93101" name="High-grade Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_unique_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (B-grade).  -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="2" price="4500000"/>
+	</item>
+
+	<item id="93102" name="Top-grade Life Stone - Shield/Sigil" type="NONE" icon="icon.renewal_mineral_r">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (A-grade).  -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="2" price="13500000"/>
+	</item>
+
+	<item id="93103" name="Spellbook: Holy Ray" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Spellbook needed to learn Holy Ray. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="93104" name="Scroll: Ground Smash" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll to learn Ground Smash. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="93105" name="Scroll: Prophecy of Light" type="NONE" icon="icon.etc_magic_book_white_i00">
+	<!-- Scroll to learn Prophecy of Light. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="93106" name="Scroll: Mass Dryad Root" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll to learn Mass Dryad Root. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="93107" name="Scroll: Mass Wind Shackle" type="NONE" icon="icon.etc_magic_book_red_i00">
+	<!-- Scroll to learn Mass Wind Shackle. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="93108" name="Blueprint: Mechanical Fist" type="NONE" icon="icon.etc_plan_i00">
+	<!-- Blueprint to learn Mechanical Fist. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="120" price="1000000"/>
+	</item>
+
+	<armor id="93109" name="Tree Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.arcana_sigil_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="920" price="19350" />
+		<crystal />
+	</armor>
+
+	<armor id="93110" name="Elven Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1350" price="35000" />
+		<crystal type="D"/>
+	</armor>
+
+	<armor id="93111" name="Chain Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.belleface_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1220" price="375000" />
+		<crystal type="C"/>
+	</armor>
+
+	<armor id="93112" name="Demon’s Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1280" price="156000" />
+		<crystal type="C"/>
+	</armor>
+
+	<armor id="93113" name="Blue Wolf Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.airtoil_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1210" price="545000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93114" name="Avadon Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1210" price="545000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93115" name="Doom Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.elos_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1200" price="845000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93116" name="Zubei Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1210" price="545000" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="93117" name="Dark Crystal Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1190" price="935000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93118" name="Tallum Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1190" price="935000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93119" name="Nightmare Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="1422000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93120" name="Majestic Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1180" price="1422000" />
+		<crystal type="A"/>
+	</armor>
+
+	<item id="93121" name="Common Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_special_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 10 Gemstones (B-grade). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="1150000"/>
+	</item>
+
+	<item id="93122" name="Advanced Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_rare_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 5 Gemstones (A-grade). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="1500000"/>
+	</item>
+
+	<item id="93123" name="High-grade Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_unique_i00">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (B-grade).  -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="4500000"/>
+	</item>
+
+	<item id="93124" name="Top-grade Life Stone - Shield/Sigil" type="NONE" icon="icon.renewal_mineral_r">
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (A-grade).  -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="13500000"/>
+	</item>
+
+	<armor id="93125" name="Goddard Circlet" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i03">
+	<!-- Shield Circlet. Can be worn by the Lord of Goddard Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" price="500000" />
+		<crystal />
+	</armor>
+
+	<item id="93126" name="Unknown Safe" type="NONE" icon="icon.bm_pirate_battle_box">
+	<!-- We don’t know what’s inside the safe, but it definitely has some treasures. Don’t trust anyone. Hide it somewhere no one will find it. -->
+		<restriction stackable="true" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes quest-item="true"/>
+	</item>
+
+	<armor id="93127" name="Jin Death Knight - Red" type="NONE" body-part="ALL_DRESS" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+		<restriction sellable="false"/>
+		<attributes />
+		<crystal />
+	</armor>
+
+	<armor id="93128" name="Ignis Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_fire_1">
+	<!-- Increases P. Atk. and M. Atk. when equipped. Starting +5, Hold/Sleep/Paralysis Attack Rate increase.\n\nSummon Ignis Agathion can be used.\n\n<Note>\nIf it is equipped with the Aquarius, Leo Agathion, only the effect of the Ignis Agathion will be applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="50" />
+		<crystal />
+	</armor>
+
+	<armor id="93129" name="Nebula Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_water_1">
+	<!-- Increases P./M. Critical Rate when equipped. Starting +5, Skill Cooldown decreases.\n\nSummon Agathion Nebula can be used.\n\n<Note>\nIf it is equipped with the Scorpio, Capricorn Agathion, only the effect of the Nebula Agathion will be applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="50" />
+		<crystal />
+	</armor>
+
+	<armor id="93130" name="Procella Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_wind_1">
+	<!-- Increases Atk. Spd./Casting Spd. when equipped. Starting +5, MP Consumption decreases.\n\nSummon Agathion Procella can be used.\n\n<Note>\nIf it is equipped with the Libra, Sagittarius Agathion, only the effect of the Procella Agathion will be applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="50" />
+		<crystal />
+	</armor>
+
+	<armor id="93131" name="Petram Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_earth_1">
+	<!-- Increases P. Def. and M. Def. when equipped. Starting +5, Stun/Mental Attack Rate increase.\n\nSummon Petram Agathion can be used.\n\n<Note>\nIf it is equipped with the Taurus, Virgo Agathion, only the effect of the Petram Agathion will be applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="50" />
+		<crystal />
+	</armor>
+
+	<armor id="93132" name="Agathion Joy" type="NONE" body-part="AGATHION" icon="icon.pleasure_agathion_i00">
+	<!-- Increases Sayha's Grace when equipped. Starting +5, Max HP/MP/CP and XP/SP Gain increase.\n\nSummon Shiny can be used.\n\n<Note>\nIf it is equipped with the Gemini Agathion, only the effect of the Shiny Agathion will be applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="50" />
+		<crystal />
+	</armor>
+
+	<item id="93133" name="Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
+	<!-- An enchant scroll for Agathion. Increases the Agathion’s M. Def. Can enchant safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="93134" name="Ignis Agathion Pack" type="NONE" icon="icon.agathion_fire_1">
+	<!-- Double-click to obtain the Ignis Agathion.\n\nWhen equipped with the Ignis Agathion, P. Atk. and M. Atk. increase, and starting from +5, Hold/Sleep/Paralysis Attack Rate increase. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93135" name="Nebula Agathion Pack" type="NONE" icon="icon.agathion_water_1">
+	<!-- Double-click to obtain the Nebula Agathion.\n\nWhen equipped with the Nebula Agathion, P./M. Critical Rate increase, and starting from +5, Skill Cooldown decreases. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93136" name="Procella Agathion Pack" type="NONE" icon="icon.agathion_wind_1">
+	<!-- Double-click to obtain the Procella Agathion.\n\nWhen equipped with the Procella Agathion, Atk. Spd and Casting Spd. increase, and starting from +5, MP Consumption decreases. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93137" name="Petram Agathion Pack" type="NONE" icon="icon.agathion_earth_1">
+	<!-- Double-click to obtain the Petram Agathion.\n\nWhen equipped with the Petram Agathion, P. Def. and M. Def. increase, and starting from +5, Stun/Mental Attack Rate increase. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93138" name="Shiny Agathion Pack" type="NONE" icon="icon.pleasure_agathion_i00">
+	<!-- Double-click to obtain the Shiny Agathion.\n\nWhen equipped with the Shiny Agathion, Sayha's Grace increases, and starting from +5, Max HP/MP/CP and XP/SP Gain increase. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93139" name="Freeze Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t94_u_i01">
+	<!-- <Options>\nCON +2\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20%\n\nWhen enchanted +5 or higher, Max HP/MP increase. -->
+		<restriction/>
+		<attributes weight="7700" price="3562000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93140" name="Freeze Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t94_l_i01">
+	<!-- <Options>\nCON +1\nWeight Limit +1000\nM. Def. +10\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20%\n\nWhen enchanted +5 or higher, Max HP/MP increase. -->
+		<restriction/>
+		<attributes weight="3320" price="2226000" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93141" name="Freeze Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t94_u_i01">
+	<!-- <Options>\nCON +2\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20%\n\nWhen enchanted +5 or higher, Max HP/MP increase. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="7700" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93142" name="Freeze Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t94_l_i01">
+	<!-- <Options>\nCON +1\nWeight Limit +1000\nM. Def. +10\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20%\n\nWhen enchanted +5 or higher, Max HP/MP increase. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="3320" />
+		<crystal type="A"/>
+	</armor>
+
+	<item id="93143" name="Castle Siege Support Box - Goddard" type="NONE" icon="Branchsys2.icon2.g_alegra_box">
+	<!-- Double-click to obtain 2-100 Sayha's Blessing. If you are lucky, you can also gain one of various items. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93144" name="+4 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +4 Enchanted Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93145" name="Transcendence Dungeon Extra Pass" type="NONE" icon="icon.etc_ticket_red_i00">
+	<!-- Extra pass to a daily instanced zone. Double-click to unbind Transcendence Dungeon <Epic>. Cannot be used if the instanced zone is not bound. Can be used only once a day outside of the instanced zone. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93146" name="Transcendence Dungeon Extra Pass" type="NONE" icon="icon.etc_ticket_red_i00">
+	<!-- Extra pass to a daily instanced zone. Double-click to unbind Transcendence Dungeon <Epic>. Cannot be used if the instanced zone is not bound. Can be used only once a day outside of the instanced zone. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93147" name="Tallum Blade Random Enchant Crafting" type="NONE" icon="icon.weapon_tallum_blade_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Tallum Blade. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93148" name="Dragon Slayer Random Enchant Crafting" type="NONE" icon="icon.weapon_dragon_slayer_i00">
+	<!-- Obtain a +0-+5 enchanted Sealed Dragon Slayer. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93149" name="Halberd Random Enchant Crafting" type="NONE" icon="icon.weapon_halbard_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Halberd. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93150" name="Elemental Sword Random Enchant Crafting" type="NONE" icon="icon.weapon_elemental_sword_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Elemental Sword. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93151" name="Sword of Miracles Random Enchant Crafting" type="NONE" icon="icon.weapon_sword_of_miracle_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Sword of Miracles. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93152" name="Elysian Random Enchant Crafting" type="NONE" icon="icon.weapon_elysian_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Elysian. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93153" name="Dasparion's Staff Random Enchant Crafting" type="NONE" icon="icon.weapon_dasparions_staff_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dasparion's Staff. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93154" name="Branch of the Mother Tree Random Enchant Crafting" type="NONE" icon="icon.weapon_worldtrees_branch_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Branch of the Mother Tree. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93155" name="Bloody Orchid Random Enchant Crafting" type="NONE" icon="icon.weapon_bloody_orchid_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Bloody Orchid. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93156" name="Soul Separator Random Enchant Crafting" type="NONE" icon="icon.weapon_soul_separator_i00">
+	<!-- Obtain a +0-+5 enchanted Sealed Soul Separator. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93157" name="Blood Tornado Random Enchant Crafting" type="NONE" icon="icon.weapon_blood_tornado_i00">
+	<!-- Obtain a +0-+5 enchanted Sealed Blood Tornado. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93158" name="Dragon Grinder Random Enchant Crafting" type="NONE" icon="icon.weapon_dragon_grinder_i00">
+	<!-- Obtain a +0-+5 enchanted Sealed Dragon Grinder. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93159" name="Carnage Bow Random Enchant Crafting" type="NONE" icon="icon.weapon_carnium_bow_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Carnage Bow. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93160" name="Soul Bow Random Enchant Crafting" type="NONE" icon="icon.weapon_soul_bow_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Soul Bow. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93161" name="Tallum Glaive Random Enchant Crafting" type="NONE" icon="icon.weapon_tallum_glaive_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Tallum Glaive. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93162" name="Dark Legion Random Enchant Crafting" type="NONE" icon="icon.weapon_dark_legions_edge_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dark Legion's Edge. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93163" name="Meteor Shower Random Enchant Crafting" type="NONE" icon="icon.weapon_meteor_shower_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Meteor Shower. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93164" name="Keshanberk*Keshanberk Random Enchant Crafting" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Keshanberk*Keshanberk. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93165" name="Keshanberk*Damascus Random Enchant Crafting" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Keshanberk*Damascus. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93166" name="Damascus*Damascus Random Enchant Crafting" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Damascus*Damascus. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93167" name="Infernal Master Random Enchant Crafting" type="NONE" icon="icon.weapon_inferno_master_i00">
+	<!-- Obtain a +0-+5 enchanted Sealed Inferno Master. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93168" name="Spiritual Eye Random Enchant Crafting" type="NONE" icon="icon.weapon_eye_of_soul_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Spiritual Eye. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93169" name="Flaming Dragon Skull Random Enchant Crafting" type="NONE" icon="icon.weapon_dragon_flame_head_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Flaming Dragon Skull. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93170" name="Destroyer Hammer Random Enchant Crafting" type="NONE" icon="icon.weapon_hammer_of_destroyer_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Destroyer Hammer. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93171" name="Doom Crusher Random Enchant Crafting" type="NONE" icon="icon.weapon_doom_crusher_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Doom Crusher. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93172" name="Sirra's Blade Random Enchant Crafting" type="NONE" icon="icon.weapon_sirr_blade_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Sirra's Blade. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93173" name="Sword of Ipos Random Enchant Crafting" type="NONE" icon="icon.weapon_sword_of_ipos_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Sword of Ipos. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93174" name="Barakiel's Axe Random Enchant Crafting" type="NONE" icon="icon.weapon_barakiel_axe_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Barakiel's Axe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93175" name="Behemoth' Tuning Fork Random Enchant Crafting" type="NONE" icon="icon.weapon_tuning_fork_of_behemoth_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Behemoth' Tuning Fork. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93176" name="Naga Storm Random Enchant Crafting" type="NONE" icon="icon.weapon_naga_storm_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Naga Storm. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93177" name="Tiphon's Spear Random Enchant Crafting" type="NONE" icon="icon.weapon_tiphon_spear_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Tiphon's Spear. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93178" name="Shyeed's Bow Random Enchant Crafting" type="NONE" icon="icon.weapon_shyid_bow_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Shyeed's Bow. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93179" name="Sobekk's Hurricane Random Enchant Crafting" type="NONE" icon="icon.weapon_sobekk_hurricane_i00">
+	<!-- Obtain a +0-+5 enchanted Sealed Sobekk's Hurricane. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93180" name="Themis' Tongue Random Enchant Crafting" type="NONE" icon="icon.weapon_tongue_of_themis_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Themis' Tongue. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93181" name="Cabrio's Hand Random Enchant Crafting" type="NONE" icon="icon.weapon_hand_of_cabrio_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Cabrio's Hand. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93182" name="Daimon Crystal Random Enchant Crafting" type="NONE" icon="icon.weapon_crystal_of_deamon_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Daimon Crystal. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93183" name="Tallum Blade*Damascus Random Enchant Crafting" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Tallum Blade*Damascus. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93184" name="Durendal Random Enchant Crafting" type="NONE" icon="icon.weapon_death_bringer_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Durendal. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93185" name="Undertaker Random Enchant Crafting" type="NONE" icon="icon.weapon_death_bringer_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Undertaker. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93186" name="Divine Pain Random Enchant Crafting" type="NONE" icon="icon.weapon_pain_of_godness_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Divine Pain. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93187" name="Éclair Bijou Random Enchant Crafting" type="NONE" icon="icon.weapon_greed_stinger_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Éclair Bijou. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93188" name="Lacerator Random Enchant Crafting" type="NONE" icon="icon.weapon_greed_stinger_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Lacerator. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93189" name="White Lightning Random Enchant Crafting" type="NONE" icon="icon.weapon_lightning_blaze_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol White Lightning. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93190" name="Dark Crystal Breastplate Random Enchant Crafting" type="NONE" icon="icon.armor_t74_u_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dark Crystal Breastplate. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93191" name="Armor of Nightmare Random Enchant Crafting" type="NONE" icon="icon.armor_t80_ul_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Armor of Nightmare. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93192" name="Dark Crystal Gaiters Random Enchant Crafting" type="NONE" icon="icon.armor_t74_l_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dark Crystal Gaiters. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93193" name="Dark Crystal Helmet Random Enchant Crafting" type="NONE" icon="icon.armor_helmet_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dark Crystal Helmet. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93194" name="Tallum Helmet Random Enchantment Crafting" type="NONE" icon="icon.armor_helmet_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Tallum Helmet. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93195" name="Dark Crystal Shield Random Enchant Crafting" type="NONE" icon="icon.shield_dark_crystal_shield_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dark Crystal Shield. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93196" name="Tallum Plate Armor Random Enchant Crafting" type="NONE" icon="icon.armor_t77_ul_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Tallum Plate Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93197" name="Majestic Plate Armor Random Enchant Crafting" type="NONE" icon="icon.armor_t83_ul_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Majestic Plate Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93198" name="Dark Crystal Leather Armor Random Enchant Crafting" type="NONE" icon="icon.armor_t75_u_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dark Crystal Leather Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93199" name="Dark Crystal Leggings Random Enchant Crafting" type="NONE" icon="icon.armor_t75_l_i00">
+	<!-- Double-click to obtain +0 - +5 Enchanted Symbol Dark Crystal Leggings. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+</list>

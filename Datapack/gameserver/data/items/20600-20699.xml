@@ -6,9 +6,9 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21109" level="1"/>  <!-- Summon Agathion - Uthanka -->
-			<skill id="23087" level="1"/>  <!-- Uthanka Agathion Skill -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="21109" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23087" level="1" value="-1"/>  <!-- Uthanka Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 

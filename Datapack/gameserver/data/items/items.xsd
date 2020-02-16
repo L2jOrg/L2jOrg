@@ -20,7 +20,7 @@
                 <xs:sequence>
                     <xs:element name="attributes" type="WeaponAttributes"/>
                     <xs:element name="crystal" type="ItemCrystal"/>
-                    <xs:element name="damage" type="WeaponDamage"/>
+                    <xs:element name="damage" type="WeaponDamage" minOccurs="0"/>
                     <xs:element name="consume" type="WeaponConsume"/>
                     <xs:element name="stats" minOccurs="0" type="ItemStats"/>
                     <xs:element name="skills" minOccurs="0" type="SkillsType"/>

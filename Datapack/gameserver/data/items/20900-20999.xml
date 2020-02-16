@@ -12,8 +12,8 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="20900" chance="100000"/>  <!-- Santa Hat -->
-			<item id="14611" chance="100000"/>  <!-- Rudolph's Nose -->
+			<item id="20900" chance="100000000"/>  <!-- Santa Hat -->
+			<item id="14611" chance="100000000"/>  <!-- Rudolph's Nose -->
 		</extract>
 	</item>
 

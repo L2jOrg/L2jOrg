@@ -21,137 +21,137 @@
 	</item>
 
 	<item id="91603" name="Doll of Border - Frintezza" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- A 30-day item. Boosts abilities with Frintezza Doll's Spell when stored in the inventory. \\n\\n<Frintezza Doll's Spell Lv. 1>\\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
+	<!-- A 30-day item. Boosts abilities with Frintezza Doll's Spell when stored in the inventory. \n\n<Frintezza Doll's Spell Lv. 1>\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="91604" name="Frintezza Doll Lv. 1" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- Boosts abilities with Frintezza Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \\n\\n<Frintezza Doll's Spell Lv. 1>\\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
+	<!-- Boosts abilities with Frintezza Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \n\n<Frintezza Doll's Spell Lv. 1>\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91605" name="Frintezza Doll Lv 2" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- Boosts abilities with Frintezza Doll's Spell stored in the inventory. \\n\\n<Frintezza Doll's Spell Lv. 2>\\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +20%, Movement Speed +5 -->
+	<!-- Boosts abilities with Frintezza Doll's Spell stored in the inventory. \n\n<Frintezza Doll's Spell Lv. 2>\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +20%, Movement Speed +5 -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<armor id="91606" name="Advanced Virgo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">
-	<!-- Virgo Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Def. and Mental Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Virgo Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Virgo Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases M. Def. and Mental Atk. Rate. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Virgo Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91607" name="Advanced Capricorn Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
-	<!-- Capricorn Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Critical Rate and decreases cooldown of magic, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Capricorn Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Capricorn Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases M. Critical Rate and decreases cooldown of magic, song, and dance skills. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Capricorn Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91608" name="Advanced Libra Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
-	<!-- Libra Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Casting Spd. and decreases MP Consumption of magic, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Libra Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Libra Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases Casting Spd. and decreases MP Consumption of magic, song, and dance skills. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Libra Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91609" name="Advanced Taurus Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_tau_star_1">
-	<!-- Taurus Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Def. and Stun Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Taurus Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Taurus Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Def. and Stun Atk. Rate. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Taurus Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91610" name="Advanced Leo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
-	<!-- Leo Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Atk. and Paralysis Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Leo Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Leo Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Atk. and Paralysis Atk. Rate. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Leo Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91611" name="Advanced Scorpio Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
-	<!-- Scorpio Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Critical Rate and decreases cooldown of physical, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Scorpio Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Scorpio Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Critical Rate and decreases cooldown of physical, song, and dance skills. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Scorpio Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91612" name="Advanced Aquarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
-	<!-- Aquarius Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Atk. and Hold/Sleep Atk. Rate. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Aquarius Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Aquarius Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases M. Atk. and Hold/Sleep Atk. Rate. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Aquarius Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91613" name="Advanced Sagittarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
-	<!-- Sagittarius Agathion imbued with Fire Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Atk. Spd. and decreases MP Consumption of physical, song, and dance skills. Activates Fire Dragon Power from +6.\\n\\nCan be changed to Advanced Sagittarius Agathion (Earth Dragon) through NPC Pona. -->
+	<!-- Sagittarius Agathion imbued with Fire Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases Atk. Spd. and decreases MP Consumption of physical, song, and dance skills. Activates Fire Dragon Power from +6.\n\nCan be changed to Advanced Sagittarius Agathion (Earth Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91614" name="Advanced Virgo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">
-	<!-- Virgo Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Def. and Mental Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Virgo Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Virgo Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases M. Def. and Mental Atk. Rate. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Virgo Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91615" name="Advanced Capricorn Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
-	<!-- Capricorn Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Critical Rate and decreases cooldown of magic, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Capricorn Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Capricorn Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases M. Critical Rate and decreases cooldown of magic, song, and dance skills. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Capricorn Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91616" name="Advanced Libra Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
-	<!-- Libra Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Casting Spd. and decreases MP Consumption of magic, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Libra Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Libra Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases Casting Spd. and decreases MP Consumption of magic, song, and dance skills. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Libra Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91617" name="Advanced Taurus Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_tau_star_1">
-	<!-- Taurus Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Def. and Stun Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Taurus Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Taurus Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Def. and Stun Atk. Rate. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Taurus Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91618" name="Advanced Leo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
-	<!-- Leo Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Atk. and Paralysis Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Leo Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Leo Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Atk. and Paralysis Atk. Rate. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Leo Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91619" name="Advanced Scorpio Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
-	<!-- Scorpio Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases P. Critical Rate and decreases cooldown of physical, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Scorpio Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Scorpio Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases P. Critical Rate and decreases cooldown of physical, song, and dance skills. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Scorpio Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91620" name="Advanced Aquarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
-	<!-- Aquarius Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases M. Atk. and Hold/Sleep Atk. Rate. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Aquarius Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Aquarius Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases M. Atk. and Hold/Sleep Atk. Rate. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Aquarius Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91621" name="Advanced Sagittarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
-	<!-- Sagittarius Agathion imbued with Earth Dragon’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Atk. Spd. and decreases MP Consumption of physical, song, and dance skills. Activates Earth Dragon Power from +6.\\n\\nCan be changed to Advanced Sagittarius Agathion (Fire Dragon) through NPC Pona. -->
+	<!-- Sagittarius Agathion imbued with Earth Dragon’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases Atk. Spd. and decreases MP Consumption of physical, song, and dance skills. Activates Earth Dragon Power from +6.\n\nCan be changed to Advanced Sagittarius Agathion (Fire Dragon) through NPC Pona. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91622" name="Advanced Gemini Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_gem_star_1">
-	<!-- Gemini Agathion imbued with Agathion’s soul.\\n\\nCan be summoned when equipped in the main slot.\\nActivates its unique ability when equipped.\\n<Unique Ability>\\nIncreases Sayha's Grace effect and Max HP/MP. Increases Max CP from +6. -->
+	<!-- Gemini Agathion imbued with Agathion’s soul.\n\nCan be summoned when equipped in the main slot.\nActivates its unique ability when equipped.\n<Unique Ability>\nIncreases Sayha's Grace effect and Max HP/MP. Increases Max CP from +6. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -206,7 +206,7 @@
 	</item>
 
 	<item id="91631" name="Material Coupon" type="NONE" icon="icon.etc_exchange_ticket_i02">
-	<!-- Can be exchanged to a high-grade material through Dimensional Merchant.\\n<Exchange Fee> Adena 2,500,000. -->
+	<!-- Can be exchanged to a high-grade material through the Store Manager.\n<Exchange Fee> Adena 2,500,000. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -261,7 +261,7 @@
 	</item>
 
 	<armor id="91640" name="Refined Romantic Chapeau: Gold" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_gold">
-	<!-- Refined Romantic Chapeau: Gold. Occupies 2 hair accessory slots. \\n\\n<Active Skill>\\n1. Chapeau’s Escape: Quickly returns to a near village. Cooldown 20 minutes.\\n2. Mysterious Aura: Enlarges your head for 10 minutes. Cooldown 20 minutes. -->
+	<!-- Refined Romantic Chapeau: Gold. Occupies 2 hair accessory slots. \n\n<Active Skill>\n1. Chapeau’s Escape: Quickly returns to a near village. Cooldown 20 minutes.\n2. Mysterious Aura: Enlarges your head for 10 minutes. Cooldown 20 minutes. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -271,8 +271,8 @@
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39191"/> <!-- Sayha's Blessing -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39191" level="1" value="-1"/>  <!-- Sayha's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -314,13 +314,10 @@
 
 	<item id="91648" name="Escape - Clean the Yard" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Vollodos in Dark Elf Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false" olympiad-restricted="true"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
-		<attributes action="SKILL_REDUCE" commission-type="SCROLL_OTHER"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51383" level="1"/>
+			<skill id="51383" level="1" value="-1"/>  <!-- Scroll of Escape: Clean the Yard -->
 		</skill-reducer>
 	</item>
 
@@ -338,13 +335,10 @@
 
 	<item id="91651" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false" olympiad-restricted="true"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
-		<attributes action="SKILL_REDUCE" commission-type="SCROLL_OTHER"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51385" level="1"/>
+			<skill id="51385" level="1" value="-1"/>  <!-- Scroll of Escape: Disruptors -->
 		</skill-reducer>
 	</item>
 
@@ -396,46 +390,46 @@
 		<attributes price="600000"/>
 	</item>
 
-	<item id="91660" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
-	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 1 hour. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
+	<item id="91660" name="Shining Scroll of Mood Melody - 1-hour" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 1 hour. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="60" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39298"/> <!-- Shining Scroll of Mood Melody -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39298" level="1" value="-1"/>  <!-- Shining Mood Melody -->
 		</skill-reducer>
 	</item>
 
-	<item id="91661" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
-	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 4 hours. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
+	<item id="91661" name="Shining Scroll of Mood Melody - 4-hour" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 4 hours. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="240" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="32298"/> <!-- Shining Scroll of Mood Melody -->
+		<skill-reducer type="ItemSkills">
+			<skill id="32298" level="1" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
-	<item id="91662" name="Shining Scroll of Mood Melody" type="SCROLL" icon="icon.bm_magmeld">
-	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 8 hours. The buff effect doesn't disappear upon death\\n\\n<Note>\\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\\n\\n2. Its duration is equal to that of the last used item. -->
+	<item id="91662" name="Shining Scroll of Mood Melody - 8-hour" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 8 hours. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="480" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="32298"/> <!-- Shining Scroll of Mood Melody -->
+		<skill-reducer type="ItemSkills">
+			<skill id="32298" level="1" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
-	<item id="91663" name="L2 Coin" type="NONE" icon="icon.etc_11th_token">
+	<item id="91663" name="L2 Coin" type="NONE" icon="icon.bm_lcoin_i00">
 	<!-- Used to buy various items at the L2 Coin Shop. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="1"/>
 	</item>
 
-	<item id="91664" name="Scroll: 10,000 SP,," type="SCROLL" icon="icon.etc_sp_scroll2_i00">
+	<item id="91664" name="Scroll: 10,000 SP" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
 	<!-- A scroll that recharges 10,000 SP. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91665" name="Scroll: 100,000 SP,," type="SCROLL" icon="icon.etc_sp_scroll3_i00">
+	<item id="91665" name="Scroll: 100,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- A scroll that recharges 100,000 SP. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -445,8 +439,8 @@
 	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +100% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51398"/> <!-- Sayha's Storm Lv. 1 (Event) -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51398" level="1" value="-1"/>  <!-- Sayha's Storm Lv. 1 - Event -->
 		</skill-reducer>
 	</item>
 
@@ -458,25 +452,25 @@
 	</armor>
 
 	<item id="91668" name="Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
-	<!-- <Magic Lamp 1st Place Reward>\\nRecharges 100,000,000 XP and 2,700,000 SP. Take it to the Dimensional Merchant to exchange for a Red Arc that can be shared within the account. -->
+	<!-- <Magic Lamp 1st Place Reward>\nRecharges 100,000,000 XP and 2,700,000 SP. Take it to the Store Manager to exchange for a Red Arc that can be shared within the account. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91669" name="Purple Arc" type="SCROLL" icon="icon.r99_soul_stone_i05">
-	<!-- <Magic Lamp 2nd Place Reward>\\nRecharges 30,000,000 XP and 810,000 SP. Take it to the Dimensional Merchant to exchange for a Purple Arc that can be shared within the account. -->
+	<!-- <Magic Lamp 2nd Place Reward>\nRecharges 30,000,000 XP and 810,000 SP. Take it to the Store Manager to exchange for a Purple Arc that can be shared within the account. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91670" name="Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
-	<!-- <Magic Lamp 3rd Place Reward>\\nRecharges 10,000,000 XP and 270,000 SP. Take it to the Dimensional Merchant to exchange for a Blue Arc that can be shared within the account. -->
+	<!-- <Magic Lamp 3rd Place Reward>\nRecharges 10,000,000 XP and 270,000 SP. Take it to the Store Manager to exchange for a Blue Arc that can be shared within the account. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91671" name="Green Arc" type="SCROLL" icon="icon.r99_soul_stone_i04">
-	<!-- <Magic Lamp 4th Place Reward>\\nRecharges 5,000,000 XP and 135,000 SP. Take it to the Dimensional Merchant to exchange for a Green Arc that can be shared within the account. -->
+	<!-- <Magic Lamp 4th Place Reward>\nRecharges 5,000,000 XP and 135,000 SP. Take it to the Store Manager to exchange for a Green Arc that can be shared within the account. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -538,7 +532,7 @@
 			<stat type="randomDamage" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -574,7 +568,7 @@
 			<stat type="randomDamage" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -633,49 +627,49 @@
 	</weapon>
 
 	<item id="91681" name="Great Spear Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A charm imbued with Enchanted Great Spear Power.\\n\\n<Active Skill> Enchanted Great Spear Power: Double-click to obtain Top-grade +8 to +16 Enchanted Glaive (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A charm imbued with Enchanted Great Spear Power.\n\n<Active Skill> Enchanted Great Spear Power: Double-click to obtain Top-grade +8 to +16 Enchanted Glaive (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91682" name="Falchion Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A charm imbued with Enchanted Falchion Power.\\n\\n<Active Skill> Enchanted Falchion Power I: Double-click to obtain Top-grade +8 to +16 Enchanted Elven Long Sword (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\n Enchanted Falchion Power II: Double-click to obtain Top-grade +8 to +16 Enchanted Bastard*Crimson Sword (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A charm imbued with Enchanted Falchion Power.\n\n<Active Skill> Enchanted Falchion Power I: Double-click to obtain Top-grade +8 to +16 Enchanted Elven Long Sword (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\n Enchanted Falchion Power II: Double-click to obtain Top-grade +8 to +16 Enchanted Bastard*Crimson Sword (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91683" name="Iron Hammer Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A charm imbued with Enchanted Iron Hammer Power.\\n\\n<Active Skill> Enchanted Iron Hammer Power: Double-click to obtain Top-grade +8 to +16 Enchanted Bonebreaker (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A charm imbued with Enchanted Iron Hammer Power.\n\n<Active Skill> Enchanted Iron Hammer Power: Double-click to obtain Top-grade +8 to +16 Enchanted Bonebreaker (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91684" name="Voodoo Doll Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A charm imbued with Enchanted Voodoo Doll Power.\\n\\n<Active Skill> Enchanted Voodoo Doll Power: Double-click to obtain Top-grade +8 to +16 Enchanted Staff of Life (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A charm imbued with Enchanted Voodoo Doll Power.\n\n<Active Skill> Enchanted Voodoo Doll Power: Double-click to obtain Top-grade +8 to +16 Enchanted Staff of Life (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91685" name="Flanged Mace Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A charm imbued with Enchanted Flanged Mace Power.\\n\\n<Active Skill> Enchanted Flanged Mace Power: Double-click to obtain Top-grade +8 to +16 Enchanted Claymore (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A charm imbued with Enchanted Flanged Mace Power.\n\n<Active Skill> Enchanted Flanged Mace Power: Double-click to obtain Top-grade +8 to +16 Enchanted Claymore (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91686" name="Sword Breaker Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A charm imbued with Enchanted Sword Breaker Power.\\n\\n<Active Skill> Enchanted Sword Breaker Power: Double-click to obtain Top-grade +8 to +16 Enchanted Mithril Dagger (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A charm imbued with Enchanted Sword Breaker Power.\n\n<Active Skill> Enchanted Sword Breaker Power: Double-click to obtain Top-grade +8 to +16 Enchanted Mithril Dagger (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91687" name="Viper Fang Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A talisman imbued with Enchanted Viper Fang Power.\\n\\n<Active Skill> Enchanted Viper Fang Power: Double-click to obtain Top-grade +8 to +16 Enchanted Scallop Jamadhr (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A talisman imbued with Enchanted Viper Fang Power.\n\n<Active Skill> Enchanted Viper Fang Power: Double-click to obtain Top-grade +8 to +16 Enchanted Scallop Jamadhr (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91688" name="Compound Bow Charm" type="RUNE" icon="icon.bm_freya_bloody_rune">
-	<!-- 30-day item. A talisman imbued with Enchanted Compound Bow Power.\\n\\n<Active Skill> Enchanted Compound Bow Power: Double-click to obtain Top-grade +8 to +16 Enchanted Light Crossbow (D-grade) with a certain chance.\\n\\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\\nThis skill can be used only once a day. -->
+	<!-- 30-day item. A talisman imbued with Enchanted Compound Bow Power.\n\n<Active Skill> Enchanted Compound Bow Power: Double-click to obtain Top-grade +8 to +16 Enchanted Light Crossbow (D-grade) with a certain chance.\n\nItem cost: 1 Weapon Summoning Coupon, which can be bought at L2 Coin Shop.\nThis skill can be used only once a day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -686,12 +680,12 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91690" name="Maliss's HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
+	<item id="91690" name="Special HP Potion" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer>
-			<skill id="39123"/> <!-- Melissa's Healing Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39123" level="1" value="-1"/>  <!-- Special HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -731,19 +725,19 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91697" name="+7 Samurai Long Sword" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
+	<item id="91697" name="+7 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
 	<!-- Double-click to obtain +7 Enchanted Samurai Long Sword. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91698" name="+7 Demon's Staff" type="NONE" icon="icon.weapon_demons_staff_i00">
+	<item id="91698" name="+7 Demon's Staff Pack" type="NONE" icon="icon.weapon_demons_staff_i00">
 	<!-- Double-click to obtain +7 Enchanted Demon's Staff. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91699" name="+7 Mace of Underworld" type="NONE" icon="icon.weapon_mace_of_underworld_i00">
+	<item id="91699" name="+7 Mace of Underworld Pack" type="NONE" icon="icon.weapon_mace_of_underworld_i00">
 	<!-- Double-click to obtain +7 Enchanted Mace of Underworld. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>

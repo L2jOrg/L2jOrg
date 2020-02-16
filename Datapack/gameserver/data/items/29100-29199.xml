@@ -289,7 +289,7 @@
 	</item>
 
 	<item id="29148" name="Feather of Blessing" type="NONE" icon="icon.blessed_feather_i00">
-	<!-- Can resurrect at the spot if stored in the inventory. -->
+	<!-- Blessed feather that allows to resurrect right in the place of death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -297,84 +297,63 @@
 	<item id="29149" name="Scroll of Escape: Talking Island Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Talking Island. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32031" level="1"/>  <!-- Teleport Stone: Talking Island Village -->
+			<skill id="32031" level="1" value="-1"/>  <!-- Scroll of Escape: Talking Island Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="29150" name="Scroll of Escape: Elven Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Elven Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32032" level="1"/>  <!-- Teleport Stone: Elven Village -->
+			<skill id="32032" level="1" value="-1"/>  <!-- Scroll of Escape: Elven Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="29151" name="Scroll of Escape: Dark Elf Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Dark Elf Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32033" level="1"/>  <!-- Teleport Stone: Dark Elf Village -->
+			<skill id="32033" level="1" value="-1"/>  <!-- Scroll of Escape: Dark Elf Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="29152" name="Scroll of Escape: Orc Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Orc Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32034" level="1"/>  <!-- Teleport Stone: Orc Village -->
+			<skill id="32034" level="1" value="-1"/>  <!-- Scroll of Escape: Orc Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="29153" name="Scroll of Escape: Dwarven Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Dwarven Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32035" level="1"/>  <!-- Teleport Stone: Dwarven Village -->
+			<skill id="32035" level="1" value="-1"/>  <!-- Scroll of Escape: Dwarven Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="29154" name="Scroll of Escape: Gludin Village" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to Gludin Village. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32036" level="1"/>  <!-- Teleport Stone: Gludin Village -->
+			<skill id="32036" level="1" value="-1"/>  <!-- Scroll of Escape: Gludin Village -->
 		</skill-reducer>
 	</item>
 
 	<item id="29155" name="Scroll of Escape: Town of Gludio" type="NONE" icon="icon.etc_scroll_of_return_i04">
 	<!-- Magical scroll that relocates you to the Town of Gludio. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="5" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="32037" level="1"/>  <!-- Teleport Stone: Town of Gludio -->
+			<skill id="32037" level="1" value="-1"/>  <!-- Scroll of Escape: Town of Gludio -->
 		</skill-reducer>
 	</item>
 
@@ -995,7 +974,7 @@
 	</weapon>
 
 	<weapon id="29193" name="Sword of Solidarity" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_long_sword_i00">
-	<!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
+	<!-- Mithril sword crafted long ago in memory of the union between the Humans and the Elves. -->
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1300" price="18500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -1012,7 +991,7 @@
 	</weapon>
 
 	<weapon id="29194" name="Sword of Sentinel" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_broad_sword_i00">
-	<!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
+	<!-- Steel Sword issued to those fighters that have been acknowledged as guardians of the forest. -->
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1300" price="33600" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -1046,7 +1025,7 @@
 	</weapon>
 
 	<weapon id="29196" name="Butcher's Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_orcish_sword_i00">
-	<!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
+	<!-- Sword granted to young Orc Warriors who distinguished themselves at war. -->
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1450" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />

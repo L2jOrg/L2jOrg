@@ -15,7 +15,7 @@ public class ConditionPlayerFlyMounted extends Condition {
     private static final ConditionPlayerFlyMounted FLYING = new ConditionPlayerFlyMounted(true);
     private static final ConditionPlayerFlyMounted NO_FLYING = new ConditionPlayerFlyMounted(false);
 
-    private final boolean _val;
+    public final boolean _val;
 
     /**
      * Instantiates a new condition player fly mounted.

@@ -528,14 +528,14 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="71688" name="Transformation Sealbook: Standard/High-grade" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i00_1">
-	<!-- Use it to randomly obtain 1 Standard or High-grade Transformation. \\n -->
+	<item id="71688" name="Transformation Sealbook: Standard/High-grade" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i00_2">
+	<!-- Use it to randomly obtain 1 Standard or High-grade Transformation. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="71689" name="Transformation Sealbook: Standard/High-grade/Rare" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i00_1">
-	<!-- Use it to randomly obtain 1 Standard, High-grade, or Rare Transformation. \\n -->
+	<item id="71689" name="Transformation Sealbook: Standard/High-grade/Rare" type="TRANSFORMATION_BOOK_BOX_RANDOM_RARE" icon="BranchIcon.Icon.g_bm_costume_book_i01_3">
+	<!-- Use it to randomly obtain 1 Standard, High-grade, or Rare Transformation. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -547,7 +547,7 @@
 	</item>
 
 	<armor id="71691" name="Dragon Pedant - Attack Type Lv. 1" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
-	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 2 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: 12 million Adena -->
+	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 2 through Head Blacksmith Ferris in the Town of Aden. \nUpgrade Materials: 12 million Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -557,7 +557,7 @@
 	</armor>
 
 	<armor id="71692" name="Dragon Pedant - Attack Type Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
-	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 3 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: Dragon Essence x3 and 16 million Adena -->
+	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 3 through Head Blacksmith Ferris in the Town of Aden. \nUpgrade Materials: Dragon Essence x3 and 16 million Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -567,7 +567,7 @@
 	</armor>
 
 	<armor id="71693" name="Dragon Pedant - Attack Type Lv. 3" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i00">
-	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 4 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: Dragon Essence x20 and 50 million Adena -->
+	<!-- Pendant imbued with Dragon's power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 4 through Head Blacksmith Ferris in the Town of Aden. \nUpgrade Materials: Dragon Essence x20 and 50 million Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -587,7 +587,7 @@
 	</armor>
 
 	<armor id="71695" name="Dragon Pedant - Magic Type Lv. 1" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
-	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 2 through Head Blacksmith Ferris in the Town of Aden. \\nUpgrade Materials: 12 million Adena -->
+	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 2 through Head Blacksmith Ferris in the Town of Aden. \nUpgrade Materials: 12 million Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -597,7 +597,7 @@
 	</armor>
 
 	<armor id="71696" name="Dragon Pedant - Magic Type Lv. 2" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
-	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 3 through Head Blacksmith Ferris in the Town of Aden.\\nUpgrade Materials: Dragon Essence x3 and 16 million Adena -->
+	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 3 through Head Blacksmith Ferris in the Town of Aden.\nUpgrade Materials: Dragon Essence x3 and 16 million Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -607,7 +607,7 @@
 	</armor>
 
 	<armor id="71697" name="Dragon Pedant - Magic Type Lv. 3" type="NONE" body-part="UNDERWEAR" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
-	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 4 through Head Blacksmith Ferris in the Town of Aden.\\nUpgrade Materials: Dragon Essence x20 and 50 million Adena -->
+	<!-- Pendant imbued with Dragon's magic power, can be enhanced with Dragon Varnish up to +5. When enhanced each effect is supplemented, at +5 can upgrade to Lv. 4 through Head Blacksmith Ferris in the Town of Aden.\nUpgrade Materials: Dragon Essence x20 and 50 million Adena -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />

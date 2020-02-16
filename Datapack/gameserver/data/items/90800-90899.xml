@@ -129,7 +129,7 @@
 			<stat type="maxMp" value="34.0"/>
 		</stats>
 		<skills>
-			<skill id="45017" level="3"/>  <!-- Orfen's Earring - Special Ability -->
+			<skill id="45017" level="3" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
@@ -145,7 +145,7 @@
 	</armor>
 
 	<item id="90821" name="My Teleport Book - 1 slot" type="NONE" icon="icon.bookmark_book_i00">
-	<!-- A dimensional item\\n Increases the number of return points to save by 1. The maximum number is 48. -->
+	<!-- Adds 1 slot to My Teleport, which can save specific locations. My Teleport can be expanded to up to 48 slots. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" action="CALL_SKILL"/>
 	</item>
@@ -169,56 +169,56 @@
 	</item>
 
 	<item id="90825" name="Doll of Border - Baium" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- A 30-day item. Boosts abilities with the Baium Doll's Spell if stored in the inventory. \\n\\n<Baium Doll's Spell>\\nMEN Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P./M. Def. +12%, Skill Cooldown -3% -->
+	<!-- A 30-day item. Boosts abilities with the Baium Doll's Spell if stored in the inventory. \n\n<Baium Doll's Spell>\nMEN Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P./M. Def. +12%, Skill Cooldown -3% -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90826" name="Sealed Doll of Border - Queen Ant" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- A 30-day item. Boosts abilities with Queen Ant Doll's Spell if stored in the inventory. \\n\\n<Queen Ant Doll's Spell>\\nP. Atk./P. Critical Damage +8%, Max HP +12%. -->
+	<!-- A 30-day item. Boosts abilities with Queen Ant Doll's Spell if stored in the inventory. \n\n<Queen Ant Doll's Spell>\nP. Atk./P. Critical Damage +8%, Max HP +12%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90827" name="Doll of Border - Orfen" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- A 30-day item. Boosts abilities with Orfen Doll's Spell if stored in the inventory. \\n\\n<Orfen Doll's Spell>\\nM. Atk./M. Critical Damage +8%, Max MP +12%. -->
+	<!-- A 30-day item. Boosts abilities with Orfen Doll's Spell if stored in the inventory. \n\n<Orfen Doll's Spell>\nM. Atk./M. Critical Damage +8%, Max MP +12%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90828" name="Transformation Scroll: Dark Knight Lv. 3" type="POTION" icon="icon.etc_charm_of_courage_i05">
-	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \\nTransformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +10%, P. Def. in PvP +10%, Stun/Paralysis/Mental Resistance +10%.  -->
+	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \nTransformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +10%, P. Def. in PvP +10%, Stun/Paralysis/Mental Resistance +10%.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39305"/> <!-- Transformation Scroll: Dark Knight -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39305" level="1" value="-1"/>  <!-- Dark Knights Transformation -->
 		</skill-reducer>
 	</item>
 
 	<item id="90829" name="Transformation Scroll: Dark Knight Lv. 2" type="POTION" icon="icon.etc_charm_of_courage_i05">
-	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \\nTransformation into a Dark Knight: Max HP/MP  +10%, P. Atk. in PvP +7%, P. Def. in PvP +7%, Stun/Paralysis/Mental Resistance +7%.  -->
+	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \nTransformation into a Dark Knight: Max HP/MP  +10%, P. Atk. in PvP +7%, P. Def. in PvP +7%, Stun/Paralysis/Mental Resistance +7%.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39305" level="2"/> <!-- Transformation Scroll: Dark Knight -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39305" level="2" value="-1"/>  <!-- Dark Knights Transformation -->
 		</skill-reducer>
 	</item>
 
 	<item id="90830" name="Transformation Scroll: Dark Knight Lv. 1" type="POTION" icon="icon.etc_charm_of_courage_i05">
-	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \\nTransformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/Paralysis/Mental Resistance +5%.  -->
+	<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. \nTransformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/Paralysis/Mental Resistance +5%.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39305" level="3"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39305" level="3" value="-1"/>  <!-- Dark Knights Transformation -->
 		</skill-reducer>
 	</item>
 
-	<item id="90831" name="Transformation Scroll: Dark Knight" type="POTION" icon="icon.scroll_of_verification_i06">
-	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \\nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
+	<item id="90831" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.scroll_of_verification_i06">
+	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39306"/> <!-- Transformation Scroll: Dark Knight -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39306" level="1" value="-1"/>  <!-- White Assassin Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -229,7 +229,7 @@
 	</item>
 
 	<armor id="90833" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- A 7-day item. Enables to summon Agathion of Joy when equipped.\\n\\n<Skill used>\\n1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min)\\n\\n<Item Skill>\\n1. Search for Evidence: Speed +66 for 15 sec. \\n\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first.  -->
+	<!-- A 7-day item. Enables to summon Agathion of Joy when equipped.\n\n<Skill used>\n1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min)\n\n<Item Skill>\n1. Search for Evidence: Speed +66 for 15 sec. \n\n<Item Skill>\n2. Hidden Search: monsters don't attack first.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="30" duration="10080" enchant-enabled="false" />
 		<crystal />
@@ -242,11 +242,11 @@
 	</item>
 
 	<item id="90835" name="Life Control Tower's Scroll of Blessing" type="SCROLL" icon="icon.etc_aidcharm_cancel_valbreath_i00">
-	<!-- Max HP/MP +5%, Hunting XP/SP Gain +30%, and grants MEN Attack/Paralysis Resistance for 60 minutes. Cooldown is 30 minutes.\\n<Note> The effect does not stack with Angel Cat's Blessing.  -->
+	<!-- Max HP/MP +5%, Hunting XP/SP Gain +30%, and grants MEN Attack/Paralysis Resistance for 60 minutes. Cooldown is 30 minutes.\n<Note> The effect does not stack with Angel Cat's Blessing.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39155"/> <!-- Life Control Tower's Scroll of Blessing -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39155" level="1" value="-1"/>  <!-- Life Control Tower's Scroll of Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -255,7 +255,7 @@
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39057" level="1"/>  <!-- Hero's XP Amulet -->
+			<skill id="39057" level="1" value="-1"/>  <!-- Warrior's XP Rune -->
 		</skill-reducer>
 	</item>
 
@@ -392,13 +392,13 @@
 	</item>
 
 	<item id="90856" name="Eva's Life Stone - Hair Accessory" type="NONE" icon="icon.trace_of_wind">
-	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran or Aden, to use it for augmentation.\\n\\nAugmentation requires C-grade Gemstones (30 pcs.).  -->
+	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran or Aden, to use it for augmentation.\n\nAugmentation requires C-grade Gemstones (30 pcs.).  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90857" name="Shiny Eva's Life Stone - Hair Accessory" type="NONE" icon="icon.trace_of_wind2">
-	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran or Aden, to use it for augmentation.\\n\\nAugmentation requires C-grade Gemstones (100 pcs.).  -->
+	<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran or Aden, to use it for augmentation.\n\nAugmentation requires C-grade Gemstones (100 pcs.).  -->
 		<restriction stackable="true" dropable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -467,7 +467,7 @@
 	</item>
 
 	<weapon id="90867" name="Savior’s Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
-	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nAtk. Spd. +5%.  -->
+	<!-- A 120-day item.\n<Soul Crystal Enhancement>\nAtk. Spd. +5%.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -484,7 +484,7 @@
 	</weapon>
 
 	<weapon id="90868" name="Savior’s Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_crystal_staff_i00" magic="true">
-	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nCasting Spd. +12%.  -->
+	<!-- A 120-day item.\n<Soul Crystal Enhancement>\nCasting Spd. +12%.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -502,7 +502,7 @@
 	</weapon>
 
 	<weapon id="90869" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00">
-	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nP. Critical Damage +52.  -->
+	<!-- A 120-day item.\n<Soul Crystal Enhancement>\nP. Critical Damage +52.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1740" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -520,7 +520,7 @@
 	</weapon>
 
 	<weapon id="90870" name="Savior’s Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dark_screamer_i00">
-	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nP. Critical Damage +66.  -->
+	<!-- A 120-day item.\n<Soul Crystal Enhancement>\nP. Critical Damage +66.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -537,7 +537,7 @@
 	</weapon>
 
 	<weapon id="90871" name="Savior's Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_scorpion_i00">
-	<!-- A 120-day item.\\n<Soul Crystal Enhancement>\\nHas about a 25% chance to stun the target during a Critical Attack.  -->
+	<!-- A 120-day item.\n<Soul Crystal Enhancement>\nHas about a 25% chance to stun the target during a Critical Attack.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
@@ -553,12 +553,12 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
 	<item id="90872" name="Piece of Wood" type="MATERIAL" icon="icon.etc_squares_wood_i00">
-	<!-- Give it to Bliss to receive a woodpile.  -->
+	<!-- Give it to Bliss to receive a woodpile. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes/>
 	</item>
@@ -573,17 +573,17 @@
 	<!-- Sayha's Grace Consumption +100%, XP/SP gain +150% while hunting monsters. Remains active after death. Duration and Cooldown are both 10 minutes. Available when more than one slot of the Sayha’s Grace gauge is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51002"/> <!-- Sayha's Storm Lv. 2 -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51002" level="1" value="-1"/>  <!-- Sayha's Storm Lv. 2 -->
 		</skill-reducer>
 	</item>
 
-	<item id="90875" name="Sayha's Storm Lv. 2" type="NONE" icon="icon.bm_sayha_storm">
-	<!-- For 10 min. Sayha Grace points +100%, XP/SP gain +150%. Cooldown: 10 minutes. This effect remains even after character's death. Available when more than one slot of the bar of Sayha’s Grace points is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+	<item id="90875" name="Sayha's Storm Lv. 2 - Exchangeable" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +150% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51002"/> <!-- Sayha's Storm Lv. 2 -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51002" level="1" value="-1"/>  <!-- Sayha's Storm Lv. 2 -->
 		</skill-reducer>
 	</item>
 
@@ -609,8 +609,8 @@
 	<!-- For 10 min. activates Sayha Grace effect. Cooldown: 10 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51006"/> <!-- Sayha Grace Maintaining Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51006" level="1" value="-1"/>  <!-- Sayha Grace Maintaining Potion -->
 		</skill-reducer>
 	</item>
 
@@ -646,35 +646,35 @@
 		<crystal />
 	</armor>
 
-	<armor id="90885" name="Agathion Bracelet - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- A 30-day item. When worn, 2 Agathion slots are activated. \\n<Active Skill>\\n1. Dance of Fury: Atk. Spd. +5% for 20 minutes.\\n\\n2. Dance of Concentration: Casting Spd. +5% for 20 minutes.\\n\\n3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days.  -->
+	<armor id="90885" name="Agathion Bracelet - Singer &amp; Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- A 30-day item. When worn, 2 Agathion slots are activated. \n<Active Skill>\n1. Dance of Fury: Atk. Spd. +5% for 20 minutes.\n\n2. Dance of Concentration: Casting Spd. +5% for 20 minutes.\n\n3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
-			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="39016" level="1"/>  <!-- Dance of Fury -->
-			<skill id="39017" level="1"/>  <!-- Dance of Concentration -->
-			<skill id="39018" level="1"/>  <!-- Song of Wind -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="39016" level="1" value="-1"/>  <!-- Dance of Fury -->
+			<skill id="39017" level="1" value="-1"/>  <!-- Dance of Concentration -->
+			<skill id="39018" level="1" value="-1"/>  <!-- Song of Wind -->
 		</skills>
 	</armor>
 
-	<armor id="90886" name="Agathion Bracelet - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- A 90-day item. When worn, 2 Agathion slots are activated. \\n<Active Skill>\\n1. Dance of Fury: Atk. Spd. +5% for 20 minutes.\\n\\n2. Dance of Concentration: Casting Spd. +5% for 20 minutes.\\n\\n3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min.\\n\\n<Note>\\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days.  -->
+	<armor id="90886" name="Agathion Bracelet - Singer &amp; Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- A 90-day item. When worn, 2 Agathion slots are activated. \n<Active Skill>\n1. Dance of Fury: Atk. Spd. +5% for 20 minutes.\n\n2. Dance of Concentration: Casting Spd. +5% for 20 minutes.\n\n3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min.\n\n<Note>\nDance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="129600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
-			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="39016" level="1"/>  <!-- Dance of Fury -->
-			<skill id="39017" level="1"/>  <!-- Dance of Concentration -->
-			<skill id="39018" level="1"/>  <!-- Song of Wind -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="39016" level="1" value="-1"/>  <!-- Dance of Fury -->
+			<skill id="39017" level="1" value="-1"/>  <!-- Dance of Concentration -->
+			<skill id="39018" level="1" value="-1"/>  <!-- Song of Wind -->
 		</skills>
 	</armor>
 
@@ -684,8 +684,8 @@
 		<attributes weight="100" duration="86400" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="2"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="51025" level="2" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
 		</skills>
 	</armor>
 
@@ -695,7 +695,7 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -705,7 +705,7 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="2"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="2" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -715,8 +715,8 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="2"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="51025" level="2" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
 		</skills>
 	</armor>
 
@@ -726,33 +726,33 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="3"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" level="1"/>  <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="51025" level="3" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
 		</skills>
 	</armor>
 
 	<armor id="90892" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
-	<!-- When worn, 2 Agathion slots are activated. \\n\\n<Item Skill>\\n1. Evidence Chase: for 15 min. Speed +66.\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first.  -->
+	<!-- When worn, 2 Agathion slots are activated. \n\n<Item Skill>\n1. Evidence Chase: for 15 min. Speed +66.\n<Item Skill>\n2. Hidden Search: monsters don't attack first.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="39101" level="1"/>  <!-- Evidence Chase -->
-			<skill id="39102" level="1"/>  <!-- Secret Investigation -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="39101" level="1" value="-1"/>  <!-- Chase Down -->
+			<skill id="39102" level="1" value="-1"/>  <!-- Sneak -->
 		</skills>
 	</armor>
 
 	<armor id="90893" name="Agathion Bracelet - Joy" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
-	<!-- A 7-day item. When worn, 2 Agathion slots are activated. \\n\\n<Item Skill>\\n1. Evidence Chase: for 15 min. Speed +66.\\n<Item Skill>\\n2. Hidden Search: monsters don't attack first.  -->
+	<!-- A 7-day item. When worn, 2 Agathion slots are activated. \n\n<Item Skill>\n1. Evidence Chase: for 15 min. Speed +66.\n<Item Skill>\n2. Hidden Search: monsters don't attack first.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="39101" level="1"/>  <!-- Evidence Chase -->
-			<skill id="39102" level="1"/>  <!-- Secret Investigation -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="39101" level="1" value="-1"/>  <!-- Chase Down -->
+			<skill id="39102" level="1" value="-1"/>  <!-- Sneak -->
 		</skills>
 	</armor>
 

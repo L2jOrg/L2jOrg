@@ -1,115 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="3100" name="Spellbook: Guidance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Guidance. Used by Prophets and Shillien Elders.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Guidance. Used by Prophets and Shillien Elders.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3101" name="Spellbook: Death Whisper" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Death Whisper. Used by Prophets and Shillien Elders.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Death Whisper. Used by Prophets and Shillien Elders.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3102" name="Spellbook: Blessed Shield" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Blessed Shield. Used by Prophets and Elven Elders.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Blessed Shield. Used by Prophets and Elven Elders.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3103" name="Amulet: Pa'agrio's Wisdom" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Wisdom spell. Used by Overlords.\\nRequired level: 40 -->
+	<!-- Amulet required for the Pa'agrio's Wisdom spell. Used by Overlords.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3104" name="Amulet: Pa'agrio's Glory" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Glory spell. Used by Overlords.\\nRequired level: 40 -->
+	<!-- Amulet required for the Pa'agrio's Glory spell. Used by Overlords.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3105" name="Amulet: Seal of Winter" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Seal of Winter spell. Used by Overlords.\\nRequired level: 40 -->
+	<!-- Amulet required for the Seal of Winter spell. Used by Overlords.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3106" name="Amulet: Seal of Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Seal of Flame spell. Used by Overlords.\\nRequired level: 48 -->
+	<!-- Amulet required for the Seal of Flame spell. Used by Overlords.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3107" name="Amulet: Seal of Gloom" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Seal of Gloom spell. Used by Overlords.\\nRequired level: 44 -->
+	<!-- Amulet required for the Seal of Gloom spell. Used by Overlords.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3108" name="Amulet: Seal of Mirage" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Seal of Mirage spell. Used by Overlords.\\nRequired level: 44 -->
+	<!-- Amulet required for the Seal of Mirage spell. Used by Overlords.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3109" name="Amulet: Seal of Silence" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Seal of Silence spell. Used by Overlords.\\nRequired level: 48 -->
+	<!-- Amulet required for the Seal of Silence spell. Used by Overlords.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3110" name="Amulet: Seal of Scourge" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Seal of Scourge spell. Used by Overlords.\\nRequired level: 40 -->
+	<!-- Amulet required for the Seal of Scourge spell. Used by Overlords.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3111" name="Amulet: Seal of Suspension" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Seal of Suspension spell. Used by Overlords.\\nRequired level: 48 -->
+	<!-- Amulet required for the Seal of Suspension spell. Used by Overlords.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3112" name="Amulet: Pa'agrio's Vision" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Vision spell. Used by Overlords.\\nRequired level: 44 -->
+	<!-- Amulet required for the Pa'agrio's Vision spell. Used by Overlords.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3113" name="Amulet: Pa'agrio's Protection" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Protection spell. Used by Overlords.\\nRequired level: 40 -->
+	<!-- Amulet required for the Pa'agrio's Protection spell. Used by Overlords.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3114" name="Amulet: Steal Essence" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Steal Essence spell. Used by Warcryers and Overlords.\\nRequired level: 40 -->
+	<!-- Amulet required for the Steal Essence spell. Used by Warcryers and Overlords.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3115" name="Amulet: Freezing Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Freezing Flame spell. Used by Warcryers.\\nRequired level: 40 -->
+	<!-- Amulet required for the Freezing Flame spell. Used by Warcryers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3116" name="Amulet: Chant of Fury" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Chant of Fury spell. Used by Warcryers.\\nRequired level: 48 -->
+	<!-- Amulet required for the Chant of Fury spell. Used by Warcryers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3117" name="Amulet: Chant of Evasion" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Chant of Evasion spell. Used by Warcryers.\\nRequired level: 40 -->
+	<!-- Amulet required for the Chant of Evasion spell. Used by Warcryers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3118" name="Amulet: Chant of Rage" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Chant of Rage spell. Used by Warcryers.\\nRequired level: 44 -->
+	<!-- Amulet required for the Chant of Rage spell. Used by Warcryers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>

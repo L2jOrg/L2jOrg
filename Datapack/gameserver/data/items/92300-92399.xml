@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="92300" name="Majestic Boots" type="NONE" body-part="FEET" icon="icon.armor_t85_b_i00">
-	<!-- <Options>\\nINT +1\\nWeight Limit +1000\\nM. Def. +10\\nMax HP +50.\\nSpeed +4\\nCasting Spd. +50\\n\\nM. Skill Cooldown reduced when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50.\nSpeed +4\nCasting Spd. +50\n\nM. Skill Cooldown reduced when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1110" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -11,7 +11,7 @@
 	</armor>
 
 	<armor id="92301" name="Tallum Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-	<!-- <Options>\\nCON +1\\nWeight Limit +1500\\nM. Def. +10\\nMax MP +50\\nP. Atk. +4%\\nHP Recovery Bonus +5.5%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nCON +1\nWeight Limit +1500\nM. Def. +10\nMax MP +50\nP. Atk. +4%\nHP Recovery Bonus +5.5%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -21,7 +21,7 @@
 	</armor>
 
 	<armor id="92302" name="Tallum Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-	<!-- <Options>\\nMEN +1\\nWeight Limit +1500\\nM. Def. +10\\nM. Atk. +8%\\nMP Recovery Bonus +8%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%\nMP Recovery Bonus +8%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -31,7 +31,7 @@
 	</armor>
 
 	<armor id="92303" name="Tallum Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-	<!-- <Options>\\nMEN +1\\nWeight Limit +1500\\nM. Def. +10\\nM. Atk. +8%\\nMP Recovery Bonus +5.5%\\nM. Def. +8%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%\nMP Recovery Bonus +5.5%\nM. Def. +8%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -41,7 +41,7 @@
 	</armor>
 
 	<armor id="92304" name="Dark Crystal Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-	<!-- <Options>\\nCON +1\\nWeight Limit +1500\\nM. Def. +10\\nMax HP +100\\nP. Atk. +4%\\nHP Recovery Bonus +5.5%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nCON +1\nWeight Limit +1500\nM. Def. +10\nMax HP +100\nP. Atk. +4%\nHP Recovery Bonus +5.5%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -51,7 +51,7 @@
 	</armor>
 
 	<armor id="92305" name="Dark Crystal Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-	<!-- <Options>\\nCON +1\\nWeight Limit +1500\\nM. Def. +10\\nP. Atk. +4%\\nMP Recovery Bonus +5.5%\\nP. Critical Damage +30\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nMP Recovery Bonus +5.5%\nP. Critical Damage +30\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -61,7 +61,7 @@
 	</armor>
 
 	<armor id="92306" name="Dark Crystal Helmet" type="NONE" body-part="HEAD" icon="icon.armor_helmet_i00">
-	<!-- <Options>\\nMEN +1\\nWeight Limit +1500\\nM. Def. +10\\nM. Atk. +8%\\nMP Recovery Bonus +5.5%\\nP. Def. +8%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%\nMP Recovery Bonus +5.5%\nP. Def. +8%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="570" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -71,7 +71,7 @@
 	</armor>
 
 	<armor id="92307" name="Helm of Nightmare" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-	<!-- <Options>\\nCON +1\\nWeight Limit +1500\\nM. Def. +10\\nP. Atk. +4%\\nHP Recovery Bonus +8%\\n5% of damage received is reflected\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nHP Recovery Bonus +8%\n5% of damage received is reflected\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="560" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -81,7 +81,7 @@
 	</armor>
 
 	<armor id="92308" name="Helm of Nightmare" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-	<!-- <Options>\\nCON +1\\nWeight Limit +1500\\nM. Def. +10\\nP. Atk. +4%\\nMP Recovery Bonus +8%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nMP Recovery Bonus +8%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="560" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -91,7 +91,7 @@
 	</armor>
 
 	<armor id="92309" name="Helm of Nightmare" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-	<!-- <Options>\\nMEN +1\\nWeight Limit +1500\\nM. Def. +10\\nM. Atk. +8%\\nMP Recovery Bonus +8%\\nM. Critical Damage +30\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%\nMP Recovery Bonus +8%\nM. Critical Damage +30\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="560" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -101,7 +101,7 @@
 	</armor>
 
 	<armor id="92310" name="Majestic Circlet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-	<!-- <Options>\\nCON +1\\nWeight Limit +1500\\nM. Def. +10\\nP. Atk. +4%\\nHP Recovery Bonus +8%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nHP Recovery Bonus +8%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="550" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -111,7 +111,7 @@
 	</armor>
 
 	<armor id="92311" name="Majestic Circlet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-	<!-- <Options>\\nCON +1\\nWeight Limit +1500\\nM. Def. +10\\nP. Atk. +4%\\nMP Recovery Bonus +5.5%\\nBow Attack +8%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%\nMP Recovery Bonus +5.5%\nBow Attack +8%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="550" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -121,7 +121,7 @@
 	</armor>
 
 	<armor id="92312" name="Majestic Circlet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
-	<!-- <Options>\\nMEN +1\\nWeight Limit +1500\\nM. Def. +10\\nMax MP +300\\nM. Atk. +8%\\nMP Recovery Bonus +8%\\n\\nMax HP increases when enchanted to +5 or higher.\\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
+	<!-- <Options>\nMEN +1\nWeight Limit +1500\nM. Def. +10\nMax MP +300\nM. Atk. +8%\nMP Recovery Bonus +8%\n\nMax HP increases when enchanted to +5 or higher.\nCannot exchange for a sealed item through the blacksmiths in each of the villages. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="550" enchant-enabled="false" />
 		<crystal type="A"/>
@@ -137,9 +137,9 @@
 	</item>
 
 	<item id="92314" name="Seal of Giran" type="NONE" icon="icon.etc_royal_seal_of_lord_i04">
-	<!-- Increases XP/SP by 20% for 20 min on use and can be exchanged for other Items through the Dimensional Merchant. -->
+	<!-- Increases XP/SP by 20% for 20 min on use and can be exchanged for other Items through the Store Manager. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
 	</item>
 
 	<item id="92315" name="Luxury Augmentation Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
@@ -154,10 +154,534 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<armor id="92318" name="Kamael Dark Wings Texture" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
+	<armor id="92317" name="Jin Kamael 2nd Dark Transformation" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
+		<restriction/>
+		<attributes weight="1000" price="5000000" />
+		<crystal />
+	</armor>
+
+	<armor id="92318" name="Jin Kamael Dark Wings Texture" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="220" enchant-enabled="false" />
 		<crystal />
 	</armor>
+
+	<armor id="92319" name="Jin Kamael Dark Wings Effect" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="220" />
+		<crystal />
+	</armor>
+
+	<armor id="92320" name="Jin Kamael 2nd White Transformation" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
+		<restriction/>
+		<attributes weight="1000" price="5000000" />
+		<crystal />
+	</armor>
+
+	<armor id="92321" name="Jin Kamael White Wings Texture" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="220" />
+		<crystal />
+	</armor>
+
+	<armor id="92322" name="Jin Kamael White Wings Effect" type="NONE" body-part="BACK" icon="icon.sayha2017_back_i01">
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="220" />
+		<crystal />
+	</armor>
+
+	<armor id="92326" name="Brooch Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
+	<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="92327" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i00">
+	<!-- MP + 9, Poison Atk. and Resistance +10%, P./M. Accuracy + 1, P./M Atk. +4%. The bonuses from this item do not stack. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal />
+	</armor>
+
+	<armor id="92328" name="Orfen's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i00">
+	<!-- MP + 19, Mental/Hold Atk. and Resistance + 10%, received Heal + 2%, MP Consumption - 2%. The bonuses from this item do not stack. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal />
+	</armor>
+
+	<armor id="92329" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i00">
+	<!-- MP + 9, Mental Atk. and Resistance + 10%, P./M. Evasion + 1, received P./M. damage - 2%. When two identical rings are equipped, the effect of only one ring will be applied. Cannot enchant. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal />
+	</armor>
+
+	<weapon id="92330" name="Samurai Long Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_samurai_old_longsword_i00">
+	<!-- Samurai Long Sword imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1380"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92331" name="Ecliptic Axe" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eclipse_axe_i00" magic="true">
+	<!-- Ecliptic Axe imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1640"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92332" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00">
+	<!-- Eminence Bow imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1720"/>
+		<crystal type="C"/>
+		<consume  soulshots="2" mana="3"/>
+	</weapon>
+
+	<item id="92333" name="Infinite Steel Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00">
+	<!-- Quiver containing arrows made of steel. Used with a C-grade bow. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<weapon id="92334" name="Katana*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- KatanaKatana imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2270"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92335" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i00">
+	<!-- Berserker Blade imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1380"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92336" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
+	<!-- Admiral's Estoc imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1300"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92337" name="Demon's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_demons_staff_i00" magic="true">
+	<!-- Demon's Staff imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="990"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92338" name="Crystal Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_crystal_dagger_i00">
+	<!-- Crystal Dagger imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1000"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92339" name="Orcish Poleaxe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_orcish_poleaxe_i00">
+	<!-- Orcish Poleaxe imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1950"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92340" name="Yaksa Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_yaksa_mace_i00">
+	<!-- Yaksa Mace imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1640"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92341" name="Great Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_great_pata_i00">
+	<!-- Great Pata imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1460"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<weapon id="92342" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
+	<!-- Saber Tooth imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1530"/>
+		<crystal type="C"/>
+		<consume />
+	</weapon>
+
+	<item id="92343" name="+16 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
+	<!-- Double-click to obtain +16 Enchanted Samurai Long Sword. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92344" name="+16 Ecliptic Axe Pack" type="NONE" icon="icon.weapon_eclipse_axe_i00">
+	<!-- Double-click to obtain +16 Enchanted Ecliptic Axe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92345" name="+16 Eminence Bow Pack" type="NONE" icon="icon.weapon_eminence_bow_i00">
+	<!-- Double-click to obtain +16 Enchanted Eminence Bow, Infinite Steel Quiver. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92346" name="+16 Katana*Katana Pack" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain +16 Enchanted KatanaKatana. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92347" name="+16 Berserker Blade Pack" type="NONE" icon="icon.weapon_berserker_blade_i00">
+	<!-- Double-click to obtain +16 Enchanted Berserker Blade. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92348" name="+16 Admiral's Estoc Pack" type="NONE" icon="icon.weapon_rapier_i00">
+	<!-- Double-click to obtain +16 Enchanted Admiral's Estoc. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92349" name="+16 Demon's Staff Pack" type="NONE" icon="icon.weapon_demons_staff_i00">
+	<!-- Double-click to obtain +16 Enchanted Demon's Staff. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92350" name="+16 Crystal Dagger Pack" type="NONE" icon="icon.weapon_crystal_dagger_i00">
+	<!-- Double-click to obtain +16 Enchanted Crystal Dagger. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92351" name="+16 Orcish Poleaxe Pack" type="NONE" icon="icon.weapon_orcish_poleaxe_i00">
+	<!-- Double-click to obtain +16 Enchanted Orcish Poleaxe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92352" name="+16 Yaksa Mace Pack" type="NONE" icon="icon.weapon_yaksa_mace_i00">
+	<!-- Double-click to obtain +16 Enchanted Yaksa Mace. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92353" name="+16 Great Pata Pack" type="NONE" icon="icon.weapon_great_pata_i00">
+	<!-- Double-click to obtain +16 Enchanted Great Pata. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92354" name="+16 Saber Tooth Pack" type="NONE" icon="icon.weapon_invincible_blade_i00">
+	<!-- Double-click to obtain +16 Enchanted Saber Tooth. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92355" name="+7 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
+	<!-- Double-click to obtain +7 Enchanted Samurai Long Sword. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92356" name="+7 Ecliptic Axe Pack" type="NONE" icon="icon.weapon_eclipse_axe_i00">
+	<!-- Double-click to obtain +7 Enchanted Ecliptic Axe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92357" name="+7 Eminence Bow Pack" type="NONE" icon="icon.weapon_eminence_bow_i00">
+	<!-- Double-click to obtain +7 Enchanted Eminence Bow, Infinite Steel Quiver. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92358" name="+7 Katana*Katana Pack" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain +7 Enchanted Katana*Katana. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92359" name="+7 Berserker Blade Pack" type="NONE" icon="icon.weapon_berserker_blade_i00">
+	<!-- Double-click to obtain +7 Enchanted Berserker Blade. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92360" name="+7 Admiral's Estoc Pack" type="NONE" icon="icon.weapon_rapier_i00">
+	<!-- Double-click to obtain +7 Enchanted Admiral's Estoc. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92361" name="+7 Demon's Staff Pack" type="NONE" icon="icon.weapon_demons_staff_i00">
+	<!-- Double-click to obtain +7 Enchanted Demon's Staff. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92362" name="+7 Crystal Dagger Pack" type="NONE" icon="icon.weapon_crystal_dagger_i00">
+	<!-- Double-click to obtain +7 Enchanted Crystal Dagger. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92363" name="+7 Orcish Poleaxe Pack" type="NONE" icon="icon.weapon_orcish_poleaxe_i00">
+	<!-- Double-click to obtain +7 Enchanted Orcish Poleaxe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92364" name="+7 Yaksa Mace Pack" type="NONE" icon="icon.weapon_yaksa_mace_i00">
+	<!-- Double-click to obtain +7 Enchanted Yaksa Mace. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92365" name="+7 Great Pata Pack" type="NONE" icon="icon.weapon_great_pata_i00">
+	<!-- Double-click to obtain +7 Enchanted Great Pata. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92366" name="+7 Saber Tooth Pack" type="NONE" icon="icon.weapon_invincible_blade_i00">
+	<!-- Double-click to obtain +7 Enchanted Saber Tooth. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="92367" name="Blue Wolf Breastplate" type="HEAVY" body-part="CHEST" icon="icon.armor_t68_u_i00">
+	<!-- Blue Wolf Breastplate for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="7820" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92368" name="Blue Wolf Gaiters" type="HEAVY" body-part="LEGS" icon="icon.armor_t68_l_i00">
+	<!-- Blue Wolf Gaiters for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="3370" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92369" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+	<!-- Blue Wolf Helmet for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92370" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t68_g_i00">
+	<!-- Blue Wolf Gloves for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92371" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t68_b_i00">
+	<!-- Blue Wolf Boots for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" />
+		<crystal type="B"/>
+	</armor>
+
+	<item id="92372" name="+4 Blue Wolf Heavy Armor Set" type="NONE" icon="icon.armor_t68_u_i00">
+	<!-- Double-click to obtain +4 Blue Wolf Breastplate, +4 Blue Wolf Gaiters, +4 Blue Wolf Helmet (Heavy Armor), +4 Blue Wolf Gloves (Heavy Armor), and +4 Blue Wolf Boots(Heavy Armor), one for each. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="92373" name="Blue Wolf Leather Armor" type="LIGHT" body-part="FULL_ARMOR" icon="icon.armor_t69_ul_i00">
+	<!-- Blue Wolf Leather Armor for a new start. Full body armor, cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5500" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92374" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+	<!-- Blue Wolf Helmet for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92375" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t69_g_i00">
+	<!-- Blue Wolf Gloves for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92376" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t69_b_i00">
+	<!-- Blue Wolf Boots for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" />
+		<crystal type="B"/>
+	</armor>
+
+	<item id="92377" name="+4 Blue Wolf Light Armor Set" type="NONE" icon="icon.armor_t69_ul_i00">
+	<!-- Double-click to obtain +4 Blue Wolf Leather Armor/ +4 Blue Wolf Helmet (Light Armor)/ +4 Blue Wolf Gloves (Light Armor)/ and +4 Blue Wolf Boots (Light Armor), one for each. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="92378" name="Blue Wolf Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t70_u_i00">
+	<!-- Blue Wolf Tunic for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1920" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92379" name="Blue Wolf Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t70_l_i00">
+	<!-- Blue Wolf Stockings for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="920" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92380" name="Blue Wolf Helmet" type="NONE" body-part="HEAD" icon="icon.armor_leather_helmet_i00">
+	<!-- Blue Wolf Helmet for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="580" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92381" name="Blue Wolf Gloves" type="NONE" body-part="GLOVES" icon="icon.armor_t70_g_i00">
+	<!-- Blue Wolf Gloves for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="590" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92382" name="Blue Wolf Boots" type="NONE" body-part="FEET" icon="icon.armor_t70_b_i00">
+	<!-- Blue Wolf Boots for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1130" />
+		<crystal type="B"/>
+	</armor>
+
+	<item id="92383" name="+4 Blue Wolf Robe Set" type="NONE" icon="icon.armor_t70_u_i00">
+	<!-- Double-click to obtain +4 Blue Wolf Tunic, +4 Blue Wolf Stockings, +4 Blue Wolf Helmet (Robe), +4 Blue Wolf Gloves (Robe), and +4 Blue Wolf Boots (Robe), one for each. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="92384" name="Black Ore Earring" type="NONE" body-part="EAR" icon="icon.accessary_earing_of_black_ore_i00">
+	<!-- Black Ore Earring for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92385" name="Black Ore Ring" type="NONE" body-part="FINGER" icon="icon.accessary_ring_of_black_ore_i00">
+	<!-- Black Ore Ring for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal type="B"/>
+	</armor>
+
+	<armor id="92386" name="Black Ore Necklace" type="NONE" body-part="NECK" icon="icon.accessary_necklace_of_black_ore_i00">
+	<!-- Black Ore Necklace for a new start. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal type="B"/>
+	</armor>
+
+	<item id="92387" name="+4 Black Ore Accessory Set" type="NONE" icon="icon.accessary_necklace_of_black_ore_i00">
+	<!-- Double-click to obtain 2 +4 Black Ore Rings, 2 +4 Black Ore Earrings, and 1 +4 Black Ore Necklace. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="92388" name="Ruby Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
+	<!-- When equipped increases Soulshot, Blessed Soulshot and Beast Soulshot damage 8%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="92389" name="Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
+	<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="92390" name="Diamond Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
+	<!-- P. Def. +81 and P. Critical Damage Received -4% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="92391" name="Pearl Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
+	<!-- M. Def. +46, M. Critical Damage Received -4% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="92392" name="Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
+	<!-- XP/SP gain +8% while hunting during Sayha's Grace effect and Sayha's Grace Consumption Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<item id="92393" name="Jewel Box Filled With Gratitude" type="NONE" icon="icon.bm_special_jewelbox_lv5">
+	<!-- Double-click to obtain one each of Lv. 4 Ruby, Sapphire, Diamond, Pearl, Vital Stone. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92394" name="Sayha's Grace Package" type="NONE" icon="icon.bm_dragon_present">
+	<!-- Double-click to obtain Sayha's Blessing x250, Sayha's Buff Scroll x20, Sayha's Storm Lv. 3 x20, Ring of Insolence x1, Dragon Valley Earring x1. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92395" name="Lucky Blessing Basket" type="NONE" icon="icon.etc_candy_basket_i04_1">
+	<!-- Double-click to obtain a random amount of Sayha's Blessing, and if you’re lucky, you can also gain one of various items. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92396" name="Sayha's Blessing 1000-unit Pack" type="NONE" icon="icon.event_oriental_park_i00">
+	<!-- Double-click to obtain Sayha's Blessing x1000. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="92397" name="Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Restricted to characters below level 75. Recharges 35,000 Sayha's Grace Points. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="92398" name="Sayha's Blessing - Event" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Recharges 35,000 Sayha's Grace Points. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="92399" name="Primeval Garden Time Recharge Stone - Exchangeable" type="POTION" icon="icon.timezone_refill_3">
+	<!-- Adds 60 minutes to the duration of the Primeval Garden timed hunting zone. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes weight="5"/>
+	</item>
 
 </list>

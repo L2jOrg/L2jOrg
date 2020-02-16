@@ -23,7 +23,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2023" level="1"/>  <!-- Star Shard -->
+			<skill id="2023" level="1" value="-1"/>  <!-- Star Shard -->
 		</skill-reducer>
 	</item>
 
@@ -44,7 +44,7 @@
 		<restriction freightable="false" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2024" level="1"/>  <!-- Fireworks -->
+			<skill id="2024" level="1" value="-1"/>  <!-- Firecracker -->
 		</skill-reducer>
 	</item>
 
@@ -53,7 +53,7 @@
 		<restriction freightable="false" coc-restricted="true" stackable="true" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2025" level="1"/>  <!-- Thunder Bolt -->
+			<skill id="2025" level="1" value="-1"/>  <!-- Large Firecracker -->
 		</skill-reducer>
 	</item>
 

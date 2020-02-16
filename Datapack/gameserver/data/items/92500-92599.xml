@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<item id="92500" name="Necklace of Protection Gemstone" type="MATERIAL" icon="icon.etc_gem_yellow_i00">
+	<!-- Key material that Dwarves use to make the Necklace of Protection. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="11900"/>
+	</item>
+
+	<item id="92501" name="Earring of Seal Gemstone" type="MATERIAL" icon="icon.etc_gem_clear_i00">
+	<!-- Key material that Dwarves use to make an Earring of Seal. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="21300"/>
+	</item>
+
+	<item id="92502" name="Ring of Ages Gemstone" type="MATERIAL" icon="icon.etc_gem_clear_i00">
+	<!-- Key material that Dwarves use to make a Ring of Ages. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="11967"/>
+	</item>
+
+	<item id="92503" name="Necklace of Mermaid Teardrop" type="MATERIAL" icon="icon.etc_reagent_white_i00">
+	<!-- Key material that Dwarves use to make the Necklace of Mermaid. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="18934"/>
+	</item>
+
+	<item id="92504" name="Sage's Necklace Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
+	<!-- Key material that Dwarves use to make a Sage's Necklace. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="21434"/>
+	</item>
+
+	<item id="92505" name="Nassen's Earring Gemstone" type="MATERIAL" icon="icon.etc_gem_red_i00">
+	<!-- Key material that Dwarves use to make Nassen's Earring. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="31134"/>
+	</item>
+
+	<item id="92506" name="Sage's Ring Gemstone" type="MATERIAL" icon="icon.etc_bead_silver_i00">
+	<!-- Key material that Dwarves use to make a Sage's Ring. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="20767"/>
+	</item>
+
+	<item id="92507" name="Necklace of Seal Chain" type="MATERIAL" icon="icon.etc_jewel_box_i00">
+	<!-- Key material that Dwarves use to make a Necklace of Seal. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="41667"/>
+	</item>
+
+	<item id="92508" name="Leather Shoe Texture" type="MATERIAL" icon="icon.etc_leather_yellow_i00">
+	<!-- Key material that Dwarves use to make Leather Shoes. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="40334"/>
+	</item>
+
+	<item id="92509" name="Leather Tunic Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make a Leather Tunic. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="26934"/>
+	</item>
+
+	<item id="92510" name="Leather Stocking Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make Leather Stockings. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="54000"/>
+	</item>
+
+	<item id="92511" name="Leather Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make a Leather Helmet. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="31000"/>
+	</item>
+
+	<item id="92512" name="Leather Glove Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Leather Gloves. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="20600"/>
+	</item>
+
+	<item id="92513" name="Piece Bone Breastplate Fragment" type="MATERIAL" icon="icon.etc_piece_bone_black_i00">
+	<!-- Key material that Dwarves use to make a Piece Bone Breastplate. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="41400"/>
+	</item>
+
+	<item id="92514" name="Durable Leather Shirt Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make the Durable Leather Shirt. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="39200"/>
+	</item>
+
+	<item id="92515" name="Piece Bone Gaiter Fragment" type="MATERIAL" icon="icon.etc_piece_bone_black_i00">
+	<!-- Key material that Dwarves use to make Piece Bone Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="26000"/>
+	</item>
+
+	<item id="92516" name="Durable Leather Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Durable Leather Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="52200"/>
+	</item>
+
+	<item id="92517" name="Boot Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Boots. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="59000"/>
+	</item>
+
+	<item id="92518" name="Leather Boot Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Leather Boots. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="39200"/>
+	</item>
+
+	<item id="92519" name="Bone Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make a Bone Helmet. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="78600"/>
+	</item>
+
+	<item id="92520" name="Dark Stocking Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
+	<!-- Key material that Dwarves use to make Dark Stockings. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="113000"/>
+	</item>
+
+	<item id="92521" name="Quality Leather Glove Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Quality Leather Gloves. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="84800"/>
+	</item>
+
+	<item id="92522" name="Scale Mail Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Scale Mail. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="88000"/>
+	</item>
+
+	<item id="92523" name="White Tunic Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make a White Tunic. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="175715"/>
+	</item>
+
+	<item id="92524" name="Scale Gaiter Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Scale Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="36900"/>
+	</item>
+
+	<item id="92525" name="Mithril Banded Mail Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Mithril Banded Mail. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="23000"/>
+	</item>
+
+	<item id="92526" name="Mithril Banded Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Mithril Banded Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="12300"/>
+	</item>
+
+	<item id="92527" name="Iron Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make Iron Boots. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="6967"/>
+	</item>
+
+	<item id="92528" name="Brigandine Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
+	<!-- Key material that Dwarves use to make Brigandine. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="10434"/>
+	</item>
+
+	<item id="92529" name="Manticore Skin Shirt Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make a Manticor Skin Shirt. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="20834"/>
+	</item>
+
+	<item id="92530" name="Manticore Skin Gaiter Pattern" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make Manticor Skin Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="6967"/>
+	</item>
+
+	<item id="92531" name="Mithril Tunic Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
+	<!-- Key material that Dwarves use to make a Mithril Tunic. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="44334"/>
+	</item>
+
+	<item id="92532" name="Mithril Stocking Design" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Mithril Stockings. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="33300"/>
+	</item>
+
+	<item id="92533" name="Rip Gauntlet Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make Rip Gauntlets. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="27767"/>
+	</item>
+
+	<item id="92534" name="Kite Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make a Kite Shield. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="50667"/>
+	</item>
+
+	<item id="92535" name="Boots of Strength Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make the Boots of Strength. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="31734"/>
+	</item>
+
+	<item id="92536" name="Mithril Glove Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make Mithril Gloves. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="16934"/>
+	</item>
+
+	<item id="92537" name="Half Plate Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
+	<!-- Key material that Dwarves use to make Half Plate. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="99667"/>
+	</item>
+
+	<item id="92538" name="Plate Gaiter Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Plate Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="74667"/>
+	</item>
+
+	<item id="92539" name="Salamander Skin Mail Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Salamander Skin Mail. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="46667"/>
+	</item>
+
+	<item id="92540" name="Sage's Rag Lining" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make a Sage's Rags. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="74667"/>
+	</item>
+
+	<item id="92541" name="Karmian Stocking Design" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make Karmian Stockings. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="46667"/>
+	</item>
+
+	<item id="92542" name="Chain Helmet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make a Chain Helmet. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="24900"/>
+	</item>
+
+	<item id="92543" name="Square Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make a Square Shield. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="26134"/>
+	</item>
+
+	<item id="92544" name="Assault Boot Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Assault Boots. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="24900"/>
+	</item>
+
+	<item id="92545" name="Reinforced Mithril Boot Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make Reinforced Mithril Boots. This can be sold at shops. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="32600"/>
+	</item>
+
+	<item id="92546" name="Chain Mail Shirt Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make a Chain Mail Shirt. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="130334"/>
+	</item>
+
+	<item id="92547" name="Chain Gaiter Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Chain Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="81334"/>
+	</item>
+
+	<item id="92548" name="Reinforced Mithril Shirt Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
+	<!-- Key material that Dwarves use to make a Mithril Shirt. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="143000"/>
+	</item>
+
+	<item id="92549" name="Karmian Tunic Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make a Karmian Tunic. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="143000"/>
+	</item>
+
+	<item id="92550" name="Ogre Power Gauntlet Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Ogre Power Gauntlets. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="47400"/>
+	</item>
+
+	<item id="92551" name="Eldarake Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
+	<!-- Key material that Dwarves use to make an Eldarake. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="29400"/>
+	</item>
+
+	<item id="92552" name="Metal Plate Helmet Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make a metal Plate Helmet. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="34334"/>
+	</item>
+
+	<item id="92553" name="Plated Leather Armor Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Plated Leather. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="32600"/>
+	</item>
+
+	<item id="92554" name="Plated Leather Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Plated Leather Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="25200"/>
+	</item>
+
+	<item id="92555" name="Dwarven Chain Mail Shirt Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make the Dwarven Chain Mail Shirt. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="101000"/>
+	</item>
+
+	<item id="92556" name="Dwarven Chain Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Dwarven Chain Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="63200"/>
+	</item>
+
+	<item id="92557" name="Robe of Seal Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
+	<!-- Key material that Dwarves use to make the Robe of Seal. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="75800"/>
+	</item>
+
+	<item id="92558" name="Great Helmet Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make the Great Helmet. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="75800"/>
+	</item>
+
+	<item id="92559" name="Knight's Shield Fragment" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make a Knight's Shield. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="32600"/>
+	</item>
+
+	<item id="92560" name="Pa'agrio Hand Design" type="MATERIAL" icon="icon.etc_jewel_box_i00">
+	<!-- Key material that Dwarves use to make a Pa'agrio Hand. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="26600"/>
+	</item>
+
+	<item id="92561" name="Crimson Boot Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_red_i00">
+	<!-- Key material that Dwarves use to make Crimson Boots. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="41200"/>
+	</item>
+
+	<item id="92562" name="Rind Leather Armor Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make Rind Leather Armor. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="89200"/>
+	</item>
+
+	<item id="92563" name="Rind Leather Gaiter Material" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Rind Leather Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="55800"/>
+	</item>
+
+	<item id="92564" name="Compound Armor Temper" type="MATERIAL" icon="icon.etc_plate_glay_i00">
+	<!-- Key material that Dwarves use to make Compound Armor. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="128800"/>
+	</item>
+
+	<item id="92565" name="Tower Shield Fragment" type="MATERIAL" icon="icon.etc_plate_glay_i00">
+	<!-- Key material that Dwarves use to make the Tower Shield. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="80600"/>
+	</item>
+
+	<item id="92566" name="Demon's Tunic Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
+	<!-- Key material that Dwarves use to make a Demon's Tunic. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="141400"/>
+	</item>
+
+	<item id="92567" name="Demon's Stocking Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make Demon's Stockings. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="48400"/>
+	</item>
+
+	<item id="92568" name="Mithril Gauntlet Design" type="MATERIAL" icon="icon.etc_pouch_brown_i00">
+	<!-- Key material that Dwarves use to make Mithril Gauntlets. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="33800"/>
+	</item>
+
+	<item id="92569" name="Forgotten Boot Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make Forgotten Boots. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="24780"/>
+	</item>
+
+	<item id="92570" name="Shining Circlet Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make the Shining Circlet. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="32200"/>
+	</item>
+
+	<item id="92571" name="Theca Leather Armor Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make Theca Leather Armor. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="96600"/>
+	</item>
+
+	<item id="92572" name="Theca Leather Gaiter Pattern" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Theca Leather Gaiters. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="60400"/>
+	</item>
+
+	<item id="92573" name="Full Plate Armor Temper" type="MATERIAL" icon="icon.etc_plate_silver_i00">
+	<!-- Key material that Dwarves use to make Full Plate Armor. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="288000"/>
+	</item>
+
+	<item id="92574" name="Drake Leather Armor Texture" type="MATERIAL" icon="icon.etc_leather_gray_i00">
+	<!-- Key material that Dwarves use to make Drake Leather Armor. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="51600"/>
+	</item>
+
+	<item id="92575" name="Divine Tunic Fabric" type="MATERIAL" icon="icon.etc_piece_of_cloth_white_i00">
+	<!-- Key material that Dwarves use to make the Divine Tunic. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="147200"/>
+	</item>
+
+	<item id="92576" name="Divine Stocking Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make Divine Stockings. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="92000"/>
+	</item>
+
+	<item id="92577" name="Mithril Helmet Design" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make the Mithril Helmet. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="49000"/>
+	</item>
+
+	<item id="92578" name="Gauntlets of Ghost Pattern" type="MATERIAL" icon="icon.etc_letter_red_i00">
+	<!-- Key material that Dwarves use to make the Gauntlets of Ghost. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="49000"/>
+	</item>
+
+	<item id="92579" name="Adamantite Boot Design" type="MATERIAL" icon="icon.etc_pouch_yellow_i00">
+	<!-- Key material that Dwarves use to make Adamantite Boots. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="73600"/>
+	</item>
+
+	<item id="92580" name="Broadsword Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make a Broadsword. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="165000"/>
+	</item>
+
+	<item id="92581" name="Willow Staff Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Key material that Dwarves use to make the Willow Staff. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="103200"/>
+	</item>
+
+	<item id="92582" name="Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Key material that Dwarves use to make a Bow. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="418000"/>
+	</item>
+
+	<item id="92583" name="Cedar Staff Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Key material that Dwarves use to make a Cedar Staff. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="314000"/>
+	</item>
+
+	<item id="92584" name="Dirk Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make a Dirk. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="214000"/>
+	</item>
+
+	<item id="92585" name="Brandish Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make a Brandish. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="134200"/>
+	</item>
+
+	<item id="92586" name="Short Spear Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make a Short Spear. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="107200"/>
+	</item>
+
+	<item id="92587" name="Sword of Reflection Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make the Sword of Reflection. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="1118572"/>
+	</item>
+
+	<item id="92588" name="Forest Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Key material that Dwarves use to make the Forest Bow. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="55020"/>
+	</item>
+
+	<item id="92589" name="Iron Hammer Head" type="MATERIAL" icon="icon.etc_squares_silver_i00">
+	<!-- Key material that Dwarves use to make the Iron Hammer. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="71600"/>
+	</item>
+
+	<item id="92590" name="Sword Breaker Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make the Sword Breaker. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="244000"/>
+	</item>
+
+	<item id="92591" name="Compound Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Key material that Dwarves use to make the Compound Bow. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="244000"/>
+	</item>
+
+	<item id="92592" name="Saber Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make a Saber. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="244000"/>
+	</item>
+
+	<item id="92593" name="Assassin Knife Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make the Assassin Knife. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="136334"/>
+	</item>
+
+	<item id="92594" name="Trident Edge" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make a Trident. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="136334"/>
+	</item>
+
+	<item id="92595" name="Temptation of Abyss Piece" type="MATERIAL" icon="icon.etc_oriharukon_ore_i00">
+	<!-- Key material that Dwarves use to make the Temptation of Abyss. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="136334"/>
+	</item>
+
+	<item id="92596" name="Spinebone Sword Blade" type="MATERIAL" icon="icon.etc_sword_body_i00">
+	<!-- Key material that Dwarves use to make the Spinebone Sword. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="136334"/>
+	</item>
+
+	<item id="92597" name="Mace of Judgment Head" type="MATERIAL" icon="icon.etc_squares_silver_i00">
+	<!-- Key material that Dwarves use to make the Mace of Judgment. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="214667"/>
+	</item>
+
+	<item id="92598" name="Conjuror's Staff Head" type="MATERIAL" icon="icon.etc_squares_gray_i00">
+	<!-- Key material that Dwarves use to make the Conjuror's Staff. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="214667"/>
+	</item>
+
+	<item id="92599" name="Elven Bow Shaft" type="MATERIAL" icon="icon.etc_branch_gold_i00">
+	<!-- Key material that Dwarves use to make the Elven Bow. Can be sold in any shop. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="60" price="214667"/>
+	</item>
+
+</list>

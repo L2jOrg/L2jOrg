@@ -8,290 +8,290 @@
 	</armor>
 
 	<armor id="70401" name="Agathion - One-eyed Bat Drove" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_bat_i00">
-	<!-- Bracelet that summons the image of One-eyed Bat Drove as an Agathion.   -->
+	<!-- Bracelet that summons the One-eyed Bat Drove Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55416" level="1"/>  <!-- Summon Agathion One-eyed Bat Drove -->
-			<skill id="55440" level="1"/>  <!-- One-eyed Bat Drove Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55416" level="1" value="-1"/>  <!-- Summon Agathion - One-eyed Bat Drove -->
+			<skill id="55440" level="1" value="-1"/>  <!-- One-eyed Bat Drove Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70402" name="Agathion - Zaken's Spirit Swords" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.Icon.br_aga_zaken_i00">
-	<!-- Bracelet that summons the image of 5 Zaken's Spirit Swords as an Agathion.   -->
+	<!-- Bracelet that summons the 5 Zaken's Spirit Swords Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55417" level="1"/>  <!-- Summon Agathion Zaken's Spirit Swords -->
-			<skill id="55441" level="1"/>  <!-- Zaken's Spirit Swords Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55417" level="1" value="-1"/>  <!-- Summon Agathion - Zaken's Spirit Swords -->
+			<skill id="55441" level="1" value="-1"/>  <!-- Zaken's Spirit Swords Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70403" name="Agathion - Pegasus" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_pegasus_i00">
-	<!-- Bracelet that summons the image of Pegasus as an Agathion.   -->
+	<!-- Bracelet that summons the Pegasus Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55418" level="1"/>  <!-- Summon Agathion Pegasus -->
-			<skill id="55442" level="1"/>  <!-- Pegasus Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55418" level="1" value="-1"/>  <!-- Summon Agathion - Pegasus -->
+			<skill id="55442" level="1" value="-1"/>  <!-- Pegasus Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70404" name="Agathion - Guangong" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_warriorgod_i00">
-	<!-- Bracelet that summons the image of Guangong as an Agathion.   -->
+	<!-- Bracelet that summons the Guangong Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55419" level="1"/>  <!-- Summon Agathion Guangong -->
-			<skill id="55443" level="1"/>  <!-- Guangong Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55419" level="1" value="-1"/>  <!-- Summon Agathion - Guangong -->
+			<skill id="55443" level="1" value="-1"/>  <!-- Guangong Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70405" name="Agathion - God of Fortune" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_wealth_god_i00">
-	<!-- Bracelet that summons the image of God of Fortune as an Agathion.   -->
+	<!-- Bracelet that summons the God of Fortune Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55420" level="1"/>  <!-- Summon Agathion God of Fortune -->
-			<skill id="55444" level="1"/>  <!-- God of Fortune Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55420" level="1" value="-1"/>  <!-- Summon Agathion - Mr. Lucky -->
+			<skill id="55444" level="1" value="-1"/>  <!-- Mr. Lucky Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70406" name="Agathion - Phoenix" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_china_phoenix_i00">
-	<!-- Bracelet that summons the image of Phoenix as an Agathion.   -->
+	<armor id="70406" name="Agathion Bracelet - Phoenix" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_china_phoenix_i00">
+	<!-- Bracelet that summons the Phoenix Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55421" level="1"/>  <!-- Summon Agathion Phoenix -->
-			<skill id="55445" level="1"/>  <!-- Phoenix Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55421" level="1" value="-1"/>  <!-- Summon Agathion - Phoenix -->
+			<skill id="55445" level="1" value="-1"/>  <!-- Phoenix Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70407" name="Agathion - Saerom" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
-	<!-- Bracelet that summons the image of Saerom as an Agathion.   -->
+	<armor id="70407" name="Agathion Bracelet - Saerom" type="NONE" body-part="LEFT_BRACELET" icon="icon.pi_high_agathion_bracelet_i00">
+	<!-- Bracelet that summons the Saerom Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55422" level="1"/>  <!-- Summon Agathion - Saerom -->
-			<skill id="55446" level="1"/>  <!-- Saerom Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55422" level="1" value="-1"/>  <!-- Summon Agathion - Saerom -->
+			<skill id="55446" level="1" value="-1"/>  <!-- Saerom Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70408" name="Agathion - Gwanseum Nyang " type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_mercygod_i00">
-	<!-- Bracelet that summons the image of Gwanseum Nyang  as an Agathion.   -->
+	<armor id="70408" name="Agathion - Gwanseum Nyang Nyang" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_mercygod_i00">
+	<!-- Bracelet that summons the Gwanseum Nyang Nyang Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55423" level="1"/>  <!-- Summon Agathion Gwanseum Nyang -->
-			<skill id="55447" level="1"/>  <!-- Gwanseum Nyang Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55423" level="1" value="-1"/>  <!-- Summon Agathion - Gwanseum Nyang -->
+			<skill id="55447" level="1" value="-1"/>  <!-- Gwanseum Nyang Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70409" name="Agathion - Blue Opera" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_blue_pekingopera_i00">
-	<!-- Bracelet that summons the image of Blue Opera as an Agathion.   -->
+	<!-- Bracelet that summons the Blue Opera Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55424" level="1"/>  <!-- Summon Agathion Blue Opera -->
-			<skill id="55448" level="1"/>  <!-- Blue Opera Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55424" level="1" value="-1"/>  <!-- Summon Agathion - Blue Opera -->
+			<skill id="55448" level="1" value="-1"/>  <!-- Blue Opera Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70410" name="Agathion - Red Opera" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_pekingopera_i00">
-	<!-- Bracelet that summons the image of Red Opera as an Agathion.   -->
+	<!-- Bracelet that summons the Red Opera Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55425" level="1"/>  <!-- Summon Agathion Red Opera -->
-			<skill id="55449" level="1"/>  <!-- Red Opera Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55425" level="1" value="-1"/>  <!-- Summon Agathion - Red Opera -->
+			<skill id="55449" level="1" value="-1"/>  <!-- Red Opera Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70411" name="Agathion - Miss Chipao" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_chinesedress_i00">
-	<!-- Bracelet that summons the image of Miss Chipao as an Agathion.   -->
+	<!-- Bracelet that summons the Miss Chipao Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55426" level="1"/>  <!-- Summon Agathion Miss Chipao -->
-			<skill id="55450" level="1"/>  <!-- Miss Chipao Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55426" level="1" value="-1"/>  <!-- Summon Agathion - Miss Chipao -->
+			<skill id="55450" level="1" value="-1"/>  <!-- Miss Chipao Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
 	<armor id="70412" name="Agathion - Flower Fairy Spirit" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_flower_i00">
-	<!-- Bracelet that summons the image of Flower Fairy Spirit as an Agathion.   -->
+	<!-- Bracelet that summons the Flower Fairy Spirit Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55427" level="1"/>  <!-- Summon Agathion Flower Fairy Spirit -->
-			<skill id="55451" level="1"/>  <!-- Flower Fairy Spirit Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55427" level="1" value="-1"/>  <!-- Summon Agathion - Flower Fairy Spirit -->
+			<skill id="55451" level="1" value="-1"/>  <!-- Flower Fairy Spirit Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70413" name="Agathion - Iken" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_b_i00">
-	<!-- Bracelet that summons the image of Iken as an Agathion.   -->
+	<armor id="70413" name="Agathion Bracelet - Iken" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_b_i00">
+	<!-- Bracelet that summons the Iken Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55428" level="1"/>  <!-- Summon Agathion Iken -->
-			<skill id="55452" level="1"/>  <!-- Iken Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55428" level="1" value="-1"/>  <!-- Summon Agathion - Lancet -->
+			<skill id="55452" level="1" value="-1"/>  <!-- Lancet Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70414" name="Agathion - Lanya" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_a_i00">
-	<!-- Bracelet that summons the image of Lanya as an Agathion.   -->
+	<armor id="70414" name="Agathion Bracelet - Lanya" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_a_i00">
+	<!-- Bracelet that summons the Lanya Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55429" level="1"/>  <!-- Summon Agathion Lanya -->
-			<skill id="55453" level="1"/>  <!-- Lanya Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55429" level="1" value="-1"/>  <!-- Summon Agathion - Liposa -->
+			<skill id="55453" level="1" value="-1"/>  <!-- Liposa Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70415" name="Agathion - Gnosian" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_f_i00">
-	<!-- Bracelet that summons the image of Gnosian as an Agathion.   -->
+	<armor id="70415" name="Agathion Bracelet - Gnosian" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_f_i00">
+	<!-- Bracelet that summons the Gnosian Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55430" level="1"/>  <!-- Summon Agathion Gnosian -->
-			<skill id="55454" level="1"/>  <!-- Gnosian Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55430" level="1" value="-1"/>  <!-- Summon Agathion - Velarin -->
+			<skill id="55454" level="1" value="-1"/>  <!-- Velarin Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70416" name="Agathion - Cheerleader Orodriel" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_e_i00">
-	<!-- Bracelet that summons the image of Orodriel as an Agathion.   -->
+	<armor id="70416" name="Agathion Bracelet - Cheerleader Orodriel" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_e_i00">
+	<!-- Bracelet that summons the Orodriel Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55431" level="1"/>  <!-- Summon Agathion Cheerleader Orodriel -->
-			<skill id="55455" level="1"/>  <!-- Cheerleader Orodriel Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55431" level="1" value="-1"/>  <!-- Summon Agathion - Dulcinel -->
+			<skill id="55455" level="1" value="-1"/>  <!-- Dulcinel Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70417" name="Agathion - Lakinos" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_d_i00">
-	<!-- Bracelet that summons the image of Lakinos as an Agathion.   -->
+	<armor id="70417" name="Agathion Bracelet - Lakinos" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_d_i00">
+	<!-- Bracelet that summons the Lakinos Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55432" level="1"/>  <!-- Summon Agathion Lakinos -->
-			<skill id="55456" level="1"/>  <!-- Lakinos Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55432" level="1" value="-1"/>  <!-- Summon Agathion - Chimeros -->
+			<skill id="55456" level="1" value="-1"/>  <!-- Chimeros Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70418" name="Agathion - Mortia" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_c_i00">
-	<!-- Bracelet that summons the image of Mortia as an Agathion.   -->
+	<armor id="70418" name="Agathion Bracelet - Mortia" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_c_i00">
+	<!-- Bracelet that summons the Mortia Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55433" level="1"/>  <!-- Summon Agathion Mortia -->
-			<skill id="55457" level="1"/>  <!-- Mortia Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55433" level="1" value="-1"/>  <!-- Summon Agathion - Niveri -->
+			<skill id="55457" level="1" value="-1"/>  <!-- Niveri Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70419" name="Agathion - Heintz" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_h_i00">
-	<!-- Bracelet that summons the image of Heintz as an Agathion.   -->
+	<armor id="70419" name="Agathion Bracelet - Heintz" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_h_i00">
+	<!-- Bracelet that summons the Heintz Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55434" level="1"/>  <!-- Summon Agathion Heintz -->
-			<skill id="55458" level="1"/>  <!-- Heintz Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55434" level="1" value="-1"/>  <!-- Summon Agathion - Hamell -->
+			<skill id="55458" level="1" value="-1"/>  <!-- Hamell Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70420" name="Agathion - Meruril" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_g_i00">
-	<!-- Bracelet that summons the image of Meruril as an Agathion.   -->
+	<armor id="70420" name="Agathion Bracelet - Meruril" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_g_i00">
+	<!-- Bracelet that summons the Meruril Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55435" level="1"/>  <!-- Summon Agathion Meruril -->
-			<skill id="55459" level="1"/>  <!-- Meruril Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55435" level="1" value="-1"/>  <!-- Summon Agathion - Joriya -->
+			<skill id="55459" level="1" value="-1"/>  <!-- Joriya Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70421" name="Agathion - Taman Zu Rapatui" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_i_i00">
-	<!-- Bracelet that summons the image of Taman Zu Rapatui as an Agathion.   -->
+	<armor id="70421" name="Agathion Bracelet - Taman Zu Rapatui" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_i_i00">
+	<!-- Bracelet that summons the Taman Zu Rapatui Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55436" level="1"/>  <!-- Summon Agathion Taman Zu Rapatui -->
-			<skill id="55460" level="1"/>  <!-- Taman Zu Rapatui Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55436" level="1" value="-1"/>  <!-- Summon Agathion - Ralmak -->
+			<skill id="55460" level="1" value="-1"/>  <!-- Ralmak Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70422" name="Agathion - Kaurin" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_j_i00">
-	<!-- Bracelet that summons the image of Kaurin as an Agathion.   -->
+	<armor id="70422" name="Agathion Bracelet - Kaurin" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_j_i00">
+	<!-- Bracelet that summons the Kaurin Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55437" level="1"/>  <!-- Summon Agathion Kaurin -->
-			<skill id="55461" level="1"/>  <!-- Kaurin Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55437" level="1" value="-1"/>  <!-- Summon Agathion - Goras -->
+			<skill id="55461" level="1" value="-1"/>  <!-- Goras Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70423" name="Agathion - Ahertbein" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_l_i00">
-	<!-- Bracelet that summons the image of Ahertbein as an Agathion.   -->
+	<armor id="70423" name="Agathion Bracelet - Ahertbein" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_l_i00">
+	<!-- Bracelet that summons the Ahertbein Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55438" level="1"/>  <!-- Summon Agathion Ahertbein -->
-			<skill id="55462" level="1"/>  <!-- Ahertbein Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55438" level="1" value="-1"/>  <!-- Summon Agathion - Vensar -->
+			<skill id="55462" level="1" value="-1"/>  <!-- Vensar Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
-	<armor id="70424" name="Agathion - Naonin" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_k_i00">
-	<!-- Bracelet that summons the image of Naonin as an Agathion.   -->
+	<armor id="70424" name="Agathion Bracelet - Naonin" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys.icon.br_aga_local2009_k_i00">
+	<!-- Bracelet that summons the Naonin Agathion. -->
 		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55439" level="1"/>  <!-- Summon Agathion Naonin -->
-			<skill id="55463" level="1"/>  <!-- Naonin Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="55439" level="1" value="-1"/>  <!-- Summon Agathion - Kiela -->
+			<skill id="55463" level="1" value="-1"/>  <!-- Kiela Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
@@ -303,11 +303,11 @@
 	</armor>
 
 	<item id="70426" name="Energy of Protection" type="POTION" icon="icon.general_energy_condense_i01">
-	<!-- For 20 min. Max HP/ MP +5%, XP/ SP +30%. Provides Mental Attack/Paralysis Resistance.\\n<Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
+	<!-- For 20 min. Max HP/ MP +5%, XP/ SP +30%. Provides Mental Attack/Paralysis Resistance.\n<Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55464"/> <!-- Energy of Protection -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55464" level="1" value="-1"/>  <!-- Energy of Protection -->
 		</skill-reducer>
 	</item>
 
@@ -316,7 +316,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70297" chance="100000"/>  <!-- Talisman of Fate Lv. 4 -->
+			<item id="70297" chance="100000000"/>  <!-- Talisman of Fate Lv. 4 -->
 		</extract>
 	</item>
 
@@ -325,16 +325,16 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70298" chance="100000"/>  <!-- Talisman of Fate Lv. 5 -->
+			<item id="70298" chance="100000000"/>  <!-- Talisman of Fate Lv. 5 -->
 		</extract>
 	</item>
 
-	<item id="70429" name="Agathion - Singer and Dancer Pack (7-day)" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
+	<item id="70429" name="Agathion - Singer &amp; Dancer Pack (7-day)" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
 	<!-- Double-click to get Agathion - Singer & Dancer (7-day).   -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70114" chance="100000"/>  <!-- Agathion - Singer and Dancer  -->
+			<item id="70114" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
 		</extract>
 	</item>
 
@@ -660,7 +660,7 @@
 	</armor>
 
 	<item id="70476" name="Shiny Rough Jewel" type="NONE" icon="icon.etc_bm_jewel_piece">
-	<!-- You can exchange some amount of Ore for Lv. 1 Brooch, Lv. 3-5 jewels or Jewelry Box through Dimensional Merchant. -->
+	<!-- You can exchange some amount of Ore for Lv. 1 Brooch, Lv. 3-5 jewels or Jewelry Box through the Store Manager. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>

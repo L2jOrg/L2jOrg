@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<item id="93400" name="Deton’s Request Lv. 5 Pack" type="NONE" icon="icon.alchemy_master_scroll">
+	<!-- Double-click to obtain Deton’s Request Lv. 5. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93401" name="Deton’s Request Lv. 6 Pack" type="NONE" icon="icon.alchemy_master_scroll">
+	<!-- Double-click to obtain Deton’s Request Lv. 6. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93402" name="Deton’s Request Lv. 7 Pack" type="NONE" icon="icon.alchemy_master_scroll">
+	<!-- Double-click to obtain Deton’s Request Lv. 7. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93403" name="Deton’s Request Lv. 8 Pack" type="NONE" icon="icon.alchemy_master_scroll">
+	<!-- Double-click to obtain Deton’s Request Lv. 8. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93404" name="Deton’s Request Lv. 9 Pack" type="NONE" icon="icon.alchemy_master_scroll">
+	<!-- Double-click to obtain Deton’s Request Lv. 9. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93405" name="Deton’s Request Lv. 10 Pack" type="NONE" icon="icon.alchemy_master_scroll">
+	<!-- Double-click to obtain Deton’s Request Lv. 10. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93406" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i03">
+	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120" price="1500000"/>
+	</item>
+
+	<item id="93407" name="Scroll: Enchant Armor (B-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i03">
+	<!-- Increases P. Def. by 1 for B-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120" price="240000"/>
+	</item>
+
+	<item id="93408" name="Scroll: Enchant Weapon (C-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i02">
+	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120" price="330000"/>
+	</item>
+
+	<item id="93409" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i02">
+	<!-- Increases P. Def. by 1 for C-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120" price="45000"/>
+	</item>
+
+	<item id="93410" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120" price="150000"/>
+	</item>
+
+	<item id="93411" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i01">
+	<!-- Increases P. Def. by 1 for D-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120" price="18000"/>
+	</item>
+
+	<item id="93412" name="Letter - K" type="NONE" icon="icon.etc_alphabet_k_i00">
+	<!-- Combine with other letters to receive a great gift! -->
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93413" name="Letter - U" type="NONE" icon="icon.etc_alphabet_u_i00">
+	<!-- Combine with other letters to receive a great gift! -->
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93414" name="Letter W" type="NONE" icon="icon.etc_alphabet_w_i00">
+	<!-- Combine with other letters to receive a great gift! -->
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93415" name="Formal Wear" type="HEAVY" body-part="ALL_DRESS" icon="icon.armor_t2000_ul_i00">
+	<!-- Tuxedo for male characters, and a wedding dress for female characters. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1000" price="5000000" />
+		<crystal />
+	</armor>
+
+	<weapon id="93416" name="Chrono Cithara" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_chrono_cithara_i00">
+	<!-- Chronos weapon to celebrate the Promise of 5,000 Days. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<weapon id="93417" name="Chrono Unitus" type="FIST" body-part="TWO_HAND" icon="icon.weapon_chrono_tambourine_i00">
+	<!-- Chronos weapon to celebrate the Promise of 5,000 Days. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<weapon id="93418" name="Chrono Campana" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_chrono_campana_i00">
+	<!-- Chronos weapon to celebrate the Promise of 5,000 Days. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<weapon id="93419" name="Chrono Darbuka" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_chrono_darbuka_i00">
+	<!-- Chronos weapon to celebrate the Promise of 5,000 Days. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<weapon id="93420" name="Chrono Maracas" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_chrono_maracas_i00">
+	<!-- Chronos weapon to celebrate the Promise of 5,000 Days. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes/>
+		<crystal />
+		<consume />
+	</weapon>
+
+	<armor id="93421" name="Valakas' Necklace" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_valakas_i00">
+	<!-- MP +30, Paralysis Attack and Resistance +10%, P. Atk./M. Atk. +5%, Skill Cooldown -4%, Damage Reflect Resistance +5%, P./M. Skill Power +5%. Cannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal />
+	</armor>
+
+	<weapon id="93422" name="Damascus" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_damascus_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1350" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93423" name="Lance" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_lancia_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1920" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93424" name="Deadman's Glory" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_deadmans_glory_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1600" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93425" name="Art of Battle Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_art_of_battle_axe_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1570" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93426" name="Staff of Evil Spirits" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_staff_of_evil_sprit_i00" magic="true">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="930" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93427" name="Demon's Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_demons_sword_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="970" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93428" name="Bellion Cestus " type="FIST" body-part="TWO_HAND" icon="icon.weapon_bellion_cestus_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1390" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93429" name="Bow of Peril" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hazard_bow_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1700" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="3" spiritshots="2" mana="4"/>
+	</weapon>
+
+	<weapon id="93430" name="Samurai Long Sword*Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<!-- When enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. of a dualsword increases more significantly than that of a normal one-handed sword. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2080" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93431" name="Guardian's Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_guardians_sword_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1930" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93432" name="Wizard's Tear" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tears_of_wizard_i00" magic="true">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1350" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93433" name="Star Buster" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_star_buster_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1930" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93434" name="Dismantler" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_dismantler_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1530" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<weapon id="93435" name="Colichemarde" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_colichemarde_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1300" price="13100000"/>
+		<crystal type="B"/>
+		<consume  soulshots="2" spiritshots="2"/>
+	</weapon>
+
+	<item id="93436" name="+4 - +15 Random Weapon Pack - Samurai Long Sword" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Samurai Long Sword at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93437" name="+4 - +15 Random Weapon Pack - Demon's Staff" type="NONE" icon="icon.weapon_demons_staff_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Demon's Staff at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93438" name="+4 - +15 Random Weapon Pack - Ecliptic Axe" type="NONE" icon="icon.weapon_eclipse_axe_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Ecliptic Axe at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93439" name="+4 - +15 Random Weapon Pack - Crystal Dagger" type="NONE" icon="icon.weapon_crystal_dagger_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Crystal Dagger at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93440" name="+4 - +15 Random Weapon Pack - Eminence Bow" type="NONE" icon="icon.weapon_eminence_bow_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Eminence Bow at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93441" name="+4 - +15 Random Weapon Pack - Orcish Poleaxe" type="NONE" icon="icon.weapon_orcish_poleaxe_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Orcish Poleaxe at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93442" name="+4 - +15 Random Weapon Pack - Katana*Katana" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Katana*Katana at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93443" name="+4 - +15 Random Weapon Pack - Yaksa Mace" type="NONE" icon="icon.weapon_yaksa_mace_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Yaksa Mace at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93444" name="+4 - +15 Random Weapon Pack - Berserker Blade" type="NONE" icon="icon.weapon_berserker_blade_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Berserker Blade at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93445" name="+4 - +15 Random Weapon Pack - Great Pata" type="NONE" icon="icon.weapon_great_pata_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Great Pata at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93446" name="+4 - +15 Random Weapon Pack - Admiral's Estoc" type="NONE" icon="icon.weapon_blink_slasher_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Admiral's Estoc at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93447" name="+4 - +15 Random Weapon Pack - Saber Tooth" type="NONE" icon="icon.weapon_invincible_blade_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Saber Tooth at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93448" name="A-grade Weapon Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_sell_ticket">
+	<!-- Exchange for an A-grade weapon through the Store Manager. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93449" name="A-grade Armor Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_ench_ticket">
+	<!-- Exchange for an A-grade armor through the Store Manager. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93450" name="Gold Box" type="NONE" icon="icon.bm_gold_relic_box">
+	<!-- Craft one of the following items: B-grade Enchant Weapon Exchange Ticket, C-grade Enchant Weapon Exchange Ticket, Boss Weapons, Thunder Leather Armor, Thunder Leggings, Freeze Breastplate, Freeze Gaiters. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93451" name="Boss Weapon Crafting" type="NONE" icon="icon.zariche_box">
+	<!-- Use to craft 1 of the following: Zaken’s Blood Sword, Core’s Plasma Bow, Orfen’s Poisonous Sword, Baium’s Thunder Breaker, Queen Ant’s Stone Crasher. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93452" name="Scroll of Escape: Fortress" type="SCROLL" icon="icon.etc_scroll_of_return_castle_i00">
+	<!-- Magical scroll that transports you to your Fortress. If you don't have a Fortress, it will relocate you to the nearest village. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="120" price="500"/>
+	</item>
+
+	<item id="93453" name="Blessed Scroll of Escape: Clan Hall" type="SCROLL" icon="icon.etc_scroll_of_return_castle_i01">
+	<!-- Magical scroll that transports you to your Fortress quickly. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes weight="120" price="100000"/>
+	</item>
+
+	<item id="93454" name="+14 S-grade Weapon Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 of the +14 S-grade weapons at random. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93455" name="+10 S-grade Weapon Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 of the +10 S-grade weapons at random. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93456" name="+16 A-grade Weapon Pack" type="NONE" icon="icon.etc_treasure_box_i00">
+	<!-- Double-click to obtain 1 of the +16 Top-grade A-grade weapons at random. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93457" name="+8 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain a +8 Dragon’s Belt. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93458" name="Magic Lamp Acceleration Potion - Event" type="NONE" icon="icon.etc_recall_potion2">
+	<!-- 20% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93459" name="A-grade Armor Pack - Majestic" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
+	<!-- Double-click to obtain 1 Majestic Heavy Armor, Light Armor, or Robe that cannot be exchanged. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93460" name="A-grade Armor Pack - Nightmare" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
+	<!-- Double-click to obtain 1 Nightmare Heavy Armor, Light Armor, or Robe that cannot be exchanged. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93461" name="A-grade Armor Pack - Dark Crystal" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
+	<!-- Double-click to obtain 1 Dark Crystal Heavy Armor, Light Armor, or Robe that cannot be exchanged. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93462" name="A-grade Armor Pack - Tallum" type="NONE" icon="icon.etc_box_of_adventure_3_i00">
+	<!-- Double-click to obtain 1 Tallum Heavy Armor, Light Armor, or Robe that cannot be exchanged. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93463" name="+4 - +15 Random Weapon Pack - Damascus" type="NONE" icon="icon.weapon_sword_of_damascus_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Damascus at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93464" name="+4 - +15 Random Weapon Pack - Tears of Wizard" type="NONE" icon="icon.weapon_tears_of_wizard_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Tears of Wizard at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93465" name="+4 - +15 Random Weapon Pack - Guardian's Sword" type="NONE" icon="icon.weapon_guardians_sword_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Guardian's Sword at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93466" name="+4 - +15 Random Weapon Pack - Bellion Cestus" type="NONE" icon="icon.weapon_bellion_cestus_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Bellion Cestus at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93467" name="+4 - +15 Random Weapon Pack - Bow of Peril" type="NONE" icon="icon.weapon_hazard_bow_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Bow of Peril at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93468" name="+4 - +15 Random Weapon Pack - Lance" type="NONE" icon="icon.weapon_lancia_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Lance at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93469" name="+4 - +15 Random Weapon Pack - Staff of Evil Spirits" type="NONE" icon="icon.weapon_staff_of_evil_sprit_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Staff of Evil Spirits at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93470" name="+4 - +15 Random Weapon Pack - Deadman's Glory" type="NONE" icon="icon.weapon_deadmans_glory_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Deadman's Glory at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93471" name="+4 - +15 Random Weapon Pack - Art of Battleaxe" type="NONE" icon="icon.weapon_art_of_battle_axe_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Art of Battleaxe at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93472" name="+4 - +15 Random Weapon Pack - Samurai Long Sword*Samurai Long Sword" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Samurai Long Sword*Samurai Long Sword at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93473" name="+4 - +15 Random Weapon Pack - Demon's Dagger" type="NONE" icon="icon.weapon_demons_sword_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Demon's Dagger at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93474" name="+4 - +15 Random Weapon Pack - Colichemarde" type="NONE" icon="icon.weapon_colichemarde_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Colichemarde at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93475" name="+4 - +15 Random Weapon Pack - Dismantler" type="NONE" icon="icon.weapon_dismantler_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Dismantler at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93476" name="+4 - +15 Random Weapon Pack - Star Buster" type="NONE" icon="icon.weapon_star_buster_i00">
+	<!-- Double-click to obtain a +4 - +15 enchanted Star Buster at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93477" name="3000 L2 Coins" type="NONE" icon="icon.bm_lcoin_box_i01">
+	<!-- Double-click to obtain 3000 L2 Coins. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93478" name="Lv. 60 Reward Box" type="NONE" icon="icon.bm_2019_cube_lv1">
+	<!-- Double-click to obtain +2 Aden Talisman, 500 L2 Coins, and Lv. 65 Reward Box.\n\nCan be used by characters level 60 or higher. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93479" name="Lv. 65 Reward Box" type="NONE" icon="icon.bm_2019_cube_lv2">
+	<!-- Double-click to obtain +2 Cloak of Protection, 500 L2 Coins, and Lv. 70 Reward Box.\n\nCan be used by characters level 65 or higher. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93480" name="Lv. 70 Reward Box" type="NONE" icon="icon.bm_2019_cube_lv3">
+	<!-- Double-click to obtain +2 Dragon’s Belt, 1000 L2 Coins.\n\nCan be used by characters level 70 or higher. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93481" name="Everyday Grace Cube" type="COUPON" icon="icon.sa_cube">
+	<!-- Double-click to obtain Sayha's Blessing x20. Can only be used once a day. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93482" name="5000 L2 Coins" type="NONE" icon="icon.bm_lcoin_box_i02">
+	<!-- Double-click to obtain 5000 L2 Coins. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93483" name="L2 Coins Growth Package" type="NONE" icon="icon.npoint_antaras_30day_box">
+	<!-- Double-click to obtain 3000 L2 Coins, Lv. 60 Reward Box. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93484" name="L2 Coins Grace Package" type="NONE" icon="icon.npoint_earring_of_lind_30day_box">
+	<!-- Double-click to obtain 5000 L2 Coins and 1 Everyday Grace Cube. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93485" name="Spellbook: Mount Wyvern" type="NONE" icon="icon.etc_spellbook_red_i00">
+	<!-- Double-click to learn Summon Mount Wyvern. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="120"/>
+	</item>
+
+	<item id="93486" name="Battleground Scroll" type="NONE" icon="icon.etc_ssq_i00">
+	<!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical/M. Skill Critical Damage +10%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use-type="SUPPLY"/>
+	</item>
+
+	<item id="93487" name="Character Creation Package - Orc Shaman" type="NONE" icon="icon.etc_equip_item_box_i01">
+	<!-- Double-click to obtain Training Gloves, Apprentice's Tunic, Apprentice's Stockings, and 3 Adventurer's Scroll of Escape. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93488" name="Character Creation Package - Orc Warrior" type="NONE" icon="icon.etc_equip_item_box_i01">
+	<!-- Double-click to obtain Training Gloves, Squire's Sword, Squire's Shirt, Squire's Pants, and 3 Adventurer's Scroll of Escape. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93489" name="Character Creation Package - Dwarf" type="NONE" icon="icon.etc_equip_item_box_i01">
+	<!-- Double-click to obtain Guild Member's Club, Dagger, Squire's Shirt, Squire's Pants, and 3 Adventurer's Scroll of Escape. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93490" name="Character Creation Package - Jin Kamael" type="NONE" icon="icon.etc_equip_item_box_i01">
+	<!-- Double-click to obtain Apprentice Fighter’s Rapier, Apprentice Fighter’s Ancient Sword, Squire's Shirt, Squire's Pants, and 3 Adventurer's Scroll of Escape. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93491" name="Character Creation Package - Fighter" type="NONE" icon="icon.etc_equip_item_box_i01">
+	<!-- Double-click to obtain Squire's Sword, Dagger, Squire's Shirt, Squire's Pants, and 3 Adventurer's Scroll of Escape. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93492" name="Character Creation Package - Mage" type="NONE" icon="icon.etc_equip_item_box_i01">
+	<!-- Double-click to obtain Apprentice's Wand, Apprentice's Tunic, Apprentice's Stockings, and 3 Adventurer's Scroll of Escape. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93493" name="Moonshadow Armor Set" type="NONE" icon="icon.etc_treasure_box_i01">
+	<!-- Box containing Moonshadow Armor Set. Double-click to obtain the Moonshadow Armor Set. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93494" name="Moonshadow Outfit Set" type="NONE" icon="icon.etc_treasure_box_i01">
+	<!-- Box containing Moonshadow Outfit Set. Double-click to obtain the Moonshadow Outfit Set. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93495" name="Moonshadow Doublet Set" type="NONE" icon="icon.etc_treasure_box_i01">
+	<!-- Box containing Moonshadow Doublet Set. Double-click to obtain the Moonshadow Doublet Set. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93496" name="1st Class Transfer Gift Box" type="NONE" icon="icon.etc_treasure_box_i03">
+	<!-- Receive this gift after completing the first class transfer. Double-click to obtain 2 Scroll: 10,000 SP, 100 Spirit Ores, 1 Spellbook: Haste, and 1 Spellbook: Acumen. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93497" name="1st Class Transfer Gift Box" type="NONE" icon="icon.etc_treasure_box_i03">
+	<!-- Receive this gift after completing the first class transfer. Double-click to obtain 2 Scroll: 10,000 SP, 100 Spirit Ores, 1 Chant of Haste, and 1 Chant of Acumen. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93498" name="C-grade Enchant Weapon Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_sell_ticket">
+	<!-- Exchange for a C-grade weapon through the Store Manager. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93499" name="B-grade Enchant Weapon Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_sell_ticket">
+	<!-- Exchange for a B-grade weapon through the Store Manager. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+</list>

@@ -175,13 +175,13 @@
 	</item>
 
 	<item id="90729" name="Flower Sweets" type="SCROLL" icon="icon.flower_songpyeon">
-	<!-- For 20 minutes Max HP/MP +5%, XP and SP gained through hunting +20%.  \\n<Note>When used simultaneously with Life Control Tower's Scroll of Blessing, effects do not stack. If Angel Cat's Blessing is used at the same time, only Flower Sweets will produce an effect.  -->
+	<!-- For 20 minutes Max HP/MP +5%, XP and SP gained through hunting +20%.  \n<Note>When used simultaneously with Life Control Tower's Scroll of Blessing, effects do not stack. If Angel Cat's Blessing is used at the same time, only Flower Sweets will produce an effect.  -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90730" name="Pumpkin Sweets" type="SCROLL" icon="icon.pumpkin_songpyeon">
-	<!-- Recharges Sayha's Grace Points by 35,000 and for 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Crit. Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. \\n<Note>When used simultaneously with Special Fruit Buff or Special Dragon's Fruit, effects do not stack.  -->
+	<!-- Recharges Sayha's Grace Points by 35,000 and for 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, P./M. Crit. Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. \n<Note>When used simultaneously with Special Fruit Buff or Special Dragon's Fruit, effects do not stack.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -388,7 +388,7 @@
 			<stat type="maxMp" value="22.0"/>
 		</stats>
 		<skills>
-			<skill id="45017" level="1"/>  <!-- Orfen's Earring - Special Ability -->
+			<skill id="45017" level="1" value="-1"/>  <!-- Orfen's Earring - Special Ability -->
 		</skills>
 	</armor>
 
@@ -402,7 +402,7 @@
 			<stat type="maxMp" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="45017" level="2"/>  <!-- Orfen's Earring - Special Ability -->
+			<skill id="45017" level="2" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
@@ -416,7 +416,7 @@
 			<stat type="maxMp" value="34.0"/>
 		</stats>
 		<skills>
-			<skill id="45017" level="3"/>  <!-- Orfen's Earring - Special Ability -->
+			<skill id="45017" level="3" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
@@ -637,7 +637,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55715" level="1"/>  <!-- Chef's Fish Stew Box -->
+			<skill id="55715" level="1" value="-1"/>  <!-- Chef's Fish Stew Box -->
 		</skill-reducer>
 	</item>
 
@@ -645,8 +645,8 @@
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39298"/> <!-- Shining Scroll of Mood Melody -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39298" level="1" value="-1"/>  <!-- Shining Mood Melody -->
 		</skill-reducer>
 	</item>
 

@@ -6,7 +6,7 @@
 		<attributes weight="150" price="1080000" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3322" level="1"/>  <!-- Iron Bracelet -->
+			<skill id="3322" level="1" value="-1"/>  <!-- Iron Bracelet -->
 		</skills>
 	</armor>
 
@@ -16,7 +16,7 @@
 		<attributes weight="150" price="5400000" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3323" level="1"/>  <!-- Bronze Bracelet -->
+			<skill id="3323" level="1" value="-1"/>  <!-- Bronze Bracelet -->
 		</skills>
 	</armor>
 
@@ -26,7 +26,7 @@
 		<attributes weight="150" price="27000000" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3324" level="1"/>  <!-- Steel Bracelet -->
+			<skill id="3324" level="1" value="-1"/>  <!-- Steel Bracelet -->
 		</skills>
 	</armor>
 

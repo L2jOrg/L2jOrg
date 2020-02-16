@@ -111,7 +111,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -204,7 +204,7 @@
 		</stats>
 	</weapon>
 
-	<weapon id="26267" name="Halloween Dual sword" type="DUAL" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
+	<weapon id="26267" name="Halloween Dualsword" type="DUAL" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>

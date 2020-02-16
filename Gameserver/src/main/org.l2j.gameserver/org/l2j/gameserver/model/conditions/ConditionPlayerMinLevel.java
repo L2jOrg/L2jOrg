@@ -10,7 +10,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
  * @author mkizub
  */
 public class ConditionPlayerMinLevel extends Condition {
-    private final int _level;
+    public final int _level;
 
     /**
      * Instantiates a new condition player level.

@@ -10,7 +10,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
  * @author mkizub
  */
 public class ConditionLogicNot extends Condition {
-    private final Condition _condition;
+    public final Condition _condition;
 
     /**
      * Instantiates a new condition logic not.

@@ -47,7 +47,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2069" level="1"/>  <!-- Item - Race Sound Crystal -->
+			<skill id="2069" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -56,7 +56,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2068" level="1"/>  <!-- Item - Race Sound Crystal -->
+			<skill id="2068" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -65,7 +65,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2070" level="1"/>  <!-- Item - Race Sound Crystal -->
+			<skill id="2070" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -74,7 +74,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2072" level="1"/>  <!-- Item - Race Sound Crystal -->
+			<skill id="2072" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -83,7 +83,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2071" level="1"/>  <!-- Item - Race Sound Crystal -->
+			<skill id="2071" level="1" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -92,7 +92,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2073" level="1"/>  <!-- Item - Theme Sound Crystal -->
+			<skill id="2073" level="1" value="-1"/>  <!-- Item - Fight Song Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -101,7 +101,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2067" level="1"/>  <!-- Item - Theme Sound Crystal -->
+			<skill id="2067" level="1" value="-1"/>  <!-- Item - Fight Song Crystal -->
 		</skill-reducer>
 	</item>
 

@@ -15,7 +15,7 @@ public class ConditionPlayerSex extends Condition {
     private static final ConditionPlayerSex FEMALE = new ConditionPlayerSex(1);
 
     // male 0 female 1
-    private final int _sex;
+    public final int _sex;
 
     /**
      * Instantiates a new condition player sex.

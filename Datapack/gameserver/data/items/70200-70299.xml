@@ -21,21 +21,21 @@
 	</armor>
 
 	<armor id="70202" name="Refined Romantic Chapeau: Gold" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_gold">
-	<!-- Occupies 2 Hair Accessory slots. \\n\\n<Active Skills>\\n1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Cooldown: 360 minutes.\\n2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Cooldown: 60 minutes.\\n3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
+	<!-- Occupies 2 Hair Accessory slots. \n\n<Active Skills>\n1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Cooldown: 360 minutes.\n2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Cooldown: 60 minutes.\n3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="144000" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70203" name="Refined Romantic Chapeau: Yellow" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_yellow">
-	<!-- Occupies 2 Hair Accessory slots. \\n\\n<Active Skills>\\n1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Cooldown: 360 minutes.\\n2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Cooldown: 60 minutes.\\n3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
+	<!-- Occupies 2 Hair Accessory slots. \n\n<Active Skills>\n1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Cooldown: 360 minutes.\n2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Cooldown: 60 minutes.\n3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="47520" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="70204" name="Feather of Blessing" type="NONE" icon="icon.blessed_feather_i00">
-	<!-- Dimensional item\\n Blessed feather that allows to resurrect right in the place of death. -->
+	<!-- Blessed feather that allows to resurrect right in the place of death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -107,23 +107,23 @@
 	</item>
 
 	<item id="70216" name="Chronicle Cube" type="NONE" icon="icon.etc_ore_cube_event_i00">
-	<!-- A 21-item. Can be used once a day. Allows obtaining a vast variety of items.  -->
+	<!-- 21-day Cube. Can be used once a day. Allows obtaining a vast variety of items. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="30240" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70217" name="Rare Accessory Lv. 3 Coupon" type="MATERIAL" icon="icon.etc_lottery_card_i00">
-	<!-- Collect 4 to obtain a Chronicle Cube. Collect 500 to obtain a coupon exchangeable for a Rare Accessory Enhanced Pack Lv. 3 (30-day). The item will be removed after the event is over. -->
+	<!-- Collect 4 to obtain a Chronicle Cube. Collect 500 to obtain a coupon exchangeable for a Rare Accessory Enhanced Pack Lv. 3 (30-day). -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="70218" name="Chronicle Chest" type="NONE" icon="icon.ev_10th_present2">
-	<!-- Allows obtaining a vast variety of items.  -->
+	<!-- Allows obtaining a vast variety of items. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55317" level="1"/>  <!-- Chronicle Chest -->
+			<skill id="55317" level="1" value="-1"/>  <!-- Chronicle Chest -->
 		</skill-reducer>
 	</item>
 
@@ -143,7 +143,7 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="3"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -157,7 +157,7 @@
 			<stat type="maxMp" value="31.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="3"/>  <!-- Orfen's Earring -->
+			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -171,8 +171,8 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="3"/>  <!-- Ring of Core -->
-			<skill id="35016" level="1"/>  <!-- Ring of Core - Special Ability -->
+			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
+			<skill id="35016" level="1" value="-1"/>  <!-- Ring of Core - Special Ability -->
 		</skills>
 	</armor>
 
@@ -195,7 +195,7 @@
 	</item>
 
 	<item id="70226" name="Chronicle Cube Box (21-day)" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click to receive Chronicle Cube (21-day).  -->
+	<!-- Double-click to receive Chronicle Cube (21-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -219,7 +219,7 @@
 	</item>
 
 	<item id="70230" name="Rare Accessory Lv. 3 Exchange Ticket" type="MATERIAL" icon="icon.etc_lottery_card_i00">
-	<!-- Using Dimensional Merchant, you can trade it for a Rare Accessory Lv. 3 (30-day). The item will be removed after the event is over. -->
+	<!-- Using the Store Manager, you can trade it for a Rare Accessory Lv. 3 (30-day). -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -237,29 +237,29 @@
 	</item>
 
 	<item id="70233" name="Strawberry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
-	<!-- When used, activates Prophecy of Fire - Lv. 1 for 5 minutes.\\n<Note> The effect does not stack with Mango Juice, Cherry Juice, or any of the Prophecies. -->
+	<!-- When used, activates Prophecy of Fire - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Mango Juice, Cherry Juice, or any of the Prophecies. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55329"/>  <!-- Strawberry Juice -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55329" level="1" value="-1"/>  <!-- Strawberry Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70234" name="Mango Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
-	<!-- When used, activates Prophecy of Water - Lv. 1 for 5 minutes.\\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies. -->
+	<!-- When used, activates Prophecy of Water - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55330"/>  <!-- Mango Juice -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55330" level="1" value="-1"/>  <!-- Mango Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70235" name="Cherry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
-	<!-- When used, activates Prophecy of Wind - Lv. 1 for 5 minutes.\\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies. -->
+	<!-- When used, activates Prophecy of Wind - Lv. 1 for 5 minutes.\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55331"/>  <!-- Cherry Juice -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55331" level="1" value="-1"/>  <!-- Cherry Juice -->
 		</skill-reducer>
 	</item>
 
@@ -275,234 +275,234 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="70238" name="Scroll: 1,000 SP,," type="SCROLL" icon="icon.etc_sp_scroll3_i00">
+	<item id="70238" name="Scroll: 1,000 SP" type="SCROLL" icon="icon.etc_sp_scroll3_i00">
 	<!-- When used, adds 1,000 SP. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70239" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~19.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55335"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55335" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70240" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~19.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55336"/> <!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55336" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70241" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~19.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~19.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55337"/>  <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55337" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70242" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 20~39.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55338"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55338" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70243" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 20~39.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55339"/> <!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55339" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70244" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 20~39.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 20~39.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55340"/> <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55340" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70245" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 40~51.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55341"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55341" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70246" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 40~51.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55342"/> <!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55342" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70247" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 40~51.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 40~51.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55343"/> <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55343" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70248" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 52~60.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55344"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55344" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70249" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 52~60.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55345"/> <!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55345" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70250" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 52~60.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 52~60.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55346"/> <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55346" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70251" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 61~75.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55347"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55347" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70252" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 61~75.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55348"/> <!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55348" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70253" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 61~75.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 61~75.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55349"/> <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55349" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70254" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 76~79.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55350"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55350" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70255" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 76~79.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55351"/> <!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55351" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70256" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 76~79.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 76~79.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55352"/> <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55352" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70257" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 80~85.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55353"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55353" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70258" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 80~85.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55354"/>	<!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55354" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70259" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 80~85.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 80~85.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55355"/> <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55355" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70260" name="XP/SP Hourglass - 1 Hour" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- Increases XP/SP gain by 50% for 1 hour.\\nIntended for Lv. 1~99.  -->
+	<!-- Increases XP/SP gain by 50% for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55356"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55356" level="1" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 
 	<item id="70261" name="XP/SP Hourglass - 2 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~99.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55357"/> <!-- Irene's Hourglass - 2 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55357" level="1" value="-1"/>  <!-- XP/SP Hourglass - 2 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70262" name="XP/SP Hourglass - 3 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~99.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55358"/> <!-- Irene's Hourglass - 3 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55358" level="1" value="-1"/>  <!-- XP/SP Hourglass - 3 Hours -->
 		</skill-reducer>
 	</item>
 
 	<item id="70263" name="XP/SP Hourglass - 4 Hours" type="POTION" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, provides 50% XP bonus for 1 hour.\\nIntended for Lv. 1~99.  -->
+	<!-- When used, provides 50% XP bonus for 1 hour.\nIntended for Lv. 1~99.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55359"/> <!-- Irene's Hourglass - 1 Hour -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55359" level="1" value="-1"/>  <!-- XP/SP Hourglass - 4 Hours -->
 		</skill-reducer>
 	</item>
 
@@ -607,7 +607,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55362" level="1"/>  <!-- Clan Reputation Score - 10 -->
+			<skill id="55362" level="1" value="-1"/>  <!-- Clan Reputation Score - 10 -->
 		</skill-reducer>
 	</item>
 
@@ -616,7 +616,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55363" level="1"/>  <!-- Clan Reputation Score - 50 -->
+			<skill id="55363" level="1" value="-1"/>  <!-- Clan Reputation Score - 50 -->
 		</skill-reducer>
 	</item>
 
@@ -625,7 +625,7 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="1440" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55364" level="1"/>  <!-- Clan Reputation Score - 150 -->
+			<skill id="55364" level="1" value="-1"/>  <!-- Clan Reputation Score - 150 -->
 		</skill-reducer>
 	</item>
 
@@ -634,17 +634,17 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="20" price="1200" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55361" level="1"/>  <!-- Superspeed Potion -->
+			<skill id="55361" level="1" value="-1"/>  <!-- Superspeed Potion -->
 		</skill-reducer>
 	</item>
 
-	<item id="70284" name="Weapon Supply Box (B-grade)" type="NONE" icon="icon.bm_pirate_treasure_box">
+	<item id="70284" name="Weapon Pack (B-grade)" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a B-grade weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="70285" name="Weapon Supply Box (C-grade)" type="NONE" icon="icon.bm_pirate_treasure_box">
+	<item id="70285" name="Weapon Pack (C-grade)" type="NONE" icon="icon.bm_pirate_treasure_box">
 	<!-- Double-click to receive a C-grade weapon. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -698,43 +698,43 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="70294" name="Talisman of Fate Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\\n\\n<Note>\\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
+	<armor id="70294" name="Talisman of Fate Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
+	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70295" name="Talisman of Fate Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\\n\\n<Note>\\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
+	<armor id="70295" name="Talisman of Fate Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
+	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70296" name="Talisman of Fate Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\\n\\n<Note>\\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
+	<armor id="70296" name="Talisman of Fate Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
+	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70297" name="Talisman of Fate Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\\n\\n<Note>\\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
+	<armor id="70297" name="Talisman of Fate Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
+	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70298" name="Talisman of Fate Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.bm_magic_square_talisman">
-	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\\n\\n<Note>\\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
+	<armor id="70298" name="Talisman of Fate Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
+	<!-- By combining Talismans of the same level through Veruti in the Town of Giran, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used.\n\n<Note>\nWhen combining with other Talismans, their enchantment is reset; therefore, if you have an enchanted Talisman in your inventory, be careful and do not combine it with another Talisman. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="70299" name="Enchant Scroll of Fate" type="ENCHANT_ARMOR" icon="icon.etc_doom_capture">
-	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. The maximum level of enchantment is +10; with each level, special effects are added. In case of a failed enchantment, the item does not disappear. -->
+	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. The maximum level of enchantment is +10; with each level, special effects are added. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>

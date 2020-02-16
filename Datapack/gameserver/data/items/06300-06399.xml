@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="6307" name="Ultimate Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_limit_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical by 65. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical by 65. -->
 		<restriction freightable="false"/>
 		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9281"/>
 		<crystal type="C" count="1720"/>
@@ -16,12 +16,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3007" level="3"/>  <!-- Special Ability: Guidance -->
+			<skill id="3007" level="3" value="-1"/>  <!-- Special Ability: Guidance -->
 		</skills>
 	</weapon>
 
 	<weapon id="6308" name="Ultimate Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_limit_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 7%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 7%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9282"/>
 		<crystal type="C" count="1720"/>
@@ -36,12 +36,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3022" level="3" type="ON_CRITICAL_SKILL"/>  <!-- Special Ability: Critical Absorption -->
+			<skill id="3022" level="3" type="ON_CRITICAL_SKILL" value="-1"/>  <!-- Special Ability: Critical Drain -->
 		</skills>
 	</weapon>
 
 	<weapon id="6309" name="Ultimate Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_limit_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 191 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 191 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9283"/>
 		<crystal type="C" count="1720"/>
@@ -56,12 +56,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3013" level="1"/>  <!-- Special Ability: Health -->
+			<skill id="3013" level="1" value="-1"/>  <!-- Special Ability: Health -->
 		</skills>
 	</weapon>
 
 	<weapon id="6310" name="Sword of Whispering Death" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_deathbreath_sword_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 46. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 46. -->
 		<restriction freightable="false"/>
 		<attributes weight="920" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="C" count="1720"/>
@@ -76,12 +76,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3076" level="3"/>  <!-- Special Ability: Empower -->
+			<skill id="3076" level="3" value="-1"/>  <!-- Special Ability: Empower -->
 		</skills>
 	</weapon>
 
 	<weapon id="6311" name="Sword of Whispering Death" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_deathbreath_sword_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 12%. -->
 		<restriction freightable="false"/>
 		<attributes weight="920" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="C" count="1720"/>
@@ -96,12 +96,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3077" level="3"/>  <!-- Special Ability: M. Atk. -->
+			<skill id="3077" level="3" value="-1"/>  <!-- Special Ability: Magic Power -->
 		</skills>
 	</weapon>
 
 	<weapon id="6312" name="Sword of Whispering Death" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_deathbreath_sword_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 16%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 16%. -->
 		<restriction freightable="false"/>
 		<attributes weight="920" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="C" count="1720"/>
@@ -116,12 +116,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3078" level="3" type="ON_MAGIC_SKILL" chance="10"/>  <!-- Special Ability: Magic Silence -->
+			<skill id="3078" level="3" type="ON_MAGIC_SKILL" chance="10" value="-1"/>  <!-- Special Ability: Magic Silence -->
 		</skills>
 	</weapon>
 
 	<weapon id="6313" name="Homunkulus' Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_homunkuluss_sword_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 46. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 46. -->
 		<restriction freightable="false"/>
 		<attributes weight="950" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="C" count="1720"/>
@@ -136,12 +136,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3047" level="1"/>  <!-- Special Ability: Acumen -->
+			<skill id="3047" level="1" value="-1"/>  <!-- Special Ability: Acumen -->
 		</skills>
 	</weapon>
 
 	<weapon id="6314" name="Homunkulus' Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_homunkuluss_sword_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 12%. -->
 		<restriction freightable="false"/>
 		<attributes weight="950" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="C" count="1720"/>
@@ -156,12 +156,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3048" level="1"/>  <!-- Special Ability: Conversion -->
+			<skill id="3048" level="1" value="-1"/>  <!-- Special Ability: Conversion -->
 		</skills>
 	</weapon>
 
 	<weapon id="6315" name="Homunkulus' Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_homunkuluss_sword_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 16%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 16%. -->
 		<restriction freightable="false"/>
 		<attributes weight="950" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="C" count="1720"/>
@@ -176,7 +176,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3079" level="3" type="ON_MAGIC_SKILL" chance="5"/>  <!-- Special Ability: Magic Paralysis -->
+			<skill id="3079" level="3" type="ON_MAGIC_SKILL" chance="5" value="-1"/>  <!-- Special Ability: Magic Paralyze -->
 		</skills>
 	</weapon>
 
@@ -398,7 +398,7 @@
 	</item>
 
 	<weapon id="6347" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical by 62. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical by 62. -->
 		<restriction freightable="false"/>
 		<attributes weight="1380" price="6130000" commission-type="TWO_HAND_SWORD" change-weapon="9297"/>
 		<crystal type="C" count="2452"/>
@@ -413,12 +413,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3010" level="4"/>  <!-- Special Ability: Focus -->
+			<skill id="3010" level="4" value="-1"/>  <!-- Special Ability: Focus -->
 		</skills>
 	</weapon>
 
 	<weapon id="6348" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 8%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 8%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1380" price="6130000" commission-type="TWO_HAND_SWORD" change-weapon="9298"/>
 		<crystal type="C" count="2452"/>
@@ -433,12 +433,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3542" level="4"/>  <!-- Special Ability: P. Critical Damage -->
+			<skill id="3542" level="4" value="-1"/>  <!-- Special Ability: P. Critical Damage -->
 		</skills>
 	</weapon>
 
 	<weapon id="6349" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 242 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 242 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1380" price="6130000" commission-type="TWO_HAND_SWORD" change-weapon="9299"/>
 		<crystal type="C" count="2452"/>
@@ -453,24 +453,24 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3037" level="4"/>  <!-- Special Ability: Haste -->
+			<skill id="3037" level="4" value="-1"/>  <!-- Special Ability: Haste -->
 		</skills>
 	</weapon>
 
 	<item id="6350" name="Amulet: Pa'agrio's Honor" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Honor. Used by Overlords.\\nRequired level: 56 -->
+	<!-- Amulet required for the Pa'agrio's Honor. Used by Overlords.\nRequired level: 56 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6351" name="Amulet: Ritual of Life" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Ritual of Life. Used by Overlords.\\nRequired level: 48 -->
+	<!-- Amulet required for the Ritual of Life. Used by Overlords.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6352" name="Spellbook: Prayer" type="NONE" icon="icon.etc_spell_books_white_i00">
-	<!-- Spellbook needed to learn Prayer. Used by Bishops.\\nRequired level: 66 -->
+	<!-- Spellbook needed to learn Prayer. Used by Bishops.\nRequired level: 66 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="8700" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -482,7 +482,7 @@
 	</item>
 
 	<weapon id="6356" name="Needle Wolverine" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_needle_wolverine_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases P. Critical by 70. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical by 70. -->
 		<restriction freightable="false"/>
 		<attributes weight="1040" price="2290000" commission-type="DAGGER"/>
 		<crystal type="C" count="916"/>
@@ -498,12 +498,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3033" level="1"/>  <!-- Special Ability: Risk Haste -->
+			<skill id="3033" level="1" value="-1"/>  <!-- Special Ability: Risk Haste -->
 		</skills>
 	</weapon>
 
 	<weapon id="6357" name="Needle Wolverine" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_needle_wolverine_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Atk. Spd. by 5%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 5%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1040" price="2290000" commission-type="DAGGER"/>
 		<crystal type="C" count="916"/>
@@ -519,12 +519,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3033" level="2"/>  <!-- Special Ability: Risk Haste -->
+			<skill id="3033" level="2" value="-1"/>  <!-- Special Ability: Risk Haste -->
 		</skills>
 	</weapon>
 
 	<weapon id="6358" name="Needle Wolverine" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_needle_wolverine_i01">
-	<!-- <Soul Crystal Enhancement>\\nIncreases the success rate of the Vital Stab skills. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases the success rate of the Vital Stab skills. -->
 		<restriction freightable="false"/>
 		<attributes weight="1040" price="2290000" commission-type="DAGGER"/>
 		<crystal type="C" count="916"/>
@@ -540,12 +540,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3043" level="4"/>  <!-- Special Ability: P. Critical Damage -->
+			<skill id="3043" level="4" value="-1"/>  <!-- Special Ability: Critical Damage -->
 		</skills>
 	</weapon>
 
 	<weapon id="6359" name="Demon's Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_demons_sword_i01">
-	<!-- <Soul Crystal Enhancement>\\nP. Atk. + 160 during a Critical Attack. -->
+	<!-- <Soul Crystal Enhancement>\nP. Atk. + 160 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="970" price="13100000" commission-type="DAGGER"/>
 		<crystal type="B" count="1746"/>
@@ -561,7 +561,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3043" level="6"/>  <!-- Special Ability: P. Critical Damage -->
+			<skill id="3043" level="6" value="-1"/>  <!-- Special Ability: Critical Damage -->
 		</skills>
 	</weapon>
 
@@ -620,7 +620,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -657,7 +657,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -853,7 +853,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2003" level="1"/>  <!-- Cloned Squash Seed -->
+			<skill id="2003" level="1" value="-1"/>  <!-- Squash Seed -->
 		</skill-reducer>
 	</item>
 
@@ -862,7 +862,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2004" level="1"/>  <!-- Cloned Large Squash Seed -->
+			<skill id="2004" level="1" value="-1"/>  <!-- Large Squash Seed -->
 		</skill-reducer>
 	</item>
 
@@ -871,7 +871,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2005" level="1"/>  <!-- Nectar -->
+			<skill id="2005" level="1" value="-1"/>  <!-- Nectar -->
 		</skill-reducer>
 	</item>
 
@@ -895,25 +895,25 @@
 	</armor>
 
 	<item id="6395" name="Amulet: Chant of Predator" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Chant of Predator spell. Used by Warcryers.\\nRequired level: 48 -->
+	<!-- Amulet required for the Chant of Predator spell. Used by Warcryers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6396" name="Amulet: Chant of Eagle" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet needed to learn the Chant of Eagle incantation. Used by Warcryers.\\nRequired level: 48 -->
+	<!-- Amulet needed to learn the Chant of Eagle incantation. Used by Warcryers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6397" name="Amulet: Chant of Vampire" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers.\\nRequired level: 44 -->
+	<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6398" name="Spellbook: Body of Avatar" type="NONE" icon="icon.etc_spell_books_white_i00">
-	<!-- Spellbook needed to learn Body of Avatar. Used by Bishops.\\nRequired level: 48 -->
+	<!-- Spellbook needed to learn Body of Avatar. Used by Bishops.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>

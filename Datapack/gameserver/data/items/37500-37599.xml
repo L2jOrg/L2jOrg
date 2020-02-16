@@ -26,7 +26,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="17110" level="1"/>  <!-- Snowy Squash Nectar -->
+			<skill id="17110" level="1" value="-1"/>  <!-- Snowy Squash Nectar -->
 		</skill-reducer>
 	</item>
 
@@ -83,7 +83,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="17111" level="1"/>  <!-- Snowy Squash Seed -->
+			<skill id="17111" level="1" value="-1"/>  <!-- Snowy Squash Seed -->
 		</skill-reducer>
 	</item>
 
@@ -92,7 +92,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="17112" level="1"/>  <!-- Large Snowy Squash Seed -->
+			<skill id="17112" level="1" value="-1"/>  <!-- Large Snowy Squash Seed -->
 		</skill-reducer>
 	</item>
 

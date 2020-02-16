@@ -948,7 +948,7 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29259" name="Apprentice's Wand" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_rod_i00" magic="true">
+	<weapon id="29259" name="Apprentice's Rod" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_apprentices_rod_i00" magic="true">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1330" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -1461,7 +1461,7 @@
 	</weapon>
 
 	<weapon id="29289" name="Staff of Sentinel" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_cedar_staff_i00" magic="true">
-	<!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. -->
+	<!-- Staff issued to those magicians that have been acknowledged as guardians of the forest. -->
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1800" price="33600" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="4200" name="Spellbook: Restore Life" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Restore Life. Used by Bishops.\\nRequired level: 44 -->
+	<!-- Spellbook needed to learn Restore Life. Used by Bishops.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4201" name="Spellbook: Stun Resistance" type="NONE" icon="icon.etc_spell_books_white_i00">
-	<!-- Spellbook needed to learn Stun Resistance. Used by Elven Elders.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Stun Resistance. Used by Elven Elders.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -30,37 +30,37 @@
 	</weapon>
 
 	<item id="4203" name="Spellbook: Life Leech" type="NONE" icon="icon.etc_spell_books_defighter_i00">
-	<!-- Spellbook needed to learn Life Leech. Used by Shillien Knights.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Life Leech. Used by Shillien Knights.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4204" name="Amulet: Pa'agrio's Tact" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Tact spell. Used by Overlords.\\nRequired level: 40 -->
+	<!-- Amulet required for the Pa'agrio's Tact spell. Used by Overlords.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4205" name="Amulet: Pa'agrio's Rage" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Rage spell. Used by Overlords.\\nRequired level: 44 -->
+	<!-- Amulet required for the Pa'agrio's Rage spell. Used by Overlords.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4206" name="Spellbook: Transfer Pain" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Transfer Pain. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Transfer Pain. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4207" name="Spellbook: Mana Regeneration" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Mana Regeneration. Used by Spellsingers.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Mana Regeneration. Used by Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="4208" name="Spellbook: Curse Gloom" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Curse Gloom. Used by Necromancers.\\nRequired level: 44 -->
+	<!-- Spellbook needed to learn Curse Gloom. Used by Necromancers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -123,8 +123,8 @@
 	<!-- Increases MP Recovery Rate. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="2064"/>  <!-- Scroll: Mana Regeneration -->
+		<skill-reducer type="ItemSkills">
+			<skill id="2064" level="1" value="-1"/>  <!-- Scroll: Mana Regeneration -->
 		</skill-reducer>
 	</item>
 

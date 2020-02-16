@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="71000" name="Agathion - Singer and Dancer  Pack (7-day)" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
-	<!-- Double-click to obtain Agathion - Singer & Dancer (7-day).\\n -->
+	<item id="71000" name="Agathion - Singer &amp; Dancer  Pack (7-day)" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
+	<!-- Double-click to obtain Agathion - Singer & Dancer (7-day).\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="71001" name="Agathion - Singer and Dancer  Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
-	<!-- Double-click to obtain Agathion - Singer & Dancer (30-day).\\n -->
+	<item id="71001" name="Agathion - Singer &amp; Dancer  Pack (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<!-- Double-click to obtain Agathion - Singer & Dancer (30-day).\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="71002" name="Agathion - Singer and Dancer  Pack (90-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
-	<!-- Double-click to obtain Agathion - Singer & Dancer (90-day).\\n -->
+	<item id="71002" name="Agathion - Singer &amp; Dancer  Pack (90-day)" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<!-- Double-click to obtain Agathion - Singer & Dancer (90-day).\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -55,7 +55,7 @@
 	</item>
 
 	<item id="71009" name="Jack O'Lantern" type="MATERIAL" icon="icon.ev_wp_halloween">
-	<!-- Jack O'Lantern made with love. Go find NPC Rico with it in your inventory to receive the Halloween Blessing buff. \\nCannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
+	<!-- Jack O'Lantern made with love. Go find NPC Rico with it in your inventory to receive the Halloween Blessing buff. \nCannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -142,8 +142,8 @@
 	<!-- Changes the appearance to that of a teddy bear for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39367"/> <!-- Transformation Scroll: Teddy Bear -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39367" level="1" value="-1"/>  <!-- Teddy Bear Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -151,8 +151,8 @@
 	<!-- Changes the appearance to that of a panda for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51147"/> <!-- Transformation Scroll: Panda -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51147" level="1" value="-1"/>  <!-- Panda Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -160,8 +160,8 @@
 	<!-- Changes the appearance to that of a cat for 15 min. During transformation HP/MP +20%, P./ M. Def. +3%, acquired XP/SP during hunt +5%. Effect remains after death.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51148"/> <!-- Transformation into Cat -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51148" level="1" value="-1"/>  <!-- Cat Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -208,19 +208,19 @@
 	</item>
 
 	<item id="71033" name="Match Girls' Gift" type="NONE" icon="icon.etc_pouch_red_i00">
-	<!-- A gift with various items from the Match Girls who are thankful for your help. Double-click to obtain Match Girls' Gratitude and a Regular Dish, and at a certain rate one of the following items:\\nChristmas Talisman Pack​ (P. Skill Critical Damage/ M. Skill Critical Damage/ Ultimate Defense/ Debuff Resistance/ P. Atk./ M. Atk./ P. Def./ M. Def.), Santa's Hat (Permanent), Rudolph's Nose (Permanent), Santa's Cloak (Permanent), Santa's Suit (Permanent), Transformation Sealbook: Part-time Seller.  -->
+	<!-- A gift with various items from the Match Girls who are thankful for your help. Double-click to obtain Match Girls' Gratitude and a Regular Dish, and at a certain rate one of the following items:\nChristmas Talisman Pack​ (P. Skill Critical Damage/ M. Skill Critical Damage/ Ultimate Defense/ Debuff Resistance/ P. Atk./ M. Atk./ P. Def./ M. Def.), Santa's Hat (Permanent), Rudolph's Nose (Permanent), Santa's Cloak (Permanent), Santa's Suit (Permanent), Transformation Sealbook: Part-time Seller.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71034" name="Match Girls' Gratitude" type="SCROLL" icon="icon.etc_candle_white_i00">
-	<!-- For 20 min., P./M. Atk. +12%, P./M. Def +15%, Max HP/MP/CP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the melee damage inflicted on target as HP. \\n\\n<Note> When used simultaneously with Special Fruit Buff or Special Dragon's Fruit, effects do not stack.  -->
+	<!-- For 20 min., P./M. Atk. +12%, P./M. Def +15%, Max HP/MP/CP +25%, P./M. Critical Rate +10, P./M. Critical Damage +5%, HP/MP Recovery Bonus +30%. At a certain chance absorbs 5% of the melee damage inflicted on target as HP. \n\n<Note> When used simultaneously with Special Fruit Buff or Special Dragon's Fruit, effects do not stack.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71035" name="Cooking Ingredient" type="NONE" icon="icon.etc_meat_of_monstereye_i00">
-	<!-- Cooking ingredient of the Match Girls. Use it on the bonfire to cook food.\\n\\n<Note> If you use it on a bonfire made by someone else, the ingredient will disappear, and you will get nothing.  -->
+	<!-- Cooking ingredient of the Match Girls. Use it on the bonfire to cook food.\n\n<Note> If you use it on a bonfire made by someone else, the ingredient will disappear, and you will get nothing.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -360,7 +360,7 @@
 	</item>
 
 	<armor id="71057" name="Rudolph's Nose" type="NONE" body-part="HAIR" icon="icon.Accessory_nose_of_rudolph_mask_i00">
-	<!-- Rudolph's Nose.\\n -->
+	<!-- Rudolph's Nose.\n -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" />
 		<crystal />
@@ -401,27 +401,27 @@
 	</item>
 
 	<armor id="71063" name="Agathion Rudolph" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.event_lbracelet_rudolph">
-	<!-- A 7-days item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph.\\n\\n\\n<Special Ability>\\n - Rudolph's Blessing\\n - Rudolph's Blessed Resurrection\\n - Rudolph's Power\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
+	<!-- A 7-days item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph.\n\n\n<Special Ability>\n - Rudolph's Blessing\n - Rudolph's Blessed Resurrection\n - Rudolph's Power\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" />
 		<crystal />
 	</armor>
 
 	<armor id="71064" name="Agathion Rudolph" type="NONE" body-part="AGATHION" icon="BranchSys2.icon.event_lbracelet_rudolph">
-	<!-- A 30-days item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph.\\n\\n\\n<Special Ability>\\n - Rudolph's Blessing\\n - Rudolph's Blessed Resurrection\\n - Rudolph's Power\\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
+	<!-- A 30-days item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph.\n\n\n<Special Ability>\n - Rudolph's Blessing\n - Rudolph's Blessed Resurrection\n - Rudolph's Power\n - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" />
 		<crystal />
 	</armor>
 
 	<item id="71065" name="Agathion Rudolph Box (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Double-click to obtain Agathion Rudolph (7-day).\\n  -->
+	<!-- Double-click to obtain Agathion Rudolph (7-day).\n  -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="71066" name="Agathion Rudolph Box (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Double-click to obtain Agathion Rudolph (30-day).\\n  -->
+	<!-- Double-click to obtain Agathion Rudolph (30-day).\n  -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -433,61 +433,61 @@
 	</item>
 
 	<item id="71068" name="Highest Grade Talisman of Fate Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
-	<!-- Sealed Case with +10 Talisman of Fate - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be sold.  -->
+	<!-- Sealed Case with +10 Talisman of Fate - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71069" name="Talisman of Fate Lucky Chest" type="NONE" icon="icon.bm_special_pendant_abradant_box">
-	<!-- Double click to obtain random Talisman of Fate Lv. from 2 to 4. Additionally can be obtained Enchant Scroll of Fate.  -->
+	<!-- Double click to obtain random Talisman of Fate Lv. 2 to 4. Additionally can be obtained Enchant Scroll of Fate. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71070" name="Fire Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
-	<!-- Double click to obtain random Fire Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Fire Dragon Pendant Chest.  -->
+	<!-- Double click to obtain random Fire Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Fire Dragon Pendant Chest. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71071" name="Water Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
-	<!-- Double click to obtain random Water Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Water Dragon Pendant Chest.  -->
+	<!-- Double click to obtain random Water Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Water Dragon Pendant Chest. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71072" name="Wind Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
-	<!-- Double click to obtain random Wind Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Wind Dragon Pendant Chest.  -->
+	<!-- Double click to obtain random Wind Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Wind Dragon Pendant Chest. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71073" name="Earth Dragon Pendant Lucky Chest" type="NONE" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
-	<!-- Double click to obtain random Earth Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Earth Dragon Pendant Chest.  -->
+	<!-- Double click to obtain random Earth Dragon Pendant Lv. from 2 to 4. Additionally can be obtained Earth Dragon Pendant Chest. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71074" name="Highest Grade Fire Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
-	<!-- Sealed Case with +10 Fire Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be sold.  -->
+	<!-- Sealed Case with +10 Fire Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71075" name="Highest Grade Water Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
-	<!-- Sealed Case with +10 Water Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be sold.  -->
+	<!-- Sealed Case with +10 Water Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71076" name="Highest Grade Wind Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
-	<!-- Sealed Case with +10 Wind Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be sold.  -->
+	<!-- Sealed Case with +10 Wind Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="71077" name="Highest Grade Earth Dragon Pendant Sealed Case" type="NONE" icon="icon.etc_armor_soul_i00">
-	<!-- Sealed Case with +10 Earth Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be sold.  -->
+	<!-- Sealed Case with +10 Earth Dragon Pendant - Lv. 5. Double click to release the seal. Possible to use after seal releasing, but cannot be exchanged. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -541,7 +541,7 @@
 	</armor>
 
 	<armor id="71085" name="Talisman of Noble Power - Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv1">
-	<!-- When equipped, P./ M. Def. +26, HP +12%, MP +8%, P./ M. Atk. +5%, Atk. Spd. +3%, Casting Spd. +2%. With Talisman of Power Fragment you can enhance the level of this Talisman. If an upgrade fails, Talisman remains the same. Effects from two such Talismans do not stack.  -->
+	<!-- P./M. Def. +26%, HP +12%, MP +8%, P./M. Atk. +5%, P. Atk. Spd. +3%, M. Atk. Spd. +2%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not lower level if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes />
 		<crystal />
@@ -575,8 +575,8 @@
 		<crystal />
 	</armor>
 
-	<armor id="71090" name="Bright Talisman of Power - Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv1">
-	<!-- When equipped, P./ M. Def. +51, HP +18%, MP +14%, P./ M. Atk. +10%, Atk. Spd. +6%, Casting Spd. +4%, P. Critical Rate +10, M. Critical Rate +20, P. Skill Power +5%, M. Skill Power +10%, Power of Shunaiman Lv. 1 can de used. With Talisman of Power Fragment you can enhance the level of this Talisman. If an upgrade fails, Talisman remains the same. Effects from two such Talismans do not stack.  -->
+	<armor id="71090" name="Brilliant Talisman of Power Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv1">
+	<!-- P./M. Def. +51%, HP +18%, MP +14%, P./M. Atk. +10%, P. Atk. Spd. +6%, M. Atk. Spd. +4%, P. Critical Rate +10, M. Critical Rate +20, P. Skill Power +5%, M. Skill Power +10%. Can use Shunaiman’s Power Lv1. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not lower level if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes />
 		<crystal />
@@ -617,7 +617,7 @@
 	</item>
 
 	<armor id="71096" name="Shining Couple Ring" type="NONE" body-part="FINGER" icon="icon.accessory_shiny_couple_ring">
-	<!-- Ring for summoning another character. Target of summoning must be in your party and have same ring equipped.\\n Cooldown is 24 hrs. -->
+	<!-- Ring for summoning another character. Target of summoning must be in your party and have same ring equipped.\n Cooldown is 24 hrs. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />

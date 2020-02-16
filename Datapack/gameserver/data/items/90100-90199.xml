@@ -225,12 +225,12 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39207" level="1"/>  <!-- Dimensional Gift -->
+			<skill id="39207" level="1" value="-1"/>  <!-- Dimensional Gift -->
 		</skill-reducer>
 	</item>
 
 	<item id="90137" name="Matte Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish">
-	<!-- Matte varnish to enchant pendants. Can be used on Dragon Pendants up to +6, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
+	<!-- Matte varnish to enchant pendants. Can be used on Dragon Pendants up to + 6, and keeps the pendant upgrade level and the existing enchant level intact even if the enchant fails. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -272,17 +272,17 @@
 	<!-- Increases XP/SP gain by 100% for 1 hour. Cooldown: 1 hour. The effect persists through death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55360"/> <!-- Irene's Song -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55360" level="1" value="-1"/>  <!-- XP/SP Rune - 100% -->
 		</skill-reducer>
 	</item>
 
 	<item id="90144" name="Transformation Scroll: White Assassin" type="POTION" icon="icon.scroll_of_verification_i06">
-	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \\nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
+	<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. \nTransformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39210"/> <!-- Transformation Scroll: White Assassin -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39210" level="1" value="-1"/>  <!-- White Assassin Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -303,7 +303,7 @@
 	</item>
 
 	<item id="90147" name="Mark of Savior" type="NONE" icon="icon.etc_ev_kalie_token">
-	<!-- Using Dimensional Merchant, you can trade it for a Savior’s weapon (30-day).  Can be transferred between characters on one account and be stored in a private warehouse.  -->
+	<!-- Using the Store Manager, you can trade it for a Savior’s weapon (30-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -321,7 +321,7 @@
 	</item>
 
 	<weapon id="90150" name="Savior’s Dual Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
-	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nAtk. Spd. +5%.  -->
+	<!-- A 30-day item.\n<Soul Crystal Enhancement>\nAtk. Spd. +5%.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
@@ -338,7 +338,7 @@
 	</weapon>
 
 	<weapon id="90151" name="Savior’s Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_crystal_staff_i00" magic="true">
-	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nCasting Spd. +12%.  -->
+	<!-- A 30-day item.\n<Soul Crystal Enhancement>\nCasting Spd. +12%.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
@@ -356,7 +356,7 @@
 	</weapon>
 
 	<weapon id="90152" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00">
-	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nP. Crit. Rate. +52.  -->
+	<!-- A 30-day item.\n<Soul Crystal Enhancement>\nP. Crit. Rate. +52.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1740" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
@@ -374,7 +374,7 @@
 	</weapon>
 
 	<weapon id="90153" name="Savior’s Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dark_screamer_i00">
-	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\nP. Crit. Rate. +66.  -->
+	<!-- A 30-day item.\n<Soul Crystal Enhancement>\nP. Crit. Rate. +66.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
@@ -392,7 +392,7 @@
 	</weapon>
 
 	<weapon id="90154" name="Savior's Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_scorpion_i00">
-	<!-- A 30-day item.\\n<Soul Crystal Enhancement>\\n25% chance to stun the target by Crit. Atk.  -->
+	<!-- A 30-day item.\n<Soul Crystal Enhancement>\n25% chance to stun the target by Crit. Atk.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2010" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
@@ -408,7 +408,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -431,7 +431,7 @@
 		<attributes weight="120" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35036" level="1"/>  <!-- Warrior's Talisman - Attack -->
+			<skill id="35036" level="1" value="-1"/>  <!-- Warrior's Talisman - Attack -->
 		</skills>
 	</armor>
 
@@ -444,20 +444,17 @@
 			<stat type="pDef" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="35007" level="6"/>  <!-- Fire Dragon Pendant +1 -->
+			<skill id="35007" level="6" value="-1"/>  <!-- Fire Dragon Pendant +1 -->
 		</skills>
 	</armor>
 
 	<armor id="90159" name="Talisman of Battle - Liberate" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i03">
 	<!-- Clears all abnormal states and debuffs. Cooldown is 10 minutes.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player zone="311,312,313,314"/>
-		</condition>
 		<attributes weight="120" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35045" level="1"/>  <!-- Talisman of Battle - Liberate -->
+			<skill id="35045" level="1" value="-1"/>  <!-- Talisman of Battle - Liberate -->
 		</skills>
 	</armor>
 
@@ -467,12 +464,12 @@
 		<attributes weight="120" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35037" level="1"/>  <!-- Warrior's Talisman - Defense -->
+			<skill id="35037" level="1" value="-1"/>  <!-- Warrior's Talisman - Defense -->
 		</skills>
 	</armor>
 
 	<item id="90161" name="Chest of Glory" type="NONE" icon="icon.etc_readybox_gold">
-	<!-- Double-click to receive one Monster Arena Belt (7-day).\\n<Note> After you open the chest, you cannot move the item. -->
+	<!-- Double-click to receive one Monster Arena Belt (7-day).\n<Note> After you open the chest, you cannot move the item. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -482,7 +479,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="90157" chance="100000"/>  <!-- Warrior’s Talisman - Attack -->
+			<item id="90157" chance="100000000"/>  <!-- Warrior’s Talisman - Attack -->
 		</extract>
 	</item>
 
@@ -491,7 +488,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="90160" chance="100000"/>  <!-- Warrior’s Talisman - Defense -->
+			<item id="90160" chance="100000000"/>  <!-- Warrior’s Talisman - Defense -->
 		</extract>
 	</item>
 
@@ -518,45 +515,45 @@
 		<restriction freightable="false" destroyable="false" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39223" level="1"/>  <!-- Bunch of Bananas -->
+			<skill id="39223" level="1" value="-1"/>  <!-- Monkey Banana -->
 		</skill-reducer>
 	</item>
 
 	<item id="90168" name="Strawberry Banana Shake" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
-	<!-- Activates Strawberry Banana Shake effect for 5 minutes (Scroll: Prophecy of Fire - Lv. 1).\\n<Note>Effects do not stack if two shakes are used. -->
+	<!-- Activates Strawberry Banana Shake effect for 5 minutes (Scroll: Prophecy of Fire - Lv. 1).\n<Note>Effects do not stack if two shakes are used. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39224" level="1"/>  <!-- Strawberry-Banana Cocktail -->
+			<skill id="39224" level="1" value="-1"/>  <!-- Strawberry-Banana Cocktail -->
 		</skill-reducer>
 	</item>
 
 	<item id="90169" name="Mango Banana Shake" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
-	<!-- Activates Mango Banana Shake effect for 5 minutes (Scroll: Prophecy of Water - Lv. 1).\\n<Note>Effects do not stack if two shakes are used. -->
+	<!-- Activates Mango Banana Shake effect for 5 minutes (Scroll: Prophecy of Water - Lv. 1).\n<Note>Effects do not stack if two shakes are used. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39225" level="1"/>  <!-- Mango-Banana Cocktail -->
+			<skill id="39225" level="1" value="-1"/>  <!-- Mango-Banana Cocktail -->
 		</skill-reducer>
 	</item>
 
 	<item id="90170" name="Cherry Banana Shake" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
-	<!-- Activates Cherry Banana Shake effect for 5 minutes (Scroll: Prophecy of Wind - Lv. 1).\\n<Note>Effects do not stack if two shakes are used. -->
+	<!-- Activates Cherry Banana Shake effect for 5 minutes (Scroll: Prophecy of Wind - Lv. 1).\n<Note>Effects do not stack if two shakes are used. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39226" level="1"/>  <!-- Cherry-Banana Cocktail -->
+			<skill id="39226" level="1" value="-1"/>  <!-- Cherry Banana Shake -->
 		</skill-reducer>
 	</item>
 
 	<item id="90171" name="Monkey Bait" type="LURE" icon="icon.etc_gludio_fish_lure_i00">
-	<!-- Fishing Time: 20 seconds\\nFishing Standby Time: 10 seconds\\n\\nFish bait bought from Chef Monkey. Fish using this bait to catch Tuna.  -->
+	<!-- Fishing Time: 20 seconds\nFishing Standby Time: 10 seconds\n\nFish bait bought from Chef Monkey. Fish using this bait to catch Tuna.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
 	<item id="90172" name="Gemstone of Fate" type="NONE" icon="icon.ensoul_big_mm">
-	<!-- For enchanting Talisman of Fate above Lv. 4. Give this item, along with a low-level Talisman of Fate, to Baggins, and you will get a higher-level Talisman of Fate.\\n\\n<Note>\\nCannot be used to enchant Talisman of Fate Lv. 10 and Blessed Talisman of Fate.  -->
+	<!-- For enchanting Talisman of Fate above Lv. 4. Give this item, along with a low-level Talisman of Fate, to Baggins, and you will get a higher-level Talisman of Fate.\n\n<Note>\nCannot be used to enchant Talisman of Fate Lv. 10 and Blessed Talisman of Fate.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -621,39 +618,39 @@
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
-	<item id="90183" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Chant of Victory Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+	<item id="90183" name="Chef's Fish Stew - Victory - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 20 min. activates Prophecy of Victory Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39253"/> <!-- Chef's Fish Stew - Victory -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39253" level="1" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
 		</skill-reducer>
 	</item>
 
-	<item id="90184" name="Chef's Fish Stew - Fire" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Prophecy of Fire Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+	<item id="90184" name="Chef's Fish Stew - Fire - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 20 min. activates Prophecy of Fire Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39254"/> <!-- Chef's Fish Stew - Fire -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39254" level="1" value="-1"/>  <!-- Chef's Fish Stew - Fire -->
 		</skill-reducer>
 	</item>
 
-	<item id="90185" name="Chef's Fish Stew - Water" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Prophecy of Water Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+	<item id="90185" name="Chef's Fish Stew - Water - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 20 min. activates Prophecy of Water Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39255"/> <!-- Chef's Fish Stew - Water -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39255" level="1" value="-1"/>  <!-- Chef's Fish Stew - Water -->
 		</skill-reducer>
 	</item>
 
-	<item id="90186" name="Chef's Fish Stew - Wind" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- For 10 min. activates Prophecy of Wind Lv. 1. \\n<Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
+	<item id="90186" name="Chef's Fish Stew - Wind - Exchangeable" type="SCROLL" icon="icon.fish_stew_residence_cha">
+	<!-- For 20 min. activates Prophecy of Wind Lv. 1. \n<Note> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39256"/> <!-- Chef's Fish Stew - Wind -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39256" level="1" value="-1"/>  <!-- Artisan's Fish Stew - Wind -->
 		</skill-reducer>
 	</item>
 
@@ -670,7 +667,7 @@
 	</item>
 
 	<item id="90189" name="Blue Spinel" type="NONE" icon="icon.ensoul_big_m">
-	<!-- A reward item.\\nYou can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
+	<!-- A reward item.\nYou can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -696,25 +693,25 @@
 	</armor>
 
 	<item id="90192" name="Giant's Enchant Scroll Pack" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
-	<!-- Double-click to receive one Average, Improved, Solid, or Blessed Scroll: Enchant Weapon (C/B). -->
+	<!-- Double-click to receive one Average, Improved, Solid, or Protection Scroll: Enchant Weapon (C/B). -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90193" name="Low-grade Arena Loot" type="NONE" icon="icon.etc_jewel_box_i00">
-	<!-- Arena Reward\\nDouble-click to receive one of the following items: Dandy's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Warrior's Major HP Potion.   -->
+	<!-- Arena Reward\nDouble-click to receive one of the following items: Dandy's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Warrior's Major HP Potion.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90194" name="Intermediate Arena Loot" type="NONE" icon="icon.etc_jewel_box_i00">
-	<!-- Arena Reward\\nDouble-click to receive one of the following items: Spellbook Box - 3rd Class Transfer, Magic Tablet, Spellbook Box, Common Life Stone, Scroll of Mood Melody.   -->
+	<!-- Arena Reward\nDouble-click to receive one of the following items: Spellbook Box - 3rd Class Transfer, Magic Tablet, Spellbook Box, Common Life Stone, Scroll of Mood Melody.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="90195" name="High-grade Arena Loot" type="NONE" icon="icon.etc_jewel_box_i00">
-	<!-- Arena Reward\\nDouble-click to receive one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Stone, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy Pendant (1-day).   -->
+	<!-- Arena Reward\nDouble-click to receive one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Stone, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy Pendant (1-day).   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>

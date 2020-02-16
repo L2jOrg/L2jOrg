@@ -296,57 +296,57 @@
 		</stats>
 	</weapon>
 
-	<item id="947" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i03">
+	<item id="947" name="Scroll: Enchant Weapon (B-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="500000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="948" name="Scroll: Enchant Armor (B-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i03">
-	<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+	<item id="948" name="Scroll: Enchant Armor (B-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i03">
+	<!-- Increases P. Def. by 1 for B-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="80000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="951" name="Scroll: Enchant Weapon (C-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i02">
+	<item id="951" name="Scroll: Enchant Weapon (C-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i02">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="110000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="952" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i02">
-	<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+	<item id="952" name="Scroll: Enchant Armor (C-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i02">
+	<!-- Increases P. Def. by 1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="15000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="955" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
-	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+	<item id="955" name="Scroll: Enchant Weapon (D-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="50000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="956" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i01">
-	<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+	<item id="956" name="Scroll: Enchant Armor (D-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i01">
+	<!-- Increases P. Def. by 1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="6000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="959" name="Scroll: Enchant Weapon (S-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i05">
+	<item id="959" name="Scroll: Enchant Weapon (S-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i05">
 	<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./M. Atk. bonus quadruples. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="2000000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="960" name="Scroll: Enchant Armor (S-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i05">
-	<!-- When enchanted, P. Def. +2 for S-grade armor and accessories. Starting at +4, P. Def. +8. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. Starting at +4 armor, HP increases depending on the enchant value. -->
+	<item id="960" name="Scroll: Enchant Armor (S-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i05">
+	<!-- When enchanted, P. Def. +2 for S-grade armor and accessories. Starting at +4, P. Def. +8. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="300000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>

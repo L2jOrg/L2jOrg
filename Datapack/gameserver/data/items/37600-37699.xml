@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="37662" name="Refined Romantic Chapeau: Gold" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_gold">
-	<!-- A Refined Romantic Chapeau: Gold (100-day). Uses 2 hair accessory slots. Cannot be exchanged, dropped or sold in a private store or to an NPC.\\n\\n<Skills>\\n1. Holy Chapeau: Resurrect a corpse by using 1 Spirit Ore. Restore 50% of the XP. Cooldown is 30 min.\\n2. Chapeau's Authority: For 20 min., acquired XP and SP + 5%. Cooldown is 60 min.\\n3. Chapeau's Side Effect: Increases the size of the head for 10 min. Cooldown is 30 min. -->
+	<!-- A Refined Romantic Chapeau: Gold (100-day). Uses 2 hair accessory slots. Cannot be exchanged, dropped or sold in a private store or to an NPC.\n\n<Skills>\n1. Holy Chapeau: Resurrect a corpse by using 1 Spirit Ore. Restore 50% of the XP. Cooldown is 30 min.\n2. Chapeau's Authority: For 20 min., acquired XP and SP + 5%. Cooldown is 60 min.\n3. Chapeau's Side Effect: Increases the size of the head for 10 min. Cooldown is 30 min. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="37665" name="Refined Romantic Chapeau: Yellow" type="NONE" body-part="HAIR_ALL" icon="icon.bm_romantic_chaperon_yellow">
-	<!-- A Refined Romantic Chapeau: Gold (33-day). Uses 2 hair accessory slots. Cannot be exchanged, dropped or sold in a private store or to an NPC.\\n\\n<Skills>\\n1. Holy Chapeau: Resurrect a corpse by using 1 Spirit Ore. Restore 50% of the XP. Cooldown is 30 min.\\n2. Chapeau's Authority: For 20 min., acquired XP and SP + 5%. Cooldown is 60 min.\\n3. Chapeau's Side Effect: Increases the size of the head for 10 min. Cooldown is 30 min. -->
+	<!-- A Refined Romantic Chapeau: Gold (33-day). Uses 2 hair accessory slots. Cannot be exchanged, dropped or sold in a private store or to an NPC.\n\n<Skills>\n1. Holy Chapeau: Resurrect a corpse by using 1 Spirit Ore. Restore 50% of the XP. Cooldown is 30 min.\n2. Chapeau's Authority: For 20 min., acquired XP and SP + 5%. Cooldown is 60 min.\n3. Chapeau's Side Effect: Increases the size of the head for 10 min. Cooldown is 30 min. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
@@ -114,7 +114,7 @@
 			<stat type="randomDamage" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 

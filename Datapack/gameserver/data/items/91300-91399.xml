@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91300" name="Spring Energy Lv. 3" type="NONE" icon="icon.etc_leaf_green_i00">
-	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.  \\n\\n<Note>\\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\\n\\n -->
+	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.  \n\n<Note>\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\n\n -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91301" name="Sayha's Spring Breeze" type="NONE" icon="icon.ev_magic_flame_game_wind1">
-	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \\n\\n<Note>\\nCannot be used with Sayha's Storm or Sayha's Gust.\\n\\n -->
+	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \n\n<Note>\nCannot be used with Sayha's Storm or Sayha's Gust.\n\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51228"/> <!-- Sayha's Spring Wind -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51228" level="1" value="-1"/>  <!-- Sayha's Spring Breeze -->
 		</skill-reducer>
 	</item>
 
 	<item id="91302" name="Spring's Blessing Box" type="NONE" icon="icon.npoint_antaras_30day_box">
-	<!-- A blessed box that Primavera prepared with great care. Double-click to obtain 1 item at random among Fire Dragon Belt, Earth Dragon Belt, Enchant Scroll Enchant Scroll by grade, and various supply items. \\n\\n -->
+	<!-- A blessed box that Primavera prepared with great care. Double-click to obtain 1 item at random among Fire Dragon Belt, Earth Dragon Belt, Enchant Scroll Enchant Scroll by grade, and various supply items. \n\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -392,7 +392,7 @@
 	</item>
 
 	<item id="91356" name="Gem Energy" type="NONE" icon="icon.bm_blessed_jewel">
-	<!-- Returns a higher-grade Gem when combined with a Greater Gem. Can be exchanged for a Glittering Rough Jewel through the Dimensional Merchant.  -->
+	<!-- Returns a higher-grade Gem when combined with a Greater Gem. Can be exchanged for a Glittering Rough Jewel through the Store Manager. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -492,7 +492,7 @@
 	</item>
 
 	<item id="91371" name="Brilliant Brooch Fragment" type="NONE" icon="icon.bm_2018_brooch_piece">
-	<!-- Take 1 Brooch Lv. 4 and 1 Brilliant Brooch Fragment to the Dimensional Merchant to exchange them for a Brooch Lv. 5.  Will be deleted during maintenance on Wednesday, May 30th, 2018. -->
+	<!-- Take 1 Brooch Lv. 4 and 1 Brilliant Brooch Fragment to the Store Manager to exchange them for a Brooch Lv. 5. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -545,7 +545,7 @@
 	</armor>
 
 	<armor id="91379" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i04">
-	<!-- MP +40, MEN Attack and Resistance +20%, Hold Attack and Resistance +30%, Heal Received +12%, Skill MP Consumption -10%. MP Drain effect. Enables a skill that decreases enemy MP by 10%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- MP +40, MEN Attack and Resistance +20%, Hold Attack and Resistance +30%, Heal Received +12%, Skill MP Consumption -10%. MP Drain effect. Enables a skill that decreases enemy MP by 10% during PvP. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -642,12 +642,12 @@
 		<crystal />
 	</armor>
 
-	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2" type="SCROLL" icon="icon.ev_invasion_buff_box">
-	<!-- XP/SP gain +30% while hunting for 20 minutes when used.  -->
+	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2 - Tradable" type="SCROLL" icon="icon.ev_invasion_buff_box">
+	<!-- XP/SP gain +30% while hunting for 20 minutes when used. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39076" level="2"/> <!-- Fish Stew - Guild's Gratitude -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39076" level="2" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
 		</skill-reducer>
 	</item>
 

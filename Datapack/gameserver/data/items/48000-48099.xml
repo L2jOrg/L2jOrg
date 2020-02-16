@@ -45,82 +45,82 @@
 	</armor>
 
 	<item id="48046" name="Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
-	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. -->
+	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3 and can be enchanted up to +10. Starting from +1 enchanting special abilities increases step by step. Item is destroyed upon enchant failure. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="48047" name="High-grade Agathion Enchant Scroll" type="QUALITY_AGATHION_ENCHANT" icon="icon.star_giantscrl_of_ench_ag">
-	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step.\\nEnchant randomly from +1 to +3 on success.\\nCan not use for items with enchant level more than +8. -->
+	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Item is destroyed upon enchant failure. Cannot use for items with enchant level more than +8. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="48048" name="Agathion - Virgo" type="NONE" body-part="AGATHION" icon="icon.agathion_virgo_star_1">
-	<!-- An item which can be used to obtain the power of the Virgo Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nM. Def. increased.\\nStarting at +6, bonus to MEN attacks.\\n -->
+	<!-- An item which can be used to obtain the power of the Virgo Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nM. Def. increased.\nStarting at +6, bonus to MEN attacks.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48049" name="Agathion - Capricorn" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
-	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nM. Critical Rate increased.\\nStarting at +6, cooldown of M. Skills and songs/dances decreased.\\n -->
+	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nM. Critical Rate increased.\nStarting at +6, cooldown of M. Skills and songs/dances decreased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48050" name="Agathion - Libra" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
-	<!-- An item which can be used to obtain the power of the Libra Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nCasting Spd. increased.\\nStarting at +6, MP Consumption for magic and songs/dance skills decreased.\\n -->
+	<!-- An item which can be used to obtain the power of the Libra Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nCasting Spd. increased.\nStarting at +6, MP Consumption for magic and songs/dance skills decreased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48052" name="Agathion - Taurus" type="NONE" body-part="AGATHION" icon="icon.agathion_tau_star_1">
-	<!-- An item which can be used to obtain the power of the Taurus Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nP. Def. increased.\\nStarting at +6, bonus to stun attacks.\\n -->
+	<!-- An item which can be used to obtain the power of the Taurus Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nP. Def. increased.\nStarting at +6, bonus to stun attacks.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48053" name="Agathion - Leo" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
-	<!-- An item which can be used to obtain the power of the Leo Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nP. Atk. increased.\\nStarting at +6, bonus to Paralysis Attacks.\\n -->
+	<!-- An item which can be used to obtain the power of the Leo Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nP. Atk. increased.\nStarting at +6, bonus to Paralysis Attacks.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48054" name="Agathion - Gemini" type="NONE" body-part="AGATHION" icon="icon.agathion_gem_star_1">
-	<!-- An item which can be used to obtain the power of the Gemini Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nEffect of Sayha's Grace increased.\\nStarting at +6, Max HP/MP increased.\\n -->
+	<!-- An item which can be used to obtain the power of the Gemini Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nEffect of Sayha's Grace increased.\nStarting at +6, Max HP/MP increased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48055" name="Agathion - Scorpio" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
-	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nP. Critical Rate increased.\\nStarting at +6, cooldown of P. Skills and songs/dances decreased.\\n -->
+	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nP. Critical Rate increased.\nStarting at +6, cooldown of P. Skills and songs/dances decreased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48056" name="Agathion - Aquarius" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
-	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nM. Atk. increased.\\nStarting at +6, bonus to Hold/Sleep.\\n -->
+	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nM. Atk. increased.\nStarting at +6, bonus to Hold/Sleep.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="48058" name="Agathion - Sagittarius" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
-	<!-- An item which can be used to obtain the power of the Sagittarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n\\n<Unique Ability>\\nAtk. Spd. increased.\\nStarting at +6, MP Consumption for P. Skills and songs/dances decreased.\\n -->
+	<!-- An item which can be used to obtain the power of the Sagittarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nAtk. Spd. increased.\nStarting at +6, MP Consumption for P. Skills and songs/dances decreased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="48066" name="Zodiac Agathion Box" type="NONE" icon="icon.star_agathion_cube">
-	<!-- Double-click to get a random Zodiac Agathion.\\n -->
+	<!-- Double-click to get a random Zodiac Agathion.\n -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>

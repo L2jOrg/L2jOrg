@@ -12,7 +12,7 @@
 		<attributes weight="100" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -34,31 +34,31 @@
 	</armor>
 
 	<item id="90904" name="Agathion - Aries Pack" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
-	<!-- Double-click to obtain 1 Agathion Bracelet Lv. 3 (60 days) and 1 Aries Agathion (60 days).\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
+	<!-- Double-click to obtain 1 Agathion Bracelet Lv. 3 (60 days) and 1 Aries Agathion (60 days).\n\n<Note>\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes duration="86400" immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="90905" name="Singer and Dancer Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<item id="90905" name="Singer &amp; Dancer Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Agathion Bracelet - Singer & Dancer (30 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="90906" name="Singer and Dancer Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
+	<item id="90906" name="Singer &amp; Dancer Pack" type="NONE" icon="icon.etc_pi_gift_box_i04">
 	<!-- Double-click to obtain Agathion Bracelet - Singer & Dancer (90 days).  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="129600" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90907" name="Soulshot Ticket" type="NONE" icon="icon.etc_exchange_ticket_i03">
-	<!-- Using Dimensional Merchant, you can exchange it for a Soulshot, Spiritshot, Blessed Spiritshot, Blessed Soulshot, Beast Soulshot, Beast Spiritshot.  -->
+	<!-- Using the Store Manager, you can exchange it for a Soulshot, Spiritshot, Blessed Spiritshot, Blessed Soulshot, Beast Soulshot, Beast Spiritshot. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90908" name="Agathion Box: Rudolph" type="NONE" icon="icon.etc_pi_gift_box_i04">
-	<!-- Double-click to obtain 1 Rudolph Agathion (2 hours).\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box.  -->
+	<!-- Double-click to obtain 1 Rudolph Agathion (2 hours).\n\n<Note>\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="120" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -70,8 +70,8 @@
 		<crystal />
 	</armor>
 
-	<item id="90910" name="Christmas Red Sox" type="NONE" icon="BranchSys.icon.br_xmas_present_i00">
-	<!-- Can be exchanged through the Fishermen's Guild for Rice Cake of Flaming Fighting Spirit (Event), Angel Cat's Energy (30 days), Special Fruit Buff (Event).    -->
+	<item id="90910" name="Holiday Red Sock" type="NONE" icon="BranchSys.icon.br_xmas_present_i00">
+	<!-- Can be exchanged through the Fishermen's Guild for XP Boost Scroll, Angel Cat's Energy (30 days), Special Fruit Buff (Event). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -112,30 +112,30 @@
 		<attributes/>
 	</item>
 
-	<item id="90917" name="XP Scroll: 10,0,0," type="SCROLL" icon="icon.exp_bottle_scroll">
+	<item id="90917" name="XP Scroll: 10,000,000" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- XP +10,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51043" level="1"/>  <!-- XP Scroll: 10,000,000 -->
+			<skill id="51043" level="1" value="-1"/>  <!-- Scroll: 10,000,000 XP -->
 		</skill-reducer>
 	</item>
 
-	<item id="90918" name="XP Scroll: 50,0,0," type="SCROLL" icon="icon.exp_bottle_scroll">
+	<item id="90918" name="XP Scroll: 50,000,000" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- XP +50,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51044" level="1"/>  <!-- XP Scroll: 50,000,000 -->
+			<skill id="51044" level="1" value="-1"/>  <!-- Scroll: 50,000,000 XP -->
 		</skill-reducer>
 	</item>
 
-	<item id="90919" name="XP Scroll: 100,0,0," type="SCROLL" icon="icon.exp_bottle_scroll">
+	<item id="90919" name="XP Scroll: 100,000,000" type="SCROLL" icon="icon.exp_bottle_scroll">
 	<!-- XP +100,000,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51045" level="1"/>  <!-- XP Scroll: 100,000,000 -->
+			<skill id="51045" level="1" value="-1"/>  <!-- Scroll: 100,000,000 XP -->
 		</skill-reducer>
 	</item>
 
@@ -297,7 +297,7 @@
 	</item>
 
 	<item id="90944" name="Shining Brooch Fragment" type="NONE" icon="icon.etc_bm_brooch_lavianrose_piece">
-	<!-- Take the brooch and brooch fragments to the Dimensional Merchant to exchange them for a higher-grade brooch. \\n\\n<Brooch Exchange Materials>\\nBrooch Lv. 3: 1 Brooch Lv. 2 and 2 Shining Brooch Fragments\\nBrooch Lv. 4: 1 Brooch Lv. 3 and 3 Shining Brooch Fragments -->
+	<!-- Take the brooch and brooch fragments to the Store Manager to exchange them for a higher-grade brooch. \n\n<Brooch Exchange Materials>\nBrooch Lv. 3: 1 Brooch Lv. 2 and 2 Shining Brooch Fragments\nBrooch Lv. 4: 1 Brooch Lv. 3 and 3 Shining Brooch Fragments -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -327,11 +327,11 @@
 	</item>
 
 	<item id="90949" name="Transformation Scroll: White Knight" type="POTION" icon="icon.etc_charm_of_courage_i00">
-	<!-- Transforms you into a White Knight for 20 minutes. Effect remains even after death. \\nDuring White Knight Transformation: Max HP/MP +10%, PvE P. Atk. +5%, PvE P. Def +5%, Stun/Paralysis/MEN Attack Resistance +5%.  -->
+	<!-- Transforms you into a White Knight for 20 minutes. Effect remains even after death. \nDuring White Knight Transformation: Max HP/MP +10%, PvE P. Atk. +5%, PvE P. Def +5%, Stun/Paralysis/MEN Attack Resistance +5%.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39369"/> <!-- Transformation Scroll: White Knight -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39369" level="1" value="-1"/>  <!-- White Knight Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -411,11 +411,11 @@
 	</item>
 
 	<item id="90960" name="Transformation Scroll: Teddy Bear" type="POTION" icon="icon.gomdori_chest_change">
-	<!-- Transforms you into Teddy Bear for 15 min. Effect remains after death. \\n Teddy Bear Transform: Max HP/MP +20%. Sayha's Grace Hunting XP/SP +20%. Effect remains after death. \\n<Warning>\\n If used when Blue Dynasty/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
+	<!-- Transforms you into Teddy Bear for 15 min. Effect remains after death. \n Teddy Bear Transform: Max HP/MP +20%. Sayha's Grace Hunting XP/SP +20%. Effect remains after death. \n<Warning>\n If used when Blue Dynasty/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39367"/> <!-- Transformation Scroll: Teddy Bear -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39367" level="1" value="-1"/>  <!-- Teddy Bear Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -424,7 +424,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39368" level="1"/>  <!-- Weapon Supply Box +15 (A-grade) -->
+			<skill id="39368" level="1" value="-1"/>  <!-- Weapon Supply Box +15 (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -444,18 +444,18 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
 	<item id="90963" name="Solid Scroll: Enchant Agathion" type="SEVEN_SINS_AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
-	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
+	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3 and can be enchanted up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchant level is maintained. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90964" name="Sealed Doll of Border Box" type="NONE" icon="icon.event_oriental_park_i00">
-	<!-- You can obtain one of the 30-days items: Sealed Doll of Border - Baium, Sealed Doll of Border - Orfen, Doll of Border - Queen Ant.\\n -->
+	<!-- You can obtain one of the 30-days items: Sealed Doll of Border - Baium, Sealed Doll of Border - Orfen, Doll of Border - Queen Ant.\n -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -479,7 +479,7 @@
 	</item>
 
 	<item id="90968" name="GM Repi Gift Box" type="NONE" icon="icon.event_six_party_box_i00">
-	<!-- Double-click to randomly obtain a Dandy's Home Run Ball, 3 Morale Bean Cakes (Event), 3 White Assassin Transformation Scrolls (Event), or 5 Sayha's Storm (Event).   -->
+	<!-- Double-click to randomly obtain a Dandy's Home Run Ball, 3 XP Boost Scroll (Event), 3 White Assassin Transformation Scrolls (Event), or 5 Sayha's Storm (Event). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -505,7 +505,7 @@
 	</armor>
 
 	<item id="90971" name="High-grade Shining Pendant Polish Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
-	<!-- Double-click to randomly obtain 1 Matte Pendant Varnish, Shining Pendant Varnish Box, or Brilliant Pendant Varnish.  -->
+	<!-- Double-click to randomly obtain 1 Matte Pendant Varnish, Shiny Pendant Varnish Box, or Brilliant Pendant Varnish.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -515,7 +515,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51057" level="1"/>  <!-- +8 Weapon Pack (A-grade) -->
+			<skill id="51057" level="1" value="-1"/>  <!-- Weapon Supply Box +8 (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -545,19 +545,19 @@
 	</item>
 
 	<item id="90977" name="Doll of Border - Baium" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- A 7-day item. Boosts abilities if stored in the inventory. \\n<Baium Doll's Spell>\\nMEN Atk. Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P./M. Def. +12%, Skill Cooldown -3%. -->
+	<!-- A 7-day item. Boosts abilities if stored in the inventory. \n<Baium Doll's Spell>\nMEN Atk. Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P./M. Def. +12%, Skill Cooldown -3%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="90978" name="Doll of Border - Queen Ant" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- A 7-day item. Boosts abilities if stored in the inventory. \\n\\n<Queen Ant's Doll Spell>\\nP. Atk. and Critical Damage +8%, Max HP +12%. -->
+	<!-- A 7-day item. Boosts abilities if stored in the inventory. \n\n<Queen Ant's Doll Spell>\nP. Atk. and Critical Damage +8%, Max HP +12%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="90979" name="Doll of Border - Orfen" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- A 7-day item. Boosts abilities if stored in the inventory. \\n\\n<Orfen's Doll Spell>\\nM. Atk./M. Critical Damage +8%, Max MP +12%. -->
+	<!-- A 7-day item. Boosts abilities if stored in the inventory. \n\n<Orfen's Doll Spell>\nM. Atk./M. Critical Damage +8%, Max MP +12%. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
@@ -659,10 +659,10 @@
 		<crystal />
 		<stats>
 			<stat type="mDef" value="74.0"/>
-			<stat type="maxMp" value="28"/>
+			<stat type="maxMp" value="28.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="12"/>  <!-- Damaged Antharas' Earring -->
+			<skill id="3558" level="12" value="-1"/>  <!-- Damaged Antharas' Earring -->
 		</skills>
 	</armor>
 

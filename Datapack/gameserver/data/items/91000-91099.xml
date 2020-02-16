@@ -24,7 +24,7 @@
 		<attributes weight="100" duration="1440" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -172,7 +172,7 @@
 	</item>
 
 	<item id="91027" name="Dragon's Miracle Potion" type="SCROLL" icon="icon.bm_dragon_posion_brave">
-	<!-- For 20 minutes, recharges 5000 Sayha's Grace points, XP/SP +20%, P./M. Atk. +12%, P./M. Def. +15%, P./M. Critical Rate +20, P./M. Critical Damage +5%, HP/MP/CP +25%, HP/MP Recovery +30%, and Sayha's Grace Consumption Rate -10%. Has a chance to absorb 5% of physical damage dealt to enemies as HP. Can accumulate up to Stage 3. \\nCannot be used if you have the Dragon's Special Elixir effect. -->
+	<!-- For 20 minutes, recharges 5000 Sayha's Grace points, XP/SP +20%, P./M. Atk. +12%, P./M. Def. +15%, P./M. Critical Rate +20, P./M. Critical Damage +5%, HP/MP/CP +25%, HP/MP Recovery +30%, and Sayha's Grace Consumption Rate -10%. Has a chance to absorb 5% of physical damage dealt to enemies as HP. Can accumulate up to Stage 3. \nCannot be used if you have the Dragon's Special Elixir effect. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -181,8 +181,8 @@
 	<!-- After instant 1000 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer>
-			<skill id="51083"/> <!-- High-grade Maliss' HP Recovery Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51083" level="1" value="-1"/>  <!-- Maliss's High-grade HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -195,9 +195,9 @@
 	<item id="91030" name="Spirit's Blessing" type="NONE" icon="icon.elemental_bless_scrl_i00">
 	<!-- Activates a buff when the item is used. Attribute XP gain +20% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer>
-			<skill id="54028"/>  <!-- Spirit's Blessing -->
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54028" level="1" value="-1"/>  <!-- Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -283,8 +283,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54023" level="1"/>  <!-- Water Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" level="1" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -298,8 +298,8 @@
 			<stat type="maxMp" value="37.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="2"/>  <!-- Attribute XP Increase -->
-			<skill id="54023" level="2"/>  <!-- Water Attack Defense -->
+			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" level="2" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -313,8 +313,8 @@
 			<stat type="maxMp" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="3"/>  <!-- Attribute XP Increase -->
-			<skill id="54023" level="3"/>  <!-- Water Attack Defense -->
+			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" level="3" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -328,8 +328,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54024" level="1"/>  <!-- Fire Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" level="1" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -343,8 +343,8 @@
 			<stat type="maxMp" value="37.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="2"/>  <!-- Attribute XP Increase -->
-			<skill id="54024" level="2"/>  <!-- Fire Attack Defense -->
+			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" level="2" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -358,8 +358,8 @@
 			<stat type="maxMp" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="3"/>  <!-- Attribute XP Increase -->
-			<skill id="54024" level="3"/>  <!-- Fire Attack Defense -->
+			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" level="3" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -374,8 +374,8 @@
 			<stat type="windRes" value="20.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54025" level="1"/>  <!-- Wind Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54025" level="1" value="-1"/>  <!-- Wind Defense -->
 		</skills>
 	</armor>
 
@@ -389,8 +389,8 @@
 			<stat type="maxMp" value="37.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="2"/>  <!-- Attribute XP Increase -->
-			<skill id="54025" level="2"/>  <!-- Wind Attack Defense -->
+			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54025" level="2" value="-1"/>  <!-- Wind Defense -->
 		</skills>
 	</armor>
 
@@ -404,8 +404,8 @@
 			<stat type="maxMp" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="3"/>  <!-- Attribute XP Increase -->
-			<skill id="54025" level="3"/>  <!-- Wind Attack Defense -->
+			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54025" level="3" value="-1"/>  <!-- Wind Defense -->
 		</skills>
 	</armor>
 
@@ -419,8 +419,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54026" level="1"/>  <!-- Earth Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" level="1" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -434,8 +434,8 @@
 			<stat type="maxMp" value="37.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="2"/>  <!-- Attribute XP Increase -->
-			<skill id="54026" level="2"/>  <!-- Earth Attack Defense -->
+			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" level="2" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -449,8 +449,8 @@
 			<stat type="maxMp" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="3"/>  <!-- Attribute XP Increase -->
-			<skill id="54026" level="3"/>  <!-- Earth Attack Defense -->
+			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" level="3" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -464,8 +464,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54023" level="1"/>  <!-- Water Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" level="1" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -479,8 +479,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54024" level="1"/>  <!-- Fire Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" level="1" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -494,8 +494,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54025" level="1"/>  <!-- Wind Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54025" level="1" value="-1"/>  <!-- Wind Defense -->
 		</skills>
 	</armor>
 
@@ -509,8 +509,8 @@
 			<stat type="maxMp" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="1"/>  <!-- Attribute XP Increase -->
-			<skill id="54026" level="1"/>  <!-- Earth Attack Defense -->
+			<skill id="54027" level="1" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" level="1" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -701,63 +701,63 @@
 		<crystal />
 	</armor>
 
-	<armor id="91086" name="Venir's Talisman Lv10" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
+	<armor id="91086" name="Venir's Talisman Lv10" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- Increases CON/MEN/DEX/WIT +2, STR/INT +1 when equipped. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv6 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91087" name="Venir's Talisman Lv11" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="91087" name="Venir's Talisman Lv11" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- Increases CON/MEN/DEX/WIT/STR +2, INT +1 when equipped. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv6 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91088" name="Venir's Talisman Lv12" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="91088" name="Venir's Talisman Lv12" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- Increases CON/MEN/DEX/WIT/STR/INT +2 when equipped. Drains damage delivered to enemy to HP 4%/MP 2%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 12 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91089" name="Venir's Talisman Lv13" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91089" name="Venir's Talisman Lv13" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON +3, MEN/DEX/WIT/STR/INT +2 when equipped. Drains damage delivered to enemy to HP 4%/MP 2%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv12 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91090" name="Venir's Talisman Lv14" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91090" name="Venir's Talisman Lv14" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN +3, DEX/WIT/STR/INT +2 when equipped. Drains damage delivered to enemy to HP 4%/MP 2%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv12 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91091" name="Venir's Talisman Lv15" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91091" name="Venir's Talisman Lv15" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN +3, DEX/WIT/STR/INT +2 when equipped. Drains damage delivered to enemy to HP 4%/MP 2%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv12 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91092" name="Venir's Talisman Lv16" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91092" name="Venir's Talisman Lv16" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN/DEX/WIT +3, STR/INT +2 when equipped. Drains damage delivered to enemy to HP 4%/MP 2%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv12 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91093" name="Venir's Talisman Lv17" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91093" name="Venir's Talisman Lv17" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN/DEX/WIT/STR+3, INT +2 when equipped. Drains damage delivered to enemy to HP 4%/MP 2%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv12 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91094" name="Venir's Talisman Lv18" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91094" name="Venir's Talisman Lv18" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON +4, MEN/DEX/WIT/STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />

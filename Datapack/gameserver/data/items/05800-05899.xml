@@ -51,36 +51,27 @@
 	<item id="5803" name="Lucky Charm (D-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
 	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 20-39. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="10" price="330" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2168" level="2"/>  <!-- Lucky Charm -->
+			<skill id="2168" level="2" value="-1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
 	</item>
 
 	<item id="5804" name="Lucky Charm (C-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
 	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 40-51. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="10" price="660" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2168" level="3"/>  <!-- Lucky Charm -->
+			<skill id="2168" level="3" value="-1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
 	</item>
 
 	<item id="5805" name="Lucky Charm (B-grade)" type="SCROLL" icon="icon.etc_charm_of_luck_i00">
 	<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, their abilities will not be diminished. This item can only be used on self by a character level 52-60. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="10" price="1300" reuse-delay="10000" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2168" level="4"/>  <!-- Lucky Charm -->
+			<skill id="2168" level="4" value="-1"/>  <!-- Lucky Charm -->
 		</skill-reducer>
 	</item>
 
@@ -92,49 +83,49 @@
 	</armor>
 
 	<item id="5809" name="Spellbook: Aqua Splash" type="NONE" icon="icon.etc_spell_books_element_i00">
-	<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers.\\nRequired level: 58 -->
+	<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers.\nRequired level: 58 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="6750" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5810" name="Spellbook: Rain of Fire" type="NONE" icon="icon.etc_spell_books_element_i00">
-	<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers.\\nRequired level: 58 -->
+	<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers.\nRequired level: 58 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="6750" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5811" name="Spellbook: Mass Slow" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Mass Slow. Used by Necromancers.\\nRequired level: 61 -->
+	<!-- Spellbook needed to learn Mass Slow. Used by Necromancers.\nRequired level: 61 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5812" name="Spellbook: Servitor Empowerment" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners.\\nRequired level: 52 -->
+	<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners.\nRequired level: 52 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="5400" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5813" name="Spellbook: Servitor Cure" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5814" name="Spellbook: Servitor Blessing" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners.\\nRequired level: 62 -->
+	<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners.\nRequired level: 62 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="7700" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5815" name="Spellbook: Wild Magic" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders.\\nRequired level: 62 -->
+	<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders.\nRequired level: 62 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5816" name="Spellbook: Advanced Block" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders.\\nRequired level: 42 -->
+	<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders.\nRequired level: 42 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -156,31 +147,25 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
 	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="SCROLL" icon="icon.etc_scroll_of_return_agit_i01">
 	<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" price="100000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2177" level="1"/>  <!-- Blessed Scroll of Escape: Clan Hall -->
+			<skill id="2177" level="1" value="-1"/>  <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skill-reducer>
 	</item>
 
 	<item id="5859" name="Blessed Scroll of Escape: Castle" type="SCROLL" icon="icon.etc_scroll_of_return_castle_i01">
 	<!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" price="80000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2178" level="1"/>  <!-- Blessed Scroll of Escape: Castle -->
+			<skill id="2178" level="1" value="-1"/>  <!-- Blessed Scroll of Escape: Castle -->
 		</skill-reducer>
 	</item>
 

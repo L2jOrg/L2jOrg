@@ -43,7 +43,7 @@
 	</item>
 
 	<item id="90007" name="Common Life Stone" type="NONE" icon="icon.etc_mineral_general_i00">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 100 Gemstones (D-grade).  -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 100 Gemstones (D-grade).  -->
 		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2"/>
 	</item>
@@ -73,31 +73,31 @@
 	</item>
 
 	<item id="90012" name="Common Life Stone" type="NONE" icon="icon.etc_mineral_general_i00">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 100 Gemstones (D-grade).  -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 100 Gemstones (D-grade).  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="2" price="100000"/>
 	</item>
 
 	<item id="90013" name="Mid-grade Life Stone" type="NONE" icon="icon.etc_mineral_special_i03">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (C-grade).  -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (C-grade).  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="2" price="300000"/>
 	</item>
 
 	<item id="90014" name="High-grade Life Stone" type="NONE" icon="icon.etc_mineral_rare_i03">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (B-grade).  -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (B-grade).  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="2" price="900000"/>
 	</item>
 
 	<item id="90015" name="Top-grade Life Stone" type="NONE" icon="icon.etc_mineral_unique_i03">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (A-grade).  -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (A-grade).  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="2" price="2700000"/>
 	</item>
 
 	<item id="90016" name="Shining Life Stone" type="NONE" icon="icon.renewal_mineral_r">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\\n\\nAugmentation requires 200 Gemstones (S-grade).  -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (S-grade).  -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="2"/>
 	</item>
@@ -149,7 +149,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35040" level="1"/>  <!-- Belt -->
+			<skill id="35040" level="1" value="-1"/>  <!-- Belt -->
 		</skills>
 	</armor>
 
@@ -162,7 +162,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35041" level="1"/>  <!-- Rag Belt -->
+			<skill id="35041" level="1" value="-1"/>  <!-- Rag Belt -->
 		</skills>
 	</armor>
 
@@ -175,7 +175,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35042" level="1"/>  <!-- Leather Belt -->
+			<skill id="35042" level="1" value="-1"/>  <!-- Leather Belt -->
 		</skills>
 	</armor>
 
@@ -188,7 +188,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35043" level="1"/>  <!-- Iron Belt -->
+			<skill id="35043" level="1" value="-1"/>  <!-- Iron Belt -->
 		</skills>
 	</armor>
 
@@ -201,7 +201,7 @@
 			<stat type="pDef" value="10.0"/>
 		</stats>
 		<skills>
-			<skill id="35044" level="1"/>  <!-- Mithril Belt -->
+			<skill id="35044" level="1" value="-1"/>  <!-- Mithril Belt -->
 		</skills>
 	</armor>
 
@@ -252,7 +252,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39203" level="1"/>  <!-- Life Stone Pack -->
+			<skill id="39203" level="1" value="-1"/>  <!-- Life Stone Pack -->
 		</skill-reducer>
 	</item>
 
@@ -262,7 +262,7 @@
 		<attributes weight="120" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35038" level="1"/>  <!-- Hero's Talisman - Attack -->
+			<skill id="35038" level="1" value="-1"/>  <!-- Hero's Talisman - Attack -->
 		</skills>
 	</armor>
 
@@ -272,7 +272,7 @@
 		<attributes weight="120" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="35039" level="1"/>  <!-- Hero's Talisman - Defense -->
+			<skill id="35039" level="1" value="-1"/>  <!-- Hero's Talisman - Defense -->
 		</skills>
 	</armor>
 
@@ -307,11 +307,11 @@
 	</item>
 
 	<item id="90043" name="Dark Assassin Transformation Potion" type="POTION" icon="icon.empty_bottle">
-	<!-- For 15 minutes transforms you into Dark Assassin. \\nTransformation into Dark Assassin: Max HP/MP +5%, P./M. Accuracy +1, P./M. Atk. +2%, P./M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +1, Speed +4. -->
+	<!-- For 15 minutes transforms you into Dark Assassin. \nTransformation into Dark Assassin: Max HP/MP +5%, P./M. Accuracy +1, P./M. Atk. +2%, P./M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +1, Speed +4. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39205"/>  <!-- Dark Assassin Transformation Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39205" level="1" value="-1"/>  <!-- Dark Assassin Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -320,7 +320,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39204" level="1"/>  <!-- Dimensional Blessing -->
+			<skill id="39204" level="1" value="-1"/>  <!-- Dimensional Blessing -->
 		</skill-reducer>
 	</item>
 

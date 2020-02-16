@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="45473" name="Blue Mackerel" type="NONE" icon="icon.fish_normal_i04">
-	<!-- Trade for various items through a fishing guild member. -->
+	<item id="45473" name="Blue Mackerel - Tradable" type="NONE" icon="icon.fish_normal_i04">
+	<!-- Exchange for various items through a Fishing Guild Member. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="45481" name="Fresh Blue Mackerel" type="NONE" icon="icon.fish_normal_i12">
-	<!-- Trade for various items through a fishing guild member. -->
+	<item id="45481" name="Fresh Blue Mackerel - Tradable" type="NONE" icon="icon.fish_normal_i12">
+	<!-- Exchange for various items through a Fishing Guild Member. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes/>
 	</item>
@@ -40,7 +40,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" price="20514" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="45492" chance="100000"/>  <!-- Fishing Rod -->
+			<item id="45492" chance="100000000"/>  <!-- Fishing Rod -->
 		</extract>
 	</item>
 

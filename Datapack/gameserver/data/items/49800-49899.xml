@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="49800" name="Oriana's Coin Box" type="NONE" icon="icon.event_orc_coinbox">
-	<!-- Double-click to receive 200 Oriana's Coins.  -->
+	<!-- Double-click to receive 200 Oriana's Coins. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -279,12 +279,12 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="49845" name="Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
-	<!-- Sayha Grace points +35,000 (1 slot). -->
+	<item id="49845" name="Sayha's Blessing - Exchangeable" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39191"/> <!-- Sayha's Blessing -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39191" level="1" value="-1"/>  <!-- Sayha's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -292,8 +292,8 @@
 	<!-- Sayha Grace points +70,000 (2 slots). -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39192"/> <!-- Sayha's Silver Light Blessing -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39192" level="1" value="-1"/>  <!-- Sayha's Silver Light Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -301,8 +301,8 @@
 	<!-- Sayha Grace points +105,000 (3 slots). -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39193"/> <!-- Sayha's Silver Light Blessing -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39193" level="1" value="-1"/>  <!-- Sayha's Golden Light Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -311,7 +311,7 @@
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<extract >
-			<item id="49467" chance="100000" min-enchant="10" max-enchant="10"/>  <!-- Fire Dragon Pendant -->
+			<item id="49467" chance="100000000" min-enchant="10" max-enchant="10"/>  <!-- Fire Dragon Pendant -->
 		</extract>
 	</item>
 
@@ -326,16 +326,16 @@
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39187" level="1"/>  <!-- Ornament Supply Box (A-grade) -->
+			<skill id="39187" level="1" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
 		</skill-reducer>
 	</item>
 
-	<item id="49851" name="Sayha's Gust" type="NONE" icon="icon.bm_sayha_storm">
-	<!-- Sayha Grace points +100%, XP/SP gain +100%. This effect remains even after character's death. Duration: 10 minutes. Cooldown: 10 minutes. Available when more than one slot of the bar of Sayha’s Grace points is filled. Cannot be dropped or sold in the grocery store. -->
+	<item id="49851" name="Sayha's Storm Lv. 1 - Exchangeable" type="NONE" icon="icon.bm_sayha_storm">
+	<!-- Sayha's Grace Consumption +100% and XP/SP Gain +100% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. Available only when Sayha's Grace is 35,000 or higher. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39194"/> <!-- Sayha's Gust -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39194" level="1" value="-1"/>  <!-- Sayha's Gust Lv. 1 -->
 		</skill-reducer>
 	</item>
 
@@ -351,12 +351,12 @@
 		<attributes/>
 	</item>
 
-	<item id="49854" name="Maliss's MP Recovery Potion" type="POTION" icon="icon.freya_potion">
-	<!-- Instantly recovers MP.  -->
+	<item id="49854" name="Maliss's MP Recovery Potion - Exchangeable" type="POTION" icon="icon.freya_potion">
+	<!-- Instantly recovers MP. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39198" level="1"/>  <!-- Melissa's MP Recovery Potion -->
+			<skill id="39198" level="1" value="-1"/>  <!-- Maliss's MP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -384,8 +384,8 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49859" name="Weapon Exchange Coupon" type="NONE" icon="icon.etc_exchange_ticket_i01">
-	<!-- Using Dimensional Merchant, you can exchange it for a No-, D-, C-, or Top-grade item. A fee is required for exchange.  -->
+	<item id="49859" name="Weapon Exchange Ticket" type="NONE" icon="icon.etc_exchange_ticket_i01">
+	<!-- Using the Store Manager, you can exchange it for a No-, D-, C-, or Top-grade item. A fee is required for exchange. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>

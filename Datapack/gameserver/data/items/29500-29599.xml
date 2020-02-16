@@ -70,7 +70,7 @@
 	</item>
 
 	<item id="29509" name="Feather of Blessing-For NPC Temp" type="NONE" icon="icon.blessed_feather_i00">
-	<!-- Can resurrect at the spot if stored in the inventory. -->
+	<!-- Blessed feather that allows to resurrect right in the place of death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -80,101 +80,83 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="34603" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious No-grade Soulshot -->
-			<item id="34610" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
-			<item id="29648" min-count="30" max-count="30" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="49032" chance="100000"/>  <!-- Eva's Mark -->
-			<item id="49000" chance="100000"/>  <!-- Agathion - Singer and Dancer  -->
-			<item id="29651" min-count="50" max-count="50" chance="100000"/>  <!-- Healing Potion -->
-			<item id="10650" min-count="30" max-count="30" chance="100000"/>  <!-- Scroll of Escape (Novice) -->
-			<item id="49036" min-count="30" max-count="30" chance="100000"/>  <!-- Adventurer's Wind Walk Potion -->
-			<item id="29653" min-count="30" max-count="30" chance="100000"/>  <!-- Haste Potion (Novice) -->
-			<item id="29511" chance="100000"/>  <!-- Beginner's Pack - Stage 2 -->
+			<item id="34603" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious No-grade Soulshot -->
+			<item id="34610" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
+			<item id="29648" min-count="30" max-count="30" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="49032" chance="100000000"/>  <!-- Eva's Mark -->
+			<item id="49000" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
+			<item id="29651" min-count="50" max-count="50" chance="100000000"/>  <!-- Healing Potion -->
+			<item id="10650" min-count="30" max-count="30" chance="100000000"/>  <!-- Scroll of Escape (Novice) -->
+			<item id="49036" min-count="30" max-count="30" chance="100000000"/>  <!-- Adventurer's Wind Walk Potion -->
+			<item id="29653" min-count="30" max-count="30" chance="100000000"/>  <!-- Haste Potion (Novice) -->
+			<item id="29511" chance="100000000"/>  <!-- Beginner's Pack - Stage 2 -->
 		</extract>
 	</item>
 
 	<item id="29511" name="Beginner's Pack - Stage 2" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 30 Full Buff Scrolls and a Beginner's Pack - Stage 3. Lv. 10 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113" add-name="true">
-			<player level-min="10"/>
-		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29512" chance="100000"/>  <!-- Beginner's Pack - Stage 3 -->
-			<item id="29654" min-count="30" max-count="30" chance="100000"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<item id="29512" chance="100000000"/>  <!-- Beginner's Pack - Stage 3 -->
+			<item id="29654" min-count="30" max-count="30" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
 	<item id="29512" name="Beginner's Pack - Stage 3" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Saber*Elven Sword (30-day), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 4. Lv. 20 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113" add-name="true">
-			<player level-min="20"/>
-		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29527" chance="100000"/>  <!-- Saber*Elven Sword -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
-			<item id="29513" chance="100000"/>  <!-- Beginner's Pack - Stage 4 -->
+			<item id="29527" chance="100000000"/>  <!-- Saber*Elven Sword -->
+			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29513" chance="100000000"/>  <!-- Beginner's Pack - Stage 4 -->
 		</extract>
 	</item>
 
 	<item id="29513" name="Beginner's Pack - Stage 4" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Magic Necklace Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 5. Lv. 25 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113" add-name="true">
-			<player level-min="25"/>
-		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29529" chance="100000"/>  <!-- Magic Necklace Crafting Pack -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
-			<item id="29514" chance="100000"/>  <!-- Beginner's Pack - Stage 5 -->
+			<item id="29529" chance="100000000"/>  <!-- Magic Necklace Crafting Pack -->
+			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29514" chance="100000000"/>  <!-- Beginner's Pack - Stage 5 -->
 		</extract>
 	</item>
 
 	<item id="29514" name="Beginner's Pack - Stage 5" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 1 Elven Ring Crafting Pack, 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 6. Lv. 30 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113" add-name="true">
-			<player level-min="30"/>
-		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29530" chance="100000"/>  <!-- Tiger's Eye Crafting Pack -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
-			<item id="29515" chance="100000"/>  <!-- Beginner's Pack - Stage 6 -->
+			<item id="29530" chance="100000000"/>  <!-- Tiger's Eye Crafting Pack -->
+			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29515" chance="100000000"/>  <!-- Beginner's Pack - Stage 6 -->
 		</extract>
 	</item>
 
 	<item id="29515" name="Beginner's Pack - Stage 6" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to get the following: 20 XP/SP Boost Scrolls (40%), 4500 Soulshots, 1000 Blessed Spiritshots, and a Beginner's Pack - Stage 7. Lv. 35 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113" add-name="true">
-			<player level-min="35"/>
-		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29649" min-count="10" max-count="10" chance="100000"/>  <!-- Scroll: Mid-grade XP/SP Boost -->
-			<item id="34604" min-count="9000" max-count="9000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="34611" min-count="2000" max-count="2000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
-			<item id="29516" chance="100000"/>  <!-- Beginner's Pack - Stage 7 -->
+			<item id="29649" min-count="10" max-count="10" chance="100000000"/>  <!-- Scroll: Mid-grade XP/SP Boost -->
+			<item id="34604" min-count="9000" max-count="9000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min-count="2000" max-count="2000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29516" chance="100000000"/>  <!-- Beginner's Pack - Stage 7 -->
 		</extract>
 	</item>
 
 	<item id="29516" name="Beginner's Pack - Stage 7" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Get a Black Samurai Long Sword (30-day). Lv. 40 or above. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<condition msg-id="113" add-name="true">
-			<player level-min="40"/>
-		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49573" chance="100000"/>  <!-- Samurai Black Long Sword -->
+			<item id="49573" chance="100000000"/>  <!-- Samurai Black Long Sword -->
 		</extract>
 	</item>
 
@@ -190,17 +172,17 @@
 		<attributes weight="5" price="4000" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="POTION" icon="icon.etc_recall_exp_scroll">
+	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- XP/SP Gain + 40% for 20 minutes. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55000" level="2"/>  <!-- XP/SP Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55000" level="2" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
 
 	<item id="29520" name="VIP Coin" type="MATERIAL" icon="BranchIcon.Icon.etc_vip_coin_i00">
-	<!-- Use the coin to exchange for various items through the Dimensional Merchant.  -->
+	<!-- Use the coin to exchange for various items through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -210,7 +192,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29023" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious No-grade Soulshot -->
+			<item id="29023" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
 		</extract>
 	</item>
 
@@ -219,7 +201,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29024" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
+			<item id="29024" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
 		</extract>
 	</item>
 
@@ -228,7 +210,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29025" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29025" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
 		</extract>
 	</item>
 
@@ -237,7 +219,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29026" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29026" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
 		</extract>
 	</item>
 
@@ -246,7 +228,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29027" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Soulshot (C-grade) -->
+			<item id="29027" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Soulshot (C-grade) -->
 		</extract>
 	</item>
 
@@ -255,7 +237,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29028" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
+			<item id="29028" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
 		</extract>
 	</item>
 
@@ -287,12 +269,12 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="1900" min-count="5" max-count="5" chance="100000"/>  <!-- Necklace Chain of Magic -->
-			<item id="1886" chance="100000"/>  <!-- Silver Mold -->
-			<item id="1878" min-count="15" max-count="15" chance="100000"/>  <!-- Durable Braid -->
-			<item id="1865" min-count="3" max-count="3" chance="100000"/>  <!-- Varnish -->
-			<item id="1458" min-count="18" max-count="18" chance="100000"/>  <!-- Crystal (D-grade) -->
-			<item id="2130" min-count="3" max-count="3" chance="100000"/>  <!-- Gemstone (D-grade) -->
+			<item id="1900" min-count="5" max-count="5" chance="100000000"/>  <!-- Necklace Chain of Magic -->
+			<item id="1886" chance="100000000"/>  <!-- Silver Mold -->
+			<item id="1878" min-count="15" max-count="15" chance="100000000"/>  <!-- Durable Braid -->
+			<item id="1865" min-count="3" max-count="3" chance="100000000"/>  <!-- Varnish -->
+			<item id="1458" min-count="18" max-count="18" chance="100000000"/>  <!-- Crystal (D-grade) -->
+			<item id="2130" min-count="3" max-count="3" chance="100000000"/>  <!-- Gemstone (D-grade) -->
 		</extract>
 	</item>
 
@@ -301,12 +283,12 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="1901" min-count="6" max-count="6" chance="100000"/>  <!-- Tiger's Eye Stone -->
-			<item id="1886" chance="100000"/>  <!-- Silver Mold -->
-			<item id="1884" min-count="30" max-count="30" chance="100000"/>  <!-- Cord -->
-			<item id="1865" min-count="6" max-count="6" chance="100000"/>  <!-- Varnish -->
-			<item id="1458" min-count="22" max-count="22" chance="100000"/>  <!-- Crystal (D-grade) -->
-			<item id="2130" min-count="4" max-count="4" chance="100000"/>  <!-- Gemstone (D-grade) -->
+			<item id="1901" min-count="6" max-count="6" chance="100000000"/>  <!-- Tiger's Eye Stone -->
+			<item id="1886" chance="100000000"/>  <!-- Silver Mold -->
+			<item id="1884" min-count="30" max-count="30" chance="100000000"/>  <!-- Cord -->
+			<item id="1865" min-count="6" max-count="6" chance="100000000"/>  <!-- Varnish -->
+			<item id="1458" min-count="22" max-count="22" chance="100000000"/>  <!-- Crystal (D-grade) -->
+			<item id="2130" min-count="4" max-count="4" chance="100000000"/>  <!-- Gemstone (D-grade) -->
 		</extract>
 	</item>
 
@@ -315,9 +297,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29023" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious No-grade Soulshot -->
-			<item id="29648" min-count="15" max-count="15" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29011" min-count="15" max-count="15" chance="100000"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<item id="29023" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (No-grade) -->
+			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -326,9 +308,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29024" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed No-grade Spiritshot -->
-			<item id="29648" min-count="15" max-count="15" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29011" min-count="15" max-count="15" chance="100000"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<item id="29024" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (No-grade) -->
+			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -337,9 +319,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29025" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious Soulshot (D-grade) -->
-			<item id="29648" min-count="15" max-count="15" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29011" min-count="15" max-count="15" chance="100000"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<item id="29025" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -348,9 +330,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29026" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
-			<item id="29648" min-count="15" max-count="15" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29011" min-count="15" max-count="15" chance="100000"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<item id="29026" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -359,9 +341,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29027" min-count="5000" max-count="5000" chance="100000"/>  <!-- Mysterious Soulshot (C-grade) -->
-			<item id="29648" min-count="15" max-count="15" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29011" min-count="15" max-count="15" chance="100000"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<item id="29027" min-count="5000" max-count="5000" chance="100000000"/>  <!-- Mysterious Soulshot (C-grade) -->
+			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -370,9 +352,9 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29028" min-count="1000" max-count="1000" chance="100000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
-			<item id="29648" min-count="15" max-count="15" chance="100000"/>  <!-- Scroll: Regular XP/SP Boost -->
-			<item id="29011" min-count="15" max-count="15" chance="100000"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<item id="29028" min-count="1000" max-count="1000" chance="100000000"/>  <!-- Mysterious Blessed Spiritshot (C-grade) -->
+			<item id="29648" min-count="15" max-count="15" chance="100000000"/>  <!-- Scroll: Regular XP/SP Boost -->
+			<item id="29011" min-count="15" max-count="15" chance="100000000"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</extract>
 	</item>
 
@@ -383,37 +365,37 @@
 	</item>
 
 	<item id="29538" name="Soulshot (No-grade)" type="NONE" icon="BranchIcon.Icon.g_etc_soulshot_i01">
-	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="3" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29539" name="Blessed Spiritshot (No-grade)" type="NONE" icon="BranchIcon.Icon.g_etc_spiritshot_i01">
-	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="4" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="29540" name="Soulshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_d_i00">
-	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with a D-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29541" name="Blessed Spiritshot (D-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_d_i00">
-	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with D-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- Spiritshot containing the light of Spirits; it instantly and greatly increases the power of magic. Used with D-grade weapons. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="4" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
 
 	<item id="29542" name="Soulshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_soulshot_c_i00">
-	<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" immediate-effect="true" action="SOULSHOT"/>
 	</item>
 
 	<item id="29543" name="Blessed Spiritshot (C-grade)" type="NONE" icon="br_cashtex.item.br_cash_spiritshot_c_i00">
-	<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a C-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" immediate-effect="true" action="SPIRITSHOT"/>
 	</item>
@@ -441,13 +423,13 @@
 	</item>
 
 	<item id="29547" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00">
-	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
+	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29548" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00">
-	<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+	<!-- Increases P. Def. by 1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
@@ -459,13 +441,13 @@
 	</item>
 
 	<item id="29550" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00">
-	<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+	<!-- Increases P. Def. by 1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29551" name="Chronicles Heir's Ring Fragment" type="MATERIAL" icon="icon.event_classic_ring">
-	<!-- Ingredient to upgrade a Chronicles Heir's Ring through the Dimensional Merchant. -->
+	<!-- Ingredient to upgrade a Chronicles Heir's Ring through the Store Manager. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -474,8 +456,8 @@
 	<!-- For 20 min., Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55035"/>  <!-- 1st Class Buff Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55035" level="1" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -483,8 +465,8 @@
 	<!-- For 20 min., Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55036" level="2"/>  <!-- 2nd Class Buff Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55036" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -493,7 +475,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55037" level="1"/>  <!-- Quick Healing Potion -->
+			<skill id="55037" level="1" value="-1"/>  <!-- Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
@@ -502,7 +484,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55038" level="1"/>  <!-- Major Quick Healing Potion -->
+			<skill id="55038" level="1" value="-1"/>  <!-- Greater Quick Healing Potion -->
 		</skill-reducer>
 	</item>
 
@@ -555,17 +537,17 @@
 	</item>
 
 	<item id="29564" name="Attendance Coin" type="NONE" icon="BranchIcon.Icon.etc_att_coin_i00">
-	<!-- Coin received as a reward for checking attendance. You can exchange them for various rewards through the Dimensional Merchant. -->
+	<!-- Coin received as a reward for checking attendance. You can exchange them for various rewards through the Store Manager. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="29565" name="XP/SP Boost Scroll" type="POTION" icon="icon.etc_recall_exp_scroll">
+	<item id="29565" name="XP/SP Boost Scroll" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
 	<!-- Increases XP/SP from hunting by 20% for 60 minutes. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55041"/>  <!-- XP/SP Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55041" level="1" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
 	</item>
 
@@ -574,7 +556,7 @@
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55042" level="1"/>  <!-- Attendance XP Rune -->
+			<skill id="55042" level="1" value="-1"/>  <!-- Attendance Reward XP Rune. -->
 		</skill-reducer>
 	</item>
 
@@ -636,7 +618,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="1"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" level="1" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -650,7 +632,7 @@
 			<stat type="maxMp" value="19.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="1"/>  <!-- Orfen's Earring -->
+			<skill id="3560" level="1" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -664,7 +646,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="1"/>  <!-- Ring of Core -->
+			<skill id="3563" level="1" value="-1"/>  <!-- Ring of Core -->
 		</skills>
 	</armor>
 
@@ -673,7 +655,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39058" level="1"/>  <!-- Rare Accessory Box -->
+			<skill id="39058" level="1" value="-1"/>  <!-- Rare Accessory Box -->
 		</skill-reducer>
 	</item>
 
@@ -683,12 +665,12 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="39025" level="1"/>  <!-- Adventurer's Scroll of Escape -->
+			<skill id="39025" level="1" value="-1"/>  <!-- Adventurer's Scroll of Escape -->
 		</skills>
 	</armor>
 
 	<item id="29580" name="dreamin7 Coupon" type="MATERIAL" icon="icon.etc_lottery_card_i00">
-	<!-- A coupon that lets you exchange a + 7 enchanted Saber*Elven Sword (30-day) for a permanent weapon. Deleted after event. -->
+	<!-- A coupon that lets you exchange a +7 enchanted Saber*Elven Sword (30-day) for a permanent weapon. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -698,7 +680,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55044" level="1"/>  <!-- Lineage II Chest -->
+			<skill id="55044" level="1" value="-1"/>  <!-- LineageII Box -->
 		</skill-reducer>
 	</item>
 
@@ -707,7 +689,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55045" level="1"/>  <!-- Chronicle Chest -->
+			<skill id="55045" level="1" value="-1"/>  <!-- Chronicle Box -->
 		</skill-reducer>
 	</item>
 
@@ -716,7 +698,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55046" level="1"/>  <!-- Memories Chest -->
+			<skill id="55046" level="1" value="-1"/>  <!-- Memories Box -->
 		</skill-reducer>
 	</item>
 
@@ -725,7 +707,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="35669" chance="100000"/>  <!-- Angel Cat's Blessing -->
+			<item id="35669" chance="100000000"/>  <!-- Angel Cat's Blessing -->
 		</extract>
 	</item>
 
@@ -735,8 +717,8 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55047" level="1"/>  <!-- Romantic Chapeau - Blessed Body -->
-			<skill id="55048" level="1"/>  <!-- Romantic Chapeau - Wind Walk -->
+			<skill id="55047" level="1" value="-1"/>  <!-- Romantic Bless the Body -->
+			<skill id="55048" level="1" value="-1"/>  <!-- Romantic Wind Walk -->
 		</skills>
 	</armor>
 
@@ -746,23 +728,23 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<armor id="29587" name="Agathion - Singer and Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-	<!-- Can summon Agathion - Singer & Dancer that gleefully sings and dances when equipped. Cannot be exchanged, dropped or sold in a private store or to an NPC. -->
+	<armor id="29587" name="Agathion - Singer &amp; Dancer" type="NONE" body-part="LEFT_BRACELET" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
+	<!-- Can summon Singer & Dancer Agathion that gleefully sings and dances when equipped. -->
 		<restriction freightable="false" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="21233" level="1"/>  <!-- Summon Agathion - Singer and Dancer -->
-			<skill id="23234" level="1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="55270" level="1"/>  <!-- Agathion - Dance of Fury -->
-			<skill id="55271" level="1"/>  <!-- Agathion - Dance of Concentration -->
-			<skill id="55272" level="1"/>  <!-- Agathion - Song of Wind -->
+			<skill id="21233" level="1" value="-1"/>  <!-- Release Agathion - Uthanka -->
+			<skill id="23234" level="1" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55270" level="1" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" level="1" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" level="1" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
-	<item id="29588" name="Samurai Black Long Sword Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
-	<!-- Double-click on the item to get Black Samurai Long Sword (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. You cannot exchange, drop or sell Black Samurai Long Sword. -->
+	<item id="29588" name="Black Samurai Long Sword 30-day Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click on the item to get Black Samurai Long Sword (30-day). The Black Samurai Long Sword cannot be exchanged, dropped, or sold. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -790,7 +772,7 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29591" name="Black Samurai Long Sword 30-day Pack" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
+	<weapon id="29591" name="Black Samurai Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
 	<!-- Can be enchanted and can bestow special abilities. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="2340" commission-type="OTHER_ITEM" enchant-enabled="false"/>
@@ -865,8 +847,8 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29599" name="Chronicles Heir's Great Equipment Pack" type="NONE" icon="icon.ev_10th_present2">
-	<!-- Double-click to obtain a Chronicles Heir's Great equipment (3-day, 7-day, 15-day, or permanent). -->
+	<item id="29599" name="Chronicles Heir's Greater Equipment Pack" type="NONE" icon="icon.ev_10th_present2">
+	<!-- Double-click to obtain a Chronicles Heir's Greater equipment (3-day, 7-day, 15-day, 30-day, or permanent). -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>

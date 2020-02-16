@@ -64,7 +64,7 @@
 		<restriction freightable="false" depositable="false"/>
 		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="17154" level="1"/>  <!-- Elixir of Life -->
+			<skill id="17154" level="1" value="-1"/>  <!-- Elixir of Life -->
 		</skill-reducer>
 	</item>
 

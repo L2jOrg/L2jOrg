@@ -12,7 +12,7 @@
 	</armor>
 
 	<armor id="91801" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i04">
-	<!-- 15-day item. MP +40, MEN Attack and Resistance +20%, Hold Attack and Resistance +30%, Heal Received +12%, Skill MP Consumption -10%. MP Drain effect. Enables a skill that decreases enemy MP by 10%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- 15-day item. MP +40, MEN Attack and Resistance +20%, Hold Attack and Resistance +30%, Heal Received +12%, Skill MP Consumption -10%. MP Drain effect. Enables a skill that decreases enemy MP by 10% during PvP. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -92,42 +92,42 @@
 	</item>
 
 	<armor id="91811" name="+3 Capricorn Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
-	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nM. Critical Rate increased.\\nStarting at +6, cooldown of M. Skills and songs/dances decreased. 3-day. -->
+	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n<Unique Ability>\nM. Critical Rate increased.\nStarting at +6, cooldown of M. Skills and songs/dances decreased. 3-day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91812" name="+3 Libra Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_lib_star_1">
-	<!-- An item which can be used to obtain the power of the Libra Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nCasting Spd. increased.\\nStarting at +6, MP Consumption for M. Skills and songs/dances decreased. 3-day. -->
+	<!-- An item which can be used to obtain the power of the Libra Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n<Unique Ability>\nCasting Spd. increased.\nStarting at +6, MP Consumption for M. Skills and songs/dances decreased. 3-day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91813" name="+3 Leo Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_leo_star_1">
-	<!-- An item which can be used to obtain the power of the Leo Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nP. Atk.. increased.\\nStarting at +6, increases Paralysis Atk. Rate. 3-day. -->
+	<!-- An item which can be used to obtain the power of the Leo Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n<Unique Ability>\nP. Atk.. increased.\nStarting at +6, increases Paralysis Atk. Rate. 3-day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91814" name="+3 Scorpio Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
-	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nP. Critical Rate increased.\\nStarting at +6, cooldown of M. Skills and songs/dances decreased. 3-day. -->
+	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n<Unique Ability>\nP. Critical Rate increased.\nStarting at +6, cooldown of M. Skills and songs/dances decreased. 3-day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91815" name="+3 Aquarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
-	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nM. Atk. increased.\\nStarting at +6, increases Atk. Rate of Hold/Sleep. 3-day. -->
+	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n<Unique Ability>\nM. Atk. increased.\nStarting at +6, increases Atk. Rate of Hold/Sleep. 3-day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91816" name="+3 Sagittarius Agathion" type="NONE" body-part="AGATHION" icon="icon.agathion_sag_star_1">
-	<!-- An item which can be used to obtain the power of the Sagittarius Agathion.\\n\\nSummons Agathion from the main slot.\\nActivates Unique Ability.\\n<Unique Ability>\\nAtk. Spd. increased.\\nStarting at +6, MP Consumption for P. Skills and songs/dances decreased. 3-day. -->
+	<!-- An item which can be used to obtain the power of the Sagittarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n<Unique Ability>\nAtk. Spd. increased.\nStarting at +6, MP Consumption for P. Skills and songs/dances decreased. 3-day. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -176,38 +176,38 @@
 	</item>
 
 	<item id="91824" name="Chef's Fish Stew - Victory" type="SCROLL" icon="icon.fish_stew_residence_cha">
-	<!-- When used, Prophecy of Victory Lv. 1 is applied for 3 hours. \\n<Caution> Prophecy effects can only be applied one at a time. Effect remains even after death.\\n -->
+	<!-- When used, Prophecy of Victory Lv. 1 is applied for 3 hours. \n<Caution> Prophecy effects can only be applied one at a time. Effect remains even after death.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="54119"/> <!-- Chef's Fish Stew - Victory -->
+		<skill-reducer type="ItemSkills">
+			<skill id="54119" level="1" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
 		</skill-reducer>
 	</item>
 
 	<item id="91825" name="Adventurer's High Priest Transformation Scroll" type="POTION" icon="icon.bm2018_healer_i01">
-	<!-- Transforms you into High Priest for 20 minutes. Effect remains even after death.\\n\\n<High Priest's Energy> P. Atk. +63, M. Atk. +70, XP/SP Gain when hunting +5%. Has a chance to recover party members' HP/MP when attacking or using skills. Cooldown 1 minute. -->
+	<!-- Transforms you into High Priest for 20 minutes. Effect remains even after death.\n\n<High Priest's Energy> P. Atk. +63, M. Atk. +70, XP/SP Gain when hunting +5%. Has a chance to recover party members' HP/MP when attacking or using skills. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51457"/> <!-- Adventurer's Scroll: High Priest Transformation -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51457" level="1" value="-1"/>  <!-- Adventurer's High Priest Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91826" name="Adventurer's Valkyrie Transformation Scroll" type="POTION" icon="icon.bm2018_valkyrie_i01">
-	<!-- Transforms you into Valkyrie for 20 minutes. Effect remains even after death.\\n\\n<Valkyrie's Energy> P. Atk. +63, M. Atk. +70, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +20, Speed +10, Sayha's Grace Consumption Speed -5%. Has a chance to inflict additional damage when attacking and using skills. Cooldown 1 minute. -->
+	<!-- Transforms you into Valkyrie for 20 minutes. Effect remains even after death.\n\n<Valkyrie's Energy> P. Atk. +63, M. Atk. +70, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +20, Speed +10, Sayha's Grace Consumption Speed -5%. Has a chance to inflict additional damage when attacking and using skills. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51458"/> <!-- Adventurer's Scroll: Valkyrie Transformation -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51458" level="1" value="-1"/>  <!-- Adventurer's Valkyrie Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91827" name="Adventurer's Dragon Berserker Transformation Scroll" type="POTION" icon="icon.bm2018_dragon_i01">
-	<!-- Transforms you into Dragon Berserker for 20 minutes. Effect remains even after death.\\n\\n<Dragon Berserker's Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./Casting Spd. +100, P./M. Critical Rate +50, Speed +15, Sayha's Grace Consumption Speed -10%. When attacking and using skills there's a chance for P. Atk. +300, M. Atk. +300, Atk. Spd +100, Casting Spd +100, P./M. Critical Damage +135, and returns 15% of received damage back to the enemy. Cooldown 1 minute. -->
+	<!-- Transforms you into Dragon Berserker for 20 minutes. Effect remains even after death.\n\n<Dragon Berserker's Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./Casting Spd. +100, P./M. Critical Rate +50, Speed +15, Sayha's Grace Consumption Speed -10%. When attacking and using skills there's a chance for P. Atk. +300, M. Atk. +300, Atk. Spd +100, Casting Spd +100, P./M. Critical Damage +135, and returns 15% of received damage back to the enemy. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51459"/> <!-- Adventurer's Scroll: Dragon Berserker Transformation -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51459" level="1" value="-1"/>  <!-- Adventurer's Dragon Berserker Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -227,8 +227,8 @@
 	<!-- Increases Fire Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="54122"/>  <!-- Improved Fire Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="54122" level="1" value="-1"/>  <!-- Greater Fire Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -236,8 +236,8 @@
 	<!-- Increases Water Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="54123"/>  <!-- Improved Water Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="54123" level="1" value="-1"/>  <!-- Greater Water Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -245,8 +245,8 @@
 	<!-- Increases Wind Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="54124"/>  <!-- Improved Wind Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="54124" level="1" value="-1"/>  <!-- Greater Wind Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -254,8 +254,8 @@
 	<!-- Increases Earth Attack +80 for 20 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="54125"/>  <!-- Improved Earth Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="54125" level="1" value="-1"/>  <!-- Greater Earth Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -284,55 +284,55 @@
 	</item>
 
 	<item id="91838" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
-	<!-- This consumable item allows you to magically transport yourself to a specific location. \\n -->
+	<!-- This consumable item allows you to magically transport yourself to a specific location. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91839" name="Advanced Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
-	<!-- A magic scroll that quickly teleports you to the nearest village. \\n -->
+	<item id="91839" name="Advanced Scroll of Escape - Event" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
+	<!-- A magic scroll that quickly teleports you to the nearest village. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91840" name="Rice Cake of Flaming Fighting Spirit" type="NONE" icon="icon.bm_rice_cake_i01">
-	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \\n -->
+	<item id="91840" name="XP Boost Scroll - Event" type="NONE" icon="icon.etc_recall_exp_scroll">
+	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="32002"/> <!-- Rice Cake of Flaming Fighting Spirit -->
+		<skill-reducer type="ItemSkills">
+			<skill id="32002" level="1" value="-1"/>  <!-- XP Boost Scroll - Exchangeable -->
 		</skill-reducer>
 	</item>
 
 	<item id="91841" name="White Assassin Transformation Scroll" type="POTION" icon="icon.scroll_of_verification_i06">
-	<!-- Transforms you into White Assassin for 20 min. Effect remains after death. \\nWhite Assassin Transformation: Max HP/MP +7%, P../M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. \\n -->
+	<!-- Transforms you into White Assassin for 20 min. Effect remains after death. \nWhite Assassin Transformation: Max HP/MP +7%, P../M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55414"/> <!-- White Assassin Transformation Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55414" level="1" value="-1"/>  <!-- White Assassin Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91842" name="Einhasad's Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, Hunting XP/SP Gain when hunting +100% for 1 hour. Cooldown 1 minute. The effect remains active even after death.\\n -->
+	<!-- When used, Hunting XP/SP Gain when hunting +100% for 1 hour. Cooldown 1 minute. The effect remains active even after death.\n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="50135"/> <!-- Einhasad's Protection -->
+		<skill-reducer type="ItemSkills">
+			<skill id="50135" level="1" value="-1"/>  <!-- Einhasad's Protection -->
 		</skill-reducer>
 	</item>
 
-	<item id="91843" name="Hero’s HP Potion" type="POTION" icon="icon.etc_lesser_potion_red_i00">
+	<item id="91843" name="Hero’s HP Potion - Event" type="POTION" icon="icon.etc_lesser_potion_red_i00">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer>
-			<skill id="39103"/> <!-- Hero HP Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39103" level="1" value="-1"/>  <!-- Hero HP Potion -->
 		</skill-reducer>
 	</item>
 
-	<item id="91844" name="Warrior's MP Potion" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
-	<!-- A magic potion that recovers MP. \\n -->
+	<item id="91844" name="Warrior's MP Potion - Event" type="POTION" icon="icon.etc_lesser_potion_blue_i00">
+	<!-- A magic potion that recovers MP. \n -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -383,8 +383,8 @@
 	<!-- Recharges 30,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="50127"/> <!-- Little Pig Blessing Star Candy -->
+		<skill-reducer type="ItemSkills">
+			<skill id="50127" level="1" value="-1"/>  <!-- Little Pig Blessing Star Candy -->
 		</skill-reducer>
 	</item>
 
@@ -406,12 +406,12 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91856" name="Dragon's Special Elixir Lv. 1" type="SCROLL" icon="icon.bm_dragon_posion">
-	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10, Sayha's Grace Consumption Speed -20% for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
+	<item id="91856" name="Dragon's Special Elixir Lv. 1 - Exchangeable" type="SCROLL" icon="icon.bm_dragon_posion">
+	<!-- When used, XP/SP Gain +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P/M. Critical Rate +30, P./M. Critical Damage +10%, Atk. Spd./Casting Spd. +50, HP +2500, MP +1500, CP +2500, HP/MP Recovery Bonus +10, Sayha's Grace Consumption Speed -20% for 20 minutes. Has a chance to recover 5% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="50170"/> <!--  Dragon's Special Elixir -->
+		<skill-reducer type="ItemSkills">
+			<skill id="50170" level="1" value="-1"/>  <!-- Dragon's Special Elixir -->
 		</skill-reducer>
 	</item>
 
@@ -419,31 +419,31 @@
 	<!-- After instant 100 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="1" price="2000" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer>
-			<skill id="50134"/> <!-- Intermediate HP Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="50134" level="1" value="-1"/>  <!-- XP Boost Scroll - Event -->
 		</skill-reducer>
 	</item>
 
 	<item id="91858" name="Activated Red Arc" type="SCROLL" icon="icon.r99_soul_stone_i00">
-	<!-- <Magic Lamp 1st Place Reward>\\nActivated Arc. Recharges 100,000,000 XP and 2,700,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+	<!-- <Magic Lamp 1st Place Reward>\nActivated Arc. Recharges 100,000,000 XP and 2,700,000 SP.\nCan’t be shred with characters higher than your own level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91859" name="Activated Purple Arc" type="SCROLL" icon="icon.r99_soul_stone_i05">
-	<!-- <Magic Lamp 2nd Place Reward>\\nActivated Arc. Recharges 30,000,000 XP and 810,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+	<!-- <Magic Lamp 2nd Place Reward>\nActivated Arc. Recharges 30,000,000 XP and 810,000 SP.\nCan’t be shred with characters higher than your own level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91860" name="Activated Blue Arc" type="SCROLL" icon="icon.r99_soul_stone_i02">
-	<!-- <Magic Lamp 3rd Place Reward>\\nActivated Arc. Recharges 10,000,000 XP and 270,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+	<!-- <Magic Lamp 3rd Place Reward>\nActivated Arc. Recharges 10,000,000 XP and 270,000 SP.\nCan’t be shred with characters higher than your own level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91861" name="Activated Green Arc" type="SCROLL" icon="icon.r99_soul_stone_i04">
-	<!-- <Magic Lamp 4th Place Reward>\\nActivated Arc. Recharges 5,000,000 XP and 135,000 SP.\\nCan’t be shred with characters higher than your own level. -->
+	<!-- <Magic Lamp 4th Place Reward>\nActivated Arc. Recharges 5,000,000 XP and 135,000 SP.\nCan’t be shred with characters higher than your own level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -541,15 +541,15 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<armor id="91875" name="Kamael Dark Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
-	<!-- Appearance of dark Kamael. Hair accessories, weapon, and magic armor are not removed. -->
+	<armor id="91875" name="Jin Kamael Dark Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
+	<!-- Appearance of dark Jin Kamael. Hair accessories, weapon, and magic armor are not removed. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91876" name="Kamael White Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
-	<!-- Appearance of white Kamael. Hair accessories, weapon, and magic armor are not removed. -->
+	<armor id="91876" name="Jin Kamael White Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
+	<!-- Appearance of white Jin Kamael. Hair accessories, weapon, and magic armor are not removed. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />

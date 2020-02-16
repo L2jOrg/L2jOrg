@@ -6,39 +6,39 @@
 		<attributes weight="10" price="35000"/>
 	</item>
 
-	<item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" type="NONE" icon="icon.etc_add_buffslot_i00">
-	<!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
+	<item id="8618" name="Buff Slot Expansion Ticket Lv. 1" type="NONE" icon="icon.etc_add_buffslot_i00">
+	<!-- Item needed to acquire Increase of Divinity Lv. 1. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="1405" level="1"/>  <!-- Divine Inspiration -->
+			<skill id="1405" level="1" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
 
-	<item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)" type="NONE" icon="icon.etc_add_buffslot_i01">
-	<!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
+	<item id="8619" name="Buff Slot Expansion Ticket Lv. 2" type="NONE" icon="icon.etc_add_buffslot_i01">
+	<!-- Item needed to acquire Increase of Divinity Lv. 2. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="1405" level="2"/>  <!-- Divine Inspiration -->
+			<skill id="1405" level="2" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
 
-	<item id="8620" name="Ancient Book: Divine Inspiration (Manuscript)" type="NONE" icon="icon.etc_add_buffslot_i02">
-	<!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or above.) -->
+	<item id="8620" name="Buff Slot Expansion Ticket Lv. 3" type="NONE" icon="icon.etc_add_buffslot_i02">
+	<!-- Item needed to acquire Increase of Divinity Lv. 3. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="1405" level="3"/>  <!-- Divine Inspiration -->
+			<skill id="1405" level="3" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
 
-	<item id="8621" name="Ancient Book: Divine Inspiration (Original Version)" type="NONE" icon="icon.etc_add_buffslot_i03">
-	<!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
+	<item id="8621" name="Buff Slot Expansion Ticket Lv. 4" type="NONE" icon="icon.etc_add_buffslot_i03">
+	<!-- Item needed to acquire Increase of Divinity Lv. 4. -->
 		<restriction freightable="false" sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SPELLBOOK" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="1405" level="4"/>  <!-- Divine Inspiration -->
+			<skill id="1405" level="4" value="-1"/>  <!-- Divine Inspiration -->
 		</skill-reducer>
 	</item>
 
@@ -141,7 +141,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 

@@ -28,26 +28,26 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91104" name="Luxury Flanchard Enhancement Stone - A-grade" type="GIANT_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
-	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting A-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9.  -->
+	<item id="91104" name="Luxury Lucky Enchant Stone - A-grade - Exchangeable" type="GIANT_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
+	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting A-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91105" name="Luxury Flanchard Enhancement Stone - B-grade" type="GIANT_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
-	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting B-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9.  -->
+	<item id="91105" name="Luxury Lucky Enchant Stone - B-grade - Exchangeable" type="GIANT_ENCHANT" icon="icon.giant_ench_armor_stone_r_i02">
+	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting B-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91106" name="Abundance Wind Cube" type="COUPON" icon="icon.sa_cube">
-	<!-- 30-day item. Double-click to get Dandy's Home Run Ball, Morale Bean Cake (Event), Saviour's Weapon Enchant Scroll. (Can be used 1 time in 1 day.)   -->
+	<!-- 30-day item. Double-click to get Dandy's Home Run Ball, XP Boost Scroll, Savior Scroll: Enchant Weapon. (Can be used 1 time in 1 day.) -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91107" name="Abundance Wind Cube" type="COUPON" icon="icon.sa_cube">
-	<!-- 90-day item. Double-click to get Dandy's Home Run Ball, Morale Bean Cake (Event), Saviour's Weapon Enchant Scroll. (Can be used 1 time in 1 day.)   -->
+	<!-- 90-day item. Double-click to get Dandy's Home Run Ball, XP Boost Scroll, Savior Scroll: Enchant Weapon. (Can be used 1 time in 1 day.) -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="129600" action="SKILL_REDUCE"/>
 	</item>
@@ -59,20 +59,20 @@
 	</item>
 
 	<item id="91109" name="Blue Dynasty Scroll" type="POTION" icon="icon.scroll_of_verification_i01">
-	<!-- Transforms you into Blue Dynasty for 15 min. Effect remains after death. \\n Blue Dynasty's Power: Max HP/MP +20%. When Sayha's Grace applies, XP/ SP gain +20%. Effect remains after death. \\n<Warning>\\n If used when Teddy Bear/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
+	<!-- Transforms you into Blue Dynasty for 15 min. Effect remains after death. \n Blue Dynasty's Power: Max HP/MP +20%. When Sayha's Grace applies, XP/ SP gain +20%. Effect remains after death. \n<Warning>\n If used when Teddy Bear/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55693"/> <!-- Blue Dynasty Transformation Scroll -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55693" level="1" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
 		</skill-reducer>
 	</item>
 
 	<item id="91110" name="Cat the Cat Scroll" type="POTION" icon="icon.scroll_of_verification_i03">
-	<!-- Transforms you into Kat the Cat for 15 minutes. Effect remains even after death. Cannot be dropped or sold at an NCP's store. \\nKat the Cat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \\n<Warning>\\nIf used during Teddy Bear/Blue Dynasty/Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
+	<!-- Transforms you into Kat the Cat for 15 minutes. Effect remains even after death. Cannot be dropped or sold at an NCP's store. \nKat the Cat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \n<Warning>\nIf used during Teddy Bear/Blue Dynasty/Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51148"/> <!-- Transformation into Cat -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51148" level="1" value="-1"/>  <!-- Cat Transformation -->
 		</skill-reducer>
 	</item>
 
@@ -118,8 +118,8 @@
 			<stat type="maxMp" value="42.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4"/>  <!-- Attribute XP Increase -->
-			<skill id="54023" level="4"/>  <!-- Water Attack Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" level="4" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -133,8 +133,8 @@
 			<stat type="maxMp" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5"/>  <!-- Attribute XP Increase -->
-			<skill id="54023" level="5"/>  <!-- Water Attack Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54023" level="5" value="-1"/>  <!-- Water Defense -->
 		</skills>
 	</armor>
 
@@ -148,8 +148,8 @@
 			<stat type="maxMp" value="42.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4"/>  <!-- Attribute XP Increase -->
-			<skill id="54024" level="4"/>  <!-- Fire Attack Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" level="4" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -163,8 +163,8 @@
 			<stat type="maxMp" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5"/>  <!-- Attribute XP Increase -->
-			<skill id="54024" level="5"/>  <!-- Fire Attack Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54024" level="5" value="-1"/>  <!-- Fire Defense -->
 		</skills>
 	</armor>
 
@@ -179,8 +179,8 @@
 			<stat type="windRes" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4"/>  <!-- Attribute XP Increase -->
-			<skill id="54026" level="4"/>  <!-- Earth Attack Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" level="4" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -194,8 +194,8 @@
 			<stat type="maxMp" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5"/>  <!-- Attribute XP Increase -->
-			<skill id="54025" level="5"/>  <!-- Wind Attack Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54025" level="5" value="-1"/>  <!-- Wind Defense -->
 		</skills>
 	</armor>
 
@@ -209,8 +209,8 @@
 			<stat type="maxMp" value="42.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4"/>  <!-- Attribute XP Increase -->
-			<skill id="54026" level="4"/>  <!-- Earth Attack Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" level="4" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -224,8 +224,8 @@
 			<stat type="maxMp" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5"/>  <!-- Attribute XP Increase -->
-			<skill id="54026" level="5"/>  <!-- Earth Attack Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
+			<skill id="54026" level="5" value="-1"/>  <!-- Earth Defense -->
 		</skills>
 	</armor>
 
@@ -265,9 +265,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101" level="1"/>  <!-- Agathion Summon - Ignis -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51093" level="1"/>  <!-- Fire Attribute Attack -->
+			<skill id="51101" level="1" value="-1"/>  <!-- Summon Ignis Agathion -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51093" level="1" value="-1"/>  <!-- Fire Attack Strength -->
 		</skills>
 	</armor>
 
@@ -277,9 +277,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51102" level="1"/>  <!-- Agathion Summon - Nebula -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51094" level="1"/>  <!-- Water Attribute Attack -->
+			<skill id="51102" level="1" value="-1"/>  <!-- Summon Nebula Agathion -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51094" level="1" value="-1"/>  <!-- Water Attack Strength -->
 		</skills>
 	</armor>
 
@@ -289,9 +289,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51103" level="1"/>  <!-- Agathion Summon - Procella -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51095" level="1"/>  <!-- Wind Attribute Attack -->
+			<skill id="51103" level="1" value="-1"/>  <!-- Summon Procella Agathion -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51095" level="1" value="-1"/>  <!-- Wind Attack Strength -->
 		</skills>
 	</armor>
 
@@ -301,9 +301,9 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101" level="1"/>  <!-- Agathion Summon - Ignis -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51096" level="1"/>  <!-- Earth Attribute Attack -->
+			<skill id="51101" level="1" value="-1"/>  <!-- Summon Ignis Agathion -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51096" level="1" value="-1"/>  <!-- Earth Attack Strength -->
 		</skills>
 	</armor>
 
@@ -329,8 +329,8 @@
 	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of NC Dinos Uniform. -->
 		<restriction freightable="false" stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51108"/> <!-- Dandy's Golden Ball -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51108" level="1" value="-1"/>  <!-- Dandy's Golden Ball -->
 		</skill-reducer>
 	</item>
 
@@ -347,10 +347,10 @@
 		<crystal />
 		<stats>
 			<stat type="mDef" value="84.0"/>
-			<stat type="maxMp" value="34"/>
+			<stat type="maxMp" value="34.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="13"/>  <!-- Damaged Antharas' Earring -->
+			<skill id="3558" level="13" value="-1"/>  <!-- Damaged Antharas' Earring -->
 		</skills>
 	</armor>
 
@@ -364,46 +364,46 @@
 			<stat type="maxMp" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="14" /> <!-- Antharas' Earring -->
+			<skill id="3558" level="14" value="-1"/>  <!-- Damaged Antharas' Earring -->
 		</skills>
 	</armor>
 
-	<armor id="91140" name="Venir's Talisman Lv19" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91140" name="Venir's Talisman Lv19" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON +4, MEN/DEX/WIT/STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91141" name="Venir's Talisman Lv20" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91141" name="Venir's Talisman Lv20" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN +4, DEX/WIT/STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91142" name="Venir's Talisman Lv21" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91142" name="Venir's Talisman Lv21" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN/DEX +4, WIT/STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91143" name="Venir's Talisman Lv22" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91143" name="Venir's Talisman Lv22" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN/DEX/WIT +4, STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91144" name="Venir's Talisman Lv23" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91144" name="Venir's Talisman Lv23" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN/DEX/WIT/STR +4, INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91145" name="Venir's Talisman Lv24" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="91145" name="Venir's Talisman Lv24" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- Increases CON/MEN/DEX/WIT/STR/INT +4 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 16%/MP 8%. Can upgrade to higher talisman when successfully synthesized with the same talisman. Effect does not stack with additional talismans of the same type.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
@@ -496,25 +496,25 @@
 	</item>
 
 	<item id="91157" name="Maphr Potion" type="POTION" icon="icon.etc_instant_lucky_potion_i00">
-	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. \\n\\n<Warning>\\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace.  -->
+	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. \n\n<Warning>\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91158" name="Maphr Potion" type="POTION" icon="icon.etc_instant_lucky_potion_i00">
-	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. Cannot be applied to partial enchantment.  \\n\\n<Warning>\\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace. -->
+	<item id="91158" name="Maphr Potion - Exchangeable" type="POTION" icon="icon.etc_instant_lucky_potion_i00">
+	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. Cannot be applied to partial enchantment. \n\n<Note>\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91159" name="Agathion Exchange Ticket" type="MATERIAL" icon="icon.bm_challenger_wp_trade_ticket">
-	<!-- Can be exchanged for Zodiac Agathion, Agathion Enchant Scroll Pack, Enchant Scroll through Pona.  -->
+	<!-- Can be exchanged for a Zodiac Agathion, Agathion Enchant Scroll Pack, or an Agathion Enchant Scroll through Pona. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91160" name="Agathion Enchant Scroll Pack" type="NONE" icon="icon.npoint_antaras_30day_box">
-	<!-- Double-click to get 1 of Agathion Enchant Scroll/Quality Agathion Enchant Scroll/Stable Agathion Enchant Scroll/Agathion's Horn/Blessed Agathion's Horn.  -->
+	<!-- Double-click for a chance to receive one of the following items: Agathion Enchant Scroll, High-grade Agathion Enchant Scroll, Solid Scroll: Enchant Agathion, Agathion's Soul, or a Blessed Agathion's Soul. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -525,9 +525,9 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="4"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" level="1"/>  <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" level="1"/>  <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="55885" level="1" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
 		</skills>
 	</armor>
 
@@ -679,7 +679,7 @@
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="51125" level="1"/>  <!-- MP Replenishing Potion -->
+			<skill id="51125" level="1" value="-1"/>  <!-- Quick MP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -687,8 +687,8 @@
 	<!-- Activates a buff when the item is used. Attribute XP gain +30% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51126"/>  <!-- Intermediate Spirit's Blessing -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51126" level="1" value="-1"/>  <!-- Intermediate Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -696,8 +696,8 @@
 	<!-- Activates a buff when the item is used. Attribute XP gain +50% for 20 minutes when hunting attribute monsters.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51127"/>  <!-- Advanced Spirit's Blessing -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51127" level="1" value="-1"/>  <!-- High-grade Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
@@ -717,8 +717,8 @@
 	<!-- Increases Fire Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51130"/>  <!-- Fire Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51130" level="1" value="-1"/>  <!-- Fire Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -726,8 +726,8 @@
 	<!-- Increases Water Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51131"/>  <!-- Water Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51131" level="1" value="-1"/>  <!-- Water Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -735,8 +735,8 @@
 	<!-- Increases Wind Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51132"/>  <!-- Wind Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51132" level="1" value="-1"/>  <!-- Wind Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -744,8 +744,8 @@
 	<!-- Increases Earth Attack +50 for 20 min.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51133"/>  <!-- Earth Attack Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51133" level="1" value="-1"/>  <!-- Earth Attack Potion -->
 		</skill-reducer>
 	</item>
 
@@ -763,7 +763,7 @@
 	</armor>
 
 	<armor id="91195" name="Talisman Bracelet Lv. 4" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i03">
-	<!-- A 30-day item. When equipped, opens up 4 Talisman slots.\\n\\n<Special Effect>\\nHP/MP Recovery Bonus +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7,000. -->
+	<!-- A 30-day item. When equipped, opens up 4 Talisman slots.\n\n<Special Effect>\nHP/MP Recovery Bonus +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7,000. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
@@ -777,19 +777,19 @@
 	</armor>
 
 	<item id="91197" name="Scroll of Escape: Forge of the Gods" type="NONE" icon="icon.etc_scroll_of_return_i04">
-	<!-- Move to the Forge of the Gods with Magic Scroll.  \\n\\nNote: Can Move to the Forge of the Gods through Gatekeeper Tatiana in the Goddard Castle. -->
+	<!-- Move to the Forge of the Gods with Magic Scroll.  \n\nNote: Can Move to the Forge of the Gods through Gatekeeper Tatiana in the Goddard Castle. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91198" name="Scroll of Escape: Garden of Eva" type="NONE" icon="icon.etc_scroll_of_return_i04">
-	<!-- Move to the Garden of Eva with Magic Scroll.  \\n\\nNote: Can Move to the Garden of Eva through Gatekeeper Clarissa in the Town of Giran. -->
+	<!-- Move to the Garden of Eva with Magic Scroll.  \n\nNote: Can Move to the Garden of Eva through Gatekeeper Clarissa in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91199" name="Escape - Wind Plateau" type="NONE" icon="icon.etc_scroll_of_return_i04">
-	<!-- Move to the Wind Plateau with Magic Scroll.  \\n\\nNote: Can Move to the Wind Plateau through Gatekeeper Clarissa in the Town of Giran. -->
+	<!-- Move to the Wind Plateau with Magic Scroll.  \n\nNote: Can Move to the Wind Plateau through Gatekeeper Clarissa in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>

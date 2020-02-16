@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="13307" name="Color Title (Event)" type="COLOR_CHANGE" icon="icon.color_name_i00">
-	<!-- A dimensional item\\nAn item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse); however, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
+	<!-- An item which can be used to change the color of a character’s title. Upon leaving a clan, the color title disappears, just as the regular one does. However, upon joining a clan and obtaining a new title, the color reappears. After changing the title color, enter '/ resetname’ command in order to bring back the initial color. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="NICK_COLOR"/>
 		<action handler="NicknameColor"/>
@@ -13,9 +13,9 @@
 		<attributes weight="30" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="5763" level="1"/>  <!-- Wink -->
-			<skill id="8245" level="1"/>  <!-- Summon Agathion - Love -->
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="5763" level="1" value="-1"/>  <!-- Wink -->
+			<skill id="8245" level="1" value="-1"/>  <!-- TODO Skill not found -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>
 	</armor>
 
@@ -24,7 +24,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="13340" chance="100000"/>  <!-- Agathion - Love (Event) -->
+			<item id="13340" chance="100000000"/>  <!-- Agathion - Love (Event) -->
 		</extract>
 	</item>
 

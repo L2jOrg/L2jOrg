@@ -577,7 +577,7 @@
 	</item>
 
 	<item id="1294" name="Spellbook: Defense Aura" type="NONE" icon="icon.etc_spell_books_efighter_i00">
-	<!-- Spellbook needed to learn Defense Aura. Used by Elven Fighters and Dark Fighters.\\nRequired level: 5 -->
+	<!-- Spellbook needed to learn Defense Aura. Used by Elven Fighters and Dark Fighters.\nRequired level: 5 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="75" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<weapon id="7810" name="Soulfire Dirk" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_magicflame_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 46. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 46. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="2870000" commission-type="DAGGER"/>
 		<crystal type="C" count="1148"/>
@@ -17,12 +17,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3014" level="1"/>  <!-- Special Ability: Boost Mana -->
+			<skill id="3014" level="1" value="-1"/>  <!-- Special Ability: Mana Up -->
 		</skills>
 	</weapon>
 
 	<weapon id="7811" name="Soulfire Dirk" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_magicflame_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 12%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="2870000" commission-type="DAGGER"/>
 		<crystal type="C" count="1148"/>
@@ -38,12 +38,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="1201" level="18" type="ON_MAGIC_SKILL" chance="10"/>  <!-- Dryad Root -->
+			<skill id="1201" level="18" type="ON_MAGIC_SKILL" chance="10" value="-1"/>  <!-- Dryad Root -->
 		</skills>
 	</weapon>
 
 	<weapon id="7812" name="Soulfire Dirk" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_dagger_of_magicflame_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 16%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 16%. -->
 		<restriction freightable="false"/>
 		<attributes weight="750" price="2870000" commission-type="DAGGER"/>
 		<crystal type="C" count="1148"/>
@@ -59,12 +59,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3074" level="2" type="ON_MAGIC_SKILL" chance="10"/>  <!-- Special Ability: Magic Silence -->
+			<skill id="3074" level="2" type="ON_MAGIC_SKILL" chance="10" value="-1"/>  <!-- Special Ability: Magic Silence -->
 		</skills>
 	</weapon>
 
 	<weapon id="7813" name="Twilight Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_hell_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases M. Atk. by 96. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases M. Atk. by 96. -->
 		<restriction freightable="false"/>
 		<attributes weight="740" price="8680000" commission-type="DAGGER"/>
 		<crystal type="B" count="1157"/>
@@ -80,12 +80,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="1044" level="3" type="ON_MAGIC_SKILL" chance="30"/>  <!-- Regeneration -->
+			<skill id="1044" level="3" type="ON_MAGIC_SKILL" chance="30" value="-1"/>  <!-- Regeneration -->
 		</skills>
 	</weapon>
 
 	<weapon id="7814" name="Twilight Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_hell_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases Casting Spd. by 12%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases Casting Spd. by 12%. -->
 		<restriction freightable="false"/>
 		<attributes weight="740" price="8680000" commission-type="DAGGER"/>
 		<crystal type="B" count="1157"/>
@@ -101,12 +101,12 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="1035" level="4" type="ON_MAGIC_SKILL" chance="50"/>  <!-- Mental Shield -->
+			<skill id="1035" level="4" type="ON_MAGIC_SKILL" chance="50" value="-1"/>  <!-- Mental Shield -->
 		</skills>
 	</weapon>
 
 	<weapon id="7815" name="Twilight Knife" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_hell_knife_i01" magic="true">
-	<!-- <Soul Crystal Enhancement>\\nIncreases MP Recovery Rate by 14%. -->
+	<!-- <Soul Crystal Enhancement>\nIncreases MP Recovery Rate by 14%. -->
 		<restriction freightable="false"/>
 		<attributes weight="740" price="8680000" commission-type="DAGGER"/>
 		<crystal type="B" count="1157"/>
@@ -122,7 +122,7 @@
 			<stat type="pAtkRange" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="1164" level="11" type="ON_MAGIC_SKILL" chance="7"/>  <!-- Curse Weakness -->
+			<skill id="1164" level="11" type="ON_MAGIC_SKILL" chance="7" value="-1"/>  <!-- Curse Weakness -->
 		</skills>
 	</weapon>
 

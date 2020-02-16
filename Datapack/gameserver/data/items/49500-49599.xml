@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="49500" name="Advanced Return Scroll" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
-	<!-- Magical scroll that quickly teleports you to the closest town. -->
+	<item id="49500" name="Greater Scroll of Escape - Exchangeable" type="SCROLL" icon="icon.etc_scroll_of_return_i01">
+	<!-- Magic scroll used to quickly teleport the character to the nearest town. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49501" name="Fish Stew - Guildsman's Gratitude Lv. 1" type="SCROLL" icon="icon.ev_invasion_buff_box">
-	<!-- Increases XP and SP obtained from hunting by 10% for 20 min.  -->
+	<item id="49501" name="Fish Stew - Guildsman's Gratitude Lv. 1 - Tradable" type="SCROLL" icon="icon.ev_invasion_buff_box">
+	<!-- Increases XP and SP obtained from hunting by 10% for 20 min. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39076"/>  <!-- Fish Stew - Guild's Gratitude -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39076" level="1" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
 		</skill-reducer>
 	</item>
 
-	<item id="49502" name="Return: Giran Harbor" type="NONE" icon="icon.etc_scroll_of_return_i05">
+	<item id="49502" name="Scroll of Escape: Giran Harbor" type="NONE" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to Giran Harbor. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39078" level="1"/>  <!-- Teleport: Giran Harbor -->
+			<skill id="39078" level="1" value="-1"/>  <!-- Return: Giran Harbor -->
 		</skill-reducer>
 	</item>
 
-	<item id="49503" name="Return: Gludin Harbor" type="NONE" icon="icon.etc_scroll_of_return_i05">
+	<item id="49503" name="Scroll of Escape: Gludin Harbor - Exchangeable" type="NONE" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to Gludin Harbor. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39077" level="1"/>  <!-- Teleport: Gludin Harbor -->
+			<skill id="39077" level="1" value="-1"/>  <!-- Return: Gludin Harbor -->
 		</skill-reducer>
 	</item>
 
@@ -73,7 +67,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49506" chance="100000"/>  <!-- Fishing Rod -->
+			<item id="49506" chance="100000000"/>  <!-- Fishing Rod -->
 		</extract>
 	</item>
 
@@ -93,7 +87,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="1"/>  <!-- Ring of Core -->
+			<skill id="3563" level="1" value="-1"/>  <!-- Ring of Core -->
 		</skills>
 	</armor>
 
@@ -114,32 +108,32 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="20160" immediate-effect="true"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39082" level="1"/>  <!-- Amulet: Prosperity -->
+			<skill id="39082" level="1" value="-1"/>  <!-- Perfect Charm -->
 		</skill-reducer>
 	</item>
 
-	<item id="49513" name="Shining Pendant Varnish Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
-	<!-- Double-click to obtain 1 Shiny Varnish that strengthens a pendant’s ability.\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
+	<item id="49513" name="Shiny Pendant Varnish Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- Double-click to obtain 1 Shiny Varnish that strengthens a pendant’s ability.\n\n<Note>\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="49514" name="Agathion Bracelet - Aries" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
-	<!-- 60-day item. Bracelet that can be used to summon Agathion - Aries. \\n\\n<Active Skill>\\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes)\\n\\n<Item Skill>\\n1. Aries Power: increases STR/ INT/ CON/ MEN by 1.  -->
+	<!-- 60-day item. Bracelet that can be used to summon Agathion - Aries. \n\n<Active Skill>\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes)\n\n<Item Skill>\n1. Aries Power: increases STR/ INT/ CON/ MEN by 1.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="86400" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49515" name="Agathion Bracelet - Aries" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
-	<!-- Bracelet that can be used to summon Agathion - Aries.\\n\\n<Active Skill>\\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes)\\n\\n<Item Skill>\\n1. Aries Power: increases STR/ INT/ CON/ MEN by 1.  -->
+	<!-- Bracelet that can be used to summon Agathion - Aries.\n\n<Active Skill>\nAgathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes)\n\n<Item Skill>\n1. Aries Power: increases STR/ INT/ CON/ MEN by 1.  -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="49516" name="Blessed Agathion Bracelet - Aries" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">
-	<!-- Bracelet that can be used to summon Agathion - Aries.\\n\\n<Active Skill>\\n1. Agathion Teleport: Grants the ability to teleport to Town of Giran/Town of Gludio/Town of Dion/Town of Oren. (Cooldown: 30 minutes)\\n\\n<Item Skill>\\n1. Aries' Power: STR/INT/CON/MEN +1.\\n2. Aries' Blessing: MEN/Stun/Sleep/Paralysis Resistance +5%. -->
+	<!-- Bracelet that can be used to summon Agathion - Aries.\n\n<Active Skill>\n1. Agathion Teleport: Grants the ability to teleport to Town of Giran/Town of Gludio/Town of Dion/Town of Oren. (Cooldown: 30 minutes)\n\n<Item Skill>\n1. Aries' Power: STR/INT/CON/MEN +1.\n2. Aries' Blessing: MEN/Stun/Sleep/Paralysis Resistance +5%. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -155,8 +149,8 @@
 	<!-- For 20 min., P./M. Atk. + 7%, P./M. Def. + 10%, Max HP/CP/MP + 15%, HP/MP Recovery + 20%. Has a chance of recovering 3% of physical damage dealt to enemy as HP. Increase XP/SP gain by 5% when hunting. Cooldown is 1 minute. Effect remains even after death. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39144"/>  <!-- Special Pirate Fruit -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39144" level="1" value="-1"/>  <!-- Special Fruit Buff -->
 		</skill-reducer>
 	</item>
 
@@ -167,7 +161,7 @@
 	</item>
 
 	<item id="49520" name="Aries Agathion Box" type="NONE" icon="icon.bm_sheep_agathion_30d_box">
-	<!-- Double-click to obtain 1 Aries Agathion (60-day).\\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
+	<!-- Double-click to obtain 1 Aries Agathion (60-day).\n\n<Note>\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes duration="86400" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -204,12 +198,12 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="55089" level="1"/>  <!-- Rare Accessory Pack -->
+			<skill id="55089" level="1" value="-1"/>  <!-- Rare Accessory Pack -->
 		</skill-reducer>
 	</item>
 
-	<item id="49526" name="Advanced Scroll of Resurrection" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
-	<!-- Magic scroll that resurrects a dead character and restores their XP by 50%. -->
+	<item id="49526" name="Greater Scroll of Resurrection - Exchangeable" type="SCROLL" icon="icon.etc_scroll_of_resurrection_i01">
+	<!-- Magic scroll used to resurrect a dead character, restoring 50% of XP. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -224,8 +218,8 @@
 	<!-- After instant 600 HP Recovery, CP Recovery with remaining points. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="1" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer>
-			<skill id="39089"/> <!--Pirate Healing Potion" -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39089" level="1" value="-1"/>  <!-- Pirate's HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -261,8 +255,8 @@
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="1" action="SKILL_REDUCE" auto-use-type="HEALING"/>
-		<skill-reducer>
-			<skill id="39103"/> <!-- Hero HP Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39103" level="1" value="-1"/>  <!-- Hero HP Potion -->
 		</skill-reducer>
 	</item>
 
@@ -273,7 +267,7 @@
 	</item>
 
 	<item id="49535" name="Fishing kit of the Hero Who Came Back" type="NONE" icon="icon.etc_elite_marguene_collection_box_i00">
-	<!-- Double-click to receive Fishing Rod (10-day), Bait (2160 pcs, Event), Hero's Dual Swords (15-day), 3 Soulshot Tickets. \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
+	<!-- Double-click to receive Fishing Rod (10-day), Bait (2160 pcs, Event), Hero's Dual Swords (15-day), 3 Soulshot Tickets. \n\n<Note>\nBe careful before opening the items as their relocation is restricted. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -284,7 +278,7 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="49537" name="Return: Dragon Valley Bridge" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
+	<item id="49537" name="Scroll of Escape: Dragon Valley Bridge - Exchangeable" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the Dragon Valley Bridge. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
@@ -296,7 +290,7 @@
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49539" name="Return: Cruma Tower Entrance" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
+	<item id="49539" name="Scroll of Escape: Cruma Tower Entrance - Exchangeable" type="SCROLL" icon="icon.etc_scroll_of_return_i05">
 	<!-- Magic scroll that teleports you to the entrance of Cruma Tower. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
@@ -313,7 +307,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39059" level="1"/>  <!-- Spellbok Box -->
+			<skill id="39059" level="1" value="-1"/>  <!-- Spellbook Box -->
 		</skill-reducer>
 	</item>
 
@@ -322,7 +316,7 @@
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39109" level="1"/>  <!-- Improved Scroll of Resurrection -->
+			<skill id="39109" level="1" value="-1"/>  <!-- Greater Scroll of Resurrection -->
 		</skill-reducer>
 	</item>
 
@@ -451,31 +445,31 @@
 	</item>
 
 	<item id="49562" name="Spellbook: Spirit Sharing" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Spirit Sharing. Used by Warlocks, Elemental Summoners, and Phantom Summoners.\\nLevel: 44 -->
+	<!-- Spellbook needed to learn Spirit Sharing. Used by Warlocks, Elemental Summoners, and Phantom Summoners.\nLevel: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="50000"/>
 	</item>
 
-	<item id="49563" name="1,0,0,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
+	<item id="49563" name="1,000,000,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
 	<!-- Aden look like adens, but they are rare and more valuable. The one who takes them to Misfety receives a gift and Buffs. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="49564" name="10,0,0,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
+	<item id="49564" name="10,000,000,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
 	<!-- Aden look like adens, but they are rare and more valuable. The one who takes them to Misfety receives a gift and Buffs. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49565" name="Misfety's Gift" type="NONE" icon="icon.etc_pi_box_joy_pack">
-	<!-- Miss Patch's Gift. Double-click the chest to receive Successor's Ring, Sheep Hat (14-day) and The Rune of Hero's Experience (30-day). \\n\\n<Note>\\nBe careful before opening the items as their relocation is restricted. -->
+	<!-- Miss Patch's Gift. Double-click the chest to receive Successor's Ring, Sheep Hat (14-day) and The Rune of Hero's Experience (30-day). \n\n<Note>\nBe careful before opening the items as their relocation is restricted. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49566" name="Roa's Gift" type="NONE" icon="icon.etc_ev_draco_gift_box">
-	<!-- Roa's Gift. This is the gift she put her soul into. Double-click the chest to receive 1 Soulshot Ticket, Buff Scrolls Chest, Base Scroll of Escape Pack, Fishing Kit, Feather of Blessing, or Spellbook Box. \\n\\n<Note>\\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
+	<!-- Roa's Gift. This is the gift she put her soul into. Double-click the chest to receive 1 Soulshot Ticket, Buff Scrolls Chest, Base Scroll of Escape Pack, Fishing Kit, Feather of Blessing, or Spellbook Box. \n\n<Note>\nThe items obtained from the box cannot be moved freely. Keep this in mind before opening the box. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -487,25 +481,25 @@
 	</item>
 
 	<item id="49568" name="Spellbook: Sonic Move" type="NONE" icon="icon.etc_spell_books_blue_i00">
-	<!-- Spellbook needed to learn Sonic Move. Used by Gladiators.\\nLevel: 56 -->
+	<!-- Spellbook needed to learn Sonic Move. Used by Gladiators.\nLevel: 56 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<item id="49569" name="Spellbook: Sand Bomb" type="NONE" icon="icon.etc_spell_books_blue_i00">
-	<!-- Spellbook needed to learn Sand Bomb. Used by Treasure Hunters, Plains Walkers, and Abyss Walkers.\\nLevel: 55 -->
+	<!-- Spellbook needed to learn Sand Bomb. Used by Treasure Hunters, Plains Walkers, and Abyss Walkers.\nLevel: 55 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<item id="49570" name="Spellbook: Mass Curse Gloom" type="NONE" icon="icon.etc_spell_books_blue_i00">
-	<!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers.\\nLevel: 58 -->
+	<!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers.\nLevel: 58 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
 
 	<item id="49571" name="Spellbook: Clear Mind" type="NONE" icon="icon.etc_spell_books_blue_i00">
-	<!-- Spellbook needed to learn Clear Mind. Used by Sorcerers, Spellsingers, and Spellhowlers.\\nLevel: 40 -->
+	<!-- Spellbook needed to learn Clear Mind. Used by Sorcerers, Spellsingers, and Spellhowlers.\nLevel: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000"/>
 	</item>
@@ -537,7 +531,7 @@
 			<stat type="maxMp" value="15.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="2"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" level="2" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -551,7 +545,7 @@
 			<stat type="maxMp" value="25.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="2"/>  <!-- Orfen's Earring -->
+			<skill id="3560" level="2" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -565,7 +559,7 @@
 			<stat type="maxMp" value="15.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="2"/>  <!-- Ring of Core -->
+			<skill id="3563" level="2" value="-1"/>  <!-- Ring of Core -->
 		</skills>
 	</armor>
 
@@ -579,7 +573,7 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="3"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -593,7 +587,7 @@
 			<stat type="maxMp" value="31.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="3"/>  <!-- Orfen's Earring -->
+			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -607,8 +601,8 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="3"/>  <!-- Ring of Core -->
-			<skill id="35016" level="1"/>  <!-- Ring of Core - Special Ability -->
+			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
+			<skill id="35016" level="1" value="-1"/>  <!-- Ring of Core - Special Ability -->
 		</skills>
 	</armor>
 
@@ -622,7 +616,7 @@
 			<stat type="maxMp" value="9.0"/>
 		</stats>
 		<skills>
-			<skill id="3561" level="1"/>  <!-- Damaged Baium's Ring -->
+			<skill id="3561" level="1" value="-1"/>  <!-- Damaged Baium's Ring -->
 		</skills>
 	</armor>
 
@@ -636,7 +630,7 @@
 			<stat type="maxMp" value="15.0"/>
 		</stats>
 		<skills>
-			<skill id="3561" level="2"/>  <!-- Damaged Baium's Ring -->
+			<skill id="3561" level="2" value="-1"/>  <!-- Damaged Baium's Ring -->
 		</skills>
 	</armor>
 
@@ -650,7 +644,7 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3561" level="3"/>  <!-- Damaged Baium's Ring -->
+			<skill id="3561" level="3" value="-1"/>  <!-- Damaged Baium's Ring -->
 		</skills>
 	</armor>
 
@@ -659,10 +653,10 @@
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="49589" min-count="180" max-count="180" chance="100000"/>  <!-- Golden Bait -->
-			<item id="38154" min-count="180" max-count="180" chance="100000"/>  <!-- Fishing Shot -->
-			<item id="49502" min-count="5" max-count="5" chance="100000"/>  <!-- Return: Giran Harbor -->
-			<item id="49503" min-count="5" max-count="5" chance="100000"/>  <!-- Return: Gludin Harbor -->
+			<item id="49589" min-count="180" max-count="180" chance="100000000"/>  <!-- Golden Bait -->
+			<item id="38154" min-count="180" max-count="180" chance="100000000"/>  <!-- Fishing Shot -->
+			<item id="49502" min-count="5" max-count="5" chance="100000000"/>  <!-- Scroll of Escape: Giran Harbor -->
+			<item id="49503" min-count="5" max-count="5" chance="100000000"/>  <!-- Scroll of Escape: Gludin Harbor - Exchangeable -->
 		</extract>
 	</item>
 
@@ -671,7 +665,7 @@
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<extract >
-			<item id="45488" chance="100000"/>  <!-- Golden Treasure Chest -->
+			<item id="45488" chance="100000000"/>  <!-- Golden Treasure Chest -->
 		</extract>
 	</item>
 
@@ -680,12 +674,12 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="39113" level="1"/>  <!-- Golden Mermaid's Tears -->
+			<skill id="39113" level="1" value="-1"/>  <!-- Golden Mermaid's Tear -->
 		</skill-reducer>
 	</item>
 
 	<weapon id="49586" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
-	<!-- 30-day item. Golden Mermaid's Fishing Rod.  Bobber usage: 1\\n\\nEnables to teleport to Giran/Gludin. Cooldown: 1 min. -->
+	<!-- 30-day item. Golden Mermaid's Fishing Rod.  Bobber usage: 1\n\nEnables to teleport to Giran/Gludin. Cooldown: 1 min. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
 		<crystal />
@@ -702,7 +696,7 @@
 	</weapon>
 
 	<weapon id="49587" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND" icon="icon.bm_gold_fishing_pole">
-	<!-- Golden Mermaid's fishing rod.   Consumes 1 Fishing Shot.\\n\\nEquip to use skill that lets you telepot to Giran or Gludin Harbor. Cooldown is 1 min. -->
+	<!-- Golden Mermaid's fishing rod.   Consumes 1 Fishing Shot.\n\nEquip to use skill that lets you telepot to Giran or Gludin Harbor. Cooldown is 1 min. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -719,7 +713,7 @@
 	</weapon>
 
 	<item id="49588" name="Golden Mermaid's Fishing Rod Box" type="NONE" icon="icon.etc_bm_lure_box_i00">
-	<!-- Use to obtain a 30-day Golden Mermaid's Fishing Rod. \\n\\n<Note>\\nThe item in the box has movement limitations, so keep that in mind when opening the box. -->
+	<!-- Use to obtain a 30-day Golden Mermaid's Fishing Rod. \n\n<Note>\nThe item in the box has movement limitations, so keep that in mind when opening the box. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes weight="100" duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -746,7 +740,7 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3562" level="3"/>  <!-- Queen Ant's Ring -->
+			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
 		</skills>
 	</armor>
 
@@ -760,7 +754,7 @@
 			<stat type="maxMp" value="31.0"/>
 		</stats>
 		<skills>
-			<skill id="3560" level="3"/>  <!-- Orfen's Earring -->
+			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->
 		</skills>
 	</armor>
 
@@ -774,25 +768,25 @@
 			<stat type="maxMp" value="21.0"/>
 		</stats>
 		<skills>
-			<skill id="3563" level="3"/>  <!-- Ring of Core -->
-			<skill id="35016" level="1"/>  <!-- Ring of Core - Special Ability -->
+			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
+			<skill id="35016" level="1" value="-1"/>  <!-- Ring of Core - Special Ability -->
 		</skills>
 	</armor>
 
-	<item id="49594" name="Whale" type="SCROLL" icon="icon.fish_huge_i15">
-	<!-- Double-Click to obtain a Fishing Coin or, at a certain chance, Golden Boots.   -->
+	<item id="49594" name="Whale - Account Shareable" type="SCROLL" icon="icon.fish_huge_i15">
+	<!-- Double-Click to obtain a Fishing Coin or, at a certain chance, Golden Boots. -->
 		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="49595" name="Scroll: 2,000 SP,," type="SCROLL" icon="icon.etc_sp_scroll1_i00">
-	<!-- Scroll that replenishes 2,000 SP.  -->
+	<item id="49595" name="Scroll: 2,000 SP - Exchangeable" type="SCROLL" icon="icon.etc_sp_scroll1_i00">
+	<!-- Scroll that replenishes 2,000 SP. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49596" name="Scroll: 10,000 SP,," type="SCROLL" icon="icon.etc_sp_scroll2_i00">
-	<!-- Scroll that replenishes 10,000 SP.  -->
+	<item id="49596" name="Scroll: 10,000 SP - Exchangeable" type="SCROLL" icon="icon.etc_sp_scroll2_i00">
+	<!-- Scroll that replenishes 10,000 SP. -->
 		<restriction freightable="false" stackable="true" dropable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>

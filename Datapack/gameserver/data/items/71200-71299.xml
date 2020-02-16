@@ -1,117 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="71200" name="Gowther Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Gowther Agathion +7 to upgrade to Lv. 3. -->
+	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Gowther Agathion +7 to upgrade to Lv. 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56041" level="1"/>  <!-- Summon Agathion Gowther -->
+			<skill id="56041" level="1" value="-1"/>  <!-- Agathion Summon - Gowther -->
 		</skills>
 	</armor>
 
 	<armor id="71201" name="Escanor Agathion Lv. 2" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\\n\\n<Upgrade Requirement> Escanor Agathion +7 to upgrade to Stage 3. -->
+	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth.\n\n<Upgrade Requirement> Escanor Agathion +7 to upgrade to Stage 3. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56042" level="1"/>  <!-- Summon Agathion Escanor -->
+			<skill id="56042" level="1" value="-1"/>  <!-- Agathion Summon - Escanor -->
 		</skills>
 	</armor>
 
 	<armor id="71202" name="Meliodas Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Meliodas. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56034" level="1"/>  <!-- Summon Agathion Meliodas -->
+			<skill id="56034" level="1" value="-1"/>  <!-- Agathion Summon - Meliodas -->
 		</skills>
 	</armor>
 
 	<armor id="71203" name="Elizabeth Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Elizabeth. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Elizabeth. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56035" level="1"/>  <!-- Summon Agathion Elizabeth -->
+			<skill id="56035" level="1" value="-1"/>  <!-- Agathion Summon - Elizabeth -->
 		</skills>
 	</armor>
 
 	<armor id="71204" name="Hawk Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Hawk. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56036" level="1"/>  <!-- Summon Agathion Hawk -->
+			<skill id="56036" level="1" value="-1"/>  <!-- Agathion Summon - Hawk -->
 		</skills>
 	</armor>
 
 	<armor id="71205" name="Ban Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Ban. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56037" level="1"/>  <!-- Summon Agathion Ban -->
+			<skill id="56037" level="1" value="-1"/>  <!-- Agathion Summon - Ban -->
 		</skills>
 	</armor>
 
 	<armor id="71206" name="Diane Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Diane. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56038" level="1"/>  <!-- Summon Agathion Diane -->
+			<skill id="56038" level="1" value="-1"/>  <!-- Agathion Summon - Diane -->
 		</skills>
 	</armor>
 
 	<armor id="71207" name="King Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of King. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56039" level="1"/>  <!-- Summon Agathion King -->
+			<skill id="56039" level="1" value="-1"/>  <!-- Agathion Summon - King -->
 		</skills>
 	</armor>
 
 	<armor id="71208" name="Merlin Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Merlin. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56040" level="1"/>  <!-- Summon Agathion Merlin -->
+			<skill id="56040" level="1" value="-1"/>  <!-- Agathion Summon - Merlin -->
 		</skills>
 	</armor>
 
 	<armor id="71209" name="Gowther Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Gowther. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56041" level="1"/>  <!-- Summon Agathion Gowther -->
+			<skill id="56041" level="1" value="-1"/>  <!-- Agathion Summon - Gowther -->
 		</skills>
 	</armor>
 
 	<armor id="71210" name="Escanor Agathion Lv. 3" type="NONE" body-part="AGATHION" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
-	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+	<!-- An Agathion that activates the power of Escanor. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a side slot, only the unique ability is applied.\nUpgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="56042" level="1"/>  <!-- Summon Agathion Escanor -->
+			<skill id="56042" level="1" value="-1"/>  <!-- Agathion Summon - Escanor -->
 		</skills>
 	</armor>
 
 	<item id="71211" name="Seven Deadly Sins Agathion Book of Growth" type="SEVEN_SINS_AGATHION_ENCHANT" icon="BranchIcon.icon.g_bm_7th_sins_enchant_jp">
-	<!-- Book of Growth for the Seven Deadly Sins Agathion Charms.\\nThe enchant level remains the same even if enchantment fails. -->
+	<!-- Book of Growth for the Seven Deadly Sins Agathion Charms.\nThe enchant level remains the same even if enchantment fails. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -128,7 +128,7 @@
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="1" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 		</skills>
 	</armor>
 
@@ -145,11 +145,11 @@
 	</item>
 
 	<item id="71216" name="Seven Deadly Sins Special Beer" type="SCROLL" icon="BranchSys3.icon1.g_beerfestival_octoberfest_beer">
-	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Chant of Victory Lv. 1 applied for 20 minutes. \\n<Warning>\\n Cannot be used with Prophecy type effects. -->
+	<!-- Buff to celebrate the collaboration with Seven Deadly Sins. Chant of Victory Lv. 1 applied for 20 minutes. \n<Warning>\n Cannot be used with Prophecy type effects. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="56089"/> <!-- Seven Deadly Sins Special Beer - Victory -->
+		<skill-reducer type="ItemSkills">
+			<skill id="56089" level="1" value="-1"/>  <!-- Seven Deadly Sins Special Beer - Victory -->
 		</skill-reducer>
 	</item>
 
@@ -438,7 +438,7 @@
 	</item>
 
 	<item id="71267" name="Hero's Weapon Exchange Ticket - Lv. 54" type="MATERIAL" icon="icon.etc_level_bustup_ticket_i00">
-	<!-- Take it to the Dimensional Merchant after reaching Lv. 54 to exchange for a +10 B-grade Weapon (15-day). -->
+	<!-- Take it to the Store Manager after reaching Lv. 54 to exchange for a +10 B-grade Weapon (15-day). -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -461,188 +461,188 @@
 		<attributes/>
 	</item>
 
-	<armor id="71271" name="Venir's Talisman Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<armor id="71271" name="Venir's Talisman Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON +1. It can be upgraded if combined with Venir's Talisman Fragment. Does not disappear even if it fails. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71272" name="Venir's Talisman Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<armor id="71272" name="Venir's Talisman Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71273" name="Venir's Talisman Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<armor id="71273" name="Venir's Talisman Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71274" name="Venir's Talisman Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<armor id="71274" name="Venir's Talisman Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX, WIT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71275" name="Venir's Talisman Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<armor id="71275" name="Venir's Talisman Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 1. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71276" name="Venir's Talisman Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i00">
+	<armor id="71276" name="Venir's Talisman Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71277" name="Venir's Talisman Lv. 7" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="71277" name="Venir's Talisman Lv. 7" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71278" name="Venir's Talisman Lv. 8" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="71278" name="Venir's Talisman Lv. 8" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71279" name="Venir's Talisman Lv. 9" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="71279" name="Venir's Talisman Lv. 9" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71280" name="Venir's Talisman Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="71280" name="Venir's Talisman Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX, WIT +2, STR, INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71281" name="Venir's Talisman Lv. 11" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="71281" name="Venir's Talisman Lv. 11" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR +2,INT +1. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 6. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71282" name="Venir's Talisman Lv. 12" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i01">
+	<armor id="71282" name="Venir's Talisman Lv. 12" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i00">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71283" name="Venir's Talisman Lv. 13" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71283" name="Venir's Talisman Lv. 13" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON +3, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71284" name="Venir's Talisman Lv. 14" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71284" name="Venir's Talisman Lv. 14" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN +3, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71285" name="Venir's Talisman Lv. 15" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71285" name="Venir's Talisman Lv. 15" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX +3, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71286" name="Venir's Talisman Lv. 16" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71286" name="Venir's Talisman Lv. 16" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX, WIT +3, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71287" name="Venir's Talisman Lv. 17" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71287" name="Venir's Talisman Lv. 17" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR +3, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate. It can be upgraded if combined with Venir's Talisman Fragment. If it fails, you'll get a Venir's Talisman Lv. 12. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71288" name="Venir's Talisman Lv. 18" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71288" name="Venir's Talisman Lv. 18" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71289" name="Venir's Talisman Lv. 19" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71289" name="Venir's Talisman Lv. 19" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON +4, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71290" name="Venir's Talisman Lv. 20" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71290" name="Venir's Talisman Lv. 20" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN +4, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71291" name="Venir's Talisman Lv. 21" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71291" name="Venir's Talisman Lv. 21" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX +4, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71292" name="Venir's Talisman Lv. 22" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71292" name="Venir's Talisman Lv. 22" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX, WIT +4, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71293" name="Venir's Talisman Lv. 23" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71293" name="Venir's Talisman Lv. 23" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR +4, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="71294" name="Venir's Talisman Lv. 24" type="NONE" body-part="TALISMAN" icon="icon.etc_all_stat_talisman_i02">
+	<armor id="71294" name="Venir's Talisman Lv. 24" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
 	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +4. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 16% of damage dealt to enemy as HP and 8% as MP at a certain rate. Effect does not stack with identical ones.  -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
-	<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Can be used on weapons enchanted up to +20. -->
+	<item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Failure to enchant does not crystallize the item and the enchantment level is retained. Can be used on weapons enchanted up to +20. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="71296" name="Master's Scroll: Enchant Weapon (A-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
-	<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./M. Atk doubles starting at +4. If enchantment succeeds, it may increase +1 - +3. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Can be used on weapons enchanted up to +20. -->
+	<item id="71296" name="Master's Scroll: Enchant Weapon (A-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. If enchantment succeeds, it may increase +1 - +3. Failure to enchant does not crystallize the item and the enchantment level is retained. Can be used on weapons enchanted up to +20. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="71297" name="Holy Scroll: Enchant Weapon (A-grade)" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
-	<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./M. Atk doubles starting at +4. Has 100% to succeed in enchantment if used. Can be used on weapons enchanted up to +12. -->
+	<item id="71297" name="Holy Scroll: Enchant Weapon (A-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_a">
+	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Has 100% to succeed in enchantment if used. Can be used on weapons enchanted up to +12. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>

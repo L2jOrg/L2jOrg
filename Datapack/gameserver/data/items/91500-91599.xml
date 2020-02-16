@@ -390,7 +390,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -581,7 +581,7 @@
 	</armor>
 
 	<weapon id="91574" name="Sacred Sword Excalibur" type="TWO_HAND_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_plenitas_i00">
-	<!-- Sacred Sword Excalibur. Enchant the sword and give it to the Excalibur Expeditionary Force Leader to receive various rewards. Will be deleted during maintenance on Wednesday, August 29th, 2018. -->
+	<!-- Sacred Sword Excalibur. Enchant the sword and give it to the Excalibur Expeditionary Force Leader to receive various rewards.  -->
 		<restriction freightable="false"/>
 		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -598,7 +598,7 @@
 	</weapon>
 
 	<item id="91575" name="Scroll: Enchant Excalibur" type="ENCHANT_WEAPON" icon="icon.yogi_scroll_of_enchant_weapon_grade_i00">
-	<!-- A weapon enchant scroll that can be used on the Sacred Sword Excalibur. Up to enchant level +3, P. Atk. +5 and M. Atk. +3. Starting at +4, P. Atk./M. Atk. bonus doubles. Can only be used up to +20. -->
+	<!-- A weapon enchant scroll that can be used on the Sacred Sword Excalibur. Up to enchant level +3, P. Atk. +5 and M. Atk. +3. Starting at +4, P. Atk./M. Atk. bonus doubles. Can only be used up to +20.  -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>

@@ -251,7 +251,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2584" level="1"/>  <!-- Item - Special Sound Crystal -->
+			<skill id="2584" level="1" value="-1"/>  <!-- Item - Special Sound Crystal -->
 		</skill-reducer>
 	</item>
 
@@ -259,7 +259,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="10" price="1" reuse-delay="44000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2585" level="1"/>  <!-- Item - Special Sound Crystal -->
+			<skill id="2585" level="1" value="-1"/>  <!-- Item - Special Sound Crystal -->
 		</skill-reducer>
 	</item>
 

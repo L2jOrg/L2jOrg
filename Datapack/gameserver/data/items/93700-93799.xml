@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<item id="93700" name="Songpyeon Ingredient Box" type="NONE" icon="icon.etc_grave_goods_i00">
+	<!-- Double-click to obtain 42 Honey, 21 Bean, and 8 Sesame. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93701" name="Random Crafting 1 Time Recharge Stone - Event" type="MATERIAL" icon="icon.etc_chaser_stone">
+	<!-- Fills up 1 count for crafting.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes price="2000000"/>
+	</item>
+
+</list>

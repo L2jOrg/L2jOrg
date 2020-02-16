@@ -3,120 +3,90 @@
 	<item id="3926" name="Scroll: Guidance" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Accuracy + 2 for 20 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2050"/>  <!-- Scroll: Guidance -->
+			<skill id="2050" level="1" value="-1"/>  <!-- Scroll: Guidance -->
 		</skill-reducer>
 	</item>
 
 	<item id="3927" name="Scroll: Death Whisper" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Damage + 25% for 20 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2051"/>  <!-- Scroll: Death Whisper -->
+			<skill id="2051" level="1" value="-1"/>  <!-- Scroll: Death Whisper -->
 		</skill-reducer>
 	</item>
 
 	<item id="3928" name="Scroll: Focus" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Critical Rate + 20% for 20 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2052"/>  <!-- Scroll: Focus -->
+			<skill id="2052" level="1" value="-1"/>  <!-- Scroll: Focus -->
 		</skill-reducer>
 	</item>
 
 	<item id="3929" name="Scroll: Acumen" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Casting Spd. + 15% for 20 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2053"/>  <!-- Scroll: Acumen -->
+			<skill id="2053" level="1" value="-1"/>  <!-- Scroll: Acumen -->
 		</skill-reducer>
 	</item>
 
 	<item id="3930" name="Scroll: Haste" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Atk. Spd. + 15% for 20 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2054"/>  <!-- Scroll: Haste -->
+			<skill id="2054" level="1" value="-1"/>  <!-- Scroll: Haste -->
 		</skill-reducer>
 	</item>
 
 	<item id="3931" name="Scroll: Agility" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Increases Evasion. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2055"/>  <!-- Scroll: Agility -->
+			<skill id="2055" level="1" value="-1"/>  <!-- Scroll: Agility -->
 		</skill-reducer>
 	</item>
 
 	<item id="3932" name="Scroll: Mystic Empower" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- M. Atk. + 55% for 20 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2056"/>  <!-- Scroll: Empower -->
+			<skill id="2056" level="1" value="-1"/>  <!-- Scroll: Empower -->
 		</skill-reducer>
 	</item>
 
 	<item id="3933" name="Scroll: Might" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Atk. Increases. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="2057"/>  <!-- Scroll: Might -->
+		<skill-reducer type="ItemSkills">
+			<skill id="2057" level="1" value="-1"/>  <!-- Scroll: Might -->
 		</skill-reducer>
 	</item>
 
 	<item id="3934" name="Scroll: Wind Walk" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- Speed + 20 for 20 minutes. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="2058"/>  <!-- Scroll: Wind Walk -->
+		<skill-reducer type="ItemSkills">
+			<skill id="2058" level="1" value="-1"/>  <!-- Scroll: Wind Walk -->
 		</skill-reducer>
 	</item>
 
 	<item id="3935" name="Scroll: Shield" type="SCROLL" icon="icon.etc_scroll_white_i00">
 	<!-- P. Def. Increases. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player flying="false"/>
-		</condition>
 		<attributes weight="120" commission-type="SCROLL_OTHER" for-npc="true" action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="2059"/>  <!-- Scroll: Shield -->
+		<skill-reducer type="ItemSkills">
+			<skill id="2059" level="1" value="-1"/>  <!-- Scroll: Shield -->
 		</skill-reducer>
 	</item>
 
@@ -125,7 +95,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" price="400000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2049" level="1"/>  <!-- Blessed Scroll of Resurrection -->
+			<skill id="2049" level="1" value="-1"/>  <!-- Blessed Scroll of Resurrection -->
 		</skill-reducer>
 	</item>
 
@@ -145,7 +115,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -165,7 +135,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -185,36 +155,36 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
 	<item id="3940" name="Blueprint: Summon Siege Golem" type="NONE" icon="icon.etc_plan_i00">
-	<!-- Blueprint needed to learn the Summon Siege Golem technique.\\nRequired level: 49 -->
+	<!-- Blueprint needed to learn the Summon Siege Golem technique.\nRequired level: 49 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3941" name="Spellbook: Mass Resurrection" type="NONE" icon="icon.etc_spell_books_white_i00">
-	<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops.\\nRequired level: 40 -->
+	<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3942" name="Spellbook: Party Return" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Party Return. Used by Elven Elders.\\nRequired level: 48 -->
+	<!-- Spellbook needed to learn Party Return. Used by Elven Elders.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3943" name="Amulet: Pa'agrio's Heart" type="NONE" icon="icon.etc_orcish_talisman_i00">
-	<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords.\\nRequired level: 44 -->
+	<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3944" name="Spellbook: Decrease Weight" type="NONE" icon="icon.etc_spell_books_blue_i00">
-	<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles.\\nRequired level: 35 -->
+	<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -224,7 +194,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="4" price="35" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="2061" level="1"/>  <!-- Blessed Spiritshot (No-grade) -->
+			<skill id="2061" level="1" value="-1"/>  <!-- Blessed Spiritshot (No-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -233,7 +203,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="4" price="45" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="2160" level="1"/>  <!-- Blessed Spiritshot (D-grade) -->
+			<skill id="2160" level="1" value="-1"/>  <!-- Blessed Spiritshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -242,7 +212,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="90" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="2161" level="1"/>  <!-- Blessed Spiritshot (C-grade) -->
+			<skill id="2161" level="1" value="-1"/>  <!-- Blessed Spiritshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -251,7 +221,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="245" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="2162" level="1"/>  <!-- Blessed Spiritshot (B-grade) -->
+			<skill id="2162" level="1" value="-1"/>  <!-- Blessed Spiritshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -260,7 +230,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="290" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="2163" level="1"/>  <!-- Blessed Spiritshot (A-grade) -->
+			<skill id="2163" level="1" value="-1"/>  <!-- Blessed Spiritshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -269,7 +239,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="350" commission-type="SPIRITSHOT" immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="BlessedSpiritShot">
-			<skill id="2164" level="1"/>  <!-- Blessed Spiritshot (S-grade) -->
+			<skill id="2164" level="1" value="-1"/>  <!-- Blessed Spiritshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -313,7 +283,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2036" level="2"/>  <!-- Blessed Scroll of Escape -->
+			<skill id="2036" level="2" value="-1"/>  <!-- Blessed Scroll of Escape -->
 		</skill-reducer>
 	</item>
 
@@ -322,7 +292,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
-			<skill id="2062" level="1"/>  <!-- Blessed Scroll of Resurrection -->
+			<skill id="2062" level="1" value="-1"/>  <!-- Blessed Scroll of Resurrection -->
 		</skill-reducer>
 	</item>
 

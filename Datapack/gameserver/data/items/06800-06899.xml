@@ -3,87 +3,66 @@
 	<armor id="6835" name="Circlet of Dion" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i02">
 	<!-- Torchlight Circlet. Can be worn by the lord of Dion Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player castle="2" pledge-class="2"/>
-		</condition>
 		<attributes weight="10" price="500000" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 		<skills>
-			<skill id="3633" level="1"/>  <!-- Residential Stun Immunity -->
+			<skill id="3633" level="1" value="-1"/>  <!-- Residential Stun Immunity -->
 		</skills>
 	</armor>
 
 	<armor id="6837" name="Circlet of Oren" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i04">
 	<!-- Tower Circlet. Can be worn by the lord of Oren Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player castle="4" pledge-class="2"/>
-		</condition>
 		<attributes weight="10" price="500000" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 		<skills>
-			<skill id="3633" level="1"/>  <!-- Residential Stun Immunity -->
+			<skill id="3633" level="1" value="-1"/>  <!-- Residential Stun Immunity -->
 		</skills>
 	</armor>
 
 	<armor id="6838" name="Circlet of Gludio" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i05">
 	<!-- Three-Swords Circlet. Can be worn by the lord of Gludio Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player castle="1" pledge-class="2"/>
-		</condition>
 		<attributes weight="10" price="500000" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 		<skills>
-			<skill id="3633" level="1"/>  <!-- Residential Stun Immunity -->
+			<skill id="3633" level="1" value="-1"/>  <!-- Residential Stun Immunity -->
 		</skills>
 	</armor>
 
 	<armor id="6839" name="Circlet of Giran" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap1_i06">
 	<!-- Cross Circlet. Can be worn by the Lord of Giran Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player castle="3" pledge-class="2"/>
-		</condition>
 		<attributes weight="10" price="500000" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 		<skills>
-			<skill id="3633" level="1"/>  <!-- Residential Stun Immunity -->
+			<skill id="3633" level="1" value="-1"/>  <!-- Residential Stun Immunity -->
 		</skills>
 	</armor>
 
 	<armor id="6840" name="Circlet of Aden" type="NONE" body-part="HAIR" icon="icon.accessory_pledge_cap2_i07">
 	<!-- Lion Circlet. Can be worn by the lord of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player castle="5" pledge-class="2"/>
-		</condition>
 		<attributes weight="10" price="500000" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 		<skills>
-			<skill id="3633" level="2"/>  <!-- Residential Stun Immunity -->
+			<skill id="3633" level="2" value="-1"/>  <!-- Residential Stun Immunity -->
 		</skills>
 	</armor>
 
 	<armor id="6841" name="Lord's Crown" type="NONE" body-part="HAIR" icon="icon.accessory_crown_i00">
 	<!-- Lord's Crown.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player castle="-1" pledge-class="-1"/>
-		</condition>
 		<attributes weight="10" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 		<skills>
-			<skill id="3632" level="1"/>  <!-- Clan Gate -->
+			<skill id="3632" level="1" value="-1"/>  <!-- Clan Gate -->
 		</skills>
 	</armor>
 
 	<armor id="6842" name="Wings of Destiny Circlet" type="NONE" body-part="HAIR" icon="icon.accessory_hero_cap_i00">
 	<!-- Hair Accessory, only for Heroes.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<condition msg-id="1518">
-			<player hero="true"/>
-		</condition>
 		<attributes weight="10" commission-type="HAIR_ACCESSORY" />
 		<crystal />
 	</armor>

@@ -264,7 +264,7 @@
 	</armor>
 
 	<item id="70543" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i03">
-	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3.  -->
+	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
@@ -318,35 +318,35 @@
 	</item>
 
 	<armor id="70552" name="Mount - Elk" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.tf_elk_i00">
-	<!-- Can mount an Elk when equipped.\\n  -->
+	<!-- Can mount an Elk when equipped.\n  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70553" name="Mount - Elk" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.tf_elk_i00">
-	<!-- Can mount an Elk when equipped.\\n  -->
+	<!-- Can mount an Elk when equipped.\n  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70554" name="Mount - Elk" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.tf_elk_i00">
-	<!-- Can mount an Elk when equipped.\\n  -->
+	<!-- Can mount an Elk when equipped.\n  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70555" name="Mount - Elk" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.tf_elk_i00">
-	<!-- Can mount an Elk when equipped.\\n.  \\n<Active Skill>\\n1. Elk Blessing: For 1 hour XP/ SP +30% (Cooldown: 12 hours)\\n2. Elk Invisibility: for 1 minute makes a character invisible and invincible to enemy attacks. Speed -40%. Disappears if your character attacks (Cooldown: 10 minutes). -->
+	<!-- Can mount an Elk when equipped.\n.  \n<Active Skill>\n1. Elk Blessing: For 1 hour XP/ SP +30% (Cooldown: 12 hours)\n2. Elk Invisibility: for 1 minute makes a character invisible and invincible to enemy attacks. Speed -40%. Disappears if your character attacks (Cooldown: 10 minutes). -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="70556" name="Mount - Elk (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Mount - Elk (7-day).\\n -->
+	<!-- Pack containing Mount - Elk (7-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
@@ -358,140 +358,140 @@
 	</item>
 
 	<item id="70558" name="Mount - Elk - Event" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Mount - Elk (7-day).\\n -->
+	<!-- Pack containing Mount - Elk (7-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<armor id="70559" name="Agathion Bracelet - Minion Eye" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Summons Agathion - Minion Eye.\\nCan mount an Elk when equipped.\\n  -->
+	<!-- Summons Agathion - Minion Eye.\nCan mount an Elk when equipped.\n  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70560" name="Agathion Bracelet - Minion Eye" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Summons Agathion - Minion Eye. CON/ MEN +1, Weight Gauge +5000, Max. HP/MP/CP +100, when used. MP Consumption for skill use -3%.\\n\\n\\n<Active Skill>\\n1. Minion Eye's Blessed Resurrection: Resurrects a corpse and fully restores his lost XP. Consumes 2 Spirit Ore. -->
+	<!-- Summons Agathion - Minion Eye. CON/ MEN +1, Weight Gauge +5000, Max. HP/MP/CP +100, when used. MP Consumption for skill use -3%.\n\n\n<Active Skill>\n1. Minion Eye's Blessed Resurrection: Resurrects a corpse and fully restores his lost XP. Consumes 2 Spirit Ore. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3267" level="1" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="55543" level="1"/>  <!-- Summon Agathion Minion Eye -->
-			<skill id="55552" level="1"/>  <!-- Minion Eye's Courage -->
-			<skill id="55553" level="1"/>  <!-- Minion Eye's Blessed Resurrection -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="55543" level="1" value="-1"/>  <!-- Summon Agathion - Minion Eye -->
+			<skill id="55552" level="1" value="-1"/>  <!-- Minion Eye's Courage -->
+			<skill id="55553" level="1" value="-1"/>  <!-- Minion Eye's Blessed Resurrection -->
 		</skills>
 	</armor>
 
 	<armor id="70561" name="Agathion Bracelet - Minion Eye" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Summons Agathion - Minion Eye. CON/ MEN +1, Weight Gauge +5000, Max. HP/MP/CP +100, when used. MP Consumption for skill use -3%.\\n\\n\\n<Active Skill>\\n1. Minion Eye's Blessed Resurrection: Resurrects a corpse and fully restores his lost XP. Consumes 2 Spirit Ore. -->
+	<!-- Summons Agathion - Minion Eye. CON/ MEN +1, Weight Gauge +5000, Max. HP/MP/CP +100, when used. MP Consumption for skill use -3%.\n\n\n<Active Skill>\n1. Minion Eye's Blessed Resurrection: Resurrects a corpse and fully restores his lost XP. Consumes 2 Spirit Ore. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70562" name="Agathion Bracelet - Matryoshka" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Summons Agathion - Matryoshka.\\n  -->
+	<!-- Summons Agathion - Matryoshka.\n  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70563" name="Agathion Bracelet - Matryoshka" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Summons Agathion - Matryoshka.\\n \\n<Active Skill>\\n1. Matryoshka's Gift: allows to receive 1 Strawberry Juice/ Mango Juice/ Cherry Juice (Cooldown: 12 hours).\\n2. Matryoshka's Blessing: for 20 min XP/ SP +30% (Cooldown: 2 hours).\\n3. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 1 hour). -->
+	<!-- Summons Agathion - Matryoshka.\n \n<Active Skill>\n1. Matryoshka's Gift: allows to receive 1 Strawberry Juice/ Mango Juice/ Cherry Juice (Cooldown: 12 hours).\n2. Matryoshka's Blessing: for 20 min XP/ SP +30% (Cooldown: 2 hours).\n3. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 1 hour). -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70564" name="Agathion Bracelet - Matryoshka" type="NONE" body-part="LEFT_BRACELET" icon="icon.etc_rbracelet_aga_agit_i00">
-	<!-- Summons Agathion - Matryoshka.\\n \\n<Active Skill>\\n1. Matryoshka's Gift: allows to receive 1 Strawberry Juice/ Mango Juice/ Cherry Juice (Cooldown: 12 hours).\\n2. Matryoshka's Blessing: for 20 min XP/ SP +30% (Cooldown: 2 hours).\\n3. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 1 hour). -->
+	<!-- Summons Agathion - Matryoshka.\n \n<Active Skill>\n1. Matryoshka's Gift: allows to receive 1 Strawberry Juice/ Mango Juice/ Cherry Juice (Cooldown: 12 hours).\n2. Matryoshka's Blessing: for 20 min XP/ SP +30% (Cooldown: 2 hours).\n3. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 1 hour). -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70565" name="Agathion Bracelet - Babayaga" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.br_babayaga_i00">
-	<!-- Summons Agathion - Babayaga.\\n  -->
+	<!-- Summons Agathion - Babayaga.\n  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70566" name="Agathion Bracelet - Babayaga" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.br_babayaga_i00">
-	<!-- Summons Agathion - Babayaga. Damage dealt in PvE +3% received PvE damage -3%.\\n \\n<Active Skill>\\n1. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 30 minutes).\\n2. Babayaga's Serenade: Soothes surrounding enemies, eliminating their desire to attack (Cooldown: 20 minutes). -->
+	<!-- Summons Agathion - Babayaga. Damage dealt in PvE +3% received PvE damage -3%.\n \n<Active Skill>\n1. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 30 minutes).\n2. Babayaga's Serenade: Soothes surrounding enemies, eliminating their desire to attack (Cooldown: 20 minutes). -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" duration="10080" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="70567" name="Agathion Bracelet - Babayaga" type="NONE" body-part="LEFT_BRACELET" icon="BranchIcon.icon.br_babayaga_i00">
-	<!-- Summons Agathion - Babayaga. Damage dealt in PvE +3% received PvE damage -3%.\\n \\n<Active Skill>\\n1. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 30 minutes).\\n2. Babayaga's Serenade: Soothes surrounding enemies, eliminating their desire to attack (Cooldown: 20 minutes). -->
+	<!-- Summons Agathion - Babayaga. Damage dealt in PvE +3% received PvE damage -3%.\n \n<Active Skill>\n1. Agathion Teleport: grants the ability to teleport to Aden/ Giran/ Dion/ Gludio (Cooldown: 30 minutes).\n2. Babayaga's Serenade: Soothes surrounding enemies, eliminating their desire to attack (Cooldown: 20 minutes). -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="70568" name="Agathion - Minion Eye (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Agathion - Minion Eye (7-day).\\n -->
+	<!-- Pack containing Agathion - Minion Eye (7-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70569" name="Agathion - Minion Eye (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Agathion - Minion Eye (7-day).\\n -->
+	<!-- Pack containing Agathion - Minion Eye (7-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70570" name="Agathion - Matryoshka (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Agathion - Matryoshka (7-day).\\n -->
+	<!-- Pack containing Agathion - Matryoshka (7-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70571" name="Agathion - Matryoshka (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Agathion - Matryoshka (7-day).\\n -->
+	<!-- Pack containing Agathion - Matryoshka (7-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70572" name="Agathion - Babayaga (7-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Agathion - Babayaga (7-day).\\n -->
+	<!-- Pack containing Agathion - Babayaga (7-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70573" name="Agathion - Babayaga (30-day)" type="NONE" icon="icon.etc_pi_gift_box_i02">
-	<!-- Pack containing Agathion - Babayaga (30-day).\\n -->
+	<!-- Pack containing Agathion - Babayaga (30-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="100" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70574" name="Strawberry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i01">
-	<!-- For 5 min. activates Prophecy of Fire - Lv. 1, when used.\\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\\n  -->
+	<!-- For 5 min. activates Prophecy of Fire - Lv. 1, when used.\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55679"/>  <!-- Strawberry Juice -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55679" level="1" value="-1"/>  <!-- Strawberry Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70575" name="Mango Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i03">
-	<!-- For 5 min. activates Prophecy of Water - Lv. 1, when used.\\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\\n  -->
+	<!-- For 5 min. activates Prophecy of Water - Lv. 1, when used.\n<Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies.\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55680"/> <!-- Mango Juice -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55680" level="1" value="-1"/>  <!-- Mango Juice -->
 		</skill-reducer>
 	</item>
 
 	<item id="70576" name="Cherry Juice" type="SCROLL" icon="icon.etc_fruit_cocktail_i02">
-	<!-- For 5 min. activates Prophecy of Wind - Lv. 1, when used.\\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies.\\n  -->
+	<!-- For 5 min. activates Prophecy of Wind - Lv. 1, when used.\n<Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies.\n  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use-type="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55681"/> <!-- Cherry Juice -->
+		<skill-reducer type="ItemSkills">
+			<skill id="55681" level="1" value="-1"/>  <!-- Cherry Juice -->
 		</skill-reducer>
 	</item>
 
@@ -527,7 +527,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
@@ -733,13 +733,13 @@
 	</item>
 
 	<item id="70598" name="Expertise Rune Pack" type="NONE" icon="icon.etc_equip_item_box_i00">
-	<!-- Contains Expertise Rune - B (10-day).\\n   -->
+	<!-- Contains Expertise Rune - B (10-day).\n   -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="70599" name="Mysterious Blessed Soulshot (No-grade)" type="SOULSHOT" icon="icon.etc_bless_spirit_bullet_white_i00">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
+	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with a No-grade weapon. Exchange for a new Soulshot through the Store Manager. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="SOULSHOT"/>
 	</item>

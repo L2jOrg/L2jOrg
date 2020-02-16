@@ -14,7 +14,7 @@ public class ConditionPlayerIsHero extends Condition {
     private static final ConditionPlayerIsHero HERO = new ConditionPlayerIsHero(true);
     private static final ConditionPlayerIsHero NO_HERO = new ConditionPlayerIsHero(false);
 
-    private final boolean isHero;
+    public final boolean isHero;
 
     /**
      * Instantiates a new condition player is hero.

@@ -1,115 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="1400" name="Spellbook: Surrender to Fire" type="NONE" icon="icon.etc_spell_books_element_i00">
-	<!-- Spellbook needed to learn Surrender to Fire. Used by Human Wizards.\\nRequired level: 25 -->
+	<!-- Spellbook needed to learn Surrender to Fire. Used by Human Wizards.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1401" name="Spellbook: Acumen" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Acumen. Used by Clerics.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Acumen. Used by Clerics.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1402" name="Spellbook: Agility" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Agility. Used by Elven Oracles.\\nRequired level: 25 -->
+	<!-- Spellbook needed to learn Agility. Used by Elven Oracles.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1403" name="Spellbook: Summon Kat the Cat" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Summon Kat the Cat. Used by Human Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Summon Kat the Cat. Used by Human Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1404" name="Spellbook: Servitor Recharge" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Servitor Recharge. Used by Human Wizards, Elven Wizards, and Dark Wizards.\\nRequired level: 25 -->
+	<!-- Spellbook needed to learn Servitor Recharge. Used by Human Wizards, Elven Wizards, and Dark Wizards.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1405" name="Spellbook: Servitor Heal" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Servitor Heal. Used by Human Wizards, Elven Wizards, and Dark Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Servitor Heal. Used by Human Wizards, Elven Wizards, and Dark Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1406" name="Spellbook: Servitor Wind Walk" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Servitor Wind Walk. Used by Human Wizards.\\nRequired level: 35 -->
+	<!-- Spellbook needed to learn Servitor Wind Walk. Used by Human Wizards.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1407" name="Spellbook: Servitor Magic Boost" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Servitor Magic Boost. Used by Elven Wizards.\\nRequired level: 35 -->
+	<!-- Spellbook needed to learn Servitor Magic Boost. Used by Elven Wizards.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1408" name="Spellbook: Mighty Servitor" type="NONE" icon="icon.etc_spell_books_summon_i00">
-	<!-- Spellbook needed to learn Mighty Servitor. Used by Dark Wizards.\\nRequired level: 35 -->
+	<!-- Spellbook needed to learn Mighty Servitor. Used by Dark Wizards.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1409" name="Spellbook: Slow" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Slow. Used by Human Wizards and Dark Wizards.\\nRequired level: 35 -->
+	<!-- Spellbook needed to learn Slow. Used by Human Wizards and Dark Wizards.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1410" name="Spellbook: Poisonous Cloud" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Poisonous Cloud. Used by Human Wizards and Dark Wizards.\\nRequired level: 25 -->
+	<!-- Spellbook needed to learn Poisonous Cloud. Used by Human Wizards and Dark Wizards.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1411" name="Spellbook: Aura Burn" type="NONE" icon="icon.etc_spell_books_element_i00">
-	<!-- Spellbook needed to learn Aura Burn. Used by Wizards, Elven Wizards and Dark Wizards.\\nRequired level: 20 -->
+	<!-- Spellbook needed to learn Aura Burn. Used by Wizards, Elven Wizards and Dark Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1412" name="Spellbook: Water Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Water Resistance. Used by Elven Wizards and Prophets.\\nRequired level: Elven Wizard - 25, Prophet - 58 -->
+	<!-- Spellbook needed to learn Water Resistance. Used by Elven Wizards and Prophets.\nRequired level: Elven Wizard - 25, Prophet - 58 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1413" name="Spellbook: Wind Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Wind Resistance. Used by Shillien Oracles and Prophets.\\nRequired level: Shillien Oracle - 35, Prophet - 58 -->
+	<!-- Spellbook needed to learn Wind Resistance. Used by Shillien Oracles and Prophets.\nRequired level: Shillien Oracle - 35, Prophet - 58 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1414" name="Spellbook: Fire Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Fire Resistance. Used by Clerics.\\nRequired level: 30 -->
+	<!-- Spellbook needed to learn Fire Resistance. Used by Clerics.\nRequired level: 30 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1415" name="Spellbook: Dryad Root" type="NONE" icon="icon.etc_spell_books_assistance_i00">
-	<!-- Spellbook needed to learn Dryad Root. Used by Clerics, Oracles, and Shillien Oracles.\\nRequired level: 23 -->
+	<!-- Spellbook needed to learn Dryad Root. Used by Clerics, Oracles, and Shillien Oracles.\nRequired level: 23 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="10603" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1416" name="Spellbook: Curse Chaos" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Curse Chaos. Used by Human Wizards and Dark Wizards.\\nRequired level: 35 -->
+	<!-- Spellbook needed to learn Curse Chaos. Used by Human Wizards and Dark Wizards.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1417" name="Spellbook: Surrender to Earth" type="NONE" icon="icon.etc_spell_books_element_i00">
-	<!-- Spellbook needed to learn Surrender to Earth. Used by Elven Wizards.\\nRequired level: 35 -->
+	<!-- Spellbook needed to learn Surrender to Earth. Used by Elven Wizards.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1418" name="Spellbook: Surrender to Poison" type="NONE" icon="icon.etc_spell_books_black_i00">
-	<!-- Spellbook needed to learn Surrender to Poison. Used by Dark Wizards.\\nRequired level: 25 -->
+	<!-- Spellbook needed to learn Surrender to Poison. Used by Dark Wizards.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
@@ -359,7 +359,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="10" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2150" level="1"/>  <!-- Soulshot (D-grade) -->
+			<skill id="2150" level="1" value="-1"/>  <!-- Soulshot (D-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -368,7 +368,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="2" price="15" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2151" level="1"/>  <!-- Soulshot (C-grade) -->
+			<skill id="2151" level="1" value="-1"/>  <!-- Soulshot (C-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -377,7 +377,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="50" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2152" level="1"/>  <!-- Soulshot (B-grade) -->
+			<skill id="2152" level="1" value="-1"/>  <!-- Soulshot (B-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -386,7 +386,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="80" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2153" level="1"/>  <!-- Soulshot (A-grade) -->
+			<skill id="2153" level="1" value="-1"/>  <!-- Soulshot (A-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -395,7 +395,7 @@
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="1" price="100" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="SoulShots">
-			<skill id="2154" level="1"/>  <!-- Soulshot (S-grade) -->
+			<skill id="2154" level="1" value="-1"/>  <!-- Soulshot (S-grade) -->
 		</skill-reducer>
 	</item>
 
@@ -432,7 +432,7 @@
 			<stat type="pAtkRange" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="3599" level="1"/>  <!-- Polearm Multi-attack -->
+			<skill id="3599" level="1" value="-1"/>  <!-- Polearm Multi-attack -->
 		</skills>
 	</weapon>
 
