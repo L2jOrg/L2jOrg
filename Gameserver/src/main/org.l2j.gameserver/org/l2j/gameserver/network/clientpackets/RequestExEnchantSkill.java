@@ -1,21 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
-import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.SkillEnchantType;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.EnchantSkillHolder;
-import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.InvalidDataPacketException;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfo;
-import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
-import org.l2j.gameserver.network.serverpackets.ExEnchantSkillResult;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,7 +34,7 @@ public final class RequestExEnchantSkill extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0)) {
+        /*if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0)) {
             return;
         }
 
@@ -190,6 +176,6 @@ public final class RequestExEnchantSkill extends ClientPacket {
         skill = player.getKnownSkill(_skillId);
         player.sendPacket(new ExEnchantSkillInfo(skill.getId(), skill.getLevel(), skill.getSubLevel(), skill.getSubLevel()));
         player.sendPacket(new ExEnchantSkillInfoDetail(_type, skill.getId(), skill.getLevel(), Math.min(skill.getSubLevel() + 1, EnchantSkillGroupsData.MAX_ENCHANT_LEVEL), player));
-        player.updateShortCuts(skill.getId(), skill.getLevel(), skill.getSubLevel());
+        player.updateShortCuts(skill.getId(), skill.getLevel(), skill.getSubLevel());*/
     }
 }

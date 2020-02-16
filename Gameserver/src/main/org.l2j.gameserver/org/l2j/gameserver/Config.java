@@ -651,7 +651,6 @@ public final class Config {
     public static String CLAN_NAME_TEMPLATE;
     public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
     public static File DATAPACK_ROOT;
-    public static List<Integer> PROTOCOL_LIST;
     public static int SERVER_LIST_AGE;
     public static boolean SERVER_LIST_BRACKET;
     public static boolean SERVER_RESTART_SCHEDULE_ENABLED;
@@ -914,7 +913,6 @@ public final class Config {
     public static Map<Integer, Integer> HOPZONE_REWARD = new HashMap<>();
     public static int HOPZONE_DUALBOXES_ALLOWED;
     public static boolean ALLOW_HOPZONE_GAME_SERVER_REPORT;
-    ;
 
     /**
      * This class initializes all global variables for configuration.<br>
@@ -967,16 +965,6 @@ public final class Config {
 
         HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
         MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);
-
-        final String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "166").split(";");
-        PROTOCOL_LIST = new ArrayList<>(protocols.length);
-        for (String protocol : protocols) {
-            try {
-                PROTOCOL_LIST.add(Integer.parseInt(protocol.trim()));
-            } catch (NumberFormatException e) {
-                LOGGER.warn("Wrong config protocol version: " + protocol + ". Skipped.");
-            }
-        }
 
         SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
         SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);

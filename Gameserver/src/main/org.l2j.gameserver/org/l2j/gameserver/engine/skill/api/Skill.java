@@ -2,7 +2,6 @@ package org.l2j.gameserver.engine.skill.api;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.engine.skill.SkillType;
@@ -1629,7 +1628,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public boolean isEnchantable() {
-        return EnchantSkillGroupsData.getInstance().isEnchantable(this);
+        return false;
     }
 
     protected void setIcon(String icon) {

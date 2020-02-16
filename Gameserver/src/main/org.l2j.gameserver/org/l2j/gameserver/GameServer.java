@@ -238,10 +238,7 @@ public class GameServer {
         } else {
             _deadDetectThread = null;
         }
-        System.gc();
-        final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
-        LOGGER.info("Started, using {} of {} MB total memory", getUsedMemoryMB(), totalMem);
-        LOGGER.info("Maximum number of connected players is {}", Config.MAXIMUM_ONLINE_USERS);
+        LOGGER.info("Maximum number of connected players is configured to {}", Config.MAXIMUM_ONLINE_USERS);
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
         printSection("Setting All characters to offline status!");
@@ -308,6 +305,7 @@ public class GameServer {
 
                 printSection("Server Info Version");
                 LOGGER.info("Update: .................. {}", updateName);
+                LOGGER.info("Protocol: ................ {}", getSettings(ServerSettings.class).acceptedProtocols());
                 LOGGER.info("Build Version: ........... {}", version);
                 LOGGER.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
                 LOGGER.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
@@ -324,10 +322,6 @@ public class GameServer {
 
     public static GameServer getInstance() {
         return INSTANCE;
-    }
-
-    public long getUsedMemoryMB() {
-        return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
     }
 
     public ConnectionHandler<GameClient> getConnectionHandler() {

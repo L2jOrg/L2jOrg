@@ -127,23 +127,16 @@ public final class SettingsFile extends Properties {
     public int[] getIntegerArray(String key, String delimiter) {
         var property = getProperty(key);
         if(isNullOrEmpty(property)) {
-            return  INT_ARRAY_EMPTY;
+            return INT_ARRAY_EMPTY;
         }
         var values = property.split(delimiter);
         int[] array = new int[values.length];
         int index = 0;
         for (String v : values) {
-
-            if (isNullOrEmpty(v)) {
+            if (!isInteger(v)) {
                 continue;
             }
-
-            try {
-                int value = Integer.parseInt(v);
-                array[index++] = value;
-            } catch (Exception e) {
-                logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
-            }
+            array[index++] = Integer.parseInt(v);
         }
         return array;
     }

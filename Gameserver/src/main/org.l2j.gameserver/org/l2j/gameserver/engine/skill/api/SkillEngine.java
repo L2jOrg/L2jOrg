@@ -4,7 +4,6 @@ import io.github.joealisson.primitive.HashLongMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.LongMap;
 import io.github.joealisson.primitive.function.IntBiConsumer;
-import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.data.xml.impl.PetSkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -424,7 +423,6 @@ public class SkillEngine extends EffectParser {
 
     public static void init() {
         EffectHandler.getInstance().executeScript();
-        EnchantSkillGroupsData.getInstance();
         getInstance().load();
         SkillTreesData.getInstance();
         PetSkillData.getInstance();

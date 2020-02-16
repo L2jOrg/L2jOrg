@@ -23,6 +23,7 @@ public class ServerSettings implements Settings {
 
     private int scheduledPoolSize;
     private int threadPoolSize;
+    private int[] acceptedProtocols;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -47,6 +48,7 @@ public class ServerSettings implements Settings {
 
         scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
+        acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
     }
 
     private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
@@ -116,5 +118,9 @@ public class ServerSettings implements Settings {
 
     public int threadPoolSize() {
         return threadPoolSize;
+    }
+
+    public int[] acceptedProtocols() {
+        return acceptedProtocols;
     }
 }

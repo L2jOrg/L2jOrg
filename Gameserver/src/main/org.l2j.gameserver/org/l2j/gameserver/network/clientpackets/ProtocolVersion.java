@@ -1,30 +1,36 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.KeyPacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
+
+/**
+ * @author JoeAlisson
+ */
 public final class ProtocolVersion extends ClientPacket {
     private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
-    private int _version;
+    private int version;
 
     @Override
     public void readImpl() {
-        _version = readInt();
+        version = readInt();
     }
 
     @Override
     public void runImpl() {
         // this packet is never encrypted
-        if (_version == -2) {
+        if (version == -2) {
             // this is just a ping attempt from the new C2 client
             client.closeNow();
-        } else if (!Config.PROTOCOL_LIST.contains(_version)) {
-            LOGGER_ACCOUNTING.warn("Wrong protocol version {}, {}", _version, client);
+        } else if (Util.contains(getSettings(ServerSettings.class).acceptedProtocols(), version)) {
+            LOGGER_ACCOUNTING.warn("Wrong protocol version {}, {}", version, client);
             AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(client.getAccountName()));
             client.setProtocolOk(false);
             client.close(new KeyPacket(client.enableCrypt(), 0));

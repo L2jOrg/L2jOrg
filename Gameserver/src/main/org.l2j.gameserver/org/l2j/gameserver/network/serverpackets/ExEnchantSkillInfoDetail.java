@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.EnchantSkillHolder;
@@ -26,7 +25,7 @@ public class ExEnchantSkillInfoDetail extends ServerPacket {
         _skillLvl = skillLvl;
         _skillSubLvl = skillSubLvl;
 
-        _enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLvl % 1000);
+        _enchantSkillHolder = null;
     }
 
     @Override
