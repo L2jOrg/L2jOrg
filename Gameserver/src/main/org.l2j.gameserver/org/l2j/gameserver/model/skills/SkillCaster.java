@@ -500,7 +500,7 @@ public class SkillCaster implements Runnable {
         // Disable the skill during the re-use delay and create a task EnableSkill with Medium priority to enable it at the end of the re-use delay
         int reuseDelay = caster.getStats().getReuseTime(_skill);
         if (reuseDelay > 10) {
-            if (!_skill.isStatic() && _skill.getReferenceItemId() == 0 && _skill.getOperateType() == SkillOperateType.A1 && Formulas.calcSkillMastery(caster, _skill)) {
+            if (!_skill.isStatic()  && _skill.getOperateType() == SkillOperateType.A1 && Formulas.calcSkillMastery(caster, _skill)) {
                 reuseDelay = 100;
                 caster.sendPacket(SystemMessageId.A_SKILL_IS_READY_TO_BE_USED_AGAIN);
             }

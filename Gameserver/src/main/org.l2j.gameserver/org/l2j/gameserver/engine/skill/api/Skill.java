@@ -73,9 +73,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int abnormalLvl;
     private int abnormalTime;
     private boolean stayAfterDeath;
-
-    private int _refId;
-    // all times in milliseconds
     private int hitTime;
     private double hitCancelTime;
     private int coolTime;
@@ -1191,15 +1188,6 @@ public final class Skill implements IIdentifiable, Cloneable {
      */
     public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, WorldObject target) {
         return conditions.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
-    }
-
-    /**
-     * used for tracking item id in case that item consume cannot be used
-     *
-     * @return reference item id
-     */
-    public int getReferenceItemId() {
-        return _refId;
     }
 
     public boolean canBeDispelled() {
