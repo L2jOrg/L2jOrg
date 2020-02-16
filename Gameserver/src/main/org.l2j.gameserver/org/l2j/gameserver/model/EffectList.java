@@ -368,7 +368,7 @@ public final class EffectList {
 
     public void stopAllTogglesOfGroup(int toggleGroup) {
         if (toggleCount.get() > 0) {
-            stopEffects(b -> b.getSkill().isToggle() && (b.getSkill().getToggleGroupId() == toggleGroup), true, true);
+            stopEffects(b -> b.getSkill().isToggle(), true, true);
         }
     }
 

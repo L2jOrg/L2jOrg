@@ -110,9 +110,8 @@ public final class Skill implements IIdentifiable, Cloneable {
     private boolean canCastWhileDisabled;
     private boolean isSharedWithSummon;
     private boolean deleteAbnormalOnLeave;
-    private boolean irreplacableBuff; // Stays after death, on subclass change, cant be canceled.
-    private boolean blockActionUseSkill; // Blocks the use skill client action and is not showed on skill list.
-    private int _toggleGroupId;
+    private boolean irreplacableBuff;
+    private boolean blockActionUseSkill;
     private int _attachToggleGroupId;
     private List<AttachSkillHolder> _attachSkills = Collections.emptyList();
     private Set<AbnormalType> abnormalResists;
@@ -1301,7 +1300,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
         //@formatter:off
         final int toggleSkillId = activeChar.getEffectList().getEffects().stream()
-                .filter(info -> info.getSkill().getToggleGroupId() == _attachToggleGroupId)
                 .mapToInt(info -> info.getSkill().getId())
                 .findAny().orElse(0);
         //@formatter:on
@@ -1366,10 +1364,6 @@ public final class Skill implements IIdentifiable, Cloneable {
      */
     public boolean isBlockActionUseSkill() {
         return blockActionUseSkill;
-    }
-
-    public int getToggleGroupId() {
-        return _toggleGroupId;
     }
 
     public int getAttachToggleGroupId() {

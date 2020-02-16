@@ -6768,8 +6768,6 @@ public final class Player extends Playable {
                 stopSkillEffects(true, skill.getId());
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return false;
-            } else if (skill.getToggleGroupId() > 0) {
-                getEffectList().stopAllTogglesOfGroup(skill.getToggleGroupId());
             }
         }
 
