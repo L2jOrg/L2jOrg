@@ -18,7 +18,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.holders.AttachSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.*;
@@ -115,7 +114,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private Set<AbnormalType> abnormalResists;
     private double magicCriticalRate;
     private SkillBuffType buffType;
-    private boolean _displayInList;
     private SkillAutoUseType autoUse;
 
     @Deprecated // Chance to instance
@@ -1321,10 +1319,6 @@ public final class Skill implements IIdentifiable, Cloneable {
      */
     public boolean isIrreplacableBuff() {
         return irreplacableBuff;
-    }
-
-    public boolean isDisplayInList() {
-        return _displayInList;
     }
 
     /**
