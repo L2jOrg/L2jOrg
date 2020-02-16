@@ -769,7 +769,7 @@ public class Pet extends Summon {
                     }
 
                     // Toggles are skipped, unless they are necessary to be always on.
-                    if (skill.isToggle() && !skill.isNecessaryToggle()) {
+                    if (skill.isToggle()) {
                         continue;
                     }
 

@@ -2266,7 +2266,7 @@ public final class Player extends Playable {
             }
 
             // fix when learning toggle skills
-            if (skill.isToggle() && !skill.isNecessaryToggle() && isAffectedBySkill(skill.getId())) {
+            if (skill.isToggle() && isAffectedBySkill(skill.getId())) {
                 stopSkillEffects(true, skill.getId());
             }
 
@@ -5790,7 +5790,7 @@ public final class Player extends Playable {
                         }
 
                         // Toggles are skipped, unless they are necessary to be always on.
-                        if ((skill.isToggle() && !skill.isNecessaryToggle())) {
+                        if (skill.isToggle()) {
                             continue;
                         }
 
@@ -6765,9 +6765,7 @@ public final class Player extends Playable {
         // Check if the skill type is toggle and disable it, unless the toggle is necessary to be on.
         if (skill.isToggle()) {
             if (isAffectedBySkill(skill.getId())) {
-                if (!skill.isNecessaryToggle()) {
-                    stopSkillEffects(true, skill.getId());
-                }
+                stopSkillEffects(true, skill.getId());
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return false;
             } else if (skill.getToggleGroupId() > 0) {

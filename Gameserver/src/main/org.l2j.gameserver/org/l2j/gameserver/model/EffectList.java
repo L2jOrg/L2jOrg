@@ -326,7 +326,7 @@ public final class EffectList {
      * @param broadcast {@code true} to broadcast update packets, {@code false} otherwise.
      */
     public void stopAllEffects(boolean broadcast) {
-        stopEffects(b -> !b.getSkill().isNecessaryToggle() && !b.getSkill().isIrreplacableBuff(), true, broadcast);
+        stopEffects(b -> !b.getSkill().isIrreplacableBuff(), true, broadcast);
     }
 
     /**
@@ -362,7 +362,7 @@ public final class EffectList {
     public void stopAllToggles() {
         if (toggleCount.get() > 0) {
             // Ignore necessary toggles.
-            stopEffects(b -> b.getSkill().isToggle() && !b.getSkill().isNecessaryToggle() && !b.getSkill().isIrreplacableBuff(), true, true);
+            stopEffects(b -> b.getSkill().isToggle() &&  !b.getSkill().isIrreplacableBuff(), true, true);
         }
     }
 

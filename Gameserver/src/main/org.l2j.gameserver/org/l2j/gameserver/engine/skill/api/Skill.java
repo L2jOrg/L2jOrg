@@ -109,7 +109,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private long channelingTickInterval;
     private boolean canCastWhileDisabled;
     private boolean isSharedWithSummon;
-    private boolean _isNecessaryToggle;
     private boolean deleteAbnormalOnLeave;
     private boolean irreplacableBuff; // Stays after death, on subclass change, cant be canceled.
     private boolean blockActionUseSkill; // Blocks the use skill client action and is not showed on skill list.
@@ -751,7 +750,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public boolean isStayAfterDeath() {
-        return stayAfterDeath || irreplacableBuff || _isNecessaryToggle;
+        return stayAfterDeath || irreplacableBuff;
     }
 
     void setStayAfterDeath(boolean stayAfterDeath) {
@@ -1344,10 +1343,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public boolean isSharedWithSummon() {
         return isSharedWithSummon;
-    }
-
-    public boolean isNecessaryToggle() {
-        return _isNecessaryToggle;
     }
 
     public boolean isDeleteAbnormalOnLeave() {
