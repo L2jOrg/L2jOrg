@@ -1003,11 +1003,10 @@ public final class EffectList {
                 abnormalTypeFlags.add(skill.getAbnormalType());
 
                 // Add AbnormalVisualEffect flag.
-                if (skill.hasAbnormalVisualEffects()) {
-                    for (AbnormalVisualEffect ave : skill.getAbnormalVisualEffects()) {
-                        abnormalVisualEffectFlags.add(ave);
-                        abnormalVisualEffects.add(ave);
-                    }
+                if (skill.hasAbnormalVisualEffect()) {
+                    var visual = skill.getAbnormalVisualEffect();
+                    abnormalVisualEffectFlags.add(visual); // TODO review : why two lists ?
+                    abnormalVisualEffects.add(visual);
                     if (broadcast) {
                         owner.updateAbnormalVisualEffects();
                     }

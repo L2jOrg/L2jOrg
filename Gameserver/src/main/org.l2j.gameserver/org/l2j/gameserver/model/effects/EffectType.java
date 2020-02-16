@@ -4,8 +4,10 @@ package org.l2j.gameserver.model.effects;
  * Effect types.
  *
  * @author nBd
+ * @author JoeAlisson
  */
 public enum EffectType {
+    NONE,
     AGGRESSION,
     CHARM_OF_LUCK,
     CPHEAL,
@@ -27,7 +29,6 @@ public enum EffectType {
     MANAHEAL_PERCENT,
     MUTE,
     NOBLESSE_BLESSING,
-    NONE,
     PHYSICAL_ATTACK,
     PHYSICAL_ATTACK_HP_LINK,
     LETHAL_ATTACK,
@@ -47,5 +48,9 @@ public enum EffectType {
     SUMMON_NPC,
     TELEPORT,
     TELEPORT_TO_TARGET,
-    ABNORMAL_SHIELD
+    ABNORMAL_SHIELD;
+
+    public long mask() {
+        return this == NONE ? 0 :  1 << ordinal();
+    }
 }

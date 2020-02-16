@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.skill.api;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -35,6 +36,7 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 import java.util.function.Consumer;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -115,15 +117,13 @@ public final class Skill implements IIdentifiable, Cloneable {
     private double magicCriticalRate;
     private SkillBuffType buffType;
     private SkillAutoUseType autoUse;
-
-    @Deprecated // Chance to instance
-    private Set<AbnormalVisualEffect> abnormalVisualEffects;
-    private volatile Byte[] _effectTypes;
+    private AbnormalVisualEffect  abnormalVisualEffect;
     private int affectMin;
     private int affectRandom;
     private int fanStartAngle;
     private int fanRadius;
     private int fanAngle;
+    private volatile long effectsMask = -1;
 
     Skill(int id, String name, int maxLevel, boolean debuff, SkillOperateType action, SkillType type) {
         this.id = id;
@@ -258,17 +258,12 @@ public final class Skill implements IIdentifiable, Cloneable {
         return abnormalTime;
     }
 
-    public void setAbnormalTime(int time) {
+    void setAbnormalTime(int time) {
         abnormalTime = time;
     }
 
-    /**
-     * Gets the skill abnormal visual effect.
-     *
-     * @return the abnormal visual effect
-     */
-    public Set<AbnormalVisualEffect> getAbnormalVisualEffects() {
-        return (abnormalVisualEffects != null) ? abnormalVisualEffects : Collections.emptySet();
+    public AbnormalVisualEffect getAbnormalVisualEffect() {
+        return abnormalVisualEffect;
     }
 
     /**
@@ -276,8 +271,8 @@ public final class Skill implements IIdentifiable, Cloneable {
      *
      * @return {@code true} if the skill has abnormal visual effects, {@code false} otherwise
      */
-    public boolean hasAbnormalVisualEffects() {
-        return (abnormalVisualEffects != null) && !abnormalVisualEffects.isEmpty();
+    public boolean hasAbnormalVisualEffect() {
+        return Util.falseIfNullOrElse(abnormalVisualEffect, visual -> visual != AbnormalVisualEffect.NONE);
     }
 
     /**
@@ -1200,60 +1195,24 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     /**
-     * Parses all the abnormal visual effects.
-     *
-     * @param abnormalVisualEffects the abnormal visual effects list
-     */
-    private void parseAbnormalVisualEffect(String abnormalVisualEffects) {
-        if (abnormalVisualEffects != null) {
-            final String[] data = abnormalVisualEffects.split(";");
-            final Set<AbnormalVisualEffect> aves = new HashSet<>(1);
-            for (String aveString : data) {
-                final AbnormalVisualEffect ave = AbnormalVisualEffect.findByName(aveString);
-                if (ave != null) {
-                    aves.add(ave);
-                } else {
-                    LOGGER.warn("Invalid AbnormalVisualEffect(" + this + ") found for Skill(" + aveString + ")");
-                }
-            }
-
-            if (!aves.isEmpty()) {
-                this.abnormalVisualEffects = aves;
-            }
-        }
-    }
-
-    /**
-     * @param effectType  Effect type to check if its present on this skill effects.
      * @param effectTypes Effect types to check if are present on this skill effects.
      * @return {@code true} if at least one of specified {@link EffectType} types is present on this skill effects, {@code false} otherwise.
      */
-    public boolean hasEffectType(EffectType effectType, EffectType... effectTypes) {
-        if (_effectTypes == null) {
-            synchronized (this) {
-                if (_effectTypes == null) {
-                    final Set<Byte> effectTypesSet = new HashSet<>();
-                    for (List<AbstractEffect> effectList : effects.values()) {
-                        if (effectList != null) {
-                            for (AbstractEffect effect : effectList) {
-                                effectTypesSet.add((byte) effect.getEffectType().ordinal());
-                            }
-                        }
-                    }
+    public boolean hasEffectType(EffectType... effectTypes) {
+        if(isNull(effectTypes)) {
+            return false;
+        }
 
-                    final Byte[] effectTypesArray = effectTypesSet.toArray(new Byte[effectTypesSet.size()]);
-                    Arrays.sort(effectTypesArray);
-                    _effectTypes = effectTypesArray;
+        if (this.effectsMask == -1) {
+            synchronized (this) {
+                if (this.effectsMask == -1) {
+                    effectsMask = effects.values().stream().flatMap(Collection::stream).mapToLong(e -> e.getEffectType().mask()).reduce(0, (a, b) -> a | b);
                 }
             }
         }
 
-        if (Arrays.binarySearch(_effectTypes, (byte) effectType.ordinal()) >= 0) {
-            return true;
-        }
-
         for (EffectType type : effectTypes) {
-            if (Arrays.binarySearch(_effectTypes, (byte) type.ordinal()) >= 0) {
+            if ((effectsMask & type.mask()) != 0) {
                 return true;
             }
         }
@@ -1429,7 +1388,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     void setAbnormalVisual(AbnormalVisualEffect visual) {
-        abnormalVisualEffects = Set.of(visual);
+        abnormalVisualEffect = visual;
     }
 
     void setAbnormalSubordination(AbnormalType subordination) {
