@@ -51,11 +51,9 @@ public final class Skill implements IIdentifiable, Cloneable {
     private final String name;
     private final SkillOperateType operateType;
     private final SkillType type;
-
-    @Deprecated
-    private final int[] _affectHeight = new int[2];
     private final boolean debuff;
-    public Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
+
+    public Map<EffectScope, List<AbstractEffect>> effects = new EnumMap<>(EffectScope.class);
     private int level;
     private int maxLevel;
     private int castRange;
@@ -68,10 +66,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int hpConsume;
     private int itemConsumeCount;
     private int itemConsumeId;
-    /**
-     * Fame points consumed by this skill from caster
-     */
-    private int _famePointConsume;
+
     /**
      * Clan points consumed by this skill from caster's clan
      */
@@ -520,13 +515,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     /**
-     * @return Fame points consumed by this skill from caster
-     */
-    public int getFamePointConsume() {
-        return _famePointConsume;
-    }
-
-    /**
      * @return Clan points consumed by this skill from caster's clan
      */
     public int getClanRepConsume() {
@@ -945,7 +933,7 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @param effect      the effect
      */
     public void addEffect(EffectScope effectScope, AbstractEffect effect) {
-        _effectLists.computeIfAbsent(effectScope, k -> new ArrayList<>()).add(effect);
+        effects.computeIfAbsent(effectScope, k -> new ArrayList<>()).add(effect);
     }
 
     /**
@@ -955,7 +943,7 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @return the list of effects for the give scope
      */
     public List<AbstractEffect> getEffects(EffectScope effectScope) {
-        return _effectLists.get(effectScope);
+        return effects.get(effectScope);
     }
 
     /**
@@ -965,7 +953,7 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @return {@code true} if this skill has effects for the given scope, {@code false} otherwise
      */
     public boolean hasEffects(EffectScope effectScope) {
-        final List<AbstractEffect> effects = _effectLists.get(effectScope);
+        final List<AbstractEffect> effects = this.effects.get(effectScope);
         return (effects != null) && !effects.isEmpty();
     }
 
@@ -1322,7 +1310,7 @@ public final class Skill implements IIdentifiable, Cloneable {
             synchronized (this) {
                 if (_effectTypes == null) {
                     final Set<Byte> effectTypesSet = new HashSet<>();
-                    for (List<AbstractEffect> effectList : _effectLists.values()) {
+                    for (List<AbstractEffect> effectList : effects.values()) {
                         if (effectList != null) {
                             for (AbstractEffect effect : effectList) {
                                 effectTypesSet.add((byte) effect.getEffectType().ordinal());
@@ -1360,7 +1348,7 @@ public final class Skill implements IIdentifiable, Cloneable {
             return false;
         }
 
-        for (AbstractEffect effect : _effectLists.get(effectScope)) {
+        for (AbstractEffect effect : effects.get(effectScope)) {
             if (effectType == effect.getEffectType()) {
                 return true;
             }
@@ -1665,7 +1653,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     Skill clone(boolean mantainAttributes) throws CloneNotSupportedException {
         var clone = clone();
         if (!mantainAttributes) {
-            clone._effectLists = new EnumMap<>(EffectScope.class);
+            clone.effects = new EnumMap<>(EffectScope.class);
         }
         return clone;
     }

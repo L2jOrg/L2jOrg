@@ -302,10 +302,10 @@ public class GameServer {
                 var updateName = versionProperties.getProperty("update");
 
                 fullVersion = String.format("%s: %s-%s (%s)", updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
-
+                var protocol = getSettings(ServerSettings.class).acceptedProtocols();
                 printSection("Server Info Version");
                 LOGGER.info("Update: .................. {}", updateName);
-                LOGGER.info("Protocol: ................ {}", getSettings(ServerSettings.class).acceptedProtocols());
+                LOGGER.info("Protocol: ................ {}", protocol);
                 LOGGER.info("Build Version: ........... {}", version);
                 LOGGER.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
                 LOGGER.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));

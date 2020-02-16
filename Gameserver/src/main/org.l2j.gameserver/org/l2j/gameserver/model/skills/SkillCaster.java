@@ -427,11 +427,6 @@ public class SkillCaster implements Runnable {
                 return false;
             }
 
-            if (player.getFame() < skill.getFamePointConsume()) {
-                player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
-                return false;
-            }
-
             // Consume clan reputation points
             if (skill.getClanRepConsume() > 0) {
                 final Clan clan = player.getClan();
@@ -588,19 +583,6 @@ public class SkillCaster implements Runnable {
 
         if (isPlayer(caster)) {
             final Player player = caster.getActingPlayer();
-
-            // Consume fame points.
-            if (_skill.getFamePointConsume() > 0) {
-                if (player.getFame() < _skill.getFamePointConsume()) {
-                    player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
-                    return false;
-                }
-                player.setFame(player.getFame() - _skill.getFamePointConsume());
-
-                final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_FAME_HAS_BEEN_CONSUMED);
-                msg.addInt(_skill.getFamePointConsume());
-                player.sendPacket(msg);
-            }
 
             // Consume clan reputation points.
             if (_skill.getClanRepConsume() > 0) {
