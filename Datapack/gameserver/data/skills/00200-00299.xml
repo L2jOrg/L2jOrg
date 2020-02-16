@@ -131,178 +131,92 @@
 		</conditions>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK">
-				<power initial="4.5">
-					<value level="2">7.3</value>
-					<value level="2">5.3</value>
-					<value level="2">5.9</value>
-					<value level="3">8.9</value>
-					<value level="3">8.0</value>
-					<value level="3">8.9</value>
-					<value level="4">10.7</value>
-					<value level="4">11.8</value>
-					<value level="5">12.8</value>
-					<value level="5">13.3</value>
-					<value level="5">14.8</value>
-					<value level="6">15.1</value>
-					<value level="6">16.0</value>
-					<value level="6">17.7</value>
-					<value level="7">18.7</value>
-					<value level="7">20.7</value>
-					<value level="8">20.5</value>
-					<value level="8">21.3</value>
-					<value level="8">23.6</value>
-					<value level="9">23.7</value>
-					<value level="9">24.0</value>
-					<value level="9">26.6</value>
-					<value level="10">25.4</value>
-					<value level="10">26.7</value>
-					<value level="10">29.6</value>
-					<value level="11">27.1</value>
-					<value level="11">29.3</value>
-					<value level="11">32.5</value>
-					<value level="12">29.0</value>
-					<value level="12">32.0</value>
-					<value level="12">35.5</value>
-					<value level="13">30.9</value>
-					<value level="13">34.7</value>
-					<value level="13">38.4</value>
-					<value level="14">32.9</value>
-					<value level="14">37.3</value>
-					<value level="14">41.4</value>
-					<value level="15">35.0</value>
-					<value level="15">40.0</value>
-					<value level="15">44.3</value>
-					<value level="16">37.1</value>
-					<value level="16">42.7</value>
-					<value level="16">47.3</value>
-					<value level="17">39.4</value>
-					<value level="17">45.3</value>
-					<value level="17">50.2</value>
-					<value level="18">41.7</value>
-					<value level="18">48.0</value>
-					<value level="18">53.2</value>
-					<value level="19">44.1</value>
-					<value level="19">50.7</value>
-					<value level="19">56.2</value>
-					<value level="20">46.6</value>
-					<value level="20">53.3</value>
-					<value level="20">59.1</value>
-					<value level="21">49.2</value>
-					<value level="21">56.0</value>
-					<value level="21">62.1</value>
-					<value level="22">51.9</value>
-					<value level="22">58.7</value>
-					<value level="22">65.0</value>
-					<value level="23">54.6</value>
-					<value level="23">61.3</value>
-					<value level="23">68.0</value>
-					<value level="24">57.5</value>
-					<value level="24">64.0</value>
-					<value level="24">70.9</value>
-					<value level="25">60.4</value>
-					<value level="25">66.7</value>
-					<value level="25">73.9</value>
-					<value level="26">63.3</value>
-					<value level="26">69.3</value>
-					<value level="26">76.8</value>
-					<value level="27">66.4</value>
-					<value level="27">72.0</value>
-					<value level="27">79.8</value>
-					<value level="28">69.5</value>
-					<value level="28">74.7</value>
-					<value level="28">82.8</value>
-					<value level="29">72.7</value>
-					<value level="29">77.3</value>
-					<value level="29">85.7</value>
-					<value level="30">76.0</value>
-					<value level="30">80.0</value>
-					<value level="30">88.7</value>
-					<value level="31">79.3</value>
-					<value level="31">82.7</value>
-					<value level="31">91.6</value>
-					<value level="32">82.7</value>
-					<value level="32">85.3</value>
-					<value level="32">94.6</value>
-					<value level="33">86.1</value>
-					<value level="33">88.0</value>
-					<value level="33">97.5</value>
-					<value level="34">89.6</value>
-					<value level="34">90.7</value>
-					<value level="34">100.0</value>
-					<value level="35">93.1</value>
-					<value level="35">93.3</value>
-					<value level="35">103.4</value>
-					<value level="36">96.6</value>
-					<value level="36">96.0</value>
-					<value level="36">106.4</value>
-					<value level="37">100.2</value>
-					<value level="37">98.7</value>
-					<value level="37">109.4</value>
-					<value level="38">103.8</value>
-					<value level="38">101.3</value>
-					<value level="38">112.3</value>
-					<value level="39">107.5</value>
-					<value level="39">104.0</value>
-					<value level="39">115.3</value>
-					<value level="40">111.1</value>
-					<value level="40">106.7</value>
-					<value level="40">118.2</value>
-					<value level="41">114.8</value>
-					<value level="41">109.3</value>
-					<value level="41">121.2</value>
-					<value level="42">118.4</value>
-					<value level="42">112.0</value>
-					<value level="42">124.1</value>
-					<value level="43">122.1</value>
-					<value level="43">114.7</value>
-					<value level="43">127.1</value>
-					<value level="44">125.7</value>
-					<value level="44">117.3</value>
-					<value level="44">130.0</value>
-					<value level="45">129.3</value>
-					<value level="45">120.0</value>
-					<value level="45">133.0</value>
-					<value level="46">132.0</value>
-					<value level="46">123.0</value>
-					<value level="46">136.0</value>
-					<value level="47">135.0</value>
-					<value level="47">126.0</value>
-					<value level="47">139.0</value>
-					<value level="48">138.0</value>
-					<value level="48">129.0</value>
-					<value level="48">141.0</value>
-					<value level="49">144.0</value>
-					<value level="49">135.0</value>
-					<value level="49">147.0</value>
-					<value level="50">138.0</value>
-					<value level="50">150.0</value>
-					<value level="51">141.0</value>
-					<value level="51">153.0</value>
-					<value level="52">144.0</value>
-					<value level="52">156.0</value>
-					<value level="53">147.0</value>
-					<value level="53">159.0</value>
-					<value level="54">150.0</value>
-					<value level="54">162.0</value>
-					<value level="55">159.0</value>
-					<value level="55">150.0</value>
-					<value level="55">162.0</value>
-					<value level="56">159.0</value>
-					<value level="56">150.0</value>
-					<value level="56">162.0</value>
-					<value level="57">159.0</value>
-					<value level="57">150.0</value>
-					<value level="57">162.0</value>
-					<value level="58">159.0</value>
-					<value level="58">150.0</value>
-					<value level="58">162.0</value>
-					<value level="59">159.0</value>
-					<value level="59">150.0</value>
-					<value level="59">162.0</value>
+				<power initial="9">
+					<value level="2">15</value>
+					<value level="3">19</value>
+					<value level="4">24</value>
+					<value level="5">30</value>
+					<value level="6">35</value>
+					<value level="7">41</value>
+					<value level="8">47</value>
+					<value level="9">53</value>
+					<value level="10">58</value>
+					<value level="11">63</value>
+					<value level="12">67</value>
+					<value level="13">73</value>
+					<value level="14">78</value>
+					<value level="15">82</value>
+					<value level="16">88</value>
+					<value level="17">94</value>
+					<value level="18">99</value>
+					<value level="19">104</value>
+					<value level="20">110</value>
+					<value level="21">116</value>
+					<value level="22">122</value>
+					<value level="23">128</value>
+					<value level="24">133</value>
+					<value level="25">140</value>
+					<value level="26">146</value>
+					<value level="27">152</value>
+					<value level="28">157</value>
+					<value level="29">166</value>
+					<value level="30">172</value>
+					<value level="31">179</value>
+					<value level="32">186</value>
+					<value level="33">192</value>
+					<value level="34">199</value>
+					<value level="35">206</value>
+					<value level="36">212</value>
+					<value level="37">220</value>
+					<value level="38">227</value>
+					<value level="39">233</value>
+					<value level="40">241</value>
+					<value level="41">248</value>
+					<value level="42">255</value>
+					<value level="43">262</value>
+					<value level="44">269</value>
+					<value level="45">276</value>
+					<value level="46">282</value>
+					<value level="47">288</value>
+					<value level="48">295</value>
+					<value level="49">308</value>
+					<value level="50">315</value>
+					<value level="51">321</value>
+					<value level="52">328</value>
+					<value level="53">335</value>
+					<value level="54">341</value>
+					<value level="55">348</value>
+					<value level="56">354</value>
+					<value level="57">361</value>
+					<value level="58">368</value>
+					<value level="59">375</value>
 				</power>
-				<weapon-type>SWORD BLUNT </weapon-type>
+				<weapon-type>SWORD BLUNT</weapon-type>
 			</stat-modify>
-			<trigger-skill-by-attack skill="5604" start-level="9" stop-level="54">
+			<stat-modify stat="PHYSICAL_ATTACK" start-level="3">
+				<power initial="1">
+					<value level="6">2</value>
+					<value level="9">3</value>
+					<value level="12">4</value>
+					<value level="15">5</value>
+					<value level="18">6</value>
+					<value level="21">7</value>
+					<value level="22">6</value>
+					<value level="24">7</value>
+					<value level="27">8</value>
+					<value level="30">9</value>
+					<value level="33">10</value>
+					<value level="36">11</value>
+					<value level="39">12</value>
+					<value level="42">13</value>
+					<value level="48">12</value>
+					<value level="57">13</value>
+					<value level="58">14</value>
+					<value level="58">15</value>
+				</power>
+				<weapon-type>BLUNT</weapon-type>
+			</stat-modify>
+			<trigger-skill-by-attack skill="5604" start-level="9"> <!-- Sword/Blunt Weapon Mastery -->
 				<power initial="1.0"/>
 				<chance initial="50.0"/>
 				<min-damage initial="1.0"/>
@@ -8801,8 +8715,60 @@
 		<effects>
 			<stat-modify stat="ACCURACY">
 				<power initial="6.0"/>
-				<weapon-type>FIST </weapon-type>
+				<weapon-type>FIST</weapon-type>
 			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+				<power initial="10"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="10"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="5"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_RATE">
+				<power initial="50"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-modify>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="60">
+				<power initial="4"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="PHYSICAL_ATTACK" hp-percent="60" mode="PER">
+				<power initial="10"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="PHYSICAL_DEFENCE" hp-percent="60" mode="PER">
+				<power initial="5"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="PHYSICAL_ATTACK_SPEED" hp-percent="60" mode="PER">
+				<power initial="5"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="60">
+				<power initial="50"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="30">
+				<power initial="2"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="PHYSICAL_ATTACK" hp-percent="30" mode="PER">
+				<power initial="10"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="30" mode="PER">
+				<power initial="5"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
+			<stat-hp-based stat="CRITICAL_RATE" hp-percent="30">
+				<power initial="100"/>
+				<weapon-type>FIST</weapon-type>
+			</stat-hp-based>
 		</effects>
 	</skill>
 	<skill id="293" name="Two-handed Weapon Mastery" max-level="34" >
