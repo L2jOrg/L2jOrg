@@ -1034,9 +1034,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public synchronized void doCast(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
         // Get proper casting type.
         SkillCastingType castingType = SkillCastingType.NORMAL;
-        if (skill.canDoubleCast() && isAffected(EffectFlag.DOUBLE_CAST) && isCastingNow(castingType)) {
-            castingType = SkillCastingType.NORMAL_SECOND;
-        }
 
         // Try casting the skill
         final SkillCaster skillCaster = SkillCaster.castSkill(this, _target, skill, item, castingType, ctrlPressed, shiftPressed);

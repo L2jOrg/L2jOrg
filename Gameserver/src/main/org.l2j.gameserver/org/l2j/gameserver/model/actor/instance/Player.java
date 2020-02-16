@@ -6815,11 +6815,9 @@ public final class Player extends Playable {
             return false;
         }
 
-        final boolean doubleCast = isAffected(EffectFlag.DOUBLE_CAST) && skill.canDoubleCast();
-
         // If a skill is currently being used, queue this one if this is not the same
         // In case of double casting, check if both slots are occupied, then queue skill.
-        if ((!doubleCast && isCastingNow(SkillCaster::isAnyNormalType)) || (isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL) && isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL_SECOND))) {
+        if (isCastingNow(SkillCaster::isAnyNormalType) || (isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL) && isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL_SECOND))) {
             // Do not queue skill if called by an item.
             if (item == null) {
                 // Create a new SkillDat object and queue it in the player _queuedSkill

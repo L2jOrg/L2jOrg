@@ -17,7 +17,6 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.AttachSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
@@ -108,10 +107,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int channelingSkillId;
     private long channelingStart;
     private long channelingTickInterval;
-
-    // Stance skill IDs
-    private int _doubleCastSkill;
-    private boolean _canDoubleCast;
     private boolean canCastWhileDisabled;
     private boolean isSharedWithSummon;
     private boolean _isNecessaryToggle;
@@ -1297,15 +1292,9 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     /**
-     * @param activeChar
      * @return alternative skill that has been attached due to the effect of toggle skills on the player (e.g Fire Stance, Water Stance).
      */
     public Skill getAttachedSkill(Creature activeChar) {
-        // If character is double casting, return double cast skill.
-        if ((_doubleCastSkill > 0) && activeChar.isAffected(EffectFlag.DOUBLE_CAST)) {
-            return SkillEngine.getInstance().getSkill(getDoubleCastSkill(), getLevel());
-        }
-
         // Default toggle group ID, assume nothing attached.
         if ((_attachToggleGroupId <= 0) || (_attachSkills == null)) {
             return null;
@@ -1347,14 +1336,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public long getChannelingTickInitialDelay() {
         return channelingStart;
-    }
-
-    public boolean canDoubleCast() {
-        return _canDoubleCast;
-    }
-
-    public int getDoubleCastSkill() {
-        return _doubleCastSkill;
     }
 
     public boolean canCastWhileDisabled() {
