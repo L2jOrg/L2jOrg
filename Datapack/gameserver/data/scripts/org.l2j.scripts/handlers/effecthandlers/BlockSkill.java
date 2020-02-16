@@ -28,7 +28,7 @@ public final class BlockSkill extends AbstractEffect {
 	}
 	
 	private TerminateReturn onSkillUseEvent(OnCreatureSkillUse event) {
-		if (Util.contains(magicTypes, event.getSkill().getMagicType())) {
+		if (Util.contains(magicTypes, event.getSkill().getSkillType().ordinal())) {
 			return new TerminateReturn(true, true, true);
 		}
 		return null;

@@ -374,7 +374,7 @@ public class CreatureStats {
             }
         }
 
-        return (int) (mpConsume * getMpConsumeTypeValue(skill.getMagicType()));
+        return (int) (mpConsume * getMpConsumeTypeValue(skill.getSkillType().ordinal()));
     }
 
     /**
@@ -895,7 +895,7 @@ public class CreatureStats {
      * @return the time in milliseconds this skill is being under reuse.
      */
     public int getReuseTime(Skill skill) {
-        return (skill.isStaticReuse() || skill.isStatic()) ? skill.getReuseDelay() : (int) (skill.getReuseDelay() * getReuseTypeValue(skill.getMagicType()));
+        return (skill.isStaticReuse() || skill.isStatic()) ? skill.getReuseDelay() : (int) (skill.getReuseDelay() * getReuseTypeValue(skill.getSkillType().ordinal()));
     }
 
     /**

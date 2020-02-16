@@ -4,7 +4,6 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
-import org.l2j.gameserver.engine.skill.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;
@@ -14,7 +13,6 @@ import org.l2j.gameserver.handler.IAffectScopeHandler;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.CubicInstance;
@@ -38,7 +36,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -52,16 +49,14 @@ public final class Skill implements IIdentifiable, Cloneable {
     private final int id;
     private final String name;
     private final SkillOperateType operateType;
-    private int maxLevel;
-    private SkillType type;
+    private final SkillType type;
 
     private int level;
-    private  int castRange;
+    private int maxLevel;
 
-    private int _subLevel;
+    private int castRange;
+
     private int displayId;
-    private int _displayLevel;
-    private int _magic;
     private TraitType traitType = TraitType.NONE;
     private boolean staticReuse;
     private int manaConsume;
@@ -191,190 +186,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int fanRangeStartAngle;
     private int fanRangeRadius;
     private int fanRangeAngle;
-
-    public Skill(StatsSet set) {
-        id = set.getInt(".id");
-        level = set.getInt(".level");
-        _subLevel = set.getInt(".subLevel", 0);
-        _refId = set.getInt(".referenceId", 0);
-        displayId = set.getInt(".displayId", id);
-        _displayLevel = set.getInt(".displayLevel", level);
-        name = set.getString(".name", "");
-        operateType = set.getEnum("operateType", SkillOperateType.class);
-        _magic = set.getInt("isMagic", 0);
-        traitType = set.getEnum("trait", TraitType.class, TraitType.NONE);
-        staticReuse = set.getBoolean("staticReuse", false);
-        manaConsume = set.getInt("mpConsume", 0);
-        manaInitialConsume = set.getInt("mpInitialConsume", 0);
-        mpPerChanneling = set.getInt("mpPerChanneling", manaConsume);
-        hpConsume = set.getInt("hpConsume", 0);
-        itemConsumeCount = set.getInt("itemConsumeCount", 0);
-        itemConsumeId = set.getInt("itemConsumeId", 0);
-        _famePointConsume = set.getInt("famePointConsume", 0);
-        _clanRepConsume = set.getInt("clanRepConsume", 0);
-
-        castRange = set.getInt("castRange", -1);
-        effectRange = set.getInt("effectRange", -1);
-        abnormalLvl = set.getInt("abnormalLvl", 0);
-        abnormalType = set.getEnum("abnormalType", AbnormalType.class, AbnormalType.NONE);
-        subordinationAbnormalType = set.getEnum("subordinationAbnormalType", AbnormalType.class, AbnormalType.NONE);
-
-        int abnormalTime = set.getInt("abnormalTime", 0);
-        if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(id)) {
-            if ((level < 100) || (level > 140)) {
-                abnormalTime = Config.SKILL_DURATION_LIST.get(id);
-            } else if (level < 140) {
-                abnormalTime += Config.SKILL_DURATION_LIST.get(id);
-            }
-        }
-
-        this.abnormalTime = abnormalTime;
-        isAbnormalInstant = set.getBoolean("abnormalInstant", false);
-        parseAbnormalVisualEffect(set.getString("abnormalVisualEffect", null));
-
-        stayAfterDeath = set.getBoolean("stayAfterDeath", false);
-
-        hitTime = set.getInt("hitTime", 0);
-        hitCancelTime = set.getDouble("hitCancelTime", 0);
-        coolTime = set.getInt("coolTime", 0);
-        debuff = set.getBoolean("isDebuff", false);
-        _isRecoveryHerb = set.getBoolean("isRecoveryHerb", false);
-
-        if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(id)) {
-            reuseDelay = Config.SKILL_REUSE_LIST.get(id);
-        } else {
-            reuseDelay = set.getInt("reuseDelay", 0);
-        }
-
-        reuseDelayGroup = set.getInt("reuseDelayGroup", -1);
-        reuseHashCode = SkillEngine.skillHashCode(reuseDelayGroup > 0 ? reuseDelayGroup : id, level);
-
-        targetType = set.getEnum("targetType", TargetType.class, TargetType.SELF);
-        affectScope = set.getEnum("affectScope", AffectScope.class, AffectScope.SINGLE);
-        affectObject = set.getEnum("affectObject", AffectObject.class, AffectObject.ALL);
-        affectRange = set.getInt("affectRange", 0);
-
-        final String fanRange = set.getString("fanRange", null);
-        if (fanRange != null) {
-            try {
-                final String[] valuesSplit = fanRange.split(";");
-                _fanRange[0] = Integer.parseInt(valuesSplit[0]);
-                _fanRange[1] = Integer.parseInt(valuesSplit[1]);
-                _fanRange[2] = Integer.parseInt(valuesSplit[2]);
-                _fanRange[3] = Integer.parseInt(valuesSplit[3]);
-            } catch (Exception e) {
-                throw new IllegalArgumentException("SkillId: " + id + " invalid fanRange value: " + fanRange + ", \"unk;startDegree;fanAffectRange;fanAffectAngle\" required");
-            }
-        }
-
-        final String affectLimit = set.getString("affectLimit", null);
-        if (affectLimit != null) {
-            try {
-                final String[] valuesSplit = affectLimit.split("-");
-                _affectLimit[0] = Integer.parseInt(valuesSplit[0]);
-                _affectLimit[1] = Integer.parseInt(valuesSplit[1]);
-                if (valuesSplit.length > 2) {
-                    _affectLimit[2] = Integer.parseInt(valuesSplit[2]);
-                }
-            } catch (Exception e) {
-                throw new IllegalArgumentException("SkillId: " + id + " invalid affectLimit value: " + affectLimit + ", \"minAffected-additionalRandom\" required");
-            }
-        }
-
-        final String affectHeight = set.getString("affectHeight", null);
-        if (affectHeight != null) {
-            try {
-                final String[] valuesSplit = affectHeight.split(";");
-                _affectHeight[0] = Integer.parseInt(valuesSplit[0]);
-                _affectHeight[1] = Integer.parseInt(valuesSplit[1]);
-            } catch (Exception e) {
-                throw new IllegalArgumentException("SkillId: " + id + " invalid affectHeight value: " + affectHeight + ", \"minHeight-maxHeight\" required");
-            }
-
-            if (_affectHeight[0] > _affectHeight[1]) {
-                throw new IllegalArgumentException("SkillId: " + id + " invalid affectHeight value: " + affectHeight + ", \"minHeight-maxHeight\" required, minHeight is higher than maxHeight!");
-            }
-        }
-
-        magicLevel = set.getInt("magicLvl", 0);
-        levelBonusRate = set.getInt("lvlBonusRate", 0);
-        activateRate = set.getInt("activateRate", -1);
-        minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);
-        maxChance = set.getInt("maxChance", Config.MAX_ABNORMAL_STATE_SUCCESS_RATE);
-
-        nextAction = set.getEnum("nextAction", NextActionType.class, NextActionType.NONE);
-
-        removedOnAnyActionExceptMove = set.getBoolean("removedOnAnyActionExceptMove", false);
-        removedOnDamage = set.getBoolean("removedOnDamage", false);
-
-        blockedInOlympiad = set.getBoolean("blockedInOlympiad", false);
-
-        attributeType = set.getEnum("attributeType", AttributeType.class, AttributeType.NONE);
-        attributeValue = set.getInt("attributeValue", 0);
-
-        basicProperty = set.getEnum("basicProperty", BasicProperty.class, BasicProperty.NONE);
-
-        isSuicideAttack = set.getBoolean("isSuicideAttack", false);
-
-        _minPledgeClass = set.getInt("minPledgeClass", 0);
-
-        soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
-        chargeConsume = set.getInt("chargeConsume", 0);
-
-        isTriggeredSkill = set.getBoolean("isTriggeredSkill", false);
-        effectPoint = set.getInt("effectPoint", 0);
-
-        canBeDispelled = set.getBoolean("canBeDispelled", true);
-
-        excludedFromCheck = set.getBoolean("excludedFromCheck", false);
-        withoutAction = set.getBoolean("withoutAction", false);
-
-        icon = set.getString("icon", "icon.skill0000");
-
-        channelingSkillId = set.getInt("channelingSkillId", 0);
-        channelingTickInterval = (long) set.getFloat("channelingTickInterval", 2000f) * 1000;
-        channelingStart = (long) (set.getFloat("channelingStart", 0f) * 1000);
-
-        _isMentoring = set.getBoolean("isMentoring", false);
-
-        _doubleCastSkill = set.getInt("doubleCastSkill", 0);
-
-        _canDoubleCast = set.getBoolean("canDoubleCast", false);
-        canCastWhileDisabled = set.getBoolean("canCastWhileDisabled", false);
-        isSharedWithSummon = set.getBoolean("isSharedWithSummon", true);
-
-        _isNecessaryToggle = set.getBoolean("isNecessaryToggle", false);
-        deleteAbnormalOnLeave = set.getBoolean("deleteAbnormalOnLeave", false);
-        irreplacableBuff = set.getBoolean("irreplacableBuff", false);
-        blockActionUseSkill = set.getBoolean("blockActionUseSkill", false);
-
-        _toggleGroupId = set.getInt("toggleGroupId", -1);
-        _attachToggleGroupId = set.getInt("attachToggleGroupId", -1);
-        _attachSkills = set.getList("attachSkillList", StatsSet.class, Collections.emptyList()).stream().map(AttachSkillHolder::fromStatsSet).collect(Collectors.toList());
-
-        final String abnormalResist = set.getString("abnormalResists", null);
-        if (abnormalResist != null) {
-            final String[] abnormalResistStrings = abnormalResist.split(";");
-            if (abnormalResistStrings.length > 0) {
-                abnormalResists = new HashSet<>(abnormalResistStrings.length);
-                for (String s : abnormalResistStrings) {
-                    try {
-                        abnormalResists.add(AbnormalType.valueOf(s));
-                    } catch (Exception e) {
-                        LOGGER.warn("Skill ID[" + id + "] Expected AbnormalType for abnormalResists but found " + s, e);
-                    }
-                }
-            } else {
-                abnormalResists = Collections.emptySet();
-            }
-        } else {
-            abnormalResists = Collections.emptySet();
-        }
-
-        magicCriticalRate = set.getDouble("magicCriticalRate", 0);
-        buffType = isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : debuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
-        _displayInList = set.getBoolean("displayInList", true);
-    }
 
     Skill(int id, String name, int maxLevel, boolean debuff, SkillOperateType action, SkillType type) {
         this.id = id;
@@ -641,13 +452,12 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public int getDisplayLevel() {
-        return _displayLevel;
+        return level;
     }
 
     /**
      * Return skill basic property type.
      *
-     * @return
      */
     public BasicProperty getBasicProperty() {
         return basicProperty;
@@ -690,18 +500,13 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     /**
      * @return Returns the sub level.
-     * TODO remove
      */
     public int getSubLevel() {
-        return _subLevel;
+        return 0;
     }
 
-    /**
-     * @return isMagic integer value from the XML.
-     * TODO change to Type
-     */
-    public int getMagicType() {
-        return _magic;
+    public SkillType getSkillType() {
+        return type;
     }
 
     /**
@@ -890,10 +695,6 @@ public final class Skill implements IIdentifiable, Cloneable {
         return isTriggeredSkill;
     }
 
-    public boolean isSynergySkill() {
-        return operateType.isSynergy();
-    }
-
     public SkillOperateType getOperateType() {
         return operateType;
     }
@@ -916,11 +717,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public boolean useSpiritShot() {
-        return _magic == 1;
-    }
-
-    public boolean useFishShot() {
-        return hasEffectType(EffectType.FISHING);
+        return type == SkillType.MAGIC;
     }
 
     public int getMinPledgeClass() {
@@ -1376,11 +1173,6 @@ public final class Skill implements IIdentifiable, Cloneable {
      */
     public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, WorldObject target) {
         return _conditionLists.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
-    }
-
-    @Override
-    public String toString() {
-        return "Skill " + name + "(" + id + "," + level + "," + _subLevel + ")";
     }
 
     /**
@@ -1894,5 +1686,10 @@ public final class Skill implements IIdentifiable, Cloneable {
     @Override
     protected Skill clone() throws CloneNotSupportedException {
         return (Skill) super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Skill %s (%d, %d)",  name, id, level);
     }
 }

@@ -7,7 +7,6 @@ import io.github.joealisson.primitive.function.IntBiConsumer;
 import org.l2j.gameserver.data.xml.impl.PetSkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
-import org.l2j.gameserver.engine.skill.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;

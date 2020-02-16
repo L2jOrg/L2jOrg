@@ -6,6 +6,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.HitConditionBonusData;
 import org.l2j.gameserver.data.xml.impl.KarmaData;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -383,12 +384,12 @@ public final class Formulas {
      * @return factor divisor for skill hit time and cancel time.
      */
     public static double calcSkillTimeFactor(Creature creature, Skill skill) {
-        if (skill.getOperateType().isChanneling() || (skill.getMagicType() == 2) || (skill.getMagicType() == 4) || (skill.getMagicType() == 21)) {
+        if (skill.isChanneling() || (skill.getSkillType() == SkillType.STATIC)) {
             return 1.0d;
         }
 
         double factor = 0.0;
-        if (skill.getMagicType() == 1) {
+        if (skill.getSkillType() == SkillType.MAGIC) {
             final double spiritshotHitTime = (creature.isChargedShot(ShotType.SPIRITSHOTS) || creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS)) ? 0.4 : 0; // TODO: Implement propper values
             factor = creature.getStats().getMAttackSpeedMultiplier() + (creature.getStats().getMAttackSpeedMultiplier() * spiritshotHitTime); // matkspdmul + (matkspdmul * spiritshot_hit_time)
         } else {
@@ -732,7 +733,7 @@ public final class Formulas {
     }
 
     public static boolean calcPhysicalSkillEvasion(Creature activeChar, Creature target, Skill skill) {
-        if (Rnd.get(100) < target.getStats().getSkillEvasionTypeValue(skill.getMagicType())) {
+        if (Rnd.get(100) < target.getStats().getSkillEvasionTypeValue(skill.getSkillType().ordinal())) {
             if (isPlayer(activeChar)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
                 sm.addString(target.getName());

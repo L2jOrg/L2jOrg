@@ -42,7 +42,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect {
 			return;
 		}
 		
-		if (!Util.contains(magicTypes, event.getSkill().getMagicType())) {
+		if (!Util.contains(magicTypes, event.getSkill().getSkillType().ordinal())) {
 			return;
 		}
 		
