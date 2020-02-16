@@ -52,13 +52,15 @@ public final class Skill implements IIdentifiable, Cloneable {
     private final SkillOperateType operateType;
     private final SkillType type;
     private final boolean debuff;
+    private final int maxLevel;
 
     public Map<EffectScope, List<AbstractEffect>> effects = new EnumMap<>(EffectScope.class);
+    private TraitType traitType = TraitType.NONE;
+    private AbnormalType abnormalType = AbnormalType.NONE;
+    private AbnormalType subordinationAbnormalType = AbnormalType.NONE;
     private int level;
-    private int maxLevel;
     private int castRange;
     private int displayId;
-    private TraitType traitType = TraitType.NONE;
     private boolean staticReuse;
     private int manaConsume;
     private int manaInitialConsume;
@@ -66,39 +68,12 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int hpConsume;
     private int itemConsumeCount;
     private int itemConsumeId;
-
-    /**
-     * Effect range: how far the skill affect the target.
-     */
     private int effectRange;
-    /**
-     * Abnormal instant, used for herbs mostly.
-     */
     private boolean isAbnormalInstant;
-    /**
-     * Abnormal level, global effect level.
-     */
     private int abnormalLvl;
-    /**
-     * Abnormal type: global effect "group".
-     */
-    private AbnormalType abnormalType = AbnormalType.NONE;
-    /**
-     * Abnormal type: local effect "group".
-     */
-    private AbnormalType subordinationAbnormalType = AbnormalType.NONE;
-    /**
-     * Abnormal time: global effect duration time.
-     */
     private int abnormalTime;
-    /**
-     * If {@code true} this skill's effect should stay after death.
-     */
     private boolean stayAfterDeath;
-    /**
-     * If {@code true} this skill's effect recovery HP/MP or CP from herb.
-     */
-    private boolean _isRecoveryHerb;
+
     private int _refId;
     // all times in milliseconds
     private int hitTime;
@@ -462,15 +437,6 @@ public final class Skill implements IIdentifiable, Cloneable {
      */
     public boolean isDebuff() {
         return debuff;
-    }
-
-    /**
-     * Verify if this skill is coming from Recovery Herb.
-     *
-     * @return {@code true} if this skill is a recover herb, {@code false} otherwise
-     */
-    public boolean isRecoveryHerb() {
-        return _isRecoveryHerb;
     }
 
     public int getDisplayId() {
@@ -1067,8 +1033,8 @@ public final class Skill implements IIdentifiable, Cloneable {
 
             // Support for buff sharing feature including healing herbs.
             if (isSharedWithSummon && isPlayer(effected) && effected.hasServitors() && !isTransformation()) {
-                if ((addContinuousEffects && isContinuous() && !debuff) || _isRecoveryHerb) {
-                    effected.getServitors().values().forEach(s -> applyEffects(effector, s, _isRecoveryHerb, 0));
+                if ((addContinuousEffects && isContinuous() && !debuff)) {
+                    effected.getServitors().values().forEach(s -> applyEffects(effector, s, instant, 0));
                 }
             }
         }
