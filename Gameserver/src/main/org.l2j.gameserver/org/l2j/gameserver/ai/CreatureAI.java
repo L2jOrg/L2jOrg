@@ -1070,14 +1070,14 @@ public class CreatureAI extends AbstractAI {
                     continue;
                 }
 
-                if (sk.hasEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT)) {
+                if (sk.hasAnyEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT)) {
                     cancelSkills.add(sk);
-                } else if (sk.hasEffectType(EffectType.HEAL)) {
+                } else if (sk.hasAnyEffectType(EffectType.HEAL)) {
                     healSkills.add(sk);
                     hasHealOrResurrect = true;
-                } else if (sk.hasEffectType(EffectType.SLEEP)) {
+                } else if (sk.hasAnyEffectType(EffectType.SLEEP)) {
                     sleepSkills.add(sk);
-                } else if (sk.hasEffectType(EffectType.BLOCK_ACTIONS)) {
+                } else if (sk.hasAnyEffectType(EffectType.BLOCK_ACTIONS)) {
                     // hardcoding petrification until improvements are made to
                     // EffectTemplate... petrification is totally different for
                     // AI than paralyze
@@ -1095,13 +1095,13 @@ public class CreatureAI extends AbstractAI {
                             break;
                         }
                     }
-                } else if (sk.hasEffectType(EffectType.ROOT)) {
+                } else if (sk.hasAnyEffectType(EffectType.ROOT)) {
                     rootSkills.add(sk);
-                } else if (sk.hasEffectType(EffectType.BLOCK_CONTROL)) {
+                } else if (sk.hasAnyEffectType(EffectType.BLOCK_CONTROL)) {
                     debuffSkills.add(sk);
-                } else if (sk.hasEffectType(EffectType.MUTE)) {
+                } else if (sk.hasAnyEffectType(EffectType.MUTE)) {
                     muteSkills.add(sk);
-                } else if (sk.hasEffectType(EffectType.RESURRECTION)) {
+                } else if (sk.hasAnyEffectType(EffectType.RESURRECTION)) {
                     resurrectSkills.add(sk);
                     hasHealOrResurrect = true;
                 } else {

@@ -669,7 +669,7 @@ public class FortManager extends Merchant {
                             skill_lvl = Integer.parseInt(st.nextToken());
                         }
                         skill = SkillEngine.getInstance().getSkill(skill_id, skill_lvl);
-                        if (skill.hasEffectType(EffectType.SUMMON)) {
+                        if (skill.hasAnyEffectType(EffectType.SUMMON)) {
                             player.doCast(skill);
                         } else if (!((skill.getMpConsume() + skill.getMpInitialConsume()) > getCurrentMp())) {
                             doCast(skill);

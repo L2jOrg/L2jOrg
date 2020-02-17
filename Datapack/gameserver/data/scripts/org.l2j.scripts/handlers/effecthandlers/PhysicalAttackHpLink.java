@@ -71,8 +71,8 @@ public final class PhysicalAttackHpLink extends AbstractEffect {
 		if (defence != -1) {
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
-			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), true);
-			final double weaknessMod = Formulas.calcWeaknessBonus(effector, effected, skill.getTraitType());
+			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTrait(), true);
+			final double weaknessMod = Formulas.calcWeaknessBonus(effector, effected, skill.getTrait());
 			final double attributeMod = Formulas.calcAttributeBonus(effector, effected, skill);
 			final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill, true);
 			final double randomMod = effector.getRandomDamageMultiplier();

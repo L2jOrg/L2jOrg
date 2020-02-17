@@ -6681,7 +6681,7 @@ public final class Player extends Playable {
         }
 
         // If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && skill.hasEffectType(EffectType.TELEPORT)) {
+        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -6707,7 +6707,7 @@ public final class Player extends Playable {
         }
 
         // Check if fishing and trying to use non-fishing skills.
-        if (isFishing() && !skill.hasEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
+        if (isFishing() && !skill.hasAnyEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
             sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
             return false;
         }

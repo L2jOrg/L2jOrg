@@ -34,7 +34,7 @@ public final class Unsummon extends AbstractEffect {
 		final int magicLevel = skill.getMagicLevel();
 		if ((magicLevel <= 0) || ((effected.getLevel() - 9) <= magicLevel))
 		{
-			final double chance = this.power * Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
+			final double chance = this.power * Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTrait(), false);
 			return Rnd.chance(chance);
 		}
 		

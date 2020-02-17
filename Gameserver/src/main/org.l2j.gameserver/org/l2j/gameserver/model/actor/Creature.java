@@ -575,9 +575,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         broadcastPacket(su);
     }
 
-    /**
-     * @param text
-     */
     public void sendMessage(String text) {
         // default implementation
     }

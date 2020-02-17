@@ -58,7 +58,7 @@ public final class Lethal extends AbstractEffect {
 			return;
 		}
 		
-		final double chanceMultiplier = Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
+		final double chanceMultiplier = Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTrait(), false);
 		
 		// Calculate instant kill resistance first.
 		if (Rnd.get(100) < effected.getStats().getValue(Stat.INSTANT_KILL_RESIST, 0)) {

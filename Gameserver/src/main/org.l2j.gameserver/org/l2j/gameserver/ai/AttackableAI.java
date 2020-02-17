@@ -764,7 +764,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             // Check if target had buffs if skill is bad cancel, or debuffs if skill is good cancel.
-            if (skill.hasEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT)) {
+            if (skill.hasAnyEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT)) {
                 if (skill.isBad()) {
                     if (((Creature) target).getEffectList().getBuffCount() == 0) {
                         return false;
@@ -775,7 +775,7 @@ public class AttackableAI extends CreatureAI {
             }
 
             // Check for damaged targets if using healing skill.
-            return (((Creature) target).getCurrentHp() != ((Creature) target).getMaxHp()) || !skill.hasEffectType(EffectType.HEAL);
+            return (((Creature) target).getCurrentHp() != ((Creature) target).getMaxHp()) || !skill.hasAnyEffectType(EffectType.HEAL);
         }
 
         return true;
@@ -833,7 +833,7 @@ public class AttackableAI extends CreatureAI {
             //@formatter:on
         } else {
 
-            if (skill.hasEffectType(EffectType.HEAL)) {
+            if (skill.hasAnyEffectType(EffectType.HEAL)) {
                 return World.getInstance().findFirstVisibleObject(npc, Creature.class, range, true, c -> checkSkillTarget(skill, c), Comparator.comparingInt(Creature::getCurrentHpPercent));
             }
             return World.getInstance().findAnyVisibleObject(npc, Creature.class, range, true, c -> checkSkillTarget(skill, c));

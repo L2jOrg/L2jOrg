@@ -70,7 +70,7 @@ public class PcBody implements ITargetTypeHandler
 		
 		if (target.isDead())
 		{
-			if (skill.hasEffectType(EffectType.RESURRECTION))
+			if (skill.hasAnyEffectType(EffectType.RESURRECTION))
 			{
 				if (activeChar.isResurrectionBlocked() || target.isResurrectionBlocked())
 				{

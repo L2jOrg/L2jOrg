@@ -83,8 +83,8 @@ public final class Formulas {
         final double criticalAddVuln = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
         // Trait, elements
         final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
-        final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
-        final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTraitType());
+        final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTrait(), true);
+        final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTrait());
         final double attributeMod = calcAttributeBonus(attacker, target, skill);
         final double randomMod = attacker.getRandomDamageMultiplier();
         final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
@@ -111,8 +111,8 @@ public final class Formulas {
         final double critMod = mcrit ? calcCritDamage(attacker, target, skill) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
 
         // Trait, elements
-        final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
-        final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTraitType());
+        final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTrait(), true);
+        final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTrait());
         final double attributeMod = calcAttributeBonus(attacker, target, skill);
         final double randomMod = attacker.getRandomDamageMultiplier();
         final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
@@ -124,7 +124,7 @@ public final class Formulas {
         if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 if (calcMagicSuccess(attacker, target, skill)) {
-                    if (skill.hasEffectType(EffectType.HP_DRAIN)) {
+                    if (skill.hasAnyEffectType(EffectType.HP_DRAIN)) {
                         attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_SUCCESSFUL);
                     } else {
                         attacker.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
@@ -140,7 +140,7 @@ public final class Formulas {
             }
 
             if (isPlayer(target)) {
-                final SystemMessage sm = (skill.hasEffectType(EffectType.HP_DRAIN)) ? getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+                final SystemMessage sm = (skill.hasAnyEffectType(EffectType.HP_DRAIN)) ? getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
                 sm.addString(attacker.getName());
                 target.sendPacket(sm);
             }
@@ -498,7 +498,7 @@ public final class Formulas {
             defence = target.getMDef();
         }
 
-        final double attack = 2 * actor.getMAtk() * calcGeneralTraitBonus(actor, target, skill.getTraitType(), false);
+        final double attack = 2 * actor.getMAtk() * calcGeneralTraitBonus(actor, target, skill.getTrait(), false);
         double d = (attack - defence) / (attack + defence);
 
         if (skill.isDebuff()) {
@@ -514,7 +514,7 @@ public final class Formulas {
 
     public static double calcLvlBonusMod(Creature attacker, Creature target, Skill skill) {
         final int attackerLvl = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel();
-        final double skillLvlBonusRateMod = 1 + (skill.getLvlBonusRate() / 100.);
+        final double skillLvlBonusRateMod = 1 + (skill.getLevelBonusRate() / 100.);
         final double lvlMod = 1 + ((attackerLvl - target.getLevel()) / 100.);
         return skillLvlBonusRateMod * lvlMod;
     }
@@ -566,9 +566,9 @@ public final class Formulas {
         }
 
         final double targetBasicProperty = getAbnormalResist(skill.getBasicProperty(), target);
-        final double baseMod = ((((((magicLevel - target.getLevel()) + 3) * skill.getLvlBonusRate()) + activateRate) + 30.0) - targetBasicProperty);
+        final double baseMod = ((((((magicLevel - target.getLevel()) + 3) * skill.getLevelBonusRate()) + activateRate) + 30.0) - targetBasicProperty);
         final double elementMod = calcAttributeBonus(attacker, target, skill);
-        final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
+        final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTrait(), false);
         final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
         final double buffDebuffMod = skill.isDebuff() ? target.getStats().getValue(Stat.RESIST_ABNORMAL_DEBUFF, 1) : 1;
         final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
@@ -611,7 +611,7 @@ public final class Formulas {
         double rate = (baseRate / statMod);
 
         // Resist Modifier.
-        final double resMod = calcGeneralTraitBonus(attacker.getOwner(), target, skill.getTraitType(), false);
+        final double resMod = calcGeneralTraitBonus(attacker.getOwner(), target, skill.getTrait(), false);
         rate *= resMod;
 
         // Lvl Bonus Modifier.
@@ -687,7 +687,7 @@ public final class Formulas {
         mAtk *= bss ? 4 * (shotsBonus + sapphireBonus) : sps ? 2 * (shotsBonus + sapphireBonus) : 1;
 
         double damage = (Math.sqrt(mAtk) * power * (mp / 97)) / mDef;
-        damage *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
+        damage *= calcGeneralTraitBonus(attacker, target, skill.getTrait(), false);
         damage *= calculatePvpPveBonus(attacker, target, skill, mcrit);
 
         // Failure calculation
@@ -822,7 +822,7 @@ public final class Formulas {
 
             double counterdmg = ((target.getPAtk() * 873.) / attacker.getPDef()); // Old: (((target.getPAtk(attacker) * 10.0) * 70.0) / attacker.getPDef(target));
             counterdmg *= calcWeaponTraitBonus(attacker, target);
-            counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
+            counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTrait(), true);
             counterdmg *= calcAttributeBonus(attacker, target, skill);
 
             attacker.reduceCurrentHp(counterdmg, target, skill);
@@ -993,12 +993,12 @@ public final class Formulas {
     public static boolean calcProbability(double baseChance, Creature attacker, Creature target, Skill skill) {
         // Skills without set probability should only test against trait invulnerability.
         if (Double.isNaN(baseChance)) {
-            return calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true) > 0;
+            return calcGeneralTraitBonus(attacker, target, skill.getTrait(), true) > 0;
         }
 
         // Outdated formula: return Rnd.get(100) < ((((((skill.getMagicLevel() + baseChance) - target.getLevel()) + 30) - target.getINT()) * calcAttributeBonus(attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
         // TODO: Find more retail-like formula
-        return Rnd.get(100) < (((((skill.getMagicLevel() + baseChance) - target.getLevel()) - getAbnormalResist(skill.getBasicProperty(), target)) * calcAttributeBonus(attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
+        return Rnd.get(100) < (((((skill.getMagicLevel() + baseChance) - target.getLevel()) - getAbnormalResist(skill.getBasicProperty(), target)) * calcAttributeBonus(attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTrait(), false));
     }
 
     /**

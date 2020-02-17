@@ -63,6 +63,15 @@ public class Util {
         return false;
     }
 
+    public static <T> boolean contains(T[] array, T obj) {
+        for (var element : array) {
+            if(Objects.equals(element, obj)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static String hash(final String value) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA3-256");
         byte[] raw = value.getBytes(StandardCharsets.UTF_8);

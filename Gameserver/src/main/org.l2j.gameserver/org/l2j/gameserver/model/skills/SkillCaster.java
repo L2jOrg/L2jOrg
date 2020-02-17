@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -11,7 +12,6 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
-import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
@@ -225,7 +225,7 @@ public class SkillCaster implements Runnable {
                         }
 
                         // notify target AI about the attack
-                        if (((Creature) obj).hasAI() && !skill.hasEffectType(EffectType.HATE)) {
+                        if (((Creature) obj).hasAI() && !skill.hasAnyEffectType(EffectType.HATE)) {
                             ((Creature) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
                         }
                     }
@@ -396,7 +396,7 @@ public class SkillCaster implements Runnable {
             // Get the Item consumed by the spell
             final Item requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
             if ((requiredItem == null) || (requiredItem.getCount() < skill.getItemConsumeCount())) {
-                if (skill.hasEffectType(EffectType.SUMMON)) {
+                if (skill.hasAnyEffectType(EffectType.SUMMON)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
                     sm.addItemName(skill.getItemConsumeId());
                     sm.addInt(skill.getItemConsumeCount());
@@ -420,7 +420,7 @@ public class SkillCaster implements Runnable {
             }
 
             // Check if not in AirShip
-            if (player.isInAirShip() && !skill.hasEffectType(EffectType.REFUEL_AIRSHIP)) {
+            if (player.isInAirShip() && !skill.hasAnyEffectType(EffectType.REFUEL_AIRSHIP)) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
                 sm.addSkillName(skill);
                 player.sendPacket(sm);
@@ -623,7 +623,7 @@ public class SkillCaster implements Runnable {
             return false;
         }
 
-        if (_targets == null) {
+        if (Util.isNullOrEmpty(_targets)) {
             _targets = Collections.singletonList(target);
         }
 

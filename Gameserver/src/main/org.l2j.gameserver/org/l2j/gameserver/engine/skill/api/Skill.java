@@ -1,7 +1,6 @@
 package org.l2j.gameserver.engine.skill.api;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -10,8 +9,6 @@ import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.AffectScopeHandler;
-import org.l2j.gameserver.handler.IAffectScopeHandler;
-import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
@@ -29,14 +26,19 @@ import org.l2j.gameserver.model.stats.BasicPropertyResist;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.TraitType;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
+import static java.lang.String.format;
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.contains;
+import static org.l2j.commons.util.Util.falseIfNullOrElse;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -56,73 +58,89 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public Map<EffectScope, List<AbstractEffect>> effects = new EnumMap<>(EffectScope.class);
     private TraitType traitType = TraitType.NONE;
+
     private AbnormalType abnormalType = AbnormalType.NONE;
     private AbnormalType subordinationAbnormalType = AbnormalType.NONE;
-    private NextActionType nextAction = NextActionType.NONE;
-    private AttributeType attributeType = AttributeType.NONE;
-
-    private int level;
-    private int castRange;
-    private int displayId;
-    private boolean staticReuse;
-    private int manaConsume;
-    private int manaInitialConsume;
-    private int mpPerChanneling;
-    private int hpConsume;
-    private int itemConsumeCount;
-    private int itemConsumeId;
-    private int effectRange;
+    private AbnormalVisualEffect  abnormalVisualEffect;
     private boolean isAbnormalInstant;
     private int abnormalLvl;
     private int abnormalTime;
-    private boolean stayAfterDeath;
+    private int activateRate;
+
+    private AttributeType attributeType = AttributeType.NONE;
+    private int attributeValue;
+
+    private String icon;
+    private int level;
+    private int displayId;
+
+    private int castRange;
+    private int effectRange;
+
+    private int coolTime;
     private int hitTime;
     private double hitCancelTime;
-    private int coolTime;
+
+    private int reuseDelayGroup = -1;
+    private boolean staticReuse;
     private long reuseHashCode;
     private int reuseDelay;
-    private int reuseDelayGroup = -1;
+
     private int magicLevel;
+    private int effectPoint;
     private int levelBonusRate;
-    private int activateRate;
+    private double magicCriticalRate;
+
     private int minChance;
     private int maxChance;
+
     private TargetType targetType;
     private AffectScope affectScope;
     private AffectObject affectObject;
     private int affectRange;
-    private boolean removedOnAnyActionExceptMove;
-    private boolean removedOnDamage;
-    private boolean blockedInOlympiad;
-    private int attributeValue;
-    private BasicProperty basicProperty;
+    private int affectMin;
+    private int affectRandom;
+
+    private int manaConsume;
+    private int manaInitialConsume;
+    private int hpConsume;
     private int soulMaxConsume;
     private int chargeConsume;
+    private int itemConsumeId;
+    private int itemConsumeCount;
+
+    private boolean removedOnAnyActionExceptMove;
+    private boolean removedOnDamage;
+
+    private boolean blockedInOlympiad;
+    private boolean stayAfterDeath;
     private boolean isTriggeredSkill;
-    private int effectPoint;
     private boolean isSuicideAttack;
     private boolean canBeDispelled;
     private boolean excludedFromCheck;
     private boolean withoutAction;
-    private String icon;
+
     private int channelingSkillId;
     private long channelingStart;
     private long channelingTickInterval;
+    private int mpPerChanneling;
+
     private boolean canCastWhileDisabled;
     private boolean isSharedWithSummon;
     private boolean deleteAbnormalOnLeave;
     private boolean irreplacableBuff;
     private boolean blockActionUseSkill;
+
     private Set<AbnormalType> abnormalResists;
-    private double magicCriticalRate;
     private SkillBuffType buffType;
+    private BasicProperty basicProperty;
+    private NextActionType nextAction = NextActionType.NONE;
     private SkillAutoUseType autoUse;
-    private AbnormalVisualEffect  abnormalVisualEffect;
-    private int affectMin;
-    private int affectRandom;
+
     private int fanStartAngle;
     private int fanRadius;
     private int fanAngle;
+
     private volatile long effectsMask = -1;
 
     Skill(int id, String name, int maxLevel, boolean debuff, SkillOperateType action, SkillType type) {
@@ -156,655 +174,46 @@ public final class Skill implements IIdentifiable, Cloneable {
         maxChance = Config.MAX_ABNORMAL_STATE_SUCCESS_RATE;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
-    public TraitType getTraitType() {
-        return traitType;
-    }
-
-    public AttributeType getAttributeType() {
-        return attributeType;
-    }
-
-    public void setAttributeType(AttributeType type) {
-        attributeType = type;
-    }
-
-    public int getAttributeValue() {
-        return attributeValue;
-    }
-
-    public void setAttributeValue(int value) {
-        attributeValue = value;
-    }
-
-    public boolean isAOE() {
-        switch (affectScope) {
-            case FAN:
-            case FAN_PB:
-            case POINT_BLANK:
-            case RANGE:
-            case RING_RANGE:
-            case SQUARE:
-            case SQUARE_PB: {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean isSuicideAttack() {
-        return isSuicideAttack;
-    }
-
-    public boolean allowOnTransform() {
-        return isPassive();
-    }
-
-    /**
-     * Verify if this skill is abnormal instant.<br>
-     * Herb buff skills yield {@code true} for this check.
-     *
-     * @return {@code true} if the skill is abnormal instant, {@code false} otherwise
-     */
-    public boolean isAbnormalInstant() {
-        return isAbnormalInstant;
-    }
-
-    public void setAbnormalInstant(boolean instant) {
-        this.isAbnormalInstant = instant;
-    }
-
-    /**
-     * Gets the skill abnormal type.
-     *
-     * @return the abnormal type
-     */
-    public AbnormalType getAbnormalType() {
-        return abnormalType;
-    }
-
-    public void setAbnormalType(AbnormalType type) {
-        abnormalType = type;
-    }
-
-    /**
-     * Gets the skill subordination abnormal type.
-     *
-     * @return the abnormal type
-     */
-    public AbnormalType getSubordinationAbnormalType() {
-        return subordinationAbnormalType;
-    }
-
-    /**
-     * Gets the skill abnormal level.
-     *
-     * @return the skill abnormal level
-     */
-    public int getAbnormalLvl() {
-        return abnormalLvl;
-    }
-
-    /**
-     * Gets the skill abnormal time.<br>
-     * Is the base to calculate the duration of the continuous effects of this skill.
-     *
-     * @return the abnormal time
-     */
-    public int getAbnormalTime() {
-        return abnormalTime;
-    }
-
-    void setAbnormalTime(int time) {
-        abnormalTime = time;
-    }
-
-    public AbnormalVisualEffect getAbnormalVisualEffect() {
-        return abnormalVisualEffect;
-    }
-
-    /**
-     * Verify if the skill has abnormal visual effects.
-     *
-     * @return {@code true} if the skill has abnormal visual effects, {@code false} otherwise
-     */
-    public boolean hasAbnormalVisualEffect() {
-        return Util.falseIfNullOrElse(abnormalVisualEffect, visual -> visual != AbnormalVisualEffect.NONE);
-    }
-
-    /**
-     * Gets the skill magic level.
-     *
-     * @return the skill magic level
-     */
-    public int getMagicLevel() {
-        return magicLevel;
-    }
-
-    public void setMagicLevel(int level) {
-        magicLevel = level;
-    }
-
-    public int getLvlBonusRate() {
-        return levelBonusRate;
-    }
-
-    public int getActivateRate() {
-        return activateRate;
-    }
-
-    public void setActivateRate(int rate) {
-        activateRate = rate;
-    }
-
-    /**
-     * Return custom minimum skill/effect chance.
-     *
-     * @return
-     */
-    public int getMinChance() {
-        return minChance;
-    }
-
-    /**
-     * Return custom maximum skill/effect chance.
-     *
-     * @return
-     */
-    public int getMaxChance() {
-        return maxChance;
-    }
-
-    /**
-     * Return true if skill effects should be removed on any action except movement
-     *
-     * @return
-     */
-    public boolean isRemovedOnAnyActionExceptMove() {
-        return removedOnAnyActionExceptMove;
-    }
-
-    /**
-     * @return {@code true} if skill effects should be removed on damage
-     */
-    public boolean isRemovedOnDamage() {
-        return removedOnDamage;
-    }
-
-    /**
-     * @return {@code true} if skill can not be used in olympiad.
-     */
-    public boolean isBlockedInOlympiad() {
-        return blockedInOlympiad;
-    }
-
-    /**
-     * Return the additional effect Id.
-     *
-     * @return
-     */
-    public int getChannelingSkillId() {
-        return channelingSkillId;
-    }
-
-    /**
-     * Return character action after cast
-     *
-     * @return
-     */
-    public NextActionType getNextAction() {
-        return nextAction;
-    }
-
-    void setNextAction(NextActionType action) {
-        nextAction = action;
-    }
-
-    /**
-     * @return Returns the castRange.
-     */
-    public int getCastRange() {
-        return castRange;
-    }
-
-    public void setCastRange(int range) {
-        castRange = range;
-    }
-
-    /**
-     * @return Returns the effectRange.
-     */
-    public int getEffectRange() {
-        return effectRange;
-    }
-
-    public void setEffectRange(int effectRange) {
-        this.effectRange = effectRange;
-    }
-
-    /**
-     * @return Returns the hpConsume.
-     */
-    public int getHpConsume() {
-        return hpConsume;
-    }
-
-    public void setHpConsume(int consume) {
-        hpConsume = consume;
-    }
-
-    /**
-     * Gets the skill ID.
-     *
-     * @return the skill ID
-     */
-    @Override
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Verify if this skill is a debuff.
-     *
-     * @return {@code true} if this skill is a debuff, {@code false} otherwise
-     */
-    public boolean isDebuff() {
-        return debuff;
-    }
-
-    public int getDisplayId() {
-        return displayId;
-    }
-
-    void setDisplayId(int id) {
-        displayId = id;
-    }
-
-    public int getDisplayLevel() {
-        return level;
-    }
-
-    /**
-     * Return skill basic property type.
-     */
-    public BasicProperty getBasicProperty() {
-        return basicProperty;
-    }
-
-    /**
-     * @return Returns the how much item will be consumed.
-     */
-    public int getItemConsumeCount() {
-        return itemConsumeCount;
-    }
-
-    public void setItemConsumeCount(int count) {
-        itemConsumeCount = count;
-    }
-
-    /**
-     * @return Returns the ID of item for consume.
-     */
-    public int getItemConsumeId() {
-        return itemConsumeId;
-    }
-
-    /**
-     * @return Returns the level.
-     */
-    public int getLevel() {
-        return level;
-    }
-
-    void setLevel(int level) {
-        this.level = level;
-    }
-
-    /**
-     * @return Returns the sub level.
-     */
-    public int getSubLevel() {
-        return 0;
-    }
-
-    public SkillType getSkillType() {
-        return type;
-    }
-
-    /**
-     * @return Returns true to set physical skills.
-     */
-    public boolean isPhysical() {
-        return type == SkillType.PHYSIC;
-    }
-
-    /**
-     * @return Returns true to set magic skills.
-     */
-    public boolean isMagic() {
-        return type == SkillType.MAGIC;
-    }
-
-    /**
-     * @return Returns true to set static skills.
-     */
-    public boolean isStatic() {
-        return type == SkillType.STATIC;
-    }
-
-    /**
-     * @return Returns true to set dance skills.
-     */
-    public boolean isDance() {
-        return type == SkillType.DANCE;
-    }
-
-    /**
-     * @return Returns true to set static reuse.
-     */
-    public boolean isStaticReuse() {
-        return staticReuse;
-    }
-
-    void setStaticReuse(boolean staticReuse) {
-        this.staticReuse = staticReuse;
-    }
-
-    /**
-     * @return Returns the mpConsume.
-     */
-    public int getMpConsume() {
-        return manaConsume;
-    }
-
-    /**
-     * @return Returns the mpInitialConsume.
-     */
-    public int getMpInitialConsume() {
-        return manaInitialConsume;
-    }
-
-    /**
-     * @return Mana consumption per channeling tick.
-     */
-    public int getMpPerChanneling() {
-        return mpPerChanneling;
-    }
-
-    /**
-     * @return the skill name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @return the reuse delay
-     */
-    public int getReuseDelay() {
-        return reuseDelay;
-    }
-
-    /**
-     * @return the skill ID from which the reuse delay should be taken.
-     */
-    public int getReuseDelayGroup() {
-        return reuseDelayGroup;
-    }
-
-    public long getReuseHashCode() {
-        return reuseHashCode;
-    }
-
-    public int getHitTime() {
-        return hitTime;
-    }
-
-    public void setHitTime(int time) {
-        hitTime = time;
-    }
-
-    public double getHitCancelTime() {
-        return hitCancelTime;
-    }
-
-    void setHitCancelTime(double time) {
-        hitCancelTime = time;
-    }
-
-    /**
-     * @return the cool time
-     */
-    public int getCoolTime() {
-        return coolTime;
-    }
-
-    public void setCoolTime(int time) {
-        coolTime = time;
-    }
-
-    /**
-     * @return the target type of the skill : SELF, TARGET, SUMMON, GROUND...
-     */
-    public TargetType getTargetType() {
-        return targetType;
-    }
-
-    public void setTargetType(TargetType type) {
-        targetType = type;
-    }
-
-    /**
-     * @return the affect scope of the skill : SINGLE, FAN, SQUARE, PARTY, PLEDGE...
-     */
-    public AffectScope getAffectScope() {
-        return affectScope;
-    }
-
-    public void setAffectScope(AffectScope scope) {
-        affectScope = scope;
-    }
-
-    /**
-     * @return the affect object of the skill : All, Clan, Friend, NotFriend, Invisible...
-     */
-    public AffectObject getAffectObject() {
-        return affectObject;
-    }
-
-    public void setAffectObject(AffectObject object) {
-        affectObject = object;
-    }
-
-    /**
-     * @return the AOE range of the skill.
-     */
-    public int getAffectRange() {
-        return affectRange;
-    }
-
-    public void setAffectRange(int range) {
-        affectRange = range;
-    }
-
-    /**
-     * @return the maximum amount of targets the skill can affect or 0 if unlimited.
-     */
-    public int getAffectLimit() {
-        return affectMin + Rnd.get(affectRandom);
-    }
-
-    public boolean isActive() {
-        return operateType.isActive();
-    }
-
-    public boolean isPassive() {
-        return operateType.isPassive();
-    }
-
-    public boolean isToggle() {
-        return operateType.isToggle();
-    }
-
-    public boolean isAura() {
-        return operateType.isAura();
-    }
-
-    public boolean isHidingMessages() {
-        return operateType.isHidingMessages();
-    }
-
-    public boolean isNotBroadcastable() {
-        return operateType.isNotBroadcastable();
-    }
-
-    public boolean isContinuous() {
-        return operateType.isContinuous() || isSelfContinuous();
-    }
-
-    public boolean isFlyType() {
-        return operateType.isFlyType();
-    }
-
-    public boolean isSelfContinuous() {
-        return operateType.isSelfContinuous();
-    }
-
-    public boolean isChanneling() {
-        return operateType.isChanneling();
-    }
-
-    public boolean isTriggeredSkill() {
-        return isTriggeredSkill;
-    }
-
-    public SkillOperateType getOperateType() {
-        return operateType;
-    }
-
-    /**
-     * Verify if the skill is a transformation skill.
-     *
-     * @return {@code true} if the skill is a transformation, {@code false} otherwise
-     */
-    public boolean isTransformation() {
-        return abnormalType == AbnormalType.TRANSFORM;
-    }
-
-    public int getEffectPoint() {
-        return effectPoint;
-    }
-
-    public void setEffectPoint(int effectPoints) {
-        effectPoint = effectPoints;
-    }
-
-    public boolean useSoulShot() {
-        return hasEffectType(EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK);
-    }
-
-    public boolean useSpiritShot() {
-        return type == SkillType.MAGIC;
-    }
-
-    public boolean isHeroSkill() {
-        return SkillTreesData.getInstance().isHeroSkill(id, level);
-    }
-
-    public boolean isGMSkill() {
-        return SkillTreesData.getInstance().isGMSkill(id, level);
-    }
-
-    public boolean is7Signs() {
-        return (id > 4360) && (id < 4367);
-    }
-
-    /**
-     * Verify if this is a healing potion skill.
-     *
-     * @return {@code true} if this is a healing potion skill, {@code false} otherwise
-     */
-    public boolean isHealingPotionSkill() {
-        return abnormalType == AbnormalType.HP_RECOVER;
-    }
-
-    public int getMaxSoulConsumeCount() {
-        return soulMaxConsume;
-    }
-
-    public int getChargeConsumeCount() {
-        return chargeConsume;
-    }
-
-    public boolean isStayAfterDeath() {
-        return stayAfterDeath || irreplacableBuff;
-    }
-
-    void setStayAfterDeath(boolean stayAfterDeath) {
-        this.stayAfterDeath = stayAfterDeath;
-    }
-
-    public boolean isBad() {
-        return effectPoint < 0;
-    }
-
     public boolean checkCondition(Creature activeChar, WorldObject object) {
-        if ((activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION)) {
+        if (activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION) {
             return true;
         }
 
         if (isPlayer(activeChar) && activeChar.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(id)) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-            sm.addSkillName(id);
-            activeChar.sendPacket(sm);
+            activeChar.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
             return false;
         }
 
         if (!checkConditions(SkillConditionScope.GENERAL, activeChar, object) || !checkConditions(SkillConditionScope.TARGET, activeChar, object)) {
-            if (!((activeChar == object) && isBad())) // Self targeted bad skills should not send a message.
-            {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-                sm.addSkillName(id);
-                activeChar.sendPacket(sm);
+            // Self targeted bad skills should not send a message.
+            if (!(activeChar == object && isBad()) ) {
+                activeChar.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
             }
             return false;
         }
-
         return true;
     }
 
-    /**
-     * @param activeChar  the character that requests getting the skill target.
-     * @param forceUse    if character pressed ctrl (force pick target)
-     * @param dontMove    if character pressed shift (dont move and pick target only if in range)
-     * @param sendMessage send SystemMessageId packet if target is incorrect.
-     * @return {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
-     */
+    public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, WorldObject target) {
+        return conditions.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
+    }
+
     public WorldObject getTarget(Creature activeChar, boolean forceUse, boolean dontMove, boolean sendMessage) {
         return getTarget(activeChar, activeChar.getTarget(), forceUse, dontMove, sendMessage);
     }
 
-    /**
-     * @param activeChar    the character that requests getting the skill target.
-     * @param seletedTarget the target that has been selected by this character to be checked.
-     * @param forceUse      if character pressed ctrl (force pick target)
-     * @param dontMove      if character pressed shift (dont move and pick target only if in range)
-     * @param sendMessage   send SystemMessageId packet if target is incorrect.
-     * @return the selected {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
-     */
     public WorldObject getTarget(Creature activeChar, WorldObject seletedTarget, boolean forceUse, boolean dontMove, boolean sendMessage) {
-        final ITargetTypeHandler handler = TargetHandler.getInstance().getHandler(getTargetType());
-        if (handler != null) {
+        var handler = TargetHandler.getInstance().getHandler(targetType);
+        if (nonNull(handler)) {
             try {
                 return handler.getTarget(activeChar, seletedTarget, this, forceUse, dontMove, sendMessage);
             } catch (Exception e) {
-                LOGGER.warn("Exception in Skill.getTarget(): " + e.getMessage(), e);
+                LOGGER.error("Could not execute target handler {} on skill {}", handler, this, e);
             }
         }
-        activeChar.sendMessage("Target type of skill " + this + " is not currently handled.");
+        if(activeChar.isGM()) {
+            activeChar.sendMessage(format("Target type %s of skill %s is not currently handled.", targetType, this));
+        }
         return null;
     }
 
@@ -814,87 +223,45 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @return list containing objects gathered in a specific geometric way that are valid to be affected by this skill.
      */
     public List<WorldObject> getTargetsAffected(Creature activeChar, WorldObject target) {
-        if (target == null) {
-            return null;
+        if (isNull(target)) {
+            return Collections.emptyList();
         }
-        final IAffectScopeHandler handler = AffectScopeHandler.getInstance().getHandler(getAffectScope());
-        if (handler != null) {
+        var handler = AffectScopeHandler.getInstance().getHandler(affectScope);
+        if (nonNull(handler)) {
             try {
                 final List<WorldObject> result = new LinkedList<>();
                 handler.forEachAffected(activeChar, target, this, result::add);
                 return result;
             } catch (Exception e) {
-                LOGGER.warn("Exception in Skill.getTargetsAffected(): " + e.getMessage(), e);
+                LOGGER.error("Could not execute affect scope handler {} of Skill {}", handler, this, e);
             }
         }
-        activeChar.sendMessage("Target affect scope of skill " + this + " is not currently handled.");
-        return null;
+        if(activeChar.isGM()) {
+            activeChar.sendMessage(format("Target affect scope %s of skill %s is not currently handled.", affectScope, this));
+        }
+        return Collections.emptyList();
     }
 
-    /**
-     * @param activeChar the character that needs to gather targets.
-     * @param target     the initial target activeChar is focusing upon.
-     * @param action     for each affected target.
-     */
     public void forEachTargetAffected(Creature activeChar, WorldObject target, Consumer<? super WorldObject> action) {
-        if (target == null) {
+        if (isNull(target)) {
             return;
         }
 
-        final IAffectScopeHandler handler = AffectScopeHandler.getInstance().getHandler(getAffectScope());
-        if (handler != null) {
+        var handler = AffectScopeHandler.getInstance().getHandler(affectScope);
+        if (nonNull(handler)) {
             try {
                 handler.forEachAffected(activeChar, target, this, action);
             } catch (Exception e) {
-                LOGGER.warn("Exception in Skill.forEachTargetAffected(): " + e.getMessage(), e);
+                LOGGER.warn("Could not execute affect scope handler {} of skill {}", handler, this, e);
             }
-        } else {
-            activeChar.sendMessage("Target affect scope of skill " + this + " is not currently handled.");
+        } else if(activeChar.isGM()) {
+            activeChar.sendMessage(String.format("Target affect scope %s of skill %s is not currently handled.", affectScope, this));
         }
     }
 
-    /**
-     * Adds an effect to the effect list for the given effect scope.
-     *
-     * @param effectScope the effect scope
-     * @param effect      the effect
-     */
-    public void addEffect(EffectScope effectScope, AbstractEffect effect) {
-        effects.computeIfAbsent(effectScope, k -> new ArrayList<>()).add(effect);
-    }
-
-    /**
-     * Gets the skill effects.
-     *
-     * @param effectScope the effect scope
-     * @return the list of effects for the give scope
-     */
-    public List<AbstractEffect> getEffects(EffectScope effectScope) {
-        return effects.get(effectScope);
-    }
-
-    /**
-     * Verify if this skill has effects for the given scope.
-     *
-     * @param effectScope the effect scope
-     * @return {@code true} if this skill has effects for the given scope, {@code false} otherwise
-     */
-    public boolean hasEffects(EffectScope effectScope) {
-        final List<AbstractEffect> effects = this.effects.get(effectScope);
-        return (effects != null) && !effects.isEmpty();
-    }
-
-    /**
-     * Applies the effects from this skill to the target for the given effect scope.
-     *
-     * @param effectScope          the effect scope
-     * @param info                 the buff info
-     * @param applyInstantEffects  if {@code true} instant effects will be applied to the effected
-     * @param addContinuousEffects if {@code true} continuous effects will be applied to the effected
-     */
     public void applyEffectScope(EffectScope effectScope, BuffInfo info, boolean applyInstantEffects, boolean addContinuousEffects) {
-        if ((effectScope != null) && hasEffects(effectScope)) {
-            for (AbstractEffect effect : getEffects(effectScope)) {
+        if (nonNull(effectScope) && hasEffects(effectScope)) {
+            for (var effect : getEffects(effectScope)) {
                 if (effect.isInstant()) {
                     if (applyInstantEffects && effect.calcSuccess(info.getEffector(), info.getEffected(), info.getSkill())) {
                         effect.instant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
@@ -918,38 +285,14 @@ public final class Skill implements IIdentifiable, Cloneable {
         }
     }
 
-    /**
-     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
-     * Simplify the calls.
-     *
-     * @param effector the caster of the skill
-     * @param effected the target of the effect
-     */
     public void applyEffects(Creature effector, Creature effected) {
         applyEffects(effector, effected, false, false, true, 0, null);
     }
 
-    /**
-     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
-     * Simplify the calls.
-     *
-     * @param effector the caster of the skill
-     * @param effected the target of the effect
-     * @param item
-     */
-    public void applyEffects(Creature effector, Creature effected, Item item) {
+    private void applyEffects(Creature effector, Creature effected, Item item) {
         applyEffects(effector, effected, false, false, true, 0, item);
     }
 
-    /**
-     * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int, Item)}.<br>
-     * Simplify the calls, allowing abnormal time time customization.
-     *
-     * @param effector     the caster of the skill
-     * @param effected     the target of the effect
-     * @param instant      if {@code true} instant effects will be applied to the effected
-     * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
-     */
     public void applyEffects(Creature effector, Creature effected, boolean instant, int abnormalTime) {
         applyEffects(effector, effected, false, false, instant, abnormalTime, null);
     }
@@ -963,11 +306,9 @@ public final class Skill implements IIdentifiable, Cloneable {
      * @param passive      if {@code true} passive effects will be applied to the effector
      * @param instant      if {@code true} instant effects will be applied to the effected
      * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
-     * @param item
      */
     public void applyEffects(Creature effector, Creature effected, boolean self, boolean passive, boolean instant, int abnormalTime, Item item) {
-        // null targets cannot receive any effects.
-        if (effected == null) {
+        if (isNull(effected)) {
             return;
         }
 
@@ -1045,15 +386,8 @@ public final class Skill implements IIdentifiable, Cloneable {
         }
     }
 
-    /**
-     * Applies the channeling effects from this skill to the target.
-     *
-     * @param effector the caster of the skill
-     * @param effected the target of the effect
-     */
     public void applyChannelingEffects(Creature effector, Creature effected) {
-        // null targets cannot receive any effects.
-        if (effected == null) {
+        if (isNull(effected)) {
             return;
         }
 
@@ -1061,46 +395,19 @@ public final class Skill implements IIdentifiable, Cloneable {
         applyEffectScope(EffectScope.CHANNELING, info, true, true);
     }
 
-    /**
-     * Activates a skill for the given creature and targets.
-     *
-     * @param caster  the caster
-     * @param targets the targets
-     */
     public void activateSkill(Creature caster, WorldObject... targets) {
         activateSkill(caster, null, targets);
     }
 
-    /**
-     * Activates a skill for the given creature and targets.
-     *
-     * @param caster  the caster
-     * @param item
-     * @param targets the targets
-     */
     public void activateSkill(Creature caster, Item item, WorldObject... targets) {
         activateSkill(caster, null, item, targets);
     }
 
-    /**
-     * Activates a skill for the given cubic and targets.
-     *
-     * @param cubic   the cubic
-     * @param targets the targets
-     */
     public void activateSkill(CubicInstance cubic, WorldObject... targets) {
         activateSkill(cubic.getOwner(), cubic, null, targets);
     }
 
-    /**
-     * Activates the skill to the targets.
-     *
-     * @param caster  the caster
-     * @param cubic   the cubic that cast the skill, can be {@code null}
-     * @param item
-     * @param targets the targets
-     */
-    public final void activateSkill(Creature caster, CubicInstance cubic, Item item, WorldObject... targets) {
+    private void activateSkill(Creature caster, CubicInstance cubic, Item item, WorldObject... targets) {
         for (WorldObject targetObject : targets) {
             if (!isCreature(targetObject)) {
                 continue;
@@ -1122,7 +429,6 @@ public final class Skill implements IIdentifiable, Cloneable {
             }
         }
 
-        // Self Effect
         if (hasEffects(EffectScope.SELF)) {
             if (caster.isAffectedBySkill(id)) {
                 caster.stopSkillEffects(true, id);
@@ -1143,62 +449,7 @@ public final class Skill implements IIdentifiable, Cloneable {
         }
     }
 
-    /**
-     * Adds a condition to the condition list for the given condition scope.
-     *
-     * @param skillConditionScope the condition scope
-     * @param skillCondition      the condition
-     */
-    public void addCondition(SkillConditionScope skillConditionScope, SkillCondition skillCondition) {
-        conditions.computeIfAbsent(skillConditionScope, k -> new ArrayList<>()).add(skillCondition);
-    }
-
-    /**
-     * Checks the conditions of this skills for the given condition scope.
-     *
-     * @param skillConditionScope the condition scope
-     * @param caster              the caster
-     * @param target              the target
-     * @return {@code false} if at least one condition returns false, {@code true} otherwise
-     */
-    public boolean checkConditions(SkillConditionScope skillConditionScope, Creature caster, WorldObject target) {
-        return conditions.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
-    }
-
-    public boolean canBeDispelled() {
-        return canBeDispelled;
-    }
-
-    /**
-     * Verify if the skill can be stolen.
-     *
-     * @return {@code true} if skill can be stolen, {@code false} otherwise
-     */
-    public boolean canBeStolen() {
-        return !isPassive() && !isToggle() && !debuff && !irreplacableBuff && !isHeroSkill() && !isGMSkill() && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispelled;
-    }
-
-    public boolean isClanSkill() {
-        return SkillTreesData.getInstance().isClanSkill(id, level);
-    }
-
-    public boolean isExcludedFromCheck() {
-        return excludedFromCheck;
-    }
-
-    public boolean isWithoutAction() {
-        return withoutAction;
-    }
-
-    public void setWithoutAction(boolean withoutAction) {
-        this.withoutAction = withoutAction;
-    }
-
-    /**
-     * @param effectTypes Effect types to check if are present on this skill effects.
-     * @return {@code true} if at least one of specified {@link EffectType} types is present on this skill effects, {@code false} otherwise.
-     */
-    public boolean hasEffectType(EffectType... effectTypes) {
+    public boolean hasAnyEffectType(EffectType... effectTypes) {
         if(isNull(effectTypes)) {
             return false;
         }
@@ -1219,29 +470,475 @@ public final class Skill implements IIdentifiable, Cloneable {
         return false;
     }
 
-    /**
-     * @param effectScope Effect Scope to look inside for the specific effect type.
-     * @param effectType  Effect type to check if its present on this skill effects.
-     * @param effectTypes Effect types to check if are present on this skill effects.
-     * @return {@code true} if at least one of specified {@link EffectType} types is present on this skill effects, {@code false} otherwise.
-     */
-    public boolean hasEffectType(EffectScope effectScope, EffectType effectType, EffectType... effectTypes) {
-        if (hasEffects(effectScope)) {
+    public boolean hasAnyEffectType(EffectScope effectScope, EffectType... effectTypes) {
+        if (hasEffects(effectScope) || isNull(effectTypes)) {
             return false;
         }
 
-        for (AbstractEffect effect : effects.get(effectScope)) {
-            if (effectType == effect.getEffectType()) {
-                return true;
-            }
+        return effects.get(effectScope).stream().anyMatch(e -> contains(effectTypes, e.getEffectType()));
+    }
 
-            for (EffectType type : effectTypes) {
-                if (type == effect.getEffectType()) {
-                    return true;
-                }
-            }
-        }
-        return false;
+    public void addEffect(EffectScope effectScope, AbstractEffect effect) {
+        effects.computeIfAbsent(effectScope, k -> new ArrayList<>()).add(effect);
+    }
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    public int getMaxLevel() {
+        return maxLevel;
+    }
+
+    void setAttributeType(AttributeType type) {
+        attributeType = type;
+    }
+    public AttributeType getAttributeType() {
+        return attributeType;
+    }
+
+    void setAttributeValue(int value) {
+        attributeValue = value;
+    }
+
+    public int getAttributeValue() {
+        return attributeValue;
+    }
+
+    public boolean allowOnTransform() {
+        return isPassive();
+    }
+
+    void setAbnormalInstant(boolean instant) {
+        this.isAbnormalInstant = instant;
+    }
+
+    public boolean isAbnormalInstant() {
+        return isAbnormalInstant;
+    }
+
+    void setAbnormalType(AbnormalType type) {
+        abnormalType = type;
+    }
+
+    public AbnormalType getAbnormalType() {
+        return abnormalType;
+    }
+
+    void setAbnormalSubordination(AbnormalType subordination) {
+        subordinationAbnormalType = subordination;
+    }
+
+    public AbnormalType getSubordinationAbnormalType() {
+        return subordinationAbnormalType;
+    }
+
+    void setAbnormalLevel(int level) {
+        abnormalLvl = level;
+    }
+
+    public int getAbnormalLvl() {
+        return abnormalLvl;
+    }
+
+    void setAbnormalTime(int time) {
+        abnormalTime = time;
+    }
+
+    /**
+     * Gets the skill abnormal time.<br>
+     * Is the base to calculate the duration of the continuous effects of this skill.
+     *
+     * @return the abnormal time
+     */
+    public int getAbnormalTime() {
+        return abnormalTime;
+    }
+
+    void setAbnormalVisualEffect(AbnormalVisualEffect visual) {
+        abnormalVisualEffect = visual;
+    }
+
+    public AbnormalVisualEffect getAbnormalVisualEffect() {
+        return abnormalVisualEffect;
+    }
+
+    public boolean hasAbnormalVisualEffect() {
+        return falseIfNullOrElse(abnormalVisualEffect, visual -> visual != AbnormalVisualEffect.NONE);
+    }
+
+    public int getMagicLevel() {
+        return magicLevel;
+    }
+
+    void setMagicLevel(int level) {
+        magicLevel = level;
+    }
+
+    public int getActivateRate() {
+        return activateRate;
+    }
+
+    void setActivateRate(int rate) {
+        activateRate = rate;
+    }
+
+    public int getMinChance() {
+        return minChance;
+    }
+
+    public int getMaxChance() {
+        return maxChance;
+    }
+
+    void setNextAction(NextActionType action) {
+        nextAction = action;
+    }
+
+    public NextActionType getNextAction() {
+        return nextAction;
+    }
+
+    void setCastRange(int range) {
+        castRange = range;
+    }
+
+    public int getCastRange() {
+        return castRange;
+    }
+
+    void setEffectRange(int effectRange) {
+        this.effectRange = effectRange;
+    }
+
+    public int getEffectRange() {
+        return effectRange;
+    }
+
+    void setHpConsume(int consume) {
+        hpConsume = consume;
+    }
+
+    public int getHpConsume() {
+        return hpConsume;
+    }
+
+    public boolean isDebuff() {
+        return debuff;
+    }
+
+    public int getDisplayId() {
+        return displayId;
+    }
+
+    void setDisplayId(int id) {
+        displayId = id;
+    }
+
+    public int getDisplayLevel() {
+        return level;
+    }
+
+    public BasicProperty getBasicProperty() {
+        return basicProperty;
+    }
+
+    public int getItemConsumeCount() {
+        return itemConsumeCount;
+    }
+
+    void setItemConsumeCount(int count) {
+        itemConsumeCount = count;
+    }
+
+    public int getItemConsumeId() {
+        return itemConsumeId;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getSubLevel() {
+        return 0;
+    }
+
+    public SkillType getSkillType() {
+        return type;
+    }
+
+    public boolean isPhysical() {
+        return type == SkillType.PHYSIC;
+    }
+
+    public boolean isMagic() {
+        return type == SkillType.MAGIC;
+    }
+
+    public boolean isStatic() {
+        return type == SkillType.STATIC;
+    }
+
+    public boolean isDance() {
+        return type == SkillType.DANCE;
+    }
+
+    public boolean isStaticReuse() {
+        return staticReuse;
+    }
+
+    void setStaticReuse(boolean staticReuse) {
+        this.staticReuse = staticReuse;
+    }
+
+    public int getMpConsume() {
+        return manaConsume;
+    }
+
+    public int getMpInitialConsume() {
+        return manaInitialConsume;
+    }
+
+    public int getMpPerChanneling() {
+        return mpPerChanneling;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getReuseDelay() {
+        return reuseDelay;
+    }
+
+    public int getReuseDelayGroup() {
+        return reuseDelayGroup;
+    }
+
+    public long getReuseHashCode() {
+        return reuseHashCode;
+    }
+
+    public int getHitTime() {
+        return hitTime;
+    }
+
+    void setHitTime(int time) {
+        hitTime = time;
+    }
+
+    public double getHitCancelTime() {
+        return hitCancelTime;
+    }
+
+    void setHitCancelTime(double time) {
+        hitCancelTime = time;
+    }
+
+    public int getCoolTime() {
+        return coolTime;
+    }
+
+    void setCoolTime(int time) {
+        coolTime = time;
+    }
+
+    public TargetType getTargetType() {
+        return targetType;
+    }
+
+    void setTargetType(TargetType type) {
+        targetType = type;
+    }
+
+    void setAffectScope(AffectScope scope) {
+        affectScope = scope;
+    }
+
+    public AffectObject getAffectObject() {
+        return affectObject;
+    }
+
+    void setAffectObject(AffectObject object) {
+        affectObject = object;
+    }
+
+    public int getAffectRange() {
+        return affectRange;
+    }
+
+    void setAffectRange(int range) {
+        affectRange = range;
+    }
+
+    /**
+     * @return the maximum amount of targets the skill can affect or 0 if unlimited.
+     */
+    public int getAffectLimit() {
+        return (affectMin > 0 || affectRandom > 0) ? affectMin + Rnd.get(affectRandom) : 0;
+    }
+
+    public boolean isActive() {
+        return operateType.isActive();
+    }
+
+    public boolean isPassive() {
+        return operateType.isPassive();
+    }
+
+    public boolean isToggle() {
+        return operateType.isToggle();
+    }
+
+    public boolean isAura() {
+        return operateType.isAura();
+    }
+
+    public boolean isHidingMessages() {
+        return operateType.isHidingMessages();
+    }
+
+    public boolean isNotBroadcastable() {
+        return operateType.isNotBroadcastable();
+    }
+
+    public boolean isContinuous() {
+        return operateType.isContinuous() || isSelfContinuous();
+    }
+
+    public boolean isFlyType() {
+        return operateType.isFlyType();
+    }
+
+    public boolean isSelfContinuous() {
+        return operateType.isSelfContinuous();
+    }
+
+    public boolean isChanneling() {
+        return operateType.isChanneling();
+    }
+
+    public boolean isTriggeredSkill() {
+        return isTriggeredSkill;
+    }
+
+    public SkillOperateType getOperateType() {
+        return operateType;
+    }
+
+    public boolean isTransformation() {
+        return abnormalType == AbnormalType.TRANSFORM;
+    }
+
+    public int getEffectPoint() {
+        return effectPoint;
+    }
+
+    void setEffectPoint(int effectPoints) {
+        effectPoint = effectPoints;
+    }
+
+    public boolean useSoulShot() {
+        return hasAnyEffectType(EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK);
+    }
+
+    public boolean useSpiritShot() {
+        return type == SkillType.MAGIC;
+    }
+
+    public boolean isHeroSkill() {
+        return SkillTreesData.getInstance().isHeroSkill(id, level);
+    }
+
+    public boolean isGMSkill() {
+        return SkillTreesData.getInstance().isGMSkill(id, level);
+    }
+
+    public boolean is7Signs() {
+        return (id > 4360) && (id < 4367);
+    }
+
+    public boolean isHealingPotionSkill() {
+        return abnormalType == AbnormalType.HP_RECOVER;
+    }
+
+    public int getMaxSoulConsumeCount() {
+        return soulMaxConsume;
+    }
+
+    public int getChargeConsumeCount() {
+        return chargeConsume;
+    }
+
+    public boolean isStayAfterDeath() {
+        return stayAfterDeath || irreplacableBuff;
+    }
+
+    void setStayAfterDeath(boolean stayAfterDeath) {
+        this.stayAfterDeath = stayAfterDeath;
+    }
+
+    public boolean isBad() {
+        return effectPoint < 0;
+    }
+
+    /**
+     * Gets the skill effects.
+     *
+     * @param effectScope the effect scope
+     * @return the list of effects for the give scope
+     */
+    public List<AbstractEffect> getEffects(EffectScope effectScope) {
+        return effects.get(effectScope);
+    }
+
+    /**
+     * Verify if this skill has effects for the given scope.
+     *
+     * @param effectScope the effect scope
+     * @return {@code true} if this skill has effects for the given scope, {@code false} otherwise
+     */
+    public boolean hasEffects(EffectScope effectScope) {
+        return falseIfNullOrElse(effects.get(effectScope), Predicate.not(List::isEmpty));
+    }
+
+    /**
+     * Adds a condition to the condition list for the given condition scope.
+     *
+     * @param skillConditionScope the condition scope
+     * @param skillCondition      the condition
+     */
+    public void addCondition(SkillConditionScope skillConditionScope, SkillCondition skillCondition) {
+        conditions.computeIfAbsent(skillConditionScope, k -> new ArrayList<>()).add(skillCondition);
+    }
+
+    public boolean canBeDispelled() {
+        return canBeDispelled;
+    }
+
+    public boolean canBeStolen() {
+        return !isPassive() && !isToggle() && !debuff && !irreplacableBuff && !isHeroSkill() && !isGMSkill() && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispelled;
+    }
+
+    public boolean isClanSkill() {
+        return SkillTreesData.getInstance().isClanSkill(id, level);
+    }
+
+    public boolean isExcludedFromCheck() {
+        return excludedFromCheck;
+    }
+
+    public boolean isWithoutAction() {
+        return withoutAction;
+    }
+
+    void setWithoutAction(boolean withoutAction) {
+        this.withoutAction = withoutAction;
     }
 
     public String getIcon() {
@@ -1311,6 +1008,10 @@ public final class Skill implements IIdentifiable, Cloneable {
         this.traitType = trait;
     }
 
+    public TraitType getTrait() {
+        return traitType;
+    }
+
     void setProperty(BasicProperty property) {
         basicProperty = property;
     }
@@ -1319,20 +1020,40 @@ public final class Skill implements IIdentifiable, Cloneable {
         levelBonusRate = rate;
     }
 
+    public int getLevelBonusRate() {
+        return levelBonusRate;
+    }
+
     void setRemoveOnAction(boolean removeOnAction) {
         removedOnAnyActionExceptMove = removeOnAction;
+    }
+
+    public boolean isRemovedOnAnyActionExceptMove() {
+        return removedOnAnyActionExceptMove;
     }
 
     void setRemoveOnDamage(boolean removeOnDamage) {
         removedOnDamage = removeOnDamage;
     }
 
+    public boolean isRemovedOnDamage() {
+        return removedOnDamage;
+    }
+
     void setBlockedOnOlympiad(boolean blockedOnOlympiad) {
         this.blockedInOlympiad = blockedOnOlympiad;
     }
 
+    public boolean isBlockedInOlympiad() {
+        return blockedInOlympiad;
+    }
+
     void setSuicide(boolean suicide) {
         this.isSuicideAttack = suicide;
+    }
+
+    public boolean isSuicideAttack() {
+        return isSuicideAttack;
     }
 
     void setTriggered(boolean triggered) {
@@ -1387,20 +1108,16 @@ public final class Skill implements IIdentifiable, Cloneable {
         this.affectRandom = affectRandom;
     }
 
-    void setAbnormalVisual(AbnormalVisualEffect visual) {
-        abnormalVisualEffect = visual;
-    }
-
-    void setAbnormalSubordination(AbnormalType subordination) {
-        subordinationAbnormalType = subordination;
-    }
-
     void setResistAbnormals(Set<AbnormalType> abnormals) {
         this.abnormalResists = abnormals;
     }
 
     void setChannelingSkill(int skill) {
         this.channelingSkillId = skill;
+    }
+
+    public int getChannelingSkillId() {
+        return channelingSkillId;
     }
 
     void setChannelingMpConsume(int mpConsume) {
@@ -1455,10 +1172,6 @@ public final class Skill implements IIdentifiable, Cloneable {
         return fanAngle;
     }
 
-    void setAbnormalLevel(int level) {
-        abnormalLvl = level;
-    }
-
     void setAbnormalChance(int chance) {
         activateRate = chance;
     }
@@ -1478,6 +1191,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     @Override
     public String toString() {
-        return String.format("Skill %s (%d, %d)", name, id, level);
+        return format("Skill %s (%d, %d)", name, id, level);
     }
 }
