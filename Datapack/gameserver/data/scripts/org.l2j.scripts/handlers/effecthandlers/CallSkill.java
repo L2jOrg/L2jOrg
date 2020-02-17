@@ -1,13 +1,12 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
 import static java.util.Objects.nonNull;
@@ -39,7 +38,7 @@ public final class CallSkill extends AbstractEffect {
 			final int knownLevel = effector.getSkillLevel(this.skill.getSkillId());
 
 			if (knownLevel > 0) {
-				triggerSkill = SkillEngine.getInstance().getSkill(this.skill.getSkillId(), knownLevel, this.skill.getSkillSubLevel());
+				triggerSkill = SkillEngine.getInstance().getSkill(this.skill.getSkillId(), knownLevel);
 			} else {
 				LOGGER.warn("Player {} called unknown skill {} triggered by {} CallSkill.", effector, this.skill, skill);
 			}

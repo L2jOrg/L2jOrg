@@ -22,7 +22,7 @@ public class SkillCoolTime extends ServerPacket {
         _currentTime = System.currentTimeMillis();
         for (TimeStamp ts : player.getSkillReuseTimeStamps().values())
         {
-            if ((_currentTime < ts.getStamp()) && !SkillEngine.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl(), ts.getSkillSubLvl()).isNotBroadcastable())
+            if ((_currentTime < ts.getStamp()) && !SkillEngine.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl()).isNotBroadcastable())
             {
                 _skillReuseTimeStamps.add(ts);
             }

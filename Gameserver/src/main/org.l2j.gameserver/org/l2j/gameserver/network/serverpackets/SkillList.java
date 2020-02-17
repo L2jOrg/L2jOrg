@@ -23,7 +23,7 @@ public final class SkillList extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.SKILL_LIST);
-        _skills.sort(Comparator.comparing(s -> SkillEngine.getInstance().getSkill(s.id, s.level, s.subLevel).isToggle() ? 1 : 0));
+        _skills.sort(Comparator.comparing(s -> SkillEngine.getInstance().getSkill(s.id, s.level).isToggle() ? 1 : 0));
         writeInt(_skills.size());
         for (Skill temp : _skills) {
             writeInt(temp.passive ? 1 : 0);

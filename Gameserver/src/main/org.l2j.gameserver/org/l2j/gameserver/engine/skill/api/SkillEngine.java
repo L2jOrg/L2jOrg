@@ -56,11 +56,6 @@ public class SkillEngine extends EffectParser {
         return skills.get(skillHashCode(id, level));
     }
 
-    // TODO Remove skill enchant feature
-    public Skill getSkill(int id, int level, int subLevel) {
-        return getSkill(id, level);
-    }
-
     public void addSiegeSkills(Player player) {
         player.addSkill(CommonSkill.IMPRIT_OF_LIGHT.getSkill(), false);
         player.addSkill(CommonSkill.IMPRIT_OF_DARKNESS.getSkill(), false);

@@ -37,7 +37,7 @@ public final class RequestExEnchantSkillInfo extends ClientPacket {
             return;
         }
 
-        final Skill skill = SkillEngine.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
+        final Skill skill = SkillEngine.getInstance().getSkill(_skillId, _skillLvl);
         if ((skill == null) || (skill.getId() != _skillId)) {
             return;
         }
