@@ -38,7 +38,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<reuse type="1">
+			<reuse skill-type="MAGIC">
 				<power initial="-15.0"/>
 			</reuse>
 		</effects>
@@ -81,7 +81,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<reuse type="3">
+			<reuse skill-type="MAGIC">
 				<power initial="-15.0"/>
 			</reuse>
 		</effects>
@@ -124,7 +124,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power initial="-15.0"/>
 			</reuse>
 		</effects>
@@ -2026,7 +2026,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-4.0">
 					<value level="2">-7.0</value>
 					<value level="3">-10.0</value>
@@ -2053,7 +2053,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-10.0">
 					<value level="2">-15.0</value>
 					<value level="3">-20.0</value>
@@ -2075,7 +2075,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<magic-cost type="3">
+			<magic-cost type="DANCE">
 				<power initial="-4.0">
 					<value level="2">-7.0</value>
 					<value level="3">-10.0</value>
@@ -2097,7 +2097,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-4.0">
 					<value level="2">-7.0</value>
 					<value level="2">-15.0</value>

@@ -1227,7 +1227,7 @@
 			<stat-modify stat="FIRE_RES">
 				<power initial="-50.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="200.0"/>
 			</magic-cost>
 		</effects>

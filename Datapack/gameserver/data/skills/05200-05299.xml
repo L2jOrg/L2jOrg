@@ -2292,7 +2292,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="2">50.0</value>
 					<value level="4">600.0</value>

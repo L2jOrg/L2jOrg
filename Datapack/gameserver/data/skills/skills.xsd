@@ -201,15 +201,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="SkillType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="PHYSIC"/>
-			<xs:enumeration value="MAGIC"/>
-			<xs:enumeration value="STATIC"/>
-			<xs:enumeration value="DANCE"/>
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="TraitType">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="NONE"/>

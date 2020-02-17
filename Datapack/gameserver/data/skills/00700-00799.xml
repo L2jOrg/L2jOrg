@@ -161,7 +161,7 @@
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-5.0"/>
 			</magic-cost>
 		</effects>
@@ -2138,7 +2138,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<skill-evasion type="0">
+			<skill-evasion type="PHYSIC">
 				<power initial="40.0"/>
 			</skill-evasion>
 			<speed>
@@ -2176,7 +2176,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<skill-evasion type="0">
+			<skill-evasion type="PHYSIC">
 				<power initial="60.0"/>
 			</skill-evasion>
 			<speed>
@@ -2214,7 +2214,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<skill-evasion type="0">
+			<skill-evasion type="PHYSIC">
 				<power initial="10.0"/>
 			</skill-evasion>
 			<speed>

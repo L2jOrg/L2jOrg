@@ -405,7 +405,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<reuse type="1">
+			<reuse skill-type="MAGIC">
 				<power initial="-30.0">
 					<value level="2">-32.0</value>
 					<value level="3">-35.0</value>

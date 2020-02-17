@@ -111,7 +111,7 @@
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
 				<power initial="4.0"/>
 			</stat-modify>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power initial="-5.0"/>
 			</reuse>
 		</effects>

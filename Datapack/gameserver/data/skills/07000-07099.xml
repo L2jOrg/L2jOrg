@@ -473,7 +473,7 @@
 					<value level="4">100.0</value>
 				</power>
 			</stat-modify>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power initial="-99.0"/>
 			</reuse>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1269,7 +1269,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-10.0"/>
 			</magic-cost>
 		</effects>
@@ -1331,7 +1331,7 @@
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-5.0"/>
 			</magic-cost>
 		</effects>

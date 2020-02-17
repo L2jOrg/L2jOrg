@@ -317,7 +317,7 @@
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
 				<power initial="20.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="3">-5.0</value>
 				</power>
@@ -406,7 +406,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<skill-evasion type="0">
+			<skill-evasion type="PHYSIC">
 				<power>
 					<value level="2">25.0</value>
 				</power>

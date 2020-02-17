@@ -454,14 +454,14 @@
 					<value level="7">20.0</value>
 				</power>
 			</stat-hp-based>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="5">-2.0</value>
 					<value level="6">-4.0</value>
 					<value level="7">-5.0</value>
 				</power>
 			</magic-cost>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power>
 					<value level="7">-3.0</value>
 				</power>

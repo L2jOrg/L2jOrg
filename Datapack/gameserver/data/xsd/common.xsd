@@ -78,6 +78,19 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="SkillType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="PHYSIC"/>
+            <xs:enumeration value="MAGIC"/>
+            <xs:enumeration value="STATIC"/>
+            <xs:enumeration value="DANCE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SkillTypeList">
+        <xs:list itemType="SkillType"/>
+    </xs:simpleType>
+
     <xs:simpleType name="ResidenceType">
         <xs:restriction base="xs:token">
             <xs:enumeration value="CASTLE"/>

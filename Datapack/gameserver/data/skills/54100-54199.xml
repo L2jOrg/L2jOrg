@@ -256,7 +256,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-20.0"/>
 			</magic-cost>
 		</effects>

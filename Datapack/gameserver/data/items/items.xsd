@@ -23,7 +23,7 @@
                     <xs:element name="damage" type="WeaponDamage" minOccurs="0"/>
                     <xs:element name="consume" type="WeaponConsume"/>
                     <xs:element name="stats" minOccurs="0" type="ItemStats"/>
-                    <xs:element name="skills" minOccurs="0" type="SkillsType"/>
+                    <xs:element name="skills" minOccurs="0" type="ItemSkillsType"/>
                 </xs:sequence>
                 <xs:attribute name="type" type="WeaponType" use="required"/>
                 <xs:attribute name="body-part" type="WeaponBodyPart"/>
@@ -62,7 +62,7 @@
                     <xs:element name="attributes" type="ArmorAttributes"/>
                     <xs:element name="crystal" type="ItemCrystal"/>
                     <xs:element name="stats" minOccurs="0" type="ItemStats"/>
-                    <xs:element name="skills" minOccurs="0" type="SkillsType"/>
+                    <xs:element name="skills" minOccurs="0" type="ItemSkillsType"/>
                 </xs:sequence>
                 <xs:attribute name="type" type="ArmorType" use="required"/>
                 <xs:attribute name="body-part" type="ArmorBodyPart" use="required"/>
@@ -160,7 +160,7 @@
 
     <xs:complexType name="SkillReducer">
         <xs:sequence>
-            <xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
+            <xs:element name="skill" type="ItemSkillType" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="type" type="xs:token" default="ItemSkills"/>
     </xs:complexType>
@@ -206,19 +206,13 @@
         </xs:attribute>
     </xs:complexType>
 
-    <xs:complexType name="SkillsType">
+    <xs:complexType name="ItemSkillsType">
         <xs:sequence>
-            <xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
+            <xs:element name="skill" type="ItemSkillType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="unequipSkillsType">
-        <xs:sequence>
-            <xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="SkillType">
+    <xs:complexType name="ItemSkillType">
         <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         <xs:attribute name="level" type="xs:positiveInteger" default="1"/>
         <xs:attribute name="type" default="NORMAL">

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -9,13 +10,14 @@ import org.l2j.gameserver.util.MathUtil;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class Reuse extends AbstractEffect {
-    public final int magicType;
+    public final SkillType magicType;
     public final double power;
 
     public Reuse(StatsSet params) {
-        magicType = params.getInt("type", 0);
+        magicType = params.getEnum("skill-type", SkillType.class);
         power = params.getDouble("power", 0);
     }
 

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -11,11 +12,11 @@ import org.l2j.gameserver.engine.skill.api.Skill;
  * @author Sdw
  */
 public class SkillEvasion extends AbstractEffect {
-	public final int magicType;
+	public final SkillType magicType;
 	public final double power;
 	
 	public SkillEvasion(StatsSet params){
-		magicType = params.getInt("type", 0);
+		magicType = params.getEnum("type", SkillType.class);
 		power = params.getDouble("power", 0);
 	}
 	

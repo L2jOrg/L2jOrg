@@ -1,6 +1,8 @@
 package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.EffectList;
@@ -8,11 +10,10 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.model.stats.*;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.util.MathUtil;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,6 +23,7 @@ import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 import java.util.stream.Stream;
 
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 public class CreatureStats {
@@ -29,9 +31,9 @@ public class CreatureStats {
     private final Map<Stat, Double> statsAdd = new EnumMap<>(Stat.class);
     private final Map<Stat, Double> _statsMul = new EnumMap<>(Stat.class);
     private final Map<Stat, Map<MoveType, Double>> _moveTypeStats = new ConcurrentHashMap<>();
-    private final Map<Integer, Double> _reuseStat = new ConcurrentHashMap<>();
-    private final Map<Integer, Double> _mpConsumeStat = new ConcurrentHashMap<>();
-    private final Map<Integer, LinkedList<Double>> _skillEvasionStat = new ConcurrentHashMap<>();
+    private final Map<SkillType, Double> reuseStat = Collections.synchronizedMap(new EnumMap<>(SkillType.class));
+    private final Map<SkillType, Double> mpConsumeStat = Collections.synchronizedMap(new EnumMap<>(SkillType.class));
+    private final Map<SkillType, Stack<Double>> skillEvasionStat = Collections.synchronizedMap(new EnumMap<>(SkillType.class));
     private final Map<Stat, Map<Position, Double>> _positionStats = new ConcurrentHashMap<>();
     private final Deque<StatsHolder> _additionalAdd = new ConcurrentLinkedDeque<>();
     private final Deque<StatsHolder> _additionalMul = new ConcurrentLinkedDeque<>();
@@ -374,7 +376,7 @@ public class CreatureStats {
             }
         }
 
-        return (int) (mpConsume * getMpConsumeTypeValue(skill.getSkillType().ordinal()));
+        return (int) (mpConsume * getMpConsumeTypeValue(skill.getSkillType()));
     }
 
     /**
@@ -839,37 +841,33 @@ public class CreatureStats {
         _moveTypeStats.computeIfAbsent(stat, key -> new ConcurrentHashMap<>()).merge(type, value, MathUtil::add);
     }
 
-    public double getReuseTypeValue(int magicType) {
-        return _reuseStat.getOrDefault(magicType, 1d);
+    public double getReuseTypeValue(SkillType magicType) {
+        return reuseStat.getOrDefault(magicType, 1d);
     }
 
-    public void mergeReuseTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func) {
-        _reuseStat.merge(magicType, value, func);
+    public void mergeReuseTypeValue(SkillType magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func) {
+        reuseStat.merge(magicType, value, func);
     }
 
-    public double getMpConsumeTypeValue(int magicType) {
-        return _mpConsumeStat.getOrDefault(magicType, 1d);
+    public double getMpConsumeTypeValue(SkillType magicType) {
+        return mpConsumeStat.getOrDefault(magicType, 1d);
     }
 
-    public void mergeMpConsumeTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func) {
-        _mpConsumeStat.merge(magicType, value, func);
+    public void mergeMpConsumeTypeValue(SkillType magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func) {
+        mpConsumeStat.merge(magicType, value, func);
     }
 
-    public double getSkillEvasionTypeValue(int magicType) {
-        final LinkedList<Double> skillEvasions = _skillEvasionStat.get(magicType);
-        if ((skillEvasions != null) && !skillEvasions.isEmpty()) {
-            return skillEvasions.peekLast();
-        }
-        return 0d;
+    public double getSkillEvasionTypeValue(SkillType magicType) {
+        var stack = skillEvasionStat.get(magicType);
+        return isNullOrEmpty(stack) ? 0 : stack.pop();
     }
 
-    public void addSkillEvasionTypeValue(int magicType, double value) {
-        _skillEvasionStat.computeIfAbsent(magicType, k -> new LinkedList<>()).add(value);
+    public void addSkillEvasionTypeValue(SkillType magicType, double value) {
+        skillEvasionStat.computeIfAbsent(magicType, k -> new Stack<>()).add(value);
     }
 
-    public void removeSkillEvasionTypeValue(int magicType, double value) {
-        _skillEvasionStat.computeIfPresent(magicType, (k, v) ->
-        {
+    public void removeSkillEvasionTypeValue(SkillType magicType, double value) {
+        skillEvasionStat.computeIfPresent(magicType, (k, v) -> {
             v.remove(value);
             return !v.isEmpty() ? v : null;
         });
@@ -895,7 +893,7 @@ public class CreatureStats {
      * @return the time in milliseconds this skill is being under reuse.
      */
     public int getReuseTime(Skill skill) {
-        return (skill.isStaticReuse() || skill.isStatic()) ? skill.getReuseDelay() : (int) (skill.getReuseDelay() * getReuseTypeValue(skill.getSkillType().ordinal()));
+        return (skill.isStaticReuse() || skill.isStatic()) ? skill.getReuseDelay() : (int) (skill.getReuseDelay() * getReuseTypeValue(skill.getSkillType()));
     }
 
     /**

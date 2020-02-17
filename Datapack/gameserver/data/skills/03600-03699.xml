@@ -356,7 +356,7 @@
 			<stat-modify stat="DARK_RES">
 				<power initial="15.0"/>
 			</stat-modify>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power initial="-5.0"/>
 			</reuse>
 		</effects>
@@ -455,7 +455,7 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="2">-5.0</value>
 				</power>
@@ -496,7 +496,7 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="2">-5.0</value>
 				</power>
@@ -537,7 +537,7 @@
 			<stat-modify stat="REGENERATE_CP_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="2">-5.0</value>
 				</power>

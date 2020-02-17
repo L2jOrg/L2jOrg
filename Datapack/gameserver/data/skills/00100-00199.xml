@@ -1098,7 +1098,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <skill-evasion type="0">
+            <skill-evasion type="PHYSIC">
                 <power initial="25.0">
                     <value level="2">40.0</value>
                 </power>
@@ -3005,7 +3005,7 @@
         </attributes>
         <target/>
         <effects>
-            <reuse type="1">
+            <reuse skill-type="MAGIC">
                 <power initial="-10.0">
                     <value level="2">-15.0</value>
                     <value level="3">-20.0</value>
@@ -3809,7 +3809,7 @@
                     <value level="3">5.0</value>
                 </power>
             </stat-hp-based>
-            <skill-evasion type="0">
+            <skill-evasion type="PHYSIC">
                 <power initial="3.0">
                     <value level="2">6.0</value>
                     <value level="3">10.0</value>

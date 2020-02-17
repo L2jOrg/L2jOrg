@@ -1127,7 +1127,7 @@
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
 				<power initial="10.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-100.0"/>
 			</magic-cost>
 		</effects>

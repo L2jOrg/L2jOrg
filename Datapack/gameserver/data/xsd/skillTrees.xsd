@@ -16,7 +16,7 @@
 
 	<xs:complexType name="SkillTreeType">
 		<xs:sequence>
-			<xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
+			<xs:element name="skill" type="LearnSkillType" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="classId" type="ClassId"/>
 		<xs:attribute name="parentClassId" type="ClassId"/>
@@ -56,7 +56,7 @@
 		</xs:attribute>
 	</xs:complexType>
 
-	<xs:complexType name="SkillType">
+	<xs:complexType name="LearnSkillType">
 		<xs:sequence>
 			<xs:element name="subClassConditions" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>

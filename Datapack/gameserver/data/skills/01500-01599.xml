@@ -217,7 +217,7 @@
 				<power initial="10.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<reuse type="1">
+			<reuse skill-type="MAGIC">
 				<power initial="-10.0">
 					<value level="2">-15.0</value>
 					<value level="3">-20.0</value>
@@ -259,7 +259,7 @@
 			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">
 				<power initial="50.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-70.0"/>
 			</magic-cost>
 		</effects>

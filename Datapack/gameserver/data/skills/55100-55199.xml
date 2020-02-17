@@ -931,7 +931,7 @@
 			<stat-modify stat="REGENERATE_MP_RATE">
 				<power initial="0.5"/>
 			</stat-modify>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="3.0"/>
 			</magic-cost>
 		</effects>
@@ -1010,7 +1010,7 @@
 					<value level="10">2.8</value>
 				</power>
 			</stat-modify>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="5.0">
 					<value level="2">7.0</value>
 					<value level="3">9.0</value>

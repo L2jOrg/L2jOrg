@@ -1065,7 +1065,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power initial="-99.0"/>
 			</reuse>
 		</effects>

@@ -1144,7 +1144,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="30.0"/>
 			</resist-abnormal-by-category>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="30.0"/>
 			</magic-cost>
 		</effects>
@@ -1481,7 +1481,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-20.0"/>
 			</resist-abnormal-by-category>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-3.0"/>
 			</magic-cost>
 		</effects>
@@ -1782,7 +1782,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-3.0">
 					<value level="2">-5.0</value>
 				</power>
@@ -3078,7 +3078,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="200.0"/>
 			</magic-cost>
 		</effects>
@@ -3129,7 +3129,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-4.0">
 					<value level="2">-7.0</value>
 					<value level="2">-15.0</value>

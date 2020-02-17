@@ -210,7 +210,7 @@
 			<stat-modify stat="BLOW_RATE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-60.0"/>
 			</magic-cost>
 		</effects>
@@ -237,7 +237,7 @@
 					<power initial="0.20000000298023224"/>
 				</trait>
 			</attack-trait>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-60.0"/>
 			</magic-cost>
 		</effects>
@@ -1403,7 +1403,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-10.0">
 					<value level="2">-15.0</value>
 					<value level="2">-7.0</value>

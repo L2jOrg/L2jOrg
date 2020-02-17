@@ -660,7 +660,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-3.0"/>
 			</magic-cost>
 		</effects>

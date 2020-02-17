@@ -998,7 +998,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-10.0"/>
 			</magic-cost>
 		</effects>
@@ -1174,7 +1174,7 @@
 				</power>
 				<weapon-type>SWORD SPEAR </weapon-type>
 			</stat-hp-based>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-50.0"/>
 			</magic-cost>
 		</effects>
@@ -1572,7 +1572,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<skill-evasion type="0">
+			<skill-evasion type="PHYSIC">
 				<power initial="90.0"/>
 			</skill-evasion>
 		</effects>

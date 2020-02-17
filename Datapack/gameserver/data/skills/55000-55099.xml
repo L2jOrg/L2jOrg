@@ -370,7 +370,7 @@
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-30.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="300.0"/>
 			</magic-cost>
 			<stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">

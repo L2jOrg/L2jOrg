@@ -54,7 +54,7 @@
 					<value level="3">2.0</value>
 				</power>
 			</vampiric-attack>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power>
 					<value level="3">4.0</value>
 				</power>
@@ -196,7 +196,7 @@
 					<value level="3">52.0</value>
 				</power>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="3">-4.0</value>
 				</power>

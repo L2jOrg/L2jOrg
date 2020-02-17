@@ -1614,7 +1614,7 @@
 			<vital-stat-modify stat="MAX_HP">
 				<power initial="445.0"/>
 			</vital-stat-modify>
-			<reuse type="0">
+			<reuse skill-type="PHYSIC">
 				<power initial="-10.0"/>
 			</reuse>
 		</effects>
@@ -1687,7 +1687,7 @@
 			<stat-modify stat="EARTH_RES">
 				<power initial="15.0"/>
 			</stat-modify>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power>
 					<value level="10">-1.0</value>
 					<value level="12">-3.0</value>
@@ -1835,7 +1835,7 @@
 					<value level="3">6.0</value>
 				</power>
 			</stat-modify>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">5.0</value>
@@ -2413,7 +2413,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-10.0"/>
 			</magic-cost>
 		</effects>
@@ -2572,7 +2572,7 @@
 			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="30.0"/>
 			</vital-stat-modify>
-			<magic-cost type="0">
+			<magic-cost type="PHYSIC">
 				<power initial="-5.0"/>
 			</magic-cost>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -2732,7 +2732,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<magic-cost type="1">
+			<magic-cost type="MAGIC">
 				<power initial="-100.0"/>
 			</magic-cost>
 		</effects>

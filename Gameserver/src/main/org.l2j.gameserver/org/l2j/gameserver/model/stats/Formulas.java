@@ -3,9 +3,10 @@ package org.l2j.gameserver.model.stats;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.HitConditionBonusData;
 import org.l2j.gameserver.data.xml.impl.KarmaData;
-import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.actor.Creature;
@@ -24,7 +25,6 @@ import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -733,7 +733,7 @@ public final class Formulas {
     }
 
     public static boolean calcPhysicalSkillEvasion(Creature activeChar, Creature target, Skill skill) {
-        if (Rnd.get(100) < target.getStats().getSkillEvasionTypeValue(skill.getSkillType().ordinal())) {
+        if (Rnd.get(100) < target.getStats().getSkillEvasionTypeValue(skill.getSkillType())) {
             if (isPlayer(activeChar)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
                 sm.addString(target.getName());
