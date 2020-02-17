@@ -5,6 +5,7 @@ import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
@@ -27,9 +28,9 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  */
 public final class BlockActions extends AbstractEffect {
 
-	public final IntSet allowedSkills;
+	private final IntSet allowedSkills;
 	
-	public BlockActions(StatsSet params) {
+	private BlockActions(StatsSet params) {
 		final String[] allowedSkills = params.getString("allowed-skills", "").split(" ");
 		this.allowedSkills = StreamUtil.collectToSet(Arrays.stream(allowedSkills).filter(Util::isInteger).mapToInt(Integer::parseInt));
 	}
@@ -69,4 +70,18 @@ public final class BlockActions extends AbstractEffect {
 			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new BlockActions(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "block-all-actions";
+		}
+	}
+
 }

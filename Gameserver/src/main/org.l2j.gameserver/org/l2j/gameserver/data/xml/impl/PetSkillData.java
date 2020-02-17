@@ -26,7 +26,6 @@ public class PetSkillData extends GameXmlReader {
     private final Map<Integer, Map<Long, SkillHolder>> _skillTrees = new HashMap<>();
 
     private PetSkillData() {
-        load();
     }
 
     @Override
@@ -101,6 +100,10 @@ public class PetSkillData extends GameXmlReader {
         }
 
         return lvl;
+    }
+
+    public static void init()  {
+        getInstance().load();
     }
 
     public static PetSkillData getInstance() {

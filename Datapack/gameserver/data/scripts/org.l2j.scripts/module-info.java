@@ -1,9 +1,11 @@
+import handlers.effecthandlers.*;
 import handlers.skillconditionhandlers.SkillConditionTargetFactory;
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
 import handlers.skillconditionhandlers.*;
+import org.l2j.gameserver.model.actor.instance.Block;
 import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
@@ -35,6 +37,27 @@ open module org.l2j.scripts {
     uses org.l2j.gameserver.handler.IPlayerActionHandler;
     uses org.l2j.gameserver.model.quest.Quest;
     uses org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
+    uses org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
+
+    provides org.l2j.gameserver.engine.skill.api.SkillEffectFactory
+            with AbnormalShield.Factory,
+                AddHate.Factory,
+                AddTeleportBookmarkSlot.Factory,
+                StatModify.Factory,
+                AttackTrait.Factory,
+                Backstab.Factory,
+                Betray.Factory,
+                BlockAbnormalSlot.Factory,
+                BlockAction.Factory,
+                BlockActions.Factory,
+                BlockChat.Factory,
+                BlockControl.Factory,
+                BlockEscape.Factory,
+                BlockMove.Factory,
+                BlockParty.Factory,
+                BlockResurrection.Factory,
+                BlockSkill.Factory
+            ;
 
     provides org.l2j.gameserver.engine.skill.api.SkillConditionFactory
             with BuildAdvanceBaseSkillCondition.Factory,

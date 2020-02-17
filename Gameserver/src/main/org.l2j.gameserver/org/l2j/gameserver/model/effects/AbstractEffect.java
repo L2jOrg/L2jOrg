@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author Zoey76
  */
-public abstract class AbstractEffect implements Cloneable {
+public abstract class AbstractEffect  {
     protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractEffect.class);
 
     private int _ticks;

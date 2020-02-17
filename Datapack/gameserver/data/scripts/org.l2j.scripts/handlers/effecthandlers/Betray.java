@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -14,10 +15,11 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
 /**
  * Betray effect implementation.
  * @author decad
+ * @author JoeAlisson
  */
 public final class Betray extends AbstractEffect {
 
-    public Betray(StatsSet params) {
+    private Betray() {
     }
 
     @Override
@@ -42,5 +44,19 @@ public final class Betray extends AbstractEffect {
     public void onExit(Creature effector, Creature effected, Skill skill)
     {
         effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+        private static final Betray INSTANCE = new Betray();
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return INSTANCE;
+        }
+
+        @Override
+        public String effectName() {
+            return "Betray";
+        }
     }
 }

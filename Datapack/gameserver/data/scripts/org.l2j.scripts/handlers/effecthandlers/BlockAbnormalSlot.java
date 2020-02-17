@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -18,9 +19,9 @@ import java.util.stream.Collectors;
  */
 public final class BlockAbnormalSlot extends AbstractEffect {
 
-	public final Set<AbnormalType> blockAbnormalSlots;
+	private final Set<AbnormalType> blockAbnormalSlots;
 	
-	public BlockAbnormalSlot(StatsSet params) {
+	private BlockAbnormalSlot(StatsSet params) {
 		blockAbnormalSlots = Arrays.stream(params.getString("abnormals").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());
 	}
 	
@@ -34,5 +35,18 @@ public final class BlockAbnormalSlot extends AbstractEffect {
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.getEffectList().removeBlockedAbnormalTypes(blockAbnormalSlots);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new BlockAbnormalSlot(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "block-abnormal";
+		}
 	}
 }

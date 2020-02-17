@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -17,9 +18,9 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  */
 public final class AddHate extends AbstractEffect {
 
-    public final double power;
+    private final double power;
 
-    public AddHate(StatsSet params) {
+    private AddHate(StatsSet params) {
         power = params.getDouble("power", 0);
     }
 
@@ -40,6 +41,19 @@ public final class AddHate extends AbstractEffect {
             ((Attackable) effected).addDamageHate(effector, 0, (int) val);
         } else if (val < 0) {
             ((Attackable) effected).reduceHate(effector, (int) -val);
+        }
+    }
+
+    public static final class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new AddHate(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "AddHate";
         }
     }
 }

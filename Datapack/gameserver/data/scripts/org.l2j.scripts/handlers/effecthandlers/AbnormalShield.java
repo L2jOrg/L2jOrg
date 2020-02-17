@@ -1,22 +1,24 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * An effect that blocks a debuff. Acts like DOTA's Linken Sphere.
  * @author Nik
+ * @author JoeAlisson
  */
 public final class AbnormalShield extends AbstractEffect {
 
-    public final int power;
+    private final int power;
 
-    public AbnormalShield(StatsSet params)
+    private AbnormalShield(StatsSet params)
     {
         power = params.getInt("power", -1);
     }
@@ -43,5 +45,19 @@ public final class AbnormalShield extends AbstractEffect {
     public EffectType getEffectType()
     {
         return EffectType.ABNORMAL_SHIELD;
+    }
+
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new AbnormalShield(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "AbnormalShield";
+        }
     }
 }

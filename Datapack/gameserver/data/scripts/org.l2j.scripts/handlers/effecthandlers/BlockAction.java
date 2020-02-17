@@ -4,6 +4,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -24,9 +25,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class BlockAction extends AbstractEffect {
 
-	public IntSet blockedActions;
+	private IntSet blockedActions;
 	
-	public BlockAction(StatsSet params) {
+	private BlockAction(StatsSet params) {
 		blockedActions = StreamUtil.collectToSet(Arrays.stream(params.getString("actions").split(" ")).mapToInt(Integer::parseInt));
 	}
 	
@@ -60,6 +61,19 @@ public final class BlockAction extends AbstractEffect {
 
 		if (blockedActions.contains(ReportTable.CHAT_BLOCK_ID)) {
 			PunishmentManager.getInstance().stopPunishment(effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new BlockAction(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "block-action";
 		}
 	}
 }

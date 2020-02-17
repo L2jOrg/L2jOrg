@@ -418,8 +418,8 @@ public class SkillEngine extends EffectParser {
     public static void init() {
         EffectHandler.getInstance().executeScript();
         getInstance().load();
-        SkillTreesData.getInstance();
-        PetSkillData.getInstance();
+        SkillTreesData.init();
+        PetSkillData.init();
     }
 
     public void reload() {

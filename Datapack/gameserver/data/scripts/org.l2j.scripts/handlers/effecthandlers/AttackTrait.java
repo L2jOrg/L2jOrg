@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -19,9 +20,9 @@ import java.util.Map.Entry;
  */
 public final class AttackTrait extends AbstractEffect {
 
-    public final Map<TraitType, Float> attackTraits;
+    private final Map<TraitType, Float> attackTraits;
 
-    public AttackTrait(StatsSet params) {
+    private AttackTrait(StatsSet params) {
         if(params.contains("type")) {
             attackTraits = Map.of(params.getEnum("type", TraitType.class), params.getFloat("power") / 100);
         } else {
@@ -46,6 +47,19 @@ public final class AttackTrait extends AbstractEffect {
     public void onExit(Creature effector, Creature effected, Skill skill) {
         for (Entry<TraitType, Float> trait : attackTraits.entrySet()) {
             effected.getStats().removeAttackTrait(trait.getKey(), trait.getValue());
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new AttackTrait(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "attack-trait";
         }
     }
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -15,15 +16,16 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
 /**
  * Backstab effect implementation.
  * @author Adry_85
- */
+ * @author JoeAlisson
+ * */
 public final class Backstab extends AbstractEffect {
 
-    public final double power;
-    public final double chanceBoost;
-    public final double criticalChance;
-    public final boolean overHit;
+    private final double power;
+    private final double chanceBoost;
+    private final double criticalChance;
+    private final boolean overHit;
 
-    public Backstab(StatsSet params) {
+    private Backstab(StatsSet params) {
         power = params.getDouble("power");
         chanceBoost = params.getDouble("chance-boost");
         criticalChance = params.getDouble("critical-chance", 0);
@@ -66,5 +68,18 @@ public final class Backstab extends AbstractEffect {
         }
 
         effector.doAttack(damage, effected, skill, false, true, true, false);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new Backstab(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "backstab";
+        }
     }
 }

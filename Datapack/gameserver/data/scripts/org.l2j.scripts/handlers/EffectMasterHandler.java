@@ -4,38 +4,27 @@ import handlers.effecthandlers.*;
 import handlers.effecthandlers.stat.StatHpBased;
 import handlers.effecthandlers.stat.TransferDamageToPlayer;
 import handlers.effecthandlers.stat.VitalStatModify;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ServiceLoader;
 
 /**
  * Effect Master handler.
  * @author NosBit
  */
-public final class
-EffectMasterHandler {
+public final class EffectMasterHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EffectMasterHandler.class);
 
     public static void main(String[] args) {
         var handler = EffectHandler.getInstance();
-        handler.registerFactory("AbnormalShield", AbnormalShield::new);
-        handler.registerFactory("AddHate", AddHate::new);
-        handler.registerFactory("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
-        handler.registerFactory("stat-modify", StatModify::new);
-        handler.registerFactory("attack-trait", AttackTrait::new);
-        handler.registerFactory("backstab", Backstab::new);
-        handler.registerFactory("Betray", Betray::new);
-        handler.registerFactory("block-abnormal", BlockAbnormalSlot::new);
-        handler.registerFactory("block-action", BlockAction::new);
-        handler.registerFactory("block-all-actions", BlockActions::new);
-        handler.registerFactory("BlockChat", BlockChat::new);
-        handler.registerFactory("BlockControl", BlockControl::new);
-        handler.registerFactory("BlockEscape", BlockEscape::new);
-        handler.registerFactory("BlockMove", BlockMove::new);
-        handler.registerFactory("BlockParty", BlockParty::new);
-        handler.registerFactory("BlockResurrection", BlockResurrection::new);
-        handler.registerFactory("block-skill", BlockSkill::new);
+        var loader = EffectMasterHandler.class.getClassLoader();
+
+        ServiceLoader.load(SkillEffectFactory.class, loader).forEach(handler::registerFactory);
+
         handler.registerFactory("BlockTarget", BlockTarget::new);
         handler.registerFactory("Bluff", Bluff::new);
         handler.registerFactory("BuffBlock", BuffBlock::new);

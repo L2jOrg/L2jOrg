@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -16,9 +17,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Block Chat effect implementation.
  * @author BiggBoss
+ * @author JoeAlisson
  */
 public final class BlockChat extends AbstractEffect {
-	public BlockChat(StatsSet params) {
+	private BlockChat() {
 	}
 	
 	@Override
@@ -42,5 +44,19 @@ public final class BlockChat extends AbstractEffect {
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		PunishmentManager.getInstance().stopPunishment(effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final BlockChat INSTANCE = new BlockChat();
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "BlockChat";
+		}
 	}
 }

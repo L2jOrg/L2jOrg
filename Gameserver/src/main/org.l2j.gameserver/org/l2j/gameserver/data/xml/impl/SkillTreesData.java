@@ -51,6 +51,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * For XML schema please refer to skillTrees.xsd in datapack in xsd folder and for parameters documentation refer to documentation.txt in skillTrees folder.<br>
  *
  * @author Zoey76
+ * @author JoeAlisson
  */
 public final class SkillTreesData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillTreesData.class.getName());
@@ -81,7 +82,6 @@ public final class SkillTreesData extends GameXmlReader {
     private long[] _allSkillsHashCodes; // Fishing, Collection, Transformations, Common Skills.
 
     private SkillTreesData() {
-        load();
     }
 
     @Override
@@ -868,6 +868,10 @@ public final class SkillTreesData extends GameXmlReader {
         LOGGER.info("Loaded {} Game Master Skills.", gameMasterSkillTree.size());
         LOGGER.info("Loaded {} Game Master Aura Skills.", gameMasterAuraSkillTree.size());
         LOGGER.info("Loaded {} Common Skills to all classes.", commonSkillTree.size());
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static SkillTreesData getInstance() {

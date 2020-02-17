@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -15,9 +16,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Block Party effect implementation.
  * @author BiggBoss
+ * @author JoeAlisson
  */
 public final class BlockParty extends AbstractEffect {
-	public BlockParty(StatsSet params) {
+	private BlockParty() {
 	}
 	
 	@Override
@@ -35,5 +37,18 @@ public final class BlockParty extends AbstractEffect {
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		PunishmentManager.getInstance().stopPunishment(effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final BlockParty INSTANCE = new BlockParty();
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "BlockParty";
+		}
 	}
 }

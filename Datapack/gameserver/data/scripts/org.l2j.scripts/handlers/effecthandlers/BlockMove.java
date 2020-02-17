@@ -1,17 +1,19 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * Immobile Buff effect implementation.
  * @author mkizub
+ * @author JoeAlisson
  */
 public final class BlockMove extends AbstractEffect {
-	public BlockMove(StatsSet params) {
+	private BlockMove() {
 	}
 	
 	@Override
@@ -25,4 +27,18 @@ public final class BlockMove extends AbstractEffect {
 	{
 		effected.setIsImmobilized(false);
 	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final BlockMove INSTANCE = new BlockMove();
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "BlockMove";
+		}
+	}
+
 }

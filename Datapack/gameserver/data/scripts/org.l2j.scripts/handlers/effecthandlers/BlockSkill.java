@@ -3,6 +3,7 @@ package handlers.effecthandlers;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -28,7 +29,7 @@ public final class BlockSkill extends AbstractEffect {
 
     public final EnumSet<SkillType> magicTypes;
 
-    public BlockSkill(StatsSet params) {
+    private BlockSkill(StatsSet params) {
         magicTypes = StreamUtil.collectToEnumSet(SkillType.class, stream(params.getString("magic-types").split(Util.SPACE)).map(SkillType::valueOf));
     }
 
@@ -48,5 +49,18 @@ public final class BlockSkill extends AbstractEffect {
     public void onExit(Creature effector, Creature effected, Skill skill)
     {
         effected.removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == this);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new BlockSkill(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "block-skill";
+        }
     }
 }

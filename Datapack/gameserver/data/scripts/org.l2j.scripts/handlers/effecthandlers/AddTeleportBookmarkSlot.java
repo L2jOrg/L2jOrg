@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -13,12 +14,13 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Item Effect: Gives teleport bookmark slots to the owner.
  * @author Nik
+ * @author JoeAlisson
  */
 public final class AddTeleportBookmarkSlot extends AbstractEffect {
 
-    public final int power;
+    private final int power;
 
-    public AddTeleportBookmarkSlot(StatsSet params)
+    private AddTeleportBookmarkSlot(StatsSet params)
     {
         power = params.getInt("power", 0);
     }
@@ -39,4 +41,19 @@ public final class AddTeleportBookmarkSlot extends AbstractEffect {
         player.setBookMarkSlot(player.getBookMarkSlot() + power);
         player.sendPacket(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED);
     }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new AddTeleportBookmarkSlot(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "AddTeleportBookmarkSlot";
+        }
+    }
+
+
 }
