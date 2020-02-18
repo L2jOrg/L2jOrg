@@ -960,7 +960,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<conditions>
-			<level max-level="60"/>
+			<level on-level="1" max-level="19"/>
+			<level on-level="2" min-level="20" max-level="39"/>
+			<level on-level="3" min-level="40" max-level="51"/>
+			<level on-level="4" min-level="52" max-level="60"/>
 		</conditions>
 		<effects>
 			<reduce-drop-penalty type="RAID">

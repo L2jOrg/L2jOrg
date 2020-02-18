@@ -120,13 +120,62 @@ public class SkillEngine extends EffectParser {
                     case "attributes" -> parseSkillAttributes(node, skill, maxLevel);
                     case "consume" -> parseSkillConsume(node, skill, maxLevel);
                     case "abnormal" -> parseSkillAbnormal(node, skill, maxLevel);
+                    case "conditions" -> parseConditions(node, skill);
                     case "effects" -> parseSkillEffects(node, skill, maxLevel);
                 }
             }
-            getOrCloneSkillBasedOnLast(id, maxLevel, true);
+            getOrCloneSkillBasedOnLast(id, maxLevel, true, true);
         } catch (Exception e) {
             LOGGER.error("Could not parse skill info {}", skill, e);
         }
+    }
+
+    private void parseConditions(Node conditionsNode, Skill skill) throws CloneNotSupportedException {
+        parseLeveledCondition(conditionsNode, skill, skill.getMaxLevel());
+
+        for (var node = conditionsNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+            if(nonNull(node.getAttributes().getNamedItem("on-level"))) {
+                continue;
+            }
+            SkillCondition cond = "condition".equals(node.getNodeName()) ? parseNamedCondition(node) : parseCondition(node);
+            if(nonNull(cond)) {
+                var scope = parseEnum(node.getAttributes(), SkillConditionScope.class, "scope");
+                var currentLevel = skill.getMaxLevel();
+                var hash = skillHashCode(skill.getId(), currentLevel);
+                while (currentLevel-- > 0) {
+                    doIfNonNull(skills.get(hash--), s -> s.addCondition(scope, cond));
+                }
+            }  else {
+                LOGGER.warn("Could not parse skill's ({}) condition {}", skill, node.getNodeName());
+            }
+        }
+    }
+
+    private void parseLeveledCondition(Node conditionsNode, Skill skill, int maxLevel) throws CloneNotSupportedException {
+        for (var node = conditionsNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+            var level = parseInt(node.getAttributes(), "on-level", -1);
+            if(level < 1 || level > maxLevel) {
+                continue;
+            }
+            SkillCondition cond = "condition".equals(node.getNodeName()) ? parseNamedCondition(node) : parseCondition(node);
+            if(nonNull(cond)) {
+                var scope = parseEnum(node.getAttributes(), SkillConditionScope.class, "scope");
+                var sk = getOrCloneSkillBasedOnLast(skill.getId(), level);
+                sk.addCondition(scope, cond);
+            }  else {
+                LOGGER.warn("Could not parse skill's ({}) condition {}", skill, node.getNodeName());
+            }
+        }
+    }
+
+    private SkillCondition parseCondition(Node node) {
+        var factory = SkillConditionHandler.getInstance().getHandlerFactory(node.getNodeName());
+        return computeIfNonNull(factory, f -> f.apply(node));
+    }
+
+    private SkillCondition parseNamedCondition(Node node) {
+        var factory = SkillConditionHandler.getInstance().getHandlerFactory(parseString(node.getAttributes(), "name"));
+        return computeIfNonNull(factory, f -> f.apply(node));
     }
 
     private void parseSkillEffects(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
@@ -175,7 +224,7 @@ public class SkillEngine extends EffectParser {
                 addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
             } else {
                 for (var i = startLevel; i <= stopLevel; i++) {
-                    var sk = getOrCloneSkillBasedOnLast(skill.getId(), i);
+                    var sk = getOrCloneSkillBasedOnLast(skill.getId(), i, false, true);
                     var statsSet = levelInfo.computeIfAbsent(i, level -> {
                         for (int j = level; j > 0; j--) {
                             if(levelInfo.containsKey(j)) {
@@ -232,32 +281,10 @@ public class SkillEngine extends EffectParser {
                 case "abnormal" -> parseConstantAbnormal(node, skill);
                 case "resist-abnormals" -> parseConstantResistAbnormals(node, skill);
                 case "channeling" -> parseConstantsChanneling(node, skill);
-                case "conditions" -> parseConditions(node, skill);
             }
         }
     }
 
-    private void parseConditions(Node conditionsNode, Skill skill) {
-        for (var node = conditionsNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-            SkillCondition cond = "condition".equals(node.getNodeName()) ? parseNamedCondition(node) : parseCondition(node);
-            if(nonNull(cond)) {
-                var scope = parseEnum(node.getAttributes(), SkillConditionScope.class, "scope");
-                skill.addCondition(scope, cond);
-            }  else {
-                LOGGER.warn("Could not parse skill's ({}) condition {}", skill, node.getNodeName());
-            }
-        }
-    }
-
-    private SkillCondition parseCondition(Node node) {
-        var factory = SkillConditionHandler.getInstance().getHandlerFactory(node.getNodeName());
-        return computeIfNonNull(factory, f -> f.apply(node));
-    }
-
-    private SkillCondition parseNamedCondition(Node node) {
-        var factory = SkillConditionHandler.getInstance().getHandlerFactory(parseString(node.getAttributes(), "name"));
-        return computeIfNonNull(factory, f -> f.apply(node));
-    }
 
     private void parseConstantsChanneling(Node node, Skill skill) {
         var attr = node.getAttributes();
@@ -391,10 +418,10 @@ public class SkillEngine extends EffectParser {
     }
 
     private Skill getOrCloneSkillBasedOnLast(int id, int level) throws CloneNotSupportedException {
-        return getOrCloneSkillBasedOnLast(id, level, false);
+        return getOrCloneSkillBasedOnLast(id, level, false, false);
     }
 
-    private Skill getOrCloneSkillBasedOnLast(int id, int level, boolean mantainAttributes) throws CloneNotSupportedException {
+    private Skill getOrCloneSkillBasedOnLast(int id, int level, boolean keepEffects, boolean keepConditions) throws CloneNotSupportedException {
         Skill skill = null;
         var hash = skillHashCode(id, level);
         int currentLevel = level;
@@ -408,7 +435,7 @@ public class SkillEngine extends EffectParser {
         }
 
         while (nonNull(skill) && currentLevel < level) {
-            skill = skill.clone(mantainAttributes);
+            skill = skill.clone(keepEffects, keepConditions);
             skill.setLevel(++currentLevel);
             skills.put(++hash, skill);
         }

@@ -1710,15 +1710,19 @@
 			<weapon>
 				<type>DUAL DUAL_BLUNT</type>
 			</weapon>
-			<energy-saved/>
+			<energy-saved on-level="1"/>
+			<energy-saved on-level="2" charges="2"/>
+			<energy-saved on-level="3" charges="2"/>
+			<energy-saved on-level="4" charges="2"/>
+			<energy-saved on-level="5" charges="2"/>
 		</conditions>
 		<effects>
 			<speed>
-				<power initial="20.0">
-					<value level="2">30.0</value>
-					<value level="3">40.0</value>
-					<value level="4">45.0</value>
-					<value level="5">50.0</value>
+				<power initial="20">
+					<value level="2">30</value>
+					<value level="3">40</value>
+					<value level="4">45</value>
+					<value level="5">50</value>
 				</power>
 			</speed>
 		</effects>

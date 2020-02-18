@@ -48,7 +48,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Skill.class);
 
-    private final Map<SkillConditionScope, List<SkillCondition>> conditions = new EnumMap<>(SkillConditionScope.class);
     private final int id;
     private final String name;
     private final SkillOperateType operateType;
@@ -56,7 +55,8 @@ public final class Skill implements IIdentifiable, Cloneable {
     private final boolean debuff;
     private final int maxLevel;
 
-    public Map<EffectScope, List<AbstractEffect>> effects = new EnumMap<>(EffectScope.class);
+    private Map<SkillConditionScope, List<SkillCondition>> conditions = new EnumMap<>(SkillConditionScope.class);
+    private Map<EffectScope, List<AbstractEffect>> effects = new EnumMap<>(EffectScope.class);
     private TraitType traitType = TraitType.NONE;
 
     private AbnormalType abnormalType = AbnormalType.NONE;
@@ -1176,10 +1176,13 @@ public final class Skill implements IIdentifiable, Cloneable {
         activateRate = chance;
     }
 
-    Skill clone(boolean mantainAttributes) throws CloneNotSupportedException {
+    Skill clone(boolean keepEffects, boolean keepConditions) throws CloneNotSupportedException {
         var clone = clone();
-        if (!mantainAttributes) {
+        if (!keepEffects) {
             clone.effects = new EnumMap<>(EffectScope.class);
+        }
+        if(!keepConditions) {
+            clone.conditions = new EnumMap<>(SkillConditionScope.class);
         }
         return clone;
     }

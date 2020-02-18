@@ -213,6 +213,7 @@
 
     <xs:complexType name="Condition" abstract="true">
         <xs:attribute name="scope" type="ConditionScope" default="GENERAL"/>
+        <xs:attribute name="on-level" type="xs:positiveInteger"/>
     </xs:complexType>
 
     <xs:simpleType name="ConditionScope">
