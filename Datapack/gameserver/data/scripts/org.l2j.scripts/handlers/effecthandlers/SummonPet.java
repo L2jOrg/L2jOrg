@@ -2,6 +2,7 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -22,77 +23,93 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Summon Pet effect implementation.
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class SummonPet extends AbstractEffect {
 
-	public SummonPet(StatsSet params) {
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.SUMMON_PET;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (!isPlayer(effector) || !isPlayer(effected) || effected.isAlikeDead()) {
-			return;
-		}
-		
-		final Player player = effector.getActingPlayer();
-		
-		if (player.hasPet() || player.isMounted()) {
-			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
-			return;
-		}
-		
-		final PetItemHolder holder = player.removeScript(PetItemHolder.class);
-		if (isNull(holder)) {
-			LOGGER.warn("Summoning pet without attaching PetItemHandler!", new Throwable());
-			return;
-		}
-		
-		final Item collar = holder.getItem();
-		if (player.getInventory().getItemByObjectId(collar.getObjectId()) != collar) {
-			LOGGER.warn("Player: {} is trying to summon pet from item that he doesn't owns.", player);
-			return;
-		}
-		
-		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
-		if (isNull(petData ) || (petData.getNpcId() == -1)) {
-			return;
-		}
-		
-		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
-		final Pet pet = Pet.spawnPet(npcTemplate, player, collar);
-		
-		pet.setShowSummonAnimation(true);
-		if (!pet.isRespawned()) {
-			pet.setCurrentHp(pet.getMaxHp());
-			pet.setCurrentMp(pet.getMaxMp());
-			pet.getStats().setExp(pet.getExpForThisLevel());
-			pet.setCurrentFed(pet.getMaxFed());
-		}
-		
-		pet.setRunning();
-		
-		if (!pet.isRespawned()) {
-			pet.storeMe();
-		}
-		
-		collar.setEnchantLevel(pet.getLevel());
-		player.setPet(pet);
-		pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
-		pet.startFeed();
-		pet.setFollowStatus(true);
-		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
-		pet.broadcastStatusUpdate();
-	}
+    private SummonPet() {
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.SUMMON_PET;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (!isPlayer(effector) || !isPlayer(effected) || effected.isAlikeDead()) {
+            return;
+        }
+
+        final Player player = effector.getActingPlayer();
+
+        if (player.hasPet() || player.isMounted()) {
+            player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
+            return;
+        }
+
+        final PetItemHolder holder = player.removeScript(PetItemHolder.class);
+        if (isNull(holder)) {
+            LOGGER.warn("Summoning pet without attaching PetItemHandler!", new Throwable());
+            return;
+        }
+
+        final Item collar = holder.getItem();
+        if (player.getInventory().getItemByObjectId(collar.getObjectId()) != collar) {
+            LOGGER.warn("Player: {} is trying to summon pet from item that he doesn't owns.", player);
+            return;
+        }
+
+        final PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
+        if (isNull(petData ) || (petData.getNpcId() == -1)) {
+            return;
+        }
+
+        final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+        final Pet pet = Pet.spawnPet(npcTemplate, player, collar);
+
+        pet.setShowSummonAnimation(true);
+        if (!pet.isRespawned()) {
+            pet.setCurrentHp(pet.getMaxHp());
+            pet.setCurrentMp(pet.getMaxMp());
+            pet.getStats().setExp(pet.getExpForThisLevel());
+            pet.setCurrentFed(pet.getMaxFed());
+        }
+
+        pet.setRunning();
+
+        if (!pet.isRespawned()) {
+            pet.storeMe();
+        }
+
+        collar.setEnchantLevel(pet.getLevel());
+        player.setPet(pet);
+        pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
+        pet.startFeed();
+        pet.setFollowStatus(true);
+        pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
+        pet.broadcastStatusUpdate();
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        private static final SummonPet INSTANCE = new SummonPet();
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return INSTANCE;
+        }
+
+        @Override
+        public String effectName() {
+            return "SummonPet";
+        }
+    }
 }

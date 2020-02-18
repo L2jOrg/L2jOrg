@@ -1,9 +1,11 @@
 package handlers.effecthandlers;
 
 import handlers.effecthandlers.stat.AbstractStatEffect;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.stats.Stat;
 
 /**
@@ -12,7 +14,7 @@ import org.l2j.gameserver.model.stats.Stat;
  */
 public final class Speed extends AbstractStatEffect {
 
-    public Speed(StatsSet params) {
+    private Speed(StatsSet params) {
         super(params, Stat.RUN_SPEED);
     }
 
@@ -35,6 +37,19 @@ public final class Speed extends AbstractStatEffect {
                 effected.getStats().mergeMul(Stat.FLY_RUN_SPEED, (power / 100) + 1);
                 effected.getStats().mergeMul(Stat.FLY_WALK_SPEED, (power / 100) + 1);
             }
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new Speed(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "speed";
         }
     }
 }

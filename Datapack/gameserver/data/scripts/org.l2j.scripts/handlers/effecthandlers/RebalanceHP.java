@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -17,9 +18,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Rebalance HP effect implementation.
  * @author Adry_85, earendil
+ * @author JoeAlisson
  */
 public final class RebalanceHP extends AbstractEffect {
-	public RebalanceHP(StatsSet params) {
+	private RebalanceHP() {
 	}
 	
 	@Override
@@ -113,6 +115,21 @@ public final class RebalanceHP extends AbstractEffect {
 					}
 				}
 			}
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		private static final RebalanceHP INSTANCE = new RebalanceHP();
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "RebalanceHP";
 		}
 	}
 }

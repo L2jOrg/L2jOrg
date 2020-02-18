@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -15,11 +16,12 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
 /**
  * Delete Hate effect implementation.
  * @author Adry_85
+ * @author JoeAlisson
  */
 public final class DeleteHate extends AbstractEffect {
-    public final int power;
+    private final int power;
 
-    public DeleteHate(StatsSet params)
+    private DeleteHate(StatsSet params)
     {
         power = params.getInt("power", 100);
     }
@@ -52,5 +54,18 @@ public final class DeleteHate extends AbstractEffect {
         target.clearAggroList();
         target.setWalking();
         target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new DeleteHate(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "DeleteHate";
+        }
     }
 }

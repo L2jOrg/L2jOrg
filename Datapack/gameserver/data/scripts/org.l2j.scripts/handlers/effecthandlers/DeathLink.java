@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -16,40 +17,53 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class DeathLink extends AbstractEffect {
-	public final double power;
-	
-	public DeathLink(StatsSet params)
-	{
-		power = params.getDouble("power", 0);
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.DEATH_LINK;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (effector.isAlikeDead()) {
-			return;
-		}
-		
-		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		
-		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
-			effected.stopFakeDeath(true);
-		}
-		
-		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power * (-((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2), effected.getMDef(), sps, bss, mcrit);
-		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
-	}
+    private final double power;
+
+    private DeathLink(StatsSet params)
+    {
+        power = params.getDouble("power", 0);
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.DEATH_LINK;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (effector.isAlikeDead()) {
+            return;
+        }
+
+        final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+        final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+
+        if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
+            effected.stopFakeDeath(true);
+        }
+
+        final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
+        final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power * (-((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2), effected.getMDef(), sps, bss, mcrit);
+        effector.doAttack(damage, effected, skill, false, false, mcrit, false);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new DeathLink(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "DeathLink";
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -15,11 +16,12 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Fake Death effect implementation.
  * @author mkizub
+ * @author JoeAlisson
  */
 public final class FakeDeath extends AbstractEffect {
-	public final double power;
+	private final double power;
 	
-	public FakeDeath(StatsSet params) {
+	private FakeDeath(StatsSet params) {
 		power = params.getDouble("power", 0);
 		setTicks(params.getInt("ticks"));
 	}
@@ -62,5 +64,18 @@ public final class FakeDeath extends AbstractEffect {
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		effected.startFakeDeath();
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new FakeDeath(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "FakeDeath";
+		}
 	}
 }

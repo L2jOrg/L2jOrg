@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -17,9 +18,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Zoey76
  */
 public final class SummonAgathion extends AbstractEffect {
-	public final int npcId;
+	private final int npcId;
 	
-	public SummonAgathion(StatsSet params) {
+	private SummonAgathion(StatsSet params) {
 		if (params.isEmpty()) {
 			LOGGER.warn("must have parameters.");
 		}
@@ -46,5 +47,18 @@ public final class SummonAgathion extends AbstractEffect {
 		player.broadcastCharInfo();
 
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonAgathion(player, npcId));
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new SummonAgathion(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "summon-agathion";
+		}
 	}
 }

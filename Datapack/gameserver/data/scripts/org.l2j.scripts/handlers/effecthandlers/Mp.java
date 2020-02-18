@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -16,54 +17,68 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
 /**
  * MP change effect. It is mostly used for potions and static damage.
  * @author Nik
+ * @author JoeAlisson
  */
 public final class Mp extends AbstractEffect {
-	public final int power;
-	public final StatModifierType mode;
+    private final int power;
+    private final StatModifierType mode;
 
-	public Mp(StatsSet params) {
-		power = params.getInt("power", 0);
-		mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
-	}
+    private Mp(StatsSet params) {
+        power = params.getInt("power", 0);
+        mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
+    }
 
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
 
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (effected.isDead() || isDoor(effected) || effected.isMpBlocked()) {
-			return;
-		}
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (effected.isDead() || isDoor(effected) || effected.isMpBlocked()) {
+            return;
+        }
 
-		int basicAmount = power;
-		if ((item != null) && (item.isPotion() || item.isElixir())) {
-			basicAmount += effected.getStats().getValue(Stat.ADDITIONAL_POTION_MP, 0);
-		}
+        int basicAmount = power;
+        if ((item != null) && (item.isPotion() || item.isElixir())) {
+            basicAmount += effected.getStats().getValue(Stat.ADDITIONAL_POTION_MP, 0);
+        }
 
-		double amount = switch (mode) {
-			case DIFF ->  Math.min(basicAmount, effected.getMaxRecoverableMp() - effected.getCurrentMp());
-			case PER -> Math.min((effected.getMaxMp() * basicAmount) / 100.0, effected.getMaxRecoverableMp() - effected.getCurrentMp());
-		};
+        double amount = switch (mode) {
+            case DIFF ->  Math.min(basicAmount, effected.getMaxRecoverableMp() - effected.getCurrentMp());
+            case PER -> Math.min((effected.getMaxMp() * basicAmount) / 100.0, effected.getMaxRecoverableMp() - effected.getCurrentMp());
+        };
 
-		if (amount >= 0) {
-			if (amount != 0) {
-				effected.setCurrentMp(amount + effected.getCurrentMp(), false);
-				effected.broadcastStatusUpdate(effector);
-			}
+        if (amount >= 0) {
+            if (amount != 0) {
+                effected.setCurrentMp(amount + effected.getCurrentMp(), false);
+                effected.broadcastStatusUpdate(effector);
+            }
 
-			SystemMessage sm;
-			if (effector.getObjectId() != effected.getObjectId()) {
-				sm = getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_C1).addString(effector.getName());
-			} else{
-				sm = getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
-			}
-			effected.sendPacket(sm.addInt((int) amount));
-		} else {
-			final double damage = -amount;
-			effected.reduceCurrentMp(damage);
-		}
-	}
+            SystemMessage sm;
+            if (effector.getObjectId() != effected.getObjectId()) {
+                sm = getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_C1).addString(effector.getName());
+            } else{
+                sm = getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
+            }
+            effected.sendPacket(sm.addInt((int) amount));
+        } else {
+            final double damage = -amount;
+            effected.reduceCurrentMp(damage);
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new Mp(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "mp";
+        }
+    }
 }

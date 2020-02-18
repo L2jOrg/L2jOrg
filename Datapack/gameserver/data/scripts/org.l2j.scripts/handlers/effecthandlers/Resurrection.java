@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -19,35 +20,48 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class Resurrection extends AbstractEffect {
 
-	public final int power;
-	
-	public Resurrection(StatsSet params)
-	{
-		power = params.getInt("power", 0);
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.RESURRECTION;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (isPlayer(effector)) {
-			final Player player = effected.getActingPlayer();
-			if (!player.isResurrectionBlocked() && !player.isReviveRequested()) {
-				effected.getActingPlayer().reviveRequest(effector.getActingPlayer(), skill, isPet(effected), power);
-			}
-		} else {
-			DecayTaskManager.getInstance().cancel(effected);
-			effected.doRevive(Formulas.calculateSkillResurrectRestorePercent(power, effector));
-		}
-	}
+    private final int power;
+
+    private Resurrection(StatsSet params)
+    {
+        power = params.getInt("power", 0);
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.RESURRECTION;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (isPlayer(effector)) {
+            final Player player = effected.getActingPlayer();
+            if (!player.isResurrectionBlocked() && !player.isReviveRequested()) {
+                effected.getActingPlayer().reviveRequest(effector.getActingPlayer(), skill, isPet(effected), power);
+            }
+        } else {
+            DecayTaskManager.getInstance().cancel(effected);
+            effected.doRevive(Formulas.calculateSkillResurrectRestorePercent(power, effector));
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new Resurrection(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "Resurrection";
+        }
+    }
 }

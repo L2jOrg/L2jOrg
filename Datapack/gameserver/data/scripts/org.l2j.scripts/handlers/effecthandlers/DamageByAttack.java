@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.DamageByAttackType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -20,19 +21,32 @@ import org.l2j.gameserver.model.stats.Stat;
  */
 public class DamageByAttack extends AbstractEffect {
 
-	public final double power;
-	public final DamageByAttackType type;
-	
-	public DamageByAttack(StatsSet params) {
-		power = params.getDouble("power");
-		type = params.getEnum("type", DamageByAttackType.class, DamageByAttackType.NONE);
-	}
-	
-	@Override
-	public void pump(Creature target, Skill skill) {
-		switch (type) {
-			case PK -> target.getStats().mergeAdd(Stat.PVP_DAMAGE_TAKEN, power);
-			case ENEMY_ALL -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN, power);
-		}
-	}
+    private final double power;
+    private final DamageByAttackType type;
+
+    private DamageByAttack(StatsSet params) {
+        power = params.getDouble("power");
+        type = params.getEnum("type", DamageByAttackType.class, DamageByAttackType.NONE);
+    }
+
+    @Override
+    public void pump(Creature target, Skill skill) {
+        switch (type) {
+            case PK -> target.getStats().mergeAdd(Stat.PVP_DAMAGE_TAKEN, power);
+            case ENEMY_ALL -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN, power);
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new DamageByAttack(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "damage-by-attack";
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -20,17 +21,18 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Energy Attack effect implementation.
  * @author NosBit
+ * @author JoeAlisson
  */
 public final class EnergyAttack extends AbstractEffect {
 
-	public final double power;
-	public final int chargeConsume;
-	public final int criticalChance;
-	public final boolean ignoreShieldDefence;
-	public final boolean overHit;
-	public final double pDefMod;
+	private final double power;
+	private final int chargeConsume;
+	private final int criticalChance;
+	private final boolean ignoreShieldDefence;
+	private final boolean overHit;
+	private final double pDefMod;
 	
-	public EnergyAttack(StatsSet params) {
+	private EnergyAttack(StatsSet params) {
 		power = params.getDouble("power", 0);
 		criticalChance = params.getInt("critical-chance", 0);
 		ignoreShieldDefence = params.getBoolean("ignore-shield", false);
@@ -120,5 +122,18 @@ public final class EnergyAttack extends AbstractEffect {
 		damage = Math.max(0, damage * effector.getStats().getValue(Stat.PHYSICAL_SKILL_POWER, 1));
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new EnergyAttack(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "energy-attack";
+		}
 	}
 }

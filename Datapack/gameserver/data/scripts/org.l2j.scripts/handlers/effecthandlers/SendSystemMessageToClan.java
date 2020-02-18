@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -14,12 +15,13 @@ import static java.util.Objects.nonNull;
 
 /**
  * @author Nik
+ * @author JoeAlisson
  */
 public class SendSystemMessageToClan extends AbstractEffect {
 
-	public final SystemMessage message;
+	private final SystemMessage message;
 	
-	public SendSystemMessageToClan(StatsSet params) {
+	private SendSystemMessageToClan(StatsSet params) {
 		final int id = params.getInt("id", 0);
 		message = SystemMessage.getSystemMessage(id);
 	}
@@ -40,6 +42,19 @@ public class SendSystemMessageToClan extends AbstractEffect {
 		final Clan clan = player.getClan();
 		if (nonNull(clan)) {
 			clan.broadcastToOnlineMembers(message);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new SendSystemMessageToClan(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "clan-system-message";
 		}
 	}
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -20,10 +21,10 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author JoeAlisson
  */
 public final class Hp extends AbstractEffect {
-	public final int power;
-	public final StatModifierType mode;
+	private final int power;
+	private final StatModifierType mode;
 	
-	public Hp(StatsSet params) {
+	private Hp(StatsSet params) {
 		power = params.getInt("power", 0);
 		mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 	}
@@ -69,6 +70,19 @@ public final class Hp extends AbstractEffect {
 			final double damage = -amount;
 			effected.reduceCurrentHp(damage, effector, skill, false, false, false, false);
 			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new Hp(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "hp";
 		}
 	}
 }

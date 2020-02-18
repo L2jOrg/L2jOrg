@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlEvent;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -13,9 +14,11 @@ import static java.util.Objects.isNull;
 
 /**
  * Mute effect implementation.
+ *
+ * @author JoeAlisson
  */
 public final class Mute extends AbstractEffect {
-	public Mute(StatsSet params) {
+	private Mute() {
 	}
 	
 	@Override
@@ -38,5 +41,19 @@ public final class Mute extends AbstractEffect {
 
 		effected.abortCast();
 		effected.getAI().notifyEvent(CtrlEvent.EVT_MUTED);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final Mute INSTANCE = new Mute();
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "Mute";
+		}
 	}
 }

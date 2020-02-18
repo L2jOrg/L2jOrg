@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -17,35 +18,48 @@ import org.l2j.gameserver.model.stats.Stat;
  * @author JoeAlisson
  */
 public class TwoHandedSwordBonus extends AbstractEffect {
-	private static final Condition weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
-	private static final Condition slotCondition = new ConditionUsingSlotType(BodyPart.TWO_HAND.getId());
-	
-	public final double pAtkAmount;
-	public final StatModifierType pAtkmode;
-	
-	public final double accuracyAmount;
-	public final StatModifierType accuracyMode;
-	
-	public TwoHandedSwordBonus(StatsSet params) {
-		pAtkAmount = params.getDouble("power", 0);
-		pAtkmode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
-		
-		accuracyAmount = params.getDouble("accuracy", 0);
-		accuracyMode = params.getEnum("accuracy-mode", StatModifierType.class, StatModifierType.DIFF);
-	}
-	
-	@Override
-	public void pump(Creature effected, Skill skill) {
-		if (weaponTypeCondition.test(effected, effected, skill) && slotCondition.test(effected, effected, skill)) {
-			switch (pAtkmode) {
-				case DIFF -> effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, pAtkAmount);
-				case PER -> effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (pAtkAmount / 100) + 1);
-			}
+    private static final Condition weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
+    private static final Condition slotCondition = new ConditionUsingSlotType(BodyPart.TWO_HAND.getId());
 
-			switch (accuracyMode) {
-				case DIFF -> effected.getStats().mergeAdd(Stat.ACCURACY, accuracyAmount);
-				case PER -> effected.getStats().mergeMul(Stat.ACCURACY, (accuracyAmount / 100) + 1);
-			}
-		}
-	}
+    private final double pAtkAmount;
+    private final StatModifierType pAtkmode;
+
+    private final double accuracyAmount;
+    private final StatModifierType accuracyMode;
+
+    private TwoHandedSwordBonus(StatsSet params) {
+        pAtkAmount = params.getDouble("power", 0);
+        pAtkmode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
+
+        accuracyAmount = params.getDouble("accuracy", 0);
+        accuracyMode = params.getEnum("accuracy-mode", StatModifierType.class, StatModifierType.DIFF);
+    }
+
+    @Override
+    public void pump(Creature effected, Skill skill) {
+        if (weaponTypeCondition.test(effected, effected, skill) && slotCondition.test(effected, effected, skill)) {
+            switch (pAtkmode) {
+                case DIFF -> effected.getStats().mergeAdd(Stat.PHYSICAL_ATTACK, pAtkAmount);
+                case PER -> effected.getStats().mergeMul(Stat.PHYSICAL_ATTACK, (pAtkAmount / 100) + 1);
+            }
+
+            switch (accuracyMode) {
+                case DIFF -> effected.getStats().mergeAdd(Stat.ACCURACY, accuracyAmount);
+                case PER -> effected.getStats().mergeMul(Stat.ACCURACY, (accuracyAmount / 100) + 1);
+            }
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new TwoHandedSwordBonus(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "two-hand-sword-bonus";
+        }
+    }
 }

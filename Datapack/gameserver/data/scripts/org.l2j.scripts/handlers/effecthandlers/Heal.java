@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -20,11 +21,12 @@ import static org.l2j.gameserver.util.GameUtils.*;
 /**
  * Heal effect implementation.
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class Heal extends AbstractEffect {
-	public final double power;
+	private final double power;
 	
-	public Heal(StatsSet params)
+	private Heal(StatsSet params)
 	{
 		power = params.getDouble("power", 0);
 	}
@@ -108,6 +110,19 @@ public final class Heal extends AbstractEffect {
 			} else {
 				effected.sendPacket(getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addInt((int) amount));
 			}
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new Heal(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "Heal";
 		}
 	}
 }

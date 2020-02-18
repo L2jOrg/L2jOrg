@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -11,9 +12,9 @@ import org.l2j.gameserver.network.SystemMessageId;
  * Mp Consume Per Level effect implementation.
  */
 public final class MpConsumePerLevel extends AbstractEffect {
-	public final double power;
+	private final double power;
 	
-	public MpConsumePerLevel(StatsSet params) {
+	private MpConsumePerLevel(StatsSet params) {
 		power = params.getDouble("power", 0);
 		setTicks(params.getInt("ticks"));
 	}
@@ -33,5 +34,18 @@ public final class MpConsumePerLevel extends AbstractEffect {
 		
 		effected.reduceCurrentMp(consume);
 		return skill.isToggle();
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new MpConsumePerLevel(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "MpConsumePerLevel";
+		}
 	}
 }

@@ -2,6 +2,7 @@ package handlers.effecthandlers;
 
 import java.util.List;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.DispelSlotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -15,13 +16,14 @@ import org.l2j.gameserver.model.stats.Formulas;
 /**
  * Dispel By Category effect implementation.
  * @author DS, Adry_85
+ * @author JoeAlisson
  */
 public final class DispelByCategory extends AbstractEffect {
-    public final DispelSlotType category;
-    public final int power;
-    public final int max;
+    private final DispelSlotType category;
+    private final int power;
+    private final int max;
 
-    public DispelByCategory(StatsSet params) {
+    private DispelByCategory(StatsSet params) {
         category = params.getEnum("category", DispelSlotType.class, DispelSlotType.BUFF);
         power = params.getInt("power", 0);
         max = params.getInt("max", 0);
@@ -47,5 +49,18 @@ public final class DispelByCategory extends AbstractEffect {
 
         final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(effector, effected, skill, category, power, max);
         canceled.forEach(b -> effected.getEffectList().stopSkillEffects(true, b.getSkill()));
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new DispelByCategory(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "dispel-by-category";
+        }
     }
 }

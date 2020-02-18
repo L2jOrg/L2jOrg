@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -16,11 +17,12 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
 /**
  * Heal Percent effect implementation.
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class HealPercent extends AbstractEffect {
-	public final int power;
+	private final int power;
 	
-	public HealPercent(StatsSet params)
+	private HealPercent(StatsSet params)
 	{
 		power = params.getInt("power", 0);
 	}
@@ -71,6 +73,19 @@ public final class HealPercent extends AbstractEffect {
 			final double damage = -amount;
 			effected.reduceCurrentHp(damage, effector, skill, false, false, false, false);
 			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new HealPercent(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "HealPercent";
 		}
 	}
 }

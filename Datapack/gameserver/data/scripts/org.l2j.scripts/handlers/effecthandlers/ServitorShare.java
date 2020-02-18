@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -20,9 +21,9 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * @author JoeAlisson
  */
 public final class ServitorShare extends AbstractEffect {
-    public final Map<Stat, Float> sharedStats;
+    private final Map<Stat, Float> sharedStats;
 
-    public ServitorShare(StatsSet params) {
+    private ServitorShare(StatsSet params) {
         if(params.contains("type")) {
             sharedStats = Map.of(params.getEnum("type", Stat.class), params.getFloat("power") / 100);
         } else {
@@ -49,6 +50,19 @@ public final class ServitorShare extends AbstractEffect {
             for (Entry<Stat, Float> stats : sharedStats.entrySet()) {
                 effected.getStats().mergeAdd(stats.getKey(), owner.getStats().getValue(stats.getKey()) * stats.getValue());
             }
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new ServitorShare(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "servitor-share";
         }
     }
 }

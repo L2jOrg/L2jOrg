@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -13,9 +14,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Detection effect implementation.
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class Detection extends AbstractEffect {
-	public Detection(StatsSet params) {
+	private Detection() {
 	}
 	
 	@Override
@@ -48,6 +50,20 @@ public final class Detection extends AbstractEffect {
 			
 			// Remove Hide.
 			target.getEffectList().stopEffects(AbnormalType.HIDE);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final Detection INSTANCE = new Detection();
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "Detection";
 		}
 	}
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.DispelSlotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -21,11 +22,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class StealAbnormal extends AbstractEffect {
 
-	public final DispelSlotType slot;
-	public final int rate;
-	public final int power;
+	private final DispelSlotType slot;
+	private final int rate;
+	private final int power;
 	
-	public StealAbnormal(StatsSet params) {
+	private StealAbnormal(StatsSet params) {
 		slot = params.getEnum("category", DispelSlotType.class, DispelSlotType.BUFF);
 		rate = params.getInt("rate", 0);
 		power = params.getInt("power", 0);
@@ -60,6 +61,18 @@ public final class StealAbnormal extends AbstractEffect {
 				effected.getEffectList().remove(infoToSteal, true, true, true);
 				effector.getEffectList().add(stolen);
 			}
+		}
+	}
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new StealAbnormal(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "steal-abnormal";
 		}
 	}
 }

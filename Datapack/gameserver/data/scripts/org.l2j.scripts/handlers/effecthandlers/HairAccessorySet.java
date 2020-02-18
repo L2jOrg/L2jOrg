@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -13,9 +14,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class HairAccessorySet extends AbstractEffect  {
-	public HairAccessorySet(StatsSet params) {
+
+	private HairAccessorySet() {
 	}
 	
 	@Override
@@ -34,5 +37,19 @@ public class HairAccessorySet extends AbstractEffect  {
 		player.setHairAccessoryEnabled(!player.isHairAccessoryEnabled());
 		player.broadcastUserInfo(UserInfoType.APPAREANCE);
 		player.sendPacket(player.isHairAccessoryEnabled() ? SystemMessageId.HAIR_ACCESSORIES_WILL_BE_DISPLAYED_FROM_NOW_ON : SystemMessageId.HAIR_ACCESSORIES_WILL_NO_LONGER_BE_DISPLAYED);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final HairAccessorySet INSTANCE = new HairAccessorySet();
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "HairAccessorySet";
+		}
 	}
 }

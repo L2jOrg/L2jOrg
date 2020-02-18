@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -18,9 +19,9 @@ import java.util.Map.Entry;
  * @author JoeAlisson
  */
 public final class DefenceTrait extends AbstractEffect {
-    public final Map<TraitType, Float> defenceTraits;
+    private final Map<TraitType, Float> defenceTraits;
 
-    public DefenceTrait(StatsSet params) {
+    private DefenceTrait(StatsSet params) {
         if(params.contains("type")) {
             defenceTraits = Map.of(params.getEnum("type", TraitType.class), params.getFloat("power") / 100);
         } else {
@@ -53,6 +54,19 @@ public final class DefenceTrait extends AbstractEffect {
             } else {
                 effected.getStats().removeInvulnerableTrait(trait.getKey());
             }
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new DefenceTrait(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "defence-trait";
         }
     }
 }

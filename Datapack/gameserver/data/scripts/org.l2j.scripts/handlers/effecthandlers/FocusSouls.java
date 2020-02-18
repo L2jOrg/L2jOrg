@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -15,11 +16,12 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Focus Souls effect implementation.
  *
  * @author nBd, Adry_85
+ * @author JoeAlisson
  */
 public final class FocusSouls extends AbstractEffect {
-    public final int power;
+    private final int power;
 
-    public FocusSouls(StatsSet params) {
+    private FocusSouls(StatsSet params) {
         power = params.getInt("power", 0);
     }
 
@@ -44,6 +46,19 @@ public final class FocusSouls extends AbstractEffect {
             } else {
                 target.sendPacket(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
             }
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new FocusSouls(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "FocusSouls";
         }
     }
 }

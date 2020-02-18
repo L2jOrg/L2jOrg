@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -14,11 +15,11 @@ import org.l2j.gameserver.util.MathUtil;
  */
 public class StatPositionBased extends AbstractEffect {
 
-    public final double power;
-    public final Position position;
+    private final double power;
+    private final Position position;
     private final Stat stat;
 
-    public StatPositionBased(StatsSet params) {
+    private StatPositionBased(StatsSet params) {
         stat = params.getEnum("stat", Stat.class);
         power = params.getDouble("power", 0);
         position = params.getEnum("position", Position.class, Position.FRONT);
@@ -34,5 +35,18 @@ public class StatPositionBased extends AbstractEffect {
     public void onExit(Creature effector, Creature effected, Skill skill)
     {
         effected.getStats().mergePositionTypeValue(stat, position, (power / 100) + 1, MathUtil::div);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new StatPositionBased(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "stat-position-based";
+        }
     }
 }

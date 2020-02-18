@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -16,47 +17,61 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Magical Attack effect implementation.
  * @author Adry_85
+ * @author JoeAlisson
  */
 public final class MagicalAttack extends AbstractEffect {
-	public final double power;
-	public final boolean overHit;
-	
-	public MagicalAttack(StatsSet params) {
-		power = params.getDouble("power", 0);
-		overHit = params.getBoolean("over-hit", false);
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.MAGICAL_ATTACK;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (effector.isAlikeDead()) {
-			return;
-		}
-		
-		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
-			effected.stopFakeDeath(true);
-		}
-		
-		if (overHit && isAttackable(effected)) {
-			((Attackable) effected).overhitEnabled(true);
-		}
-		
-		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
-		
-		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
-	}
+    private final double power;
+    private final boolean overHit;
+
+    private MagicalAttack(StatsSet params) {
+        power = params.getDouble("power", 0);
+        overHit = params.getBoolean("over-hit", false);
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.MAGICAL_ATTACK;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (effector.isAlikeDead()) {
+            return;
+        }
+
+        if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
+            effected.stopFakeDeath(true);
+        }
+
+        if (overHit && isAttackable(effected)) {
+            ((Attackable) effected).overhitEnabled(true);
+        }
+
+        final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+        final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+        final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
+        double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
+
+        effector.doAttack(damage, effected, skill, false, false, mcrit, false);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new MagicalAttack(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "magical-attack";
+        }
+    }
 }

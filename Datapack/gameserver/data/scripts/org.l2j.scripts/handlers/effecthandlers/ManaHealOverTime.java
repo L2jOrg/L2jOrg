@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -11,11 +12,13 @@ import static java.util.Objects.nonNull;
 
 /**
  * Mana Heal Over Time effect implementation.
+ *
+ * @author JoeAlisson
  */
 public final class ManaHealOverTime extends AbstractEffect {
-	public final double power;
+	private final double power;
 	
-	public ManaHealOverTime(StatsSet params) {
+	private ManaHealOverTime(StatsSet params) {
 		power = params.getDouble("power", 0);
 		setTicks(params.getInt("ticks"));
 	}
@@ -44,5 +47,18 @@ public final class ManaHealOverTime extends AbstractEffect {
 		effected.setCurrentMp(mp, false);
 		effected.broadcastStatusUpdate(effector);
 		return skill.isToggle();
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new ManaHealOverTime(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "ManaHealOverTime";
+		}
 	}
 }

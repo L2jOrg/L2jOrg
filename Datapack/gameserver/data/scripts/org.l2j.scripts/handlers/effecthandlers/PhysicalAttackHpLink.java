@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -17,13 +18,14 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * Physical Attack HP Link effect implementation.<br>
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
  * @author Adry_85, Nik
+ * @author JoeAlisson
  */
 public final class PhysicalAttackHpLink extends AbstractEffect {
-	public final double power;
-	public final double criticalChance;
-	public final boolean overHit;
+	private final double power;
+	private final double criticalChance;
+	private final boolean overHit;
 	
-	public PhysicalAttackHpLink(StatsSet params) {
+	private PhysicalAttackHpLink(StatsSet params) {
 		power = params.getDouble("power", 0);
 		criticalChance = params.getDouble("critical-chance", 0);
 		overHit = params.getBoolean("over-hit", false);
@@ -102,5 +104,18 @@ public final class PhysicalAttackHpLink extends AbstractEffect {
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new PhysicalAttackHpLink(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "physical-attack-hp-link";
+		}
 	}
 }

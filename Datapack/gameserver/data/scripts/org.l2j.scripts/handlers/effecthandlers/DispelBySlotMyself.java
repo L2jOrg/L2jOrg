@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -19,9 +20,9 @@ import org.l2j.gameserver.engine.skill.api.Skill;
  * @author Gnacik, Zoey76, Adry_85
  */
 public final class DispelBySlotMyself extends AbstractEffect {
-	public final Set<AbnormalType> dispelAbnormals;
+	private final Set<AbnormalType> dispelAbnormals;
 	
-	public DispelBySlotMyself(StatsSet params) {
+	private DispelBySlotMyself(StatsSet params) {
 		dispelAbnormals = Arrays.stream(params.getString("abnormals").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());;
 	}
 	
@@ -45,5 +46,18 @@ public final class DispelBySlotMyself extends AbstractEffect {
 		
 		// The effectlist should already check if it has buff with this abnormal type or not.
 		effected.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && dispelAbnormals.contains(info.getSkill().getAbnormalType()), true, true);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new DispelBySlotMyself(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "dispel-myself";
+		}
 	}
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -14,11 +15,12 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Magical Attack By Abnormal effect implementation.
  * @author Adry_85
+ * @author JoeAlisson
  */
 public final class MagicalAttackByAbnormal extends AbstractEffect {
-	public final double power;
+	private final double power;
 	
-	public MagicalAttackByAbnormal(StatsSet params)
+	private MagicalAttackByAbnormal(StatsSet params)
 	{
 		power = params.getDouble("power", 0);
 	}
@@ -54,5 +56,18 @@ public final class MagicalAttackByAbnormal extends AbstractEffect {
 		damage *= (((effected.getBuffCount() * 0.3) + 1.3) / 4);
 		
 		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new MagicalAttackByAbnormal(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "MagicalAttackByAbnormal";
+		}
 	}
 }

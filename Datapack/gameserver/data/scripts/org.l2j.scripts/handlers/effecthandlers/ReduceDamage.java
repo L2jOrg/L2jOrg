@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -15,33 +16,46 @@ import java.util.function.Function;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class ReduceDamage extends AbstractEffect {
-	public final double power;
-	
-	public ReduceDamage(StatsSet params)
-	{
-		power = params.getDouble("power");
-	}
-	
-	private DamageReturn onDamageReceivedEvent(OnCreatureDamageReceived event) {
-		// DOT effects are not taken into account.
-		if (event.isDamageOverTime()) {
-			return null;
-		}
-		
-		final double newDamage = event.getDamage() * (power / 100);
-		return new DamageReturn(false, true, false, newDamage);
-	}
-	
-	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_RECEIVED, listener -> listener.getOwner() == this);
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
-		effected.addListener(new FunctionEventListener(effected, EventType.ON_CREATURE_DAMAGE_RECEIVED, (Function<OnCreatureDamageReceived, AbstractEventReturn>) this::onDamageReceivedEvent, this));
-	}
+    private final double power;
+
+    private ReduceDamage(StatsSet params) {
+        power = params.getDouble("power");
+    }
+
+    private DamageReturn onDamageReceivedEvent(OnCreatureDamageReceived event) {
+        // DOT effects are not taken into account.
+        if (event.isDamageOverTime()) {
+            return null;
+        }
+
+        final double newDamage = event.getDamage() * (power / 100);
+        return new DamageReturn(false, true, false, newDamage);
+    }
+
+    @Override
+    public void onExit(Creature effector, Creature effected, Skill skill)
+    {
+        effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_RECEIVED, listener -> listener.getOwner() == this);
+    }
+
+    @Override
+    public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
+        effected.addListener(new FunctionEventListener(effected, EventType.ON_CREATURE_DAMAGE_RECEIVED, (Function<OnCreatureDamageReceived, AbstractEventReturn>) this::onDamageReceivedEvent, this));
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new ReduceDamage(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "ReduceDamage";
+        }
+    }
 }

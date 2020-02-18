@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -17,11 +18,12 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Focus Energy effect implementation.
  *
  * @author DS
+ * @author JoeAlisson
  */
 public final class FocusMomentum extends AbstractEffect {
-    public final int maxCharges;
+    private final int maxCharges;
 
-    public FocusMomentum(StatsSet params) {
+    private FocusMomentum(StatsSet params) {
         maxCharges = params.getInt("power", 0);
     }
 
@@ -58,5 +60,18 @@ public final class FocusMomentum extends AbstractEffect {
         }
 
         player.sendPacket(new EtcStatusUpdate(player));
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new FocusMomentum(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "FocusMomentum";
+        }
     }
 }

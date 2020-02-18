@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -21,41 +22,54 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Sdw
  */
 public final class MagicalAttackByAbnormalSlot extends AbstractEffect {
-	public final double power;
-	public final Set<AbnormalType> abnormals;
-	
-	public MagicalAttackByAbnormalSlot(StatsSet params) {
-		power = params.getDouble("power", 0);
-		abnormals = Arrays.stream(params.getString("abnormals", "").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.MAGICAL_ATTACK;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (effector.isAlikeDead() || abnormals.stream().noneMatch(effected::hasAbnormalType)) {
-			return;
-		}
-		
-		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
-			effected.stopFakeDeath(true);
-		}
-		
-		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
-		
-		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
-	}
+    private final double power;
+    private final Set<AbnormalType> abnormals;
+
+    private MagicalAttackByAbnormalSlot(StatsSet params) {
+        power = params.getDouble("power", 0);
+        abnormals = Arrays.stream(params.getString("abnormals", "").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.MAGICAL_ATTACK;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (effector.isAlikeDead() || abnormals.stream().noneMatch(effected::hasAbnormalType)) {
+            return;
+        }
+
+        if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
+            effected.stopFakeDeath(true);
+        }
+
+        final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+        final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+        final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
+        final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
+
+        effector.doAttack(damage, effected, skill, false, false, mcrit, false);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new MagicalAttackByAbnormalSlot(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "magical-attack-by-abnormal";
+        }
+    }
 }

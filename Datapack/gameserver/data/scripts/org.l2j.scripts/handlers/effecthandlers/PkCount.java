@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -13,11 +14,12 @@ import static java.util.Objects.isNull;
 /**
  * Item Effect: Increase/decrease PK count permanently.
  * @author Nik
+ * @author JoeAlisson
  */
 public class PkCount extends AbstractEffect {
-	public final int power;
+	private final int power;
 	
-	public PkCount(StatsSet params)
+	private PkCount(StatsSet params)
 	{
 		power = params.getInt("power", 0);
 	}
@@ -40,6 +42,19 @@ public class PkCount extends AbstractEffect {
 			final int newPkCount = Math.max(player.getPkKills() + power, 0);
 			player.setPkKills(newPkCount);
 			player.sendPacket(new UserInfo(player));
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new PkCount(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "PkCount";
 		}
 	}
 }

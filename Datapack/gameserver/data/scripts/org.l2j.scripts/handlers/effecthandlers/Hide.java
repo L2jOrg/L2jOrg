@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
@@ -14,9 +15,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Hide effect implementation.
  * @author ZaKaX, nBd
+ * @author JoeAlisson
  */
 public final class Hide extends AbstractEffect {
-	public Hide(StatsSet params) {
+
+	private Hide() {
 	}
 	
 	@Override
@@ -44,6 +47,19 @@ public final class Hide extends AbstractEffect {
 			if (!activeChar.inObserverMode()) {
 				activeChar.setInvisible(false);
 			}
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final Hide INSTANCE = new Hide();
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "Hide";
 		}
 	}
 }

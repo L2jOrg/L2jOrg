@@ -19,14 +19,13 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * Caches script engines and provides functionality for executing and managing scripts.
  *
  * @author KenM, HorridoJoho
+ * @author JoeAlisson
  */
 public final class ScriptEngineManager  {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ScriptEngineManager.class);
 
     public static final Path SCRIPT_FOLDER = getSettings(ServerSettings.class).dataPackDirectory().resolve("data/scripts");
-    private static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "MasterHandler.java");
-    private static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "EffectMasterHandler.java");
     private static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
 
     private final Map<String, IExecutionContext> extEngines = new HashMap<>();
@@ -111,14 +110,6 @@ public final class ScriptEngineManager  {
         } else if (!Files.isRegularFile(filePath)) {
             throw new Exception("ScriptFile: " + filePath + " is not a file!");
         }
-    }
-
-    public void executeMasterHandler() throws Exception {
-        executeScript(MASTER_HANDLER_FILE);
-    }
-
-    public void executeEffectMasterHandler() throws Exception {
-        executeScript(EFFECT_MASTER_HANDLER_FILE);
     }
 
     public void executeConditionMasterHandler() throws Exception {

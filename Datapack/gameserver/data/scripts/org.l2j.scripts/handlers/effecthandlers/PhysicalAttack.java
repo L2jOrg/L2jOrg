@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -23,14 +24,14 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author JoeAlisson
  */
 public final class PhysicalAttack extends AbstractEffect {
-	public final double power;
-	public final double pAtkMod;
-	public final double pDefMod;
-	public final double criticalChance;
-	public final boolean ignoreShieldDefence;
-	public final boolean overHit;
+	private final double power;
+	private final double pAtkMod;
+	private final double pDefMod;
+	private final double criticalChance;
+	private final boolean ignoreShieldDefence;
+	private final boolean overHit;
 
-	public PhysicalAttack(StatsSet params) {
+	private PhysicalAttack(StatsSet params) {
 		power = params.getDouble("power", 0);
 		pAtkMod = params.getDouble("attack-mod", 1.0);
 		pDefMod = params.getDouble("defense-mod", 1.0);
@@ -119,5 +120,18 @@ public final class PhysicalAttack extends AbstractEffect {
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new PhysicalAttack(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "physical-attack";
+		}
 	}
 }

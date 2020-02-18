@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -14,11 +15,11 @@ import org.l2j.gameserver.network.SystemMessageId;
  * Dam Over Time effect implementation.
  */
 public final class DamOverTime extends AbstractEffect {
-	public final boolean canKill;
-	public final double power;
+	private final boolean canKill;
+	private final double power;
 	private final StatModifierType mode;
 
-	public DamOverTime(StatsSet params) {
+	private DamOverTime(StatsSet params) {
 		canKill = params.getBoolean("can-kill", false);
 		power = params.getDouble("power");
 		mode = params.getEnum("mode", StatModifierType.class);
@@ -73,5 +74,18 @@ public final class DamOverTime extends AbstractEffect {
 		
 		effector.doAttack(damage, effected, skill, true, false, false, false);
 		return skill.isToggle();
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new DamOverTime(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "damage-over-time";
+		}
 	}
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
@@ -11,10 +12,10 @@ import org.l2j.gameserver.model.effects.EffectFlag;
  * @author JoeAlisson
  */
 public final class DamageBlock extends AbstractEffect {
-	public final boolean blockHp;
-	public final boolean blockMp;
+	private final boolean blockHp;
+	private final boolean blockMp;
 	
-	public DamageBlock(StatsSet params) {
+	private DamageBlock(StatsSet params) {
 		blockHp = params.getBoolean("block-hp");
 		blockMp = params.getBoolean("block-mp");
 	}
@@ -29,5 +30,18 @@ public final class DamageBlock extends AbstractEffect {
 			mask |= EffectFlag.MP_BLOCK.getMask();
 		}
 		return mask;
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new DamageBlock(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "damage-block";
+		}
 	}
 }

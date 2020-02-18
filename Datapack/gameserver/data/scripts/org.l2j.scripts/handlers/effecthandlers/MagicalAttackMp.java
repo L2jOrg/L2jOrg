@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -17,13 +18,14 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Magical Attack MP effect.
  * @author Adry_85
+ * @author JoeAlisson
  */
 public final class MagicalAttackMp extends AbstractEffect {
-	public final double power;
-	public final boolean critical;
-	public final double criticalLimit;
+	private final double power;
+	private final boolean critical;
+	private final double criticalLimit;
 	
-	public MagicalAttackMp(StatsSet params) {
+	private MagicalAttackMp(StatsSet params) {
 		power = params.getDouble("power");
 		critical = params.getBoolean("critical");
 		criticalLimit = params.getDouble("critical-limit");
@@ -87,6 +89,19 @@ public final class MagicalAttackMp extends AbstractEffect {
 		
 		if (isPlayer(effector)) {
 			effector.sendPacket( getSystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1).addInt((int) mp));
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new MagicalAttackMp(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "magical-attack-mp";
 		}
 	}
 }

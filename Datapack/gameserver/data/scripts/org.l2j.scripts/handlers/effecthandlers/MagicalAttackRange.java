@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -14,50 +15,64 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Magical Attack effect implementation.
  * @author Adry_85
+ * @author JoeAlisson
  */
 public final class MagicalAttackRange extends AbstractEffect {
-	public final double power;
-	public final double shieldDefPercent;
-	
-	public MagicalAttackRange(StatsSet params) {
-		power = params.getDouble("power");
-		shieldDefPercent = params.getDouble("shield-defense", 0);
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.MAGICAL_ATTACK;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
-			effected.stopFakeDeath(true);
-		}
-		
-		double mDef = effected.getMDef();
-		switch (Formulas.calcShldUse(effector, effected)) {
-			case Formulas.SHIELD_DEFENSE_SUCCEED -> mDef += ((effected.getShldDef() * shieldDefPercent) / 100);
-			case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK -> mDef = -1;
-		}
-		
-		double damage = 1;
-		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		
-		if (mDef != -1) {
-			final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-			final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-			
-			damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, mDef, sps, bss, mcrit);
-		}
-		
-		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
-	}
+    private final double power;
+    private final double shieldDefPercent;
+
+    private MagicalAttackRange(StatsSet params) {
+        power = params.getDouble("power");
+        shieldDefPercent = params.getDouble("shield-defense", 0);
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.MAGICAL_ATTACK;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
+            effected.stopFakeDeath(true);
+        }
+
+        double mDef = effected.getMDef();
+        switch (Formulas.calcShldUse(effector, effected)) {
+            case Formulas.SHIELD_DEFENSE_SUCCEED -> mDef += ((effected.getShldDef() * shieldDefPercent) / 100);
+            case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK -> mDef = -1;
+        }
+
+        double damage = 1;
+        final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
+
+        if (mDef != -1) {
+            final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+            final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+
+            damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, mDef, sps, bss, mcrit);
+        }
+
+        effector.doAttack(damage, effected, skill, false, false, mcrit, false);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new MagicalAttackRange(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "magical-attack-range";
+        }
+    }
 }

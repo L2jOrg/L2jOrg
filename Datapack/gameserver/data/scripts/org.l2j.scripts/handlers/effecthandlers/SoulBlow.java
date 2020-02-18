@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -18,11 +19,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Adry_85
  */
 public final class SoulBlow extends AbstractEffect {
-	public final double power;
-	public final double chanceBoost;
-	public final boolean overHit;
+	private final double power;
+	private final double chanceBoost;
+	private final boolean overHit;
 	
-	public SoulBlow(StatsSet params) {
+	private SoulBlow(StatsSet params) {
 		power = params.getDouble("power");
 		chanceBoost = params.getDouble("chance-boost");
 		overHit = params.getBoolean("over-hit", false);
@@ -72,5 +73,18 @@ public final class SoulBlow extends AbstractEffect {
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, true, false);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new SoulBlow(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "soul-blow";
+		}
 	}
 }

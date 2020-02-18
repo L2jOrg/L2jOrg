@@ -2,6 +2,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.ExtractableProductItem;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -33,9 +34,9 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class RestorationRandom extends AbstractEffect {
 
-    public final List<ExtractableProductItem> products;
+    private final List<ExtractableProductItem> products;
 
-    public RestorationRandom(StatsSet params) {
+    private RestorationRandom(StatsSet params) {
         if(params.contains("id")) {
             var item = new RestorationItemHolder(params.getInt("id"), params.getInt("count"), 0, 0);
             products = List.of(new ExtractableProductItem(List.of(item), params.getInt("chance")));
@@ -140,5 +141,18 @@ public final class RestorationRandom extends AbstractEffect {
             sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(item);
         }
         player.sendPacket(sm);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new RestorationRandom(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "random-restoration";
+        }
     }
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -13,13 +14,14 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Give XP and SP effect implementation.
  * @author quangnguyen
+ * @author JoeAlisson
  */
 public final class GiveExpAndSp extends AbstractEffect {
 
-    public final int xp;
-    public final int sp;
+    private final int xp;
+    private final int sp;
 
-    public GiveExpAndSp(StatsSet params) {
+    private GiveExpAndSp(StatsSet params) {
         xp = params.getInt("xp", 0);
         sp = params.getInt("sp", 0);
     }
@@ -40,6 +42,19 @@ public final class GiveExpAndSp extends AbstractEffect {
             effector.getActingPlayer().getStats().addExp(xp);
             effector.getActingPlayer().getStats().addSp(sp);
             effector.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4).addLong(xp).addLong(0).addLong(sp).addLong(0));
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new GiveExpAndSp(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "acquire-xp-sp";
         }
     }
 }

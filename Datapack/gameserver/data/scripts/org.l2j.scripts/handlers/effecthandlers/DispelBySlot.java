@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -20,9 +21,9 @@ import static java.util.Objects.nonNull;
  */
 public final class DispelBySlot extends AbstractEffect {
 
-    public final Map<AbnormalType, Short> dispelAbnormals;
+    private final Map<AbnormalType, Short> dispelAbnormals;
 
-    public DispelBySlot(StatsSet params) {
+    private DispelBySlot(StatsSet params) {
         if(params.contains("type")) {
             dispelAbnormals = Map.of(params.getEnum("type", AbnormalType.class), params.getShort("power"));
         } else {
@@ -71,6 +72,19 @@ public final class DispelBySlot extends AbstractEffect {
                 final Short abnormalLevel = dispelAbnormals.get(info.getSkill().getAbnormalType());
                 return (abnormalLevel != null) && ((abnormalLevel < 0) || (abnormalLevel >= info.getSkill().getAbnormalLvl()));
             }, true, true);
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new DispelBySlot(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "dispel";
         }
     }
 }

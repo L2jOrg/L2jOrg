@@ -1,6 +1,7 @@
 package handlers;
 
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.handler.*;
 
 import java.util.ServiceLoader;
@@ -26,6 +27,7 @@ public class Init {
         ServiceLoader.load(IAffectScopeHandler.class, loader).forEach(AffectScopeHandler.getInstance()::registerHandler);
         ServiceLoader.load(IPlayerActionHandler.class, loader).forEach(PlayerActionHandler.getInstance()::registerHandler);
         ServiceLoader.load(SkillConditionFactory.class, loader).forEach(SkillConditionHandler.getInstance()::registerFactory);
+        ServiceLoader.load(SkillEffectFactory.class, loader).forEach(EffectHandler.getInstance()::registerFactory);
 
     }
 }

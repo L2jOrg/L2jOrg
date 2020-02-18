@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.DispelSlotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -9,12 +10,13 @@ import org.l2j.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class ResistDispelByCategory extends AbstractEffect {
-    public final DispelSlotType slot;
-    public final double power;
+    private final DispelSlotType slot;
+    private final double power;
 
-    public ResistDispelByCategory(StatsSet params) {
+    private ResistDispelByCategory(StatsSet params) {
         power = params.getDouble("power", 0);
         slot = params.getEnum("category", DispelSlotType.class, DispelSlotType.BUFF);
     }
@@ -24,6 +26,19 @@ public class ResistDispelByCategory extends AbstractEffect {
         // Only this one is in use it seems
         if (slot == DispelSlotType.BUFF) {
             effected.getStats().mergeMul(Stat.RESIST_DISPEL_BUFF, 1 + (power / 100));
+        }
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new ResistDispelByCategory(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "resist-dispel-by-category";
         }
     }
 }

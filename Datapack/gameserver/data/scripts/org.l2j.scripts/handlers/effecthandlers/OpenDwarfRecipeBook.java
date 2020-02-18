@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.RecipeController;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -15,30 +16,46 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Open Dwarf Recipe Book effect implementation.
  * @author Adry_85
+ * @author JoeAlisson
  */
 public final class OpenDwarfRecipeBook extends AbstractEffect {
 
-	public OpenDwarfRecipeBook(StatsSet params) {
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (!isPlayer(effector)) {
-			return;
-		}
-		
-		final Player player = effector.getActingPlayer();
-		if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
-			player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
-			return;
-		}
-		
-		RecipeController.getInstance().requestBookOpen(player, true);
-	}
+    private OpenDwarfRecipeBook() {
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (!isPlayer(effector)) {
+            return;
+        }
+
+        final Player player = effector.getActingPlayer();
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
+            return;
+        }
+
+        RecipeController.getInstance().requestBookOpen(player, true);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        private static final OpenDwarfRecipeBook INSTANCE = new OpenDwarfRecipeBook();
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return INSTANCE;
+        }
+
+        @Override
+        public String effectName() {
+            return "OpenDwarfRecipeBook";
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -17,11 +18,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author Sdw
  */
 public class Feed extends AbstractEffect {
-	public final int normal;
-	public final int ride;
-	public final int wyvern;
+	private final int normal;
+	private final int ride;
+	private final int wyvern;
 	
-	public Feed(StatsSet params) {
+	private Feed(StatsSet params) {
 		normal = params.getInt("normal", 0);
 		ride = params.getInt("ride", 0);
 		wyvern = params.getInt("wyvern", 0);
@@ -45,6 +46,19 @@ public class Feed extends AbstractEffect {
 			} else {
 				player.setCurrentFeed(player.getCurrentFeed() + ride);
 			}
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new Feed(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "feed";
 		}
 	}
 }

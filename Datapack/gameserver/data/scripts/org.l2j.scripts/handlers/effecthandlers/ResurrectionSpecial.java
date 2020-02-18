@@ -3,6 +3,7 @@ package handlers.effecthandlers;
 import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -19,12 +20,13 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Resurrection Special effect implementation.
  * @author Zealar
+ * @author JoeAlisson
  */
 public final class ResurrectionSpecial extends AbstractEffect {
-	public final int power;
+	private final int power;
 	private final IntSet instanceIds;
 	
-	public ResurrectionSpecial(StatsSet params) {
+	private ResurrectionSpecial(StatsSet params) {
 		power = params.getInt("power", 0);
 		
 		final String instanceIds = params.getString("instanceId", null);
@@ -67,6 +69,19 @@ public final class ResurrectionSpecial extends AbstractEffect {
 		} else if (isPet(effected)) {
 			final Pet pet = (Pet) effected;
 			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, power);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new ResurrectionSpecial(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "ResurrectionSpecial";
 		}
 	}
 }

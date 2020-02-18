@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.RecipeController;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -15,9 +16,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * Open Common Recipe Book effect implementation.
  * @author Adry_85
+ * @author JoeAlisson
  */
 public final class OpenCommonRecipeBook extends AbstractEffect {
-	public OpenCommonRecipeBook(StatsSet params) {
+	private OpenCommonRecipeBook() {
 	}
 	
 	@Override
@@ -39,5 +41,20 @@ public final class OpenCommonRecipeBook extends AbstractEffect {
 		}
 		
 		RecipeController.getInstance().requestBookOpen(player, false);
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		private static final OpenCommonRecipeBook INSTANCE = new OpenCommonRecipeBook();
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "OpenCommonRecipeBook";
+		}
 	}
 }

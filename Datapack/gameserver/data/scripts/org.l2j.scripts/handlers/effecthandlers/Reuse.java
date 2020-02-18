@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -13,10 +14,10 @@ import org.l2j.gameserver.util.MathUtil;
  * @author JoeAlisson
  */
 public class Reuse extends AbstractEffect {
-    public final SkillType magicType;
-    public final double power;
+    private final SkillType magicType;
+    private final double power;
 
-    public Reuse(StatsSet params) {
+    private Reuse(StatsSet params) {
         magicType = params.getEnum("skill-type", SkillType.class);
         power = params.getDouble("power", 0);
     }
@@ -31,5 +32,18 @@ public class Reuse extends AbstractEffect {
     public void onExit(Creature effector, Creature effected, Skill skill)
     {
         effected.getStats().mergeReuseTypeValue(magicType, (power / 100) + 1, MathUtil::div);
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new Reuse(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "reuse";
+        }
     }
 }

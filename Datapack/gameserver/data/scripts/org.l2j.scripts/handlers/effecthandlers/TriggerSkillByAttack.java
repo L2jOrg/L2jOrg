@@ -2,6 +2,7 @@ package handlers.effecthandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.StatsSet;
@@ -30,100 +31,113 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author JoeAlisson
  */
 public final class TriggerSkillByAttack extends AbstractEffect {
-	public final int minDamage;
-	public final int chance;
-	public final SkillHolder skill;
-	public final TargetType targetType;
-	private final InstanceType instanceType;
-	public int allowWeapons;
-	public final Boolean isCritical;
-	private final boolean allowNormalAttack;
-	private final boolean allowSkillAttack;
-	private final boolean allowReflect;
+    private final int minDamage;
+    private final int chance;
+    private final SkillHolder skill;
+    private final TargetType targetType;
+    private final InstanceType instanceType;
+    private int allowWeapons;
+    private final Boolean isCritical;
+    private final boolean allowNormalAttack;
+    private final boolean allowSkillAttack;
+    private final boolean allowReflect;
 
-	public TriggerSkillByAttack(StatsSet params) {
-		minDamage = params.getInt("min-damage", 1);
-		chance = params.getInt("chance", 100);
-		skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
-		targetType = params.getEnum("target", TargetType.class, TargetType.SELF);
-		instanceType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
-		isCritical = params.getBoolean("critical");
-		allowNormalAttack = params.getBoolean("allowNormalAttack", true);
-		allowSkillAttack = params.getBoolean("allowSkillAttack", false);
-		allowReflect = params.getBoolean("allowReflect", false);
+    private TriggerSkillByAttack(StatsSet params) {
+        minDamage = params.getInt("min-damage", 1);
+        chance = params.getInt("chance", 100);
+        skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
+        targetType = params.getEnum("target", TargetType.class, TargetType.SELF);
+        instanceType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
+        isCritical = params.getBoolean("critical");
+        allowNormalAttack = params.getBoolean("allowNormalAttack", true);
+        allowSkillAttack = params.getBoolean("allowSkillAttack", false);
+        allowReflect = params.getBoolean("allowReflect", false);
 
-		if(params.contains("weapons") && Util.isNotEmpty(params.getString("weapons"))) {
-			for (String s : params.getString("weapons").split(" ")) {
-				allowWeapons |= WeaponType.valueOf(s).mask();
-			}
-		}
-	}
-	
-	private void onAttackEvent(OnCreatureDamageDealt event) {
-		if (event.isDamageOverTime() || (chance == 0) || ((skill.getSkillId() == 0) || (skill.getLevel() == 0)) || (!allowNormalAttack && !allowSkillAttack)) {
-			return;
-		}
-		
-		// Check if there is dependancy on critical.
-		if (nonNull(isCritical) && (isCritical != event.isCritical())) {
-			return;
-		}
-		
-		// When no skill attacks are allowed.
-		if (!allowSkillAttack && nonNull(event.getSkill())) {
-			return;
-		}
-		
-		// When no normal attacks are allowed.
-		if (!allowNormalAttack && nonNull(event.getSkill())) {
-			return;
-		}
-		
-		if (!allowReflect && event.isReflect()) {
-			return;
-		}
-		
-		if (event.getAttacker() == event.getTarget()) {
-			return;
-		}
-		
-		if ((event.getDamage() < minDamage) || (Rnd.get(100) > chance) || !event.getAttacker().getInstanceType().isType(instanceType)) {
-			return;
-		}
-		
-		if (allowWeapons > 0) {
-			if ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & allowWeapons) == 0)) {
-				return;
-			}
-		}
-		
-		final Skill triggerSkill = skill.getSkill();
-		WorldObject target = null;
-		try {
-			target = TargetHandler.getInstance().getHandler(targetType).getTarget(event.getAttacker(), event.getTarget(), triggerSkill, false, false, false);
-		} catch (Exception e) {
-			LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
-		}
-		
-		if (isCreature(target))
-		{
-			final BuffInfo info = ((Creature) target).getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
-			if ((info == null) || (info.getSkill().getLevel() < triggerSkill.getLevel()))
-			{
-				SkillCaster.triggerCast(event.getAttacker(), (Creature) target, triggerSkill);
-			}
-		}
-	}
-	
-	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_DEALT, listener -> listener.getOwner() == this);
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_DAMAGE_DEALT, (Consumer<OnCreatureDamageDealt>) this::onAttackEvent, this));
-	}
+        if(params.contains("weapons") && Util.isNotEmpty(params.getString("weapons"))) {
+            for (String s : params.getString("weapons").split(" ")) {
+                allowWeapons |= WeaponType.valueOf(s).mask();
+            }
+        }
+    }
+
+    private void onAttackEvent(OnCreatureDamageDealt event) {
+        if (event.isDamageOverTime() || (chance == 0) || ((skill.getSkillId() == 0) || (skill.getLevel() == 0)) || (!allowNormalAttack && !allowSkillAttack)) {
+            return;
+        }
+
+        // Check if there is dependancy on critical.
+        if (nonNull(isCritical) && (isCritical != event.isCritical())) {
+            return;
+        }
+
+        // When no skill attacks are allowed.
+        if (!allowSkillAttack && nonNull(event.getSkill())) {
+            return;
+        }
+
+        // When no normal attacks are allowed.
+        if (!allowNormalAttack && nonNull(event.getSkill())) {
+            return;
+        }
+
+        if (!allowReflect && event.isReflect()) {
+            return;
+        }
+
+        if (event.getAttacker() == event.getTarget()) {
+            return;
+        }
+
+        if ((event.getDamage() < minDamage) || (Rnd.get(100) > chance) || !event.getAttacker().getInstanceType().isType(instanceType)) {
+            return;
+        }
+
+        if (allowWeapons > 0) {
+            if ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & allowWeapons) == 0)) {
+                return;
+            }
+        }
+
+        final Skill triggerSkill = skill.getSkill();
+        WorldObject target = null;
+        try {
+            target = TargetHandler.getInstance().getHandler(targetType).getTarget(event.getAttacker(), event.getTarget(), triggerSkill, false, false, false);
+        } catch (Exception e) {
+            LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+        }
+
+        if (isCreature(target))
+        {
+            final BuffInfo info = ((Creature) target).getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
+            if ((info == null) || (info.getSkill().getLevel() < triggerSkill.getLevel()))
+            {
+                SkillCaster.triggerCast(event.getAttacker(), (Creature) target, triggerSkill);
+            }
+        }
+    }
+
+    @Override
+    public void onExit(Creature effector, Creature effected, Skill skill)
+    {
+        effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_DEALT, listener -> listener.getOwner() == this);
+    }
+
+    @Override
+    public void onStart(Creature effector, Creature effected, Skill skill, Item item)
+    {
+        effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_DAMAGE_DEALT, (Consumer<OnCreatureDamageDealt>) this::onAttackEvent, this));
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new TriggerSkillByAttack(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "trigger-skill-by-attack";
+        }
+    }
 }

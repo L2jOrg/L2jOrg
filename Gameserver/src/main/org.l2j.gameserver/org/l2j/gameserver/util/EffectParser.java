@@ -3,7 +3,6 @@ package org.l2j.gameserver.util;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.stats.Stat;
 import org.w3c.dom.Node;
 
 import static java.util.Objects.nonNull;
@@ -85,6 +84,8 @@ public abstract class EffectParser extends GameXmlReader {
         var forceLevel = childStats.contains("level");
         var childLevel = childStats.getInt("level", startLevel);
 
+        var childKey = child.getNodeName() + child.hashCode();
+
         if(child.hasChildNodes()) {
             IntMap<StatsSet> childLevelInfo = new HashIntMap<>();
 
@@ -97,17 +98,17 @@ public abstract class EffectParser extends GameXmlReader {
                     var stats = entry.getValue();
                     var level = entry.getKey();
                     stats.merge(childStats);
-                    levelInfo.computeIfAbsent(level, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), stats);
+                    levelInfo.computeIfAbsent(level, i -> new StatsSet()).set(childKey, stats);
                 }
             } else if(forceLevel) {
-                levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), childStats);
+                levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(childKey, childStats);
             } else {
-                staticStatSet.set(child.getNodeName() + child.hashCode(), childStats);
+                staticStatSet.set(childKey, childStats);
             }
         } else if(forceLevel){
-            levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(child.getNodeName() + child.hashCode(), childStats);
+            levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(childKey, childStats);
         } else {
-            staticStatSet.set(child.getNodeName() + child.hashCode(), childStats);
+            staticStatSet.set(childKey, childStats);
         }
     }
 
