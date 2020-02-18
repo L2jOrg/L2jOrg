@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -17,9 +18,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class ChameleonRest extends AbstractEffect {
 
-	public final double power;
+	private final double power;
 	
-	public ChameleonRest(StatsSet params) {
+	private ChameleonRest(StatsSet params) {
 		power = params.getDouble("power", 0);
 		setTicks(params.getInt("ticks"));
 	}
@@ -62,6 +63,19 @@ public final class ChameleonRest extends AbstractEffect {
 			effected.getActingPlayer().sitDown(false);
 		} else {
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new ChameleonRest(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "ChameleonRest";
 		}
 	}
 }

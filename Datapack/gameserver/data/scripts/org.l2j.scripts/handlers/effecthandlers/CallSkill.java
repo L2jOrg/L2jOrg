@@ -1,6 +1,7 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -18,9 +19,9 @@ import static java.util.Objects.nonNull;
  */
 public final class CallSkill extends AbstractEffect {
 
-	public final SkillHolder skill;
+	private final SkillHolder skill;
 	
-	public CallSkill(StatsSet params) {
+	private CallSkill(StatsSet params) {
 		skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
 	}
 	
@@ -50,6 +51,19 @@ public final class CallSkill extends AbstractEffect {
 			SkillCaster.triggerCast(effector, effected, triggerSkill);
 		} else {
 			LOGGER.warn("Skill not found effect called from {}", skill);
+		}
+	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new CallSkill(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "call-skill";
 		}
 	}
 }

@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -22,10 +23,11 @@ import static org.l2j.gameserver.util.GameUtils.isWeapon;
 /**
  * Convert Item effect implementation.
  * @author Zoey76
+ * @author JoeAlisson
  */
 public final class ConvertItem extends AbstractEffect {
 
-	public ConvertItem(StatsSet params) {
+	private ConvertItem() {
 	}
 	
 	@Override
@@ -127,5 +129,19 @@ public final class ConvertItem extends AbstractEffect {
 		u.addItem(newItem);
 		player.sendInventoryUpdate(u);
 		player.broadcastUserInfo();
+	}
+
+	public static class Factory implements SkillEffectFactory {
+		private static final ConvertItem INSTANCE = new ConvertItem();
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return INSTANCE;
+		}
+
+		@Override
+		public String effectName() {
+			return "ConvertItem";
+		}
 	}
 }

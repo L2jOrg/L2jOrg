@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -20,49 +21,62 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
  * @author JoeAlisson
  */
 public final class CpHeal extends AbstractEffect {
-	public final double power;
-	
-	public CpHeal(StatsSet params)
-	{
-		power = params.getDouble("power", 0);
-	}
-	
-	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.CPHEAL;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-		if (effected.isDead() || isDoor(effected) || effected.isHpBlocked()) {
-			return;
-		}
-		
-		double amount = power;
-		if (nonNull(item) && (item.isPotion() || item.isElixir())) {
-			amount += effected.getStats().getValue(Stat.ADDITIONAL_POTION_CP, 0);
-		}
-		
-		// Prevents overheal and negative amount
-		amount = Math.max(Math.min(amount, effected.getMaxRecoverableCp() - effected.getCurrentCp()), 0);
-		if (amount != 0) {
-			effected.setCurrentCp(amount + effected.getCurrentCp(), false);
-			effected.broadcastStatusUpdate(effector);
-		}
+    private final double power;
 
-		SystemMessage sm;
-		if (nonNull(effector) && (effector != effected)) {
-			 sm = getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1).addString(effector.getName());
-		} else {
-			sm = getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
-		}
-		effected.sendPacket(sm.addInt((int) amount));
-	}
+    private CpHeal(StatsSet params)
+    {
+        power = params.getDouble("power", 0);
+    }
+
+    @Override
+    public EffectType getEffectType()
+    {
+        return EffectType.CPHEAL;
+    }
+
+    @Override
+    public boolean isInstant()
+    {
+        return true;
+    }
+
+    @Override
+    public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+        if (effected.isDead() || isDoor(effected) || effected.isHpBlocked()) {
+            return;
+        }
+
+        double amount = power;
+        if (nonNull(item) && (item.isPotion() || item.isElixir())) {
+            amount += effected.getStats().getValue(Stat.ADDITIONAL_POTION_CP, 0);
+        }
+
+        // Prevents overheal and negative amount
+        amount = Math.max(Math.min(amount, effected.getMaxRecoverableCp() - effected.getCurrentCp()), 0);
+        if (amount != 0) {
+            effected.setCurrentCp(amount + effected.getCurrentCp(), false);
+            effected.broadcastStatusUpdate(effector);
+        }
+
+        SystemMessage sm;
+        if (nonNull(effector) && (effector != effected)) {
+            sm = getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1).addString(effector.getName());
+        } else {
+            sm = getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
+        }
+        effected.sendPacket(sm.addInt((int) amount));
+    }
+
+    public static class Factory implements SkillEffectFactory {
+
+        @Override
+        public AbstractEffect create(StatsSet data) {
+            return new CpHeal(data);
+        }
+
+        @Override
+        public String effectName() {
+            return "CpHeal";
+        }
+    }
 }

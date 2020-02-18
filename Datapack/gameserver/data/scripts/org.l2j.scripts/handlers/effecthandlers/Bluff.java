@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -12,12 +13,13 @@ import org.l2j.gameserver.network.serverpackets.StopRotation;
 /**
  * Bluff effect implementation.
  * @author decad
+ * @author JoeAlisson
  */
 public final class Bluff extends AbstractEffect {
 
-	public final int power;
+	private final int power;
 	
-	public Bluff(StatsSet params) {
+	private Bluff(StatsSet params) {
 		power = params.getInt("power", 100);
 	}
 	
@@ -44,4 +46,18 @@ public final class Bluff extends AbstractEffect {
 		effected.broadcastPacket(new StopRotation(effected.getObjectId(), effector.getHeading(), 65535));
 		effected.setHeading(effector.getHeading());
 	}
+
+	public static class Factory implements SkillEffectFactory {
+
+		@Override
+		public AbstractEffect create(StatsSet data) {
+			return new Bluff(data);
+		}
+
+		@Override
+		public String effectName() {
+			return "Bluff";
+		}
+	}
+
 }

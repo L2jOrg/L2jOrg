@@ -27,7 +27,7 @@ import static java.util.Arrays.stream;
  */
 public final class BlockSkill extends AbstractEffect {
 
-    public final EnumSet<SkillType> magicTypes;
+    private final EnumSet<SkillType> magicTypes;
 
     private BlockSkill(StatsSet params) {
         magicTypes = StreamUtil.collectToEnumSet(SkillType.class, stream(params.getString("magic-types").split(Util.SPACE)).map(SkillType::valueOf));

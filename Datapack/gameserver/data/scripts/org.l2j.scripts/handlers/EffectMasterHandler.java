@@ -25,23 +25,6 @@ public final class EffectMasterHandler {
 
         ServiceLoader.load(SkillEffectFactory.class, loader).forEach(handler::registerFactory);
 
-        handler.registerFactory("BlockTarget", BlockTarget::new);
-        handler.registerFactory("Bluff", Bluff::new);
-        handler.registerFactory("BuffBlock", BuffBlock::new);
-        handler.registerFactory("CallParty", CallParty::new);
-        handler.registerFactory("call-pc", CallPc::new);
-        handler.registerFactory("call-skill", CallSkill::new);
-        handler.registerFactory("CheapShot", CheapShot::new);
-        handler.registerFactory("ChameleonRest", ChameleonRest::new);
-        handler.registerFactory("ChangeFace", ChangeFace::new);
-        handler.registerFactory("ChangeHairColor", ChangeHairColor::new);
-        handler.registerFactory("ChangeHairStyle", ChangeHairStyle::new);
-        handler.registerFactory("Confuse", Confuse::new);
-        handler.registerFactory("ConsumeBody", ConsumeBody::new);
-        handler.registerFactory("ConvertItem", ConvertItem::new);
-        handler.registerFactory("cp", Cp::new);
-        handler.registerFactory("CpHeal", CpHeal::new);
-        handler.registerFactory("CpHealPercent", CpHealPercent::new);
         handler.registerFactory("stat-position-based", StatPositionBased::new);
         handler.registerFactory("stat-hp-based", StatHpBased::new);
         handler.registerFactory("damage-block", DamageBlock::new);

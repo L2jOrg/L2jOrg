@@ -1,11 +1,9 @@
-import handlers.effecthandlers.*;
-import handlers.skillconditionhandlers.SkillConditionTargetFactory;
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
+import handlers.effecthandlers.*;
 import handlers.skillconditionhandlers.*;
-import org.l2j.gameserver.model.actor.instance.Block;
 import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
@@ -56,7 +54,24 @@ open module org.l2j.scripts {
                 BlockMove.Factory,
                 BlockParty.Factory,
                 BlockResurrection.Factory,
-                BlockSkill.Factory
+                BlockSkill.Factory,
+                BlockTarget.Factory,
+                Bluff.Factory,
+                BuffBlock.Factory,
+                CallParty.Factory,
+                CallPc.Factory,
+                CallSkill.Factory,
+                CheapShot.Factory,
+                ChameleonRest.Factory,
+                ChangeFace.Factory,
+                ChangeHairColor.Factory,
+                ChangeHairStyle.Factory,
+                Confuse.Factory,
+                ConsumeBody.Factory,
+                ConvertItem.Factory,
+                Cp.Factory,
+                CpHeal.Factory,
+                CpHealPercent.Factory
             ;
 
     provides org.l2j.gameserver.engine.skill.api.SkillConditionFactory
