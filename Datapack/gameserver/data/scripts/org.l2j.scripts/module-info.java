@@ -3,6 +3,7 @@ import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
 import handlers.effecthandlers.*;
+import handlers.effecthandlers.stat.Speed;
 import handlers.effecthandlers.stat.StatHpBased;
 import handlers.effecthandlers.stat.TransferDamageToPlayer;
 import handlers.effecthandlers.stat.VitalStatModify;
@@ -105,6 +106,7 @@ open module org.l2j.scripts {
                 FocusMomentum.Factory,
                 FocusMaxMomentum.Factory,
                 FocusSouls.Factory,
+                GetAgro.Factory,
                 GiveClanReputation.Factory,
                 GiveSp.Factory,
                 GiveXp.Factory,
@@ -626,9 +628,11 @@ open module org.l2j.scripts {
             handlers.targethandlers.affectobject.WyvernObject,
             handlers.targethandlers.affectobject.UndeadRealEnemy,
             handlers.targethandlers.affectobject.ObjectDeadNpcBody,
+            handlers.targethandlers.affectobject.NotFriend,
             handlers.targethandlers.affectobject.NotFriendPc,
             handlers.targethandlers.affectobject.Invisible,
             handlers.targethandlers.affectobject.HiddenPlace,
+            handlers.targethandlers.affectobject.Friend,
             handlers.targethandlers.affectobject.FriendPc,
             handlers.targethandlers.affectobject.Clan;
 

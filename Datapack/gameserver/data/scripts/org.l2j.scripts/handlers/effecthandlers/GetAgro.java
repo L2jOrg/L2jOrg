@@ -23,7 +23,7 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * @author JoeAlisson
  */
 public final class GetAgro extends AbstractEffect {
-    public GetAgro() {
+    private GetAgro() {
     }
 
     @Override

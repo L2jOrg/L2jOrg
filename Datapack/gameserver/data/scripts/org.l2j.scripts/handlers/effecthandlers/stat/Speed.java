@@ -1,4 +1,4 @@
-package handlers.effecthandlers;
+package handlers.effecthandlers.stat;
 
 import handlers.effecthandlers.stat.AbstractStatEffect;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;

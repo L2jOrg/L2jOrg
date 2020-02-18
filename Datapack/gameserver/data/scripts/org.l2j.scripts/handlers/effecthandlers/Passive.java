@@ -32,10 +32,10 @@ public final class Passive extends AbstractEffect {
     }
 
     public static class Factory implements SkillEffectFactory {
-
+        private static final Passive INSTANCE = new Passive();
         @Override
         public AbstractEffect create(StatsSet data) {
-            return null;
+            return INSTANCE;
         }
 
         @Override
