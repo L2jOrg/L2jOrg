@@ -26,7 +26,6 @@ public final class ScriptEngineManager  {
     private static final Logger LOGGER = LoggerFactory.getLogger(ScriptEngineManager.class);
 
     public static final Path SCRIPT_FOLDER = getSettings(ServerSettings.class).dataPackDirectory().resolve("data/scripts");
-    private static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
 
     private final Map<String, IExecutionContext> extEngines = new HashMap<>();
     private IExecutionContext currentExecutionContext = null;
@@ -110,10 +109,6 @@ public final class ScriptEngineManager  {
         } else if (!Files.isRegularFile(filePath)) {
             throw new Exception("ScriptFile: " + filePath + " is not a file!");
         }
-    }
-
-    public void executeConditionMasterHandler() throws Exception {
-        executeScript(CONDITION_HANDLER_FILE);
     }
 
     public void executeScriptInit() throws Exception {

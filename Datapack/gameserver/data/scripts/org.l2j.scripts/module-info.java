@@ -2,12 +2,17 @@ import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
+import handlers.conditions.CategoryTypeCondition;
+import handlers.conditions.NpcLevelCondition;
+import handlers.conditions.PlayerLevelCondition;
 import handlers.effecthandlers.*;
 import handlers.effecthandlers.stat.Speed;
 import handlers.effecthandlers.stat.StatHpBased;
 import handlers.effecthandlers.stat.TransferDamageToPlayer;
 import handlers.effecthandlers.stat.VitalStatModify;
 import handlers.skillconditionhandlers.*;
+import org.l2j.gameserver.model.conditions.ConditionFactory;
+import org.l2j.gameserver.model.conditions.ICondition;
 import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
@@ -40,6 +45,13 @@ open module org.l2j.scripts {
     uses org.l2j.gameserver.model.quest.Quest;
     uses org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
     uses org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
+    uses org.l2j.gameserver.model.conditions.ConditionFactory;
+
+    provides org.l2j.gameserver.model.conditions.ConditionFactory
+            with NpcLevelCondition.Factory,
+                CategoryTypeCondition.Factory,
+                PlayerLevelCondition.Factory
+            ;
 
     provides org.l2j.gameserver.engine.skill.api.SkillEffectFactory
             with AbnormalShield.Factory,

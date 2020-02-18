@@ -1,6 +1,7 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.conditions.ConditionFactory;
 import org.l2j.gameserver.model.conditions.ICondition;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 
@@ -12,29 +13,21 @@ import java.util.function.Function;
  * @author Sdw
  */
 public final class ConditionHandler {
-    private final Map<String, Function<StatsSet, ICondition>> _conditionHandlerFactories = new HashMap<>();
+    private final Map<String, Function<StatsSet, ICondition>> factories = new HashMap<>();
 
     private ConditionHandler() {
     }
 
-    public void registerHandler(String name, Function<StatsSet, ICondition> handlerFactory) {
-        _conditionHandlerFactories.put(name, handlerFactory);
+    public void registerFactory(ConditionFactory handler) {
+        factories.put(handler.conditionName(), handler::create);
     }
 
     public Function<StatsSet, ICondition> getHandlerFactory(String name) {
-        return _conditionHandlerFactories.get(name);
+        return factories.get(name);
     }
 
     public int size() {
-        return _conditionHandlerFactories.size();
-    }
-
-    public void executeScript() {
-        try {
-            ScriptEngineManager.getInstance().executeConditionMasterHandler();
-        } catch (Exception e) {
-            throw new Error("Problems while running ConditionMasterHandler", e);
-        }
+        return factories.size();
     }
 
     public static ConditionHandler getInstance() {

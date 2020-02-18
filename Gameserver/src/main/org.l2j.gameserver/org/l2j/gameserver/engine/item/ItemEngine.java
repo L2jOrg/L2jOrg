@@ -10,7 +10,6 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.handler.ConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.WorldObject;
@@ -485,7 +484,6 @@ public final class ItemEngine extends GameXmlReader {
     }
 
     public static void init() {
-        ConditionHandler.getInstance().executeScript();
         getInstance().load();
         EnchantItemGroupsData.init();
         EnchantItemData.init();
