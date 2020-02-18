@@ -115,6 +115,7 @@ open module org.l2j.scripts {
                 Heal.Factory,
                 HealOverTime.Factory,
                 HealPercent.Factory,
+                Hide.Factory,
                 Hp.Factory,
                 HpByLevel.Factory,
                 HpCpHeal.Factory,
@@ -124,6 +125,7 @@ open module org.l2j.scripts {
                 KnockBack.Factory,
                 Lethal.Factory,
                 Lucky.Factory,
+                MagicalAttack.Factory,
                 MagicalAttackByAbnormal.Factory,
                 MagicalAttackByAbnormalSlot.Factory,
                 MagicalAttackMp.Factory,
@@ -151,6 +153,7 @@ open module org.l2j.scripts {
                 PhysicalAttackMute.Factory,
                 PhysicalMute.Factory,
                 PhysicalShieldAngleAll.Factory,
+                PhysicalSoulAttack.Factory,
                 PkCount.Factory,
                 PolearmSingleTarget.Factory,
                 ProtectionBlessing.Factory,
@@ -164,6 +167,7 @@ open module org.l2j.scripts {
                 ResistAbnormalByCategory.Factory,
                 ResistDispelByCategory.Factory,
                 Restoration.Factory,
+                RestorationRandom.Factory,
                 Resurrection.Factory,
                 ResurrectionSpecial.Factory,
                 Reuse.Factory,
@@ -207,6 +211,7 @@ open module org.l2j.scripts {
                 TwoHandedBluntBonus.Factory,
                 TwoHandedSwordBonus.Factory,
                 Unsummon.Factory,
+                UnsummonAgathion.Factory,
                 VampiricAttack.Factory
             ;
 

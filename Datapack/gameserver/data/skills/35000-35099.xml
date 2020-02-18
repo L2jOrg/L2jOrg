@@ -374,66 +374,66 @@
 			<defence-trait>
 				<trait type="BOW">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 				<trait type="DUAL">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 				<trait type="SWORD">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 				<trait type="DAGGER">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 				<trait type="DUALFIST">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 				<trait type="BLUNT">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 				<trait type="DUAL_DAGGER">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 				<trait type="SPEAR">
 					<power>
-					<value level="3">0.009999999776482582</value>
-					<value level="4">0.019999999552965164</value>
-					<value level="6">0.029999999329447746</value>
-					<value level="7">0.05000000074505806</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -1037,7 +1037,7 @@
 			</resist-abnormal-by-category>
 			<defence-trait>
 				<trait type="PULL">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>

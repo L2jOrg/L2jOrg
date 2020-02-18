@@ -609,25 +609,25 @@
 		<effects>
 			<defence-trait>
 				<trait type="DUAL">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 				<trait type="SWORD">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 				<trait type="DAGGER">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 				<trait type="DUALFIST">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 				<trait type="BLUNT">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 				<trait type="DUAL_DAGGER">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 				<trait type="SPEAR">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -645,7 +645,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="-0.699999988079071"/>
+					<power initial="-70"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -2534,7 +2534,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>

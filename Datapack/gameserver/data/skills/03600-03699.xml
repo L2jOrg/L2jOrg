@@ -318,36 +318,36 @@
 		<effects>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.25"/>
+					<power initial="25"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.25"/>
+					<power initial="25"/>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.25"/>
+					<power initial="25"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.25"/>
+					<power initial="25"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">

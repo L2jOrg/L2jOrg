@@ -164,7 +164,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="55710" name="Equip Lv. 4 Brooch" action="A1">
+	<skill id="55710" name="Equip Lv. 4 Brooch">
 	<!-- The brooch radiates bright light. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
 		<attributes property="PHYSIC" >
@@ -173,6 +173,9 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<abnormal visual="AVE_BROOCH">
+			<time initial="-1"/>
+		</abnormal>
 	</skill>
 	<skill id="55711" name="Remove Lv. 4 Brooch" action="A1">
 	<!-- The bright light fades. -->

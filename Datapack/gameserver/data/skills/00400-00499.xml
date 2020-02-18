@@ -408,7 +408,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -477,7 +477,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -548,7 +548,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1339,7 +1339,7 @@
 			</stat-modify>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -2214,9 +2214,9 @@
 		<effects>
 			<defence-trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.4000000059604645">
-					<value level="2">0.6000000238418579</value>
-					<value level="3">1.0</value>
+					<power initial="40">
+					<value level="2">60</value>
+					<value level="3">100</value>
 				</power>
 				</trait>
 			</defence-trait>

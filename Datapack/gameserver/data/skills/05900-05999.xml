@@ -193,7 +193,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -221,7 +221,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -430,16 +430,16 @@
 		<effects>
 			<defence-trait>
 				<trait type="ROOT_PHYSICALLY">
-					<power initial="-0.10000000149011612">
-					<value level="2">-0.20000000298023224</value>
-					<value level="3">-0.30000001192092896</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.5</value>
-					<value level="6">-0.6000000238418579</value>
-					<value level="7">-0.699999988079071</value>
-					<value level="8">-0.800000011920929</value>
-					<value level="9">-0.8999999761581421</value>
-					<value level="10">-0.9900000095367432</value>
+					<power initial="-10">
+					<value level="2">-20</value>
+					<value level="3">-30</value>
+					<value level="4">-40</value>
+					<value level="5">-50</value>
+					<value level="6">-60</value>
+					<value level="7">-70</value>
+					<value level="8">-80</value>
+					<value level="9">-89</value>
+					<value level="10">-99</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -731,10 +731,10 @@
 		<effects>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="0.8999999761581421"/>
+					<power initial="90"/>
 				</trait>
 				<trait type="CROSSBOW">
-					<power initial="0.8999999761581421"/>
+					<power initial="90"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1820,7 +1820,7 @@
 		<effects>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.07999999821186066"/>
+					<power initial="8"/>
 				</trait>
 			</attack-trait>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">

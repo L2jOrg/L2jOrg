@@ -132,17 +132,17 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="-0.10000000149011612">
-					<value level="2">-0.15000000596046448</value>
-					<value level="3">-0.20000000298023224</value>
-					<value level="4">-0.25</value>
+					<power initial="-10">
+					<value level="2">-15</value>
+					<value level="3">-20</value>
+					<value level="4">-25</value>
 				</power>
 				</trait>
 				<trait type="BOW">
-					<power initial="-0.11999999731779099">
-					<value level="2">-0.1599999964237213</value>
-					<value level="3">-0.18000000715255737</value>
-					<value level="4">-0.20000000298023224</value>
+					<power initial="-11">
+					<value level="2">-15</value>
+					<value level="3">-18</value>
+					<value level="4">-20</value>
 				</power>
 				</trait>
 			</defence-trait>

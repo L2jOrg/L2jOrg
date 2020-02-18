@@ -61,7 +61,7 @@
 			</reuse>
 			<defence-trait start-level="4">
 				<trait type="SHOCK">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -139,13 +139,13 @@
 			</stat-modify>
 			<defence-trait start-level="4">
 				<trait type="SHOCK">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -213,10 +213,10 @@
 			</stat-modify>
 			<defence-trait start-level="4">
 				<trait type="SHOCK">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>

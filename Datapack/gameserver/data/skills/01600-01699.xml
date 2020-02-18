@@ -1019,10 +1019,10 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.029999999329447746">
-					<value level="2">0.03999999910593033</value>
-					<value level="3">0.05000000074505806</value>
-					<value level="4">0.10000000149011612</value>
+					<power initial="2">
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">10</value>
 				</power>
 				</trait>
 			</defence-trait>

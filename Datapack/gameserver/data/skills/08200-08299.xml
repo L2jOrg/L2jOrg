@@ -27,12 +27,12 @@
 		<effects>
 			<attack-trait>
 				<trait type="HOLD">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="ACCURACY">
@@ -56,18 +56,18 @@
 		<effects>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 			</defence-trait>
 			<vampiric-attack chance="30">
@@ -88,13 +88,13 @@
 		<effects>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 			</attack-trait>
 			<defence-trait>

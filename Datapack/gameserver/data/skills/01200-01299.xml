@@ -195,7 +195,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -576,7 +576,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -2153,8 +2153,8 @@
 		<effects>
 			<defence-trait>
 				<trait type="POISON">
-					<power initial="-0.25">
-					<value level="4">-0.30000001192092896</value>
+					<power initial="-25">
+					<value level="4">-30</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -6139,10 +6139,10 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.15000000596046448">
-					<value level="2">0.20000000298023224</value>
-					<value level="3">0.30000001192092896</value>
-					<value level="4">0.4000000059604645</value>
+					<power initial="15">
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
 				</power>
 				</trait>
 			</defence-trait>

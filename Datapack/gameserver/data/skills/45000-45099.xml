@@ -810,24 +810,24 @@
 			</vampiric-attack>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.05000000074505806"/>
+					<power initial="5"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">

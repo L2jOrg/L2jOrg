@@ -54,7 +54,7 @@
 			</vital-stat-modify>
 			<defence-trait start-level="2">
 				<trait type="POISON">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -187,10 +187,10 @@
 			</stat-hp-based>
 			<defence-trait start-level="2">
 				<trait type="BLEED">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -214,10 +214,10 @@
 			</vital-stat-modify>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -241,10 +241,10 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER" start-level="2">
@@ -271,10 +271,10 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</trait>
 			</defence-trait>
 			<stat type="STR" start-level="2">
@@ -301,10 +301,10 @@
 			</stat-modify>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 				<trait type="PARALYZE">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -325,7 +325,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 			<stat type="INT" start-level="2">
@@ -352,7 +352,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -376,7 +376,7 @@
 			</stat-modify>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -400,7 +400,7 @@
 			</stat-modify>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -421,7 +421,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 			<stat type="WIT" start-level="2">
@@ -459,7 +459,7 @@
 			</vital-stat-modify>
 			<defence-trait start-level="3">
 				<trait type="PARALYZE">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="4">
@@ -491,10 +491,10 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="BLEED">
-					<power initial="0.6000000238418579"/>
+					<power initial="60"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.6000000238418579"/>
+					<power initial="60"/>
 				</trait>
 			</defence-trait>
 			<stat type="CON" start-level="4">
@@ -525,7 +525,7 @@
 			</stat-hp-based>
 			<defence-trait start-level="3">
 				<trait type="PARALYZE">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat type="DEX" start-level="4">
@@ -556,10 +556,10 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="BLEED">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER" start-level="3">
@@ -591,7 +591,7 @@
 			</vital-stat-modify>
 			<defence-trait start-level="3">
 				<trait type="PARALYZE">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER" start-level="4">
@@ -616,10 +616,10 @@
 		<effects>
 			<defence-trait>
 				<trait type="BLEED">
-					<power initial="0.6000000238418579"/>
+					<power initial="60"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.6000000238418579"/>
+					<power initial="60"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -654,7 +654,7 @@
 			</speed>
 			<defence-trait start-level="3">
 				<trait type="SHOCK">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat type="STR" start-level="4">
@@ -682,10 +682,10 @@
 			</vital-stat-modify>
 			<defence-trait start-level="2">
 				<trait type="HOLD">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 			<stat type="STR" start-level="3">
@@ -722,7 +722,7 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="SHOCK">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER" start-level="3">
@@ -753,10 +753,10 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="HOLD">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 			<stat type="DEX" start-level="3">
@@ -788,7 +788,7 @@
 			</vital-stat-modify>
 			<defence-trait start-level="3">
 				<trait type="SHOCK">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 			</defence-trait>
 			<stat type="INT" start-level="4">
@@ -820,10 +820,10 @@
 			</speed>
 			<defence-trait start-level="3">
 				<trait type="HOLD">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="BREATH" start-level="3">
@@ -861,7 +861,7 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="PARALYZE">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 			<stat type="STR" start-level="4">
@@ -892,10 +892,10 @@
 			</stat-modify>
 			<defence-trait start-level="2">
 				<trait type="BLEED">
-					<power initial="0.800000011920929"/>
+					<power initial="80"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.800000011920929"/>
+					<power initial="80"/>
 				</trait>
 			</defence-trait>
 			<speed start-level="2">
@@ -944,7 +944,7 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="PARALYZE">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -975,10 +975,10 @@
 			</stat>
 			<defence-trait start-level="3">
 				<trait type="BLEED">
-					<power initial="0.800000011920929"/>
+					<power initial="80"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.800000011920929"/>
+					<power initial="80"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1004,10 +1004,10 @@
 			</stat-modify>
 			<defence-trait start-level="2">
 				<trait type="BLEED">
-					<power initial="0.800000011920929"/>
+					<power initial="80"/>
 				</trait>
 				<trait type="POISON">
-					<power initial="0.800000011920929"/>
+					<power initial="80"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER" start-level="3">
@@ -1044,7 +1044,7 @@
 			</speed>
 			<defence-trait start-level="2">
 				<trait type="PARALYZE">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -1090,10 +1090,10 @@
 			</stat>
 			<defence-trait start-level="3">
 				<trait type="HOLD">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1130,7 +1130,7 @@
 			</stat>
 			<defence-trait start-level="3">
 				<trait type="SHOCK">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1164,10 +1164,10 @@
 			</stat>
 			<defence-trait start-level="3">
 				<trait type="HOLD">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1205,7 +1205,7 @@
 			</stat>
 			<defence-trait start-level="3">
 				<trait type="SHOCK">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1230,10 +1230,10 @@
 			</stat-modify>
 			<defence-trait start-level="2">
 				<trait type="HOLD">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" start-level="2">
@@ -1278,7 +1278,7 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="SHOCK">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1479,10 +1479,10 @@
 			</stat-modify>
 			<defence-trait start-level="3">
 				<trait type="HOLD">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="0.699999988079071"/>
+					<power initial="70"/>
 				</trait>
 			</defence-trait>
 			<stat type="STR" start-level="4">
@@ -1567,7 +1567,7 @@
 			</stat-modify>
 			<defence-trait start-level="2">
 				<trait type="SHOCK">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</trait>
 			</defence-trait>
 			<stat type="WIT" start-level="3">
@@ -1588,12 +1588,12 @@
 		<effects>
 			<attack-trait>
 				<trait type="SLEEP">
-					<power initial="0.4000000059604645"/>
+					<power initial="40"/>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="SLEEP">
-					<power initial="0.4000000059604645"/>
+					<power initial="40"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -1649,23 +1649,23 @@
 		<effects>
 			<attack-trait>
 				<trait type="BLEED">
-					<power initial="0.009999999776482582">
-					<value level="5">0.05999999865889549</value>
-					<value level="6">0.07999999821186066</value>
-					<value level="7">0.10000000149011612</value>
-					<value level="13">0.20000000298023224</value>
-					<value level="14">0.30000001192092896</value>
+					<power initial="1">
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">10</value>
+					<value level="13">20</value>
+					<value level="14">30</value>
 				</power>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="BLEED">
-					<power initial="0.009999999776482582">
-					<value level="5">0.05999999865889549</value>
-					<value level="6">0.07999999821186066</value>
-					<value level="7">0.10000000149011612</value>
-					<value level="13">0.20000000298023224</value>
-					<value level="14">0.30000001192092896</value>
+					<power initial="1">
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">10</value>
+					<value level="13">20</value>
+					<value level="14">30</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -1738,31 +1738,31 @@
 		<effects>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.20000000298023224">
-					<value level="2">0.30000001192092896</value>
+					<power initial="20">
+					<value level="2">30</value>
 				</power>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.20000000298023224">
-					<value level="2">0.30000001192092896</value>
+					<power initial="20">
+					<value level="2">30</value>
 				</power>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.20000000298023224">
-					<value level="2">0.30000001192092896</value>
+					<power initial="20">
+					<value level="2">30</value>
 				</power>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.30000001192092896"/>
+					<power initial="30"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.20000000298023224">
-					<value level="2">0.30000001192092896</value>
+					<power initial="20">
+					<value level="2">30</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -1803,29 +1803,29 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.05000000074505806">
-					<value level="2">0.10000000149011612</value>
-					<value level="3">0.15000000596046448</value>
+					<power initial="5">
+					<value level="2">10</value>
+					<value level="3">15</value>
 				</power>
 				</trait>
 			</defence-trait>
 			<attack-trait>
 				<trait type="HOLD">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.05000000074505806">
-					<value level="2">0.10000000149011612</value>
-					<value level="3">0.15000000596046448</value>
+					<power initial="5">
+					<value level="2">10</value>
+					<value level="3">15</value>
 				</power>
 				</trait>
 			</attack-trait>
@@ -1876,29 +1876,29 @@
 		<effects>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.05000000074505806">
-					<value level="2">0.10000000149011612</value>
-					<value level="3">0.15000000596046448</value>
+					<power initial="5">
+					<value level="2">10</value>
+					<value level="3">15</value>
 				</power>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 				<trait type="BLEED">
-					<power initial="0.05000000074505806">
-					<value level="2">0.10000000149011612</value>
-					<value level="3">0.15000000596046448</value>
+					<power initial="5">
+					<value level="2">10</value>
+					<value level="3">15</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -1956,17 +1956,17 @@
 		<effects>
 			<attack-trait>
 				<trait type="POISON">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="POISON">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -2028,17 +2028,17 @@
 		<effects>
 			<attack-trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="DERANGEMENT">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
-					<value level="3">0.20000000298023224</value>
+					<power initial="10">
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</power>
 				</trait>
 			</defence-trait>

@@ -108,7 +108,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -126,7 +126,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -144,7 +144,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SLEEP">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1070,7 +1070,7 @@
 			<block-all-actions/>
 			<defence-trait>
 				<trait type="SLEEP">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>

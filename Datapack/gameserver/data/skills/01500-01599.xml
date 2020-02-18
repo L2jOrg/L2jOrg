@@ -124,18 +124,18 @@
 		<effects>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
+					<power initial="10">
+					<value level="2">15</value>
 				</power>
 				</trait>
 				<trait type="TWO_HAND_CROSSBOW">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
+					<power initial="10">
+					<value level="2">15</value>
 				</power>
 				</trait>
 				<trait type="CROSSBOW">
-					<power initial="0.10000000149011612">
-					<value level="2">0.15000000596046448</value>
+					<power initial="10">
+					<value level="2">15</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -976,31 +976,31 @@
 		<effects>
 			<servitor-share>
 				<stat type="MAGIC_ATTACK_SPEED">
-					<power initial="0.029999999329447746"/>
+					<power initial="3"/>
 				</stat>
 				<stat type="MAX_MP">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</stat>
 				<stat type="MAX_HP">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</stat>
 				<stat type="MAGIC_ATTACK">
-					<power initial="0.25"/>
+					<power initial="25"/>
 				</stat>
 				<stat type="MAGICAL_DEFENCE">
-					<power initial="0.25"/>
+					<power initial="25"/>
 				</stat>
 				<stat type="PHYSICAL_ATTACK">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</stat>
 				<stat type="PHYSICAL_ATTACK_SPEED">
-					<power initial="0.10000000149011612"/>
+					<power initial="10"/>
 				</stat>
 				<stat type="PHYSICAL_DEFENCE">
-					<power initial="0.5"/>
+					<power initial="50"/>
 				</stat>
 				<stat type="CRITICAL_RATE">
-					<power initial="0.20000000298023224"/>
+					<power initial="20"/>
 				</stat>
 			</servitor-share>
 		</effects>

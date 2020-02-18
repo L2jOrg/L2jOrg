@@ -416,7 +416,7 @@
 		<effects>
 			<attack-trait>
 				<trait type="SHOCK">
-					<power initial="0.15000000596046448"/>
+					<power initial="15"/>
 				</trait>
 			</attack-trait>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -1391,7 +1391,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>

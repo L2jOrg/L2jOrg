@@ -53,28 +53,28 @@
 			</block-all-actions>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 				<trait type="HOLD">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 				<trait type="KNOCKDOWN">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 				<trait type="CHANGEBODY">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 				<trait type="SLEEP">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 				<trait type="DERANGEMENT">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 				<trait type="AIRBIND">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 				<trait type="KNOCKBACK">
-					<power initial="1.0"/>
+					<power initial="100"/>
 				</trait>
 			</defence-trait>
 		</effects>

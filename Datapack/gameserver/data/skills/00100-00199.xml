@@ -646,7 +646,7 @@
         <effects>
             <attack-trait>
                 <trait type="PLANT_WEAKNESS">
-                    <power initial="0.30000001192092896"/>
+                    <power initial="30"/>
                 </trait>
             </attack-trait>
         </effects>
@@ -964,7 +964,7 @@
             <effect name="Root"/>
             <defence-trait>
                 <trait type="HOLD">
-                    <power initial="1.0"/>
+                    <power initial="100"/>
                 </trait>
             </defence-trait>
         </effects>
@@ -1162,17 +1162,17 @@
         <effects>
             <defence-trait>
                 <trait type="BOW">
-                    <power initial="0.1599999964237213">
-                        <value level="2">0.23999999463558197</value>
-                        <value level="3">0.3199999928474426</value>
-                        <value level="4">0.4000000059604645</value>
+                    <power initial="16">
+                        <value level="2">24</value>
+                        <value level="3">32</value>
+                        <value level="4">40</value>
                     </power>
                 </trait>
                 <trait type="CROSSBOW">
-                    <power initial="0.07999999821186066">
-                        <value level="2">0.11999999731779099</value>
-                        <value level="3">0.1599999964237213</value>
-                        <value level="4">0.20000000298023224</value>
+                    <power initial="7">
+                        <value level="2">12</value>
+                        <value level="3">16</value>
+                        <value level="4">20</value>
                     </power>
                 </trait>
             </defence-trait>
@@ -2064,13 +2064,13 @@
         <effects>
             <defence-trait>
                 <trait type="HOLD">
-                    <power initial="0.20000000298023224"/>
+                    <power initial="20"/>
                 </trait>
                 <trait type="SLEEP">
-                    <power initial="0.20000000298023224"/>
+                    <power initial="20"/>
                 </trait>
                 <trait type="POISON">
-                    <power initial="0.20000000298023224"/>
+                    <power initial="20"/>
                 </trait>
             </defence-trait>
         </effects>
@@ -3110,7 +3110,7 @@
             </stat-by-move-type>
             <defence-trait>
                 <trait type="HOLD">
-                    <power initial="-0.10999999940395355"/>
+                    <power initial="-10"/>
                 </trait>
             </defence-trait>
         </effects>

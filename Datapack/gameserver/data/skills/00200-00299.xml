@@ -1757,7 +1757,7 @@
 			</stat-by-move-type>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="-0.10999999940395355"/>
+					<power initial="-10"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -3902,6 +3902,11 @@
 					<value level="49">101.0</value>
 					<value level="50">104.0</value>
 					<value level="51">107.0</value>
+					<value level="52">110</value>
+					<value level="53">120</value>
+					<value level="54">130</value>
+					<value level="55">140</value>
+					<value level="56">150</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK">
@@ -3956,13 +3961,20 @@
 					<value level="49">123.0</value>
 					<value level="50">126.0</value>
 					<value level="51">129.0</value>
+					<value level="52">140</value>
+					<value level="53">155</value>
+					<value level="54">170</value>
+					<value level="55">185</value>
+					<value level="56">200</value>
 				</power>
 			</stat-modify>
-			<vampiric-attack chance="0">
-				<power>
-					<value level="43">10.0</value>
-				</power>
+			<vampiric-attack chance="100" start-level="43">
+				<power initial="10"/>
 			</vampiric-attack>
+			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+				<power initial="-5"/>
+				<weapon-type>BOW SPEAR</weapon-type>
+			</stat-modify>
 		</effects>
 	</skill>
 	<skill id="251" name="Robe Mastery" max-level="59" >
@@ -8275,17 +8287,17 @@
 		<effects>
 			<defence-trait>
 				<trait type="SPEAR">
-					<power initial="-0.10000000149011612">
+					<power initial="-10">
 					<value level="2">-0.10999999940395355</value>
 					<value level="3">-0.11999999731779099</value>
 					<value level="4">-0.12999999523162842</value>
 					<value level="5">-0.14000000059604645</value>
-					<value level="6">-0.15000000596046448</value>
+					<value level="6">-15</value>
 					<value level="7">-0.1599999964237213</value>
 					<value level="8">-0.17000000178813934</value>
-					<value level="9">-0.18000000715255737</value>
+					<value level="9">-18</value>
 					<value level="10">-0.1899999976158142</value>
-					<value level="11">-0.20000000298023224</value>
+					<value level="11">-20</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -8336,25 +8348,25 @@
 				<trait type="SHOCK">
 					<power initial="0.4000000059604645">
 					<value level="2">0.6000000238418579</value>
-					<value level="3">0.800000011920929</value>
+					<value level="3">80</value>
 				</power>
 				</trait>
 				<trait type="HOLD">
 					<power initial="0.4000000059604645">
 					<value level="2">0.6000000238418579</value>
-					<value level="3">0.800000011920929</value>
+					<value level="3">80</value>
 				</power>
 				</trait>
 				<trait type="SLEEP">
 					<power initial="0.4000000059604645">
 					<value level="2">0.6000000238418579</value>
-					<value level="3">0.800000011920929</value>
+					<value level="3">80</value>
 				</power>
 				</trait>
 				<trait type="PARALYZE">
 					<power initial="0.4000000059604645">
 					<value level="2">0.6000000238418579</value>
-					<value level="3">0.800000011920929</value>
+					<value level="3">80</value>
 				</power>
 				</trait>
 			</defence-trait>
