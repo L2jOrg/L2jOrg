@@ -593,7 +593,6 @@ open module org.l2j.scripts {
             handlers.voicedcommandhandlers.Lang,
             handlers.voicedcommandhandlers.ChatAdmin,
             handlers.voicedcommandhandlers.Banking,
-            handlers.voicedcommandhandlers.AutoPotion,
             handlers.voicedcommandhandlers.ChangePassword,
 
             //custom
