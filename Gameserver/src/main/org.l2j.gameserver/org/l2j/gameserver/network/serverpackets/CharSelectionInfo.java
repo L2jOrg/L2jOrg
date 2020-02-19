@@ -5,7 +5,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.enums.InventorySlot;
-import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.VariationInstance;
@@ -22,8 +21,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.Instant;
 import java.util.LinkedList;
-import java.util.List;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
@@ -321,6 +320,9 @@ public class CharSelectionInfo extends ServerPacket {
             writeByte(charInfoPackage.isNoble());
             writeByte(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x02 : 0x00); // Hero glow
             writeByte(charInfoPackage.isHairAccessoryEnabled()); // Show hair accessory if enabled
+            writeInt(0); // ban time in secs
+            writeInt((int) Instant.ofEpochMilli(charInfoPackage.getLastAccess()).getEpochSecond());
+
         }
     }
 }
