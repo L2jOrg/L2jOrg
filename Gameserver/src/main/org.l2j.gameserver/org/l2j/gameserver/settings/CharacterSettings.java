@@ -13,6 +13,7 @@ public class CharacterSettings implements Settings {
     private boolean autoLootRaid;
     private int raidLootPrivilegeTime;
     private boolean autoLoot;
+    private boolean initialEquipEvent;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -22,6 +23,8 @@ public class CharacterSettings implements Settings {
         autoLootItems = settingsFile.getIntSet("AutoLootItemIds", ",");
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);
         raidLootPrivilegeTime = settingsFile.getInteger("RaidLootRightsInterval", 900) * 1000;
+
+        initialEquipEvent = settingsFile.getBoolean("InitialEquipmentEvent", false);
     }
 
     public int partyRange() {
@@ -42,5 +45,9 @@ public class CharacterSettings implements Settings {
 
     public int raidLootPrivilegeTime() {
         return raidLootPrivilegeTime;
+    }
+
+    public boolean initialEquipEvent() {
+        return initialEquipEvent;
     }
 }

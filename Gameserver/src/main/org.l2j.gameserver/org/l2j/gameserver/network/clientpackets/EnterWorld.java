@@ -29,10 +29,11 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
-import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
+import org.l2j.gameserver.settings.AttendanceSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -381,7 +382,7 @@ public class EnterWorld extends ClientPacket {
             player.updateAbnormalVisualEffects();
         }
 
-        if (Config.ENABLE_ATTENDANCE_REWARDS) {
+        if (getSettings(AttendanceSettings.class).enabled()) {
             sendAttendanceInfo(player);
         }
 

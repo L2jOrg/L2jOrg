@@ -20,6 +20,7 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -29,6 +30,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.*;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -415,7 +417,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					return false;
 				}
 				player.setName(val);
-				if (Config.CACHE_CHAR_NAMES)
+				if (getSettings(GeneralSettings.class).cachePlayersName())
 				{
 					PlayerNameTable.getInstance().addName(player);
 				}

@@ -162,7 +162,7 @@ public final class Player extends Playable {
         player.setBaseClass(player.getClassId());
         player.setRecomLeft(20);
         if (player.createDb()) {
-            if (Config.CACHE_CHAR_NAMES) {
+            if (getSettings(GeneralSettings.class).cachePlayersName()) {
                 PlayerNameTable.getInstance().addName(player);
             }
             return player;

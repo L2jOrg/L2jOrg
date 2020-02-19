@@ -6,6 +6,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +15,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -29,7 +31,7 @@ public class PlayerNameTable {
     private final Map<Integer, Integer> accessLevels = new ConcurrentHashMap<>();
 
     private PlayerNameTable() {
-        if (Config.CACHE_CHAR_NAMES) {
+        if (getSettings(GeneralSettings.class).cachePlayersName()) {
             loadAll();
         }
     }
@@ -66,7 +68,7 @@ public class PlayerNameTable {
             }
         }
 
-        if (Config.CACHE_CHAR_NAMES) {
+        if (getSettings(GeneralSettings.class).cachePlayersName()) {
             return -1;
         }
 
@@ -90,7 +92,7 @@ public class PlayerNameTable {
             return name;
         }
 
-        if (Config.CACHE_CHAR_NAMES) {
+        if (getSettings(GeneralSettings.class).cachePlayersName()) {
             return null;
         }
 

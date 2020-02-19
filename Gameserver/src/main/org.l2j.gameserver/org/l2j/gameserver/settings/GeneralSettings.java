@@ -22,6 +22,7 @@ public class GeneralSettings implements Settings {
     private boolean smallLogItems;
     private boolean loadCustomBuyList;
     private boolean loadCustomMultisell;
+    private boolean cachePlayersName;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -44,6 +45,8 @@ public class GeneralSettings implements Settings {
 
         loadCustomBuyList = settingsFile.getBoolean("CustomBuyListLoad", false);
         loadCustomMultisell = settingsFile.getBoolean("CustomMultisellLoad", false);
+
+        cachePlayersName = settingsFile.getBoolean("CacheCharNames", true);
      }
 
     public int generalChatLevel() {
@@ -100,5 +103,9 @@ public class GeneralSettings implements Settings {
 
     public boolean loadCustomMultisell() {
         return loadCustomMultisell;
+    }
+
+    public boolean cachePlayersName() {
+        return cachePlayersName;
     }
 }

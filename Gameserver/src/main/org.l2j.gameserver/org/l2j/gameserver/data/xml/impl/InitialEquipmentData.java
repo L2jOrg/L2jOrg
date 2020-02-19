@@ -1,9 +1,9 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.PcItemTemplate;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -46,7 +46,7 @@ public final class InitialEquipmentData extends GameXmlReader {
     @Override
     public void load() {
         _initialEquipmentList.clear();
-        parseDatapackFile(Config.INITIAL_EQUIPMENT_EVENT ? EVENT : NORMAL);
+        parseDatapackFile(getSettings(CharacterSettings.class).initialEquipEvent()  ? EVENT : NORMAL);
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _initialEquipmentList.size() + " Initial Equipment data.");
     }
 

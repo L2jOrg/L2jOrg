@@ -51,7 +51,7 @@ public final class Config {
     public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
-    private static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
+    private static final String ATTENDANCE_CONFIG_FILE = "config/attendance-rewards.properties";
     private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
@@ -100,7 +100,6 @@ public final class Config {
     // --------------------------------------------------
     // Variable Definitions
     // --------------------------------------------------
-    public static boolean ENABLE_ATTENDANCE_REWARDS;
     public static boolean VIP_ONLY_ATTENDANCE_REWARDS;
     public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
     public static int ATTENDANCE_REWARD_DELAY;
@@ -214,7 +213,7 @@ public final class Config {
     public static int ALT_PARTY_RANGE;
 
     public static boolean ALT_LEAVE_PARTY_LEADER;
-    public static boolean INITIAL_EQUIPMENT_EVENT;
+
     public static long STARTING_ADENA;
     public static byte STARTING_LEVEL;
     public static int STARTING_SP;
@@ -385,7 +384,6 @@ public final class Config {
     public static boolean MULTIPLE_ITEM_DROP;
     public static boolean FORCE_INVENTORY_UPDATE;
 
-    public static boolean CACHE_CHAR_NAMES;
     public static int MIN_NPC_ANIMATION;
     public static int MAX_NPC_ANIMATION;
     public static int MIN_MONSTER_ANIMATION;
@@ -1035,7 +1033,7 @@ public final class Config {
 
         // Load Attandance config file (if exists)
         final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
-        ENABLE_ATTENDANCE_REWARDS = Attandance.getBoolean("EnableAttendanceRewards", false);
+
         VIP_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("VipOnlyAttendanceRewards", false);
         ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
         ATTENDANCE_REWARD_DELAY = Attandance.getInt("AttendanceRewardDelay", 30);
@@ -1216,7 +1214,7 @@ public final class Config {
         ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
 
         ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
-        INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
+
         STARTING_ADENA = Character.getLong("StartingAdena", 0);
         STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
         STARTING_SP = Character.getInt("StartingSP", 0);
@@ -1331,7 +1329,6 @@ public final class Config {
         MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
         FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 
-        CACHE_CHAR_NAMES = General.getBoolean("CacheCharNames", true);
         MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
         MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
         MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);

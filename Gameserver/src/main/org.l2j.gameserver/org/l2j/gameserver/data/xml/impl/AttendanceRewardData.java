@@ -1,9 +1,9 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.settings.AttendanceSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -37,13 +37,13 @@ public class AttendanceRewardData extends GameXmlReader {
 
     @Override
     public void load() {
-        if (Config.ENABLE_ATTENDANCE_REWARDS) {
+        if (getSettings(AttendanceSettings.class).enabled()) {
             _rewards.clear();
             parseDatapackFile("data/AttendanceRewards.xml");
             _rewardsCount = _rewards.size();
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + _rewardsCount + " rewards.");
+            LOGGER.info("Loaded {}  rewards.", _rewardsCount );
         } else {
-            LOGGER.info(getClass().getSimpleName() + ": Disabled.");
+            LOGGER.info("Disabled.");
         }
     }
 

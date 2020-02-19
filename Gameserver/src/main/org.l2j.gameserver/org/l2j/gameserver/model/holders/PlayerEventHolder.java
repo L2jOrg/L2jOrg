@@ -21,10 +21,13 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Player event holder, meant for restoring player after event has finished.<br>
@@ -72,7 +75,7 @@ public final class PlayerEventHolder {
 
     public void restorePlayerStats() {
         _player.setName(_name);
-        if (Config.CACHE_CHAR_NAMES) {
+        if (getSettings(GeneralSettings.class).cachePlayersName()) {
             PlayerNameTable.getInstance().addName(_player);
         }
         _player.setTitle(_title);
