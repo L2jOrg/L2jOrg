@@ -4,7 +4,6 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
@@ -361,18 +360,19 @@ public final class ItemEngine extends GameXmlReader {
         final Item item = new Item(IdFactory.getInstance().getNextId(), template);
 
         // TODO Extract this block
-        if (process.equalsIgnoreCase("loot") && !getSettings(CharacterSettings.class).isAutoLoot(itemId)) {
+        var characterSettings = getSettings(CharacterSettings.class);
+        if (process.equalsIgnoreCase("loot") && !characterSettings.isAutoLoot(itemId)) {
             ScheduledFuture<?> itemLootShedule;
             if ((reference instanceof Attackable) && ((Attackable) reference).isRaid()) // loot privilege for raids
             {
                 final Attackable raid = (Attackable) reference;
                 // if in CommandChannel and was killing a World/RaidBoss
-                if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS) {
+                if ((raid.getFirstCommandChannelAttacked() != null) && !characterSettings.autoLootRaid()) {
                     item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
+                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), characterSettings.raidLootPrivilegeTime());
                     item.setItemLootShedule(itemLootShedule);
                 }
-            } else if (!Config.AUTO_LOOT || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
+            } else if (!characterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
                 item.setOwnerId(actor.getObjectId());
                 itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
                 item.setItemLootShedule(itemLootShedule);
@@ -385,8 +385,9 @@ public final class ItemEngine extends GameXmlReader {
             item.setCount(count);
         }
 
-        if (Config.LOG_ITEMS && !process.equals("Reset")) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || item.isEquipable() || item.getId() == CommonItem.ADENA) {
+        var generalSettings = getSettings(GeneralSettings.class);
+        if (generalSettings.logItems() && !process.equals("Reset")) {
+            if (!generalSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
                 LOGGER_ITEMS.info("CREATE: {}, item {}:+{} {} ({}), Previous count{}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(), actor, reference);
             }
         }
@@ -438,8 +439,9 @@ public final class ItemEngine extends GameXmlReader {
             World.getInstance().removeObject(item);
             IdFactory.getInstance().releaseId(item.getObjectId());
 
-            if (Config.LOG_ITEMS) {
-                if (!Config.LOG_ITEMS_SMALL_LOG || item.isEquipable() || item.getId() == CommonItem.ADENA) {
+            var generalSettings = getSettings(GeneralSettings.class);
+            if (generalSettings.logItems()) {
+                if (!generalSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
                     LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
                 }
             }

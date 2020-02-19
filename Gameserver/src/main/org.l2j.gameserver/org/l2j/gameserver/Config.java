@@ -219,10 +219,8 @@ public final class Config {
     public static byte STARTING_LEVEL;
     public static int STARTING_SP;
     public static long MAX_ADENA;
-    public static boolean AUTO_LOOT;
-    public static boolean AUTO_LOOT_RAIDS;
+
     public static boolean AUTO_LOOT_SLOT_LIMIT;
-    public static int LOOT_RAIDS_PRIVILEGE_INTERVAL;
     public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
 
     public static boolean ENABLE_KEYBOARD_MOVEMENT;
@@ -354,8 +352,6 @@ public final class Config {
     public static boolean GM_DEBUG_HTML_PATHS;
     public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
     public static boolean LOG_CHAT;
-    public static boolean LOG_ITEMS;
-    public static boolean LOG_ITEMS_SMALL_LOG;
     public static boolean LOG_ITEM_ENCHANTS;
     public static boolean LOG_SKILL_ENCHANTS;
 
@@ -1229,10 +1225,8 @@ public final class Config {
         if (MAX_ADENA < 0) {
             MAX_ADENA = Long.MAX_VALUE;
         }
-        AUTO_LOOT = Character.getBoolean("AutoLoot", false);
-        AUTO_LOOT_RAIDS = Character.getBoolean("AutoLootRaids", false);
+
         AUTO_LOOT_SLOT_LIMIT = Character.getBoolean("AutoLootSlotLimit", false);
-        LOOT_RAIDS_PRIVILEGE_INTERVAL = Character.getInt("RaidLootRightsInterval", 900) * 1000;
         LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
 
         ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
@@ -1304,9 +1298,6 @@ public final class Config {
         GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
         USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
         LOG_CHAT = General.getBoolean("LogChat", false);
-
-        LOG_ITEMS = General.getBoolean("LogItems", false);
-        LOG_ITEMS_SMALL_LOG = General.getBoolean("LogItemsSmallLog", false);
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
         LOG_SKILL_ENCHANTS = General.getBoolean("LogSkillEnchants", false);
 

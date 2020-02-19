@@ -18,6 +18,8 @@ public class GeneralSettings implements Settings {
     private int autoDestroyItemTime;
     private int autoDestroyHerbTime;
     private boolean allowMail;
+    private boolean logItems;
+    private boolean smallLogItems;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -29,6 +31,8 @@ public class GeneralSettings implements Settings {
         banChatAdenaAdsReportCount = settingsFile.getInteger("BanChatAdenaADSReportCount", 10);
 
         auditGM = settingsFile.getBoolean("AuditGM", false);
+        logItems = settingsFile.getBoolean("LogItems", false);
+        smallLogItems = settingsFile.getBoolean("LogItemsSmallLog", true);
 
         saveDroppedItems = settingsFile.getBoolean("SaveDroppedItem", false);
         autoDestroyItemTime = settingsFile.getInteger("AutoDestroyDroppedItemAfter", 600) * 1000;
@@ -75,5 +79,13 @@ public class GeneralSettings implements Settings {
 
     public boolean allowMail() {
         return allowMail;
+    }
+
+    public boolean logItems() {
+        return logItems;
+    }
+
+    public boolean smallLogItems() {
+        return smallLogItems;
     }
 }

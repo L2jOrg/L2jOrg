@@ -851,7 +851,8 @@ public class Attackable extends Npc {
             for (ItemHolder drop : deathItems) {
                 final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
                 // Check if the autoLoot mode is active
-                if (getSettings(CharacterSettings.class).isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
+                var characterSettings = getSettings(CharacterSettings.class);
+                if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot()) || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
                     player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
                 } else {
                     dropItem(player, drop); // drop the item on the ground
@@ -905,7 +906,8 @@ public class Attackable extends Npc {
             if (Rnd.get(1000000) < drop.getEventDrop().getDropChance()) {
                 final int itemId = drop.getEventDrop().getItemIdList()[Rnd.get(drop.getEventDrop().getItemIdList().length)];
                 final long itemCount = Rnd.get(drop.getEventDrop().getMinCount(), drop.getEventDrop().getMaxCount());
-                if (getSettings(CharacterSettings.class).isAutoLoot(itemId) || Config.AUTO_LOOT || isFlying()) {
+                var characterSettings = getSettings(CharacterSettings.class);
+                if (characterSettings.autoLoot() || isFlying() || characterSettings.isAutoLoot(itemId)) {
                     player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the Player that has killed the Attackable
                 } else {
                     dropItem(player, itemId, itemCount); // drop the item on the ground

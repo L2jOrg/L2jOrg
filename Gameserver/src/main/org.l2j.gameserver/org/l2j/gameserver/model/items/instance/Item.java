@@ -283,8 +283,9 @@ public final class Item extends WorldObject {
     public void setOwnerId(String process, int owner_id, Player creator, Object reference) {
         setOwnerId(owner_id);
 
-        if (Config.LOG_ITEMS) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (template.isEquipable() || (template.getId() == CommonItem.ADENA)))) {
+        var generalSettings = getSettings(GeneralSettings.class);
+        if (generalSettings.logItems()) {
+            if (!generalSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
                 if (_enchantLevel > 0) {
                     LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
@@ -437,8 +438,9 @@ public final class Item extends WorldObject {
 
         _storedInDb = false;
 
-        if (Config.LOG_ITEMS && (process != null)) {
-            if (!Config.LOG_ITEMS_SMALL_LOG || template.isEquipable() || template.getId() == CommonItem.ADENA) {
+        var generalSettings = getSettings(GeneralSettings.class);
+        if (generalSettings.logItems() && (process != null)) {
+            if (!generalSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
                 if (_enchantLevel > 0) {
                     LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
                             + ", item " + getObjectId() //
