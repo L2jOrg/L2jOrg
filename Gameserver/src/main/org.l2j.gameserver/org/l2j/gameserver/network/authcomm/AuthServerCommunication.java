@@ -13,15 +13,13 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -29,122 +27,79 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.network.authcomm.gs2as.ServerStatus.SERVER_LIST_TYPE;
 
+/**
+ * @author JoeAlisson
+ */
 public class AuthServerCommunication implements Runnable, PacketExecutor<AuthServerClient> {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthServerCommunication.class);
 
-    private final Map<String, GameClient> waitingClients = new HashMap<>();
-    private final Map<String, GameClient> authedClients = new HashMap<>();
-
-    private final ReadWriteLock lock = new ReentrantReadWriteLock();
-    private final Lock readLock = lock.readLock();
-    private final Lock writeLock = lock.writeLock();
+    private final Map<String, GameClient> waitingClients = new ConcurrentHashMap<>();
+    private final Map<String, GameClient> authedClients = new ConcurrentHashMap<>();
 
     private AuthServerClient client;
+    private final Connector<AuthServerClient> connector;
+    private final InetSocketAddress address;
     private volatile boolean shutdown = false;
 
-    private AuthServerCommunication() { }
+    private AuthServerCommunication() {
+        var serverSettings = getSettings(ServerSettings.class);
+        address = isNullOrEmpty(serverSettings.authServerAddress()) ? new InetSocketAddress(serverSettings.port()) : new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
+        connector = Connector.create(AuthServerClient::new, new PacketHandler(), this);
+    }
 
     public void connect() throws IOException, ExecutionException, InterruptedException {
-        var serverSettings = getSettings(ServerSettings.class);
-        logger.info("Connecting to authserver on {}:{}", serverSettings.authServerAddress(), serverSettings.authServerPort());
-        InetSocketAddress address = isNullOrEmpty(serverSettings.authServerAddress()) ? new InetSocketAddress(serverSettings.port()) : new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
-        client = Connector.create(AuthServerClient::new, new PacketHandler(), this).connect(address);
+        if(nonNull(client)) {
+            client = null;
+        }
+        logger.info("Connecting to authserver on {}:{}", address.getAddress(), address.getPort());
+        client = connector.connect(address);
+
     }
 
     @Override
     public void run() {
-        while (!shutdown && (isNull(client) || !client.isConnected())) {
-            try {
+        try {
+            if(!shutdown && (isNull(client) || !client.isConnected())) {
                 connect();
-            } catch (IOException | ExecutionException | InterruptedException e) {
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException ignored) {
-                    Thread.currentThread().interrupt();
-                }
             }
+        } catch (IOException | ExecutionException | InterruptedException e) {
+            restart();
         }
     }
 
     public GameClient addWaitingClient(GameClient client) {
-        writeLock.lock();
-        try {
-            return waitingClients.put(client.getAccountName(), client);
-        } finally {
-            writeLock.unlock();
-        }
+        return waitingClients.put(client.getAccountName(), client);
     }
 
     public GameClient removeWaitingClient(String account) {
-        writeLock.lock();
-        try {
-            return waitingClients.remove(account);
-        } finally {
-            writeLock.unlock();
-        }
+        return waitingClients.remove(account);
     }
 
     public GameClient addAuthedClient(GameClient client) {
-        writeLock.lock();
-        try {
-            return authedClients.put(client.getAccountName(), client);
-        } finally {
-            writeLock.unlock();
-        }
+        return authedClients.put(client.getAccountName(), client);
     }
 
     public GameClient removeAuthedClient(String login) {
-        writeLock.lock();
-        try {
-            return authedClients.remove(login);
-        } finally {
-            writeLock.unlock();
-        }
+        return authedClients.remove(login);
     }
 
     public GameClient getAuthedClient(String login) {
-        readLock.lock();
-        try {
-            return authedClients.get(login);
-        } finally {
-            readLock.unlock();
-        }
+        return authedClients.get(login);
     }
 
     public List<GameClient> getAuthedClientsByIP(String ip) {
-        List<GameClient> clients = new ArrayList<>();
-
-        readLock.lock();
-        try {
-            for(GameClient client : authedClients.values()) {
-                if(client.getHostAddress().equalsIgnoreCase(ip))
-                    clients.add(client);
-            }
-        } finally {
-            readLock.unlock();
+        if(isNullOrEmpty(ip)) {
+            return Collections.emptyList();
         }
-        return clients;
+        return authedClients.values().stream().filter(c -> c.getHostAddress().equalsIgnoreCase(ip)).collect(Collectors.toList());
     }
 
     public List<GameClient> getAuthedClientsByHWID(String hwid) {
-        List<GameClient> clients = new ArrayList<>();
-        if(isNullOrEmpty(hwid))
-            return clients;
-
-        readLock.lock();
-        try {
-            for(GameClient client : authedClients.values()) {
-                String h = client.getHardwareInfo().getMacAddress();
-                if(!isNullOrEmpty(h) && h.equalsIgnoreCase(hwid))
-                    clients.add(client);
-            }
+        if(isNullOrEmpty(hwid)) {
+            return Collections.emptyList();
         }
-        finally
-        {
-            readLock.unlock();
-        }
-        return clients;
+        return authedClients.values().stream().filter(c -> hwid.equalsIgnoreCase(c.getHardwareInfo().getMacAddress())).collect(Collectors.toList());
     }
 
     public String[] getAccounts() {
@@ -159,7 +114,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
     public void shutdown() {
         shutdown = true;
         if(nonNull(client) && client.isConnected()) {
-            client.close(null);
+            client.close();
         }
     }
 
