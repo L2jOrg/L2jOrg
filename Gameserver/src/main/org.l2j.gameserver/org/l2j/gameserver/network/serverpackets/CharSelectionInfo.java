@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.time.Instant;
+import java.time.ZoneOffset;
 import java.util.LinkedList;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -34,6 +34,7 @@ import static org.l2j.gameserver.enums.InventorySlot.TWO_HAND;
 public class CharSelectionInfo extends ServerPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CharSelectionInfo.class);
+    private static final int CLIENT_ZONE_OFFSET = ZoneOffset.ofHours(5).getTotalSeconds();
     private final String _loginName;
     private final int _sessionId;
     private final CharSelectInfoPackage[] _characterPackages;
@@ -321,7 +322,7 @@ public class CharSelectionInfo extends ServerPacket {
             writeByte(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x02 : 0x00); // Hero glow
             writeByte(charInfoPackage.isHairAccessoryEnabled()); // Show hair accessory if enabled
             writeInt(0); // ban time in secs
-            writeInt((int) Instant.ofEpochMilli(charInfoPackage.getLastAccess()).getEpochSecond());
+            writeInt((int) (charInfoPackage.getLastAccess() / 1000) + CLIENT_ZONE_OFFSET);
 
         }
     }
