@@ -2,8 +2,6 @@ package org.l2j.gameserver.data.xml.impl;
 
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.commons.util.filter.NumericNameFilter;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.EnchantItemGroupsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.SpecialItemType;
@@ -14,6 +12,7 @@ import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -23,7 +22,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,7 +51,7 @@ public final class MultisellData extends GameXmlReader {
     public void load() {
         _multisells.clear();
         parseDatapackDirectory("data/multisell", false);
-        if (Config.CUSTOM_MULTISELL_LOAD) {
+        if (getSettings(GeneralSettings.class).loadCustomMultisell()) {
             parseDatapackDirectory("data/multisell/custom", false);
         }
 

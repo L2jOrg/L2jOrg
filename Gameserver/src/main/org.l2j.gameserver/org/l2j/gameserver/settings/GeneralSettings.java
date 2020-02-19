@@ -20,6 +20,8 @@ public class GeneralSettings implements Settings {
     private boolean allowMail;
     private boolean logItems;
     private boolean smallLogItems;
+    private boolean loadCustomBuyList;
+    private boolean loadCustomMultisell;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -39,6 +41,9 @@ public class GeneralSettings implements Settings {
         autoDestroyHerbTime = settingsFile.getInteger("AutoDestroyHerbTime", 120) * 1000;
 
         allowMail = settingsFile.getBoolean("AllowMail", true);
+
+        loadCustomBuyList = settingsFile.getBoolean("CustomBuyListLoad", false);
+        loadCustomMultisell = settingsFile.getBoolean("CustomMultisellLoad", false);
      }
 
     public int generalChatLevel() {
@@ -87,5 +92,13 @@ public class GeneralSettings implements Settings {
 
     public boolean smallLogItems() {
         return smallLogItems;
+    }
+
+    public boolean loadCustomBuyList() {
+        return loadCustomBuyList;
+    }
+
+    public boolean loadCustomMultisell() {
+        return loadCustomMultisell;
     }
 }
