@@ -201,7 +201,7 @@ public class GameServer {
             ItemsOnGroundManager.getInstance();
         }
 
-        if (generalSettings.autoDestroyItemTime()> 0 || (Config.HERB_AUTO_DESTROY_TIME > 0)) {
+        if (generalSettings.autoDestroyItemTime() > 0 || generalSettings.autoDestroyHerbTime() > 0) {
             ItemsAutoDestroy.getInstance();
         }
 

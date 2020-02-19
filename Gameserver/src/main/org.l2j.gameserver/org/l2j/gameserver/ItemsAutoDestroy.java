@@ -42,7 +42,7 @@ public final class ItemsAutoDestroy {
                 if (item.getTemplate().getAutoDestroyTime() > 0) {
                     autoDestroyTime = item.getTemplate().getAutoDestroyTime();
                 } else if (item.getTemplate().hasExImmediateEffect()) {
-                    autoDestroyTime = Config.HERB_AUTO_DESTROY_TIME;
+                    autoDestroyTime = generalSettings.autoDestroyHerbTime();
                 } else {
                     if( (autoDestroyTime = generalSettings.autoDestroyItemTime()) == 0) {
                         autoDestroyTime = 3600000;

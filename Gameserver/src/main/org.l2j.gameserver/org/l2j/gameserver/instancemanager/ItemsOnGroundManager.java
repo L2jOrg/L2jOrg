@@ -94,7 +94,7 @@ public final class ItemsOnGroundManager implements Runnable {
                     // add to ItemsAutoDestroy only items not protected
                     if (!Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
                         if (dropTime > -1) {
-                            if ((generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getTemplate().hasExImmediateEffect())) {
+                            if ((generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (generalSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
                                 ItemsAutoDestroy.getInstance().addItem(item);
                             }
                         }

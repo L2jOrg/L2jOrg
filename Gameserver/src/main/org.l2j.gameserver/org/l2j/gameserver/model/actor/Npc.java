@@ -1228,7 +1228,8 @@ public class Npc extends Creature {
 
             // Add drop to auto destroy item task.
             if (!Config.LIST_PROTECTED_ITEMS.contains(itemId)) {
-                if (( getSettings(GeneralSettings.class).autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getTemplate().hasExImmediateEffect())) {
+                var generalSettings = getSettings(GeneralSettings.class);
+                if (( generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (generalSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
                     ItemsAutoDestroy.getInstance().addItem(item);
                 }
             }
