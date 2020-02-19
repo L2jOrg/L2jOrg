@@ -1407,7 +1407,7 @@ public final class Item extends WorldObject {
 
     @Override
     public boolean decayMe() {
-        if (Config.SAVE_DROPPED_ITEM) {
+        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
             ItemsOnGroundManager.getInstance().removeObject(this);
         }
 
@@ -1841,7 +1841,7 @@ public final class Item extends WorldObject {
 
             // Add the Item dropped in the world as a visible object
             World.getInstance().addVisibleObject(_itеm, _itеm.getWorldRegion());
-            if (Config.SAVE_DROPPED_ITEM) {
+            if (getSettings(GeneralSettings.class).saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().save(_itеm);
             }
             _itеm.setDropperObjectId(0); // Set the dropper Id back to 0 so it no longer shows the drop packet

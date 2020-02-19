@@ -41,7 +41,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 public final class Config {
     // --------------------------------------------------
     // Constants
-    private static final Logger LOGGER = LoggerFactory.getLogger(Config.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
     // --------------------------------------------------
     public static final String EOL = System.lineSeparator();
     // --------------------------------------------------
@@ -383,7 +383,7 @@ public final class Config {
     public static boolean DESTROY_DROPPED_PLAYER_ITEM;
     public static boolean DESTROY_EQUIPABLE_PLAYER_ITEM;
     public static boolean DESTROY_ALL_ITEMS;
-    public static boolean SAVE_DROPPED_ITEM;
+
     public static boolean EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD;
     public static int SAVE_DROPPED_ITEM_INTERVAL;
     public static boolean CLEAR_DROPPED_ITEM_TABLE;
@@ -1361,7 +1361,6 @@ public final class Config {
         DESTROY_DROPPED_PLAYER_ITEM = General.getBoolean("DestroyPlayerDroppedItem", false);
         DESTROY_EQUIPABLE_PLAYER_ITEM = General.getBoolean("DestroyEquipableItem", false);
         DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
-        SAVE_DROPPED_ITEM = General.getBoolean("SaveDroppedItem", false);
         EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD = General.getBoolean("EmptyDroppedItemTableAfterLoad", false);
         SAVE_DROPPED_ITEM_INTERVAL = General.getInt("SaveDroppedItemInterval", 60) * 60000;
         CLEAR_DROPPED_ITEM_TABLE = General.getBoolean("ClearDroppedItemTable", false);

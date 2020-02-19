@@ -93,6 +93,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.*;
 import org.l2j.gameserver.world.World;
@@ -114,6 +115,7 @@ import java.util.stream.Collectors;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.model.items.BodyPart.*;
@@ -3788,7 +3790,7 @@ public final class Player extends Playable {
 
             // Remove the Item from the world and send server->client GetItem packets
             target.pickupMe(this);
-            if (Config.SAVE_DROPPED_ITEM) {
+            if (getSettings(GeneralSettings.class).saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().removeObject(target);
             }
         }

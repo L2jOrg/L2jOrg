@@ -11,6 +11,7 @@ public class GeneralSettings implements Settings {
     private int tradeChatLevel;
     private int banChatAdenaAdsReportCount;
     private boolean auditGM;
+    private boolean saveDroppedItems;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -22,6 +23,8 @@ public class GeneralSettings implements Settings {
         banChatAdenaAdsReportCount = settingsFile.getInteger("BanChatAdenaADSReportCount", 10);
 
         auditGM = settingsFile.getBoolean("AuditGM", false);
+
+        saveDroppedItems = settingsFile.getBoolean("SaveDroppedItem", false);
     }
 
     public int generalChatLevel() {
@@ -48,4 +51,7 @@ public class GeneralSettings implements Settings {
         return auditGM;
     }
 
+    public boolean saveDroppedItems() {
+        return saveDroppedItems;
+    }
 }

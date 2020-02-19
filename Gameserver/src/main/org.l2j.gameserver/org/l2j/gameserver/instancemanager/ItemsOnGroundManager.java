@@ -4,6 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.slf4j.Logger;
@@ -12,6 +13,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.*;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -33,11 +36,10 @@ public final class ItemsOnGroundManager implements Runnable {
 
     private void load() {
         // If SaveDroppedItem is false, may want to delete all items previously stored to avoid add old items on reactivate
-        if (!Config.SAVE_DROPPED_ITEM && Config.CLEAR_DROPPED_ITEM_TABLE) {
-            emptyTable();
-        }
-
-        if (!Config.SAVE_DROPPED_ITEM) {
+        if (!getSettings(GeneralSettings.class).saveDroppedItems()) {
+            if (Config.CLEAR_DROPPED_ITEM_TABLE) {
+                emptyTable();
+            }
             return;
         }
 
@@ -109,13 +111,13 @@ public final class ItemsOnGroundManager implements Runnable {
     }
 
     public void save(Item item) {
-        if (Config.SAVE_DROPPED_ITEM) {
+        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
             _items.add(item);
         }
     }
 
     public void removeObject(Item item) {
-        if (Config.SAVE_DROPPED_ITEM) {
+        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
             _items.remove(item);
         }
     }
@@ -139,7 +141,7 @@ public final class ItemsOnGroundManager implements Runnable {
 
     @Override
     public synchronized void run() {
-        if (!Config.SAVE_DROPPED_ITEM) {
+        if (!getSettings(GeneralSettings.class).saveDroppedItems()) {
             return;
         }
 

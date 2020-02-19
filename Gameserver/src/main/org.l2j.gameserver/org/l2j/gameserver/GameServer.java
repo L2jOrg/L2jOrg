@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.util.Broadcast;
@@ -195,7 +196,7 @@ public class GameServer {
         SiegeGuardManager.getInstance();
         QuestManager.getInstance().report();
 
-        if (Config.SAVE_DROPPED_ITEM) {
+        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
             ItemsOnGroundManager.getInstance();
         }
 

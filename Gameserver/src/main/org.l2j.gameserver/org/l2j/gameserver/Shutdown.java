@@ -7,6 +7,7 @@ import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.instancemanager.*;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -20,6 +21,8 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Broadcast;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -419,7 +422,7 @@ public class Shutdown extends Thread {
         LOGGER.info("SchemeBufferTable data has been saved.");
 
         // Save items on ground before closing
-        if (Config.SAVE_DROPPED_ITEM) {
+        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
             ItemsOnGroundManager.getInstance().saveInDb();
             LOGGER.info("Items On Ground Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
             ItemsOnGroundManager.getInstance().cleanUp();

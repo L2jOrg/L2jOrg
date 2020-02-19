@@ -40,6 +40,7 @@ import org.l2j.gameserver.model.skills.EffectScope;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
@@ -53,6 +54,8 @@ import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 public class Pet extends Summon {
@@ -437,7 +440,7 @@ public class Pet extends Summon {
             // Remove from the ground!
             target.pickupMe(this);
 
-            if (Config.SAVE_DROPPED_ITEM) {
+            if (getSettings(GeneralSettings.class).saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().removeObject(target);
             }
         }
