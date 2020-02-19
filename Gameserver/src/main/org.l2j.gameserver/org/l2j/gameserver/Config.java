@@ -635,9 +635,7 @@ public final class Config {
     // --------------------------------------------------
     // Server Settings
     // --------------------------------------------------
-    public static int PORT_GAME;
 
-    public static int MAXIMUM_ONLINE_USERS;
     public static boolean HARDWARE_INFO_ENABLED;
     public static int MAX_PLAYERS_PER_HWID;
     public static Pattern CHARNAME_TEMPLATE_PATTERN;
@@ -919,7 +917,6 @@ public final class Config {
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 
         final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
-        PORT_GAME = serverSettings.getInt("GameserverPort", 7777);
 
         try {
             DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
@@ -943,7 +940,6 @@ public final class Config {
         CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
 
         MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
-        MAXIMUM_ONLINE_USERS = serverSettings.getInt("MaximumOnlineUsers", 100);
 
         HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
         MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);

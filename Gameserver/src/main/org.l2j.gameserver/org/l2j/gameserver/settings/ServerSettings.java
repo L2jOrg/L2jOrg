@@ -31,6 +31,7 @@ public class ServerSettings implements Settings {
     private boolean useDeadLockDetector;
     private int deadLockDetectorInterval;
     private boolean restartOnDeadLock;
+    private int maxPlayers;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -152,4 +153,6 @@ public class ServerSettings implements Settings {
     public boolean restartOnDeadLock() {
         return restartOnDeadLock;
     }
+
+
 }

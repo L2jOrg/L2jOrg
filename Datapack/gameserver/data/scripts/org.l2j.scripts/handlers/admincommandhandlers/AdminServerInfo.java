@@ -24,6 +24,7 @@ import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 
@@ -59,7 +60,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			
 			html.replace("%os_name%", System.getProperty("os.name"));
 			html.replace("%os_ver%", System.getProperty("os.version"));
-			html.replace("%slots%", getPlayersCount("ALL") + "/" + Config.MAXIMUM_ONLINE_USERS);
+			html.replace("%slots%", getPlayersCount("ALL") + "/" + getSettings(ServerSettings.class).maximumOnlineUsers());
 			html.replace("%gameTime%", WorldTimeController.getInstance().getGameHour() + ":" + WorldTimeController.getInstance().getGameMinute());
 			html.replace("%dayNight%", WorldTimeController.getInstance().isNight() ? "Night" : "Day");
 			html.replace("%geodata%", getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? "Enabled" : "Disabled");

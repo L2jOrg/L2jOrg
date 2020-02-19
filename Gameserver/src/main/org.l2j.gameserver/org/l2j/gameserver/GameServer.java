@@ -223,17 +223,18 @@ public class GameServer {
             OfflineTradersTable.getInstance().restoreOfflineTraders();
         }
 
-        if (getSettings(ServerSettings.class).scheduleRestart()) {
+        var serverSettings = getSettings(ServerSettings.class);
+        if (serverSettings.scheduleRestart()) {
             ServerRestartManager.getInstance();
         }
 
-        LOGGER.info("Maximum number of connected players is configured to {}", Config.MAXIMUM_ONLINE_USERS);
+        LOGGER.info("Maximum number of connected players is configured to {}", serverSettings.maximumOnlineUsers());
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
         printSection("Setting All characters to offline status!");
         getDAO(CharacterDAO.class).setAllCharactersOffline();
 
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
         connectionHandler.start();
     }
 
