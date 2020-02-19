@@ -36,19 +36,23 @@ public final class ItemsAutoDestroy {
             if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID)) {
                 itemIterator.remove();
             } else {
-                final long autoDestroyTime;
+                var generalSettings = getSettings(GeneralSettings.class);
+                long autoDestroyTime;
+
                 if (item.getTemplate().getAutoDestroyTime() > 0) {
                     autoDestroyTime = item.getTemplate().getAutoDestroyTime();
                 } else if (item.getTemplate().hasExImmediateEffect()) {
                     autoDestroyTime = Config.HERB_AUTO_DESTROY_TIME;
                 } else {
-                    autoDestroyTime = ((Config.AUTODESTROY_ITEM_AFTER == 0) ? 3600000 : Config.AUTODESTROY_ITEM_AFTER * 1000);
+                    if( (autoDestroyTime = generalSettings.autoDestroyItemTime()) == 0) {
+                        autoDestroyTime = 3600000;
+                    }
                 }
 
                 if ((curtime - item.getDropTime()) > autoDestroyTime) {
                     item.decayMe();
                     itemIterator.remove();
-                    if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+                    if (generalSettings.saveDroppedItems()) {
                         ItemsOnGroundManager.getInstance().removeObject(item);
                     }
                 }

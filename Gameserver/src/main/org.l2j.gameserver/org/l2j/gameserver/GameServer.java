@@ -196,11 +196,12 @@ public class GameServer {
         SiegeGuardManager.getInstance();
         QuestManager.getInstance().report();
 
-        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+        var generalSettings = getSettings(GeneralSettings.class);
+        if (generalSettings.saveDroppedItems()) {
             ItemsOnGroundManager.getInstance();
         }
 
-        if ((Config.AUTODESTROY_ITEM_AFTER > 0) || (Config.HERB_AUTO_DESTROY_TIME > 0)) {
+        if (generalSettings.autoDestroyItemTime()> 0 || (Config.HERB_AUTO_DESTROY_TIME > 0)) {
             ItemsAutoDestroy.getInstance();
         }
 

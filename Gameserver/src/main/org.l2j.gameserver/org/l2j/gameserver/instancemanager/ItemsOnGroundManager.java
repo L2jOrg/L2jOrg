@@ -36,7 +36,8 @@ public final class ItemsOnGroundManager implements Runnable {
 
     private void load() {
         // If SaveDroppedItem is false, may want to delete all items previously stored to avoid add old items on reactivate
-        if (!getSettings(GeneralSettings.class).saveDroppedItems()) {
+        var generalSettings = getSettings(GeneralSettings.class);
+        if (!generalSettings.saveDroppedItems()) {
             if (Config.CLEAR_DROPPED_ITEM_TABLE) {
                 emptyTable();
             }
@@ -93,7 +94,7 @@ public final class ItemsOnGroundManager implements Runnable {
                     // add to ItemsAutoDestroy only items not protected
                     if (!Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
                         if (dropTime > -1) {
-                            if (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getTemplate().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getTemplate().hasExImmediateEffect())) {
+                            if ((generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getTemplate().hasExImmediateEffect())) {
                                 ItemsAutoDestroy.getInstance().addItem(item);
                             }
                         }

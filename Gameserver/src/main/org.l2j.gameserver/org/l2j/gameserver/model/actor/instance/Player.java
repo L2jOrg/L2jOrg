@@ -3165,7 +3165,7 @@ public final class Player extends Playable {
 
         item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
 
-        if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
+        if ((getSettings(GeneralSettings.class).autoDestroyItemTime() > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
             if ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()) {
                 ItemsAutoDestroy.getInstance().addItem(item);
             }
@@ -3173,7 +3173,7 @@ public final class Player extends Playable {
 
         // protection against auto destroy dropped item
         if (Config.DESTROY_DROPPED_PLAYER_ITEM) {
-            if (!item.isEquipable() || (item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM)) {
+            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
                 item.setProtected(false);
             } else {
                 item.setProtected(true);
@@ -3238,13 +3238,13 @@ public final class Player extends Playable {
 
         item.dropMe(this, x, y, z);
 
-        if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
-            if ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()) {
+        if ((getSettings(GeneralSettings.class).autoDestroyItemTime() > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
+            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
                 ItemsAutoDestroy.getInstance().addItem(item);
             }
         }
         if (Config.DESTROY_DROPPED_PLAYER_ITEM) {
-            if (!item.isEquipable() || (item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM)) {
+            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
                 item.setProtected(false);
             } else {
                 item.setProtected(true);

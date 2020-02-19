@@ -373,7 +373,6 @@ public final class Config {
     public static int DEADLOCK_CHECK_INTERVAL;
     public static boolean RESTART_ON_DEADLOCK;
     public static boolean ALLOW_DISCARDITEM;
-    public static int AUTODESTROY_ITEM_AFTER;
     public static int HERB_AUTO_DESTROY_TIME;
     public static List<Integer> LIST_PROTECTED_ITEMS;
     public static int CHAR_DATA_STORE_INTERVAL;
@@ -1347,7 +1346,6 @@ public final class Config {
         ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
         ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
         ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
-        AUTODESTROY_ITEM_AFTER = General.getInt("AutoDestroyDroppedItemAfter", 600);
         HERB_AUTO_DESTROY_TIME = General.getInt("AutoDestroyHerbTime", 60) * 1000;
         final String[] split = General.getString("ListOfProtectedItems", "0").split(",");
         LIST_PROTECTED_ITEMS = new ArrayList<>(split.length);
