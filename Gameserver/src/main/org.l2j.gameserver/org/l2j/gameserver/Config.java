@@ -224,7 +224,7 @@ public final class Config {
     public static boolean AUTO_LOOT_SLOT_LIMIT;
     public static int LOOT_RAIDS_PRIVILEGE_INTERVAL;
     public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
-    public static List<Integer> AUTO_LOOT_ITEM_IDS;
+
     public static boolean ENABLE_KEYBOARD_MOVEMENT;
     public static int UNSTUCK_INTERVAL;
     public static int TELEPORT_WATCHDOG_TIMEOUT;
@@ -1234,20 +1234,7 @@ public final class Config {
         AUTO_LOOT_SLOT_LIMIT = Character.getBoolean("AutoLootSlotLimit", false);
         LOOT_RAIDS_PRIVILEGE_INTERVAL = Character.getInt("RaidLootRightsInterval", 900) * 1000;
         LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
-        final String[] autoLootItemIds = Character.getString("AutoLootItemIds", "0").split(",");
-        AUTO_LOOT_ITEM_IDS = new ArrayList<>(autoLootItemIds.length);
-        for (String item : autoLootItemIds) {
-            Integer itm = 0;
-            try {
-                itm = Integer.parseInt(item);
-            } catch (NumberFormatException nfe) {
-                LOGGER.warn("Auto loot item ids: Wrong ItemId passed: " + item);
-                LOGGER.warn(nfe.getMessage());
-            }
-            if (itm != 0) {
-                AUTO_LOOT_ITEM_IDS.add(itm);
-            }
-        }
+
         ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
         UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
         TELEPORT_WATCHDOG_TIMEOUT = Character.getInt("TeleportWatchdogTimeout", 0);

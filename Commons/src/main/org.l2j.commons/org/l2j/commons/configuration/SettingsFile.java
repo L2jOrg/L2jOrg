@@ -1,5 +1,7 @@
 package org.l2j.commons.configuration;
 
+import io.github.joealisson.primitive.IntSet;
+import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +13,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.nio.file.Files.newBufferedReader;
+import static java.util.Arrays.stream;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.*;
 
@@ -104,6 +107,10 @@ public final class SettingsFile extends Properties {
             }
         });
         return list;
+    }
+
+    public IntSet getIntSet(String key, String delimiter) {
+        return StreamUtil.collectToSet(stream(getProperty(key).split(delimiter)).filter(Util::isInteger).mapToInt(Integer::parseInt));
     }
 
     public double getDouble(String key, double defaultValue) {

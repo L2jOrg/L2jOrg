@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.*;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GMAudit;
@@ -360,7 +361,7 @@ public final class ItemEngine extends GameXmlReader {
         final Item item = new Item(IdFactory.getInstance().getNextId(), template);
 
         // TODO Extract this block
-        if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId)) {
+        if (process.equalsIgnoreCase("loot") && !getSettings(CharacterSettings.class).isAutoLoot(itemId)) {
             ScheduledFuture<?> itemLootShedule;
             if ((reference instanceof Attackable) && ((Attackable) reference).isRaid()) // loot privilege for raids
             {
