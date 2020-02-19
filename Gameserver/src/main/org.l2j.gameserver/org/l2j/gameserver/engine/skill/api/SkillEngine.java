@@ -81,7 +81,7 @@ public class SkillEngine extends EffectParser {
 
 
     public int getMaxLevel(int skillId) {
-        return zeroIfNullOrElse(skills.get(skillId), Skill::getMaxLevel);
+        return zeroIfNullOrElse(skills.get(skillHashCode(skillId, 1)), Skill::getMaxLevel);
     }
 
     @Override

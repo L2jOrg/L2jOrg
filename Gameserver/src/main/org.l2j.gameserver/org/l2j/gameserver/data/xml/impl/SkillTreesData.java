@@ -54,7 +54,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author JoeAlisson
  */
 public final class SkillTreesData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(SkillTreesData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(SkillTreesData.class);
 
     // ClassId, Map of Skill Hash Code, SkillLearn
     private static final Map<ClassId, LongMap<SkillLearn>> classSkillTrees = new HashMap<>();
@@ -323,7 +323,7 @@ public final class SkillTreesData extends GameXmlReader {
 
             if (player.getLevel() >= skill.getGetLevel()) {
                 if (skill.getSkillLevel() > SkillEngine.getInstance().getMaxLevel(skill.getSkillId())) {
-                    LOGGER.error("SkillTreesData found learnable skill {} with level higher than max skill level!", skill.getSkillId());
+                    LOGGER.warn("SkillTreesData found learnable skill {} with level higher than max skill level!", skill.getSkillId());
                     continue;
                 }
 
