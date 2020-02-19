@@ -4,6 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
@@ -15,6 +16,9 @@ import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
+
+import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Migi, DS
@@ -30,7 +34,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
     @Override
     public void runImpl() {
         final Player activeChar = client.getPlayer();
-        if ((activeChar == null) || !Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS) {
+        if (isNull(activeChar) || !getSettings(GeneralSettings.class).allowMail() || !Config.ALLOW_ATTACHMENTS) {
             return;
         }
 

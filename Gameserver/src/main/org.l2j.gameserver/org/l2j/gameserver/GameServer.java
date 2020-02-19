@@ -209,7 +209,7 @@ public class GameServer {
 
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 
-        if (Config.ALLOW_MAIL) {
+        if (generalSettings.allowMail()) {
             MailManager.getInstance();
         }
 

@@ -33,6 +33,7 @@ import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettab
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -41,6 +42,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -323,7 +325,7 @@ public class EnterWorld extends ClientPacket {
             player.destroyItem("Akamanah", player.getInventory().getItemByItemId(8689), null, true);
         }
 
-        if (Config.ALLOW_MAIL) {
+        if (getSettings(GeneralSettings.class).allowMail()) {
             if (MailManager.getInstance().hasUnreadPost(player)) {
                 client.sendPacket(ExNoticePostArrived.valueOf(false));
             }

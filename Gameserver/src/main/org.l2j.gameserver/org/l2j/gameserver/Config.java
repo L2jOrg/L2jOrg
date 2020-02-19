@@ -410,7 +410,6 @@ public final class Config {
     public static boolean WAREHOUSE_CACHE;
     public static int WAREHOUSE_CACHE_TIME;
     public static boolean ALLOW_REFUND;
-    public static boolean ALLOW_MAIL;
     public static boolean ALLOW_ATTACHMENTS;
     public static boolean ALLOW_WEAR;
     public static int WEAR_DELAY;
@@ -1384,7 +1383,6 @@ public final class Config {
         WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
         WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
         ALLOW_REFUND = General.getBoolean("AllowRefund", true);
-        ALLOW_MAIL = General.getBoolean("AllowMail", true);
         ALLOW_ATTACHMENTS = General.getBoolean("AllowAttachments", true);
         ALLOW_WEAR = General.getBoolean("AllowWear", true);
         WEAR_DELAY = General.getInt("WearDelay", 5);

@@ -17,6 +17,7 @@ public class GeneralSettings implements Settings {
     private boolean saveDroppedItems;
     private int autoDestroyItemTime;
     private int autoDestroyHerbTime;
+    private boolean allowMail;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -32,6 +33,8 @@ public class GeneralSettings implements Settings {
         saveDroppedItems = settingsFile.getBoolean("SaveDroppedItem", false);
         autoDestroyItemTime = settingsFile.getInteger("AutoDestroyDroppedItemAfter", 600) * 1000;
         autoDestroyHerbTime = settingsFile.getInteger("AutoDestroyHerbTime", 120) * 1000;
+
+        allowMail = settingsFile.getBoolean("AllowMail", true);
      }
 
     public int generalChatLevel() {
@@ -68,5 +71,9 @@ public class GeneralSettings implements Settings {
 
     public int autoDestroyHerbTime() {
         return autoDestroyHerbTime;
+    }
+
+    public boolean allowMail() {
+        return allowMail;
     }
 }

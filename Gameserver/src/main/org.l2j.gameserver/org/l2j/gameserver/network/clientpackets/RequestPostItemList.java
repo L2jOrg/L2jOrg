@@ -2,9 +2,12 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExReplyPostItemList;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Migi, DS
@@ -17,7 +20,7 @@ public final class RequestPostItemList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS) {
+        if (!getSettings(GeneralSettings.class).allowMail() || !Config.ALLOW_ATTACHMENTS) {
             return;
         }
 

@@ -4,11 +4,15 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.util.GameUtils;
+
+import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Migi, DS
@@ -34,7 +38,7 @@ public final class RequestDeleteSentPost extends ClientPacket {
     @Override
     public void runImpl() {
         final Player activeChar = client.getPlayer();
-        if ((activeChar == null) || (_msgIds == null) || !Config.ALLOW_MAIL) {
+        if (isNull(activeChar) || isNull(_msgIds) || !getSettings(GeneralSettings.class).allowMail()) {
             return;
         }
 
