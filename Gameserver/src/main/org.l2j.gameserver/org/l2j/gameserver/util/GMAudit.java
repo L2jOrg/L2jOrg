@@ -40,7 +40,7 @@ public class GMAudit {
 
         final File file = new File("log/GMAudit/" + name + ".txt");
         try (FileWriter save = new FileWriter(file, true)) {
-            save.write(date + ">" + gmName + ">" + action + ">" + target + ">" + params + Config.EOL);
+            save.write(date + ">" + gmName + ">" + action + ">" + target + ">" + params + System.lineSeparator());
         } catch (IOException e) {
             LOGGER.error("GMAudit for GM " + gmName + " could not be saved: ", e);
         }

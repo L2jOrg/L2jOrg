@@ -92,12 +92,12 @@ public final class DecayTaskManager {
     public String toString() {
         final StringBuilder ret = new StringBuilder();
         ret.append("============= DecayTask Manager Report ============");
-        ret.append(Config.EOL);
+        ret.append(System.lineSeparator());
         ret.append("Tasks count: ");
 		ret.append(DECAY_SCHEDULES.size());
-        ret.append(Config.EOL);
+        ret.append(System.lineSeparator());
         ret.append("Tasks dump:");
-        ret.append(Config.EOL);
+        ret.append(System.lineSeparator());
 
 		final long time = System.currentTimeMillis();
 		for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
@@ -108,7 +108,7 @@ public final class DecayTaskManager {
             ret.append(entry.getKey().getName());
             ret.append(" decay timer: ");
 			ret.append(entry.getValue() - time);
-            ret.append(Config.EOL);
+            ret.append(System.lineSeparator());
         }
 
         return ret.toString();

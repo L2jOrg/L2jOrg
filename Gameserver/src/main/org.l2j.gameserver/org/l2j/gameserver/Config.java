@@ -43,7 +43,7 @@ public final class Config {
     // Constants
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
     // --------------------------------------------------
-    public static final String EOL = System.lineSeparator();
+
     // --------------------------------------------------
     // Config File Definitions
     // --------------------------------------------------
@@ -1423,7 +1423,7 @@ public final class Config {
         CUSTOM_BUYLIST_LOAD = General.getBoolean("CustomBuyListLoad", false);
         ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
         ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
-        ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + EOL + EOL + "Sincerely, Alegria");
+        ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + System.lineSeparator().repeat(2) + "Sincerely, Alegria");
         ENABLE_BLOCK_CHECKER_EVENT = General.getBoolean("EnableBlockCheckerEvent", false);
 
         HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);

@@ -60,7 +60,6 @@ public class GameServer {
     private static Logger LOGGER;
     private static GameServer INSTANCE;
     public static String fullVersion;
-    private static DeadLockDetector deadLockDetector;
     private final ConnectionHandler<GameClient> connectionHandler;
 
     public GameServer() throws Exception {
@@ -259,7 +258,7 @@ public class GameServer {
         ThreadPool.execute(AuthServerCommunication.getInstance());
 
         if (settings.useDeadLockDetector()) {
-            deadLockDetector = new DeadLockDetector(Duration.ofSeconds(settings.deadLockDetectorInterval()), () -> {
+            DeadLockDetector deadLockDetector = new DeadLockDetector(Duration.ofSeconds(settings.deadLockDetectorInterval()), () -> {
                 if (settings.restartOnDeadLock()) {
                     Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
                     Shutdown.getInstance().startShutdown(null, 60, true);

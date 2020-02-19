@@ -93,6 +93,6 @@ public class CubicTemplate implements ICubicConditionHolder {
 
     @Override
     public String toString() {
-        return "Cubic id: " + _id + " level: " + _level + " slot: " + _slot + " duration: " + _duration + " delay: " + _delay + " maxCount: " + _maxCount + " useUp: " + _useUp + " power: " + _power + Config.EOL + "skills: " + _skills + Config.EOL + "conditions:" + _conditions + Config.EOL;
+        return "Cubic id: " + _id + " level: " + _level + " slot: " + _slot + " duration: " + _duration + " delay: " + _delay + " maxCount: " + _maxCount + " useUp: " + _useUp + " power: " + _power + System.lineSeparator() + "skills: " + _skills + System.lineSeparator() + "conditions:" + _conditions + System.lineSeparator();
     }
 }

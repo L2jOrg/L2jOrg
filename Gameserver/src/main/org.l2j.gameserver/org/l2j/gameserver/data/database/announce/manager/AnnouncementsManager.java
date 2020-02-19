@@ -157,7 +157,7 @@ public final class AnnouncementsManager {
         public void run() {
             ScheduledFuture task;
             if (data.getRepeat() == -1 || runs > 0) {
-                for (String content : data.getContent().split(Config.EOL)) {
+                for (String content : data.getContent().split(System.lineSeparator())) {
                     Broadcast.toAllOnlinePlayers(content, (data.getType() == AUTO_CRITICAL));
                 }
 

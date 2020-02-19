@@ -304,7 +304,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
             }
 
             final Location firstNode = holder.getNodes().get(0);
-            final StringJoiner sj = new StringJoiner(Config.EOL);
+            final StringJoiner sj = new StringJoiner(System.lineSeparator());
             sj.add("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             sj.add("<list xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://l2j.org\" xsi:schemaLocation=\"http://l2j.org zones.xsd\">");
             sj.add("\t<zone name=\"" + holder.getName() + "\" type=\"org.l2j.gameserver.world.zone.type.ScriptZone\" form=\"Polygon\" minZ=\"" + (holder.getMinZ() != 0 ? holder.getMinZ() : firstNode.getZ() - 100) + "\" maxZ=\"" + (holder.getMaxZ() != 0 ? holder.getMaxZ() : firstNode.getZ() + 100) + "\">");

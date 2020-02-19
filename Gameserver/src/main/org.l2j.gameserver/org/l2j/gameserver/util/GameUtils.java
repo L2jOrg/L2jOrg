@@ -343,7 +343,7 @@ public final class GameUtils {
      * @param text
      */
     public static void fillMultiEditContent(Player activeChar, String text) {
-        activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
+        activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", System.lineSeparator()), "0", "0", "0", "0")));
     }
 
     public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius) {

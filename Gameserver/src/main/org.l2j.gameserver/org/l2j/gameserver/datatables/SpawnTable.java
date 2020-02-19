@@ -21,6 +21,9 @@ import static java.util.Objects.nonNull;
  * Spawn data retriever.
  *
  * @author Zoey76, Mobius
+ *
+ *
+ * TODO move edited spawns to Database.
  */
 public final class SpawnTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpawnTable.class);
@@ -116,11 +119,11 @@ public final class SpawnTable {
                     String currentLine;
                     while ((currentLine = reader.readLine()) != null) {
                         if (currentLine.contains("</group>")) {
-                            writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + Config.EOL);
-                            writer.write(currentLine + Config.EOL);
+                            writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + System.lineSeparator());
+                            writer.write(currentLine + System.lineSeparator());
                             continue;
                         }
-                        writer.write(currentLine + Config.EOL);
+                        writer.write(currentLine + System.lineSeparator());
                     }
                     writer.close();
                     reader.close();
@@ -133,14 +136,14 @@ public final class SpawnTable {
             {
                 try {
                     final BufferedWriter writer = new BufferedWriter(new FileWriter(spawnFile));
-                    writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + Config.EOL);
-                    writer.write("<list xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"../../xsd/spawns.xsd\">" + Config.EOL);
-                    writer.write("	<spawn name=\"" + x + "_" + y + "\">" + Config.EOL);
-                    writer.write("		<group>" + Config.EOL);
-                    writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + Config.EOL);
-                    writer.write("		</group>" + Config.EOL);
-                    writer.write("	</spawn>" + Config.EOL);
-                    writer.write("</list>" + Config.EOL);
+                    writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + System.lineSeparator());
+                    writer.write("<list xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"../../xsd/spawns.xsd\">" + System.lineSeparator());
+                    writer.write("	<spawn name=\"" + x + "_" + y + "\">" + System.lineSeparator());
+                    writer.write("		<group>" + System.lineSeparator());
+                    writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + System.lineSeparator());
+                    writer.write("		</group>" + System.lineSeparator());
+                    writer.write("	</spawn>" + System.lineSeparator());
+                    writer.write("</list>" + System.lineSeparator());
                     writer.close();
                     LOGGER.info(getClass().getSimpleName() + ": Created file: " + OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
                 } catch (Exception e) {
@@ -195,7 +198,7 @@ public final class SpawnTable {
                             continue;
                         }
                     }
-                    writer.write(currentLine + Config.EOL);
+                    writer.write(currentLine + System.lineSeparator());
                     if (currentLine.contains("</list>")) {
                         lastLineFound = true;
                     }

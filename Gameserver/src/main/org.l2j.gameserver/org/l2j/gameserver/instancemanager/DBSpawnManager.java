@@ -393,7 +393,7 @@ public class DBSpawnManager {
      * @return the raid npc status
      */
     public String getNpcsStatus(int npcId) {
-        String msg = "NPC Status..." + Config.EOL;
+        String msg = "NPC Status..." + System.lineSeparator();
 
         if (_npcs == null) {
             msg += "None";
