@@ -6,6 +6,9 @@ import org.l2j.gameserver.ServerType;
 
 import java.nio.file.Path;
 
+/**
+ * @author JoeAlisson
+ */
 public class ServerSettings implements Settings {
 
     private int serverId;
@@ -24,6 +27,10 @@ public class ServerSettings implements Settings {
     private int scheduledPoolSize;
     private int threadPoolSize;
     private int[] acceptedProtocols;
+    private boolean scheduleRestart;
+    private boolean useDeadLockDetector;
+    private int deadLockDetectorInterval;
+    private boolean restartOnDeadLock;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -49,6 +56,12 @@ public class ServerSettings implements Settings {
         scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
         acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
+
+        scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
+
+        useDeadLockDetector = settingsFile.getBoolean("DeadLockDetector", true);
+        deadLockDetectorInterval = settingsFile.getInteger("DeadLockCheckInterval", 1800);
+        restartOnDeadLock = settingsFile.getBoolean("RestartOnDeadlock", false);
     }
 
     private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
@@ -122,5 +135,21 @@ public class ServerSettings implements Settings {
 
     public int[] acceptedProtocols() {
         return acceptedProtocols;
+    }
+
+    public boolean scheduleRestart() {
+        return scheduleRestart;
+    }
+
+    public boolean useDeadLockDetector() {
+        return useDeadLockDetector;
+    }
+
+    public int deadLockDetectorInterval() {
+        return deadLockDetectorInterval;
+    }
+
+    public boolean restartOnDeadLock() {
+        return restartOnDeadLock;
     }
 }

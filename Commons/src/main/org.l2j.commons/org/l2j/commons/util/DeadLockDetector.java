@@ -24,6 +24,7 @@ public class DeadLockDetector extends Thread
 		_checkInterval = checkInterval;
 		_deadLockCallback = deadLockCallback;
 		tmx = ManagementFactory.getThreadMXBean();
+		setDaemon(true);
 	}
 	
 	@Override

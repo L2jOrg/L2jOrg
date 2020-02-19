@@ -34,6 +34,7 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -252,7 +253,7 @@ public class EnterWorld extends ClientPacket {
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
 
-        if ((Config.SERVER_RESTART_SCHEDULE_ENABLED) && (Config.SERVER_RESTART_SCHEDULE_MESSAGE)) {
+        if (getSettings(ServerSettings.class).scheduleRestart() && (Config.SERVER_RESTART_SCHEDULE_MESSAGE)) {
             player.sendPacket(new CreatureSay(2, ChatType.BATTLEFIELD, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
         }
 

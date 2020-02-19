@@ -60,7 +60,7 @@ public class GameServer {
     private static Logger LOGGER;
     private static GameServer INSTANCE;
     public static String fullVersion;
-    private final DeadLockDetector _deadDetectThread;
+    private static DeadLockDetector deadLockDetector;
     private final ConnectionHandler<GameClient> connectionHandler;
 
     public GameServer() throws Exception {
@@ -223,23 +223,10 @@ public class GameServer {
             OfflineTradersTable.getInstance().restoreOfflineTraders();
         }
 
-        if (Config.SERVER_RESTART_SCHEDULE_ENABLED) {
+        if (getSettings(ServerSettings.class).scheduleRestart()) {
             ServerRestartManager.getInstance();
         }
 
-        if (Config.DEADLOCK_DETECTOR) {
-            _deadDetectThread = new DeadLockDetector(Duration.ofSeconds(Config.DEADLOCK_CHECK_INTERVAL), () ->
-            {
-                if (Config.RESTART_ON_DEADLOCK) {
-                    Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
-                    Shutdown.getInstance().startShutdown(null, 60, true);
-                }
-            });
-            _deadDetectThread.setDaemon(true);
-            _deadDetectThread.start();
-        } else {
-            _deadDetectThread = null;
-        }
         LOGGER.info("Maximum number of connected players is configured to {}", Config.MAXIMUM_ONLINE_USERS);
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
@@ -269,6 +256,16 @@ public class GameServer {
         INSTANCE = new GameServer();
 
         ThreadPool.execute(AuthServerCommunication.getInstance());
+
+        if (settings.useDeadLockDetector()) {
+            deadLockDetector = new DeadLockDetector(Duration.ofSeconds(settings.deadLockDetectorInterval()), () -> {
+                if (settings.restartOnDeadLock()) {
+                    Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
+                    Shutdown.getInstance().startShutdown(null, 60, true);
+                }
+            });
+            deadLockDetector.start();
+        }
     }
 
     private static void configureCache() {

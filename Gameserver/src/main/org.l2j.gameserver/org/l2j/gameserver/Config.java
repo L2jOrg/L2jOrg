@@ -369,9 +369,6 @@ public final class Config {
     public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
     public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
 
-    public static boolean DEADLOCK_DETECTOR;
-    public static int DEADLOCK_CHECK_INTERVAL;
-    public static boolean RESTART_ON_DEADLOCK;
     public static boolean ALLOW_DISCARDITEM;
 
     public static List<Integer> LIST_PROTECTED_ITEMS;
@@ -650,7 +647,7 @@ public final class Config {
     public static File DATAPACK_ROOT;
     public static int SERVER_LIST_AGE;
     public static boolean SERVER_LIST_BRACKET;
-    public static boolean SERVER_RESTART_SCHEDULE_ENABLED;
+
     public static boolean SERVER_RESTART_SCHEDULE_MESSAGE;
     public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
     public static String[] SERVER_RESTART_SCHEDULE;
@@ -954,11 +951,6 @@ public final class Config {
         SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
         SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 
-        DEADLOCK_DETECTOR = serverSettings.getBoolean("DeadLockDetector", true);
-        DEADLOCK_CHECK_INTERVAL = serverSettings.getInt("DeadLockCheckInterval", 20);
-        RESTART_ON_DEADLOCK = serverSettings.getBoolean("RestartOnDeadlock", false);
-
-        SERVER_RESTART_SCHEDULE_ENABLED = serverSettings.getBoolean("ServerRestartScheduleEnabled", false);
         SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
         SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
         SERVER_RESTART_SCHEDULE = serverSettings.getString("ServerRestartSchedule", "08:00").split(",");
