@@ -1,6 +1,5 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
@@ -28,15 +27,9 @@ public final class BowCrossRodListener implements PlayerInventoryListener {
             doIfNonNull(inventory.getPaperdollItem(InventorySlot.LEFT_HAND), i -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null));
         }
         else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) {
-            final Item bolts = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-            if (bolts != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null);
-            }
+            doIfNonNull(inventory.getPaperdollItem(InventorySlot.LEFT_HAND), i -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null));
         }else if (item.getItemType() == WeaponType.FISHING_ROD) {
-            final Item lure = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-            if (lure != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null);
-            }
+            doIfNonNull(inventory.getPaperdollItem(InventorySlot.LEFT_HAND), i -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null));
         }
     }
 
@@ -47,15 +40,9 @@ public final class BowCrossRodListener implements PlayerInventoryListener {
         }
 
         if (item.getItemType() == WeaponType.BOW) {
-            final Item arrow = inventory.findArrowForBow(item.getTemplate());
-            if (arrow != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, arrow);
-            }
+            doIfNonNull(inventory.findArrowForBow(item.getTemplate()), arrow -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, arrow));
         } else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) {
-            final Item bolts = inventory.findBoltForCrossBow(item.getTemplate());
-            if (bolts != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, bolts);
-            }
+            doIfNonNull(inventory.findBoltForCrossBow(item.getTemplate()), bolts -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, bolts));
         }
     }
 

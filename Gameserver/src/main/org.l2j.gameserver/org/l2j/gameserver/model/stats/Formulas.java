@@ -33,6 +33,7 @@ import org.l2j.gameserver.util.MathUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Math.max;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
@@ -341,7 +342,7 @@ public final class Formulas {
         double rate = target.getStats().getValue(Stat.ATTACK_CANCEL, init);
 
         // Adjust the rate to be between 1 and 99
-        rate = Math.max(Math.min(rate, 99), 1);
+        rate = max(Math.min(rate, 99), 1);
 
         return Rnd.get(100) < rate;
     }
@@ -402,11 +403,11 @@ public final class Formulas {
                 factor /= npcFactor;
             }
         }
-        return Math.max(0.01, factor);
+        return max(0.01, factor);
     }
 
     public static double calcSkillCancelTime(Creature creature, Skill skill) {
-        return Math.max((skill.getHitCancelTime() * 1000) / calcSkillTimeFactor(creature, skill), SKILL_LAUNCH_TIME);
+        return max((skill.getHitCancelTime() * 1000) / calcSkillTimeFactor(creature, skill), SKILL_LAUNCH_TIME);
     }
 
     /**
@@ -422,7 +423,7 @@ public final class Formulas {
         // Get additional bonus from the conditions when you are attacking
         chance *= HitConditionBonusData.getInstance().getConditionBonus(attacker, target);
 
-        chance = Math.max(chance, 200);
+        chance = max(chance, 200);
         chance = Math.min(chance, 980);
 
         return chance < Rnd.get(1000);
@@ -726,7 +727,7 @@ public final class Formulas {
             restorePercent += 20.0;
         }
 
-        restorePercent = Math.max(restorePercent, baseRestorePercent);
+        restorePercent = max(restorePercent, baseRestorePercent);
         restorePercent = Math.min(restorePercent, 90.0);
 
         return restorePercent;
@@ -795,7 +796,7 @@ public final class Formulas {
         if (diff > 0) {
             return Math.min(1.025 + (Math.sqrt(Math.pow(diff, 3) / 2) * 0.0001), 1.25);
         } else if (diff < 0) {
-            return Math.max(0.975 - (Math.sqrt(Math.pow(-diff, 3) / 2) * 0.0001), 0.75);
+            return max(0.975 - (Math.sqrt(Math.pow(-diff, 3) / 2) * 0.0001), 0.75);
         }
 
         return 1;
@@ -1072,7 +1073,7 @@ public final class Formulas {
             }
         }
 
-        return Math.max(attacker.getStats().getAttackTrait(traitType) - target.getStats().getDefenceTrait(traitType), 0.05);
+        return max(attacker.getStats().getAttackTrait(traitType) - target.getStats().getDefenceTrait(traitType), 0.05);
     }
 
     public static double calcWeaknessBonus(Creature attacker, Creature target, TraitType traitType)
@@ -1082,14 +1083,14 @@ public final class Formulas {
         {
             if ((traitType != trait) && target.getStats().hasDefenceTrait(trait) && attacker.getStats().hasAttackTrait(trait) && !target.getStats().isInvulnerableTrait(traitType))
             {
-                result *= Math.max(attacker.getStats().getAttackTrait(trait) - target.getStats().getDefenceTrait(trait), 0.05);
+                result *= max(attacker.getStats().getAttackTrait(trait) - target.getStats().getDefenceTrait(trait), 0.05);
             }
         }
         return result;
     }
 
     public static double calcWeaponTraitBonus(Creature attacker, Creature target) {
-        return Math.max(0, 1.0 - target.getStats().getDefenceTrait(attacker.getAttackType().getTraitType()));
+        return max(0, 1.0 - target.getStats().getDefenceTrait(attacker.getAttackType().getTraitType()));
     }
 
     public static double calcAttackTraitBonus(Creature attacker, Creature target) {
@@ -1108,7 +1109,7 @@ public final class Formulas {
             }
         }
 
-        return Math.max(weaponTraitBonus * weaknessBonus, 0.05);
+        return max(weaponTraitBonus * weaknessBonus, 0.05);
     }
 
     public static double getBasicPropertyResistBonus(BasicProperty basicProperty, Creature target) {
@@ -1180,7 +1181,7 @@ public final class Formulas {
         damage *= calcAttributeBonus(attacker, target, null);
         damage *= calculatePvpPveBonus(attacker, target, null, crit);
 
-        damage = Math.max(0, damage);
+        damage = max(0, damage);
 
         return damage;
     }
@@ -1240,7 +1241,7 @@ public final class Formulas {
      */
     public static int calculateTimeBetweenAttacks(int attackSpeed) {
         // Measured Nov 2015 by Nik. Formula: atk.spd/500 = hits per second.
-        return Math.max(50, (500000 / attackSpeed));
+        return max(50, (500000 / attackSpeed));
     }
 
     /**
@@ -1332,7 +1333,7 @@ public final class Formulas {
                 pvpAttack = attacker.getStats().getValue(Stat.PVP_PHYSICAL_ATTACK_DAMAGE, 1);
                 pvpDefense = target.getStats().getValue(Stat.PVP_PHYSICAL_ATTACK_DEFENCE, 1);
             }
-            return Math.max(0.05, 1 + (pvpAttack - pvpDefense));
+            return max(0.05, 1 + (pvpAttack - pvpDefense));
         }
 
         // PvE Bonus
@@ -1360,7 +1361,7 @@ public final class Formulas {
                 pveDefense = target.getStats().getValue(Stat.PVE_PHYSICAL_ATTACK_DEFENCE, 1);
                 pveRaidDefense = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
             }
-            return Math.max(0.05, (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty);
+            return max(0.05, (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty);
         }
 
         return 1;
@@ -1368,7 +1369,7 @@ public final class Formulas {
 
     public static double calcSpiritElementalDamage(Creature attacker, Creature target, double baseDamage) {
         // TODO find retail calc
-        if(isPlayer(attacker)) {
+            if(isPlayer(attacker)) {
             var attackerPlayer = attacker.getActingPlayer();
             ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
 
@@ -1381,7 +1382,7 @@ public final class Formulas {
             var critRate = attackerPlayer.getElementalSpiritCritRate();
             var isCrit = Math.min(critRate * 10, 380) > Rnd.get(1000);
             var critDamage = attackerPlayer.getElementalSpiritCritDamage();
-            var attack = attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type) + Rnd.get(-2, 8);
+            var attack = attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type) + Rnd.get(-2, 6);
             if(isPlayer(target)) {
                 return calcSpiritElementalPvPDamage(attack, critDamage, isCrit, baseDamage);
             }
@@ -1394,9 +1395,9 @@ public final class Formulas {
     private static double calcSpiritElementalPvPDamage(double attack, double critDamage, boolean isCrit, double baseDamage) {
         var base = Math.abs(attack * 1.3);
         if(isCrit) {
-            base +=  Math.abs((attack * 1.223)  + ( (attack * 0.03 + 24) * critDamage) + Rnd.get(-5, 30));
+            base +=  Math.abs((attack * 1.223)  + ( (attack * 0.03 + 24) * critDamage) + Rnd.get(-5, 15));
         }
-        return (base * attack  + baseDamage * 0.3) / Math.log(baseDamage);
+        return (base * attack  + baseDamage * 0.3) / Math.log(max(baseDamage, 20));
     }
 
     private static double calcSpiritElementalPvEDamage(ElementalType attackerType, ElementalType targetType, double attack, double critDamage, boolean isCrit, double baseDamage) {
@@ -1414,10 +1415,10 @@ public final class Formulas {
         }
 
         if(isCrit) {
-           damage += Math.abs((40 + (9.2 + attack * 0.048 ) * critDamage) * bonus + Rnd.get(-10, 50)) ;
+           damage += Math.abs((40 + (9.2 + attack * 0.048 ) * critDamage) * bonus + Rnd.get(-10, 30)) ;
         }
 
-        return (damage * attack + baseDamage * bonus) / Math.log(baseDamage);
+        return (damage * attack + baseDamage * bonus) / Math.log(max(baseDamage, 20));
     }
 
 }

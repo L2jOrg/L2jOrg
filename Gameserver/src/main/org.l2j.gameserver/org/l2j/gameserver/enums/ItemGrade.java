@@ -4,6 +4,7 @@ import org.l2j.gameserver.model.items.type.CrystalType;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public enum ItemGrade {
     NONE,
@@ -11,8 +12,7 @@ public enum ItemGrade {
     C,
     B,
     A,
-    S,
-    R;
+    S;
 
     public static ItemGrade valueOf(CrystalType type) {
         return  switch (type) {
