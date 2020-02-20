@@ -555,11 +555,8 @@ public class SkillCaster implements Runnable {
         }
 
         if (isPlayer(caster) && !instantCast) {
-            // Send a system message to the player.
-            caster.sendPacket(_skill.getId() != 2046 ? SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 
-            // Show the gauge bar for casting.
-            caster.sendPacket(new SetupGauge(caster.getObjectId(), SetupGauge.BLUE, displayedCastTime));
+            caster.sendPacket(_skill.getId() != 2046 ? SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
         }
 
         // Consume reagent item.
