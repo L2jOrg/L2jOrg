@@ -1,10 +1,13 @@
 package org.l2j.gameserver.engine.item.container.listener;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
+
+import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
  * @author JoeAlisson
@@ -17,15 +20,12 @@ public final class BowCrossRodListener implements PlayerInventoryListener {
 
     @Override
     public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
-        if (slot != InventorySlot.RIGHT_HAND) {
+        if (slot != InventorySlot.RIGHT_HAND && slot != InventorySlot.TWO_HAND) {
             return;
         }
 
         if (item.getItemType() == WeaponType.BOW) {
-            final Item arrow = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-            if (arrow != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null);
-            }
+            doIfNonNull(inventory.getPaperdollItem(InventorySlot.LEFT_HAND), i -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null));
         }
         else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) {
             final Item bolts = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
@@ -42,7 +42,7 @@ public final class BowCrossRodListener implements PlayerInventoryListener {
 
     @Override
     public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
-        if (slot != InventorySlot.RIGHT_HAND) {
+        if (slot != InventorySlot.RIGHT_HAND && slot != InventorySlot.TWO_HAND  ) {
             return;
         }
 

@@ -366,6 +366,10 @@ public abstract class Inventory extends ItemContainer {
         };
 
         if (nonNull(pdollSlot)) {
+            if(pdollSlot == InventorySlot.TWO_HAND) {
+                paperdoll.remove(InventorySlot.TWO_HAND);
+                pdollSlot = InventorySlot.RIGHT_HAND;
+            }
             return setPaperdollItem(pdollSlot, null);
         }
         return null;
@@ -541,8 +545,8 @@ public abstract class Inventory extends ItemContainer {
     private void equipTwoHand(Item item) {
         checkEquippedDress();
         setPaperdollItem(InventorySlot.LEFT_HAND, null);
-        setPaperdollItem(InventorySlot.TWO_HAND, item);
         setPaperdollItem(InventorySlot.RIGHT_HAND, item);
+        paperdoll.put(InventorySlot.TWO_HAND, item);
     }
 
     private void equipArtifact(Item item) {
@@ -658,14 +662,14 @@ public abstract class Inventory extends ItemContainer {
      * @return Item pointing out arrows for bow
      */
     public Item findArrowForBow(ItemTemplate bow) {
-        if (bow == null) {
+        if (isNull(bow)) {
             return null;
         }
 
         Item arrow = null;
 
         for (Item item : getItems()) {
-            if (item.isEtcItem() && (item.getTemplate().getCrystalType() == bow.getCrystalType()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW)) {
+            if (item.isEtcItem() && (item.getTemplate().getCrystalType() == bow.getCrystalType()) && (item.getItemType() == EtcItemType.ARROW)) {
                 arrow = item;
                 break;
             }

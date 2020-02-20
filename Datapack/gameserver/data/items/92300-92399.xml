@@ -246,6 +246,7 @@
 	<!-- Quiver containing arrows made of steel. Used with a C-grade bow. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
+		<crystal type="C"/>
 	</item>
 
 	<weapon id="92334" name="Katana*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">

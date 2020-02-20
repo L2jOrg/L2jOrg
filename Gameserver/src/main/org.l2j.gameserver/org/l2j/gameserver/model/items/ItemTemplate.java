@@ -784,4 +784,13 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public void setForNpc(Boolean forNpc) {
         this.forNpc = forNpc;
     }
+
+    public void setCrystalType(CrystalType type) {
+        crystalType = type;
+    }
+
+    public void setCrystalCount(int count) {
+        crystalCount = count;
+    }
+
 }

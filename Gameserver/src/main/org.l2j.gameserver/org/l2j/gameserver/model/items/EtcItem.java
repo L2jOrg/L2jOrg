@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.items;
 
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.items.type.ActionType;
+import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 
 import java.util.ArrayList;
@@ -139,5 +140,4 @@ public final class EtcItem extends ItemTemplate {
     public boolean isAutoSupply() {
         return autoUseType == AutoUseType.SUPPLY;
     }
-
 }
