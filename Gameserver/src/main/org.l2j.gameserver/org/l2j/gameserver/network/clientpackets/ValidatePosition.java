@@ -44,6 +44,10 @@ public class ValidatePosition extends ClientPacket {
         final int realY = player.getY();
         int realZ = player.getZ();
 
+        if(realX == _x && realY == _y && realZ == _z) {
+            return;
+        }
+
         if ((_x == 0) && (_y == 0)) {
             if (realX != 0) {
                 return;
@@ -81,6 +85,10 @@ public class ValidatePosition extends ClientPacket {
         dy = _y - realY;
         dz = _z - realZ;
         diffSq = ((dx * dx) + (dy * dy));
+
+        if(diffSq < 10) {
+            return;
+        }
 
         // Don't allow flying transformations outside gracia area!
         if (player.isFlyingMounted() && (_x > World.GRACIA_MAX_X)) {

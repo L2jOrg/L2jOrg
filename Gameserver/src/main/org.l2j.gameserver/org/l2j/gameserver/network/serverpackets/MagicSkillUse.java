@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static java.lang.Math.max;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -90,7 +91,7 @@ public final class MagicSkillUse extends ServerPacket {
         writeInt(_target.getY());
         writeInt(_target.getZ());
         writeInt(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
-        writeInt(_actionId >= 0 ? _actionId : 0); // ID from RequestActionUse. Used to set cooldown on summon skills.
+        writeInt(max(_actionId, 0)); // ID from RequestActionUse. Used to set cooldown on summon skills.
     }
 
 }

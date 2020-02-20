@@ -196,12 +196,16 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="60018" name="Teleport">
-	<!-- Teleport -->
+	<skill id="60018" name="Teleport" action="A1">
+		<!-- Teleport -->
 		<icon initial="icon.skill0000"/>
 		<attributes >
 			<cast-range initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target />
+		<effects>
+			<teleport use-request="true"/>
+		</effects>
 	</skill>
 </list>

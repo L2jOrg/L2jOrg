@@ -3,11 +3,13 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.xml.impl.TeleportListData;
 import org.l2j.gameserver.data.xml.model.TeleportData;
 import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.model.actor.request.TeleportRequest;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.GameUtils;
 
 /**
- * @author joeAlisson
+ * @author JoeAlisson
  */
 public class ExRequestTeleport extends ClientPacket {
     private int id;
@@ -31,9 +33,8 @@ public class ExRequestTeleport extends ClientPacket {
         }
 
         if(GameUtils.canTeleport(player) && (player.getLevel() <= 40 || player.reduceAdena("Teleport", info.getPrice(), null, true))) {
-            player.abortCast();
-            player.stopMove(null);
-            player.teleToLocation(info.getLocation());
+            player.addRequest(new TeleportRequest(player, id));
+            player.useMagic(CommonSkill.TELEPORT.getSkill(), null, false, true);
         }
     }
 }

@@ -12,18 +12,18 @@ import static java.util.Objects.nonNull;
  * @author UnAfraid
  */
 public abstract class AbstractRequest {
-    private final Player _activeChar;
+    private final Player player;
     private volatile long _timestamp = 0;
     private volatile boolean _isProcessing;
     private ScheduledFuture<?> _timeOutTask;
 
-    public AbstractRequest(Player activeChar) {
-        Objects.requireNonNull(activeChar);
-        _activeChar = activeChar;
+    public AbstractRequest(Player player) {
+        Objects.requireNonNull(player);
+        this.player = player;
     }
 
     public Player getActiveChar() {
-        return _activeChar;
+        return player;
     }
 
     public long getTimestamp() {

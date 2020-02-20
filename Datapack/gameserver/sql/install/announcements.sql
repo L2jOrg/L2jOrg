@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS `announcements` (
 
 INSERT INTO announcements (`author`, `content`) VALUES
 ('System', 'Welcome to L2j Org!'),
-('System', 'Report any bug at https://github.com/JoeAlisson/L2jOrg/issues');
+('System', 'Report any bug at https://github . c o m/JoeAlisson/L2jOrg/issues');

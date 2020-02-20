@@ -465,8 +465,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
         setSpawned(true);
-        setIsTeleporting(false);
         World.getInstance().switchRegionIfNeed(this);
+        setIsTeleporting(false);
         EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
     }
 
@@ -624,6 +624,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         setTarget(null);
 
         setIsTeleporting(true);
+        World.getInstance().removeVisibleObject(this, this.getWorldRegion());
+        setWorldRegion(null);
 
         getAI().setIntention(AI_INTENTION_ACTIVE);
 
