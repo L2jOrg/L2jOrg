@@ -1,4 +1,4 @@
-package org.l2j.gameserver.model;
+package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
@@ -22,28 +22,29 @@ public class Shortcut {
     public static final int AUTO_MACRO_SLOT = 0;
     public static final int AUTO_POTION_SLOT = 1;
 
-    @Column("char_id")
+    @Column("player_id")
     private int playerId;
 
     @Column("client_id")
-    private final int clientId;
+    private int clientId;
 
     @Column("class_index")
     private int classIndex;
 
-    private final ShortcutType type;
+    private  ShortcutType type;
 
     @Column("shortcut_id")
-    private final int shortcutId;
+    private int shortcutId;
 
     /**
      * Shortcut level (used for skills).
      */
-    private final int level;
+    private int level;
     /**
      * Shortcut sub level (used for skills).
      */
-    private final int subLevel;
+    @Column("sub_level")
+    private int subLevel;
 
     /**
      * Slot from 0 to 11.

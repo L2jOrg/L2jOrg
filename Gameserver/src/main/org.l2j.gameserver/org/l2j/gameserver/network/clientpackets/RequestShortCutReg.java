@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.ShortcutType;
-import org.l2j.gameserver.model.Shortcut;
+import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 

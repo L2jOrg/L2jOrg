@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.Shortcut;
+import org.l2j.gameserver.data.database.data.Shortcut;
 
 /**
  * @author JoeAlisson

@@ -5,7 +5,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.model.Shortcut;
+import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;

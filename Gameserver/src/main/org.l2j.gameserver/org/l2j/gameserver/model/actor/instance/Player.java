@@ -20,6 +20,7 @@ import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
+import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;

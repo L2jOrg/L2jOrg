@@ -15,10 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.cache.Cache;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
+import java.lang.reflect.*;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -115,7 +112,7 @@ class JDBCInvocation implements InvocationHandler {
         var fields = fieldsOf(clazz);
         Map<String, IntKeyValue<Class<?>>> parameterMap = new HashMap<>(fields.size());
 
-        var columns = fields.stream().filter(f -> !f.isAnnotationPresent(Transient.class))
+        var columns = fields.stream().filter(f -> !f.isAnnotationPresent(Transient.class) && !Modifier.isStatic(f.getModifiers()))
                 .peek(f -> parameterMap.put(f.getName(), new IntKeyValue<>(parameterMap.size()+1, f.getType())))
                 .map(this::fieldToColumnName).collect(Collectors.joining(",", "(", ")"));
 

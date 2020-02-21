@@ -3,6 +3,7 @@ package org.l2j.gameserver.model;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
+import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;

@@ -4,7 +4,7 @@ import org.l2j.gameserver.enums.MacroType;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.model.MacroCmd;
-import org.l2j.gameserver.model.Shortcut;
+import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.instance.Item;
