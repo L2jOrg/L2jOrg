@@ -74,12 +74,7 @@ public class MacroList implements IRestorable {
             deleteMacroFromDb(removed);
         }
 
-        final Shortcut[] allShortCuts = _owner.getAllShortCuts();
-        for (Shortcut sc : allShortCuts) {
-            if ((sc.getId() == id) && (sc.getType() == ShortcutType.MACRO)) {
-                _owner.deleteShortCut(sc.getSlot(), sc.getPage());
-            }
-        }
+        _owner.deleteShortcuts(s -> s.getShortcutId() == id && s.getType() == ShortcutType.MACRO);
         _owner.sendPacket(new SendMacroList(0, removed, MacroUpdateType.DELETE));
     }
 

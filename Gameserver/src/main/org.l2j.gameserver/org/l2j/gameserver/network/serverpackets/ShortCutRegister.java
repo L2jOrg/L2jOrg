@@ -7,11 +7,6 @@ import org.l2j.gameserver.network.ServerPacketId;
 public final class ShortCutRegister extends ServerPacket {
     private final Shortcut shortcut;
 
-    /**
-     * Register new skill shortcut
-     *
-     * @param shortcut
-     */
     public ShortCutRegister(Shortcut shortcut) {
         this.shortcut = shortcut;
     }
@@ -21,20 +16,20 @@ public final class ShortCutRegister extends ServerPacket {
         writeId(ServerPacketId.SHORT_CUT_REGISTER);
 
         writeInt(shortcut.getType().ordinal());
-        writeInt(shortcut.getSlot() + (shortcut.getPage() * 12)); // C4 Client
+        writeInt(shortcut.getClientId()); // C4 Client
         writeByte(0);
         switch (shortcut.getType()) {
             case ITEM -> writeShortcutItem();
             case SKILL -> writeShortcutSkill();
             case ACTION, MACRO, RECIPE, BOOKMARK -> {
-                writeInt(shortcut.getId());
+                writeInt(shortcut.getShortcutId());
                 writeInt(shortcut.getCharacterType());
             }
         }
     }
 
     private void writeShortcutSkill() {
-        writeInt(shortcut.getId());
+        writeInt(shortcut.getShortcutId());
         writeShort(shortcut.getLevel());
         writeShort(shortcut.getSubLevel());
         writeInt(shortcut.getSharedReuseGroup());
@@ -45,7 +40,7 @@ public final class ShortCutRegister extends ServerPacket {
     }
 
     private void writeShortcutItem() {
-        writeInt(shortcut.getId());
+        writeInt(shortcut.getShortcutId());
         writeInt(shortcut.getCharacterType());
         writeInt(shortcut.getSharedReuseGroup());
         writeInt(0x00); // Remaining time

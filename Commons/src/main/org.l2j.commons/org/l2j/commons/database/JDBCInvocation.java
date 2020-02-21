@@ -43,7 +43,7 @@ class JDBCInvocation implements InvocationHandler {
     private static final Cache<Class<?>, QueryDescriptor> saveDescriptors = CacheFactory.getInstance().getCache("sql-save-descriptors");
 
     JDBCInvocation() {
-        for (TypeHandler typeHandler : ServiceLoader.load(TypeHandler.class)) {
+        for (TypeHandler<?> typeHandler : ServiceLoader.load(TypeHandler.class)) {
             TypeHandler.MAP.put(typeHandler.type(), typeHandler);
         }
     }

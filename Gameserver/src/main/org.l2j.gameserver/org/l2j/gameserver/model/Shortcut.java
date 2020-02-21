@@ -1,65 +1,84 @@
 package org.l2j.gameserver.model;
 
+import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.Table;
+import org.l2j.commons.database.annotation.Transient;
 import org.l2j.gameserver.enums.ShortcutType;
 
 /**
  * Shortcut DTO.
  *
  * @author Zoey76
+ * @author JoeAlisson
  */
+@Table("character_shortcuts")
 public class Shortcut {
 
     public static final int MAX_SLOTS_PER_PAGE = 12;
+    public static final int MAX_ROOM = 20 * MAX_SLOTS_PER_PAGE;
+    public static final int AUTO_POTION_ROOM = pageAndSlotToClientId(23, 1);
     public static final int AUTO_PLAY_PAGE = 23;
     public static final int AUTO_SUPPLY_PAGE = 22;
     public static final int AUTO_MACRO_SLOT = 0;
     public static final int AUTO_POTION_SLOT = 1;
 
-    /**
-     * Slot from 0 to 11.
-     */
-    private final int slot;
-    /**
-     * Page from 0 to 23.
-     */
-    private final int page;
-    /**
-     * Type: item, skill, action, macro, recipe, bookmark.
-     */
+    @Column("char_id")
+    private int playerId;
+
+    @Column("client_id")
+    private final int clientId;
+
+    @Column("class_index")
+    private int classIndex;
+
     private final ShortcutType type;
+
+    @Column("shortcut_id")
+    private final int shortcutId;
+
     /**
-     * Shortcut ID.
-     */
-    private final int id;
-    /**
-     * Shortcut level (skills).
+     * Shortcut level (used for skills).
      */
     private final int level;
     /**
-     * Shortcut level (skills).
+     * Shortcut sub level (used for skills).
      */
     private final int subLevel;
+
+    /**
+     * Slot from 0 to 11.
+     */
+    @Transient
+    private final int slot;
+
+    /**
+     * Page from 0 to 23.
+     */
+    @Transient
+    private final int page;
+
+    @Transient
+    private int sharedReuseGroup = -1;
+
     /**
      * Character type: 1 player, 2 summon.
      */
+    @Transient
     private final int characterType;
-    /**
-     * Shared reuse group.
-     */
-    private int sharedReuseGroup = -1;
 
-    public Shortcut(int slot, int page, ShortcutType type, int id, int level, int subLevel, int characterType) {
+    public Shortcut(int slot, int page, ShortcutType type, int shortcutId, int level, int subLevel, int characterType) {
         this.slot = slot;
         this.page = page;
         this.type = type;
-        this.id = id;
+        this.clientId = pageAndSlotToClientId(page, slot);
+        this.shortcutId = shortcutId;
         this.level = level;
         this.subLevel = subLevel;
         this.characterType = characterType;
     }
 
     public int getClientId() {
-        return pageAndSlotToClientId(page, slot);
+        return clientId;
     }
 
     /**
@@ -67,8 +86,8 @@ public class Shortcut {
      *
      * @return the ID
      */
-    public int getId() {
-        return id;
+    public int getShortcutId() {
+        return shortcutId;
     }
 
     /**
@@ -145,5 +164,13 @@ public class Shortcut {
 
     public static int pageAndSlotToClientId(int page, int slot) {
         return  slot + (page * MAX_SLOTS_PER_PAGE);
+    }
+
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
+    }
+
+    public void setClassIndex(int classIndex) {
+        this.classIndex = classIndex;
     }
 }

@@ -17,6 +17,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
@@ -25,6 +26,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * This class handles following admin commands: - delete = deletes target
@@ -86,15 +89,10 @@ public class AdminRepairChar implements IAdminCommandHandler
 				con.close();
 				return;
 			}
-			
-			// connection = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?");
-			statement.setInt(1, objId);
-			statement.execute();
-			statement.close();
-			
-			// connection = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("UPDATE items SET loc=\"INVENTORY\" WHERE owner_id=?");
+
+			getDAO(ShortcutDAO.class).deleteAll(objId);
+
+			statement = con.prepareStatement("UPDATE items SET loc='INVENTORY' WHERE owner_id=?");
 			statement.setInt(1, objId);
 			statement.execute();
 			statement.close();

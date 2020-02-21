@@ -188,9 +188,9 @@ public final class AutoPlayEngine {
                 var shortcuts = entry.getValue();
                 var shortcutIt = shortcuts.iterator();
                 while (shortcutIt.hasNext()) {
-                    var shortcut = player.getShortCut(shortcutIt.next());
+                    var shortcut = player.getShortcut(shortcutIt.next());
                     if(nonNull(shortcut)) {
-                        var item = player.getInventory().getItemByObjectId(shortcut.getId());
+                        var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
                         if(item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, Predicate.not(player::isAffectedBySkill))) {
                             useItem(player, item);
                         }
@@ -216,9 +216,9 @@ public final class AutoPlayEngine {
                 var settings = player.getAutoPlaySettings();
                 if(settings.getUsableHpPotionPercent() >= player.getCurrentHpPercent()) {
 
-                    var shortcut = player.getShortCut(Shortcut.AUTO_POTION_SLOT, Shortcut.AUTO_PLAY_PAGE) ;
+                    var shortcut = player.getShortcut(Shortcut.AUTO_POTION_ROOM) ;
                     if(nonNull(shortcut))  {
-                        var item = player.getInventory().getItemByObjectId(shortcut.getId());
+                        var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
                         useItem(player, item);
                     } else {
                         it.remove();

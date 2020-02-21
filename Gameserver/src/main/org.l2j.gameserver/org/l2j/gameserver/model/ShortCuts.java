@@ -1,155 +1,118 @@
 package org.l2j.gameserver.model;
 
 import io.github.joealisson.primitive.CHashIntMap;
-import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.IRestorable;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author JoeAlisson
  */
 public class ShortCuts implements IRestorable {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ShortCuts.class);
     private final Player owner;
-    private final IntMap<Shortcut> shortCuts = new CHashIntMap<>();
+    private final IntMap<Shortcut> shortcuts = new CHashIntMap<>();
 
     public ShortCuts(Player owner) {
         this.owner = owner;
     }
 
-    public Shortcut[] getAllShortCuts() {
-        return shortCuts.values().toArray(Shortcut[]::new);
+    public void registerShortCut(Shortcut shortcut) {
+        if (shortcut.getType() == ShortcutType.ITEM) {
+            var item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
+            if (isNull(item)) {
+                return;
+            }
+            shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
+        }
+        registerShortCutInDb(shortcut, shortcuts.put(shortcut.getClientId(), shortcut));
     }
 
-    public Shortcut getShortCut(int slot, int page) {
-        return getShortCut(Shortcut.pageAndSlotToClientId(page, slot));
+    private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut) {
+        if (nonNull(oldShortCut)) {
+            deleteShortcutFromDb(oldShortCut);
+        }
+
+        shortcut.setPlayerId(owner.getObjectId());
+        shortcut.setClassIndex(owner.getClassIndex());
+        getDAO(ShortcutDAO.class).save(shortcut);
     }
 
-    public Shortcut getShortCut(int shortcutId) {
-        Shortcut sc = shortCuts.get(shortcutId);
-        if (nonNull(sc) && sc.getType() == ShortcutType.ITEM && isNull(owner.getInventory().getItemByObjectId(sc.getId())) ) {
-            deleteShortCut(sc.getSlot(), sc.getPage());
+    private void deleteShortcutFromDb(Shortcut shortcut) {
+        getDAO(ShortcutDAO.class).delete(owner.getObjectId(), shortcut.getClientId(), owner.getClassIndex());
+    }
+
+    public void deleteShortcuts(Predicate<Shortcut> filter) {
+        shortcuts.values().stream().filter(filter).forEach(s -> deleteShortcut(s.getClientId()));
+    }
+
+    public void deleteShortcuts() {
+        shortcuts.clear();
+        getDAO(ShortcutDAO.class).deleteFromSubclass(owner.getObjectId(), owner.getClassIndex());
+    }
+
+    public void forEachShortcut(Consumer<Shortcut> action) {
+        shortcuts.values().forEach(action);
+    }
+
+    public int getAmount() {
+        return shortcuts.size();
+    }
+
+
+    public Shortcut getShortcut(int room) {
+        Shortcut sc = shortcuts.get(room);
+        if (nonNull(sc) && sc.getType() == ShortcutType.ITEM && isNull(owner.getInventory().getItemByObjectId(sc.getShortcutId())) ) {
+            deleteShortcut(sc.getClientId());
             sc = null;
         }
         return sc;
     }
 
-    public void registerShortCut(Shortcut shortcut) {
-        if (shortcut.getType() == ShortcutType.ITEM) {
-            final Item item = owner.getInventory().getItemByObjectId(shortcut.getId());
-            if (item == null) {
-                return;
-            }
-            shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
-        }
-        registerShortCutInDb(shortcut, shortCuts.put(shortcut.getClientId(), shortcut));
-    }
-
-    private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut) {
-        if (oldShortCut != null) {
-            deleteShortCutFromDb(oldShortCut);
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,sub_level,class_index) values(?,?,?,?,?,?,?,?)")) {
-            statement.setInt(1, owner.getObjectId());
-            statement.setInt(2, shortcut.getSlot());
-            statement.setInt(3, shortcut.getPage());
-            statement.setInt(4, shortcut.getType().ordinal());
-            statement.setInt(5, shortcut.getId());
-            statement.setInt(6, shortcut.getLevel());
-            statement.setInt(7, shortcut.getSubLevel());
-            statement.setInt(8, owner.getClassIndex());
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Could not store character shortcut: " + e.getMessage(), e);
-        }
-    }
-
-    public synchronized void deleteShortCut(int slot, int page) {
-        final Shortcut old = shortCuts.remove(Shortcut.pageAndSlotToClientId(page, slot));
-        if ((old == null) || (owner == null)) {
+    public void deleteShortcut(int room) {
+        final Shortcut old = shortcuts.remove(room);
+        if (isNull(old) || (isNull(owner))) {
             return;
         }
-        deleteShortCutFromDb(old);
+        deleteShortcutFromDb(old);
     }
 
-    public synchronized void deleteShortCutByObjectId(int objectId) {
-        for (Shortcut shortcut : shortCuts.values()) {
-            if ((shortcut.getType() == ShortcutType.ITEM) && (shortcut.getId() == objectId)) {
-                deleteShortCut(shortcut.getSlot(), shortcut.getPage());
+    public void deleteShortCutByObjectId(int objectId) {
+        for (Shortcut shortcut : shortcuts.values()) {
+            if ((shortcut.getType() == ShortcutType.ITEM) && (shortcut.getShortcutId() == objectId)) {
+                deleteShortcut(shortcut.getClientId());
                 break;
             }
         }
     }
 
-    private void deleteShortCutFromDb(Shortcut shortcut) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?")) {
-            statement.setInt(1, owner.getObjectId());
-            statement.setInt(2, shortcut.getSlot());
-            statement.setInt(3, shortcut.getPage());
-            statement.setInt(4, owner.getClassIndex());
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Could not delete character shortcut: " + e.getMessage(), e);
-        }
-    }
-
     @Override
     public boolean restoreMe() {
-        shortCuts.clear();
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("SELECT charId, slot, page, type, shortcut_id, level, sub_level FROM character_shortcuts WHERE charId=? AND class_index=?")) {
-            statement.setInt(1, owner.getObjectId());
-            statement.setInt(2, owner.getClassIndex());
-
-            try (ResultSet rset = statement.executeQuery()) {
-                while (rset.next()) {
-                    final int slot = rset.getInt("slot");
-                    final int page = rset.getInt("page");
-                    final int type = rset.getInt("type");
-                    final int id = rset.getInt("shortcut_id");
-                    final int level = rset.getInt("level");
-                    final int subLevel = rset.getInt("sub_level");
-                    var shortcut = new Shortcut(slot, page, ShortcutType.values()[type], id, level, subLevel, 1);
-                    shortCuts.put(shortcut.getClientId(), shortcut);
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Could not restore character shortcuts: " + e.getMessage(), e);
-            return false;
-        }
+        shortcuts.clear();
+        getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId(), owner.getClassIndex()).forEach(s -> shortcuts.put(s.getClientId(), s));
 
         // Verify shortcuts
-        for (Shortcut sc : getAllShortCuts()) {
-            if (sc.getType() == ShortcutType.ITEM) {
-                final Item item = owner.getInventory().getItemByObjectId(sc.getId());
-                if (item == null) {
-                    deleteShortCut(sc.getSlot(), sc.getPage());
+        forEachShortcut(s -> {
+            if (s.getType() == ShortcutType.ITEM) {
+                final Item item = owner.getInventory().getItemByObjectId(s.getShortcutId());
+                if (isNull(item)) {
+                    deleteShortcut(s.getClientId());
                 } else if (item.isEtcItem()) {
-                    sc.setSharedReuseGroup(item.getEtcItem().getSharedReuseGroup());
+                    s.setSharedReuseGroup(item.getSharedReuseGroup());
                 }
             }
-        }
-
+        });
         return true;
     }
 
@@ -160,11 +123,11 @@ public class ShortCuts implements IRestorable {
      * @param skillLevel    the skill level to update.
      * @param skillSubLevel the skill sub level to update.
      */
-    public synchronized void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
+    public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
         // Update all the shortcuts for this skill
-        for (Shortcut sc : shortCuts.values()) {
-            if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL)) {
-                final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, skillSubLevel, 1);
+        for (Shortcut sc : shortcuts.values()) {
+            if ((sc.getShortcutId() == skillId) && (sc.getType() == ShortcutType.SKILL)) {
+                final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getShortcutId(), skillLevel, skillSubLevel, 1);
                 owner.sendPacket(new ShortCutRegister(newsc));
                 owner.registerShortCut(newsc);
             }

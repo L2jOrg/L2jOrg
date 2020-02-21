@@ -7,6 +7,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -85,6 +86,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         }
 
         PlayerNameTable.getInstance().removeName(objId);
+        getDAO(ShortcutDAO.class).deleteAll(objId);
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_contacts WHERE charId=? OR contactId=?")) {
@@ -111,11 +113,6 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             }
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_recipebook WHERE charId=?")) {
-                ps.setInt(1, objId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?")) {
                 ps.setInt(1, objId);
                 ps.execute();
             }

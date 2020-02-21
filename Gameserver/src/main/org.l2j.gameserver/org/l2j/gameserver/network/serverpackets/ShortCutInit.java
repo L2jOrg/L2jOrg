@@ -1,45 +1,40 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Shortcut;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+/**
+ * @author JoeAlisson
+ */
 public final class ShortCutInit extends ServerPacket {
-    private Shortcut[] shortCuts;
-
-    public ShortCutInit(Player player) {
-        if (player == null) {
-            return;
-        }
-
-        shortCuts = player.getAllShortCuts();
-    }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.SHORT_CUT_INIT);
 
-        writeInt(shortCuts.length);
-        for (Shortcut sc : shortCuts) {
+        var player = client.getPlayer();
 
-            writeInt(sc.getType().ordinal());
-            writeInt(sc.getSlot() + (sc.getPage() * 12));
+        writeInt(player.getShortcutAmount());
+
+        player.forEachShortcut(s -> {
+            writeInt(s.getType().ordinal());
+            writeInt(s.getClientId());
             writeByte(0x00); // 228
 
-            switch (sc.getType()) {
-                case ITEM -> writeShortcutItem(sc);
-                case SKILL -> writeShortcutSkill(sc);
+            switch (s.getType()) {
+                case ITEM -> writeShortcutItem(s);
+                case SKILL -> writeShortcutSkill(s);
                 case ACTION, MACRO, RECIPE, BOOKMARK -> {
-                    writeInt(sc.getId());
-                    writeInt(sc.getCharacterType());
+                    writeInt(s.getShortcutId());
+                    writeInt(s.getCharacterType());
                 }
             }
-        }
+        });
     }
 
     private void writeShortcutSkill(Shortcut sc) {
-        writeInt(sc.getId());
+        writeInt(sc.getShortcutId());
         writeShort(sc.getLevel());
         writeShort(sc.getSubLevel());
         writeInt(sc.getSharedReuseGroup());
@@ -48,7 +43,7 @@ public final class ShortCutInit extends ServerPacket {
     }
 
     private void writeShortcutItem(Shortcut sc) {
-        writeInt(sc.getId());
+        writeInt(sc.getShortcutId());
         writeInt(0x01); // Enabled or not
         writeInt(sc.getSharedReuseGroup());
         writeInt(0x00);

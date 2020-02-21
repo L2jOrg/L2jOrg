@@ -1,34 +1,24 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.Shortcut;
 
 /**
- * This class ...
- *
- * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
+ * @author JoeAlisson
  */
 public final class RequestShortCutDel extends ClientPacket {
-    private int _slot;
-    private int _page;
+    private int room;
 
     @Override
     public void readImpl() {
-        final int id = readInt();
-        _slot = id % 12;
-        _page = id / 12;
+        room = readInt();
     }
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        if(room < 0 || (room > Shortcut.MAX_ROOM && room != Shortcut.AUTO_POTION_ROOM)) {
             return;
         }
 
-        if ((_page > 23) || (_page < 0)) {
-            return;
-        }
-
-        activeChar.deleteShortCut(_slot, _page);
+        client.getPlayer().deleteShortcut(room);
     }
 }

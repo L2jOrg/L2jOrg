@@ -233,7 +233,7 @@ public final class InitialShortcutData extends GameXmlReader {
 
         // Register global shortcuts.
         for (Shortcut shortcut : _initialGlobalShortcutList) {
-            int shortcutId = shortcut.getId();
+            int shortcutId = shortcut.getShortcutId();
             switch (shortcut.getType()) {
                 case ITEM: {
                     final Item item = player.getInventory().getItemByItemId(shortcutId);
@@ -268,7 +268,7 @@ public final class InitialShortcutData extends GameXmlReader {
         // Register class specific shortcuts.
         if (_initialShortcutData.containsKey(player.getClassId())) {
             for (Shortcut shortcut : _initialShortcutData.get(player.getClassId())) {
-                int shortcutId = shortcut.getId();
+                int shortcutId = shortcut.getShortcutId();
                 switch (shortcut.getType()) {
                     case ITEM: {
                         final Item item = player.getInventory().getItemByItemId(shortcutId);
@@ -279,7 +279,7 @@ public final class InitialShortcutData extends GameXmlReader {
                         break;
                     }
                     case SKILL: {
-                        if (!player.getSkills().containsKey(shortcut.getId())) {
+                        if (!player.getSkills().containsKey(shortcut.getShortcutId())) {
                             continue;
                         }
                         break;

@@ -18,6 +18,7 @@ import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
+import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.xml.CategoryManager;
@@ -110,6 +111,8 @@ import java.util.Map.Entry;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
@@ -170,6 +173,14 @@ public final class Player extends Playable {
         return null;
     }
 
+    public void deleteShortcuts(Predicate<Shortcut> filter) {
+        shortCuts.deleteShortcuts(filter);
+    }
+
+    public void forEachShortcut(Consumer<Shortcut> action) {
+        shortCuts.forEachShortcut(action);
+    }
+
     public void initElementalSpirits() {
         if(nonNull(spirits)) {
             return;
@@ -212,6 +223,20 @@ public final class Player extends Playable {
         }
     }
 
+    public ElementalSpirit getElementalSpirit(ElementalType type) {
+        if(isNull(spirits) || isNull(type) || type == ElementalType.NONE) {
+            return null;
+        }
+        return spirits[type.getId() -1];
+    }
+
+    public void changeElementalSpirit(byte element) {
+        activeElementalSpiritType = ElementalType.of(element);
+        var userInfo =  new UserInfo(this, false);
+        userInfo.addComponentType(UserInfoType.SPIRITS);
+        sendPacket(userInfo);
+    }
+
     public double getActiveElementalSpiritAttack() {
         return getStats().getElementalSpiritPower(activeElementalSpiritType, zeroIfNullOrElse(getElementalSpirit(activeElementalSpiritType), ElementalSpirit::getAttack));
     }
@@ -248,22 +273,8 @@ public final class Player extends Playable {
         return getStats().getElementalSpiritXpBonus();
     }
 
-    public ElementalSpirit getElementalSpirit(ElementalType type) {
-        if(isNull(spirits) || isNull(type) || type == ElementalType.NONE) {
-            return null;
-        }
-        return spirits[type.getId() -1];
-    }
-
     public byte getActiveElementalSpiritType() {
         return (byte) zeroIfNullOrElse(activeElementalSpiritType, ElementalType::getId);
-    }
-
-    public void changeElementalSpirit(byte element) {
-        activeElementalSpiritType = ElementalType.of(element);
-        var userInfo =  new UserInfo(this, false);
-        userInfo.addComponentType(UserInfoType.SPIRITS);
-        sendPacket(userInfo);
     }
 
     public ElementalSpirit[] getSpirits() {
@@ -318,6 +329,18 @@ public final class Player extends Playable {
         return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
     }
 
+    public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
+        this.autoPlaySettings = autoPlaySettings;
+    }
+
+    public AutoPlaySettings getAutoPlaySettings() {
+        return autoPlaySettings;
+    }
+
+    public int getShortcutAmount() {
+        return shortCuts.getAmount();
+    }
+
     // Unchecked
 
     // TODO: This needs to be better integrated and saved/loaded
@@ -363,8 +386,7 @@ public final class Player extends Playable {
     private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
     private static final String DELETE_CHAR_HENNA = "DELETE FROM character_hennas WHERE charId=? AND slot=? AND class_index=?";
     private static final String DELETE_CHAR_HENNAS = "DELETE FROM character_hennas WHERE charId=? AND class_index=?";
-    // Character Shortcut SQL String Definitions:
-    private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
+
     // Character Recipe List Save
     private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
     private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
@@ -1320,11 +1342,7 @@ public final class Player extends Playable {
             LOGGER.warn("Attempted to remove unknown RecipeList: " + recipeId);
         }
 
-        for (Shortcut sc : shortCuts.getAllShortCuts()) {
-            if ((sc != null) && (sc.getId() == recipeId) && (sc.getType() == ShortcutType.RECIPE)) {
-                deleteShortCut(sc.getSlot(), sc.getPage());
-            }
-        }
+        shortCuts.deleteShortcuts(s -> s.getShortcutId() == recipeId && s.getType() == ShortcutType.RECIPE);
     }
 
     private void insertNewRecipeData(int recipeId, boolean isDwarf) {
@@ -1495,24 +1513,9 @@ public final class Player extends Playable {
         return (_notifyQuestOfDeathList == null) || _notifyQuestOfDeathList.isEmpty();
     }
 
-    /**
-     * @return a table containing all L2ShortCut of the Player.
-     */
-    public Shortcut[] getAllShortCuts() {
-        return shortCuts.getAllShortCuts();
-    }
 
-    /**
-     * @param slot The slot in which the shortCuts is equipped
-     * @param page The page of shortCuts containing the slot
-     * @return the L2ShortCut of the Player corresponding to the position (page-slot).
-     */
-    public Shortcut getShortCut(int slot, int page) {
-        return shortCuts.getShortCut(slot, page);
-    }
-
-    public Shortcut getShortCut(int shortcutId) {
-        return shortCuts.getShortCut(shortcutId);
+    public Shortcut getShortcut(int room) {
+        return shortCuts.getShortcut(room);
     }
 
     /**
@@ -1535,14 +1538,8 @@ public final class Player extends Playable {
         shortCuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
     }
 
-    /**
-     * Delete the L2ShortCut corresponding to the position (page-slot) from the Player _shortCuts.
-     *
-     * @param slot
-     * @param page
-     */
-    public void deleteShortCut(int slot, int page) {
-        shortCuts.deleteShortCut(slot, page);
+    public void deleteShortcut(int room) {
+        shortCuts.deleteShortcut(room);
     }
 
     /**
@@ -5973,12 +5970,8 @@ public final class Player extends Playable {
             return oldSkill;
         }
 
-        if (skill != null) {
-            for (Shortcut sc : shortCuts.getAllShortCuts()) {
-                if ((sc != null) && (sc.getId() == skill.getId()) && (sc.getType() == ShortcutType.SKILL) && !((skill.getId() >= 3080) && (skill.getId() <= 3259))) {
-                    deleteShortCut(sc.getSlot(), sc.getPage());
-                }
-            }
+        if (nonNull(skill) &&  !(skill.getId() >= 3080 && skill.getId() <= 3259)) { // exclude item skills ?! it's all ?
+            deleteShortcuts(s -> s.getShortcutId() == skill.getId() && s.getType() == ShortcutType.SKILL);
         }
         return oldSkill;
     }
@@ -7751,9 +7744,11 @@ public final class Player extends Playable {
             // Remove after stats are recalculated.
             getSubClasses().remove(classIndex);
 
+            shortCuts.deleteShortcuts();
+
             try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
-                 PreparedStatement deleteShortcuts = con.prepareStatement(DELETE_CHAR_SHORTCUTS);
+
                  PreparedStatement deleteSkillReuse = con.prepareStatement(DELETE_SKILL_SAVE);
                  PreparedStatement deleteSkills = con.prepareStatement(DELETE_CHAR_SKILLS);
                  PreparedStatement deleteSubclass = con.prepareStatement(DELETE_CHAR_SUBCLASS)) {
@@ -7761,11 +7756,6 @@ public final class Player extends Playable {
                 deleteHennas.setInt(1, getObjectId());
                 deleteHennas.setInt(2, classIndex);
                 deleteHennas.execute();
-
-                // Remove all shortcuts info stored for this sub-class.
-                deleteShortcuts.setInt(1, getObjectId());
-                deleteShortcuts.setInt(2, classIndex);
-                deleteShortcuts.execute();
 
                 // Remove all effects info stored for this sub-class.
                 deleteSkillReuse.setInt(1, getObjectId());
@@ -7988,7 +7978,7 @@ public final class Player extends Playable {
             model.setExpBeforeDeath(0);
 
             shortCuts.restoreMe();
-            sendPacket(new ShortCutInit(this));
+            sendPacket(new ShortCutInit());
 
             broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
             sendPacket(new SkillCoolTime(this));
@@ -11183,13 +11173,5 @@ public final class Player extends Playable {
 
         // Both are defenders, friends.
         return true;
-    }
-
-    public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
-        this.autoPlaySettings = autoPlaySettings;
-    }
-
-    public AutoPlaySettings getAutoPlaySettings() {
-        return autoPlaySettings;
     }
 }
