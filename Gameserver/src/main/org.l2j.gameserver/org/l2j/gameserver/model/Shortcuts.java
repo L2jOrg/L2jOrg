@@ -82,6 +82,10 @@ public class Shortcuts {
         return shortcut;
     }
 
+    public void resetNextAutoShortcut() {
+        nextAutoShortcut = 0;
+    }
+    
     private void deleteShortcutFromDb(Shortcut shortcut) {
         getDAO(ShortcutDAO.class).delete(owner.getObjectId(), shortcut.getClientId(), owner.getClassIndex());
     }
@@ -143,6 +147,9 @@ public class Shortcuts {
                 } else if (item.isEtcItem()) {
                     s.setSharedReuseGroup(item.getSharedReuseGroup());
                 }
+            }
+            if(s.isActive()) {
+                activeShortcuts.set(s.getClientId());
             }
         });
     }

@@ -69,7 +69,6 @@ public class Shortcut {
     /**
      * auto use shortcut is active
      */
-    @Transient
     private boolean active;
 
     public Shortcut(int slot, int page, ShortcutType type, int shortcutId, int level, int subLevel, int characterType) {
@@ -182,5 +181,9 @@ public class Shortcut {
 
     public static int pageAndSlotToClientId(int page, int slot) {
         return  slot + (page * MAX_SLOTS_PER_PAGE);
+    }
+
+    public boolean isActive() {
+        return active;
     }
 }

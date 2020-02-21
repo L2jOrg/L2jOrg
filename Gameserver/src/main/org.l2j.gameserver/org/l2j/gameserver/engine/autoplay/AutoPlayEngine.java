@@ -114,6 +114,7 @@ public final class AutoPlayEngine {
                 autoPlayTask = null;
             }
         }
+        player.resetNextAutoShortcut();
     }
 
     public void startAutoPotion(Player player) {

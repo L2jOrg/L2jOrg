@@ -348,6 +348,10 @@ public final class Player extends Playable {
         return shortcuts.nextAutoShortcut();
     }
 
+    public void resetNextAutoShortcut() {
+        shortcuts.resetNextAutoShortcut();
+    }
+
     // Unchecked
 
     // TODO: This needs to be better integrated and saved/loaded
