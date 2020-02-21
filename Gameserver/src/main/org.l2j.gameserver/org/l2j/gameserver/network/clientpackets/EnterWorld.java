@@ -10,6 +10,7 @@ import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ChatType;
+import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.Clan;
@@ -364,13 +365,13 @@ public class EnterWorld extends ClientPacket {
         }
 
         player.broadcastUserInfo();
+        player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
         player.sendPacket(new ExUserInfoEquipSlot(player));
 
         if (Config.ENABLE_WORLD_CHAT) {
             player.sendPacket(new ExWorldChatCnt(player));
         }
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
-
         player.sendPacket(new ExAutoSoulShot(0, true, 0));
         player.sendPacket(new ExAutoSoulShot(0, true, 1));
         player.sendPacket(new ExAutoSoulShot(0, true, 2));

@@ -477,30 +477,35 @@
 	<!-- Arrow made from a piece of sharpened bone. It is used as an arrow for a D-grade bow. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="5" price="3" immediate-effect="true" action="EQUIP"/>
+		<crystal type="D"/>
 	</item>
 
 	<item id="1342" name="Steel Arrow" type="ARROW" icon="icon.etc_fine_steel_quiver_i00">
 	<!-- Powerful arrow made of steel. It is used as an arrow for a C-grade bow. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="4" price="5" immediate-effect="true" action="EQUIP"/>
+		<crystal type="C"/>
 	</item>
 
 	<item id="1343" name="Silver Arrow" type="ARROW" icon="icon.etc_silver_quiver_i00">
 	<!-- Steel arrow plated with silver. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="4" price="7" immediate-effect="true" action="EQUIP"/>
+		<crystal type="B"/>
 	</item>
 
 	<item id="1344" name="Mithril Arrow" type="ARROW" icon="icon.etc_mithril_quiver_i00">
 	<!-- Steel Arrow coated by mithril. For A-grade bows. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="3" price="8" immediate-effect="true" action="EQUIP"/>
+		<crystal type="A"/>
 	</item>
 
 	<item id="1345" name="Arrow of Light" type="ARROW" icon="icon.etc_shining_quiver_i00">
 	<!-- Arrows made of an unknown material. Used with an S-grade bow. Very light. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="3" price="10" immediate-effect="true" action="EQUIP"/>
+		<crystal type="S"/>
 	</item>
 
 	<item id="1346" name="Golem's Stoneheart" type="NONE" icon="icon.etc_squares_gray_i00">

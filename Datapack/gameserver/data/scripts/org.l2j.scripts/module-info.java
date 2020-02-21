@@ -17,13 +17,13 @@ import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
 
-    requires java.logging;
-    requires org.l2j.gameserver;
-    requires org.l2j.commons;
-    requires java.sql;
     requires java.desktop;
-    requires org.slf4j;
+    requires java.logging;
+    requires java.sql;
     requires io.github.joealisson.primitive;
+    requires org.l2j.commons;
+    requires org.l2j.gameserver;
+    requires org.slf4j;
 
     uses instances.AbstractInstance;
     uses events.ScriptEvent;

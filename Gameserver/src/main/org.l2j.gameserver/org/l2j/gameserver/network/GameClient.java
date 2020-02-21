@@ -544,7 +544,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             return switch (state) {
                 case CONNECTED, CLOSING, DISCONNECTED  -> "[IP: " + (address == null ? "disconnected" : address) + "]";
                 case AUTHENTICATED -> "[Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
-                case IN_GAME, JOINING_GAME -> "[Character: " + (player == null ? "disconnected" : player.getName() + "[" + player.getObjectId() + "]") + " - Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
+                case IN_GAME, JOINING_GAME -> "[Player: " + (player == null ? "disconnected" : player.getName() + "[" + player.getObjectId() + "]") + " - Account: " + accountName + " - IP: " + (address == null ? "disconnected" : address) + "]";
             };
         } catch (NullPointerException e) {
             return "[Character read failed due to disconnect]";

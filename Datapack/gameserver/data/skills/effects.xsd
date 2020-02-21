@@ -193,8 +193,9 @@
         <xs:complexContent>
             <xs:extension base="Effect">
                 <xs:sequence>
-                    <xs:element name="location" type="LeveledLocation" maxOccurs="unbounded"/>
+                    <xs:element name="location" type="LeveledLocation" maxOccurs="unbounded" minOccurs="0"/>
                 </xs:sequence>
+                <xs:attribute name="use-request" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

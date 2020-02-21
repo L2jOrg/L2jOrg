@@ -49,9 +49,9 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     private volatile int z = -10000;
 
     private volatile int _heading = 0;
+    private volatile boolean spawned;
 
     private Instance instance;
-    private boolean spawned;
     private boolean invisible;
     private boolean targetable = true;
 

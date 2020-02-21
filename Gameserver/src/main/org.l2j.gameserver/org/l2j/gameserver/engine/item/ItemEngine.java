@@ -108,7 +108,7 @@ public final class ItemEngine extends GameXmlReader {
         items.put(weapon.getId(), weapon);
     }
 
-    private void parseCrystalType(EquipableItem weapon, Node node) {
+    private void parseCrystalType(ItemTemplate weapon, Node node) {
         var attr = node.getAttributes();
         weapon.setCrystalType(parseEnum(attr, CrystalType.class, "type", CrystalType.NONE));
         weapon.setCrystalCount(parseInt(attr, "count"));
@@ -276,6 +276,7 @@ public final class ItemEngine extends GameXmlReader {
             switch (node.getNodeName()) {
                 case "attributes" -> parseItemAttributes(item, node);
                 case "restriction" -> parseItemRestriction(item, node);
+                case "crystal" -> parseItemCrystal(item, node);
                 case "action" -> parseItemAction(item, node);
                 case "skill-reducer" -> parseSkillReducer(item, node);
                 case "extract" -> parseItemExtract(item, node);
@@ -284,6 +285,10 @@ public final class ItemEngine extends GameXmlReader {
         } );
         item.fillType2();
         items.put(item.getId(), item);
+    }
+
+    private void parseItemCrystal(EtcItem item, Node node) {
+        item.setCrystalType(parseEnum(node.getAttributes(), CrystalType.class, "type", CrystalType.NONE));
     }
 
     private void parseItemExtract(EtcItem item, Node node) {

@@ -84,6 +84,7 @@
             <xs:extension base="AbstractItem">
                 <xs:sequence>
                     <xs:element name="attributes" type="ItemAttributes"/>
+                    <xs:element name="crystal" type="ItemCrystal" minOccurs="0"/>
                     <xs:choice minOccurs="0">
                         <xs:element name="action" type="ItemAction"/>
                         <xs:element name="extract" type="ItemExtract"/>

@@ -82,8 +82,7 @@ public enum InventorySlot implements IUpdateTypeComponent {
     private static final EnumSet<InventorySlot> armorset = EnumSet.of(CHEST, LEGS, HEAD, GLOVES, FEET);
     public static final int TOTAL_SLOTS = 60;
 
-    InventorySlot() {
-    }
+    public static final InventorySlot[] CACHE = values();
 
     public int getId() {
         return ordinal();
@@ -98,7 +97,11 @@ public enum InventorySlot implements IUpdateTypeComponent {
         if(id < 0 || id > ARTIFACT21.ordinal()) {
             return null;
         }
-        return values()[id];
+        return CACHE[id];
+    }
+
+    public static InventorySlot[] cachedValues() {
+        return CACHE;
     }
 
     public static EnumSet<InventorySlot> accessories() {

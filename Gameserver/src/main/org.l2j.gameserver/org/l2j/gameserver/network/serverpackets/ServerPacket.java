@@ -21,14 +21,14 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServerPacket.class);
 
-    private InventorySlot[] PAPERDOLL_ORDER_AUGMENT = new InventorySlot[] {
+    private InventorySlot[] PAPERDOLL_ORDER_AUGMENT = {
         RIGHT_HAND,
         LEFT_HAND,
         TWO_HAND
     };
 
     public InventorySlot[] getPaperdollOrder() {
-        return InventorySlot.values();
+        return InventorySlot.cachedValues();
     }
 
     public InventorySlot[] getPaperdollOrderAugument() {

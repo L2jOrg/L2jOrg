@@ -4,6 +4,7 @@
 	<!-- A steel bolt coated by mithril. For A-grade crossbows. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="3" price="8" immediate-effect="true" action="EQUIP"/>
+		<crystal type="A"/>
 	</item>
 
 </list>

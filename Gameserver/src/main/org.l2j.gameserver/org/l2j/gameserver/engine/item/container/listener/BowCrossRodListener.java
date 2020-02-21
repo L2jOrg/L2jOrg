@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
 
+import static org.l2j.commons.util.Util.doIfNonNull;
+
 /**
  * @author JoeAlisson
  */
@@ -17,45 +19,30 @@ public final class BowCrossRodListener implements PlayerInventoryListener {
 
     @Override
     public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
-        if (slot != InventorySlot.RIGHT_HAND) {
+        if (slot != InventorySlot.RIGHT_HAND && slot != InventorySlot.TWO_HAND) {
             return;
         }
 
         if (item.getItemType() == WeaponType.BOW) {
-            final Item arrow = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-            if (arrow != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null);
-            }
+            doIfNonNull(inventory.getPaperdollItem(InventorySlot.LEFT_HAND), i -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null));
         }
         else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) {
-            final Item bolts = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-            if (bolts != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null);
-            }
+            doIfNonNull(inventory.getPaperdollItem(InventorySlot.LEFT_HAND), i -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null));
         }else if (item.getItemType() == WeaponType.FISHING_ROD) {
-            final Item lure = inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-            if (lure != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null);
-            }
+            doIfNonNull(inventory.getPaperdollItem(InventorySlot.LEFT_HAND), i -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, null));
         }
     }
 
     @Override
     public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
-        if (slot != InventorySlot.RIGHT_HAND) {
+        if (slot != InventorySlot.RIGHT_HAND && slot != InventorySlot.TWO_HAND  ) {
             return;
         }
 
         if (item.getItemType() == WeaponType.BOW) {
-            final Item arrow = inventory.findArrowForBow(item.getTemplate());
-            if (arrow != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, arrow);
-            }
+            doIfNonNull(inventory.findArrowForBow(item.getTemplate()), arrow -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, arrow));
         } else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) {
-            final Item bolts = inventory.findBoltForCrossBow(item.getTemplate());
-            if (bolts != null) {
-                inventory.setPaperdollItem(InventorySlot.LEFT_HAND, bolts);
-            }
+            doIfNonNull(inventory.findBoltForCrossBow(item.getTemplate()), bolts -> inventory.setPaperdollItem(InventorySlot.LEFT_HAND, bolts));
         }
     }
 

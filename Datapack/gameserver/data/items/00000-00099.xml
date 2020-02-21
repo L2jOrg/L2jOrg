@@ -279,6 +279,7 @@
 	<!-- Arrow made of wood. It is an arrow used for a No-grade bow. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="6" price="2" immediate-effect="true" action="EQUIP"/>
+		<crystal/>
 	</item>
 
 	<armor id="18" name="Leather Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.shield_leather_shield_i00">
