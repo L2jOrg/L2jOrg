@@ -1,6 +1,7 @@
 package org.l2j.gameserver.engine.skill.api;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -36,6 +37,7 @@ import java.util.function.Predicate;
 import static java.lang.String.format;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.*;
 import static org.l2j.commons.util.Util.contains;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -135,7 +137,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private SkillBuffType buffType;
     private BasicProperty basicProperty;
     private NextActionType nextAction = NextActionType.NONE;
-    private SkillAutoUseType autoUse;
+    private SkillAutoUseType skillAutoUseType;
 
     private int fanStartAngle;
     private int fanRadius;
@@ -1088,8 +1090,8 @@ public final class Skill implements IIdentifiable, Cloneable {
         this.blockActionUseSkill = block;
     }
 
-    void setAutoUse(SkillAutoUseType autoUse) {
-        this.autoUse = autoUse;
+    void setSkillAutoUseType(SkillAutoUseType skillAutoUseType) {
+        this.skillAutoUseType = skillAutoUseType;
     }
 
     void setSoulConsume(int souls) {
@@ -1195,5 +1197,9 @@ public final class Skill implements IIdentifiable, Cloneable {
     @Override
     public String toString() {
         return format("Skill %s (%d, %d)", name, id, level);
+    }
+
+    public boolean isAutoUse() {
+        return falseIfNullOrElse(skillAutoUseType, t -> t != SkillAutoUseType.NONE);
     }
 }

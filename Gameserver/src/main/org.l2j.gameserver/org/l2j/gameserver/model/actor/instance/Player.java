@@ -18,7 +18,6 @@ import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
-import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.xml.CategoryManager;
@@ -174,11 +173,11 @@ public final class Player extends Playable {
     }
 
     public void deleteShortcuts(Predicate<Shortcut> filter) {
-        shortCuts.deleteShortcuts(filter);
+        shortcuts.deleteShortcuts(filter);
     }
 
     public void forEachShortcut(Consumer<Shortcut> action) {
-        shortCuts.forEachShortcut(action);
+        shortcuts.forEachShortcut(action);
     }
 
     public void initElementalSpirits() {
@@ -338,7 +337,15 @@ public final class Player extends Playable {
     }
 
     public int getShortcutAmount() {
-        return shortCuts.getAmount();
+        return shortcuts.getAmount();
+    }
+
+    public void setActiveAutoShortcut(int room, boolean active) {
+        shortcuts.setActive(room, active);
+    }
+
+    public Shortcut nextAutoShortcut() {
+        return shortcuts.nextAutoShortcut();
     }
 
     // Unchecked
@@ -427,7 +434,7 @@ public final class Player extends Playable {
     /**
      * The list containing all shortCuts of this player.
      */
-    private final ShortCuts shortCuts = new ShortCuts(this);
+    private final Shortcuts shortcuts = new Shortcuts(this);
     /**
      * The list containing all macros of this player.
      */
@@ -1342,7 +1349,7 @@ public final class Player extends Playable {
             LOGGER.warn("Attempted to remove unknown RecipeList: " + recipeId);
         }
 
-        shortCuts.deleteShortcuts(s -> s.getShortcutId() == recipeId && s.getType() == ShortcutType.RECIPE);
+        shortcuts.deleteShortcuts(s -> s.getShortcutId() == recipeId && s.getType() == ShortcutType.RECIPE);
     }
 
     private void insertNewRecipeData(int recipeId, boolean isDwarf) {
@@ -1515,7 +1522,7 @@ public final class Player extends Playable {
 
 
     public Shortcut getShortcut(int room) {
-        return shortCuts.getShortcut(room);
+        return shortcuts.getShortcut(room);
     }
 
     /**
@@ -1524,7 +1531,7 @@ public final class Player extends Playable {
      * @param shortcut
      */
     public void registerShortCut(Shortcut shortcut) {
-        shortCuts.registerShortCut(shortcut);
+        shortcuts.registerShortCut(shortcut);
     }
 
     /**
@@ -1535,11 +1542,11 @@ public final class Player extends Playable {
      * @param skillSubLevel the skill sub level to update.
      */
     public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
-        shortCuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
+        shortcuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
     }
 
     public void deleteShortcut(int room) {
-        shortCuts.deleteShortcut(room);
+        shortcuts.deleteShortcut(room);
     }
 
     /**
@@ -2001,7 +2008,7 @@ public final class Player extends Playable {
      */
     public void setFame(int fame) {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, fame), this);
-        _fame = (fame > Config.MAX_PERSONAL_FAME_POINTS) ? Config.MAX_PERSONAL_FAME_POINTS : fame;
+        _fame = Math.min(fame, Config.MAX_PERSONAL_FAME_POINTS);
     }
 
     /**
@@ -2424,7 +2431,7 @@ public final class Player extends Playable {
     }
 
     public void removeItemFromShortCut(int objectId) {
-        shortCuts.deleteShortCutByObjectId(objectId);
+        shortcuts.deleteShortCutByObjectId(objectId);
     }
 
     /**
@@ -3163,7 +3170,7 @@ public final class Player extends Playable {
         item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
 
         if ((getSettings(GeneralSettings.class).autoDestroyItemTime() > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId())) {
-            if ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()) {
+            if (!item.isEquipable() || Config.DESTROY_EQUIPABLE_PLAYER_ITEM) {
                 ItemsAutoDestroy.getInstance().addItem(item);
             }
         }
@@ -3743,7 +3750,7 @@ public final class Player extends Playable {
                 return;
             }
 
-            if (((isInParty() && (_party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS)) || !isInParty()) && !inventory.validateCapacity(target)) {
+            if ((!isInParty() || (_party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS)) && !inventory.validateCapacity(target)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
                 return;
@@ -5526,7 +5533,7 @@ public final class Player extends Playable {
      */
     private void restoreShortCuts() {
         // Retrieve from the database all shortCuts of this Player and add them to _shortCuts.
-        shortCuts.restoreMe();
+        shortcuts.restoreMe();
     }
 
     /**
@@ -7744,7 +7751,7 @@ public final class Player extends Playable {
             // Remove after stats are recalculated.
             getSubClasses().remove(classIndex);
 
-            shortCuts.deleteShortcuts();
+            shortcuts.deleteShortcuts();
 
             try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
@@ -7977,7 +7984,7 @@ public final class Player extends Playable {
             // Clear resurrect xp calculation
             model.setExpBeforeDeath(0);
 
-            shortCuts.restoreMe();
+            shortcuts.restoreMe();
             sendPacket(new ShortCutInit());
 
             broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));

@@ -5,26 +5,29 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.interfaces.IRestorable;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
+import java.util.BitSet;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.*;
 
 /**
  * @author JoeAlisson
  */
-public class ShortCuts implements IRestorable {
+public class Shortcuts {
 
     private final Player owner;
     private final IntMap<Shortcut> shortcuts = new CHashIntMap<>();
+    private final BitSet activeShortcuts = new BitSet(Shortcut.MAX_ROOM);
+    private int nextAutoShortcut = 0;
 
-    public ShortCuts(Player owner) {
+    public Shortcuts(Player owner) {
         this.owner = owner;
     }
 
@@ -47,6 +50,36 @@ public class ShortCuts implements IRestorable {
         shortcut.setPlayerId(owner.getObjectId());
         shortcut.setClassIndex(owner.getClassIndex());
         getDAO(ShortcutDAO.class).save(shortcut);
+    }
+
+    public void setActive(int room, boolean active) {
+        doIfNonNull(shortcuts.get(room), s -> {
+            s.setActive(active);
+            if(Shortcut.AUTO_POTION_ROOM != room) {
+                if(active) {
+                    activeShortcuts.set(room);
+                } else {
+                    activeShortcuts.clear(room);
+                }
+            }
+        });
+    }
+
+    public Shortcut nextAutoShortcut() {
+        if(activeShortcuts.isEmpty()) {
+            return null;
+        }
+        Shortcut shortcut = null;
+        var next = activeShortcuts.nextSetBit(nextAutoShortcut);
+        if(next >= 0) {
+            shortcut = shortcuts.get(next);
+            if(isNull(shortcut)) {
+                deleteShortcut(next);
+                activeShortcuts.clear(next);
+            }
+            nextAutoShortcut = next + 1;
+        }
+        return shortcut;
     }
 
     private void deleteShortcutFromDb(Shortcut shortcut) {
@@ -97,8 +130,7 @@ public class ShortCuts implements IRestorable {
         }
     }
 
-    @Override
-    public boolean restoreMe() {
+    public void restoreMe() {
         shortcuts.clear();
         getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId(), owner.getClassIndex()).forEach(s -> shortcuts.put(s.getClientId(), s));
 
@@ -113,7 +145,6 @@ public class ShortCuts implements IRestorable {
                 }
             }
         });
-        return true;
     }
 
     /**

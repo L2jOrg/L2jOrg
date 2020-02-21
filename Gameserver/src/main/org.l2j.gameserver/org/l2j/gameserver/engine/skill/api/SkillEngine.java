@@ -356,7 +356,7 @@ public class SkillEngine extends EffectParser {
         skill.setRemoveAbnormalOnLeave(parseBoolean(attr, "remove-abnormal-on-leave"));
         skill.setIrreplacable(parseBoolean(attr, "irreplacable"));
         skill.setBlockActionSkill(parseBoolean(attr, "block-action-skill"));
-        skill.setAutoUse(parseEnum(attr, SkillAutoUseType.class,"auto-use"));
+        skill.setSkillAutoUseType(parseEnum(attr, SkillAutoUseType.class,"auto-use"));
 
         forEach(nodeAttributes, "element", elementNode -> {
             skill.setAttributeType(parseEnum(elementNode.getAttributes(), AttributeType.class, "type"));

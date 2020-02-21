@@ -66,6 +66,12 @@ public class Shortcut {
     @Transient
     private final int characterType;
 
+    /**
+     * auto use shortcut is active
+     */
+    @Transient
+    private boolean active;
+
     public Shortcut(int slot, int page, ShortcutType type, int shortcutId, int level, int subLevel, int characterType) {
         this.slot = slot;
         this.page = page;
@@ -162,15 +168,19 @@ public class Shortcut {
         this.sharedReuseGroup = sharedReuseGroup;
     }
 
-    public static int pageAndSlotToClientId(int page, int slot) {
-        return  slot + (page * MAX_SLOTS_PER_PAGE);
-    }
-
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
 
     public void setClassIndex(int classIndex) {
         this.classIndex = classIndex;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public static int pageAndSlotToClientId(int page, int slot) {
+        return  slot + (page * MAX_SLOTS_PER_PAGE);
     }
 }
