@@ -24,6 +24,7 @@ public final class ElementalSpiritEngine extends GameXmlReader {
     public static final long EXTRACT_FEE = 1000000;
     public static final float FRAGMENT_XP_CONSUME = 50000.0f;
     public static final int TALENT_INIT_FEE = 50000;
+    public static final int MAX_STAGE = 5;
 
     private final Map<Byte, Map<Byte, ElementalSpiritTemplate>> spiritData = new HashMap<>(4);
 
