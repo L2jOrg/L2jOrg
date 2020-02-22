@@ -1202,4 +1202,12 @@ public final class Skill implements IIdentifiable, Cloneable {
     public boolean isAutoUse() {
         return falseIfNullOrElse(skillAutoUseType, t -> t != SkillAutoUseType.NONE);
     }
+
+    public boolean isAutoTransformation() {
+        return skillAutoUseType == SkillAutoUseType.TRANSFORM;
+    }
+
+    public boolean isAutoBuff() {
+        return skillAutoUseType == SkillAutoUseType.BUFF;
+    }
 }

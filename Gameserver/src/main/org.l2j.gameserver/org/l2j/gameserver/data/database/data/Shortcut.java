@@ -31,7 +31,7 @@ public class Shortcut {
     @Column("class_index")
     private int classIndex;
 
-    private  ShortcutType type;
+    private ShortcutType type;
 
     @Column("shortcut_id")
     private int shortcutId;
@@ -50,13 +50,13 @@ public class Shortcut {
      * Slot from 0 to 11.
      */
     @Transient
-    private final int slot;
+    private int slot;
 
     /**
      * Page from 0 to 23.
      */
     @Transient
-    private final int page;
+    private int page;
 
     @Transient
     private int sharedReuseGroup = -1;
@@ -65,12 +65,16 @@ public class Shortcut {
      * Character type: 1 player, 2 summon.
      */
     @Transient
-    private final int characterType;
+    private int characterType;
 
     /**
      * auto use shortcut is active
      */
     private boolean active;
+
+    public Shortcut() {
+
+    }
 
     public Shortcut(int slot, int page, ShortcutType type, int shortcutId, int level, int subLevel, int characterType) {
         this.slot = slot;

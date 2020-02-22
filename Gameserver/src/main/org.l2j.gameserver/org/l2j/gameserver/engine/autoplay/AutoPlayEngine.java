@@ -2,14 +2,13 @@ package org.l2j.gameserver.engine.autoplay;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -158,9 +157,10 @@ public final class AutoPlayEngine {
 
         private void doAutoPlay() {
             players.parallelStream().filter(AutoPlayEngine.this::canUseAutoPlay).forEach(player -> {
-                var world = World.getInstance();
                 var setting = player.getAutoPlaySettings();
+                setting.setAutoPlaying(true);
                 var range = setting.isNearTarget() ? 600 : 1400;
+                var world = World.getInstance();
 
                 if(setting.isAutoPickUpOn()) {
                     var item = world.findAnyVisibleObject(player, Item.class, range, false, it -> it.getDropProtection().tryPickUp(player));
@@ -171,47 +171,69 @@ public final class AutoPlayEngine {
                 }
 
                 var target = player.getTarget();
-                if(isNull(target) || (isMonster(target) && ((Monster) target).isDead())) {
+                if(isNull(target) || (isMonster(target) && ((Monster) target).isDead()) || target.equals(player)) {
                     var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
                     player.setTarget(monster);
                 }
 
                 if(nonNull(player.getTarget())) {
-                    var shortcut = player.nextAutoShortcut();
-                    if(nonNull(shortcut)) {
-                        switch (shortcut.getType()) {
-                            case SKILL -> autoUseSkill(player, shortcut);
-                            case ITEM ->  autoUseItem(player, shortcut);
-                            case ACTION -> autoUseAction(player, shortcut);
-                        }
-                    }
+                    tryUseAutoShortcut(player);
                 }
+                setting.setAutoPlaying(false);
             });
         }
 
-        private void autoUseAction(Player player, Shortcut shortcut) {
+        private void tryUseAutoShortcut(Player player) {
+            var nextShortcut = player.nextAutoShortcut();
+            if(nonNull(nextShortcut)) {
+                var  shortcut = nextShortcut;
+                do {
+                    if(useShortcut(player, shortcut)) {
+                        break;
+                    }
+                    shortcut = player.nextAutoShortcut();
+                } while (!nextShortcut.equals(shortcut));
+            }
         }
 
-        private void autoUseItem(Player player, Shortcut shortcut) {
+        private boolean useShortcut(Player player, Shortcut shortcut) {
+            return switch (shortcut.getType()) {
+                case SKILL -> autoUseSkill(player, shortcut);
+                case ITEM -> autoUseItem(player, shortcut);
+                case ACTION -> autoUseAction(player, shortcut);
+                default -> false;
+            };
+        }
+
+        private boolean autoUseAction(Player player, Shortcut shortcut) {
+            return false;
+        }
+
+        private boolean autoUseItem(Player player, Shortcut shortcut) {
             var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
             if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, Predicate.not(player::isAffectedBySkill))) {
                 useItem(player, item);
+                return true;
             }
+            return false;
         }
 
-        private void autoUseSkill(Player player, Shortcut shortcut) {
+        private boolean autoUseSkill(Player player, Shortcut shortcut) {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
-            if(isNull(skill)) {
-                return;
+
+            if(skill.isAutoTransformation() && player.isTransformed()) {
+                return false;
+            }
+            if(skill.isAutoBuff() && (player.hasAbnormalType(skill.getAbnormalType()) || player.isAffectedBySkill(skill.getId()))) {
+                return false;
             }
 
             if (skill.isBlockActionUseSkill()) {
-                player.sendPacket(ActionFailed.STATIC_PACKET);
-                return;
+                return false;
             }
 
             player.onActionRequest();
-            player.useMagic(skill, null, false, false); // TODO use the combat mode
+            return player.useMagic(skill, null, false, false);
         }
 
         private boolean canBeTargeted(Player player, AutoPlaySettings setting, Monster monster) {
@@ -261,6 +283,12 @@ public final class AutoPlayEngine {
     }
 
     private boolean canUseAutoPlay(Player player) {
-        return player.getAI().getIntention() != CtrlIntention.AI_INTENTION_PICK_UP && !player.hasBlockActions() && !player.isControlBlocked() && !player.isAlikeDead() && !player.isInsideZone(ZoneType.PEACE);
+        return !player.getAutoPlaySettings().isAutoPlaying() &&
+                player.getAI().getIntention() != CtrlIntention.AI_INTENTION_PICK_UP &&
+                !player.hasBlockActions() &&
+                !player.isControlBlocked() &&
+                !player.isAlikeDead() &&
+                !player.isInsideZone(ZoneType.PEACE) &&
+                !player.isCastingNow();
     }
 }

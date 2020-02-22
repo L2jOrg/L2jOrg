@@ -154,7 +154,7 @@ public abstract class Inventory extends ItemContainer {
     @Override
     protected void addItem(Item item) {
         super.addItem(item);
-        if (item.isEquipped()) {
+        if (item.isEquipped() && item.getBodyPart() != NONE) {
             equipItem(item);
         }
     }

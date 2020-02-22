@@ -1,5 +1,7 @@
 package org.l2j.gameserver.engine.autoplay;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 /**
  * @author JoeAlisson
  */
@@ -12,6 +14,7 @@ public class AutoPlaySettings {
     private final boolean isNearTarget;
     private final int usableHpPotionPercent;
     private final boolean mannerMode;
+    private AtomicBoolean autoPlaying = new AtomicBoolean(false);
 
     public AutoPlaySettings(short options, boolean active, boolean pickUp, short nextTargetMode, boolean isNearTarget, int usableHpPotionPercent, boolean mannerMode) {
         this.options = options;
@@ -49,5 +52,13 @@ public class AutoPlaySettings {
 
     public boolean isRespectfulMode() {
         return mannerMode;
+    }
+
+    public boolean isAutoPlaying() {
+        return autoPlaying.get();
+    }
+
+    public void setAutoPlaying(boolean autoPlaying) {
+        this.autoPlaying.set(autoPlaying);
     }
 }

@@ -4239,7 +4239,6 @@ public final class Player extends Playable {
         stopWaterTask();
 
         AntiFeedManager.getInstance().setLastDeathTime(getObjectId());
-        AutoPlayEngine.getInstance().stopTasks(this);
         // FIXME: Karma reduction tempfix.
         if (getReputation() < 0) {
             final int newRep = getReputation() - (getReputation() / 4);
