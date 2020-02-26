@@ -1,15 +1,15 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.PcCondOverride;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -80,13 +80,10 @@ public final class Attack extends ClientPacket {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
+
         // Players can't attack objects in the other instances
-        else if (target.getInstanceWorld() != player.getInstanceWorld()) {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
         // Only GMs can directly attack invisible characters
-        else if (!target.isVisibleFor(player)) {
+        else if (target.getInstanceWorld() != player.getInstanceWorld() || !target.isVisibleFor(player)) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

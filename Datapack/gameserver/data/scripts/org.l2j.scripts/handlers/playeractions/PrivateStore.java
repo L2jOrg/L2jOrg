@@ -41,12 +41,12 @@ public final class PrivateStore implements IPlayerActionHandler
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrivateStore.class);
 	
 	@Override
-	public void useAction(Player player, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		final PrivateStoreType type = PrivateStoreType.findById(data.getOptionId());
+		final PrivateStoreType type = PrivateStoreType.findById(action.getOptionId());
 		if (isNull(type))
 		{
-			LOGGER.warn("Incorrect private store type: {}", data.getOptionId());
+			LOGGER.warn("Incorrect private store type: {}", action.getOptionId());
 			return;
 		}
 		

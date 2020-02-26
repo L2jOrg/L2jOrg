@@ -11,8 +11,6 @@ import handlers.effecthandlers.stat.StatHpBased;
 import handlers.effecthandlers.stat.TransferDamageToPlayer;
 import handlers.effecthandlers.stat.VitalStatModify;
 import handlers.skillconditionhandlers.*;
-import org.l2j.gameserver.model.conditions.ConditionFactory;
-import org.l2j.gameserver.model.conditions.ICondition;
 import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
@@ -670,7 +668,8 @@ open module org.l2j.scripts {
             handlers.targethandlers.affectscope.DeadPartyPledge;
 
     provides org.l2j.gameserver.handler.IPlayerActionHandler
-        with handlers.playeractions.PrivateStore,
+        with handlers.playeractions.ActionHandler,
+            handlers.playeractions.PrivateStore,
             handlers.playeractions.UnsummonServitor,
             handlers.playeractions.UnsummonPet,
             handlers.playeractions.TeleportBookmark,

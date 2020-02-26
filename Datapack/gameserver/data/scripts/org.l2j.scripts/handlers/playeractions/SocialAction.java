@@ -24,9 +24,9 @@ import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 public final class SocialAction implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		switch (data.getOptionId())
+		switch (action.getOptionId())
 		{
 			case 2: // Greeting
 			case 3: // Victory
@@ -45,14 +45,14 @@ public final class SocialAction implements IPlayerActionHandler
 			case 28: // Propose
 			case 29: // Provoke
 			{
-				useSocial(activeChar, data.getOptionId());
+				useSocial(player, action.getOptionId());
 				break;
 			}
 			case 30: // Beauty Shop
 			{
-				if (useSocial(activeChar, data.getOptionId()))
+				if (useSocial(player, action.getOptionId()))
 				{
-					activeChar.broadcastInfo();
+					player.broadcastInfo();
 				}
 				break;
 			}
@@ -60,7 +60,7 @@ public final class SocialAction implements IPlayerActionHandler
 			case 17: // High Five
 			case 18: // Couple Dance
 			{
-				useCoupleSocial(activeChar, data.getOptionId());
+				useCoupleSocial(player, action.getOptionId());
 			}
 		}
 	}

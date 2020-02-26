@@ -29,15 +29,15 @@ import org.l2j.gameserver.model.actor.instance.Player;
 public final class BotReport implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
 		if (Config.BOTREPORT_ENABLE)
 		{
-			ReportTable.getInstance().reportBot(activeChar);
+			ReportTable.getInstance().reportBot(player);
 		}
 		else
 		{
-			activeChar.sendMessage("This feature is disabled.");
+			player.sendMessage("This feature is disabled.");
 		}
 	}
 }

@@ -4,6 +4,7 @@ import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -15,6 +16,7 @@ import java.io.File;
 import java.nio.file.Path;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.falseIfNullOrElse;
 
 /**
  * @author UnAfraid
@@ -29,6 +31,7 @@ public final class ActionManager extends GameXmlReader {
     private ActionManager() {
     }
 
+
     @Override
     protected Path getSchemaFilePath() {
         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/actions.xsd");
@@ -42,20 +45,18 @@ public final class ActionManager extends GameXmlReader {
         LOGGER.info("Loaded {} player actions.", actions.size());
     }
 
-
     @Override
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "action", actionNode -> {
             var attrs = actionNode.getAttributes();
             var id = parseInteger(attrs, "id");
-            var handler = parseString(attrs, "handler");
             var optionId = parseInteger(attrs, "option");
 
-            final ActionData action = new ActionData(id, handler, optionId);
-            actions.put(action.getId(), action);
+            final ActionData action = new ActionData(id, parseString(attrs, "handler"), optionId, parseBoolean(attrs, "auto-use"));
+            actions.put(id, action);
 
             if(isActionSkill(action)) {
-                actionSkills.put(action.getOptionId(), action.getId());
+                actionSkills.put(optionId, id);
             }
         }));
     }
@@ -80,6 +81,9 @@ public final class ActionManager extends GameXmlReader {
         return actionSkills.getOrDefault(skillId, -1);
     }
 
+    public boolean isAutoUseAction(int actionId) {
+        return falseIfNullOrElse(actions.get(actionId), ActionData::isAutoUse);
+    }
 
     public static void init() {
         getInstance().load();

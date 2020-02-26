@@ -28,18 +28,18 @@ import org.l2j.gameserver.network.SystemMessageId;
 public final class ServitorAttack implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (activeChar.hasServitors())
+		if (player.hasServitors())
 		{
-			activeChar.getServitors().values().stream().filter(s -> s.canAttack(activeChar.getTarget(), ctrlPressed)).forEach(s ->
+			player.getServitors().values().stream().filter(s -> s.canAttack(player.getTarget(), ctrlPressed)).forEach(s ->
 			{
-				s.doAttack(activeChar.getTarget());
+				s.doAttack(player.getTarget());
 			});
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
 		}
 	}
 }

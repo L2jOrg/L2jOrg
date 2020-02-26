@@ -28,14 +28,14 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 public final class TacticalSignTarget implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (!activeChar.isInParty())
+		if (!player.isInParty())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		activeChar.getParty().setTargetBasedOnTacticalSignId(activeChar, data.getOptionId());
+		player.getParty().setTargetBasedOnTacticalSignId(player, action.getOptionId());
 	}
 }

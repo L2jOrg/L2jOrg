@@ -21,20 +21,20 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 public final class SitStand implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (activeChar.isSitting() || !activeChar.isMoving() || activeChar.isFakeDeath())
+		if (player.isSitting() || !player.isMoving() || player.isFakeDeath())
 		{
-			useSit(activeChar, activeChar.getTarget());
+			useSit(player, player.getTarget());
 		}
 		else
 		{
 			// Sit when arrive using next action.
 			// Creating next action class.
-			final NextAction nextAction = new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(activeChar, activeChar.getTarget()));
+			final NextAction nextAction = new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(player, player.getTarget()));
 			
 			// Binding next action to AI.
-			activeChar.getAI().setNextAction(nextAction);
+			player.getAI().setNextAction(nextAction);
 		}
 	}
 	

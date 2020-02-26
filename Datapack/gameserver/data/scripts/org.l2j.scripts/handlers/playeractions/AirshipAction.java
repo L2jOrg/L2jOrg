@@ -28,51 +28,51 @@ import org.l2j.gameserver.model.actor.instance.Player;
 public final class AirshipAction implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (!activeChar.isInAirShip())
+		if (!player.isInAirShip())
 		{
 			return;
 		}
 		
-		switch (data.getOptionId())
+		switch (action.getOptionId())
 		{
 			case 1: // Steer
 			{
-				if (activeChar.getAirShip().setCaptain(activeChar))
+				if (player.getAirShip().setCaptain(player))
 				{
-					activeChar.broadcastUserInfo();
+					player.broadcastUserInfo();
 				}
 				break;
 			}
 			case 2: // Cancel Control
 			{
-				if (activeChar.getAirShip().isCaptain(activeChar))
+				if (player.getAirShip().isCaptain(player))
 				{
-					if (activeChar.getAirShip().setCaptain(null))
+					if (player.getAirShip().setCaptain(null))
 					{
-						activeChar.broadcastUserInfo();
+						player.broadcastUserInfo();
 					}
 				}
 				break;
 			}
 			case 3: // Destination Map
 			{
-				AirShipManager.getInstance().sendAirShipTeleportList(activeChar);
+				AirShipManager.getInstance().sendAirShipTeleportList(player);
 				break;
 			}
 			case 4: // Exit Airship
 			{
-				if (activeChar.getAirShip().isCaptain(activeChar))
+				if (player.getAirShip().isCaptain(player))
 				{
-					if (activeChar.getAirShip().setCaptain(null))
+					if (player.getAirShip().setCaptain(null))
 					{
-						activeChar.broadcastUserInfo();
+						player.broadcastUserInfo();
 					}
 				}
-				else if (activeChar.getAirShip().isInDock())
+				else if (player.getAirShip().isInDock())
 				{
-					activeChar.getAirShip().oustPlayer(activeChar);
+					player.getAirShip().oustPlayer(player);
 				}
 			}
 		}

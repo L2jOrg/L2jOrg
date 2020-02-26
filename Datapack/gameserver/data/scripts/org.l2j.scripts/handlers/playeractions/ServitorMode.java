@@ -29,23 +29,23 @@ import org.l2j.gameserver.network.SystemMessageId;
 public final class ServitorMode implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (!activeChar.hasServitors())
+		if (!player.hasServitors())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
 			return;
 		}
 		
-		switch (data.getOptionId())
+		switch (action.getOptionId())
 		{
 			case 1: // Passive mode
 			{
-				activeChar.getServitors().values().forEach(s ->
+				player.getServitors().values().forEach(s ->
 				{
 					if (s.isBetrayed())
 					{
-						activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+						player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 						return;
 					}
 					
@@ -55,11 +55,11 @@ public final class ServitorMode implements IPlayerActionHandler
 			}
 			case 2: // Defending mode
 			{
-				activeChar.getServitors().values().forEach(s ->
+				player.getServitors().values().forEach(s ->
 				{
 					if (s.isBetrayed())
 					{
-						activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+						player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 						return;
 					}
 					

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
@@ -8,6 +12,7 @@
 						<xs:attribute type="xs:nonNegativeInteger" name="id" use="required" />
 						<xs:attribute type="xs:token" name="handler" use="required" />
 						<xs:attribute type="xs:int" name="option" default="0" />
+						<xs:attribute type="xs:boolean" name="auto-use" default="false"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

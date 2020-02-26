@@ -31,26 +31,26 @@ import static org.l2j.gameserver.util.GameUtils.isPet;
 public final class PetAttack implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (!isPet(activeChar.getPet()))
+		if (!isPet(player.getPet()))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 			return;
 		}
 		
-		final Pet pet = activeChar.getPet();
+		final Pet pet = player.getPet();
 		if (pet.isUncontrollable())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_YOUR_PET_WHEN_ITS_HUNGER_GAUGE_IS_AT_0);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_YOUR_PET_WHEN_ITS_HUNGER_GAUGE_IS_AT_0);
 		}
 		else if (pet.isBetrayed())
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 		}
-		else if (pet.canAttack(activeChar.getTarget(), ctrlPressed))
+		else if (pet.canAttack(player.getTarget(), ctrlPressed))
 		{
-			pet.doAttack(activeChar.getTarget());
+			pet.doAttack(player.getTarget());
 		}
 	}
 }

@@ -3,6 +3,7 @@ package org.l2j.gameserver.engine.autoplay;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
@@ -62,13 +63,13 @@ public final class AutoPlayEngine {
         return switch (shortcut.getType()) {
             case ITEM -> handleAutoItem(player, shortcut, activate);
             case SKILL -> handleAutoSkill(player, shortcut);
-            case ACTION -> handleAutoAction(player, shortcut);
+            case ACTION -> handleAutoAction(shortcut);
             default -> false;
         };
     }
 
-    private boolean handleAutoAction(Player player, Shortcut shortcut) {
-        return false;
+    private boolean handleAutoAction(Shortcut shortcut) {
+        return ActionManager.getInstance().isAutoUseAction(shortcut.getShortcutId());
     }
 
     private boolean handleAutoSkill(Player player, Shortcut shortcut) {
@@ -171,7 +172,7 @@ public final class AutoPlayEngine {
                 }
 
                 var target = player.getTarget();
-                if(isNull(target) || (isMonster(target) && ((Monster) target).isDead()) || target.equals(player)) {
+                if((isNull(target) || (isMonster(target) && ((Monster) target).isDead()) || target.equals(player)) && !player.isTargetingDisabled()) {
                     var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
                     player.setTarget(monster);
                 }
@@ -237,7 +238,7 @@ public final class AutoPlayEngine {
         }
 
         private boolean canBeTargeted(Player player, AutoPlaySettings setting, Monster monster) {
-            return !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) &&
+            return  monster.isTargetable() && !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) &&
                     GeoEngine.getInstance().canSeeTarget(player, monster) && GeoEngine.getInstance().canMoveToTarget(player, monster);
         }
     }

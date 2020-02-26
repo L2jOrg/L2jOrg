@@ -1,49 +1,42 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
+/**
+ * @author JoeAlisson
+ */
 public final class Action extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Action.class);
 
-    private int _objectId;
-    @SuppressWarnings("unused")
-    private int _originX;
-    @SuppressWarnings("unused")
-    private int _originY;
-    @SuppressWarnings("unused")
-    private int _originZ;
-    private int _actionId;
+    private int objectId;
+    private int actionId;
 
     @Override
     public void readImpl() {
-        _objectId = readInt(); // Target object Identifier
-        _originX = readInt();
-        _originY = readInt();
-        _originZ = readInt();
-        _actionId = readByte(); // Action identifier : 0-Simple click, 1-Shift click
+        objectId = readInt(); // Target object Identifier
+        readInt(); // origin x
+        readInt(); // origin y
+        readInt(); // origin z
+        actionId = readByte(); // Action identifier : 0-Simple click, 1-Shift click
     }
 
     @Override
     public void runImpl() {
-        // Get the current Player of the player
-        final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
+        var player = client.getPlayer();
 
         if (player.inObserverMode()) {
             player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
@@ -63,17 +56,17 @@ public final class Action extends ClientPacket {
         }
 
         final WorldObject obj;
-        if (player.getTargetId() == _objectId) {
+        if (player.getTargetId() == objectId) {
             obj = player.getTarget();
-        } else if (player.isInAirShip() && (player.getAirShip().getHelmObjectId() == _objectId)) {
+        } else if (player.isInAirShip() && (player.getAirShip().getHelmObjectId() == objectId)) {
             obj = player.getAirShip();
         } else {
-            obj = World.getInstance().findObject(_objectId);
+            obj = World.getInstance().findObject(objectId);
         }
 
         // If object requested does not exist, add warn msg into logs
-        if (obj == null) {
-            // pressing e.g. pickup many times quickly would get you here
+        // pressing e.g. pickup many times quickly would get you here
+        if (isNull(obj)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -83,14 +76,9 @@ public final class Action extends ClientPacket {
             return;
         }
 
-        // Players can't interact with objects in the other instances
-        if (obj.getInstanceWorld() != player.getInstanceWorld()) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
+        // Players can't interact with objects in the other instances.
         // Only GMs can directly interact with invisible characters
-        if (!obj.isVisibleFor(player)) {
+        if (obj.getInstanceWorld() != player.getInstanceWorld() || !obj.isVisibleFor(player)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -104,7 +92,7 @@ public final class Action extends ClientPacket {
 
         player.onActionRequest();
 
-        switch (_actionId) {
+        switch (actionId) {
             case 0 -> obj.onAction(player);
             case 1 -> {
                 if (!player.isGM() && (!(isNpc(obj) && Config.ALT_GAME_VIEWNPC))) {
@@ -115,7 +103,7 @@ public final class Action extends ClientPacket {
             }
             default -> {
                 // Invalid action detected (probably client cheating), log this
-                LOGGER.warn("Character: {} requested invalid action: {}", player.getName(), _actionId);
+                LOGGER.warn("Character: {} requested invalid action: {}", player.getName(), actionId);
                 client.sendPacket(ActionFailed.STATIC_PACKET);
             }
         }

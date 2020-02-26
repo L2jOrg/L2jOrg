@@ -31,14 +31,14 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 public final class TacticalSignUse implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if ((!activeChar.isInParty() || !isCreature(activeChar.getTarget())))
+		if ((!player.isInParty() || !isCreature(player.getTarget())))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		activeChar.getParty().addTacticalSign(activeChar, data.getOptionId(), (Creature) activeChar.getTarget());
+		player.getParty().addTacticalSign(player, action.getOptionId(), (Creature) player.getTarget());
 	}
 }

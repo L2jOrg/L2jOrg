@@ -66,12 +66,8 @@ public final class AttackRequest extends ClientPacket {
             return;
         }
         // Players can't attack objects in the other instances
-        else if (target.getInstanceWorld() != activeChar.getInstanceWorld()) {
-            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
         // Only GMs can directly attack invisible characters
-        else if (!target.isVisibleFor(activeChar)) {
+        else if (target.getInstanceWorld() != activeChar.getInstanceWorld() || !target.isVisibleFor(activeChar)) {
             activeChar.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

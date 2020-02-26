@@ -32,40 +32,40 @@ import org.l2j.gameserver.network.SystemMessageId;
 public final class PetSkillUse implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (activeChar.getTarget() == null)
+		if (player.getTarget() == null)
 		{
 			return;
 		}
 		
-		final Pet pet = activeChar.getPet();
+		final Pet pet = player.getPet();
 		if (pet == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 		}
 		else if (pet.isUncontrollable())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_YOUR_PET_WHEN_ITS_HUNGER_GAUGE_IS_AT_0);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_YOUR_PET_WHEN_ITS_HUNGER_GAUGE_IS_AT_0);
 		}
 		else if (pet.isBetrayed())
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 		}
-		else if ((pet.getLevel() - activeChar.getLevel()) > 20)
+		else if ((pet.getLevel() - player.getLevel()) > 20)
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+			player.sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
 		}
 		else
 		{
-			final int skillLevel = PetDataTable.getInstance().getPetData(pet.getId()).getAvailableLevel(data.getOptionId(), pet.getLevel());
+			final int skillLevel = PetDataTable.getInstance().getPetData(pet.getId()).getAvailableLevel(action.getOptionId(), pet.getLevel());
 			if (skillLevel > 0)
 			{
-				pet.setTarget(activeChar.getTarget());
-				pet.useMagic(SkillEngine.getInstance().getSkill(data.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
+				pet.setTarget(player.getTarget());
+				pet.useMagic(SkillEngine.getInstance().getSkill(action.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
 			}
 			
-			if (data.getOptionId() == CommonSkill.PET_SWITCH_STANCE.getId())
+			if (action.getOptionId() == CommonSkill.PET_SWITCH_STANCE.getId())
 			{
 				pet.switchMode();
 			}
