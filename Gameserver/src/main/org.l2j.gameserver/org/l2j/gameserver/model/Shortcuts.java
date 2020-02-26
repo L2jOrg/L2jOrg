@@ -73,7 +73,7 @@ public class Shortcuts {
         Shortcut shortcut = null;
         var next = activeShortcuts.nextSetBit(nextAutoShortcut);
         if(next == -1) {
-            next = activeShortcuts.nextClearBit(nextAutoShortcut = 0);
+            next = activeShortcuts.nextSetBit(nextAutoShortcut = 0);
         }
         if(next >= 0) {
             shortcut = shortcuts.get(next);

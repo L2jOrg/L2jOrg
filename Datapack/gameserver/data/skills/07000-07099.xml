@@ -3,7 +3,7 @@
 	<skill id="7000" name="NPC Default" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -12,12 +12,11 @@
 	<skill id="7001" name="Dispel Buff" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="400"/>
 			<effect-point initial="100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -29,12 +28,11 @@
 	<skill id="7002" name="Dispel Debuff" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="400"/>
 			<effect-point initial="100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -46,12 +44,11 @@
 	<skill id="7003" name="Dispel All" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="400"/>
 			<effect-point initial="100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -63,13 +60,12 @@
 	<skill id="7004" name="Dispel Petrification" max-level="2" action="A1" type="MAGIC">
 	<!-- Cures Petrification. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="566"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="566000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -87,21 +83,20 @@
 		level 4: Momentarily allows party members to partially restore HP using damage inflicted upon the enemy with a certain probability.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="74"/>
 			<cast-range initial="400"/>
 			<reuse initial="20000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="900"/>
-			<hit-time initial="655000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="55"/>
 			<mana initial="272"/>
 		</consume>
 		<target type="TARGET" scope="PARTY" object="FRIEND" range="200" />
-		<abnormal type="VAMPIRIC_ATTACK" >
+		<abnormal type="VAMPIRIC_ATTACK">
 			<level initial="4"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -118,19 +113,18 @@
 	<skill id="7006" name="The Love of Pa'agrio" max-level="13" action="A2" type="MAGIC">
 	<!-- Momentarily increases target's allies HP recovery bonus. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="400"/>
 			<reuse initial="20000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="900"/>
-			<hit-time initial="655000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="265"/>
 		</consume>
 		<target type="TARGET" scope="PLEDGE" object="FRIEND" range="200" />
-		<abnormal type="LIFE_FORCE_OTHERS" >
+		<abnormal type="LIFE_FORCE_OTHERS">
 			<level initial="6"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -145,14 +139,13 @@
 		level 4: Sets the target's allies on fire. Momentarily and continuously decreases the enemies' HP.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="74"/>
 			<cast-range initial="400"/>
 			<reuse initial="20000"/>
 			<effect-point initial="-409"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-409000"/>
-			<activate-rate initial="35"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -169,16 +162,15 @@
 	<skill id="7008" name="Feather of Blessing" debuff="true" action="A2">
 	<!-- Once used, the Feather of Blessing cannot be reused for another 5 minutes. -->
 		<icon initial="icon.blessed_feather_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-2"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="9"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -187,7 +179,7 @@
 	<skill id="7009" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -198,7 +190,7 @@
 	<skill id="7010" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -209,7 +201,7 @@
 	<skill id="7011" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -220,7 +212,7 @@
 	<skill id="7012" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -231,7 +223,7 @@
 	<skill id="7013" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -242,7 +234,7 @@
 	<skill id="7014" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Damage by +10%%. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -253,7 +245,7 @@
 	<skill id="7015" name="Test - P. Critical Damage Down" action="T">
 	<!-- Received P. Critical Damage by -50%%. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -264,7 +256,7 @@
 	<skill id="7016" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Damage by +100. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -275,7 +267,7 @@
 	<skill id="7017" name="Test - P. Critical Damage Down" action="T">
 	<!-- Received P. Critical Damage by +200. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -286,7 +278,7 @@
 	<skill id="7018" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Rate +10%%. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -297,7 +289,7 @@
 	<skill id="7019" name="Test - P. Critical Down" action="T">
 	<!-- Received P. Critical Rate -50%%. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -308,7 +300,7 @@
 	<skill id="7020" name="Test - P. Critical Damage Up" action="T">
 	<!-- Received P. Critical Rate +100. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -319,7 +311,7 @@
 	<skill id="7021" name="Test - P. CriticalDown" action="T">
 	<!-- Received P. Critical Rate -200. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -330,10 +322,11 @@
 	<skill id="7022" name="Test - Find Hidden Door" action="A1">
 	<!-- Look for hidden door. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -343,7 +336,7 @@
 	<skill id="7023" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -354,7 +347,7 @@
 	<skill id="7024" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -365,7 +358,7 @@
 	<skill id="7025" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -376,7 +369,7 @@
 	<skill id="7026" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -387,7 +380,7 @@
 	<skill id="7027" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -398,7 +391,7 @@
 	<skill id="7028" name="Stationary NPCs">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -421,12 +414,11 @@
 		level 4: Obtains great combat power.
 	 -->
 		<icon initial="icon.skill7029"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="NONE" />
@@ -434,7 +426,7 @@
 			<effect name="MpConsumePerLevel" ticks="5">
 				<power initial="1.0E-4"/>
 			</effect>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power>
 					<value level="3">999900.0</value>
 					<value level="4">999999.0</value>
@@ -487,11 +479,12 @@
 	<skill id="7030" name="Summon King Bugbear" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="4500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -501,7 +494,7 @@
 		</consume>
 		<target />
 		<effects>
-			<summon consume-item="0" life-time="1200000">
+			<summon consume-item="0" life-time="1200000000">
 				<npc initial="20150.0"/>
 				<consume-count initial="1.0"/>
 			</summon>
@@ -510,11 +503,12 @@
 	<skill id="7031" name="Summon Skeleton Royal Guard" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="4500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -527,11 +521,12 @@
 	<skill id="7032" name="Summon Hunter Gargoyle" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="4500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -541,7 +536,7 @@
 		</consume>
 		<target />
 		<effects>
-			<summon consume-item="0" life-time="1200000">
+			<summon consume-item="0" life-time="1200000000">
 				<npc initial="20241.0"/>
 				<consume-count initial="1.0"/>
 			</summon>
@@ -550,7 +545,7 @@
 	<skill id="7033" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -561,7 +556,7 @@
 	<skill id="7034" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -572,7 +567,7 @@
 	<skill id="7035" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -583,7 +578,7 @@
 	<skill id="7036" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -594,7 +589,7 @@
 	<skill id="7037" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -605,7 +600,7 @@
 	<skill id="7038" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -616,7 +611,7 @@
 	<skill id="7039" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -627,7 +622,7 @@
 	<skill id="7040" name="not_used">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -642,26 +637,25 @@
 		level 3: The GM is always by your side. Increases P. Critical Rate +30%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="CRITICAL_PROB_UP" >
+		<abnormal type="CRITICAL_PROB_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="30.0"/>
 			</stat-hp-based>
 		</effects>
@@ -673,20 +667,19 @@
 		level 3: The GM is always by your side. Increases P. Critical Damage +35%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="56"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="CRITICAL_DMG_UP" >
+		<abnormal type="CRITICAL_DMG_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -704,26 +697,25 @@
 		level 3: The GM is always by your side. Increases Atk. Spd. by 33%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="ATTACK_TIME_DOWN" >
+		<abnormal type="ATTACK_TIME_DOWN">
 			<level initial="3"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="33.0"/>
 			</stat-modify>
 		</effects>
@@ -735,26 +727,25 @@
 		level 3: The GM is always by your side. Increases P. Accuracy +4 for 8 hours.
 	 -->
 		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="56"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="HIT_UP" >
+		<abnormal type="HIT_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -766,26 +757,25 @@
 		level 3: The GM is always by your side. Increases Max HP by 35%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1045"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="72"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MAX_HP_UP" >
+		<abnormal type="MAX_HP_UP">
 			<level initial="7"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -797,26 +787,25 @@
 		level 3: The GM is always by your side. Increases Max MP by 35%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1048"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="70"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MAX_MP_UP" >
+		<abnormal type="MAX_MP_UP">
 			<level initial="7"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -828,26 +817,26 @@
 		level 3: The GM is always by your side. Increase P. Evasion by 4 for 8 hours.
 	 -->
 		<icon initial="icon.skill1087"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="AVOID_UP" >
+		<abnormal type="AVOID_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -858,26 +847,25 @@
 		level 3: The GM is always by your side. Increases Casting Spd. +30%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="48"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="CASTING_TIME_DOWN" >
+		<abnormal type="CASTING_TIME_DOWN">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
@@ -889,26 +877,25 @@
 		level 3: The GM is always by your side. Weight Penalty Segment +9000 for 8 hours.
 	 -->
 		<icon initial="icon.skill1257"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="DECREASE_WEIGHT_PENALTY" >
+		<abnormal type="DECREASE_WEIGHT_PENALTY">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="WEIGHT_PENALTY">
+			<stat-modify stat="WEIGHT_PENALTY" stat-add="WEIGHT_PENALTY">
 				<power initial="9000.0"/>
 			</stat-modify>
 		</effects>
@@ -920,26 +907,25 @@
 		level 3: The GM is always by your side. Increases P. Atk. by 15%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="40"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="PA_UP" >
+		<abnormal type="PA_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="15.0"/>
 			</stat-modify>
 		</effects>
@@ -951,26 +937,25 @@
 		level 3: The GM is always by your side. Increases P. Def. by 15%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="44"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="PD_UP" >
+		<abnormal type="PD_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="15.0"/>
 			</stat-modify>
 		</effects>
@@ -982,26 +967,25 @@
 		level 3: The GM is always by your side. Increases M. Def. by 30%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1036"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MD_UP" >
+		<abnormal type="MD_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
@@ -1013,20 +997,19 @@
 		level 3: The GM is always by your side. For 8 hours, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability.
 	 -->
 		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="72"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="VAMPIRIC_ATTACK" >
+		<abnormal type="VAMPIRIC_ATTACK">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -1044,26 +1027,25 @@
 		level 3: The GM is always by your side. Increases M. Atk. by 75%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MA_UP" >
+		<abnormal type="MA_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="75.0"/>
 			</stat-modify>
 		</effects>
@@ -1075,20 +1057,19 @@
 		level 3: The GM is always by your side. Increases Speed by 33 for 8 hours.
 	 -->
 		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="30"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="SPEED_UP" >
+		<abnormal type="SPEED_UP">
 			<level initial="3"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -1106,26 +1087,25 @@
 		level 3: The GM is always by your side. For 8 hours, decreases a party member's P. Def. -8%%, M. Def. -16%%, and P. evasion -4. Increases P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8.
 	 -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="BERSERKER" >
+		<abnormal type="BERSERKER">
 			<level initial="3"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="8.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1157,26 +1137,25 @@
 		level 3: The GM is always by your side. Increases P. Atk. by 10%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1388"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="74"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="PA_PD_UP" >
+		<abnormal type="PA_PD_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
@@ -1188,26 +1167,25 @@
 		level 3: The GM is always by your side. Increases P. Def. by 15%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1389"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="74"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="PA_PD_UP" >
+		<abnormal type="PA_PD_UP">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="15.0"/>
 			</stat-modify>
 		</effects>
@@ -1219,26 +1197,25 @@
 		level 3: The GM is always by your side. Increases M. Critical Rate +20 for 8 hours.
 	 -->
 		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="70"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MAGIC_CRITICAL_UP" >
+		<abnormal type="MAGIC_CRITICAL_UP">
 			<level initial="3"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -1250,20 +1227,19 @@
 		level 3: The GM is always by your side. For 8 hours, decreases physical skill MP consumption by 20%%, magic skill's MP consumption by 10%%, and song/dance skill's MP consumption by 20%%.
 	 -->
 		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="74"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="CHEAP_MAGIC" >
+		<abnormal type="CHEAP_MAGIC">
 			<level initial="4"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -1281,27 +1257,26 @@
 		level 3: The GM is always by your side. MP Recovery Bonus +20%%, M. Atk. +15%%, M. Def. +15%%, Casting Spd. +10%%, Debuff Resistance +10%%, and Skill MP Consumption -5%% for 8 hours with the help of a great spirit.
 	 -->
 		<icon initial="icon.skill1355"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1"/>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1343,26 +1318,25 @@
 		level 3: The GM is always by your side. Max HP +15%%, HP Recovery Bonus +20%%, P. Atk. +50%%, P. Def. +15%%, Atk. Spd. +10%%, and Debuff Resistance +10%% for 8 hours with the help of a great spirit.
 	 -->
 		<icon initial="icon.skill1356"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1410,20 +1384,19 @@
 		level 3: GM is always by your side. For 8 hours, party members' P./M. Accuracy +3, P./M. Evasion +3, P./M. Critical Rate +10%%, P./M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, P. Atk. against Raid Boss +15%%.
 	 -->
 		<icon initial="icon.skill1357"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -1432,7 +1405,7 @@
 			<vampiric-attack chance="30">
 				<power initial="5.0"/>
 			</vampiric-attack>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1456,10 +1429,10 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-10.0"/>
 			</resist-abnormal-by-category>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="20.0"/>
 			</stat-hp-based>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
@@ -1474,29 +1447,28 @@
 		level 3: The GM is always by your side. Max CP +15%%, CP Recovery Bonus +40%%, P. Accuracy +4, P. Evasion +4, P. Atk./M. Atk. +20%%, Atk. Spd./Casting Spd. +10%%, P. Critical/M. Critical Rate +20%%, and P. Critical Damage/M. Critical Damage +15%% for 8 hours with the help of a great spirit.
 	 -->
 		<icon initial="icon.skill1363"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="true">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER" heal="true">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1534,11 +1506,12 @@
 	<skill id="7065" name="Test - Charge" action="DA1">
 	<!-- Charges into the enemy. -->
 		<icon initial="icon.skill0000"/>
-		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="400"/>
 			<cool-time initial="200"/>
 			<effect-range initial="600"/>
+			<hit-time initial="800"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1549,12 +1522,12 @@
 	<skill id="7066" name="Test Stun Charge" debuff="true" action="DA2">
 	<!-- Charges into enemy and Stuns. -->
 		<icon initial="icon.skill0000"/>
-		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
 			<magic-level initial="75"/>
 			<cast-range initial="400"/>
 			<cool-time initial="200"/>
 			<effect-range initial="600"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="800"/>
 		</attributes>
 		<consume>
 			<mana initial="50"/>
@@ -1565,7 +1538,6 @@
 			<time initial="9"/>
 			<chance initial="50"/>
 		</abnormal>
-
 		<effects>
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
@@ -1575,12 +1547,12 @@
 	<skill id="7067" name="Test Range Charge" debuff="true" action="DA2">
 	<!-- Charges into enemy and causes bleeding -->
 		<icon initial="icon.skill0000"/>
-		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
 			<magic-level initial="75"/>
 			<cast-range initial="400"/>
 			<cool-time initial="200"/>
 			<effect-range initial="600"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="800"/>
 		</attributes>
 		<consume>
 			<mana initial="50"/>
@@ -1591,44 +1563,43 @@
 			<time initial="20"/>
 			<chance initial="100"/>
 		</abnormal>
-
 	</skill>
 	<skill id="7068" name="Test Steal Abnormal State" action="A1" type="MAGIC">
 	<!-- Steals enemy's abnormal state. -->
 		<icon initial="icon.skill0000"/>
-		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<cool-time initial="200"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="100"/>
 		</consume>
 		<target type="ENEMY" />
-
 	</skill>
 	<skill id="7069" name="Test Abnormal State DD" action="A1" type="MAGIC">
 	<!-- Inflicts damage according to the enemy's number of abnormal states. -->
 		<icon initial="icon.skill0000"/>
-		<attributes next-action="ATTACK" magic-critical-rate="-5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<cool-time initial="200"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="100"/>
 		</consume>
 		<target type="ENEMY" />
-
 	</skill>
 	<skill id="7070" name="Test - Soul Eating Passive">
 	<!-- Absorbs soul. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1639,11 +1610,12 @@
 	<skill id="7071" name="Test - Soul Transfer" action="A1">
 	<!-- Transfers soul to party member. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1651,18 +1623,17 @@
 			<hp initial="20"/>
 		</consume>
 		<target type="TARGET" />
-
 	</skill>
 	<skill id="7075" name="Test - Distance DD" action="A1" type="MAGIC">
 	<!-- Magic damage changes by distance. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="17"/>
 			<cast-range initial="600"/>
 			<reuse initial="6000"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-1000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1675,14 +1646,13 @@
 	<skill id="7076" name="Test - Delay Debuff" debuff="true" action="A2">
 	<!-- Bleeds for 20 seconds and gets Stunned. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
 			<magic-level initial="70"/>
 			<cast-range initial="40"/>
 			<cool-time initial="720"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-1000"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="30"/>
@@ -1697,11 +1667,10 @@
 	<skill id="7077" name="Test - Delay Debuff - Call" debuff="true" action="A2">
 	<!-- Currently stunned. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="70"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<abnormal type="STUN" visual="STUN" >
@@ -1713,19 +1682,18 @@
 	<skill id="7079" name="Test - Party Damage Absorb" action="A2">
 	<!-- Transfers party damage to tanker. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="100"/>
 		</consume>
 		<target scope="POINT_BLANK" object="FRIEND" range="1000" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1734,19 +1702,18 @@
 	<skill id="7080" name="Test - General Attack Prohibited" debuff="true" action="A2">
 	<!-- Cannot perform general attack. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="70"/>
 			<cast-range initial="600"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="30"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="40"/>
 			<chance initial="-1"/>
@@ -1755,14 +1722,14 @@
 	<skill id="7081" name="Effect Test - Land Shot" action="A1">
 	<!-- Shoots toward ground. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="500"/>
 			<reuse initial="25000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-1000"/>
+			<hit-time initial="3200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1773,13 +1740,13 @@
 	<skill id="7082" name="Effect Test - Chain Lightning" action="A1" type="MAGIC">
 	<!-- Chain Lightning -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="500"/>
 			<reuse initial="20000"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-1000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -1792,12 +1759,11 @@
 	<skill id="7083" name="Test - Trap Skill" action="A1" type="MAGIC">
 	<!-- Trap Range Skill -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="38"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1807,12 +1773,11 @@
 	<skill id="7084" name="Test - Trap Skill" action="CA1" type="MAGIC">
 	<!-- Trap Range Skill -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="38"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1823,12 +1788,12 @@
 	<skill id="7085" name="Self-Destruct Explosion" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="50"/>
@@ -1841,12 +1806,11 @@
 	<skill id="7086" name="Last Stand_test" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" />
@@ -1854,12 +1818,12 @@
 	<skill id="7087" name="Chain Magic - Dark Explosion_test" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="500"/>
 			<effect-point initial="-1063"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-1063000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="50"/>
@@ -1876,21 +1840,20 @@
 		level 3: The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 8 hours, increases P. Atk. by 15%% and P. Def. by 15%%.
 	 -->
 		<icon initial="icon.skill1499"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="70"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1"/>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="IMPROVE_PA_PD_UP" >
+		<abnormal type="IMPROVE_PA_PD_UP">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -1922,38 +1885,37 @@
 		level 3: The GM is always by your side. Combines the M. Atk. Boost and M. Def. Boost to create a more advanced magic ability boost effect. For 8 hours, M. Atk. +75%% and M. Def. +30%%.
 	 -->
 		<icon initial="icon.skill1500"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="74"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1"/>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="IMPROVE_MA_MD_UP" >
+		<abnormal type="IMPROVE_MA_MD_UP">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<dispel>
-				<abnormal type="MA_UP">
+				<abnormal type="MD_UP">
 					<power initial="9.0"/>
 				</abnormal>
-				<abnormal type="MD_UP">
+				<abnormal type="MA_UP">
 					<power initial="9.0"/>
 				</abnormal>
 			</dispel>
 			<block-abnormal>
-				<abnormals>MA_UP MD_UP</abnormals>
+				<abnormals>MD_UP MA_UP</abnormals>
 			</block-abnormal>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="75.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -1968,21 +1930,20 @@
 		level 3: The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 8 hours, increases Max HP by 35%% and Max MP by 35%%.
 	 -->
 		<icon initial="icon.skill1501"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="72"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1"/>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="IMPROVE_HP_MP_UP" >
+		<abnormal type="IMPROVE_HP_MP_UP">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -2014,41 +1975,40 @@
 		level 3: The GM is always by your side. Combines the P. Critical Rate Boost and P. Critical Damage Boost to create a more advanced P. Critical boost effect. For 8 hours, P. Critical Rate +30%% and P. Critical Damage +35%%.
 	 -->
 		<icon initial="icon.skill1502"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="74"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1"/>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="IMPROVE_CRT_RATE_DMG_UP" >
+		<abnormal type="IMPROVE_CRT_RATE_DMG_UP">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<dispel>
-				<abnormal type="CRITICAL_PROB_UP">
+				<abnormal type="CRITICAL_DMG_UP">
 					<power initial="9.0"/>
 				</abnormal>
-				<abnormal type="CRITICAL_DMG_UP">
+				<abnormal type="CRITICAL_PROB_UP">
 					<power initial="9.0"/>
 				</abnormal>
 			</dispel>
 			<block-abnormal>
-				<abnormals>CRITICAL_PROB_UP CRITICAL_DMG_UP</abnormals>
+				<abnormals>CRITICAL_DMG_UP CRITICAL_PROB_UP</abnormals>
 			</block-abnormal>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="35.0"/>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="30.0"/>
 			</stat-hp-based>
 		</effects>
@@ -2060,21 +2020,20 @@
 		level 3: The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 8 hours, increases shield defense rate by 30%% and Shield Defense by 50%%.
 	 -->
 		<icon initial="icon.skill1503"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="70"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1"/>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="IMPROVE_SHIELD_RATE_DEFENCE_UP" >
+		<abnormal type="IMPROVE_SHIELD_RATE_DEFENCE_UP">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -2091,7 +2050,7 @@
 			<block-abnormal>
 				<abnormals>SHIELD_PROB_UP SHIELD_DEFENCE_UP</abnormals>
 			</block-abnormal>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 			<stat-modify stat="SHIELD_DEFENCE" mode="PER">
@@ -2106,41 +2065,41 @@
 		level 3: The GM is always by your side. Combines the Movement Speed Boost and P. Evasion Boost to create a more advanced movement boost effect. For 8 hours, Movement Speed +33 and P. Evasion +4.
 	 -->
 		<icon initial="icon.skill1504"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="72"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1"/>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="IMPROVE_SPEED_AVOID_UP" >
+		<abnormal type="IMPROVE_SPEED_AVOID_UP">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<dispel>
-				<abnormal type="SPEED_UP">
+				<abnormal type="AVOID_UP">
 					<power initial="9.0"/>
 				</abnormal>
-				<abnormal type="AVOID_UP">
+				<abnormal type="SPEED_UP">
 					<power initial="9.0"/>
 				</abnormal>
 			</dispel>
 			<block-abnormal>
-				<abnormals>SPEED_UP AVOID_UP</abnormals>
+				<abnormals>AVOID_UP SPEED_UP</abnormals>
 			</block-abnormal>
 			<speed>
 				<power initial="33.0"/>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -2151,30 +2110,29 @@
 		level 3: The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5%% and P. Critical Rate by 20%% for 8 hours.
 	 -->
 		<icon initial="icon.skill0825"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="49"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="DWARF_ATTACK_BUFF" >
+		<abnormal type="DWARF_ATTACK_BUFF">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="5.0"/>
 				<weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER </weapon-type>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="20.0"/>
 				<weapon-type>SWORD DAGGER SPEAR FIST DUAL RAPIER ANCIENT_SWORD DUAL_DAGGER </weapon-type>
 			</stat-hp-based>
@@ -2187,26 +2145,25 @@
 		level 3: The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10%% for 8 hours.
 	 -->
 		<icon initial="icon.skill0828"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="46"/>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="DWARF_DEFENCE_BUFF" >
+		<abnormal type="DWARF_DEFENCE_BUFF">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="10.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
@@ -2225,14 +2182,13 @@
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="PRESERVE_ABNORMAL" >
+		<abnormal type="PRESERVE_ABNORMAL">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -2248,16 +2204,15 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="709"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="709000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="PARTY" object="FRIEND" range="2000" />
 		<effects>
 			<dispel>
-				<abnormal type="DANCE_OF_SHADOW">
+				<abnormal type="STEALTH">
 					<power initial="-1.0"/>
 				</abnormal>
-				<abnormal type="STEALTH">
+				<abnormal type="DANCE_OF_SHADOW">
 					<power initial="-1.0"/>
 				</abnormal>
 			</dispel>
@@ -2266,12 +2221,12 @@
 	<skill id="7098" name="Clan-exclusive Pet Heal" action="A1" type="MAGIC">
 	<!-- Recovers all of your HP. Power 3000 -->
 		<icon initial="icon.skill1401"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-700000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2287,13 +2242,12 @@
 	<skill id="7099" name="Clan-exclusive Pet Fear" action="A2" type="MAGIC">
 	<!-- Inflicts fear on the target for 3 seconds. -->
 		<icon initial="icon.skill4108"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT">
 			<magic-level initial="85"/>
 			<cast-range initial="900"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-700000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="5"/>

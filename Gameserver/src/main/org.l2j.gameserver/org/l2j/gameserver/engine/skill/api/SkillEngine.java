@@ -179,7 +179,7 @@ public class SkillEngine extends EffectParser {
     }
 
     private void parseSkillEffects(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
-        for(var child = node.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             if("effect".equals(child.getNodeName())) {
                 parseNamedEffect(child, skill, maxLevel);
             } else {
@@ -218,7 +218,7 @@ public class SkillEngine extends EffectParser {
         var staticStatSet = new StatsSet(parseAttributes(node));
 
         if(node.hasChildNodes()) {
-            IntMap<StatsSet> levelInfo = parseEffectChildNodes(node, startLevel, staticStatSet);
+            IntMap<StatsSet> levelInfo = parseEffectChildNodes(node, startLevel, stopLevel, staticStatSet);
 
             if(levelInfo.isEmpty()) {
                 addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
@@ -245,17 +245,17 @@ public class SkillEngine extends EffectParser {
     private void addStaticEffect(Function<StatsSet, AbstractEffect> factory, Skill skill, int startLevel, int stopLevel, EffectScope scope, StatsSet staticStatSet) throws CloneNotSupportedException {
         var effect = factory.apply(staticStatSet);
         for (int i = startLevel; i <= stopLevel ; i++) {
-            var sk = getOrCloneSkillBasedOnLast(skill.getId(), i);
+            var sk = getOrCloneSkillBasedOnLast(skill.getId(), i, false, true);
             sk.addEffect(scope, effect);
         }
     }
 
     private void parseSkillAbnormal(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
-        for(var child = node.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             switch (child.getNodeName()) {
-                case "level" -> parseMappedInt(node, skill, maxLevel, skill::setAbnormalLevel, (level, s) -> s.setAbnormalLevel(level));
-                case "time" -> parseMappedInt(node, skill, maxLevel, skill::setAbnormalTime, (time, s) -> s.setAbnormalTime(time));
-                case "chance" -> parseMappedInt(node, skill, maxLevel, skill::setAbnormalChance, (chance, s) -> s.setAbnormalChance(chance));
+                case "level" -> parseMappedInt(child, skill, maxLevel, skill::setAbnormalLevel, (level, s) -> s.setAbnormalLevel(level));
+                case "time" -> parseMappedInt(child, skill, maxLevel, skill::setAbnormalTime, (time, s) -> s.setAbnormalTime(time));
+                case "chance" -> parseMappedInt(child, skill, maxLevel, skill::setAbnormalChance, (chance, s) -> s.setAbnormalChance(chance));
             }
         }
     }
@@ -263,11 +263,11 @@ public class SkillEngine extends EffectParser {
     private void parseSkillConsume(Node node, Skill skill, int maxLevel) throws CloneNotSupportedException {
         for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             switch (child.getNodeName()) {
-                case "mana-init" -> parseMappedInt(node, skill, maxLevel, skill::setManaInitConsume, (consume, s) -> s.setManaInitConsume(consume));
-                case "mana" -> parseMappedInt(node, skill, maxLevel, skill::setManaConsume, (consume, s) -> s.setManaConsume(consume));
-                case "hp" -> parseMappedInt(node, skill, maxLevel, skill::setHpConsume, (consume, s) -> s.setHpConsume(consume));
-                case "item" -> parseMappedInt(node, skill, maxLevel, skill::setItemConsume, (item, s) -> s.setItemConsume(item));
-                case "item-count" -> parseMappedInt(node, skill, maxLevel, skill::setItemConsumeCount, (count, s) -> s.setItemConsume(count));
+                case "mana-init" -> parseMappedInt(child, skill, maxLevel, skill::setManaInitConsume, (consume, s) -> s.setManaInitConsume(consume));
+                case "mana" -> parseMappedInt(child, skill, maxLevel, skill::setManaConsume, (consume, s) -> s.setManaConsume(consume));
+                case "hp" -> parseMappedInt(child, skill, maxLevel, skill::setHpConsume, (consume, s) -> s.setHpConsume(consume));
+                case "item" -> parseMappedInt(child, skill, maxLevel, skill::setItemConsume, (item, s) -> s.setItemConsume(item));
+                case "item-count" -> parseMappedInt(child, skill, maxLevel, skill::setItemConsumeCount, (count, s) -> s.setItemConsumeCount(count));
             }
         }
     }
@@ -371,9 +371,9 @@ public class SkillEngine extends EffectParser {
                 case "magic-level" -> parseMappedInt(node, skill, maxLevel, skill::setMagicLevel, (magicLevel, s) -> s.setMagicLevel(magicLevel));
                 case "cast-range" -> parseMappedInt(node, skill, maxLevel, skill::setCastRange, (range, s) -> s.setCastRange(range));
                 case "reuse" -> parseMappedInt(node, skill, maxLevel, skill::setReuse, (reuse, s) -> s.setReuse(reuse));
-                case "cool-time" -> parseMappedInt(node, skill, maxLevel, skill::setCoolTime, (time, s) -> s.setReuse(time));
+                case "cool-time" -> parseMappedInt(node, skill, maxLevel, skill::setCoolTime, (time, s) -> s.setCoolTime(time));
                 case "effect-point" -> parseMappedInt(node, skill, maxLevel, skill::setEffectPoint, (points, s) -> s.setEffectPoint(points));
-                case "effect-range" -> parseMappedInt(node, skill, maxLevel, skill::setEffectRange, (range, s) -> s.setEffectPoint(range));
+                case "effect-range" -> parseMappedInt(node, skill, maxLevel, skill::setEffectRange, (range, s) -> s.setEffectRange(range));
                 case "hit-time" -> parseMappedInt(node, skill, maxLevel, skill::setHitTime, (time, s) -> s.setHitTime(time));
                 case "activate-rate" -> parseMappedInt(node, skill, maxLevel, skill::setActivateRate, (rate, s) -> s.setActivateRate(rate));
             }
@@ -382,18 +382,40 @@ public class SkillEngine extends EffectParser {
 
     private void parseMappedInt(Node node, Skill skill, int maxLevel, IntConsumer setter, IntBiConsumer<Skill> skillSetter) throws CloneNotSupportedException {
         int lastValue = parseInt(node.getAttributes(), "initial");
+        var lastLevel = skill.getLevel();
         setter.accept(lastValue);
+
         for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             if ("value".equals(child.getNodeName())) {
                 var value = Integer.parseInt(child.getTextContent());
                 if (lastValue != value) {
-                    lastValue = value;
                     var level = parseInt(child.getAttributes(), "level");
-                    if(level <= maxLevel) {
+
+                    var hash = skillHashCode(skill.getId(), ++lastLevel);
+                    var tmp = skills.get(hash);
+
+                    while (nonNull(tmp) && lastLevel++ < level) {
+                        skillSetter.accept(lastValue, tmp);
+                        tmp = skills.get(++hash);
+                    }
+
+                    lastValue = value;
+                    if (level <= maxLevel) {
                         var newSkill = getOrCloneSkillBasedOnLast(skill.getId(), level);
                         skillSetter.accept(lastValue, newSkill);
+                        lastLevel = level;
                     }
                 }
+            }
+        }
+
+        if(lastLevel < maxLevel) {
+            var hash = skillHashCode(skill.getId(), ++lastLevel);
+            var tmp = skills.get(hash);
+
+            while (nonNull(tmp) && lastLevel++ <= maxLevel) {
+                skillSetter.accept(lastValue, tmp);
+                tmp = skills.get(++hash);
             }
         }
     }

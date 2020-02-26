@@ -3,7 +3,7 @@
 	<skill id="13648" name="Equip Lv. 5 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i06"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -13,11 +13,10 @@
 	<skill id="13649" name="Unequip Lv. 5 Brooch" action="A1">
 	<!-- The brooch's radiant light fades. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -25,7 +24,7 @@
 	<skill id="13650" name="Equip Lv. 4 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i05"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -35,11 +34,10 @@
 	<skill id="13651" name="Unequip Lv. 4 Brooch" action="A1">
 	<!-- The brooch’s brilliant light fades. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -47,7 +45,7 @@
 	<skill id="13652" name="Equip Lv. 3 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -57,11 +55,10 @@
 	<skill id="13653" name="Unequip Lv. 3 Brooch" action="A1">
 	<!-- The brooch’s brilliant light fades. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -69,7 +66,7 @@
 	<skill id="13654" name="Equip Lv. 2 Brooch" action="A1">
 	<!-- A radiant light is emanating from the brooch. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -79,11 +76,10 @@
 	<skill id="13655" name="Unequip Lv. 2 Brooch" action="A1">
 	<!-- The brooch’s brilliant light fades. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -91,14 +87,14 @@
 	<skill id="13656" name="Brooch Lv. 1">
 	<!-- 2 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
+			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -106,14 +102,14 @@
 	<skill id="13657" name="Brooch Lv. 2">
 	<!-- 3 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
+			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
 				<power initial="3.0"/>
 			</stat-modify>
 		</effects>
@@ -121,14 +117,14 @@
 	<skill id="13658" name="Brooch Lv. 3">
 	<!-- 4 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
+			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -136,14 +132,14 @@
 	<skill id="13659" name="Brooch Lv. 4">
 	<!-- 5 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i05"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
+			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
@@ -151,14 +147,14 @@
 	<skill id="13660" name="Brooch Lv. 5">
 	<!-- 6 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i06"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
+			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
 				<power initial="6.0"/>
 			</stat-modify>
 		</effects>
@@ -176,7 +172,7 @@
 			<value level="4">icon.etc_bm_brooch_lavianrose_i05</value>
 			<value level="5">icon.etc_bm_brooch_lavianrose_i06</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

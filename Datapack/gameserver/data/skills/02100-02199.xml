@@ -3,10 +3,11 @@
 	<skill id="2100" name="Escape (1-second)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -20,7 +21,7 @@
 	<skill id="2103" name="Mysterious Potion" action="A2">
 	<!-- Enlarges the user's head. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -36,7 +37,7 @@
 	<skill id="2104" name="Greater Soulshot Compressed Package (No-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -53,7 +54,7 @@
 	<skill id="2105" name="Greater Soulshot Compressed Package (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -70,7 +71,7 @@
 	<skill id="2106" name="Greater Soulshot Compressed Package (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -87,7 +88,7 @@
 	<skill id="2107" name="Greater Soulshot Compressed Package (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -104,7 +105,7 @@
 	<skill id="2108" name="Greater Soulshot Compressed Package (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -121,7 +122,7 @@
 	<skill id="2110" name="Greater Spiritshot Compressed Package (No-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -138,7 +139,7 @@
 	<skill id="2111" name="Greater Spiritshot Compressed Package (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -155,7 +156,7 @@
 	<skill id="2112" name="Greater Spiritshot Compressed Package (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -172,7 +173,7 @@
 	<skill id="2113" name="Greater Spiritshot Compressed Package (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -189,7 +190,7 @@
 	<skill id="2114" name="Greater Spiritshot Compressed Package (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -206,7 +207,7 @@
 	<skill id="2116" name="Greater Blessed Spiritshot Compressed Package (No-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -223,7 +224,7 @@
 	<skill id="2117" name="Greater Blessed Spiritshot Compressed Package (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -240,7 +241,7 @@
 	<skill id="2118" name="Greater Blessed Spiritshot Compressed Package (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -257,7 +258,7 @@
 	<skill id="2119" name="Greater Blessed Spiritshot Compressed Package (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -274,7 +275,7 @@
 	<skill id="2120" name="Greater Blessed Spiritshot Compressed Package (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -291,10 +292,11 @@
 	<skill id="2122" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -311,10 +313,11 @@
 	<skill id="2123" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -331,10 +334,11 @@
 	<skill id="2124" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -351,10 +355,11 @@
 	<skill id="2125" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -371,10 +376,11 @@
 	<skill id="2126" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -391,10 +397,11 @@
 	<skill id="2127" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -411,10 +418,11 @@
 	<skill id="2128" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -431,10 +439,11 @@
 	<skill id="2129" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -451,10 +460,11 @@
 	<skill id="2130" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -471,10 +481,11 @@
 	<skill id="2131" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -491,10 +502,11 @@
 	<skill id="2132" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -511,10 +523,11 @@
 	<skill id="2133" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -531,10 +544,11 @@
 	<skill id="2134" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -554,10 +568,11 @@
 	<skill id="2135" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -577,7 +592,7 @@
 	<skill id="2136" name="Rice Cake" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -596,7 +611,7 @@
 	<skill id="2140" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -607,7 +622,7 @@
 	<skill id="2141" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -618,7 +633,7 @@
 	<skill id="2142" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -629,7 +644,7 @@
 	<skill id="2143" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -640,7 +655,7 @@
 	<skill id="2144" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -651,7 +666,7 @@
 	<skill id="2145" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -662,7 +677,7 @@
 	<skill id="2146" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -673,7 +688,7 @@
 	<skill id="2147" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -684,7 +699,7 @@
 	<skill id="2148" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -695,7 +710,7 @@
 	<skill id="2149" name="Item - Carol Sound Crystal" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -706,7 +721,7 @@
 	<skill id="2150" name="Soulshot (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -717,7 +732,7 @@
 	<skill id="2151" name="Soulshot (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -728,7 +743,7 @@
 	<skill id="2152" name="Soulshot (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -739,7 +754,7 @@
 	<skill id="2153" name="Soulshot (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -750,7 +765,7 @@
 	<skill id="2154" name="Soulshot (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_spirit_bullet_white_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -761,7 +776,7 @@
 	<skill id="2155" name="Spiritshot (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -772,7 +787,7 @@
 	<skill id="2156" name="Spiritshot (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -783,7 +798,7 @@
 	<skill id="2157" name="Spiritshot (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -794,7 +809,7 @@
 	<skill id="2158" name="Spiritshot (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -805,7 +820,7 @@
 	<skill id="2159" name="Spiritshot (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_spirit_bullet_white_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -816,7 +831,7 @@
 	<skill id="2160" name="Blessed Spiritshot (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -827,7 +842,7 @@
 	<skill id="2161" name="Blessed Spiritshot (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -838,7 +853,7 @@
 	<skill id="2162" name="Blessed Spiritshot (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -849,7 +864,7 @@
 	<skill id="2163" name="Blessed Spiritshot (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -860,7 +875,7 @@
 	<skill id="2164" name="Blessed Spiritshot (S-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_spirit_bullet_white_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -871,7 +886,7 @@
 	<skill id="2165" name="Momentum Stone" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -887,7 +902,7 @@
 	<skill id="2166" name="CP Potion" max-level="2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -905,7 +920,7 @@
 	<skill id="2167" name="SP Scroll" max-level="4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
@@ -922,7 +937,7 @@
 		</consume>
 		<target />
 		<effects>
-			<effect  name="GiveSp">
+			<effect name="GiveSp">
 				<power initial="2000.0">
 					<value level="2">10000.0</value>
 					<value level="3">100000.0</value>
@@ -934,12 +949,12 @@
 	<skill id="2168" name="Lucky Charm" max-level="4" action="A2">
 	<!-- Blessed and exempt from the death penalty if you are killed by Boss/Raid Monsters. -->
 		<icon initial="icon.etc_orcish_talisman_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<item initial="5703">
@@ -950,7 +965,7 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="REDUCE_DROP_PENALTY" >
+		<abnormal type="REDUCE_DROP_PENALTY">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -980,16 +995,15 @@
 		<icon initial="icon.etc_potion_of_acumen2_i00">
 			<value level="2">icon.etc_potion_of_acumen3_i00</value>
 		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="35">
 				<value level="2">48</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="CASTING_TIME_DOWN" >
+		<abnormal type="CASTING_TIME_DOWN">
 			<level initial="2">
 				<value level="2">3</value>
 			</level>
@@ -997,7 +1011,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="23.0">
 					<value level="2">30.0</value>
 				</power>
@@ -1007,13 +1021,13 @@
 	<skill id="2170" name="Scroll: Cancel Sleep" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="400"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="600"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1032,7 +1046,7 @@
 	<skill id="2171" name="Spellbook Paper" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1058,7 +1072,7 @@
 	<skill id="2172" name="Scroll of Giants" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1101,7 +1115,7 @@
 	<skill id="2173" name="Book of Giants" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1134,10 +1148,11 @@
 	<skill id="2177" name="Blessed Scroll of Escape: Clan Hall" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1156,10 +1171,11 @@
 	<skill id="2178" name="Blessed Scroll of Escape: Castle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1178,7 +1194,7 @@
 	<skill id="2180" name="Wyvern Food" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>

@@ -99,7 +99,7 @@ public class AugmentationEngine extends EffectParser {
         var statsSet = new StatsSet(parseAttributes(node));
         StatsSet stats = null;
         if (node.hasChildNodes()) {
-            IntMap<StatsSet> levelInfo = parseEffectChildNodes(node, 1, statsSet);
+            IntMap<StatsSet> levelInfo = parseEffectChildNodes(node, 1, 1, statsSet);
             if (!levelInfo.isEmpty()) {
                 stats = levelInfo.get(1);
                 stats.merge(statsSet);

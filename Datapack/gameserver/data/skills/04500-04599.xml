@@ -3,7 +3,7 @@
 	<skill id="4500" name="Treasure Chest (Lv. 27)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -14,7 +14,7 @@
 	<skill id="4501" name="Treasure Chest (Lv. 29)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -25,7 +25,7 @@
 	<skill id="4502" name="Treasure Chest (Lv. 31)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -36,7 +36,7 @@
 	<skill id="4503" name="Treasure Chest (Lv. 32)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -47,7 +47,7 @@
 	<skill id="4504" name="Treasure Chest (Lv. 33)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -58,7 +58,7 @@
 	<skill id="4505" name="Treasure Chest (Lv. 35)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -69,7 +69,7 @@
 	<skill id="4506" name="Treasure Chest (Lv. 39)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -80,7 +80,7 @@
 	<skill id="4507" name="Treasure Chest (Lv. 42)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -91,7 +91,7 @@
 	<skill id="4508" name="Treasure Chest (Lv. 43)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -102,7 +102,7 @@
 	<skill id="4509" name="Treasure Chest (Lv. 45)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -113,7 +113,7 @@
 	<skill id="4510" name="Treasure Chest (Lv. 47)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -124,7 +124,7 @@
 	<skill id="4511" name="Treasure Chest (Lv. 49)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -135,7 +135,7 @@
 	<skill id="4512" name="Treasure Chest (Lv. 52)">
 	<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -146,7 +146,7 @@
 	<skill id="4513" name="Squash - Level Up" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -157,7 +157,7 @@
 	<skill id="4514" name="Squash - Poisoned" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -173,8 +173,6 @@
 			<cast-range initial="1500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="2000"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="TURN_STONE" visual="FLESH_STONE" >
@@ -189,13 +187,13 @@
 	<skill id="4516" name="Orfen Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="600"/>
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -212,7 +210,7 @@
 	<skill id="4517" name="Shield" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -220,7 +218,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
 			<speed mode="PER">
@@ -234,7 +232,7 @@
 	<skill id="4518" name="Might" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -256,7 +254,7 @@
 	<skill id="4519" name="Shield" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -266,7 +264,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="90"/>
+					<power initial="90.0"/>
 				</trait>
 			</defence-trait>
 			<speed mode="PER">
@@ -277,7 +275,7 @@
 	<skill id="4520" name="Might" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -287,7 +285,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="-10"/>
+					<power initial="-10.0"/>
 				</trait>
 			</defence-trait>
 			<speed mode="PER">
@@ -298,7 +296,7 @@
 	<skill id="4521" name="Bow Attack Resistance">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -334,16 +332,14 @@
 	<skill id="4522" name="Eye of Assassin" action="A2" type="MAGIC">
 	<!-- Assassin's senses are greatly heightened. Greatly increases the P. Crit. Rate when attacking from behind. -->
 		<icon initial="icon.skill0016"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -356,36 +352,37 @@
 	<skill id="4523" name="Ultimate Evasion" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="10000"/>
 		</attributes>
 		<target />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="30.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="30.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
 	<skill id="4524" name="Bluff" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="10000"/>
 		</attributes>
 		<target />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="5"/>
 			<chance initial="-1"/>
@@ -394,7 +391,7 @@
 	<skill id="4525" name="Shield" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -404,7 +401,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SLEEP">
-					<power initial="70"/>
+					<power initial="70.0"/>
 				</trait>
 			</defence-trait>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -418,7 +415,7 @@
 	<skill id="4526" name="Summon" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -434,22 +431,20 @@
 	<skill id="4527" name="Restore" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="600"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="true">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER" heal="true">
 				<power initial="30.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -457,16 +452,14 @@
 	<skill id="4528" name="Wind Walk" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -480,13 +473,12 @@
 	<skill id="4529" name="Self-destruction" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
@@ -499,13 +491,12 @@
 	<skill id="4530" name="Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
@@ -518,13 +509,12 @@
 	<skill id="4531" name="Heal" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
@@ -537,7 +527,7 @@
 	<skill id="4532" name="Reflect Damage" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -545,7 +535,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="900.0"/>
 			</stat-modify>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
@@ -556,16 +546,15 @@
 	<skill id="4533" name="Dance of Resistance" debuff="true" action="A2">
 	<!-- Momentarily decreases Movement Speed and P. Accuracy significantly. Dance of Inspiration can remove the curse. -->
 		<icon initial="icon.skill0272"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="DANCE_OF_INSPIRATION" >
+		<abnormal type="DANCE_OF_INSPIRATION">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -574,7 +563,7 @@
 			<speed mode="PER">
 				<power initial="-50.0"/>
 			</speed>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
@@ -582,24 +571,24 @@
 	<skill id="4534" name="Nihilistic Dance" debuff="true" action="A2">
 	<!-- Atk. Spd. decreases momentarily. and P. Evasion significantly. Dance of Fury can remove the curse. -->
 		<icon initial="icon.skill0275"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="DANCE_OF_FURY" >
+		<abnormal type="DANCE_OF_FURY">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-40.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="-40.0"/>
 			</stat-hp-based>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-30.0"/>
 			</stat-modify>
 		</effects>
@@ -607,16 +596,15 @@
 	<skill id="4535" name="Dance of Weakness" debuff="true" action="A2">
 	<!-- P. Def. decreases momentarily. and P. Atk. significantly. Dance of the Vampire can remove the curse. -->
 		<icon initial="icon.skill0310"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="DANCE_OF_VAMPIRE" >
+		<abnormal type="DANCE_OF_VAMPIRE">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -633,16 +621,15 @@
 	<skill id="4536" name="Song of Seduction" debuff="true" action="A2">
 	<!-- Momentarily decreases Movement Speed and P. Accuracy significantly. Song of Wind can remove the curse. -->
 		<icon initial="icon.skill0268"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="SONG_OF_WIND" >
+		<abnormal type="SONG_OF_WIND">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -651,7 +638,7 @@
 			<speed mode="PER">
 				<power initial="-50.0"/>
 			</speed>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
@@ -659,24 +646,24 @@
 	<skill id="4537" name="Song of Sweet Whispers" debuff="true" action="A2">
 	<!-- Atk. Spd. decreases momentarily. and P. Evasion significantly. Song of Water can remove the curse. -->
 		<icon initial="icon.skill0266"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="SONG_OF_WATER" >
+		<abnormal type="SONG_OF_WATER">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-40.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="-40.0"/>
 			</stat-hp-based>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-30.0"/>
 			</stat-modify>
 		</effects>
@@ -684,16 +671,15 @@
 	<skill id="4538" name="Song of Temptation" debuff="true" action="A2">
 	<!-- P. Def. decreases momentarily. and P. Atk. significantly. Song of Vengeance can remove the curse. -->
 		<icon initial="icon.skill0305"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="SONG_OF_VENGEANCE" >
+		<abnormal type="SONG_OF_VENGEANCE">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -710,16 +696,15 @@
 	<skill id="4539" name="Vague Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- Momentarily decreases Movement Speed and P. Accuracy significantly. Guidance spell can remove the curse. -->
 		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="HIT_UP" >
+		<abnormal type="HIT_UP">
 			<level initial="3"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -728,7 +713,7 @@
 			<speed mode="PER">
 				<power initial="-50.0"/>
 			</speed>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
@@ -736,16 +721,15 @@
 	<skill id="4540" name="Curse of Weakness" debuff="true" action="A2" type="MAGIC">
 	<!-- P. Def. decreases momentarily. and Movement Speed significantly. Shield spell can remove the curse. -->
 		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="PD_UP" >
+		<abnormal type="PD_UP">
 			<level initial="3"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -754,7 +738,7 @@
 			<speed mode="PER">
 				<power initial="-50.0"/>
 			</speed>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
 		</effects>
@@ -762,16 +746,15 @@
 	<skill id="4541" name="Nihilistic Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- P. Atk. decreases momentarily., M. Atk. and Atk. Spd. significantly. Might spell can remove the curse. -->
 		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="400"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="PA_UP" >
+		<abnormal type="PA_UP">
 			<level initial="3"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -791,7 +774,7 @@
 	<skill id="4542" name="Sleep/Stun Resistance">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -801,7 +784,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="-0.8999999761581421"/>
+					<power initial="-90"/>
 				</trait>
 				<trait type="SLEEP">
 					<power initial="90"/>
@@ -812,7 +795,7 @@
 	<skill id="4543" name="Weakened Stun">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -822,7 +805,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="-10"/>
+					<power initial="-10.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -830,11 +813,10 @@
 	<skill id="4544" name="Weakness" max-level="3" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<abnormal type="PUBLIC_SLOT" visual="DOT_POISON" >
@@ -846,7 +828,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-30.0">
 					<value level="2">-40.0</value>
 					<value level="3">-50.0</value>
@@ -869,7 +851,7 @@
 	<skill id="4545" name="Reflect Damage" action="T">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -880,7 +862,7 @@
 			<speed mode="PER">
 				<power initial="-30.0"/>
 			</speed>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="900.0"/>
 			</stat-modify>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
@@ -891,7 +873,7 @@
 	<skill id="4546" name="Consume Slate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="1000"/>
 			<effect-range initial="1500"/>
@@ -902,14 +884,13 @@
 	<skill id="4547" name="Watchman's Gaze" debuff="true" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0131"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="1000"/>
 			<effect-range initial="1500"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="WATCHER_GAZE" >
+		<abnormal type="WATCHER_GAZE">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -918,7 +899,7 @@
 	<skill id="4548" name="Annulment" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="1000"/>
 			<effect-range initial="1500"/>
@@ -936,10 +917,11 @@
 	<skill id="4549" name="Quest - Unsealed Altar" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -947,10 +929,11 @@
 	<skill id="4550" name="Quest - Cursed Altar" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -962,7 +945,7 @@
 		level 6: Infected with Hot Springs Flu. P. Def. momentarily decreased by 8%%.
 	 -->
 		<icon initial="icon.skill1164"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
@@ -991,7 +974,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power>
 					<value level="2">-4.0</value>
 					<value level="5">-8.0</value>
@@ -999,7 +982,7 @@
 					<value level="10">-15.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="30.0">
 					<value level="2">50.0</value>
 					<value level="3">80.0</value>
@@ -1017,13 +1000,11 @@
 		level 6: Infected with Hot Springs Flu. P. Evasion momentarily decreased by 5.
 	 -->
 		<icon initial="icon.skill1164"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana-init initial="14"/>
@@ -1046,14 +1027,15 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-0.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="-0.0">
 					<value level="2">-3.0</value>
 					<value level="5">-5.0</value>
 					<value level="8">-8.0</value>
 					<value level="10">-10.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="3.0">
 					<value level="2">6.0</value>
 					<value level="3">8.0</value>
@@ -1071,13 +1053,11 @@
 		level 6: Infected with Hot Springs Flu. P. Atk. momentarily decreased by 8%%.
 	 -->
 		<icon initial="icon.skill1164"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana-init initial="14"/>
@@ -1100,7 +1080,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power>
 					<value level="2">-4.0</value>
 					<value level="5">-8.0</value>
@@ -1126,13 +1106,11 @@
 		level 6: Infected with Hot Springs Flu. MP Consumption momentarily increased.
 	 -->
 		<icon initial="icon.skill1164"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana-init initial="14"/>
@@ -1155,7 +1133,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="4.0">
 					<value level="2">8.0</value>
 					<value level="3">12.0</value>
@@ -1177,7 +1155,7 @@
 	<skill id="4555" name="Mutation Resistance">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1207,7 +1185,7 @@
 	<skill id="4556" name="Dispel Hot Spring Disease A D" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1232,7 +1210,7 @@
 	<skill id="4557" name="Dispel Hot Spring Disease B D" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1245,10 +1223,10 @@
 		<target type="TARGET" />
 		<effects>
 			<dispel>
-				<abnormal type="SPA_DISEASE_D">
+				<abnormal type="SPA_DISEASE_B">
 					<power initial="10.0"/>
 				</abnormal>
-				<abnormal type="SPA_DISEASE_B">
+				<abnormal type="SPA_DISEASE_D">
 					<power initial="10.0"/>
 				</abnormal>
 			</dispel>
@@ -1257,7 +1235,7 @@
 	<skill id="4558" name="Dispel Hot Spring Disease C D" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1282,7 +1260,7 @@
 	<skill id="4559" name="Hot Spring Illusion" action="A2">
 	<!-- Temporary optical illusion caused by the Hot Spring. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1296,7 +1274,7 @@
 	<skill id="4560" name="Fire Burn" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.0" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1314,7 +1292,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="650"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1356,7 +1334,7 @@
 	<skill id="4561" name="Fire Burn" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.5" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.5">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1373,7 +1351,7 @@
 			<cast-range initial="150"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="650"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1410,7 +1388,7 @@
 	<skill id="4562" name="Solar Flare" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1428,7 +1406,7 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -1481,7 +1459,7 @@
 	<skill id="4563" name="Solar Flare" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="4.5" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="4.5">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1498,7 +1476,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -1550,7 +1528,7 @@
 	<skill id="4564" name="Solar Flare" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="2.5" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="2.5">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1567,7 +1545,7 @@
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -1620,7 +1598,7 @@
 	<skill id="4565" name="Rain of Fire" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1638,7 +1616,7 @@
 			<reuse initial="20000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1680,7 +1658,7 @@
 	<skill id="4566" name="Rain of Fire" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="4.5" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="4.5">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1697,7 +1675,7 @@
 			<cast-range initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1738,7 +1716,7 @@
 	<skill id="4567" name="Rain of Fire" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="2.5" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="2.5">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1755,7 +1733,7 @@
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1797,7 +1775,7 @@
 	<skill id="4568" name="Solar Flare" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1815,7 +1793,7 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -1869,7 +1847,7 @@
 	<skill id="4569" name="Solar Flare" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="4.5" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="4.5">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1886,7 +1864,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -1939,7 +1917,7 @@
 	<skill id="4570" name="Solar Flare" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="2.5" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="2.5">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1956,7 +1934,7 @@
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -2010,7 +1988,7 @@
 	<skill id="4571" name="Blazing Circle" max-level="12" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2028,7 +2006,7 @@
 			<reuse initial="15000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -2070,7 +2048,7 @@
 	<skill id="4572" name="Triple Sonic Slash" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2088,7 +2066,7 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1800"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2128,7 +2106,7 @@
 	<skill id="4573" name="Sonic Blaster" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2146,7 +2124,7 @@
 			<reuse initial="15000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2186,7 +2164,7 @@
 	<skill id="4574" name="Sonic Storm" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2204,7 +2182,7 @@
 			<reuse initial="20000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2247,7 +2225,7 @@
 		level 2: Atk. Spd. has been increased by 33%.
 	 -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="30">
 				<value level="2">70</value>
 			</magic-level>
@@ -2255,8 +2233,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="4">
@@ -2267,7 +2244,7 @@
 			</mana>
 		</consume>
 		<target scope="RANGE" object="CLAN" range="900" />
-		<abnormal type="ATTACK_TIME_DOWN" >
+		<abnormal type="ATTACK_TIME_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 			</level>
@@ -2275,7 +2252,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="15.0">
 					<value level="2">33.0</value>
 				</power>
@@ -2289,7 +2266,7 @@
 		level 3: 20% of received damage will be deflected.
 	 -->
 		<icon initial="icon.skill0086"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="20">
 				<value level="2">40</value>
 				<value level="3">70</value>
@@ -2298,8 +2275,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="3">
@@ -2312,7 +2288,7 @@
 			</mana>
 		</consume>
 		<target scope="RANGE" object="CLAN" range="900" />
-		<abnormal type="DMG_SHIELD" >
+		<abnormal type="DMG_SHIELD">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -2321,7 +2297,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT" stat-add="REFLECT_DAMAGE_PERCENT">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -2332,7 +2308,7 @@
 	<skill id="4577" name="Decrease P. Accuracy" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- P. Accuracy has been momentarily decreased. -->
 		<icon initial="icon.skill1222"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2350,8 +2326,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="18">
@@ -2369,7 +2344,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="HIT_DOWN" >
+		<abnormal type="HIT_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -2378,7 +2353,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="-1.0">
 					<value level="2">-2.0</value>
 					<value level="3">-3.0</value>
@@ -2398,13 +2373,12 @@
 	<skill id="4578" name="Petrify" debuff="true" action="A2" type="MAGIC">
 	<!-- Petrified and unable to move momentarily. -->
 		<icon initial="icon.skill4111"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 
 			<element type="EARTH" value="20"/>
 		</attributes>
@@ -2425,7 +2399,7 @@
 			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="-100.0"/>
 			</stat-modify>
 		</effects>
@@ -2433,7 +2407,7 @@
 	<skill id="4579" name="Bleed" max-level="12" debuff="true" action="A2">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2451,8 +2425,7 @@
 			<reuse initial="6000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="25">
@@ -2517,7 +2490,7 @@
 	<skill id="4580" name="Decrease P. Atk." max-level="12" debuff="true" action="A2">
 	<!-- P. Atk. has been momentarily decreased by 17%%. -->
 		<icon initial="icon.skill4037"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2535,8 +2508,7 @@
 			<reuse initial="6000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="24">
@@ -2554,7 +2526,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="PA_DOWN" >
+		<abnormal type="PA_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -2563,7 +2535,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-17.0">
 					<value level="2">-20.0</value>
 					<value level="4">-23.0</value>
@@ -2574,7 +2546,7 @@
 	<skill id="4581" name="Hold" max-level="12" debuff="true" action="A2">
 	<!-- Afflicted with Hold and unable to move momentarily. -->
 		<icon initial="icon.skill4047"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2592,8 +2564,7 @@
 			<reuse initial="6000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="24">
@@ -2623,7 +2594,7 @@
 	<skill id="4582" name="Poison" max-level="12" debuff="true" action="A2">
 	<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill4035"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2641,8 +2612,7 @@
 			<reuse initial="6000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="70"/>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="24">
@@ -2692,7 +2662,7 @@
 	<skill id="4583" name="Decrease Speed" max-level="12" debuff="true" action="A2">
 	<!-- Movement Speed has been momentarily decreased by 10%%. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2710,8 +2680,7 @@
 			<reuse initial="17000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="36">
@@ -2729,7 +2698,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -2749,7 +2718,7 @@
 	<skill id="4584" name="Stunned and P. Def. decreased." max-level="12" debuff="true" action="A2">
 	<!-- P. Def. has been momentarily decreased and immobile due to stun. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2767,8 +2736,7 @@
 			<reuse initial="6000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="24">
@@ -2802,7 +2770,7 @@
 				<power/>
 			</physical-attack>
 			<block-all-actions/>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-17.0">
 					<value level="2">-20.0</value>
 					<value level="4">-23.0</value>
@@ -2817,7 +2785,7 @@
 		level 3: P. Atk. +8%, M. Atk. +16%, Atk. Spd. +4, Casting Spd. +24%, and Movement Speed +16%. P. Def. -8%, M. Def. -8%, and P. Evasion -8.
 	 -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="20">
 				<value level="2">40</value>
 				<value level="3">70</value>
@@ -2826,8 +2794,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="6">
@@ -2850,7 +2817,7 @@
 		</abnormal>
 		<effects>
 			<effect name="Grow"/>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="13.0">
 					<value level="2">18.0</value>
 					<value level="3">24.0</value>
@@ -2891,7 +2858,7 @@
 	<skill id="4586" name="Decrease P. Evasion" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- P. Evasion has been momentarily decreased by 10. -->
 		<icon initial="icon.skill1222"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2909,8 +2876,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="13">
@@ -2928,7 +2894,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="AVOID_DOWN" >
+		<abnormal type="AVOID_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -2937,7 +2903,8 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-1.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="-1.0">
 					<value level="2">-2.0</value>
 					<value level="3">-3.0</value>
 					<value level="4">-4.0</value>
@@ -2956,7 +2923,7 @@
 	<skill id="4587" name="Decrease P. Atk." max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- P. Atk. has been momentarily decreased by 17%%. -->
 		<icon initial="icon.skill4037"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -2974,8 +2941,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="18">
@@ -2993,7 +2959,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="PA_DOWN" >
+		<abnormal type="PA_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -3002,7 +2968,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-17.0">
 					<value level="2">-20.0</value>
 					<value level="4">-23.0</value>
@@ -3013,7 +2979,7 @@
 	<skill id="4588" name="Berserker Haste" max-level="2" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="30">
 				<value level="2">70</value>
 			</magic-level>
@@ -3021,8 +2987,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8">
@@ -3033,7 +2998,7 @@
 			</mana>
 		</consume>
 		<target scope="RANGE" object="CLAN" range="900" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1">
 				<value level="2">2</value>
 			</level>
@@ -3041,7 +3006,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="5.0">
 					<value level="2">8.0</value>
 				</power>
@@ -3081,7 +3046,7 @@
 	<skill id="4589" name="Decrease Speed" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- Movement Speed has been momentarily decreased by 10%%. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3099,8 +3064,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -3120,7 +3084,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -3140,7 +3104,7 @@
 	<skill id="4590" name="Decrease Speed" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- Movement Speed has been momentarily decreased by 10%%. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="3.5" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="3.5" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3157,8 +3121,7 @@
 			<cast-range initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -3178,7 +3141,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -3198,7 +3161,7 @@
 	<skill id="4591" name="Decrease Speed" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- Movement Speed has been momentarily decreased by 10%%. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="2.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="2.0" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3215,8 +3178,7 @@
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="2000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -3236,7 +3198,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -3256,7 +3218,7 @@
 	<skill id="4592" name="Decrease P. Def." max-level="12" debuff="true" action="A2">
 	<!-- P. Def has been momentarily decreased. -->
 		<icon initial="icon.skill0122"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3274,8 +3236,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -3295,7 +3256,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -3304,7 +3265,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-17.0">
 					<value level="2">-20.0</value>
 					<value level="4">-23.0</value>
@@ -3315,7 +3276,7 @@
 	<skill id="4593" name="Decrease P. Def." max-level="12" debuff="true" action="A2">
 	<!-- P. Def has been momentarily decreased. -->
 		<icon initial="icon.skill0122"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="3.5" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="3.5" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3332,8 +3293,7 @@
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -3353,7 +3313,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -3362,7 +3322,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-17.0">
 					<value level="2">-20.0</value>
 					<value level="4">-23.0</value>
@@ -3373,7 +3333,7 @@
 	<skill id="4594" name="Decrease P. Def." max-level="12" debuff="true" action="A2">
 	<!-- P. Def has been momentarily decreased. -->
 		<icon initial="icon.skill0122"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="2.0" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="2.0" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3390,8 +3350,7 @@
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="2000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -3411,7 +3370,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>
@@ -3420,7 +3379,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-17.0">
 					<value level="2">-20.0</value>
 					<value level="4">-23.0</value>
@@ -3431,7 +3390,7 @@
 	<skill id="4595" name="Acumen Shield" max-level="3" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="20">
 				<value level="2">40</value>
 				<value level="3">70</value>
@@ -3440,8 +3399,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="6">
@@ -3454,7 +3412,7 @@
 			</mana>
 		</consume>
 		<target scope="RANGE" object="CLAN" range="900" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -3463,7 +3421,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="8.0">
 					<value level="2">12.0</value>
 					<value level="3">15.0</value>
@@ -3480,7 +3438,7 @@
 	<skill id="4596" name="Bleed" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3498,8 +3456,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="29">
@@ -3549,7 +3506,7 @@
 	<skill id="4597" name="Bleed" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" hit-cancel-time="3.5" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" hit-cancel-time="3.5" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3566,8 +3523,7 @@
 			<cast-range initial="600"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="20">
@@ -3617,7 +3573,7 @@
 	<skill id="4598" name="Bleed" max-level="12" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" hit-cancel-time="2.0" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" hit-cancel-time="2.0" level-bonus-rate="2">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3634,8 +3590,7 @@
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="20">
@@ -3685,7 +3640,7 @@
 	<skill id="4599" name="Decrease Speed" max-level="12" debuff="true" action="A2">
 	<!-- Movement Speed has been momentarily decreased. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -3703,8 +3658,7 @@
 			<reuse initial="6000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="35">
@@ -3722,7 +3676,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="20" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="4">3</value>

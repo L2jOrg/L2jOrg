@@ -3,9 +3,10 @@
 	<skill id="59600" name="Transformation Sealbook: Devil - Legendary" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -13,9 +14,10 @@
 	<skill id="59601" name="Transformation Sealbook: Devil - Mythic" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -45,7 +47,7 @@
 	<skill id="59604" name="Shadow Master - Decoy" max-level="2" action="A2">
 	<!-- Mystic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you are attacked while transformed into Shadow Master, summons a clone that provokes every 60 seconds and hides into the shadows for 20 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="100000">
 				<value level="2">60000</value>
@@ -61,7 +63,7 @@
 		level 2: Borrows the power of the Shadow Master and hides for 20 seconds. Effect is canceled if you perform an action other than just moving.
 	 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -71,7 +73,7 @@
 	<skill id="59606" name="Shadow Master - Decoy Provocation" action="A2">
 	<!-- Borrows the power of the Shadow Master and hides for $s1. Effect is canceled if you perform an action other than just moving. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -103,7 +105,7 @@
 	<skill id="59609" name="Navy Admiral - Attack Release" max-level="2" action="A2">
 	<!-- Recharging energy of the Navy Admiral. Attack/Defense buffs are not activated anymore. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="100000">
 				<value level="2">60000</value>
@@ -116,7 +118,7 @@
 	<skill id="59610" name="Navy Admiral - Defense Release" max-level="2" action="A2">
 	<!-- Recharging energy of the Navy Admiral. Attack/Defense buffs are not activated anymore. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="100000">
 				<value level="2">60000</value>
@@ -132,7 +134,7 @@
 		level 2: Borrows the power of the Navy Admiral and for 15 seconds, P./M. Atk. +200%.
 	 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -145,7 +147,7 @@
 		level 2: Borrows the power of the Navy Admiral and for 15 seconds, P./M. Def. +200%.
 	 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -177,12 +179,11 @@
 	<skill id="59615" name="Nymph - Temptation" action="A2">
 	<!-- Borrows the power of the Nymph and seduces the opponent for 3 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="1200"/>
 			<reuse initial="100000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -190,12 +191,11 @@
 	<skill id="59616" name="Nymph - Temptation" action="A2">
 	<!-- Borrows the power of the Nymph and seduces the opponent for 5 seconds. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="1200"/>
 			<reuse initial="60000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -214,12 +214,11 @@
 	<skill id="59618" name="Devil - Barrier" action="A2">
 	<!-- Borrows the power of the Devil and all damage is set to 1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="90000"/>
 			<effect-point initial="20"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -227,7 +226,7 @@
 	<skill id="59619" name="Devil - Inferno" action="A2">
 	<!-- Inflicts 1000 real damage to all targets that attack you. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -237,9 +236,10 @@
 	<skill id="59620" name="Devil - Inferno" action="A2">
 	<!-- Inflicts 1000 real damage to all targets that attack you. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -247,11 +247,12 @@
 	<skill id="59631" name="+8 S-grade Weapon Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon_bm_gold_lure_special_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -259,11 +260,12 @@
 	<skill id="59632" name="+5 Dragon Pendant Lv. 4 Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -271,11 +273,12 @@
 	<skill id="59633" name="Fire Dragon Pendant Chest +6" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -289,15 +292,13 @@
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="71741"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -309,7 +310,7 @@
 			<stat-modify stat="MAGIC_ATTACK">
 				<power initial="150.0"/>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="30.0"/>
 			</stat-hp-based>
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -351,7 +352,7 @@
 		level 9: Dimensional Power of Fate triggered. P. Atk. +20%, M. Atk. +30%, P./M. Critical Damage +40%, P./M. Critical Rate +10%.
 	 -->
 		<icon initial="icon.skill10030"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-range initial="-1"/>
@@ -373,11 +374,12 @@
 		level 10: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -30% and P. Critical Damage/M. Critical Damage -15% and increases Magic Attack Resistance +5% for 15 seconds.
 	 -->
 		<icon initial="icon.skill11876"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="180000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -388,11 +390,12 @@
 	<skill id="59637" name="Dimensional Barrier" action="A1">
 	<!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->
 		<icon initial="icon.skill11621"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -403,11 +406,12 @@
 	<skill id="59638" name="Box Full of Blessing" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -415,11 +419,12 @@
 	<skill id="59639" name="Aden Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -427,11 +432,12 @@
 	<skill id="59640" name="Jin Kamael's Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -439,11 +445,12 @@
 	<skill id="59641" name="Baium's Mystery Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -451,11 +458,12 @@
 	<skill id="59642" name="Sealed Samurai Long Sword Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -463,11 +471,12 @@
 	<skill id="59643" name="Sealed Mace of Underworld Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -475,11 +484,12 @@
 	<skill id="59644" name="Sealed Demon's Staff Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -487,11 +497,12 @@
 	<skill id="59645" name="Sealed Crystal Dagger Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -499,11 +510,12 @@
 	<skill id="59646" name="Sealed Eminence Bow Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -511,11 +523,12 @@
 	<skill id="59647" name="Sealed Orcish Poleaxe Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -523,11 +536,12 @@
 	<skill id="59648" name="Sealed Katana*Katana Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -535,11 +549,12 @@
 	<skill id="59649" name="Sealed Yaksa Mace Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -547,11 +562,12 @@
 	<skill id="59650" name="Sealed Berserker Blade Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -559,11 +575,12 @@
 	<skill id="59651" name="Sealed Great Pata Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -571,11 +588,12 @@
 	<skill id="59652" name="Sealed Admiral's Estoc Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -583,11 +601,12 @@
 	<skill id="59653" name="Sealed Saber Tooth Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -595,11 +614,12 @@
 	<skill id="59654" name="Sealed Samurai Long Sword Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -607,11 +627,12 @@
 	<skill id="59655" name="Sealed Mace of Underworld Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -619,11 +640,12 @@
 	<skill id="59656" name="Sealed Demon's Staff Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -631,11 +653,12 @@
 	<skill id="59657" name="Sealed Crystal Dagger Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -643,11 +666,12 @@
 	<skill id="59658" name="Sealed Eminence Bow Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -655,11 +679,12 @@
 	<skill id="59659" name="Sealed Orcish Poleaxe Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -667,11 +692,12 @@
 	<skill id="59660" name="Sealed Katana*Katana Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -679,11 +705,12 @@
 	<skill id="59661" name="Sealed Yaksa Mace Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -691,11 +718,12 @@
 	<skill id="59662" name="Sealed Berserker Blade Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -703,11 +731,12 @@
 	<skill id="59663" name="Sealed Great Pata Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -715,11 +744,12 @@
 	<skill id="59664" name="Sealed Admiral's Estoc Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -727,11 +757,12 @@
 	<skill id="59665" name="Sealed Saber Tooth Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -739,11 +770,12 @@
 	<skill id="59666" name="Sealed Samurai Long Sword Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -751,11 +783,12 @@
 	<skill id="59667" name="Sealed Mace of Underworld Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -763,11 +796,12 @@
 	<skill id="59668" name="Sealed Demon's Staff Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -775,11 +809,12 @@
 	<skill id="59669" name="Sealed Crystal Dagger Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -787,11 +822,12 @@
 	<skill id="59670" name="Sealed Eminence Bow Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -799,11 +835,12 @@
 	<skill id="59671" name="Sealed Orcish Poleaxe Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -811,11 +848,12 @@
 	<skill id="59672" name="Sealed Katana*Katana Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -823,11 +861,12 @@
 	<skill id="59673" name="Sealed Yaksa Mace Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -835,11 +874,12 @@
 	<skill id="59674" name="Sealed Berserker Blade Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -847,11 +887,12 @@
 	<skill id="59675" name="Sealed Great Pata Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -859,11 +900,12 @@
 	<skill id="59676" name="Sealed Admiral's Estoc Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -871,11 +913,12 @@
 	<skill id="59677" name="Sealed Saber Tooth Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -883,11 +926,12 @@
 	<skill id="59678" name="Chronicle Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -895,11 +939,12 @@
 	<skill id="59679" name="15th Anniversary Gift Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pendant_pve_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -907,7 +952,7 @@
 	<skill id="59680" name="XP Scroll - Lv. 1" action="A1">
 	<!-- XP +20,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -918,7 +963,7 @@
 	<skill id="59681" name="XP Scroll - Lv. 2" action="A1">
 	<!-- XP +4,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -929,7 +974,7 @@
 	<skill id="59682" name="XP Scroll - Lv. 3" action="A1">
 	<!-- XP +100,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -940,7 +985,7 @@
 	<skill id="59683" name="XP Scroll - Lv. 4" action="A1">
 	<!-- XP +200,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -951,7 +996,7 @@
 	<skill id="59684" name="XP Scroll - Lv. 5" action="A1">
 	<!-- XP +250,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -962,7 +1007,7 @@
 	<skill id="59685" name="XP Scroll - Lv. 6" action="A1">
 	<!-- XP +400,000,000. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -973,10 +1018,11 @@
 	<skill id="59686" name="Hardin's Magic Bag">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<cool-time initial="500"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
 	</skill>
@@ -997,7 +1043,7 @@
 		level 2: When used, XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P/M. Critical Rate +40, P./M. Critical Damage +12%%, Max HP/CP +3000, MP +3000, HP/MP Recovery Bonus +12 for 20 minutes. Has a chance to recover 7%% of damage dealt to enemy as HP. Effect remains even after death.
 	 -->
 		<icon initial="icon.bm_dragon_posion"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 		</attributes>
@@ -1009,7 +1055,7 @@
 		level 2: For 20 minutes, XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P/M. Critical Rate +40, P./M. Critical Damage +12%%,, HP/CP +3000, MP +2000, HP/MP Recovery Bonus +12. Has a chance to recover 7%% of damage dealt to enemy as HP. Does not disappear upon death.
 	 -->
 		<icon initial="icon.bm_dragon_posion"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 		</attributes>
@@ -1018,7 +1064,7 @@
 	<skill id="59690" name="Cute Animal Friends">
 	<!-- Max CP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1026,7 +1072,7 @@
 	<skill id="59691" name="Special Season">
 	<!-- Max HP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1034,7 +1080,7 @@
 	<skill id="59692" name="Striking Elegance">
 	<!-- P. Atk./M. Atk. +50 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1042,7 +1088,7 @@
 	<skill id="59693" name="Wow! It’s Summer!">
 	<!-- Max HP/CP/MP +200 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1050,7 +1096,7 @@
 	<skill id="59694" name="Uncontrollable Power">
 	<!-- P. Atk. +150 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1058,7 +1104,7 @@
 	<skill id="59695" name="Overflowing Magic">
 	<!-- M. Atk. +150 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1066,7 +1112,7 @@
 	<skill id="59696" name="Rarity Collector">
 	<!-- P. Atk./M. Atk. +30 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1074,7 +1120,7 @@
 	<skill id="59697" name="Highly Durable!">
 	<!-- P. Atk./M. Atk. +300, Damage Received -5%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1082,7 +1128,7 @@
 	<skill id="59698" name="Very Strong!">
 	<!-- P. Atk./M. Atk. +300, Damage Received -3%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1090,7 +1136,7 @@
 	<skill id="59699" name="Very Quick!">
 	<!-- P. Atk./M. Atk. +350, Damage Received -3%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />

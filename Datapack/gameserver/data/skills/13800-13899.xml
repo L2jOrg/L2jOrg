@@ -19,14 +19,14 @@
 		level 15: P. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -74,14 +74,14 @@
 		level 15: Atk. Spd. +25% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="11.0">
 					<value level="2">12.0</value>
 					<value level="3">13.0</value>
@@ -129,14 +129,14 @@
 		level 15: P. Critical Rate +142 and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="58.0">
 					<value level="2">64.0</value>
 					<value level="3">70.0</value>
@@ -184,7 +184,7 @@
 		level 15: P. Critical Damage +17% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -239,7 +239,7 @@
 		level 15: P. Skill Critical Rate +20% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -265,7 +265,7 @@
 		level 15: P. Skill Critical Damage +20% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -291,14 +291,14 @@
 		level 15: Max HP +35% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="21.0">
 					<value level="2">22.0</value>
 					<value level="3">23.0</value>
@@ -346,14 +346,14 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="2.0">
 					<value level="2">3.0</value>
 					<value level="3">4.0</value>
@@ -401,19 +401,19 @@
 		level 15: Casting Spd. +25% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="11.0">
 					<value level="2">12.0</value>
 					<value level="3">13.0</value>
@@ -461,14 +461,14 @@
 		level 15: M. Critical Rate +35% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
 				<power initial="21.0">
 					<value level="2">22.0</value>
 					<value level="3">23.0</value>
@@ -516,7 +516,7 @@
 		level 15: M. Critical Damage +17% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -571,14 +571,14 @@
 		level 15: Max MP +40% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power initial="26.0">
 					<value level="2">27.0</value>
 					<value level="3">28.0</value>
@@ -626,14 +626,14 @@
 		level 15: Atk. Spd. +12%, P. Critical Rate +64, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0">
 					<value level="3">6.0</value>
 					<value level="5">7.0</value>
@@ -644,7 +644,7 @@
 					<value level="15">12.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="26.0">
 					<value level="2">29.0</value>
 					<value level="3">32.0</value>
@@ -692,14 +692,14 @@
 		level 15: Atk. Spd. +12%, P. Critical Damage +8%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0">
 					<value level="3">6.0</value>
 					<value level="5">7.0</value>
@@ -751,7 +751,7 @@
 		level 15: Atk. Spd. +12%, P. Skill Critical Rate +10%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -777,7 +777,7 @@
 		level 15: Atk. Spd. +12%, P. Skill Critical Damage +10%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -803,14 +803,14 @@
 		level 15: Atk. Spd. +12%, Max HP +17%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0">
 					<value level="3">6.0</value>
 					<value level="5">7.0</value>
@@ -821,7 +821,7 @@
 					<value level="15">12.0</value>
 				</power>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -862,14 +862,14 @@
 		level 15: P. Critical Rate +64, P. Critical Damage +8%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="26.0">
 					<value level="2">29.0</value>
 					<value level="3">32.0</value>
@@ -928,7 +928,7 @@
 		level 15: P. Critical Rate +64, P. Skill Critical Rate +10%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -954,7 +954,7 @@
 		level 15: P. Critical Rate +64, P. Skill Critical Damage +10%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -980,14 +980,14 @@
 		level 15: P. Critical Rate +64, Max HP +17%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="26.0">
 					<value level="2">29.0</value>
 					<value level="3">32.0</value>
@@ -1005,7 +1005,7 @@
 					<value level="15">68.0</value>
 				</power>
 			</stat-hp-based>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -1046,14 +1046,14 @@
 		level 15: Casting Spd. +12%, M. Critical Rate +17%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -1105,7 +1105,7 @@
 		level 15: Casting Spd. +12%, M. Critical Damage +8%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1164,14 +1164,14 @@
 		level 15: Casting Spd. +12%, Max MP +20%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power initial="13.0">
 					<value level="2">14.0</value>
 					<value level="4">15.0</value>
@@ -1182,7 +1182,7 @@
 					<value level="14">20.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="5.0">
 					<value level="3">6.0</value>
 					<value level="5">7.0</value>
@@ -1223,7 +1223,7 @@
 		level 15: M. Critical Rate +17%, M. Critical Damage +8%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1282,14 +1282,14 @@
 		level 15: M. Critical Rate +17%, Max MP +20%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -1300,7 +1300,7 @@
 					<value level="14">17.0</value>
 				</power>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power initial="13.0">
 					<value level="2">14.0</value>
 					<value level="4">15.0</value>
@@ -1341,14 +1341,14 @@
 		level 15: Max HP +17%, Casting Spd. +12%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -1359,7 +1359,7 @@
 					<value level="14">17.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="5.0">
 					<value level="3">6.0</value>
 					<value level="5">7.0</value>
@@ -1400,14 +1400,14 @@
 		level 15: Max HP +17%, M. Critical Rate +17%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -1418,7 +1418,7 @@
 					<value level="14">17.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -1459,14 +1459,14 @@
 		level 15: Max HP +17%, M. Critical Damage +9%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="4">12.0</value>
@@ -1518,7 +1518,7 @@
 		level 15: Max HP +17%, Max MP +20%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1577,14 +1577,14 @@
 		level 15: Max MP +20%, Atk. Spd. +12%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power initial="13.0">
 					<value level="3">14.0</value>
 					<value level="5">15.0</value>
@@ -1595,7 +1595,7 @@
 					<value level="15">20.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0">
 					<value level="2">6.0</value>
 					<value level="4">7.0</value>
@@ -1636,14 +1636,14 @@
 		level 15: Max MP +20%, P. Critical Rate +64, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power initial="13.0">
 					<value level="3">14.0</value>
 					<value level="5">15.0</value>
@@ -1654,7 +1654,7 @@
 					<value level="15">20.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="26.0">
 					<value level="2">29.0</value>
 					<value level="3">32.0</value>
@@ -1702,14 +1702,14 @@
 		level 15: Max MP +20%, P. Critical Damage +8%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="13.0">
 					<value level="3">14.0</value>
 					<value level="5">15.0</value>
@@ -1761,7 +1761,7 @@
 		level 15: Max MP +20%, P. Skill Critical Rate +10%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1787,7 +1787,7 @@
 		level 15: Max MP +20%, P. Skill Critical Damage +10%, and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

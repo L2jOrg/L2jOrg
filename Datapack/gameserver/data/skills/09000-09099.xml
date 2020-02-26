@@ -3,11 +3,12 @@
 	<skill id="9029" name="Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -19,7 +20,7 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13271">
+			<summon-npc>
 				<npc initial="13271.0"/>
 			</summon-npc>
 		</effects>
@@ -27,11 +28,12 @@
 	<skill id="9030" name="Honey Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -43,7 +45,7 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13275">
+			<summon-npc>
 				<npc initial="13275.0"/>
 			</summon-npc>
 		</effects>
@@ -51,11 +53,12 @@
 	<skill id="9031" name="Copied Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -67,7 +70,7 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13271">
+			<summon-npc>
 				<npc initial="13271.0"/>
 			</summon-npc>
 		</effects>
@@ -75,11 +78,12 @@
 	<skill id="9032" name="Copied Honey Watermelon Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -91,7 +95,7 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13275">
+			<summon-npc>
 				<npc initial="13275.0"/>
 			</summon-npc>
 		</effects>

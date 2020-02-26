@@ -3,7 +3,7 @@
 	<skill id="3100" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Upon using magic, momentarily inflicts Sleep on the target. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -19,8 +19,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="SLEEP" visual="SLEEP" >
@@ -40,7 +38,7 @@
 	<skill id="3101" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2">
 	<!-- Skill Effect: Petrifies an enemy for 15 seconds upon using magic. When fully petrified, becomes paralyzed for 10 seconds. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -56,11 +54,9 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PARALYZE" >
+		<abnormal type="PARALYZE">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="40"/>
@@ -83,7 +79,7 @@
 	<skill id="3102" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2">
 	<!-- Chance: Momentarily petrifies the target during magic use. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -99,8 +95,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 
 			<element type="EARTH" value="20"/>
 		</attributes>
@@ -117,7 +111,7 @@
 	<skill id="3103" name="Item Skill: Fear" max-level="10" debuff="true" action="A2">
 	<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during magic use. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -133,8 +127,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="TURN_FLEE" visual="TURN_FLEE" >
@@ -150,7 +142,7 @@
 	<skill id="3104" name="Item Skill: Poison (Magic)" max-level="15" debuff="true" action="A2">
 	<!-- Effect: Upon using magic, momentarily inflicts Poison on the target. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -171,8 +163,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
@@ -200,7 +190,7 @@
 	<skill id="3105" name="Item Skill: Bleed (Magic)" max-level="15" debuff="true" action="A2">
 	<!-- Effect: Upon using magic, momentarily inflicts Bleed on the target. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -221,8 +211,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
@@ -249,7 +237,7 @@
 	<skill id="3106" name="Item Skill: Silence" max-level="10" debuff="true" action="A2">
 	<!-- Chance: Momentarily blocks the target's magic skill during magic use. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -265,8 +253,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="SILENCE" visual="SILENCE" >
@@ -281,7 +267,7 @@
 	<skill id="3107" name="Item Skill: Doom" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Upon using magic, momentarily blocks all of the target's P. Skills/M. Skills. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -297,8 +283,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="SILENCE_ALL" visual="SILENCE" >
@@ -325,7 +309,7 @@
 		level 10: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 659..
 	 -->
 		<icon initial="icon.skill3080"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -346,7 +330,6 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
@@ -375,7 +358,7 @@
 		level 15: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 390..
 	 -->
 		<icon initial="icon.skill3080"/>
-		<attributes magic-critical-rate="5.0" trait="DERANGEMENT" >
+		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -433,7 +416,7 @@
 		level 10: Effect: Burns the target's MP upon P. Critical damage. Power: 88..
 	 -->
 		<icon initial="icon.skill3080"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -470,7 +453,7 @@
 	<skill id="3111" name="Item Skill: Slow (Critical)" max-level="15" debuff="true" action="A2">
 	<!-- Effect: The target's Movement Speed -30%% upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -490,10 +473,9 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="3"/>
 			<time initial="15"/>
 			<chance initial="40"/>
@@ -507,7 +489,7 @@
 	<skill id="3112" name="Item Skill: Winter (Critical)" max-level="15" debuff="true" action="A2">
 	<!-- Effect: The target's Atk. Spd. -23%% upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -527,16 +509,15 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="ATTACK_TIME_UP" >
+		<abnormal type="ATTACK_TIME_UP">
 			<level initial="3"/>
 			<time initial="15"/>
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-23.0"/>
 			</stat-modify>
 		</effects>
@@ -544,7 +525,7 @@
 	<skill id="3113" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Momentarily stuns the target upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -559,7 +540,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="STUN" visual="STUN" >
@@ -574,7 +554,7 @@
 	<skill id="3114" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
 	<!-- Effect: Momentarily inflicts hold on the target upon P. Critical damage. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -594,7 +574,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
@@ -614,7 +593,7 @@
 	<skill id="3115" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Momentarily inflicts Sleep on the target upon P. Critical damage. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -629,7 +608,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="SLEEP" visual="SLEEP" >
@@ -649,7 +627,7 @@
 	<skill id="3116" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Petrifies an enemy for 15 seconds upon P. Critical. When fully petrified, becomes paralyzed for 10 seconds. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -664,10 +642,9 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PARALYZE" >
+		<abnormal type="PARALYZE">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="40"/>
@@ -690,7 +667,7 @@
 	<skill id="3117" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Momentarily inflicts Sleep on the target upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -705,7 +682,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 
 			<element type="EARTH" value="20"/>
 		</attributes>
@@ -722,7 +698,7 @@
 	<skill id="3118" name="Item Skill: Fear" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Momentarily causes your enemy to flee in fear upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -737,7 +713,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="TURN_FLEE" visual="TURN_FLEE" >
@@ -753,7 +728,7 @@
 	<skill id="3119" name="Item Skill: Poison (Critical)" max-level="15" debuff="true" action="A2">
 	<!-- Effect: Momentarily poisons the target upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -773,7 +748,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
@@ -801,7 +775,7 @@
 	<skill id="3120" name="Item Skill: Bleed (Critical)" max-level="15" debuff="true" action="A2">
 	<!-- Effect: Momentarily causes the target to bleed upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="44">
 				<value level="3">54</value>
 				<value level="6">62</value>
@@ -812,7 +786,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
@@ -837,7 +810,7 @@
 	<skill id="3121" name="Item Skill: Silence" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Momentarily blocks the target's M. Skills upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -852,7 +825,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="SILENCE" visual="SILENCE" >
@@ -867,7 +839,7 @@
 	<skill id="3122" name="Item Skill: Doom" max-level="10" debuff="true" action="A2">
 	<!-- Effect: Momentarily blocks the target's entire P. Skills/M. Skills upon P. Critical damage. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -882,7 +854,6 @@
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-range initial="400"/>
-			<activate-rate initial="40"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="SILENCE_ALL" visual="SILENCE" >
@@ -909,7 +880,7 @@
 		level 10: Active: Instantly recovers your HP. Power 552.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -935,17 +906,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1001,7 +962,7 @@
 		level 10: Active Skill: Max HP +300 for a set time.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1027,18 +988,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1063,13 +1013,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="30.0">
 					<value level="2">60.0</value>
 					<value level="3">90.0</value>
@@ -1087,7 +1037,7 @@
 	<skill id="3125" name="Item Skill: Battle Roar" max-level="10" action="A2">
 	<!-- Active Skill: Increases Max HP for a set time and restores HP by the increased amount. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1113,18 +1063,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1149,13 +1088,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER" heal="true">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER" heal="true">
 				<power initial="3.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1163,7 +1102,7 @@
 	<skill id="3126" name="Item Skill: Prayer" max-level="10" action="A2">
 	<!-- Active Skill: Increases Heal Received for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1189,18 +1128,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1225,7 +1153,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -1254,7 +1182,7 @@
 		level 10: Active: Regenerates MP. Power 69.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1280,17 +1208,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1346,7 +1264,7 @@
 		level 10: Active Skill: Max MP +200 for a set time.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1372,18 +1290,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1408,13 +1315,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="20.0">
 					<value level="2">40.0</value>
 					<value level="3">60.0</value>
@@ -1432,7 +1339,7 @@
 	<skill id="3129" name="Item Skill: Mana Gain" max-level="15" action="A2">
 	<!-- Active Skill: Increases recovery bonus during MP Recovery through recharge. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1463,18 +1370,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1504,13 +1400,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MANA_CHARGE">
+			<stat-modify stat="MANA_CHARGE" stat-add="MANA_CHARGE">
 				<power initial="25.0">
 					<value level="2">27.0</value>
 					<value level="3">30.0</value>
@@ -1544,7 +1440,7 @@
 		level 10: Active: Regenerates CP. Power 473.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1570,17 +1466,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1636,7 +1522,7 @@
 		level 10: Active Skill: Max CP +300 for a set time.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1662,18 +1548,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1698,13 +1573,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="30.0">
 					<value level="2">60.0</value>
 					<value level="3">90.0</value>
@@ -1722,7 +1597,7 @@
 	<skill id="3132" name="Item Skill: Might" max-level="15" action="A2">
 	<!-- Active Skill: Increases P. Atk. for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1753,18 +1628,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1789,13 +1653,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="23.64">
 					<value level="2">27.96</value>
 					<value level="3">32.76</value>
@@ -1818,7 +1682,7 @@
 	<skill id="3133" name="Item Skill: Empower" max-level="15" action="A2">
 	<!-- Active Skill: Increases M. Atk. for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1849,18 +1713,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1885,13 +1738,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="15.9">
 					<value level="2">18.65</value>
 					<value level="3">21.6</value>
@@ -1914,7 +1767,7 @@
 	<skill id="3134" name="Item Skill: Might in Duel - PvP" max-level="10" action="A2">
 	<!-- Active Skill: Increases your P. Atk. in PvP for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1940,18 +1793,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -1976,7 +1818,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -1993,7 +1835,7 @@
 	<skill id="3135" name="Item Skill: Shield" max-level="15" action="A2">
 	<!-- Active Skill: Increases P. Def. for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2024,18 +1866,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2060,13 +1891,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="30.2">
 					<value level="2">33.72</value>
 					<value level="3">37.4</value>
@@ -2089,7 +1920,7 @@
 	<skill id="3136" name="Item Skill: Magic Barrier" max-level="15" action="A2">
 	<!-- Active Skill: Increases M. Def. for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2120,18 +1951,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2156,13 +1976,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="37.0">
 					<value level="2">40.0</value>
 					<value level="3">44.0</value>
@@ -2185,7 +2005,7 @@
 	<skill id="3137" name="Item Skill: Weakness in Duel" max-level="10" debuff="true" action="A2">
 	<!-- Active Skill: Decreases enemy's P. Atk. in PvP for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2211,18 +2031,7 @@
 				<value level="10">-789</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-440000">
-				<value level="2">-481000</value>
-				<value level="3">-521000</value>
-				<value level="4">-562000</value>
-				<value level="5">-602000</value>
-				<value level="6">-640000</value>
-				<value level="7">-677000</value>
-				<value level="8">-711000</value>
-				<value level="9">-743000</value>
-				<value level="10">-789000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2247,7 +2056,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PVP_DMG_DOWN" >
+		<abnormal type="PVP_DMG_DOWN">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="80"/>
@@ -2264,7 +2073,7 @@
 	<skill id="3138" name="Item Skill: Heal Empower" max-level="10" action="A2">
 	<!-- Active Skill: Increases the amount of Heal given for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2290,18 +2099,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2326,7 +2124,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -2350,7 +2148,7 @@
 	<skill id="3139" name="Item Skill: Agility" max-level="15" action="A2">
 	<!-- Active Skill: Increases P. Evasion for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2381,18 +2179,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2417,13 +2204,14 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
 					<value level="10">4.0</value>
@@ -2435,7 +2223,7 @@
 	<skill id="3140" name="Item Skill: Guidance" max-level="15" action="A2">
 	<!-- Active Skill: Increases P. Accuracy for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2466,18 +2254,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2502,13 +2279,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
@@ -2521,7 +2298,7 @@
 	<skill id="3141" name="Item Skill: Focus" max-level="10" action="A2">
 	<!-- Active Skill: Increases P. Critical Rate for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2547,18 +2324,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2583,13 +2349,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="5.0">
 					<value level="4">10.0</value>
 					<value level="7">15.0</value>
@@ -2601,7 +2367,7 @@
 	<skill id="3142" name="Item Skill: Wild Magic" max-level="10" action="A2">
 	<!-- Active Skill: Increases M. Critical Rate for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2627,18 +2393,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2663,13 +2418,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
 				<power initial="1.0">
 					<value level="4">2.0</value>
 					<value level="7">3.0</value>
@@ -2681,7 +2436,7 @@
 	<skill id="3143" name="Item Skill: Eva's Kiss" max-level="10" action="A2">
 	<!-- Active Skill: Increases Lung Capacity for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2707,18 +2462,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2743,13 +2487,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BREATH" mode="PER">
+			<stat-modify stat="BREATH" stat-add="BREATH" mode="PER">
 				<power initial="600.0"/>
 			</stat-modify>
 		</effects>
@@ -2757,7 +2501,7 @@
 	<skill id="3144" name="Item Skill: Acrobatics" max-level="10" action="A2">
 	<!-- Active Skill: Increases the height from which you can jump without sustaining damage for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2783,18 +2527,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2819,13 +2552,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="FALL">
+			<stat-modify stat="FALL" stat-add="FALL">
 				<power initial="-100.0"/>
 			</stat-modify>
 		</effects>
@@ -2833,7 +2566,7 @@
 	<skill id="3145" name="Item Skill: Iron Body" max-level="15" action="A2">
 	<!-- Active: Increases Resistance to damage from falling. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2864,18 +2597,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -2900,13 +2622,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="DAMAGE_ZONE_VULN">
+			<stat-modify stat="DAMAGE_ZONE_VULN" stat-add="DAMAGE_ZONE_VULN">
 				<power initial="-10.0">
 					<value level="4">-20.0</value>
 					<value level="7">-30.0</value>
@@ -2919,11 +2641,12 @@
 	<skill id="3146" name="Item Skill: Return" action="A1">
 	<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2941,11 +2664,12 @@
 	<skill id="3147" name="Item Skill: Quick Return" action="A1">
 	<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="56"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2963,7 +2687,7 @@
 	<skill id="3148" name="Item Skill: Vampiric Rage" max-level="10" action="A2">
 	<!-- Active Skill: Has a chance to absorb some of the damage inflicted on the enemy as HP for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2989,18 +2713,7 @@
 				<value level="10">789</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-				<value level="10">789000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10">
@@ -3025,7 +2738,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -3054,7 +2767,7 @@
 		level 10: Active: Increases the target's urge to attack. Power 659.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3086,17 +2799,7 @@
 				<value level="10">-659</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="-438000">
-				<value level="2">-467000</value>
-				<value level="3">-495000</value>
-				<value level="4">-523000</value>
-				<value level="5">-549000</value>
-				<value level="6">-574000</value>
-				<value level="7">-597000</value>
-				<value level="8">-617000</value>
-				<value level="9">-635000</value>
-				<value level="10">-659000</value>
-			</hit-time>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3138,7 +2841,7 @@
 		level 15: Active: Decreases the target's urge to attack. Power 390.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" trait="DERANGEMENT" >
+		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3158,6 +2861,7 @@
 			<cast-range initial="600"/>
 			<reuse initial="180000"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3207,7 +2911,7 @@
 	<skill id="3151" name="Item Skill: Peace" max-level="15" action="A1">
 	<!-- Active: Puts the opponent's mind at peace and erases the desire to attack. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" trait="DERANGEMENT" >
+		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3227,6 +2931,7 @@
 			<cast-range initial="600"/>
 			<reuse initial="180000"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3260,7 +2965,7 @@
 	<skill id="3152" name="Item Skill: Trick" max-level="10" action="A1">
 	<!-- Active: Cancels the target's status. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" trait="DERANGEMENT" >
+		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3275,6 +2980,7 @@
 			<cast-range initial="400"/>
 			<reuse initial="180000"/>
 			<effect-range initial="900"/>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3311,7 +3017,7 @@
 		level 10: Active: Absorbs HP. Power 88.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3337,17 +3043,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -3407,7 +3103,7 @@
 		level 10: Active: Burns up the enemy's MP. Power 120.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3433,17 +3129,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3500,7 +3186,7 @@
 		level 10: Active: Opens doors Lv. 3 or below with 100% chance and chests Lv. 72 or below with 90% chance. Requires 17 Keys of a Thief.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3526,17 +3212,7 @@
 				<value level="10">-14</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-5000">
-				<value level="2">-6000</value>
-				<value level="3">-7000</value>
-				<value level="4">-8000</value>
-				<value level="5">-9000</value>
-				<value level="6">-10000</value>
-				<value level="7">-11000</value>
-				<value level="8">-12000</value>
-				<value level="9">-13000</value>
-				<value level="10">-14000</value>
-			</hit-time>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3578,7 +3254,7 @@
 	<skill id="3156" name="Item Skill: Firecracker" action="A1">
 	<!-- Active: Ignites a Firecracker. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
@@ -3593,7 +3269,7 @@
 	<skill id="3157" name="Item Skill: Large Firecracker" action="A1">
 	<!-- Active: Ignites a Large Firecracker. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
@@ -3608,21 +3284,20 @@
 	<skill id="3158" name="Item Skill: Celestial Shield" action="A2">
 	<!-- Active: Instantly becomes invincible. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="659"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="659000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="17"/>
 			<mana initial="82"/>
 		</consume>
 		<target />
-		<abnormal type="INVINCIBILITY" >
+		<abnormal type="INVINCIBILITY">
 			<level initial="1"/>
 			<time initial="7"/>
 			<chance initial="-1"/>
@@ -3634,7 +3309,7 @@
 	<skill id="3159" name="Item Skill: Stealth" max-level="3" action="A2">
 	<!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="58">
 				<value level="2">67</value>
 				<value level="3">75</value>
@@ -3646,11 +3321,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">617000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="27">
@@ -3666,7 +3337,7 @@
 		</abnormal>
 		<effects>
 			<effect name="SilentMove"/>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-45.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -3704,7 +3375,7 @@
 		level 9: Active Skill: Resurrects a corpse. Also restores about 70% of XP.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -3728,16 +3399,7 @@
 				<value level="9">743</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="440000">
-				<value level="2">481000</value>
-				<value level="3">521000</value>
-				<value level="4">562000</value>
-				<value level="5">602000</value>
-				<value level="6">640000</value>
-				<value level="7">677000</value>
-				<value level="8">711000</value>
-				<value level="9">743000</value>
-			</hit-time>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3782,7 +3444,7 @@
 	<skill id="3161" name="Item Skill: Skill Clarity" max-level="8" action="A2">
 	<!-- Active Skill: Decreases P. Skill MP Consumption for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -3799,11 +3461,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -3816,7 +3474,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -3836,7 +3494,7 @@
 	<skill id="3162" name="Item Skill: Spell Clarity" max-level="8" action="A2">
 	<!-- Active Skill: Decreases M. Skill MP Consumption for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -3853,11 +3511,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -3870,7 +3524,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -3887,7 +3541,7 @@
 	<skill id="3163" name="Item Skill: Music Clarity" max-level="3" action="A2">
 	<!-- Active: Temporarily decreases MP Consumption for song/dance skills. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -3899,11 +3553,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -3916,7 +3566,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -3933,7 +3583,7 @@
 	<skill id="3164" name="Item Skill: Clarity" max-level="3" action="A2">
 	<!-- Active Skill: Decreases MP Consumptions of all skills for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -3945,11 +3595,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -3962,7 +3608,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -3970,11 +3616,7 @@
 		<effects>
 			<magic-cost type="MAGIC">
 				<power initial="-4.0">
-					<value level="2">-7.0</value>
-					<value level="2">-15.0</value>
 					<value level="2">-10.0</value>
-					<value level="3">-20.0</value>
-					<value level="3">-10.0</value>
 				</power>
 			</magic-cost>
 		</effects>
@@ -3993,7 +3635,7 @@
 		level 10: Active: Detonates a fireball by compressing the air around the caster. Power 110.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4019,17 +3661,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -4085,7 +3717,7 @@
 		level 10: Active: Unleashes a spray of highly pressurized water. Power 110.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4111,17 +3743,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -4177,7 +3799,7 @@
 		level 10: Active: Creates a whirlwind of destruction. Power 110.
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4203,17 +3825,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
@@ -4269,7 +3881,7 @@
 		level 10: Active Skill: Attacks the target with a stone boulder. Power: 110..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4295,17 +3907,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="EARTH" value="20"/>
@@ -4361,7 +3963,7 @@
 		level 10: Active Skill: Unleashes a Holy Attack. Power: 110..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4387,17 +3989,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -4453,7 +4045,7 @@
 		level 10: Active Skill: Unleashes a Dark Attack. Power: 110..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4479,17 +4071,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -4545,7 +4127,7 @@
 		level 10: Active Skill: Attacks the target with magic. Power: 110..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4571,17 +4153,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -4635,7 +4207,7 @@
 		level 10: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4661,17 +4233,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -4727,7 +4289,7 @@
 		level 10: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4753,17 +4315,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -4819,7 +4371,7 @@
 		level 10: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4845,17 +4397,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
@@ -4911,7 +4453,7 @@
 		level 10: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -4937,17 +4479,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="EARTH" value="20"/>
@@ -5003,7 +4535,7 @@
 		level 10: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5029,17 +4561,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -5095,7 +4617,7 @@
 		level 10: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5121,17 +4643,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -5187,7 +4699,7 @@
 		level 10: Active Skill: Attacks the enemies near a target. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5213,17 +4725,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5277,7 +4779,7 @@
 		level 10: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5303,17 +4805,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -5369,7 +4861,7 @@
 		level 10: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5395,17 +4887,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -5461,7 +4943,7 @@
 		level 10: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5487,17 +4969,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
@@ -5553,7 +5025,7 @@
 		level 10: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5579,17 +5051,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="EARTH" value="20"/>
@@ -5645,7 +5107,7 @@
 		level 10: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5671,17 +5133,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -5737,7 +5189,7 @@
 		level 10: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5763,17 +5215,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -5829,7 +5271,7 @@
 		level 10: Active Skill: Attacks nearby enemies. Power: 55..
 	 -->
 		<icon initial="icon.skill3123"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5855,17 +5297,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5908,7 +5340,7 @@
 	<skill id="3187" name="Item Skill: Slow" max-level="15" debuff="true" action="A2" type="MAGIC">
 	<!-- Active: Momentarily decreases the target's Speed. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -5939,18 +5371,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -5973,7 +5394,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="3"/>
 			<time initial="30"/>
 			<chance initial="40"/>
@@ -5987,7 +5408,7 @@
 	<skill id="3188" name="Item Skill: Winter" max-level="15" debuff="true" action="A2" type="MAGIC">
 	<!-- Active Skill: Momentarily decreases the target's Atk. Spd. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6018,18 +5439,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6052,13 +5462,13 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="ATTACK_TIME_UP" >
+		<abnormal type="ATTACK_TIME_UP">
 			<level initial="3"/>
 			<time initial="30"/>
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-23.0"/>
 			</stat-modify>
 		</effects>
@@ -6066,7 +5476,7 @@
 	<skill id="3189" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
 	<!-- Active Skill: Momentarily stuns the target. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6092,18 +5502,9 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
+			<hit-time initial="4000">
+				<value level="2">1500</value>
 			</hit-time>
-			<activate-rate initial="40"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6138,7 +5539,7 @@
 	<skill id="3190" name="Item Skill: Hold" max-level="10" debuff="true" action="A2" type="MAGIC">
 	<!-- Active: Momentarily inflicts Hold on the target. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6164,18 +5565,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6215,7 +5605,7 @@
 	<skill id="3191" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2" type="MAGIC">
 	<!-- Active Skill: Momentarily puts a target into sleep. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10" remove-on-damage="true" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10" remove-on-damage="true">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6241,18 +5631,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6292,7 +5671,7 @@
 	<skill id="3192" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2" type="MAGIC">
 	<!-- Skill Used: Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6318,18 +5697,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6352,7 +5720,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PARALYZE" >
+		<abnormal type="PARALYZE">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="40"/>
@@ -6375,7 +5743,7 @@
 	<skill id="3193" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2" type="MAGIC">
 	<!-- Active: Momentarily petrifies the target. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6401,18 +5769,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 
 			<element type="EARTH" value="20"/>
 		</attributes>
@@ -6449,7 +5806,7 @@
 	<skill id="3194" name="Item Skill: Fear" max-level="10" debuff="true" action="A2" type="MAGIC">
 	<!-- Active: Momentarily inflicts Fear on the target and causes him to flee. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6475,18 +5832,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6522,7 +5868,7 @@
 	<skill id="3195" name="Item Skill: Poison" max-level="15" debuff="true" action="A2" type="MAGIC">
 	<!-- Active Skill: Momentarily poisons a target. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6553,18 +5899,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6612,7 +5947,7 @@
 	<skill id="3196" name="Item Skill: Bleed" max-level="15" debuff="true" action="A2">
 	<!-- Active Skill: Momentarily causes a target to bleed. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6643,18 +5978,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6702,7 +6026,7 @@
 	<skill id="3197" name="Item Skill: Silence" max-level="10" debuff="true" action="A2" type="MAGIC">
 	<!-- Active: Momentarily blocks the target's magic skills. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6728,18 +6052,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6774,7 +6087,7 @@
 	<skill id="3198" name="Item Skill: Doom" max-level="10" debuff="true" action="A2" type="MAGIC">
 	<!-- Active Skill: Momentarily blocks all of the target's P. Skills/M. Skills. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -6800,18 +6113,7 @@
 				<value level="10">-657</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-436000">
-				<value level="2">-465000</value>
-				<value level="3">-493000</value>
-				<value level="4">-521000</value>
-				<value level="5">-547000</value>
-				<value level="6">-572000</value>
-				<value level="7">-595000</value>
-				<value level="8">-615000</value>
-				<value level="9">-633000</value>
-				<value level="10">-657000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="9">
@@ -6847,7 +6149,7 @@
 	<skill id="3199" name="Item Skill: Skill Refresh" max-level="3" action="A2">
 	<!-- Active Skill: Temporarily decreases the P. Skill Cooldown. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -6859,11 +6161,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -6876,7 +6174,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>

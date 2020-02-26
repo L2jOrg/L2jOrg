@@ -3,7 +3,7 @@
 	<skill id="3600" name="Special Ability: Anger" max-level="6" >
 	<!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -17,7 +17,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="20.44">
 					<value level="2">22.64</value>
 					<value level="3">24.77</value>
@@ -46,7 +46,7 @@
 	<skill id="3601" name="Special Ability: Haste" max-level="6" >
 	<!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -60,7 +60,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="8.0">
 					<value level="2">7.0</value>
 					<value level="5">6.0</value>
@@ -80,7 +80,7 @@
 	<skill id="3602" name="Special Ability: Guidance" max-level="6" >
 	<!-- Increases P. Accuracy. Enables the character to attack multiple opponents. -->
 		<icon initial="icon.skill1240"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -94,7 +94,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="6.88">
 					<value level="2">6.07</value>
 					<value level="3">5.72</value>
@@ -120,7 +120,7 @@
 	<skill id="3603" name="Demonic Sword Zariche" max-level="10" >
 	<!-- The Demon Bremnon is said to have used this mystical sword to slaughter enemies. The more blood the sword sheds, the more powerful it becomes. -->
 		<icon initial="icon.weapon_unique_zariche_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -141,23 +141,15 @@
 					<value level="10">50.0</value>
 				</power>
 			</vampiric-attack>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="220.0">
-					<value level="2">242.0</value>
 					<value level="2">720.0</value>
-					<value level="3">266.0</value>
 					<value level="3">864.0</value>
-					<value level="4">292.0</value>
 					<value level="4">1036.0</value>
-					<value level="5">322.0</value>
 					<value level="5">1244.0</value>
-					<value level="6">354.0</value>
 					<value level="6">1492.0</value>
-					<value level="7">389.0</value>
 					<value level="7">1791.0</value>
-					<value level="8">428.0</value>
 					<value level="8">2149.0</value>
-					<value level="9">471.0</value>
 					<value level="9">2579.0</value>
 					<value level="10">518.0</value>
 					<value level="10">3095.0</value>
@@ -257,23 +249,14 @@
 			</stat-modify>
 			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="1050.0">
-					<value level="2">1102.0</value>
 					<value level="2">1690.0</value>
-					<value level="3">1157.0</value>
 					<value level="3">2197.0</value>
-					<value level="4">1215.0</value>
 					<value level="4">2856.0</value>
-					<value level="5">1276.0</value>
 					<value level="5">3712.0</value>
-					<value level="6">1340.0</value>
 					<value level="6">4826.0</value>
-					<value level="7">1407.0</value>
 					<value level="7">6274.0</value>
-					<value level="8">1477.0</value>
 					<value level="8">8157.0</value>
-					<value level="9">1551.0</value>
 					<value level="9">10604.0</value>
-					<value level="10">1628.0</value>
 					<value level="10">13785.0</value>
 				</power>
 			</vital-stat-modify>
@@ -308,7 +291,7 @@
 	<skill id="3604" name="Frintezza's Necklace">
 	<!-- Increases Dark Attack/Poison/Bleed/Paralysis/Stun/Sleep Resistance, and Poison/Bleed/Paralysis/Stun/Sleep Atk. Rate. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
 		<icon initial="icon.accessory_necklace_of_frintessa_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -364,7 +347,7 @@
 	<skill id="3605" name="Set Effect - Moonshadow Heavy Armor, 4-piece">
 	<!-- HP Recovery Bonus +3%%, Max HP +25, and P. Def. +3%%. -->
 		<icon initial="icon.armor_t1001_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -372,7 +355,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="25.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -386,7 +369,7 @@
 	<skill id="3606" name="Set Effect - Moonshadow Light Armor, 4-piece">
 	<!-- MP Recovery Bonus +3%%, Max MP +10, and P. Atk. +2%%. -->
 		<icon initial="icon.armor_t1002_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -394,10 +377,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="2.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
@@ -408,7 +391,7 @@
 	<skill id="3607" name="Set Effect - Moonshadow Robe, 4-piece">
 	<!-- MP Recovery Bonus +3%%, Max MP +20, and M. Atk. +2%%. -->
 		<icon initial="icon.armor_t1003_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -416,10 +399,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="2.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
@@ -433,7 +416,7 @@
 		level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases M. Def. and P. Critical Rate and decreases the chance of receiving P. Critical Damage.
 	 -->
 		<icon initial="icon.armor_t1004_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -447,12 +430,12 @@
 				</power>
 				<chance initial="10.0"/>
 			</trigger-skill-by-damage>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="1035.0">
 					<value level="2">1116.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_CP_RATE">
+			<stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
 			<magic-cost type="MAGIC">
@@ -474,7 +457,7 @@
 		level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases P. Evasion and Atk. Spd., and decreases P. Critical Damage Received.
 	 -->
 		<icon initial="icon.armor_t1005_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -488,12 +471,12 @@
 				</power>
 				<chance initial="10.0"/>
 			</trigger-skill-by-damage>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="1035.0">
 					<value level="2">1116.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_CP_RATE">
+			<stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
 			<magic-cost type="MAGIC">
@@ -515,7 +498,7 @@
 		level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases Movement Speed, P. Def., and M. Atk.
 	 -->
 		<icon initial="icon.armor_t1006_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -529,12 +512,12 @@
 				</power>
 				<chance initial="10.0"/>
 			</trigger-skill-by-damage>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="1035.0">
 					<value level="2">1116.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_CP_RATE">
+			<stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
 			<magic-cost type="MAGIC">
@@ -553,7 +536,7 @@
 	<skill id="3611" name="Enchant Heavy Armor (D-grade)">
 	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
 		<icon initial="icon.skill0231"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -564,7 +547,7 @@
 			<stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
 				<power initial="1.518"/>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="25.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
@@ -573,7 +556,7 @@
 	<skill id="3612" name="Enchant Light Armor (D-grade)">
 	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
 		<icon initial="icon.skill0233"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -581,11 +564,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="14.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="2.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-hp-based>
 		</effects>
@@ -593,7 +577,7 @@
 	<skill id="3613" name="Enchant Robe (D-grade)">
 	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
 		<icon initial="icon.skill0234"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -601,7 +585,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="16.0"/>
 				<armor-type>MAGIC </armor-type>
 			</stat-modify>
@@ -613,7 +597,7 @@
 	<skill id="3614" name="Enchant Heavy Armor (C-grade)">
 	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
 		<icon initial="icon.skill0231"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -624,7 +608,7 @@
 			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
 				<power initial="2.019"/>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="38.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
@@ -633,7 +617,7 @@
 	<skill id="3615" name="Enchant Light Armor (C-grade)">
 	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
 		<icon initial="icon.skill0233"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -641,11 +625,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="20.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="2.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-hp-based>
 		</effects>
@@ -653,7 +638,7 @@
 	<skill id="3616" name="Enchant Robe (C-grade)">
 	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
 		<icon initial="icon.skill0234"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -661,7 +646,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="24.0"/>
 				<armor-type>MAGIC </armor-type>
 			</stat-modify>
@@ -673,7 +658,7 @@
 	<skill id="3617" name="Enchant Heavy Armor (B-grade)">
 	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
 		<icon initial="icon.skill0231"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -684,7 +669,7 @@
 			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
 				<power initial="2.25"/>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="44.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
@@ -693,7 +678,7 @@
 	<skill id="3618" name="Enchant Light Armor (B-grade)">
 	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
 		<icon initial="icon.skill0233"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -701,11 +686,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="24.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="2.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-hp-based>
 		</effects>
@@ -713,7 +699,7 @@
 	<skill id="3619" name="Enchant Robe (B-grade)">
 	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
 		<icon initial="icon.skill0234"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -721,7 +707,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="28.0"/>
 				<armor-type>MAGIC </armor-type>
 			</stat-modify>
@@ -733,7 +719,7 @@
 	<skill id="3620" name="Enchant Heavy Armor (A-grade)">
 	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
 		<icon initial="icon.skill0231"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -744,7 +730,7 @@
 			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
 				<power initial="2.43"/>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="50.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
@@ -753,7 +739,7 @@
 	<skill id="3621" name="Enchant Light Armor (A-grade)">
 	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
 		<icon initial="icon.skill0233"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -761,11 +747,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="27.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="2.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-hp-based>
 		</effects>
@@ -773,7 +760,7 @@
 	<skill id="3622" name="Enchant Robe (A-grade)">
 	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
 		<icon initial="icon.skill0234"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -781,7 +768,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="32.0"/>
 				<armor-type>MAGIC </armor-type>
 			</stat-modify>
@@ -793,7 +780,7 @@
 	<skill id="3623" name="Enchant Heavy Armor (S-grade)" max-level="3" >
 	<!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
 		<icon initial="icon.skill0231"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -804,7 +791,7 @@
 			<stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
 				<power initial="2.823"/>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="59.0"/>
 				<armor-type>HEAVY </armor-type>
 			</stat-modify>
@@ -813,7 +800,7 @@
 	<skill id="3624" name="Enchant Light Armor (S-grade)" max-level="3" >
 	<!-- Increases M. Def. and P. Evasion through item set enchantment. -->
 		<icon initial="icon.skill0233"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -821,11 +808,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="33.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="2.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-hp-based>
 		</effects>
@@ -833,7 +821,7 @@
 	<skill id="3625" name="Enchant Robe (S-grade)" max-level="3" >
 	<!-- Increases P. Def. and Weight Limit through item set enchantment. -->
 		<icon initial="icon.skill0234"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -841,7 +829,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="38.0"/>
 				<armor-type>MAGIC </armor-type>
 			</stat-modify>
@@ -853,7 +841,7 @@
 	<skill id="3629" name="Blood Sword Akamanah" max-level="10" >
 	<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
 		<icon initial="icon.weapon_dual_sword_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -874,23 +862,15 @@
 					<value level="10">50.0</value>
 				</power>
 			</vampiric-attack>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="220.0">
-					<value level="2">242.0</value>
 					<value level="2">720.0</value>
-					<value level="3">266.0</value>
 					<value level="3">864.0</value>
-					<value level="4">292.0</value>
 					<value level="4">1036.0</value>
-					<value level="5">322.0</value>
 					<value level="5">1244.0</value>
-					<value level="6">354.0</value>
 					<value level="6">1492.0</value>
-					<value level="7">389.0</value>
 					<value level="7">1791.0</value>
-					<value level="8">428.0</value>
 					<value level="8">2149.0</value>
-					<value level="9">471.0</value>
 					<value level="9">2579.0</value>
 					<value level="10">518.0</value>
 					<value level="10">3095.0</value>
@@ -990,23 +970,14 @@
 			</stat-modify>
 			<vital-stat-modify stat="MAX_CP" mode="PER">
 				<power initial="1050.0">
-					<value level="2">1102.0</value>
 					<value level="2">1690.0</value>
-					<value level="3">1157.0</value>
 					<value level="3">2197.0</value>
-					<value level="4">1215.0</value>
 					<value level="4">2856.0</value>
-					<value level="5">1276.0</value>
 					<value level="5">3712.0</value>
-					<value level="6">1340.0</value>
 					<value level="6">4826.0</value>
-					<value level="7">1407.0</value>
 					<value level="7">6274.0</value>
-					<value level="8">1477.0</value>
 					<value level="8">8157.0</value>
-					<value level="9">1551.0</value>
 					<value level="9">10604.0</value>
-					<value level="10">1628.0</value>
 					<value level="10">13785.0</value>
 				</power>
 			</vital-stat-modify>
@@ -1041,13 +1012,13 @@
 	<skill id="3630" name="Void Burst" action="A1">
 	<!-- Discharges cursed energy to attack nearby enemies. -->
 		<icon initial="icon.skill3630"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1063,13 +1034,13 @@
 	<skill id="3631" name="Void Flow" action="A1">
 	<!-- Emits cursed energy to strike a distant enemy. -->
 		<icon initial="icon.skill3631"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="600"/>
 			<reuse initial="60000"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-1000"/>
+			<hit-time initial="1900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1085,12 +1056,12 @@
 	<skill id="3632" name="Clan Gate" action="A2">
 	<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
 		<icon initial="icon.accessory_crown_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="10000"/>
 		</attributes>
 		<target />
 		<abnormal type="ABNORMAL_ITEM" visual="MAGIC_SQUARE" >
@@ -1114,15 +1085,14 @@
 		level 2: Active Skill: Spontaneously becomes immune to stun.
 	 -->
 		<icon initial="icon.accessory_pledge_cap1_i05"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="7"/>
 			<chance initial="-1"/>

@@ -8,7 +8,7 @@
 		level 4: Blessed Soulshot damage +3%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -21,7 +21,7 @@
 		level 2: Blessed Soulshot damage +5%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -34,7 +34,7 @@
 		level 2: Blessed Soulshot damage +8%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -57,7 +57,7 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -72,7 +72,7 @@
 		level 4: Spiritshot damage +3%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -82,7 +82,7 @@
 	<skill id="17819" name="Sapphire" max-level="2" action="A1">
 	<!-- Spiritshot damage +5%. -->
 		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -92,7 +92,7 @@
 	<skill id="17820" name="Sapphire" max-level="2" action="A1">
 	<!-- Spiritshot damage +8%. -->
 		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -110,7 +110,7 @@
 		<icon initial="icon.etc_bm_jewel_sapphire_i00">
 			<value level="3">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -129,7 +129,7 @@
 		<icon initial="icon.etc_bm_jewel_aquamarine_i00">
 			<value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -141,7 +141,7 @@
 		<icon initial="icon.etc_bm_jewel_aquamarine_i00">
 			<value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
 		</icon>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
@@ -152,7 +152,7 @@
 	<skill id="17825" name="Greater Aquamarine - Special Ability" action="A1">
 	<!-- Recovers 10%% MP upon using a skill. -->
 		<icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-range initial="-1"/>
@@ -166,7 +166,7 @@
 		level 2: Beast Soulshot damage +3%
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -176,7 +176,7 @@
 	<skill id="17889" name="Ruby" action="A1">
 	<!-- Beast Soulshot damage +5% -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -186,7 +186,7 @@
 	<skill id="17890" name="Ruby" action="A1">
 	<!-- Beast Soulshot damage +8% -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -204,7 +204,7 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="2">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -214,10 +214,11 @@
 	<skill id="17896" name="Aquamarine - Mana Drain">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<reuse initial="8000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

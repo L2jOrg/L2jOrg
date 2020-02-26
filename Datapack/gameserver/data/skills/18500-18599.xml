@@ -3,11 +3,12 @@
 	<skill id="18564" name="Shiny Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -28,7 +29,7 @@
 		<icon initial="icon.etc_bm_jewel_garnet">
 			<value level="6">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -48,12 +49,11 @@
 		<icon initial="icon.etc_bm_jewel_garnet">
 			<value level="3">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -61,7 +61,7 @@
 	<skill id="18571" name="Hero's Basics - I">
 	<!-- XP/SP gain +3%%. -->
 		<icon initial="icon.skill18571"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -71,7 +71,7 @@
 	<skill id="18572" name="Hero's Basics - II">
 	<!-- XP/SP gain +7%%. -->
 		<icon initial="icon.skill18572"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -81,7 +81,7 @@
 	<skill id="18573" name="Hero's Basics - III">
 	<!-- XP/SP gain +3%% and XP penalty on death -20%%. -->
 		<icon initial="icon.skill18573"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -91,7 +91,7 @@
 	<skill id="18575" name="Call to Hunt - I">
 	<!-- Max HP/Max MP/Max CP +200, P. Atk./M. Atk. +5%%, and P. Def/M. Def +5%%. -->
 		<icon initial="icon.skill18575"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -101,7 +101,7 @@
 	<skill id="18576" name="Call to Hunt - II">
 	<!-- P. Critical Damage +45, M. Critical Damage +30, and P. Critical/M. Critical Rate +10. -->
 		<icon initial="icon.skill18576"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -111,7 +111,7 @@
 	<skill id="18577" name="Call to Battle">
 	<!-- PvP Damage Received -5%%, Debuff Resistance +10%%. -->
 		<icon initial="icon.skill18577"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -121,7 +121,7 @@
 	<skill id="18578" name="Song Contest">
 	<!-- World Chat Points +20. -->
 		<icon initial="icon.skill18578"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -131,11 +131,12 @@
 	<skill id="18588" name="Fortune Brooch" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

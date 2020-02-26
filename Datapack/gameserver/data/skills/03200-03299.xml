@@ -3,7 +3,7 @@
 	<skill id="3200" name="Item Skill: Spell Refresh" max-level="3" action="A2">
 	<!-- Active Skill: Decreases M. Skill Cooldown for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -15,11 +15,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -32,7 +28,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -46,7 +42,7 @@
 	<skill id="3201" name="Item Skill: Music Refresh" max-level="3" action="A2">
 	<!-- Active Skill: Decreases the song/dance skill Cooldown for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -58,11 +54,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -75,7 +67,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -89,7 +81,7 @@
 	<skill id="3202" name="Item Skill: Refresh" max-level="3" action="A2">
 	<!-- Active Skill: Decreases the Cooldown for all skills for a set time. Does not apply to skills with fixed cooldowns. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -101,11 +93,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -118,7 +106,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -132,7 +120,7 @@
 	<skill id="3203" name="Item Skill: Mystery Skill" action="A2">
 	<!-- Active: Increases your head size. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
@@ -149,7 +137,7 @@
 	<skill id="3204" name="Item Skill: Reflect Damage" max-level="3" action="A2" type="MAGIC">
 	<!-- Active Skill: Allows you to reflect some of the damage received back to the enemy for a set time. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -161,11 +149,7 @@
 				<value level="3">495</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000">
-				<value level="2">438000</value>
-				<value level="3">495000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="5">
@@ -178,13 +162,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABNORMAL_ITEM" >
+		<abnormal type="ABNORMAL_ITEM">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT" stat-add="REFLECT_DAMAGE_PERCENT">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -195,13 +179,16 @@
 	<skill id="3205" name="Item Skill: Party Return" max-level="2" action="A1" type="MAGIC">
 	<!-- Active: Teleports party members to a village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="48">
 				<value level="2">56</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000">
+				<value level="2">3500</value>
+			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -223,7 +210,7 @@
 	<skill id="3206" name="Item Skill: Music" max-level="10" action="A1">
 	<!-- Active: Plays music. -->
 		<icon initial="icon.skill3123"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -245,7 +232,7 @@
 	<skill id="3207" name="Item Skill: Heal" max-level="10" >
 	<!-- Effect: Has a chance of recovering HP when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -282,7 +269,7 @@
 	<skill id="3208" name="Item Skill: Blessed Body" max-level="10" >
 	<!-- Effect: Has a chance of increasing Max HP for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -319,7 +306,7 @@
 	<skill id="3209" name="Item Skill: Prayer" max-level="10" >
 	<!-- Effect: Increases Heal Received for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -356,7 +343,7 @@
 	<skill id="3210" name="Item Skill: Recharge" max-level="10" >
 	<!-- Effect: Has a chance of restoring MP when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -393,7 +380,7 @@
 	<skill id="3211" name="Item Skill: Blessed Soul" max-level="10" >
 	<!-- Effect: Increases Max MP for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -430,7 +417,7 @@
 	<skill id="3212" name="Item Skill: Mana Gain" max-level="15" >
 	<!-- Effect: Increases recovery bonus during MP Recovery through recharge when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -477,7 +464,7 @@
 	<skill id="3213" name="Item Skill: Ritual" max-level="10" >
 	<!-- Effect: Restores CP when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -514,7 +501,7 @@
 	<skill id="3214" name="Item Skill: Cheer" max-level="10" >
 	<!-- Effect: Increases Max CP for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -551,7 +538,7 @@
 	<skill id="3215" name="Item Skill: Might" max-level="15" >
 	<!-- Effect: Increases P. Atk. for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -598,7 +585,7 @@
 	<skill id="3216" name="Item Skill: Empower" max-level="15" >
 	<!-- Effect: Increases M. Atk. for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -645,7 +632,7 @@
 	<skill id="3217" name="Item Skill: Might in Duel - PvP" max-level="10" >
 	<!-- Effect: Increases PvP P. Atk. for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -682,7 +669,7 @@
 	<skill id="3218" name="Item Skill: Shield" max-level="15" >
 	<!-- Effect: Increases P. Def. for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -729,7 +716,7 @@
 	<skill id="3219" name="Item Skill: Magic Barrier" max-level="15" >
 	<!-- Effect: Increases M. Def. for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -776,7 +763,7 @@
 	<skill id="3220" name="Item Skill: Weakness in Duel" max-level="10" >
 	<!-- Effect: Decreases enemy's PvP P. Atk. for a set time when attacked -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -813,7 +800,7 @@
 	<skill id="3221" name="Item Skill: Agility" max-level="15" >
 	<!-- Effect: Increases P. Evasion for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -860,7 +847,7 @@
 	<skill id="3222" name="Item Skill: Guidance" max-level="15" >
 	<!-- Effect: Increases P. Accuracy for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -907,7 +894,7 @@
 	<skill id="3223" name="Item Skill: Focus" max-level="10" >
 	<!-- Effect: Increases P. Critical Rate for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -944,7 +931,7 @@
 	<skill id="3224" name="Item Skill: Wild Magic" max-level="10" >
 	<!-- Effect: Increases M. Critical Rate for a set time when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -981,7 +968,7 @@
 	<skill id="3225" name="Item Skill: Charm" max-level="15" >
 	<!-- Effect: Decreases the enemy's urge to attack you when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1028,7 +1015,7 @@
 	<skill id="3226" name="Item Skill: Slow" max-level="15" >
 	<!-- Effect: Momentarily decreases the target's Movement Speed when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1075,7 +1062,7 @@
 	<skill id="3227" name="Item Skill: Winter" max-level="15" >
 	<!-- Effect: Momentarily decreases the target's Atk. Spd. when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1122,7 +1109,7 @@
 	<skill id="3228" name="Item Skill: Stun" max-level="10" >
 	<!-- Effect: Momentarily stuns the target when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1159,7 +1146,7 @@
 	<skill id="3229" name="Item Skill: Hold" max-level="10" >
 	<!-- Effect: Momentarily holds the target when attacked. Greatly decreases the chance to inflict additional Hold state while effects last. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1196,7 +1183,7 @@
 	<skill id="3230" name="Item Skill: Sleep" max-level="10" >
 	<!-- Effect: Momentarily causes the target to fall asleep when attacked. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1233,7 +1220,7 @@
 	<skill id="3231" name="Item Skill: Paralyze" max-level="10" >
 	<!-- Effect: Momentarily paralyzes the target when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1270,7 +1257,7 @@
 	<skill id="3232" name="Item Skill: Medusa" max-level="10" >
 	<!-- Effect: Momentarily petrifies the target when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1307,7 +1294,7 @@
 	<skill id="3233" name="Item Skill: Fear" max-level="10" >
 	<!-- Effect: Momentarily causes the target to flee in fear when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1344,7 +1331,7 @@
 	<skill id="3234" name="Item Skill: Poison" max-level="15" >
 	<!-- Effect: Momentarily poisons the target when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1391,7 +1378,7 @@
 	<skill id="3235" name="Item Skill: Bleed" max-level="15" >
 	<!-- Effect: Momentarily causes the target to bleed when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1438,7 +1425,7 @@
 	<skill id="3236" name="Item Skill: Silence" max-level="10" >
 	<!-- Effect: Momentarily blocks the target's M. Skills when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1475,7 +1462,7 @@
 	<skill id="3237" name="Item Skill: Doom" max-level="10" >
 	<!-- Effect: Momentarily blocks the target's P. Skills/M. Skills when attacked. -->
 		<icon initial="icon.skill3080"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1512,7 +1499,7 @@
 	<skill id="3238" name="Item Skill: Prayer" max-level="10" >
 	<!-- Item Skill: Increases Heal Received when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1538,7 +1525,7 @@
 	<skill id="3239" name="Item Skill: Mana Gain" max-level="15" >
 	<!-- Item Skill: Increases recovery bonus during MP Recovery through recharge when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1561,7 +1548,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MANA_CHARGE">
+			<stat-modify stat="MANA_CHARGE" stat-add="MANA_CHARGE">
 				<power initial="1.0"/>
 			</stat-modify>
 		</effects>
@@ -1569,7 +1556,7 @@
 	<skill id="3240" name="Item Skill: Might" max-level="15" >
 	<!-- Item Skill: Increases P. Atk. when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1592,7 +1579,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="10.26">
 					<value level="2">11.22</value>
 					<value level="3">11.94</value>
@@ -1610,7 +1597,7 @@
 	<skill id="3241" name="Item Skill: Empower" max-level="15" >
 	<!-- Item Skill: Increases M. Atk. when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1633,7 +1620,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="55.0"/>
 			</stat-modify>
 		</effects>
@@ -1641,7 +1628,7 @@
 	<skill id="3243" name="Item Skill: Might in Duel - PvP" max-level="10" >
 	<!-- Item Skill: Increases PvP P. Atk. when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1670,7 +1657,7 @@
 	<skill id="3244" name="Item Skill: Shield" max-level="15" >
 	<!-- Item Skill: Increases P. Def when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1693,7 +1680,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="12.78">
 					<value level="2">13.73</value>
 					<value level="3">14.14</value>
@@ -1711,7 +1698,7 @@
 	<skill id="3245" name="Item Skill: Magic Barrier" max-level="15" >
 	<!-- Item Skill: Increases M. Def when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1734,7 +1721,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="10.8">
 					<value level="2">11.62</value>
 					<value level="3">11.96</value>
@@ -1752,7 +1739,7 @@
 	<skill id="3246" name="Item Skill: Heal Empower" max-level="10" >
 	<!-- Item Skill: Increases the amount of Heal given when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1788,7 +1775,7 @@
 	<skill id="3247" name="Item Skill: Agility" max-level="15" >
 	<!-- Item Skill: Increases P. Evasion when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1811,14 +1798,15 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="2.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="2.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
 	<skill id="3248" name="Item Skill: Guidance" max-level="15" >
 	<!-- Item Skill: Increases P. Accuracy when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1841,7 +1829,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -1849,7 +1837,7 @@
 	<skill id="3249" name="Item Skill: Focus" max-level="10" >
 	<!-- Item Skill: Increases P. Critical Rate when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1867,7 +1855,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="20.0"/>
 			</stat-hp-based>
 		</effects>
@@ -1875,7 +1863,7 @@
 	<skill id="3250" name="Item Skill: Wild Magic" max-level="10" >
 	<!-- Item Skill: Increases M. Critical Rate when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1893,7 +1881,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -1901,7 +1889,7 @@
 	<skill id="3251" name="Item Skill: Weight Limit" max-level="10" >
 	<!-- Passive: Weight limit x2 when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1919,7 +1907,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT" mode="PER">
 				<power initial="100.0"/>
 			</stat-modify>
 		</effects>
@@ -1927,7 +1915,7 @@
 	<skill id="3252" name="Item Skill: Eva's Kiss" max-level="10" >
 	<!-- Item Skill: Increases Lung Capacity when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1945,7 +1933,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BREATH" mode="PER">
+			<stat-modify stat="BREATH" stat-add="BREATH" mode="PER">
 				<power initial="500.0"/>
 			</stat-modify>
 		</effects>
@@ -1953,7 +1941,7 @@
 	<skill id="3253" name="Item Skill: Acrobatics" max-level="10" >
 	<!-- Passive: Increases the height from which you can jump without sustaining damage when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1971,7 +1959,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="FALL">
+			<stat-modify stat="FALL" stat-add="FALL">
 				<power initial="-100.0"/>
 			</stat-modify>
 		</effects>
@@ -1979,7 +1967,7 @@
 	<skill id="3254" name="Item Skill: Iron Body" max-level="15" >
 	<!-- Passive: Increases Terrain Damage Resistance when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -2002,7 +1990,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="DAMAGE_ZONE_VULN">
+			<stat-modify stat="DAMAGE_ZONE_VULN" stat-add="DAMAGE_ZONE_VULN">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
@@ -2010,7 +1998,7 @@
 	<skill id="3255" name="Item Skill: Skill Clarity" max-level="8" >
 	<!-- Passive: Decreases P. Skills MP Consumption when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -2037,7 +2025,7 @@
 	<skill id="3256" name="Item Skill: Spell Clarity" max-level="8" >
 	<!-- Passive: Decreases M. Skill MP Consumption when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -2064,7 +2052,7 @@
 	<skill id="3257" name="Item Skill: Music Clarity" max-level="3" >
 	<!-- Passive: Decreases song/dance skill MP Consumption when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -2086,7 +2074,7 @@
 	<skill id="3258" name="Item Skill: Clarity" max-level="3" >
 	<!-- Passive: Decreases MP Consumption for all skills when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -2099,11 +2087,7 @@
 		<effects>
 			<magic-cost type="MAGIC">
 				<power initial="-4.0">
-					<value level="2">-7.0</value>
-					<value level="2">-15.0</value>
 					<value level="2">-10.0</value>
-					<value level="3">-20.0</value>
-					<value level="3">-10.0</value>
 				</power>
 			</magic-cost>
 		</effects>
@@ -2111,7 +2095,7 @@
 	<skill id="3259" name="Item Skill: Reflect Damage" max-level="3" >
 	<!-- Passive: Allows you to reflect some of the damage incurred back to the enemy when equipped. -->
 		<icon initial="icon.skill3238"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55">
 				<value level="2">64</value>
 				<value level="3">75</value>
@@ -2122,7 +2106,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REFLECT_DAMAGE_PERCENT">
+			<stat-modify stat="REFLECT_DAMAGE_PERCENT" stat-add="REFLECT_DAMAGE_PERCENT">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">20.0</value>
@@ -2133,14 +2117,14 @@
 	<skill id="3261" name="Forgiveness" action="A1">
 	<!-- Taps into the magic of the bow to fire a harmless bolt. Warning: If you use this skill against a monster, it will flag you for PvP. -->
 		<icon initial="icon.skill3260"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="500"/>
 			<reuse initial="3000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="1"/>
 			<effect-range initial="700"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2151,13 +2135,13 @@
 	<skill id="3263" name="Blessed Resurrection" action="A1">
 	<!-- Blessed Resurrection is available. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="1"/>
 			<cast-range initial="400"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="600"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2176,11 +2160,12 @@
 	<skill id="3264" name="Blessed Escape" action="A1">
 	<!-- Blessed Escape is available. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2197,7 +2182,7 @@
 	<skill id="3265" name="Mysterious Ability" action="A2">
 	<!-- Increases the size of your head. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="ETC">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
@@ -2211,7 +2196,7 @@
 	<skill id="3266" name="Large Firecracker's Ability" action="A1">
 	<!-- Allows the use of Large Fireworks. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
@@ -2226,10 +2211,11 @@
 	<skill id="3267" name="Seal Agathion" action="A1">
 	<!-- Dismiss a summoned Agathion. -->
 		<icon initial="icon.etc_unsummon_aga_agit_i01"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="65"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -2240,10 +2226,11 @@
 	<skill id="3268" name="Release Agathion's Seal - Castle" action="A1">
 	<!-- Removes the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -2254,10 +2241,11 @@
 	<skill id="3269" name="Release Agathion's Seal - Rainbow Clan Hall" action="A1">
 	<!-- Removes the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="65"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -2268,10 +2256,11 @@
 	<skill id="3270" name="Release Agathion's Seal - Beast Farm" action="A1">
 	<!-- Removes the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="65"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -2287,7 +2276,7 @@
 		<icon initial="icon.etc_talisman_i01">
 			<value level="2">icon.etc_talisman_i00</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2295,7 +2284,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 				</power>
@@ -2312,7 +2301,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2320,7 +2309,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="3.0">
 					<value level="2">4.0</value>
 					<value level="3">5.0</value>
@@ -2338,7 +2327,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2346,7 +2335,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="3.0">
 					<value level="2">5.0</value>
 					<value level="3">6.0</value>
@@ -2364,7 +2353,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2372,7 +2361,8 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="PER">				<power initial="10.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0" mode="PER">
+				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">18.0</value>
 				</power>
@@ -2387,7 +2377,7 @@
 		<icon initial="icon.etc_talisman_i01">
 			<value level="2">icon.etc_talisman_i00</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2395,7 +2385,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 				</power>
@@ -2412,7 +2402,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2420,7 +2410,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="3.0">
 					<value level="2">4.0</value>
 					<value level="3">5.0</value>
@@ -2438,7 +2428,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2446,7 +2436,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="3.0">
 					<value level="2">5.0</value>
 					<value level="3">6.0</value>
@@ -2464,7 +2454,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2472,7 +2462,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_EVASION_RATE" mode="PER">
+			<stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 					<value level="3">18.0</value>
@@ -2490,7 +2480,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2498,7 +2488,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="3.0">
 					<value level="2">5.0</value>
 					<value level="3">7.0</value>
@@ -2516,7 +2506,7 @@
 			<value level="2">icon.etc_talisman_i00</value>
 			<value level="3">icon.etc_wise_man_stone_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2524,7 +2514,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power initial="3.0">
 					<value level="2">5.0</value>
 					<value level="3">7.0</value>
@@ -2535,17 +2525,16 @@
 	<skill id="3281" name="Grey Talisman Box - Guard" action="A2">
 	<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. Cooldown - 5 min. -->
 		<icon initial="icon.etc_talisman_i07"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="-1"/>
@@ -2565,7 +2554,7 @@
 			<reuse initial="300000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -2577,23 +2566,22 @@
 	<skill id="3283" name="Grey Talisman - Benefaction" action="A2">
 	<!-- For 10 sec., P. Def. +1800 and M. Def. +1620. Buff-canceling Attack Resistance +80%%. Effects from two such Talismans do not stack. Cooldown - 15 min. -->
 		<icon initial="icon.etc_talisman_i07"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="900000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="1800.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE">
@@ -2607,23 +2595,22 @@
 	<skill id="3284" name="Grey Talisman - Block" debuff="true" action="A2">
 	<!-- For 15 seconds, restricts the target's HP recovery to 70%% when used during PvP. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Can only be used on a PC. Cooldown is 4 minutes. -->
 		<icon initial="icon.etc_talisman_i07"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="900"/>
 			<reuse initial="180000"/>
 			<effect-point initial="-679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-679000"/>
-			<activate-rate initial="70"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAX_RECOVERABLE_HP" mode="PER">
+			<stat-modify stat="MAX_RECOVERABLE_HP" stat-add="MAX_RECOVERABLE_HP" mode="PER">
 				<power initial="-70.0"/>
 			</stat-modify>
 		</effects>
@@ -2631,17 +2618,16 @@
 	<skill id="3285" name="Grey Talisman - Gravity" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Atk. Spd. and Casting Spd. -20%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 4 minutes. -->
 		<icon initial="icon.etc_talisman_i07"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="600"/>
 			<reuse initial="180000"/>
 			<effect-point initial="-679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-679000"/>
-			<activate-rate initial="70"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="70"/>
@@ -2658,17 +2644,16 @@
 	<skill id="3286" name="Grey Talisman - Bond" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Movement Speed -30%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 4 minutes. -->
 		<icon initial="icon.etc_talisman_i07"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="600"/>
 			<reuse initial="180000"/>
 			<effect-point initial="-655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-655000"/>
-			<activate-rate initial="70"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="70"/>
@@ -2682,17 +2667,16 @@
 	<skill id="3287" name="Yellow Talisman - Guard" action="A2">
 	<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="240000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="-1"/>
@@ -2712,7 +2696,7 @@
 			<reuse initial="240000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -2724,23 +2708,22 @@
 	<skill id="3289" name="Yellow Talisman - Benefaction" action="A2">
 	<!-- For 10 seconds, P. Def. +3600 and M. Def. +3240, when used. Buff-canceling Attack Resistance +80%%. Effects from two such Talismans do not stack. Cooldown - 15 min. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="900000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="3600.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE">
@@ -2754,23 +2737,22 @@
 	<skill id="3290" name="Yellow Talisman - Block" debuff="true" action="A2">
 	<!-- For 15 seconds, restricts the target's HP recovery to 70%% when used during PvP. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Can only be used on a PC. Cooldown is 3 minutes. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="900"/>
 			<reuse initial="120000"/>
 			<effect-point initial="-679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-679000"/>
-			<activate-rate initial="70"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAX_RECOVERABLE_HP" mode="PER">
+			<stat-modify stat="MAX_RECOVERABLE_HP" stat-add="MAX_RECOVERABLE_HP" mode="PER">
 				<power initial="-70.0"/>
 			</stat-modify>
 		</effects>
@@ -2778,17 +2760,16 @@
 	<skill id="3291" name="Yellow Talisman - Gravity" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Atk. Spd. and Casting Spd. -20%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 3 minutes. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="600"/>
 			<reuse initial="120000"/>
 			<effect-point initial="-679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-679000"/>
-			<activate-rate initial="70"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="70"/>
@@ -2805,17 +2786,16 @@
 	<skill id="3292" name="Yellow Talisman - Bond" debuff="true" action="A2">
 	<!-- For 15 seconds, target's Movement Speed -30%% when used. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. Cooldown is 4 minutes -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="600"/>
 			<reuse initial="120000"/>
 			<effect-point initial="-655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-655000"/>
-			<activate-rate initial="70"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal type="TALISMAN" >
+		<abnormal type="TALISMAN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="70"/>
@@ -2829,7 +2809,7 @@
 	<skill id="3293" name="Talisman of Darkness - Healing Power">
 	<!-- Healing Power +4%%. Effects from two such Talismans do not stack. -->
 		<icon initial="icon.etc_wise_man_stone_i04"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2845,7 +2825,7 @@
 	<skill id="3294" name="Talisman of Darkness - Power of Healing Magic">
 	<!-- Power of healing magic +43. Effects from two such Talismans do not stack. -->
 		<icon initial="icon.etc_wise_man_stone_i04"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>

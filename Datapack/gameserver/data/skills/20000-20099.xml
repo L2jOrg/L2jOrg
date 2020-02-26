@@ -3,14 +3,14 @@
 	<skill id="20002" name="Dragon Kick" action="A1">
 	<!-- Powerful blow containing the power of a dragon. Attacks a target with bonus 3420 Power. Critical. Over-hit. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="20"/>
 			<reuse initial="7000"/>
 			<cool-time initial="167"/>
 			<effect-point initial="-347"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-347000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -26,14 +26,14 @@
 	<skill id="20003" name="Dragon Slash" action="A1">
 	<!-- Powerful blow containing the power of a dragon. Attacks a target with bonus 3420 Power. Critical. Over-hit. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="20"/>
 			<reuse initial="7000"/>
 			<cool-time initial="167"/>
 			<effect-point initial="-348"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-348000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -49,20 +49,18 @@
 	<skill id="20004" name="Dragon Dash" action="A2" type="MAGIC">
 	<!-- Increases Speed by 100%% for 5 seconds with a dragon's strength. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<reuse initial="25000"/>
 			<effect-point initial="689"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="689000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="38"/>
 		</consume>
 		<target />
-		<abnormal type="SPEED_UP_SPECIAL" >
+		<abnormal type="SPEED_UP_SPECIAL">
 			<level initial="2"/>
 			<time initial="5"/>
 			<chance initial="-1"/>
@@ -76,26 +74,25 @@
 	<skill id="20005" name="Dragon Aura" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Rate +30%% and P. Critical Damage +35%% with the power of a Dragon. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="70"/>
 			<cast-range initial="400"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="635"/>
 			<effect-range initial="900"/>
-			<hit-time initial="635000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="47"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="IMPROVE_CRT_RATE_DMG_UP" >
+		<abnormal type="IMPROVE_CRT_RATE_DMG_UP">
 			<level initial="3"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="30.0"/>
 			</stat-hp-based>
 		</effects>

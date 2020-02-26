@@ -3,7 +3,7 @@
 	<skill id="600" name="Residence Guidance">
 	<!-- P. Accuracy of clan members in residence +4. -->
 		<icon initial="icon.skill0380"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -19,7 +19,7 @@
 	<skill id="601" name="Residence Agility">
 	<!-- P. Evasion of clan members in residence +4. -->
 		<icon initial="icon.skill0381"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -27,14 +27,15 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
 	<skill id="602" name="Residence Shield Block">
 	<!-- Shield Defense Rate of clan members in residence +20%%. -->
 		<icon initial="icon.skill0382"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -42,7 +43,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
@@ -50,7 +51,7 @@
 	<skill id="603" name="Residence Shield Defense">
 	<!-- Shield Def. of clan members in residence +225. -->
 		<icon initial="icon.skill0383"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -58,7 +59,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE">
+			<stat-modify stat="SHIELD_DEFENCE" stat-add="SHIELD_DEFENCE">
 				<power initial="225.0"/>
 			</stat-modify>
 		</effects>
@@ -66,7 +67,7 @@
 	<skill id="604" name="Residence Typhoon Resistance">
 	<!-- Water/Wind Resistance of clan members in residence increases by 10. -->
 		<icon initial="icon.skill0384"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -74,7 +75,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WATER_RES">
+			<stat-modify stat="WATER_RES" stat-add="WATER_RES">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
@@ -82,7 +83,7 @@
 	<skill id="605" name="Residence Lava Resistance">
 	<!-- Fire/Earth Resistance of clan members in residence increases by 10. -->
 		<icon initial="icon.skill0385"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -90,7 +91,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="FIRE_RES">
+			<stat-modify stat="FIRE_RES" stat-add="FIRE_RES">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
@@ -98,7 +99,7 @@
 	<skill id="606" name="Residence Fortitude">
 	<!-- Stun Resistance of clan members in residence +10. -->
 		<icon initial="icon.skill0386"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -108,7 +109,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -116,7 +117,7 @@
 	<skill id="607" name="Residence Freedom">
 	<!-- Hold Resistance of clan members in residence increases by 10. -->
 		<icon initial="icon.skill0387"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -126,7 +127,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -134,7 +135,7 @@
 	<skill id="608" name="Residence Vigilance">
 	<!-- Sleep Resistance of clan members in residence increases by 10. -->
 		<icon initial="icon.skill0388"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -144,7 +145,7 @@
 		<effects>
 			<defence-trait>
 				<trait type="SLEEP">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -152,7 +153,7 @@
 	<skill id="609" name="Residence Movement">
 	<!-- The Speed of clan members in residence increases by 6. -->
 		<icon initial="icon.skill0389"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -168,7 +169,7 @@
 	<skill id="610" name="Residence Death Fortune">
 	<!-- When a clan member within the residence is killed by PK/regular monsters, decreases the item drop rate and XP decrease rate. -->
 		<icon initial="icon.skill0390"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -189,7 +190,7 @@
 		level 3: The corresponding troops' P. Atk. +17.3, P. Critical Rate +15, and P. Critical Damage +100.
 	 -->
 		<icon initial="icon.skill1463"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -197,7 +198,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="17.3"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -219,7 +220,7 @@
 		level 3: The corresponding troops' P. Def. +27.3, M. Def. +17.6, and Shield Def. +6%.
 	 -->
 		<icon initial="icon.skill1464"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -227,7 +228,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power>
 					<value level="2">17.6</value>
 				</power>
@@ -249,7 +250,7 @@
 		level 3: The corresponding troops' P. Accuracy +2, P. Evasion +2, and Movement Speed +3.
 	 -->
 		<icon initial="icon.skill1465"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -262,11 +263,12 @@
 					<value level="3">3.0</value>
 				</power>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power>
 					<value level="2">2.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -278,7 +280,7 @@
 		level 3: The corresponding troops' M. Def. increase by 44.
 	 -->
 		<icon initial="icon.skill1466"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -286,7 +288,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="17.0">
 					<value level="2">31.1</value>
 					<value level="3">44.0</value>
@@ -301,7 +303,7 @@
 		level 3: The amount of Heal given to the troops +20, Max MP +30%, and MP Consumption -5%.
 	 -->
 		<icon initial="icon.skill1043"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -309,7 +311,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
 				<power>
 					<value level="2">30.0</value>
 				</power>
@@ -330,7 +332,7 @@
 		level 3: The corresponding troops' M. Atk. +19.32 and M. Critical Rate +1%.
 	 -->
 		<icon initial="icon.skill1443"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -338,7 +340,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="7.17">
 					<value level="2">19.32</value>
 				</power>
@@ -353,12 +355,12 @@
 	<skill id="619" name="Dispel Transform" action="A1">
 	<!-- Dispels the transformation. -->
 		<icon initial="icon.skilltransform2"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="56"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="10"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="10000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -389,10 +391,7 @@
 				<value level="2">300</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="200000">
-				<value level="2">300000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="40">
@@ -400,7 +399,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="AVOID_UP_SPECIAL" >
+		<abnormal type="AVOID_UP_SPECIAL">
 			<level initial="1"/>
 			<time initial="20"/>
 			<chance initial="-1"/>
@@ -416,7 +415,8 @@
 					<value level="2">66.0</value>
 				</power>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="20.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="20.0">
 					<value level="2">35.0</value>
 				</power>
 			</stat-hp-based>
@@ -431,7 +431,7 @@
 		level 5: P. Critical Rate +20%, P. Critical Damage +500.
 	 -->
 		<icon initial="icon.skill10812"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="45">
 				<value level="2">55</value>
 				<value level="3">67</value>
@@ -452,7 +452,7 @@
 					<value level="5">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="10.0">
 					<value level="2">12.0</value>
 					<value level="3">14.0</value>
@@ -482,13 +482,7 @@
 				<value level="5">-500</value>
 			</effect-point>
 			<effect-range initial="600"/>
-			<hit-time initial="-460000">
-				<value level="2">-470000</value>
-				<value level="3">-480000</value>
-				<value level="4">-490000</value>
-				<value level="5">-500000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume soul="5">
 			<mana initial="40">
@@ -512,14 +506,14 @@
 	<skill id="675" name="Divine Warrior Cross Slash" action="A1">
 	<!-- Attack targets with bonus 2904 Power. Critical. Over-hit. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="167"/>
 			<effect-point initial="-598"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-598000"/>
+			<hit-time initial="1733"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -535,13 +529,13 @@
 	<skill id="676" name="Divine Warrior Sonic Blaster" action="A1">
 	<!-- Hurls Momentum to attack the enemy with bonus 2323 Power. Critical. Over-hit. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<reuse initial="3000"/>
 			<effect-point initial="-342"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-342000"/>
+			<hit-time initial="1900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -557,14 +551,14 @@
 	<skill id="677" name="Divine Warrior Transfixion of Earth" action="A1">
 	<!-- Stabs the ground with bonus 2323 Power to attack nearby enemies. Ignores Shield Defense. Over-hit. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="4000"/>
 			<cool-time initial="733"/>
 			<effect-point initial="-342"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-342000"/>
+			<hit-time initial="1067"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -580,26 +574,25 @@
 	<skill id="678" name="Divine Warrior War Cry" action="A2">
 	<!-- Increases P. Atk. by 25%% for 1 minute. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="45000"/>
 			<effect-point initial="408"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="408000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="36"/>
 		</consume>
 		<target />
-		<abnormal type="PA_UP_SPECIAL" >
+		<abnormal type="PA_UP_SPECIAL">
 			<level initial="2"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="25.0"/>
 			</stat-modify>
 		</effects>
@@ -607,17 +600,16 @@
 	<skill id="679" name="Sacrifice Warrior" action="A2" type="MAGIC">
 	<!-- Sacrifices oneself to increase P. Atk. of all party members by 20%% for 30 seconds. Available only when HP is under 30%%. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<target scope="PARTY" object="FRIEND" range="300" />
-		<abnormal type="TRANSFORM_SCRIFICE" >
+		<abnormal type="TRANSFORM_SCRIFICE">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -626,7 +618,7 @@
 			<remain-status stat="HP" amount="30"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<call-skill skill="5602" scope="SELF">
@@ -637,21 +629,20 @@
 	<skill id="680" name="Divine Knight Hate" debuff="true" action="A2">
 	<!-- Provokes the enemy to attack with 6752 Power. -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="30" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="80"/>
 			<cast-range initial="400"/>
 			<reuse initial="6000"/>
 			<cool-time initial="200"/>
 			<effect-point initial="-6752"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-6752000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="700"/>
 		</attributes>
 		<consume>
 			<mana initial="51"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="TARGET_LOCK" >
+		<abnormal type="TARGET_LOCK">
 			<level initial="1"/>
 			<time initial="3"/>
 			<chance initial="80"/>
@@ -663,20 +654,19 @@
 	<skill id="681" name="Divine Knight Aggression Aura" debuff="true" action="A2">
 	<!-- Provokes nearby enemies to attack with 6752 Power. -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="30" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="40000"/>
 			<effect-point initial="-6752"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-6752000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="144"/>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
-		<abnormal type="TARGET_LOCK" >
+		<abnormal type="TARGET_LOCK">
 			<level initial="1"/>
 			<time initial="3"/>
 			<chance initial="40"/>
@@ -688,15 +678,14 @@
 	<skill id="682" name="Divine Knight Stun Attack" debuff="true" action="A2">
 	<!-- Inflicts damage and briefly stuns the enemy. Over-hit. Power: 1162. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
 			<magic-level initial="80"/>
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="720"/>
 			<effect-point initial="-342"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-342000"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="76"/>
@@ -717,15 +706,14 @@
 	<skill id="683" name="Divine Knight Thunder Storm" debuff="true" action="A2">
 	<!-- Inflicts damage and briefly stuns nearby enemies. Ignores Shield Defense. Over-hit. Power: 775. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<cool-time initial="720"/>
 			<effect-point initial="-171"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-171000"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="114"/>
@@ -746,14 +734,13 @@
 	<skill id="684" name="Divine Knight Ultimate Defense" action="A2">
 	<!-- Spontaneously increases P. Def/M. Def, Buff-canceling Attack Resistance significantly. The caster cannot move while the effect lasts. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="900000"/>
 			<effect-point initial="676"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="676000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="36"/>
@@ -766,7 +753,7 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="2700.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -780,17 +767,16 @@
 	<skill id="685" name="Sacrifice Knight" action="A2" type="MAGIC">
 	<!-- Increases P. Def. of the party members by sacrificing yourself. Available only when HP is under 30 percent. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<target scope="PARTY" object="FRIEND" range="300" />
-		<abnormal type="TRANSFORM_SCRIFICE" >
+		<abnormal type="TRANSFORM_SCRIFICE">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -799,7 +785,7 @@
 			<remain-status stat="HP" amount="30"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<call-skill skill="5602" scope="SELF">
@@ -810,15 +796,14 @@
 	<skill id="686" name="Divine Rogue Stun Shot" debuff="true" action="A2">
 	<!-- Shoots an arrow that inflicts damage and cancels the enemy's targeting. Momentarily stuns the enemy. Over-hit. Power: 2323. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
 			<magic-level initial="80"/>
 			<cast-range initial="900"/>
 			<reuse initial="3000"/>
 			<cool-time initial="1000"/>
 			<effect-point initial="-684"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-684000"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<mana initial="116"/>
@@ -842,14 +827,14 @@
 	<skill id="687" name="Divine Rogue Double Shot" action="A1">
 	<!-- Shoots 2 arrows in succession. Critical. Over-hit. Power: 6195. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="900"/>
 			<reuse initial="3000"/>
 			<cool-time initial="1000"/>
 			<effect-point initial="-684"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-684000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -865,15 +850,14 @@
 	<skill id="688" name="Divine Rogue Bleed Attack" debuff="true" action="A2">
 	<!-- Aims at vital points to injure the target. Momentarily causes the enemy to bleed. Over-hit. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20">
 			<magic-level initial="80"/>
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="720"/>
 			<effect-point initial="-342"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-342000"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="80"/>
@@ -896,14 +880,14 @@
 	<skill id="689" name="Divine Rogue Deadly Blow" action="A1">
 	<!-- Attacks the target's vital points. CP Siphon. Over-hit is possible. Power 6969. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="720"/>
 			<effect-point initial="-342"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-342000"/>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -923,43 +907,42 @@
 	<skill id="690" name="Divine Rogue Agility" action="A2" type="MAGIC">
 	<!-- P. Evasion +4 for a set time. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="676"/>
 			<effect-range initial="900"/>
-			<hit-time initial="676000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="73"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="AVOID_UP" >
+		<abnormal type="AVOID_UP">
 			<level initial="3"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
 	<skill id="691" name="Sacrifice Rogue" action="A2" type="MAGIC">
 	<!-- Increases a party member's P. Evasion by sacrificing yourself. Available only when HP is at 30%% or below. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<target scope="PARTY" object="FRIEND" range="300" />
-		<abnormal type="TRANSFORM_SCRIFICE" >
+		<abnormal type="TRANSFORM_SCRIFICE">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -968,7 +951,8 @@
 			<remain-status stat="HP" amount="30"/>
 		</conditions>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="10.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="10.0"/>
 			</stat-hp-based>
 			<call-skill skill="5602" scope="SELF">
 				<power initial="1.0"/>
@@ -978,13 +962,13 @@
 	<skill id="692" name="Divine Wizard Holy Flare" action="A3" type="MAGIC">
 	<!-- Attacks a contacted target with 102 magic Power. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="150"/>
 			<reuse initial="1000"/>
 			<effect-point initial="-541"/>
 			<effect-range initial="650"/>
-			<hit-time initial="-541000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1000,13 +984,13 @@
 	<skill id="693" name="Divine Wizard Holy Strike" action="A1" type="MAGIC">
 	<!-- Unleashes a Holy Attack. Over-hit. Power: 128. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="900"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-844"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-844000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -1024,13 +1008,13 @@
 	<skill id="694" name="Divine Wizard Holy Curtain" action="A1" type="MAGIC">
 	<!-- Attack a large number of enemies with divine rainstorm. Power 64. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="500"/>
 			<reuse initial="4000"/>
 			<effect-point initial="-338"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-338000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="HOLY" value="20"/>
@@ -1048,14 +1032,13 @@
 	<skill id="695" name="Divine Wizard Holy Cloud" debuff="true" action="A2" type="MAGIC">
 	<!-- Briefly draws in divine clouds that make nearby enemies fall asleep. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="30" remove-on-damage="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="30" remove-on-damage="true">
 			<magic-level initial="80"/>
 			<cast-range initial="500"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-676"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-676000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="5000"/>
 		</attributes>
 		<consume>
 			<mana initial="109"/>
@@ -1070,7 +1053,7 @@
 			<block-all-actions/>
 			<defence-trait>
 				<trait type="SLEEP">
-					<power initial="100"/>
+					<power initial="100.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1078,14 +1061,13 @@
 	<skill id="696" name="Divine Wizard Surrender to Holy" debuff="true" action="A2" type="MAGIC">
 	<!-- Momentarily decreases Holy Attack Resistance, and increases Dark Attack Resistance. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="80"/>
 			<cast-range initial="750"/>
 			<reuse initial="2000"/>
 			<effect-point initial="-331"/>
 			<effect-range initial="1250"/>
-			<hit-time initial="-331000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 
 			<element type="DARK" value="20"/>
 		</attributes>
@@ -1093,13 +1075,13 @@
 			<mana initial="73"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="ARMOR_UNHOLY" >
+		<abnormal type="ARMOR_UNHOLY">
 			<level initial="3"/>
 			<time initial="30"/>
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="HOLY_RES">
+			<stat-modify stat="HOLY_RES" stat-add="HOLY_RES">
 				<power initial="-25.0"/>
 			</stat-modify>
 		</effects>
@@ -1107,17 +1089,16 @@
 	<skill id="697" name="Sacrifice Wizard" action="A2" type="MAGIC">
 	<!-- Increase party member's M. Atk. by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<target scope="PARTY" object="FRIEND" range="300" />
-		<abnormal type="TRANSFORM_SCRIFICE" >
+		<abnormal type="TRANSFORM_SCRIFICE">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -1126,7 +1107,7 @@
 			<remain-status stat="MP" amount="10"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<call-skill skill="5602" scope="SELF">
@@ -1137,13 +1118,13 @@
 	<skill id="698" name="Divine Healer Major Heal" action="A1" type="MAGIC">
 	<!-- Recovers HP with 946 Power. -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<effect-point initial="826"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="826000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1159,13 +1140,13 @@
 	<skill id="699" name="Divine Healer Battle Heal" action="A1" type="MAGIC">
 	<!-- Recovers HP with 826 Power. -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<effect-point initial="661"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="661000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

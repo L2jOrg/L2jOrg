@@ -9,20 +9,19 @@
 			<reuse initial="3000"/>
 			<effect-point initial="679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="679000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="37"/>
 		</consume>
 		<target />
-		<abnormal type="DD_RESIST" >
+		<abnormal type="DD_RESIST">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_SUCCESS_RES" mode="PER">
+			<stat-modify stat="MAGIC_SUCCESS_RES" stat-add="MAGIC_SUCCESS_RES" mode="PER">
 				<power initial="50.0"/>
 			</stat-modify>
 		</effects>
@@ -30,20 +29,19 @@
 	<skill id="914" name="Song of Purification" action="A2" type="DANCE">
 	<!-- Has a 50%% chance of removing a party member's debuffs. For 5 minutes, Debuff Resistance +80%% and Heal Received +30%%. -->
 		<icon initial="icon.skill0914"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="679000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="66"/>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="SONG_OF_PURIFICATION" >
+		<abnormal type="SONG_OF_PURIFICATION">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -62,20 +60,19 @@
 	<skill id="915" name="Dance of Berserker" action="A2" type="DANCE">
 	<!-- For 5 minutes, a party member's P. Def. -4%%, M. Def. -8%%, P. Evasion -2; P. Atk. +4%%, M. Atk. +8%%, Atk. Spd. +4%%, Casting Spd. +4%%, and Movement Speed +4. Requires a dualsword. -->
 		<icon initial="icon.skill0915"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-point initial="679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="679000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="73"/>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="DANCE_OF_BERSERKER" >
+		<abnormal type="DANCE_OF_BERSERKER">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -86,7 +83,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-4.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -124,8 +121,7 @@
 			<reuse initial="45000"/>
 			<effect-point initial="204"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="204000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -133,7 +129,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="REFLECT_MAGIC_DD" >
+		<abnormal type="REFLECT_MAGIC_DD">
 			<level initial="1"/>
 			<time initial="8"/>
 			<chance initial="-1"/>
@@ -142,7 +138,7 @@
 			<condition name="EquipShield"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="VENGEANCE_SKILL_MAGIC_DAMAGE">
+			<stat-modify stat="VENGEANCE_SKILL_MAGIC_DAMAGE" stat-add="VENGEANCE_SKILL_MAGIC_DAMAGE">
 				<power initial="20.0">
 					<value level="2">30.0</value>
 					<value level="3">40.0</value>
@@ -160,14 +156,13 @@
 			<reuse initial="150000"/>
 			<effect-point initial="597"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="597000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="41"/>
 		</consume>
 		<target />
-		<abnormal type="FINAL_SECRET" >
+		<abnormal type="FINAL_SECRET">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -190,7 +185,7 @@
 			<reuse initial="75000"/>
 			<effect-point initial="150"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="150000"/>
+			<hit-time initial="900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -217,7 +212,7 @@
 			<reuse initial="75000"/>
 			<effect-point initial="150"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="150000"/>
+			<hit-time initial="900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -245,7 +240,7 @@
 			<cool-time initial="720"/>
 			<effect-point initial="-337"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-337000"/>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -280,8 +275,6 @@
 			<reuse initial="180000"/>
 			<effect-point initial="679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="679000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="38"/>
@@ -306,7 +299,7 @@
 	<skill id="936" name="Ordinary Mercenary" max-level="47" >
 	<!-- Mercenary's ability. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
 				<value level="2">41</value>
 				<value level="3">42</value>
@@ -361,7 +354,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="565.79">
 					<value level="2">566.08</value>
 					<value level="3">565.89</value>
@@ -569,7 +562,7 @@
 	<skill id="937" name="Elite Mercenary" max-level="47" >
 	<!-- Elite Mercenary's ability. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
 				<value level="2">41</value>
 				<value level="3">42</value>
@@ -624,7 +617,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="586.22">
 					<value level="2">586.76</value>
 					<value level="3">586.82</value>
@@ -836,7 +829,7 @@
 	<skill id="938" name="Exalted Mercenary" max-level="47" >
 	<!-- Exalted Mercenary's ability. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
 				<value level="2">41</value>
 				<value level="3">42</value>
@@ -891,7 +884,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="625.43">
 					<value level="2">626.46</value>
 					<value level="3">627.01</value>
@@ -1099,20 +1092,18 @@
 	<skill id="959" name="Frog Jump" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="24"/>
 		</consume>
 		<target />
-		<abnormal type="SIGNAL_A" >
+		<abnormal type="SIGNAL_A">
 			<level initial="2"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1126,20 +1117,18 @@
 	<skill id="960" name="Race Running" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="24"/>
 		</consume>
 		<target />
-		<abnormal type="SIGNAL_A" >
+		<abnormal type="SIGNAL_A">
 			<level initial="2"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1153,20 +1142,18 @@
 	<skill id="961" name="Swift Dash" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="24"/>
 		</consume>
 		<target />
-		<abnormal type="SIGNAL_A" >
+		<abnormal type="SIGNAL_A">
 			<level initial="2"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1180,21 +1167,20 @@
 	<skill id="962" name="Guard's March" action="A2" type="MAGIC">
 	<!-- Increases Speed by 33 for 5 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="5"/>
 			<mana initial="24"/>
 		</consume>
 		<target />
-		<abnormal type="SIGNAL_A" >
+		<abnormal type="SIGNAL_A">
 			<level initial="2"/>
 			<time initial="5"/>
 			<chance initial="-1"/>
@@ -1208,14 +1194,12 @@
 	<skill id="963" name="Guard's Ambush" action="A2">
 	<!-- Hides the user. Decreases Speed by 30%%, and the effect is canceled if any action other than movement is initiated. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="15000"/>
 			<effect-point initial="679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="679000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana-init initial="5"/>
@@ -1237,7 +1221,7 @@
 	<skill id="964" name="Children of Shilen">
 	<!-- Casting Spd. +13 and MP Recovery Bonus +2%%. -->
 		<icon initial="icon.skill0294"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="14"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1245,7 +1229,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
 				<power initial="13.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
@@ -1256,10 +1240,11 @@
 	<skill id="965" name="Fake Attack" action="A1">
 	<!-- Pretends to attack. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1267,12 +1252,12 @@
 	<skill id="966" name="Special Motion" action="A1">
 	<!-- Plays the Harp. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1280,7 +1265,7 @@
 	<skill id="967" name="Cursed Body">
 	<!-- Cursed body. Recovery is not possible. -->
 		<icon initial="icon.skill0967"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1291,14 +1276,14 @@
 	<skill id="968" name="Treykan Claw" action="A1">
 	<!-- Attack targets with 6960 Power added to P. Atk. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="20"/>
 			<reuse initial="7000"/>
 			<cool-time initial="167"/>
 			<effect-point initial="-354"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-354000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1314,21 +1299,19 @@
 	<skill id="969" name="Treykan Dash" action="A2" type="MAGIC">
 	<!-- Increases your Speed by 100%% for 5 seconds. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8"/>
 			<mana initial="38"/>
 		</consume>
 		<target />
-		<abnormal type="SPEED_UP_SPECIAL" >
+		<abnormal type="SPEED_UP_SPECIAL">
 			<level initial="2"/>
 			<time initial="5"/>
 			<chance initial="-1"/>
@@ -1342,20 +1325,19 @@
 	<skill id="970" name="Dash" action="A2">
 	<!-- Movement Speed +66 for 15 seconds. -->
 		<icon initial="icon.skill0004"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="46"/>
 			<cast-range initial="400"/>
 			<reuse initial="30000"/>
 			<effect-point initial="438"/>
 			<effect-range initial="900"/>
-			<hit-time initial="438000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="20"/>
 		</consume>
 		<target />
-		<abnormal type="SPEED_UP_SPECIAL" >
+		<abnormal type="SPEED_UP_SPECIAL">
 			<level initial="2"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1369,27 +1351,26 @@
 	<skill id="971" name="Acumen" action="A2" type="MAGIC">
 	<!-- Casting Spd. +30%% for 20 minutes. -->
 		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="48"/>
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="438"/>
 			<effect-range initial="900"/>
-			<hit-time initial="438000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8"/>
 			<mana initial="38"/>
 		</consume>
 		<target />
-		<abnormal type="CASTING_TIME_DOWN" >
+		<abnormal type="CASTING_TIME_DOWN">
 			<level initial="3"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
@@ -1397,27 +1378,26 @@
 	<skill id="972" name="Snipe" action="A2">
 	<!-- For 2 minutes, P. Accuracy +6, P. Atk. +199, Range +200, and P. Critical Rate +20%% when equipped with a bow. Cannot move while the effect lasts. -->
 		<icon initial="icon.skill0313"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="74"/>
 			<cast-range initial="-1"/>
 			<reuse initial="75000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="655000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="35"/>
 		</consume>
 		<target />
-		<abnormal type="SNIPE" >
+		<abnormal type="SNIPE">
 			<level initial="8"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="199.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
@@ -1447,7 +1427,7 @@
 		level 8: Attack targets with Power 928 added to P. Atk. Stuns the enemy for 9 seconds.
 	 -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
 			<magic-level initial="60">
 				<value level="2">70</value>
 				<value level="3">80</value>
@@ -1470,16 +1450,7 @@
 				<value level="8">-314</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-288000">
-				<value level="2">-292000</value>
-				<value level="3">-342000</value>
-				<value level="4">-300000</value>
-				<value level="5">-304000</value>
-				<value level="6">-307000</value>
-				<value level="7">-311000</value>
-				<value level="8">-314000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="58">
@@ -1522,7 +1493,7 @@
 		level 7: Shoots an arrow with bonus 2784 Power. Stuns for 9 seconds. Cancel target.
 	 -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
 			<magic-level initial="70">
 				<value level="2">80</value>
 				<value level="3">81</value>
@@ -1536,8 +1507,7 @@
 			<cool-time initial="1000"/>
 			<effect-point initial="-665"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-665000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<mana initial="107">
@@ -1579,7 +1549,7 @@
 		level 7: Creates a powerful vortex of water and inflicts Water damage on the enemy with bonus 122 M. Atk. Power.
 	 -->
 		<icon initial="icon.skill1175"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="20">
 				<value level="3">23</value>
 				<value level="4">25</value>
@@ -1598,14 +1568,7 @@
 				<value level="7">-689</value>
 			</effect-point>
 			<effect-range initial="1250"/>
-			<hit-time initial="-673000">
-				<value level="2">-676000</value>
-				<value level="3">-679000</value>
-				<value level="4">-681000</value>
-				<value level="5">-684000</value>
-				<value level="6">-687000</value>
-				<value level="7">-689000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -1642,7 +1605,7 @@
 		level 7: Creates a powerful hurricane and inflicts Wind damage on the enemy with bonus 122 M. Atk. Power.
 	 -->
 		<icon initial="icon.skill1177"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="70">
 				<value level="2">80</value>
 				<value level="3">81</value>
@@ -1662,14 +1625,7 @@
 				<value level="7">-687</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-669000">
-				<value level="2">-673000</value>
-				<value level="3">-676000</value>
-				<value level="4">-679000</value>
-				<value level="5">-681000</value>
-				<value level="6">-684000</value>
-				<value level="7">-687000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="25"/>
@@ -1705,7 +1661,7 @@
 		level 6: Spontaneously freezes the surrounding air, inflicting Water damage on the enemy with bonus 98 M. Atk. Power. For 1 minute, Movement Speed -20%.
 	 -->
 		<icon initial="icon.skill1184"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
 			<magic-level initial="80">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -1724,14 +1680,7 @@
 				<value level="6">-689</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-676000">
-				<value level="2">-679000</value>
-				<value level="3">-681000</value>
-				<value level="4">-684000</value>
-				<value level="5">-687000</value>
-				<value level="6">-689000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="3100"/>
 
 			<element type="WATER" value="25"/>
 		</attributes>
@@ -1743,7 +1692,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="2"/>
 			<time initial="60"/>
 			<chance initial="80"/>
@@ -1766,7 +1715,7 @@
 	<skill id="978" name="Shoulder Charge" max-level="7" debuff="true" action="DA2">
 	<!-- Disrupts the enemy with a powerful shoulder charge, stunning them for 9 seconds. Increases Power upon the consumption of up to 5 souls. Over-hit. -->
 		<icon initial="icon.skill0494"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
 			<magic-level initial="70">
 				<value level="2">80</value>
 				<value level="3">81</value>
@@ -1787,15 +1736,7 @@
 				<value level="7">-347</value>
 			</effect-point>
 			<effect-range initial="800"/>
-			<hit-time initial="-341000">
-				<value level="2">-342000</value>
-				<value level="3">-343000</value>
-				<value level="4">-344000</value>
-				<value level="5">-345000</value>
-				<value level="6">-346000</value>
-				<value level="7">-347000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="800"/>
 		</attributes>
 		<consume>
 			<mana initial="56">
@@ -1825,7 +1766,7 @@
 		level 6: Provokes the enemy to switch the target and attack you with 11018 Power.
 	 -->
 		<icon initial="icon.skill0028"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="80">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -1844,17 +1785,10 @@
 				<value level="6">-11018</value>
 			</effect-point>
 			<effect-range initial="1300"/>
-			<hit-time initial="-7427000">
-				<value level="2">-8137000</value>
-				<value level="3">-8851000</value>
-				<value level="4">-9570000</value>
-				<value level="5">-10292000</value>
-				<value level="6">-11018000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="700"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="TARGET_LOCK" >
+		<abnormal type="TARGET_LOCK">
 			<level initial="1"/>
 			<time initial="3"/>
 			<chance initial="-1"/>
@@ -1874,7 +1808,7 @@
 		level 6: Provokes the enemies around you to switch the target and attack you with 10330 Power.
 	 -->
 		<icon initial="icon.skill0018"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="80">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -1892,14 +1826,7 @@
 				<value level="6">-11018</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-7427000">
-				<value level="2">-8137000</value>
-				<value level="3">-8851000</value>
-				<value level="4">-9570000</value>
-				<value level="5">-10292000</value>
-				<value level="6">-11018000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="108">
@@ -1910,7 +1837,7 @@
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
-		<abnormal type="TARGET_LOCK" >
+		<abnormal type="TARGET_LOCK">
 			<level initial="1"/>
 			<time initial="3"/>
 			<chance initial="-1"/>
@@ -1923,7 +1850,7 @@
 	<skill id="981" name="Sleep" max-level="6" debuff="true" action="A2" type="MAGIC">
 	<!-- Causes the enemy to sleep for 30 seconds. -->
 		<icon initial="icon.skill1069"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="30" remove-on-damage="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="30" remove-on-damage="true">
 			<magic-level initial="80">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -1941,14 +1868,7 @@
 				<value level="6">-689</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-676000">
-				<value level="2">-679000</value>
-				<value level="3">-681000</value>
-				<value level="4">-684000</value>
-				<value level="5">-687000</value>
-				<value level="6">-689000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="10000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="15"/>
@@ -2052,30 +1972,7 @@
 				<value level="23">-5661</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-3125000">
-				<value level="2">-3366000</value>
-				<value level="3">-3609000</value>
-				<value level="4">-3849000</value>
-				<value level="5">-4084000</value>
-				<value level="6">-4312000</value>
-				<value level="7">-4530000</value>
-				<value level="8">-4668000</value>
-				<value level="9">-4798000</value>
-				<value level="10">-4922000</value>
-				<value level="11">-5036000</value>
-				<value level="12">-5142000</value>
-				<value level="13">-5238000</value>
-				<value level="14">-5323000</value>
-				<value level="15">-5397000</value>
-				<value level="16">-5462000</value>
-				<value level="17">-5492000</value>
-				<value level="18">-5520000</value>
-				<value level="19">-5571000</value>
-				<value level="20">-5595000</value>
-				<value level="21">-5618000</value>
-				<value level="22">-5640000</value>
-				<value level="23">-5661000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2148,8 +2045,7 @@
 			<cool-time initial="500"/>
 			<effect-point initial="-694"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-694000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="3500"/>
 		</attributes>
 		<consume>
 			<mana initial="248"/>
@@ -2184,7 +2080,7 @@
 		level 8: Absorbs the target's Momentum. Momentum can be absorbed with a 20% chance for regular physical attacks and 30% during a P. Critical attack. Applies when a sword, blunt weapon, or dualsword is equipped. Max Stage 8 Momentum can be absorbed.
 	 -->
 		<icon initial="icon.skill0992"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
 				<value level="2">43</value>
 				<value level="3">49</value>
@@ -2205,7 +2101,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="MAX_MOMENTUM">
+			<stat-modify stat="MAX_MOMENTUM" stat-add="MAX_MOMENTUM">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -2228,18 +2124,6 @@
 				</power>
 				<chance initial="15.0">
 					<value level="2">30.0</value>
-					<value level="3">15.0</value>
-					<value level="3">30.0</value>
-					<value level="4">15.0</value>
-					<value level="4">30.0</value>
-					<value level="5">15.0</value>
-					<value level="5">30.0</value>
-					<value level="6">15.0</value>
-					<value level="6">30.0</value>
-					<value level="7">15.0</value>
-					<value level="7">30.0</value>
-					<value level="8">15.0</value>
-					<value level="8">30.0</value>
 				</chance>
 				<min-damage initial="1.0"/>
 				<weapons>SWORD BLUNT DUAL</weapons>
@@ -2258,7 +2142,7 @@
 		level 8: Absorbs the target's Momentum. Momentum can be absorbed with a 15% chance for regular physical attacks and 30% during a P. Critical attack. Applies when a fist weapon is equipped. Max Stage 8 Momentum can be absorbed.
 	 -->
 		<icon initial="icon.skill0993"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="24">
 				<value level="2">32</value>
 				<value level="3">40</value>
@@ -2274,7 +2158,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAX_MOMENTUM">
+			<stat-modify stat="MAX_MOMENTUM" stat-add="MAX_MOMENTUM">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -2297,18 +2181,6 @@
 				</power>
 				<chance initial="15.0">
 					<value level="2">30.0</value>
-					<value level="3">15.0</value>
-					<value level="3">30.0</value>
-					<value level="4">15.0</value>
-					<value level="4">30.0</value>
-					<value level="5">15.0</value>
-					<value level="5">30.0</value>
-					<value level="6">15.0</value>
-					<value level="6">30.0</value>
-					<value level="7">15.0</value>
-					<value level="7">30.0</value>
-					<value level="8">15.0</value>
-					<value level="8">30.0</value>
 				</chance>
 				<min-damage initial="1.0"/>
 				<weapons>FIST</weapons>
@@ -2331,10 +2203,7 @@
 				<value level="3">-500</value>
 			</effect-point>
 			<effect-range initial="600"/>
-			<hit-time initial="-300000">
-				<value level="2">-400000</value>
-				<value level="3">-500000</value>
-			</hit-time>
+			<hit-time initial="800"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2348,7 +2217,6 @@
 			<weapon>
 				<type>SWORD BLUNT DAGGER SPEAR FIST DUAL DUAL_DAGGER DUAL_BLUNT</type>
 			</weapon>
-
 		</conditions>
 	</skill>
 </list>

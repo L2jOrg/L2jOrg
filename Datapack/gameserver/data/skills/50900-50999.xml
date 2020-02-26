@@ -16,7 +16,7 @@
 			<value level="5">icon.dimension_bracelet_i04</value>
 			<value level="6">icon.dimension_bracelet_i05</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -38,17 +38,17 @@
 		level 11: A talisman imbued with Eva’s energy. M. Def. +600, Max MP +1000, MP Recovery Bonus +40, All Critical Damage Received -15%, Skill MP Consumption -15%.
 	 -->
 		<icon initial="icon.bm_eva_talisman"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE">
@@ -98,13 +98,13 @@
 		level 10: Interrupts target's skill casting when used. In PvP, ignores CP and inflicts a fixed damage of 5000 Power.
 	 -->
 		<icon initial="icon.etc_bm_jewel_amber_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="30000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

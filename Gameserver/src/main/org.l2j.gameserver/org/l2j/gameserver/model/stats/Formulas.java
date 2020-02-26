@@ -1369,7 +1369,7 @@ public final class Formulas {
 
     public static double calcSpiritElementalDamage(Creature attacker, Creature target, double baseDamage) {
         // TODO find retail calc
-            if(isPlayer(attacker)) {
+        if(isPlayer(attacker)) {
             var attackerPlayer = attacker.getActingPlayer();
             ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
 
@@ -1418,7 +1418,7 @@ public final class Formulas {
            damage += Math.abs((40 + (9.2 + attack * 0.048 ) * critDamage) * bonus + Rnd.get(-10, 30)) ;
         }
 
-        return (damage * attack + baseDamage * bonus) / Math.log(max(baseDamage, 20));
+        return ((damage + baseDamage) * bonus) / Math.log(20 + baseDamage + damage);
     }
 
 }

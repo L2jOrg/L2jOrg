@@ -8,7 +8,7 @@
 		level 10: Damage Reflect Immunity
 	 -->
 		<icon initial="icon.skill0350"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -28,13 +28,13 @@
 		level 9: Deals physical damage to the target using intense spirit. Power 8287.
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-183"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-183000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12" />
@@ -66,13 +66,13 @@
 		level 9: Inflicts damage on nearby enemies with 120 Power added to M. Atk. using the power of holy magic.
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<cast-range initial="500"/>
 			<reuse initial="7000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-183"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-183000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
@@ -104,13 +104,13 @@
 		level 9: Deals damage to the target with 9861 Power using the power of a devout heart.
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-183"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-183000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12" />
@@ -142,7 +142,7 @@
 		level 9: Inflicts magical damage on nearby enemies with 133 Power added to M. Atk. by fully concentrating on holy magic.
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="40">
 				<value level="2">85</value>
 				<value level="3">30</value>
@@ -158,7 +158,7 @@
 			<cool-time initial="500"/>
 			<effect-point initial="-183"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-183000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />

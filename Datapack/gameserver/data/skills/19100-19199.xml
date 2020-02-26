@@ -3,21 +3,20 @@
 	<skill id="19113" name="No Clan Return" debuff="true" action="A2">
 	<!-- For 30 seconds prevents the chosen target from using Teleport. Needs 2 Blood Crystals. -->
 		<icon initial="icon.skill_recall"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true">
 			<magic-level initial="-1"/>
 			<cast-range initial="600"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<item initial="49758"/>
 			<item-count initial="2"/>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -29,22 +28,21 @@
 	<skill id="19114" name="No Clan Resurrection" debuff="true" action="A2" type="MAGIC">
 	<!-- For 30 sec. prevents the chosen target from using Resurrection. Needs 1 Blood Crystal. -->
 		<icon initial="icon.skill_resurrection"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true">
 			<magic-level initial="-1"/>
 			<cast-range initial="600"/>
 			<reuse initial="1800000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<item initial="49758"/>
 			<item-count initial="2"/>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="PUBLIC_SLOT" >
+		<abnormal type="PUBLIC_SLOT">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -56,11 +54,11 @@
 	<skill id="19119" name="Noblesse Grace" action="A2" type="MAGIC">
 	<!-- Retains target's buffs/debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore. -->
 		<icon initial="icon.skill1323"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

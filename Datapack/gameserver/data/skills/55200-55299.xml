@@ -3,11 +3,12 @@
 	<skill id="55200" name="Sealed Rune Lvl 8" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -33,11 +34,12 @@
 	<skill id="55201" name="Sealed Rune Lvl 9" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -63,11 +65,12 @@
 	<skill id="55202" name="Sealed Rune Lv. 10" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -93,11 +96,12 @@
 	<skill id="55203" name="Sealed Rune Lv. 11" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_red_sealed_rune_01"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -123,11 +127,12 @@
 	<skill id="55204" name="Sealed Rune Lv. 12" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_red_sealed_rune_01"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -153,11 +158,12 @@
 	<skill id="55205" name="Sealed Rune Lv. 13" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_red_sealed_rune_01"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -183,10 +189,11 @@
 	<skill id="55206" name="Sealed Rune Lv. 14" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -194,10 +201,11 @@
 	<skill id="55207" name="Sealed Rune Lv. 15" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -205,10 +213,11 @@
 	<skill id="55208" name="Sealed Rune Lv. 16" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -216,10 +225,11 @@
 	<skill id="55209" name="Sealed Rune Lv. 17" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -227,10 +237,11 @@
 	<skill id="55210" name="Sealed Rune Lv. 18" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -238,10 +249,11 @@
 	<skill id="55211" name="Sealed Rune Lv. 19" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -249,10 +261,11 @@
 	<skill id="55212" name="Sealed Rune Lv. 20" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -260,7 +273,7 @@
 	<skill id="55213" name="Instant Acceleration Potion" action="A1">
 	<!-- Greatly increases Speed for a short period of time. -->
 		<icon initial="icon.etc_potion_green_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -270,9 +283,10 @@
 	<skill id="55214" name="Teleport: Entrance to Mithril Mines" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -280,9 +294,10 @@
 	<skill id="55215" name="Teleport: Entrance to the School of Dark Arts" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -290,9 +305,10 @@
 	<skill id="55216" name="Teleport: Entrance to Orc Barracks" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -300,9 +316,10 @@
 	<skill id="55217" name="Teleport: Entrance to Ruins of Agony" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -310,9 +327,10 @@
 	<skill id="55218" name="Teleport: Entrance to Ruins of Despair" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -320,9 +338,10 @@
 	<skill id="55219" name="Teleport: Abandoned Camp" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -330,9 +349,10 @@
 	<skill id="55220" name="Teleport: Entrance to Ant Nest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -340,9 +360,10 @@
 	<skill id="55221" name="Teleport: Entrance to Cruma Tower" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -350,9 +371,10 @@
 	<skill id="55222" name="Teleport: Death Pass" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -360,9 +382,10 @@
 	<skill id="55223" name="Teleport: Three-way crossroads at Dragon Valley" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -370,9 +393,10 @@
 	<skill id="55224" name="Teleport: Entrance to Antharas' Lair" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -380,9 +404,10 @@
 	<skill id="55225" name="Teleport: Outlaw Forest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -390,9 +415,10 @@
 	<skill id="55226" name="Teleport: Alligator Island" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -400,9 +426,10 @@
 	<skill id="55227" name="Teleport: Entrance to Forgotten Temple" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -410,10 +437,11 @@
 	<skill id="55228" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -430,9 +458,10 @@
 	<skill id="55229" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -440,9 +469,10 @@
 	<skill id="55230" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -450,9 +480,10 @@
 	<skill id="55231" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -460,9 +491,10 @@
 	<skill id="55232" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -470,9 +502,10 @@
 	<skill id="55233" name="Scroll of Escape: Talking Island Village" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -480,7 +513,7 @@
 	<skill id="55234" name="XP Rune 100%">
 	<!-- XP/SP Gain from hunting +100%% -->
 		<icon initial="icon.skill19226"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -502,25 +535,24 @@
 	<skill id="55235" name="Adventurer's Haste Potion" action="A2">
 	<!-- Increases Atk. Spd. -->
 		<icon initial="icon.etc_reagent_green_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="70102"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="ATTACK_TIME_DOWN" >
+		<abnormal type="ATTACK_TIME_DOWN">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
@@ -528,24 +560,23 @@
 	<skill id="55236" name="Adventurer's Potion - Casting Spd." action="A2">
 	<!-- Increases Casting Spd. -->
 		<icon initial="icon.etc_potion_of_acumen2_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="70102"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="ATTACK_TIME_DOWN" >
+		<abnormal type="ATTACK_TIME_DOWN">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
@@ -553,19 +584,19 @@
 	<skill id="55237" name="Scroll: Vampiric Rage" action="A2">
 	<!-- For 20 minutes, recovers as HP 6%% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="900"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="70104"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="VAMPIRIC_ATTACK" >
+		<abnormal type="VAMPIRIC_ATTACK">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -579,7 +610,7 @@
 	<skill id="55238" name="Side Effect" action="A1">
 	<!-- Head has been enlarged for 10 minutes due to a side effect. Cooldown is 30 minutes. -->
 		<icon initial="icon.skill2513"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-range initial="-1"/>
@@ -590,13 +621,13 @@
 	<skill id="55239" name="Holiday Hat" action="A1">
 	<!-- Resurrects a corpse and restores 50%% XP. Consumes 1 Spirit Ore. Cooldown is 30 minutes. -->
 		<icon initial="icon.bm_romantic_chaperon_gold"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<reuse initial="1800000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -604,12 +635,11 @@
 	<skill id="55240" name="Overwhelming Power of a Holiday Hat" action="A1">
 	<!-- For 20 minutes, XP/SP Gain +5%%. Effect remains even after death. -->
 		<icon initial="icon.skill19226"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -617,10 +647,10 @@
 	<skill id="55241" name="Scroll: Mana Regeneration" action="A2">
 	<!-- MP Recovery Bonus has been increased. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="7"/>
@@ -628,13 +658,13 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MP_REGEN_UP" >
+		<abnormal type="MP_REGEN_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -646,20 +676,20 @@
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="70107"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="BERSERKER" >
+		<abnormal type="BERSERKER">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-5.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -690,27 +720,26 @@
 		level 2: For 10 minutes, P. Atk +12%%.
 	 -->
 		<icon initial="icon.skill0271"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-point initial="523"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="523000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<item initial="70110"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="CRITICAL_DMG_UP" >
+		<abnormal type="CRITICAL_DMG_UP">
 			<level initial="4"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="12.0"/>
 			</stat-modify>
 		</effects>
@@ -721,27 +750,26 @@
 		level 2: For 10 minutes, M. Atk +20%%.
 	 -->
 		<icon initial="icon.skill0273"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-point initial="467"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="467000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<item initial="70111"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="CRITICAL_DMG_UP" >
+		<abnormal type="CRITICAL_DMG_UP">
 			<level initial="4"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
@@ -749,9 +777,10 @@
 	<skill id="55245" name="Scroll of Escape: Town of Aden" max-level="8" action="A1">
 	<!-- For 10 minutes, M. Atk +20%%. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -759,7 +788,7 @@
 	<skill id="55246" name="Rune of Boost">
 	<!-- When in inventory STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. -->
 		<icon initial="BranchSys3.lcon.g_rune_itemdrop_up"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -774,14 +803,14 @@
 	<skill id="55247" name="Refined Romantic Chapeau">
 	<!-- P. Atk. +33, M. Atk. +41. -->
 		<icon initial="icon.accessory_archer_hat2_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -792,7 +821,7 @@
 	<skill id="55248" name="Bracelet of Duty - Lv. 1">
 	<!-- Opens up 1 Talisman slot. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_01"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -808,7 +837,7 @@
 	<skill id="55249" name="Bracelet of Duty - Lv. 2">
 	<!-- Opens up one Talisman slot. CON +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_02"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -827,7 +856,7 @@
 	<skill id="55250" name="Bracelet of Duty - Lv. 3">
 	<!-- Opens up two Talisman slots. CON +1, MEN +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_03"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -846,7 +875,7 @@
 	<skill id="55251" name="Bracelet of Duty - Lv. 4">
 	<!-- Opens up two Talisman slots. DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_04"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -865,7 +894,7 @@
 	<skill id="55252" name="Bracelet of Duty - Lv. 5">
 	<!-- Opens up three Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
 		<icon initial="BranchIcon.Icon.g_pledge_bracelet_05"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -903,14 +932,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="20.2">
 					<value level="2">24.6</value>
 					<value level="3">29.8</value>
@@ -951,14 +980,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="73.0">
 					<value level="2">94.0</value>
 					<value level="3">129.0</value>
@@ -999,14 +1028,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="2.8">
 					<value level="2">3.8</value>
 					<value level="3">5.1</value>
@@ -1032,14 +1061,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="2.0">
 					<value level="2">2.25</value>
 					<value level="3">2.5</value>
@@ -1065,14 +1094,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="75.0">
 					<value level="2">100.0</value>
 					<value level="3">125.0</value>
@@ -1113,7 +1142,7 @@
 			<value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1160,7 +1189,7 @@
 			<value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1207,14 +1236,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="2.47">
 					<value level="2">2.67</value>
 					<value level="3">2.87</value>
@@ -1240,14 +1269,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="15.94">
 					<value level="2">19.84</value>
 					<value level="3">24.31</value>
@@ -1276,14 +1305,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="20.0">
 					<value level="2">27.0</value>
 					<value level="3">34.0</value>
@@ -1324,14 +1353,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="12.0">
 					<value level="2">12.72</value>
 					<value level="3">13.44</value>
@@ -1356,14 +1385,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="3.89">
 					<value level="2">5.0</value>
 					<value level="3">6.1</value>
@@ -1389,14 +1418,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="2.665">
 					<value level="2">3.0</value>
 					<value level="3">3.33</value>
@@ -1422,14 +1451,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
 				<power initial="1000.0">
 					<value level="2">1400.0</value>
 					<value level="3">1800.0</value>
@@ -1455,14 +1484,14 @@
 			<value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
 				<power initial="0.57">
 					<value level="2">0.88</value>
 					<value level="3">0.92</value>
@@ -1488,7 +1517,7 @@
 			<value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
 			<value level="14">icon.ensoul_big_p</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1517,10 +1546,11 @@
 	<skill id="55269" name="Valakas Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_sheep_agathion_30d_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1528,22 +1558,21 @@
 	<skill id="55270" name="Agathion - Dance of Fury" action="A2">
 	<!-- For 20 minutes, Atk. Spd. +5%%. -->
 		<icon initial="icon.bm_agathion_fury"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target object="FRIEND" range="1000" />
-		<abnormal type="DANCE_OF_FURY" >
+		<abnormal type="DANCE_OF_FURY">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
@@ -1551,22 +1580,21 @@
 	<skill id="55271" name="Agathion - Dance of Concentration" action="A2">
 	<!-- For 20 minutes, Casting Spd. +5%%. -->
 		<icon initial="icon.bm_agathion_concentration"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target object="FRIEND" range="1000" />
-		<abnormal type="DANCE_OF_CONCENTRATION" >
+		<abnormal type="DANCE_OF_CONCENTRATION">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
@@ -1574,17 +1602,16 @@
 	<skill id="55272" name="Agathion - Song of Wind" action="A2">
 	<!-- For 5 min., Speed +20. -->
 		<icon initial="icon.bm_agathion_wind"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target object="FRIEND" range="1000" />
-		<abnormal type="SONG_OF_WIND" >
+		<abnormal type="SONG_OF_WIND">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -1602,14 +1629,13 @@
 		level 3: For 10 minutes XP gained through hunting 10%.
 	 -->
 		<icon initial="BranchIcon.Icon.etc_g_bonus_herb_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="100"/>
 		</attributes>
 		<target />
 		<abnormal type="HERB_EXP" instant="true">
@@ -1618,7 +1644,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
 				<power initial="5.0">
 					<value level="2">7.0</value>
 					<value level="3">10.0</value>
@@ -1633,14 +1659,13 @@
 		level 3: Receiving mysterious power, for 10 min, Movement Speed +5.
 	 -->
 		<icon initial="BranchIcon.Icon.etc_g_bonus_herb_i01"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="100"/>
 		</attributes>
 		<target />
 		<abnormal type="HERB_SPEED" instant="true">
@@ -1664,14 +1689,13 @@
 		level 3: Receiving mysterious power, for 10 min, P. Accuracy 4 and M. Accuracy +4.
 	 -->
 		<icon initial="BranchIcon.Icon.etc_g_bonus_herb_i02"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="100"/>
 		</attributes>
 		<target />
 		<abnormal type="HERB_ACCURANCY" instant="true">
@@ -1680,7 +1704,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">4.0</value>
@@ -1691,11 +1715,10 @@
 	<skill id="55282" name="Buff for the Hero of Ruins of Agony" action="A1">
 	<!-- A Buff for a warrior fighting in the Ruins of Agony. P. Atk. and M. Atk. +10%%. You can receive a Box of Tears when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1703,11 +1726,10 @@
 	<skill id="55283" name="Box of Tears Acquisition Effect" action="A1">
 	<!-- You can receive a Box of Tears when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1715,11 +1737,10 @@
 	<skill id="55284" name="Box of Tears Acquisition Effect" action="A1">
 	<!-- You can receive a Box of Tears when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1727,10 +1748,11 @@
 	<skill id="55285" name="Box of Tears" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1738,10 +1760,11 @@
 	<skill id="55286" name="Decayed Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1749,10 +1772,11 @@
 	<skill id="55287" name="Shabby Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1760,10 +1784,11 @@
 	<skill id="55288" name="Crude Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1771,10 +1796,11 @@
 	<skill id="55289" name="Old Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1782,7 +1808,7 @@
 	<skill id="55290" name="Devi's Ring">
 	<!-- Increases P. Atk./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1790,7 +1816,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK">
@@ -1804,7 +1830,7 @@
 	<skill id="55291" name="Devi's Ring">
 	<!-- Increases P. Atk./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1814,7 +1840,7 @@
 	<skill id="55292" name="Devi's Earring">
 	<!-- Increases MP Recovery Bonus and Heal Received. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1822,7 +1848,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
 				<power initial="0.2"/>
 			</stat-modify>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
@@ -1833,7 +1859,7 @@
 	<skill id="55293" name="Devi's Earring">
 	<!-- Increases MP Recovery Bonus and Heal Received. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1843,7 +1869,7 @@
 	<skill id="55294" name="Devi's Necklace">
 	<!-- Increases P. Def./M. Def. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1857,7 +1883,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE">
 				<power initial="3.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1865,7 +1891,7 @@
 	<skill id="55295" name="Devi's Necklace">
 	<!-- Increases P. Def./M. Def. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1875,12 +1901,12 @@
 	<skill id="55296" name="Scroll of Invisibility" action="A1">
 	<!-- Makes the player invisible and invincible to enemy's attacks. Speed -40%%. The effect fades upon attack. -->
 		<icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="240000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1888,11 +1914,10 @@
 	<skill id="55297" name="Buff for the Hero of Ruins of Despair" action="A1">
 	<!-- A Buff for a warrior fighting in the Ruins of Despair. P. Atk. and M. Atk. +10%%. You can receive a Decayed Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1900,11 +1925,10 @@
 	<skill id="55298" name="Decayed Box Acquisition Effect" action="A1">
 	<!-- You can receive a Decayed Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1912,11 +1936,10 @@
 	<skill id="55299" name="Decayed Box Acquisition Effect" action="A1">
 	<!-- You can receive a Decayed Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

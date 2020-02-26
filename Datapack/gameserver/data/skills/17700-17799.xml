@@ -16,13 +16,13 @@
 		<icon initial="icon.etc_bm_jewel_topaz_i00">
 			<value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="30000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -30,13 +30,13 @@
 	<skill id="17702" name="Greater Topaz - Special Ability" action="A1">
 	<!-- Removes up to 3 buffs on the enemy. -->
 		<icon initial="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="300000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -57,7 +57,7 @@
 		<icon initial="icon.etc_bm_jewel_vital">
 			<value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -80,7 +80,7 @@
 		<icon initial="icon.etc_bm_jewel_jade_i00">
 			<value level="6">icon.bm_jewel_speedup_lv1_high</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -103,7 +103,7 @@
 		<icon initial="icon.etc_bm_jewel_diamond_i00">
 			<value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -126,7 +126,7 @@
 		<icon initial="icon.etc_bm_jewel_pearl_i00">
 			<value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

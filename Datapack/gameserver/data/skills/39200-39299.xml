@@ -3,11 +3,12 @@
 	<skill id="39200" name="Weapons Ingredient Box - A-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -15,11 +16,12 @@
 	<skill id="39201" name="Box of Superior Dye" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_4_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -27,11 +29,12 @@
 	<skill id="39202" name="Spellbok Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -39,12 +42,13 @@
 	<skill id="39203" name="Life Stone Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -65,7 +69,7 @@
 	<skill id="39204" name="Dimensional Blessing" action="A1">
 	<!-- Can obtain 37,000,000 XP/1,110,000 SP. -->
 		<icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
@@ -89,7 +93,6 @@
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="90043"/>
@@ -111,7 +114,7 @@
 			<speed>
 				<power initial="4.0"/>
 			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
@@ -140,7 +143,7 @@
 	<skill id="39206" name="Monster Arena Belt">
 	<!-- CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/Max MP/Max CP +10%%, and Damage Received -3%% when equipped with a belt. -->
 		<icon initial="icon.belt_of_tiat"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -150,12 +153,13 @@
 	<skill id="39207" name="Dimensional Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_5_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -177,7 +181,7 @@
 	<skill id="39208" name="Pendant Matte Varnish" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -187,7 +191,7 @@
 	<skill id="39209" name="Varnish for Deluxe Pendant" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -197,12 +201,11 @@
 	<skill id="39210" name="White Assassin Transformation" action="A1">
 	<!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
 		<icon initial="icon.scroll_of_verification_i06"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -210,12 +213,11 @@
 	<skill id="39211" name="Saviour's Scroll of Growth" action="A1">
 	<!-- For 2 hours, XP/SP Gain +50%% due to the energy of the savior. Cooldown is 2 hours. The Savior's Scroll of Growth remains after death. -->
 		<icon initial="icon.etc_kalie_hero_scroll"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="7200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -223,12 +225,11 @@
 	<skill id="39212" name="XP/SP Hourglass (100%) - 1 Hour" action="A1">
 	<!-- For 1 hour, XP/SP Gain +100%% due to Einhasad's Protection. Cooldown is 1 minute. Einhasad's Protection remains after death. -->
 		<icon initial="icon.etc_dragons_blood_i03"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -236,7 +237,7 @@
 	<skill id="39213" name="Savior Scroll: Enchant Weapon" action="A1">
 	<!-- Can only be used on Savior's Weapon. The item is not destroyed and will retain the current enchant value even if enchantment fails. -->
 		<icon initial="icon.yogi_scroll_of_enchant_weapon_grade_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -246,7 +247,7 @@
 	<skill id="39214" name="Savior's Cube" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_crystal_cube_event_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -257,7 +258,7 @@
 	<skill id="39215" name="Ring of Savior">
 	<!-- Stun Resistance +5%%, HP Recovery Bonus +1.8 and MP Recovery Bonus +1.1 while running. When two identical rings are equipped, the effect of only one ring will be applied. -->
 		<icon initial="icon.event_classic_ring"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -267,10 +268,11 @@
 	<skill id="39216" name="Transformation into an Apostle" action="A1" type="DANCE">
 	<!-- Transformed into a Hierophant. Cannot attack while transformed. When used during restart or during a duel, the transformation is removed once the duel ends. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -278,10 +280,11 @@
 	<skill id="39217" name="Transformation into a Shillien Saint" action="A1" type="DANCE">
 	<!-- Transformed into a Shillien Saint. Cannot attack while transformed. When used during restart or during a duel, the transformation is removed once the duel ends. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -289,10 +292,11 @@
 	<skill id="39218" name="Transformation into an Eva's Saint" action="A1" type="DANCE">
 	<!-- Transformed into Eva's Saint. Cannot attack while transformed. When used during restart or during a duel, the transformation is removed once the duel ends. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -304,12 +308,11 @@
 		level 3: Transformed Dark Knight. Max HP/ MP +10%, Stun/ Paralysis/ Fear Resistance +10%, Attack Power in PvP +10%, received damage -10%.
 	 -->
 		<icon initial="icon.dark_kninght"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -317,7 +320,7 @@
 	<skill id="39220" name="Ticket for Monster Arena" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_ticket_red_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -327,7 +330,7 @@
 	<skill id="39221" name="Elite Ticket for Monster Arena" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_ticket_red_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -337,7 +340,7 @@
 	<skill id="39222" name="Battle Cure" action="A1">
 	<!-- none -->
 		<icon initial="icon.super_elixir_potion"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-range initial="-1"/>
@@ -348,13 +351,11 @@
 	<skill id="39223" name="Monkey Banana" action="A2">
 	<!-- For 5 minutes, Hunting XP/SP +10%, P. Atk./M. Atk. +15%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +10%, Movement Speed +10. The effects disappear upon restart. -->
 		<icon initial="Icon.ev_monkey_banana"/>
-		<attributes property="PHYSIC" static-reuse="true" stay-after-death="true" blocked-on-olympiad="true" >
+		<attributes property="PHYSIC" static-reuse="true" stay-after-death="true" blocked-on-olympiad="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="PARTY" object="FRIEND" />
 		<abnormal type="PA_UP_HERB" instant="true">
@@ -400,17 +401,15 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="STRAWBERRY_FRUIT" >
+		<abnormal type="STRAWBERRY_FRUIT">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -433,16 +432,14 @@
 	<skill id="39225" name="Mango-Banana Cocktail" action="A2">
 	<!-- For 60 minutes, MP Recovery Bonus +10%%, M. Atk. +10%%, M. Def +10%%, Casting Spd. +5%%, Debuff Resistance +10%%, and Skill MP Consumption -3%%. -->
 		<icon initial="icon.etc_fruit_cocktail_i03"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="MONGO_FRUIT" >
+		<abnormal type="MONGO_FRUIT">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -468,16 +465,14 @@
 	<skill id="39226" name="Cherry Banana Shake" action="A2">
 	<!-- For 60 minutes, P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%%, P. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, and P. Atk. against Raid Boss +10%%. -->
 		<icon initial="icon.etc_fruit_cocktail_i02"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="CHERRY_FRUIT" >
+		<abnormal type="CHERRY_FRUIT">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -505,7 +500,7 @@
 	<skill id="39227" name="Tuna" action="A1">
 	<!-- none -->
 		<icon initial="icon.fish_huge_i12"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -516,27 +511,25 @@
 	<skill id="39228" name="Chef's Fish Stew - Victory" action="A2">
 	<!-- For 20 minutes, HP Recovery Bonus/MP Recovery Bonus +20%, P./M. Accuracy +4, P./M. Evasion +4, PvE Damage +15%, Atk. Spd./Casting Spd. +10%. P./M. Critical Rate +15%, P./M. Critical Damage +15% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="90407"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
@@ -582,27 +575,25 @@
 	<skill id="39229" name="Chef's Fish Stew - Fire" action="A2">
 	<!-- For 20 minutes, Max HP +10%, HP Recovery Bonus +10%, P./M. Def. +10%, Atk. Spd./Casting Spd. +10%, PvE Damage +15%, P./M. Critical Rate +25%, Debuff Resistance +10% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="90408"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -625,21 +616,19 @@
 	<skill id="39230" name="Chef's Fish Stew - Water" action="A2">
 	<!-- For 20 minutes, Max MP +15%, MP Recovery Bonus +10%, P./M. Def. +10%, Atk. Spd./Casting Spd. +10%, PvE Damage +15%, Debuff Resistance +10%, Skill MP Consumption -10% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="90409"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -668,29 +657,28 @@
 	<skill id="39231" name="Artisan's Fish Stew - Wind" action="A2">
 	<!-- For 20 minutes, P./M. Accuracy +4, P./M. Evasion +4, P./M. Critical Rate +15%, P./M. Critical Damage +25%, Movement Speed +10%, Debuff Resistance +10%, PvE Damage +15% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="90410"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="3.0"/>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
@@ -710,11 +698,12 @@
 	<skill id="39232" name="Gold Urn" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_gold_pot"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -722,7 +711,7 @@
 	<skill id="39233" name="Glowing  Whale" action="A1">
 	<!-- none -->
 		<icon initial="icon.fish_huge_i15"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -733,11 +722,12 @@
 	<skill id="39234" name="Giant's Enchant Scroll Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -745,11 +735,12 @@
 	<skill id="39235" name="Low-grade Arena Loot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -757,11 +748,12 @@
 	<skill id="39236" name="Intermediate Arena Loot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -769,11 +761,12 @@
 	<skill id="39237" name="High-grade Arena Loot" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -781,11 +774,10 @@
 	<skill id="39238" name="MOPP Combat Ration" action="A1">
 	<!-- MOPP Combat Ration. For 5 minutes, Hunting XP/SP +10%, P. Atk./M. Atk. +15%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +10%, Movement Speed +10, and Sayha's Grace Consumption Rate -30%. The effects disappear upon restart. -->
 		<icon initial="icon.ev_mopp_herb"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -796,7 +788,7 @@
 		level 2: Beast Spiritshot Damage +3%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -806,7 +798,7 @@
 	<skill id="39240" name="Sapphire" action="A1">
 	<!-- Beast Spiritshot Damage +5%. -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -816,7 +808,7 @@
 	<skill id="39241" name="Sapphire" action="A1">
 	<!-- Beast Spiritshot Damage +8%. -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -834,7 +826,7 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="2">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -844,11 +836,12 @@
 	<skill id="39243" name="Topaz Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -856,11 +849,12 @@
 	<skill id="39244" name="Garnet Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -868,11 +862,12 @@
 	<skill id="39245" name="Jade Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -880,11 +875,12 @@
 	<skill id="39246" name="Ruby Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -892,11 +888,12 @@
 	<skill id="39247" name="Sapphire Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -904,11 +901,12 @@
 	<skill id="39248" name="Diamond Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -916,11 +914,12 @@
 	<skill id="39249" name="Pearl Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -928,11 +927,12 @@
 	<skill id="39250" name="Vital Stone Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -940,7 +940,7 @@
 	<skill id="39251" name="Melodys Luck Cube" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_crystal_cube_event_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -951,7 +951,7 @@
 	<skill id="39252" name="My Teleport Book" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -961,12 +961,11 @@
 	<skill id="39253" name="Chef's Fish Stew - Victory" action="A1">
 	<!-- For 20 minutes, HP Recovery Bonus +20%, P./M. Accuracy +4, P./M. Evasion +4, PvE Damage +15%, Atk. Spd./Casting Spd. +10%. P./M. Critical Rate +15%, P./M. Critical Damage +15% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -974,12 +973,11 @@
 	<skill id="39254" name="Chef's Fish Stew - Fire" action="A1">
 	<!-- For 20 minutes, Max HP +10%, HP Recovery Bonus +10%, P./M. Def. +10%, Atk. Spd./Casting Spd. +10%, PvE Damage +15%, P./M. Critical Rate +25%, Debuff Resistance +10% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -987,12 +985,11 @@
 	<skill id="39255" name="Chef's Fish Stew - Water" action="A1">
 	<!-- For 20 minutes, Max MP +15%, MP Recovery Bonus +10%, P./M. Def. +10%, Atk. Spd./Casting Spd. +10%, PvE Damage +15%, Debuff Resistance +10%, Skill MP Consumption -10% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1000,12 +997,11 @@
 	<skill id="39256" name="Artisan's Fish Stew - Wind" action="A1">
 	<!-- For 20 minutes, P./M. Accuracy +4, P./M. Evasion +4, P./M. Critical Rate +15%, P./M. Critical Damage +25%, Movement Speed +10%, Debuff Rrsistance +10%, PvE Damage +15% with the help of a great spirit. Effect remains even after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1013,7 +1009,7 @@
 	<skill id="39257" name="Newbie MP Recovery Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_reagent_white_i00"/>
-		<attributes >
+		<attributes>
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1029,7 +1025,7 @@
 	<skill id="39258" name="Warrior MP Recovery Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_reagent_white_i00"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1045,11 +1041,12 @@
 	<skill id="39259" name="Savior's XP Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1057,7 +1054,7 @@
 	<skill id="39260" name="Magical Potion of Leaping - Lv. 4" action="A1">
 	<!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
 		<icon initial="icon.etc_water_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -1068,10 +1065,11 @@
 	<skill id="39261" name="Fish Stew - Greater Might" action="A1">
 	<!-- For 20 minutes, P. Atk. +4%. -->
 		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1079,10 +1077,11 @@
 	<skill id="39262" name="Fish Stew - Greater Shield" action="A1">
 	<!-- For 20 minutes, P. Def. +5% -->
 		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1090,10 +1089,11 @@
 	<skill id="39263" name="Fish Stew - Wild Magic" action="A1">
 	<!-- For 20 minutes, M. Critical Rate +10. -->
 		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1104,10 +1104,11 @@
 		level 2: For 20 minutes, P. Def. -8%, M. Def. -16%, and P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8.
 	 -->
 		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1119,10 +1120,11 @@
 		level 3: For 20 minutes, Weight Penalty Segment +9000.
 	 -->
 		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1130,11 +1132,12 @@
 	<skill id="39266" name="Shiny Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1147,7 +1150,6 @@
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1155,11 +1157,12 @@
 	<skill id="39268" name="Mysterious Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_special_jewelbox_lv5"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1170,13 +1173,12 @@
 		level 2: For 20 minutes, XP/SP Gain +15%%, P. Atk./M. Atk. +15%%, P. Critical/M. Critical Rate +20, P. Critical Damage/M. Critical Damage +7%%, P. Def./M. Def. +20%%, HP/MP/CP +30%%, HP Recovery Bonus/MP Recovery Bonus +40%%, and has a chance to absorb 7%% of physical damage dealt to enemies as HP. Effect remains even after death.
 	 -->
 		<icon initial="icon.bm_dragon_fruit"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1184,13 +1186,13 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP">
@@ -1234,11 +1236,12 @@
 	<skill id="39270" name="Dragon's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_dragon_present"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1246,11 +1249,12 @@
 	<skill id="39271" name="Dragon's Shining Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_dragon_shinning_present"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1258,20 +1262,20 @@
 	<skill id="39272" name="Officer of Balthus Knights" action="A2">
 	<!-- For 2 hours, Hunting XP/SP Gain +20%% and grants a chance to obtain Special Supplies by disguising as a Balthus Knight. Effect remains even after death. -->
 		<icon initial="icon.ev_balthus_token"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<item initial="90506"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -1291,21 +1295,19 @@
 	<skill id="39273" name="Golden Fruit Buff" action="A1">
 	<!-- For 20 minutes, XP/SP Gain +10%%, P. Atk./M. Atk. +12%%, P. Critical/M. Critical Rate +10, P. Critical Damage/M. Critical Damage +5%%, P. Def./M. Def. +15%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, and has a chance to absorb 5%% of physical damage dealt to enemies as HP. Effect remains even after death. -->
 		<icon initial="icon.bm_dragon_fruit"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="90499"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="DRAGON_FRUIT" >
+		<abnormal type="DRAGON_FRUIT">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1355,11 +1357,12 @@
 	<skill id="39274" name="Lesser GM's Blessing Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1367,11 +1370,12 @@
 	<skill id="39275" name="Greater GM's Blessing Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1379,11 +1383,12 @@
 	<skill id="39276" name="Greatest GM's Blessing Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1391,11 +1396,11 @@
 	<skill id="39277" name="Transform Raid Hero" action="A1">
 	<!-- Transforms into Raid Hero for 1 hour. If activated in combat, the effect will disappear after the combat ends. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1403,12 +1408,11 @@
 	<skill id="39278" name="Flower Sweets" action="A1">
 	<!-- For 20 minutes, Max HP/Max MP +5%% and Hunting XP/SP Gain +20%%. -->
 		<icon initial="icon.flower_songpyeon"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1416,12 +1420,11 @@
 	<skill id="39279" name="Pumpkin Sweets" action="A1">
 	<!-- For 20 minutes, P. Atk./M. Atk. +12%%, P. Critical/M. Critical Rate +10, P. Critical Damage/M. Critical Damage +5%%, P. Def./M. Def. +15%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, and has a chance to absorb 5%% of physical damage dealt against enemies as HP. -->
 		<icon initial="icon.pumpkin_songpyeon"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1429,11 +1432,10 @@
 	<skill id="39280" name="Banana Sweets" action="A1">
 	<!-- For 5 minutes, XP/SP Gain +50%%, P. Atk. +15%%, M. Atk. +23%%, P. Def./M. Def +15%%, Atk. Spd./Casting Spd. +10%%, and Movement Speed +10, HP/MP Recovery Bonus +30%%. Changes appearance to Hanbok. The effects disappear upon restart. -->
 		<icon initial="icon.songpyeon_herb"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1441,11 +1443,12 @@
 	<skill id="39281" name="Sealed Rune Lvl 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1453,11 +1456,12 @@
 	<skill id="39282" name="Sealed Rune Lvl 2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1465,11 +1469,12 @@
 	<skill id="39283" name="Sealed Rune Lvl 3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1477,11 +1482,12 @@
 	<skill id="39284" name="Sealed Rune Lvl 4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1489,11 +1495,12 @@
 	<skill id="39285" name="Sealed Rune Lvl 5" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1501,11 +1508,12 @@
 	<skill id="39286" name="Sealed Rune Lvl 6" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1513,11 +1521,12 @@
 	<skill id="39287" name="Sealed Rune Lvl 7" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1525,11 +1534,12 @@
 	<skill id="39288" name="Sealed Rune Lvl 8" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1537,11 +1547,12 @@
 	<skill id="39289" name="Sealed Rune Lvl 9" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1549,11 +1560,12 @@
 	<skill id="39290" name="Sealed Rune Lvl 10" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1561,11 +1573,12 @@
 	<skill id="39291" name="Sealed Rune Lvl 11" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1573,11 +1586,12 @@
 	<skill id="39292" name="Sealed Rune Lvl 12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1585,11 +1599,12 @@
 	<skill id="39293" name="Sealed Rune Lvl 13" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1597,11 +1612,12 @@
 	<skill id="39294" name="Pirate's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="etc_treasure_box_i02"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1609,10 +1625,11 @@
 	<skill id="39295" name="Teleport: Entrance to the Devil's Isle" action="A1">
 	<!-- Teleports you to the entrance to the Devil's Isle -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1620,10 +1637,11 @@
 	<skill id="39296" name="Teleports you to the entrance to the Devil's Isle" action="A1">
 	<!-- Teleports you to the entrance to the Devil's Isle -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="7200000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1631,10 +1649,11 @@
 	<skill id="39297" name="Escape: Clan Hall" action="A1">
 	<!-- Return to Clan Hall. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1642,12 +1661,11 @@
 	<skill id="39298" name="Shining Mood Melody" action="A1">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
 		<icon initial="icon.bm_magmeld"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1655,7 +1673,7 @@
 	<skill id="39299" name="Cube of Forsaken Isle" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>

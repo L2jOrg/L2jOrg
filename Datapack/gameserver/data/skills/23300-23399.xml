@@ -3,11 +3,10 @@
 	<skill id="23300" name="Ghost Piercing" debuff="true" action="A2">
 	<!-- For 10 seconds, becomes haunted by a ghost to receive 300 damage per second. -->
 		<icon initial="icon.skill0773"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
 		</attributes>

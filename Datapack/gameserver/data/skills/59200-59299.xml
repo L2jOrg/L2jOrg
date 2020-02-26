@@ -810,7 +810,7 @@
 		level 3: Party member's P. Atk. and M. Atk. +20%
 	 -->
 		<icon initial="icon.bm2018_pirate_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="300000">
 				<value level="2">200000</value>
@@ -818,7 +818,6 @@
 			</reuse>
 			<effect-point initial="20"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -859,7 +858,7 @@
 	<skill id="59277" name="Noblesse Red - Magic Attack" max-level="3" action="A1">
 	<!-- Attacks the enemy with powerful magic. -->
 		<icon initial="icon.bm2018_rednoblesse_i01"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<reuse initial="180000">
 				<value level="2">80000</value>
@@ -867,7 +866,6 @@
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -912,7 +910,7 @@
 		level 3: P. Def. -40%.
 	 -->
 		<icon initial="icon.barbarian_chest_change_0"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="180000">
 				<value level="2">80000</value>
@@ -920,7 +918,6 @@
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -961,7 +958,7 @@
 	<skill id="59285" name="Valkyrie - Paralyze" max-level="3" debuff="true" action="A1">
 	<!-- A temporary paralysis that prevents movement. -->
 		<icon initial="icon.valkyrie_chest_change_0"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="180000">
 				<value level="2">80000</value>
@@ -969,7 +966,6 @@
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1014,7 +1010,7 @@
 		level 3: Evades P./M. Skills for 7 seconds.
 	 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_kelbim"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="180000">
 				<value level="2">100000</value>
@@ -1022,7 +1018,6 @@
 			</reuse>
 			<effect-point initial="20"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1063,7 +1058,7 @@
 	<skill id="59293" name="Ninja - Cancel Target" action="A1">
 	<!-- Cancels the enemy's target. -->
 		<icon initial="icon.bm2018_ninja_i01"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<reuse initial="180000"/>
 			<effect-range initial="-1"/>
@@ -1074,14 +1069,13 @@
 	<skill id="59294" name="Ninja - Cancel Target" max-level="2" debuff="true" action="A1">
 	<!-- Cancels the enemy's target. -->
 		<icon initial="icon.bm2018_ninja_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="80000">
 				<value level="2">30000</value>
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1126,7 +1120,7 @@
 		level 3: Recovers a party member's HP by 2000 and MP by 400 through Divine Power.
 	 -->
 		<icon initial="icon.bm2018_healer_i01"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="300000">
 				<value level="2">200000</value>
@@ -1134,7 +1128,6 @@
 			</reuse>
 			<effect-point initial="20"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

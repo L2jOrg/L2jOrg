@@ -108,7 +108,7 @@ public final class RequestAcquireSkill extends ClientPacket {
             return;
         }
 
-        final Skill existingSkill = activeChar.getKnownSkill(_id); // Mobius: Keep existing sublevel.
+
         final Skill skill = SkillEngine.getInstance().getSkill(_id, _level);
         if (skill == null) {
             LOGGER.warn(RequestAcquireSkill.class.getSimpleName() + ": Player " + activeChar.getName() + " is trying to learn a null skill Id: " + _id + " level: " + _level + "!");

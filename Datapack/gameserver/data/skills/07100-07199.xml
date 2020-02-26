@@ -3,13 +3,12 @@
 	<skill id="7100" name="Clan-exclusive Pet Stun" action="A2">
 	<!-- Stuns the target for 3 seconds. -->
 		<icon initial="icon.skill5168"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="85"/>
 			<cast-range initial="900"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-700000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="5"/>
@@ -29,13 +28,12 @@
 	<skill id="7101" name="Clan-exclusive Pet Aerial Thrust" action="A2" type="MAGIC">
 	<!-- Lifts and holds the target in the air for 3 seconds. -->
 		<icon initial="icon.skill11276"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND">
 			<magic-level initial="85"/>
 			<cast-range initial="900"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-700000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="5"/>
@@ -46,7 +44,7 @@
 			<time initial="3"/>
 			<chance initial="-1"/>
 		</abnormal>
-		<resist-abnormals>STUN TURN_FLEE</resist-abnormals>
+		<resist-abnormals>TURN_FLEE STUN</resist-abnormals>
 		<effects>
 			<block-all-actions>
 				<allowed-skills>35016</allowed-skills>
@@ -82,10 +80,11 @@
 	<skill id="7102" name="Summon Clan Pet" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -100,12 +99,12 @@
 	<skill id="7103" name="Helping Tree CP Recovery Range" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="635"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="635000"/>
+			<hit-time initial="300"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="RANGE" object="FRIEND" range="1000" affect-min="5" affect-random="12" />
@@ -113,14 +112,14 @@
 	<skill id="7104" name="Pa'agrio's Hand" action="A1">
 	<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Fire Spirit Agathion must be summoned for it to be used. -->
 		<icon initial="icon.skill11775"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="100"/>
 			<reuse initial="2000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-1000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -128,20 +127,19 @@
 	<skill id="7105" name="Incubation Possible" action="A1">
 	<!-- Incubation Possible -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="100"/>
 			<reuse initial="2000"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="700"/>
-			<hit-time initial="-1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<resist-abnormals>PUBLIC_SLOT DERANGEMENT ROOT_PHYSICALLY PARALYZE TURN_STONE OBLIVION DISARM ABSORB MIRAGE SLEEP CHANGEBODY ROOT_MAGICALLY AIRBIND SILENCE_PHYSICAL TURN_FLEE SILENCE_ALL KNOCKDOWN MIRAGE_TRAP DEPORT STUN SILENCE</resist-abnormals>
 		<conditions>
 			<target>				<npc>
-					<ids>19257 19258 19449 19450</ids>
+					<ids>19257 19449 19258 19450</ids>
 				</npc>
 			</target>
 		</conditions>
@@ -149,21 +147,20 @@
 	<skill id="7106" name="Optimal Temperature Incubation Success" action="A1">
 	<!-- Optimal Temperature Incubation Success -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<resist-abnormals>PUBLIC_SLOT DERANGEMENT ROOT_PHYSICALLY PARALYZE TURN_STONE OBLIVION DISARM ABSORB MIRAGE SLEEP CHANGEBODY ROOT_MAGICALLY AIRBIND SILENCE_PHYSICAL TURN_FLEE SILENCE_ALL KNOCKDOWN MIRAGE_TRAP DEPORT STUN SILENCE</resist-abnormals>
 		<conditions>
 			<target>				<npc>
-					<ids>19257 19258 19449 19450</ids>
+					<ids>19257 19449 19258 19450</ids>
 				</npc>
 			</target>
 		</conditions>
@@ -171,21 +168,20 @@
 	<skill id="7107" name="Incubation Success" action="A1">
 	<!-- Incubation Success -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<resist-abnormals>PUBLIC_SLOT DERANGEMENT ROOT_PHYSICALLY PARALYZE TURN_STONE OBLIVION DISARM ABSORB MIRAGE SLEEP CHANGEBODY ROOT_MAGICALLY AIRBIND SILENCE_PHYSICAL TURN_FLEE SILENCE_ALL KNOCKDOWN MIRAGE_TRAP DEPORT STUN SILENCE</resist-abnormals>
 		<conditions>
 			<target>				<npc>
-					<ids>19257 19258 19449 19450</ids>
+					<ids>19257 19449 19258 19450</ids>
 				</npc>
 			</target>
 		</conditions>
@@ -193,21 +189,20 @@
 	<skill id="7108" name="Incubation Failure" action="A1">
 	<!-- Incubation Failure -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<resist-abnormals>CHANGEBODY ROOT_MAGICALLY TURN_STONE OBLIVION STUN PARALYZE AIRBIND SLEEP KNOCKDOWN SILENCE_PHYSICAL SILENCE DISARM MIRAGE MIRAGE_TRAP DERANGEMENT ABSORB PUBLIC_SLOT SILENCE_ALL ROOT_PHYSICALLY TURN_FLEE DEPORT</resist-abnormals>
+		<resist-abnormals>PUBLIC_SLOT DERANGEMENT ROOT_PHYSICALLY PARALYZE TURN_STONE OBLIVION DISARM ABSORB MIRAGE SLEEP CHANGEBODY ROOT_MAGICALLY AIRBIND SILENCE_PHYSICAL TURN_FLEE SILENCE_ALL KNOCKDOWN MIRAGE_TRAP DEPORT STUN SILENCE</resist-abnormals>
 		<conditions>
 			<target>				<npc>
-					<ids>19257 19258 19449 19450</ids>
+					<ids>19257 19449 19258 19450</ids>
 				</npc>
 			</target>
 		</conditions>
@@ -215,13 +210,12 @@
 	<skill id="7113" name="Pet Invincibility Effect" action="A2" type="MAGIC">
 	<!-- Invincibility Effect -->
 		<icon initial="icon.skill0442"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="78"/>
@@ -245,8 +239,7 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
 		<abnormal type="CURIOUS_HOUSE" visual="CURIOUS_HOUSE" >
@@ -258,7 +251,7 @@
 	<skill id="7122" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, Queen Ant's minion is guarding the lands near the Ant Nest. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -268,7 +261,7 @@
 	<skill id="7123" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, Giran is guarding the lands and praying about resurrection. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -278,7 +271,7 @@
 	<skill id="7124" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, minion of Core is guarding the lands around Cruma Tower. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -288,7 +281,7 @@
 	<skill id="7125" name="Lv. 75 Raid Boss">
 	<!-- Enchanted by Shilen, enshrouded in darkness, minion of Orfen is guarding the Plains of the Lizardmen. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -302,12 +295,12 @@
 		level 3: The GM is always by your side. Increases all party members' Holy Attack damage by 20 for 8 hours.
 	 -->
 		<icon initial="icon.skill1043"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="243"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="243000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -319,12 +312,12 @@
 		level 3: The GM is always by your side. Stun Resistance +40%% for 8 hours.
 	 -->
 		<icon initial="icon.skill1259"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="646"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="646000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -332,12 +325,12 @@
 	<skill id="7129" name="Triple Sonic Slash" max-level="4" action="A1">
 	<!-- The GM is always by your side. Stun Resistance +40%% for $s1. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1800"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -352,12 +345,12 @@
 	<skill id="7130" name="Sonic Blaster" max-level="4" action="A1">
 	<!-- The GM is always by your side. Stun Resistance +40%% for $s1. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="15000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

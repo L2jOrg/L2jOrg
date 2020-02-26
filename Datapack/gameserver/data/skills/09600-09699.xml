@@ -3,9 +3,10 @@
 	<skill id="9618" name="Yum Yum Candy">
 	<!-- XP/ SP gain +15%%. Works in a pair with Nom Nom Candy. Only one Nom Nom Candy can work at a moment. -->
 		<icon initial="etc_whiteday_candy_i05"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -21,9 +22,10 @@
 	<skill id="9619" name="Nom Nom Candy">
 	<!-- XP/ SP gain +15%%. Works in a pair with Yum Yum Candy. Only one Yum Yum Candy can work at a moment. -->
 		<icon initial="etc_whiteday_candy_i06"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -39,10 +41,11 @@
 	<skill id="9620" name="Yummy Gift Box" action="A1">
 	<!-- XP/ SP gain +15%%. Works in a pair with Yum Yum Candy. Only one Yum Yum Candy can work at a moment. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

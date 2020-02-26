@@ -8,11 +8,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="BR_EVENT_BUF1" >
+		<abnormal type="BR_EVENT_BUF1">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>

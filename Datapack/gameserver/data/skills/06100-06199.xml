@@ -7,12 +7,12 @@
 		level 3: Turkey's Choice - Paper.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -36,11 +36,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="EVENT_WIN" >
+		<abnormal type="EVENT_WIN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -54,12 +52,11 @@
 	<skill id="6104" name="Event Cancel" action="A1">
 	<!-- Reset score. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -72,11 +69,10 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<target scope="POINT_BLANK" range="400" />
-		<abnormal type="EVENT_SANTA_REWARD" >
+		<abnormal type="EVENT_SANTA_REWARD">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -90,11 +86,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" range="400" />
-		<abnormal type="EVENT_SANTA_REWARD" >
+		<abnormal type="EVENT_SANTA_REWARD">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -108,11 +102,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -126,11 +118,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -144,11 +134,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -162,11 +150,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -180,11 +166,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -198,11 +182,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -216,11 +198,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -234,11 +214,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -252,11 +230,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_TERRITORY" >
+		<abnormal type="EVENT_TERRITORY">
 			<level initial="1"/>
 			<time initial="604800"/>
 			<chance initial="-1"/>
@@ -265,12 +241,12 @@
 	<skill id="6116" name="Attack Turkey" action="A1">
 	<!-- Attacks the Turkey -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -290,11 +266,9 @@
 			<cast-range initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="EVENT_GAWI" >
+		<abnormal type="EVENT_GAWI">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -306,12 +280,12 @@
 	<skill id="6118" name="Holiday Blessing" action="A1">
 	<!-- For 1 hr., Might, Shield, Focus, Heist, Acumen, Empower, and Wind Walk are applied. -->
 		<icon initial="icon.etc_x_mas_tree_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -319,10 +293,11 @@
 	<skill id="6119" name="Blessing of Abundance" action="A1">
 	<!-- Applies Might, Shield, Focus, Haste, Acumen, Empower, and Wind Walk effects for 1 hour. -->
 		<icon initial="icon.skill5662"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -330,22 +305,20 @@
 	<skill id="6120" name="Santa's Reward" action="A2">
 	<!-- Santa's Reward. For 1 hour, increases Max HP +10%%, Max MP +10%%, Max CP +10%%, Movement Speed +15%%, P. Atk. +10%%, M. Atk. +15%%, P. Critical Rate +5, P. Critical Damage +15%%, and M. Critical Rate +20. -->
 		<icon initial="icon.etc_pi_gift_box_i04"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" range="400" />
-		<abnormal type="EVENT_SANTA_REWARD" >
+		<abnormal type="EVENT_SANTA_REWARD">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -354,7 +327,7 @@
 			<speed>
 				<power initial="15.0"/>
 			</speed>
-			<vital-stat-modify stat="MAX_CP" mode="PER">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -377,10 +350,11 @@
 	<skill id="6124" name="Agathion Cute Trick - Neolithica" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -391,11 +365,10 @@
 	<skill id="6125" name="Paralysis" debuff="true" action="A2" type="MAGIC">
 	<!-- Paralyzed and unable to move momentarily. -->
 		<icon initial="icon.skill1170"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" />
 		<abnormal type="PARALYZE" visual="PARALYZE" >
@@ -410,11 +383,10 @@
 	<skill id="6126" name="Paralysis" debuff="true" action="A2" type="MAGIC">
 	<!-- Paralyzed and unable to move momentarily. -->
 		<icon initial="icon.skill1170"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" />
 		<abnormal type="PARALYZE" visual="PARALYZE" >
@@ -429,7 +401,7 @@
 	<skill id="6127" name="Anti-limit">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -445,10 +417,11 @@
 	<skill id="6128" name="Presentation - Cow Rage" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -456,15 +429,14 @@
 	<skill id="6129" name="Stun" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0092"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="2">
 			<magic-level initial="95"/>
 			<cast-range initial="40"/>
 			<reuse initial="6000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="85"/>
@@ -479,15 +451,14 @@
 	<skill id="6130" name="Mutant Curse" debuff="true" action="A2">
 	<!-- Mutant Curse: Stunned and unable to move momentarily. -->
 		<icon initial="icon.skill0092"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
 			<magic-level initial="95"/>
 			<cast-range initial="600"/>
 			<reuse initial="6000"/>
 			<cool-time initial="2000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="6000"/>
 		</attributes>
 		<consume>
 			<mana initial="43"/>
@@ -502,20 +473,19 @@
 	<skill id="6131" name="Decrease Speed" debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Movement Speed momentarily decreased by 8%%. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2">
 			<magic-level initial="95"/>
 			<cast-range initial="600"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="80"/>
@@ -524,20 +494,19 @@
 	<skill id="6132" name="Decrease Atk. Spd." debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Atk. Spd. momentarily decreased by 8%%. -->
 		<icon initial="icon.skill4038"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="95"/>
 			<cast-range initial="600"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="13"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="ATTACK_TIME_UP" >
+		<abnormal type="ATTACK_TIME_UP">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="80"/>
@@ -546,12 +515,11 @@
 	<skill id="6133" name="Mysterious Effect" debuff="true" action="A2">
 	<!-- Head is enlarged. -->
 		<icon initial="icon.skill2513"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC">
 			<magic-level initial="95"/>
 			<cast-range initial="900"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-1000"/>
 		</attributes>
 		<target type="ENEMY" />
 		<abnormal type="BIG_HEAD" visual="BIG_HEAD" >
@@ -562,20 +530,19 @@
 	<skill id="6134" name="Mutant Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- Mutant Curse: Atk. Spd. and Movement Speed are decreased by 30%% momentarily. -->
 		<icon initial="icon.skill4038"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="95"/>
 			<cast-range initial="600"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="15"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="ALL_SPEED_DOWN" >
+		<abnormal type="ALL_SPEED_DOWN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="80"/>
@@ -584,15 +551,14 @@
 	<skill id="6135" name="Mutant Curse" debuff="true" action="A2">
 	<!-- Mutant Curse: Stunned and unable to move momentarily. -->
 		<icon initial="icon.skill0092"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
 			<magic-level initial="95"/>
 			<cast-range initial="600"/>
 			<reuse initial="6000"/>
 			<cool-time initial="2000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="6000"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="STUN" visual="STUN" >
@@ -604,11 +570,12 @@
 	<skill id="6136" name="Agathion Cute Trick - Juju" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -619,11 +586,12 @@
 	<skill id="6137" name="Agathion Juju - Mysterious Effect" action="A2">
 	<!-- Makes the head enlarge. -->
 		<icon initial="icon.skill2513"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 		<abnormal type="BIG_HEAD" visual="BIG_HEAD" >
@@ -633,11 +601,12 @@
 	<skill id="6138" name="Agathion Juju - Large Firecracker" action="A1">
 	<!-- Can set off large firecrackers. -->
 		<icon initial="icon.skill_agathion_cute"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="20000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -645,14 +614,13 @@
 	<skill id="6139" name="Fake Tears" action="A2">
 	<!-- For 10 minutes, weapon appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
 		<icon initial="icon.etc_water_of_silen_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="100"/>
 		</attributes>
 		<target scope="POINT_BLANK" range="1000" />
 		<abnormal type="WP_CHANGE_EVENT" visual="CHANGE_WP" >
@@ -664,17 +632,16 @@
 	<skill id="6140" name="Bog Stride" max-level="3" debuff="true" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="75"/>
 		</consume>
 		<target />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -686,14 +653,13 @@
 	<skill id="6141" name="Source of Marsh" debuff="true" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="ATTACK_TIME_UP" >
+		<abnormal type="ATTACK_TIME_UP">
 			<level initial="3"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
@@ -712,15 +678,14 @@
 			<reuse initial="30000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="600"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="90"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="15"/>
 			<mana initial="72"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -735,13 +700,14 @@
 					<value level="3">-90.0</value>
 				</power>
 			</speed>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-10.0">
 					<value level="2">-20.0</value>
 					<value level="3">-30.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="PER">				<power initial="-10.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0" mode="PER">
+				<power initial="-10.0">
 					<value level="2">-20.0</value>
 					<value level="3">-30.0</value>
 				</power>
@@ -751,13 +717,13 @@
 	<skill id="6143" name="Ancient Beam" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="82"/>
 			<cast-range initial="600"/>
 			<reuse initial="4000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -768,13 +734,13 @@
 	<skill id="6144" name="Ancient Beam" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="82"/>
 			<cast-range initial="600"/>
 			<reuse initial="4000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -785,17 +751,16 @@
 	<skill id="6145" name="Earth Wyrm's Evil Aura" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="74"/>
 		</consume>
 		<target />
-		<abnormal type="PD_UP" >
+		<abnormal type="PD_UP">
 			<level initial="3"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -804,15 +769,15 @@
 	<skill id="6146" name="Forfeiture of Will" debuff="true" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<reuse initial="4000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="3"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -821,19 +786,19 @@
 	<skill id="6147" name="Kasha's Divine Protection" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<reuse initial="4000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="15"/>
 			<mana initial="74"/>
 		</consume>
 		<target />
-		<abnormal type="DMG_SHIELD" >
+		<abnormal type="DMG_SHIELD">
 			<level initial="3"/>
 			<time initial="10"/>
 			<chance initial="-1"/>
@@ -853,28 +818,27 @@
 	<skill id="6148" name="Altar's Curse" debuff="true" action="A2" type="MAGIC">
 	<!-- You have been weakened by the Altar's Curse. You probably can't fight in this condition. -->
 		<icon initial="icon.skill1064"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" hit-cancel-time="1.5" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" hit-cancel-time="1.5">
 			<magic-level initial="-1"/>
 			<cast-range initial="900"/>
 			<reuse initial="4000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="15"/>
 			<mana initial="74"/>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SILENCE" >
+		<abnormal type="SILENCE">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<effect name="Mute"/>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-99.0"/>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
@@ -893,17 +857,15 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="2000" />
-		<abnormal type="MULTI_DEBUFF" >
+		<abnormal type="MULTI_DEBUFF">
 			<level initial="1"/>
 			<time initial="900"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
 			<speed mode="PER">
@@ -926,17 +888,16 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="3"/>
 			<time initial="11"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="2.0">
 					<value level="2">4.0</value>
 					<value level="3">6.0</value>
@@ -952,16 +913,15 @@
 			<value level="3">icon.skill6151_3</value>
 			<value level="4">icon.skill6151_4</value>
 		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="3"/>
 			<time initial="11"/>
 			<chance initial="-1"/>
@@ -979,17 +939,16 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SIGNAL_A" >
+		<abnormal type="SIGNAL_A">
 			<level initial="2"/>
 			<time initial="11"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="2.0">
 					<value level="2">4.0</value>
 					<value level="3">6.0</value>
@@ -1005,16 +964,15 @@
 			<value level="3">icon.skill6152_3</value>
 			<value level="4">icon.skill6152_4</value>
 		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SIGNAL_A" >
+		<abnormal type="SIGNAL_A">
 			<level initial="2"/>
 			<time initial="11"/>
 			<chance initial="-1"/>
@@ -1032,8 +990,7 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="MAX_HP_DOWN" visual="DOT_BLEEDING" >
@@ -1042,7 +999,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="150.0">
 					<value level="2">200.0</value>
 					<value level="3">520.0</value>
@@ -1058,13 +1015,12 @@
 			<value level="3">icon.skill6154_3</value>
 			<value level="4">icon.skill6154_4</value>
 		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="MAX_HP_DOWN" visual="DOT_BLEEDING" >
@@ -1076,15 +1032,15 @@
 	<skill id="6156" name="Mood Melody" action="A2">
 	<!-- For 1hour, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. -->
 		<icon initial="icon.bm_magmeld"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="-2"/>
 			<cast-range initial="400"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="200"/>
 		</attributes>
 		<target />
-		<abnormal type="G_EV_BUFF1" >
+		<abnormal type="G_EV_BUFF1">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -1096,7 +1052,7 @@
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="15.0"/>
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="30.0"/>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
@@ -1122,14 +1078,13 @@
 	<skill id="6166" name="Hold" debuff="true" action="A2" type="MAGIC">
 	<!-- Afflicted with Hold and unable to move momentarily. -->
 		<icon initial="icon.skill4047"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2">
 			<magic-level initial="81"/>
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="73"/>
@@ -1144,7 +1099,7 @@
 	<skill id="6167" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1162,8 +1117,7 @@
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="30"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="13">
@@ -1190,7 +1144,7 @@
 	<skill id="6168" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1208,8 +1162,7 @@
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="50"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="13">
@@ -1236,16 +1189,14 @@
 	<skill id="6169" name="Shyeed's Fury" debuff="true" action="A2">
 	<!-- Shyeed's cries continue to be heard. Nearby monsters seem to get stronger. -->
 		<icon initial="icon.skill6169"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="83"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="NPC_FURY" >
+		<abnormal type="NPC_FURY">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -1259,11 +1210,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -1294,11 +1243,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="ULTIMATE_BUFF" >
+		<abnormal type="ULTIMATE_BUFF">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -1324,16 +1271,15 @@
 	<skill id="6172" name="Presentation - Tyranno" action="A2">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="40"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-1000000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal type="SIGNAL_A" >
+		<abnormal type="SIGNAL_A">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="-1"/>
@@ -1347,10 +1293,11 @@
 	<skill id="6173" name="Presentation - Memorial Service for Repose" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1358,7 +1305,7 @@
 	<skill id="6174" name="Presentation - Incense for Relic" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1369,10 +1316,11 @@
 	<skill id="6175" name="Presentation - High Ranking Dawn Priest's Prayer" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="15000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1380,7 +1328,7 @@
 	<skill id="6176" name="Presentation - Dawn's Seal Stone" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1391,10 +1339,11 @@
 	<skill id="6177" name="Presentation - Anakim's Message" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1402,7 +1351,7 @@
 	<skill id="6178" name="Presentation - Ultimate Seal Motion1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1413,7 +1362,7 @@
 	<skill id="6179" name="Presentation - Ultimate Seal Motion2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1424,10 +1373,11 @@
 	<skill id="6180" name="Presentation - Lilith Presentation1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
+			<hit-time initial="12000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1435,7 +1385,7 @@
 	<skill id="6181" name="Presentation - Lilith Presentation2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1446,7 +1396,7 @@
 	<skill id="6182" name="Presentation - Lilith Presentation3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1457,7 +1407,7 @@
 	<skill id="6183" name="Presentation - Lilith Presentation4" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1468,7 +1418,7 @@
 	<skill id="6184" name="Presentation - Anakim's Presentation1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1479,7 +1429,7 @@
 	<skill id="6185" name="Presentation - Anakim's Presentation2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1490,7 +1440,7 @@
 	<skill id="6186" name="Presentation - Anakim's Presentation3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="600"/>
 			<effect-range initial="1100"/>
@@ -1501,12 +1451,12 @@
 	<skill id="6187" name="Presentation - Lilith Battle" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="700"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1514,12 +1464,12 @@
 	<skill id="6188" name="Presentation - Lilith' Steward Battle1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="700"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1527,12 +1477,12 @@
 	<skill id="6189" name="Presentation - Lilith' Steward Battle2" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" trait="POISON" >
+		<attributes magic-critical-rate="-5.0" trait="POISON">
 			<magic-level initial="79"/>
 			<cast-range initial="700"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1540,12 +1490,12 @@
 	<skill id="6190" name="Presentation - Lilith' Bodyguards Battle1" debuff="true" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" trait="HOLD" >
+		<attributes magic-critical-rate="-5.0" trait="HOLD">
 			<magic-level initial="84"/>
 			<cast-range initial="700"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1553,12 +1503,12 @@
 	<skill id="6191" name="Presentation - Anakim Battle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="84"/>
 			<cast-range initial="700"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1566,13 +1516,13 @@
 	<skill id="6192" name="Presentation - Anakim's Guardian Battle1" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="79"/>
 			<cast-range initial="700"/>
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1580,13 +1530,13 @@
 	<skill id="6193" name="Presentation - Anakim's Guardian Battle2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="79"/>
 			<cast-range initial="700"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1594,13 +1544,13 @@
 	<skill id="6194" name="Presentation - Anakim's Royal Guard Battle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="79"/>
 			<cast-range initial="700"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1608,13 +1558,13 @@
 	<skill id="6195" name="Presentation - Anakim's Executor Battle" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="79"/>
 			<cast-range initial="700"/>
 			<reuse initial="8000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -1622,10 +1572,11 @@
 	<skill id="6197" name="Agathion Cute Trick - Oink Oink" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1636,10 +1587,11 @@
 	<skill id="6198" name="Agathion Cute Trick - Light of the Dawn" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1650,7 +1602,7 @@
 	<skill id="6199" name="Tail Strike" max-level="7" action="A1">
 	<!-- Tail Strike -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="55">
 				<value level="2">60</value>
 				<value level="3">65</value>
@@ -1669,13 +1621,7 @@
 				<value level="6">-1349</value>
 			</effect-point>
 			<effect-range initial="500"/>
-			<hit-time initial="-1044000">
-				<value level="2">-1130000</value>
-				<value level="3">-1206000</value>
-				<value level="4">-1268000</value>
-				<value level="5">-1315000</value>
-				<value level="6">-1349000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

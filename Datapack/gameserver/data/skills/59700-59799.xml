@@ -3,7 +3,7 @@
 	<skill id="59700" name="I Am Legend">
 	<!-- Max HP/CP/MP +1000, P. Atk./M. Atk. +500, Damage Received -7%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -11,7 +11,7 @@
 	<skill id="59701" name="No Pain, No Gain">
 	<!-- Max HP/CP/MP +1200, P. Atk./M. Atk. +700, Damage Received -10%% -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -19,25 +19,27 @@
 	<skill id="59702" name="Transformation Sealbook: Standard/High-grade">
 	<!-- Max HP/CP/MP +1200, P. Atk./M. Atk. +700, Damage Received -10%% -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_book_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59703" name="Radiant Jewel Box">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59704" name="Halloween Candy">
 	<!-- For 20 min., XP/SP Gain while hunting +20%%, P. Atk./M. Atk. +5%%, Atk. Spd./Casting Spd. +5%%. -->
 		<icon initial="BranchSys.br_hallowinday_candy_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -45,7 +47,7 @@
 	<skill id="59705" name="Silver Armor Riding Strider">
 	<!-- Mount Silver Armor Strider. -->
 		<icon initial="icon.skill1373"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<hit-time initial="1000"/>
@@ -55,7 +57,7 @@
 	<skill id="59706" name="Black Armor Riding Strider">
 	<!-- Mount Black Armor Strider. -->
 		<icon initial="icon.skill1373"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<hit-time initial="1000"/>
@@ -65,7 +67,7 @@
 	<skill id="59707" name="Steel Armor Riding Strider">
 	<!-- Mount Steel Armor Strider. -->
 		<icon initial="icon.skill1373"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<hit-time initial="1000"/>
@@ -75,75 +77,82 @@
 	<skill id="59708" name="Silver Armor Riding Strider Spellbook">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59709" name="Black Armor Riding Strider Spellbook">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59710" name="Steel Armor Riding Strider Spellbook">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59711" name="Black Ticket">
 	<!-- For 20 minutes, XP/SP Gain +20%. Cooldown 1 miunte. The Black Ticket effect does not disappear upon death. -->
 		<icon initial="icon.bm_royal_black_ticket_all"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59712" name="Spellbook: Ninja">
 	<!-- Spellbook to transform into a Ninja. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59713" name="Spellbook: Cowboy">
 	<!-- Spellbook to transform into a Cowboy. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59714" name="Spellbook: Steampunk">
 	<!-- Spellbook to transform into a Steampunk. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59715" name="Spellbook: Chipao">
 	<!-- Spellbook to transform into Chipao. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="59716" name="Spellbook: Traditional Taiwanese Native Outfit">
 	<!-- Spellbook to transform into a Traditional Taiwanese Native Outfit. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<target />
 	</skill>
@@ -155,7 +164,7 @@
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -167,7 +176,7 @@
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -179,7 +188,7 @@
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -191,7 +200,7 @@
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -203,7 +212,7 @@
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
 	</skill>

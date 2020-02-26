@@ -3,7 +3,7 @@
 	<skill id="3500" name="Set Effect - Wooden Light Armor, 3-piece">
 	<!-- Max HP +41 and P. Def +2%%. -->
 		<icon initial="icon.armor_t06_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -11,10 +11,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="2.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="41.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -22,7 +22,7 @@
 	<skill id="3501" name="Set Effect - Robe of Devotion, 3-piece">
 	<!-- Casting Spd. +15%%. -->
 		<icon initial="icon.armor_t55_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -30,7 +30,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="15.0"/>
 			</stat-modify>
 		</effects>
@@ -41,7 +41,7 @@
 		level 2: Max HP +126 and Poison Attack Resistance +20%%.
 	 -->
 		<icon initial="icon.armor_t19_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -49,7 +49,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="126.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="2">
@@ -65,7 +65,7 @@
 		level 2: Max MP +80 and P. Critical Damage +10.
 	 -->
 		<icon initial="icon.armor_t13_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -73,7 +73,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="80.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD" start-level="2">
@@ -87,7 +87,7 @@
 		level 2: Max MP +40 and M. Atk. +10%%.
 	 -->
 		<icon initial="icon.armor_t41_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -95,10 +95,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="40.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER" start-level="2">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER" start-level="2">
 				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
@@ -109,7 +109,7 @@
 		level 2: Max MP +92 and P. Critical Damage +15.
 	 -->
 		<icon initial="icon.armor_t42_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -117,7 +117,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="92.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD" start-level="2">
@@ -131,7 +131,7 @@
 		level 2: Max HP +153 and P. Def +5%%.
 	 -->
 		<icon initial="icon.armor_t43_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -139,10 +139,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="153.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER" start-level="2">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
@@ -153,7 +153,7 @@
 		level 2: INT +1 and MP Recovery Bonus +5.24%%.
 	 -->
 		<icon initial="icon.armor_elven_tunic_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -175,7 +175,7 @@
 		level 2: P. Evasion +4 and Poison/Bleed Resistance +30%%.
 	 -->
 		<icon initial="icon.armor_t47_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -183,7 +183,8 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 			<defence-trait start-level="2">
 				<trait type="BLEED">
@@ -201,7 +202,7 @@
 		level 2: Sleep/Hold Resistance +20%%, Max HP +198, and P. Def. +5%%.
 	 -->
 		<icon initial="icon.armor_t48_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -209,7 +210,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="198.0"/>
 			</vital-stat-modify>
 			<defence-trait>
@@ -231,7 +232,7 @@
 		level 2: Sleep/Hold Resistance +20%%, Casting Spd. +15%%, and P. Def. +5.26%%.
 	 -->
 		<icon initial="icon.armor_t53_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -261,7 +262,7 @@
 		level 2: STR +4, CON -1, Sleep/Hold Resistance +20%%.
 	 -->
 		<icon initial="icon.armor_t47_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -285,7 +286,7 @@
 	<skill id="3512" name="Set Effect - Compound Heavy Armor, 2-piece">
 	<!-- Weight Limit +5795, M. Def. +5%%, and Paralysis Resistance +10%%. -->
 		<icon initial="icon.armor_t61_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -293,7 +294,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
 				<power initial="5795.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
@@ -315,7 +316,7 @@
 		level 2: INT +4, WIT -1, Stun Resistance +10%%, Max HP -270.
 	 -->
 		<icon initial="icon.armor_t54_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -325,13 +326,13 @@
 		<effects>
 			<defence-trait>
 				<trait type="SHOCK">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 			<stat type="INT" start-level="2">
 				<power initial="4.0"/>
 			</stat>
-			<vital-stat-modify stat="MAX_HP" start-level="2">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" start-level="2">
 				<power initial="-270.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -342,7 +343,7 @@
 		level 2: Paralysis Resistance +10%% and P. Def. +5.26%%.
 	 -->
 		<icon initial="icon.armor_t63_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -352,10 +353,10 @@
 		<effects>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER" start-level="2">
 				<power initial="5.26"/>
 			</stat-modify>
 		</effects>
@@ -363,7 +364,7 @@
 	<skill id="3515" name="Set Effect - Drake Light Armor, 2-piece">
 	<!-- M. Def. +5%% and Stun Resistance +10%%. -->
 		<icon initial="icon.armor_t45_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -371,12 +372,12 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -384,7 +385,7 @@
 	<skill id="3516" name="Set Effect - Full Plate Heavy Armor, 2-piece">
 	<!-- Max HP +270, P. Def. +5%%, and Stun Resistance +10%%. -->
 		<icon initial="icon.armor_t62_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -392,15 +393,15 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="270.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -411,7 +412,7 @@
 		level 2: WIT +1, Max MP +171, P. Def +5.26%%, and Paralysis Resistance +10%%.
 	 -->
 		<icon initial="icon.armor_t57_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -421,16 +422,16 @@
 		<effects>
 			<defence-trait>
 				<trait type="PARALYZE">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 			<stat type="WIT" start-level="2">
 				<power initial="1.0"/>
 			</stat>
-			<vital-stat-modify stat="MAX_MP" start-level="2">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" start-level="2">
 				<power initial="171.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER" start-level="2">
 				<power initial="5.26"/>
 			</stat-modify>
 		</effects>
@@ -443,7 +444,7 @@
 		level 4: HP Recovery Bonus +5.24%%, Max HP +294, Paralysis Resistance +30%%, and P. Def. +5.26%%.
 	 -->
 		<icon initial="icon.armor_t64_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -451,10 +452,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="5.24"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" start-level="2">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" start-level="2">
 				<power initial="294.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="3">
@@ -475,7 +476,7 @@
 		level 4: CON +1, Max HP +294, P. Def. +5%%, and Poison/Bleed Resistance +60%%.
 	 -->
 		<icon initial="icon.armor_t66_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -483,10 +484,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="294.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER" start-level="2">
 				<power initial="5.0"/>
 			</stat-modify>
 			<defence-trait start-level="3">
@@ -510,7 +511,7 @@
 		level 4: DEX +1, P. Evasion +4, P. Critical Rate +10, and Paralysis Resistance +30%%.
 	 -->
 		<icon initial="icon.armor_t65_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -540,7 +541,7 @@
 		level 3: Weight Limit +5759, P. Critical Damage +30, Poison/Bleed Resistance +60%%, and M. Def +5.25%%.
 	 -->
 		<icon initial="icon.armor_t67_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -548,7 +549,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
 				<power initial="5795.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD" start-level="2">
@@ -575,7 +576,7 @@
 		level 4: MP Recovery Bonus +5.26%%, Max MP +102, Paralysis Resistance +30%%, and M. Atk.+10%%.
 	 -->
 		<icon initial="icon.armor_t56_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -583,10 +584,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" start-level="2">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" start-level="2">
 				<power initial="102.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="3">
@@ -606,7 +607,7 @@
 		level 3: Poison/Bleed Resistance +60%%, P. Def. +5.26%%, and Casting Spd. +15%%.
 	 -->
 		<icon initial="icon.armor_t59_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -638,7 +639,7 @@
 		level 4: STR +3, CON -1, DEX -2, HP Recovery Bonus +5.24%%, Movement Speed +7, and Stun Resistance +30%%.
 	 -->
 		<icon initial="icon.armor_t68_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -646,7 +647,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="5.24"/>
 			</stat-modify>
 			<speed start-level="2">
@@ -669,7 +670,7 @@
 		level 3: STR -3, CON +3, Max HP +320, and Sleep/Hold Resistance +50%%.
 	 -->
 		<icon initial="icon.armor_t71_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -677,7 +678,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="320.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="2">
@@ -700,7 +701,7 @@
 		level 3: INT -2, MEN +3, WIT -1, MP Recovery Bonus +5.26%%, P. Def. +5.26%%, Stun Resistance +30%%, and Casting Spd. +15%%.
 	 -->
 		<icon initial="icon.armor_t69_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -708,7 +709,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
 			<stat type="MEN" start-level="2">
@@ -737,7 +738,7 @@
 		level 3: DEX +3, MP Recovery Bonus by 5.26%%, P. Atk. by 2.7%%, and Sleep/Hold Resistance by 50%%.
 	 -->
 		<icon initial="icon.armor_t72_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -745,7 +746,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER" start-level="2">
@@ -772,7 +773,7 @@
 		level 4: INT -2, MEN -1, WIT +3, MP Recovery Bonus +5.26%%, Max MP +206, and Stun Resistance +30%%.
 	 -->
 		<icon initial="icon.armor_t70_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -780,10 +781,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" start-level="2">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" start-level="2">
 				<power initial="206.0"/>
 			</vital-stat-modify>
 			<defence-trait start-level="3">
@@ -804,7 +805,7 @@
 		level 4: INT +2, MEN +1, WIT -3, MP Recovery Bonus +5.26%%, Movement Speed +7, Sleep/Hold Resistance +50%%, and M. Critical Damage +30.
 	 -->
 		<icon initial="icon.armor_t73_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -812,7 +813,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
 			<speed start-level="2">
@@ -845,7 +846,7 @@
 		level 4: STR -2, CON +2, HP Recovery Bonus +5.24%%, Heal Received +4%%, Max HP +238, and Paralysis Resistance +50%%.
 	 -->
 		<icon initial="icon.armor_t74_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -853,7 +854,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="5.24"/>
 			</stat-modify>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD" start-level="2">
@@ -879,7 +880,7 @@
 		level 3: STR +2, CON -2, Weight Limit +5759, Poison/Bleed Resistance +80%%, Movement Speed +4, and Atk. Spd. +8%%.
 	 -->
 		<icon initial="icon.armor_t77_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -887,7 +888,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
 				<power initial="5795.0"/>
 			</stat-modify>
 			<defence-trait start-level="2">
@@ -917,7 +918,7 @@
 		level 4: STR +1, CON -1, P. Evasion +4, P. Critical Damage +30, P. Atk. +4%%, Atk. Spd. +4%%, and Paralysis Resistance +50%%.
 	 -->
 		<icon initial="icon.armor_t75_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -925,7 +926,8 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 			<stat type="CON">
 				<power initial="-1.0">
@@ -956,7 +958,7 @@
 		level 3: MEN +2, WIT -2, MP Recovery Bonus +8%%, Max MP +222, and Poison/Bleed Resistance +80%%.
 	 -->
 		<icon initial="icon.armor_t78_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -964,10 +966,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="8.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" start-level="2">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" start-level="2">
 				<power initial="222.0"/>
 			</vital-stat-modify>
 			<stat type="MEN" start-level="3">
@@ -991,7 +993,7 @@
 		level 4: INT -2, WIT +2, MP Recovery Bonus +5.26%%, Poison/Bleed Resistance +80%%, M. Def. +8%%, and Casting Spd. +15%%.
 	 -->
 		<icon initial="icon.armor_t79_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -999,7 +1001,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
 			<defence-trait start-level="2">
@@ -1028,7 +1030,7 @@
 		level 3: WIT +2, MEN -2, Movement Speed +7, Paralysis Resistance +50%%, P. Def. +8%%, Casting Spd. +15%%. Decreases Magic Cancellation Rate.
 	 -->
 		<icon initial="icon.armor_t76_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1036,7 +1038,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL">
+			<stat-modify stat="ATTACK_CANCEL" stat-add="ATTACK_CANCEL">
 				<power initial="-50.0"/>
 			</stat-modify>
 			<speed>
@@ -1065,7 +1067,7 @@
 		level 3: CON +2, DEX -2, P. Accuracy +3, HP Recovery Bonus +5.24%%, P. Atk. +4%%, and Sleep/Hold Resistance +70%%. Additionally reflects 5%% of normal P. melee damage.
 	 -->
 		<icon initial="icon.armor_t80_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1073,7 +1075,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -1105,7 +1107,7 @@
 		level 3: STR +2, CON -2, P. Accuracy +3, HP Recovery Bonus +5.24%%, P. Atk. +4%%, Movement Speed +7, and Stun Resistance +50%%.
 	 -->
 		<icon initial="icon.armor_t83_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1113,7 +1115,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -1142,7 +1144,7 @@
 		level 3: DEX +1, CON -1, MP Recovery Bonus +5.26%%, M. Def. +4%%, and Sleep/Hold Resistance +70%%. Has a chance to absorb 3%% of physical damage dealt to enemies as HP.
 	 -->
 		<icon initial="icon.armor_t81_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1150,7 +1152,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
 			<vampiric-attack chance="100" start-level="2">
@@ -1179,7 +1181,7 @@
 		level 3: DEX +1, CON -1, Weight Limit +5759, P. Accuracy +3, Bow Damage +8%%, Max MP +240, and Stun Resistance +50%%.
 	 -->
 		<icon initial="icon.armor_t84_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1187,7 +1189,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_PENALTY">
+			<stat-modify stat="WEIGHT_PENALTY" stat-add="WEIGHT_PENALTY">
 				<power initial="5795.0"/>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
@@ -1217,7 +1219,7 @@
 		level 3: INT +2, WIT -2, MP Recovery Bonus +5.26%%, Sleep/Hold Resistance +70%%, and M. Critical Damage +30, M. Atk. +8%%
 	 -->
 		<icon initial="icon.armor_t82_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1254,7 +1256,7 @@
 		level 3: MEN +1, INT -1, MP Recovery Bonus +8%%, Max MP +240, Casting Spd. +15%%, and Stun Resistance +50%%.
 	 -->
 		<icon initial="icon.armor_t85_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1262,7 +1264,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="8.0"/>
 			</stat-modify>
 			<stat type="MEN" start-level="2">
@@ -1270,7 +1272,7 @@
 					<value level="3">-1.0</value>
 				</power>
 			</stat>
-			<vital-stat-modify stat="MAX_MP" start-level="2">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" start-level="2">
 				<power initial="240.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER" start-level="3">
@@ -1286,7 +1288,7 @@
 	<skill id="3542" name="Special Ability: P. Critical Damage" max-level="9" >
 	<!-- Increases P. Critical Damage. -->
 		<icon initial="icon.skill1242"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">49</value>
 				<value level="3">52</value>
@@ -1314,7 +1316,7 @@
 	<skill id="3543" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1322,7 +1324,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE" stat-add="SHIELD_DEFENCE" mode="PER">
 				<power initial="2.63"/>
 			</stat-modify>
 		</effects>
@@ -1330,7 +1332,7 @@
 	<skill id="3544" name="Equip Shield">
 	<!-- Increases Max HP. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1338,7 +1340,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1346,7 +1348,7 @@
 	<skill id="3545" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1354,7 +1356,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
 		</effects>
@@ -1362,7 +1364,7 @@
 	<skill id="3546" name="Equip Shield">
 	<!-- Additionally increases M. Atk. Resistance. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1370,7 +1372,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="3.0"/>
 			</stat-modify>
 		</effects>
@@ -1378,7 +1380,7 @@
 	<skill id="3547" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1386,7 +1388,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="5.26"/>
 			</stat-modify>
 		</effects>
@@ -1394,7 +1396,7 @@
 	<skill id="3548" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1402,7 +1404,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="24.0"/>
 			</stat-modify>
 		</effects>
@@ -1410,7 +1412,7 @@
 	<skill id="3549" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1418,7 +1420,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="24.0"/>
 			</stat-modify>
 		</effects>
@@ -1426,7 +1428,7 @@
 	<skill id="3550" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1434,7 +1436,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="24.0"/>
 			</stat-modify>
 		</effects>
@@ -1442,7 +1444,7 @@
 	<skill id="3551" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1450,7 +1452,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="24.0"/>
 			</stat-modify>
 		</effects>
@@ -1463,7 +1465,7 @@
 		level 4: STR +4, DEX -1, Max HP +445, HP Recovery Bonus +6%%, P. Def. +8%%, and Sleep/Hold Resistance +70%%.
 	 -->
 		<icon initial="icon.armor_t88_u_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1471,7 +1473,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="6.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER" start-level="2">
@@ -1488,7 +1490,7 @@
 			<stat type="STR" start-level="4">
 				<power initial="4.0"/>
 			</stat>
-			<vital-stat-modify stat="MAX_HP" start-level="4">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" start-level="4">
 				<power initial="445.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1496,7 +1498,7 @@
 	<skill id="3554" name="Equip Shield">
 	<!-- Additionally increases Shield Defense Rate. -->
 		<icon initial="icon.skill0091"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1504,7 +1506,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="SHIELD_DEFENCE_RATE" mode="PER">
+			<stat-modify stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE" mode="PER">
 				<power initial="24.0"/>
 			</stat-modify>
 		</effects>
@@ -1516,7 +1518,7 @@
 		level 3: STR +2, DEX +2, CON -1, Weight Limit +5759, Max MP +289, P. Atk. +4%%, and Atk. Spd. +4%%.
 	 -->
 		<icon initial="icon.armor_t89_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1524,10 +1526,10 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_PENALTY">
+			<stat-modify stat="WEIGHT_PENALTY" stat-add="WEIGHT_PENALTY">
 				<power initial="5759.0"/>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="289.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER" start-level="2">
@@ -1548,7 +1550,7 @@
 		level 3: INT +2, WIT +2, MEN -1, Weight Limit +5759, Movement Speed +7, M. Atk. +17%%, and Stun Resistance +50%%.
 	 -->
 		<icon initial="icon.armor_t90_ul_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1556,7 +1558,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_PENALTY">
+			<stat-modify stat="WEIGHT_PENALTY" stat-add="WEIGHT_PENALTY">
 				<power initial="5759.0"/>
 			</stat-modify>
 			<speed>
@@ -1578,7 +1580,7 @@
 	<skill id="3557" name="Valakas' Necklace">
 	<!-- Increases Fire Resistance, Sleep Resistance, Sleep Atk. Rate, Max HP/P. Atk./M. Atk., and P. Critical Rate of damage-dealing magic. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
 		<icon initial="icon.accessory_necklace_of_valakas_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1596,7 +1598,7 @@
 					<power initial="40"/>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1639,7 +1641,7 @@
 			<value level="14">icon.accessory_earring_of_antaras_i02</value>
 			<value level="15">icon.accessory_earring_of_antaras_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1728,7 +1730,7 @@
 			<value level="14">icon.accessory_earring_of_zaken_i03</value>
 			<value level="15">icon.accessory_earring_of_zaken_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1793,7 +1795,7 @@
 			<value level="3">icon.accessory_earring_of_orfen_i03</value>
 			<value level="4">icon.accessory_earring_of_orfen_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1866,7 +1868,7 @@
 			<value level="14">icon.accessory_ring_of_baium_i03</value>
 			<value level="15">icon.accessory_ring_of_baium_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1946,7 +1948,7 @@
 			<value level="3">icon.accessory_ring_of_queen_ant_i03</value>
 			<value level="4">icon.accessory_ring_of_queen_ant_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2018,7 +2020,7 @@
 			<value level="3">icon.accessory_ring_of_core_i03</value>
 			<value level="4">icon.accessory_ring_of_core_i04</value>
 		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2042,12 +2044,13 @@
 				</power>
 				</trait>
 			</defence-trait>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
 				</power>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_EVASION_RATE">
+			<stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -2088,17 +2091,13 @@
 	<skill id="3571" name="Special Ability: Critical Stun" max-level="2" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
 			<magic-level initial="75">
 				<value level="2">84</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="27">
-				<value level="2">43</value>
-			</activate-rate>
 		</attributes>
 		<target type="ENEMY_ONLY" object="NOT_FRIEND" />
 		<abnormal type="STUN" visual="STUN" >
@@ -2115,21 +2114,16 @@
 	<skill id="3574" name="Special Ability: Critical Slow" max-level="3" debuff="true" action="A2">
 	<!-- Movement Speed has temporarily decreased by 30%%. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="75">
 				<value level="2">84</value>
 			</magic-level>
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="16">
-				<value level="2">24</value>
-				<value level="3">33</value>
-			</activate-rate>
 		</attributes>
 		<target type="ENEMY_ONLY" object="NOT_FRIEND" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="3"/>
 			<time initial="120"/>
 			<chance initial="16">
@@ -2146,7 +2140,7 @@
 	<skill id="3577" name="Special Ability: Magic Hold" max-level="3" debuff="true" action="A2" type="MAGIC">
 	<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon initial="icon.skill1201"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
 			<magic-level initial="75">
 				<value level="2">84</value>
 				<value level="3">85</value>
@@ -2154,8 +2148,6 @@
 			<cast-range initial="1000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1500"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
 		</attributes>
 		<target type="ENEMY_ONLY" />
 		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
@@ -2170,7 +2162,7 @@
 	<skill id="3578" name="Special Ability: Infinity Sword">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, Atk. Speed +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_sword_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2178,7 +2170,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2207,16 +2199,16 @@
 	<skill id="3579" name="Infinity Power - Reflect" action="A2">
 	<!-- For 5 minutes, returns 8% of damage received by the target back to the enemy. -->
 		<icon initial="icon.skill0086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -2233,7 +2225,7 @@
 	<skill id="3580" name="Special Ability: Infinity Axe">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, Atk. Speed +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_axe_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2241,7 +2233,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2270,16 +2262,16 @@
 	<skill id="3581" name="Infinity Power - Tenacity" action="A2">
 	<!-- For 2 minutes returns 10% of the received damage back to the enemy. Recovers 460 HP. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -2299,7 +2291,7 @@
 	<skill id="3582" name="Special Ability: Infinity Slasher">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, P. Critical Damage +10%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_two_handed_sword_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2307,7 +2299,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2336,16 +2328,16 @@
 	<skill id="3584" name="Infinity Power - Protection" action="A2">
 	<!-- For 2 minutes makes you immune to debuffs 5 times. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -2358,7 +2350,7 @@
 	<skill id="3585" name="Special Ability: Infinity Dualsword">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +5%%, P. Critical Damage +5%%, P. Atk. Spd. +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_dualsword_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2366,7 +2358,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2398,16 +2390,16 @@
 	<skill id="3586" name="Set Effect - Full Plate Heavy Armor, 2-piece" action="A2">
 	<!-- All Skill Cooldown -10% for 5 minutes. Does not apply to skills with fixed cooldowns. -->
 		<icon initial="icon.skill3123"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -2421,7 +2413,7 @@
 	<skill id="3587" name="Special Ability: Infinity Fighter">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Critical Rate +20, Atk. Spd. +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_fist_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2429,7 +2421,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2458,7 +2450,7 @@
 	<skill id="3589" name="Special Ability: Infinity Dagger">
 	<!-- Max HP +15%%, Max MP +25%%, Max CP +30%%, M. Critical Rate +20, P. Critical Damage +20%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_dagger_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2466,7 +2458,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2495,22 +2487,22 @@
 	<skill id="3590" name="Infinity Power - Immortal" action="A2">
 	<!-- For 5 minutes, Deadly Stab Rate +20%. -->
 		<icon initial="icon.skill0410"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BLOW_RATE" mode="PER">
+			<stat-modify stat="BLOW_RATE" stat-add="BLOW_RATE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
@@ -2518,7 +2510,7 @@
 	<skill id="3591" name="Special Ability: Infinity Spear">
 	<!-- Max HP +20%%, Max MP +15%%, Max CP +30%%, P. Atk. +10%%, P. Critical Damage +10%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_pole_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2526,7 +2518,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="20.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2555,7 +2547,7 @@
 	<skill id="3593" name="Special Ability: Infinity Bow">
 	<!-- Max HP +15%%, Max MP +25%%, Max CP +30%%, Atk. Spd. +10%%, PvP Damage +5%%, and Skills MP Consumptions -5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_bow_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2563,7 +2555,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="15.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2575,7 +2567,7 @@
 			<magic-cost type="PHYSIC">
 				<power initial="-5.0"/>
 			</magic-cost>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
@@ -2592,22 +2584,22 @@
 	<skill id="3594" name="Infinity Power - Archery" action="A2">
 	<!-- Movement Speed +15 and Max Range +100 for 5 minutes. -->
 		<icon initial="icon.skill0431"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="15.0"/>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
@@ -2620,7 +2612,7 @@
 	<skill id="3595" name="Special Ability: Infinity Scepter">
 	<!-- Max HP +10%%, Max MP +25%%, Max CP +30%%, M. Atk. +10%%, M. Critical Damage +10%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_staff_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2628,7 +2620,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2657,22 +2649,22 @@
 	<skill id="3596" name="Infinity Power - Vampiric Mana" action="A2">
 	<!-- For 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
 		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
+			<stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT" stat-add="ABSORB_MANA_DAMAGE_PERCENT">
 				<power initial="3.0"/>
 			</stat-modify>
 		</effects>
@@ -2680,7 +2672,7 @@
 	<skill id="3597" name="Special Ability: Infinity Rod">
 	<!-- Max HP +10%%, Max MP +25%%, Max CP +30%%, M. Critical Rate +20, Casting Spd. +5%%, and PvP Damage +5%%. Can also uses weapon's special ability. -->
 		<icon initial="icon.weapon_the_mace_of_hero_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2688,7 +2680,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_MP" mode="PER">
@@ -2717,16 +2709,16 @@
 	<skill id="3598" name="Infinity Power - Mana Limit" action="A2">
 	<!-- For 30 sec. magic skills don't consume MP. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -2740,7 +2732,7 @@
 	<skill id="3599" name="Polearm Multi-attack">
 	<!-- Enables the character to attack multiple opponents. -->
 		<icon initial="icon.skill0216"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2748,7 +2740,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="ATTACK_COUNT_MAX">
+			<stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>

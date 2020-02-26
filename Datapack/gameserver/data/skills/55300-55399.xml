@@ -3,11 +3,10 @@
 	<skill id="55300" name="Buff for the Hero of Abandoned Camp" action="A1">
 	<!-- A Buff for a warrior fighting in the Abandoned Camp. P. Atk. and M. Atk. +10%%. You can receive a Shabby Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i02"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -15,11 +14,10 @@
 	<skill id="55301" name="Shabby Box Acquisition Effect" action="A1">
 	<!-- You can receive a Shabby Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i02"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -27,11 +25,10 @@
 	<skill id="55302" name="Shabby Box Acquisition Effect" action="A1">
 	<!-- You can receive a Shabby Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i02"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -39,11 +36,10 @@
 	<skill id="55303" name="Crude Box Acquisition Effect" action="A1">
 	<!-- A Buff for a warrior fighting in Orc Barracks. P. Atk. and M. Atk. +10%%. You can receive a Crude Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i03"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -51,11 +47,10 @@
 	<skill id="55304" name="Crude Box Acquisition Effect" action="A1">
 	<!-- You can receive a Crude Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i03"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -63,11 +58,10 @@
 	<skill id="55305" name="Crude Box Acquisition Effect" action="A1">
 	<!-- You can receive a Crude Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -75,11 +69,10 @@
 	<skill id="55306" name="Buff for the Hero of 2nd Floor of Cruma Tower" action="A1">
 	<!-- A Buff for a warrior fighting on the 2nd floor of Cruma Tower. P. Atk. and M. Atk. +10%%. You can receive an Old Box when the Buff is no longer in effect. <Warning> You cannot receive the item if your character dies when receiving or if there is no empty slot in your Inventory. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i04"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -87,11 +80,10 @@
 	<skill id="55307" name="Old Box Acquisition Effect" action="A1">
 	<!-- You can receive an Old Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i04"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -99,11 +91,10 @@
 	<skill id="55308" name="Old Box Acquisition Effect" action="A1">
 	<!-- You can receive an Old Box when the Buff is no longer in effect. -->
 		<icon initial="BranchIcon.Icon.skill_g_field_special_buff_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -122,7 +113,7 @@
 		level 10: MP Recovery Bonus +10% and MP Increase +10%.
 	 -->
 		<icon initial="icon.event_classic_ring"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -132,13 +123,13 @@
 	<skill id="55310" name="Holiday Hat" action="A1">
 	<!-- Resurrects a dead target and restores 100%% XP. Consumes 1 Spirit Ore. Skill Cooldown: 600 minutes. -->
 		<icon initial="icon.bm_romantic_chaperon_gold"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<reuse initial="21600000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -146,12 +137,11 @@
 	<skill id="55311" name="Overwhelming Power of a Holiday Hat" action="A1">
 	<!-- For 60 minutes, XP/SP gain +5%%. Will not be deleted upon death. -->
 		<icon initial="icon.skill19226"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -159,7 +149,7 @@
 	<skill id="55312" name="Test Cube" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="82800000"/>
 			<effect-range initial="-1"/>
@@ -170,7 +160,7 @@
 	<skill id="55313" name="Test Cube" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="82800000"/>
 			<effect-range initial="-1"/>
@@ -181,23 +171,21 @@
 	<skill id="55314" name="Attempt to Forget" action="A2">
 	<!-- For 1 hr., grants the following effects: Might - Lv. 3, Shield - Lv. 3, Focus - Lv. 3, Haste - Lv. 2, Acumen - Lv. 3, Empower - Lv. 3 and Wind Walk - Lv. 2. -->
 		<icon initial="icon.skill0763"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="-2"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="G_EV_BUFF1" >
+		<abnormal type="G_EV_BUFF1">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="15.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -223,10 +211,11 @@
 	<skill id="55315" name="Lindvior's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pirate_king_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -234,7 +223,7 @@
 	<skill id="55316" name="Chronicle Cube" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="82800000"/>
 			<effect-range initial="-1"/>
@@ -245,7 +234,7 @@
 	<skill id="55317" name="Chronicle Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -302,7 +291,7 @@
 	<skill id="55318" name="Refined Rare Accessory Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -312,7 +301,7 @@
 	<skill id="55319" name="Lineage II Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -381,7 +370,7 @@
 	<skill id="55320" name="Memories Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -438,7 +427,7 @@
 	<skill id="55321" name="Chronicle Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -498,7 +487,7 @@
 	<skill id="55322" name="Normal VIP Gain Scroll" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -509,7 +498,7 @@
 	<skill id="55323" name="Medium VIP Gain Scroll" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -520,7 +509,7 @@
 	<skill id="55324" name="Good VIP Gain Scroll" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -531,7 +520,7 @@
 	<skill id="55325" name="Perfect VIP Gain Scroll" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -542,7 +531,7 @@
 	<skill id="55326" name="Elixir of Mind" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -552,26 +541,24 @@
 	<skill id="55327" name="Sweet Chocolate Energy" action="A1">
 	<!-- Eat some chocolate from Coco Brownie to feel life-giving energy. For 2 hours XP and SP gain +5%%, Atk. Spd./Casting Spd. +10%%, Movement Speed +10. Cannot be stacked with Blessing of Light. -->
 		<icon initial="icon.etc_whiteday_choco"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="-2"/>
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="BUFF_SPECIAL_MULTI" >
+		<abnormal type="BUFF_SPECIAL_MULTI">
 			<level initial="1"/>
 			<time initial="7200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
@@ -591,11 +578,10 @@
 	<skill id="55328" name="PC Progression Support - Event" action="A1">
 	<!-- Event buff for PC Cafe only. XP/SP bonus +20%%. item drop rate +100%%. Cannot be used on servitors. -->
 		<icon initial="icon.etc_pccafe_exp_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -608,17 +594,15 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="STRAWBERRY_FRUIT" >
+		<abnormal type="STRAWBERRY_FRUIT">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -646,11 +630,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="MONGO_FRUIT" >
+		<abnormal type="MONGO_FRUIT">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -681,19 +663,18 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="CHERRY_FRUIT" >
+		<abnormal type="CHERRY_FRUIT">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="3.0"/>
 			</stat-hp-based>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
@@ -713,10 +694,11 @@
 	<skill id="55332" name="Scroll: 50 SP" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -724,10 +706,11 @@
 	<skill id="55333" name="Scroll: 100 SP" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -735,10 +718,11 @@
 	<skill id="55334" name="Scroll: 1000 SP" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1001,7 +985,7 @@
 		<icon initial="br_cashtex.skill.br_cash_rune_of_exp_buff_1">
 			<value level="5">br_cashtex.skill.br_cash_rune_of_exp_buff_2</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1015,14 +999,13 @@
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="70283"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="SPEED_UP" >
+		<abnormal type="SPEED_UP">
 			<level initial="2"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1036,11 +1019,12 @@
 	<skill id="55362" name="Clan Reputation Score - 10" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1057,11 +1041,12 @@
 	<skill id="55363" name="Clan Reputation Score - 50" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1078,11 +1063,12 @@
 	<skill id="55364" name="Clan Reputation Score - 150" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1099,10 +1085,11 @@
 	<skill id="55365" name="King Pirate's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1110,11 +1097,12 @@
 	<skill id="55366" name="Weapon Supply Box (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1122,11 +1110,12 @@
 	<skill id="55367" name="Weapon Supply Box (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1134,11 +1123,12 @@
 	<skill id="55368" name="B-grade Armor Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1146,11 +1136,12 @@
 	<skill id="55369" name="C-grade Armor Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1158,11 +1149,12 @@
 	<skill id="55370" name="B-grade Weapons Ingredient Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1170,11 +1162,12 @@
 	<skill id="55371" name="C-grade Weapons Ingredient Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1182,11 +1175,12 @@
 	<skill id="55372" name="B-grade Armor Ingredient Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1194,11 +1188,12 @@
 	<skill id="55373" name="C-grade Armor Ingredient Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1206,11 +1201,12 @@
 	<skill id="55374" name="Baium Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_box_of_adventure_1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1218,11 +1214,12 @@
 	<skill id="55375" name="Kusto's Support Box: Enhance Weapon" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1230,7 +1227,7 @@
 	<skill id="55376" name="Enchant Scroll of Fate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1240,7 +1237,7 @@
 	<skill id="55377" name="Enchant Scroll of Forbidden Limit" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1268,7 +1265,7 @@
 		<icon initial="icon.bm_magic_square_talisman">
 			<value level="11">icon.bm_dimension_tallisman</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1278,12 +1275,12 @@
 	<skill id="55379" name="Fate Purification" action="A1" type="MAGIC">
 	<!-- Cancels paralysis and petrification and cures severe poison/ bleed condition. Restores 15% HP. -->
 		<icon initial="icon.skill10036"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="30000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1314,7 +1311,7 @@
 		<icon initial="icon.bm_magic_square_talisman">
 			<value level="11">icon.bm_dimension_tallisman</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1332,7 +1329,7 @@
 		level 7: P./ M. Atk. +10%%, P./ M. Critical Damage +40%%.
 	 -->
 		<icon initial="icon.skill10030"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-range initial="-1"/>
@@ -1343,13 +1340,13 @@
 	<skill id="55382" name="Blessing of Fate" action="A1" type="MAGIC">
 	<!-- Restores 100%% HP/ CP and 50%% MP when used. -->
 		<icon initial="icon.skill10034"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<cool-time initial="200"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1357,7 +1354,7 @@
 	<skill id="55383" name="Blessed Enchant Scroll of Fate" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1367,7 +1364,7 @@
 	<skill id="55384" name="Mysterious Blessed Soulshot (No-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1378,7 +1375,7 @@
 	<skill id="55385" name="Mysterious Blessed Soulshot (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1389,7 +1386,7 @@
 	<skill id="55386" name="Mysterious Blessed Soulshot (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1400,7 +1397,7 @@
 	<skill id="55387" name="Mysterious Blessed Soulshot (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1411,7 +1408,7 @@
 	<skill id="55388" name="Mysterious Blessed Soulshot (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1427,10 +1424,11 @@
 		<icon initial="icon.etc_lesser_potion_red_i00">
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i10</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1443,10 +1441,11 @@
 		<icon initial="icon.etc_lesser_potion_scarlet_i00">
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i11</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1459,10 +1458,11 @@
 		<icon initial="icon.etc_lesser_potion_yellow_i00">
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i07</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1475,10 +1475,11 @@
 		<icon initial="icon.etc_lesser_potion_green_i00">
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i03</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1491,10 +1492,11 @@
 		<icon initial="icon.etc_lesser_potion_blue_i00">
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i05</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1507,10 +1509,11 @@
 		<icon initial="icon.etc_lesser_potion_purple_i00">
 			<value level="2">icon.etc_fruit_juice_glass_bottle_i04</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1518,12 +1521,11 @@
 	<skill id="55395" name="Commemorative Olympiad XP/SP Scroll" action="A1">
 	<!-- For 20 minutes, obtained XP/ SP +50%%. -->
 		<icon initial="icon.exp_bottle"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="20000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1531,12 +1533,11 @@
 	<skill id="55396" name="Olympiad Warrior's Special Fruit" action="A1">
 	<!-- For 20 minutes, obtained XP/ SP +10%%, P./ M. Atk. +10%%, P./ M. Def. +5%%, Max. HP/ MP/ CP +15%%, HP/ MP Recovery Bonus +20%%, PvE damage +10%%. With a certain chance, converts 3%% of damage dealt into HP. -->
 		<icon initial="icon.etc_cobol_i04"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="20000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1544,7 +1545,7 @@
 	<skill id="55397" name="Olympiad Commemorative Amulet - 100%">
 	<!-- XP/SP +100%%, while hunting. -->
 		<icon initial="icon.skill19226"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1554,10 +1555,11 @@
 	<skill id="55398" name="Olympiad Warrior's SP Scroll" action="A1">
 	<!-- XP/SP +100%%, while hunting. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1565,7 +1567,7 @@
 	<skill id="55399" name="Tryout Glorious Cloak">
 	<!-- P./ M. Def. +3%%, Speed +10. -->
 		<icon initial="BranchSys2.Icon.7anni_cloack_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

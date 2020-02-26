@@ -3,11 +3,10 @@
 	<skill id="17107" name="Snowman's Buff" debuff="true" action="A2" type="MAGIC">
 	<!-- Snowman's present. Once debuffed, no more debuffs can be applied. -->
 		<icon initial="icon.weapon_snowman_stick_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="-2"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -15,12 +14,11 @@
 	<skill id="17108" name="Christmas Blessing" action="A2">
 	<!-- Restores energy when in a peaceful zone. -->
 		<icon initial="icon.weapon_snowman_stick_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -28,7 +26,7 @@
 	<skill id="17109" name="-" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -38,13 +36,12 @@
 	<skill id="17110" name="Snowy Squash Nectar" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="200"/>
 			<reuse initial="2000"/>
 			<effect-point initial="-150"/>
 			<effect-range initial="300"/>
-			<hit-time initial="-150000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -63,11 +60,12 @@
 	<skill id="17111" name="Snowy Squash Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -79,7 +77,7 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13399" despawn-delay="180000">
+			<summon-npc despawn-delay="180000">
 				<npc initial="13399.0"/>
 			</summon-npc>
 		</effects>
@@ -87,11 +85,12 @@
 	<skill id="17112" name="Large Snowy Squash Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5" >
+		<attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -103,7 +102,7 @@
 			<condition name="OpCanNotUseAirship"/>
 		</conditions>
 		<effects>
-			<summon-npc count="13403" despawn-delay="180000">
+			<summon-npc despawn-delay="180000">
 				<npc initial="13403.0"/>
 			</summon-npc>
 		</effects>
@@ -111,7 +110,7 @@
 	<skill id="17113" name="Christmas Buff Set 2015" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -126,8 +125,7 @@
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="100"/>
 		</attributes>
 		<target />
 		<abnormal type="RHAPSODY" visual="CHANGE_VALENTINE" >
@@ -153,12 +151,11 @@
 	<skill id="17192" name="Change Hair Accessory" action="A1">
 	<!-- Change hair accessories. -->
 		<icon initial="icon.skill0810"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="180000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

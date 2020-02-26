@@ -19,13 +19,7 @@
 				<value level="5">-500</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-460000">
-				<value level="2">-470000</value>
-				<value level="3">-480000</value>
-				<value level="4">-490000</value>
-				<value level="5">-500000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="40">
@@ -36,7 +30,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="3"/>
 			<time initial="30"/>
 			<chance initial="80"/>
@@ -54,7 +48,7 @@
 		level 3: Provokes the enemies to the front with 15000 Power.
 	 -->
 		<icon initial="icon.skill0503"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="43">
 				<value level="2">55</value>
 				<value level="3">64</value>
@@ -67,10 +61,7 @@
 				<value level="3">-20000</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-13000000">
-				<value level="2">-15000000</value>
-				<value level="3">-20000000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -105,12 +96,7 @@
 				<value level="4">-323</value>
 			</effect-point>
 			<effect-range initial="1200"/>
-			<hit-time initial="-193000">
-				<value level="2">-252000</value>
-				<value level="3">-296000</value>
-				<value level="4">-323000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="55">
@@ -157,14 +143,13 @@
 			<reuse initial="900000"/>
 			<effect-point initial="673"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="673000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="43"/>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="TRANSFER_DAMAGE" >
+		<abnormal type="TRANSFER_DAMAGE">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -173,7 +158,7 @@
 			<effect name="TransferDamageToPlayer">
 				<power initial="90.0"/>
 			</effect>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="2700.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -197,10 +182,7 @@
 				<value level="2">-691</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-671000">
-				<value level="2">-691000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="47">
@@ -208,7 +190,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="T_CRT_RATE_UP" >
+		<abnormal type="T_CRT_RATE_UP">
 			<level initial="2"/>
 			<time initial="30"/>
 			<chance initial="80"/>
@@ -238,14 +220,13 @@
 			<reuse initial="900000"/>
 			<effect-point initial="673"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="673000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="157"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="-1"/>
@@ -257,7 +238,7 @@
 			<cp mode="PER">
 				<power initial="-95.0"/>
 			</cp>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="35.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
@@ -280,7 +261,7 @@
 	<skill id="559" name="Spear" max-level="4" debuff="true" action="A2">
 	<!-- A strong spear thrust that has a chance of causing the enemy to bleed. Over-hit -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -295,12 +276,7 @@
 				<value level="4">-320</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-288000">
-				<value level="2">-300000</value>
-				<value level="3">-311000</value>
-				<value level="4">-320000</value>
-			</hit-time>
-			<activate-rate initial="50"/>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="61">
@@ -338,7 +314,7 @@
 		level 4: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1733..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -352,11 +328,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -382,7 +354,7 @@
 	<skill id="561" name="Angel's Blessing" max-level="4" action="A2">
 	<!-- A divine blessing that increases P. Atk. of all party members. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -396,12 +368,7 @@
 				<value level="4">630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="566000">
-				<value level="2">590000</value>
-				<value level="3">611000</value>
-				<value level="4">630000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="61">
@@ -411,13 +378,13 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="400" />
-		<abnormal type="DANCE_OF_WARRIOR" >
+		<abnormal type="DANCE_OF_WARRIOR">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="12.0"/>
 			</stat-modify>
 		</effects>
@@ -425,7 +392,7 @@
 	<skill id="562" name="Wind of Angel" max-level="4" action="A2">
 	<!-- A divine Wind that increases P. Evasion of a party member. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -439,12 +406,7 @@
 				<value level="4">630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="566000">
-				<value level="2">590000</value>
-				<value level="3">611000</value>
-				<value level="4">630000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="61">
@@ -454,13 +416,14 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="400" />
-		<abnormal type="SONG_OF_WATER" >
+		<abnormal type="SONG_OF_WATER">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="3.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -472,7 +435,7 @@
 		level 4: Powerfully rams into the enemy with a horn. Over-hit. Power: 1733..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -487,11 +450,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -515,7 +474,7 @@
 	<skill id="564" name="Gravity Control" max-level="4" debuff="true" action="A2">
 	<!-- Uses the horn to decrease speed and Atk. Spd. of nearby enemies. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -529,12 +488,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
-			<activate-rate initial="60"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="61">
@@ -544,7 +498,7 @@
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="60"/>
@@ -557,7 +511,7 @@
 					<value level="4">-40.0</value>
 				</power>
 			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-10.0">
 					<value level="2">-15.0</value>
 					<value level="3">-20.0</value>
@@ -574,7 +528,7 @@
 		level 4: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 1300..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -589,11 +543,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -622,7 +572,7 @@
 		level 4: Draws from the force of light to bestow the ability of recovery. Power 806.
 	 -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -632,7 +582,7 @@
 			<reuse initial="3000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -666,7 +616,7 @@
 		level 4: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1733.
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -681,11 +631,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -717,7 +663,7 @@
 		level 4: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 867.
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -731,11 +677,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -767,7 +709,7 @@
 		level 4: Gathers Momentum while attacking the enemy. Can be charged up to Stage 4. Critical. Over-hit.
 	 -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -780,11 +722,7 @@
 				<value level="4">-320</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-288000">
-				<value level="2">-300000</value>
-				<value level="3">-311000</value>
-				<value level="4">-320000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -808,7 +746,7 @@
 	<skill id="571" name="Poison Dust" max-level="4" debuff="true" action="A2" type="MAGIC">
 	<!-- Sprays a poisonous powder all over nearby enemies. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="20">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -822,12 +760,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
-			<activate-rate initial="70"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="5">
@@ -862,7 +795,7 @@
 		level 4: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 1300..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -876,11 +809,7 @@
 				<value level="4">-320</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-288000">
-				<value level="2">-300000</value>
-				<value level="3">-311000</value>
-				<value level="4">-320000</value>
-			</hit-time>
+			<hit-time initial="1900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -909,7 +838,7 @@
 		level 4: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 867..
 	 -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -923,12 +852,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-566000">
-				<value level="2">-590000</value>
-				<value level="3">-611000</value>
-				<value level="4">-630000</value>
-			</hit-time>
-			<activate-rate initial="50"/>
+			<hit-time initial="3000"/>
 
 			<element type="EARTH" value="20"/>
 		</attributes>
@@ -964,7 +888,7 @@
 		level 4: Attacks with a sharp steel blade. Over-hit. Power: 1733..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -979,11 +903,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-477000">
-				<value level="2">-532000</value>
-				<value level="3">-582000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1012,7 +932,7 @@
 		level 4: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1733..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1027,11 +947,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-477000">
-				<value level="2">-532000</value>
-				<value level="3">-582000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1060,7 +976,7 @@
 		level 4: Spews fire to attack enemies in front of you. Over-hit. Power: 1213..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1075,11 +991,7 @@
 				<value level="4">-959</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-726000">
-				<value level="2">-811000</value>
-				<value level="3">-887000</value>
-				<value level="4">-959000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1107,7 +1019,7 @@
 	<skill id="578" name="Blaze Quake" max-level="4" debuff="true" action="A2">
 	<!-- Inflicts a burning fire attack on nearby enemies. Over-hit. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1122,12 +1034,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-477000">
-				<value level="2">-532000</value>
-				<value level="3">-582000</value>
-				<value level="4">-630000</value>
-			</hit-time>
-			<activate-rate initial="60"/>
+			<hit-time initial="1080"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -1139,7 +1046,7 @@
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
-		<abnormal type="DOT_ATTR" >
+		<abnormal type="DOT_ATTR">
 			<level initial="6">
 				<value level="3">7</value>
 			</level>
@@ -1164,7 +1071,7 @@
 	<skill id="579" name="Fire Armor" max-level="4" action="A2">
 	<!-- An intense flame ignites and protects the body. Immobilized while in effect. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1178,12 +1085,7 @@
 				<value level="4">630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="477000">
-				<value level="2">532000</value>
-				<value level="3">582000</value>
-				<value level="4">630000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -1195,7 +1097,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="PD_UP_SPECIAL" >
+		<abnormal type="PD_UP_SPECIAL">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1206,7 +1108,7 @@
 		</abnormal>
 		<effects>
 			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="800.0">
 					<value level="2">900.0</value>
 					<value level="3">1000.0</value>
@@ -1228,7 +1130,7 @@
 	<skill id="580" name="Death Blow" max-level="4" action="A1">
 	<!-- Inflicts a deadly blow. Lethal Strike. Over-hit. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1243,11 +1145,7 @@
 				<value level="4">-630</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-477000">
-				<value level="2">-532000</value>
-				<value level="3">-582000</value>
-				<value level="4">-630000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1275,7 +1173,7 @@
 	<skill id="581" name="Sand Cloud" max-level="4" debuff="true" action="A2">
 	<!-- Uses blinding sand to decrease nearby enemies' P. Accuracy. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1285,8 +1183,7 @@
 			<reuse initial="15000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="360"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="60"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<mana initial="61">
@@ -1296,13 +1193,13 @@
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
-		<abnormal type="HIT_DOWN" >
+		<abnormal type="HIT_DOWN">
 			<level initial="1"/>
 			<time initial="60"/>
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="-6.0">
 					<value level="2">-7.0</value>
 					<value level="3">-8.0</value>
@@ -1314,7 +1211,7 @@
 	<skill id="582" name="Scope Bleed" max-level="4" debuff="true" action="A2">
 	<!-- Attacks frontal enemies with a lethal blow and causes them to bleed. Over-hit -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1329,12 +1226,7 @@
 				<value level="4">-320</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-242000">
-				<value level="2">-271000</value>
-				<value level="3">-296000</value>
-				<value level="4">-320000</value>
-			</hit-time>
-			<activate-rate initial="50"/>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="61">
@@ -1369,7 +1261,7 @@
 	<skill id="583" name="Assimilation" max-level="4" action="A2">
 	<!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="60">
 				<value level="2">63</value>
 				<value level="3">66</value>
@@ -1383,12 +1275,7 @@
 				<value level="4">630</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="566000">
-				<value level="2">590000</value>
-				<value level="3">611000</value>
-				<value level="4">630000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="61">
@@ -1420,14 +1307,14 @@
 	<skill id="584" name="Power Claw" action="A1">
 	<!-- Attacks the enemy with powerful claws. Over-hit. Power: 1008. -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="720"/>
 			<effect-point initial="-475"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-475000"/>
+			<hit-time initial="1080"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1443,20 +1330,19 @@
 	<skill id="585" name="Fast Moving" action="A2">
 	<!-- Spontaenously increases Movement Speed significantly. -->
 		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-point initial="477"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="477000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="55"/>
 		</consume>
 		<target />
-		<abnormal type="SPEED_UP_SPECIAL" >
+		<abnormal type="SPEED_UP_SPECIAL">
 			<level initial="2"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1473,7 +1359,7 @@
 		level 2: Quickly swings a spear around, attacking nearby enemies. Over-hit. Power: 984..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="59">
 				<value level="2">63</value>
 			</magic-level>
@@ -1481,7 +1367,7 @@
 			<reuse initial="4000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1504,7 +1390,7 @@
 		level 2: Deals a powerful attack that penetrates the earth. Over-hit. Power: 1406..
 	 -->
 		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<magic-level initial="59">
 				<value level="2">63</value>
 			</magic-level>
@@ -1514,9 +1400,7 @@
 				<value level="2">-580</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-530000">
-				<value level="2">-580000</value>
-			</hit-time>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1536,7 +1420,7 @@
 	<skill id="588" name="Curse of Darkness" max-level="2" debuff="true" action="A2">
 	<!-- Casts a powerful curse on your enemy. -->
 		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="59">
 				<value level="2">63</value>
 			</magic-level>
@@ -1544,8 +1428,7 @@
 			<reuse initial="11000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1200"/>
 		</attributes>
 		<consume>
 			<mana initial="54">
@@ -1553,7 +1436,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="80"/>
@@ -1569,13 +1452,14 @@
 	<skill id="589" name="Darkness Energy Drain" max-level="2" action="A1">
 	<!-- Absorbs energy from corpses to recover HP. -->
 		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="59">
 				<value level="2">63</value>
 			</magic-level>
 			<cast-range initial="20"/>
 			<reuse initial="8000"/>
 			<effect-range initial="400"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1599,7 +1483,7 @@
 	<skill id="590" name="Residence Body">
 	<!-- The Max HP of clan members in residence increases by 222. -->
 		<icon initial="icon.skill0370"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1607,7 +1491,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="222.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1615,7 +1499,7 @@
 	<skill id="591" name="Residence Spirit">
 	<!-- Max CP of clan members in residence +444. -->
 		<icon initial="icon.skill0371"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1623,7 +1507,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="444.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1631,7 +1515,7 @@
 	<skill id="592" name="Residence Soul">
 	<!-- The Max MP of clan members in residence increases by 168. -->
 		<icon initial="icon.skill0372"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1639,7 +1523,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="168.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1647,7 +1531,7 @@
 	<skill id="593" name="Residence Health">
 	<!-- HP Recovery Bonus of clan members in residence +1.09. -->
 		<icon initial="icon.skill0373"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1655,7 +1539,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
 				<power initial="1.09"/>
 			</stat-modify>
 		</effects>
@@ -1663,7 +1547,7 @@
 	<skill id="594" name="Residence Moral">
 	<!-- CP recovery bonus of clan members in residence +1.09. -->
 		<icon initial="icon.skill0374"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1671,7 +1555,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_CP_RATE">
+			<stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
 				<power initial="1.09"/>
 			</stat-modify>
 		</effects>
@@ -1679,7 +1563,7 @@
 	<skill id="595" name="Residence Clarity">
 	<!-- MP Recovery Bonus of clan members in residence +0.47. -->
 		<icon initial="icon.skill0375"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1687,7 +1571,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
 				<power initial="0.47"/>
 			</stat-modify>
 		</effects>
@@ -1695,7 +1579,7 @@
 	<skill id="596" name="Residence Might">
 	<!-- P. Atk. of clan members in residence increases by 34.6. -->
 		<icon initial="icon.skill0376"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1703,7 +1587,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="34.6"/>
 			</stat-modify>
 		</effects>
@@ -1711,7 +1595,7 @@
 	<skill id="597" name="Residence Shield">
 	<!-- P. Def. of clan members in residence increases by 54.7. -->
 		<icon initial="icon.skill0377"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1719,7 +1603,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="54.7"/>
 			</stat-modify>
 		</effects>
@@ -1727,7 +1611,7 @@
 	<skill id="598" name="Residence Empower">
 	<!-- M. Atk. of clan members in residence increases by 40.4. -->
 		<icon initial="icon.skill0378"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1735,7 +1619,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="40.4"/>
 			</stat-modify>
 		</effects>
@@ -1743,7 +1627,7 @@
 	<skill id="599" name="Residence Magic Barrier">
 	<!-- The M. Def. of clan members in residence increases by 44. -->
 		<icon initial="icon.skill0379"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1751,7 +1635,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="44.0"/>
 			</stat-modify>
 		</effects>

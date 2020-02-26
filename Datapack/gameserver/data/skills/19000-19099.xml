@@ -8,11 +8,9 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="50" />
-		<abnormal type="CLAN_ADVENT" >
+		<abnormal type="CLAN_ADVENT">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
@@ -29,7 +27,7 @@
 	<skill id="19032" name="Ability of Light">
 	<!-- Imbued with the Ability of Light. Increases Max CP by 2000. Effects do not apply when in Chaotic state. -->
 		<icon initial="icon.skill19008"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -40,7 +38,7 @@
 			<condition name="NonChaotic" scope="PASSIVE"/>
 		</conditions>
 		<effects>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="3000.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
@@ -57,7 +55,7 @@
 	<skill id="19033" name="Ability of Darkness">
 	<!-- Imbued with the Ability of Darkness. Increases Max CP by 1000. -->
 		<icon initial="icon.skill19008"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -65,7 +63,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="3000.0"/>
 			</vital-stat-modify>
 			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
@@ -82,11 +80,12 @@
 	<skill id="19034" name="Seal of Ruler" action="A1">
 	<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
 		<icon initial="icon.skill0246"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="85"/>
 			<reuse initial="5000"/>
 			<effect-range initial="400"/>
+			<hit-time initial="15000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -104,11 +103,12 @@
 	<skill id="19035" name="Imprint of Darkness" action="A1">
 	<!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
 		<icon initial="icon.skill0246"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="85"/>
 			<reuse initial="5000"/>
 			<effect-range initial="400"/>
+			<hit-time initial="120000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -130,7 +130,6 @@
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<abnormal type="BRIGHTNESS_BLESS" visual="VP_KEEP" >
@@ -150,7 +149,7 @@
 	<skill id="19039" name="Cloak of Light">
 	<!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. Not available in a chaotic state. -->
 		<icon initial="icon.amor_goodness_cloak"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -216,7 +215,7 @@
 	<skill id="19040" name="Cloak of Darkness">
 	<!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. -->
 		<icon initial="icon.amor_evilness_cloak"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -279,11 +278,12 @@
 	<skill id="19041" name="Escape: Castle" action="A1">
 	<!-- Return to Castle. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -297,11 +297,12 @@
 	<skill id="19042" name="Blessed Scroll of Escape: Castle" action="A1">
 	<!-- Return to Castle. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

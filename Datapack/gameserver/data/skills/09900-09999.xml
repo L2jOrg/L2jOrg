@@ -3,7 +3,7 @@
 	<skill id="9985" name="Elixir of Life" max-level="7" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_super_hp_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="180000"/>
 			<effect-range initial="-1"/>
@@ -18,7 +18,7 @@
 	<skill id="9986" name="Elixir of Mind" max-level="7" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_super_mp_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="180000"/>
 			<effect-range initial="-1"/>

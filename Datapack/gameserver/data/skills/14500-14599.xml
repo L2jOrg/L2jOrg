@@ -3,9 +3,10 @@
 	<skill id="14509" name="Life Force Transfer" max-level="2" action="A1">
 	<!-- Connects to Spirit King. Instant HP Recovery. -->
 		<icon initial="icon.skill1042"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="600000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -13,13 +14,11 @@
 	<skill id="14559" name="Soul Drain Status" action="A2">
 	<!-- HP is being absorbed. -->
 		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="90"/>
 			<cast-range initial="500"/>
 			<effect-point initial="-2"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-2000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" />
 		<abnormal type="PHYSICAL_STANCE" visual="DOT_POISON" >

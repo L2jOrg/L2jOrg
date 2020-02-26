@@ -7,17 +7,15 @@
 		level 4: For 20 minutes, XP/SP Gain from hunting +100%. Does not disappear when dying.
 	 -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -49,9 +47,10 @@
 	<skill id="55001" name="Blessed Scroll of Escape" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -59,7 +58,7 @@
 	<skill id="55002" name="Blessed Scroll of Resurrection" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
@@ -76,14 +75,14 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29011"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
@@ -101,31 +100,28 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29012"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<call-skill skill="1040" scope="SELF">
-				<power initial="2.0">
-					<value level="2">1.0</value>
-					<value level="2">2.0</value>
-				</power>
+				<power initial="2.0"/>
 			</call-skill>
 		</effects>
 	</skill>
 	<skill id="55005" name="Scroll: Enchant Weapon (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -135,7 +131,7 @@
 	<skill id="55006" name="Scroll: Enchant Armor (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -145,7 +141,7 @@
 	<skill id="55007" name="Scroll: Enchant Weapon (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -155,7 +151,7 @@
 	<skill id="55008" name="Scroll: Enchant Armor (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -165,7 +161,7 @@
 	<skill id="55009" name="Blessed Scroll: Enchant Weapon (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -175,7 +171,7 @@
 	<skill id="55010" name="Blessed Scroll: Enchant Weapon (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -185,7 +181,7 @@
 	<skill id="55011" name="Blessed Scroll: Enchant Armor (D-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -195,7 +191,7 @@
 	<skill id="55012" name="Blessed Scroll: Enchant Armor (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -205,9 +201,10 @@
 	<skill id="55013" name="Blessed Scroll of Escape" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -215,7 +212,7 @@
 	<skill id="55014" name="Blessed Scroll of Resurrection" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
@@ -228,7 +225,7 @@
 	<skill id="55015" name="Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -248,7 +245,7 @@
 	<skill id="55016" name="Greater Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -268,9 +265,10 @@
 	<skill id="55017" name="Scroll of Escape: Talking Island Village" max-level="7" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -278,7 +276,7 @@
 	<skill id="55024" name="VIP Lv. 1">
 	<!-- The right to VIP 1st level chest. XP/SP gain +3%%, item drop rate +3%%. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -288,7 +286,7 @@
 	<skill id="55025" name="VIP Lv. 2">
 	<!-- Receive the daily VIP Lv. 2 gift box. XP/SP Gain +7%%, Item Drop Rate +7%%, can use World Chat in all levels, and get an additional 3 times. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip2"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -298,7 +296,7 @@
 	<skill id="55026" name="VIP Lv. 3">
 	<!-- Receive the daily VIP Lv. 3 gift box. XP/SP Gain +15%%, Item Drop Rate +15%%, XP Reduction and Item Drop Rate at death -10%%, can use World Chat in all levels, and get an additional 3 times. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip3"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -308,7 +306,7 @@
 	<skill id="55027" name="VIP Lv. 4">
 	<!-- Receive the daily VIP Lv. 41 gift box. XP/SP Gain +25%%, Item Drop Rate +15%%, XP Reduction and Item Drop rate at death -15%%, can use World Chat in all levels, and get an additional 5 times. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip4"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -318,7 +316,7 @@
 	<skill id="55028" name="VIP Lv. 5">
 	<!-- Receive the daily VIP Lv. 5 gift box. XP/SP Gain +30%%, Item Drop Rate +30%%, XP Reduction and Item Drop rate at death -20%%, increased PvE Damage, can use World Chat in all levels, and get an additional 10 times. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip5"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -328,7 +326,7 @@
 	<skill id="55029" name="VIP Lv. 6">
 	<!-- Receive the daily VIP Lv. 6 gift box. XP/SP Gain +30%%, Item Drop Rate +30%%, XP Reduction and Item Drop rate at death -20%%, increased PvE Damage, STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1, can use World Chat in all levels, and get an additional 10 times. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip6"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -338,7 +336,7 @@
 	<skill id="55030" name="VIP Lv. 7">
 	<!-- Receive the daily VIP Lv. 7 gift box. XP/SP Gain +30%%, Item Drop Rate +30%%, XP Reduction and Item Drop rate at death -20%%, increased PvE/PvP Damage, STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, can use World Chat in all levels, and get an additional 10 times. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip7"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -348,14 +346,13 @@
 	<skill id="55031" name="Reported" action="A2">
 	<!-- You've been restricted for being suspected of using illegal programs. -->
 		<icon initial="icon.skill6038"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
-		<abnormal type="BOT_PENALTY" >
+		<abnormal type="BOT_PENALTY">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -393,12 +390,12 @@
 	<skill id="55032" name="Life Hazard" action="A1">
 	<!-- Resurrects and fully restores your Stats. Buff and Debuff effects remain after death. Cooldown - 12 hours. -->
 		<icon initial="icon.skill_agathion_special"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="43200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -406,9 +403,10 @@
 	<skill id="55033" name="Blessed Scroll of Escape" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -416,7 +414,7 @@
 	<skill id="55034" name="Blessed Scroll of Resurrection" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
@@ -433,14 +431,14 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29552"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
@@ -458,31 +456,28 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29553"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<call-skill skill="1040" scope="SELF">
-				<power initial="2.0">
-					<value level="2">1.0</value>
-					<value level="2">2.0</value>
-				</power>
+				<power initial="2.0"/>
 			</call-skill>
 		</effects>
 	</skill>
 	<skill id="55037" name="Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -502,7 +497,7 @@
 	<skill id="55038" name="Greater Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -522,7 +517,7 @@
 	<skill id="55039" name="Chronicles Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.new_user_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -532,7 +527,7 @@
 	<skill id="55040" name="Chronicles Descendant's Great Power">
 	<!-- Max HP +10%%, HP Recovery Bonus +10%%, Atk. Spd. increased, Casting Spd. increased, P. Accuracy +1, M. Accuracy +1 and Weight Limit +5000. -->
 		<icon initial="icon.event_classic_ring"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -542,17 +537,15 @@
 	<skill id="55041" name="XP/SP Boost" action="A2">
 	<!-- For 60 minutes, XP/SP Gain from hunting +20%%. Does not disappear when dying. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -572,7 +565,7 @@
 	<skill id="55042" name="Attendance Reward XP Rune.">
 	<!-- XP/SP Gain from hunting +10%% -->
 		<icon initial="br_cashtex.item.br_cash_rune_of_exp_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -594,7 +587,7 @@
 	<skill id="55043" name="Rare Accessory Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -618,7 +611,7 @@
 	<skill id="55044" name="LineageII Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -687,7 +680,7 @@
 	<skill id="55045" name="Chronicle Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -744,7 +737,7 @@
 	<skill id="55046" name="Memories Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -804,23 +797,22 @@
 	<skill id="55047" name="Romantic Bless the Body" action="A2" type="MAGIC">
 	<!-- Max HP +10%% for 20 minutes. -->
 		<icon initial="icon.accessory_archer_hat2_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="52"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="418"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="418000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<target />
-		<abnormal type="MAX_HP_UP" >
+		<abnormal type="MAX_HP_UP">
 			<level initial="3"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -828,17 +820,16 @@
 	<skill id="55048" name="Romantic Wind Walk" action="A2" type="MAGIC">
 	<!-- Movement Speed +20 for 5 minutes. -->
 		<icon initial="icon.accessory_archer_hat2_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="30"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="219"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="219000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<target />
-		<abnormal type="SPEED_UP" >
+		<abnormal type="SPEED_UP">
 			<level initial="3"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -852,7 +843,7 @@
 	<skill id="55049" name="Chronicles Descendant's Greater Equipment Random Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -862,7 +853,7 @@
 	<skill id="55050" name="Chronicles Descendant's Greater Equipment Random Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -876,17 +867,15 @@
 		level 4: For 20 minutes, XP/SP Gain from hunting +100%. Does not disappear when dying.
 	 -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -910,14 +899,14 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29654"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
@@ -935,41 +924,37 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29655"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<call-skill skill="1040" scope="SELF">
-				<power initial="2.0">
-					<value level="2">1.0</value>
-					<value level="2">2.0</value>
-				</power>
+				<power initial="2.0"/>
 			</call-skill>
 		</effects>
 	</skill>
 	<skill id="55057" name="Wind Walk" action="A2" type="MAGIC">
 	<!-- Speed + 20 for 10 min. -->
 		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="400"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="204"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="204000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -983,10 +968,11 @@
 	<skill id="55059" name="Release Agathion's Seal - Griffin" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -997,7 +983,7 @@
 	<skill id="55060" name="Griffin's Blessing">
 	<!-- STR/INT + 1. -->
 		<icon initial="icon.etc_rbracelet_aga_agit_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1013,17 +999,15 @@
 	<skill id="55061" name="Castle Scroll: Regular XP/SP Boost" action="A2">
 	<!-- For 20 minutes, XP/SP gain +35%%. Effect remains even after death. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1043,17 +1027,15 @@
 	<skill id="55062" name="Castle Scroll: Mid-grade XP/SP Boost" action="A2">
 	<!-- For 20 minutes, XP/SP gain +45%%. Effect remains even after death. -->
 		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="3"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1073,7 +1055,7 @@
 	<skill id="55063" name="Castle Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1093,7 +1075,7 @@
 	<skill id="55064" name="Castle Greater Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1113,10 +1095,11 @@
 	<skill id="55065" name="Castle Scroll: Berserker Spirit" action="A2">
 	<!-- For 20 minutes, P. Def. -5%%, M. Def. -10%%, P. Evasion -2, P. Atk. +5%%, M. Atk. +10%%, Atk. Spd. +5%%, Casting Spd. +5%%, and Movement Speed +5. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1124,13 +1107,13 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="4"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="-5.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -1158,10 +1141,11 @@
 	<skill id="55066" name="Castle Scroll: Death Whisper" action="A2">
 	<!-- For 20 minutes, P. Critical Atk. Power +25%%. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1169,7 +1153,7 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="4"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1183,10 +1167,11 @@
 	<skill id="55067" name="Castle Blessed Scroll of Escape" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1205,14 +1190,13 @@
 	<skill id="55068" name="Scroll: Blessing of Castle" action="A2" type="MAGIC">
 	<!-- Maintains target's buff/de-buff condition even following death. The Noblesse Blessing and the Lucky Charm disappear, however. -->
 		<icon initial="icon.skill1323"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="99"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="900"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="100"/>
 		</attributes>
 		<consume>
 			<mana-init initial="14"/>
@@ -1220,7 +1204,7 @@
 			<item-count initial="1"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="PRESERVE_ABNORMAL" >
+		<abnormal type="PRESERVE_ABNORMAL">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1232,17 +1216,17 @@
 	<skill id="55069" name="Castle Ring">
 	<!-- Increases P. Atk./M. Atk. and Max HP. -->
 		<icon initial="icon.ev_11th_rare_acc_ring"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="5.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK">
@@ -1253,20 +1237,20 @@
 	<skill id="55070" name="Castle Earrings">
 	<!-- Increases MP Recovery Bonus and Heal Received. -->
 		<icon initial="icon.ev_11th_rare_acc_earing"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="0.2"/>
 			</stat-modify>
 			<effect name="Heal">
 				<power/>
 			</effect>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="10.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1274,17 +1258,17 @@
 	<skill id="55071" name="Castle Necklace">
 	<!-- Increases P. Def./M. Def. -->
 		<icon initial="icon.ev_11th_rare_acc_necklace"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="20.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -1295,7 +1279,7 @@
 	<skill id="55072" name="LineageII Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1364,7 +1348,7 @@
 	<skill id="55073" name="Chronicle Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1421,7 +1405,7 @@
 	<skill id="55074" name="Memories Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1484,12 +1468,12 @@
 		level 5: For 20 min., P. Def. +12%%.
 	 -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="243"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="243000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1503,12 +1487,12 @@
 		level 5: For 20 min., P. Atk. +12%%.
 	 -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="204"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="204000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1522,12 +1506,12 @@
 		level 8: For 20 min., Damage that cancels magic -25.
 	 -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="285"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="285000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1538,12 +1522,12 @@
 	<skill id="55078" name="Agility" max-level="4" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Evasion +2. -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="243"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="243000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1557,12 +1541,12 @@
 		level 4: For 20 min., HP Recovery Bonus +10%%.
 	 -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="331"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="331000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1576,12 +1560,12 @@
 		level 3: For 20 min., M. Def. +23%%.
 	 -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="418"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="418000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1595,12 +1579,12 @@
 		level 7: For 20 min., Max HP +10%%.
 	 -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="418"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="418000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1614,12 +1598,12 @@
 		level 7: For 20 imn., Max MP +10%%.
 	 -->
 		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="418"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="418000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1630,7 +1614,7 @@
 	<skill id="55083" name="Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1650,7 +1634,7 @@
 	<skill id="55084" name="Greater Quick Healing Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1674,14 +1658,14 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29697"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
@@ -1699,33 +1683,31 @@
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<item initial="29698"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<call-skill skill="1040" scope="SELF">
-				<power initial="2.0">
-					<value level="2">1.0</value>
-					<value level="2">2.0</value>
-				</power>
+				<power initial="2.0"/>
 			</call-skill>
 		</effects>
 	</skill>
 	<skill id="55087" name="A Little Blessed Scroll of Escape" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1733,7 +1715,7 @@
 	<skill id="55088" name="A Little Blessed Scroll of Resurrection" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
@@ -1746,7 +1728,7 @@
 	<skill id="55089" name="Rare Accessory Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1770,7 +1752,7 @@
 	<skill id="55090" name="Lv. 1 Fire Dragon's Pendant Basic Effect">
 	<!-- Increases P. Atk. +4. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1778,7 +1760,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -1797,7 +1779,7 @@
 		level 10: Increases P. Atk. +75.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1805,7 +1787,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="6.0">
 					<value level="2">8.0</value>
 					<value level="3">12.0</value>
@@ -1823,7 +1805,7 @@
 	<skill id="55092" name="Lv. 2 Fire Dragon's Pendant Basic Effect">
 	<!-- P. Atk. +4, P. Critical Damage +26. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1831,7 +1813,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -1853,7 +1835,7 @@
 		level 10: P. Atk. +75, P. Critical Damage +498.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1861,7 +1843,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="6.0">
 					<value level="2">8.0</value>
 					<value level="3">12.0</value>
@@ -1892,7 +1874,7 @@
 	<skill id="55094" name="Lv. 3 Fire Dragon's Pendant Basic Effect">
 	<!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1900,7 +1882,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -1925,7 +1907,7 @@
 		level 10: P. Atk. +75, P. Critical Damage +498, P. Critical Rate +15%%.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1933,7 +1915,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="6.0">
 					<value level="2">8.0</value>
 					<value level="3">12.0</value>
@@ -1977,7 +1959,7 @@
 	<skill id="55096" name="Lv. 4 Fire Dragon's Pendant Basic Effect">
 	<!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%%, P. Atk. +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1985,7 +1967,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -2010,7 +1992,7 @@
 		level 10: P. Atk. +75, P. Critical Damage +498, P. Critical Rate +15%%, P. Atk. +8%%.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2018,25 +2000,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="6.0">
-					<value level="2">8.0</value>
 					<value level="2">2.0</value>
-					<value level="3">12.0</value>
 					<value level="3">2.5</value>
-					<value level="4">19.0</value>
 					<value level="4">3.0</value>
-					<value level="5">28.0</value>
 					<value level="5">3.5</value>
-					<value level="6">35.0</value>
 					<value level="6">4.0</value>
-					<value level="7">46.0</value>
 					<value level="7">4.5</value>
-					<value level="8">59.0</value>
 					<value level="8">5.0</value>
-					<value level="9">63.0</value>
 					<value level="9">6.0</value>
-					<value level="10">75.0</value>
 					<value level="10">8.0</value>
 				</power>
 			</stat-modify>
@@ -2071,7 +2044,7 @@
 	<skill id="55098" name="Lv. 5 Fire Dragon's Pendant Basic Effect">
 	<!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%%, P. Atk. +1%% and P. Critical Damage +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2079,7 +2052,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="4.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -2104,7 +2077,7 @@
 		level 10: P. Atk. +75, P. Critical Damage +498, P. Critical Rate +15%%, P. Atk. +8%% and P. Critical Damage +15%%.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2112,25 +2085,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="6.0">
-					<value level="2">8.0</value>
 					<value level="2">2.0</value>
-					<value level="3">12.0</value>
 					<value level="3">2.5</value>
-					<value level="4">19.0</value>
 					<value level="4">3.0</value>
-					<value level="5">28.0</value>
 					<value level="5">3.5</value>
-					<value level="6">35.0</value>
 					<value level="6">4.0</value>
-					<value level="7">46.0</value>
 					<value level="7">4.5</value>
-					<value level="8">59.0</value>
 					<value level="8">5.0</value>
-					<value level="9">63.0</value>
 					<value level="9">6.0</value>
-					<value level="10">75.0</value>
 					<value level="10">8.0</value>
 				</power>
 			</stat-modify>

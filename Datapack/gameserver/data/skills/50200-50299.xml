@@ -14,7 +14,7 @@
 		level 10: Beast Soulshot Damage +21%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -35,7 +35,7 @@
 		level 10: Spiritshot damage +21%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -56,7 +56,7 @@
 		level 10: Blessed Spiritshot damage +21%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -77,7 +77,7 @@
 		level 10: Beast Spiritshot Damage +21%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -98,7 +98,7 @@
 		level 10: 21% bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +500, M. Atk. +600, P. Critical Rate +5%, M. Critical Rate +10%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -108,7 +108,7 @@
 	<skill id="50205" name="Spinel - Steal Mana" max-level="10" action="A1">
 	<!-- $s1 bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate +$s4, M. Critical Rate +$s5. -->
 		<icon initial="icon.etc_bm_jewel_garnet_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
@@ -130,7 +130,7 @@
 		level 10: P. Def. +300, M. Def. +200, CON/MEN/DEX/WIT/STR/INT +2, P./M. Critical Damage Received -20%, and procs to recover MP by 100 upon using a skill.
 	 -->
 		<icon initial="icon.etc_bm_jewel_garnet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -151,7 +151,7 @@
 		level 10: P./M. Critical Damage +20%, P./M. Skill Power +7%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_bloodstone_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -172,7 +172,7 @@
 		level 10: XP/SP gain +30%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
 	 -->
 		<icon initial="icon.etc_bm_jewel_moonstone_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -182,7 +182,7 @@
 	<skill id="50209" name="Dark Crystal Helmet - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +5.5%%\nMax HP +100 -->
 		<icon initial="icon.armor_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -192,7 +192,7 @@
 	<skill id="50210" name="Dark Crystal Helmet - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +5.5%%\nP. Def. +8%% -->
 		<icon initial="icon.armor_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -202,7 +202,7 @@
 	<skill id="50211" name="Dark Crystal Helmet - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nMP Recovery Bonus +5.5%%\nP. Critical Damage +30 -->
 		<icon initial="icon.armor_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -212,7 +212,7 @@
 	<skill id="50212" name="Majestic Circlet - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +8%% -->
 		<icon initial="icon.armor_leather_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -222,7 +222,7 @@
 	<skill id="50213" name="Majestic Circlet - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +8%%\nMax MP +300 -->
 		<icon initial="icon.armor_leather_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -232,7 +232,7 @@
 	<skill id="50214" name="Majestic Circlet - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nMP Recovery Bonus +5.5%%\nBow Attack Power +8%% -->
 		<icon initial="icon.armor_leather_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -242,7 +242,7 @@
 	<skill id="50215" name="Helm of Nightmare - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +8%%\nReflect 5%% of Damage Received -->
 		<icon initial="icon.armor_leather_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -252,7 +252,7 @@
 	<skill id="50216" name="Helm of Nightmare - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +8%%\nM. Critical Damage +30 -->
 		<icon initial="icon.armor_leather_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -262,7 +262,7 @@
 	<skill id="50217" name="Helm of Nightmare - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nMP Recovery Bonus +8%% -->
 		<icon initial="icon.armor_leather_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -272,7 +272,7 @@
 	<skill id="50218" name="Tallum Helmet - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +10\nP. Atk. +4%%\nHP Recovery Bonus +5.5%%\nMax MP +50 -->
 		<icon initial="icon.armor_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -282,7 +282,7 @@
 	<skill id="50219" name="Tallum Helmet - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +5.5%%\nM. Def. +8%% -->
 		<icon initial="icon.armor_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -292,7 +292,7 @@
 	<skill id="50220" name="Tallum Helmet - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nMEN +1\nWeight Limit +1500\nM. Def. +10\nM. Atk. +8%%\nMP Recovery Bonus +8%% -->
 		<icon initial="icon.armor_helmet_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -302,7 +302,7 @@
 	<skill id="50221" name="Dark Crystal Breastplate - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +50%% -->
 		<icon initial="icon.armor_t74_u_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -312,7 +312,7 @@
 	<skill id="50222" name="Dark Crystal Leather Armor - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nDEX +1\nWeight Limit +1500\nM. Def. +15\nParalysis Resistance +50%% -->
 		<icon initial="icon.armor_t75_u_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -322,7 +322,7 @@
 	<skill id="50223" name="Tallum Tunic - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nWIT +1\nWeight Limit +1500\nM. Def. +15\nMEN Attack Resistance +50%% -->
 		<icon initial="icon.armor_t79_u_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -332,7 +332,7 @@
 	<skill id="50224" name="Dark Crystal Gaiters - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200 -->
 		<icon initial="icon.armor_t74_l_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -342,7 +342,7 @@
 	<skill id="50225" name="Dark Crystal Leggings - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nDEX +1\nWeight Limit +1000\nM. Def. +10\nMax HP +150\nMax MP +80 -->
 		<icon initial="icon.armor_t75_l_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -352,7 +352,7 @@
 	<skill id="50226" name="Tallum Stockings - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nWIT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +100\nMax MP +120 -->
 		<icon initial="icon.armor_t79_l_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -362,7 +362,7 @@
 	<skill id="50227" name="Dark Crystal Robe - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nParalysis Resistance +50%% -->
 		<icon initial="icon.armor_t76_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -372,7 +372,7 @@
 	<skill id="50228" name="Majestic Plate Armor - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nStun Resistance +50%% -->
 		<icon initial="icon.armor_t83_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -382,7 +382,7 @@
 	<skill id="50229" name="Majestic Robe - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nStun Resistance +50%% -->
 		<icon initial="icon.armor_t85_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -392,7 +392,7 @@
 	<skill id="50230" name="Majestic Leather Armor - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nDEX +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nStun Resistance +50%% -->
 		<icon initial="icon.armor_t84_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -402,7 +402,7 @@
 	<skill id="50231" name="Armor of Nightmare Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nSleep Resistance +70%%\nHold Resistance +70%% -->
 		<icon initial="icon.armor_t80_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -412,7 +412,7 @@
 	<skill id="50232" name="Robe of Nightmare - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nWIT +2\nWeight Limit +2500\nM. Def. +25\nMax HP +100\nMax MP +120\nSleep Resistance +70%%\nHold Resistance +70%% -->
 		<icon initial="icon.armor_t82_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -422,7 +422,7 @@
 	<skill id="50233" name="Leather Armor of Nightmare - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nDEX +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nSleep Resistance +70%%\nHold Resistance +70%% -->
 		<icon initial="icon.armor_t81_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -432,7 +432,7 @@
 	<skill id="50234" name="Tallum Plate Armor -Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nCON +2\nWeight Limit +2500\nM. Def. +25\nMax HP +200\nMEN Attack Resistance +50%% -->
 		<icon initial="icon.armor_t77_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -442,7 +442,7 @@
 	<skill id="50235" name="Tallum Leather Armor - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nMEN +2\nWeight Limit +2500\nM. Def. +25\nMax HP +150\nMax MP +80\nMEN Attack Resistance +50%% -->
 		<icon initial="icon.armor_t78_ul_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -452,7 +452,7 @@
 	<skill id="50236" name="Dark Crystal Gloves - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200\nAtk. Spd. +8%%\nHeal Received +2%% -->
 		<icon initial="icon.armor_t74_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -462,7 +462,7 @@
 	<skill id="50237" name="Dark Crystal Gloves - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nMagic Cancel Rate -25 -->
 		<icon initial="icon.armor_t76_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -472,7 +472,7 @@
 	<skill id="50238" name="Dark Crystal Gloves - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Evasion +2 -->
 		<icon initial="icon.armor_t75_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -482,7 +482,7 @@
 	<skill id="50239" name="Majestic Gauntlets - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nAtk. Spd. +50 -->
 		<icon initial="icon.armor_t83_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -492,7 +492,7 @@
 	<skill id="50240" name="Majestic Gauntlets - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nCasting Spd. +50 -->
 		<icon initial="icon.armor_t85_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -502,7 +502,7 @@
 	<skill id="50241" name="Majestic Gauntlets - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Skill Critical Damage +50 -->
 		<icon initial="icon.armor_t84_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -512,7 +512,7 @@
 	<skill id="50242" name="Gauntlets of Nightmare - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Atk. +50 -->
 		<icon initial="icon.armor_t80_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -522,7 +522,7 @@
 	<skill id="50243" name="Gauntlets of Nightmare - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nCasting Spd. +15%%\nM. Atk. +50 -->
 		<icon initial="icon.armor_t82_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -532,7 +532,7 @@
 	<skill id="50244" name="Gauntlets of Nightmare - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nRecover CON by 2%% of damage dealt -->
 		<icon initial="icon.armor_t81_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -542,7 +542,7 @@
 	<skill id="50245" name="Tallum Gloves - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nAtk. Spd. +8%%\nP. Def. +10 -->
 		<icon initial="icon.armor_t77_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -552,7 +552,7 @@
 	<skill id="50246" name="Tallum Gloves - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +20\nMax HP +50\nCasting Spd. +15%% -->
 		<icon initial="icon.armor_t79_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -562,7 +562,7 @@
 	<skill id="50247" name="Tallum Gloves - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nCasting Spd. +15%% -->
 		<icon initial="icon.armor_t78_g_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -572,7 +572,7 @@
 	<skill id="50248" name="Dark Crystal Boots - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +200\nMovement Speed +4\nHeal Received +2%% -->
 		<icon initial="icon.armor_t74_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -582,7 +582,7 @@
 	<skill id="50249" name="Dark Crystal Boots - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +7\nMagic Cancel Rate -25 -->
 		<icon initial="icon.armor_t76_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -592,7 +592,7 @@
 	<skill id="50250" name="Dark Crystal Boots - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Evasion +2 -->
 		<icon initial="icon.armor_t75_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -602,7 +602,7 @@
 	<skill id="50251" name="Majestic Boots - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +7\nAtk. Spd. +50 -->
 		<icon initial="icon.armor_t83_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -612,7 +612,7 @@
 	<skill id="50252" name="Majestic Boots - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nCasting Spd. +50 -->
 		<icon initial="icon.armor_t85_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -622,7 +622,7 @@
 	<skill id="50253" name="Majestic Boots - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Skill Critical Damage +50 -->
 		<icon initial="icon.armor_t84_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -632,7 +632,7 @@
 	<skill id="50254" name="Boots of Nightmare - Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Atk. +50 -->
 		<icon initial="icon.armor_t80_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -642,7 +642,7 @@
 	<skill id="50255" name="Boots of Nightmare - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nM. Atk. +50 -->
 		<icon initial="icon.armor_t82_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -652,7 +652,7 @@
 	<skill id="50256" name="Boots of Nightmare - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nRecover CON by 2%% of damage dealt -->
 		<icon initial="icon.armor_t81_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -662,7 +662,7 @@
 	<skill id="50257" name="Tallum Boots -Heavy Armor">
 	<!-- Effects of wearing A-grade equipment\n\nSTR +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMovement Speed +4\nP. Def. +10 -->
 		<icon initial="icon.armor_t77_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -672,7 +672,7 @@
 	<skill id="50258" name="Tallum Boots - Robe">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +20\nMax HP +50\nMovement Speed +4 -->
 		<icon initial="icon.armor_t79_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -682,7 +682,7 @@
 	<skill id="50259" name="Tallum Boots - Light Armor">
 	<!-- Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nMovement Speed +4 -->
 		<icon initial="icon.armor_t78_b_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -700,7 +700,7 @@
 		level 10: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +15\nMP Recovery Bonus +10
 	 -->
 		<icon initial="icon.armor_t89_ul_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -718,7 +718,7 @@
 		level 10: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +15
 	 -->
 		<icon initial="icon.armor_t601_u_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -736,7 +736,7 @@
 		level 10: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +10
 	 -->
 		<icon initial="icon.armor_t601_l_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -754,7 +754,7 @@
 		level 10: Effects of enchanted A-grade gloves\n\nP. Skill Power +15%
 	 -->
 		<icon initial="icon.armor_t601_g_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -772,7 +772,7 @@
 		level 10: Effects of enchanted A-grade gloves\n\nM. Skill Power +15%
 	 -->
 		<icon initial="icon.armor_t601_g_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -790,7 +790,7 @@
 		level 10: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -10%
 	 -->
 		<icon initial="icon.armor_t601_b_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -808,7 +808,7 @@
 		level 10: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -10%
 	 -->
 		<icon initial="icon.armor_t601_b_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -826,7 +826,7 @@
 		level 10: Effects of enchanted A-grade Headgear\n\nMax HP +1000
 	 -->
 		<icon initial="icon.armor_helmet_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -836,7 +836,7 @@
 	<skill id="50268" name="Baium’s Soul">
 	<!-- Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt -->
 		<icon initial="icon.skill1469"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -867,10 +867,9 @@
 		level 22: Attacks the enemy with bonus 89 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill1469"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -885,7 +884,7 @@
 		level 10: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +6\nINT +6
 	 -->
 		<icon initial="icon.skill1469"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -908,17 +907,16 @@
 		level 20: Attacks the enemy with bonus 134 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill1469"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="50273" name="Queen Ant's Soul">
 	<!-- Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower -->
 		<icon initial="icon.skill4282_new"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -948,10 +946,9 @@
 		level 22: Attacks the enemy with bonus 57 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill4282_new"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -966,7 +963,7 @@
 		level 10: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +6
 	 -->
 		<icon initial="icon.skill4282_new"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -989,17 +986,16 @@
 		level 20: Attacks the enemy with bonus 85 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill4282_new"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="50278" name="Zaken's Soul">
 	<!-- Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison -->
 		<icon initial="icon.skill32100"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1030,10 +1026,9 @@
 		level 22: Attacks the enemy with bonus 81 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill32100"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -1048,7 +1043,7 @@
 		level 10: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +6
 	 -->
 		<icon initial="icon.skill32100"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1071,17 +1066,16 @@
 		level 20: Attacks the enemy with bonus 122 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill32100"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="50283" name="Orfen's Soul">
 	<!-- Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest -->
 		<icon initial="icon.skill6435"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1112,10 +1106,9 @@
 		level 22: Attacks the enemy with bonus 81 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill6435"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -1130,7 +1123,7 @@
 		level 10: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +6
 	 -->
 		<icon initial="icon.skill6435"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1153,17 +1146,16 @@
 		level 20: Attacks the enemy with bonus 122 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill6435"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="50288" name="Core's Soul">
 	<!-- Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock -->
 		<icon initial="icon.skill32633"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1193,10 +1185,9 @@
 		level 22: Attacks the enemy with bonus 57 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill32633"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -1211,7 +1202,7 @@
 		level 10: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +6
 	 -->
 		<icon initial="icon.skill32633"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1234,10 +1225,9 @@
 		level 20: Attacks the enemy with bonus 85 Power added to M. Atk.
 	 -->
 		<icon initial="icon.skill32633"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -1256,7 +1246,7 @@
 		level 11: P. Def./M. Def. +300, Max HP +2500, Speed +8.
 	 -->
 		<icon initial="icon.tallisman_rapid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1276,7 +1266,7 @@
 		level 11: P. Atk. Spd. +300, P. Critical Damage +1200, M. Critical Damage +1000 with the power of speed.
 	 -->
 		<icon initial="icon.skill5662"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 		</attributes>
@@ -1285,7 +1275,7 @@
 	<skill id="50295" name="Baium’s Thunder Breaker">
 	<!-- Dagger containing Baium’s soul. Can use Baium’s power.\nP. Atk. and M. Atk. increase depending on the level. -->
 		<icon initial="icon.weapon_terakan_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1293,7 +1283,7 @@
 	<skill id="50296" name="Queen Ant’s Stone Spear">
 	<!-- Spear containing Queen Ant’s soul. Can use Queen Ant’s power. -->
 		<icon initial="BranchSys3.Icon.g_melisa_stormer_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1301,7 +1291,7 @@
 	<skill id="50297" name="Zaken’s Blood Sword">
 	<!-- Sword containing Zaken’s soul. Can use Zaken’s power. -->
 		<icon initial="icon.special_weapon_onehandsword"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1309,7 +1299,7 @@
 	<skill id="50298" name="Orfen’s Poisonous Sword">
 	<!-- Sword containing Orfen’s soul. Can use Orfen’s power. -->
 		<icon initial="icon.bm_the_two_handed_sword_of_hero_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -1317,7 +1307,7 @@
 	<skill id="50299" name="Core’s Plasma Bow">
 	<!-- Bow containing Core’s soul. Can use Core’s power. -->
 		<icon initial="icon.weapon_karupis_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />

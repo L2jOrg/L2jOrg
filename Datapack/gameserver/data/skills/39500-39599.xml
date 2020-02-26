@@ -3,11 +3,10 @@
 	<skill id="39561" name="Security Buff" action="A1">
 	<!-- A benefit provided for security service subscribers. \nP. Def. +50, M. Def. +30. -->
 		<icon initial="icon.security_buff"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

@@ -1,7 +1,6 @@
 package org.l2j.gameserver.engine.skill.api;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -37,7 +36,6 @@ import java.util.function.Predicate;
 import static java.lang.String.format;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.*;
 import static org.l2j.commons.util.Util.contains;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -57,8 +55,8 @@ public final class Skill implements IIdentifiable, Cloneable {
     private final boolean debuff;
     private final int maxLevel;
 
-    private Map<SkillConditionScope, List<SkillCondition>> conditions = new EnumMap<>(SkillConditionScope.class);
-    private Map<EffectScope, List<AbstractEffect>> effects = new EnumMap<>(EffectScope.class);
+    public Map<SkillConditionScope, List<SkillCondition>> conditions = new EnumMap<>(SkillConditionScope.class);
+    public Map<EffectScope, List<AbstractEffect>> effects = new EnumMap<>(EffectScope.class);
     private TraitType traitType = TraitType.NONE;
 
     private AbnormalType abnormalType = AbnormalType.NONE;
@@ -97,11 +95,11 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int maxChance;
 
     private TargetType targetType;
-    private AffectScope affectScope;
+    public AffectScope affectScope;
     private AffectObject affectObject;
     private int affectRange;
-    private int affectMin;
-    private int affectRandom;
+    public int affectMin;
+    public int affectRandom;
 
     private int manaConsume;
     private int manaInitialConsume;
@@ -157,6 +155,10 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     void computeSkillAttributes() {
         buffType = isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : debuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
+
+        if(isNull(abnormalResists)) {
+            abnormalResists = Collections.emptySet();
+        }
 
         if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(id)) {
             reuseDelay = Config.SKILL_REUSE_LIST.get(id);

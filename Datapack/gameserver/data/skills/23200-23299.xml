@@ -3,10 +3,11 @@
 	<skill id="23234" name="Singer and Dancer Agathion Cute Trick" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -17,11 +18,10 @@
 	<skill id="23298" name="Flame Hawk" debuff="true" action="A2">
 	<!-- For 10 seconds, becomes engulfed in flames to receive 250 damage per second. -->
 		<icon initial="icon.skill0771"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -40,11 +40,10 @@
 	<skill id="23299" name="Arrow Rain" debuff="true" action="A2">
 	<!-- For 10 seconds, becomes swept into a gust of wind to receive 250 damage per second. -->
 		<icon initial="icon.skill0772"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" triggered="true">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
 		</attributes>

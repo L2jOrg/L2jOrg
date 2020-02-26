@@ -3,7 +3,7 @@
 	<skill id="53100" name="Heroic Miracle">
 	<!-- Skill given to heroes at the Olympiad. Max HP +850. Has a chance to activate Heroes' Power when attacking to receive a buff that increases Atk. Spd. and Casting Spd., and continuously recovers MP. -->
 		<icon initial="icon.skill0912"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -13,7 +13,7 @@
 	<skill id="53101" name="Heroic Miracle" action="A1">
 	<!-- Atk. Spd. +100, Casting Spd. +100, Speed +20, and continuously recovers MP. -->
 		<icon initial="icon.skill0912"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="100000"/>
 			<effect-range initial="-1"/>

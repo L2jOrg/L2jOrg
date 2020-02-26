@@ -57,31 +57,7 @@
 				<value level="23">-195</value>
 				<value level="24">-200</value>
 			</effect-point>
-			<hit-time initial="-35000">
-				<value level="2">-40000</value>
-				<value level="3">-45000</value>
-				<value level="4">-60000</value>
-				<value level="5">-65000</value>
-				<value level="6">-70000</value>
-				<value level="7">-85000</value>
-				<value level="8">-90000</value>
-				<value level="9">-95000</value>
-				<value level="10">-110000</value>
-				<value level="11">-115000</value>
-				<value level="12">-120000</value>
-				<value level="13">-130000</value>
-				<value level="14">-135000</value>
-				<value level="15">-140000</value>
-				<value level="16">-150000</value>
-				<value level="17">-155000</value>
-				<value level="18">-160000</value>
-				<value level="19">-170000</value>
-				<value level="20">-175000</value>
-				<value level="21">-180000</value>
-				<value level="22">-190000</value>
-				<value level="23">-195000</value>
-				<value level="24">-200000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="5">
@@ -166,31 +142,7 @@
 				<value level="23">-195</value>
 				<value level="24">-200</value>
 			</effect-point>
-			<hit-time initial="-35000">
-				<value level="2">-40000</value>
-				<value level="3">-45000</value>
-				<value level="4">-60000</value>
-				<value level="5">-65000</value>
-				<value level="6">-70000</value>
-				<value level="7">-85000</value>
-				<value level="8">-90000</value>
-				<value level="9">-95000</value>
-				<value level="10">-110000</value>
-				<value level="11">-115000</value>
-				<value level="12">-120000</value>
-				<value level="13">-130000</value>
-				<value level="14">-135000</value>
-				<value level="15">-140000</value>
-				<value level="16">-150000</value>
-				<value level="17">-155000</value>
-				<value level="18">-160000</value>
-				<value level="19">-170000</value>
-				<value level="20">-175000</value>
-				<value level="21">-180000</value>
-				<value level="22">-190000</value>
-				<value level="23">-195000</value>
-				<value level="24">-200000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="6">
@@ -276,31 +228,7 @@
 				<value level="23">-195</value>
 				<value level="24">-200</value>
 			</effect-point>
-			<hit-time initial="-35000">
-				<value level="2">-40000</value>
-				<value level="3">-45000</value>
-				<value level="4">-60000</value>
-				<value level="5">-65000</value>
-				<value level="6">-70000</value>
-				<value level="7">-85000</value>
-				<value level="8">-90000</value>
-				<value level="9">-95000</value>
-				<value level="10">-110000</value>
-				<value level="11">-115000</value>
-				<value level="12">-120000</value>
-				<value level="13">-130000</value>
-				<value level="14">-135000</value>
-				<value level="15">-140000</value>
-				<value level="16">-150000</value>
-				<value level="17">-155000</value>
-				<value level="18">-160000</value>
-				<value level="19">-170000</value>
-				<value level="20">-175000</value>
-				<value level="21">-180000</value>
-				<value level="22">-190000</value>
-				<value level="23">-195000</value>
-				<value level="24">-200000</value>
-			</hit-time>
+			<hit-time initial="1604"/>
 		</attributes>
 		<consume>
 			<mana initial="5">
@@ -415,47 +343,7 @@
 				<value level="39">-435</value>
 				<value level="40">-440</value>
 			</effect-point>
-			<hit-time initial="-240000">
-				<value level="2">-245000</value>
-				<value level="3">-250000</value>
-				<value level="4">-255000</value>
-				<value level="5">-260000</value>
-				<value level="6">-265000</value>
-				<value level="7">-270000</value>
-				<value level="8">-275000</value>
-				<value level="9">-280000</value>
-				<value level="10">-285000</value>
-				<value level="11">-290000</value>
-				<value level="12">-295000</value>
-				<value level="13">-300000</value>
-				<value level="14">-305000</value>
-				<value level="15">-310000</value>
-				<value level="16">-315000</value>
-				<value level="17">-320000</value>
-				<value level="18">-325000</value>
-				<value level="19">-330000</value>
-				<value level="20">-335000</value>
-				<value level="21">-340000</value>
-				<value level="22">-345000</value>
-				<value level="23">-350000</value>
-				<value level="24">-355000</value>
-				<value level="25">-360000</value>
-				<value level="26">-365000</value>
-				<value level="27">-370000</value>
-				<value level="28">-375000</value>
-				<value level="29">-380000</value>
-				<value level="30">-385000</value>
-				<value level="31">-390000</value>
-				<value level="32">-400000</value>
-				<value level="33">-405000</value>
-				<value level="34">-410000</value>
-				<value level="35">-415000</value>
-				<value level="36">-420000</value>
-				<value level="37">-425000</value>
-				<value level="38">-430000</value>
-				<value level="39">-435000</value>
-				<value level="40">-440000</value>
-			</hit-time>
+			<hit-time initial="1733"/>
 		</attributes>
 		<consume>
 			<mana initial="33">
@@ -559,37 +447,7 @@
 				<value level="29">-435</value>
 				<value level="30">-440</value>
 			</effect-point>
-			<hit-time initial="-285000">
-				<value level="2">-290000</value>
-				<value level="3">-295000</value>
-				<value level="4">-300000</value>
-				<value level="5">-305000</value>
-				<value level="6">-310000</value>
-				<value level="7">-315000</value>
-				<value level="8">-320000</value>
-				<value level="9">-325000</value>
-				<value level="10">-330000</value>
-				<value level="11">-335000</value>
-				<value level="12">-340000</value>
-				<value level="13">-345000</value>
-				<value level="14">-350000</value>
-				<value level="15">-355000</value>
-				<value level="16">-360000</value>
-				<value level="17">-365000</value>
-				<value level="18">-370000</value>
-				<value level="19">-375000</value>
-				<value level="20">-380000</value>
-				<value level="21">-385000</value>
-				<value level="22">-390000</value>
-				<value level="23">-400000</value>
-				<value level="24">-405000</value>
-				<value level="25">-410000</value>
-				<value level="26">-420000</value>
-				<value level="27">-425000</value>
-				<value level="28">-430000</value>
-				<value level="29">-435000</value>
-				<value level="30">-440000</value>
-			</hit-time>
+			<hit-time initial="1667"/>
 		</attributes>
 		<consume>
 			<mana initial="38">
@@ -717,52 +575,7 @@
 				<value level="44">-435</value>
 				<value level="45">-440</value>
 			</effect-point>
-			<hit-time initial="-210000">
-				<value level="2">-215000</value>
-				<value level="3">-220000</value>
-				<value level="4">-225000</value>
-				<value level="5">-230000</value>
-				<value level="6">-235000</value>
-				<value level="7">-240000</value>
-				<value level="8">-245000</value>
-				<value level="9">-250000</value>
-				<value level="10">-255000</value>
-				<value level="11">-260000</value>
-				<value level="12">-265000</value>
-				<value level="13">-270000</value>
-				<value level="14">-275000</value>
-				<value level="15">-280000</value>
-				<value level="16">-285000</value>
-				<value level="17">-290000</value>
-				<value level="18">-295000</value>
-				<value level="19">-300000</value>
-				<value level="20">-305000</value>
-				<value level="21">-310000</value>
-				<value level="22">-315000</value>
-				<value level="23">-320000</value>
-				<value level="24">-325000</value>
-				<value level="25">-330000</value>
-				<value level="26">-335000</value>
-				<value level="27">-340000</value>
-				<value level="28">-345000</value>
-				<value level="29">-350000</value>
-				<value level="30">-355000</value>
-				<value level="31">-360000</value>
-				<value level="32">-365000</value>
-				<value level="33">-370000</value>
-				<value level="34">-375000</value>
-				<value level="35">-380000</value>
-				<value level="36">-385000</value>
-				<value level="37">-390000</value>
-				<value level="38">-400000</value>
-				<value level="39">-405000</value>
-				<value level="40">-410000</value>
-				<value level="41">-420000</value>
-				<value level="42">-425000</value>
-				<value level="43">-430000</value>
-				<value level="44">-435000</value>
-				<value level="45">-440000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="44">
@@ -909,52 +722,7 @@
 				<value level="44">-435</value>
 				<value level="45">-440</value>
 			</effect-point>
-			<hit-time initial="-210000">
-				<value level="2">-215000</value>
-				<value level="3">-220000</value>
-				<value level="4">-225000</value>
-				<value level="5">-230000</value>
-				<value level="6">-235000</value>
-				<value level="7">-240000</value>
-				<value level="8">-245000</value>
-				<value level="9">-250000</value>
-				<value level="10">-255000</value>
-				<value level="11">-260000</value>
-				<value level="12">-265000</value>
-				<value level="13">-270000</value>
-				<value level="14">-275000</value>
-				<value level="15">-280000</value>
-				<value level="16">-285000</value>
-				<value level="17">-290000</value>
-				<value level="18">-295000</value>
-				<value level="19">-300000</value>
-				<value level="20">-305000</value>
-				<value level="21">-310000</value>
-				<value level="22">-315000</value>
-				<value level="23">-320000</value>
-				<value level="24">-325000</value>
-				<value level="25">-330000</value>
-				<value level="26">-335000</value>
-				<value level="27">-340000</value>
-				<value level="28">-345000</value>
-				<value level="29">-350000</value>
-				<value level="30">-355000</value>
-				<value level="31">-360000</value>
-				<value level="32">-365000</value>
-				<value level="33">-370000</value>
-				<value level="34">-375000</value>
-				<value level="35">-380000</value>
-				<value level="36">-385000</value>
-				<value level="37">-390000</value>
-				<value level="38">-400000</value>
-				<value level="39">-405000</value>
-				<value level="40">-410000</value>
-				<value level="41">-420000</value>
-				<value level="42">-425000</value>
-				<value level="43">-430000</value>
-				<value level="44">-435000</value>
-				<value level="45">-440000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -1092,52 +860,7 @@
 				<value level="44">-435</value>
 				<value level="45">-440</value>
 			</effect-point>
-			<hit-time initial="-210000">
-				<value level="2">-215000</value>
-				<value level="3">-220000</value>
-				<value level="4">-225000</value>
-				<value level="5">-230000</value>
-				<value level="6">-235000</value>
-				<value level="7">-240000</value>
-				<value level="8">-245000</value>
-				<value level="9">-250000</value>
-				<value level="10">-255000</value>
-				<value level="11">-260000</value>
-				<value level="12">-265000</value>
-				<value level="13">-270000</value>
-				<value level="14">-275000</value>
-				<value level="15">-280000</value>
-				<value level="16">-285000</value>
-				<value level="17">-290000</value>
-				<value level="18">-295000</value>
-				<value level="19">-300000</value>
-				<value level="20">-305000</value>
-				<value level="21">-310000</value>
-				<value level="22">-315000</value>
-				<value level="23">-320000</value>
-				<value level="24">-325000</value>
-				<value level="25">-330000</value>
-				<value level="26">-335000</value>
-				<value level="27">-340000</value>
-				<value level="28">-345000</value>
-				<value level="29">-350000</value>
-				<value level="30">-355000</value>
-				<value level="31">-360000</value>
-				<value level="32">-365000</value>
-				<value level="33">-370000</value>
-				<value level="34">-375000</value>
-				<value level="35">-380000</value>
-				<value level="36">-385000</value>
-				<value level="37">-390000</value>
-				<value level="38">-400000</value>
-				<value level="39">-405000</value>
-				<value level="40">-410000</value>
-				<value level="41">-420000</value>
-				<value level="42">-425000</value>
-				<value level="43">-430000</value>
-				<value level="44">-435000</value>
-				<value level="45">-440000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -1277,53 +1000,7 @@
 				<value level="45">-435</value>
 				<value level="46">-440</value>
 			</effect-point>
-			<hit-time initial="-210000">
-				<value level="2">-215000</value>
-				<value level="3">-220000</value>
-				<value level="4">-225000</value>
-				<value level="5">-230000</value>
-				<value level="6">-235000</value>
-				<value level="7">-240000</value>
-				<value level="8">-245000</value>
-				<value level="9">-250000</value>
-				<value level="10">-255000</value>
-				<value level="11">-260000</value>
-				<value level="12">-265000</value>
-				<value level="13">-270000</value>
-				<value level="14">-275000</value>
-				<value level="15">-280000</value>
-				<value level="16">-285000</value>
-				<value level="17">-290000</value>
-				<value level="18">-295000</value>
-				<value level="19">-300000</value>
-				<value level="20">-305000</value>
-				<value level="21">-310000</value>
-				<value level="22">-315000</value>
-				<value level="23">-320000</value>
-				<value level="24">-325000</value>
-				<value level="25">-330000</value>
-				<value level="26">-335000</value>
-				<value level="27">-340000</value>
-				<value level="28">-345000</value>
-				<value level="29">-350000</value>
-				<value level="30">-355000</value>
-				<value level="31">-360000</value>
-				<value level="32">-365000</value>
-				<value level="33">-370000</value>
-				<value level="34">-375000</value>
-				<value level="35">-380000</value>
-				<value level="36">-385000</value>
-				<value level="37">-390000</value>
-				<value level="38">-400000</value>
-				<value level="39">-405000</value>
-				<value level="40">-410000</value>
-				<value level="41">-415000</value>
-				<value level="42">-420000</value>
-				<value level="43">-425000</value>
-				<value level="44">-430000</value>
-				<value level="45">-435000</value>
-				<value level="46">-440000</value>
-			</hit-time>
+			<hit-time initial="1900"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -1468,55 +1145,7 @@
 				<value level="47">-435</value>
 				<value level="48">-440</value>
 			</effect-point>
-			<hit-time initial="-190000">
-				<value level="2">-195000</value>
-				<value level="3">-200000</value>
-				<value level="4">-210000</value>
-				<value level="5">-215000</value>
-				<value level="6">-220000</value>
-				<value level="7">-225000</value>
-				<value level="8">-230000</value>
-				<value level="9">-235000</value>
-				<value level="10">-240000</value>
-				<value level="11">-245000</value>
-				<value level="12">-250000</value>
-				<value level="13">-255000</value>
-				<value level="14">-260000</value>
-				<value level="15">-265000</value>
-				<value level="16">-270000</value>
-				<value level="17">-275000</value>
-				<value level="18">-280000</value>
-				<value level="19">-285000</value>
-				<value level="20">-290000</value>
-				<value level="21">-295000</value>
-				<value level="22">-300000</value>
-				<value level="23">-305000</value>
-				<value level="24">-310000</value>
-				<value level="25">-315000</value>
-				<value level="26">-320000</value>
-				<value level="27">-325000</value>
-				<value level="28">-330000</value>
-				<value level="29">-335000</value>
-				<value level="30">-340000</value>
-				<value level="31">-345000</value>
-				<value level="32">-350000</value>
-				<value level="33">-355000</value>
-				<value level="34">-360000</value>
-				<value level="35">-365000</value>
-				<value level="36">-370000</value>
-				<value level="37">-375000</value>
-				<value level="38">-380000</value>
-				<value level="39">-385000</value>
-				<value level="40">-390000</value>
-				<value level="41">-400000</value>
-				<value level="42">-405000</value>
-				<value level="43">-410000</value>
-				<value level="44">-420000</value>
-				<value level="45">-425000</value>
-				<value level="46">-430000</value>
-				<value level="47">-435000</value>
-				<value level="48">-440000</value>
-			</hit-time>
+			<hit-time initial="1360"/>
 		</attributes>
 		<consume>
 			<mana initial="26">
@@ -1584,16 +1213,7 @@
 				<value level="8">-435</value>
 				<value level="9">-440</value>
 			</effect-point>
-			<hit-time initial="-400000">
-				<value level="2">-405000</value>
-				<value level="3">-410000</value>
-				<value level="4">-415000</value>
-				<value level="5">-420000</value>
-				<value level="6">-425000</value>
-				<value level="7">-430000</value>
-				<value level="8">-435000</value>
-				<value level="9">-440000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="84">
@@ -1622,9 +1242,7 @@
 			<effect-point initial="-400">
 				<value level="2">-430</value>
 			</effect-point>
-			<hit-time initial="-400000">
-				<value level="2">-430000</value>
-			</hit-time>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="54">
@@ -1682,27 +1300,7 @@
 				<value level="19">-4300</value>
 				<value level="20">-4400</value>
 			</effect-point>
-			<hit-time initial="-2200000">
-				<value level="2">-2350000</value>
-				<value level="3">-2500000</value>
-				<value level="4">-2650000</value>
-				<value level="5">-2800000</value>
-				<value level="6">-2950000</value>
-				<value level="7">-3100000</value>
-				<value level="8">-3200000</value>
-				<value level="9">-3300000</value>
-				<value level="10">-3400000</value>
-				<value level="11">-3500000</value>
-				<value level="12">-3600000</value>
-				<value level="13">-3700000</value>
-				<value level="14">-3800000</value>
-				<value level="15">-3900000</value>
-				<value level="16">-4000000</value>
-				<value level="17">-4100000</value>
-				<value level="18">-4200000</value>
-				<value level="19">-4300000</value>
-				<value level="20">-4400000</value>
-			</hit-time>
+			<hit-time initial="1300"/>
 		</attributes>
 		<consume>
 			<mana initial="30">
@@ -1778,27 +1376,7 @@
 				<value level="19">-4300</value>
 				<value level="20">-4400</value>
 			</effect-point>
-			<hit-time initial="-2200000">
-				<value level="2">-2350000</value>
-				<value level="3">-2500000</value>
-				<value level="4">-2650000</value>
-				<value level="5">-2800000</value>
-				<value level="6">-2950000</value>
-				<value level="7">-3100000</value>
-				<value level="8">-3200000</value>
-				<value level="9">-3300000</value>
-				<value level="10">-3400000</value>
-				<value level="11">-3500000</value>
-				<value level="12">-3600000</value>
-				<value level="13">-3700000</value>
-				<value level="14">-3800000</value>
-				<value level="15">-3900000</value>
-				<value level="16">-4000000</value>
-				<value level="17">-4100000</value>
-				<value level="18">-4200000</value>
-				<value level="19">-4300000</value>
-				<value level="20">-4400000</value>
-			</hit-time>
+			<hit-time initial="1300"/>
 		</attributes>
 		<consume>
 			<mana initial="30">
@@ -1844,12 +1422,7 @@
 				<value level="4">-430</value>
 				<value level="5">-440</value>
 			</effect-point>
-			<hit-time initial="-400000">
-				<value level="2">-410000</value>
-				<value level="3">-420000</value>
-				<value level="4">-430000</value>
-				<value level="5">-440000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="54">
@@ -1916,30 +1489,7 @@
 				<value level="22">-4350</value>
 				<value level="23">-4400</value>
 			</effect-point>
-			<hit-time initial="-2200000">
-				<value level="2">-2350000</value>
-				<value level="3">-2500000</value>
-				<value level="4">-2650000</value>
-				<value level="5">-2800000</value>
-				<value level="6">-2950000</value>
-				<value level="7">-3100000</value>
-				<value level="8">-3200000</value>
-				<value level="9">-3300000</value>
-				<value level="10">-3400000</value>
-				<value level="11">-3500000</value>
-				<value level="12">-3600000</value>
-				<value level="13">-3700000</value>
-				<value level="14">-3800000</value>
-				<value level="15">-3900000</value>
-				<value level="16">-4000000</value>
-				<value level="17">-4050000</value>
-				<value level="18">-4100000</value>
-				<value level="19">-4200000</value>
-				<value level="20">-4250000</value>
-				<value level="21">-4300000</value>
-				<value level="22">-4350000</value>
-				<value level="23">-4400000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="30">
@@ -1992,15 +1542,7 @@
 				<value level="7">-435</value>
 				<value level="8">-440</value>
 			</effect-point>
-			<hit-time initial="-400000">
-				<value level="2">-405000</value>
-				<value level="3">-410000</value>
-				<value level="4">-420000</value>
-				<value level="5">-425000</value>
-				<value level="6">-430000</value>
-				<value level="7">-435000</value>
-				<value level="8">-440000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="54">
@@ -2032,12 +1574,7 @@
 				<value level="4">-370</value>
 				<value level="5">-395</value>
 			</effect-point>
-			<hit-time initial="-220000">
-				<value level="2">-270000</value>
-				<value level="3">-320000</value>
-				<value level="4">-370000</value>
-				<value level="5">-395000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="30">
@@ -2129,43 +1666,7 @@
 				<value level="35">-344</value>
 				<value level="36">-346</value>
 			</effect-point>
-			<hit-time initial="-180000">
-				<value level="2">-190000</value>
-				<value level="3">-200000</value>
-				<value level="4">-209000</value>
-				<value level="5">-219000</value>
-				<value level="6">-229000</value>
-				<value level="7">-239000</value>
-				<value level="8">-248000</value>
-				<value level="9">-257000</value>
-				<value level="10">-266000</value>
-				<value level="11">-271000</value>
-				<value level="12">-275000</value>
-				<value level="13">-279000</value>
-				<value level="14">-283000</value>
-				<value level="15">-287000</value>
-				<value level="16">-291000</value>
-				<value level="17">-295000</value>
-				<value level="18">-299000</value>
-				<value level="19">-302000</value>
-				<value level="20">-306000</value>
-				<value level="21">-309000</value>
-				<value level="22">-312000</value>
-				<value level="23">-315000</value>
-				<value level="24">-318000</value>
-				<value level="25">-321000</value>
-				<value level="26">-323000</value>
-				<value level="27">-325000</value>
-				<value level="28">-328000</value>
-				<value level="29">-330000</value>
-				<value level="30">-332000</value>
-				<value level="31">-334000</value>
-				<value level="32">-338000</value>
-				<value level="33">-340000</value>
-				<value level="34">-342000</value>
-				<value level="35">-344000</value>
-				<value level="36">-346000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -2282,43 +1783,7 @@
 				<value level="35">-344</value>
 				<value level="36">-346</value>
 			</effect-point>
-			<hit-time initial="-180000">
-				<value level="2">-190000</value>
-				<value level="3">-200000</value>
-				<value level="4">-209000</value>
-				<value level="5">-219000</value>
-				<value level="6">-229000</value>
-				<value level="7">-239000</value>
-				<value level="8">-248000</value>
-				<value level="9">-257000</value>
-				<value level="10">-266000</value>
-				<value level="11">-271000</value>
-				<value level="12">-275000</value>
-				<value level="13">-279000</value>
-				<value level="14">-283000</value>
-				<value level="15">-287000</value>
-				<value level="16">-291000</value>
-				<value level="17">-295000</value>
-				<value level="18">-299000</value>
-				<value level="19">-302000</value>
-				<value level="20">-306000</value>
-				<value level="21">-309000</value>
-				<value level="22">-312000</value>
-				<value level="23">-315000</value>
-				<value level="24">-318000</value>
-				<value level="25">-321000</value>
-				<value level="26">-323000</value>
-				<value level="27">-325000</value>
-				<value level="28">-328000</value>
-				<value level="29">-330000</value>
-				<value level="30">-332000</value>
-				<value level="31">-334000</value>
-				<value level="32">-338000</value>
-				<value level="33">-340000</value>
-				<value level="34">-342000</value>
-				<value level="35">-344000</value>
-				<value level="36">-346000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -2435,43 +1900,7 @@
 				<value level="35">-344</value>
 				<value level="36">-346</value>
 			</effect-point>
-			<hit-time initial="-180000">
-				<value level="2">-190000</value>
-				<value level="3">-200000</value>
-				<value level="4">-209000</value>
-				<value level="5">-219000</value>
-				<value level="6">-229000</value>
-				<value level="7">-239000</value>
-				<value level="8">-248000</value>
-				<value level="9">-257000</value>
-				<value level="10">-266000</value>
-				<value level="11">-271000</value>
-				<value level="12">-275000</value>
-				<value level="13">-279000</value>
-				<value level="14">-283000</value>
-				<value level="15">-287000</value>
-				<value level="16">-291000</value>
-				<value level="17">-295000</value>
-				<value level="18">-299000</value>
-				<value level="19">-302000</value>
-				<value level="20">-306000</value>
-				<value level="21">-309000</value>
-				<value level="22">-312000</value>
-				<value level="23">-315000</value>
-				<value level="24">-318000</value>
-				<value level="25">-321000</value>
-				<value level="26">-323000</value>
-				<value level="27">-325000</value>
-				<value level="28">-328000</value>
-				<value level="29">-330000</value>
-				<value level="30">-332000</value>
-				<value level="31">-334000</value>
-				<value level="32">-338000</value>
-				<value level="33">-340000</value>
-				<value level="34">-342000</value>
-				<value level="35">-344000</value>
-				<value level="36">-346000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -2584,40 +2013,7 @@
 				<value level="32">-321</value>
 				<value level="33">-323</value>
 			</effect-point>
-			<hit-time initial="-91000">
-				<value level="2">-102000</value>
-				<value level="3">-114000</value>
-				<value level="4">-122000</value>
-				<value level="5">-134000</value>
-				<value level="6">-143000</value>
-				<value level="7">-157000</value>
-				<value level="8">-166000</value>
-				<value level="9">-190000</value>
-				<value level="10">-200000</value>
-				<value level="11">-209000</value>
-				<value level="12">-219000</value>
-				<value level="13">-229000</value>
-				<value level="14">-239000</value>
-				<value level="15">-248000</value>
-				<value level="16">-257000</value>
-				<value level="17">-266000</value>
-				<value level="18">-271000</value>
-				<value level="19">-275000</value>
-				<value level="20">-279000</value>
-				<value level="21">-283000</value>
-				<value level="22">-287000</value>
-				<value level="23">-291000</value>
-				<value level="24">-295000</value>
-				<value level="25">-299000</value>
-				<value level="26">-302000</value>
-				<value level="27">-306000</value>
-				<value level="28">-309000</value>
-				<value level="29">-312000</value>
-				<value level="30">-315000</value>
-				<value level="31">-318000</value>
-				<value level="32">-321000</value>
-				<value level="33">-323000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="18">
@@ -2733,40 +2129,7 @@
 				<value level="32">-321</value>
 				<value level="33">-323</value>
 			</effect-point>
-			<hit-time initial="-91000">
-				<value level="2">-102000</value>
-				<value level="3">-114000</value>
-				<value level="4">-122000</value>
-				<value level="5">-134000</value>
-				<value level="6">-143000</value>
-				<value level="7">-157000</value>
-				<value level="8">-166000</value>
-				<value level="9">-190000</value>
-				<value level="10">-200000</value>
-				<value level="11">-209000</value>
-				<value level="12">-219000</value>
-				<value level="13">-229000</value>
-				<value level="14">-239000</value>
-				<value level="15">-248000</value>
-				<value level="16">-257000</value>
-				<value level="17">-266000</value>
-				<value level="18">-271000</value>
-				<value level="19">-275000</value>
-				<value level="20">-279000</value>
-				<value level="21">-283000</value>
-				<value level="22">-287000</value>
-				<value level="23">-291000</value>
-				<value level="24">-295000</value>
-				<value level="25">-299000</value>
-				<value level="26">-302000</value>
-				<value level="27">-306000</value>
-				<value level="28">-309000</value>
-				<value level="29">-312000</value>
-				<value level="30">-315000</value>
-				<value level="31">-318000</value>
-				<value level="32">-321000</value>
-				<value level="33">-323000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="18">
@@ -2882,40 +2245,7 @@
 				<value level="32">-321</value>
 				<value level="33">-323</value>
 			</effect-point>
-			<hit-time initial="-46000">
-				<value level="2">-102000</value>
-				<value level="3">-114000</value>
-				<value level="4">-122000</value>
-				<value level="5">-134000</value>
-				<value level="6">-143000</value>
-				<value level="7">-157000</value>
-				<value level="8">-166000</value>
-				<value level="9">-190000</value>
-				<value level="10">-200000</value>
-				<value level="11">-209000</value>
-				<value level="12">-219000</value>
-				<value level="13">-229000</value>
-				<value level="14">-239000</value>
-				<value level="15">-248000</value>
-				<value level="16">-257000</value>
-				<value level="17">-266000</value>
-				<value level="18">-271000</value>
-				<value level="19">-275000</value>
-				<value level="20">-279000</value>
-				<value level="21">-283000</value>
-				<value level="22">-287000</value>
-				<value level="23">-291000</value>
-				<value level="24">-295000</value>
-				<value level="25">-299000</value>
-				<value level="26">-302000</value>
-				<value level="27">-306000</value>
-				<value level="28">-309000</value>
-				<value level="29">-312000</value>
-				<value level="30">-315000</value>
-				<value level="31">-318000</value>
-				<value level="32">-321000</value>
-				<value level="33">-323000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="18">
@@ -3015,33 +2345,7 @@
 				<value level="25">-342</value>
 				<value level="26">-344</value>
 			</effect-point>
-			<hit-time initial="-180000">
-				<value level="2">-190000</value>
-				<value level="3">-200000</value>
-				<value level="4">-209000</value>
-				<value level="5">-219000</value>
-				<value level="6">-229000</value>
-				<value level="7">-239000</value>
-				<value level="8">-248000</value>
-				<value level="9">-257000</value>
-				<value level="10">-266000</value>
-				<value level="11">-275000</value>
-				<value level="12">-283000</value>
-				<value level="13">-291000</value>
-				<value level="14">-299000</value>
-				<value level="15">-306000</value>
-				<value level="16">-312000</value>
-				<value level="17">-318000</value>
-				<value level="18">-323000</value>
-				<value level="19">-328000</value>
-				<value level="20">-330000</value>
-				<value level="21">-332000</value>
-				<value level="22">-336000</value>
-				<value level="23">-338000</value>
-				<value level="24">-340000</value>
-				<value level="25">-342000</value>
-				<value level="26">-344000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="28">
@@ -3119,26 +2423,7 @@
 				<value level="18">-336</value>
 				<value level="19">-338</value>
 			</effect-point>
-			<hit-time initial="-190000">
-				<value level="2">-209000</value>
-				<value level="3">-229000</value>
-				<value level="4">-248000</value>
-				<value level="5">-266000</value>
-				<value level="6">-275000</value>
-				<value level="7">-283000</value>
-				<value level="8">-291000</value>
-				<value level="9">-299000</value>
-				<value level="10">-306000</value>
-				<value level="11">-312000</value>
-				<value level="12">-318000</value>
-				<value level="13">-323000</value>
-				<value level="14">-328000</value>
-				<value level="15">-330000</value>
-				<value level="16">-332000</value>
-				<value level="17">-334000</value>
-				<value level="18">-336000</value>
-				<value level="19">-338000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="35">
@@ -3193,17 +2478,7 @@
 				<value level="9">-445</value>
 				<value level="10">-470</value>
 			</effect-point>
-			<hit-time initial="-120000">
-				<value level="2">-170000</value>
-				<value level="3">-220000</value>
-				<value level="4">-270000</value>
-				<value level="5">-320000</value>
-				<value level="6">-370000</value>
-				<value level="7">-395000</value>
-				<value level="8">-420000</value>
-				<value level="9">-445000</value>
-				<value level="10">-470000</value>
-			</hit-time>
+			<hit-time initial="1800"/>
 		</attributes>
 		<consume>
 			<mana initial="17">
@@ -3245,15 +2520,7 @@
 				<value level="7">-445</value>
 				<value level="8">-470</value>
 			</effect-point>
-			<hit-time initial="-220000">
-				<value level="2">-270000</value>
-				<value level="3">-320000</value>
-				<value level="4">-370000</value>
-				<value level="5">-395000</value>
-				<value level="6">-420000</value>
-				<value level="7">-445000</value>
-				<value level="8">-470000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="30">
@@ -3293,15 +2560,7 @@
 				<value level="7">-445</value>
 				<value level="8">-470</value>
 			</effect-point>
-			<hit-time initial="-220000">
-				<value level="2">-270000</value>
-				<value level="3">-320000</value>
-				<value level="4">-370000</value>
-				<value level="5">-395000</value>
-				<value level="6">-420000</value>
-				<value level="7">-445000</value>
-				<value level="8">-470000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="30">
@@ -3340,15 +2599,7 @@
 				<value level="7">-950</value>
 				<value level="8">-1000</value>
 			</effect-point>
-			<hit-time initial="-500000">
-				<value level="2">-600000</value>
-				<value level="3">-650000</value>
-				<value level="4">-800000</value>
-				<value level="5">-850000</value>
-				<value level="6">-900000</value>
-				<value level="7">-950000</value>
-				<value level="8">-1000000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="24">
@@ -3392,17 +2643,7 @@
 				<value level="9">-445</value>
 				<value level="10">-470</value>
 			</effect-point>
-			<hit-time initial="-120000">
-				<value level="2">-170000</value>
-				<value level="3">-220000</value>
-				<value level="4">-270000</value>
-				<value level="5">-320000</value>
-				<value level="6">-370000</value>
-				<value level="7">-395000</value>
-				<value level="8">-420000</value>
-				<value level="9">-445000</value>
-				<value level="10">-470000</value>
-			</hit-time>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<mana initial="24">
@@ -3467,27 +2708,7 @@
 				<value level="19">-342</value>
 				<value level="20">-344</value>
 			</effect-point>
-			<hit-time initial="-209000">
-				<value level="2">-229000</value>
-				<value level="3">-248000</value>
-				<value level="4">-266000</value>
-				<value level="5">-275000</value>
-				<value level="6">-283000</value>
-				<value level="7">-291000</value>
-				<value level="8">-299000</value>
-				<value level="9">-306000</value>
-				<value level="10">-312000</value>
-				<value level="11">-318000</value>
-				<value level="12">-323000</value>
-				<value level="13">-328000</value>
-				<value level="14">-330000</value>
-				<value level="15">-332000</value>
-				<value level="16">-336000</value>
-				<value level="17">-338000</value>
-				<value level="18">-340000</value>
-				<value level="19">-342000</value>
-				<value level="20">-344000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="23">
@@ -3594,43 +2815,7 @@
 				<value level="35">-342</value>
 				<value level="36">-344</value>
 			</effect-point>
-			<hit-time initial="-180000">
-				<value level="2">-190000</value>
-				<value level="3">-200000</value>
-				<value level="4">-209000</value>
-				<value level="5">-219000</value>
-				<value level="6">-229000</value>
-				<value level="7">-239000</value>
-				<value level="8">-248000</value>
-				<value level="9">-257000</value>
-				<value level="10">-266000</value>
-				<value level="11">-271000</value>
-				<value level="12">-275000</value>
-				<value level="13">-279000</value>
-				<value level="14">-283000</value>
-				<value level="15">-287000</value>
-				<value level="16">-291000</value>
-				<value level="17">-295000</value>
-				<value level="18">-299000</value>
-				<value level="19">-302000</value>
-				<value level="20">-306000</value>
-				<value level="21">-309000</value>
-				<value level="22">-312000</value>
-				<value level="23">-315000</value>
-				<value level="24">-318000</value>
-				<value level="25">-321000</value>
-				<value level="26">-323000</value>
-				<value level="27">-325000</value>
-				<value level="28">-328000</value>
-				<value level="29">-330000</value>
-				<value level="30">-332000</value>
-				<value level="31">-334000</value>
-				<value level="32">-336000</value>
-				<value level="33">-338000</value>
-				<value level="34">-340000</value>
-				<value level="35">-342000</value>
-				<value level="36">-344000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="60">
@@ -3712,22 +2897,7 @@
 				<value level="14">-435</value>
 				<value level="15">-440</value>
 			</effect-point>
-			<hit-time initial="-140000">
-				<value level="2">-180000</value>
-				<value level="3">-265000</value>
-				<value level="4">-310000</value>
-				<value level="5">-350000</value>
-				<value level="6">-370000</value>
-				<value level="7">-400000</value>
-				<value level="8">-405000</value>
-				<value level="9">-410000</value>
-				<value level="10">-415000</value>
-				<value level="11">-420000</value>
-				<value level="12">-425000</value>
-				<value level="13">-430000</value>
-				<value level="14">-435000</value>
-				<value level="15">-440000</value>
-			</hit-time>
+			<hit-time initial="1080"/>
 		</attributes>
 		<consume>
 			<mana initial="20">
@@ -3750,7 +2920,7 @@
 	<skill id="45234" name="Glory Expand Inventory">
 	<!-- Inventory slots +10. -->
 		<icon initial="icon.skill0332"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -3758,7 +2928,7 @@
 	<skill id="45235" name="Glory Expand Limit Weight">
 	<!-- Weight Limit +10000. -->
 		<icon initial="icon.skill0418"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />

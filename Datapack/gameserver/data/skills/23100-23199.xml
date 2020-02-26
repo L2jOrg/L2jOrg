@@ -3,12 +3,12 @@
 	<skill id="23174" name="Soul Stealth" action="A1">
 	<!-- Resurrects and fully restores your Stats. Buff and debuff effects remain after death. However, Noblesse Blessing and Lucky Charm disappear. Cooldown is 12 hours. -->
 		<icon initial="icon.skill_agathion_special"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="43200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

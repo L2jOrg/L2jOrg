@@ -3,10 +3,11 @@
 	<skill id="8256" name="Release Agathion's Seal - Shiny" action="A1">
 	<!-- Releases the Agathion's seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -17,7 +18,7 @@
 	<skill id="8292" name="Olympiad Warrior's Ring">
 	<!-- Hold Resistance +30%%, Hold Atk. Rate +30%%, P. Critical Damage +15%%, and P. Accuracy +2. -->
 		<icon initial="icon.accessory_tateossian_ring_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -27,15 +28,15 @@
 		<effects>
 			<attack-trait>
 				<trait type="HOLD">
-					<power initial="30"/>
+					<power initial="30.000001907348633"/>
 				</trait>
 			</attack-trait>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="30"/>
+					<power initial="30.000001907348633"/>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="2.0"/>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -46,7 +47,7 @@
 	<skill id="8293" name="Olympiad Warrior's Earring">
 	<!-- Stun/MEN Attack Resistance +20%%, Stun/MEN Atk. Rate +20%%, and procs to recover HP by 4%% of damage dealt. -->
 		<icon initial="icon.accessory_tateossian_earring_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -78,7 +79,7 @@
 	<skill id="8294" name="Olympiad Warrior's Necklace">
 	<!-- Paralysis/Stun/Sleep Resistance +15%%, Paralysis/Stun/Sleep Atk. Rate +15%%, Skill Cooldown -5%%. Reflects 4%% of received damage back to the enemy. -->
 		<icon initial="icon.accessory_tateossian_necklace_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="75"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>

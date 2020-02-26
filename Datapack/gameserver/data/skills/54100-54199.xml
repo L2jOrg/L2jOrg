@@ -3,20 +3,20 @@
 	<skill id="54100" name="Sayha's Shield" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Def. +300 -->
 		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="PD_UP" >
+		<abnormal type="PD_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="300.0"/>
 			</stat-modify>
 		</effects>
@@ -24,20 +24,20 @@
 	<skill id="54101" name="Sayha's Magic Barrier" action="A2" type="MAGIC">
 	<!-- For 20 minutes, M. Def. +350 -->
 		<icon initial="icon.skill1036"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="MD_UP" >
+		<abnormal type="MD_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="300.0"/>
 			</stat-modify>
 		</effects>
@@ -50,27 +50,27 @@
 			<reuse initial="3600000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="54103" name="Sayha's Decrease Weight" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Weight Limit +9000 -->
 		<icon initial="icon.skill1257"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="DECREASE_WEIGHT_PENALTY" >
+		<abnormal type="DECREASE_WEIGHT_PENALTY">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="WEIGHT_PENALTY">
+			<stat-modify stat="WEIGHT_PENALTY" stat-add="WEIGHT_PENALTY">
 				<power initial="9000.0"/>
 			</stat-modify>
 		</effects>
@@ -78,14 +78,14 @@
 	<skill id="54104" name="Sayha's Berserker Spirit" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Def. -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, Movement Speed +8. -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="BERSERKER" >
+		<abnormal type="BERSERKER">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -117,14 +117,14 @@
 	<skill id="54105" name="Sayha's Wind Walk" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Movement Speed +33 -->
 		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="SPEED_UP" >
+		<abnormal type="SPEED_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -138,20 +138,20 @@
 	<skill id="54106" name="Sayha's Might" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Atk. +230 -->
 		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="PA_UP" >
+		<abnormal type="PA_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="230.0"/>
 			</stat-modify>
 		</effects>
@@ -159,20 +159,20 @@
 	<skill id="54108" name="Sayha's Focus" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Rate +40 -->
 		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="CRITICAL_PROB_UP" >
+		<abnormal type="CRITICAL_PROB_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="40.0"/>
 			</stat-hp-based>
 		</effects>
@@ -180,20 +180,20 @@
 	<skill id="54109" name="Sayha's Haste" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Atk. Spd. +33%% -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="ATTACK_TIME_DOWN" >
+		<abnormal type="ATTACK_TIME_DOWN">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="33.0"/>
 			</stat-modify>
 		</effects>
@@ -201,14 +201,14 @@
 	<skill id="54110" name="Sayha's Death Whisper" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Damage +35%% -->
 		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="CRITICAL_DMG_UP" >
+		<abnormal type="CRITICAL_DMG_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -222,20 +222,20 @@
 	<skill id="54111" name="Sayha's Empower" action="A2" type="MAGIC">
 	<!-- For 20 minutes, M. Atk. +300 -->
 		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="MA_UP" >
+		<abnormal type="MA_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="300.0"/>
 			</stat-modify>
 		</effects>
@@ -243,14 +243,14 @@
 	<skill id="54112" name="Sayha's Clarity" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, Song/Dance Skill MP Consumption -20%% -->
 		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="CHEAP_MAGIC" >
+		<abnormal type="CHEAP_MAGIC">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -264,20 +264,20 @@
 	<skill id="54113" name="Sayha's Wild Magic" action="A2" type="MAGIC">
 	<!-- For 20 minutes, M. Critical Rate +20 -->
 		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="MAGIC_CRITICAL_UP" >
+		<abnormal type="MAGIC_CRITICAL_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
+			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>
@@ -285,20 +285,20 @@
 	<skill id="54114" name="Sayha's Acumen" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Casting Spd. +30%% -->
 		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="CASTING_TIME_DOWN" >
+		<abnormal type="CASTING_TIME_DOWN">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
@@ -306,20 +306,20 @@
 	<skill id="54115" name="Sayha's Concentration" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Magic Cancel Damage -53 -->
 		<icon initial="icon.skill1078"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="CANCEL_PROB_DOWN" >
+		<abnormal type="CANCEL_PROB_DOWN">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ATTACK_CANCEL" mode="PER">
+			<stat-modify stat="ATTACK_CANCEL" stat-add="ATTACK_CANCEL" mode="PER">
 				<power initial="-53.0"/>
 			</stat-modify>
 		</effects>
@@ -327,14 +327,14 @@
 	<skill id="54116" name="Sayha's Victory" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%% -->
 		<icon initial="icon.skill5074"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -378,20 +378,20 @@
 	<skill id="54117" name="Sayha's Restore HP" action="A2">
 	<!-- Sayha's Power recovers HP over 20 minutes. -->
 		<icon initial="icon.skill0211"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="HP_REGEN_UP" >
+		<abnormal type="HP_REGEN_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
 				<power initial="1.1"/>
 			</stat-modify>
 		</effects>
@@ -399,20 +399,20 @@
 	<skill id="54118" name="Sayha's Restore MP" action="A2">
 	<!-- Sayha's Power recovers MP over 20 minutes. Cannot use Sayha's Buff Scroll while the skill is active. -->
 		<icon initial="icon.skill0213"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<target />
-		<abnormal type="MP_REGEN_UP" >
+		<abnormal type="MP_REGEN_UP">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
 				<power initial="1.1"/>
 			</stat-modify>
 		</effects>
@@ -420,12 +420,11 @@
 	<skill id="54119" name="Chef's Fish Stew - Victory" action="A1">
 	<!-- HP Recovery Bonus/MP Recovery Bonus +20%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +15%, Atk. Spd./Casting Spd. +10%, P. Critical/M. Critical Rate +15%, P. Critical Damage/M. Critical Damage +15% for 3 hours with the help of a great spirit. Effect remains after death. -->
 		<icon initial="icon.fish_stew_residence_cha"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -433,11 +432,12 @@
 	<skill id="54120" name="Adventurer's High Priest Transformation Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -445,11 +445,12 @@
 	<skill id="54121" name="Adventurer's Valkyrie Transformation Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -457,7 +458,7 @@
 	<skill id="54122" name="Greater Fire Attack Potion" action="A2">
 	<!-- For 20 minutes, Fire Attack +80. Cooldown 1 minute. -->
 		<icon initial="icon.etc_fire_potion_i00"/>
-		<attributes property="PHYSIC" stay-after-death="true" >
+		<attributes property="PHYSIC" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
@@ -465,13 +466,13 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_FIRE_ATTACK">
+			<stat-modify stat="ELEMENTAL_SPIRIT_FIRE_ATTACK" stat-add="ELEMENTAL_SPIRIT_FIRE_ATTACK">
 				<power initial="80.0"/>
 			</stat-modify>
 		</effects>
@@ -479,7 +480,7 @@
 	<skill id="54123" name="Greater Water Attack Potion" action="A2">
 	<!-- For 20 minutes, Water Attack +80. Cooldown 1 minute. -->
 		<icon initial="icon.etc_water_potion_i00"/>
-		<attributes property="PHYSIC" stay-after-death="true" >
+		<attributes property="PHYSIC" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
@@ -487,13 +488,13 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WATER_ATTACK">
+			<stat-modify stat="ELEMENTAL_SPIRIT_WATER_ATTACK" stat-add="ELEMENTAL_SPIRIT_WATER_ATTACK">
 				<power initial="80.0"/>
 			</stat-modify>
 		</effects>
@@ -501,7 +502,7 @@
 	<skill id="54124" name="Greater Wind Attack Potion" action="A2">
 	<!-- For 20 minutes, Wind Attack +80. Cooldown 1 minute. -->
 		<icon initial="icon.etc_wind_potion_i00"/>
-		<attributes property="PHYSIC" stay-after-death="true" >
+		<attributes property="PHYSIC" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
@@ -509,13 +510,13 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WIND_ATTACK">
+			<stat-modify stat="ELEMENTAL_SPIRIT_WIND_ATTACK" stat-add="ELEMENTAL_SPIRIT_WIND_ATTACK">
 				<power initial="80.0"/>
 			</stat-modify>
 		</effects>
@@ -523,7 +524,7 @@
 	<skill id="54125" name="Greater Earth Attack Potion" action="A2">
 	<!-- For 20 minutes, Earth Attack +80. Cooldown 1 minute. -->
 		<icon initial="icon.etc_earth_potion_i00"/>
-		<attributes property="PHYSIC" stay-after-death="true" >
+		<attributes property="PHYSIC" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
@@ -531,13 +532,13 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_EARTH_ATTACK">
+			<stat-modify stat="ELEMENTAL_SPIRIT_EARTH_ATTACK" stat-add="ELEMENTAL_SPIRIT_EARTH_ATTACK">
 				<power initial="80.0"/>
 			</stat-modify>
 		</effects>
@@ -545,11 +546,12 @@
 	<skill id="54126" name="Sayha's Grace Box" max-level="3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

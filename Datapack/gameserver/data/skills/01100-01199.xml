@@ -16,10 +16,7 @@
 				<value level="2">-81</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-61000">
-				<value level="2">-81000</value>
-			</hit-time>
-			<activate-rate initial="70"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -53,7 +50,7 @@
 		level 2: Ignites nearby enemies, causing loss of 79 HP per second for 15 seconds.
 	 -->
 		<icon initial="icon.skill1101"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
 			<magic-level initial="25">
 				<value level="2">35</value>
 			</magic-level>
@@ -63,10 +60,7 @@
 				<value level="2">-166</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-122000">
-				<value level="2">-166000</value>
-			</hit-time>
-			<activate-rate initial="35"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -122,14 +116,7 @@
 				<value level="6">-318</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-122000">
-				<value level="2">-166000</value>
-				<value level="3">-209000</value>
-				<value level="4">-248000</value>
-				<value level="5">-299000</value>
-				<value level="6">-318000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="7">
@@ -183,7 +170,7 @@
 	<skill id="1104" name="Seal of Winter" max-level="22" debuff="true" action="A2" type="MAGIC">
 	<!-- Decreases Atk. Spd. of nearby enemies by 23% for 30 seconds. -->
 		<icon initial="icon.skill1104"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
 			<magic-level initial="40">
 				<value level="2">44</value>
 				<value level="3">48</value>
@@ -233,30 +220,7 @@
 				<value level="22">-684</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-379000">
-				<value level="2">-418000</value>
-				<value level="3">-457000</value>
-				<value level="4">-495000</value>
-				<value level="5">-532000</value>
-				<value level="6">-549000</value>
-				<value level="7">-566000</value>
-				<value level="8">-582000</value>
-				<value level="9">-597000</value>
-				<value level="10">-611000</value>
-				<value level="11">-624000</value>
-				<value level="12">-635000</value>
-				<value level="13">-646000</value>
-				<value level="14">-655000</value>
-				<value level="15">-659000</value>
-				<value level="16">-663000</value>
-				<value level="17">-667000</value>
-				<value level="18">-671000</value>
-				<value level="19">-675000</value>
-				<value level="20">-679000</value>
-				<value level="21">-682000</value>
-				<value level="22">-684000</value>
-			</hit-time>
-			<activate-rate initial="60"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -295,13 +259,13 @@
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
-		<abnormal type="ATTACK_TIME_UP" >
+		<abnormal type="ATTACK_TIME_UP">
 			<level initial="3"/>
 			<time initial="30"/>
 			<chance initial="60"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="-23.0"/>
 			</stat-modify>
 		</effects>
@@ -351,25 +315,7 @@
 				<value level="18">-655</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-204000">
-				<value level="2">-243000</value>
-				<value level="3">-285000</value>
-				<value level="4">-331000</value>
-				<value level="5">-379000</value>
-				<value level="6">-418000</value>
-				<value level="7">-457000</value>
-				<value level="8">-495000</value>
-				<value level="9">-532000</value>
-				<value level="10">-549000</value>
-				<value level="11">-566000</value>
-				<value level="12">-582000</value>
-				<value level="13">-597000</value>
-				<value level="14">-611000</value>
-				<value level="15">-624000</value>
-				<value level="16">-635000</value>
-				<value level="17">-646000</value>
-				<value level="18">-655000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -428,10 +374,7 @@
 				<value level="2">-143</value>
 			</effect-point>
 			<effect-range initial="1250"/>
-			<hit-time initial="-102000">
-				<value level="2">-143000</value>
-			</hit-time>
-			<activate-rate initial="70"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -467,7 +410,7 @@
 		level 4: Ignites nearby enemies with flame, decreasing 92 HP per second for 15 seconds.
 	 -->
 		<icon initial="icon.skill1108"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
 			<magic-level initial="48">
 				<value level="2">56</value>
 				<value level="3">68</value>
@@ -481,12 +424,7 @@
 				<value level="4">-205</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-143000">
-				<value level="2">-167000</value>
-				<value level="3">-195000</value>
-				<value level="4">-205000</value>
-			</hit-time>
-			<activate-rate initial="60"/>
+			<hit-time initial="4000"/>
 
 			<element type="FIRE" value="20"/>
 		</attributes>
@@ -530,7 +468,7 @@
 		level 17: Summons Kat the Cat. Consumes 9 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill1111"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="20">
 				<value level="2">25</value>
 				<value level="3">30</value>
@@ -555,6 +493,7 @@
 				<value level="5">5000</value>
 			</reuse>
 			<effect-range initial="-1"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -681,7 +620,7 @@
 		level 42: Recovers the servitor's MP with up to 145 Power depending on the servitor's level.
 	 -->
 		<icon initial="icon.skill1126"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="23">
 				<value level="2">25</value>
 				<value level="3">28</value>
@@ -771,49 +710,7 @@
 				<value level="42">363</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="113000">
-				<value level="2">121000</value>
-				<value level="3">134000</value>
-				<value level="4">142000</value>
-				<value level="5">156000</value>
-				<value level="6">165000</value>
-				<value level="7">180000</value>
-				<value level="8">189000</value>
-				<value level="9">199000</value>
-				<value level="10">209000</value>
-				<value level="11">219000</value>
-				<value level="12">228000</value>
-				<value level="13">238000</value>
-				<value level="14">247000</value>
-				<value level="15">257000</value>
-				<value level="16">266000</value>
-				<value level="17">270000</value>
-				<value level="18">274000</value>
-				<value level="19">279000</value>
-				<value level="20">283000</value>
-				<value level="21">287000</value>
-				<value level="22">291000</value>
-				<value level="23">295000</value>
-				<value level="24">298000</value>
-				<value level="25">302000</value>
-				<value level="26">305000</value>
-				<value level="27">308000</value>
-				<value level="28">312000</value>
-				<value level="29">315000</value>
-				<value level="30">317000</value>
-				<value level="31">320000</value>
-				<value level="32">323000</value>
-				<value level="33">325000</value>
-				<value level="34">327000</value>
-				<value level="35">332000</value>
-				<value level="36">336000</value>
-				<value level="37">341000</value>
-				<value level="38">345000</value>
-				<value level="39">350000</value>
-				<value level="40">354000</value>
-				<value level="41">359000</value>
-				<value level="42">363000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -989,7 +886,7 @@
 		level 53: Recovers the Servitor's HP with 1124 Power.
 	 -->
 		<icon initial="icon.skill1127"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="16">
 				<value level="2">18</value>
 				<value level="3">20</value>
@@ -1101,60 +998,7 @@
 				<value level="53">422</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="60000">
-				<value level="2">67000</value>
-				<value level="3">75000</value>
-				<value level="4">88000</value>
-				<value level="5">92000</value>
-				<value level="6">97000</value>
-				<value level="7">112000</value>
-				<value level="8">117000</value>
-				<value level="9">122000</value>
-				<value level="10">139000</value>
-				<value level="11">144000</value>
-				<value level="12">150000</value>
-				<value level="13">168000</value>
-				<value level="14">174000</value>
-				<value level="15">181000</value>
-				<value level="16">194000</value>
-				<value level="17">200000</value>
-				<value level="18">207000</value>
-				<value level="19">220000</value>
-				<value level="20">227000</value>
-				<value level="21">233000</value>
-				<value level="22">247000</value>
-				<value level="23">254000</value>
-				<value level="24">260000</value>
-				<value level="25">274000</value>
-				<value level="26">281000</value>
-				<value level="27">287000</value>
-				<value level="28">294000</value>
-				<value level="29">301000</value>
-				<value level="30">307000</value>
-				<value level="31">314000</value>
-				<value level="32">320000</value>
-				<value level="33">326000</value>
-				<value level="34">332000</value>
-				<value level="35">338000</value>
-				<value level="36">344000</value>
-				<value level="37">350000</value>
-				<value level="38">355000</value>
-				<value level="39">361000</value>
-				<value level="40">366000</value>
-				<value level="41">371000</value>
-				<value level="42">376000</value>
-				<value level="43">381000</value>
-				<value level="44">386000</value>
-				<value level="45">390000</value>
-				<value level="46">394000</value>
-				<value level="47">398000</value>
-				<value level="48">402000</value>
-				<value level="49">406000</value>
-				<value level="50">410000</value>
-				<value level="51">414000</value>
-				<value level="52">418000</value>
-				<value level="53">422000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1307,7 +1151,7 @@
 		level 17: Summons a Shadow. Consumes 9 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill1128"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="20">
 				<value level="2">25</value>
 				<value level="3">30</value>
@@ -1332,6 +1176,7 @@
 				<value level="5">5000</value>
 			</reuse>
 			<effect-range initial="-1"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1421,7 +1266,7 @@
 		level 8: Summons a Reanimated Being. Consumes 12 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill1129"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="44">
 				<value level="2">52</value>
 				<value level="3">60</value>
@@ -1435,6 +1280,7 @@
 			<reuse initial="5000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="400"/>
+			<hit-time initial="3500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1500,10 +1346,7 @@
 				<value level="2">495</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="418000">
-				<value level="2">495000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8">
@@ -1514,7 +1357,7 @@
 			</mana>
 		</consume>
 		<target type="SUMMON" />
-		<abnormal type="MD_UP" >
+		<abnormal type="MD_UP">
 			<level initial="2">
 				<value level="2">3</value>
 			</level>
@@ -1522,7 +1365,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="23.0">
 					<value level="2">30.0</value>
 				</power>
@@ -1548,11 +1391,7 @@
 				<value level="3">532</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="379000">
-				<value level="2">457000</value>
-				<value level="3">532000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="7">
@@ -1565,7 +1404,7 @@
 			</mana>
 		</consume>
 		<target type="SUMMON" />
-		<abnormal type="PD_UP" >
+		<abnormal type="PD_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1574,7 +1413,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="8.0">
 					<value level="2">12.0</value>
 					<value level="3">15.0</value>
@@ -1598,10 +1437,7 @@
 				<value level="2">495</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="418000">
-				<value level="2">495000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8">
@@ -1612,7 +1448,7 @@
 			</mana>
 		</consume>
 		<target type="SUMMON" />
-		<abnormal type="ATTACK_TIME_DOWN" >
+		<abnormal type="ATTACK_TIME_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 			</level>
@@ -1620,7 +1456,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="15.0">
 					<value level="2">33.0</value>
 				</power>
@@ -1643,10 +1479,7 @@
 				<value level="2">457</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="331000">
-				<value level="2">457000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="6">
@@ -1657,7 +1490,7 @@
 			</mana>
 		</consume>
 		<target type="SUMMON" />
-		<abnormal type="SPEED_UP" >
+		<abnormal type="SPEED_UP">
 			<level initial="1">
 				<value level="2">2</value>
 			</level>
@@ -1691,11 +1524,7 @@
 				<value level="3">532</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="331000">
-				<value level="2">457000</value>
-				<value level="3">532000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="6">
@@ -1708,7 +1537,7 @@
 			</mana>
 		</consume>
 		<target type="SUMMON" />
-		<abnormal type="MA_UP" >
+		<abnormal type="MA_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1717,7 +1546,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="55.0">
 					<value level="2">65.0</value>
 					<value level="3">75.0</value>
@@ -1744,11 +1573,7 @@
 				<value level="3">532</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="331000">
-				<value level="2">457000</value>
-				<value level="3">532000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="6">
@@ -1761,7 +1586,7 @@
 			</mana>
 		</consume>
 		<target type="SUMMON" />
-		<abnormal type="PA_UP" >
+		<abnormal type="PA_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1770,7 +1595,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="8.0">
 					<value level="2">12.0</value>
 					<value level="3">15.0</value>
@@ -1806,13 +1631,7 @@
 				<value level="6">-122</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-72000">
-				<value level="2">-81000</value>
-				<value level="3">-91000</value>
-				<value level="4">-102000</value>
-				<value level="5">-114000</value>
-				<value level="6">-122000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -1914,27 +1733,7 @@
 				<value level="20">-344</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-209000">
-				<value level="2">-229000</value>
-				<value level="3">-248000</value>
-				<value level="4">-266000</value>
-				<value level="5">-275000</value>
-				<value level="6">-283000</value>
-				<value level="7">-291000</value>
-				<value level="8">-299000</value>
-				<value level="9">-306000</value>
-				<value level="10">-312000</value>
-				<value level="11">-318000</value>
-				<value level="12">-323000</value>
-				<value level="13">-328000</value>
-				<value level="14">-330000</value>
-				<value level="15">-332000</value>
-				<value level="16">-336000</value>
-				<value level="17">-338000</value>
-				<value level="18">-340000</value>
-				<value level="19">-342000</value>
-				<value level="20">-344000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -2004,7 +1803,7 @@
 	<skill id="1151" name="Corpse Life Drain" max-level="18" action="A1" type="MAGIC">
 	<!-- Absorbs residual life energy from a corpse to restore your own HP. -->
 		<icon initial="icon.skill1151"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="30">
 				<value level="2">35</value>
 				<value level="3">40</value>
@@ -2027,6 +1826,7 @@
 			<cast-range initial="400"/>
 			<reuse initial="5000"/>
 			<effect-range initial="900"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2092,7 +1892,7 @@
 		level 6: Summons a Corrupted Being. Consumes 6 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill1154"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
 				<value level="2">48</value>
 				<value level="3">56</value>
@@ -2103,6 +1903,7 @@
 			<cast-range initial="40"/>
 			<reuse initial="5000"/>
 			<effect-range initial="400"/>
+			<hit-time initial="15000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2172,7 +1973,7 @@
 		level 23: Detonates a corpse to inflict damage on the enemies with bonus 135 M. Atk. Power.
 	 -->
 		<icon initial="icon.skill1155"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">48</value>
 				<value level="3">50</value>
@@ -2224,30 +2025,7 @@
 				<value level="23">-173</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="-110000">
-				<value level="2">-115000</value>
-				<value level="3">-120000</value>
-				<value level="4">-124000</value>
-				<value level="5">-129000</value>
-				<value level="6">-133000</value>
-				<value level="7">-138000</value>
-				<value level="8">-142000</value>
-				<value level="9">-146000</value>
-				<value level="10">-150000</value>
-				<value level="11">-153000</value>
-				<value level="12">-156000</value>
-				<value level="13">-159000</value>
-				<value level="14">-162000</value>
-				<value level="15">-164000</value>
-				<value level="16">-166000</value>
-				<value level="17">-167000</value>
-				<value level="18">-168000</value>
-				<value level="19">-169000</value>
-				<value level="20">-170000</value>
-				<value level="21">-171000</value>
-				<value level="22">-172000</value>
-				<value level="23">-173000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -2340,6 +2118,7 @@
 			<cast-range initial="400"/>
 			<reuse initial="5000"/>
 			<effect-range initial="900"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2413,17 +2192,7 @@
 				<value level="10">701</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="243000">
-				<value level="2">379000</value>
-				<value level="3">495000</value>
-				<value level="4">549000</value>
-				<value level="5">611000</value>
-				<value level="6">673000</value>
-				<value level="7">680000</value>
-				<value level="8">687000</value>
-				<value level="9">694000</value>
-				<value level="10">701000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2556,37 +2325,7 @@
 				<value level="30">-346</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-239000">
-				<value level="2">-248000</value>
-				<value level="3">-257000</value>
-				<value level="4">-266000</value>
-				<value level="5">-271000</value>
-				<value level="6">-275000</value>
-				<value level="7">-279000</value>
-				<value level="8">-283000</value>
-				<value level="9">-287000</value>
-				<value level="10">-291000</value>
-				<value level="11">-295000</value>
-				<value level="12">-299000</value>
-				<value level="13">-302000</value>
-				<value level="14">-306000</value>
-				<value level="15">-309000</value>
-				<value level="16">-312000</value>
-				<value level="17">-315000</value>
-				<value level="18">-318000</value>
-				<value level="19">-321000</value>
-				<value level="20">-323000</value>
-				<value level="21">-325000</value>
-				<value level="22">-328000</value>
-				<value level="23">-330000</value>
-				<value level="24">-332000</value>
-				<value level="25">-334000</value>
-				<value level="26">-338000</value>
-				<value level="27">-340000</value>
-				<value level="28">-342000</value>
-				<value level="29">-344000</value>
-				<value level="30">-346000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="DARK" value="20"/>
@@ -2709,25 +2448,7 @@
 				<value level="17">-663</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-331000">
-				<value level="2">-379000</value>
-				<value level="3">-418000</value>
-				<value level="4">-457000</value>
-				<value level="5">-495000</value>
-				<value level="6">-532000</value>
-				<value level="7">-549000</value>
-				<value level="8">-566000</value>
-				<value level="9">-582000</value>
-				<value level="10">-597000</value>
-				<value level="11">-611000</value>
-				<value level="12">-624000</value>
-				<value level="13">-635000</value>
-				<value level="14">-646000</value>
-				<value level="15">-655000</value>
-				<value level="16">-659000</value>
-				<value level="17">-663000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="6">
@@ -2760,7 +2481,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="2">
 				<value level="2">3</value>
 			</level>
@@ -2812,21 +2533,7 @@
 				<value level="14">-655</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-379000">
-				<value level="2">-418000</value>
-				<value level="3">-457000</value>
-				<value level="4">-495000</value>
-				<value level="5">-532000</value>
-				<value level="6">-549000</value>
-				<value level="7">-566000</value>
-				<value level="8">-582000</value>
-				<value level="9">-597000</value>
-				<value level="10">-611000</value>
-				<value level="11">-624000</value>
-				<value level="12">-635000</value>
-				<value level="13">-646000</value>
-				<value level="14">-655000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2927,34 +2634,7 @@
 				<value level="26">-675</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-162000">
-				<value level="2">-204000</value>
-				<value level="3">-243000</value>
-				<value level="4">-285000</value>
-				<value level="5">-331000</value>
-				<value level="6">-379000</value>
-				<value level="7">-418000</value>
-				<value level="8">-457000</value>
-				<value level="9">-495000</value>
-				<value level="10">-532000</value>
-				<value level="11">-549000</value>
-				<value level="12">-566000</value>
-				<value level="13">-582000</value>
-				<value level="14">-597000</value>
-				<value level="15">-611000</value>
-				<value level="16">-624000</value>
-				<value level="17">-635000</value>
-				<value level="18">-646000</value>
-				<value level="19">-655000</value>
-				<value level="20">-659000</value>
-				<value level="21">-663000</value>
-				<value level="22">-667000</value>
-				<value level="23">-669000</value>
-				<value level="24">-671000</value>
-				<value level="25">-673000</value>
-				<value level="26">-675000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="1">
@@ -2998,7 +2678,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PA_DOWN" >
+		<abnormal type="PA_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="6">3</value>
@@ -3007,7 +2687,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-17.0">
 					<value level="2">-20.0</value>
 					<value level="6">-23.0</value>
@@ -3046,15 +2726,7 @@
 				<value level="7">-330</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-122000">
-				<value level="2">-166000</value>
-				<value level="3">-229000</value>
-				<value level="4">-266000</value>
-				<value level="5">-299000</value>
-				<value level="6">-328000</value>
-				<value level="7">-330000</value>
-			</hit-time>
-			<activate-rate initial="35"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="7">
@@ -3131,15 +2803,7 @@
 				<value level="7">-323</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-61000">
-				<value level="2">-102000</value>
-				<value level="3">-143000</value>
-				<value level="4">-209000</value>
-				<value level="5">-248000</value>
-				<value level="6">-291000</value>
-				<value level="7">-323000</value>
-			</hit-time>
-			<activate-rate initial="70"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="2">
@@ -3226,24 +2890,7 @@
 				<value level="16">-663</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-379000">
-				<value level="2">-418000</value>
-				<value level="3">-457000</value>
-				<value level="4">-495000</value>
-				<value level="5">-532000</value>
-				<value level="6">-549000</value>
-				<value level="7">-566000</value>
-				<value level="8">-582000</value>
-				<value level="9">-597000</value>
-				<value level="10">-611000</value>
-				<value level="11">-624000</value>
-				<value level="12">-635000</value>
-				<value level="13">-646000</value>
-				<value level="14">-655000</value>
-				<value level="15">-659000</value>
-				<value level="16">-663000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="7">
@@ -3333,28 +2980,7 @@
 				<value level="20">-675</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="-418000">
-				<value level="2">-457000</value>
-				<value level="3">-495000</value>
-				<value level="4">-532000</value>
-				<value level="5">-549000</value>
-				<value level="6">-566000</value>
-				<value level="7">-582000</value>
-				<value level="8">-597000</value>
-				<value level="9">-611000</value>
-				<value level="10">-624000</value>
-				<value level="11">-635000</value>
-				<value level="12">-646000</value>
-				<value level="13">-655000</value>
-				<value level="14">-659000</value>
-				<value level="15">-663000</value>
-				<value level="16">-667000</value>
-				<value level="17">-669000</value>
-				<value level="18">-671000</value>
-				<value level="19">-673000</value>
-				<value level="20">-675000</value>
-			</hit-time>
-			<activate-rate initial="100"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8">
@@ -3388,7 +3014,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PARALYZE" >
+		<abnormal type="PARALYZE">
 			<level initial="1"/>
 			<time initial="5"/>
 			<chance initial="100"/>
@@ -3439,7 +3065,7 @@
 		level 27: Spreads ring-shaped flames to inflict damage on nearby enemies with bonus 108 M. Atk. Power.
 	 -->
 		<icon initial="icon.skill1171"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="38">
 				<value level="2">40</value>
 				<value level="3">42</value>
@@ -3499,34 +3125,7 @@
 				<value level="27">-202</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-90000">
-				<value level="2">-95000</value>
-				<value level="3">-100000</value>
-				<value level="4">-105000</value>
-				<value level="5">-110000</value>
-				<value level="6">-115000</value>
-				<value level="7">-120000</value>
-				<value level="8">-124000</value>
-				<value level="9">-129000</value>
-				<value level="10">-133000</value>
-				<value level="11">-138000</value>
-				<value level="12">-142000</value>
-				<value level="13">-146000</value>
-				<value level="14">-150000</value>
-				<value level="15">-153000</value>
-				<value level="16">-156000</value>
-				<value level="17">-159000</value>
-				<value level="18">-162000</value>
-				<value level="19">-164000</value>
-				<value level="20">-169000</value>
-				<value level="21">-172000</value>
-				<value level="22">-177000</value>
-				<value level="23">-182000</value>
-				<value level="24">-187000</value>
-				<value level="25">-192000</value>
-				<value level="26">-197000</value>
-				<value level="27">-202000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -3642,15 +3241,7 @@
 				<value level="8">-133</value>
 			</effect-point>
 			<effect-range initial="650"/>
-			<hit-time initial="-73000">
-				<value level="2">-82000</value>
-				<value level="3">-91000</value>
-				<value level="4">-97000</value>
-				<value level="5">-107000</value>
-				<value level="6">-114000</value>
-				<value level="7">-125000</value>
-				<value level="8">-133000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3786,38 +3377,7 @@
 				<value level="31">-215</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-143000">
-				<value level="2">-149000</value>
-				<value level="3">-155000</value>
-				<value level="4">-160000</value>
-				<value level="5">-163000</value>
-				<value level="6">-165000</value>
-				<value level="7">-168000</value>
-				<value level="8">-170000</value>
-				<value level="9">-173000</value>
-				<value level="10">-175000</value>
-				<value level="11">-177000</value>
-				<value level="12">-179000</value>
-				<value level="13">-182000</value>
-				<value level="14">-184000</value>
-				<value level="15">-186000</value>
-				<value level="16">-187000</value>
-				<value level="17">-189000</value>
-				<value level="18">-191000</value>
-				<value level="19">-193000</value>
-				<value level="20">-194000</value>
-				<value level="21">-195000</value>
-				<value level="22">-197000</value>
-				<value level="23">-199000</value>
-				<value level="24">-201000</value>
-				<value level="25">-203000</value>
-				<value level="26">-205000</value>
-				<value level="27">-207000</value>
-				<value level="28">-209000</value>
-				<value level="29">-211000</value>
-				<value level="30">-213000</value>
-				<value level="31">-215000</value>
-			</hit-time>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -4019,40 +3579,7 @@
 				<value level="33">-323</value>
 			</effect-point>
 			<effect-range initial="1250"/>
-			<hit-time initial="-91000">
-				<value level="2">-102000</value>
-				<value level="3">-114000</value>
-				<value level="4">-122000</value>
-				<value level="5">-134000</value>
-				<value level="6">-143000</value>
-				<value level="7">-157000</value>
-				<value level="8">-166000</value>
-				<value level="9">-190000</value>
-				<value level="10">-200000</value>
-				<value level="11">-209000</value>
-				<value level="12">-219000</value>
-				<value level="13">-229000</value>
-				<value level="14">-239000</value>
-				<value level="15">-248000</value>
-				<value level="16">-257000</value>
-				<value level="17">-266000</value>
-				<value level="18">-271000</value>
-				<value level="19">-275000</value>
-				<value level="20">-279000</value>
-				<value level="21">-283000</value>
-				<value level="22">-287000</value>
-				<value level="23">-291000</value>
-				<value level="24">-295000</value>
-				<value level="25">-299000</value>
-				<value level="26">-302000</value>
-				<value level="27">-306000</value>
-				<value level="28">-309000</value>
-				<value level="29">-312000</value>
-				<value level="30">-315000</value>
-				<value level="31">-318000</value>
-				<value level="32">-321000</value>
-				<value level="33">-323000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -4220,30 +3747,7 @@
 				<value level="23">-189</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-110000">
-				<value level="2">-115000</value>
-				<value level="3">-120000</value>
-				<value level="4">-124000</value>
-				<value level="5">-129000</value>
-				<value level="6">-133000</value>
-				<value level="7">-138000</value>
-				<value level="8">-142000</value>
-				<value level="9">-146000</value>
-				<value level="10">-150000</value>
-				<value level="11">-153000</value>
-				<value level="12">-156000</value>
-				<value level="13">-159000</value>
-				<value level="14">-162000</value>
-				<value level="15">-164000</value>
-				<value level="16">-166000</value>
-				<value level="17">-167000</value>
-				<value level="18">-171000</value>
-				<value level="19">-175000</value>
-				<value level="20">-178000</value>
-				<value level="21">-182000</value>
-				<value level="22">-185000</value>
-				<value level="23">-189000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
@@ -4340,12 +3844,7 @@
 				<value level="5">-81</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-46000">
-				<value level="2">-53000</value>
-				<value level="3">-61000</value>
-				<value level="4">-72000</value>
-				<value level="5">-81000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
@@ -4482,40 +3981,7 @@
 				<value level="33">-323</value>
 			</effect-point>
 			<effect-range initial="1250"/>
-			<hit-time initial="-46000">
-				<value level="2">-102000</value>
-				<value level="3">-114000</value>
-				<value level="4">-122000</value>
-				<value level="5">-134000</value>
-				<value level="6">-143000</value>
-				<value level="7">-157000</value>
-				<value level="8">-166000</value>
-				<value level="9">-190000</value>
-				<value level="10">-200000</value>
-				<value level="11">-209000</value>
-				<value level="12">-219000</value>
-				<value level="13">-229000</value>
-				<value level="14">-239000</value>
-				<value level="15">-248000</value>
-				<value level="16">-257000</value>
-				<value level="17">-266000</value>
-				<value level="18">-271000</value>
-				<value level="19">-275000</value>
-				<value level="20">-279000</value>
-				<value level="21">-283000</value>
-				<value level="22">-287000</value>
-				<value level="23">-291000</value>
-				<value level="24">-295000</value>
-				<value level="25">-299000</value>
-				<value level="26">-302000</value>
-				<value level="27">-306000</value>
-				<value level="28">-309000</value>
-				<value level="29">-312000</value>
-				<value level="30">-315000</value>
-				<value level="31">-318000</value>
-				<value level="32">-321000</value>
-				<value level="33">-323000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
@@ -4628,10 +4094,7 @@
 				<value level="3">-143</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-102000">
-				<value level="2">-122000</value>
-				<value level="3">-143000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -4678,12 +4141,7 @@
 				<value level="4">-409</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-262000">
-				<value level="2">-310000</value>
-				<value level="3">-373000</value>
-				<value level="4">-409000</value>
-			</hit-time>
-			<activate-rate initial="70"/>
+			<hit-time initial="4000"/>
 
 			<element type="WATER" value="20"/>
 		</attributes>
@@ -4748,14 +4206,7 @@
 				<value level="6">-102</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-53000">
-				<value level="2">-61000</value>
-				<value level="3">-72000</value>
-				<value level="4">-81000</value>
-				<value level="5">-91000</value>
-				<value level="6">-102000</value>
-			</hit-time>
-			<activate-rate initial="60"/>
+			<hit-time initial="3000"/>
 
 			<element type="WATER" value="20"/>
 		</attributes>
@@ -4773,7 +4224,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="2"/>
 			<time initial="60"/>
 			<chance initial="60"/>

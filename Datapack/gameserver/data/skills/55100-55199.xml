@@ -3,7 +3,7 @@
 	<skill id="55100" name="Lv. 1 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
 		</effects>
@@ -30,7 +30,7 @@
 		level 10: M. Atk. +202.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -38,7 +38,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="3">31.0</value>
@@ -76,7 +76,7 @@
 	<skill id="55102" name="Lv. 2 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -84,7 +84,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
@@ -106,7 +106,7 @@
 		level 10: M. Atk. +202, M. Critical Damage +1344.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -114,7 +114,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="3">31.0</value>
@@ -165,7 +165,7 @@
 	<skill id="55104" name="Lv. 3 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -173,7 +173,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
@@ -198,7 +198,7 @@
 		level 10: M. Atk. +202, M. Critical Damage +1344, M. Critical Rate +12%%.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -206,7 +206,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="13.0">
 					<value level="2">20.0</value>
 					<value level="3">31.0</value>
@@ -270,7 +270,7 @@
 	<skill id="55106" name="Lv. 4 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%%, M. Atk. +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -278,7 +278,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
@@ -303,7 +303,7 @@
 		level 10: M. Atk. +202, M. Critical Damage +1344, M. Critical Rate +12%%, M. Atk. +10%%.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -311,25 +311,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="13.0">
-					<value level="2">20.0</value>
 					<value level="2">2.0</value>
-					<value level="3">31.0</value>
 					<value level="3">2.5</value>
-					<value level="4">46.0</value>
 					<value level="4">3.0</value>
-					<value level="5">64.0</value>
 					<value level="5">3.5</value>
-					<value level="6">84.0</value>
 					<value level="6">4.0</value>
-					<value level="7">107.0</value>
 					<value level="7">5.0</value>
-					<value level="8">149.0</value>
 					<value level="8">6.0</value>
-					<value level="9">160.0</value>
 					<value level="9">8.0</value>
-					<value level="10">202.0</value>
 					<value level="10">10.0</value>
 				</power>
 			</stat-modify>
@@ -384,7 +375,7 @@
 	<skill id="55108" name="Lv. 5 Water Dragon's Pendant Basic Effect">
 	<!-- M. Atk. +9, M. Critical Damage +62, M. Critical Rate +1%%, M. Atk. +1%% and M. Critical Damage +1%%. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -392,7 +383,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="9.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
@@ -417,7 +408,7 @@
 		level 10: M. Atk. +202, M. Critical Damage +1344, M. Critical Rate +12%%, M. Atk. +10%% and M. Critical Damage +15%%.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -425,25 +416,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="13.0">
-					<value level="2">20.0</value>
 					<value level="2">2.0</value>
-					<value level="3">31.0</value>
 					<value level="3">2.5</value>
-					<value level="4">46.0</value>
 					<value level="4">3.0</value>
-					<value level="5">64.0</value>
 					<value level="5">3.5</value>
-					<value level="6">84.0</value>
 					<value level="6">4.0</value>
-					<value level="7">107.0</value>
 					<value level="7">5.0</value>
-					<value level="8">149.0</value>
 					<value level="8">6.0</value>
-					<value level="9">160.0</value>
 					<value level="9">8.0</value>
-					<value level="10">202.0</value>
 					<value level="10">10.0</value>
 				</power>
 			</stat-modify>
@@ -507,7 +489,7 @@
 	<skill id="55110" name="Lv. 1 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -515,7 +497,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -534,7 +516,7 @@
 		level 10: MP +156
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -542,7 +524,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -580,7 +562,7 @@
 	<skill id="55112" name="Lv. 2 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -588,7 +570,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_HP">
@@ -610,7 +592,7 @@
 		level 10: MP +156, HP +316
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -669,7 +651,7 @@
 	<skill id="55114" name="Lv. 3 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -677,7 +659,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_HP">
@@ -705,7 +687,7 @@
 		level 10: MP +156, HP +316, HP Recovery Bonus +7.4, MP Recovery Bonus +2.8
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -713,7 +695,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -739,7 +721,7 @@
 					<value level="10">316.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
 				<power initial="1.9">
 					<value level="2">2.1</value>
 					<value level="3">2.3</value>
@@ -790,7 +772,7 @@
 	<skill id="55116" name="Lv. 4 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5, 1%% chance to recover MP by 12. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -798,7 +780,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_HP">
@@ -826,7 +808,7 @@
 		level 10: MP +156, HP +316, HP Recovery Bonus +7.4, MP Recovery Bonus +2.8, 24%% chance to recover MP by 12
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -834,7 +816,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -860,7 +842,7 @@
 					<value level="10">316.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
 				<power initial="1.9">
 					<value level="2">2.1</value>
 					<value level="3">2.3</value>
@@ -911,7 +893,7 @@
 	<skill id="55118" name="Lv. 5 Wind Dragon's Pendant Basic Effect">
 	<!-- MP +21, HP +31, HP Recovery Bonus +1.8, MP Recovery Bonus +0.5, 1%% chance to recover MP by 12, M. Skill MP Consumption -3%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -919,7 +901,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="21.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_HP">
@@ -950,7 +932,7 @@
 		level 10: MP +156, HP +316, HP Recovery Bonus +7.4, MP Recovery Bonus +2.8, 24%% chance to recover MP by 12, M. Skill MP Consumption -40%%
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -958,7 +940,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="33.0">
 					<value level="2">42.0</value>
 					<value level="3">52.0</value>
@@ -984,7 +966,7 @@
 					<value level="10">316.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
 				<power initial="1.9">
 					<value level="2">2.1</value>
 					<value level="3">2.3</value>
@@ -1048,7 +1030,7 @@
 	<skill id="55120" name="Wind Dragon's Pendant MP Increase" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1058,7 +1040,7 @@
 	<skill id="55121" name="Lv. 1 Earth Dragon's Pendant Basic Effect">
 	<!-- Increases M. Def. +6. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1066,7 +1048,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
 		</effects>
@@ -1085,7 +1067,7 @@
 		level 10: Increases M. Def. +28.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1093,7 +1075,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1131,7 +1113,7 @@
 	<skill id="55123" name="Lv. 2 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1139,7 +1121,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -1161,7 +1143,7 @@
 		level 10: M. Def. +28, P. Def +71
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1169,7 +1151,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1220,7 +1202,7 @@
 	<skill id="55125" name="Lv. 3 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11, Shield Def. Rate +10%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1228,7 +1210,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -1253,7 +1235,7 @@
 		level 10: M. Def. +28, P. Def +71, Shield Def. Rate +100%%
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1261,7 +1243,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1325,7 +1307,7 @@
 	<skill id="55127" name="Lv. 4 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11, Shield Def. Rate +10%% and Shield Def. +3%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1333,7 +1315,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -1361,7 +1343,7 @@
 		level 10: M. Def. +28, P. Def +71, Shield Def. Rate +100%% and Shield Def. +50%%
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1369,7 +1351,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1446,7 +1428,7 @@
 	<skill id="55129" name="Lv. 5 Earth Dragon's Pendant Basic Effect">
 	<!-- M. Def. +6, P. Def +11, Shield Def. Rate +10%% and Shield Def. +3%% -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1454,7 +1436,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="6.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -1482,7 +1464,7 @@
 		level 10: M. Def. +28, P. Def +71, Shield Def. Rate +100%% and Shield Def. +50%%
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1490,7 +1472,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="8.0">
 					<value level="2">10.0</value>
 					<value level="3">12.0</value>
@@ -1567,7 +1549,7 @@
 	<skill id="55131" name="Lv. 5 Earth Dragon's Pendant Defense Effect" action="A1">
 	<!-- For 5 seconds, creates a shield that absorbs 202 damage. Cooldown is 90 seconds. -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="90000"/>
 			<cool-time initial="500"/>
@@ -1590,7 +1572,7 @@
 		level 10: For 15 seconds, creates a shield that absorbs 2883 damage. Cooldown is 50 seconds.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="90000">
 				<value level="3">80000</value>
@@ -1614,7 +1596,7 @@
 		level 6: XP/SP Gain +40%%.
 	 -->
 		<icon initial="BranchIcon.Icon.bm_blessing_dragon"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1645,7 +1627,7 @@
 	<skill id="55134" name="Scroll: Enchant Weapon (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1655,7 +1637,7 @@
 	<skill id="55135" name="Scroll: Enchant Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1665,7 +1647,7 @@
 	<skill id="55136" name="Blessed Scroll: Enchant Weapon (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1675,7 +1657,7 @@
 	<skill id="55137" name="Blessed Scroll: Enchant Armor (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1685,10 +1667,11 @@
 	<skill id="55138" name="Earth Dragon Antharas' Treasure Pouch" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1696,7 +1679,7 @@
 	<skill id="55141" name="Reported" action="A1">
 	<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
 		<icon initial="icon.skill6038"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1706,7 +1689,7 @@
 	<skill id="55142" name="MP Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1716,7 +1699,7 @@
 	<skill id="55143" name="Elite Fishing Rod of Golden Mermaid">
 	<!-- Upon fishing, XP/ SP bonus +50%%. -->
 		<icon initial="icon.bm_gold_fishing_pole"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1742,7 +1725,7 @@
 		level 15: P. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1768,7 +1751,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1794,7 +1777,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1820,7 +1803,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1846,7 +1829,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1872,7 +1855,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1898,7 +1881,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1924,7 +1907,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1950,7 +1933,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1976,7 +1959,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2002,7 +1985,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2028,7 +2011,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2054,7 +2037,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2080,7 +2063,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2106,7 +2089,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2132,7 +2115,7 @@
 		level 15: M. Atk. +16% and PvP Damage +5%.
 	 -->
 		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2142,27 +2125,25 @@
 	<skill id="55160" name="Special Fruit Buff" action="A2">
 	<!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP. Effect remains even after death. -->
 		<icon initial="icon.etc_codran_i09"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="49697"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="7.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -2203,14 +2184,14 @@
 	<skill id="55161" name="VIP Level 1">
 	<!-- The right to VIP 1st level chest. XP/SP gain +3%%, item drop rate +50%%. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="PER">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP" mode="PER">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP" mode="PER">
@@ -2224,14 +2205,14 @@
 	<skill id="55162" name="VIP Level 2">
 	<!-- The right to VIP 2nd level chest. XP/SP gain +7%%, item drop rate +150%%. World chat on any level, number of usage attempts +10. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip2"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="PER">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP" mode="PER">
 				<power initial="7.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP" mode="PER">
@@ -2248,7 +2229,7 @@
 	<skill id="55163" name="VIP Level 3">
 	<!-- The right to VIP 3rd level chest. XP/SP gain +15%%, item drop rate +200%%. Experience loss and chance to lose items upon death is decreased by 10%%. World chat on any level, number of usage attempts +10. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip3"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2276,14 +2257,14 @@
 	<skill id="55164" name="VIP Level 4">
 	<!-- The right to VIP 4th level chest. XP/SP gain +25%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 15%%. World chat on any level, number of usage attempts +10. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip4"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BONUS_EXP" mode="PER">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP" mode="PER">
 				<power initial="25.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP" mode="PER">
@@ -2307,7 +2288,7 @@
 	<skill id="55165" name="VIP Level 5">
 	<!-- The right to VIP 5th level chest. XP/SP gain +30%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 20%%. PvE damage is increased. World chat on any level, number of usage attempts +10. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip5"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2347,7 +2328,7 @@
 	<skill id="55166" name="VIP Level 6">
 	<!-- The right to VIP 6th level chest. XP/SP gain +30%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 20%%. PvE damage is increased, STR/DEX/INT/WIT/MEN +2. World chat on any level, number of usage attempts +10. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip6"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2357,7 +2338,7 @@
 			<stat type="STR">
 				<power initial="2.0"/>
 			</stat>
-			<stat-modify stat="BONUS_EXP" mode="PER">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP" mode="PER">
@@ -2390,7 +2371,7 @@
 	<skill id="55167" name="VIP Level 7">
 	<!-- The right to VIP 7th level chest. XP/SP gain +30%%, item drop rate +250%%. Experience loss and chance to lose items upon death is decreased by 20%%. PvE/PvP damage is increased, STR/DEX/INT/WIT/MEN +2. World chat on any level, number of usage attempts +20. XP/SP gain +20%% during fishing. -->
 		<icon initial="BranchIcon.Icon.g_skill_vip7"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2400,7 +2381,7 @@
 			<stat type="STR">
 				<power initial="2.0"/>
 			</stat>
-			<stat-modify stat="BONUS_EXP" mode="PER">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP" mode="PER">
@@ -2442,15 +2423,13 @@
 	<skill id="55168" name="Clan Unity - Lv. 1" action="A2">
 	<!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +3%%. -->
 		<icon initial="icon.skill19011"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="CLAN_TEAMWORK" >
+		<abnormal type="CLAN_TEAMWORK">
 			<level initial="1"/>
 			<time initial="10800"/>
 			<chance initial="-1"/>
@@ -2467,21 +2446,19 @@
 	<skill id="55169" name="Clan Unity - Lv. 2" action="A2">
 	<!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +5%%, damage received in PvE -2%%. -->
 		<icon initial="icon.skill19011"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="CLAN_TEAMWORK" >
+		<abnormal type="CLAN_TEAMWORK">
 			<level initial="2"/>
 			<time initial="10800"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
 				<power initial="5.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP">
@@ -2501,15 +2478,13 @@
 	<skill id="55170" name="Clan Unity - Lv. 3" action="A2">
 	<!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +7%%, damage received in PvE -5%%. -->
 		<icon initial="icon.skill19011"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="CLAN_TEAMWORK" >
+		<abnormal type="CLAN_TEAMWORK">
 			<level initial="2"/>
 			<time initial="10800"/>
 			<chance initial="-1"/>
@@ -2535,21 +2510,19 @@
 	<skill id="55171" name="Clan Unity - Lv. 4" action="A2">
 	<!-- Clan Alliance Buff. XP/SP gain +10%%, PvE damage +7%%, damage received in PvE -8%% for 3 hours. -->
 		<icon initial="icon.skill19011"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="CLAN_TEAMWORK" >
+		<abnormal type="CLAN_TEAMWORK">
 			<level initial="2"/>
 			<time initial="10800"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="BONUS_SP">
@@ -2578,7 +2551,7 @@
 	<skill id="55172" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2612,7 +2585,7 @@
 	<skill id="55173" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2659,7 +2632,7 @@
 	<skill id="55174" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2719,7 +2692,7 @@
 	<skill id="55175" name="Clan's Special Supplies" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -2787,14 +2760,14 @@
 	<skill id="55176" name="Yellow Talisman - P. Atk.">
 	<!-- Increases P. Atk. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="8.0"/>
 			</stat-modify>
 		</effects>
@@ -2802,14 +2775,14 @@
 	<skill id="55177" name="Yellow Talisman - Atk. Spd.">
 	<!-- Increases Atk. Spd. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="8.0"/>
 			</stat-modify>
 		</effects>
@@ -2817,14 +2790,14 @@
 	<skill id="55178" name="Yellow Talisman - M. Def.">
 	<!-- Increases M. Def. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="6.0"/>
 			</stat-modify>
 		</effects>
@@ -2832,14 +2805,14 @@
 	<skill id="55179" name="Yellow Talisman - M. Atk.">
 	<!-- Increases magic power when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="6.0"/>
 			</stat-modify>
 		</effects>
@@ -2847,14 +2820,14 @@
 	<skill id="55180" name="Yellow Talisman - Casting Spd.">
 	<!-- Increases Casting Spd. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="8.0"/>
 			</stat-modify>
 		</effects>
@@ -2862,7 +2835,7 @@
 	<skill id="55181" name="Yellow Talisman - P. Accuracy">
 	<!-- Increases P. Accuracy when equipped with the Talisman. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2880,14 +2853,14 @@
 	<skill id="55182" name="Yellow Talisman - P. Def.">
 	<!-- Increases P. Def. when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="6.0"/>
 			</stat-modify>
 		</effects>
@@ -2895,7 +2868,7 @@
 	<skill id="55183" name="Yellow Talisman - Speed">
 	<!-- Increases Speed when equipped. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2910,16 +2883,17 @@
 	<skill id="55184" name="Yellow Talisman - P. Evasion">
 	<!-- Increases P. Evasion when equipped with the Talisman. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="5.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="5.0"/>
 			</stat-hp-based>
-			<stat-modify stat="MAGIC_EVASION_RATE">
+			<stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
@@ -2927,7 +2901,7 @@
 	<skill id="55185" name="Yellow Talisman - Healing">
 	<!-- Increases the amount of Heal given while equipped with the talisman. -->
 		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2942,13 +2916,13 @@
 	<skill id="55186" name="Blue Talisman - Invisibility" action="T">
 	<!-- Protects from preemptive attacks from monsters by making your character invisible. -->
 		<icon initial="icon.etc_talisman_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<reuse initial="240000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -2970,10 +2944,11 @@
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -2991,10 +2966,11 @@
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -3012,10 +2988,11 @@
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -3033,10 +3010,11 @@
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -3054,10 +3032,11 @@
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -3075,10 +3054,11 @@
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -3091,11 +3071,12 @@
 	<skill id="55193" name="Sealed Rune Lvl 1" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3121,11 +3102,12 @@
 	<skill id="55194" name="Sealed Rune Lvl 2" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3151,11 +3133,12 @@
 	<skill id="55195" name="Sealed Rune Lvl 3" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3181,11 +3164,12 @@
 	<skill id="55196" name="Sealed Rune Lvl 4" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3211,11 +3195,12 @@
 	<skill id="55197" name="Sealed Rune Lvl 5" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3241,11 +3226,12 @@
 	<skill id="55198" name="Sealed Rune Lvl 6" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3271,11 +3257,12 @@
 	<skill id="55199" name="Sealed Rune Lvl 7" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

@@ -3,14 +3,13 @@
 	<skill id="1505" name="Sublime Self-Sacrifice" action="A2" type="MAGIC">
 	<!-- Sacrifices yourself to allow all other allies to fully recover their HP/MP/CP and become invincible for 15 seconds. -->
 		<icon initial="icon.skill1505"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true">
 			<magic-level initial="81"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-point initial="668"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="668000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="44"/>
@@ -40,13 +39,13 @@
 	<skill id="1506" name="Blessing of Eva" action="A1" type="MAGIC">
 	<!-- Casts Eva's Blessing to fully recover HP/MP/CP and has a chance to remove debuffs. -->
 		<icon initial="icon.skill1506"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="400"/>
 			<reuse initial="1200000"/>
 			<effect-point initial="668"/>
 			<effect-range initial="900"/>
-			<hit-time initial="668000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -71,21 +70,20 @@
 	<skill id="1507" name="Lord of Vampires" action="A2" type="MAGIC">
 	<!-- For 30 seconds, has a chance to absorb 80%% of physical damage dealt to enemies as HP. -->
 		<icon initial="icon.skill1507"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="400"/>
 			<reuse initial="150000"/>
 			<effect-point initial="679"/>
 			<effect-range initial="900"/>
-			<hit-time initial="679000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8"/>
 			<mana initial="37"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="VAMPIRIC_ATTACK_SPECIAL" >
+		<abnormal type="VAMPIRIC_ATTACK_SPECIAL">
 			<level initial="5"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -107,7 +105,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="5"/>
@@ -116,7 +114,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="PD_UP_BOW" >
+		<abnormal type="PD_UP_BOW">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -139,7 +137,7 @@
 				</power>
 				</trait>
 			</defence-trait>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="100.0"/>
 			</stat-modify>
 		</effects>
@@ -152,7 +150,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8"/>
@@ -164,7 +162,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ELEMENTAL_ARMOR" >
+		<abnormal type="ELEMENTAL_ARMOR">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -179,7 +177,7 @@
 	<skill id="1516" name="Soul Strike" max-level="10" action="A1">
 	<!-- When equipping a Rapier, has a chance to inflict additional M. Atk. when attacking the enemy. The type of M. Atk. that occurs for Soul Strike depends on the attack style. \n\n<Physical Attack>Sword Energy\n<Magci Attack>Lightning -->
 		<icon initial="icon.skill1528"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="1250"/>
@@ -202,7 +200,7 @@
 		level 3: Casting Spd. +220 and Magic Cooldown -20%.
 	 -->
 		<icon initial="icon.skill11841"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
 				<value level="2">49</value>
 				<value level="3">55</value>
@@ -213,7 +211,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="10.0"/>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
@@ -234,20 +232,19 @@
 			<reuse initial="600000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="80"/>
 		</consume>
 		<target />
-		<abnormal type="FINAL_SECRET" >
+		<abnormal type="FINAL_SECRET">
 			<level initial="1"/>
 			<time initial="20"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
@@ -270,7 +267,7 @@
 		level 2: For 40 minutes, increases party members' Speed by 33.
 	 -->
 		<icon initial="icon.skill1535"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="44">
 				<value level="2">52</value>
 			</magic-level>
@@ -278,8 +275,7 @@
 			<reuse initial="2000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="14"/>
@@ -288,7 +284,7 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="IMPROVE_SPEED_AVOID_UP" >
+		<abnormal type="IMPROVE_SPEED_AVOID_UP">
 			<level initial="1"/>
 			<time initial="2400"/>
 			<chance initial="-1"/>
@@ -310,7 +306,8 @@
 					<value level="2">33.0</value>
 				</power>
 			</speed>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
@@ -362,19 +359,7 @@
 				<value level="4">1400</value>
 				<value level="5">1500</value>
 			</effect-range>
-			<hit-time initial="-379000">
-				<value level="2">-495000</value>
-				<value level="3">-582000</value>
-				<value level="4">-635000</value>
-				<value level="5">-639000</value>
-				<value level="6">-643000</value>
-				<value level="7">-646000</value>
-				<value level="8">-649000</value>
-				<value level="9">-652000</value>
-				<value level="10">-654000</value>
-				<value level="11">-656000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="18">
@@ -410,129 +395,129 @@
 		<effects>
 			<defence-trait>
 				<trait type="DUAL">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+					<value level="2">-24</value>
+					<value level="3">-32</value>
+					<value level="4">-40</value>
+					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="RAPIER">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="SWORD">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="DAGGER">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="DUALFIST">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="BLUNT">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="DUAL_DAGGER">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="SPEAR">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
-				</power>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
+					</power>
 				</trait>
 				<trait type="ANCIENT_SWORD">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -547,8 +532,7 @@
 			<reuse initial="600000"/>
 			<effect-point initial="343"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="343000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1200"/>
 		</attributes>
 		<target />
 		<abnormal type="TURN_STONE" visual="FLESH_STONE" >
@@ -563,7 +547,7 @@
 			<damage-block block-hp="true"/>
 			<effect name="BuffBlock"/>
 			<effect name="DebuffBlock"/>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="-100.0"/>
 			</stat-modify>
 		</effects>
@@ -574,7 +558,7 @@
 		level 2: For 20 minutes, the target's Received P. Critical Damage -40%%. When the target receives a certain amount of damage or more, P. Critical Damage of normal melee physical attacks increases by 100%% for 8 seconds.
 	 -->
 		<icon initial="icon.skill1542"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80">
 				<value level="2">84</value>
 			</magic-level>
@@ -582,8 +566,7 @@
 			<reuse initial="2000"/>
 			<effect-point initial="679"/>
 			<effect-range initial="900"/>
-			<hit-time initial="679000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="15"/>
@@ -592,7 +575,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="COUNTER_CRITICAL" >
+		<abnormal type="COUNTER_CRITICAL">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -612,7 +595,7 @@
 	<skill id="1543" name="Great Fury">
 	<!-- With a certain probability, party members are seized with Great Fury that increases Atk. Spd. by 30%% after the character's attack. -->
 		<icon initial="icon.skill1543"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -655,13 +638,7 @@
 				<value level="5">741</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="418000">
-				<value level="2">582000</value>
-				<value level="3">635000</value>
-				<value level="4">688000</value>
-				<value level="5">741000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="8">
@@ -676,7 +653,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="SPIRIT_SHARING" >
+		<abnormal type="SPIRIT_SHARING">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -743,7 +720,7 @@
 			<reuse initial="15000"/>
 			<effect-point initial="662"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="662000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -768,7 +745,7 @@
 			<reuse initial="9000"/>
 			<effect-point initial="662"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="662000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -807,7 +784,7 @@
 			<reuse initial="9000"/>
 			<effect-point initial="1261"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1261000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -839,7 +816,7 @@
 		level 2: Recovers the target and the 10 most injured allies around the target by 35%% of their Max HP. The recovery amount decreases starting from the most injured person. Requires 6 Spirit Ore.
 	 -->
 		<icon initial="icon.skill1553"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="78">
 				<value level="2">82</value>
 			</magic-level>
@@ -847,7 +824,7 @@
 			<reuse initial="5000"/>
 			<effect-point initial="1301"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="1301000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -894,13 +871,7 @@
 				<value level="5">202</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="138000">
-				<value level="2">152000</value>
-				<value level="3">167000</value>
-				<value level="4">184000</value>
-				<value level="5">202000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="23"/>
@@ -918,7 +889,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MANA_SHIELD_PERCENT">
+			<stat-modify stat="MANA_SHIELD_PERCENT" stat-add="MANA_SHIELD_PERCENT">
 				<power initial="50.0">
 					<value level="2">52.0</value>
 					<value level="3">55.0</value>
@@ -951,11 +922,7 @@
 				<value level="3">385</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000">
-				<value level="2">382000</value>
-				<value level="3">385000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="7"/>
@@ -965,7 +932,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="ABILITY_CHANGE" >
+		<abnormal type="ABILITY_CHANGE">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1014,7 +981,7 @@
 		level 5: Increases Max MP by 200.
 	 -->
 		<icon initial="icon.skill19168"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
 				<value level="2">49</value>
 				<value level="3">58</value>
@@ -1027,7 +994,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="70.0">
 					<value level="2">100.0</value>
 					<value level="3">140.0</value>

@@ -3,12 +3,11 @@
 	<skill id="14000" name="Berserk" action="A1">
 	<!-- Increases Atk. Spd. And P. Atk. -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="6000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -16,7 +15,7 @@
 	<skill id="14001" name="Cross Slash" max-level="3" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="95">
 				<value level="2">96</value>
 				<value level="3">97</value>
@@ -25,7 +24,7 @@
 			<reuse initial="2500"/>
 			<effect-point initial="-354"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-354000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -46,7 +45,7 @@
 	<skill id="14002" name="Transfixion Attack" max-level="3" action="DA1">
 	<!-- none -->
 		<icon initial="icon.skill0484"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="95">
 				<value level="2">96</value>
 				<value level="3">97</value>
@@ -57,9 +56,7 @@
 				<value level="2">-353</value>
 			</effect-point>
 			<effect-range initial="600"/>
-			<hit-time initial="-352000">
-				<value level="2">-353000</value>
-			</hit-time>
+			<hit-time initial="100"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -78,7 +75,7 @@
 	<skill id="14055" name="Power Shot" max-level="2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0056"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="92">
 				<value level="2">93</value>
 			</magic-level>
@@ -88,9 +85,7 @@
 				<value level="2">-200</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-150000">
-				<value level="2">-200000</value>
-			</hit-time>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

@@ -3,7 +3,7 @@
 	<skill id="50300" name="Queen Ant’s Stone Crasher">
 	<!-- Blunt Weapon containing Queen Ant’s soul. Can use Queen Ant’s power. -->
 		<icon initial="icon.special_weapon_onehandblunt"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -11,7 +11,7 @@
 	<skill id="50301" name="Adventurer’s Belt">
 	<!-- Inventory slots +2, Weight Limit +1000. -->
 		<icon initial="icon.belt_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -19,7 +19,7 @@
 	<skill id="50302" name="Adventurer’s Cloak">
 	<!-- Max HP/Max MP +1%. -->
 		<icon initial="icon.amor_goodness_cloak"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -27,7 +27,7 @@
 	<skill id="50303" name="Enchanted Adventurer’s Cloak">
 	<!-- Max HP/Max MP +2%. -->
 		<icon initial="icon.amor_goodness_cloak"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -35,7 +35,7 @@
 	<skill id="50304" name="Chapeau of Glory">
 	<!-- STR +1, INT +1, HP +300. -->
 		<icon initial="icon.accessory_archer_hat_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -43,7 +43,7 @@
 	<skill id="50305" name="Gloves of Silence">
 	<!-- Gloves containing the power of Silence. \n\nSTR +1, INT +1, Max HP +150, Atk. Spd. +8%%, Casting Spd. +15%%. -->
 		<icon initial="icon.armor_t94_g_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -51,7 +51,7 @@
 	<skill id="50306" name="Silence Gloves Enchantment Effect">
 	<!-- Gloves containing the power of Silence. \n\nSilences all targets to prevent them from using any skills for 4 seconds. -->
 		<icon initial="icon.armor_t94_g_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -67,7 +67,7 @@
 		level 10: Gloves containing the power of Silence. \n\nHas a chance to reduce MP with 165Power added to M. Atk., and silences all targets to prevent them from using any skills for 4 seconds. Increases P./M. Skill Power by 15%.
 	 -->
 		<icon initial="icon.armor_t94_g_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -75,10 +75,9 @@
 	<skill id="50308" name="Power of Silence" debuff="true" type="MAGIC">
 	<!-- Can’t use any skills for 4 seconds. -->
 		<icon initial="icon.armor_t94_g_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
@@ -92,17 +91,16 @@
 		level 6: Decreases the target’s MP with 165 Power added to M. Atk.
 	 -->
 		<icon initial="icon.armor_t94_g_i01"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="-300"/>
-			<hit-time initial="-300000"/>
 		</attributes>
 		<target />
 	</skill>
 	<skill id="50310" name="Shield Effect">
 	<!-- Shield Def. +10, Shield Def. Rate +1%, Max HP +10. -->
 		<icon initial="icon.shield_shield_of_nightmare_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -121,7 +119,7 @@
 		level 10: Shield Def. +480, Shield Def. Rate +28%, Max HP +600 with the shield enhancement.
 	 -->
 		<icon initial="icon.shield_shield_of_nightmare_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -129,7 +127,7 @@
 	<skill id="50312" name="Sigil Effect">
 	<!-- P./M. Evasion +1, Max MP +10. -->
 		<icon initial="icon.dynasty_sigil_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -148,7 +146,7 @@
 		level 10: P./M. Evasion +10, Max MP +600 with the Sigil’s enchantment effect.
 	 -->
 		<icon initial="icon.dynasty_sigil_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -156,7 +154,7 @@
 	<skill id="50339" name="Cloak of Protection">
 	<!-- <Cloak of Protection>\nMax HP +3%\n, Max MP +3%\nBow Resistance +1% -->
 		<icon initial="icon.bm_2018_sayha_cloak_back_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
@@ -175,7 +173,7 @@
 		level 10: <Cloak of Protection>\nMax HP +20%\n, Max MP +20%\nBow Resistance +15%\nXP Gain +30%\nSP Gain +30%\nP. Def. +15%\nM. Def. +15%\nP. Critical Damage +15%\nM. Skill Critical Damage +15%\nAll Critical Damage Receive Rate -10%\nAll Critical Damage Received -10%
 	 -->
 		<icon initial="icon.bm_2018_sayha_cloak_back_i01"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />

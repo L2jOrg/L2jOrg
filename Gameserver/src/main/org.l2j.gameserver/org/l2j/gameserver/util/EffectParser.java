@@ -22,7 +22,22 @@ public abstract class EffectParser extends GameXmlReader {
 
         } else if("value".equals(node.getNodeName())) {
             var level = parseInt(node.getAttributes(), "level");
-            levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(node.getParentNode().getNodeName(), node.getTextContent());
+            var attributeName = node.getParentNode().getNodeName();
+            levelInfo.computeIfAbsent(level, l -> new StatsSet()).set(attributeName, node.getTextContent());
+
+            if(level > startLevel && !levelInfo.getOrDefault(level -1, StatsSet.EMPTY_STATSET).contains(attributeName)) {
+                var previous = level -1;
+                while (previous >= startLevel) {
+                    if(levelInfo.getOrDefault(previous, StatsSet.EMPTY_STATSET).contains(attributeName)) {
+                        var value = levelInfo.get(previous).getString(attributeName);
+                        for (int i = previous + 1; i < level ; i++) {
+                            levelInfo.computeIfAbsent(i, l -> new StatsSet()).set(attributeName, value);
+                        }
+                        break;
+                    }
+                    previous--;
+                }
+            }
 
         } else if(nonNull(attr) && nonNull(attr.getNamedItem("level"))) {
             var level = parseInt(attr, "level");
@@ -65,20 +80,36 @@ public abstract class EffectParser extends GameXmlReader {
         }
     }
 
-    protected IntMap<StatsSet> parseEffectChildNodes(Node node, int startLevel, StatsSet staticStatSet) {
+    protected IntMap<StatsSet> parseEffectChildNodes(Node node, int startLevel, int stopLevel, StatsSet staticStatSet) {
         IntMap<StatsSet> levelInfo = new HashIntMap<>();
 
         for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             if(isUnboundNode(child)) {
-                parseNodeList(startLevel, staticStatSet, levelInfo, child);
+                parseNodeList(startLevel, stopLevel, staticStatSet, levelInfo, child);
             } else {
                 parseEffectNode(child, levelInfo, startLevel, staticStatSet, false);
+
+                if(node.getChildNodes().getLength() > 1) {
+                    if(!levelInfo.getOrDefault(stopLevel, StatsSet.EMPTY_STATSET).contains(child.getNodeName()) && levelInfo.getOrDefault(startLevel, StatsSet.EMPTY_STATSET).contains(child.getNodeName())) {
+                        var previous = stopLevel -1;
+                        while (previous >= startLevel) {
+                            if(levelInfo.getOrDefault(previous, StatsSet.EMPTY_STATSET).contains(child.getNodeName())) {
+                                var value = levelInfo.get(previous).getString(child.getNodeName());
+                                for (int i = previous + 1; i <= stopLevel ; i++) {
+                                    levelInfo.computeIfAbsent(i, l -> new StatsSet()).set(child.getNodeName(), value);
+                                }
+                                break;
+                            }
+                            previous--;
+                        }
+                    }
+                }
             }
         }
         return levelInfo;
     }
 
-    protected void parseNodeList(int startLevel, StatsSet staticStatSet, IntMap<StatsSet> levelInfo, Node child) {
+    protected void parseNodeList(int startLevel, int stopLevel, StatsSet staticStatSet, IntMap<StatsSet> levelInfo, Node child) {
         var childStats = new StatsSet(parseAttributes(child));
 
         var forceLevel = childStats.contains("level");
@@ -99,6 +130,13 @@ public abstract class EffectParser extends GameXmlReader {
                     var level = entry.getKey();
                     stats.merge(childStats);
                     levelInfo.computeIfAbsent(level, i -> new StatsSet()).set(childKey, stats);
+                }
+                if(childLevelInfo.size() < stopLevel) {
+                    var levelBase =  childLevelInfo.keySet().stream().max().orElse(0);
+                    for (var i = levelBase + 1; i <= stopLevel; i++) {
+                        levelInfo.computeIfAbsent(i, level -> new StatsSet()).set(childKey, childLevelInfo.get(levelBase));
+                    }
+
                 }
             } else if(forceLevel) {
                 levelInfo.computeIfAbsent(childLevel, i -> new StatsSet()).set(childKey, childStats);

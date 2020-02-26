@@ -3,11 +3,12 @@
 	<skill id="39100" name="Agathion Teleport: Hunter's Village" action="A1">
 	<!-- Teleport to the Hunter's Village. -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="-1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -23,16 +24,16 @@
 	<skill id="39101" name="Chase Down" action="A2">
 	<!-- Movement Speed +66 for 15 seconds. -->
 		<icon initial="icon.skill0998"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-point initial="438"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="438000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="15"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -45,7 +46,7 @@
 	<skill id="39102" name="Sneak" action="T">
 	<!-- Protected from preemptive attacks from monsters. -->
 		<icon initial="icon.skill10518"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -63,7 +64,7 @@
 	<skill id="39103" name="Hero HP Potion" action="A1">
 	<!-- Protected from preemptive attacks from monsters. -->
 		<icon initial="icon.etc_reagent_white_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -73,7 +74,7 @@
 	<skill id="39104" name="Warrior's Cube (7-day)" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -84,9 +85,10 @@
 	<skill id="39105" name="Scroll of Escape: Dragon Valley Bridge" action="A1">
 	<!-- Return to Dragon Valley Bridge. Cooldown 60 minutes. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -94,9 +96,10 @@
 	<skill id="39106" name="Scroll of Escape: Inside Antharas' Lair" action="A1">
 	<!-- Return to Inside Antharas' Lair. Cooldown 60 minutes. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -104,9 +107,10 @@
 	<skill id="39107" name="Scroll of Escape: Cruma Tower Entrance" action="A1">
 	<!-- Return to Cruma Tower Entrance. Cooldown 60 minutes. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -114,9 +118,10 @@
 	<skill id="39108" name="Scroll of Escape: Orc Barracks Entrance" action="A1">
 	<!-- Return to Orc Barracks Entrance. Cooldown 60 minutes. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -124,7 +129,7 @@
 	<skill id="39109" name="Greater Scroll of Resurrection" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_scroll_of_resurrection_i01"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="400"/>
 			<cool-time initial="500"/>
@@ -150,9 +155,10 @@
 	<skill id="39110" name="Scroll of Escape: Enchanted Valley Entrance" action="A1">
 	<!-- Return to Enchanted Valley Entrance. Cooldown 60 minutes. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -160,10 +166,11 @@
 	<skill id="39111" name="Assistant Roa's Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -171,10 +178,11 @@
 	<skill id="39112" name="Golden Boots" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -182,18 +190,17 @@
 	<skill id="39113" name="Golden Mermaid's Tear" action="A2">
 	<!-- Hunting XP/SP Gain +50%% for 1 hour. Buff remains after death. -->
 		<icon initial="icon.general_fuel_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="49585"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -216,7 +223,7 @@
 		level 3: Poison Resistance +20%%, Poison Atk. Rate +20%%, P. Accuracy/M. Accuracy +3, P. Critical Damage +10%%, and M. Critical Damage +5%%.
 	 -->
 		<icon initial="icon.accessory_ring_of_queen_ant_i03"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -229,7 +236,7 @@
 		level 3: Hold Resistance +20%%, MEN Resistance +15%%, Hold Atk. Rate +20%%, MEN Atk. Rate +15%%, Heal Received +6%%, and Skill MP Consumption -5%%. Has a chance to absorb part of the damage dealt to enemies as MP.
 	 -->
 		<icon initial="icon.accessory_earring_of_orfen_i03"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -242,7 +249,7 @@
 		level 3: MEN Resistance +20%%, MEN Atk. Rate +20%%, P. Evasion/M. Evasion +3, and Damage Received -6%%.
 	 -->
 		<icon initial="icon.accessory_ring_of_core_i03"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -252,7 +259,7 @@
 	<skill id="39117" name="Whale" action="A1">
 	<!-- none -->
 		<icon initial="icon.fish_huge_i15"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -263,7 +270,7 @@
 	<skill id="39118" name="2,000 SP Scroll" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_sp_scroll1_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -274,7 +281,7 @@
 	<skill id="39119" name="10,000 SP Scroll" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_sp_scroll2_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -285,10 +292,11 @@
 	<skill id="39120" name="Teleport: Giral Harbor" action="A1">
 	<!-- Teleport to Giran Harbor. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -296,10 +304,11 @@
 	<skill id="39121" name="Teleport: Gludin Harbor" action="A1">
 	<!-- Teleport to Gludin Harbor. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -307,10 +316,11 @@
 	<skill id="39122" name="Golden Boots_Tester" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -318,7 +328,7 @@
 	<skill id="39123" name="Special HP Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_bm_hero_red_potion"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -328,11 +338,12 @@
 	<skill id="39124" name="Weapon Supply Box (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -362,11 +373,12 @@
 	<skill id="39125" name="Weapon Supply Box (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i03"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -409,11 +421,12 @@
 	<skill id="39126" name="C-grade Armor Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i06"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -441,11 +454,12 @@
 	<skill id="39127" name="B-grade Armor Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -475,11 +489,12 @@
 	<skill id="39128" name="Ornament Supply Box (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i02"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -503,11 +518,12 @@
 	<skill id="39129" name="Ornament Supply Box - B-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i08"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -540,10 +556,11 @@
 	<skill id="39130" name="Weapons Ingredient Box (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -551,10 +568,11 @@
 	<skill id="39131" name="Weapon Ingredient Box (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -562,10 +580,11 @@
 	<skill id="39132" name="Armor/Ornament Ingredient Box - C-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -573,10 +592,11 @@
 	<skill id="39133" name="Armor/Ornament Ingredient Box - B-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -584,7 +604,7 @@
 	<skill id="39134" name="XP Boost Scroll" action="A1">
 	<!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
@@ -595,7 +615,7 @@
 	<skill id="39135" name="Chic Silver Chapeau - 30-day">
 	<!-- STR +1 and INT +1 -->
 		<icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -605,10 +625,11 @@
 	<skill id="39136" name="Chic Silver Chapeau Teleport - 30-day" action="A1">
 	<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="7200000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -616,10 +637,11 @@
 	<skill id="39137" name="Chapeau Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_black_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -627,7 +649,7 @@
 	<skill id="39138" name="Blue Dynasty Transformation" action="A1">
 	<!-- Armor Appearance changes to "Blue Dynasty" for 1 h. -->
 		<icon initial="icon.general_stone_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
@@ -638,7 +660,7 @@
 	<skill id="39139" name="Transformation into Red Zubei" action="A1">
 	<!-- Armor Appearance changes to "Red Zubei" for 1 h. -->
 		<icon initial="icon.general_stone_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
@@ -649,7 +671,7 @@
 	<skill id="39140" name="Magical Potion of Leaping - Lv. 1" action="A1">
 	<!-- Can obtain 1,200,000 XP/40,000 SP. Available for characters Lv. 20 and above. -->
 		<icon initial="icon.etc_holy_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -660,7 +682,7 @@
 	<skill id="39141" name="Magical Potion of Leaping - Lv. 2" action="A1">
 	<!-- Can obtain 7,800,000 XP/240,000 SP. Available for characters Lv. 30 and above. -->
 		<icon initial="icon.etc_wind_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -671,7 +693,7 @@
 	<skill id="39142" name="Magical Potion of Leaping - Lv. 3" action="A1">
 	<!-- Can obtain 34,200,000 XP/1,040,000 SP. Available for characters Lv. 40 and above. -->
 		<icon initial="icon.etc_water_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -682,7 +704,7 @@
 	<skill id="39143" name="Gift from a Returned Friend" action="A1">
 	<!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
 		<icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -693,21 +715,19 @@
 	<skill id="39144" name="Special Fruit Buff" action="A2">
 	<!-- For 20 minutes bonus XP/SP gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of physical damage dealt to enemies as HP. Effect remains even after death. -->
 		<icon initial="icon.etc_codran_i09"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="49518"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -754,10 +774,11 @@
 	<skill id="39145" name="Tower of Insolence Enchant Scroll Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.npoint_valakas_30day_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -765,11 +786,12 @@
 	<skill id="39146" name="Sealed Fate Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_special_pendant_abradant_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -777,12 +799,13 @@
 	<skill id="39147" name="Talisman of Darkness Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_pirate_king_box"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -810,11 +833,12 @@
 	<skill id="39148" name="Sealed Blessed Talisman of Fate" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_blessed_magic_square_talisman"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -833,12 +857,13 @@
 	<skill id="39149" name="Talisman of Baium Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.npoint_tauti_30day_box"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -863,7 +888,7 @@
 	<skill id="39150" name="Sayha's Holy Water" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -873,10 +898,11 @@
 	<skill id="39151" name="A-grade Armor Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -884,11 +910,12 @@
 	<skill id="39152" name="Ornament Supply Box (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i02"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -912,10 +939,11 @@
 	<skill id="39153" name="Armor Ingredient Box - A-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -923,10 +951,11 @@
 	<skill id="39154" name="Ornament Ingredient Box - A-grade" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -934,12 +963,11 @@
 	<skill id="39155" name="Life Control Tower's Scroll of Blessing" action="A1">
 	<!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
 		<icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -947,12 +975,11 @@
 	<skill id="39156" name="Scroll of Heavenly Protection" action="A1">
 	<!-- For 20 minutes, Paralysis Resistance +15 and MEN Resistance +10. -->
 		<icon initial="icon.scroll_of_verification_i08"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -960,10 +987,11 @@
 	<skill id="39157" name="Unidentified Rock" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_magical_stone_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -971,10 +999,11 @@
 	<skill id="39158" name="Secret Scroll Box: Emperor Baium's Enchant" action="A1">
 	<!-- none -->
 		<icon initial="icon.npoint_valakas_30day_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -982,7 +1011,7 @@
 	<skill id="39159" name="Sayha's Energy" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -992,7 +1021,7 @@
 	<skill id="39160" name="Emperor Baium's Secret Treasures" action="A1">
 	<!-- none -->
 		<icon initial="icon.npoint_valakas_30day_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1002,7 +1031,7 @@
 	<skill id="39161" name="Express Bus Pass Card" action="A1">
 	<!-- Can obtain 5,000,000 XP/160,000 SP. Available for characters Lv. 20 and above. -->
 		<icon initial="icon.etc_holy_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -1013,21 +1042,19 @@
 	<skill id="39162" name="Special Fruit Buff - Attack" action="A2">
 	<!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of physical damage dealt to enemies as HP. PvP Damage +5%%. Cooldown is 1 minute Effect remains even after death. -->
 		<icon initial="icon.etc_codran_i09"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="49773"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1077,27 +1104,25 @@
 	<skill id="39163" name="Special Fruit Buff - Defense" action="A2">
 	<!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of physical damage dealt to enemies as HP. PvP Damage Received -5%%. Cooldown is 1 min. Effect remains even after death. -->
 		<icon initial="icon.etc_codran_i09"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<item initial="49774"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="VOTE" >
+		<abnormal type="VOTE">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="7.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
@@ -1141,12 +1166,11 @@
 	<skill id="39164" name="Mood Melody" action="A1">
 	<!-- For 20 minutes activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, Vampiric Rage. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Scroll of Mood Melody will not be removed after death, and the Scroll of Mood Melody cannot be used while the buff remains. -->
 		<icon initial="icon.bm_magmeld"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1154,7 +1178,7 @@
 	<skill id="39165" name="Transformation into a Prophet" action="A1">
 	<!-- Transformed into a Prophet. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-point initial="1"/>
@@ -1167,7 +1191,7 @@
 	<skill id="39166" name="Transformation into a Shillien Elder" action="A1">
 	<!-- Transformed into a Shillien Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-point initial="1"/>
@@ -1180,7 +1204,7 @@
 	<skill id="39167" name="Transformation into an Elven Elder" action="A1">
 	<!-- Transformed into an Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-point initial="1"/>
@@ -1193,7 +1217,7 @@
 	<skill id="39168" name="Gift of a Sated Cadmus" action="A1">
 	<!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
 		<icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
 			<effect-range initial="-1"/>
@@ -1204,7 +1228,7 @@
 	<skill id="39169" name="Firecracker" action="A1">
 	<!-- Scatters in a shower of multicolored sparks when exploded. -->
 		<icon initial="BranchSys.icon.br_firecracker_gold_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
@@ -1215,7 +1239,7 @@
 	<skill id="39170" name="Oriana's Lucky Draw Supply" action="A1">
 	<!-- none -->
 		<icon initial="icon.special_cube_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
@@ -1234,13 +1258,13 @@
 	<skill id="39171" name="Oriana's Disguise" action="A2">
 	<!-- For 1 hour, Hunting XP/SP Gain +30%. You’ll have a chance to obtain special supplies. Effect remains even after death. -->
 		<icon initial="icon.ev_balthus_token"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
 			<magic-level initial="56"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<item initial="49784"/>
@@ -1267,12 +1291,13 @@
 	<skill id="39172" name="Weapon Supply Box (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1312,12 +1337,13 @@
 	<skill id="39173" name="A-grade Armor Supply Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1364,12 +1390,13 @@
 	<skill id="39174" name="+8 Enchanted Weapon Supply Box (B-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1412,12 +1439,13 @@
 	<skill id="39175" name="+16 Enchanted Weapon Supply Box (C-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1447,11 +1475,12 @@
 	<skill id="39176" name="Red Libra Supplies Lv. 1" action="A1">
 	<!-- none -->
 		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1459,11 +1488,12 @@
 	<skill id="39177" name="Red Libra Supplies Lv. 2" action="A1">
 	<!-- none -->
 		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1471,11 +1501,12 @@
 	<skill id="39178" name="Red Libra Supplies Lv. 3" action="A1">
 	<!-- none -->
 		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1483,11 +1514,12 @@
 	<skill id="39179" name="Red Libra Supplies Lv. 4" action="A1">
 	<!-- none -->
 		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1495,7 +1527,7 @@
 	<skill id="39180" name="Low-grade Scroll: XP" action="A1">
 	<!-- 1000 XP. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
@@ -1508,7 +1540,7 @@
 		</consume>
 		<target />
 		<effects>
-			<effect  name="GiveXp">
+			<effect name="GiveXp">
 				<power initial="1000.0"/>
 			</effect>
 		</effects>
@@ -1516,7 +1548,7 @@
 	<skill id="39181" name="Mid-grade Scroll: XP" action="A1">
 	<!-- 10,000 XP. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
@@ -1529,7 +1561,7 @@
 		</consume>
 		<target />
 		<effects>
-			<effect  name="GiveXp">
+			<effect name="GiveXp">
 				<power initial="10000.0"/>
 			</effect>
 		</effects>
@@ -1537,7 +1569,7 @@
 	<skill id="39182" name="High-grade Scroll: XP" action="A1">
 	<!-- 100,000 XP. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
@@ -1550,7 +1582,7 @@
 		</consume>
 		<target />
 		<effects>
-			<effect  name="GiveXp">
+			<effect name="GiveXp">
 				<power initial="100000.0"/>
 			</effect>
 		</effects>
@@ -1558,7 +1590,7 @@
 	<skill id="39183" name="Top-grade Scroll: XP" action="A1">
 	<!-- 500,000 XP. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
@@ -1571,7 +1603,7 @@
 		</consume>
 		<target />
 		<effects>
-			<effect  name="GiveXp">
+			<effect name="GiveXp">
 				<power initial="500000.0"/>
 			</effect>
 		</effects>
@@ -1579,7 +1611,7 @@
 	<skill id="39184" name="Highest-grade Scroll: XP" action="A1">
 	<!-- 1,000,000 XP. -->
 		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="500"/>
@@ -1592,7 +1624,7 @@
 		</consume>
 		<target />
 		<effects>
-			<effect  name="GiveXp">
+			<effect name="GiveXp">
 				<power initial="1000000.0"/>
 			</effect>
 		</effects>
@@ -1600,13 +1632,13 @@
 	<skill id="39185" name="Support Blow" action="A1">
 	<!-- Deals a fixed amount of damage with 12 Power to the target. Can only be used against a PC. -->
 		<icon initial="icon.ev_12th_weapon"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="2000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1100"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1614,11 +1646,12 @@
 	<skill id="39186" name="Sayha's Blessing Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1626,11 +1659,12 @@
 	<skill id="39187" name="Ornament Supply Box (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1638,11 +1672,12 @@
 	<skill id="39188" name="Sayha's Golden Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1650,11 +1685,12 @@
 	<skill id="39189" name="Sayha's Silver Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1662,11 +1698,12 @@
 	<skill id="39190" name="Sayha's Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1674,7 +1711,7 @@
 	<skill id="39191" name="Sayha's Blessing" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1684,7 +1721,7 @@
 	<skill id="39192" name="Sayha's Silver Light Blessing" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1694,7 +1731,7 @@
 	<skill id="39193" name="Sayha's Golden Light Blessing" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1704,7 +1741,7 @@
 	<skill id="39194" name="Sayha's Gust Lv. 1" action="A1">
 	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +100%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
 		<icon initial="icon.bm_sayha_storm"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-range initial="-1"/>
@@ -1715,11 +1752,12 @@
 	<skill id="39195" name="Wind Token" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_special_pendant_abradant_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1727,11 +1765,12 @@
 	<skill id="39196" name="Fire Dragon Pendant Chest +10" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1739,11 +1778,12 @@
 	<skill id="39197" name="Earth Dragon Pendant Chest +10" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1751,7 +1791,7 @@
 	<skill id="39198" name="Maliss's MP Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_bm_hero_red_potion"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1767,7 +1807,7 @@
 	<skill id="39199" name="Hero's Wondrous Cubic - 7 days" action="A1">
 	<!-- none -->
 		<icon initial="icon.sa_cube"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>

@@ -3,11 +3,12 @@
 	<skill id="55500" name="Sapphire Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -15,11 +16,12 @@
 	<skill id="55501" name="Diamond Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -27,11 +29,12 @@
 	<skill id="55502" name="Pearl Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -39,11 +42,12 @@
 	<skill id="55503" name="Vital Stone Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -51,11 +55,12 @@
 	<skill id="55504" name="Shiny Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -63,11 +68,12 @@
 	<skill id="55505" name="Shiny Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -75,7 +81,7 @@
 	<skill id="55506" name="Aquamarine" max-level="2" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -98,7 +104,7 @@
 		<icon initial="icon.etc_bm_jewel_aquamarine_i00">
 			<value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -108,7 +114,7 @@
 	<skill id="55508" name="Put on Lv. 3 Brooch" action="A1">
 	<!-- Brooch radiates bright light. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i02"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -118,11 +124,10 @@
 	<skill id="55509" name="Remove Lv. 3 Brooch" action="A1">
 	<!-- Bright light fades. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -130,14 +135,14 @@
 	<skill id="55510" name="Lv. 3 Brooch">
 	<!-- Activates 4 jewel slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
+			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
 				<power initial="4.0"/>
 			</stat-modify>
 		</effects>
@@ -145,7 +150,7 @@
 	<skill id="55511" name="Lv. 3 Brooch - Additional Effect">
 	<!-- Inventory Slot +12. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i02"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -159,11 +164,12 @@
 	<skill id="55512" name="Aquamarine Fortune Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -171,10 +177,11 @@
 	<skill id="55513" name="Golden Boots" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -182,7 +189,7 @@
 	<skill id="55514" name="Unimaginable Horror" action="A1">
 	<!-- In a desperate attempt to unsee what you have just seen you close your eyes and fall incto a mindless rampage of monster killing. For 2 hours, XP/ SP gain +50%%. Not deleted upon death. -->
 		<icon initial="icon.skill30522"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -192,7 +199,7 @@
 	<skill id="55515" name="Staff Chest" action="A1">
 	<!-- Double-click to acquire one of the following items: Branch of the Mother Tree/ Dasparion's Staff/ Staff of Evil Spirits/ Spirit's Staff. -->
 		<icon initial="icon.etc_treasure_box_i02"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -202,7 +209,7 @@
 	<skill id="55516" name="Fist Weapon Chest" action="A1">
 	<!-- Double-click to acquire one of the following items: Dragon Grinder/ Blood Tornado/ Bellion Cestus/ Arthro Nail. -->
 		<icon initial="icon.etc_treasure_box_i03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -212,7 +219,7 @@
 	<skill id="55517" name="Spear Chest" action="A1">
 	<!-- Double-click to acquire one of the following items: Tallum Glaive/ Halberd/ Lance/ Great Axe. -->
 		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -222,7 +229,7 @@
 	<skill id="55518" name="Blunt Weapon Chest" action="A1">
 	<!-- Double-click to acquire one of the following items: Elysian/ Meteor Shower/ Art of Battle Axe/ Heavy War Axe. -->
 		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -232,7 +239,7 @@
 	<skill id="55519" name="Dagger Chest" action="A1">
 	<!-- Double-click to acquire one of the following items: Soul Separator/ Bloody Orchid/ Demon's Dagger/ Kris. -->
 		<icon initial="icon.etc_treasure_box_i06"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -242,7 +249,7 @@
 	<skill id="55520" name="One-handed Sword Chest" action="A1">
 	<!-- Double-click to acquire one of the following items: Dark Legion's Edg/ Tallum Blade/ Damascus Sword/ Keshanberk. -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -252,7 +259,7 @@
 	<skill id="55521" name="Bow Chest" action="A1">
 	<!-- Double-click to acquire one of the following items: Soul Bow/ Carnage Bow/ Bow of Peril/ Dark Elven Longbow. -->
 		<icon initial="icon.etc_treasure_box_i08"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -262,10 +269,11 @@
 	<skill id="55522" name="Valakas Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.bm_sheep_agathion_30d_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -273,7 +281,7 @@
 	<skill id="55523" name="Focus - Event" action="A1">
 	<!-- For 1 hour, P. Critical Rate +30%%. -->
 		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
@@ -289,12 +297,12 @@
 	<skill id="55524" name="Death Whisper - Event" action="A1">
 	<!-- For 1 hour, P. Critical Damage +35%%. -->
 		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -305,12 +313,12 @@
 	<skill id="55525" name="Haste - Event" action="A1">
 	<!-- For 1 hour, Atk. Spd. +33%%. -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -321,12 +329,12 @@
 	<skill id="55526" name="Guidance - Event" action="A1">
 	<!-- For 1 hour, P. Accuracy +4. -->
 		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -337,12 +345,12 @@
 	<skill id="55527" name="Noble Blessed Body - Event" action="A1">
 	<!-- For 1 hour, Max. HP +35%%. -->
 		<icon initial="icon.skill1045"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -353,12 +361,12 @@
 	<skill id="55528" name="Noble Blessed Soul - Event" action="A1">
 	<!-- For 1 hour, Max. MP +35%%. -->
 		<icon initial="icon.skill1048"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -369,12 +377,12 @@
 	<skill id="55529" name="Agility - Event" action="A1">
 	<!-- For 1 hour, P. Evasion +4. -->
 		<icon initial="icon.skill1087"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -385,12 +393,12 @@
 	<skill id="55530" name="Acumen - Event" action="A1">
 	<!-- For 1 hour, Casting Spd. +30%%. -->
 		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -401,12 +409,12 @@
 	<skill id="55531" name="Decrease Weight - Event" action="A1">
 	<!-- For 1 hour, increases the weight penalty interval by 9000. -->
 		<icon initial="icon.skill1257"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -417,12 +425,12 @@
 	<skill id="55532" name="Might - Event" action="A1">
 	<!-- For 1 hour, P. Atk. +15%%. -->
 		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -433,12 +441,12 @@
 	<skill id="55533" name="Shield - Event" action="A1">
 	<!-- For 1 hour, P. Def. +15%%. -->
 		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -449,12 +457,12 @@
 	<skill id="55534" name="Magic Barrier - Event" action="A1">
 	<!-- For 1 hour, M. Def. +30%%. -->
 		<icon initial="icon.skill1036"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -465,12 +473,12 @@
 	<skill id="55535" name="Vampiric Rage - Event" action="A1">
 	<!-- For 1 hour with a certain probability recovers as HP 9%% of the P. melee damage inflicted. -->
 		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -481,12 +489,12 @@
 	<skill id="55536" name="Empower - Event" action="A1">
 	<!-- For 1 hour, M. Atk. +75%%. -->
 		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -497,12 +505,12 @@
 	<skill id="55537" name="Wind Walk - Event" action="A1">
 	<!-- For 1 hour, Speed +33. -->
 		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -513,12 +521,12 @@
 	<skill id="55538" name="Berserker Spirit - Event" action="A1">
 	<!-- For 1 hour, P. Def. -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, Movement Speed +8. -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -529,12 +537,12 @@
 	<skill id="55539" name="Greater Might - Event" action="A1">
 	<!-- For 1 hour, P. Atk. +10%%. -->
 		<icon initial="icon.skill1388"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -545,12 +553,12 @@
 	<skill id="55540" name="Greater Shield - Event" action="A1">
 	<!-- For 1 hour, P. Def. +15%%. -->
 		<icon initial="icon.skill1389"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -561,12 +569,12 @@
 	<skill id="55541" name="Wild Magic - Event" action="A1">
 	<!-- For 1 hour, M. Critical Rate +20. -->
 		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -577,12 +585,12 @@
 	<skill id="55542" name="Clarity - Event" action="A1">
 	<!-- For 1 hour, decreases physical skill MP consumption by 20%%, magic skill's MP consumption by 10%%, and song/ dance skill's MP consumption by 20%%. -->
 		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -593,10 +601,11 @@
 	<skill id="55543" name="Summon Agathion - Minion Eye" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -607,9 +616,10 @@
 	<skill id="55544" name="Summon Agathion - Matryoshka" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -617,9 +627,10 @@
 	<skill id="55545" name="Summon Agathion - Babayaga" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -627,12 +638,12 @@
 	<skill id="55546" name="Elk's Invisibility" action="A1">
 	<!-- For 1 min., disables preemptive attacks from monsters. Decreases Speed by 40%%. Disappears when you attack. -->
 		<icon initial="icon.skill0221"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -640,12 +651,11 @@
 	<skill id="55547" name="Elk's Blessing" action="A1">
 	<!-- For 1 hr., acquired XP/SP +30%%. -->
 		<icon initial="BranchSys.icon.br_xmas_miracle_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="43200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -653,10 +663,11 @@
 	<skill id="55548" name="Agathion Teleport: Gludio" action="A1">
 	<!-- Teleport to Gludio -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -664,10 +675,11 @@
 	<skill id="55549" name="Agathion Teleport: Dion" action="A1">
 	<!-- Teleport to Dion -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -675,10 +687,11 @@
 	<skill id="55550" name="Agathion Teleport: Giran" action="A1">
 	<!-- Teleport to the Town of Giran. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -686,10 +699,11 @@
 	<skill id="55551" name="Agathion Teleport: Town of Aden" action="A1">
 	<!-- Teleports you to the Town of Aden. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -697,7 +711,7 @@
 	<skill id="55552" name="Minion Eye's Courage">
 	<!-- CON/ MEN +1, weight limit +5000, Max. HP/ MP/ CP +100, when used. -->
 		<icon initial="icon.etc_rbracelet_aga_agit_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="1.0" >
+		<attributes property="MAGIC" magic-critical-rate="1.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -705,7 +719,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_CP">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
 				<power initial="100.0"/>
 			</vital-stat-modify>
 			<vital-stat-modify stat="MAX_HP">
@@ -728,14 +742,14 @@
 	<skill id="55553" name="Minion Eye's Blessed Resurrection" action="A1">
 	<!-- Resurrects a dead character and fully restores its XP. Consumes 2 Spirit Ore. -->
 		<icon initial="icon.skill5662"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
 			<magic-level initial="85"/>
 			<cast-range initial="400"/>
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="400"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -755,7 +769,7 @@
 	<skill id="55554" name="Matryoshka's Gift" action="A1">
 	<!-- Allows to receive 1 Strawberry Juice/ Mango Juice/ Cherry Juice. -->
 		<icon initial="icon.etc_pi_gift_box_i03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="43200000"/>
 			<effect-range initial="-1"/>
@@ -766,12 +780,11 @@
 	<skill id="55555" name="Matryoshka's Blessing" action="A1">
 	<!-- For 20 min XP/SP +30%%. -->
 		<icon initial="BranchSys.icon.br_xmas_miracle_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="7200000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -779,7 +792,7 @@
 	<skill id="55556" name="Mount an Elk" action="A1">
 	<!-- Can mount an Elk. -->
 		<icon initial="icon.skilltransform3"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
@@ -791,7 +804,7 @@
 	<skill id="55557" name="Babayaga's Courage">
 	<!-- Damage dealt in PvE +3%% received PvE damage -3%%. -->
 		<icon initial="icon.etc_rbracelet_aga_agit_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -801,10 +814,11 @@
 	<skill id="55558" name="Babayaga's Serenade" action="A1" type="MAGIC">
 	<!-- The nearby enemies calm down and don't want to attack. -->
 		<icon initial="icon.skill1273"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -812,11 +826,12 @@
 	<skill id="55559" name="+10 Damascus Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -824,11 +839,12 @@
 	<skill id="55560" name="+10 Lance Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -836,11 +852,12 @@
 	<skill id="55561" name="+10 Deadman's Glory Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -848,11 +865,12 @@
 	<skill id="55562" name="+10 Art of Battle Axe Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -860,11 +878,12 @@
 	<skill id="55563" name="+10 Staff of Evil Spirits" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -872,11 +891,12 @@
 	<skill id="55564" name="+10 Demon's Dagger" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -884,11 +904,12 @@
 	<skill id="55565" name="+10 Bellion Cestus" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -896,11 +917,12 @@
 	<skill id="55566" name="+10 Bow of Peril" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -908,11 +930,12 @@
 	<skill id="55567" name="+10 Samurai Long Sword*Samurai Long Sword" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -920,11 +943,12 @@
 	<skill id="55568" name="+10 Guardian's Sword" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -932,7 +956,7 @@
 	<skill id="55569" name="Expertise Rune (A-grade)">
 	<!-- When possessed, you get Expertise B skill -->
 		<icon initial="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -942,7 +966,7 @@
 	<skill id="55570" name="Mount - Gold Maned Lion" action="A1">
 	<!-- Allows to mount a Golden Lion. -->
 		<icon initial="icon.skilltransform3"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
@@ -954,12 +978,12 @@
 	<skill id="55571" name="Golden Maned Lion's Invisibility" action="A1">
 	<!-- Makes a character invisible and invincible to enemy attacks. Speed -30%%. Disappears if your character attacks. -->
 		<icon initial="icon.skill_agathion_special"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -967,7 +991,7 @@
 	<skill id="55572" name="Mount - Princess Ant" action="A1">
 	<!-- Allows to mount Princess Ant. -->
 		<icon initial="icon.skilltransform3"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
@@ -979,12 +1003,12 @@
 	<skill id="55573" name="Princess Ant's Invisibility" action="A1">
 	<!-- Makes a character invisible and invincible to enemy attacks. Speed -30%%. Disappears if your character attacks. -->
 		<icon initial="icon.skill_agathion_special"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -992,7 +1016,7 @@
 	<skill id="55574" name="Major Quick Recovery Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_bm_hero_red_potion"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1002,7 +1026,7 @@
 	<skill id="55575" name="The Finest Quick Recovery Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_bm_hero_red_potion"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1017,7 +1041,7 @@
 			<reuse initial="10000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1030,7 +1054,7 @@
 			<reuse initial="10000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1038,7 +1062,7 @@
 	<skill id="55578" name="Lucky Charm">
 	<!-- Chance of dropping items -90% when character dies. Cannot be used by chaotic characters. -->
 		<icon initial="BranchSys.icon.br_four_leaf_clover_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1051,7 +1075,7 @@
 		level 2: XP/SP +60%, while hunting.
 	 -->
 		<icon initial="icon.skill19226"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1064,7 +1088,7 @@
 		level 2: If stored in the inventory during fishing, acquired XP/SP +50%.
 	 -->
 		<icon initial="icon.fishing_zone_ticket"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1078,7 +1102,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1090,7 +1113,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1098,11 +1120,10 @@
 	<skill id="55583" name="Formal Wear Appearance Scroll" action="A1">
 	<!-- Makes you armor look like Formal Wear. Combat stats are improved. Remains after death. -->
 		<icon initial="icon.etc_charm_of_courage_i02"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1113,10 +1134,11 @@
 		level 2: For 20 min., P./ M. Atk. +5%%, Atk. Spd./ Casting Spd. +5%%.
 	 -->
 		<icon initial="icon.etc_trans_4f_s_b_01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="700"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1124,12 +1146,11 @@
 	<skill id="55585" name="Special Hero's Fruit" action="A1">
 	<!-- For 20 min., P./ M. Atk. +8%%, P./ M. Def. +15%%, HP/ MP/ CP +18%%, HP/ MP Recovery Bonus +24%%. Recovers as HP 3%% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon initial="icon.etc_cobol_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="20000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1142,7 +1163,6 @@
 			<reuse initial="20000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1150,7 +1170,7 @@
 	<skill id="55587" name="Hero's Recovery Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_potion_scarlet_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1160,7 +1180,7 @@
 	<skill id="55588" name="Hero's Major Recovery Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_potion_red_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1170,7 +1190,7 @@
 	<skill id="55589" name="Hero's MP Recovery Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_potion_blue_i00"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" >
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1186,7 +1206,7 @@
 	<skill id="55590" name="Golden Mermaid's Scale" action="A1">
 	<!-- For 3 hours, during fishing XP/SP +10%%. -->
 		<icon initial="icon.etc_oren_fish_scale_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1196,7 +1216,7 @@
 	<skill id="55591" name="Growth Amulet">
 	<!-- XP/SP +40%%, while hunting. -->
 		<icon initial="BranchSys3.lcon.g_rune_itemdrop_up"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1206,7 +1226,7 @@
 	<skill id="55592" name="Hero's Bracelet">
 	<!-- Activates 4 Talisman slots.  HP/ MP/ CP +5%%. -->
 		<icon initial="icon.dimension_bracelet_i05"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1216,7 +1236,7 @@
 	<skill id="55593" name="Returning Hero's Talisman">
 	<!-- P. Def. +22, M. Def. +11, P./M. Evasion +1, Max. HP/MP/CP +80, Atk./Casting Spd. +9, Movement Speed +4. -->
 		<icon initial="icon.npoint_talisman_stat"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1226,7 +1246,7 @@
 	<skill id="55594" name="Expertise Rune (C-grade)">
 	<!-- When possessed, you get Expertise C skill -->
 		<icon initial="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1236,7 +1256,7 @@
 	<skill id="55595" name="Party Support Cube - Lv. 1" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_clear_crystal_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -1247,7 +1267,7 @@
 	<skill id="55596" name="Soulshot Support Cube" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_violet_crystal_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -1258,7 +1278,7 @@
 	<skill id="55597" name="Spiritshot Support Cube" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_pink_crystal_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -1269,7 +1289,7 @@
 	<skill id="55598" name="Buff Support Cube" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_dkbrown_crystal_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -1280,7 +1300,7 @@
 	<skill id="55599" name="Potion Support Cube - Lv. 1" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_black_crystal_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>

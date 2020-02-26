@@ -3,13 +3,13 @@
 	<skill id="15600" name="Lindvior's Attack" action="A1">
 	<!-- Powerful P. Atk. on enemy. -->
 		<icon initial="icon.skill1275"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<reuse initial="5000"/>
 			<cool-time initial="1000"/>
 			<effect-point initial="-867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-867000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -17,13 +17,13 @@
 	<skill id="15601" name="Lindvior's Attack" action="A1">
 	<!-- Powerful P. Atk. on enemy. -->
 		<icon initial="icon.skill1275"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<reuse initial="5000"/>
 			<cool-time initial="1000"/>
 			<effect-point initial="-867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-867000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -31,11 +31,11 @@
 	<skill id="15603" name="Disrupt Recharge" action="A2">
 	<!-- Disrupts recharge. -->
 		<icon initial="icon.skill14444"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="1800"/>
 			<effect-point initial="2"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -43,11 +43,10 @@
 	<skill id="15604" name="Disrupt Recharge" action="A2">
 	<!-- Disrupts recharge. -->
 		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="1800"/>
 			<effect-point initial="2"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -55,11 +54,11 @@
 	<skill id="15605" name="Recharge Possible" action="A2">
 	<!-- Recharge possible. -->
 		<icon initial="icon.skill0005"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="25000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -67,12 +66,12 @@
 	<skill id="15606" name="Recharge" action="A1">
 	<!-- Recharge. -->
 		<icon initial="icon.skill14444"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<cool-time initial="200"/>
 			<effect-point initial="-2"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-2000"/>
+			<hit-time initial="10000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -80,11 +79,11 @@
 	<skill id="15607" name="Depleted" debuff="true" action="A2" type="MAGIC">
 	<!-- Energy depleted. -->
 		<icon initial="icon.skill1064"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="1800"/>
 			<effect-point initial="-676"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-676000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -95,12 +94,12 @@
 	<skill id="15608" name="Power Strike" max-level="7" action="A1">
 	<!-- Powerful P. Atk. on enemy. -->
 		<icon initial="icon.skill0003"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0">
 			<cast-range initial="40"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="ENEMY" />
@@ -120,12 +119,12 @@
 	<skill id="15609" name="Decreased Defense" max-level="7" action="A2">
 	<!-- Decreases  P. Def. by30%. -->
 		<icon initial="icon.skill1422"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="300"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -133,12 +132,12 @@
 	<skill id="15610" name="Spinning Slasher" max-level="7" action="A1">
 	<!-- Powerful attack on nearby enemies. -->
 		<icon initial="icon.skill0922"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" />
@@ -158,12 +157,12 @@
 	<skill id="15611" name="Tornado Slasher" max-level="7" action="A1">
 	<!-- Powerful attack on nearby enemies. -->
 		<icon initial="icon.skill0922"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="800" />
@@ -183,16 +182,16 @@
 	<skill id="15612" name="Thunder Storm" max-level="7" action="A2">
 	<!-- Stuns for 2 seconds. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-167"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-167000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="2"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -200,12 +199,12 @@
 	<skill id="15613" name="Ranged Magic" max-level="7" action="A1" type="MAGIC">
 	<!-- Powerful M. Atk. on enemy. -->
 		<icon initial="icon.skill1167"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-264"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-264000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -213,12 +212,12 @@
 	<skill id="15614" name="Decreased M. Def." max-level="7" debuff="true" action="A2" type="MAGIC">
 	<!-- Decreases M. Def. by 20%. -->
 		<icon initial="icon.skill1422"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -226,12 +225,12 @@
 	<skill id="15615" name="Increase P. Atk." max-level="7" action="A2" type="MAGIC">
 	<!-- P. Atk./ M. Atk. + 10%. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -239,12 +238,12 @@
 	<skill id="15616" name="Aggression" max-level="7" debuff="true" action="A1">
 	<!-- Provokes target into attacking you. -->
 		<icon initial="icon.skill10027"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -252,12 +251,12 @@
 	<skill id="15617" name="Power Smash" max-level="7" action="A1">
 	<!-- Powerful P. Atk. on enemy. -->
 		<icon initial="icon.skill0003"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-167"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-167000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -265,12 +264,12 @@
 	<skill id="15618" name="Power Strike" max-level="7" action="A2">
 	<!-- Inflicts a powerful P. Atk. on the target and decreases P. Def. -->
 		<icon initial="icon.skill0003"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="40"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-167"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-167000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -278,12 +277,12 @@
 	<skill id="15620" name="Power Shot" max-level="7" action="A1">
 	<!-- Powerful P. Atk. on enemy. -->
 		<icon initial="icon.skill0056"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-167"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-167000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -291,16 +290,16 @@
 	<skill id="15621" name="Stun Shot" max-level="7" action="A2">
 	<!-- Attacks and Stuns target for 2 seconds. -->
 		<icon initial="icon.skill0056"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-167"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-167000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="2"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -308,12 +307,12 @@
 	<skill id="15622" name="Ranged Magic" max-level="7" action="A1" type="MAGIC">
 	<!-- Powerful M. Atk. on enemy. -->
 		<icon initial="icon.skill1167"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-167"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-167000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -321,12 +320,12 @@
 	<skill id="15623" name="Push Up" max-level="7" debuff="true" action="A2">
 	<!-- Aerial Yoke. -->
 		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -337,12 +336,12 @@
 	<skill id="15624" name="Heal" max-level="7" action="A1" type="MAGIC">
 	<!-- Monster Heal. -->
 		<icon initial="icon.skill1401"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="403"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="403000"/>
+			<hit-time initial="15000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -350,7 +349,7 @@
 	<skill id="15626" name="Lv. 86 Raid Boss">
 	<!-- A mutated version of the Dartanions at the Altar of Evil. It is bigger and stronger. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -360,7 +359,7 @@
 	<skill id="15627" name="Lv. 93 Raid Boss">
 	<!-- Captain of the Garden Patrols. He fights with the monsters in the garden. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -370,7 +369,7 @@
 	<skill id="15628" name="Lv. 95 Raid Boss">
 	<!-- A lesser member of the Spicula bosses, assigned to protect the Isle of Souls from the invading golems. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -380,12 +379,12 @@
 	<skill id="15629" name="Nerva's Mental Blow" action="A1">
 	<!-- Powerful attack on a single enemy. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="70"/>
 			<reuse initial="5000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -393,12 +392,12 @@
 	<skill id="15630" name="Stun Trap" debuff="true" action="A2">
 	<!-- Immobilizes target and nearby enemies. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="800"/>
 			<reuse initial="5000"/>
 			<effect-point initial="-642"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-642000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -406,12 +405,12 @@
 	<skill id="15632" name="Replenish Energy" action="A1">
 	<!-- Recharge. -->
 		<icon initial="icon.skill14444"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<cool-time initial="200"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="10000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -419,7 +418,7 @@
 	<skill id="15633" name="Lv. 99 Raid Boss">
 	<!-- Originally a half-orc hero, but now turned to a demon due to excessive dark energy. Unlike the other half-orcs who retained their mind, this one is dictated only by primal instinct. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -429,7 +428,7 @@
 	<skill id="15634" name="Lv. 99 Raid Boss">
 	<!-- A demon summoned from the dark spirit world by Triol , one of the 4 great demons, when he used his blood. Often called the Putrefier due to the ability to putrefy and merge corpses. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -439,7 +438,7 @@
 	<skill id="15635" name="Lv. 99 Raid Boss">
 	<!-- A noble orc hero of royal blood, and a symbolic figure for the Nerva race that wishes to construct an orc kingdom. He has begun to take action to construct the orc kingdom after seeing the illusion made by Triol (Pa'agrio's phantom). -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -449,11 +448,11 @@
 	<skill id="15636" name="Dimensional Teleport" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="3300"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -461,11 +460,10 @@
 	<skill id="15637" name="Dimensional Space" action="A2">
 	<!-- You are in the Dimensional Space. You can either restart the game or go through Mermoden in the village to return. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -473,7 +471,7 @@
 	<skill id="15638" name="Lindvior">
 	<!-- Very strong against Wind, and vulnerable to Earth. -->
 		<icon initial="icon.skillboss"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -483,11 +481,11 @@
 	<skill id="15639" name="Mysterious Fear" action="A2" type="MAGIC">
 	<!-- In Fear. -->
 		<icon initial="icon.skill1169"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="-240"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-240000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -495,7 +493,7 @@
 	<skill id="15640" name="Antharas' Explosive Rage" debuff="true" action="A2">
 	<!-- Antharas' rage has reached its limit, distorting even the very land Antharas is standing on. -->
 		<icon initial="icon.skill5086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -505,7 +503,7 @@
 	<skill id="15641" name="Valakas' Explosive Rage" debuff="true" action="A2">
 	<!-- Valakas' rage has reached its limit, distorting even the very land Valakas is standing on. -->
 		<icon initial="icon.skill5086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -515,11 +513,11 @@
 	<skill id="15654" name="Master's Blessing - GM's Courage" action="A2">
 	<!-- The GM is always by your side. Increases P. Atk. toward monsters by 100%% for 5 minutes. -->
 		<icon initial="icon.skill5661"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -527,11 +525,11 @@
 	<skill id="15655" name="Master's Blessing - GM's Protection" action="A2">
 	<!-- The GM is always by your side. Becomes invincible for 5 minutes. -->
 		<icon initial="icon.skill5662"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -539,12 +537,12 @@
 	<skill id="15656" name="Power Strike" action="A1">
 	<!-- Powerful physical attack on target. -->
 		<icon initial="icon.skill0003"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -552,12 +550,12 @@
 	<skill id="15657" name="Decreased Defense" action="A2">
 	<!-- Decreases P. Def. by 30%%. -->
 		<icon initial="icon.skill1422"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="300"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -565,12 +563,12 @@
 	<skill id="15658" name="Spinning Slasher" action="A1">
 	<!-- Powerful attack on nearby enemies. -->
 		<icon initial="icon.skill0922"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -578,12 +576,12 @@
 	<skill id="15659" name="Tornado Slasher" action="A1">
 	<!-- Powerful attack on nearby enemies. -->
 		<icon initial="icon.skill0922"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -591,12 +589,12 @@
 	<skill id="15660" name="Thunder Storm" action="A2">
 	<!-- Stuns for 2 sec. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-167"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-167000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -604,12 +602,12 @@
 	<skill id="15661" name="Dark Buster" action="A1" type="MAGIC">
 	<!-- Attacks frontal enemies with the power of darkness. -->
 		<icon initial="icon.skill1167"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="1200"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-264"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-264000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -617,12 +615,12 @@
 	<skill id="15662" name="Decreased M. Def." debuff="true" action="A2" type="MAGIC">
 	<!-- M. Def. -20%%. -->
 		<icon initial="icon.skill1422"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -630,12 +628,12 @@
 	<skill id="15663" name="Increase P. Atk." action="A2" type="MAGIC">
 	<!-- P. Atk. and M. Atk. + 10%%. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -643,13 +641,13 @@
 	<skill id="15664" name="Push Up" debuff="true" action="A2">
 	<!-- Floats the target into the air and stops him from moving for awhile. -->
 		<icon initial="icon.skill11050"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-692"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-692000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -657,7 +655,7 @@
 	<skill id="15665" name="Presentation - Anakim / Lilith" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -673,7 +671,7 @@
 		level 5: Max HP +60%% (Permanent).
 	 -->
 		<icon initial="icon.skill1045"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -689,7 +687,7 @@
 		level 5: Max P. Atk. +30%% (Permanent).
 	 -->
 		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -705,7 +703,7 @@
 		level 5: Max M. Atk. +30% (Permanent).
 	 -->
 		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -721,7 +719,7 @@
 		level 5: P. Def. +40%% (Permanent).
 	 -->
 		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -737,7 +735,7 @@
 		level 5: M. Def. +40%% (Permanent).
 	 -->
 		<icon initial="icon.skill1010"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -753,7 +751,7 @@
 		level 5: Max Atk. Spd. +30%% (Permanent).
 	 -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -769,7 +767,7 @@
 		level 5: P. Atk. Resistance +30 (Permanent).
 	 -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -785,11 +783,11 @@
 		level 5: For 25 seconds, HP doesn't drop below 1. Stuns the target.
 	 -->
 		<icon initial="icon.skill1608"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="2"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -800,13 +798,13 @@
 	<skill id="15674" name="Mass Shackling" debuff="true" action="A1">
 	<!-- Provokes nearby enemies and inflicts Hold for 10 seconds. -->
 		<icon initial="icon.skill0404"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<cool-time initial="470"/>
 			<effect-point initial="-1098"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1098000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -817,13 +815,13 @@
 	<skill id="15675" name="Tribunal" debuff="true" action="A1">
 	<!-- Inflicts physical damage on the enemy with bonus 1010 Power. and decreases the enemy's P. Critical Rate by 20% for 30 seconds. Requires a sword or blunt weapon. Over-hit. -->
 		<icon initial="icon.skill0400"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="40"/>
 			<reuse initial="4000"/>
 			<cool-time initial="700"/>
 			<effect-point initial="-911"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-911000"/>
+			<hit-time initial="1300"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -839,13 +837,13 @@
 	<skill id="15676" name="Shield Stun" debuff="true" action="A1">
 	<!-- Hits the enemy with user's shield. Stuns them for 9 seconds. Shield required. -->
 		<icon initial="icon.skill0092"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="-377"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-377000"/>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -863,7 +861,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -871,7 +868,7 @@
 	<skill id="15678" name="Sayha's Blessing" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -881,11 +878,11 @@
 	<skill id="15679" name="Dandy's Precise Swing" action="A1">
 	<!-- Throws back the target and inflicts heavy physical damage. -->
 		<icon initial="icon.skill0003"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="200"/>
 			<effect-point initial="-250"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-250000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -896,13 +893,13 @@
 	<skill id="15680" name="Roa's Hi-tech Attack" action="A1">
 	<!-- Deals significant magic damage and decreases Movement Speed, Atk. Spd. and Casting Spd. by 50%% for 5 seconds. -->
 		<icon initial="icon.skill4107"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="10000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-200"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-200000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -913,7 +910,7 @@
 	<skill id="15681" name="Arena Administrator's Location" max-level="2" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill1045"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -923,13 +920,13 @@
 	<skill id="15682" name="Orc Thunder" max-level="3" debuff="true" action="A1">
 	<!-- Pulls the target into your reach. -->
 		<icon initial="icon.skill10015"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-150"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-150000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -943,7 +940,7 @@
 	<skill id="15683" name="Front Drain" max-level="3" action="A1">
 	<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="2000"/>
 			<effect-point initial="-273">
@@ -951,10 +948,7 @@
 				<value level="3">-568</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-273000">
-				<value level="2">-405000</value>
-				<value level="3">-568000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -973,10 +967,11 @@
 		level 4: Restores HP/MP by 70%%.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -989,7 +984,7 @@
 		level 4: Restores 5%% of target's HP.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<reuse initial="2000">
 				<value level="2">2500</value>
@@ -998,7 +993,7 @@
 			</reuse>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1010,7 +1005,7 @@
 		level 3: Restores 20%% of allies' HP.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="2500">
 				<value level="2">3500</value>
@@ -1018,7 +1013,7 @@
 			</reuse>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1026,11 +1021,10 @@
 	<skill id="15687" name="Promise of Vengeance" action="A1">
 	<!-- Wrath caused by the death of an ally. Restores 50%% of HP and MP. P. Atk. and M. Atk., Atk. Spd. and Casting Spd. +30%% for 5 minutes -->
 		<icon initial="icon.skill1346"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1041,13 +1035,13 @@
 	<skill id="15688" name="Chain Snake" debuff="true" action="A1">
 	<!-- Pulls the targets to your character. -->
 		<icon initial="icon.skill10015"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="30000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-200"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-200000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1058,13 +1052,13 @@
 	<skill id="15689" name="Mass Chain Snake" debuff="true" action="A1">
 	<!-- Pulls nearby enemies to your character. -->
 		<icon initial="icon.skill10016"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="60000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-200"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-200000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1075,13 +1069,13 @@
 	<skill id="15690" name="Fearsome Defensive Strike" max-level="2" action="A1">
 	<!-- Pulls nearby enemies to your character. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="10000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1092,13 +1086,13 @@
 	<skill id="15691" name="Defense Break" action="A1">
 	<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="40000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-273"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-273000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1109,13 +1103,13 @@
 	<skill id="15692" name="Smashing Attack" action="A1">
 	<!-- Inflicts heavy physical damage on enemies surrounding your character. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="40000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-273"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-273000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1126,13 +1120,13 @@
 	<skill id="15693" name="Giant Bombardier" debuff="true" action="A1">
 	<!-- Knocks Down enemies in the working range. -->
 		<icon initial="icon.skill10262"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<cool-time initial="1000"/>
 			<effect-point initial="-200"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-200000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1143,13 +1137,13 @@
 	<skill id="15694" name="Mighty Giant Bombardier" debuff="true" action="A1">
 	<!-- Stuns enemies in the working range. -->
 		<icon initial="icon.skill10265"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<cool-time initial="1000"/>
 			<effect-point initial="-200"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-200000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1160,10 +1154,11 @@
 	<skill id="15695" name="Hex" max-level="15" debuff="true" action="A1">
 	<!-- Decreases the enemy's P. Def. by 23% for 30 seconds. -->
 		<icon initial="icon.skill0122"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="2000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1174,13 +1169,13 @@
 	<skill id="15696" name="Thunder Stun" debuff="true" action="A1">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="6000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1191,13 +1186,13 @@
 	<skill id="15697" name="Giant Bombardier" max-level="2" debuff="true" action="A1">
 	<!-- Knocks Down enemies in the working range. -->
 		<icon initial="icon.skill10262"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<cool-time initial="1000"/>
 			<effect-point initial="-200"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-200000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

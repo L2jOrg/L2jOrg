@@ -3,19 +3,19 @@
 	<skill id="55700" name="Scroll: Dance of Fire" action="A2">
 	<!-- Increases P. Critical Damage +35%% for 10 minutes. -->
 		<icon initial="icon.skill0274"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<item initial="29014"/>
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal type="CRITICAL_DMG_UP" >
+		<abnormal type="CRITICAL_DMG_UP">
 			<level initial="4"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
@@ -29,11 +29,12 @@
 	<skill id="55701" name="Release Agathion's Seal - Sin Eater" action="A1">
 	<!-- Summon Sin Eater Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -53,10 +54,10 @@
 			<reuse initial="60000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<target />
-		<abnormal type="EXP_BOTTLE" >
+		<abnormal type="EXP_BOTTLE">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -65,7 +66,7 @@
 	<skill id="55703" name="Blessed Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -75,7 +76,7 @@
 	<skill id="55704" name="Blessed Scroll: Enchant Armor (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -98,7 +99,7 @@
 		<icon initial="icon.bm_jewel_red_catseye">
 			<value level="6">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -121,7 +122,7 @@
 		<icon initial="Icon.bm_jewel_blue_catseye">
 			<value level="6">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -131,11 +132,12 @@
 	<skill id="55707" name="Fortune Red Cat's Eye Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -143,11 +145,12 @@
 	<skill id="55708" name="Fortune Blue Cat's Eye Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -155,11 +158,12 @@
 	<skill id="55709" name="Shining Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -167,24 +171,24 @@
 	<skill id="55710" name="Equip Lv. 4 Brooch">
 	<!-- The brooch radiates bright light. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal visual="AVE_BROOCH">
+		<abnormal visual="AVE_BROOCH" >
 			<time initial="-1"/>
+			<chance initial="-1"/>
 		</abnormal>
 	</skill>
 	<skill id="55711" name="Remove Lv. 4 Brooch" action="A1">
 	<!-- The bright light fades. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -199,14 +203,14 @@
 	<skill id="55712" name="Lv. 4 Brooch">
 	<!-- Activates 5 jewel slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
+			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
 				<power initial="5.0"/>
 			</stat-modify>
 		</effects>
@@ -214,7 +218,7 @@
 	<skill id="55713" name="Lv. 4 Brooch - Additional Effect">
 	<!-- Inventory Slot +12. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i03"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -228,10 +232,11 @@
 	<skill id="55714" name="Shining Golden Boot" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -239,12 +244,13 @@
 	<skill id="55715" name="Chef's Fish Stew Box" action="A1">
 	<!-- none -->
 		<icon initial="BranchSys.icon.br_silver_box_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -263,11 +269,10 @@
 	<skill id="55716" name="Letter Collector Spell" action="A1">
 	<!-- Grants the power of the Letter Collector. For 1 hour Max. HP +5%%, Max. MP +5%%, Max. CP +5%%, Speed +10, P. Atk. +8%%, M. Atk. +10%%. -->
 		<icon initial="icon.etc_candle_yellow_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -275,10 +280,11 @@
 	<skill id="55717" name="Shilen's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -286,7 +292,7 @@
 	<skill id="55718" name="XP Rune 50%">
 	<!-- XP/SP +50%%, while hunting. -->
 		<icon initial="icon.skill19226"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -296,7 +302,7 @@
 	<skill id="55719" name="Feather Rune">
 	<!-- Increases weight limit by 20%%. -->
 		<icon initial="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -327,9 +333,10 @@
 	<skill id="55722" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -337,9 +344,10 @@
 	<skill id="55723" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -347,9 +355,10 @@
 	<skill id="55724" name="Facelifting Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -357,9 +366,10 @@
 	<skill id="55725" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -367,9 +377,10 @@
 	<skill id="55726" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -377,9 +388,10 @@
 	<skill id="55727" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -387,9 +399,10 @@
 	<skill id="55728" name="Dye Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -397,9 +410,10 @@
 	<skill id="55729" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -407,9 +421,10 @@
 	<skill id="55730" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -417,9 +432,10 @@
 	<skill id="55731" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -427,9 +443,10 @@
 	<skill id="55732" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -437,9 +454,10 @@
 	<skill id="55733" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -447,9 +465,10 @@
 	<skill id="55734" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -457,9 +476,10 @@
 	<skill id="55735" name="Hair Style Change Potion" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -467,7 +487,7 @@
 	<skill id="55736" name="Elmoreden Cloak Basic Effect">
 	<!-- Increases PvP Attack Damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -506,7 +526,7 @@
 		level 20: PvP Attack Damage +5%, when using a single attack skill, deals 2375 fixed PvP damage to target at a certain rate and has a chance to reduce CP by 50%. Damage to Immobilized targets +30%. M. Def. +3%%.
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -564,14 +584,14 @@
 	<skill id="55738" name="Aden Cloak Basic Effect">
 	<!-- Increases Magic Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">
+			<stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" stat-add="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">
 				<power initial="0.1"/>
 			</stat-modify>
 		</effects>
@@ -600,14 +620,14 @@
 		level 20: Magic PvE Damage to all monsters +5%, when using an attack skill, Magic PvE Damage +100% at a certain rate, M. Skill Critical Damage +10%. M. Atk. +3%%.
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">
+			<stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" stat-add="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">
 				<power initial="0.3">
 					<value level="2">0.5</value>
 					<value level="3">0.8</value>
@@ -635,7 +655,7 @@
 	<skill id="55740" name="Elmore Cloak Basic Effect">
 	<!-- Increases Physical Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -674,7 +694,7 @@
 		level 20: Physical PvE Damage to all monsters +5%, when using an attack skill, Physical PvE Damage +100% at a certain rate, P. Skill Critical Damage +10%. P. Atk. +3%%.
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -732,7 +752,7 @@
 	<skill id="55742" name="Ferios Cloak Basic Effect">
 	<!-- Decreases received damage when enchanted and bestows various passive and active skills. -->
 		<icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -767,7 +787,7 @@
 		level 20: Damage Received -20%, Damage Received when Immobilized -30%, CP +10% when hit, P./ M. Attack +3600 for party members at certain rate when hit. P. Def. +3%%.
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -801,12 +821,12 @@
 	<skill id="55744" name="Blessing of Elmoreden" action="A1">
 	<!-- Makes you invincible for 10 sec and increases Speed by 100. -->
 		<icon initial="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -814,13 +834,13 @@
 	<skill id="55745" name="Spirit of Aden" action="A1">
 	<!-- Increases PvE Damage by 100% when dealing magic attack. -->
 		<icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -828,13 +848,13 @@
 	<skill id="55746" name="Spirit of Elmore" action="A1">
 	<!-- Increases PvE Damage by 100% when dealing physical attack. -->
 		<icon initial="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="1200000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -842,12 +862,12 @@
 	<skill id="55747" name="Blessing of Ferios" action="A1">
 	<!-- Makes you invincible for 20 sec. -->
 		<icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -860,13 +880,13 @@
 		level 4: Ignores CP in PvP, and deals 2375 fixed damage.
 	 -->
 		<icon initial="icon.skill0049"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="180000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -884,13 +904,13 @@
 		level 9: Decreases target's CP by 50%.
 	 -->
 		<icon initial="icon.skill0049"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="180000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -911,12 +931,12 @@
 		level 12: For 2 min, PvE Damage +100% when dealing magic attacks.
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_aden_cloak_normal"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -937,12 +957,12 @@
 		level 12: For 2 min, PvE Damage +100% when dealing physical attacks.
 	 -->
 		<icon initial="icon.skill0917"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -960,13 +980,13 @@
 		level 9: CP +70%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_tanzanite"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="180000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="300"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -978,13 +998,13 @@
 		level 3: For 20 sec, P./ M. Def. +3600.
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_perios_cloak_normal"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="689"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="689000"/>
+			<hit-time initial="300"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1001,13 +1021,13 @@
 		level 8: CP +70%.
 	 -->
 		<icon initial="icon.skill0049"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="120000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="689"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="689000"/>
+			<hit-time initial="300"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1026,7 +1046,7 @@
 		level 10: P. Atk. +31
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1047,7 +1067,7 @@
 		level 10: M. Atk. +33
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1068,7 +1088,7 @@
 		level 10: Atk. Spd.+45
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1089,7 +1109,7 @@
 		level 10: Casting Spd.+45
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1103,7 +1123,7 @@
 		level 3: P. Accuracy +3
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1117,7 +1137,7 @@
 		level 3: M. Accuracy +3
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1138,11 +1158,10 @@
 		level 10: Max HP +450
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1161,7 +1180,7 @@
 		level 10: Max MP +450
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1182,7 +1201,7 @@
 		level 10: Max CP +450
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1192,7 +1211,7 @@
 	<skill id="55764" name="Empire Cloak Augmentation" max-level="2" >
 	<!-- STR +1 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1202,7 +1221,7 @@
 	<skill id="55765" name="Empire Cloak Augmentation" max-level="2" >
 	<!-- CON +1 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1212,7 +1231,7 @@
 	<skill id="55766" name="Empire Cloak Augmentation" max-level="2" >
 	<!-- MEN +1 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1222,7 +1241,7 @@
 	<skill id="55767" name="Empire Cloak Augmentation" max-level="2" >
 	<!-- DEX +1 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1232,7 +1251,7 @@
 	<skill id="55768" name="Empire Cloak Augmentation" max-level="2" >
 	<!-- WIT +1 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1242,7 +1261,7 @@
 	<skill id="55769" name="Empire Cloak Augmentation" max-level="2" >
 	<!-- INT +1 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1263,7 +1282,7 @@
 		level 10: P. Critical Rate +7.5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1284,7 +1303,7 @@
 		level 10: P. Skill Critical Rate +7.5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1305,7 +1324,7 @@
 		level 10: M. Skill Critical Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1326,7 +1345,7 @@
 		level 10: P. Critical Damage Boost +7.5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1347,7 +1366,7 @@
 		level 10: P. Skill Critical Damage Boost +7.5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1365,7 +1384,7 @@
 		level 10: M. Critical Damage Boost +7%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1385,7 +1404,7 @@
 		level 9: Stun Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1405,7 +1424,7 @@
 		level 9: Hold Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1425,7 +1444,7 @@
 		level 9: Bleeding Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1445,7 +1464,7 @@
 		level 9: Paralysis Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1465,7 +1484,7 @@
 		level 9: Mind Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1485,7 +1504,7 @@
 		level 9: Sleep Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1505,7 +1524,7 @@
 		level 9: Poison Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1525,7 +1544,7 @@
 		level 9: Pull Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1545,7 +1564,7 @@
 		level 9: Petrification Attack Success Rate +15%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1559,11 +1578,10 @@
 		level 3: Max HP +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1575,11 +1593,10 @@
 		level 3: Max MP +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1591,11 +1608,10 @@
 		level 3: Max CP +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1607,7 +1623,7 @@
 		level 3: P. Atk. +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1621,7 +1637,7 @@
 		level 3: P. Def. +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1635,7 +1651,7 @@
 		level 3: Atk. Spd.+5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1649,7 +1665,7 @@
 		level 3: Speed +15
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1663,7 +1679,7 @@
 		level 3: M. Atk. +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1677,7 +1693,7 @@
 		level 3: M. Def. +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1691,7 +1707,7 @@
 		level 3: Casting Spd.+5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1705,7 +1721,7 @@
 		level 3: PvP Damage +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1719,7 +1735,7 @@
 		level 3: Received PvP Damage +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1733,7 +1749,7 @@
 		level 3: PvE Damage +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1747,7 +1763,7 @@
 		level 3: Received PvE Damage +5%
 	 -->
 		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

@@ -10,14 +10,13 @@
 			<cool-time initial="500"/>
 			<effect-point initial="-707"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-707000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="60"/>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="80"/>

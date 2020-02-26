@@ -3,12 +3,12 @@
 	<skill id="16100" name="Presentation" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="85"/>
 			<cast-range initial="600"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="10000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="TARGET" />
@@ -16,7 +16,7 @@
 	<skill id="16101" name="Tauti">
 	<!-- One of Bremnon's weapons, named by Shilen as the Lord of Hellfire. With its own ego and the ability to control living beings' emotions, Tauti is manipulating the class warfare among the races in the Seed in order to evolve itself and complete the sacrifices for Shilen. -->
 		<icon initial="icon.skillboss"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -32,12 +32,12 @@
 	<skill id="16102" name="Dark Storm" action="A1" type="MAGIC">
 	<!-- Powerful magical attack on target and nearby enemies. -->
 		<icon initial="icon.skill1167"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-264"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-264000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -45,7 +45,7 @@
 	<skill id="16103" name="Death Lift" max-level="6" action="A1">
 	<!-- Deals damage and cancels target. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="5000"/>
 			<cool-time initial="1000"/>
@@ -54,10 +54,7 @@
 				<value level="3">-150</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-150000">
-				<value level="2">-200000</value>
-				<value level="3">-150000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -74,13 +71,13 @@
 	<skill id="16104" name="Fatal Strike" max-level="7" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="5000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -98,7 +95,7 @@
 	<skill id="16106" name="Orc Thunder" max-level="2" debuff="true" action="A2">
 	<!-- Pulls the target into your reach. -->
 		<icon initial="icon.skill10015"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="3000"/>
 			<cool-time initial="1000"/>
@@ -106,9 +103,7 @@
 				<value level="2">-200</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-150000">
-				<value level="2">-200000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -121,13 +116,13 @@
 	<skill id="16107" name="Fatal Blow" max-level="3" action="A1">
 	<!-- Powerful blow on a vital spot. Critical. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="5000"/>
 			<cool-time initial="700"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -138,7 +133,7 @@
 	<skill id="16108" name="Bloody Blades" max-level="7" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="800"/>
@@ -147,9 +142,8 @@
 				<value level="3">-700</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-300000">
-				<value level="2">-400000</value>
-				<value level="3">-700000</value>
+			<hit-time initial="1500">
+				<value level="7">3000</value>
 			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -164,12 +158,12 @@
 	<skill id="16109" name="Heavy Armor Rise" action="A2" type="MAGIC">
 	<!-- P. Critical Damage increased. -->
 		<icon initial="icon.m_class_heavy"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -180,12 +174,12 @@
 	<skill id="16110" name="Light Armor Rise" action="A2" type="MAGIC">
 	<!-- P. Atk. increased. -->
 		<icon initial="icon.m_class_light"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -196,12 +190,12 @@
 	<skill id="16111" name="Robe Rise" action="A2" type="MAGIC">
 	<!-- M. Atk. increased. -->
 		<icon initial="icon.m_class_robe"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -212,12 +206,12 @@
 	<skill id="16112" name="Speed Rise" action="A2" type="MAGIC">
 	<!-- Atk. Spd. and Casting Spd. increased. -->
 		<icon initial="icon.m_mystery_brain"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -228,13 +222,13 @@
 	<skill id="16113" name="Tragic Bleed" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.m_mystery_blood"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="1000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -251,11 +245,11 @@
 		level 5: Cuts target and party members' HP by 95%%.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="1300"/>
 			<effect-point initial="-10000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-10000000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -266,12 +260,12 @@
 	<skill id="16116" name="Self-Devastation" max-level="2" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -279,12 +273,12 @@
 	<skill id="16117" name="Amplify Damage - Stage 1" action="A2" type="MAGIC">
 	<!-- Damage + 20%% toward normal monsters. -->
 		<icon initial="icon.skill6367_1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -295,12 +289,12 @@
 	<skill id="16118" name="Amplify Damage - Stage 2" action="A2" type="MAGIC">
 	<!-- Damage + 30%% toward normal monsters. -->
 		<icon initial="icon.skill6367_2"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -311,13 +305,13 @@
 	<skill id="16119" name="Flare Chain" action="A1" type="MAGIC">
 	<!-- Deals fire damage to target and nearby enemies. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="450"/>
 			<reuse initial="5000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-700000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -328,12 +322,12 @@
 	<skill id="16121" name="Sleeping Cloud" max-level="5" debuff="true" action="A2" type="MAGIC">
 	<!-- Inflicts Sleep on nearby enemies for 30 seconds. -->
 		<icon initial="icon.skill1072"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="3000"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-700000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -345,7 +339,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="30"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -353,13 +347,13 @@
 	<skill id="16122" name="Flare Breath" debuff="true" action="A2" type="MAGIC">
 	<!-- Powerful flame attack, draining HP for 5 sec. -->
 		<icon initial="icon.skill4452"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="450"/>
 			<reuse initial="5000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-700000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -370,13 +364,13 @@
 	<skill id="16123" name="Flare Outburst" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="450"/>
 			<reuse initial="5000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-700000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -387,13 +381,13 @@
 	<skill id="16124" name="Flare Life" action="A1" type="MAGIC">
 	<!-- Recovers Deathmoz' HP. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<reuse initial="10000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="1300"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1300000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -404,13 +398,13 @@
 	<skill id="16125" name="Volcano Sword Dance" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="5000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -421,13 +415,13 @@
 	<skill id="16126" name="Volcano Buster" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="100"/>
 			<reuse initial="5000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -438,13 +432,13 @@
 	<skill id="16127" name="Blind Flame" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-700000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -455,13 +449,13 @@
 	<skill id="16128" name="Flame Bog" debuff="true" action="A2" type="MAGIC">
 	<!-- Powerful flame attack on target and nearby enemies, draining HP for 5 sec. -->
 		<icon initial="icon.skill4279_new"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="450"/>
 			<reuse initial="5000"/>
 			<cool-time initial="300"/>
 			<effect-point initial="-700"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-700000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -483,12 +477,12 @@
 			<value level="4">icon.desert_thirst_Lv4</value>
 			<value level="5">icon.desert_thirst_Lv5</value>
 		</icon>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="1300"/>
 			<reuse initial="5000"/>
 			<effect-point initial="-500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -499,19 +493,19 @@
 	<skill id="16130" name="Oasis Energy" debuff="true" action="A2" type="MAGIC">
 	<!-- The Oasis has quenched your thirst, suddenly wearing you out. Atk./Atk. Spd. -25%%, and Movement Speed -50. -->
 		<icon initial="icon.oasis_feel"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="1300"/>
 			<reuse initial="5000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="10"/>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="15"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -530,12 +524,12 @@
 	<skill id="16131" name="Thirst Quench" debuff="true" action="A2" type="MAGIC">
 	<!-- Your thirst has been quenched. P./M. Atk., and Atk./Casting Spd. + 50%%. -->
 		<icon initial="icon.release_thirst"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="1300"/>
 			<reuse initial="5000"/>
 			<effect-point initial="650"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="650000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -546,13 +540,13 @@
 	<skill id="16132" name="Oasis Mirage" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="15000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -563,13 +557,13 @@
 	<skill id="16133" name="Watery Grave" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="15000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -580,13 +574,13 @@
 	<skill id="16134" name="Doom Shrieker" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -597,7 +591,7 @@
 	<skill id="16135" name="Begin Research" action="A2" type="MAGIC">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="1"/>
@@ -610,7 +604,7 @@
 	<skill id="16136" name="Reward x 2" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  2 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="1"/>
@@ -623,7 +617,7 @@
 	<skill id="16137" name="Reward x 4" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  4 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="1"/>
@@ -636,7 +630,7 @@
 	<skill id="16138" name="Reward x 8" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  8 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="1"/>
@@ -649,7 +643,7 @@
 	<skill id="16139" name="Reward x 16" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  16 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="1"/>
@@ -662,7 +656,7 @@
 	<skill id="16140" name="Reward x 32" action="A2" type="MAGIC">
 	<!-- Hero's powers give you x  32 the rewards. Disappears upon death or expiration. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="1"/>
@@ -675,11 +669,10 @@
 	<skill id="16141" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -687,11 +680,10 @@
 	<skill id="16142" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -699,11 +691,10 @@
 	<skill id="16143" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -711,11 +702,10 @@
 	<skill id="16144" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -723,11 +713,10 @@
 	<skill id="16145" name="Research Success" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -735,11 +724,10 @@
 	<skill id="16146" name="Research Fail" action="A2">
 	<!-- Researching the Heroes' Power. -->
 		<icon initial="icon.etc_deco_star_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -747,13 +735,16 @@
 	<skill id="16147" name="Fatal Wave" max-level="7" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="570"/>
 			<effect-point initial="-1578"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1578000"/>
+			<hit-time initial="1200">
+				<value level="4">3000</value>
+				<value level="5">1200</value>
+			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -771,12 +762,12 @@
 	<skill id="16148" name="Fear" max-level="5" debuff="true" action="A2" type="MAGIC">
 	<!-- Compelled to move due to Fear. -->
 		<icon initial="icon.skill1092"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="5000"/>
 			<effect-point initial="-150"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-150000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -792,13 +783,13 @@
 	<skill id="16149" name="Fatal Poison" max-level="5" debuff="true" action="A2" type="MAGIC">
 	<!-- HP cut due to deadly Poison.. -->
 		<icon initial="icon.skill4035"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="5000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-150"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-150000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -814,12 +805,12 @@
 	<skill id="16150" name="Slow" max-level="5" debuff="true" action="A2" type="MAGIC">
 	<!-- Movement Speed has momentarily decreased by 30%%. -->
 		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="600"/>
 			<reuse initial="3000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -833,7 +824,7 @@
 	<skill id="16151" name="Aura Spike" max-level="7" action="A1" type="MAGIC">
 	<!-- Attacks the target with magic. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100">
@@ -844,13 +835,7 @@
 				<value level="7">-125</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000">
-				<value level="2">-105000</value>
-				<value level="3">-110000</value>
-				<value level="4">-115000</value>
-				<value level="6">-120000</value>
-				<value level="7">-125000</value>
-			</hit-time>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -867,7 +852,7 @@
 	<skill id="16152" name="Fire Spike" max-level="7" action="A1" type="MAGIC">
 	<!-- Attacks the enemy with powerful Fire magic. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100">
@@ -878,13 +863,7 @@
 				<value level="7">-125</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000">
-				<value level="2">-105000</value>
-				<value level="3">-110000</value>
-				<value level="4">-115000</value>
-				<value level="6">-120000</value>
-				<value level="7">-125000</value>
-			</hit-time>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -901,13 +880,13 @@
 	<skill id="16155" name="Charmed Kefensis" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -918,13 +897,13 @@
 	<skill id="16156" name="Mass Droop" max-level="7" debuff="true" action="A2" type="MAGIC">
 	<!-- Decreases Atk. Spd. and Speed. -->
 		<icon initial="icon.skill1206"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="40"/>
 			<reuse initial="6000"/>
 			<cool-time initial="570"/>
 			<effect-point initial="-1578"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1578000"/>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -935,13 +914,13 @@
 	<skill id="16157" name="Grave Bleeding" max-level="5" debuff="true" action="A2" type="MAGIC">
 	<!-- Bleed instantly cuts HP. -->
 		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="40"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -957,13 +936,13 @@
 	<skill id="16158" name="Beleth's Volcano" action="A1" type="MAGIC">
 	<!-- Attacks the enemy with powerful Fire magic. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<reuse initial="2000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-709"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-709000"/>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -974,13 +953,13 @@
 	<skill id="16159" name="Beleth's Blaze" action="A1" type="MAGIC">
 	<!-- Deals powerful fire damage to nearby enemies. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -991,13 +970,13 @@
 	<skill id="16160" name="Beleth's Flame" debuff="true" action="A2" type="MAGIC">
 	<!-- Powerful flames burn off HP. -->
 		<icon initial="icon.skill1101"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="6000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1008,13 +987,13 @@
 	<skill id="16161" name="Darion's Bleed" debuff="true" action="A2" type="MAGIC">
 	<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="6000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1025,13 +1004,13 @@
 	<skill id="16162" name="Beleth's Meteor" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="6000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1042,13 +1021,13 @@
 	<skill id="16163" name="Darion's Sword Storm" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="6000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1059,13 +1038,13 @@
 	<skill id="16164" name="Flame Blade" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="6000"/>
 			<cool-time initial="570"/>
 			<effect-point initial="-1578"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1578000"/>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1076,13 +1055,13 @@
 	<skill id="16165" name="Dark Blade" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="6000"/>
 			<cool-time initial="800"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1097,21 +1076,21 @@
 		level 3: For 3 minutes, P. Evasion + 40, M. Evasion + 40, Evasion Rate against P. Skills + 40%.
 	 -->
 		<icon initial="icon.skill0078"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
 				<value level="2">120000</value>
 			</reuse>
 			<effect-point initial="204"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="204000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="10"/>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="180"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -1122,7 +1101,7 @@
 		level 2: P./M. Evasion very much strengthened.
 	 -->
 		<icon initial="icon.skill0078"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1132,13 +1111,13 @@
 	<skill id="16168" name="Half-kill" action="A1">
 	<!-- Cute target's HP in half. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="40"/>
 			<reuse initial="5000"/>
 			<cool-time initial="700"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1149,12 +1128,12 @@
 	<skill id="16171" name="Summon Poison Zone" debuff="true" action="A1">
 	<!-- Cute target's HP in half. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-point initial="-707"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-707000"/>
+			<hit-time initial="300"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1165,11 +1144,10 @@
 	<skill id="16172" name="Poisoned" debuff="true" action="A2">
 	<!-- HP drops by 75 per second due to a poisonous fog. -->
 		<icon initial="icon.skill1167"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="-707"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-707000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1180,7 +1158,7 @@
 	<skill id="16173" name="Invincibility" action="A2">
 	<!-- Invincible. -->
 		<icon initial="icon.skill1418"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1190,12 +1168,12 @@
 	<skill id="16174" name="Herb of Growth" action="A1">
 	<!-- Hellbound's mysterious powers give you 10 min of SP/XP gain + 50%% through hunting. Entire party. -->
 		<icon initial="BranchSys2.icon.g_giant_gem"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="100"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1203,12 +1181,12 @@
 	<skill id="16175" name="Major Herb of Growth">
 	<!-- Hellbound's mysterious powers give you 10 min of SP/XP gain + 100%% through hunting. Entire party. -->
 		<icon initial="BranchSys2.icon.g_dawn_gem"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="100"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1216,12 +1194,12 @@
 	<skill id="16176" name="Superior Herb of Growth">
 	<!-- Hellbound's mysterious powers give you 2 min of SP/XP gain + 300%% through hunting. Entire party. -->
 		<icon initial="icon.etc_str_symbol_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="100"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1229,7 +1207,7 @@
 	<skill id="16177" name="Knock Down Resistance" max-level="5" >
 	<!-- Resistant to Knock Down attack. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1239,12 +1217,12 @@
 	<skill id="16178" name="Leona's Thunder Spear" debuff="true" action="A2">
 	<!-- Attacks enemies around the target and stuns them. -->
 		<icon initial="icon.skll10321"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="3000"/>
 			<effect-point initial="500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1255,7 +1233,7 @@
 	<skill id="16179" name="Beleth">
 	<!-- The greatest wizard in history, and also the most demonic. Through contact with the forbidden, he gained possession of a mysterious power unknown even to the gods. His most recent tracks have been through Hellbound, which underwent an astonishing transformation after he began experimenting with Chaos, a Human attribute. No one knows what he is thinking, or what he is after. -->
 		<icon initial="icon.skillboss"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1265,7 +1243,7 @@
 	<skill id="16180" name="Darion">
 	<!-- Originally of the demon world, he was placed among the people by Beleth in order to rule Hellbound. He seeks to gain control over Hellbound whenever Beleth disappears for one of his experiments. -->
 		<icon initial="icon.skillboss"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1275,7 +1253,7 @@
 	<skill id="16181" name="Special Armor" max-level="10" >
 	<!-- Special armor reduces damage received from servitors. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1285,11 +1263,11 @@
 	<skill id="16183" name="Skill Reflect Barrier" action="A2" type="MAGIC">
 	<!-- Cast Petrify on an enemy that has used a skill. -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1300,11 +1278,11 @@
 	<skill id="16184" name="Vengeful Petrify" debuff="true" action="A2" type="MAGIC">
 	<!-- Petrified for 5 seconds. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="300"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1315,11 +1293,11 @@
 	<skill id="16185" name="Sword Storm" action="A1">
 	<!-- A powerful AoE attack with sword aura. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1330,11 +1308,11 @@
 	<skill id="16186" name="Belly Cut" action="A1">
 	<!-- A powerful physical attack near the target. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1345,11 +1323,11 @@
 	<skill id="16187" name="Head-on Crash" action="A1">
 	<!-- Physical damage on a single target. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1360,11 +1338,11 @@
 	<skill id="16188" name="Darkness" action="A1" type="MAGIC">
 	<!-- Magical AoE attack to target and surrounding area. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1375,11 +1353,11 @@
 	<skill id="16189" name="Disciple's Blow" action="A1" type="MAGIC">
 	<!-- Magical damage on a single target. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1390,11 +1368,11 @@
 	<skill id="16190" name="Recharge Fury" action="A2">
 	<!-- Increases P. Atk. +100%% for 5 seconds. -->
 		<icon initial="icon.skill0110"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="300"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1405,11 +1383,11 @@
 	<skill id="16191" name="Pandemonium" action="A1">
 	<!-- Physical attck on target and surrounding area. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1420,11 +1398,11 @@
 	<skill id="16192" name="Tyranny" action="A1" type="MAGIC">
 	<!-- Powerful magical AoE attack. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1435,11 +1413,11 @@
 	<skill id="16193" name="Lurking Lunacy" debuff="true" action="A2" type="MAGIC">
 	<!-- Casts Fear on target and nearby enemies for 2 sec. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1450,11 +1428,11 @@
 	<skill id="16194" name="Quiet Path to Death" action="A1" type="MAGIC">
 	<!-- A lethal magical AoE attack. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="1000"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="10000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1465,11 +1443,11 @@
 	<skill id="16195" name="Guided Death" action="A1" type="MAGIC">
 	<!-- A powerful magical AoE attack. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="1000"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1480,11 +1458,11 @@
 	<skill id="16196" name="Blood Shower" debuff="true" action="A2" type="MAGIC">
 	<!-- A magical AoE attack with Bleed. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1495,11 +1473,11 @@
 	<skill id="16197" name="Haughty Slaughter" action="A1">
 	<!-- Physical AoE attack. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1510,11 +1488,11 @@
 	<skill id="16198" name="Continuing Pain" action="A1">
 	<!-- Physical AoE attack. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-1500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1525,11 +1503,11 @@
 	<skill id="16199" name="Howling Abyss" action="A1" type="MAGIC">
 	<!-- Magical attack on a single target. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="300"/>
 			<effect-point initial="-500"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-500000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

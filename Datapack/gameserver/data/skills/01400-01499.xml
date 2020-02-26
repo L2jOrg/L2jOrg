@@ -3,13 +3,13 @@
 	<skill id="1403" name="Summon Friend" action="A1" type="MAGIC">
 	<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
 		<icon initial="icon.skill1403"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="56"/>
 			<cast-range initial="-2"/>
 			<reuse initial="150000"/>
 			<effect-point initial="467"/>
 			<effect-range initial="-2"/>
-			<hit-time initial="467000"/>
+			<hit-time initial="15000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -35,7 +35,7 @@
 		level 4: Increases the number of buffs an individual can receive by 4.
 	 -->
 		<icon initial="icon.skill1405"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="52">
 				<value level="2">61</value>
 				<value level="3">76</value>
@@ -61,7 +61,7 @@
 		level 5: Summons a Feline King. Consumes 16 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill1406"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="77">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -72,6 +72,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -107,7 +108,7 @@
 		level 5: Summons Magnus the Unicorn. Consumes 16 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill1407"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="77">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -118,6 +119,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -153,7 +155,7 @@
 		level 5: Summons a Spectral Lord. Consumes 16 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill1408"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="77">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -164,6 +166,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -200,7 +203,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="1000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -218,14 +221,13 @@
 	<skill id="1410" name="Salvation" action="A2" type="MAGIC">
 	<!-- Resurrects from death fully recovered. Maintains buffs and debuffs even after death. Consumes 100 Spirit Ore. -->
 		<icon initial="icon.skill1410"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="79"/>
 			<cast-range initial="400"/>
 			<reuse initial="3600000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="900"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="18"/>
@@ -234,7 +236,7 @@
 			<item-count initial="200"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="RESURRECTION_SPECIAL" >
+		<abnormal type="RESURRECTION_SPECIAL">
 			<level initial="2"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -252,7 +254,7 @@
 		level 3: Becomes invincible to debuff attacks for 15 seconds. Usable only on party members.
 	 -->
 		<icon initial="icon.skill1411"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="51">
 				<value level="2">60</value>
 				<value level="3">69</value>
@@ -261,8 +263,7 @@
 			<reuse initial="150000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="900"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana initial="59">
@@ -271,7 +272,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="ABNORMAL_INVINCIBILITY" >
+		<abnormal type="ABNORMAL_INVINCIBILITY">
 			<level initial="3"/>
 			<time initial="5">
 				<value level="2">10</value>
@@ -294,7 +295,7 @@
 		level 2: Nearby clan members' Max CP +15%, CP Recovery Bonus +40%, P. Accuracy/M. Accuracy +4, P. Evasion/M. Evasion +4, P. Atk./M. Atk. +20%, Atk. Spd./Casting Spd. +10%, P. Critical/M. Critical Rate +20%, and P. Critical Damage/M. Critical Damage +15% for 10 minutes with the help of a great spirit. Consumes 10 minutes0 Spirit Ore.
 	 -->
 		<icon initial="icon.skill1414"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="82"/>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
@@ -302,10 +303,7 @@
 				<value level="2">675</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="666000">
-				<value level="2">675000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="57"/>
@@ -316,18 +314,18 @@
 			<item-count initial="70"/>
 		</consume>
 		<target scope="PARTY_PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="100" />
-		<abnormal type="MULTI_BUFF" >
+		<abnormal type="MULTI_BUFF">
 			<level initial="1"/>
 			<time initial="600"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_CP" mode="PER">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_CP_RATE">
+			<stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
 				<power initial="20.0">
 					<value level="2">40.0</value>
 				</power>
@@ -385,15 +383,18 @@
 		level 4: For 30 seconds, clan members' Max CP +10% and restores CP.
 	 -->
 		<icon initial="icon.skill1416"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="79"/>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="669"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="669000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500">
+				<value level="2">2300</value>
+				<value level="3">2100</value>
+				<value level="4">1900</value>
+			</hit-time>
 		</attributes>
 		<consume>
 			<mana-init initial="56"/>
@@ -404,7 +405,7 @@
 			</mana>
 		</consume>
 		<target scope="PARTY_PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="100" />
-		<abnormal type="CP_UP" >
+		<abnormal type="CP_UP">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -413,7 +414,7 @@
 			<effect name="CpHealPercent">
 				<power initial="1.04"/>
 			</effect>
-			<vital-stat-modify stat="MAX_CP" mode="PER">
+			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP" mode="PER">
 				<power initial="4.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -427,7 +428,7 @@
 		level 5: Inflicts damage on nearby enemies with bonus 65 M. Atk. Power. Consumes 4 Spirit Ore.
 	 -->
 		<icon initial="icon.skill1417"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="58">
 				<value level="2">62</value>
 				<value level="3">66</value>
@@ -443,12 +444,7 @@
 				<value level="5">-262</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-220000">
-				<value level="2">-233000</value>
-				<value level="3">-245000</value>
-				<value level="4">-254000</value>
-				<value level="5">-262000</value>
-			</hit-time>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -492,6 +488,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="3600000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -509,12 +506,12 @@
 	<skill id="1427" name="Flames of Invincibility" action="A2" type="MAGIC">
 	<!-- Calls down a blessing of flames on nearby clan members to make them invincible. Consumes 100 Spirit Ore. -->
 		<icon initial="icon.skill1427"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" remove-on-action="true" blocked-on-olympiad="true" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" remove-on-action="true" blocked-on-olympiad="true">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1800000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="5000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="36"/>
@@ -563,6 +560,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="30000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -608,7 +606,7 @@
 			<reuse initial="300000"/>
 			<effect-point initial="467"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="467000"/>
+			<hit-time initial="15000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -634,7 +632,7 @@
 		level 5: Decreases P. Def. by 90% and recovers 84 MP every second for 30 seconds. The status is canceled when damage is incurred.
 	 -->
 		<icon initial="icon.skill1430"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" remove-on-damage="true" blocked-on-olympiad="true" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" remove-on-damage="true" blocked-on-olympiad="true">
 			<magic-level initial="56">
 				<value level="2">60</value>
 				<value level="3">64</value>
@@ -645,8 +643,7 @@
 			<reuse initial="600000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="6">
@@ -660,7 +657,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="FORCE_MEDITATION" >
+		<abnormal type="FORCE_MEDITATION">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1"/>
@@ -675,7 +672,7 @@
 					<value level="5">42.0</value>
 				</power>
 			</effect>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-90.0"/>
 			</stat-modify>
 		</effects>
@@ -699,7 +696,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="3">
@@ -716,7 +713,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="PA_UP" >
+		<abnormal type="PA_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -727,7 +724,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="8.0">
 					<value level="2">12.0</value>
 					<value level="3">15.0</value>
@@ -746,7 +743,7 @@
 		level 5: Has a chance to mark the enemy with a Death Mark for 10 seconds. Enemies marked with the Death Mark will receive more damage from Physical Critical Damage and Magic Critical Damage. \n\nDeath Mark Stage 5 activated
 	 -->
 		<icon initial="icon.skill1435"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" level-bonus-rate="20" >
+		<attributes property="MAGIC" magic-critical-rate="5.0" level-bonus-rate="20">
 			<magic-level initial="24">
 				<value level="2">32</value>
 				<value level="3">40</value>
@@ -755,7 +752,6 @@
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="1100"/>
-			<activate-rate initial="70"/>
 		</attributes>
 		<consume>
 			<mana-init initial="3">
@@ -810,10 +806,7 @@
 				<value level="3">-700</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-500000">
-				<value level="2">-600000</value>
-				<value level="3">-700000</value>
-			</hit-time>
+			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -851,6 +844,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="150000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -874,14 +868,14 @@
 		level 5: Atk. Spd. +50 when equipping a Rapier.
 	 -->
 		<icon initial="Icon.ev_invasion_gun_shoot"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>
@@ -911,13 +905,7 @@
 				<value level="5">-500</value>
 			</effect-point>
 			<effect-range initial="600"/>
-			<hit-time initial="-460000">
-				<value level="2">-470000</value>
-				<value level="3">-480000</value>
-				<value level="4">-490000</value>
-				<value level="5">-500000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="10"/>
@@ -962,13 +950,7 @@
 				<value level="5">-500</value>
 			</effect-point>
 			<effect-range initial="600"/>
-			<hit-time initial="-460000">
-				<value level="2">-470000</value>
-				<value level="3">-480000</value>
-				<value level="4">-490000</value>
-				<value level="5">-500000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="15"/>
@@ -992,13 +974,13 @@
 	<skill id="1448" name="Blink" action="A1" type="MAGIC">
 	<!-- Teleports to the back. -->
 		<icon initial="icon.skill11057"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<cool-time initial="200"/>
 			<effect-point initial="-1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000"/>
+			<hit-time initial="100"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1022,9 +1004,7 @@
 				<value level="2">-510</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-500000">
-				<value level="2">-510000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="FIRE" value="20"/>
@@ -1068,9 +1048,7 @@
 				<value level="2">-510</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-500000">
-				<value level="2">-510000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WATER" value="20"/>
@@ -1114,9 +1092,7 @@
 				<value level="2">-510</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="-500000">
-				<value level="2">-510000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 
 			<element type="WIND" value="20"/>
@@ -1160,8 +1136,7 @@
 			<reuse initial="300000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="70">
@@ -1170,7 +1145,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="HEAL_POWER_UP" >
+		<abnormal type="HEAL_POWER_UP">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -1194,7 +1169,7 @@
 		level 6: For 20 minutes, Recover Bonus +95 when the target receives MP Recovery through Recharge.
 	 -->
 		<icon initial="icon.skill1460"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="79">
 				<value level="2">80</value>
 				<value level="3">81</value>
@@ -1203,8 +1178,7 @@
 			<reuse initial="3000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="1100"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="38"/>
@@ -1217,7 +1191,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="RECHARGE_UP" >
+		<abnormal type="RECHARGE_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1229,7 +1203,7 @@
 			<skill id="1013"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="MANA_CHARGE">
+			<stat-modify stat="MANA_CHARGE" stat-add="MANA_CHARGE">
 				<power initial="85.0">
 					<value level="2">87.0</value>
 					<value level="3">89.0</value>
@@ -1240,21 +1214,20 @@
 	<skill id="1461" name="Chant of Protection" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Damage dealt to a party member -30%%. -->
 		<icon initial="icon.skill1461"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="79"/>
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-point initial="676"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="676000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana-init initial="39"/>
 			<mana initial="289"/>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="T_CRT_DMG_DOWN" >
+		<abnormal type="T_CRT_DMG_DOWN">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1287,11 +1260,7 @@
 				<value level="3">-677</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-673000">
-				<value level="2">-675000</value>
-				<value level="3">-677000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="4000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="22"/>
@@ -1301,7 +1270,7 @@
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
-		<abnormal type="NORMAL_ATTACK_BLOCK" >
+		<abnormal type="NORMAL_ATTACK_BLOCK">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="80"/>
@@ -1320,7 +1289,7 @@
 		level 3: M. Atk.+200.
 	 -->
 		<icon initial="icon.skill1474"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="43"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1328,7 +1297,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="200.0">
 					<value level="2">0.0</value>
 				</power>
@@ -1338,14 +1307,13 @@
 	<skill id="1495" name="Vampiric Mist" debuff="true" action="A2" type="MAGIC">
 	<!-- Unleashes a fog of death to inflict damage on nearby enemies with bonus 117 M. Atk. Power. Absorbs 20%% of the damage as HP. For 10 seconds, Movement Speed/P. Atk./Atk. Spd. -30%% and P. Accuracy -8. -->
 		<icon initial="icon.skill1495"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="-679"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-679000"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="4000"/>
 
 			<element type="DARK" value="20"/>
 		</attributes>
@@ -1353,7 +1321,7 @@
 			<mana initial="160"/>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10" />
-		<abnormal type="ULTIMATE_DEBUFF" >
+		<abnormal type="ULTIMATE_DEBUFF">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="100"/>
@@ -1362,7 +1330,7 @@
 			<hp-drain percentage="20">
 				<power initial="117.0"/>
 			</hp-drain>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-30.0"/>
 			</stat-modify>
 			<speed mode="PER">

@@ -9,7 +9,7 @@
 		level 5: Feline Queen's buff magic. Increases party members' P. Atk. +10% and P. Accuracy +3 for 10 minutes.
 	 -->
 		<icon initial="icon.skill1331"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -43,21 +43,9 @@
 				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="541000">
-				<value level="2">611000</value>
-				<value level="3">659000</value>
-				<value level="4">666000</value>
-				<value level="5">669000</value>
-				<value level="6">673000</value>
-				<value level="7">676000</value>
-				<value level="8">679000</value>
-				<value level="9">681000</value>
-				<value level="10">684000</value>
-				<value level="11">687000</value>
-				<value level="12">689000</value>
-				<value level="13">692000</value>
+			<hit-time initial="2000">
+				<value level="6">4000</value>
 			</hit-time>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="202">
@@ -76,7 +64,7 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="BUFF_QUEEN_OF_CAT" >
+		<abnormal type="BUFF_QUEEN_OF_CAT">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -96,7 +84,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="6.0">
 					<value level="2">8.0</value>
 					<value level="3">10.0</value>
@@ -120,7 +108,7 @@
 		level 7: Feline Queen's curse release magic. Has a 55% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -154,19 +142,8 @@
 				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="541000">
-				<value level="2">611000</value>
-				<value level="3">659000</value>
-				<value level="4">666000</value>
-				<value level="5">669000</value>
-				<value level="6">673000</value>
-				<value level="7">676000</value>
-				<value level="8">679000</value>
-				<value level="9">681000</value>
-				<value level="10">684000</value>
-				<value level="11">687000</value>
-				<value level="12">689000</value>
-				<value level="13">692000</value>
+			<hit-time initial="1000">
+				<value level="7">2000</value>
 			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -214,7 +191,7 @@
 		level 5: Buff magic used by the Seraphim the Unicorn. Increases Party members' MP Recovery Bonus +30% and M. Critical Rate +25% for 10 minutes.
 	 -->
 		<icon initial="icon.skill1332"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -248,21 +225,9 @@
 				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="541000">
-				<value level="2">611000</value>
-				<value level="3">659000</value>
-				<value level="4">666000</value>
-				<value level="5">669000</value>
-				<value level="6">673000</value>
-				<value level="7">676000</value>
-				<value level="8">679000</value>
-				<value level="9">681000</value>
-				<value level="10">684000</value>
-				<value level="11">687000</value>
-				<value level="12">689000</value>
-				<value level="13">692000</value>
+			<hit-time initial="2000">
+				<value level="6">4000</value>
 			</hit-time>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="202">
@@ -281,7 +246,7 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="BUFF_UNICORN_SERAPHIM" >
+		<abnormal type="BUFF_UNICORN_SERAPHIM">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -301,7 +266,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
 				<power initial="30.0">
 					<value level="2">32.0</value>
 					<value level="3">35.0</value>
@@ -318,7 +283,7 @@
 		level 5: Buff magic used by the Seraphim the Unicorn. Increases Party members' Magic Skill Cooldown +10% and M. Atk. +30% for 10 minutes.
 	 -->
 		<icon initial="icon.skill1332"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -352,21 +317,9 @@
 				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="541000">
-				<value level="2">611000</value>
-				<value level="3">659000</value>
-				<value level="4">666000</value>
-				<value level="5">669000</value>
-				<value level="6">673000</value>
-				<value level="7">676000</value>
-				<value level="8">679000</value>
-				<value level="9">681000</value>
-				<value level="10">684000</value>
-				<value level="11">687000</value>
-				<value level="12">689000</value>
-				<value level="13">692000</value>
+			<hit-time initial="2000">
+				<value level="6">4000</value>
 			</hit-time>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="202">
@@ -385,7 +338,7 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="BUFF_UNICORN_SERAPHIM" >
+		<abnormal type="BUFF_UNICORN_SERAPHIM">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -424,7 +377,7 @@
 		level 7: Curse release magic used by Seraphim the Unicorn. Has a 55% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -458,19 +411,8 @@
 				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="541000">
-				<value level="2">611000</value>
-				<value level="3">659000</value>
-				<value level="4">666000</value>
-				<value level="5">669000</value>
-				<value level="6">673000</value>
-				<value level="7">676000</value>
-				<value level="8">679000</value>
-				<value level="9">681000</value>
-				<value level="10">684000</value>
-				<value level="11">687000</value>
-				<value level="12">689000</value>
-				<value level="13">692000</value>
+			<hit-time initial="1000">
+				<value level="7">2000</value>
 			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -492,7 +434,7 @@
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
 		<effects>
-			<dispel-probability abnormals="ROOT_MAGICALLY STUN PARALYZE SLEEP SILENCE">				<power initial="40.0">
+			<dispel-probability abnormals="PARALYZE SLEEP STUN ROOT_MAGICALLY SILENCE">				<power initial="40.0">
 					<value level="2">45.0</value>
 					<value level="3">50.0</value>
 					<value level="4">55.0</value>
@@ -519,7 +461,7 @@
 		level 6: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease its P. Def. and Magic Resistance by 3..
 	 -->
 		<icon initial="icon.skill1333"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -555,32 +497,9 @@
 				<value level="13">-2074</value>
 			</effect-point>
 			<effect-range initial="900"/>
-			<hit-time initial="-1621000">
-				<value level="2">-1831000</value>
-				<value level="3">-1975000</value>
-				<value level="4">-1997000</value>
-				<value level="5">-2007000</value>
-				<value level="6">-2017000</value>
-				<value level="7">-2026000</value>
-				<value level="8">-2035000</value>
-				<value level="9">-2043000</value>
-				<value level="10">-2051000</value>
-				<value level="11">-2059000</value>
-				<value level="12">-2066000</value>
-				<value level="13">-2074000</value>
+			<hit-time initial="1000">
+				<value level="6">2000</value>
 			</hit-time>
-			<activate-rate initial="40">
-				<value level="4">41</value>
-				<value level="5">42</value>
-				<value level="6">43</value>
-				<value level="7">44</value>
-				<value level="8">45</value>
-				<value level="9">46</value>
-				<value level="10">47</value>
-				<value level="11">48</value>
-				<value level="12">49</value>
-				<value level="13">50</value>
-			</activate-rate>
 
 			<element type="DARK" value="20"/>
 		</attributes>
@@ -601,7 +520,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="DEBUFF_NIGHTSHADE" >
+		<abnormal type="DEBUFF_NIGHTSHADE">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -647,7 +566,7 @@
 		level 5: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their defense and Magic Resistance by 10%.
 	 -->
 		<icon initial="icon.skill1333"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" level-bonus-rate="1" >
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" level-bonus-rate="1">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -681,32 +600,9 @@
 				<value level="13">-2074</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1621000">
-				<value level="2">-1831000</value>
-				<value level="3">-1975000</value>
-				<value level="4">-1997000</value>
-				<value level="5">-2007000</value>
-				<value level="6">-2017000</value>
-				<value level="7">-2026000</value>
-				<value level="8">-2035000</value>
-				<value level="9">-2043000</value>
-				<value level="10">-2051000</value>
-				<value level="11">-2059000</value>
-				<value level="12">-2066000</value>
-				<value level="13">-2074000</value>
+			<hit-time initial="1000">
+				<value level="6">2000</value>
 			</hit-time>
-			<activate-rate initial="40">
-				<value level="4">41</value>
-				<value level="5">42</value>
-				<value level="6">43</value>
-				<value level="7">44</value>
-				<value level="8">45</value>
-				<value level="9">46</value>
-				<value level="10">47</value>
-				<value level="11">48</value>
-				<value level="12">49</value>
-				<value level="13">50</value>
-			</activate-rate>
 
 			<element type="DARK" value="20"/>
 		</attributes>
@@ -730,7 +626,7 @@
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
-		<abnormal type="DEBUFF_NIGHTSHADE" >
+		<abnormal type="DEBUFF_NIGHTSHADE">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -784,7 +680,7 @@
 		level 13: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 874. Power.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="57">
 				<value level="2">66</value>
 				<value level="3">75</value>
@@ -818,19 +714,8 @@
 				<value level="13">874</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="250000">
-				<value level="2">260000</value>
-				<value level="3">270000</value>
-				<value level="4">280000</value>
-				<value level="5">290000</value>
-				<value level="6">300000</value>
-				<value level="7">826000</value>
-				<value level="8">835000</value>
-				<value level="9">844000</value>
-				<value level="10">852000</value>
-				<value level="11">860000</value>
-				<value level="12">867000</value>
-				<value level="13">874000</value>
+			<hit-time initial="1000">
+				<value level="7">2000</value>
 			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -888,7 +773,7 @@
 		level 14: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 7443.
 	 -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
 			<magic-level initial="58">
 				<value level="2">62</value>
 				<value level="3">66</value>
@@ -921,18 +806,10 @@
 				<value level="10">-342</value>
 			</effect-point>
 			<effect-range initial="200"/>
-			<hit-time initial="-279000">
-				<value level="2">-296000</value>
-				<value level="3">-311000</value>
-				<value level="4">-323000</value>
-				<value level="5">-328000</value>
-				<value level="6">-333000</value>
-				<value level="7">-337000</value>
-				<value level="8">-340000</value>
-				<value level="9">-341000</value>
-				<value level="10">-342000</value>
+			<hit-time initial="2000">
+				<value level="8">1000</value>
+				<value level="9">2000</value>
 			</hit-time>
-			<activate-rate initial="50"/>
 		</attributes>
 		<consume>
 			<mana initial="58">
@@ -992,7 +869,7 @@
 		level 14: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 9283.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="58">
 				<value level="2">62</value>
 				<value level="3">66</value>
@@ -1025,16 +902,9 @@
 				<value level="10">-342</value>
 			</effect-point>
 			<effect-range initial="200"/>
-			<hit-time initial="-279000">
-				<value level="2">-296000</value>
-				<value level="3">-311000</value>
-				<value level="4">-323000</value>
-				<value level="5">-328000</value>
-				<value level="6">-333000</value>
-				<value level="7">-337000</value>
-				<value level="8">-340000</value>
-				<value level="9">-341000</value>
-				<value level="10">-342000</value>
+			<hit-time initial="2000">
+				<value level="8">1500</value>
+				<value level="9">2000</value>
 			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -1088,7 +958,7 @@
 		level 12: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 864.
 	 -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1119,20 +989,7 @@
 				<value level="12">-248</value>
 			</effect-point>
 			<effect-range initial="200"/>
-			<hit-time initial="-49000">
-				<value level="2">-73000</value>
-				<value level="3">-102000</value>
-				<value level="4">-135000</value>
-				<value level="5">-170000</value>
-				<value level="6">-202000</value>
-				<value level="7">-226000</value>
-				<value level="8">-235000</value>
-				<value level="9">-240000</value>
-				<value level="10">-243000</value>
-				<value level="11">-246000</value>
-				<value level="12">-248000</value>
-			</hit-time>
-			<activate-rate initial="15"/>
+			<hit-time initial="1100"/>
 		</attributes>
 		<consume>
 			<mana initial="3">
@@ -1175,7 +1032,7 @@
 	<skill id="4711" name="Wild Defense" max-level="12" action="A2">
 	<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed. -->
 		<icon initial="icon.skill0110"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1206,22 +1063,7 @@
 				<value level="12">709</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="138000">
-				<value level="2">204000</value>
-				<value level="3">285000</value>
-				<value level="4">379000</value>
-				<value level="5">477000</value>
-				<value level="6">566000</value>
-				<value level="7">635000</value>
-				<value level="8">659000</value>
-				<value level="9">676000</value>
-				<value level="10">689000</value>
-				<value level="11">700000</value>
-				<value level="12">709000</value>
-			</hit-time>
-			<activate-rate initial="-1">
-				<value level="12">15</value>
-			</activate-rate>
+			<hit-time initial="1100"/>
 		</attributes>
 		<consume>
 			<mana initial="46">
@@ -1239,7 +1081,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="ULTIMATE_BUFF" >
+		<abnormal type="ULTIMATE_BUFF">
 			<level initial="1"/>
 			<time initial="30"/>
 			<chance initial="-1">
@@ -1251,7 +1093,7 @@
 			<speed mode="PER">
 				<power initial="-90.0"/>
 			</speed>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="400.0"/>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
@@ -1278,7 +1120,7 @@
 		level 12: Star Hatchling/Strider's attack skill. Power 43.
 	 -->
 		<icon initial="icon.skill4712"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.0" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1308,19 +1150,7 @@
 				<value level="12">-709</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-138000">
-				<value level="2">-204000</value>
-				<value level="3">-285000</value>
-				<value level="4">-379000</value>
-				<value level="5">-477000</value>
-				<value level="6">-566000</value>
-				<value level="7">-635000</value>
-				<value level="8">-659000</value>
-				<value level="9">-676000</value>
-				<value level="10">-689000</value>
-				<value level="11">-700000</value>
-				<value level="12">-709000</value>
-			</hit-time>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1367,7 +1197,7 @@
 		level 12: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 366.
 	 -->
 		<icon initial="icon.skill4713"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.0" >
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1398,19 +1228,7 @@
 				<value level="12">366</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="33000">
-				<value level="2">61000</value>
-				<value level="3">98000</value>
-				<value level="4">145000</value>
-				<value level="5">198000</value>
-				<value level="6">251000</value>
-				<value level="7">298000</value>
-				<value level="8">316000</value>
-				<value level="9">331000</value>
-				<value level="10">347000</value>
-				<value level="11">358000</value>
-				<value level="12">366000</value>
-			</hit-time>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1448,7 +1266,7 @@
 	<skill id="4714" name="Twilight Dragon">
 	<!-- An active dragon with fast moving feet. -->
 		<icon initial="icon.skill1373"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="35"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1459,7 +1277,7 @@
 	<skill id="4715" name="Wind Dragon">
 	<!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
 		<icon initial="icon.skill1373"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="35"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1470,7 +1288,7 @@
 	<skill id="4716" name="Star Dragon">
 	<!-- A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases. -->
 		<icon initial="icon.skill1373"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="35"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1494,7 +1312,7 @@
 		level 12: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 92.
 	 -->
 		<icon initial="icon.skill4717"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1524,19 +1342,7 @@
 				<value level="12">92</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="9000">
-				<value level="2">16000</value>
-				<value level="3">25000</value>
-				<value level="4">37000</value>
-				<value level="5">50000</value>
-				<value level="6">63000</value>
-				<value level="7">75000</value>
-				<value level="8">79000</value>
-				<value level="9">83000</value>
-				<value level="10">87000</value>
-				<value level="11">90000</value>
-				<value level="12">92000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1575,7 +1381,7 @@
 		level 12: Recovery magic used by a pet. Regenerates its master's HP. Power 368.
 	 -->
 		<icon initial="icon.skill4718"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="10">
 				<value level="2">20</value>
 				<value level="3">30</value>
@@ -1605,19 +1411,7 @@
 				<value level="12">685</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="62000">
-				<value level="2">113000</value>
-				<value level="3">184000</value>
-				<value level="4">272000</value>
-				<value level="5">371000</value>
-				<value level="6">471000</value>
-				<value level="7">558000</value>
-				<value level="8">592000</value>
-				<value level="9">620000</value>
-				<value level="10">651000</value>
-				<value level="11">672000</value>
-				<value level="12">685000</value>
-			</hit-time>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1644,7 +1438,7 @@
 	<skill id="4719" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -1662,7 +1456,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1702,7 +1496,7 @@
 	<skill id="4720" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -1720,7 +1514,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1760,7 +1554,7 @@
 	<skill id="4721" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -1778,7 +1572,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1818,7 +1612,7 @@
 	<skill id="4722" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -1836,7 +1630,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1876,7 +1670,7 @@
 	<skill id="4723" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -1894,7 +1688,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1934,7 +1728,7 @@
 	<skill id="4724" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -1952,8 +1746,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -2000,7 +1793,7 @@
 	<skill id="4725" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2018,8 +1811,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -2066,7 +1858,7 @@
 	<skill id="4726" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2084,8 +1876,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -2132,7 +1923,7 @@
 	<skill id="4727" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2150,8 +1941,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -2198,7 +1988,7 @@
 	<skill id="4728" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2216,8 +2006,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -2264,7 +2053,7 @@
 	<skill id="4729" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2282,7 +2071,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2322,7 +2111,7 @@
 	<skill id="4730" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2340,7 +2129,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2380,7 +2169,7 @@
 	<skill id="4731" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2398,7 +2187,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2438,7 +2227,7 @@
 	<skill id="4732" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2456,7 +2245,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2496,7 +2285,7 @@
 	<skill id="4733" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2514,7 +2303,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2554,7 +2343,7 @@
 	<skill id="4734" name="Spinning Slasher" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2572,7 +2361,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2612,7 +2401,7 @@
 	<skill id="4735" name="Spinning Slasher" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2630,7 +2419,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2670,7 +2459,7 @@
 	<skill id="4736" name="Spinning Slasher" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2688,7 +2477,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2728,7 +2517,7 @@
 	<skill id="4737" name="Spinning Slasher" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2746,7 +2535,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2786,7 +2575,7 @@
 	<skill id="4738" name="Spinning Slasher" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2804,7 +2593,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2844,7 +2633,7 @@
 	<skill id="4739" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2862,7 +2651,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2902,7 +2691,7 @@
 	<skill id="4740" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2920,7 +2709,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -2960,7 +2749,7 @@
 	<skill id="4741" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -2978,7 +2767,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3018,7 +2807,7 @@
 	<skill id="4742" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3036,7 +2825,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3076,7 +2865,7 @@
 	<skill id="4743" name="Power Strike" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3094,7 +2883,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3134,7 +2923,7 @@
 	<skill id="4744" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3152,8 +2941,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -3200,7 +2988,7 @@
 	<skill id="4745" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3218,8 +3006,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -3266,7 +3053,7 @@
 	<skill id="4746" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3284,8 +3071,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -3332,7 +3118,7 @@
 	<skill id="4747" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3350,8 +3136,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -3398,7 +3183,7 @@
 	<skill id="4748" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3416,8 +3201,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="830"/>
 		</attributes>
 		<consume>
 			<mana initial="16">
@@ -3464,7 +3248,7 @@
 	<skill id="4749" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3482,7 +3266,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3522,7 +3306,7 @@
 	<skill id="4750" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3540,7 +3324,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3580,7 +3364,7 @@
 	<skill id="4751" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3598,7 +3382,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3638,7 +3422,7 @@
 	<skill id="4752" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3656,7 +3440,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3696,7 +3480,7 @@
 	<skill id="4753" name="Mortal Blow" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3714,7 +3498,7 @@
 			<cool-time initial="660"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="200"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="830"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3754,7 +3538,7 @@
 	<skill id="4754" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3771,7 +3555,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3811,7 +3595,7 @@
 	<skill id="4755" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3828,7 +3612,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3868,7 +3652,7 @@
 	<skill id="4756" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3885,7 +3669,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3925,7 +3709,7 @@
 	<skill id="4757" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3942,7 +3726,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -3982,7 +3766,7 @@
 	<skill id="4758" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -3999,7 +3783,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -4039,7 +3823,7 @@
 	<skill id="4759" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4056,8 +3840,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4104,7 +3887,7 @@
 	<skill id="4760" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4121,8 +3904,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4169,7 +3951,7 @@
 	<skill id="4761" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4186,8 +3968,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4234,7 +4015,7 @@
 	<skill id="4762" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4251,8 +4032,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4299,7 +4079,7 @@
 	<skill id="4763" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4316,8 +4096,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4364,7 +4143,7 @@
 	<skill id="4764" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4381,7 +4160,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -4421,7 +4200,7 @@
 	<skill id="4765" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4438,7 +4217,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -4478,7 +4257,7 @@
 	<skill id="4766" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4495,7 +4274,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -4535,7 +4314,7 @@
 	<skill id="4767" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4552,7 +4331,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -4592,7 +4371,7 @@
 	<skill id="4768" name="Power Shot" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4609,7 +4388,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -4649,7 +4428,7 @@
 	<skill id="4769" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4666,8 +4445,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4714,7 +4492,7 @@
 	<skill id="4770" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4731,8 +4509,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4779,7 +4556,7 @@
 	<skill id="4771" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4796,8 +4573,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4844,7 +4620,7 @@
 	<skill id="4772" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4861,8 +4637,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4909,7 +4684,7 @@
 	<skill id="4773" name="Stun" max-level="12" debuff="true" action="A2">
 	<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0101"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4926,8 +4701,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="4500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -4974,7 +4748,7 @@
 	<skill id="4774" name="Spear Attack" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -4991,7 +4765,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5031,7 +4805,7 @@
 	<skill id="4775" name="Spear Attack" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5048,7 +4822,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5088,7 +4862,7 @@
 	<skill id="4776" name="Spear Attack" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5105,7 +4879,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5145,7 +4919,7 @@
 	<skill id="4777" name="Spear Attack" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5162,7 +4936,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5202,7 +4976,7 @@
 	<skill id="4778" name="Spear Attack" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5219,7 +4993,7 @@
 			<cast-range initial="900"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="1400"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5259,7 +5033,7 @@
 	<skill id="4779" name="Heal" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5277,7 +5051,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5316,7 +5090,7 @@
 	<skill id="4780" name="Heal" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5334,7 +5108,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5373,7 +5147,7 @@
 	<skill id="4781" name="Heal" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5391,7 +5165,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5430,7 +5204,7 @@
 	<skill id="4782" name="Heal" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5448,7 +5222,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5487,7 +5261,7 @@
 	<skill id="4783" name="Heal" max-level="12" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" >
+		<attributes magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5505,7 +5279,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -5544,7 +5318,7 @@
 	<skill id="4784" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5562,8 +5336,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="43">
@@ -5580,7 +5353,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="LIFE_FORCE_OTHERS" >
+		<abnormal type="LIFE_FORCE_OTHERS">
 			<level initial="11">
 				<value level="2">12</value>
 				<value level="3">13</value>
@@ -5615,7 +5388,7 @@
 	<skill id="4785" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5633,8 +5406,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="43">
@@ -5651,7 +5423,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="LIFE_FORCE_OTHERS" >
+		<abnormal type="LIFE_FORCE_OTHERS">
 			<level initial="11">
 				<value level="2">12</value>
 				<value level="3">13</value>
@@ -5686,7 +5458,7 @@
 	<skill id="4786" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5704,8 +5476,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="43">
@@ -5722,7 +5493,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="LIFE_FORCE_OTHERS" >
+		<abnormal type="LIFE_FORCE_OTHERS">
 			<level initial="11">
 				<value level="2">12</value>
 				<value level="3">13</value>
@@ -5757,7 +5528,7 @@
 	<skill id="4787" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5775,8 +5546,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="43">
@@ -5793,7 +5563,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="LIFE_FORCE_OTHERS" >
+		<abnormal type="LIFE_FORCE_OTHERS">
 			<level initial="11">
 				<value level="2">12</value>
 				<value level="3">13</value>
@@ -5828,7 +5598,7 @@
 	<skill id="4788" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="-5.0">
 			<magic-level initial="14">
 				<value level="2">24</value>
 				<value level="3">34</value>
@@ -5846,8 +5616,7 @@
 			<reuse initial="8000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="1200"/>
-			<hit-time initial="100000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="43">
@@ -5864,7 +5633,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="LIFE_FORCE_OTHERS" >
+		<abnormal type="LIFE_FORCE_OTHERS">
 			<level initial="11">
 				<value level="2">12</value>
 				<value level="3">13</value>
@@ -5899,7 +5668,7 @@
 	<skill id="4789" name="High Lv." max-level="10" >
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -5907,7 +5676,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="3.0">
 					<value level="2">6.0</value>
 					<value level="3">9.0</value>
@@ -5920,7 +5689,8 @@
 					<value level="10">30.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="1.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
 					<value level="4">4.0</value>
@@ -5937,7 +5707,7 @@
 	<skill id="4790" name="Lv. 23 Raid Boss">
 	<!-- A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracian Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in Gludio. He waits for an opportunity to return to his country. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -5948,7 +5718,7 @@
 	<skill id="4791" name="Lv. 30 Raid Boss">
 	<!-- The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -5959,7 +5729,7 @@
 	<skill id="4792" name="Lv. 42 Raid Boss">
 	<!-- A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by M. Atk. of the Wastelands. The Spider was forced to retreat to this place. It swears that someday it will feed on the Ants and destroy them. It quietly grows in power while sharpening its fangs for vengeance. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -5970,7 +5740,7 @@
 	<skill id="4793" name="Lv. 55 Raid Boss">
 	<!-- A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, and the desire for revenge. Gripped by his anger, he is still at war against all humans and mystics. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -5981,7 +5751,7 @@
 	<skill id="4794" name="Lv. 50 Raid Boss">
 	<!-- One of the leaders of the peasants who resisted the merciless rule of Lord Ashton. He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came back to life. But the devil's bargain turned his once noble ideals towards loathing, turning him into a monster with the power of evil magic. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -5992,7 +5762,7 @@
 	<skill id="4795" name="Lv. 60 Raid Boss">
 	<!-- A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations. This golem was created to protect the Garden of Eva, made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafurion's troops, or invaders threatening the garden. The dwarven master made two other golems, but this third version was the strongest and became the last one remaining. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -6003,7 +5773,7 @@
 	<skill id="4796" name="Lv. 25 Raid Boss">
 	<!-- A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after suffering cruel attacks from both sides, but Pay Dryad still remains here waiting for the golden age of peace to return. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -6014,7 +5784,7 @@
 	<skill id="4797" name="Lv. 34 Raid Boss">
 	<!-- An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He grows in power, and uses summoning magic learned from the Dark Elves to harness powerful servitors and minions. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -6025,7 +5795,7 @@
 	<skill id="4798" name="Lv. 34 Raid Boss">
 	<!-- She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mercilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates and even her own children. The Queen yearns to build a kingdom for Marsh Stakatos someday. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -6036,7 +5806,7 @@
 	<skill id="4799" name="Lv. 49 Raid Boss">
 	<!-- He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He greatly detests the Silenos as well as humans, and is a formidable enemy. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0" >
+		<attributes property="MAGIC" magic-critical-rate="-5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>

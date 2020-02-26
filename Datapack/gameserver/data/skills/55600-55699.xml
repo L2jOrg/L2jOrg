@@ -3,7 +3,7 @@
 	<skill id="55600" name="Blessed Support Cube" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_golden_ore_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -14,7 +14,7 @@
 	<skill id="55601" name="Party Support Cube - Lv. 2" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_silver_ore_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -25,7 +25,7 @@
 	<skill id="55602" name="Fishing Support Cube" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_cupreous_ore_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -36,7 +36,7 @@
 	<skill id="55603" name="Potion Support Cube - Lv. 2" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_earthen_ore_cube_pc_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -47,7 +47,7 @@
 	<skill id="55604" name="Progression Support Cube" action="A1">
 	<!-- none -->
 		<icon initial="[icon.etc_crystal_cube_event_i00]"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -58,7 +58,7 @@
 	<skill id="55605" name="Artisan's Goggles (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.accessory_dwarf_goggle_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -73,7 +73,7 @@
 	<skill id="55606" name="Artisan's Goggles (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.accessory_dwarf_goggle_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -88,7 +88,7 @@
 	<skill id="55607" name="Artisan's Goggles (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.accessory_dwarf_goggle_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -103,7 +103,7 @@
 	<skill id="55608" name="Uniform Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys.icon.br_Uniform_Hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -118,7 +118,7 @@
 	<skill id="55609" name="Uniform Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys.icon.br_Uniform_Hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -133,7 +133,7 @@
 	<skill id="55610" name="Uniform Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys.icon.br_Uniform_Hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -148,7 +148,7 @@
 	<skill id="55611" name="Assassin's Bamboo Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys.icon.br_Bamboo_Hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -163,7 +163,7 @@
 	<skill id="55612" name="Assassin's Bamboo Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys.icon.br_Bamboo_Hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -178,7 +178,7 @@
 	<skill id="55613" name="Assassin's Bamboo Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys.icon.br_Bamboo_Hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -193,7 +193,7 @@
 	<skill id="55614" name="Valkyrie Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys.icon.br_valkyrie_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -208,7 +208,7 @@
 	<skill id="55615" name="Valkyrie Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys.icon.br_valkyrie_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -223,7 +223,7 @@
 	<skill id="55616" name="Valkyrie Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys.icon.br_valkyrie_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -238,7 +238,7 @@
 	<skill id="55617" name="Gatekeeper Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys.icon.br_gatekeeper_of_hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -253,7 +253,7 @@
 	<skill id="55618" name="Gatekeeper Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys.icon.br_gatekeeper_of_hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -268,7 +268,7 @@
 	<skill id="55619" name="Gatekeeper Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys.icon.br_gatekeeper_of_hat_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -283,7 +283,7 @@
 	<skill id="55620" name="Wedding Veil (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys2.icon.br_wedding_vail_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -298,7 +298,7 @@
 	<skill id="55621" name="Wedding Veil (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys2.icon.br_wedding_vail_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -313,7 +313,7 @@
 	<skill id="55622" name="Wedding Veil (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys2.icon.br_wedding_vail_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -328,7 +328,7 @@
 	<skill id="55623" name="Maid Hair Accessory (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys3.icon1.g_co_cutie_maid_hair"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -343,7 +343,7 @@
 	<skill id="55624" name="Maid Hair Accessory (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys3.icon1.g_co_cutie_maid_hair"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -358,7 +358,7 @@
 	<skill id="55625" name="Maid Hair Accessory (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys3.icon1.g_co_cutie_maid_hair"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -373,7 +373,7 @@
 	<skill id="55626" name="Refined Romantic Chapeau: Red (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.bm_romantic_chaperon_red"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -388,7 +388,7 @@
 	<skill id="55627" name="Refined Romantic Chapeau: Red (DEX+1 WIT+1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.bm_romantic_chaperon_red"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -403,7 +403,7 @@
 	<skill id="55628" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.bm_romantic_chaperon_red"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -418,7 +418,7 @@
 	<skill id="55629" name="Refined Angel Ring (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.accessory_angel_ring_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -433,7 +433,7 @@
 	<skill id="55630" name="Refined Angel Ring (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.accessory_angel_ring_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -448,7 +448,7 @@
 	<skill id="55631" name="Refined Angel Ring (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.accessory_angel_ring_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -463,7 +463,7 @@
 	<skill id="55632" name="Refined Wizard Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.accessory_magician_cap2_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -478,7 +478,7 @@
 	<skill id="55633" name="Refined Wizard Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.accessory_magician_cap2_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -493,7 +493,7 @@
 	<skill id="55634" name="Refined Wizard Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.accessory_magician_cap2_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -508,7 +508,7 @@
 	<skill id="55635" name="Laborer Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys.icon.br_people_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -523,7 +523,7 @@
 	<skill id="55636" name="Laborer Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys.icon.br_people_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -538,7 +538,7 @@
 	<skill id="55637" name="Laborer Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys.icon.br_people_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -553,7 +553,7 @@
 	<skill id="55638" name="Top Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.accessory_magicial_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -568,7 +568,7 @@
 	<skill id="55639" name="Top Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.accessory_magicial_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -583,7 +583,7 @@
 	<skill id="55640" name="Wizard Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.accessory_magicial_cap_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -598,7 +598,7 @@
 	<skill id="55641" name="Vigilante Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.zorocap"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -613,7 +613,7 @@
 	<skill id="55642" name="Vigilante Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.zorocap"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -628,7 +628,7 @@
 	<skill id="55643" name="Vigilante Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.zorocap"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -643,7 +643,7 @@
 	<skill id="55644" name="White Uniform Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys2.icon2.pi_navy_cap"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -658,7 +658,7 @@
 	<skill id="55645" name="White Uniform Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys2.icon2.pi_navy_cap"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -673,7 +673,7 @@
 	<skill id="55646" name="White Uniform Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys2.icon2.pi_navy_cap"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -688,7 +688,7 @@
 	<skill id="55647" name="Warrior's Helmet (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -703,7 +703,7 @@
 	<skill id="55648" name="Warrior's Helmet (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -718,7 +718,7 @@
 	<skill id="55649" name="Warrior's Helmet (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -733,7 +733,7 @@
 	<skill id="55650" name="First Mate Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.Accessary_middle_ages_i01"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -748,7 +748,7 @@
 	<skill id="55651" name="First Mate Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.Accessary_middle_ages_i01"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -763,7 +763,7 @@
 	<skill id="55652" name="First Mate Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.Accessary_middle_ages_i01"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -778,7 +778,7 @@
 	<skill id="55653" name="Refined Romantic Chapeau: Blue (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="icon.bm_romantic_chaperon_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -793,7 +793,7 @@
 	<skill id="55654" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="icon.bm_romantic_chaperon_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -808,7 +808,7 @@
 	<skill id="55655" name="Refined Romantic Chapeau: Blue (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="icon.bm_romantic_chaperon_blue"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -823,7 +823,7 @@
 	<skill id="55656" name="Gold-rimmed Glasses (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys2.icon.br_gold_eyeglass_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -838,7 +838,7 @@
 	<skill id="55657" name="Gold-rimmed Glasses (DEX+1 WIT+1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys2.icon.br_gold_eyeglass_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -853,7 +853,7 @@
 	<skill id="55658" name="Gold-rimmed Glasses (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys2.icon.br_gold_eyeglass_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -868,7 +868,7 @@
 	<skill id="55659" name="Horn-rimmed Glasses (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys.icon.br_Eye_Glasses_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -883,7 +883,7 @@
 	<skill id="55660" name="Horn-rimmed Glasses (DEX+1 WIT+1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys.icon.br_Eye_Glasses_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -898,7 +898,7 @@
 	<skill id="55661" name="Horn-rimmed Glasses (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys.icon.br_Eye_Glasses_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -913,7 +913,7 @@
 	<skill id="55662" name="Stylish Straw Hat (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys3.icon.g_straw_hat"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -928,7 +928,7 @@
 	<skill id="55663" name="Stylish Straw Hat (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys3.icon.g_straw_hat"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -943,7 +943,7 @@
 	<skill id="55664" name="Stylish Straw Hat (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys3.icon.g_straw_hat"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -958,7 +958,7 @@
 	<skill id="55665" name="Chic Silver Chapeau (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -973,7 +973,7 @@
 	<skill id="55666" name="Chic Silver Chapeau (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -988,7 +988,7 @@
 	<skill id="55667" name="Chic Silver Chapeau (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1003,7 +1003,7 @@
 	<skill id="55668" name="Afro Hair (STR+1 INT+1)">
 	<!-- STR+1, INT+1. -->
 		<icon initial="BranchSys.icon.br_Afro_hair_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1018,7 +1018,7 @@
 	<skill id="55669" name="Afro Hair (DEX +1 WIT +1)">
 	<!-- DEX +1, and WIT +1. -->
 		<icon initial="BranchSys.icon.br_Afro_hair_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1033,7 +1033,7 @@
 	<skill id="55670" name="Afro Hair (CON+1 MEN+1)">
 	<!-- CON+1, MEN+1 -->
 		<icon initial="BranchSys.icon.br_Afro_hair_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1048,7 +1048,7 @@
 	<skill id="55671" name="Eva's Scroll: Enchant Hair Accessory" action="A1">
 	<!-- To Enchant Hair Accessory. -->
 		<icon initial="icon.scroll_of_unidentify_am_d"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1058,7 +1058,7 @@
 	<skill id="55672" name="Stabilized Eva's Scroll: Enchant Hair Accessory" action="A1">
 	<!-- To Enchant Hair Accessory. -->
 		<icon initial="icon.scroll_of_unidentify_am_d"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1068,11 +1068,12 @@
 	<skill id="55673" name="Eva's Enhancement Pack - Hair Accessory" action="A1">
 	<!-- none -->
 		<icon initial="Branchsys2.icon.br_lucky_bag_box_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1080,12 +1081,13 @@
 	<skill id="55674" name="Eva's Hair Accessory Pack" action="A1">
 	<!-- none -->
 		<icon initial="BranchSys.icon.br_silver_box_i00"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1121,11 +1123,12 @@
 	<skill id="55675" name="Eva's Enhancement Pack - Hair Accessory" action="A1">
 	<!-- none -->
 		<icon initial="Branchsys2.icon.br_lucky_bag_box_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1133,7 +1136,7 @@
 	<skill id="55676" name="Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1143,7 +1146,7 @@
 	<skill id="55677" name="Shining Pendant Varnish" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1153,7 +1156,7 @@
 	<skill id="55678" name="Improved Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1167,7 +1170,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1179,7 +1181,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1191,7 +1192,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1199,13 +1199,12 @@
 	<skill id="55682" name="Golden Fruit Buff" action="A1">
 	<!-- For 20 minutes, XP/ SP +10%%, P./ M. Atk. +12%%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%%, P./ M. Def. +15%%, Max HP/ MP/ CP +25%%, HP/ MP Recovery Bonus +30%%. With a certain chance, converts 5%% of P. melee damage dealt into HP. Effect remains after death. -->
 		<icon initial="icon.bm_dragon_fruit"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1213,7 +1212,7 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1263,12 +1262,12 @@
 	<skill id="55683" name="Royal Tears" action="A1">
 	<!-- The essence of Frintezza's feelings. P. Atk./ M. Atk. +15%%, P. Def./ M. Def. +15%%. Changes the appearance of your weapon. Deleted upon logout. Not deleted upon death. -->
 		<icon initial="BranchSys2.icon.g_illumination_skyblue"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="100"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1276,7 +1275,7 @@
 	<skill id="55684" name="Red Candy of the Royal Family">
 	<!-- XP/SP +25%%. Can be once stacked with the Blue Candy of the Royal Family. -->
 		<icon initial="etc_whiteday_candy_i05"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1286,7 +1285,7 @@
 	<skill id="55685" name="Blue Candy of the Royal Family">
 	<!-- XP/SP +25%%. Can be once stacked with the Red Candy of the Royal Family. -->
 		<icon initial="etc_whiteday_candy_i06"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1296,9 +1295,10 @@
 	<skill id="55686" name="The Royal Confectionary Box" action="A1">
 	<!-- XP/SP +25%%. Can be once stacked with the Red Candy of the Royal Family. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1306,12 +1306,11 @@
 	<skill id="55687" name="Ultimate Confidence" action="A1">
 	<!-- You feel unusually confident about yourself and you are ready to express your feelings as they are. For 2 hr., acquired XP/SP +5%%, Atk. Spd./Casting Spd. +10%%, Movement Speed +20. Cannot be stacked with Blessing of Light. Changes the appearance of your weapon. Not deleted upon death. -->
 		<icon initial="icon.release_thirst"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="2000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1319,10 +1318,11 @@
 	<skill id="55688" name="Pirates Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1330,7 +1330,7 @@
 	<skill id="55689" name="Newbie Talisman">
 	<!-- P. Def. +18, M. Def. +9, P./M. Evasion +1, Max HP/MP/CP +50, Atk./Casting Spd. +6, Movement Speed +4. -->
 		<icon initial="icon.npoint_talisman_stat"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1344,7 +1344,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1356,7 +1355,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1368,7 +1366,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1380,7 +1377,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1392,7 +1388,6 @@
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1400,7 +1395,7 @@
 	<skill id="55695" name="Transformation Support Cube" action="A1">
 	<!-- none -->
 		<icon initial="icon.etc_golden_ore_cube_pc_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="-1000"/>
 			<effect-range initial="-1"/>
@@ -1411,7 +1406,7 @@
 	<skill id="55696" name="Newbie Amulet">
 	<!-- XP/SP +50%%, while hunting. -->
 		<icon initial="BranchSys2.lcon.br_life_rune_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1421,11 +1416,12 @@
 	<skill id="55697" name="Kusto Lucky Enchant Pack" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1433,10 +1429,11 @@
 	<skill id="55698" name="Giant's Treasure Chest" action="A1">
 	<!-- none -->
 		<icon initial="icon.card_event_blue_box"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1444,10 +1441,11 @@
 	<skill id="55699" name="Song: Hunter's Song" action="A1">
 	<!-- Increases P. Critical Rate +100%% for 10 minutes. -->
 		<icon initial="icon.skill0269"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="2500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

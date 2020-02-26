@@ -71,28 +71,7 @@
 				<value level="20">-5517</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-3006000">
-				<value level="2">-3231000</value>
-				<value level="3">-3474000</value>
-				<value level="4">-3735000</value>
-				<value level="5">-3933000</value>
-				<value level="6">-4143000</value>
-				<value level="7">-4350000</value>
-				<value level="8">-4482000</value>
-				<value level="9">-4608000</value>
-				<value level="10">-4725000</value>
-				<value level="11">-4836000</value>
-				<value level="12">-4938000</value>
-				<value level="13">-5028000</value>
-				<value level="14">-5112000</value>
-				<value level="15">-5181000</value>
-				<value level="16">-5250000</value>
-				<value level="17">-5319000</value>
-				<value level="18">-5385000</value>
-				<value level="19">-5451000</value>
-				<value level="20">-5517000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1300"/>
 
 			<element type="HOLY" value="20"/>
 		</attributes>
@@ -120,7 +99,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="CRITICAL_PROB_DOWN" >
+		<abnormal type="CRITICAL_PROB_DOWN">
 			<level initial="1">
 				<value level="6">2</value>
 				<value level="10">3</value>
@@ -158,7 +137,7 @@
 					<value level="20">2041.0</value>
 				</power>
 			</physical-attack>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power initial="-20.0">
 					<value level="6">-30.0</value>
 					<value level="11">-40.0</value>
@@ -239,28 +218,7 @@
 				<value level="20">-5517</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-3006000">
-				<value level="2">-3231000</value>
-				<value level="3">-3474000</value>
-				<value level="4">-3735000</value>
-				<value level="5">-3933000</value>
-				<value level="6">-4143000</value>
-				<value level="7">-4350000</value>
-				<value level="8">-4482000</value>
-				<value level="9">-4608000</value>
-				<value level="10">-4725000</value>
-				<value level="11">-4836000</value>
-				<value level="12">-4938000</value>
-				<value level="13">-5028000</value>
-				<value level="14">-5112000</value>
-				<value level="15">-5181000</value>
-				<value level="16">-5250000</value>
-				<value level="17">-5319000</value>
-				<value level="18">-5385000</value>
-				<value level="19">-5451000</value>
-				<value level="20">-5517000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1300"/>
 
 			<element type="DARK" value="20"/>
 		</attributes>
@@ -288,7 +246,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="CRITICAL_DMG_DOWN" >
+		<abnormal type="CRITICAL_DMG_DOWN">
 			<level initial="1">
 				<value level="6">2</value>
 				<value level="10">3</value>
@@ -369,20 +327,7 @@
 				<value level="12">-1504</value>
 			</effect-point>
 			<effect-range initial="650"/>
-			<hit-time initial="-1151000">
-				<value level="2">-1208000</value>
-				<value level="3">-1245000</value>
-				<value level="4">-1279000</value>
-				<value level="5">-1312000</value>
-				<value level="6">-1343000</value>
-				<value level="7">-1372000</value>
-				<value level="8">-1397000</value>
-				<value level="9">-1420000</value>
-				<value level="10">-1440000</value>
-				<value level="11">-1472000</value>
-				<value level="12">-1504000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="25">
@@ -416,7 +361,7 @@
 	<skill id="403" name="Shackle" max-level="10" debuff="true" action="A2">
 	<!-- Immobilizes the enemy for 5 seconds. -->
 		<icon initial="icon.skill0403"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30">
 			<magic-level initial="55">
 				<value level="2">58</value>
 				<value level="3">60</value>
@@ -442,18 +387,7 @@
 				<value level="10">-1309</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="-1046000">
-				<value level="2">-1098000</value>
-				<value level="3">-1132000</value>
-				<value level="4">-1163000</value>
-				<value level="5">-1193000</value>
-				<value level="6">-1221000</value>
-				<value level="7">-1247000</value>
-				<value level="8">-1270000</value>
-				<value level="9">-1291000</value>
-				<value level="10">-1309000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="25">
@@ -477,7 +411,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="100"/>
+					<power initial="100.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -485,7 +419,7 @@
 	<skill id="404" name="Mass Shackling" max-level="10" debuff="true" action="A2">
 	<!-- Immobilizes nearby enemies for 10 seconds. -->
 		<icon initial="icon.skill0404"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="20">
 			<magic-level initial="58">
 				<value level="2">62</value>
 				<value level="3">66</value>
@@ -512,18 +446,7 @@
 				<value level="10">-1514</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1208000">
-				<value level="2">-1279000</value>
-				<value level="3">-1343000</value>
-				<value level="4">-1397000</value>
-				<value level="5">-1440000</value>
-				<value level="6">-1454000</value>
-				<value level="7">-1469000</value>
-				<value level="8">-1484000</value>
-				<value level="9">-1498000</value>
-				<value level="10">-1514000</value>
-			</hit-time>
-			<activate-rate initial="40"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="40">
@@ -548,7 +471,7 @@
 			<effect name="Root"/>
 			<defence-trait>
 				<trait type="HOLD">
-					<power initial="100"/>
+					<power initial="100.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -572,11 +495,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="133">
@@ -585,7 +504,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="POSSESSION" >
+		<abnormal type="POSSESSION">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -698,19 +617,7 @@
 				<value level="11">-662</value>
 			</effect-point>
 			<effect-range initial="650"/>
-			<hit-time initial="-523000">
-				<value level="2">-549000</value>
-				<value level="3">-566000</value>
-				<value level="4">-582000</value>
-				<value level="5">-597000</value>
-				<value level="6">-611000</value>
-				<value level="7">-624000</value>
-				<value level="8">-635000</value>
-				<value level="9">-646000</value>
-				<value level="10">-655000</value>
-				<value level="11">-662000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="25">
@@ -727,7 +634,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="HIT_DOWN" >
+		<abnormal type="HIT_DOWN">
 			<level initial="1">
 				<value level="6">2</value>
 				<value level="10">3</value>
@@ -736,7 +643,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="-6.0">
 					<value level="6">-9.0</value>
 					<value level="10">-12.0</value>
@@ -781,17 +688,7 @@
 				<value level="9">664</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="566000">
-				<value level="2">582000</value>
-				<value level="3">597000</value>
-				<value level="4">611000</value>
-				<value level="5">624000</value>
-				<value level="6">635000</value>
-				<value level="7">646000</value>
-				<value level="8">655000</value>
-				<value level="9">664000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="84">
@@ -805,7 +702,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="SNIPE" >
+		<abnormal type="SNIPE">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -825,7 +722,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="62.0">
 					<value level="2">67.0</value>
 					<value level="3">73.0</value>
@@ -890,17 +787,7 @@
 				<value level="9">664</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="566000">
-				<value level="2">582000</value>
-				<value level="3">597000</value>
-				<value level="4">611000</value>
-				<value level="5">624000</value>
-				<value level="6">635000</value>
-				<value level="7">646000</value>
-				<value level="8">655000</value>
-				<value level="9">664000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="84">
@@ -914,7 +801,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="SNIPE" >
+		<abnormal type="SNIPE">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -934,7 +821,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="124.0">
 					<value level="2">134.0</value>
 					<value level="3">155.0</value>
@@ -979,11 +866,7 @@
 				<value level="3">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">611000</value>
-				<value level="3">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="27">
@@ -992,7 +875,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="MP_COST_DOWN" >
+		<abnormal type="MP_COST_DOWN">
 			<level initial="1"/>
 			<time initial="1200"/>
 			<chance initial="-1"/>
@@ -1034,14 +917,7 @@
 				<value level="7">700</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">582000</value>
-				<value level="3">611000</value>
-				<value level="4">635000</value>
-				<value level="5">655000</value>
-				<value level="6">676000</value>
-				<value level="7">700000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1075,7 +951,7 @@
 		level 3: Increases Weight limit by 50%.
 	 -->
 		<icon initial="icon.skill0418"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="58">
 				<value level="2">66</value>
 				<value level="3">74</value>
@@ -1086,7 +962,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT" mode="PER">
 				<power initial="30.0">
 					<value level="2">40.0</value>
 					<value level="3">50.0</value>
@@ -1109,7 +985,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="106">
@@ -1122,7 +998,7 @@
 			</hp>
 		</consume>
 		<target />
-		<abnormal type="PD_UP_SPECIAL" >
+		<abnormal type="PD_UP_SPECIAL">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1140,7 +1016,7 @@
 					<value level="3">30.0</value>
 				</power>
 			</speed>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="6.0"/>
 				<weapon-type>SWORD BLUNT SPEAR FIST </weapon-type>
 			</stat-modify>
@@ -1167,7 +1043,7 @@
 			<resist-abnormal-by-category category="DEBUFF">
 				<power initial="-80.0"/>
 			</resist-abnormal-by-category>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
 				<power initial="33.0">
 					<value level="2">66.0</value>
 					<value level="3">100.0</value>
@@ -1204,13 +1080,7 @@
 				<value level="5">655</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="549000">
-				<value level="2">582000</value>
-				<value level="3">611000</value>
-				<value level="4">635000</value>
-				<value level="5">655000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="81">
@@ -1221,7 +1091,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="POLEARM_ATTACK" >
+		<abnormal type="POLEARM_ATTACK">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1237,7 +1107,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="ATTACK_COUNT_MAX">
+			<stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>
@@ -1256,14 +1126,13 @@
 			<reuse initial="30000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="655000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="120"/>
 		</consume>
 		<target />
-		<abnormal type="POSSESSION" >
+		<abnormal type="POSSESSION">
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -1274,7 +1143,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power initial="6.0"/>
 				<weapon-type>FIST </weapon-type>
 			</stat-modify>
@@ -1305,7 +1174,7 @@
 		level 13: P. Def. +130, Shield Def. +10% and Bow Attack Resistance +10% when equipped with a heavy armor.
 	 -->
 		<icon initial="icon.skill0429"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="78">
 				<value level="2">79</value>
 				<value level="3">80</value>
@@ -1321,7 +1190,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="87.1">
 					<value level="2">90.0</value>
 					<value level="3">93.0</value>
@@ -1339,7 +1208,7 @@
 			</stat-modify>
 			<defence-trait>
 				<trait type="BOW">
-					<power initial="10"/>
+					<power initial="10.0"/>
 				</trait>
 			</defence-trait>
 		</effects>
@@ -1353,7 +1222,7 @@
 		level 5: Max CP +10% and Max HP +5%. Received P. Critical Damage/M. Critical Damage -20% when equipped with a heavy armor.
 	 -->
 		<icon initial="icon.skill0430"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1372,7 +1241,7 @@
 	<skill id="437" name="Song of Silence" max-level="3" debuff="true" action="A2">
 	<!-- Sings a Song of Silence. Blocks all the enemies' P. Skill/M. Skill for 10 seconds. -->
 		<icon initial="icon.skill0437"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
 			<magic-level initial="79">
 				<value level="2">81</value>
 				<value level="3">84</value>
@@ -1385,11 +1254,10 @@
 				<value level="3">-515</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-507000">
-				<value level="2">-510000</value>
-				<value level="3">-515000</value>
+			<hit-time initial="2500">
+				<value level="2">2400</value>
+				<value level="3">2300</value>
 			</hit-time>
-			<activate-rate initial="60"/>
 		</attributes>
 		<consume>
 			<mana initial="50">
@@ -1420,7 +1288,7 @@
 			<reuse initial="150000"/>
 			<effect-point initial="669"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="669000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1442,8 +1310,7 @@
 			<reuse initial="600000"/>
 			<effect-point initial="673"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="673000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume charge="5">
 			<mana initial="65"/>
@@ -1477,8 +1344,7 @@
 			<reuse initial="900000"/>
 			<effect-point initial="676"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="676000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume charge="4">
 			<mana initial="72"/>
@@ -1506,11 +1372,12 @@
 	<skill id="444" name="Sweeper Festival" action="A1">
 	<!-- When used on nearby corpses that are in a Spoil state, extra items may be obtained. -->
 		<icon initial="BranchSys2.icon.br_skill0444_a"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="78"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1531,14 +1398,13 @@
 			<reuse initial="300000"/>
 			<effect-point initial="673"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="673000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="47"/>
 		</consume>
 		<target />
-		<abnormal type="MIRAGE" >
+		<abnormal type="MIRAGE">
 			<level initial="1"/>
 			<time initial="120"/>
 			<chance initial="-1"/>
@@ -1559,14 +1425,13 @@
 			<reuse initial="300000"/>
 			<effect-point initial="337"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="337000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="32"/>
 		</consume>
 		<target />
-		<abnormal type="AVOID_SKILL" >
+		<abnormal type="AVOID_SKILL">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1586,20 +1451,19 @@
 			<reuse initial="300000"/>
 			<effect-point initial="337"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="337000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="32"/>
 		</consume>
 		<target />
-		<abnormal type="COUNTER_SKILL" >
+		<abnormal type="COUNTER_SKILL">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="VENGEANCE_SKILL_PHYSICAL_DAMAGE">
+			<stat-modify stat="VENGEANCE_SKILL_PHYSICAL_DAMAGE" stat-add="VENGEANCE_SKILL_PHYSICAL_DAMAGE">
 				<power initial="90.0"/>
 			</stat-modify>
 		</effects>
@@ -1611,7 +1475,7 @@
 		level 7: Summons an Attractive Cubic. Attractive Cubic can continuously use Aggression and Hold magic on the enemy. Consumes 6 Spirit Ore when summoned.
 	 -->
 		<icon initial="icon.skill0449"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="62">
 				<value level="2">66</value>
 				<value level="3">70</value>
@@ -1625,6 +1489,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1684,13 +1549,7 @@
 				<value level="5">708</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="540000">
-				<value level="2">582000</value>
-				<value level="3">624000</value>
-				<value level="4">666000</value>
-				<value level="5">708000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume charge="1">
 			<mana initial="26">
@@ -1701,7 +1560,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="SPEED_UP_SPECIAL" >
+		<abnormal type="SPEED_UP_SPECIAL">
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="-1"/>
@@ -1761,13 +1620,13 @@
 		</conditions>
 		<effects>
 			<dispel>
+				<abnormal type="ROOT_PHYSICALLY">
+					<power initial="3.0"/>
+				</abnormal>
 				<abnormal type="SPEED_DOWN">
 					<power initial="3.0"/>
 				</abnormal>
 				<abnormal type="ROOT_MAGICALLY">
-					<power initial="3.0"/>
-				</abnormal>
-				<abnormal type="ROOT_PHYSICALLY">
 					<power initial="3.0"/>
 				</abnormal>
 			</dispel>
@@ -1782,7 +1641,7 @@
 		level 5: Increases P. Atk. by 200 and additionally by 100.
 	 -->
 		<icon initial="icon.skill0816"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1">
 				<value level="2">20</value>
 				<value level="3">40</value>
@@ -1795,7 +1654,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="30.0">
 					<value level="2">50.0</value>
 					<value level="3">70.0</value>
@@ -1822,7 +1681,7 @@
 		level 5: P. Def. +200 and MP Recovery Bonus +100
 	 -->
 		<icon initial="icon.skill10097"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="5">
 				<value level="2">8</value>
 				<value level="3">10</value>
@@ -1835,7 +1694,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="9.0">
 					<value level="2">11.0</value>
 					<value level="3">12.0</value>
@@ -1866,7 +1725,7 @@
 		level 10: P. Def. +150, P. Evasion +5, P. Critical Attack Receival Rate and P. Critical Damage -25% when equipped with a light armor.
 	 -->
 		<icon initial="icon.skill0465"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="18">
 				<value level="2">20</value>
 				<value level="3">22</value>
@@ -1884,7 +1743,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power initial="0.9">
 					<value level="2">2.2</value>
 					<value level="3">3.2</value>
@@ -1898,7 +1757,8 @@
 				</power>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="3.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="3.0">
 					<value level="3">5.0</value>
 					<value level="5">6.0</value>
 				</power>
@@ -1921,7 +1781,7 @@
 		level 3: Increases M. Def. by 300.
 	 -->
 		<icon initial="icon.skill0466"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="5">
 				<value level="2">8</value>
 				<value level="3">10</value>
@@ -1932,7 +1792,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="11.0">
 					<value level="2">12.0</value>
 					<value level="3">13.0</value>
@@ -1957,7 +1817,7 @@
 		level 10: Increases P. Atk. by 250 when using an ancient equipment.
 	 -->
 		<icon initial="icon.skill0472"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20">
 				<value level="2">24</value>
 				<value level="3">26</value>
@@ -1975,7 +1835,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="5.2">
 					<value level="2">8.1</value>
 					<value level="3">9.9</value>
@@ -2005,7 +1865,7 @@
 		level 10: Increases P. Atk. by 220 when using a short sword.
 	 -->
 		<icon initial="icon.skill0474"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20">
 				<value level="2">24</value>
 				<value level="3">26</value>
@@ -2023,7 +1883,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="3.2">
 					<value level="2">5.28</value>
 					<value level="3">6.48</value>
@@ -2086,17 +1946,7 @@
 				<value level="10">-470</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-120000">
-				<value level="2">-170000</value>
-				<value level="3">-220000</value>
-				<value level="4">-270000</value>
-				<value level="5">-320000</value>
-				<value level="6">-370000</value>
-				<value level="7">-395000</value>
-				<value level="8">-420000</value>
-				<value level="9">-445000</value>
-				<value level="10">-470000</value>
-			</hit-time>
+			<hit-time initial="1800"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume soul="5">
@@ -2154,13 +2004,7 @@
 				<value level="5">-500</value>
 			</effect-point>
 			<effect-range initial="200"/>
-			<hit-time initial="-460000">
-				<value level="2">-470000</value>
-				<value level="3">-480000</value>
-				<value level="4">-490000</value>
-				<value level="5">-500000</value>
-			</hit-time>
-			<activate-rate initial="70"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="100">
@@ -2178,7 +2022,7 @@
 		</abnormal>
 		<effects>
 			<effect name="Disarm"/>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="-40.0"/>
 			</stat-modify>
 		</effects>
@@ -2198,7 +2042,7 @@
 			<cast-range initial="-1"/>
 			<reuse initial="150000"/>
 			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="20">
@@ -2207,7 +2051,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="RESIST_SPIRITLESS" >
+		<abnormal type="RESIST_SPIRITLESS">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>

@@ -3,7 +3,7 @@
 	<skill id="13136" name="Hero's Cloak">
 	<!-- Max HP/Max MP/Max CP +10%%, P. Def. +5%%, M. Def +10%%, Resistance to all weapons +5, P. Critical Rate/M. Critical Rate +20, and PvP Damage Received -10%%. Also returns 4%% of received damage to the enemy. -->
 		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>

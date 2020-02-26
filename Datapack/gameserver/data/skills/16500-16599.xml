@@ -3,7 +3,7 @@
 	<skill id="16518" name="Event Invincibility">
 	<!-- Invincible against normal attacks, skills, and debuffs. Unable to recover HP. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

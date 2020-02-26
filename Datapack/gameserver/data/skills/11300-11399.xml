@@ -3,11 +3,12 @@
 	<skill id="11316" name="Summon Soulshots" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 30 Beast Soulshots. Consumes 4 Soulstone(s). -->
 		<icon initial="icon.skill11316"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -27,10 +28,11 @@
 	<skill id="11317" name="Summon Mass Soulshot" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 300 Best Soulshots. Consumes 40 Soulstones. -->
 		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -41,11 +43,12 @@
 	<skill id="11318" name="Summon Spiritshots" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 24 Beast Spiritshots. Consumes 4 Spirit Ore. -->
 		<icon initial="icon.skill11316"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0" >
+		<attributes static-reuse="true" magic-critical-rate="5.0">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -65,10 +68,11 @@
 	<skill id="11319" name="Summon Mass Spiritshot" action="A1" type="MAGIC">
 	<!-- With a 100%% probability summons 300 Best Spiritshots. Consumes 40 Spirit Ores. -->
 		<icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="3000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

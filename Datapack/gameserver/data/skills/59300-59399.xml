@@ -25,7 +25,7 @@
 	<skill id="59302" name="Noblesse White - Curse Gloom" max-level="3" debuff="true" action="A1">
 	<!-- M. Def -23%%. -->
 		<icon initial="icon.bm2018_whitenoblesse_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="180000">
 				<value level="2">80000</value>
@@ -33,7 +33,6 @@
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -74,7 +73,7 @@
 	<skill id="59306" name="Cowboy Purple - Physical Attack" max-level="3" action="A1">
 	<!-- Inflicts a powerful P. Atk. on the target. -->
 		<icon initial="icon.bm2018_cowboy_i01"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<reuse initial="180000">
 				<value level="2">80000</value>
@@ -82,7 +81,6 @@
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -123,7 +121,7 @@
 	<skill id="59310" name="Musketeer Blue - Stun" max-level="3" debuff="true" action="A1">
 	<!-- Stunned and temporarily unable to move. -->
 		<icon initial="icon.bm2018_bluemusketeer_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="180000">
 				<value level="2">80000</value>
@@ -131,7 +129,6 @@
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -164,14 +161,13 @@
 		level 2: The armor's power makes the wearer go berserk. During Berserk state, the wearer's P. Atk. +70% M. Atk. +70% Atk. Spd. +70%, Casting Spd. +70%. Reflects 20% of received damage to the enemy.
 	 -->
 		<icon initial="icon.bm2018_dragon_i01"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="290000">
 				<value level="2">190000</value>
 			</reuse>
 			<effect-point initial="20"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -204,14 +200,13 @@
 		level 2: Zaken's power speeds up all stats. Atk. Spd. +50%, Casting Spd. +50%, Movement Speed +50%.
 	 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_zaken"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="100000">
 				<value level="2">60000</value>
 			</reuse>
 			<effect-point initial="20"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -241,14 +236,13 @@
 	<skill id="59319" name="Anakim Soul" max-level="2" debuff="true" action="A1">
 	<!-- Silenced and temporarily unable to use skills. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_anakim"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="100000">
 				<value level="2">60000</value>
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -281,14 +275,13 @@
 		level 2: Lilith's power increases a party member's P. Critical Damage by 50% and M. Critical Damage by 50%.
 	 -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_lilith"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="100000">
 				<value level="2">60000</value>
 			</reuse>
 			<effect-point initial="20"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -318,14 +311,13 @@
 	<skill id="59325" name="Freya Soul" max-level="2" action="A1">
 	<!-- Removes 1 buff -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_freya"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<reuse initial="100000">
 				<value level="2">60000</value>
 			</reuse>
 			<effect-point initial="-5"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -333,11 +325,12 @@
 	<skill id="59326" name="Brilliant Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -345,11 +338,12 @@
 	<skill id="59327" name="Shining Jewel Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -362,7 +356,7 @@
 		level 4: When killed by ordinary monsters, item drop rate decreases by 100%. Does not apply to chaotic characters.
 	 -->
 		<icon initial="icon.skill0390"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -372,7 +366,7 @@
 	<skill id="59329" name="Cute Animal Friends" action="A1">
 	<!-- Max CP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -382,7 +376,7 @@
 	<skill id="59330" name="Special Season" action="A1">
 	<!-- Max HP +80 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -392,7 +386,7 @@
 	<skill id="59331" name="Striking Elegance" action="A1">
 	<!-- P. Atk./M. Atk. +10 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -402,7 +396,7 @@
 	<skill id="59332" name="Wow! It's Summer!" action="A1">
 	<!-- Increases Max HP/CP/MP +200 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -412,7 +406,7 @@
 	<skill id="59333" name="Uncontrollable Power" action="A1">
 	<!-- P. Atk. +50 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -422,7 +416,7 @@
 	<skill id="59334" name="Overflowing Magic" action="A1">
 	<!-- M. Atk. +50 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -432,7 +426,7 @@
 	<skill id="59335" name="Rarity Collector" action="A1">
 	<!-- P. Atk./M. Atk. +100 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -442,7 +436,7 @@
 	<skill id="59336" name="Highly Durable!" action="A1">
 	<!-- Activates the Collector Power that creates a barrier which absorbs up to 1500 damage for 10 seconds -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -452,7 +446,7 @@
 	<skill id="59337" name="Very Strong!" action="A1">
 	<!-- Activates the Collector Power that ignores CP in PvP and inflicts a fixed damage of 1350 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -462,7 +456,7 @@
 	<skill id="59338" name="Very Quick!" action="A1">
 	<!-- Activates the Collector Power that cancels nearby enemies' targets and teleports the caster to the rear -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -472,7 +466,7 @@
 	<skill id="59339" name="I Am Legend" action="A1">
 	<!-- Increases Max HP/CP/MP +200 and P. Atk./M. Atk. +250 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -482,7 +476,7 @@
 	<skill id="59340" name="No Pain, No Gain" action="A1">
 	<!-- Activates the Collector Power that fully recovers HP/CP/MP and makes you invincible for 10 seconds -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -492,7 +486,7 @@
 	<skill id="59341" name="Collector Power" action="A1">
 	<!-- Creates a barrier that absorbs up to 1500 damage for 10 seconds. -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="90000"/>
 			<cool-time initial="500"/>
@@ -504,13 +498,13 @@
 	<skill id="59342" name="Collector Power" action="A1">
 	<!-- Ignores CP in PvP and inflicts a fixed damage of 1350. Can only be used in PvP. -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="30000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -518,13 +512,13 @@
 	<skill id="59343" name="Collector Power" action="A1" type="MAGIC">
 	<!-- Cancels nearby enemies' targets and teleports the caster to the rear. -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<cool-time initial="200"/>
 			<effect-point initial="-687"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-687000"/>
+			<hit-time initial="800"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -535,14 +529,16 @@
 		level 2: Becomes invincible for 10 seconds.
 	 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_active"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="600000">
 				<value level="2">0</value>
 			</reuse>
 			<effect-point initial="867"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="867000"/>
+			<hit-time initial="500">
+				<value level="2">0</value>
+			</hit-time>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -557,7 +553,7 @@
 		level 6: Transformation skill cooldown -15%.
 	 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_reuse"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -574,7 +570,7 @@
 		level 6: Transformation skill duration +42.5%.
 	 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_timeup"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -588,7 +584,7 @@
 		level 3: XP gain +30%.
 	 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_elemental_exp"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -602,7 +598,7 @@
 		level 3: Attribute Damage +45.
 	 -->
 		<icon initial="BranchIcon.Icon.s_g_bm_collection_bonus_elemental_dmg"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -612,9 +608,10 @@
 	<skill id="59349" name="Santa Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -622,9 +619,10 @@
 	<skill id="59350" name="Santa Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -632,9 +630,10 @@
 	<skill id="59351" name="Santa Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -642,9 +641,10 @@
 	<skill id="59352" name="Santa Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -652,9 +652,10 @@
 	<skill id="59353" name="Santa Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -662,9 +663,10 @@
 	<skill id="59354" name="School Uniform A Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -672,9 +674,10 @@
 	<skill id="59355" name="School Uniform A Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -682,9 +685,10 @@
 	<skill id="59356" name="School Uniform A Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -692,9 +696,10 @@
 	<skill id="59357" name="School Uniform A Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -702,9 +707,10 @@
 	<skill id="59358" name="School Uniform A Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.Br_schoollook"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -712,9 +718,10 @@
 	<skill id="59359" name="Beach Swimsuit Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -722,9 +729,10 @@
 	<skill id="59360" name="Beach Swimsuit Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -732,9 +740,10 @@
 	<skill id="59361" name="Beach Swimsuit Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -742,9 +751,10 @@
 	<skill id="59362" name="Beach Swimsuit Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -752,9 +762,10 @@
 	<skill id="59363" name="Beach Swimsuit Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -762,9 +773,10 @@
 	<skill id="59364" name="Teddy Bear Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -772,9 +784,10 @@
 	<skill id="59365" name="Teddy Bear Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -782,9 +795,10 @@
 	<skill id="59366" name="Teddy Bear Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -792,9 +806,10 @@
 	<skill id="59367" name="Teddy Bear Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -802,9 +817,10 @@
 	<skill id="59368" name="Teddy Bear Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.gomdori_chest_change"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -812,9 +828,10 @@
 	<skill id="59369" name="Kitty Plushy Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -822,9 +839,10 @@
 	<skill id="59370" name="Kitty Plushy Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -832,9 +850,10 @@
 	<skill id="59371" name="Kitty Plushy Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -842,9 +861,10 @@
 	<skill id="59372" name="Kitty Plushy Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -852,9 +872,10 @@
 	<skill id="59373" name="Kitty Plushy Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_cat"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -862,9 +883,10 @@
 	<skill id="59374" name="Panda Plushy Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -872,9 +894,10 @@
 	<skill id="59375" name="Panda Plushy Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -882,9 +905,10 @@
 	<skill id="59376" name="Panda Plushy Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -892,9 +916,10 @@
 	<skill id="59377" name="Panda Plushy Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -902,9 +927,10 @@
 	<skill id="59378" name="Panda Plushy Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="icon.sayha2017_panda"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -912,9 +938,10 @@
 	<skill id="59379" name="Baseball Uniform Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -922,9 +949,10 @@
 	<skill id="59380" name="Baseball Uniform Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -932,9 +960,10 @@
 	<skill id="59381" name="Baseball Uniform Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -942,9 +971,10 @@
 	<skill id="59382" name="Baseball Uniform Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -952,9 +982,10 @@
 	<skill id="59383" name="Baseball Uniform Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_baseball"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -962,9 +993,10 @@
 	<skill id="59384" name="Seductive Swimsuit Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -972,9 +1004,10 @@
 	<skill id="59385" name="Seductive Swimsuit Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -982,9 +1015,10 @@
 	<skill id="59386" name="Seductive Swimsuit Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -992,9 +1026,10 @@
 	<skill id="59387" name="Seductive Swimsuit Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1002,9 +1037,10 @@
 	<skill id="59388" name="Seductive Swimsuit Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_swimsuit_event_03"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1012,9 +1048,10 @@
 	<skill id="59389" name="School Uniform B Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1022,9 +1059,10 @@
 	<skill id="59390" name="School Uniform B Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1032,9 +1070,10 @@
 	<skill id="59391" name="School Uniform B Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1042,9 +1081,10 @@
 	<skill id="59392" name="School Uniform B Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1052,9 +1092,10 @@
 	<skill id="59393" name="School Uniform B Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_schoollook_b"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1062,9 +1103,10 @@
 	<skill id="59394" name="Hanbok Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1072,9 +1114,10 @@
 	<skill id="59395" name="Hanbok Sealbook - High-grade" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1082,9 +1125,10 @@
 	<skill id="59396" name="Hanbok Sealbook - Rare" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1092,9 +1136,10 @@
 	<skill id="59397" name="Hanbok Sealbook - Legendary" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1102,9 +1147,10 @@
 	<skill id="59398" name="Hanbok Sealbook - Mythic" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchIcon.Icon.g_bm_costume_korea_traditional"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1112,9 +1158,10 @@
 	<skill id="59399" name="Metal Suit Sealbook - Standard" action="A1">
 	<!-- Attribute Damage +$s1. -->
 		<icon initial="BranchSys3.icon1.g_co_sf_u"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

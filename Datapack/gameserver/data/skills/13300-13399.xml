@@ -9,7 +9,7 @@
 		level 5: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Vampiric Rage +2%%, Stun Resistance +10%%, Bow Attack Resistance +10%%, P. Def. +6%%, and P. Skills Cooldown -4%% through item set enchantment.
 	 -->
 		<icon initial="icon.skill0231"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -17,30 +17,16 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
 				<power initial="360.0"/>
 			</vital-stat-modify>
 			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
 				<power initial="10.0">
 					<value level="2">4.0</value>
-					<value level="3">10.0</value>
-					<value level="3">4.0</value>
-					<value level="4">10.0</value>
-					<value level="4">4.0</value>
-					<value level="5">10.0</value>
-					<value level="5">4.0</value>
 				</power>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power>
-					<value level="2">47.0</value>
-					<value level="2">0.0</value>
-					<value level="3">47.0</value>
-					<value level="3">0.0</value>
-					<value level="4">47.0</value>
-					<value level="4">0.0</value>
-					<value level="5">47.0</value>
-					<value level="5">10.0</value>
 					<value level="5">6.0</value>
 				</power>
 			</stat-modify>
@@ -75,7 +61,7 @@
 		level 5: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, P. Skill Power/M. Skill Power +7%%, MEN/Paralysis/Stun Resistance +5%%, Magic Attack Resistance +15%%, and M. Def. +7%% through item set enchantment.
 	 -->
 		<icon initial="icon.skill0233"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -83,24 +69,23 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_HP">
-				<power initial="200.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP">
-				<power initial="80.0"/>
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+				<power initial="200.0">
+					<value level="2">80.0</value>
+					<value level="3">200.0</value>
+					<value level="3">80.0</value>
+					<value level="4">200.0</value>
+					<value level="4">80.0</value>
+					<value level="5">200.0</value>
+					<value level="5">80.0</value>
+				</power>
 			</vital-stat-modify>
 			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
 				<power initial="10.0">
 					<value level="2">4.0</value>
-					<value level="3">10.0</value>
-					<value level="3">4.0</value>
-					<value level="4">10.0</value>
-					<value level="4">4.0</value>
-					<value level="5">10.0</value>
-					<value level="5">4.0</value>
 				</power>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power>
 					<value level="2">47.0</value>
 				</power>
@@ -159,7 +144,7 @@
 		level 5: Max MP +140. Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, M. Def. +28, Heal Given +52, Paralysis Resistance +10%%, Stun Resistance +5%%, Debuff Resistance +7%%, M. Skill MP Consumption -4%%, and P. Critical Damage Receival Rate -20%% through item set enchantment.
 	 -->
 		<icon initial="icon.skill0234"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -167,21 +152,15 @@
 		</attributes>
 		<target />
 		<effects>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="140.0"/>
 			</vital-stat-modify>
 			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
 				<power initial="4.0">
 					<value level="2">6.0</value>
-					<value level="3">4.0</value>
-					<value level="3">6.0</value>
-					<value level="4">4.0</value>
-					<value level="4">6.0</value>
-					<value level="5">4.0</value>
-					<value level="5">6.0</value>
 				</power>
 			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
 				<power>
 					<value level="2">47.0</value>
 				</power>

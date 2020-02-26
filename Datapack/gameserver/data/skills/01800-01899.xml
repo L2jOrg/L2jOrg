@@ -10,8 +10,7 @@
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<item initial="49543"/>
@@ -33,7 +32,7 @@
 			<speed>
 				<power initial="3.0"/>
 			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
@@ -69,8 +68,7 @@
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<item initial="49543"/>
@@ -92,7 +90,7 @@
 			<speed>
 				<power initial="4.0"/>
 			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="3.0"/>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
@@ -128,8 +126,7 @@
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3000"/>
 		</attributes>
 		<consume>
 			<item initial="49543"/>
@@ -151,7 +148,7 @@
 			<speed>
 				<power initial="5.0"/>
 			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
@@ -180,24 +177,24 @@
 	<skill id="1810" name="Cadmus - Might" action="A2" type="MAGIC">
 	<!-- Increases P. Atk. by 15%% for 20 minutes -->
 		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power/>
 			</stat-modify>
 		</effects>
@@ -205,24 +202,24 @@
 	<skill id="1811" name="Cadmus - Shield" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Def. +15%%. -->
 		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="418"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="418000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power/>
 			</stat-modify>
 		</effects>
@@ -230,19 +227,19 @@
 	<skill id="1812" name="Cadmus - Wind Walk" action="A2" type="MAGIC">
 	<!-- Speed +33 for 20 minutes. -->
 		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="285"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="285000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -255,10 +252,11 @@
 	<skill id="1813" name="Cadmus - Return" action="A1" type="MAGIC">
 	<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<icon initial="Icon.skill1050"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="75000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -272,24 +270,24 @@
 	<skill id="1814" name="Cadmus - Focus" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Rate +30%%. -->
 		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
+			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
 				<power/>
 			</stat-hp-based>
 		</effects>
@@ -297,19 +295,19 @@
 	<skill id="1815" name="Cadmus - Death Whisper" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Damage +35%%. -->
 		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -322,24 +320,24 @@
 	<skill id="1816" name="Cadmus - Guidance" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Accuracy +4. -->
 		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY">
+			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
 				<power/>
 			</stat-modify>
 		</effects>
@@ -352,7 +350,7 @@
 			<reuse initial="3000"/>
 			<effect-point initial="301"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="301000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -368,24 +366,24 @@
 	<skill id="1818" name="Cadmus - Haste" action="A2" type="MAGIC">
 	<!-- Increases Atk. Spd. by 33%% for 20 minutes. -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power/>
 			</stat-modify>
 		</effects>
@@ -393,24 +391,24 @@
 	<skill id="1819" name="Cadmus - Acumen" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Casting Spd. +30%%. -->
 		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="457"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="457000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power/>
 			</stat-modify>
 		</effects>
@@ -418,19 +416,19 @@
 	<skill id="1820" name="Cadmus - Vampiric Rage" action="A2" type="MAGIC">
 	<!-- For 20 minutes, recovers as HP 9%% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="646"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="646000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -443,24 +441,24 @@
 	<skill id="1821" name="Cadmus - Empower" action="A2" type="MAGIC">
 	<!-- Increases M. Atk. power by 75%% for 20 minutes. -->
 		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="75.0"/>
 			</stat-modify>
 		</effects>
@@ -468,19 +466,19 @@
 	<skill id="1822" name="Cadmus - Clarity" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. -->
 		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="655000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -493,48 +491,49 @@
 	<skill id="1823" name="Cadmus - Agility" action="A2" type="MAGIC">
 	<!-- For 20 minutes, P. Evasion +4. -->
 		<icon initial="icon.skill1087"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="4.0"/>
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+				<power initial="4.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
 	<skill id="1824" name="Cadmus - Lightness" action="A2" type="MAGIC">
 	<!-- For 20 minutes, Weight Penalty Segment +9000 -->
 		<icon initial="icon.skill1257"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="12"/>
 		</consume>
 		<target type="TARGET" />
-		<abnormal >
+		<abnormal>
 			<time initial="1200"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
 				<power initial="9000.0"/>
 			</stat-modify>
 		</effects>
@@ -542,12 +541,12 @@
 	<skill id="1825" name="Cadmus - Recharge" action="A1" type="MAGIC">
 	<!-- Recovers MP up to 94 power depending on the target's Lv.. -->
 		<icon initial="icon.skill1013"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="655000"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -568,7 +567,7 @@
 			<reuse initial="3000"/>
 			<effect-point initial="365"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="365000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -584,7 +583,7 @@
 	<skill id="1827" name="Transformation Block">
 	<!-- Transformed state attack unavailable. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -596,7 +595,7 @@
 		level 2: Transformed state P. Def./M. Def Boost.
 	 -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -605,7 +604,7 @@
 	<skill id="1829" name="Spell Master">
 	<!-- Casting Spd. +10%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1901"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -624,7 +623,7 @@
 	<skill id="1830" name="Spell Master">
 	<!-- Casting Spd. +13%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1908"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -632,7 +631,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="13.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -643,7 +642,7 @@
 	<skill id="1831" name="Spell Master">
 	<!-- Casting Spd. +9%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1911"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -651,7 +650,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="9.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -662,7 +661,7 @@
 	<skill id="1832" name="Spell Master">
 	<!-- Casting Spd. +5%%, M. Critical Rate +10. -->
 		<icon initial="icon.skill1916"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<magic-level initial="40"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -670,7 +669,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
 				<power initial="5.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -686,10 +685,9 @@
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="TRANSFORM" >
+		<abnormal type="TRANSFORM">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -709,10 +707,9 @@
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="TRANSFORM" >
+		<abnormal type="TRANSFORM">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -732,10 +729,9 @@
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="TRANSFORM" >
+		<abnormal type="TRANSFORM">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -755,10 +751,9 @@
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="TRANSFORM" >
+		<abnormal type="TRANSFORM">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -778,10 +773,9 @@
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="TRANSFORM" >
+		<abnormal type="TRANSFORM">
 			<level initial="1"/>
 			<time initial="3600"/>
 			<chance initial="-1"/>
@@ -796,12 +790,12 @@
 	<skill id="1838" name="PC Cadmus - Prophecy of Water" action="A1" type="MAGIC">
 	<!-- PC-exclusive. A party member's MP Recovery bonus +10%%, M. Atk. +10%%, M. Def +10%%, Casting Spd. +5%%, Debuff Resistance +10%%, and Skill MP Consumption -3%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill1355"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="4000"/>
 			<effect-point initial="666"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="666000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -812,12 +806,12 @@
 	<skill id="1839" name="PC Cadmus - Prophecy of Fire" action="A1" type="MAGIC">
 	<!-- PC-exclusive. A party member's Max HP +10%%, HP Recovery Bonus +10%%, P. Atk. +10%%, P. Def +10%%, Atk. Spd. +5%%, and Debuff Resistance +10%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill1356"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="4000"/>
 			<effect-point initial="666"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="666000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -828,12 +822,12 @@
 	<skill id="1840" name="PC Room Chapa - Prophecy of Wind" action="A1" type="MAGIC">
 	<!-- PC-exclusive. A party member's P. Accuracy/M. Accuracy +3, P. Evasion/M. Evasion +3, P. Critical/M. Critical Rate +10%%, P. Critical/M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, and P. Atk. against Raid Boss +15%% for 10 minutes with the help of a great spirit. Consumes 10 Spirit Ore. -->
 		<icon initial="icon.skill1357"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="4000"/>
 			<effect-point initial="666"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="666000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -844,12 +838,12 @@
 	<skill id="1841" name="PC Cadmus - Might" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Atk +15%%. PC-exclusive. -->
 		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -860,12 +854,12 @@
 	<skill id="1842" name="PC Cadmus - Shield" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Def. +15%%. PC-exclusive. -->
 		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="418"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="418000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -876,12 +870,12 @@
 	<skill id="1843" name="PC Cadmus - Wind Walk" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Movement Speed +33. PC-exclusive. -->
 		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="285"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="285000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -892,10 +886,11 @@
 	<skill id="1844" name="PC Cadmus - Return" action="A1" type="MAGIC">
 	<!-- Teleports to a town. Cannot be used in a special locations such as the GM Consultation Service. PC-exclusive. -->
 		<icon initial="Icon.skill1050"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="75000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -906,12 +901,12 @@
 	<skill id="1845" name="PC Cadmus - Focus" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Rate +30%%. PC-exclusive. -->
 		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -922,12 +917,12 @@
 	<skill id="1846" name="PC Cadmus - Death Whisper" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Critical Damage +35%%. PC-exclusive. -->
 		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -938,12 +933,12 @@
 	<skill id="1847" name="PC Cadmus - Guidance" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Accuracy +4. PC-exclusive. -->
 		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="532"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="532000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -954,12 +949,12 @@
 	<skill id="1848" name="PC Cadmus - Heal" action="A1" type="MAGIC">
 	<!-- Recovers the target's HP with 301 Power. PC-exclusive. -->
 		<icon initial="icon.skill1011"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="3000"/>
 			<effect-point initial="301"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="301000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -970,12 +965,12 @@
 	<skill id="1849" name="PC Cadmus - Haste" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Atk. Spd. +33%%. PC-exclusive. -->
 		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -986,12 +981,12 @@
 	<skill id="1850" name="PC Cadmus - Acumen" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Casting Spd. +30%%. PC-exclusive. -->
 		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="457"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="457000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1002,12 +997,12 @@
 	<skill id="1851" name="PC Cadmus - Vampiric Rage" action="A1" type="MAGIC">
 	<!-- For 20 minutes, has a chance to absorb 9%% of physical damage dealt to enemies as HP. PC-exclusive. -->
 		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="646"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="646000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1018,12 +1013,12 @@
 	<skill id="1852" name="PC Cadmus - Empower" action="A1" type="MAGIC">
 	<!-- For 20 minutes, M. Atk +75%%. PC-exclusive. -->
 		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1034,12 +1029,12 @@
 	<skill id="1853" name="PC Cadmus - Clarity" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. PC-exclusive. -->
 		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="655000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1050,12 +1045,12 @@
 	<skill id="1854" name="PC Cadmus - Agility" action="A1" type="MAGIC">
 	<!-- For 20 minutes, P. Evasion +4. PC-exclusive. -->
 		<icon initial="icon.skill1087"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1066,12 +1061,12 @@
 	<skill id="1855" name="PC Cadmus - Lightness" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Weight Penalty Segment +9000. PC-exclusive. -->
 		<icon initial="icon.skill1257"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1082,12 +1077,12 @@
 	<skill id="1856" name="PC Cadmus - Recharge" action="A1" type="MAGIC">
 	<!-- Recovers MP with up to 94 Power depending on the target's level. PC-exclusive. -->
 		<icon initial="icon.skill1013"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="400"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="655000"/>
+			<hit-time initial="6000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1098,12 +1093,12 @@
 	<skill id="1857" name="PC Cadmus - Greater Heal" action="A1" type="MAGIC">
 	<!-- Recovers the target's HP with 506 Power. PC-exclusive. -->
 		<icon initial="icon.skill1217"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="3000"/>
 			<effect-point initial="365"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="365000"/>
+			<hit-time initial="5000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1114,12 +1109,12 @@
 	<skill id="1858" name="PC Cadmus - Blessed Body" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Max HP +25%. PC-exclusive. -->
 		<icon initial="icon.skill1045"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="646"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="646000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1130,12 +1125,12 @@
 	<skill id="1859" name="PC Cadmus - Blessed Soul" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Max MP +25%. PC-exclusive. -->
 		<icon initial="icon.skill1048"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="635"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="635000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1146,12 +1141,12 @@
 	<skill id="1860" name="PC Cadmus - Stun Resistance" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Stun Resistance +15%. PC-exclusive. -->
 		<icon initial="icon.skill1259"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="646"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="646000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1162,12 +1157,12 @@
 	<skill id="1861" name="PC Cadmus - Advanced Block" action="A1" type="MAGIC">
 	<!-- For 20 minutes, Shield Def. +20%. PC-exclusive. -->
 		<icon initial="icon.skill1304"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="714"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="714000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1178,12 +1173,12 @@
 	<skill id="1862" name="PC Cadmus - Wild Magic" action="A1" type="MAGIC">
 	<!-- For 20 minutes, M. Critical Rate +10. PC-exclusive. -->
 		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="635"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="635000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1194,12 +1189,12 @@
 	<skill id="1863" name="PC Cadmus - Stigma of Shilen" debuff="true" action="A1" type="MAGIC">
 	<!-- For 30 seconds, Melee Weapon Resistance -24. M. Def. -12. PC-exclusive. -->
 		<icon initial="icon.skill1539"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="900"/>
 			<reuse initial="3000"/>
 			<effect-point initial="-635"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-635000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1210,12 +1205,12 @@
 	<skill id="1864" name="PC Cadmus - Berserker Spirit" action="A1" type="MAGIC">
 	<!-- For 20 minutes, a party member's P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8. PC-exclusive -->
 		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="400"/>
 			<reuse initial="2000"/>
 			<effect-point initial="495"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="495000"/>
+			<hit-time initial="4000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1226,7 +1221,7 @@
 	<skill id="1865" name="Transformation Attack">
 	<!-- Transformed state P. Atk. Boost. -->
 		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
@@ -1241,7 +1236,7 @@
 		level 5: Clan member's HP Recovery Bonus/MP Recovery Bonus/CP Recovery Bonus +30%, XP/SP/Attribute XP gain +20%, Stun/MEN/Paralysis Attack Success Rate +5%, Received PVE Damage -10%, and Sayha's Grace Consumption -15%.
 	 -->
 		<icon initial="icon.skill19014"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1251,7 +1246,7 @@
 	<skill id="1893" name="Cat's Potential">
 	<!-- Unravels Cat's true potential. Damage to raid bosses +5%%, Damage received from raid bosses -10%%. -->
 		<icon initial="icon.skill1406"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1261,7 +1256,7 @@
 	<skill id="1894" name="Unicorn's Potential">
 	<!-- Unravels Unicorn's true potential. Damage to raid bosses +10%%, Damage received from raid bosses -5%%. -->
 		<icon initial="icon.skill1407"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1271,7 +1266,7 @@
 	<skill id="1895" name="Spectral Potential">
 	<!-- Unravels true spectral potential. Damage to raid bosses +15%%. -->
 		<icon initial="icon.skill1408"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1301,12 +1296,7 @@
 				<value level="4">-363</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-357000">
-				<value level="2">-359000</value>
-				<value level="3">-361000</value>
-				<value level="4">-363000</value>
-			</hit-time>
-			<activate-rate initial="50"/>
+			<hit-time initial="1690"/>
 		</attributes>
 		<consume>
 			<mana initial="107">
@@ -1387,19 +1377,7 @@
 				<value level="4">1400</value>
 				<value level="5">1500</value>
 			</effect-range>
-			<hit-time initial="-379000">
-				<value level="2">-495000</value>
-				<value level="3">-582000</value>
-				<value level="4">-635000</value>
-				<value level="5">-639000</value>
-				<value level="6">-643000</value>
-				<value level="7">-646000</value>
-				<value level="8">-649000</value>
-				<value level="9">-652000</value>
-				<value level="10">-654000</value>
-				<value level="11">-656000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="54">
@@ -1424,59 +1402,59 @@
 		<effects>
 			<defence-trait>
 				<trait type="DUAL">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+					<value level="2">-24</value>
+					<value level="3">-32</value>
+					<value level="4">-40</value>
+					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="SWORD">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="BLUNT">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 				<trait type="SPEAR">
-					<power initial="-0.1599999964237213">
-					<value level="2">-0.23999999463558197</value>
-					<value level="3">-0.3199999928474426</value>
-					<value level="4">-0.4000000059604645</value>
-					<value level="5">-0.47999998927116394</value>
-					<value level="6">-0.49000000953674316</value>
-					<value level="7">-0.5</value>
-					<value level="8">-0.5099999904632568</value>
-					<value level="9">-0.5199999809265137</value>
-					<value level="10">-0.5299999713897705</value>
-					<value level="11">-0.5400000214576721</value>
+					<power initial="-16">
+						<value level="2">-24</value>
+						<value level="3">-32</value>
+						<value level="4">-40</value>
+						<value level="5">-48</value>
+						<value level="6">-49</value>
+						<value level="7">-50</value>
+						<value level="8">-51</value>
+						<value level="9">-52</value>
+						<value level="10">-53</value>
+						<value level="11">-54</value>
 				</power>
 				</trait>
 			</defence-trait>
@@ -1520,17 +1498,7 @@
 				<value level="9">-2600</value>
 			</effect-point>
 			<effect-range initial="800"/>
-			<hit-time initial="-2130000">
-				<value level="2">-2190000</value>
-				<value level="3">-2250000</value>
-				<value level="4">-2310000</value>
-				<value level="5">-2370000</value>
-				<value level="6">-2420000</value>
-				<value level="7">-2480000</value>
-				<value level="8">-2540000</value>
-				<value level="9">-2600000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="800"/>
 		</attributes>
 		<consume>
 			<mana initial="110">

@@ -3,7 +3,7 @@
 	<skill id="59100" name="Master's Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -13,7 +13,7 @@
 	<skill id="59101" name="Holy Scroll: Enchant Weapon (A-grade)" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -23,11 +23,12 @@
 	<skill id="59102" name="Brilliant Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -35,11 +36,12 @@
 	<skill id="59103" name="Brilliant Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -47,11 +49,12 @@
 	<skill id="59104" name="Fortune Jewelry Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -71,7 +74,7 @@
 		level 11: P. Def. +12%, bonus to stun attacks +30%.
 	 -->
 		<icon initial="icon.agathion_tau_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -93,7 +96,7 @@
 		level 11: P. Atk. +10%, bonus to paralyse attacks +30%.
 	 -->
 		<icon initial="icon.agathion_leo_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -115,7 +118,7 @@
 		level 11: Cooldown of P. Skills and songs/ dances -10%, P. Critical Rate +18%.
 	 -->
 		<icon initial="icon.agathion_sco_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -137,7 +140,7 @@
 		level 11: Cooldown of P. Skills and songs/ dances -10%, Atk. Spd. +70.
 	 -->
 		<icon initial="icon.agathion_sag_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -159,7 +162,7 @@
 		level 11: M. Def. +12%, bonus to mental attacks +30%.
 	 -->
 		<icon initial="icon.agathion_virgo_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -181,7 +184,7 @@
 		level 11: M. Atk. +10%, bonus to hold/ sleep +30%.
 	 -->
 		<icon initial="icon.agathion_aqu_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -203,7 +206,7 @@
 		level 11: Cooldown of P. Skills and songs/ dances -10%, M. Critical Rate +18%.
 	 -->
 		<icon initial="icon.agathion_capr_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -225,7 +228,7 @@
 		level 11: Cooldown of P. Skills and songs/ dances -12%, Casting Spd. +60.
 	 -->
 		<icon initial="icon.agathion_lib_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -247,7 +250,7 @@
 		level 11: Max HP/ MP +10%, XP/ SP gain +25%.
 	 -->
 		<icon initial="icon.agathion_gem_star_1"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -257,9 +260,10 @@
 	<skill id="59114" name="Agathion - Taurus" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -267,9 +271,10 @@
 	<skill id="59115" name="Agathion - Leo" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -277,9 +282,10 @@
 	<skill id="59116" name="Agathion - Scorpio" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -287,9 +293,10 @@
 	<skill id="59117" name="Agathion - Sagittarius" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -297,9 +304,10 @@
 	<skill id="59118" name="Agathion - Virgo" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -307,9 +315,10 @@
 	<skill id="59119" name="Agathion - Aquarius" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -317,9 +326,10 @@
 	<skill id="59120" name="Agathion - Capricorn" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -327,9 +337,10 @@
 	<skill id="59121" name="Agathion - Libra" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -337,9 +348,10 @@
 	<skill id="59122" name="Agathion - Gemini" action="A1">
 	<!-- Releases Agathion's Seal. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -347,9 +359,10 @@
 	<skill id="59123" name="Seal Agathion" action="A1">
 	<!-- Dismiss a summoned Agathion. -->
 		<icon initial="icon.etc_unsummon_aga_agit_i01"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -357,10 +370,11 @@
 	<skill id="59124" name="Zodiac Agathion Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.star_agathion_cube"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -368,7 +382,7 @@
 	<skill id="59125" name="VIP Scroll - 800" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -379,7 +393,7 @@
 	<skill id="59126" name="VIP Scroll - 2400" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -390,7 +404,7 @@
 	<skill id="59127" name="VIP Scroll - 80" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -401,7 +415,7 @@
 	<skill id="59128" name="VIP Scroll - 240" action="A1">
 	<!-- none -->
 		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<effect-range initial="-1"/>
@@ -412,9 +426,10 @@
 	<skill id="59129" name="Transformation Sealbook: Kat the Cat" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -422,7 +437,7 @@
 	<skill id="59130" name="Transform: Kat the Cat" action="A1">
 	<!-- Transforms into Kat the Cat. -->
 		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
@@ -434,11 +449,12 @@
 	<skill id="59131" name="Angler's Fishing Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -446,11 +462,12 @@
 	<skill id="59132" name="Angler's Silver Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -458,11 +475,12 @@
 	<skill id="59133" name="Angler's Gold Box" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="1000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -470,7 +488,7 @@
 	<skill id="59134" name="Scroll: Enchant Fishing Weapon" action="A1">
 	<!-- Can only be used together with fishing weapons. Disappears after an unsuccessful Enchant. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -480,10 +498,11 @@
 	<skill id="59135" name="Pumpkin Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -491,10 +510,11 @@
 	<skill id="59136" name="Honey Pumpkin Seed" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -502,12 +522,11 @@
 	<skill id="59137" name="Monster Energy" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="200"/>
 			<reuse initial="2000"/>
 			<effect-point initial="-150"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-150000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -515,7 +534,7 @@
 	<skill id="59138" name="Halloween Pumpkin - Level Up" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -525,7 +544,7 @@
 	<skill id="59139" name="Halloween Pumpkin - Poison" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -535,10 +554,11 @@
 	<skill id="59140" name="Halloween Gift" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -546,7 +566,7 @@
 	<skill id="59141" name="Lingering Halloween" action="A1">
 	<!-- Lingering Halloween. XP/SP Gain when hunting +10%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
 		<icon initial="icon.event_halloween_pumpkin_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -556,7 +576,7 @@
 	<skill id="59142" name="Lingering Halloween" action="A1">
 	<!-- Lingering Halloween. XP/SP Gain when hunting +20%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
 		<icon initial="icon.event_halloween_pumpkin_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -566,7 +586,7 @@
 	<skill id="59143" name="Lingering Halloween" action="A1">
 	<!-- Lingering Halloween. XP/SP Gain when hunting +30%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
 		<icon initial="icon.event_halloween_pumpkin_i00"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -576,7 +596,7 @@
 	<skill id="59144" name="Magic Trumpet">
 	<!-- World Chat +20. Resets every day at 7:00 am. -->
 		<icon initial="icon.skill18578"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -586,7 +606,7 @@
 	<skill id="59145" name="Magic Warehouse Summoning SCroll" action="A1">
 	<!-- Summons the Magic Warehouse. -->
 		<icon initial="BranchIcon.icon.g_bm_shop_add_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-range initial="-1"/>
@@ -597,7 +617,7 @@
 	<skill id="59146" name="Magic Warehouse Summoning Scroll - Inventory +12">
 	<!-- Expands inventory by 12 slots. -->
 		<icon initial="BranchIcon.icon.g_bm_shop_add_i00"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -607,12 +627,12 @@
 	<skill id="59147" name="Party Member Scroll of Escape" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-2"/>
 			<reuse initial="1800000"/>
 			<effect-point initial="100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="100000"/>
+			<hit-time initial="5500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -620,9 +640,10 @@
 	<skill id="59148" name="Antharas' Cute Tricks" action="A1">
 	<!-- See the summoned spirit perform cute tricks. -->
 		<icon initial="icon.skill_agathion_cute"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -630,9 +651,10 @@
 	<skill id="59149" name="Summon Agathion - Antharas" action="A1">
 	<!-- Summons Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -653,7 +675,7 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -676,7 +698,7 @@
 		<icon initial="icon.etc_bm_jewel_sapphire_i00">
 			<value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -699,7 +721,7 @@
 		<icon initial="icon.etc_bm_jewel_emerald_i00">
 			<value level="6">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -709,7 +731,7 @@
 	<skill id="59153" name="Level 5 Brooch">
 	<!-- Can equip 6 gems. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i04"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -719,7 +741,7 @@
 	<skill id="59154" name="Level 5 Brooch Additional Effect">
 	<!-- Expands inventory by 15 slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i04"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -729,13 +751,13 @@
 	<skill id="59155" name="Greater Topaz - Special Ability" action="A1">
 	<!-- Cancels up to 3 buffs from the enemy. -->
 		<icon initial="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<reuse initial="300000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-1000"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-1000000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -743,7 +765,7 @@
 	<skill id="59156" name="Greater Aquamarine - Special Ability" action="A1">
 	<!-- Recovers 10%% of MP right away. -->
 		<icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-range initial="-1"/>
@@ -754,7 +776,7 @@
 	<skill id="59157" name="XP/SP Rune 50%">
 	<!-- XP/SP Gain from hunting +50%%. -->
 		<icon initial="icon.skill19226"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

@@ -3,7 +3,7 @@
 	<skill id="3498" name="Special Ability: Light">
 	<!-- Increases weight limit. -->
 		<icon initial="icon.skill0150"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" >
+		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -11,7 +11,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" mode="PER">
+			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 		</effects>

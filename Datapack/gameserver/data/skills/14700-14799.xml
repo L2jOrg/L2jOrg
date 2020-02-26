@@ -3,7 +3,7 @@
 	<skill id="14765" name="Blood Siphon Resistance" max-level="5" >
 	<!-- Strong Blood Siphon attack resistance. -->
 		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC" >
+		<attributes property="MAGIC">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -13,13 +13,13 @@
 	<skill id="14767" name="Siege Punch" action="A1">
 	<!-- Launches a powerful attack on the target around you -->
 		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="55"/>
 			<cast-range initial="-1"/>
 			<reuse initial="5000"/>
 			<effect-point initial="-100"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-100000"/>
+			<hit-time initial="4600"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="5" affect-random="12" />

@@ -3,10 +3,11 @@
 	<skill id="18448" name="Aquamarine - Mana Drain" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -15,7 +16,7 @@
 		</consume>
 		<target />
 		<effects>
-			<summon-npc count="34084" despawn-delay="180000">
+			<summon-npc despawn-delay="180000">
 				<npc initial="34084.0"/>
 			</summon-npc>
 		</effects>
@@ -23,10 +24,11 @@
 	<skill id="18449" name="Aquamarine - Mana Drain" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="1500"/>
 			<reuse initial="6000"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -34,11 +36,11 @@
 	<skill id="18450" name="Aquamarine - Mana Drain" max-level="6" action="A1" type="MAGIC">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="900"/>
 			<effect-point initial="204"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="204000"/>
+			<hit-time initial="3000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -58,18 +60,17 @@
 			</cast-range>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<time initial="3600">
 				<value level="2">7200</value>
 			</time>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="BONUS_EXP">
+			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
 				<power initial="11.0">
 					<value level="2">30.0</value>
 				</power>
@@ -79,7 +80,7 @@
 	<skill id="18472" name="Giveaway Number 1" max-level="6" action="A1">
 	<!-- none -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -89,11 +90,10 @@
 	<skill id="18475" name="11th Anniversary Coin" action="A2">
 	<!-- none -->
 		<icon initial="icon.ev_buff_11th"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />

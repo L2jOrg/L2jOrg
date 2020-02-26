@@ -3,16 +3,14 @@
 	<skill id="13999" name="Dark Bolt" max-level="2" action="A1" type="MAGIC">
 	<!-- Max MP +$s1, P. Skill Critical Damage +$s2, and PvP Damage +$s3. -->
 		<icon initial="icon.skill0000"/>
-		<attributes >
+		<attributes>
 			<cast-range initial="600"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-300">
 				<value level="2">-400</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-300000">
-				<value level="2">-400000</value>
-			</hit-time>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>

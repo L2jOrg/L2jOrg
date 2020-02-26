@@ -16,8 +16,7 @@
 			<reuse initial="180000"/>
 			<effect-point initial="268"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="268000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana-init initial="2">
@@ -30,7 +29,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="PD_UP" >
+		<abnormal type="PD_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -44,7 +43,8 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0" mode="PER">				<power initial="30.0">
+			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0" mode="PER">
+				<power initial="30.0">
 					<value level="2">35.0</value>
 					<value level="3">40.0</value>
 				</power>
@@ -91,18 +91,7 @@
 				<value level="10">-272</value>
 			</effect-point>
 			<effect-range initial="1000"/>
-			<hit-time initial="-254000">
-				<value level="2">-256000</value>
-				<value level="3">-258000</value>
-				<value level="4">-260000</value>
-				<value level="5">-262000</value>
-				<value level="6">-264000</value>
-				<value level="7">-266000</value>
-				<value level="8">-268000</value>
-				<value level="9">-270000</value>
-				<value level="10">-272000</value>
-			</hit-time>
-			<activate-rate initial="50"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume>
 			<mana initial="63">
@@ -127,7 +116,6 @@
 			<weapon>
 				<type>SPEAR</type>
 			</weapon>
-
 		</conditions>
 		<effects>
 			<physical-attack ignore-shield="true" critical-chance="0.0" over-hit="true">
@@ -291,52 +279,7 @@
 				<value level="45">-203</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-107000">
-				<value level="2">-110000</value>
-				<value level="3">-113000</value>
-				<value level="4">-116000</value>
-				<value level="5">-119000</value>
-				<value level="6">-121000</value>
-				<value level="7">-124000</value>
-				<value level="8">-127000</value>
-				<value level="9">-130000</value>
-				<value level="10">-133000</value>
-				<value level="11">-136000</value>
-				<value level="12">-139000</value>
-				<value level="13">-142000</value>
-				<value level="14">-144000</value>
-				<value level="15">-147000</value>
-				<value level="16">-150000</value>
-				<value level="17">-153000</value>
-				<value level="18">-155000</value>
-				<value level="19">-158000</value>
-				<value level="20">-161000</value>
-				<value level="21">-163000</value>
-				<value level="22">-166000</value>
-				<value level="23">-168000</value>
-				<value level="24">-170000</value>
-				<value level="25">-173000</value>
-				<value level="26">-175000</value>
-				<value level="27">-177000</value>
-				<value level="28">-179000</value>
-				<value level="29">-181000</value>
-				<value level="30">-183000</value>
-				<value level="31">-185000</value>
-				<value level="32">-187000</value>
-				<value level="33">-189000</value>
-				<value level="34">-190000</value>
-				<value level="35">-192000</value>
-				<value level="36">-193000</value>
-				<value level="37">-194000</value>
-				<value level="38">-195000</value>
-				<value level="39">-196000</value>
-				<value level="40">-197000</value>
-				<value level="41">-199000</value>
-				<value level="42">-200000</value>
-				<value level="43">-201000</value>
-				<value level="44">-202000</value>
-				<value level="45">-203000</value>
-			</hit-time>
+			<hit-time initial="1900"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -452,8 +395,7 @@
 			<reuse initial="600000"/>
 			<effect-point initial="2"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="500"/>
 		</attributes>
 		<consume>
 			<mana initial="38">
@@ -461,7 +403,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="RESIST_DEATH" >
+		<abnormal type="RESIST_DEATH">
 			<level initial="1">
 				<value level="2">2</value>
 			</level>
@@ -485,7 +427,7 @@
 		level 4: Atk. Spd. +80 when equipped with a sword. P. Atk. +90 and P. Accuracy +3 when equipped with a two-handed sword. Consumes MP over time depending on your level.
 	 -->
 		<icon initial="icon.skill1609"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
 				<value level="2">58</value>
 				<value level="3">70</value>
@@ -505,7 +447,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
 				<power initial="40.0">
 					<value level="2">50.0</value>
 					<value level="3">60.0</value>
@@ -560,7 +502,7 @@
 		level 29: For 10 seconds, recover target's HP by 115 per second.
 	 -->
 		<icon initial="icon.skill1610"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="20">
 				<value level="2">22</value>
 				<value level="3">26</value>
@@ -624,37 +566,7 @@
 				<value level="29">681</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="204000">
-				<value level="2">243000</value>
-				<value level="3">285000</value>
-				<value level="4">331000</value>
-				<value level="5">379000</value>
-				<value level="6">418000</value>
-				<value level="7">457000</value>
-				<value level="8">495000</value>
-				<value level="9">532000</value>
-				<value level="10">549000</value>
-				<value level="11">566000</value>
-				<value level="12">582000</value>
-				<value level="13">597000</value>
-				<value level="14">611000</value>
-				<value level="15">624000</value>
-				<value level="16">635000</value>
-				<value level="17">646000</value>
-				<value level="18">655000</value>
-				<value level="19">659000</value>
-				<value level="20">663000</value>
-				<value level="21">667000</value>
-				<value level="22">670000</value>
-				<value level="23">673000</value>
-				<value level="24">675000</value>
-				<value level="25">677000</value>
-				<value level="26">678000</value>
-				<value level="27">679000</value>
-				<value level="28">680000</value>
-				<value level="29">681000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="3500"/>
 		</attributes>
 		<consume>
 			<mana initial="32">
@@ -689,7 +601,7 @@
 			</mana>
 		</consume>
 		<target type="TARGET" range="1000" affect-min="50" affect-random="50" />
-		<abnormal type="LIFE_FORCE_ORC" >
+		<abnormal type="LIFE_FORCE_ORC">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -757,14 +669,14 @@
 		level 6: Gathers power that exceeds your physical limit. P. Atk. +25% and Max HP -15%.
 	 -->
 		<icon initial="icon.skill1611"/>
-		<attributes magic-critical-rate="5.0" >
+		<attributes magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target type="NONE" />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0">
 					<value level="2">12.0</value>
 					<value level="3">14.0</value>
@@ -773,7 +685,7 @@
 					<value level="6">25.0</value>
 				</power>
 			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="-10.0">
 					<value level="2">-11.0</value>
 					<value level="3">-12.0</value>
@@ -791,11 +703,10 @@
 			<cast-range initial="400"/>
 			<effect-point initial="-204"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-204000"/>
-			<activate-rate initial="-1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<target />
-		<abnormal type="SPEED_DOWN" >
+		<abnormal type="SPEED_DOWN">
 			<time initial="15"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -849,19 +760,7 @@
 				<value level="11">-107</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="-92000">
-				<value level="2">-93000</value>
-				<value level="3">-95000</value>
-				<value level="4">-96000</value>
-				<value level="5">-98000</value>
-				<value level="6">-99000</value>
-				<value level="7">-101000</value>
-				<value level="8">-102000</value>
-				<value level="9">-104000</value>
-				<value level="10">-105000</value>
-				<value level="11">-107000</value>
-			</hit-time>
-			<activate-rate initial="100"/>
+			<hit-time initial="1200"/>
 		</attributes>
 		<consume>
 			<mana initial="38">
@@ -925,6 +824,7 @@
 			<reuse initial="10000"/>
 			<cool-time initial="500"/>
 			<effect-range initial="-1"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -935,13 +835,13 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
 				<power initial="3.0">
 					<value level="2">4.0</value>
 					<value level="3">5.0</value>
@@ -963,11 +863,10 @@
 			<reuse initial="15000"/>
 			<effect-point initial="-190"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-190000"/>
 			<activate-rate initial="100"/>
 		</attributes>
 		<target type="ENEMY" />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="15"/>
 			<chance initial="100"/>
@@ -1000,7 +899,7 @@
 			<cool-time initial="500"/>
 			<effect-point initial="379"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="379000"/>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1011,7 +910,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="300"/>
 			<chance initial="-1"/>
@@ -1049,7 +948,6 @@
 			<reuse initial="5000"/>
 			<effect-point initial="204"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="204000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
@@ -1112,7 +1010,7 @@
 		level 5: Sacrifices yourself. Max HP -20%, and for 5 minutes, a party member's P. Def. +20%, M. Def +25%, and Heal Received +30%. Requires a shield.
 	 -->
 		<icon initial="icon.skill1621"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -1128,13 +1026,7 @@
 				<value level="5">850</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="835000">
-				<value level="2">838000</value>
-				<value level="3">842000</value>
-				<value level="4">846000</value>
-				<value level="5">850000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="38">
@@ -1145,7 +1037,7 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="SHIELD_PROB_UP" >
+		<abnormal type="SHIELD_PROB_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1159,7 +1051,7 @@
 			<condition name="EquipShield"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="15.0">
 					<value level="2">16.0</value>
 					<value level="3">17.0</value>
@@ -1186,22 +1078,21 @@
 	<skill id="1622" name="Blood of Sacrifice" action="A2">
 	<!-- Sacrificed. Max HP -20%%. -->
 		<icon initial="icon.skill1621"/>
-		<attributes property="PHYSIC" triggered="true" >
+		<attributes property="PHYSIC" triggered="true">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="180"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
+			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
 				<power initial="-20.0"/>
 			</vital-stat-modify>
 		</effects>
@@ -1215,7 +1106,7 @@
 		level 5: With Eva's protection, for 5 minutes, a party member's P. Def. +20%, M. Def +15%, and Movement Speed +10. Requires a shield.
 	 -->
 		<icon initial="icon.skill1623"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="80">
 				<value level="2">81</value>
 				<value level="3">82</value>
@@ -1231,12 +1122,7 @@
 				<value level="5">850</value>
 			</effect-point>
 			<effect-range initial="600"/>
-			<hit-time initial="835000">
-				<value level="2">838000</value>
-				<value level="3">842000</value>
-				<value level="4">846000</value>
-				<value level="5">850000</value>
-			</hit-time>
+			<hit-time initial="2000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1248,7 +1134,7 @@
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="180"/>
 			<chance initial="-1"/>
@@ -1257,7 +1143,7 @@
 			<condition name="EquipShield"/>
 		</conditions>
 		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE" mode="PER">
 				<power initial="10.0">
 					<value level="2">11.0</value>
 					<value level="3">12.0</value>
@@ -1306,12 +1192,7 @@
 				<value level="4">-458</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-344000">
-				<value level="2">-378000</value>
-				<value level="3">-416000</value>
-				<value level="4">-458000</value>
-			</hit-time>
-			<activate-rate initial="100"/>
+			<hit-time initial="2500"/>
 		</attributes>
 		<consume charge="7">
 			<mana initial="120">
@@ -1321,7 +1202,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="NORMAL_ATTACK_BLOCK" >
+		<abnormal type="NORMAL_ATTACK_BLOCK">
 			<level initial="1"/>
 			<time initial="10">
 				<value level="2">12</value>
@@ -1360,14 +1241,13 @@
 			<cool-time initial="500"/>
 			<effect-point initial="-655"/>
 			<effect-range initial="1000"/>
-			<hit-time initial="-655000"/>
-			<activate-rate initial="100"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="63"/>
 		</consume>
 		<target type="ENEMY" range="150" affect-min="5" affect-random="12" />
-		<abnormal type="STUN" >
+		<abnormal type="STUN">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="100"/>
@@ -1387,14 +1267,14 @@
 	<skill id="1626" name="Howl Spear" debuff="true" action="A1">
 	<!-- Strikes with a spear to inflict damage on nearby enemies with bonus 2911 Power. Removes Movement Speed buffs. Requires a spear. -->
 		<icon initial="icon.skill1626"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20" >
+		<attributes next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20">
 			<magic-level initial="80"/>
 			<cast-range initial="-1"/>
 			<reuse initial="8000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-137"/>
 			<effect-range initial="-1"/>
-			<hit-time initial="-137000"/>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1417,15 +1297,14 @@
 	<skill id="1627" name="Destroyer's Roar" debuff="true" action="A2">
 	<!-- Nearby targets' Movement Speed -90%%, and becomes inflicted with fear. Requires a sword, blunt weapon, or two-handed sword. -->
 		<icon initial="icon.skill1627"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" >
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
 			<magic-level initial="77"/>
 			<cast-range initial="-1"/>
 			<reuse initial="60000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="-137"/>
 			<effect-range initial="400"/>
-			<hit-time initial="-137000"/>
-			<activate-rate initial="40"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<consume>
 			<mana initial="57"/>
@@ -1471,12 +1350,7 @@
 				<value level="4">560</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="549000">
-				<value level="2">552000</value>
-				<value level="3">556000</value>
-				<value level="4">560000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="34">
@@ -1486,7 +1360,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="POLEARM_ATTACK" >
+		<abnormal type="POLEARM_ATTACK">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1505,7 +1379,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="ATTACK_COUNT_MAX">
+			<stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>
@@ -1520,14 +1394,14 @@
 			<cool-time initial="500"/>
 			<effect-point initial="-707"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-707000"/>
+			<hit-time initial="1500"/>
 			<activate-rate initial="80"/>
 		</attributes>
 		<consume>
 			<mana initial="60"/>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal >
+		<abnormal>
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="80"/>
@@ -1555,14 +1429,13 @@
 			<cool-time initial="500"/>
 			<effect-point initial="-707"/>
 			<effect-range initial="900"/>
-			<hit-time initial="-707000"/>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="60"/>
 		</consume>
 		<target type="ENEMY" />
-		<abnormal type="CRITICAL_PROB_UP" >
+		<abnormal type="CRITICAL_PROB_UP">
 			<level initial="1"/>
 			<time initial="10"/>
 			<chance initial="80"/>
@@ -1594,9 +1467,7 @@
 				<value level="2">675</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="669000">
-				<value level="2">675000</value>
-			</hit-time>
+			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -1649,16 +1520,7 @@
 				<value level="8">-2282</value>
 			</effect-point>
 			<effect-range initial="400"/>
-			<hit-time initial="-1925000">
-				<value level="2">-1973000</value>
-				<value level="3">-2020000</value>
-				<value level="4">-2112000</value>
-				<value level="5">-2156000</value>
-				<value level="6">-2200000</value>
-				<value level="7">-2241000</value>
-				<value level="8">-2282000</value>
-			</hit-time>
-			<activate-rate initial="80"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="100">
@@ -1669,7 +1531,7 @@
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
-		<abnormal type="PD_DOWN" >
+		<abnormal type="PD_DOWN">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -1699,7 +1561,7 @@
 					<value level="8">3194.0</value>
 				</power>
 			</physical-attack>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
 				<power initial="-23.0"/>
 			</stat-modify>
 		</effects>

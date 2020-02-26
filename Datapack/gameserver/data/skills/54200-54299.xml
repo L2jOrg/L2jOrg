@@ -3,7 +3,7 @@
 	<skill id="54200" name="Mount Winner’s Glory">
 	<!-- Mounts a Winner’s Glory. -->
 		<icon initial="icon.warhorse_vehicle"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<hit-time initial="1000"/>
@@ -13,7 +13,7 @@
 	<skill id="54201" name="Summon White Wing">
 	<!-- Ride White Wings. -->
 		<icon initial="icon.skill8605"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<hit-time initial="1000"/>
@@ -23,7 +23,7 @@
 	<skill id="54202" name="Summon Silver Saint">
 	<!-- Mounts Silver Saint. -->
 		<icon initial="icon.skill8607"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<hit-time initial="1000"/>
@@ -33,11 +33,10 @@
 	<skill id="54203" name="Silent Riding">
 	<!-- For 30 seconds, protected from preemptive attacks from monsters. Speed -20%%. Can only use while mounted on a mount. Skill is cancelled when dismounted. -->
 		<icon initial="icon.skill0221"/>
-		<attributes property="PHYSIC" >
+		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
 			<reuse initial="45000"/>
 			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
 		</attributes>
 		<target />
 	</skill>
