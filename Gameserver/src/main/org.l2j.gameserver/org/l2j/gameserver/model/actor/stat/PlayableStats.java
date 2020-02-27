@@ -12,9 +12,11 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChange
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -74,7 +76,7 @@ public class PlayableStats extends CreatureStats {
     }
 
     public boolean removeExp(long value) {
-        if (getExp() - value < getExpForLevel(getLevel()) && (!Config.PLAYER_DELEVEL || getLevel() <= Config.DELEVEL_MINIMUM)) {
+        if (getExp() - value < getExpForLevel(getLevel()) && !getSettings(CharacterSettings.class).delevel()) {
             value = getExp() - getExpForLevel(getLevel());
         }
 
@@ -135,7 +137,7 @@ public class PlayableStats extends CreatureStats {
             setExp(getExpForLevel(getLevel()));
         }
 
-        if (!levelIncreased && isPlayer(getCreature()) && !getCreature().isGM() && Config.DECREASE_SKILL_LEVEL) {
+        if (!levelIncreased && isPlayer(getCreature()) && !getCreature().isGM()) {
             ((Player) getCreature()).checkPlayerSkills();
         }
 

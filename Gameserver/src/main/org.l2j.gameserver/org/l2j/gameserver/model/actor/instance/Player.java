@@ -2108,7 +2108,7 @@ public final class Player extends Playable {
             // Add AutoGet skills and normal skills and/or learnByFS depending on configurations.
             rewardSkills();
 
-            if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && Config.DECREASE_SKILL_LEVEL) {
+            if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
                 checkPlayerSkills();
             }
 
@@ -2212,7 +2212,7 @@ public final class Player extends Playable {
             giveAvailableAutoGetSkills();
         }
 
-        if (Config.DECREASE_SKILL_LEVEL && !canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
+        if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
             checkPlayerSkills();
         }
 
@@ -8115,7 +8115,7 @@ public final class Player extends Playable {
         revalidateZone(true);
 
         notifyFriends(FriendStatus.ONLINE);
-        if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && Config.DECREASE_SKILL_LEVEL) {
+        if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
             checkPlayerSkills();
         }
 

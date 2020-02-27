@@ -39,10 +39,8 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
  * Each configuration has a default value (that should reflect retail behavior).
  */
 public final class Config {
-    // --------------------------------------------------
-    // Constants
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
-    // --------------------------------------------------
 
     // --------------------------------------------------
     // Config File Definitions
@@ -94,9 +92,6 @@ public final class Config {
     // --------------------------------------------------
     // Variable Definitions
     // --------------------------------------------------
-    public static boolean PLAYER_DELEVEL;
-    public static int DELEVEL_MINIMUM;
-    public static boolean DECREASE_SKILL_LEVEL;
     public static double ALT_WEIGHT_LIMIT;
     public static int RUN_SPD_BOOST;
     public static double RESPAWN_RESTORE_CP;
@@ -1024,9 +1019,6 @@ public final class Config {
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        PLAYER_DELEVEL = Character.getBoolean("Delevel", true);
-        DELEVEL_MINIMUM = Character.getInt("DelevelMinimum", 85);
-        DECREASE_SKILL_LEVEL = Character.getBoolean("DecreaseSkillOnDelevel", true);
         ALT_WEIGHT_LIMIT = Character.getDouble("AltWeightLimit", 1);
         RUN_SPD_BOOST = Character.getInt("RunSpeedBoost", 0);
         RESPAWN_RESTORE_CP = Character.getDouble("RespawnRestoreCP", 0) / 100;
