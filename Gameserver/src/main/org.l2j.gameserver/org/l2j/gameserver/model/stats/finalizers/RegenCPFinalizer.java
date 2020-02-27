@@ -23,7 +23,7 @@ public class RegenCPFinalizer implements IStatsFunction {
         }
 
         final Player player = creature.getActingPlayer();
-        double baseValue = player.getTemplate().getBaseCpRegen(creature.getLevel()) * creature.getLevelMod() * BaseStats.CON.calcBonus(creature) * Config.CP_REGEN_MULTIPLIER;
+        double baseValue = player.getTemplate().getBaseCpRegen(creature.getLevel()) * creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
         if (player.isSitting()) {
             baseValue *= 1.5; // Sitting
         } else if (!player.isMoving()) {

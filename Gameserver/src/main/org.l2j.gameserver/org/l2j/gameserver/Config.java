@@ -656,9 +656,6 @@ public final class Config {
     public static boolean DISABLE_OVER_ENCHANTING;
     public static int[] AUGMENTATION_BLACKLIST;
     public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
-    public static double HP_REGEN_MULTIPLIER;
-    public static double MP_REGEN_MULTIPLIER;
-    public static double CP_REGEN_MULTIPLIER;
     public static boolean TRAINING_CAMP_ENABLE;
 
     public static int TRAINING_CAMP_MAX_DURATION;
@@ -1020,9 +1017,6 @@ public final class Config {
         RESPAWN_RESTORE_CP = Character.getDouble("RespawnRestoreCP", 0) / 100;
         RESPAWN_RESTORE_HP = Character.getDouble("RespawnRestoreHP", 65) / 100;
         RESPAWN_RESTORE_MP = Character.getDouble("RespawnRestoreMP", 0) / 100;
-        HP_REGEN_MULTIPLIER = Character.getDouble("HpRegenMultiplier", 100) / 100;
-        MP_REGEN_MULTIPLIER = Character.getDouble("MpRegenMultiplier", 100) / 100;
-        CP_REGEN_MULTIPLIER = Character.getDouble("CpRegenMultiplier", 100) / 100;
         ENABLE_MODIFY_SKILL_DURATION = Character.getBoolean("EnableModifySkillDuration", false);
 
         // Create Map only if enabled

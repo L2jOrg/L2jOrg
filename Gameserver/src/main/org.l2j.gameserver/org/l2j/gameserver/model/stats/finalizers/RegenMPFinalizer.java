@@ -52,7 +52,9 @@ public class RegenMPFinalizer implements IStatsFunction {
         throwIfPresent(base);
 
         double baseValue = isPlayer(creature) ? creature.getActingPlayer().getTemplate().getBaseMpRegen(creature.getLevel()) : creature.getTemplate().getBaseMpReg();
-        baseValue *= creature.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
+        if(creature.isRaid()) {
+            baseValue *= Config.RAID_MP_REGEN_MULTIPLIER;
+        }
 
         if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
