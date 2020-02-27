@@ -8859,9 +8859,6 @@ public final class SystemMessageId {
     @ClientString(id = 4319, message = "Clan Chat is locked. Please, try again later.")
     public static SystemMessageId CLAN_CHAT_IS_LOCKED_PLEASE_TRY_AGAIN_LATER;
 
-    @ClientString(id = 4321, message = "You can redeem your reward $s1 minutes after logging in. $s2 minutes left.")
-    public static SystemMessageId YOU_CAN_REDEEM_YOUR_REWARD_S1_MINUTES_AFTER_LOGGING_IN_S2_MINUTES_LEFT;
-
     @ClientString(id = 4322, message = "You can redeem your reward now.")
     public static SystemMessageId YOU_CAN_REDEEM_YOUR_REWARD_NOW;
 
@@ -17525,6 +17522,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 4320, message = "Location: $s1 / $s2 / $s3 (Ancient Talking Island Village)")
     public static SystemMessageId LOCATION_S1_S2_S3_ANCIENT_TALKING_ISLAND_VILLAGE;
+
+    @ClientString(id = 4321, message = "You can redeem your reward $s1 minutes after logging in. $s2 minutes left.")
+    public static SystemMessageId YOU_CAN_REDEEM_YOUR_REWARD_S1_MINUTES_AFTER_LOGGING_IN_S2_MINUTES_LEFT;
 
     @ClientString(id = 4337, message = "Rune insertion is impossible when private store and workshop are opened.")
     public static SystemMessageId RUNE_INSERTION_IS_IMPOSSIBLE_WHEN_PRIVATE_STORE_AND_WORKSHOP_ARE_OPENED;

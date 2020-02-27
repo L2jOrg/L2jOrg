@@ -401,6 +401,7 @@ public class EnterWorld extends ClientPacket {
     }
 
     private void sendAttendanceInfo(Player activeChar) {
+        var attendanceSettings = getSettings(AttendanceSettings.class);
         ThreadPool.schedule(() -> {
             // Check if player can receive reward today.
             final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
@@ -409,11 +410,11 @@ public class EnterWorld extends ClientPacket {
                 activeChar.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
                 activeChar.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
                 activeChar.sendMessage("Click on General Menu -> Attendance Check.");
-                if (Config.ATTENDANCE_POPUP_WINDOW) {
+                if (attendanceSettings.popUpWindow()) {
                     activeChar.sendPacket(new ExVipAttendanceItemList(activeChar));
                 }
             }
-        }, Config.ATTENDANCE_REWARD_DELAY * 60  * 1000);
+        }, attendanceSettings.delay() * 60  * 1000);
     }
 
     private void onGameMasterEnter(Player activeChar) {

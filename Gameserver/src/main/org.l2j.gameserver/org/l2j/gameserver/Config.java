@@ -51,7 +51,6 @@ public final class Config {
     public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
-    private static final String ATTENDANCE_CONFIG_FILE = "config/attendance-rewards.properties";
     private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
@@ -95,10 +94,6 @@ public final class Config {
     // --------------------------------------------------
     // Variable Definitions
     // --------------------------------------------------
-    public static boolean VIP_ONLY_ATTENDANCE_REWARDS;
-    public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
-    public static int ATTENDANCE_REWARD_DELAY;
-    public static boolean ATTENDANCE_POPUP_WINDOW;
     public static boolean PLAYER_DELEVEL;
     public static int DELEVEL_MINIMUM;
     public static boolean DECREASE_SKILL_LEVEL;
@@ -1025,14 +1020,6 @@ public final class Config {
         ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
         ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
         ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
-
-        // Load Attandance config file (if exists)
-        final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
-
-        VIP_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("VipOnlyAttendanceRewards", false);
-        ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
-        ATTENDANCE_REWARD_DELAY = Attandance.getInt("AttendanceRewardDelay", 30);
-        ATTENDANCE_POPUP_WINDOW = Attandance.getBoolean("AttendancePopupWindow", false);
 
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

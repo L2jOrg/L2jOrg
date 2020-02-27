@@ -30,7 +30,7 @@ class LazyConfiguratorLoader {
 
             addSettingsClass(className, fileConfigurationPath);
         }
-        logger.info("Settings classes loaded: {}", settingsClasses.size());
+        logger.debug("Settings classes loaded: {}", settingsClasses.size());
     }
 
     void addSettingsClass(String className, String fileConfigurationPath) {
@@ -80,7 +80,7 @@ class LazyConfiguratorLoader {
         T settings = settingsClass.getDeclaredConstructor().newInstance();
         SettingsFile settingsFile = isNullOrEmpty(configurationFile) ?  new SettingsFile() : new SettingsFile(configurationFile);
 
-        logger.info("Lazy Initialization : {}", settingsClass.getName());
+        logger.debug("Lazy Initialization : {}", settingsClass.getName());
         settings.load(settingsFile);
         return settings;
     }

@@ -94,6 +94,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
+import org.l2j.gameserver.settings.AttendanceSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.*;
@@ -11102,7 +11103,7 @@ public final class Player extends Playable {
         // Get last player reward time.
         final long receiveDate;
         int rewardIndex;
-        if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT) {
+        if (getSettings(AttendanceSettings.class).shareAccount()) {
             receiveDate = getAccountVariables().getLong(ATTENDANCE_DATE_VAR, 0);
             rewardIndex = getAccountVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
         } else {
@@ -11133,7 +11134,7 @@ public final class Player extends Playable {
         }
         nextReward.set(Calendar.HOUR_OF_DAY, 6);
 
-        if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT) {
+        if (getSettings(AttendanceSettings.class).shareAccount()) {
             getAccountVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
             getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
         } else {

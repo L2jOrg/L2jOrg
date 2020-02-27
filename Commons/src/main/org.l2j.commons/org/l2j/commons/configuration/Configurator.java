@@ -78,7 +78,7 @@ public class Configurator {
     }
 
     public static void reloadAll() {
-        logger.info("Reloading all settings");
+        logger.debug("Reloading all settings");
         getInstance().reload();
     }
 
@@ -88,7 +88,7 @@ public class Configurator {
     }
 
     public static void reloadSettings(Class<? extends Settings>  settingsClass) {
-        logger.info("Reloading settings " + settingsClass.getName());
+        logger.debug("Reloading settings " + settingsClass.getName());
         getInstance().removeSettings(settingsClass);
     }
 
