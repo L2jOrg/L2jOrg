@@ -160,31 +160,40 @@ public final class AutoPlayEngine {
         }
 
         private void doAutoPlay() {
-            players.parallelStream().filter(AutoPlayEngine.this::canUseAutoPlay).forEach(player -> {
-                var setting = player.getAutoPlaySettings();
-                setting.setAutoPlaying(true);
+            players.parallelStream().filter(AutoPlayEngine.this::canUseAutoPlay).forEach(this::doNextAction);
+        }
+
+        private void doNextAction(Player player) {
+            var setting = player.getAutoPlaySettings();
+            setting.setAutoPlaying(true);
+            try {
                 var range = setting.isNearTarget() ? 600 : 1400;
                 var world = World.getInstance();
 
-                if(setting.isAutoPickUpOn()) {
+                if (setting.isAutoPickUpOn()) {
                     var item = world.findAnyVisibleObject(player, Item.class, range, false, it -> it.getDropProtection().tryPickUp(player));
-                    if(nonNull(item)) {
+                    if (nonNull(item)) {
                         player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item);
                         return;
                     }
                 }
 
-                var target = player.getTarget();
-                if((isNull(target) || (isMonster(target) && ((Monster) target).isDead()) || target.equals(player)) && !player.isTargetingDisabled()) {
-                    var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
-                    player.setTarget(monster);
-                }
-
-                if(nonNull(player.getTarget())) {
-                    tryUseAutoShortcut(player);
-                }
+                pickTargetAndAct(player, setting, range, world);
+            } finally {
                 setting.setAutoPlaying(false);
-            });
+            }
+        }
+
+        private void pickTargetAndAct(Player player, AutoPlaySettings setting, int range, World world) {
+            var target = player.getTarget();
+            if ((isNull(target) || (isMonster(target) && ((Monster) target).isDead()) || target.equals(player)) && !player.isTargetingDisabled()) {
+                var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
+                player.setTarget(monster);
+            }
+
+            if (nonNull(player.getTarget())) {
+                tryUseAutoShortcut(player);
+            }
         }
 
         private void tryUseAutoShortcut(Player player) {
