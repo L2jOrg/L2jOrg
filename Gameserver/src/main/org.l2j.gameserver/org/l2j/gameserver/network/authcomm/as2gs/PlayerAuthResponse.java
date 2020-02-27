@@ -51,42 +51,6 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
         SessionKey skey = new SessionKey(authAccountId, authKey, gameserverSession, gameserverAccountId);
         if(authed && client.getSessionId().equals(skey)) {
-            if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP > 0 && isNull(AuthServerCommunication.getInstance().getAuthedClient(account))) {
-                boolean ignored = false;
-                for(String ignoredIP : Config.MAX_ACTIVE_ACCOUNTS_IGNORED_IP) {
-                    if(ignoredIP.equalsIgnoreCase(client.getHostAddress())) {
-                        ignored = true;
-                        break;
-                    }
-                }
-
-                if(!ignored) {
-                    int limit = Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP;
-
-                    List<GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByIP(client.getHostAddress());
-                    clients.add(client);
-                    if (hasMoreClientThanLimit(client, limit, clients)) {
-                        return;
-                    }
-                }
-            }
-
-            if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID > 0 && isNull(AuthServerCommunication.getInstance().getAuthedClient(account))) {
-                int limit = Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID;
-
-                var whId = client.getHardwareInfo().getMacAddress();
-
-                List<GameClient> clients = AuthServerCommunication.getInstance().getAuthedClientsByHWID(whId);
-                clients.add(client);
-                if(hasMoreClientThanLimit(client, limit, clients)) {
-                    return;
-                }
-            }
-
-            if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP > 0 || Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID > 0) {
-                client.sendPacket(TutorialCloseHtml.STATIC_PACKET);
-            }
-
             client.setConnectionState(ConnectionState.AUTHENTICATED);
             client.sendPacket(LoginFail.LOGIN_SUCCESS);
 

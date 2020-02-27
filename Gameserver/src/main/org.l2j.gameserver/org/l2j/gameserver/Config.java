@@ -68,11 +68,6 @@ public final class Config {
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
     private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 
-    public static final int MAX_ACTIVE_ACCOUNTS_ON_ONE_IP = 0;
-    public static final String[] MAX_ACTIVE_ACCOUNTS_IGNORED_IP = { "127.0.0.1"};
-    public static final int MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID = 0;
-
-
     // --------------------------------------------------
     // Custom Config File Definitions
     // --------------------------------------------------
