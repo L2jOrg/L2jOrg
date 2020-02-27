@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="error" monitorInterval="300">
+<Configuration status="error" monitorInterval="300" shutdownHook="disable">
     <properties>
         <Property name="pattern">[%-5p][%d{yyyy-MM-dd HH:mm:ss}][%c{1}:%M:%L]: %msg%n%throwable</Property>
     </properties>

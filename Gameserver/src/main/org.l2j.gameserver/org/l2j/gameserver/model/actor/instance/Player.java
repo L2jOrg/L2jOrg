@@ -5661,6 +5661,8 @@ public final class Player extends Playable {
                 getDAO(ElementalSpiritDAO.class).updateActiveSpirit(getObjectId(), activeElementalSpiritType.getId());
             }
         }
+
+        shortcuts.storeMe();
     }
 
     @Override

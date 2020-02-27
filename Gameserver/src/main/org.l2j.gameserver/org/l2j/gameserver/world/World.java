@@ -185,6 +185,10 @@ public final class World {
         return players.values();
     }
 
+    public void forEachPlayer(Consumer<Player> action) {
+        players.values().forEach(action);
+    }
+
     /**
      * <B>If you have access to player objectId use {@link #findPlayer(int playerObjId)}</B>
      *

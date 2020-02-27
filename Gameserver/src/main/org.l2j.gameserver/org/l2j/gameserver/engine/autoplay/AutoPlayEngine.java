@@ -289,7 +289,9 @@ public final class AutoPlayEngine {
                    toRemove.add(player);
                 }
             });
-            autoPotionPlayers.removeAll(toRemove);
+            if(!toRemove.isEmpty()) {
+                autoPotionPlayers.removeAll(toRemove);
+            }
         }
 
         private boolean canUseAutoPotion(Player player) {
