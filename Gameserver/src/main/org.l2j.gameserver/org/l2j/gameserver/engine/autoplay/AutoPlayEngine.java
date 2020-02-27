@@ -7,13 +7,16 @@ import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
+import org.l2j.gameserver.handler.PlayerActionHandler;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
@@ -207,6 +210,20 @@ public final class AutoPlayEngine {
         }
 
         private boolean autoUseAction(Player player, Shortcut shortcut) {
+            var actionId = shortcut.getShortcutId();
+            final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
+            if (Arrays.binarySearch(allowedActions, actionId)  < 0) {
+                return false;
+            }
+
+            var action = ActionManager.getInstance().getActionData(actionId);
+            if (nonNull(action)) {
+                var handler = PlayerActionHandler.getInstance().getHandler(action.getHandler());
+                if (nonNull(handler)) {
+                    handler.useAction(player, action, false, false); // todo use combat mode
+                }
+                return true;
+            }
             return false;
         }
 
@@ -290,6 +307,7 @@ public final class AutoPlayEngine {
                 !player.isControlBlocked() &&
                 !player.isAlikeDead() &&
                 !player.isInsideZone(ZoneType.PEACE) &&
+                !player.inObserverMode() &&
                 !player.isCastingNow();
     }
 }

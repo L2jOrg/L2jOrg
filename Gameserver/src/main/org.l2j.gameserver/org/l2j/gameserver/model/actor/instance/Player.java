@@ -1537,6 +1537,7 @@ public final class Player extends Playable {
      */
     public void registerShortCut(Shortcut shortcut) {
         shortcuts.registerShortCut(shortcut);
+        sendPacket(new ShortCutRegister(shortcut));
     }
 
     /**

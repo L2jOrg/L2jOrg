@@ -1,12 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
 import static java.util.Objects.isNull;
-import static org.l2j.gameserver.network.SystemMessageId.ONLY_MACROS_CAN_BE_REGISTERED;
 
 /**
  * @author JoeAlisson
@@ -15,19 +13,16 @@ public final class RequestShortCutReg extends ClientPacket {
 
     private ShortcutType type;
     private int id;
-    private int slot;
-    private int page;
     private int lvl;
     private int subLvl;
     private int characterType; // 1 - player, 2 - pet
+    private int room;
 
     @Override
     public void readImpl() {
         final int typeId = readInt();
         type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
-        final int room = readInt();
-        this.slot = room % 12;
-        page = room / 12;
+        room = readInt();
         readByte(); // unk 0
         id = readInt();
         lvl = readShort();
@@ -37,30 +32,17 @@ public final class RequestShortCutReg extends ClientPacket {
 
     @Override
     public void runImpl() {
-        var player = client.getPlayer();
-        if (isNull(player) || (page > 23) || (page < 0)) {
+        if(room < 0 || ( room > Shortcut.MAX_ROOM  && room != Shortcut.AUTO_POTION_ROOM)) {
             return;
         }
 
-        if(page == Shortcut.AUTO_PLAY_PAGE) {
-            if (slot == Shortcut.AUTO_MACRO_SLOT && type != ShortcutType.MACRO) {
-                client.sendPacket(ONLY_MACROS_CAN_BE_REGISTERED);
-                return;
-            }
+        var player = client.getPlayer();
 
-            Item item;
-            if (slot == Shortcut.AUTO_POTION_SLOT && (type != ShortcutType.ITEM || isNull(item = player.getInventory().getItemByObjectId(id)) || !item.isAutoPotion())) {
-                return;
-            }
-        } else if (page == Shortcut.AUTO_SUPPLY_PAGE ) {
-            Item item = player.getInventory().getItemByObjectId(id);
-            if(isNull(item) || !item.isAutoSupply()) {
-                return;
-            }
+        Item item;
+        if(room == Shortcut.AUTO_POTION_ROOM && (type != ShortcutType.ITEM || isNull(item = player.getInventory().getItemByObjectId(id)) || !item.isAutoPotion())) {
+            return;
         }
 
-        final Shortcut sc = new Shortcut(slot, page, type, id, lvl, subLvl, characterType);
-        client.getPlayer().registerShortCut(sc);
-        client.sendPacket(new ShortCutRegister(sc));
+        player.registerShortCut(new Shortcut(room, type, id, lvl, subLvl, characterType));
     }
 }

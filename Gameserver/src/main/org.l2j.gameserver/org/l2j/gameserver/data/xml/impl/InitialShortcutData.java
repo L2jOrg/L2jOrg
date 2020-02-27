@@ -189,7 +189,7 @@ public final class InitialShortcutData extends GameXmlReader {
         final int shortcutId = parseInteger(attrs, "shortcutId");
         final int shortcutLevel = parseInteger(attrs, "shortcutLevel", 0);
         final int characterType = parseInteger(attrs, "characterType", 0);
-        return new Shortcut(slotId, pageId, shortcutType, shortcutId, shortcutLevel, 0, characterType);
+        return new Shortcut(Shortcut.pageAndSlotToClientId(pageId, slotId), shortcutType, shortcutId, shortcutLevel, 0, characterType);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class InitialShortcutData extends GameXmlReader {
             }
 
             // Register shortcut
-            final Shortcut newShortcut = new Shortcut(shortcut.getSlot(), shortcut.getPage(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getSubLevel(), shortcut.getCharacterType());
+            final Shortcut newShortcut = new Shortcut(shortcut.getClientId(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getSubLevel(), shortcut.getCharacterType());
             player.sendPacket(new ShortCutRegister(newShortcut));
             player.registerShortCut(newShortcut);
         }
@@ -294,7 +294,7 @@ public final class InitialShortcutData extends GameXmlReader {
                     }
                 }
                 // Register shortcut
-                final Shortcut newShortcut = new Shortcut(shortcut.getSlot(), shortcut.getPage(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getSubLevel(), shortcut.getCharacterType());
+                final Shortcut newShortcut = new Shortcut(shortcut.getClientId(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getSubLevel(), shortcut.getCharacterType());
                 player.sendPacket(new ShortCutRegister(newShortcut));
                 player.registerShortCut(newShortcut);
             }

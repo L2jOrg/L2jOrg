@@ -17,10 +17,6 @@ public class Shortcut {
     public static final int MAX_SLOTS_PER_PAGE = 12;
     public static final int MAX_ROOM = 20 * MAX_SLOTS_PER_PAGE;
     public static final int AUTO_POTION_ROOM = pageAndSlotToClientId(23, 1);
-    public static final int AUTO_PLAY_PAGE = 23;
-    public static final int AUTO_SUPPLY_PAGE = 22;
-    public static final int AUTO_MACRO_SLOT = 0;
-    public static final int AUTO_POTION_SLOT = 1;
 
     @Column("player_id")
     private int playerId;
@@ -76,12 +72,10 @@ public class Shortcut {
 
     }
 
-    public Shortcut(int slot, int page, ShortcutType type, int shortcutId, int level, int subLevel, int characterType) {
-        this.slot = slot;
-        this.page = page;
+    public Shortcut(int clientId, ShortcutType type, int id, int level, int subLevel, int characterType) {
+        this.clientId = clientId;
         this.type = type;
-        this.clientId = pageAndSlotToClientId(page, slot);
-        this.shortcutId = shortcutId;
+        this.shortcutId = id;
         this.level = level;
         this.subLevel = subLevel;
         this.characterType = characterType;

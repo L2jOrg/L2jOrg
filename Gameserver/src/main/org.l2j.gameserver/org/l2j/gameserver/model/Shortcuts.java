@@ -169,7 +169,7 @@ public class Shortcuts {
         // Update all the shortcuts for this skill
         for (Shortcut sc : shortcuts.values()) {
             if ((sc.getShortcutId() == skillId) && (sc.getType() == ShortcutType.SKILL)) {
-                final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getShortcutId(), skillLevel, skillSubLevel, 1);
+                final Shortcut newsc = new Shortcut(sc.getClientId(), sc.getType(), sc.getShortcutId(), skillLevel, skillSubLevel, 1);
                 owner.sendPacket(new ShortCutRegister(newsc));
                 owner.registerShortCut(newsc);
             }

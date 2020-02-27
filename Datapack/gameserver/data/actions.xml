@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/actions.xsd" >
 	<action id="0" handler="SitStand" />
 	<action id="1" handler="RunWalk" />
-	<action id="3" handler="Action" auto-use="true"/>
+	<action id="2" handler="ActionHandler" auto-use="true"/>
 	<action id="10" handler="PrivateStore" option="1" /> <!-- Private Store Sell -->
 	<action id="12" handler="SocialAction" option="2" /> <!-- Greeting -->
 	<action id="13" handler="SocialAction" option="3" /> <!-- Victory -->
