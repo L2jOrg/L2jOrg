@@ -92,8 +92,6 @@ public final class Config {
     // --------------------------------------------------
     // Variable Definitions
     // --------------------------------------------------
-    public static double ALT_WEIGHT_LIMIT;
-    public static int RUN_SPD_BOOST;
     public static double RESPAWN_RESTORE_CP;
     public static double RESPAWN_RESTORE_HP;
     public static double RESPAWN_RESTORE_MP;
@@ -1019,8 +1017,6 @@ public final class Config {
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        ALT_WEIGHT_LIMIT = Character.getDouble("AltWeightLimit", 1);
-        RUN_SPD_BOOST = Character.getInt("RunSpeedBoost", 0);
         RESPAWN_RESTORE_CP = Character.getDouble("RespawnRestoreCP", 0) / 100;
         RESPAWN_RESTORE_HP = Character.getDouble("RespawnRestoreHP", 65) / 100;
         RESPAWN_RESTORE_MP = Character.getDouble("RespawnRestoreMP", 0) / 100;

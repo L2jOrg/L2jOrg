@@ -15,27 +15,12 @@ public class SummonStats extends PlayableStats {
 
     @Override
     public double getRunSpeed() {
-        final double val = super.getRunSpeed() + Config.RUN_SPD_BOOST;
-
-        // Apply max run speed cap.
-        if (val > (Config.MAX_RUN_SPEED + 50)) // In retail maximum run speed is 350 for summons and 300 for players
-        {
-            return Config.MAX_RUN_SPEED + 50;
-        }
-
-        return val;
+        // In retail maximum run speed is 350 for summons and 300 for players
+        return Math.min(super.getRunSpeed(), Config.MAX_RUN_SPEED + 50);
     }
 
     @Override
     public double getWalkSpeed() {
-        final double val = super.getWalkSpeed() + Config.RUN_SPD_BOOST;
-
-        // Apply max run speed cap.
-        if (val > (Config.MAX_RUN_SPEED + 50)) // In retail maximum run speed is 350 for summons and 300 for players
-        {
-            return Config.MAX_RUN_SPEED + 50;
-        }
-
-        return val;
+        return Math.min(super.getWalkSpeed(), Config.MAX_RUN_SPEED + 50);
     }
 }

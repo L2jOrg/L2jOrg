@@ -4,8 +4,6 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
-import java.util.List;
-
 public class CharacterSettings implements Settings {
 
     private int partyRange;
@@ -15,6 +13,7 @@ public class CharacterSettings implements Settings {
     private boolean autoLoot;
     private boolean initialEquipEvent;
     private boolean delevel;
+    private float weightLimitMultiplier;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -28,6 +27,8 @@ public class CharacterSettings implements Settings {
         initialEquipEvent = settingsFile.getBoolean("InitialEquipmentEvent", false);
 
         delevel = settingsFile.getBoolean("Delevel", true);
+
+        weightLimitMultiplier = settingsFile.getFloat("AltWeightLimit", 1f);
     }
 
     public int partyRange() {
@@ -56,5 +57,9 @@ public class CharacterSettings implements Settings {
 
     public boolean delevel() {
         return delevel;
+    }
+
+    public float weightLimitMultiplier() {
+        return weightLimitMultiplier;
     }
 }

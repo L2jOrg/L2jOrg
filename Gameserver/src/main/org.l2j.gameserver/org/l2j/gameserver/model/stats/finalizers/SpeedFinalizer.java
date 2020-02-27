@@ -86,7 +86,6 @@ public class SpeedFinalizer implements IStatsFunction {
                     }
                 }
             }
-            baseValue += Config.RUN_SPD_BOOST;
         }
         if (isPlayable(creature) && creature.isInsideZone(ZoneType.SWAMP)) {
             final SwampZone zone = ZoneManager.getInstance().getZone(creature, SwampZone.class);
