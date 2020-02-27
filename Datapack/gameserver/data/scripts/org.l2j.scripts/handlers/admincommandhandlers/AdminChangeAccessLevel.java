@@ -16,21 +16,18 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.AccessLevel;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.World;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -44,7 +41,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
+	public boolean useAdminCommand(String command, Player gm)
 	{
 		final String[] parts = command.split(" ");
 		if (parts.length == 2)
@@ -52,52 +49,35 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			try
 			{
 				final int lvl = Integer.parseInt(parts[1]);
-				final WorldObject target = activeChar.getTarget();
+				final WorldObject target = gm.getTarget();
 				if (!isPlayer(target))
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					gm.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
 				{
-					onlineChange(activeChar, (Player) target, lvl);
+					onlineChange(gm, (Player) target, lvl);
 				}
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //changelvl <target_new_level> | <player_name> <new_level>");
+				BuilderUtil.sendSysMessage(gm, "Usage: //changelvl <target_new_level> | <player_name> <new_level>");
 			}
 		}
 		else if (parts.length == 3)
 		{
 			final String name = parts[1];
-			final int lvl = Integer.parseInt(parts[2]);
+			final int level = Integer.parseInt(parts[2]);
 			final Player player = World.getInstance().findPlayer(name);
 			if (player != null)
 			{
-				onlineChange(activeChar, player, lvl);
+				onlineChange(gm, player, level);
 			}
-			else
-			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
-				{
-					final PreparedStatement statement = con.prepareStatement("UPDATE characters SET accesslevel=? WHERE char_name=?");
-					statement.setInt(1, lvl);
-					statement.setString(2, name);
-					statement.execute();
-					final int count = statement.getUpdateCount();
-					statement.close();
-					if (count == 0)
-					{
-						BuilderUtil.sendSysMessage(activeChar, "Character not found or access level unaltered.");
-					}
-					else
-					{
-						BuilderUtil.sendSysMessage(activeChar, "Character's access level is now set to " + lvl);
-					}
-				}
-				catch (SQLException se)
-				{
-					BuilderUtil.sendSysMessage(activeChar, "SQLException while changing character's access level");
+			else {
+				if(getDAO(CharacterDAO.class).updateAccessLevel(name, level)) {
+					BuilderUtil.sendSysMessage(gm, "Character's access level is now set to " + level);
+				} else {
+					BuilderUtil.sendSysMessage(gm, "Character not found or access level unaltered.");
 				}
 			}
 		}

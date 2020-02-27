@@ -1,7 +1,7 @@
 package handlers.admincommandhandlers;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.enums.SubclassInfoType;
@@ -26,11 +26,10 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -547,13 +546,8 @@ public class AdminEditChar implements IAdminCommandHandler
 				Player player = null;
 				player = World.getInstance().findPlayer(playerName);
 				
-				if (player == null)
-				{
-					final Connection con = DatabaseFactory.getInstance().getConnection();
-					final PreparedStatement ps = con.prepareStatement("UPDATE characters SET " + (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") + " WHERE char_name=? LIMIT 1");
-					
-					ps.setString(1, playerName);
-					ps.execute();
+				if (player == null) {
+					getDAO(CharacterDAO.class).removeClanPenalty(playerName);
 				}
 				else if (changeCreateExpiryTime) // removing penalty
 				{

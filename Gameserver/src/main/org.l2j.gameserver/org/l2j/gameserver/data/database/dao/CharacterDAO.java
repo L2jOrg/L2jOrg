@@ -53,4 +53,13 @@ public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("SELECT char_name, classid, level, lastAccess, clanid, createDate FROM characters WHERE charId = :friendId:")
     CharacterData findFriendData(int friendId);
+
+    @Query("UPDATE characters SET clan_create_expiry_time = 0, clan_join_expiry_time = 0 WHERE char_name=:name:")
+    void removeClanPenalty(String name);
+
+    @Query("UPDATE characters SET accesslevel=:level: WHERE char_name=:name:")
+    boolean updateAccessLevel(String name, int level);
+
+    @Query("UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE charId=:objectId:")
+    void updateToValidLocation(int objectId);
 }
