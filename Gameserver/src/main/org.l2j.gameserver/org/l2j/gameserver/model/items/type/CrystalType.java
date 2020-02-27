@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model.items.type;
 
+import java.util.function.Consumer;
+
 /**
  * Crystal Type enumerated.
  *
@@ -14,16 +16,18 @@ public enum CrystalType {
     S(5, 1462, 25, 250),
     EVENT(11, 0, 0, 0);
 
-    private final int _id;
-    private final int _crystalId;
-    private final int _crystalEnchantBonusArmor;
-    private final int _crystalEnchantBonusWeapon;
+    private final int id;
+    private final int crystalId;
+    private final int crystalEnchantBonusArmor;
+    private final int crystalEnchantBonusWeapon;
+
+    private static final CrystalType[] CACHED = values();
 
     CrystalType(int id, int crystalId, int crystalEnchantBonusArmor, int crystalEnchantBonusWeapon) {
-        _id = id;
-        _crystalId = crystalId;
-        _crystalEnchantBonusArmor = crystalEnchantBonusArmor;
-        _crystalEnchantBonusWeapon = crystalEnchantBonusWeapon;
+        this.id = id;
+        this.crystalId = crystalId;
+        this.crystalEnchantBonusArmor = crystalEnchantBonusArmor;
+        this.crystalEnchantBonusWeapon = crystalEnchantBonusWeapon;
     }
 
     /**
@@ -32,7 +36,7 @@ public enum CrystalType {
      * @return the crystal type ID
      */
     public int getId() {
-        return _id;
+        return id;
     }
 
     /**
@@ -41,22 +45,21 @@ public enum CrystalType {
      * @return the item ID of the crystal
      */
     public int getCrystalId() {
-        return _crystalId;
+        return crystalId;
     }
 
     public int getCrystalEnchantBonusArmor() {
-        return _crystalEnchantBonusArmor;
+        return crystalEnchantBonusArmor;
     }
 
     public int getCrystalEnchantBonusWeapon() {
-        return _crystalEnchantBonusWeapon;
+        return crystalEnchantBonusWeapon;
     }
 
-    public boolean isGreater(CrystalType crystalType) {
-        return getId() > crystalType.getId();
+    public static void forEach(Consumer<CrystalType> action) {
+        for (CrystalType crystalType : CACHED) {
+            action.accept(crystalType);
+        }
     }
 
-    public boolean isLesser(CrystalType crystalType) {
-        return getId() < crystalType.getId();
-    }
 }

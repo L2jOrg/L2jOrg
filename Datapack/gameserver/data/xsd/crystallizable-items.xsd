@@ -1,0 +1,52 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="templates" type="Templates" minOccurs="0"/>
+				<xs:element name="items" type="Items" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Templates">
+		<xs:sequence>
+			<xs:element name="template" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item"  type="ChancedItem" maxOccurs="unbounded" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute type="CrystalType" name="crystalType" use="required" />
+					<xs:attribute type="CrystallizationType" name="crystallizationType" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="CrystallizationType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="WEAPON"/>
+			<xs:enumeration value="ARMOR"/>
+			<xs:enumeration value="ACCESORY"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="Items">
+		<xs:sequence>
+			<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item" type="ChancedItem" maxOccurs="unbounded" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute type="xs:short" name="id" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

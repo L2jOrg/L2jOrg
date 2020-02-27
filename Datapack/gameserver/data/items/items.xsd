@@ -155,7 +155,7 @@
     </xs:complexType>
 
     <xs:complexType name="ItemCrystal">
-        <xs:attribute name="type" type="ItemGrade" default="NONE"/>
+        <xs:attribute name="type" type="CrystalType" default="NONE"/>
         <xs:attribute name="count" type="xs:int" default="0"/>
     </xs:complexType>
 

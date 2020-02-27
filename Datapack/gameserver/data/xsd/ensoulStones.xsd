@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		   targetNamespace="http://la2j.org"
-		   xmlns="http://la2j.org"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
 		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
 
 	<xs:element name="list">
 		<xs:complexType>
@@ -52,15 +54,5 @@
 		<xs:attribute type="xs:positiveInteger" name="count"/>
 	</xs:complexType>
 
-	<xs:simpleType name="CrystalType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="NONE" />
-			<xs:enumeration value="D" />
-			<xs:enumeration value="C" />
-			<xs:enumeration value="B" />
-			<xs:enumeration value="A" />
-			<xs:enumeration value="EVENT" />
-		</xs:restriction>
-	</xs:simpleType>
 
 </xs:schema>

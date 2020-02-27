@@ -378,14 +378,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="ChancedItem">
-        <xs:complexContent>
-            <xs:extension base="ItemInfo">
-                <xs:attribute name="chance" type="xs:float" use="required"/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
     <xs:complexType name="RestorationEffect">
         <xs:complexContent>
             <xs:extension base="Effect">

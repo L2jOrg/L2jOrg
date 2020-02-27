@@ -30,7 +30,15 @@
 
     <xs:complexType name="ItemInfo">
         <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
-        <xs:attribute type="xs:int" name="count" default="1"/>
+        <xs:attribute type="xs:long" name="count" default="1"/>
+    </xs:complexType>
+
+    <xs:complexType name="ChancedItem">
+        <xs:complexContent>
+            <xs:extension base="ItemInfo">
+                <xs:attribute name="chance" type="xs:float" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="ChancedSkillInfo">
@@ -1605,7 +1613,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="ItemGrade">
+    <xs:simpleType name="CrystalType">
         <xs:restriction base="xs:token">
             <xs:enumeration value="NONE"/>
             <xs:enumeration value="D"/>
@@ -1613,6 +1621,7 @@
             <xs:enumeration value="B"/>
             <xs:enumeration value="A"/>
             <xs:enumeration value="S"/>
+            <xs:enumeration value="Event"/>
         </xs:restriction>
     </xs:simpleType>
 

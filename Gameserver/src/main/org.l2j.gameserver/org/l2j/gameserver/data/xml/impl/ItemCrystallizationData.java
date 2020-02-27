@@ -1,12 +1,12 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.CrystallizationType;
 import org.l2j.gameserver.model.holders.CrystallizationDataHolder;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.model.items.Armor;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -14,43 +14,49 @@ import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Predicate;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.util.GameUtils.isArmor;
+import static org.l2j.gameserver.util.GameUtils.isWeapon;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class ItemCrystallizationData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemCrystallizationData.class);
 
-    private final Map<CrystalType, Map<CrystallizationType, List<ItemChanceHolder>>> _crystallizationTemplates = new EnumMap<>(CrystalType.class);
-    private final Map<Integer, CrystallizationDataHolder> _items = new HashMap<>();
+    private final Map<CrystalType, Map<CrystallizationType, List<ItemChanceHolder>>> crystallizationTemplates = new EnumMap<>(CrystalType.class);
+    private final IntMap<CrystallizationDataHolder> items = new HashIntMap<>();
 
     private ItemCrystallizationData() {
-        load();
     }
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/CrystallizableItems.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/crystallizable-items.xsd");
     }
 
     @Override
     public void load() {
-        _crystallizationTemplates.clear();
-        for (CrystalType crystalType : CrystalType.values()) {
-            _crystallizationTemplates.put(crystalType, new EnumMap<>(CrystallizationType.class));
-        }
-        _items.clear();
-        parseDatapackFile("data/CrystallizableItems.xml");
-        LOGGER.info("Loaded {} crystallization templates.", _crystallizationTemplates.size());
-        LOGGER.info("Loaded {} pre-defined crystallizable items.", _items.size());
+        crystallizationTemplates.clear();
+        CrystalType.forEach(c -> crystallizationTemplates.put(c, new EnumMap<>(CrystallizationType.class)));
+
+        items.clear();
+        parseDatapackFile("data/crystallizable-items.xml");
+        LOGGER.info("Loaded {} crystallization templates.", crystallizationTemplates.size());
+        LOGGER.info("Loaded {} pre-defined crystallizable items.", items.size());
 
         // Generate remaining data.
         generateCrystallizationData();
@@ -58,57 +64,48 @@ public final class ItemCrystallizationData extends GameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
-            if ("list".equalsIgnoreCase(n.getNodeName())) {
-                for (Node o = n.getFirstChild(); o != null; o = o.getNextSibling()) {
-                    if ("templates".equalsIgnoreCase(o.getNodeName())) {
-                        for (Node d = o.getFirstChild(); d != null; d = d.getNextSibling()) {
-                            if ("crystallizable_template".equalsIgnoreCase(d.getNodeName())) {
-                                final CrystalType crystalType = parseEnum(d.getAttributes(), CrystalType.class, "crystalType");
-                                final CrystallizationType crystallizationType = parseEnum(d.getAttributes(), CrystallizationType.class, "crystallizationType");
-                                final List<ItemChanceHolder> crystallizeRewards = new ArrayList<>();
-                                for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
-                                    if ("item".equalsIgnoreCase(c.getNodeName())) {
-                                        NamedNodeMap attrs = c.getAttributes();
-                                        final int itemId = parseInteger(attrs, "id");
-                                        final long itemCount = parseLong(attrs, "count");
-                                        final double itemChance = parseDouble(attrs, "chance");
-                                        crystallizeRewards.add(new ItemChanceHolder(itemId, itemChance, itemCount));
-                                    }
-                                }
-
-                                _crystallizationTemplates.get(crystalType).put(crystallizationType, crystallizeRewards);
-                            }
-                        }
-                    } else if ("items".equalsIgnoreCase(o.getNodeName())) {
-                        for (Node d = o.getFirstChild(); d != null; d = d.getNextSibling()) {
-                            if ("crystallizable_item".equalsIgnoreCase(d.getNodeName())) {
-                                final int id = parseInteger(d.getAttributes(), "id");
-                                final List<ItemChanceHolder> crystallizeRewards = new ArrayList<>();
-                                for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
-                                    if ("item".equalsIgnoreCase(c.getNodeName())) {
-                                        NamedNodeMap attrs = c.getAttributes();
-                                        final int itemId = parseInteger(attrs, "id");
-                                        final long itemCount = parseLong(attrs, "count");
-                                        final double itemChance = parseDouble(attrs, "chance");
-                                        crystallizeRewards.add(new ItemChanceHolder(itemId, itemChance, itemCount));
-                                    }
-                                }
-                                _items.put(id, new CrystallizationDataHolder(id, crystallizeRewards));
-                            }
-                        }
-                    }
+        forEach(doc, "list", listNode -> {
+            for(Node node = listNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+                switch (node.getNodeName()) {
+                    case "templates" -> forEach(node, "template", this::parseTemplate);
+                    case "items" -> forEach(node, "item", this::parseItem);
                 }
             }
-        }
+        });
     }
 
-    public int getLoadedCrystallizationTemplateCount() {
-        return _crystallizationTemplates.size();
+    private void parseTemplate(Node node) {
+        forEach(node, "template", templateNode -> {
+            var attr = templateNode.getAttributes();
+            var crystalType = parseEnum(attr, CrystalType.class, "crystalType");
+            var crystallizationType = parseEnum(attr, CrystallizationType.class, "crystallizationType");
+
+            crystallizationTemplates.get(crystalType).put(crystallizationType, parseRewards(templateNode));
+        });
+    }
+
+    private List<ItemChanceHolder> parseRewards(Node templateNode) {
+        final List<ItemChanceHolder> crystallizeRewards = new ArrayList<>();
+
+        forEach(templateNode, "item", itemNode -> {
+            var attrs = itemNode.getAttributes();
+            var itemId = parseInteger(attrs, "id");
+            var itemCount = parseLong(attrs, "count");
+            var itemChance = parseDouble(attrs, "chance");
+            crystallizeRewards.add(new ItemChanceHolder(itemId, itemChance, itemCount));
+        });
+        return crystallizeRewards;
+    }
+
+    private void parseItem(Node node) {
+        forEach(node, "item", itemNode -> {
+            final int id = parseInteger(itemNode.getAttributes(), "id");
+            items.put(id, new CrystallizationDataHolder(id, parseRewards(itemNode)));
+        });
     }
 
     private List<ItemChanceHolder> calculateCrystallizeRewards(ItemTemplate item, List<ItemChanceHolder> crystallizeRewards) {
-        if (crystallizeRewards == null) {
+        if (isNull(crystallizeRewards)) {
             return null;
         }
 
@@ -131,23 +128,23 @@ public final class ItemCrystallizationData extends GameXmlReader {
     }
 
     private void generateCrystallizationData() {
-        final int previousCount = _items.size();
+        final int previousCount = items.size();
 
-        for (ItemTemplate item : ItemEngine.getInstance().getAllItems()) {
-            // Check if the data has not been generated.
-            if (((item instanceof Weapon) || (item instanceof Armor)) && item.isCrystallizable() && !_items.containsKey(item.getId())) {
-                final List<ItemChanceHolder> holder = _crystallizationTemplates.get(item.getCrystalType()).get((item instanceof Weapon) ? CrystallizationType.WEAPON : CrystallizationType.ARMOR);
-                if (holder != null) {
-                    _items.put(item.getId(), new CrystallizationDataHolder(item.getId(), calculateCrystallizeRewards(item, holder)));
+        if(crystallizationTemplates.values().stream().flatMap(c -> c.values().stream()).anyMatch(Predicate.not(List::isEmpty))) {
+            for (ItemTemplate item : ItemEngine.getInstance().getAllItems()) {
+                // Check if the data has not been generated.
+                if ((isWeapon(item) || isArmor(item)) && item.isCrystallizable() && !items.containsKey(item.getId())) {
+
+                    final List<ItemChanceHolder> holder = crystallizationTemplates.get(item.getCrystalType()).get(isWeapon(item) ? CrystallizationType.WEAPON : CrystallizationType.ARMOR);
+
+                    if (nonNull(holder)) {
+                        items.put(item.getId(), new CrystallizationDataHolder(item.getId(), calculateCrystallizeRewards(item, holder)));
+                    }
                 }
             }
         }
 
-        LOGGER.info("Generated {} crystallizable items from templates.", _items.size() - previousCount);
-    }
-
-    public List<ItemChanceHolder> getCrystallizationTemplate(CrystalType crystalType, CrystallizationType crystallizationType) {
-        return _crystallizationTemplates.get(crystalType).get(crystallizationType);
+        LOGGER.atInfo().addArgument(() -> items.size() - previousCount).log("Generated {} crystallizable items from templates.");
     }
 
     /**
@@ -155,8 +152,8 @@ public final class ItemCrystallizationData extends GameXmlReader {
      * @return {@code CrystallizationData} for unenchanted items (enchanted items just have different crystal count, but same rewards),<br>
      * or {@code null} if there is no such data registered.
      */
-    public CrystallizationDataHolder getCrystallizationData(int itemId) {
-        return _items.get(itemId);
+    private CrystallizationDataHolder getCrystallizationData(int itemId) {
+        return items.get(itemId);
     }
 
     /**
@@ -165,8 +162,8 @@ public final class ItemCrystallizationData extends GameXmlReader {
      */
     public List<ItemChanceHolder> getCrystallizationRewards(Item item) {
         final List<ItemChanceHolder> result = new ArrayList<>();
-        final CrystallizationDataHolder data = getCrystallizationData(item.getId());
-        if (data != null) {
+        var data = getCrystallizationData(item.getId());
+        if (nonNull(data)) {
             // If there are no crystals on the template, add such.
             if (data.getItems().stream().noneMatch(i -> i.getId() == item.getTemplate().getCrystalItemId())) {
                 result.add(new ItemChanceHolder(item.getTemplate().getCrystalItemId(), 100, item.getCrystalCount()));
@@ -179,6 +176,10 @@ public final class ItemCrystallizationData extends GameXmlReader {
         }
 
         return result;
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static ItemCrystallizationData getInstance() {
