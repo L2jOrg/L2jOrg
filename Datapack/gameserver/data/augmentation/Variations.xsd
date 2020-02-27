@@ -1,94 +1,100 @@
-<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="variations">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="variation" maxOccurs="unbounded" minOccurs="0">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="optionGroup" maxOccurs="unbounded" minOccurs="0">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="optionCategory" maxOccurs="unbounded" minOccurs="0">
-														<xs:complexType>
-															<xs:choice maxOccurs="unbounded" minOccurs="0">
-																<xs:element name="option">
-																	<xs:complexType>
-																		<xs:attribute type="xs:int" name="id"/>
-																		<xs:attribute type="xs:double" name="chance"/>
-																	</xs:complexType>
-																</xs:element>
-																<xs:element name="optionRange">
-																	<xs:complexType>
-																		<xs:attribute type="xs:int" name="from"/>
-																		<xs:attribute type="xs:int" name="to"/>
-																		<xs:attribute type="xs:double" name="chance"/>
-																	</xs:complexType>
-																</xs:element>
-															</xs:choice>
-															<xs:attribute type="xs:float" name="chance"/>
-														</xs:complexType>
-													</xs:element>
-												</xs:sequence>
-												<xs:attribute type="xs:string" name="weaponType"/>
-												<xs:attribute type="xs:byte" name="order"/>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-									<xs:attribute type="xs:int" name="mineralId"/>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="itemGroups">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="itemGroup" maxOccurs="unbounded" minOccurs="0">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
-											<xs:complexType>
-												<xs:attribute type="xs:int" name="id"/>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-									<xs:attribute type="xs:byte" name="id"/>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="fees">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="fee" maxOccurs="unbounded" minOccurs="0">
-								<xs:complexType>
-									<xs:choice maxOccurs="unbounded" minOccurs="0">
-										<xs:element name="mineral">
-											<xs:complexType>
-												<xs:attribute type="xs:int" name="id"/>
-											</xs:complexType>
-										</xs:element>
-										<xs:element name="mineralRange">
-											<xs:complexType>
-												<xs:attribute type="xs:int" name="from"/>
-												<xs:attribute type="xs:int" name="to"/>
-											</xs:complexType>
-										</xs:element>
-									</xs:choice>
-									<xs:attribute type="xs:int" name="itemGroup"/>
-									<xs:attribute type="xs:int" name="itemId"/>
-									<xs:attribute type="xs:long" name="itemCount"/>
-									<xs:attribute type="xs:long" name="cancelFee"/>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="variations" type="Variations"/>
+				<xs:element name="itemGroups" type="ItemGroups"/>
+				<xs:element name="fees" type="Fees"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
+	<xs:complexType name="Fees">
+		<xs:sequence>
+			<xs:element name="fee" type="Fee" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Fee">
+		<xs:choice maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="mineral">
+				<xs:complexType>
+					<xs:attribute type="xs:int" name="id"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="mineralRange">
+				<xs:complexType>
+					<xs:attribute type="xs:int" name="from"/>
+					<xs:attribute type="xs:int" name="to"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute type="xs:int" name="itemGroup"/>
+		<xs:attribute type="xs:int" name="itemId"/>
+		<xs:attribute type="xs:long" name="itemCount"/>
+		<xs:attribute type="xs:long" name="cancelFee"/>
+	</xs:complexType>
+
+	<xs:complexType name="ItemGroups">
+		<xs:sequence>
+			<xs:element name="itemGroup" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute type="xs:int" name="id"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute type="xs:byte" name="id"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Variations">
+		<xs:sequence>
+			<xs:element name="variation" type="Variation" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Variation">
+		<xs:sequence>
+			<xs:element name="optionGroup" type="OptionGroup" maxOccurs="unbounded" minOccurs="0">
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute type="xs:int" name="mineralId"/>
+	</xs:complexType>
+
+	<xs:complexType name="OptionGroup">
+		<xs:sequence>
+			<xs:element name="optionCategory" type="OptionCategory" maxOccurs="unbounded" minOccurs="0">
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute type="xs:string" name="weaponType"/>
+		<xs:attribute type="xs:byte" name="order"/>
+	</xs:complexType>
+
+	<xs:complexType name="OptionCategory">
+		<xs:choice maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="option">
+				<xs:complexType>
+					<xs:attribute type="xs:int" name="id"/>
+					<xs:attribute type="xs:double" name="chance"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="optionRange">
+				<xs:complexType>
+					<xs:attribute type="xs:int" name="from"/>
+					<xs:attribute type="xs:int" name="to"/>
+					<xs:attribute type="xs:double" name="chance"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute type="xs:float" name="chance"/>
+	</xs:complexType>
 </xs:schema>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Variations.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org Variations.xsd" >
     <variations>
         <!-- Common Life Stone -->
         <variation mineralId="90012">
@@ -565,7 +565,5 @@
         <fee itemGroup="5" itemId="2134" itemCount="200" cancelFee="720000">
             <mineral id="90016"/> <!-- Shining Life Stone-->
         </fee>
-
-
     </fees>
 </list>

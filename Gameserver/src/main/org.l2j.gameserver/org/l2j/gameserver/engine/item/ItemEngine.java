@@ -4,10 +4,7 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.xml.impl.EnchantItemData;
-import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
-import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
-import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
+import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -498,6 +495,7 @@ public final class ItemEngine extends GameXmlReader {
         EnchantItemData.init();
         EnchantItemOptionsData.init();
         ItemCrystallizationData.init();
+        AugmentationEngine.init();
     }
 
     public static ItemEngine getInstance() {

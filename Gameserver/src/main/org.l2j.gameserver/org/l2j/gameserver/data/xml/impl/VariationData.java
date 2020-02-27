@@ -1,5 +1,8 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -23,11 +26,10 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class VariationData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(VariationData.class);
 
-    private final Map<Integer, Variation> _variations = new HashMap<>();
-    private final Map<Integer, Map<Integer, VariationFee>> _fees = new HashMap<>();
+    private final IntMap<Variation> variations = new HashIntMap<>();
+    private final IntMap<IntMap<VariationFee>> fees = new HashIntMap<>();
 
     private VariationData() {
-        load();
     }
 
     @Override
@@ -37,11 +39,11 @@ public class VariationData extends GameXmlReader {
 
     @Override
     public void load() {
-        _variations.clear();
-        _fees.clear();
+        variations.clear();
+        fees.clear();
         parseDatapackFile("data/augmentation/Variations.xml");
-        LOGGER.info("Loaded {} Variations.", _variations.size() );
-        LOGGER.info("Loaded {} Fees.", _fees.size());
+        LOGGER.info("Loaded {} Variations.", variations.size() );
+        LOGGER.info("Loaded {} Fees.", fees.size());
     }
 
     @Override
@@ -101,7 +103,7 @@ public class VariationData extends GameXmlReader {
                         variation.setEffectGroup(weaponType, order, new OptionDataGroup(sets));
                     });
 
-                    _variations.put(mineralId, variation);
+                    variations.put(mineralId, variation);
                 });
             });
 
@@ -139,7 +141,7 @@ public class VariationData extends GameXmlReader {
                     }
 
                     final VariationFee fee = new VariationFee(itemId, itemCount, cancelFee);
-                    final Map<Integer, VariationFee> feeByMinerals = new HashMap<>();
+                    final IntMap<VariationFee> feeByMinerals = new HashIntMap<>();
                     forEach(feeNode, "mineral", mineralNode ->
                     {
                         final int mId = parseInteger(mineralNode.getAttributes(), "id");
@@ -155,20 +157,12 @@ public class VariationData extends GameXmlReader {
                     });
 
                     for (int item : itemGroup) {
-                        Map<Integer, VariationFee> fees = _fees.computeIfAbsent(item, k -> new HashMap<>());
+                        var fees = this.fees.computeIfAbsent(item, k -> new HashIntMap<>());
                         fees.putAll(feeByMinerals);
                     }
                 });
             });
         });
-    }
-
-    public int getVariationCount() {
-        return _variations.size();
-    }
-
-    public int getFeeCount() {
-        return _fees.size();
     }
 
     /**
@@ -190,15 +184,15 @@ public class VariationData extends GameXmlReader {
     }
 
     public final Variation getVariation(int mineralId) {
-        return _variations.get(mineralId);
+        return variations.get(mineralId);
     }
 
     public final VariationFee getFee(int itemId, int mineralId) {
-        return _fees.getOrDefault(itemId, Collections.emptyMap()).get(mineralId);
+        return fees.getOrDefault(itemId, Containers.emptyIntMap()).get(mineralId);
     }
 
     public final long getCancelFee(int itemId, int mineralId) {
-        final Map<Integer, VariationFee> fees = _fees.get(itemId);
+        var fees = this.fees.get(itemId);
         if (fees == null) {
             return -1;
         }
@@ -217,8 +211,13 @@ public class VariationData extends GameXmlReader {
     }
 
     public final boolean hasFeeData(int itemId) {
-        Map<Integer, VariationFee> itemFees = _fees.get(itemId);
+        var itemFees = fees.get(itemId);
         return (itemFees != null) && !itemFees.isEmpty();
+    }
+
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static VariationData getInstance() {

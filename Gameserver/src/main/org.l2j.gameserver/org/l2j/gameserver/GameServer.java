@@ -91,7 +91,6 @@ public class GameServer {
 
         printSection("Items");
         ItemEngine.init();
-        AugmentationEngine.init();
         VariationData.getInstance();
         EnsoulData.getInstance();
         EnchantItemHPBonusData.getInstance();
