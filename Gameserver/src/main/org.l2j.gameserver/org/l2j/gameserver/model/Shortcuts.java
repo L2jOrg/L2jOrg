@@ -8,7 +8,6 @@ import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
 import java.util.BitSet;
 import java.util.function.Consumer;
@@ -17,7 +16,7 @@ import java.util.function.Predicate;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.*;
+import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
  * @author JoeAlisson
@@ -155,7 +154,6 @@ public class Shortcuts {
             }
             if(s.isActive()) {
                 activeShortcuts.set(s.getClientId());
-                owner.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
             }
         });
     }

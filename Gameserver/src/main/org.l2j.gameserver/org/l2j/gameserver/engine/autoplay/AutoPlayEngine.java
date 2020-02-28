@@ -229,7 +229,7 @@ public final class AutoPlayEngine {
             if (nonNull(action)) {
                 var handler = PlayerActionHandler.getInstance().getHandler(action.getHandler());
                 if (nonNull(handler)) {
-                    handler.useAction(player, action, false, false); // todo use combat mode
+                    handler.useAction(player, action, false, false);
                 }
                 return true;
             }

@@ -30,6 +30,7 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
+import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -212,6 +213,11 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExAdenaInvenCount(player));
         client.sendPacket(new ExCoinCount(client.getCoin()));
         client.sendPacket(new ShortCutInit());
+        player.forEachShortcut(s -> {
+            if(s.isActive()) {
+                client.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
+            }
+        });
         client.sendPacket(new ExDressRoomUiOpen());
         client.sendPacket(new ExSendCostumeList());
 

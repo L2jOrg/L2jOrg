@@ -1370,7 +1370,55 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<call-skill skill="54100" scope="SELF">
+			<call-skill skill="54100" scope="SELF"> <!-- Sayha's Shield -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54101"  scope="SELF"> <!-- Sayha's Magic Barrier -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54103"  scope="SELF"> <!-- Sayha's Decrease Weight -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54112"  scope="SELF"> <!-- Sayha's Clarity -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54104"  scope="SELF"> <!-- Sayha's Berserker Spirit -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54105"  scope="SELF"> <!-- Sayha's Wind Walk -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54106"  scope="SELF"> <!-- Sayha's Might -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54108"  scope="SELF"> <!-- Sayha's Focus -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54109"  scope="SELF"> <!-- Sayha's Haste -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54110"  scope="SELF"> <!-- Sayha's Death Whisper -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54111"  scope="SELF"> <!-- Sayha's Empower -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54113"  scope="SELF"> <!-- Sayha's Wild Magic -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54114"  scope="SELF"> <!-- Sayha's Acumen -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54115"  scope="SELF"> <!-- Sayha's Concentration -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54116"  scope="SELF"> <!-- Sayha's Victory -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54117"  scope="SELF"> <!-- Sayha's Recover Hp -->
+				<power initial="1.0"/>
+			</call-skill>
+			<call-skill  skill="54118"  scope="SELF"> <!-- Sayha's Recover Mp -->
 				<power initial="1.0"/>
 			</call-skill>
 		</effects>
