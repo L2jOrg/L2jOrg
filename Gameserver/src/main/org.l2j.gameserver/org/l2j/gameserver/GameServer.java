@@ -7,6 +7,7 @@ import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.*;
@@ -123,6 +124,7 @@ public class GameServer {
         CharSummonTable.getInstance().init();
         BeautyShopData.getInstance();
         MentorManager.getInstance();
+        RankManager.init();
 
         printSection("Clans");
         ClanTable.getInstance();

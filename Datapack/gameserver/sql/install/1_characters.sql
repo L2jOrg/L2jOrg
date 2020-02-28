@@ -62,33 +62,33 @@ CREATE TABLE IF NOT EXISTS `characters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-CREATE VIEW rankers AS
-SELECT charId,
-       char_name,
-       exp,
-       base_class as class,
-       race,
-       clanid,
-       rank() over (w) as 'rank'
-from characters
-where level >= 76
-    AND ( base_class BETWEEN 88 AND 118 OR base_class IN (131, 134, 195) )
-WINDOW w as (ORDER BY exp desc )
-LIMIT 150;
-
-
 CREATE VIEW rankers_race AS
-SELECT charId,
+SELECT charId as char_id,
        char_name,
        exp,
        base_class as class,
        race,
-       clanid,
+       clanid as clan_id,
        rank() over (
            PARTITION BY  race
            ORDER BY exp desc
            ) as 'rank'
 from characters
 where level >= 76
-AND ( base_class BETWEEN 88 AND 118 OR base_class IN (131, 134, 195) )
+  AND ( base_class BETWEEN 88 AND 118 OR base_class IN (131, 134, 195) )
+LIMIT 150;
+
+CREATE VIEW rankers AS
+SELECT charId as char_id,
+       char_name,
+       exp,
+       base_class as class,
+       race,
+       clanid as clan_id,
+       rank() over (w) as `rank`,
+       (SELECT `rank` FROM rankers_race r WHERE r.char_id = c.charId) as `rank_race`
+from characters c
+where level >= 76
+    AND ( base_class BETWEEN 88 AND 118 OR base_class IN (131, 134, 195) )
+WINDOW w as (ORDER BY exp desc )
 LIMIT 150;

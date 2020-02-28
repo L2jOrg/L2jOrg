@@ -23,13 +23,15 @@ module org.l2j.commons {
 
     uses TypeHandler;
     provides TypeHandler
-        with org.l2j.commons.database.handler.IntegerHandler,
+        with org.l2j.commons.database.handler.ByteHandler,
+             org.l2j.commons.database.handler.IntegerHandler,
+             org.l2j.commons.database.handler.IntMapHandler,
+             org.l2j.commons.database.handler.IntSetHandler,
+             org.l2j.commons.database.handler.ListHandler,
              org.l2j.commons.database.handler.LongHandler,
              org.l2j.commons.database.handler.VoidHandler,
-             org.l2j.commons.database.handler.ListHandler,
+             org.l2j.commons.database.handler.ShortHandler,
              org.l2j.commons.database.handler.StringHandler,
-             org.l2j.commons.database.handler.IntSetHandler,
-             org.l2j.commons.database.handler.ByteHandler,
              org.l2j.commons.database.handler.DoubleHandler,
              org.l2j.commons.database.handler.BooleanHandler,
              org.l2j.commons.database.handler.DateHandler,

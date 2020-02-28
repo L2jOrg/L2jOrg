@@ -1,9 +1,9 @@
 package org.l2j.gameserver.data.database;
 
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;
-
-import java.util.List;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -29,15 +29,13 @@ public class RankManager {
 
     private static final int AMONG_RACE_SKILL_ID = 60015;
 
-    private List<RankData> rankers;
+    private IntMap<RankData> snapshotRankers;
 
     private RankManager() {
-        loadRankers();
     }
 
     private void loadRankers() {
-        rankers = getDAO(RankDAO.class).findAllSnapshot();
-
+        snapshotRankers = getDAO(RankDAO.class).findAllSnapshot();
     }
 
     public void updateRankers() {
@@ -54,6 +52,18 @@ public class RankManager {
         dao.clearRaceSnapshot();
         dao.updateRaceSnapshot();
 
+    }
+
+    public RankData getRank(Player player) {
+        return getDAO(RankDAO.class).findPlayerRank(player.getObjectId());
+    }
+
+    public RankData getSnapshot(Player player) {
+        return snapshotRankers.get(player.getObjectId());
+    }
+
+    public static void init() {
+        getInstance().loadRankers();
     }
 
     public static RankManager getInstance() {

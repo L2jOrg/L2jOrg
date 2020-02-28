@@ -7,6 +7,7 @@ import org.l2j.commons.database.annotation.Column;
  */
  public class RankData {
 
+    @Column("char_id")
     private int charId;
 
     @Column("char_name")
@@ -17,9 +18,20 @@ import org.l2j.commons.database.annotation.Column;
     private short classId;
     private byte race;
 
-    @Column("clanid")
+    @Column("clan_id")
     private int clanId;
 
-    private long rank;
+    private int rank;
 
+    @Column("rank_race")
+    private int rankRace;
+
+
+   public int getRank() {
+      return rank;
+   }
+
+   public int getRankRace() {
+      return rankRace;
+   }
 }
