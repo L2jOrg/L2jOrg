@@ -23,7 +23,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ScheduledFuture;
-import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -168,26 +167,25 @@ public final class AutoPlayEngine {
             setting.setAutoPlaying(true);
             try {
                 var range = setting.isNearTarget() ? 600 : 1400;
-                var world = World.getInstance();
 
                 if (setting.isAutoPickUpOn()) {
-                    var item = world.findAnyVisibleObject(player, Item.class, range, false, it -> it.getDropProtection().tryPickUp(player));
+                    var item = World.getInstance().findAnyVisibleObject(player, Item.class, range, false, it -> it.getDropProtection().tryPickUp(player));
                     if (nonNull(item)) {
                         player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item);
                         return;
                     }
                 }
 
-                pickTargetAndAct(player, setting, range, world);
+                pickTargetAndAct(player, setting, range);
             } finally {
                 setting.setAutoPlaying(false);
             }
         }
 
-        private void pickTargetAndAct(Player player, AutoPlaySettings setting, int range, World world) {
+        private void pickTargetAndAct(Player player, AutoPlaySettings setting, int range) {
             var target = player.getTarget();
             if ((isNull(target) || (isMonster(target) && ((Monster) target).isDead()) || target.equals(player)) && !player.isTargetingDisabled()) {
-                var monster = world.findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
+                var monster = World.getInstance().findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
                 player.setTarget(monster);
             }
 
@@ -230,6 +228,7 @@ public final class AutoPlayEngine {
                 var handler = PlayerActionHandler.getInstance().getHandler(action.getHandler());
                 if (nonNull(handler)) {
                     handler.useAction(player, action, false, false);
+                    player.onActionRequest();
                 }
                 return true;
             }
@@ -238,7 +237,7 @@ public final class AutoPlayEngine {
 
         private boolean autoUseItem(Player player, Shortcut shortcut) {
             var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-            if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, Predicate.not(player::isAffectedBySkill))) {
+            if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> !(player.isAffectedBySkill(s) || player.hasAbnormalType(s.getSkill().getAbnormalType())))) {
                 useItem(player, item);
                 return true;
             }
@@ -248,14 +247,14 @@ public final class AutoPlayEngine {
         private boolean autoUseSkill(Player player, Shortcut shortcut) {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
 
+            if (skill.isBlockActionUseSkill()) {
+                return false;
+            }
+
             if(skill.isAutoTransformation() && player.isTransformed()) {
                 return false;
             }
             if(skill.isAutoBuff() && (player.hasAbnormalType(skill.getAbnormalType()) || player.isAffectedBySkill(skill.getId()))) {
-                return false;
-            }
-
-            if (skill.isBlockActionUseSkill()) {
                 return false;
             }
 
@@ -306,6 +305,7 @@ public final class AutoPlayEngine {
             var handler = ItemHandler.getInstance().getHandler(etcItem);
 
             if (nonNull(handler) && handler.useItem(player, item, false) && reuseDelay > 0) {
+                player.onActionRequest();
                 player.addTimeStampItem(item, reuseDelay);
             }
         }

@@ -701,12 +701,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return getItemType() == EtcItemType.PET_COLLAR;
     }
 
-    /**
-     * @param extractableProduct
-     */
-    public void addCapsuledItem(ExtractableProduct extractableProduct) {
-    }
-
     public double getStats(Stat stat, double defaultValue) {
         if (_funcTemplates != null) {
             final FuncTemplate template = _funcTemplates.stream().filter(func -> (func.getStat() == stat) && ((func.getFunctionClass() == FuncAdd.class) || (func.getFunctionClass() == FuncSet.class))).findFirst().orElse(null);

@@ -90,10 +90,6 @@ public final class EtcItem extends ItemTemplate {
         return isInfinite;
     }
 
-    /**
-     * @param extractableProduct
-     */
-    @Override
     public void addCapsuledItem(ExtractableProduct extractableProduct) {
         if (_extractableItems == null) {
             _extractableItems = new ArrayList<>();
