@@ -33,4 +33,7 @@ public interface RankDAO extends DAO<RankData> {
 
     @Query("SELECT * FROM rankers  WHERE id =:playerId:")
     RankData findPlayerRank(int playerId);
+
+    @Query("SELECT * FROM rankers_race WHERE race = :race:")
+    List<RankData> findAllByRace(int race);
 }

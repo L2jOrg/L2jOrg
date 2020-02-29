@@ -68,6 +68,10 @@ public class RankManager {
         return getDAO(RankDAO.class).findAll();
     }
 
+    public List<RankData> getRaceRankers(int race) {
+        return getDAO(RankDAO.class).findAllByRace(race);
+    }
+
     public static void init() {
         getInstance().loadRankers();
     }

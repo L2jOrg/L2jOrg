@@ -94,27 +94,32 @@ CREATE TABLE IF NOT EXISTS `rankers_race_snapshot`
   DEFAULT CHARSET = utf8MB4;
 
 CREATE VIEW rankers_race AS
-SELECT charId as id,
-       char_name as name,
-       exp,
-       level,
-       base_class as class,
-       race,
+    WITH ranked_race  AS (
+        SELECT c.charId as id,
+               c.char_name as name,
+               c.exp,
+               c.level,
+               c.base_class as class,
+               c.race,
 
-       IFNULL((SELECT clan_name
-                FROM clan_data clan
-                WHERE clan.clan_id = clanid), ''
-           ) as clan_name,
+               IFNULL((SELECT clan_name
+                       FROM clan_data clan
+                       WHERE clan.clan_id = c.clanid), ''
+                   ) as clan_name,
 
-       rank() over (
-           PARTITION BY race
-           ORDER BY exp desc
-           ) as 'rank'
+               rank() over (
+                   PARTITION BY c.race
+                   ORDER BY c.exp desc
+                   ) as `rank`,
 
-from characters
-where level >= 76
-  AND (base_class BETWEEN 88 AND 118 OR base_class IN (131, 134, 195))
-LIMIT 150;
+               IFNULL(rs.`rank`, 0) as `rank_snapshot`,
+               IFNULL(rs.rank_race, 0) as `rank_race_snapshot`
+
+        from characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
+        where c.level >= 76
+          AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
+    )
+    SELECT * FROM ranked_race WHERE `rank` <= 100;
 
 CREATE VIEW rankers AS
 SELECT c.charId as id,

@@ -6,6 +6,9 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  * @author JoeAlisson
  */
@@ -28,11 +31,15 @@ public class ExRankList extends ServerPacket {
         writeByte(scope);
         writeInt(race);
 
-        var rankers = RankManager.getInstance().getRankers();
+        List<RankData> rankers = switch (group) {
+            case 0 -> RankManager.getInstance().getRankers();
+            case 1 -> RankManager.getInstance().getRaceRankers(race);
+            default -> Collections.emptyList();
+        };
 
         writeInt(rankers.size());
 
-        for (RankData ranker : rankers) {
+        for (var ranker : rankers) {
             writeSizedString(ranker.getPlayerName());
             writeSizedString(ranker.getClanName());
             writeInt(ranker.getLevel());
