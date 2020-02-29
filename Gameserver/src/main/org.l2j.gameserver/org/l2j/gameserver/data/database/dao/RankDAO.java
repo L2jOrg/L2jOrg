@@ -1,10 +1,10 @@
 package org.l2j.gameserver.data.database.dao;
 
 import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.RankData;
-import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.List;
 
@@ -36,4 +36,10 @@ public interface RankDAO extends DAO<RankData> {
 
     @Query("SELECT * FROM rankers_race WHERE race = :race:")
     List<RankData> findAllByRace(int race);
+
+    @Query("SELECT * FROM rankers WHERE clan_id=:clanId:")
+    List<RankData> findByClan(int clanId);
+
+    @Query("SELECT * FROM rankers WHERE id IN (SELECT friend_id FROM character_relationship WHERE char_id = :playerId: AND relation = 'FRIEND')")
+    List<RankData> findFriendRankers(int playerId);
 }

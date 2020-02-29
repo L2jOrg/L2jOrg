@@ -211,7 +211,7 @@
 		<attributes/>
 	</item>
 
-	<armor id="70831" name="Brooch Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i03">
+	<armor id="70831" name="Brooch Lv. 4" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i03">
 	<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />

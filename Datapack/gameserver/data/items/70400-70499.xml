@@ -365,14 +365,14 @@
 		<crystal />
 	</armor>
 
-	<armor id="70434" name="Brooch Lv. 1" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i00">
+	<armor id="70434" name="Brooch Lv. 1" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i00">
 	<!-- Activates 2 jewel slots when equipped. Inventory Slot +5. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="70435" name="Brooch Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i01">
+	<armor id="70435" name="Brooch Lv. 2" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i01">
 	<!-- Activates 3 jewel slots when equipped. Inventory Slot +9. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />

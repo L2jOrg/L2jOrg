@@ -128,7 +128,7 @@ SELECT c.charId as id,
        c.level,
        c.base_class  as class,
        c.race,
-
+       c.clanid  as clan_id,
        IFNULL((SELECT clan_name
                 FROM clan_data clan
                 WHERE clan.clan_id = c.clanid), ''

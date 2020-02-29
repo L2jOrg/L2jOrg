@@ -72,6 +72,14 @@ public class RankManager {
         return getDAO(RankDAO.class).findAllByRace(race);
     }
 
+    public List<RankData> getClanRankers(int clanId) {
+        return getDAO(RankDAO.class).findByClan(clanId);
+    }
+
+    public List<RankData> getFriendRankers(Player player) {
+        return getDAO(RankDAO.class).findFriendRankers(player.getObjectId());
+    }
+
     public static void init() {
         getInstance().loadRankers();
     }
