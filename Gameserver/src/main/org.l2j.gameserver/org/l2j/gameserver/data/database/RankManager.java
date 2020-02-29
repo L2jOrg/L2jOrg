@@ -5,6 +5,8 @@ import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.util.List;
+
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -60,6 +62,10 @@ public class RankManager {
 
     public RankData getSnapshot(Player player) {
         return snapshotRankers.get(player.getObjectId());
+    }
+
+    public List<RankData> getRankers() {
+        return getDAO(RankDAO.class).findAll();
     }
 
     public static void init() {

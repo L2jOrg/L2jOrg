@@ -26,11 +26,11 @@ public interface RankDAO extends DAO<RankData> {
     void updateRaceSnapshot();
 
     @Query("SELECT * FROM rankers")
-    IntMap<RankData> findAll();
+    List<RankData> findAll();
 
     @Query("SELECT * FROM rankers_snapshot")
     IntMap<RankData> findAllSnapshot();
 
-    @Query("SELECT * FROM rankers  WHERE char_id =:playerId:")
+    @Query("SELECT * FROM rankers  WHERE id =:playerId:")
     RankData findPlayerRank(int playerId);
 }
