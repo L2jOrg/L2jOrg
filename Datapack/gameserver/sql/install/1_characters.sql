@@ -60,40 +60,21 @@ CREATE TABLE IF NOT EXISTS `characters`(
     KEY `clanid` (`clanid`),
     KEY `online` (`online`)
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+  DEFAULT CHARSET = utf8MB4;
 
 
 CREATE TABLE IF NOT EXISTS `rankers_snapshot`
 (
     `id` INT UNSIGNED      NOT NULL DEFAULT 0,
-    `name` VARCHAR(35)       NOT NULL,
     `exp`       BIGINT UNSIGNED           DEFAULT 0,
-    `level`     TINYINT UNSIGNED            DEFAULT NULL,
-    `class`     TINYINT UNSIGNED  NOT NULL DEFAULT 0,
-    `race`      TINYINT UNSIGNED          DEFAULT NULL,
-    `clan_name` VARCHAR(45)               DEFAULT '',
     `rank`      BIGINT UNSIGNED           DEFAULT 0,
     `rank_race` BIGINT UNSIGNED           DEFAULT 0,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    FOREIGN KEY FK_RANKERS_SNAPSHOT (`id`) REFERENCES characters (`charId`) ON DELETE CASCADE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8MB4;
 
-
-CREATE TABLE IF NOT EXISTS `rankers_race_snapshot`
-(
-    `id`    INT UNSIGNED     NOT NULL DEFAULT 0,
-    `name`  VARCHAR(35)      NOT NULL,
-    `exp`       BIGINT UNSIGNED           DEFAULT 0,
-    `level`     TINYINT UNSIGNED            DEFAULT NULL,
-    `class`     TINYINT UNSIGNED NOT NULL DEFAULT 0,
-    `race`      TINYINT UNSIGNED          DEFAULT NULL,
-    `clan_name` VARCHAR(45)              DEFAULT '',
-    `rank`      BIGINT UNSIGNED           DEFAULT 0,
-    PRIMARY KEY (`id`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8MB4;
-
-CREATE VIEW rankers_race AS
+CREATE OR REPLACE VIEW rankers_race AS
     WITH ranked_race  AS (
         SELECT c.charId as id,
                c.char_name as name,
@@ -149,3 +130,13 @@ where c.level >= 76
   AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
     WINDOW w as (ORDER BY c.exp desc )
 LIMIT 150;
+
+CREATE TABLE  IF NOT EXISTS `rankers_history`
+(
+    `id`   INT UNSIGNED NOT NULL,
+    `exp`  BIGINT UNSIGNED DEFAULT 0,
+    `rank` BIGINT UNSIGNED DEFAULT 0,
+    `date` INT UNSIGNED,
+    PRIMARY KEY (`id`, `date`)
+) ENGINE = InnoDB
+DEFAULT CHARSET = utf8MB4;

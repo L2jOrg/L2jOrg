@@ -33,7 +33,11 @@ import org.l2j.commons.database.annotation.Column;
     @Column("rank_race_snapshot")
     private int rankRaceSnapshot;
 
-   public int getRank() {
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    public int getRank() {
       return rank;
    }
 

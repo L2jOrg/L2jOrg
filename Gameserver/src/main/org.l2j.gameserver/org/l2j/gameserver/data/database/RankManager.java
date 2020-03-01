@@ -3,8 +3,11 @@ package org.l2j.gameserver.data.database;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;
+import org.l2j.gameserver.data.database.data.RankHistoryData;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -31,19 +34,18 @@ public class RankManager {
 
     private static final int AMONG_RACE_SKILL_ID = 60015;
 
-    private IntMap<RankData> snapshotRankers;
+    private IntMap<RankData> rankersSnapshot;
 
     private RankManager() {
     }
 
     private void loadRankers() {
-        snapshotRankers = getDAO(RankDAO.class).findAllSnapshot();
+        rankersSnapshot = getDAO(RankDAO.class).findAllSnapshot();
     }
 
     public void updateRankers() {
         updateDatabase();
         loadRankers();
-
     }
 
     private void updateDatabase() {
@@ -51,17 +53,14 @@ public class RankManager {
         dao.clearSnapshot();
         dao.updateSnapshot();
 
-        dao.clearRaceSnapshot();
-        dao.updateRaceSnapshot();
+        var now = Instant.now();
+        dao.updateRankersHistory(now.getEpochSecond());
+        dao.removeOldRankersHistory(now.minus(7, ChronoUnit.DAYS).getEpochSecond());
 
     }
 
     public RankData getRank(Player player) {
         return getDAO(RankDAO.class).findPlayerRank(player.getObjectId());
-    }
-
-    public RankData getSnapshot(Player player) {
-        return snapshotRankers.get(player.getObjectId());
     }
 
     public List<RankData> getRankers() {
@@ -86,6 +85,10 @@ public class RankManager {
 
     public List<RankData> getRaceRankersByPlayer(Player player) {
         return getDAO(RankDAO.class).findRaceRankersNextToPlayer(player.getObjectId(), player.getRace().ordinal());
+    }
+
+    public List<RankHistoryData> getPlayerHistory(Player player) {
+        return getDAO(RankDAO.class).findPlayerHistory(player.getObjectId());
     }
 
     public static void init() {

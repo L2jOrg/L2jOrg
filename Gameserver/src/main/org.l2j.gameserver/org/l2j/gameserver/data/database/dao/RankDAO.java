@@ -4,6 +4,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.RankData;
+import org.l2j.gameserver.data.database.data.RankHistoryData;
 
 import java.util.List;
 
@@ -15,14 +16,8 @@ public interface RankDAO extends DAO<RankData> {
     @Query("TRUNCATE rankers_snapshot")
     void clearSnapshot();
 
-    @Query("TRUNCATE rankers_race_snapshot")
-    void  clearRaceSnapshot();
-
-    @Query("INSERT INTO rankers_snapshot SELECT * FROM rankers")
+    @Query("INSERT INTO rankers_snapshot SELECT id, exp, `rank`, rank_race FROM rankers")
     void updateSnapshot();
-
-    @Query("INSERT INTO rankers_race_snapshot SELECT * FROM rankers_race")
-    void updateRaceSnapshot();
 
     @Query("SELECT * FROM rankers")
     List<RankData> findAll();
@@ -30,16 +25,16 @@ public interface RankDAO extends DAO<RankData> {
     @Query("SELECT * FROM rankers_snapshot")
     IntMap<RankData> findAllSnapshot();
 
-    @Query("SELECT * FROM rankers  WHERE id =:playerId:")
+    @Query("SELECT * FROM rankers  WHERE id = :playerId:")
     RankData findPlayerRank(int playerId);
 
     @Query("SELECT * FROM rankers_race WHERE race = :race:")
     List<RankData> findAllByRace(int race);
 
-    @Query("SELECT * FROM rankers WHERE clan_id=:clanId:")
+    @Query("SELECT * FROM rankers WHERE clan_id = :clanId:")
     List<RankData> findByClan(int clanId);
 
-    @Query("SELECT * FROM rankers WHERE id IN (SELECT friend_id FROM character_relationship WHERE char_id = :playerId: AND relation = 'FRIEND')")
+    @Query("SELECT * FROM rankers WHERE id IN (:playerId:, (SELECT friend_id FROM character_relationship WHERE char_id = :playerId: AND relation = 'FRIEND'))")
     List<RankData> findFriendRankers(int playerId);
 
     @Query("""
@@ -55,4 +50,13 @@ public interface RankDAO extends DAO<RankData> {
             WHERE @base_rank IS NOT NULL AND  rankers_race.race = :race:  AND rankers_race.`rank` BETWEEN  @base_rank - 10 AND @base_rank + 10
             """)
     List<RankData> findRaceRankersNextToPlayer(int playerId, int race);
+
+    @Query("INSERT INTO rankers_history SELECT  id, exp, `rank`, :date: FROM rankers_snapshot")
+    void updateRankersHistory(long date);
+
+    @Query("DELETE FROM rankers_history WHERE date < :baseDate:")
+    void removeOldRankersHistory(long baseDate);
+
+    @Query("SELECT * FROM rankers_history WHERE id = :playerId: ORDER BY date")
+    List<RankHistoryData> findPlayerHistory(int playerId);
 }

@@ -2,12 +2,12 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.base.SubClass;
@@ -19,6 +19,7 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,6 +53,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         resetWorldChatPoints();
         resetTrainingCamp();
         resetVipTierExpired();
+        resetRankers();
     }
 
     @ScheduleTarget
@@ -230,6 +232,10 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             VipEngine.getInstance().checkVipTierExpiration(player);
         });
         LOGGER.info("VIP expiration time has been checked.");
+    }
+
+    private void resetRankers() {
+        RankManager.getInstance().updateRankers();
     }
 
     private void resetDailyMissionRewards() {
