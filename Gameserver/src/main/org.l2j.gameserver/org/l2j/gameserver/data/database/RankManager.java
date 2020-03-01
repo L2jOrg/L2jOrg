@@ -80,6 +80,14 @@ public class RankManager {
         return getDAO(RankDAO.class).findFriendRankers(player.getObjectId());
     }
 
+    public List<RankData> getRankersByPlayer(Player player) {
+        return getDAO(RankDAO.class).findRankersNextToPlayer(player.getObjectId());
+    }
+
+    public List<RankData> getRaceRankersByPlayer(Player player) {
+        return getDAO(RankDAO.class).findRaceRankersNextToPlayer(player.getObjectId(), player.getRace().ordinal());
+    }
+
     public static void init() {
         getInstance().loadRankers();
     }

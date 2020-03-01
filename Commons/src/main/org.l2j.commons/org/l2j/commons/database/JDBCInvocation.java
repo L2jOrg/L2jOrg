@@ -33,7 +33,7 @@ import static org.l2j.commons.util.Util.*;
 class JDBCInvocation implements InvocationHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JDBCInvocation.class);
-    private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(.*?):");
+    private static final Pattern PARAMETER_PATTERN = Pattern.compile(":(\\w*?):");
     private static final String REPLACE_TEMPLATE = "REPLACE INTO %s %s VALUES %s";
 
     private static final Cache<Method, QueryDescriptor> descriptors = CacheFactory.getInstance().getCache("sql-descriptors");

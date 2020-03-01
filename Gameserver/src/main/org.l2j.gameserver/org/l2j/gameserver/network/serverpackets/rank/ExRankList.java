@@ -1,9 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.rank;
 
 import org.l2j.gameserver.data.database.RankManager;
-import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;
-import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -37,8 +35,8 @@ public class ExRankList extends ServerPacket {
         writeInt(race);
 
         List<RankData> rankers = switch (group) {
-            case 0 -> RankManager.getInstance().getRankers();
-            case 1 -> RankManager.getInstance().getRaceRankers(race);
+            case 0 -> listServerRankers(client.getPlayer(), scope);
+            case 1 -> listRaceRankers(client.getPlayer(), scope, race);
             case 2 -> listClanRankers(client.getPlayer());
             case 3 -> listFriendsRankers(client.getPlayer());
             default -> Collections.emptyList();
@@ -56,6 +54,20 @@ public class ExRankList extends ServerPacket {
             writeInt(ranker.getRankSnapshot());
             writeInt(ranker.getRankRaceSnapshot());
         }
+    }
+
+    private List<RankData> listRaceRankers(Player player, byte scope, int race) {
+        if(scope == 0) {
+            RankManager.getInstance().getRaceRankers(race);
+        }
+        return RankManager.getInstance().getRaceRankersByPlayer(player);
+    }
+
+    private List<RankData> listServerRankers(Player player, byte scope) {
+        if(scope == 0) {
+            return RankManager.getInstance().getRankers();
+        }
+        return RankManager.getInstance().getRankersByPlayer(player);
     }
 
     private List<RankData> listFriendsRankers(Player player) {
