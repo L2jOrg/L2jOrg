@@ -43,7 +43,7 @@ public class RequestChangeAttributeItem extends ClientPacket {
         if (activeChar.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, activeChar, item) == null) {
             client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             client.sendPacket(ExChangeAttributeFail.STATIC);
-            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to change attribute without an attribute change crystal.");
             return;
         }
 

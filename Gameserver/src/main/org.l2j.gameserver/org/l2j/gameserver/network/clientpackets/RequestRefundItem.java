@@ -80,7 +80,7 @@ public final class RequestRefundItem extends ClientPacket {
 
         final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
         if (buyList == null) {
-            GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId);
             return;
         }
 
@@ -99,14 +99,14 @@ public final class RequestRefundItem extends ClientPacket {
         for (int i = 0; i < _items.length; i++) {
             final int idx = _items[i];
             if ((idx < 0) || (idx >= refund.length)) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent invalid refund index", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent invalid refund index");
                 return;
             }
 
             // check for duplicates - indexes
             for (int j = i + 1; j < _items.length; j++) {
                 if (idx == _items[j]) {
-                    GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent duplicate refund index", Config.DEFAULT_PUNISH);
+                    GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent duplicate refund index");
                     return;
                 }
             }
@@ -118,7 +118,7 @@ public final class RequestRefundItem extends ClientPacket {
             // second check for duplicates - object ids
             for (int j = 0; j < i; j++) {
                 if (objectIds[i] == objectIds[j]) {
-                    GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " has duplicate items in refund list", Config.DEFAULT_PUNISH);
+                    GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " has duplicate items in refund list");
                     return;
                 }
             }

@@ -19,6 +19,7 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
+import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -152,7 +154,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     }
 
     private void resetWorldChatPoints() {
-        if (!Config.ENABLE_WORLD_CHAT) {
+        if (!getSettings(ChatSettings.class).worldChatEnabled()) {
             return;
         }
 

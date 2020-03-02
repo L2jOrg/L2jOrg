@@ -43,7 +43,7 @@ public final class RequestReceivedPost extends ClientPacket {
         }
 
         if (msg.getReceiverId() != activeChar.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to receive not own post!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to receive not own post!");
             return;
         }
 

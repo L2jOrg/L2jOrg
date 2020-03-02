@@ -23,12 +23,12 @@ public abstract class RequestBuyProduct extends ClientPacket {
 
         if (product == null) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_PRODUCT));
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime");
             return false;
         }
 
         if ((count < 1) || (count > 99)) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime");
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INCORRECT_COUNT));
             return false;
         }

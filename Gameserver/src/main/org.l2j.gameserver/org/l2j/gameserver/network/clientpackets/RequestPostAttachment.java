@@ -78,7 +78,7 @@ public final class RequestPostAttachment extends ClientPacket {
         }
 
         if (msg.getReceiverId() != activeChar.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get not own attachment!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get not own attachment!");
             return;
         }
 
@@ -101,17 +101,17 @@ public final class RequestPostAttachment extends ClientPacket {
 
             // Calculate needed slots
             if (item.getOwnerId() != msg.getSenderId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get wrong item (ownerId != senderId) from attachment!", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get wrong item (ownerId != senderId) from attachment!");
                 return;
             }
 
             if (item.getItemLocation() != ItemLocation.MAIL) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get wrong item (Location != MAIL) from attachment!", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get wrong item (Location != MAIL) from attachment!");
                 return;
             }
 
             if (item.getLocationSlot() != msg.getId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items from different attachment!", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items from different attachment!");
                 return;
             }
 
@@ -149,7 +149,7 @@ public final class RequestPostAttachment extends ClientPacket {
             }
 
             if (item.getOwnerId() != msg.getSenderId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get item with owner != sender !", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get item with owner != sender !");
                 return;
             }
 

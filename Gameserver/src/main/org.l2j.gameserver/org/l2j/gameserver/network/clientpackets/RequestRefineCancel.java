@@ -36,7 +36,7 @@ public final class RequestRefineCancel extends ClientPacket {
         }
 
         if (targetItem.getOwnerId() != activeChar.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to augment item that doesn't own.");
             return;
         }
 

@@ -103,7 +103,7 @@ public final class RequestPreviewItem extends ClientPacket {
 
         final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
         if (buyList == null) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false BuyList list_id " + _listId);
             return;
         }
 
@@ -115,7 +115,7 @@ public final class RequestPreviewItem extends ClientPacket {
 
             final Product product = buyList.getProductByItemId(itemId);
             if (product == null) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false BuyList list_id " + _listId + " and item_id " + itemId, Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false BuyList list_id " + _listId + " and item_id " + itemId);
                 return;
             }
 
@@ -132,7 +132,7 @@ public final class RequestPreviewItem extends ClientPacket {
             items.put(slot, itemId);
             totalPrice += Config.WEAR_PRICE;
             if (totalPrice > Inventory.MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
                 return;
             }
         }

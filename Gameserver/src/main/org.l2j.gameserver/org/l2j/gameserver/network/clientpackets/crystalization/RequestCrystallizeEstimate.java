@@ -48,7 +48,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
         // }
 
         if (_count <= 0) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + activeChar.getName(), Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + activeChar.getName());
             return;
         }
 

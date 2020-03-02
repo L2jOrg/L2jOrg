@@ -100,7 +100,7 @@ public final class MapRegionManager extends GameXmlReader {
     }
 
     public final int getMapRegionLocId(WorldObject obj) {
-        return isNull(obj) ? 0 :  getMapRegionLocId(obj.getX(), obj.getY());
+        return isNull(obj) ? 0 : getMapRegionLocId(obj.getX(), obj.getY());
     }
 
     public final int getMapRegionLocId(int locX, int locY) {

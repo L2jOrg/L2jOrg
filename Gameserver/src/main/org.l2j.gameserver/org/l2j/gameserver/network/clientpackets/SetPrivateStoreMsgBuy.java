@@ -28,7 +28,7 @@ public final class SetPrivateStoreMsgBuy extends ClientPacket {
         }
 
         if ((_storeMsg != null) && (_storeMsg.length() > MAX_MSG_LENGTH)) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to overflow private store buy message", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to overflow private store buy message");
             return;
         }
 

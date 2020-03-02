@@ -36,6 +36,7 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.settings.AttendanceSettings;
+import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
@@ -374,7 +375,7 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
         player.sendPacket(new ExUserInfoEquipSlot(player));
 
-        if (Config.ENABLE_WORLD_CHAT) {
+        if (getSettings(ChatSettings.class).worldChatEnabled()) {
             player.sendPacket(new ExWorldChatCnt(player));
         }
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));

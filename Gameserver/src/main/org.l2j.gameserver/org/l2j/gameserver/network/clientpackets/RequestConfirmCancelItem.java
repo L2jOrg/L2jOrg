@@ -33,7 +33,7 @@ public final class RequestConfirmCancelItem extends ClientPacket {
         }
 
         if (item.getOwnerId() != activeChar.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to destroy augment on item that doesn't own.");
             return;
         }
 

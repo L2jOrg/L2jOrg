@@ -119,7 +119,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
         if (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL) {
             if (storeList.getItemCount() > _items.size()) {
                 final String msgErr = "[RequestPrivateStoreBuy] player " + client.getPlayer().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
-                GameUtils.handleIllegalPlayerAction(client.getPlayer(), msgErr, Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(client.getPlayer(), msgErr);
                 return;
             }
         }

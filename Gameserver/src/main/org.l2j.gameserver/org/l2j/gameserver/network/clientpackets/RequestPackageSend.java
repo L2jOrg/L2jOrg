@@ -69,7 +69,7 @@ public class RequestPackageSend extends ClientPacket {
         }
 
         if (player.hasItemRequest()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!");
             return;
         }
 

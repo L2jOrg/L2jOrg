@@ -98,7 +98,7 @@ public class RequestBuySeed extends ClientPacket {
             // Calculate price
             totalPrice += (sp.getPrice() * ih.getCount());
             if (totalPrice > Inventory.MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
                 client.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }

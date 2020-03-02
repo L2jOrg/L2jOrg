@@ -42,7 +42,7 @@ public final class RequestSentPost extends ClientPacket {
         }
 
         if (msg.getSenderId() != player.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to read not own post!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to read not own post!");
             return;
         }
 

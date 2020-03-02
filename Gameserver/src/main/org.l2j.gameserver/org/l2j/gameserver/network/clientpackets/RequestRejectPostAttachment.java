@@ -52,7 +52,7 @@ public final class RequestRejectPostAttachment extends ClientPacket {
         }
 
         if (msg.getReceiverId() != activeChar.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to reject not own attachment!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to reject not own attachment!");
             return;
         }
 

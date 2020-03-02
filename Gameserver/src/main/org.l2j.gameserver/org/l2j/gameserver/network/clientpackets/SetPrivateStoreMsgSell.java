@@ -31,7 +31,7 @@ public class SetPrivateStoreMsgSell extends ClientPacket {
         }
 
         if (nonNull(_storeMsg) && (_storeMsg.length() > MAX_MSG_LENGTH)) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to overflow private store sell message", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to overflow private store sell message");
             return;
         }
 

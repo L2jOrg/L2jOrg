@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.util.GameUtils;
@@ -26,7 +25,7 @@ public class SetPrivateStoreWholeMsg extends ClientPacket {
         }
 
         if ((_msg != null) && (_msg.length() > MAX_MSG_LENGTH)) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to overflow private store whole message", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to overflow private store whole message");
             return;
         }
 

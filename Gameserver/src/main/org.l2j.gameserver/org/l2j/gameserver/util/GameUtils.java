@@ -18,6 +18,7 @@ import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
@@ -31,6 +32,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAnyNull;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -39,10 +41,15 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
  * General Utility functions related to game server.
  *
  * TODO move generic functions to Util of Commons
+ * @author JoeAlisson
  */
 public final class GameUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger(GameUtils.class);
     private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
+
+    public static void handleIllegalPlayerAction(Player actor, String message) {
+        handleIllegalPlayerAction(actor, message, getSettings(GeneralSettings.class).defaultPunishment());
+    }
 
     public static void handleIllegalPlayerAction(Player actor, String message, IllegalActionPunishmentType punishment) {
         ThreadPool.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);

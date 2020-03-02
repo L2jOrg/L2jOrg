@@ -47,7 +47,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             return;
         }
         if (msg.getSenderId() != activeChar.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to cancel not own post!", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to cancel not own post!");
             return;
         }
 
@@ -91,17 +91,17 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             }
 
             if (item.getOwnerId() != activeChar.getObjectId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get not own item from cancelled attachment!", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get not own item from cancelled attachment!");
                 return;
             }
 
             if (item.getItemLocation() != ItemLocation.MAIL) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items not from mail !", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items not from mail !");
                 return;
             }
 
             if (item.getLocationSlot() != msg.getId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items from different attachment!", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items from different attachment!");
                 return;
             }
 

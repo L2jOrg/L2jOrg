@@ -98,7 +98,7 @@ public final class RequestAcquireSkill extends ClientPacket {
         }
 
         if ((_level < 1) || (_level > 1000) || (_id < 1) || (_id > 64000)) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Wrong Packet Data in Aquired Skill", Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(activeChar, "Wrong Packet Data in Aquired Skill");
             LOGGER.warn("Recived Wrong Packet Data in Aquired Skill - id: " + _id + " level: " + _level + " for " + activeChar);
             return;
         }

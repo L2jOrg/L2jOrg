@@ -571,7 +571,7 @@ public class TradeList {
             // item with this objectId and price not found in tradelist
             if (!found) {
                 if (packaged) {
-                    GameUtils.handleIllegalPlayerAction(player, "[TradeList.privateStoreBuy()] Player " + player.getName() + " tried to cheat the package sell and buy only a part of the package! Ban this player for bot usage!", Config.DEFAULT_PUNISH);
+                    GameUtils.handleIllegalPlayerAction(player, "[TradeList.privateStoreBuy()] Player " + player.getName() + " tried to cheat the package sell and buy only a part of the package! Ban this player for bot usage!");
                     return 2;
                 }
 
@@ -804,7 +804,7 @@ public class TradeList {
                 }
             }
             if (oldItem.getId() != item.getItemId()) {
-                GameUtils.handleIllegalPlayerAction(player, player + " is cheating with sell items", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(player, player + " is cheating with sell items");
                 return false;
             }
 

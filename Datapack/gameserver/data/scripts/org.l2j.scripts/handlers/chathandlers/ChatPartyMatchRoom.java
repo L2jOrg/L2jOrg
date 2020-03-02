@@ -1,48 +1,29 @@
 package handlers.chathandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
-import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.matching.MatchingRoom;
-import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
+
+import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
  * Party Match Room chat handler.
  * @author Gnacik
+ * @author JoeAlisson
  */
-public class ChatPartyMatchRoom implements IChatHandler
-{
-	private static final ChatType[] CHAT_TYPES =
-	{
+public class ChatPartyMatchRoom implements IChatHandler {
+
+	private static final ChatType[] CHAT_TYPES = {
 		ChatType.PARTYMATCH_ROOM,
 	};
 	
 	@Override
-	public void handleChat(ChatType type, Player activeChar, String target, String text)
-	{
-		final MatchingRoom room = activeChar.getMatchingRoom();
-		if (room != null)
-		{
-			if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
-			{
-				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
-				return;
-			}
-			if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
-			{
-				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
-				return;
-			}
-			
-			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-			for (Player _member : room.getMembers())
-			{
-				_member.sendPacket(cs);
-			}
-		}
+	public void handleChat(ChatType type, Player player, String target, String text) {
+		doIfNonNull(player.getMatchingRoom(), room -> {
+			final CreatureSay cs = new CreatureSay(player, type, text);
+			room.getMembers().forEach(cs::sendTo);
+		});
 	}
 	
 	@Override

@@ -2,16 +2,12 @@ package org.l2j.gameserver.settings;
 
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 
 /**
  * @author JoeAlisson
  */
 public class GeneralSettings implements Settings {
-
-    private int generalChatLevel;
-    private int whisperChatLevel;
-    private int shoutChatLevel;
-    private int tradeChatLevel;
     private int banChatAdenaAdsReportCount;
     private boolean auditGM;
     private boolean saveDroppedItems;
@@ -24,12 +20,11 @@ public class GeneralSettings implements Settings {
     private boolean loadCustomMultisell;
     private boolean cachePlayersName;
 
+    private IllegalActionPunishmentType defaultPunishment;
+    private boolean disableChatInJail;
+
     @Override
     public void load(SettingsFile settingsFile) {
-        generalChatLevel = settingsFile.getInteger("MinimumGeneralChatLevel", 2);
-        whisperChatLevel = settingsFile.getInteger("MinimumWhisperChatLevel", 2);
-        shoutChatLevel = settingsFile.getInteger("MinimumShoutChatLevel", 10);
-        tradeChatLevel = settingsFile.getInteger("MinimumTradeChatLevel", 15);
 
         banChatAdenaAdsReportCount = settingsFile.getInteger("BanChatAdenaADSReportCount", 10);
 
@@ -47,23 +42,10 @@ public class GeneralSettings implements Settings {
         loadCustomMultisell = settingsFile.getBoolean("CustomMultisellLoad", false);
 
         cachePlayersName = settingsFile.getBoolean("CacheCharNames", true);
+
+        defaultPunishment = settingsFile.getEnum("DefaultPunish", IllegalActionPunishmentType.class, IllegalActionPunishmentType.KICK);
+        disableChatInJail = settingsFile.getBoolean("JailDisableChat", true);
      }
-
-    public int generalChatLevel() {
-        return generalChatLevel;
-    }
-
-    public int whisperChatLevel() {
-        return whisperChatLevel;
-    }
-
-    public int shoutChatLevel() {
-        return shoutChatLevel;
-    }
-
-    public int tradeChatLevel() {
-        return tradeChatLevel;
-    }
 
     public int banChatAdenaAdsReportCount() {
         return banChatAdenaAdsReportCount;
@@ -107,5 +89,13 @@ public class GeneralSettings implements Settings {
 
     public boolean cachePlayersName() {
         return cachePlayersName;
+    }
+
+    public IllegalActionPunishmentType defaultPunishment() {
+        return defaultPunishment;
+    }
+
+    public boolean disableChatInJail() {
+        return disableChatInJail;
     }
 }

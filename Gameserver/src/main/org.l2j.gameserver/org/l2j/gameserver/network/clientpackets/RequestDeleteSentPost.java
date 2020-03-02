@@ -53,7 +53,7 @@ public final class RequestDeleteSentPost extends ClientPacket {
                 continue;
             }
             if (msg.getSenderId() != activeChar.getObjectId()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to delete not own post!", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to delete not own post!");
                 return;
             }
 

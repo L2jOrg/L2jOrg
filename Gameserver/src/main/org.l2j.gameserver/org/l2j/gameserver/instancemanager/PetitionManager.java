@@ -267,7 +267,7 @@ public final class PetitionManager {
             }
 
             if ((currPetition.getPetitioner() != null) && (currPetition.getPetitioner().getObjectId() == player.getObjectId())) {
-                cs = new CreatureSay(player.getObjectId(), ChatType.PETITION_PLAYER, player.getName(), messageText);
+                cs = new CreatureSay(player, ChatType.PETITION_PLAYER,messageText);
                 currPetition.addLogMessage(cs);
 
                 currPetition.sendResponderPacket(cs);
@@ -276,7 +276,7 @@ public final class PetitionManager {
             }
 
             if ((currPetition.getResponder() != null) && (currPetition.getResponder().getObjectId() == player.getObjectId())) {
-                cs = new CreatureSay(player.getObjectId(), ChatType.PETITION_GM, player.getName(), messageText);
+                cs = new CreatureSay(player, ChatType.PETITION_GM, messageText);
                 currPetition.addLogMessage(cs);
 
                 currPetition.sendResponderPacket(cs);

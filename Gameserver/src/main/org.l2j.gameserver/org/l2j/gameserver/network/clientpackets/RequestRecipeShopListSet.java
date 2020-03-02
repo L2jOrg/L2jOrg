@@ -80,12 +80,12 @@ public final class RequestRecipeShopListSet extends ClientPacket {
         for (ManufactureItem i : _items) {
             final RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.");
                 return;
             }
 
             if (i.getCost() > MAX_ADENA) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + MAX_ADENA + " adena in Private Manufacture.", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + MAX_ADENA + " adena in Private Manufacture.");
                 return;
             }
 

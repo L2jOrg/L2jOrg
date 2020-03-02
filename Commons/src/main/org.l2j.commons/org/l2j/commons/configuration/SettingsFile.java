@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -73,7 +75,11 @@ public final class SettingsFile extends Properties {
         if(isNullOrEmpty(value)) {
             return STRING_ARRAY_EMPTY;
         }
-        return value.split(DEFAULT_DELIMITER);
+        var values = value.split(DEFAULT_DELIMITER);
+        for (int i = 0; i < values.length; i++) {
+            values[i] = values[i].trim();
+        }
+        return values;
     }
 
     public Map<Integer, Integer> getIntegerMap(String key, String entryDelimiter, String valueDelimiter) {
@@ -186,5 +192,26 @@ public final class SettingsFile extends Properties {
             logger.warn("Unknown enum constant {} of type {}", key, enumClass);
         }
         return defaultValue;
+    }
+
+    public <T extends Enum<T>> Set<T> getEnumSet(String key, Class<T> enumClass, Set<T> defaultValue) {
+        String value;
+        if(isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
+            return defaultValue;
+        }
+        var enums = value.split(DEFAULT_DELIMITER);
+        var result = EnumSet.noneOf(enumClass);
+        for (String enumName : enums) {
+            try{
+                result.add(Enum.valueOf(enumClass, enumName.trim()));
+            } catch (Exception e) {
+                logger.warn("Unknown enum constant {} of type {}", enumName, enumClass);
+            }
+        }
+        return result;
+    }
+
+    public Duration getDuration(String key, int defaultValue) {
+        return Duration.of(getInteger(key, defaultValue), ChronoUnit.SECONDS);
     }
 }

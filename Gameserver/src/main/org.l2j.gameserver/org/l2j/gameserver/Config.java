@@ -3,8 +3,6 @@ package org.l2j.gameserver;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.util.FloodProtectorConfig;
@@ -87,7 +85,6 @@ public final class Config {
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
-    private static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
 
     // --------------------------------------------------
     // Variable Definitions
@@ -228,8 +225,6 @@ public final class Config {
     public static boolean STORE_RECIPE_SHOPLIST;
     public static boolean STORE_UI_SETTINGS;
 
-    public static boolean SILENCE_MODE_EXCLUDE;
-
     // --------------------------------------------------
     // Castle Settings
     // --------------------------------------------------
@@ -333,7 +328,7 @@ public final class Config {
     public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
     public static boolean GM_DEBUG_HTML_PATHS;
     public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
-    public static boolean LOG_CHAT;
+
     public static boolean LOG_ITEM_ENCHANTS;
     public static boolean LOG_SKILL_ENCHANTS;
 
@@ -376,9 +371,6 @@ public final class Config {
     public static int GRID_NEIGHBOR_TURNON_TIME;
     public static int GRID_NEIGHBOR_TURNOFF_TIME;
     public static int PEACE_ZONE_MODE;
-    public static String DEFAULT_GLOBAL_CHAT;
-    public static String DEFAULT_TRADE_CHAT;
-    public static boolean ENABLE_WORLD_CHAT;
 
     public static boolean ALLOW_WAREHOUSE;
     public static boolean WAREHOUSE_CACHE;
@@ -400,12 +392,8 @@ public final class Config {
     public static boolean SERVER_NEWS;
     public static boolean ENABLE_COMMUNITY_BOARD;
     public static String BBS_DEFAULT;
-    public static boolean USE_SAY_FILTER;
-    public static String CHAT_FILTER_CHARS;
-    public static Set<ChatType> BAN_CHAT_CHANNELS;
-    public static int WORLD_CHAT_MIN_LEVEL;
+
     public static int WORLD_CHAT_POINTS_PER_DAY;
-    public static Duration WORLD_CHAT_INTERVAL;
     public static int ALT_OLY_START_TIME;
     public static int ALT_OLY_MIN;
     public static long ALT_OLY_CPERIOD;
@@ -453,11 +441,10 @@ public final class Config {
     public static boolean ALT_ITEM_AUCTION_ENABLED;
     public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
     public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-    public static IllegalActionPunishmentType DEFAULT_PUNISH;
+
     public static int DEFAULT_PUNISH_PARAM;
     public static boolean ONLY_GM_ITEMS_FREE;
     public static boolean JAIL_IS_PVP;
-    public static boolean JAIL_DISABLE_CHAT;
     public static boolean JAIL_DISABLE_TRANSACTION;
     public static boolean CUSTOM_NPC_DATA;
 
@@ -799,7 +786,7 @@ public final class Config {
     public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
     public static String MULTILANG_DEFAULT;
     public static boolean MULTILANG_VOICED_ALLOW;
-    public static boolean L2WALKER_PROTECTION;
+
     public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
     public static int DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
     public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
@@ -1225,8 +1212,6 @@ public final class Config {
         STORE_RECIPE_SHOPLIST = Character.getBoolean("StoreRecipeShopList", false);
         STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
 
-        SILENCE_MODE_EXCLUDE = Character.getBoolean("SilenceModeExclude", false);
-
         PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
 
         // Load Training Camp config file (if exists)
@@ -1258,7 +1243,7 @@ public final class Config {
         GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
         GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
         USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
-        LOG_CHAT = General.getBoolean("LogChat", false);
+
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
         LOG_SKILL_ENCHANTS = General.getBoolean("LogSkillEnchants", false);
 
@@ -1301,9 +1286,6 @@ public final class Config {
         GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
         GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
         PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
-        DEFAULT_GLOBAL_CHAT = General.getString("GlobalChat", "ON");
-        DEFAULT_TRADE_CHAT = General.getString("TradeChat", "ON");
-        ENABLE_WORLD_CHAT = General.getBoolean("WorldChatEnabled", false);
 
         ALLOW_WAREHOUSE = General.getBoolean("AllowWarehouse", true);
         WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
@@ -1325,20 +1307,8 @@ public final class Config {
         SERVER_NEWS = General.getBoolean("ShowServerNews", false);
         ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
         BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
-        USE_SAY_FILTER = General.getBoolean("UseChatFilter", false);
-        CHAT_FILTER_CHARS = General.getString("ChatFilterChars", "^_^");
-        final String[] propertySplit4 = General.getString("BanChatChannels", "GENERAL;SHOUT;WORLD;TRADE;HERO_VOICE").trim().split(";");
-        BAN_CHAT_CHANNELS = new HashSet<>();
-        try {
-            for (String chatId : propertySplit4) {
-                BAN_CHAT_CHANNELS.add(Enum.valueOf(ChatType.class, chatId));
-            }
-        } catch (NumberFormatException nfe) {
-            LOGGER.warn("There was an error while parsing ban chat channels: ", nfe);
-        }
-        WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 20);
+
         WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
-        WORLD_CHAT_INTERVAL = General.getDuration("WorldChatInterval", "20secs", Duration.ofSeconds(20));
         ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
         ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
         ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);
@@ -1349,11 +1319,11 @@ public final class Config {
         ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
         ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
         ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;
-        DEFAULT_PUNISH = IllegalActionPunishmentType.findByName(General.getString("DefaultPunish", "KICK"));
+
         DEFAULT_PUNISH_PARAM = General.getInt("DefaultPunishParam", 0);
         ONLY_GM_ITEMS_FREE = General.getBoolean("OnlyGMItemsFree", true);
         JAIL_IS_PVP = General.getBoolean("JailIsPvp", false);
-        JAIL_DISABLE_CHAT = General.getBoolean("JailDisableChat", true);
+
         JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
         CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
         CUSTOM_ITEMS_LOAD = General.getBoolean("CustomItemsLoad", false);
@@ -1990,11 +1960,6 @@ public final class Config {
         }
         HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
         ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
-
-        // Load WalkerBotProtection config file (if exists)
-        final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
-
-        L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
     }
 
     /**

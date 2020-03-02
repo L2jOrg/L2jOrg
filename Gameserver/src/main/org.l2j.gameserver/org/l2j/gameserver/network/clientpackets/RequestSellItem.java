@@ -99,7 +99,7 @@ public final class RequestSellItem extends ClientPacket {
 
         final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
         if (buyList == null) {
-            GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
+            GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId);
             return;
         }
 
@@ -119,7 +119,7 @@ public final class RequestSellItem extends ClientPacket {
             long price = item.getReferencePrice() / 2;
             totalPrice += price * i.getCount();
             if (((Inventory.MAX_ADENA / i.getCount()) < price) || (totalPrice > Inventory.MAX_ADENA)) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.");
                 return;
             }
 

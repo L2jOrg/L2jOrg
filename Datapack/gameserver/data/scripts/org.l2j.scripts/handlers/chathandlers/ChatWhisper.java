@@ -1,22 +1,24 @@
 package handlers.chathandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IChatHandler;
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.ChatSettings;
+import org.l2j.gameserver.world.World;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * Tell chat handler.
  * @author durgus
+ * @author JoeAlisson
  */
 public final class ChatWhisper implements IChatHandler {
 
@@ -25,57 +27,44 @@ public final class ChatWhisper implements IChatHandler {
 	};
 	
 	@Override
-	public void handleChat(ChatType type, Player activeChar, String target, String text) {
-		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type)) {
-			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
-			return;
-		}
-		
-		if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
-			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
-			return;
-		}
-		
-		// Return if no target is set
-		if (target == null) {
+	public void handleChat(ChatType type, Player player, String target, String text) {
+		if (isNullOrEmpty(target)) {
 			return;
 		}
 		
 		final Player receiver = World.getInstance().findPlayer(target);
 		
-		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId())) {
-
-			if (Config.JAIL_DISABLE_CHAT && receiver.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
-				activeChar.sendMessage("Player is in jail.");
-				return;
-			}
+		if ((receiver != null) && !receiver.isSilenceMode(player.getObjectId())) {
 			if (receiver.isChatBanned()) {
-				activeChar.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
+				player.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 				return;
 			}
-			if ((receiver.getClient() == null) || receiver.getClient().isDetached()) {
-				activeChar.sendMessage("Player is in offline mode.");
+			if (isNull(receiver.getClient()) || receiver.getClient().isDetached()) {
+				player.sendMessage("Player is in offline mode.");
 				return;
 			}
-			var levelRequired = getSettings(GeneralSettings.class).whisperChatLevel();
-			if ((activeChar.getLevel() < levelRequired) && !activeChar.getWhisperers().contains(receiver.getObjectId()) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USERS_LV_S1_OR_LOWER_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_IT).addInt(levelRequired));
+
+			var chatSettings = getSettings(ChatSettings.class);
+			var levelRequired = chatSettings.whisperChatLevel();
+			if ((player.getLevel() < levelRequired) && !player.getWhisperers().contains(receiver.getObjectId()) && !player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USERS_LV_S1_OR_LOWER_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_IT).addInt(levelRequired));
 				return;
 			}
-			if (!BlockList.isBlocked(receiver, activeChar)) {
-				// Allow reciever to send PMs to this char, which is in silence mode.
-				if (Config.SILENCE_MODE_EXCLUDE && activeChar.isSilenceMode()) {
-					activeChar.addSilenceModeExcluded(receiver.getObjectId());
+
+			if (!BlockList.isBlocked(receiver, player)) {
+				// Allow receiver to send PMs to this char, which is in silence mode.
+				if (chatSettings.silenceModeExclude() && player.isSilenceMode()) {
+					player.addSilenceModeExcluded(receiver.getObjectId());
 				}
 				
-				receiver.getWhisperers().add(activeChar.getObjectId());
-				receiver.sendPacket(new CreatureSay(activeChar, receiver, activeChar.getName(), type, text));
-				activeChar.sendPacket(new CreatureSay(activeChar, receiver, "->" + receiver.getName(), type, text));
+				receiver.getWhisperers().add(player.getObjectId());
+				receiver.sendPacket(new CreatureSay(player, receiver, player.getAppearance().getVisibleName(), type, text));
+				player.sendPacket(new CreatureSay(player, receiver, "->" + receiver.getAppearance().getVisibleName(), type, text));
 			} else {
-				activeChar.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
+				player.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 			}
 		} else {
-			activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 		}
 	}
 	

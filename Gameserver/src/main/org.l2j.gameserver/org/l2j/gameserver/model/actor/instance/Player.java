@@ -95,6 +95,7 @@ import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionI
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.settings.AttendanceSettings;
+import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.*;
@@ -9906,7 +9907,7 @@ public final class Player extends Playable {
      * @return {@code true} if the given Id is not excluded and this player is in silence mode, {@code false} otherwise
      */
     public boolean isSilenceMode(int playerObjId) {
-        if (Config.SILENCE_MODE_EXCLUDE && _silenceMode && (_silenceModeExcluded != null)) {
+        if (getSettings(ChatSettings.class).silenceModeExclude() && _silenceMode && nonNull(_silenceModeExcluded)) {
             return !_silenceModeExcluded.contains(playerObjId);
         }
         return _silenceMode;
