@@ -17,6 +17,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.function.Consumer;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
@@ -30,15 +31,45 @@ public class RankManager {
 
     private RankManager() {
         var listeners = Listeners.players();
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> addRankersSkills(event.getPlayer()), this));
+    }
 
-        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
-            var player = event.getPlayer();
-            var rankData = rankersSnapshot.get(player.getObjectId());
-            if(nonNull(rankData)) {
-                doIfNonNull(getRankerSkill(rankData), s -> player.addSkill(s.getSkill()));
-                doIfNonNull(getRaceRankerSkill(rankData, player), s -> player.addSkill(s.getSkill()));
-            }
-        }, this));
+    private void addRankersSkills(Player player) {
+        var rankData = rankersSnapshot.get(player.getObjectId());
+
+        if(isNull(rankData)) {
+            return;
+        }
+
+        player.setRank(rankData.getRank());
+        player.setRankRace(rankData.getRankRace());
+
+        var rank = player.getRank();
+
+        CommonSkill skill = null;
+        if(rank <= 100) {
+            player.addSkill(CommonSkill.RANKER_BENEFIT_I.getSkill());
+            skill = CommonSkill.RANKER_THIRD_CLASS;
+        }
+
+        if(rank <= 30) {
+            player.addSkill(CommonSkill.RANKER_BENEFIT_II.getSkill());
+            skill = CommonSkill.RANKER_SECOND_CLASS;
+        }
+
+        if(rank == 1) {
+            player.addSkill(CommonSkill.RANKER_BENEFIT_III.getSkill());
+            skill = CommonSkill.RANKER_FIRST_CLASS;
+        }
+
+        if(nonNull(skill)) {
+            skill.getSkill().applyEffects(player, player);
+        }
+
+        if(player.getRankRace() == 1) {
+            player.addSkill(CommonSkill.RANKER_RACE_BENEFIT.getSkill());
+            doIfNonNull(getRaceRankerSkill(player), s -> s.getSkill().applyEffects(player, player));
+        }
     }
 
     private void loadRankers() {
@@ -49,19 +80,34 @@ public class RankManager {
         rankersSnapshot.values().forEach(this::removeRankerSkills);
         updateDatabase();
         loadRankers();
+        rankersSnapshot.values().forEach(this::addRankersSkills);
+    }
+
+    private void addRankersSkills(RankData rankData) {
+        doIfNonNull(World.getInstance().findPlayer(rankData.getPlayerId()), this::addRankersSkills);
     }
 
     private void removeRankerSkills(RankData rankData) {
-        var player = World.getInstance().findPlayer(rankData.getPlayerId());
-        if(nonNull(player)) {
-            doIfNonNull(getRankerSkill(rankData), s -> player.removeSkill(s.getId(), true));
-            doIfNonNull(getRaceRankerSkill(rankData, player), s -> player.removeSkill(s.getId(), true));
-        }
+        doIfNonNull(World.getInstance().findPlayer(rankData.getPlayerId()), player -> {
+            removeRankersSkill(player);
+            player.setRank(0);
+            player.setRankRace(0);
+        });
     }
 
-    private CommonSkill getRaceRankerSkill(RankData rankData, Player player) {
-        int rank = rankData.getRankRace();
-        if(rank == 1) {
+    private void removeRankersSkill(Player player) {
+        player.removeSkill(CommonSkill.RANKER_BENEFIT_I.getId(), true);
+        player.removeSkill(CommonSkill.RANKER_BENEFIT_II.getId(), true);
+        player.removeSkill(CommonSkill.RANKER_BENEFIT_III.getId(), true);
+        player.removeSkill(CommonSkill.RANKER_RACE_BENEFIT.getId(), true);
+        player.stopSkillEffects(true, CommonSkill.RANKER_FIRST_CLASS.getId());
+        player.stopSkillEffects(true, CommonSkill.RANKER_SECOND_CLASS.getId());
+        player.stopSkillEffects(true, CommonSkill.RANKER_THIRD_CLASS.getId());
+        doIfNonNull(getRaceRankerSkill(player), s -> player.stopSkillEffects(true, s.getId()));
+    }
+
+    private CommonSkill getRaceRankerSkill(Player player) {
+        if(player.getRankRace() == 1) {
            return switch (player.getRace()) {
                case HUMAN -> CommonSkill.RANKER_HUMAN;
                case ELF -> CommonSkill.RANKER_ELF;
@@ -75,19 +121,6 @@ public class RankManager {
         return null;
     }
 
-    private CommonSkill getRankerSkill(RankData rankData) {
-        var rank = rankData.getRank();
-        CommonSkill skill = null;
-        if(rank == 1) {
-            skill = CommonSkill.RANKER_FIRST_CLASS;
-        } else if(rank <= 30) {
-            skill = CommonSkill.RANKER_SECOND_CLASS;
-        } else if(rank <= 100) {
-            skill = CommonSkill.RANKER_THIRD_CLASS;
-        }
-        return skill;
-    }
-
     private void updateDatabase() {
         var dao = getDAO(RankDAO.class);
         dao.clearSnapshot();
@@ -96,7 +129,6 @@ public class RankManager {
         var now = Instant.now();
         dao.updateRankersHistory(now.getEpochSecond());
         dao.removeOldRankersHistory(now.minus(7, ChronoUnit.DAYS).getEpochSecond());
-
     }
 
     public RankData getRank(Player player) {

@@ -140,6 +140,8 @@ public final class Player extends Playable {
     private ElementalSpirit[] spirits;
     private ElementalType activeElementalSpiritType;
     private AutoPlaySettings autoPlaySettings;
+    private int rank;
+    private int rankRace;
 
     private Player(CharacterData characterData, PlayerTemplate template) {
         super(characterData.getCharId(), template);
@@ -352,6 +354,23 @@ public final class Player extends Playable {
 
     public void resetNextAutoShortcut() {
         shortcuts.resetNextAutoShortcut();
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
+
+    public void setRankRace(int rankRace) {
+        this.rankRace = rankRace;
+    }
+
+    public int getRankRace() {
+        return rankRace;
     }
 
     // Unchecked

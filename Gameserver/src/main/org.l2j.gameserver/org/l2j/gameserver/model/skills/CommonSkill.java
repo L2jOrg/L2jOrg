@@ -58,6 +58,10 @@ public enum CommonSkill {
     RANKER_ORC(60009, 1),
     RANKER_DWARF(60010, 1),
     RANKER_JIN_KAMAEL(60011, 1),
+    RANKER_BENEFIT_I(60012, 1),
+    RANKER_BENEFIT_II(60013, 1),
+    RANKER_BENEFIT_III(60014, 1),
+    RANKER_RACE_BENEFIT(60015, 1),
     TELEPORT(60018, 1);
 
     private final SkillHolder _holder;

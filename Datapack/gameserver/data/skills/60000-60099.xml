@@ -26,7 +26,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="60003" name="Server Level Ranking 1st Class">
+	<skill id="60003" name="Server Level Ranking 1st Class" action="A1">
 	<!-- Benefits applied to Server Level Ranking 1st.\nAll Stats +1, Warrior's HP Potion, Maliss's HP Potion Effect +50, Weight Limit +100000, P. Evasion +20. -->
 		<icon initial="icon.server_ranking_1"/>
 		<attributes property="PHYSIC"/>
@@ -61,7 +61,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60004" name="Server Level Ranking 2nd Class">
+	<skill id="60004" name="Server Level Ranking 2nd Class" action="A1">
 	<!-- Benefits applied to Server Level Ranking 2nd-30th.\nCON +1 MEN +1, DEX +1, WIT +1, Weight Limit +10000. -->
 		<icon initial="icon.server_ranking_2"/>
 		<attributes property="PHYSIC"/>
@@ -84,7 +84,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60005" name="Server Level Ranking 3rd Class">
+	<skill id="60005" name="Server Level Ranking 3rd Class" action="A1">
 	<!-- Benefits applied to Server Level Ranking 31st-100th.\nCON +1 MEN +1, Weight Limit +5000. -->
 		<icon initial="icon.server_ranking_3"/>
 		<attributes property="PHYSIC"/>
@@ -101,7 +101,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60006" name="Human Level Ranking 1st Class">
+	<skill id="60006" name="Human Level Ranking 1st Class" action="A1">
 	<!-- Benefit applied to Human Level Ranking 1st.\nP. Critical Damage/M. Critical Damage +300. -->
 		<icon initial="icon.race_ranking_1"/>
 		<attributes property="PHYSIC"/>
@@ -115,7 +115,7 @@
 			</stat-modify>
  		</effects>
 	</skill>
-	<skill id="60007" name="Elf Level Ranking 1st Class">
+	<skill id="60007" name="Elf Level Ranking 1st Class" action="A1">
 	<!-- Benefit applied to Elf Level Ranking 1st.\nP. Atk./M. Atk. +300. -->
 		<icon initial="icon.race_ranking_1"/>
 		<attributes property="PHYSIC"/>
@@ -129,7 +129,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60008" name="Dark Elf Level Ranking 1st Class">
+	<skill id="60008" name="Dark Elf Level Ranking 1st Class" action="A1">
 	<!-- Benefit applied to Dark Elf Level Ranking 1st.\nAtk. Spd./Casting Spd. +200. -->
 		<icon initial="icon.race_ranking_1"/>
 		<attributes property="PHYSIC"/>
@@ -143,7 +143,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60009" name="Orc Level Ranking 1st Class">
+	<skill id="60009" name="Orc Level Ranking 1st Class" action="A1">
 	<!-- Benefit applied to Orc Level Ranking 1st.\nP. Critical Rate/M. Critical Rate +20. -->
 		<icon initial="icon.race_ranking_1"/>
 		<attributes property="PHYSIC"/>
@@ -157,7 +157,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60010" name="Dwarf Level Ranking 1st Class">
+	<skill id="60010" name="Dwarf Level Ranking 1st Class" action="A1">
 	<!-- Benefit applied to Dwarf Level Ranking 1st.\nIncreases Enchant Success Rate. -->
 		<icon initial="icon.race_ranking_1"/>
 		<attributes property="PHYSIC"/>
@@ -168,7 +168,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60011" name="Jin Kamael Level Ranking 1st Class">
+	<skill id="60011" name="Jin Kamael Level Ranking 1st Class" action="A1">
 	<!-- Benefit applied to Jin Kamael Level Ranking 1st.\nP. Accuracy, M. Accuracy, P. Evasion, M. Evasion +5. -->
 		<icon initial="icon.race_ranking_1"/>
 		<attributes property="PHYSIC"/>
@@ -201,31 +201,19 @@
 	<skill id="60013" name="Server Ranking Benefit 2">
 	<!-- DEX+ 1\nWIT +1\nWeight Limit +5000. -->
 		<icon initial="icon.UI_server_ranking_2"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 	</skill>
 	<skill id="60014" name="Server Ranking Benefit 3">
 	<!-- STR + 1\nINT +1\nWeight Limit +90000\nP. Evasion +20\nHP Potion Effect +50 -->
 		<icon initial="icon.UI_server_ranking_3"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 	</skill>
 	<skill id="60015" name="Race Ranking Benefit">
 	<!-- Humans: Increases P. Critical Damage /M. Critical Damage\nElves: Increases P. Atk. / M. Atk.\nDark Elves: Increases Atk. Spd. / Casting Spd.\nOrcs: Increases P. Critical Rate / M. Critical Rate\nDwarves: Increases Enchant Success Rate\nJin Kamael: Increases P. Accuracy, M. Accuracy, P. Evasion, M. Evasion. -->
 		<icon initial="icon.UI_race_ranking_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 	</skill>
 	<skill id="60016" name="Holy Artifact Animation 1" action="A1" type="MAGIC">
