@@ -6,7 +6,7 @@ import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -38,11 +38,11 @@ public class LoginMissionHandler extends AbstractMissionHandler {
 
     @Override
     public void init() {
-        Containers.Global().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this));
+        Listeners.Global().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this));
     }
 
     private void onPlayerLogin(OnPlayerLogin event) {
-        final MissionPlayerData entry = getPlayerEntry(event.getActiveChar(), true);
+        final MissionPlayerData entry = getPlayerEntry(event.getPlayer(), true);
         if(MissionStatus.COMPLETED.equals(entry.getStatus())) {
             return;
         }
@@ -54,7 +54,7 @@ public class LoginMissionHandler extends AbstractMissionHandler {
         } else {
             entry.setProgress(1);
             entry.setStatus(MissionStatus.AVAILABLE);
-            notifyAvailablesReward(event.getActiveChar());
+            notifyAvailablesReward(event.getPlayer());
         }
     }
 }

@@ -58,7 +58,7 @@ public class ExRankList extends ServerPacket {
 
     private List<RankData> listRaceRankers(Player player, byte scope, int race) {
         if(scope == 0) {
-            RankManager.getInstance().getRaceRankers(race);
+            return RankManager.getInstance().getRaceRankers(race);
         }
         return RankManager.getInstance().getRaceRankersByPlayer(player);
     }

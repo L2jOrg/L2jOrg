@@ -319,7 +319,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public void OnPlayerLogin(OnPlayerLogin event) {
         if (getState() == CeremonyOfChaosState.REGISTRATION) {
-            final Player player = event.getActiveChar();
+            final Player player = event.getPlayer();
             if (canRegister(player, false)) {
                 player.sendPacket(ExCuriousHouseState.REGISTRATION_PACKET);
             }

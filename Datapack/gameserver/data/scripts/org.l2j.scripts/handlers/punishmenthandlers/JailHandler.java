@@ -22,7 +22,7 @@ import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -44,12 +44,12 @@ public class JailHandler implements IPunishmentHandler
 	public JailHandler()
 	{
 		// Register global listener
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
+		Listeners.Global().addListener(new ConsumerEventListener(Listeners.Global(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
 	}
 	
 	private void onPlayerLogin(OnPlayerLogin event)
 	{
-		final Player activeChar = event.getActiveChar();
+		final Player activeChar = event.getPlayer();
 		if (activeChar.isJailed() && !activeChar.isInsideZone(ZoneType.JAIL))
 		{
 			applyToPlayer(null, activeChar);

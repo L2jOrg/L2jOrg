@@ -570,6 +570,10 @@ public class PlayerStats extends PlayableStats {
         return isNull(type) ? 0 : getValue(type.getDefenseStat(), base);
     }
 
+    public double getEnchantRateBonus() {
+        return getValue(Stat.ENCHANT_RATE_BONUS, 0);
+    }
+
     @Override
     protected void onRecalculateStats(boolean broadcast) {
         super.onRecalculateStats(broadcast);

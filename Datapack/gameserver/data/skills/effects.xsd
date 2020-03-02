@@ -1090,6 +1090,7 @@
             <xs:enumeration value="ELEMENTAL_SPIRIT_EARTH_DEFENSE"/>
             <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_RATE"/>
             <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_DAMAGE"/>
+            <xs:enumeration value="ENCHANT_RATE_BONUS"/>
         </xs:restriction>
     </xs:simpleType>
 

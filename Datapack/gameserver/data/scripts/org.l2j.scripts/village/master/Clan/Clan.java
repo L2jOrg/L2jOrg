@@ -90,10 +90,10 @@ public final class Clan extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		final Player activeChar = event.getActiveChar();
+		final Player activeChar = event.getPlayer();
 		if (activeChar.isClanLeader())
 		{
-			final org.l2j.gameserver.model.Clan clan = event.getActiveChar().getClan();
+			final org.l2j.gameserver.model.Clan clan = event.getPlayer().getClan();
 			clan.getMembers().forEach(member ->
 			{
 				if (member.isOnline())

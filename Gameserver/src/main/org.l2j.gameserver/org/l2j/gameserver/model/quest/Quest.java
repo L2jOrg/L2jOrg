@@ -2533,7 +2533,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
     public void setOnEnterWorld(boolean state) {
         if (state) {
-            setPlayerLoginId(event -> notifyEnterWorld(event.getActiveChar()));
+            setPlayerLoginId(event -> notifyEnterWorld(event.getPlayer()));
         } else {
             getListeners().stream().filter(listener -> listener.getType() == EventType.ON_PLAYER_LOGIN).forEach(AbstractEventListener::unregisterMe);
         }

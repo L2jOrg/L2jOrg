@@ -56,7 +56,7 @@ public final class EventDispatcher {
      */
     public <T extends AbstractEventReturn> T notifyEvent(IBaseEvent event, ListenersContainer container, Class<T> callbackClass) {
         try {
-            return Containers.Global().hasListener(event.getType()) || ((container != null) && container.hasListener(event.getType())) ? notifyEventImpl(event, container, callbackClass) : null;
+            return Listeners.Global().hasListener(event.getType()) || ((container != null) && container.hasListener(event.getType())) ? notifyEventImpl(event, container, callbackClass) : null;
         } catch (Exception e) {
             LOGGER.warn(getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
         }
@@ -74,7 +74,7 @@ public final class EventDispatcher {
             throw new NullPointerException("Event cannot be null!");
         }
 
-        boolean hasListeners = Containers.Global().hasListener(event.getType());
+        boolean hasListeners = Listeners.Global().hasListener(event.getType());
         if (!hasListeners) {
             for (ListenersContainer container : containers) {
                 if (container.hasListener(event.getType())) {
@@ -97,7 +97,7 @@ public final class EventDispatcher {
      * @param delay
      */
     public void notifyEventAsyncDelayed(IBaseEvent event, ListenersContainer container, long delay) {
-        if (Containers.Global().hasListener(event.getType()) || container.hasListener(event.getType())) {
+        if (Listeners.Global().hasListener(event.getType()) || container.hasListener(event.getType())) {
             ThreadPool.schedule(() -> notifyEvent(event, container, null), delay);
         }
     }
@@ -127,7 +127,7 @@ public final class EventDispatcher {
 
             // Global listener container.
             if ((callback == null) || !callback.abort()) {
-                callback = notifyToListeners(Containers.Global().getListeners(event.getType()), event, callbackClass, callback);
+                callback = notifyToListeners(Listeners.Global().getListeners(event.getType()), event, callbackClass, callback);
             }
 
             return callback;
@@ -157,7 +157,7 @@ public final class EventDispatcher {
 
         // Global listener container.
         if ((callback == null) || !callback.abort()) {
-            callback = notifyToListeners(Containers.Global().getListeners(event.getType()), event, callbackClass, callback);
+            callback = notifyToListeners(Listeners.Global().getListeners(event.getType()), event, callbackClass, callback);
         }
 
         return callback;

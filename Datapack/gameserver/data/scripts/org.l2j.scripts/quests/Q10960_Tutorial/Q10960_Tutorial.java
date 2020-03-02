@@ -369,7 +369,7 @@ public class Q10960_Tutorial extends Quest {
             return;
         }
 
-        final Player player = event.getActiveChar();
+        final Player player = event.getPlayer();
         if (player.getLevel() > 6) {
             return;
         }

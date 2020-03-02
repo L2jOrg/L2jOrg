@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerQuestComplete;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -40,7 +40,7 @@ public class QuestMissionHandler extends AbstractMissionHandler
 	@Override
 	public void init()
 	{
-		Containers.Players().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_QUEST_COMPLETE, (OnPlayerQuestComplete event) -> onQuestComplete(event), this));
+		Listeners.players().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_QUEST_COMPLETE, (OnPlayerQuestComplete event) -> onQuestComplete(event), this));
 	}
 
 	

@@ -7,6 +7,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
  * An Enum to hold some important references to commonly used skills
  *
  * @author DrHouse
+ * @author JoeAlisson
  */
 public enum CommonSkill {
     CREATE_DWARVEN(172, 1),
@@ -48,6 +49,15 @@ public enum CommonSkill {
     IMPRIT_OF_LIGHT(19034, 1),
     IMPRIT_OF_DARKNESS(19035, 1),
     BOT_REPORT_STATUS(55031, 1),
+    RANKER_FIRST_CLASS(60003, 1),
+    RANKER_SECOND_CLASS(60004, 1),
+    RANKER_THIRD_CLASS(60005, 1),
+    RANKER_HUMAN(60006, 1),
+    RANKER_ELF(60007, 1),
+    RANKER_DARK_ELF(60008, 1),
+    RANKER_ORC(60009, 1),
+    RANKER_DWARF(60010, 1),
+    RANKER_JIN_KAMAEL(60011, 1),
     TELEPORT(60018, 1);
 
     private final SkillHolder _holder;

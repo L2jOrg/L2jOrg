@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerFishing;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -23,7 +23,7 @@ public class FishingMissionHandler extends AbstractMissionHandler {
 	
 	@Override
 	public void init() {
-		Containers.Players().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_FISHING, (Consumer<OnPlayerFishing>) this::onPlayerFishing, this));
+		Listeners.players().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_FISHING, (Consumer<OnPlayerFishing>) this::onPlayerFishing, this));
 	}
 	
 	private void onPlayerFishing(OnPlayerFishing event) {

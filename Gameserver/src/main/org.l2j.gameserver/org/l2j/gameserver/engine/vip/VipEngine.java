@@ -5,7 +5,7 @@ import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -34,10 +34,10 @@ public final class VipEngine extends GameXmlReader {
     private IntMap<VipInfo> vipTiers = new HashIntMap<>(8);
 
     private VipEngine() {
-        var listeners = Containers.Players();
+        var listeners = Listeners.players();
 
         listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
-            final var player = event.getActiveChar();
+            final var player = event.getPlayer();
             if(player.getVipTier() > 0) {
                 if(!checkVipTierExpiration(player)) {
                     player.sendPacket(new ReceiveVipInfo());

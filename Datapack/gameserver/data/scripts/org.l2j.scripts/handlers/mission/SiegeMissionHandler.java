@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -28,7 +28,7 @@ public class SiegeMissionHandler extends AbstractMissionHandler {
 	
 	@Override
 	public void init() {
-		Containers.Global().addListener(new ConsumerEventListener(this, EventType.ON_CASTLE_SIEGE_START, (Consumer<OnCastleSiegeStart>) this::onSiegeStart, this));
+		Listeners.Global().addListener(new ConsumerEventListener(this, EventType.ON_CASTLE_SIEGE_START, (Consumer<OnCastleSiegeStart>) this::onSiegeStart, this));
 	}
 	
 	@Override

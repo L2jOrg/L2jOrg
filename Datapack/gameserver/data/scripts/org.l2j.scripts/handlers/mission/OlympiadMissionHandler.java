@@ -5,7 +5,7 @@ import org.l2j.gameserver.engine.mission.MissionStatus;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -26,7 +26,7 @@ public class OlympiadMissionHandler extends AbstractMissionHandler {
 	
 	@Override
 	public void init() {
-		Containers.Global().addListener(new ConsumerEventListener(this, EventType.ON_OLYMPIAD_MATCH_RESULT, (Consumer<OnOlympiadMatchResult>) this::onOlympiadMatchResult, this));
+		Listeners.Global().addListener(new ConsumerEventListener(this, EventType.ON_OLYMPIAD_MATCH_RESULT, (Consumer<OnOlympiadMatchResult>) this::onOlympiadMatchResult, this));
 	}
 	
 	private void onOlympiadMatchResult(OnOlympiadMatchResult event) {

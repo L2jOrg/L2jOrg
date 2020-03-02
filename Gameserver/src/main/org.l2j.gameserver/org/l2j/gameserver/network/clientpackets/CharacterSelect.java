@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSelect;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
@@ -109,7 +109,7 @@ public class CharacterSelect extends ClientPacket {
                     player.setOnlineStatus(true, true);
                     player.setVipTier(VipEngine.getInstance().getVipTier(player));
 
-                    final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(player, player.getObjectId(), player.getName(), client), Containers.Players(), TerminateReturn.class);
+                    final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(player, player.getObjectId(), player.getName(), client), Listeners.players(), TerminateReturn.class);
                     if ((terminate != null) && terminate.terminate()) {
                         Disconnection.of(player).defaultSequence(false);
                         return;

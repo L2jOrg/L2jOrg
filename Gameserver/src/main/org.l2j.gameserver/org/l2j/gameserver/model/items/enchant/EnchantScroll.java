@@ -123,7 +123,7 @@ public final class EnchantScroll extends AbstractEnchantItem {
             return EnchantResultType.ERROR;
         }
 
-        final double bonusRate = getBonusRate();
+        final double bonusRate = getBonusRate() + player.getStats().getEnchantRateBonus();
         final double finalChance = Math.min(chance + bonusRate, 100);
 
         final double random = 100 * Rnd.nextDouble();

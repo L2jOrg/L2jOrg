@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
@@ -32,7 +32,7 @@ public class ClanMissionHandler extends AbstractMissionHandler {
     @Override
     public void init() {
         if(MissionKind.JOIN == kind) {
-            Containers.Global().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_CLAN_JOIN, (Consumer<OnPlayerClanJoin>) this::onPlayerJoinClan, this));
+            Listeners.Global().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_CLAN_JOIN, (Consumer<OnPlayerClanJoin>) this::onPlayerJoinClan, this));
         }
     }
 

@@ -244,6 +244,7 @@ public enum Stat {
     STAT_BONUS_SPEED("statSpeed"),
     SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer()),
     WORLD_CHAT_POINTS("worldChatPoints"),
+    ENCHANT_RATE_BONUS("enchantBonus"),
     ATTACK_DAMAGE("attackDamage"),
 
     ELEMENTAL_SPIRIT_BONUS_XP("elementalSpiritXp"),

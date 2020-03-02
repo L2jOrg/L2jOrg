@@ -712,7 +712,7 @@ public final class ClassMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		showPopupWindow(event.getActiveChar());
+		showPopupWindow(event.getPlayer());
 	}
 	
 	private String getClassChangeOptions(Player player, int selectedClassId)

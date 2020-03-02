@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerQuestAbort;
 import org.l2j.gameserver.model.quest.Quest;
@@ -37,7 +37,7 @@ public final class RequestQuestAbort extends ClientPacket {
                 qs.setSimulated(false);
                 qs.exitQuest(QuestType.REPEATABLE);
                 activeChar.sendPacket(new QuestList(activeChar));
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerQuestAbort(activeChar, _questId), activeChar, Containers.Players());
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerQuestAbort(activeChar, _questId), activeChar, Listeners.players());
                 qe.onQuestAborted(activeChar);
             }
         }

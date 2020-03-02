@@ -5,38 +5,40 @@ import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.data.database.data.RankHistoryData;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.world.World;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.function.Consumer;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
  * @author JoeAlisson
  */
 public class RankManager {
 
-    private static final int FIRST_PLACE_SKILL_ID = 60003; // 1st
-    private static final int SECOND_PLACE_SKILL_ID = 60004; // 2nd - 30th
-    private static final int THIRD_PLACE_SKILL_ID = 60005; // 31 - 100th
-
-    private static final int HUMAN_SKILL_ID = 60006;
-    private static final int ELF_SKILL_ID = 60007;
-    private static final int DARK_ELF_SKILL_ID = 60008;
-    private static final int ORC_SKILL_ID = 60009;
-    private static final int DWARF_SKILL_ID = 60010;
-    private static final int JIN_KAMAEL_SKILL_ID = 60011;
-
-    private static final int FIRST_RANK_SKILL_ID = 60012;
-    private static final int SECOND_RANK_SKILL_ID = 60013;
-    private static final int THIRD_RANK_SKILL_ID = 60014;
-
-    private static final int AMONG_RACE_SKILL_ID = 60015;
-
     private IntMap<RankData> rankersSnapshot;
 
     private RankManager() {
+        var listeners = Listeners.players();
+
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
+            var player = event.getPlayer();
+            var rankData = rankersSnapshot.get(player.getObjectId());
+            if(nonNull(rankData)) {
+                doIfNonNull(getRankerSkill(rankData), s -> player.addSkill(s.getSkill()));
+                doIfNonNull(getRaceRankerSkill(rankData, player), s -> player.addSkill(s.getSkill()));
+            }
+        }, this));
     }
 
     private void loadRankers() {
@@ -44,8 +46,46 @@ public class RankManager {
     }
 
     public void updateRankers() {
+        rankersSnapshot.values().forEach(this::removeRankerSkills);
         updateDatabase();
         loadRankers();
+    }
+
+    private void removeRankerSkills(RankData rankData) {
+        var player = World.getInstance().findPlayer(rankData.getPlayerId());
+        if(nonNull(player)) {
+            doIfNonNull(getRankerSkill(rankData), s -> player.removeSkill(s.getId(), true));
+            doIfNonNull(getRaceRankerSkill(rankData, player), s -> player.removeSkill(s.getId(), true));
+        }
+    }
+
+    private CommonSkill getRaceRankerSkill(RankData rankData, Player player) {
+        int rank = rankData.getRankRace();
+        if(rank == 1) {
+           return switch (player.getRace()) {
+               case HUMAN -> CommonSkill.RANKER_HUMAN;
+               case ELF -> CommonSkill.RANKER_ELF;
+               case DARK_ELF -> CommonSkill.RANKER_DARK_ELF;
+               case ORC -> CommonSkill.RANKER_ORC;
+               case DWARF -> CommonSkill.RANKER_DWARF;
+               case JIN_KAMAEL -> CommonSkill.RANKER_JIN_KAMAEL;
+               default -> null;
+            };
+        }
+        return null;
+    }
+
+    private CommonSkill getRankerSkill(RankData rankData) {
+        var rank = rankData.getRank();
+        CommonSkill skill = null;
+        if(rank == 1) {
+            skill = CommonSkill.RANKER_FIRST_CLASS;
+        } else if(rank <= 30) {
+            skill = CommonSkill.RANKER_SECOND_CLASS;
+        } else if(rank <= 100) {
+            skill = CommonSkill.RANKER_THIRD_CLASS;
+        }
+        return skill;
     }
 
     private void updateDatabase() {

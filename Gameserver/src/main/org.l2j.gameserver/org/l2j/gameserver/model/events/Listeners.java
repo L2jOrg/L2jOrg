@@ -19,13 +19,13 @@ package org.l2j.gameserver.model.events;
 /**
  * @author UnAfraid
  */
-public class Containers {
+public class Listeners {
     private static final ListenersContainer _globalContainer = new ListenersContainer();
     private static final ListenersContainer _globalNpcsContainer = new ListenersContainer();
     private static final ListenersContainer _globalMonstersContainer = new ListenersContainer();
     private static final ListenersContainer _globalPlayersContainer = new ListenersContainer();
 
-    protected Containers() {
+    protected Listeners() {
 
     }
 
@@ -53,7 +53,7 @@ public class Containers {
     /**
      * @return global player listeners container
      */
-    public static ListenersContainer Players() {
+    public static ListenersContainer players() {
         return _globalPlayersContainer;
     }
 }

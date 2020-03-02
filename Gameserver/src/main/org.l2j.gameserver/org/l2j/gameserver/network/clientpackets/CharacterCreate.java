@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import org.l2j.gameserver.model.items.PcItemTemplate;
@@ -201,7 +201,7 @@ public final class CharacterCreate extends ClientPacket {
         // Register all shortcuts for actions, skills and items for this new character.
         InitialShortcutData.getInstance().registerAllShortcuts(newChar);
 
-        EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
+        EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Listeners.players());
 
         newChar.setOnlineStatus(true, false);
 

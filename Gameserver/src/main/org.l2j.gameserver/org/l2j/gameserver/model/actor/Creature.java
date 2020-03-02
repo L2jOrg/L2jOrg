@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.events.Containers;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.*;
@@ -4242,7 +4242,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public Queue<AbstractEventListener> getListeners(EventType type) {
         final Queue<AbstractEventListener> objectListenres = super.getListeners(type);
         final Queue<AbstractEventListener> templateListeners = _template.getListeners(type);
-        final Queue<AbstractEventListener> globalListeners = GameUtils.isNpc(this) && !isMonster(this) ? Containers.Npcs().getListeners(type) : isMonster(this) ? Containers.Monsters().getListeners(type) : isPlayer(this) ? Containers.Players().getListeners(type) : EmptyQueue.emptyQueue();
+        final Queue<AbstractEventListener> globalListeners = GameUtils.isNpc(this) && !isMonster(this) ? Listeners.Npcs().getListeners(type) : isMonster(this) ? Listeners.Monsters().getListeners(type) : isPlayer(this) ? Listeners.players().getListeners(type) : EmptyQueue.emptyQueue();
 
         // Attempt to do not create collection
         if (objectListenres.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {

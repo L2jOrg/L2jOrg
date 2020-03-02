@@ -2543,25 +2543,25 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             }
             case GLOBAL: // Global Listener
             {
-                final ListenersContainer template = Containers.Global();
+                final ListenersContainer template = Listeners.Global();
                 listeners.add(template.addListener(action.apply(template)));
                 break;
             }
             case GLOBAL_NPCS: // Global Npcs Listener
             {
-                final ListenersContainer template = Containers.Npcs();
+                final ListenersContainer template = Listeners.Npcs();
                 listeners.add(template.addListener(action.apply(template)));
                 break;
             }
             case GLOBAL_MONSTERS: // Global Monsters Listener
             {
-                final ListenersContainer template = Containers.Monsters();
+                final ListenersContainer template = Listeners.Monsters();
                 listeners.add(template.addListener(action.apply(template)));
                 break;
             }
             case GLOBAL_PLAYERS: // Global Players Listener
             {
-                final ListenersContainer template = Containers.Players();
+                final ListenersContainer template = Listeners.players();
                 listeners.add(template.addListener(action.apply(template)));
                 break;
             }
