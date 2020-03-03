@@ -225,12 +225,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="76.0"/>
-			<stat type="mAtk" value="47.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="406.0"/>
-			<stat type="randomDamage" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK" value="76.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
 		</stats>
 	</weapon>
 
@@ -242,12 +242,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="116.0"/>
-			<stat type="mAtk" value="90.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="406.0"/>
-			<stat type="randomDamage" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK" value="116.0"/>
+			<stat type="MAGIC_ATTACK" value="90.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
 		</stats>
 	</weapon>
 
@@ -258,12 +258,12 @@
 		<damage radius="40" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="185.0"/>
-			<stat type="mAtk" value="135.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="406.0"/>
-			<stat type="randomDamage" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK" value="185.0"/>
+			<stat type="MAGIC_ATTACK" value="135.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
 		</stats>
 	</weapon>
 
@@ -275,13 +275,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="87.0"/>
-			<stat type="mAtk" value="47.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="5.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="15.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="87.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -293,13 +293,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="135.0"/>
-			<stat type="mAtk" value="67.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="5.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="15.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="135.0"/>
+			<stat type="MAGIC_ATTACK" value="67.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -310,13 +310,13 @@
 		<damage radius="40" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="214.0"/>
-			<stat type="mAtk" value="111.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="5.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="15.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="214.0"/>
+			<stat type="MAGIC_ATTACK" value="111.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="15.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 

@@ -53,12 +53,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="1.0"/>
-			<stat type="mAtk" value="1.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="1.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 	</weapon>
 
@@ -83,8 +83,8 @@
 		<attributes weight="150" commission-type="RING" duration="21600" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="32.0"/>
-			<stat type="maxMp" value="9.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
 			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
@@ -512,12 +512,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="155.0"/>
-			<stat type="mAtk" value="70.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="MAGIC_ATTACK" value="70.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -527,8 +527,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="40.0"/>
-			<stat type="maxMp" value="15.0"/>
+			<stat type="MAGICAL_DEFENCE" value="40.0"/>
+			<stat type="MAX_MP" value="15.0"/>
 		</stats>
 		<skills>
 			<skill id="3562" level="2" value="-1"/>  <!-- Queen Ant's Ring -->
@@ -541,8 +541,8 @@
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="61.0"/>
-			<stat type="maxMp" value="25.0"/>
+			<stat type="MAGICAL_DEFENCE" value="61.0"/>
+			<stat type="MAX_MP" value="25.0"/>
 		</stats>
 		<skills>
 			<skill id="3560" level="2" value="-1"/>  <!-- Orfen's Earring -->
@@ -555,8 +555,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="40.0"/>
-			<stat type="maxMp" value="15.0"/>
+			<stat type="MAGICAL_DEFENCE" value="40.0"/>
+			<stat type="MAX_MP" value="15.0"/>
 		</stats>
 		<skills>
 			<skill id="3563" level="2" value="-1"/>  <!-- Ring of Core -->
@@ -569,8 +569,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
@@ -583,8 +583,8 @@
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="71.0"/>
-			<stat type="maxMp" value="31.0"/>
+			<stat type="MAGICAL_DEFENCE" value="71.0"/>
+			<stat type="MAX_MP" value="31.0"/>
 		</stats>
 		<skills>
 			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->
@@ -597,8 +597,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
@@ -612,8 +612,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="32.0"/>
-			<stat type="maxMp" value="9.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
 			<skill id="3561" value="-1"/>  <!-- Damaged Baium's Ring -->
@@ -626,8 +626,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="40.0"/>
-			<stat type="maxMp" value="15.0"/>
+			<stat type="MAGICAL_DEFENCE" value="40.0"/>
+			<stat type="MAX_MP" value="15.0"/>
 		</stats>
 		<skills>
 			<skill id="3561" level="2" value="-1"/>  <!-- Damaged Baium's Ring -->
@@ -640,8 +640,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3561" level="3" value="-1"/>  <!-- Damaged Baium's Ring -->
@@ -686,12 +686,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="1.0"/>
-			<stat type="mAtk" value="1.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="1.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 	</weapon>
 
@@ -703,12 +703,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="1.0"/>
-			<stat type="mAtk" value="1.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="1.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 	</weapon>
 
@@ -736,8 +736,8 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
@@ -750,8 +750,8 @@
 		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="71.0"/>
-			<stat type="maxMp" value="31.0"/>
+			<stat type="MAGICAL_DEFENCE" value="71.0"/>
+			<stat type="MAX_MP" value="31.0"/>
 		</stats>
 		<skills>
 			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->
@@ -764,8 +764,8 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->

@@ -47,7 +47,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="50.0"/>
+			<stat type="MAGICAL_DEFENCE" value="50.0"/>
 		</stats>
 	</armor>
 
@@ -279,8 +279,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -294,8 +294,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="90.0"/>
-			<stat type="maxMp" value="37.0"/>
+			<stat type="MAGICAL_DEFENCE" value="90.0"/>
+			<stat type="MAX_MP" value="37.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
@@ -309,8 +309,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="93.0"/>
-			<stat type="maxMp" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="93.0"/>
+			<stat type="MAX_MP" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
@@ -324,8 +324,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -339,8 +339,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="90.0"/>
-			<stat type="maxMp" value="37.0"/>
+			<stat type="MAGICAL_DEFENCE" value="90.0"/>
+			<stat type="MAX_MP" value="37.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
@@ -354,8 +354,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="93.0"/>
-			<stat type="maxMp" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="93.0"/>
+			<stat type="MAX_MP" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
@@ -369,9 +369,9 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
-			<stat type="windRes" value="20.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
+			<stat type="WIND_RES" value="20.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -385,8 +385,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="90.0"/>
-			<stat type="maxMp" value="37.0"/>
+			<stat type="MAGICAL_DEFENCE" value="90.0"/>
+			<stat type="MAX_MP" value="37.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
@@ -400,8 +400,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="93.0"/>
-			<stat type="maxMp" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="93.0"/>
+			<stat type="MAX_MP" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
@@ -415,8 +415,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -430,8 +430,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="90.0"/>
-			<stat type="maxMp" value="37.0"/>
+			<stat type="MAGICAL_DEFENCE" value="90.0"/>
+			<stat type="MAX_MP" value="37.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="2" value="-1"/>  <!-- Increases Skill XP -->
@@ -445,8 +445,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="93.0"/>
-			<stat type="maxMp" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="93.0"/>
+			<stat type="MAX_MP" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="3" value="-1"/>  <!-- Increases Skill XP -->
@@ -460,8 +460,8 @@
 		<attributes weight="150" commission-type="NECKLACE" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -475,8 +475,8 @@
 		<attributes weight="150" commission-type="NECKLACE" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -490,8 +490,8 @@
 		<attributes weight="150" commission-type="NECKLACE" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -505,8 +505,8 @@
 		<attributes weight="150" commission-type="NECKLACE" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="87.0"/>
-			<stat type="maxMp" value="35.0"/>
+			<stat type="MAGICAL_DEFENCE" value="87.0"/>
+			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" value="-1"/>  <!-- Increases Skill XP -->
@@ -770,7 +770,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -780,7 +780,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -790,7 +790,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -800,7 +800,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -810,7 +810,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 

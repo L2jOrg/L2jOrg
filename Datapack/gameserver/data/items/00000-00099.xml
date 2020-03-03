@@ -7,12 +7,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="8.0"/>
-			<stat type="mAtk" value="6.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="6.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -23,12 +23,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="24.0"/>
-			<stat type="mAtk" value="17.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="24.0"/>
+			<stat type="MAGIC_ATTACK" value="17.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -39,12 +39,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="11.0"/>
-			<stat type="mAtk" value="9.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="11.0"/>
+			<stat type="MAGIC_ATTACK" value="9.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -55,13 +55,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="8.0"/>
-			<stat type="mAtk" value="6.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="8.0"/>
+			<stat type="MAGIC_ATTACK" value="6.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -72,13 +72,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="11.0"/>
-			<stat type="mAtk" value="9.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="11.0"/>
+			<stat type="MAGIC_ATTACK" value="9.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -89,13 +89,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="5.0"/>
-			<stat type="mAtk" value="7.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="5.0"/>
+			<stat type="MAGIC_ATTACK" value="7.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -106,13 +106,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="6.0"/>
-			<stat type="mAtk" value="8.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="6.0"/>
+			<stat type="MAGIC_ATTACK" value="8.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -123,13 +123,13 @@
 		<damage radius="46" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="11.0"/>
-			<stat type="mAtk" value="13.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="11.0"/>
+			<stat type="MAGIC_ATTACK" value="13.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -140,13 +140,13 @@
 		<damage radius="46" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="16.0"/>
-			<stat type="mAtk" value="18.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="16.0"/>
+			<stat type="MAGIC_ATTACK" value="18.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -157,13 +157,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="5.0"/>
-			<stat type="mAtk" value="5.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="433.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="5.0"/>
+			<stat type="MAGIC_ATTACK" value="5.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -174,13 +174,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="7.0"/>
-			<stat type="mAtk" value="6.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="433.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="7.0"/>
+			<stat type="MAGIC_ATTACK" value="6.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -191,13 +191,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="10.0"/>
-			<stat type="mAtk" value="9.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="433.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="10.0"/>
+			<stat type="MAGIC_ATTACK" value="9.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -208,13 +208,13 @@
 		<damage radius="10" angle="360"/>
 		<consume  soulshots="2" mana="1"/>
 		<stats>
-			<stat type="pAtk" value="16.0"/>
-			<stat type="mAtk" value="6.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="293.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="500.0"/>
+			<stat type="PHYSICAL_ATTACK" value="16.0"/>
+			<stat type="MAGIC_ATTACK" value="6.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
 		</stats>
 	</weapon>
 
@@ -225,13 +225,13 @@
 		<damage radius="10" angle="360"/>
 		<consume  soulshots="2" mana="1"/>
 		<stats>
-			<stat type="pAtk" value="23.0"/>
-			<stat type="mAtk" value="9.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="293.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="500.0"/>
+			<stat type="PHYSICAL_ATTACK" value="23.0"/>
+			<stat type="MAGIC_ATTACK" value="9.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
 		</stats>
 	</weapon>
 
@@ -242,13 +242,13 @@
 		<damage radius="66" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="24.0"/>
-			<stat type="mAtk" value="17.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="24.0"/>
+			<stat type="MAGIC_ATTACK" value="17.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -262,13 +262,13 @@
 		<damage radius="66" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="31.0"/>
-			<stat type="mAtk" value="21.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="31.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -287,9 +287,9 @@
 		<attributes weight="1430" price="39" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="47.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="47.0"/>
 		</stats>
 	</armor>
 
@@ -298,9 +298,9 @@
 		<attributes weight="1420" price="638" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="56.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="56.0"/>
 		</stats>
 	</armor>
 
@@ -309,9 +309,9 @@
 		<attributes weight="1410" price="2780" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="67.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="67.0"/>
 		</stats>
 	</armor>
 
@@ -320,7 +320,7 @@
 		<attributes weight="4830" price="147" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="36.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 
@@ -329,7 +329,7 @@
 		<attributes weight="4830" price="2430" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="43.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
 		</stats>
 	</armor>
 
@@ -338,7 +338,7 @@
 		<attributes weight="4820" price="7960" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="47.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="47.0"/>
 		</stats>
 	</armor>
 
@@ -347,7 +347,7 @@
 		<attributes weight="4770" price="20300" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="50.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="50.0"/>
 		</stats>
 	</armor>
 
@@ -356,7 +356,7 @@
 		<attributes weight="8970" price="31800" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="62.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="62.0"/>
 		</stats>
 	</armor>
 
@@ -365,7 +365,7 @@
 		<attributes weight="8920" price="49200" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="68.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="68.0"/>
 		</stats>
 	</armor>
 
@@ -374,7 +374,7 @@
 		<attributes weight="4720" price="36900" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="53.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="53.0"/>
 		</stats>
 	</armor>
 
@@ -383,7 +383,7 @@
 		<attributes weight="1740" price="92" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="22.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -392,7 +392,7 @@
 		<attributes weight="1730" price="1520" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="27.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="27.0"/>
 		</stats>
 	</armor>
 
@@ -401,7 +401,7 @@
 		<attributes weight="1700" price="4970" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="29.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
 		</stats>
 	</armor>
 
@@ -410,7 +410,7 @@
 		<attributes weight="1680" price="12700" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="32.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -419,7 +419,7 @@
 		<attributes weight="4020" price="19900" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="39.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
 		</stats>
 	</armor>
 
@@ -428,7 +428,7 @@
 		<attributes weight="1610" price="23000" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="33.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="33.0"/>
 		</stats>
 	</armor>
 
@@ -437,7 +437,7 @@
 		<attributes weight="3960" price="30700" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="43.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
 		</stats>
 	</armor>
 
@@ -446,7 +446,7 @@
 		<attributes weight="1320" price="37" commission-type="FEET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -455,7 +455,7 @@
 		<attributes weight="1320" price="37" commission-type="FEET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -464,7 +464,7 @@
 		<attributes weight="1320" price="2650" commission-type="FEET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="13.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="13.0"/>
 		</stats>
 	</armor>
 
@@ -473,7 +473,7 @@
 		<attributes weight="1320" price="6770" commission-type="FEET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="15.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="15.0"/>
 		</stats>
 	</armor>
 
@@ -482,7 +482,7 @@
 		<attributes weight="1310" price="12300" commission-type="FEET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="17.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="17.0"/>
 		</stats>
 	</armor>
 
@@ -491,7 +491,7 @@
 		<attributes weight="1300" price="20900" commission-type="FEET" />
 		<crystal type="D" count="38"/>
 		<stats>
-			<stat type="pDef" value="19.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="19.0"/>
 		</stats>
 	</armor>
 
@@ -500,7 +500,7 @@
 		<attributes weight="660" price="55" commission-type="HELMET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="13.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="13.0"/>
 		</stats>
 	</armor>
 
@@ -509,7 +509,7 @@
 		<attributes weight="660" price="911" commission-type="HELMET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="16.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="16.0"/>
 		</stats>
 	</armor>
 
@@ -518,7 +518,7 @@
 		<attributes weight="660" price="3980" commission-type="HELMET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="19.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="19.0"/>
 		</stats>
 	</armor>
 
@@ -527,7 +527,7 @@
 		<attributes weight="650" price="10200" commission-type="HELMET" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="23.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="23.0"/>
 		</stats>
 	</armor>
 
@@ -536,7 +536,7 @@
 		<attributes weight="640" price="31300" commission-type="HELMET" />
 		<crystal type="D" count="56"/>
 		<stats>
-			<stat type="pDef" value="29.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
 		</stats>
 	</armor>
 
@@ -545,7 +545,7 @@
 		<attributes weight="630" price="50000" commission-type="HELMET" />
 		<crystal type="D" count="90"/>
 		<stats>
-			<stat type="pDef" value="33.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="33.0"/>
 		</stats>
 	</armor>
 
@@ -554,7 +554,7 @@
 		<attributes weight="640" price="76200" commission-type="HELMET" />
 		<crystal type="D" count="138"/>
 		<stats>
-			<stat type="pDef" value="37.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="37.0"/>
 		</stats>
 	</armor>
 
@@ -563,7 +563,7 @@
 		<attributes weight="660" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -572,7 +572,7 @@
 		<attributes weight="660" price="2650" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="13.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="13.0"/>
 		</stats>
 	</armor>
 
@@ -581,7 +581,7 @@
 		<attributes weight="650" price="6770" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="15.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="15.0"/>
 		</stats>
 	</armor>
 
@@ -590,7 +590,7 @@
 		<attributes weight="650" price="12300" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="17.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="17.0"/>
 		</stats>
 	</armor>
 
@@ -604,7 +604,7 @@
 		<attributes weight="8670" price="183000" commission-type="ARMOR_TOP" />
 		<crystal type="D" count="332"/>
 		<stats>
-			<stat type="pDef" value="95.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="95.0"/>
 		</stats>
 	</armor>
 
@@ -613,7 +613,7 @@
 		<attributes weight="3830" price="127000" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="230"/>
 		<stats>
-			<stat type="pDef" value="61.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="61.0"/>
 		</stats>
 	</armor>
 
@@ -623,7 +623,7 @@
 		<attributes weight="10980" price="1440000" commission-type="FULL_BODY" />
 		<crystal type="C" count="576"/>
 		<stats>
-			<stat type="pDef" value="224.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="224.0"/>
 		</stats>
 	</armor>
 
@@ -632,7 +632,7 @@
 		<attributes weight="630" price="97800" commission-type="GLOVES" />
 		<crystal type="D" count="177"/>
 		<stats>
-			<stat type="pDef" value="29.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
 		</stats>
 	</armor>
 
@@ -641,7 +641,7 @@
 		<attributes weight="1230" price="126000" commission-type="FEET" />
 		<crystal type="C" count="50"/>
 		<stats>
-			<stat type="pDef" value="32.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -650,7 +650,7 @@
 		<attributes weight="640" price="50800" commission-type="GLOVES" />
 		<crystal type="D" count="92"/>
 		<stats>
-			<stat type="pDef" value="24.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="24.0"/>
 		</stats>
 	</armor>
 
@@ -659,7 +659,7 @@
 		<attributes weight="1220" price="245000" commission-type="FEET" />
 		<crystal type="C" count="98"/>
 		<stats>
-			<stat type="pDef" value="36.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 
@@ -670,12 +670,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="17.0"/>
-			<stat type="mAtk" value="12.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="17.0"/>
+			<stat type="MAGIC_ATTACK" value="12.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -686,12 +686,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="17.0"/>
-			<stat type="mAtk" value="12.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="17.0"/>
+			<stat type="MAGIC_ATTACK" value="12.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -702,12 +702,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="31.0"/>
-			<stat type="mAtk" value="21.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="31.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -718,12 +718,12 @@
 		<damage radius="42" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="51.0"/>
-			<stat type="mAtk" value="32.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="51.0"/>
+			<stat type="MAGIC_ATTACK" value="32.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -734,12 +734,12 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="112.0"/>
-			<stat type="mAtk" value="54.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="112.0"/>
+			<stat type="MAGIC_ATTACK" value="54.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -750,12 +750,12 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="130.0"/>
-			<stat type="mAtk" value="61.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="130.0"/>
+			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -766,12 +766,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="107.0"/>
-			<stat type="mAtk" value="61.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="107.0"/>
+			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -782,12 +782,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="122.0"/>
-			<stat type="mAtk" value="68.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="122.0"/>
+			<stat type="MAGIC_ATTACK" value="68.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -798,12 +798,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="122.0"/>
-			<stat type="mAtk" value="68.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="122.0"/>
+			<stat type="MAGIC_ATTACK" value="68.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -814,12 +814,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="139.0"/>
-			<stat type="mAtk" value="76.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="139.0"/>
+			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -830,12 +830,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="139.0"/>
-			<stat type="mAtk" value="76.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="139.0"/>
+			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -846,12 +846,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="139.0"/>
-			<stat type="mAtk" value="76.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="139.0"/>
+			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -862,12 +862,12 @@
 		<damage radius="44" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="213.0"/>
-			<stat type="mAtk" value="91.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="213.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -878,12 +878,12 @@
 		<damage radius="40" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="194.0"/>
-			<stat type="mAtk" value="99.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="194.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -894,12 +894,12 @@
 		<damage radius="40" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="213.0"/>
-			<stat type="mAtk" value="107.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="213.0"/>
+			<stat type="MAGIC_ATTACK" value="107.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -910,12 +910,12 @@
 		<damage radius="46" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="282.0"/>
-			<stat type="mAtk" value="114.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="282.0"/>
+			<stat type="MAGIC_ATTACK" value="114.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -926,12 +926,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="43.0"/>
-			<stat type="mAtk" value="45.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="43.0"/>
+			<stat type="MAGIC_ATTACK" value="45.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -942,12 +942,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="111.0"/>
-			<stat type="mAtk" value="101.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="111.0"/>
+			<stat type="MAGIC_ATTACK" value="101.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -958,13 +958,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="51.0"/>
-			<stat type="mAtk" value="32.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="51.0"/>
+			<stat type="MAGIC_ATTACK" value="32.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -975,13 +975,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="31.0"/>
-			<stat type="mAtk" value="21.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="31.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -992,13 +992,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="79.0"/>
-			<stat type="mAtk" value="47.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="79.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -1009,13 +1009,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="107.0"/>
-			<stat type="mAtk" value="61.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="107.0"/>
+			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -1026,13 +1026,13 @@
 		<damage radius="46" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="77.0"/>
-			<stat type="mAtk" value="69.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="77.0"/>
+			<stat type="MAGIC_ATTACK" value="69.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -1043,13 +1043,13 @@
 		<damage radius="40" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="175.0"/>
-			<stat type="mAtk" value="91.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="175.0"/>
+			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -1060,13 +1060,13 @@
 		<damage radius="46" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="170.0"/>
-			<stat type="mAtk" value="134.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="170.0"/>
+			<stat type="MAGIC_ATTACK" value="134.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -1077,13 +1077,13 @@
 		<damage radius="66" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="79.0"/>
-			<stat type="mAtk" value="47.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="79.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -1097,13 +1097,13 @@
 		<damage radius="66" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="122.0"/>
-			<stat type="mAtk" value="68.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="122.0"/>
+			<stat type="MAGIC_ATTACK" value="68.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -1117,13 +1117,13 @@
 		<damage radius="66" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="139.0"/>
-			<stat type="mAtk" value="76.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="139.0"/>
+			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -1137,13 +1137,13 @@
 		<damage radius="66" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="107.0"/>
-			<stat type="mAtk" value="61.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="107.0"/>
+			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -1157,13 +1157,13 @@
 		<damage radius="66" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="194.0"/>
-			<stat type="mAtk" value="99.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="194.0"/>
+			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -1177,13 +1177,13 @@
 		<damage radius="66" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="213.0"/>
-			<stat type="mAtk" value="107.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="213.0"/>
+			<stat type="MAGIC_ATTACK" value="107.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
@@ -1197,12 +1197,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="9.0"/>
-			<stat type="mAtk" value="12.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="9.0"/>
+			<stat type="MAGIC_ATTACK" value="12.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 

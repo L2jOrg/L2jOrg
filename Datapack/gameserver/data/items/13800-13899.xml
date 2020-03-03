@@ -6,7 +6,7 @@
 		<attributes weight="500" price="45100" />
 		<crystal type="C"/>
 		<stats>
-			<stat type="pDef" value="10.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
 		</stats>
 	</armor>
 
@@ -16,7 +16,7 @@
 		<attributes weight="480" price="165000" />
 		<crystal type="B"/>
 		<stats>
-			<stat type="pDef" value="11.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="11.0"/>
 		</stats>
 	</armor>
 
@@ -26,7 +26,7 @@
 		<attributes weight="460" price="371300" />
 		<crystal type="A"/>
 		<stats>
-			<stat type="pDef" value="12.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="12.0"/>
 		</stats>
 	</armor>
 
@@ -36,7 +36,7 @@
 		<attributes weight="440" price="1917000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 

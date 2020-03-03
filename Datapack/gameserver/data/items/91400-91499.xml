@@ -90,7 +90,7 @@
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="57.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="57.0"/>
 		</stats>
 	</armor>
 
@@ -244,7 +244,7 @@
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="75.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="75.0"/>
 		</stats>
 	</armor>
 
@@ -404,11 +404,11 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="1.0"/>
-			<stat type="mAtk" value="1.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
 		<skills>
 			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->

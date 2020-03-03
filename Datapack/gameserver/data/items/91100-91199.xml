@@ -6,7 +6,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -114,8 +114,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="96.0"/>
-			<stat type="maxMp" value="42.0"/>
+			<stat type="MAGICAL_DEFENCE" value="96.0"/>
+			<stat type="MAX_MP" value="42.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
@@ -129,8 +129,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="100.0"/>
-			<stat type="maxMp" value="50.0"/>
+			<stat type="MAGICAL_DEFENCE" value="100.0"/>
+			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
@@ -144,8 +144,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="96.0"/>
-			<stat type="maxMp" value="42.0"/>
+			<stat type="MAGICAL_DEFENCE" value="96.0"/>
+			<stat type="MAX_MP" value="42.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
@@ -159,8 +159,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="100.0"/>
-			<stat type="maxMp" value="50.0"/>
+			<stat type="MAGICAL_DEFENCE" value="100.0"/>
+			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
@@ -174,9 +174,9 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="96.0"/>
-			<stat type="maxMp" value="42.0"/>
-			<stat type="windRes" value="80.0"/>
+			<stat type="MAGICAL_DEFENCE" value="96.0"/>
+			<stat type="MAX_MP" value="42.0"/>
+			<stat type="WIND_RES" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
@@ -190,8 +190,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="100.0"/>
-			<stat type="maxMp" value="50.0"/>
+			<stat type="MAGICAL_DEFENCE" value="100.0"/>
+			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
@@ -205,8 +205,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="96.0"/>
-			<stat type="maxMp" value="42.0"/>
+			<stat type="MAGICAL_DEFENCE" value="96.0"/>
+			<stat type="MAX_MP" value="42.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
@@ -220,8 +220,8 @@
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="100.0"/>
-			<stat type="maxMp" value="50.0"/>
+			<stat type="MAGICAL_DEFENCE" value="100.0"/>
+			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
 			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
@@ -346,8 +346,8 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="84.0"/>
-			<stat type="maxMp" value="34.0"/>
+			<stat type="MAGICAL_DEFENCE" value="84.0"/>
+			<stat type="MAX_MP" value="34.0"/>
 		</stats>
 		<skills>
 			<skill id="3558" level="13" value="-1"/>  <!-- Damaged Antharas' Earring -->
@@ -360,8 +360,8 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="94.0"/>
-			<stat type="maxMp" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="94.0"/>
+			<stat type="MAX_MP" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3558" level="14" value="-1"/>  <!-- Damaged Antharas' Earring -->
@@ -416,7 +416,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -426,7 +426,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -474,12 +474,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="155.0"/>
-			<stat type="mAtk" value="70.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="MAGIC_ATTACK" value="70.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -539,12 +539,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="12.0"/>
-			<stat type="mAtk" value="12.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="12.0"/>
+			<stat type="MAGIC_ATTACK" value="12.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 

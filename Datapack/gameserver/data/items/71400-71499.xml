@@ -124,12 +124,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="1.0"/>
-			<stat type="mAtk" value="1.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="1.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -147,12 +147,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="1.0"/>
-			<stat type="mAtk" value="1.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="1.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 

@@ -5,7 +5,7 @@
 		<attributes weight="150" price="28400" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="18.0"/>
+			<stat type="MAGICAL_DEFENCE" value="18.0"/>
 		</stats>
 	</armor>
 
@@ -14,7 +14,7 @@
 		<attributes weight="150" price="42800" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="20.0"/>
+			<stat type="MAGICAL_DEFENCE" value="20.0"/>
 		</stats>
 	</armor>
 
@@ -23,7 +23,7 @@
 		<attributes weight="150" price="62300" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="22.0"/>
+			<stat type="MAGICAL_DEFENCE" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -32,7 +32,7 @@
 		<attributes weight="150" price="80800" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="24.0"/>
+			<stat type="MAGICAL_DEFENCE" value="24.0"/>
 		</stats>
 	</armor>
 
@@ -41,7 +41,7 @@
 		<attributes weight="150" price="18000" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="16.0"/>
+			<stat type="MAGICAL_DEFENCE" value="16.0"/>
 		</stats>
 	</armor>
 
@@ -249,12 +249,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="96.0"/>
-			<stat type="mAtk" value="47.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="96.0"/>
+			<stat type="MAGIC_ATTACK" value="47.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -406,7 +406,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="14.0"/>
+			<stat type="MAGICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -614,8 +614,8 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="32.0"/>
-			<stat type="maxMp" value="9.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
 			<skill id="3562" value="-1"/>  <!-- Queen Ant's Ring -->
@@ -628,8 +628,8 @@
 		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="51.0"/>
-			<stat type="maxMp" value="19.0"/>
+			<stat type="MAGICAL_DEFENCE" value="51.0"/>
+			<stat type="MAX_MP" value="19.0"/>
 		</stats>
 		<skills>
 			<skill id="3560" value="-1"/>  <!-- Orfen's Earring -->
@@ -642,8 +642,8 @@
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="32.0"/>
-			<stat type="maxMp" value="9.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
 			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
@@ -763,12 +763,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="155.0"/>
-			<stat type="mAtk" value="70.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="MAGIC_ATTACK" value="70.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -780,12 +780,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="155.0"/>
-			<stat type="mAtk" value="70.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="155.0"/>
+			<stat type="MAGIC_ATTACK" value="70.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -807,7 +807,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="14.0"/>
+			<stat type="MAGICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -817,7 +817,7 @@
 		<attributes weight="150" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="14.0"/>
+			<stat type="MAGICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -827,7 +827,7 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="14.0"/>
+			<stat type="MAGICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -837,7 +837,7 @@
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="14.0"/>
+			<stat type="MAGICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 

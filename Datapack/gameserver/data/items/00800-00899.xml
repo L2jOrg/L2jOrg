@@ -16,7 +16,7 @@
 		<attributes weight="150" price="8890" commission-type="EARRING" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="19.0"/>
+			<stat type="MAGICAL_DEFENCE" value="19.0"/>
 		</stats>
 	</armor>
 
@@ -25,7 +25,7 @@
 		<attributes weight="150" price="16000" commission-type="EARRING" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="21.0"/>
 		</stats>
 	</armor>
 
@@ -34,7 +34,7 @@
 		<attributes weight="150" price="26900" commission-type="EARRING" />
 		<crystal type="D" count="48"/>
 		<stats>
-			<stat type="mDef" value="24.0"/>
+			<stat type="MAGICAL_DEFENCE" value="24.0"/>
 		</stats>
 	</armor>
 
@@ -43,7 +43,7 @@
 		<attributes weight="150" price="42600" commission-type="EARRING" />
 		<crystal type="D" count="77"/>
 		<stats>
-			<stat type="mDef" value="27.0"/>
+			<stat type="MAGICAL_DEFENCE" value="27.0"/>
 		</stats>
 	</armor>
 
@@ -52,7 +52,7 @@
 		<attributes weight="150" price="64300" commission-type="EARRING" />
 		<crystal type="D" count="116"/>
 		<stats>
-			<stat type="mDef" value="30.0"/>
+			<stat type="MAGICAL_DEFENCE" value="30.0"/>
 		</stats>
 	</armor>
 
@@ -61,7 +61,7 @@
 		<attributes weight="150" price="93400" commission-type="EARRING" />
 		<crystal type="D" count="169"/>
 		<stats>
-			<stat type="mDef" value="34.0"/>
+			<stat type="MAGICAL_DEFENCE" value="34.0"/>
 		</stats>
 	</armor>
 
@@ -70,7 +70,7 @@
 		<attributes weight="150" price="121000" commission-type="EARRING" />
 		<crystal type="D" count="220"/>
 		<stats>
-			<stat type="mDef" value="36.0"/>
+			<stat type="MAGICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 
@@ -79,7 +79,7 @@
 		<attributes weight="150" price="155000" commission-type="EARRING" />
 		<crystal type="C" count="62"/>
 		<stats>
-			<stat type="mDef" value="39.0"/>
+			<stat type="MAGICAL_DEFENCE" value="39.0"/>
 		</stats>
 	</armor>
 
@@ -88,7 +88,7 @@
 		<attributes weight="150" price="196000" commission-type="EARRING" />
 		<crystal type="C" count="78"/>
 		<stats>
-			<stat type="mDef" value="42.0"/>
+			<stat type="MAGICAL_DEFENCE" value="42.0"/>
 		</stats>
 	</armor>
 
@@ -97,7 +97,7 @@
 		<attributes weight="150" price="295000" commission-type="EARRING" />
 		<crystal type="C" count="118"/>
 		<stats>
-			<stat type="mDef" value="45.0"/>
+			<stat type="MAGICAL_DEFENCE" value="45.0"/>
 		</stats>
 	</armor>
 
@@ -106,7 +106,7 @@
 		<attributes weight="150" price="424000" commission-type="EARRING" />
 		<crystal type="C" count="169"/>
 		<stats>
-			<stat type="mDef" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
 		</stats>
 	</armor>
 
@@ -115,7 +115,7 @@
 		<attributes weight="150" price="606000" commission-type="EARRING" />
 		<crystal type="B" count="80"/>
 		<stats>
-			<stat type="mDef" value="51.0"/>
+			<stat type="MAGICAL_DEFENCE" value="51.0"/>
 		</stats>
 	</armor>
 
@@ -124,7 +124,7 @@
 		<attributes weight="150" price="424000" commission-type="EARRING" />
 		<crystal type="C" count="169"/>
 		<stats>
-			<stat type="mDef" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
 		</stats>
 	</armor>
 
@@ -134,8 +134,8 @@
 		<attributes weight="150" price="3270000" />
 		<crystal type="S" count="157"/>
 		<stats>
-			<stat type="mDef" value="81.0"/>
-			<stat type="maxMp" value="31.0"/>
+			<stat type="MAGICAL_DEFENCE" value="81.0"/>
+			<stat type="MAX_MP" value="31.0"/>
 		</stats>
 	</armor>
 
@@ -144,7 +144,7 @@
 		<attributes weight="150" price="606000" commission-type="EARRING" />
 		<crystal type="B" count="169"/>
 		<stats>
-			<stat type="mDef" value="51.0"/>
+			<stat type="MAGICAL_DEFENCE" value="51.0"/>
 		</stats>
 	</armor>
 
@@ -153,7 +153,7 @@
 		<attributes weight="150" price="924000" commission-type="EARRING" />
 		<crystal type="B" count="169"/>
 		<stats>
-			<stat type="mDef" value="54.0"/>
+			<stat type="MAGICAL_DEFENCE" value="54.0"/>
 		</stats>
 	</armor>
 
@@ -163,8 +163,8 @@
 		<attributes weight="150" price="1498000" commission-type="EARRING" />
 		<crystal type="A" count="120"/>
 		<stats>
-			<stat type="mDef" value="63.0"/>
-			<stat type="maxMp" value="25.0"/>
+			<stat type="MAGICAL_DEFENCE" value="63.0"/>
+			<stat type="MAX_MP" value="25.0"/>
 		</stats>
 	</armor>
 
@@ -173,7 +173,7 @@
 		<attributes weight="150" price="924000" commission-type="EARRING" />
 		<crystal type="B" count="123"/>
 		<stats>
-			<stat type="mDef" value="54.0"/>
+			<stat type="MAGICAL_DEFENCE" value="54.0"/>
 		</stats>
 	</armor>
 
@@ -182,7 +182,7 @@
 		<attributes weight="150" price="606000" commission-type="EARRING" />
 		<crystal type="B" count="123"/>
 		<stats>
-			<stat type="mDef" value="51.0"/>
+			<stat type="MAGICAL_DEFENCE" value="51.0"/>
 		</stats>
 	</armor>
 
@@ -192,8 +192,8 @@
 		<attributes weight="150" price="1005000" commission-type="EARRING" />
 		<crystal type="A" count="80"/>
 		<stats>
-			<stat type="mDef" value="60.0"/>
-			<stat type="maxMp" value="20.0"/>
+			<stat type="MAGICAL_DEFENCE" value="60.0"/>
+			<stat type="MAX_MP" value="20.0"/>
 		</stats>
 	</armor>
 
@@ -202,7 +202,7 @@
 		<attributes weight="150" price="606000" commission-type="EARRING" />
 		<crystal type="B" count="80"/>
 		<stats>
-			<stat type="mDef" value="51.0"/>
+			<stat type="MAGICAL_DEFENCE" value="51.0"/>
 		</stats>
 	</armor>
 
@@ -212,7 +212,7 @@
 		<attributes weight="150" price="540" commission-type="RING" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="9.0"/>
+			<stat type="MAGICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -222,7 +222,7 @@
 		<attributes weight="150" price="2340" commission-type="RING" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="11.0"/>
+			<stat type="MAGICAL_DEFENCE" value="11.0"/>
 		</stats>
 	</armor>
 
@@ -231,7 +231,7 @@
 		<attributes weight="150" price="5920" commission-type="RING" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="12.0"/>
+			<stat type="MAGICAL_DEFENCE" value="12.0"/>
 		</stats>
 	</armor>
 
@@ -240,7 +240,7 @@
 		<attributes weight="150" price="10700" commission-type="RING" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="14.0"/>
+			<stat type="MAGICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -249,7 +249,7 @@
 		<attributes weight="150" price="28400" commission-type="RING" />
 		<crystal type="D" count="51"/>
 		<stats>
-			<stat type="mDef" value="18.0"/>
+			<stat type="MAGICAL_DEFENCE" value="18.0"/>
 		</stats>
 	</armor>
 
@@ -258,7 +258,7 @@
 		<attributes weight="150" price="42800" commission-type="RING" />
 		<crystal type="D" count="77"/>
 		<stats>
-			<stat type="mDef" value="20.0"/>
+			<stat type="MAGICAL_DEFENCE" value="20.0"/>
 		</stats>
 	</armor>
 
@@ -267,7 +267,7 @@
 		<attributes weight="150" price="62300" commission-type="RING" />
 		<crystal type="D" count="113"/>
 		<stats>
-			<stat type="mDef" value="22.0"/>
+			<stat type="MAGICAL_DEFENCE" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -276,7 +276,7 @@
 		<attributes weight="150" price="80800" commission-type="RING" />
 		<crystal type="D" count="146"/>
 		<stats>
-			<stat type="mDef" value="24.0"/>
+			<stat type="MAGICAL_DEFENCE" value="24.0"/>
 		</stats>
 	</armor>
 
@@ -285,7 +285,7 @@
 		<attributes weight="150" price="103000" commission-type="RING" />
 		<crystal type="C" count="41"/>
 		<stats>
-			<stat type="mDef" value="26.0"/>
+			<stat type="MAGICAL_DEFENCE" value="26.0"/>
 		</stats>
 	</armor>
 
@@ -294,7 +294,7 @@
 		<attributes weight="150" price="130000" commission-type="RING" />
 		<crystal type="C" count="52"/>
 		<stats>
-			<stat type="mDef" value="28.0"/>
+			<stat type="MAGICAL_DEFENCE" value="28.0"/>
 		</stats>
 	</armor>
 
@@ -303,7 +303,7 @@
 		<attributes weight="150" price="196000" commission-type="RING" />
 		<crystal type="C" count="78"/>
 		<stats>
-			<stat type="mDef" value="30.0"/>
+			<stat type="MAGICAL_DEFENCE" value="30.0"/>
 		</stats>
 	</armor>
 
@@ -312,7 +312,7 @@
 		<attributes weight="150" price="282000" commission-type="RING" />
 		<crystal type="C" count="112"/>
 		<stats>
-			<stat type="mDef" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -321,7 +321,7 @@
 		<attributes weight="150" price="404000" commission-type="RING" />
 		<crystal type="B" count="53"/>
 		<stats>
-			<stat type="mDef" value="34.0"/>
+			<stat type="MAGICAL_DEFENCE" value="34.0"/>
 		</stats>
 	</armor>
 
@@ -330,7 +330,7 @@
 		<attributes weight="150" price="282000" commission-type="RING" />
 		<crystal type="C" count="112"/>
 		<stats>
-			<stat type="mDef" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -340,8 +340,8 @@
 		<attributes weight="150" price="2180000" />
 		<crystal type="S" count="105"/>
 		<stats>
-			<stat type="mDef" value="58.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="58.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 	</armor>
 
@@ -350,7 +350,7 @@
 		<attributes weight="150" price="18000" commission-type="RING" />
 		<crystal type="D" count="32"/>
 		<stats>
-			<stat type="mDef" value="16.0"/>
+			<stat type="MAGICAL_DEFENCE" value="16.0"/>
 		</stats>
 	</armor>
 
@@ -359,7 +359,7 @@
 		<attributes weight="150" price="616000" commission-type="RING" />
 		<crystal type="B" count="32"/>
 		<stats>
-			<stat type="mDef" value="36.0"/>
+			<stat type="MAGICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 
@@ -369,8 +369,8 @@
 		<attributes weight="150" price="999000" commission-type="RING" />
 		<crystal type="A" count="80"/>
 		<stats>
-			<stat type="mDef" value="42.0"/>
-			<stat type="maxMp" value="17.0"/>
+			<stat type="MAGICAL_DEFENCE" value="42.0"/>
+			<stat type="MAX_MP" value="17.0"/>
 		</stats>
 	</armor>
 
@@ -379,7 +379,7 @@
 		<attributes weight="150" price="616000" commission-type="RING" />
 		<crystal type="B" count="82"/>
 		<stats>
-			<stat type="mDef" value="36.0"/>
+			<stat type="MAGICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 

@@ -6,7 +6,7 @@
 		<attributes weight="7520" price="7960" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="47.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="47.0"/>
 		</stats>
 	</armor>
 
@@ -16,7 +16,7 @@
 		<attributes weight="3170" price="12700" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="32.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -26,7 +26,7 @@
 		<attributes weight="510" price="33300" />
 		<crystal type="D"/>
 		<stats>
-			<stat type="pDef" value="22.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="22.0"/>
 		</stats>
 	</armor>
 

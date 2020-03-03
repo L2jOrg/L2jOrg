@@ -12,7 +12,7 @@
 		<attributes weight="7520" price="7960" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="47.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="47.0"/>
 		</stats>
 	</armor>
 
@@ -22,7 +22,7 @@
 		<attributes weight="3170" price="12700" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="32.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -32,7 +32,7 @@
 		<attributes weight="510" price="33300" />
 		<crystal type="D"/>
 		<stats>
-			<stat type="pDef" value="22.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -42,7 +42,7 @@
 		<attributes weight="1070" price="20900" />
 		<crystal type="D"/>
 		<stats>
-			<stat type="pDef" value="19.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="19.0"/>
 		</stats>
 	</armor>
 
@@ -54,12 +54,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="39.0"/>
-			<stat type="mAtk" value="26.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="406.0"/>
-			<stat type="randomDamage" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="39.0"/>
+			<stat type="MAGIC_ATTACK" value="26.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="406.0"/>
+			<stat type="RANDOM_DAMAGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -71,13 +71,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="35.0"/>
-			<stat type="mAtk" value="21.0"/>
-			<stat type="rCrit" value="10.0"/>
-			<stat type="accCombat" value="5.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="35.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="CRITICAL_RATE" value="10.0"/>
+			<stat type="ACCURACY" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 

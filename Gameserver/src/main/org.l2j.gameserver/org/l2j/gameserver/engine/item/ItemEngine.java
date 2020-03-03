@@ -124,7 +124,7 @@ public final class ItemEngine extends GameXmlReader {
     private void parseItemStats(ItemTemplate item, Node node) {
         forEach(node, "stat", statNode -> {
             var attr = statNode.getAttributes();
-            var type = Stat.valueOfXml(parseString(attr, "type"));
+            var type = parseEnum(attr, Stat.class, "type");
             var value = parseDouble(attr, "value");
             item.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
         });

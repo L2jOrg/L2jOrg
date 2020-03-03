@@ -41,7 +41,7 @@
 		<attributes weight="8970" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="45.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="45.0"/>
 		</stats>
 	</armor>
 
@@ -50,7 +50,7 @@
 		<attributes weight="4020" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="29.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
 		</stats>
 	</armor>
 
@@ -59,8 +59,8 @@
 		<attributes weight="2080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="27.0"/>
-			<stat type="maxMp" value="60.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="27.0"/>
+			<stat type="MAX_MP" value="60.0"/>
 		</stats>
 	</armor>
 
@@ -69,8 +69,8 @@
 		<attributes weight="1030" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="17.0"/>
-			<stat type="maxMp" value="38.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="17.0"/>
+			<stat type="MAX_MP" value="38.0"/>
 		</stats>
 	</armor>
 

@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.finalizers.*;
 import org.l2j.gameserver.util.MathUtil;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.function.BiFunction;
 
@@ -17,250 +16,249 @@ import java.util.function.BiFunction;
  */
 public enum Stat {
     // HP, MP & CP
-    MAX_HP("maxHp", new MaxHpFinalizer()),
-    MAX_MP("maxMp", new MaxMpFinalizer()),
-    MAX_CP("maxCp", new MaxCpFinalizer()),
-    MAX_RECOVERABLE_HP("maxRecoverableHp"), // The maximum HP that is able to be recovered trough heals
-    MAX_RECOVERABLE_MP("maxRecoverableMp"),
-    MAX_RECOVERABLE_CP("maxRecoverableCp"),
-    REGENERATE_HP_RATE("regHp", new RegenHPFinalizer()),
-    REGENERATE_CP_RATE("regCp", new RegenCPFinalizer()),
-    REGENERATE_MP_RATE("regMp", new RegenMPFinalizer()),
-    ADDITIONAL_POTION_HP("addPotionHp"),
-    ADDITIONAL_POTION_MP("addPotionMp"),
-    ADDITIONAL_POTION_CP("addPotionCp"),
-    MANA_CHARGE("manaCharge"),
-    HEAL_EFFECT("healEffect"),
-    HEAL_EFFECT_ADD("healEffectAdd"),
+    MAX_HP(new MaxHpFinalizer()),
+    MAX_MP(new MaxMpFinalizer()),
+    MAX_CP(new MaxCpFinalizer()),
+    MAX_RECOVERABLE_HP, // The maximum HP that is able to be recovered trough heals
+    MAX_RECOVERABLE_MP,
+    MAX_RECOVERABLE_CP,
+    REGENERATE_HP_RATE(new RegenHPFinalizer()),
+    REGENERATE_CP_RATE(new RegenCPFinalizer()),
+    REGENERATE_MP_RATE(new RegenMPFinalizer()),
+    ADDITIONAL_POTION_HP,
+    ADDITIONAL_POTION_MP,
+    ADDITIONAL_POTION_CP,
+    MANA_CHARGE,
+    HEAL_EFFECT,
+    HEAL_EFFECT_ADD,
 
     // ATTACK & DEFENCE
-    PHYSICAL_DEFENCE("pDef", new PDefenseFinalizer()),
-    MAGICAL_DEFENCE("mDef", new MDefenseFinalizer()),
-    PHYSICAL_ATTACK("pAtk", new PAttackFinalizer()),
-    MAGIC_ATTACK("mAtk", new MAttackFinalizer()),
-    PHYSICAL_ATTACK_SPEED("pAtkSpd", new PAttackSpeedFinalizer()),
-    MAGIC_ATTACK_SPEED("mAtkSpd", new MAttackSpeedFinalizer()), // Magic Skill Casting Time Rate
-    ATK_REUSE("atkReuse"), // Bows Hits Reuse Rate
-    SHIELD_DEFENCE("sDef", new ShieldDefenceFinalizer()),
-    CRITICAL_DAMAGE("cAtk"),
-    CRITICAL_DAMAGE_ADD("cAtkAdd"), // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
-    HATE_ATTACK("attackHate"),
-    REAR_DAMAGE_RATE("rearDamage"),
+    PHYSICAL_DEFENCE(new PDefenseFinalizer()),
+    MAGICAL_DEFENCE(new MDefenseFinalizer()),
+    PHYSICAL_ATTACK(new PAttackFinalizer()),
+    MAGIC_ATTACK(new MAttackFinalizer()),
+    PHYSICAL_ATTACK_SPEED(new PAttackSpeedFinalizer()),
+    MAGIC_ATTACK_SPEED(new MAttackSpeedFinalizer()), // Magic Skill Casting Time Rate
+    ATK_REUSE, // Bows Hits Reuse Rate
+    SHIELD_DEFENCE(new ShieldDefenceFinalizer()),
+    CRITICAL_DAMAGE,
+    CRITICAL_DAMAGE_ADD, // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
+    HATE_ATTACK,
+    REAR_DAMAGE_RATE,
 
     // PVP BONUS
-    PVP_PHYSICAL_ATTACK_DAMAGE("pvpPhysDmg"),
-    PVP_MAGICAL_SKILL_DAMAGE("pvpMagicalDmg"),
-    PVP_PHYSICAL_SKILL_DAMAGE("pvpPhysSkillsDmg"),
-    PVP_PHYSICAL_ATTACK_DEFENCE("pvpPhysDef"),
-    PVP_MAGICAL_SKILL_DEFENCE("pvpMagicalDef"),
-    PVP_PHYSICAL_SKILL_DEFENCE("pvpPhysSkillsDef"),
+    PVP_PHYSICAL_ATTACK_DAMAGE,
+    PVP_MAGICAL_SKILL_DAMAGE,
+    PVP_PHYSICAL_SKILL_DAMAGE,
+    PVP_PHYSICAL_ATTACK_DEFENCE,
+    PVP_MAGICAL_SKILL_DEFENCE,
+    PVP_PHYSICAL_SKILL_DEFENCE,
 
     // PVE BONUS
-    PVE_PHYSICAL_ATTACK_DAMAGE("pvePhysDmg"),
-    PVE_PHYSICAL_SKILL_DAMAGE("pvePhysSkillsDmg"),
-    PVE_MAGICAL_SKILL_DAMAGE("pveMagicalDmg"),
-    PVE_PHYSICAL_ATTACK_DEFENCE("pvePhysDef"),
-    PVE_PHYSICAL_SKILL_DEFENCE("pvePhysSkillsDef"),
-    PVE_MAGICAL_SKILL_DEFENCE("pveMagicalDef"),
-    PVE_RAID_PHYSICAL_ATTACK_DEFENCE("pveRaidPhysDef"),
-    PVE_RAID_PHYSICAL_SKILL_DEFENCE("pveRaidPhysSkillsDef"),
-    PVE_RAID_MAGICAL_SKILL_DEFENCE("pveRaidMagicalDef"),
+    PVE_PHYSICAL_ATTACK_DAMAGE,
+    PVE_PHYSICAL_SKILL_DAMAGE,
+    PVE_MAGICAL_SKILL_DAMAGE,
+    PVE_PHYSICAL_ATTACK_DEFENCE,
+    PVE_PHYSICAL_SKILL_DEFENCE,
+    PVE_MAGICAL_SKILL_DEFENCE,
+    PVE_RAID_PHYSICAL_ATTACK_DEFENCE,
+    PVE_RAID_PHYSICAL_SKILL_DEFENCE,
+    PVE_RAID_MAGICAL_SKILL_DEFENCE,
 
     // FIXED BONUS
-    PVP_DAMAGE_TAKEN("pvpDamageTaken"),
-    PVE_DAMAGE_TAKEN("pveDamageTaken"),
+    PVP_DAMAGE_TAKEN,
+    PVE_DAMAGE_TAKEN,
 
     // ATTACK & DEFENCE RATES
-    MAGIC_CRITICAL_DAMAGE("mCritPower"),
-    PHYSICAL_SKILL_POWER("physicalSkillPower"), // Adding skill power (not multipliers) results in points added directly to final value unmodified by defence, traits, elements, criticals etc.
+    MAGIC_CRITICAL_DAMAGE,
+    PHYSICAL_SKILL_POWER, // Adding skill power (not multipliers) results in points added directly to final value unmodified by defence, traits, elements, criticals etc.
     // Even when damage is 0 due to general trait immune multiplier, added skill power is active and clearly visible (damage not being 0 but at the value of added skill power).
-    MAGICAL_SKILL_POWER("magicalSkillPower"),
-    SKILL_POWER_ADD("skillPowerAdd"),
-    CRITICAL_DAMAGE_SKILL("cAtkSkill"),
-    CRITICAL_DAMAGE_SKILL_ADD("cAtkSkillAdd"),
-    MAGIC_CRITICAL_DAMAGE_ADD("mCritPowerAdd"),
-    SHIELD_DEFENCE_RATE("rShld", new ShieldDefenceRateFinalizer()),
-    CRITICAL_RATE("rCrit", new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, null, 1d),
-    CRITICAL_RATE_SKILL("rCritSkill", Stat::defaultValue, MathUtil::add, MathUtil::add, null, 1d),
-    MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
-    BLOW_RATE("blowRate"),
-    DEFENCE_CRITICAL_RATE("defCritRate"),
-    DEFENCE_CRITICAL_RATE_ADD("defCritRateAdd"),
-    DEFENCE_MAGIC_CRITICAL_RATE("defMCritRate"),
-    DEFENCE_MAGIC_CRITICAL_RATE_ADD("defMCritRateAdd"),
-    DEFENCE_CRITICAL_DAMAGE("defCritDamage"),
-    DEFENCE_MAGIC_CRITICAL_DAMAGE("defMCritDamage"),
-    DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD("defMCritDamageAdd"),
-    DEFENCE_CRITICAL_DAMAGE_ADD("defCritDamageAdd"), // Resistance to critical damage in value (Example: +100 will be 100 more critical damage, NOT 100% more).
-    DEFENCE_CRITICAL_DAMAGE_SKILL("defCAtkSkill"),
-    DEFENCE_CRITICAL_DAMAGE_SKILL_ADD("defCAtkSkillAdd"),
-    INSTANT_KILL_RESIST("instantKillResist"),
-    EXPSP_RATE("rExp"),
-    BONUS_EXP("bonusExp"),
-    BONUS_SP("bonusSp"),
-    BONUS_DROP_AMOUNT("bonusDropAmount"),
-    BONUS_DROP_RATE("bonusDropRate"),
-    BONUS_SPOIL_RATE("bonusSpoilRate"),
-    ATTACK_CANCEL("cancel"),
+    MAGICAL_SKILL_POWER,
+    SKILL_POWER_ADD,
+    CRITICAL_DAMAGE_SKILL,
+    CRITICAL_DAMAGE_SKILL_ADD,
+    MAGIC_CRITICAL_DAMAGE_ADD,
+    SHIELD_DEFENCE_RATE(new ShieldDefenceRateFinalizer()),
+    CRITICAL_RATE(new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, null, 1d),
+    CRITICAL_RATE_SKILL(Stat::defaultValue, MathUtil::add, MathUtil::add, null, 1d),
+    MAGIC_CRITICAL_RATE(new MCritRateFinalizer()),
+    BLOW_RATE,
+    DEFENCE_CRITICAL_RATE,
+    DEFENCE_CRITICAL_RATE_ADD,
+    DEFENCE_MAGIC_CRITICAL_RATE,
+    DEFENCE_MAGIC_CRITICAL_RATE_ADD,
+    DEFENCE_CRITICAL_DAMAGE,
+    DEFENCE_MAGIC_CRITICAL_DAMAGE,
+    DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD,
+    DEFENCE_CRITICAL_DAMAGE_ADD, // Resistance to critical damage in value (Example: +100 will be 100 more critical damage, NOT 100% more).
+    DEFENCE_CRITICAL_DAMAGE_SKILL,
+    DEFENCE_CRITICAL_DAMAGE_SKILL_ADD,
+    INSTANT_KILL_RESIST,
+    EXPSP_RATE,
+    BONUS_EXP,
+    BONUS_SP,
+    BONUS_DROP_AMOUNT,
+    BONUS_DROP_RATE,
+    BONUS_SPOIL_RATE,
+    ATTACK_CANCEL,
 
     // ACCURACY & RANGE
-    ACCURACY("accCombat", new PAccuracyFinalizer()),
-    ACCURACY_MAGIC("accMagic", new MAccuracyFinalizer()),
-    EVASION_RATE("rEvas", new PEvasionRateFinalizer()),
-    MAGIC_EVASION_RATE("mEvas", new MEvasionRateFinalizer()),
-    PHYSICAL_ATTACK_RANGE("pAtkRange", new PRangeFinalizer()),
-    MAGIC_ATTACK_RANGE("mAtkRange"),
-    ATTACK_COUNT_MAX("atkCountMax"),
-    PHYSICAL_POLEARM_TARGET_SINGLE("polearmSingleTarget"),
-    HIT_AT_NIGHT("hitAtNight"),
+    ACCURACY(new PAccuracyFinalizer()),
+    ACCURACY_MAGIC(new MAccuracyFinalizer()),
+    EVASION_RATE(new PEvasionRateFinalizer()),
+    MAGIC_EVASION_RATE(new MEvasionRateFinalizer()),
+    PHYSICAL_ATTACK_RANGE(new PRangeFinalizer()),
+    MAGIC_ATTACK_RANGE,
+    ATTACK_COUNT_MAX,
+    PHYSICAL_POLEARM_TARGET_SINGLE,
+    HIT_AT_NIGHT,
 
     // Run speed, walk & escape speed are calculated proportionally, magic speed is a buff
-    SPEED("Speed"),
-    RUN_SPEED("runSpd", new SpeedFinalizer()),
-    WALK_SPEED("walkSpd", new SpeedFinalizer()),
-    SWIM_RUN_SPEED("fastSwimSpd", new SpeedFinalizer()),
-    SWIM_WALK_SPEED("slowSimSpd", new SpeedFinalizer()),
-    FLY_RUN_SPEED("fastFlySpd", new SpeedFinalizer()),
-    FLY_WALK_SPEED("slowFlySpd", new SpeedFinalizer()),
+    SPEED,
+    RUN_SPEED(new SpeedFinalizer()),
+    WALK_SPEED(new SpeedFinalizer()),
+    SWIM_RUN_SPEED(new SpeedFinalizer()),
+    SWIM_WALK_SPEED(new SpeedFinalizer()),
+    FLY_RUN_SPEED(new SpeedFinalizer()),
+    FLY_WALK_SPEED(new SpeedFinalizer()),
 
     // BASIC STATS
-    STAT_STR("STR", new BaseStatsFinalizer()),
-    STAT_CON("CON", new BaseStatsFinalizer()),
-    STAT_DEX("DEX", new BaseStatsFinalizer()),
-    STAT_INT("INT", new BaseStatsFinalizer()),
-    STAT_WIT("WIT", new BaseStatsFinalizer()),
-    STAT_MEN("MEN", new BaseStatsFinalizer()),
+    STAT_STR(new BaseStatsFinalizer()),
+    STAT_CON(new BaseStatsFinalizer()),
+    STAT_DEX(new BaseStatsFinalizer()),
+    STAT_INT(new BaseStatsFinalizer()),
+    STAT_WIT(new BaseStatsFinalizer()),
+    STAT_MEN(new BaseStatsFinalizer()),
 
     // Special stats, share one slot in Calculator
 
     // VARIOUS
-    BREATH("breath"),
-    FALL("fall"),
-    FISHING_EXP_SP_BONUS("fishingExpSpBonus"),
+    BREATH,
+    FALL,
+    FISHING_EXP_SP_BONUS,
 
     // VULNERABILITIES
-    DAMAGE_ZONE_VULN("damageZoneVuln"),
-    RESIST_DISPEL_BUFF("cancelVuln"), // Resistance for cancel type skills
-    RESIST_ABNORMAL_DEBUFF("debuffVuln"),
+    DAMAGE_ZONE_VULN,
+    RESIST_DISPEL_BUFF, // Resistance for cancel type skills
+    RESIST_ABNORMAL_DEBUFF,
 
     // RESISTANCES
-    FIRE_RES("fireRes", new AttributeFinalizer(AttributeType.FIRE, false)),
-    WIND_RES("windRes", new AttributeFinalizer(AttributeType.WIND, false)),
-    WATER_RES("waterRes", new AttributeFinalizer(AttributeType.WATER, false)),
-    EARTH_RES("earthRes", new AttributeFinalizer(AttributeType.EARTH, false)),
-    HOLY_RES("holyRes", new AttributeFinalizer(AttributeType.HOLY, false)),
-    DARK_RES("darkRes", new AttributeFinalizer(AttributeType.DARK, false)),
-    BASE_ATTRIBUTE_RES("baseAttrRes"),
-    MAGIC_SUCCESS_RES("magicSuccRes"),
-    // BUFF_IMMUNITY("buffImmunity"), //TODO: Implement me
-    ABNORMAL_RESIST_PHYSICAL("abnormalResPhysical"),
-    ABNORMAL_RESIST_MAGICAL("abnormalResMagical"),
+    FIRE_RES(new AttributeFinalizer(AttributeType.FIRE, false)),
+    WIND_RES(new AttributeFinalizer(AttributeType.WIND, false)),
+    WATER_RES(new AttributeFinalizer(AttributeType.WATER, false)),
+    EARTH_RES(new AttributeFinalizer(AttributeType.EARTH, false)),
+    HOLY_RES(new AttributeFinalizer(AttributeType.HOLY, false)),
+    DARK_RES(new AttributeFinalizer(AttributeType.DARK, false)),
+    BASE_ATTRIBUTE_RES,
+    MAGIC_SUCCESS_RES,
+    // BUFF_IMMUNITY, //TODO: Implement me
+    ABNORMAL_RESIST_PHYSICAL,
+    ABNORMAL_RESIST_MAGICAL,
 
     // ELEMENT POWER
-    FIRE_POWER("firePower", new AttributeFinalizer(AttributeType.FIRE, true)),
-    WATER_POWER("waterPower", new AttributeFinalizer(AttributeType.WATER, true)),
-    WIND_POWER("windPower", new AttributeFinalizer(AttributeType.WIND, true)),
-    EARTH_POWER("earthPower", new AttributeFinalizer(AttributeType.EARTH, true)),
-    HOLY_POWER("holyPower", new AttributeFinalizer(AttributeType.HOLY, true)),
-    DARK_POWER("darkPower", new AttributeFinalizer(AttributeType.DARK, true)),
+    FIRE_POWER(new AttributeFinalizer(AttributeType.FIRE, true)),
+    WATER_POWER(new AttributeFinalizer(AttributeType.WATER, true)),
+    WIND_POWER(new AttributeFinalizer(AttributeType.WIND, true)),
+    EARTH_POWER(new AttributeFinalizer(AttributeType.EARTH, true)),
+    HOLY_POWER(new AttributeFinalizer(AttributeType.HOLY, true)),
+    DARK_POWER(new AttributeFinalizer(AttributeType.DARK, true)),
 
     // PROFICIENCY
-    REFLECT_DAMAGE_PERCENT("reflectDam"),
-    REFLECT_DAMAGE_PERCENT_DEFENSE("reflectDamDef"),
-    REFLECT_SKILL_MAGIC("reflectSkillMagic"), // Need rework
-    REFLECT_SKILL_PHYSIC("reflectSkillPhysic"), // Need rework
-    VENGEANCE_SKILL_MAGIC_DAMAGE("vengeanceMdam"),
-    VENGEANCE_SKILL_PHYSICAL_DAMAGE("vengeancePdam"),
-    ABSORB_DAMAGE_PERCENT("absorbDam"),
-    ABSORB_DAMAGE_CHANCE("absorbDamChance", new VampiricChanceFinalizer()),
-    ABSORB_DAMAGE_DEFENCE("absorbDamDefence"),
-    TRANSFER_DAMAGE_SUMMON_PERCENT("transDam"),
-    MANA_SHIELD_PERCENT("manaShield"),
-    TRANSFER_DAMAGE_TO_PLAYER("transDamToPlayer"),
-    ABSORB_MANA_DAMAGE_PERCENT("absorbDamMana"),
+    REFLECT_DAMAGE_PERCENT,
+    REFLECT_DAMAGE_PERCENT_DEFENSE,
+    REFLECT_SKILL_MAGIC, // Need rework
+    REFLECT_SKILL_PHYSIC, // Need rework
+    VENGEANCE_SKILL_MAGIC_DAMAGE,
+    VENGEANCE_SKILL_PHYSICAL_DAMAGE,
+    ABSORB_DAMAGE_PERCENT,
+    ABSORB_DAMAGE_CHANCE(new VampiricChanceFinalizer()),
+    ABSORB_DAMAGE_DEFENCE,
+    TRANSFER_DAMAGE_SUMMON_PERCENT,
+    MANA_SHIELD_PERCENT,
+    TRANSFER_DAMAGE_TO_PLAYER,
+    ABSORB_MANA_DAMAGE_PERCENT,
 
-    WEIGHT_LIMIT("weightLimit"),
-    WEIGHT_PENALTY("weightPenalty"),
+    WEIGHT_LIMIT,
+    WEIGHT_PENALTY,
 
     // ExSkill
-    INVENTORY_NORMAL("inventoryLimit"),
-    STORAGE_PRIVATE("whLimit"),
-    TRADE_SELL("PrivateSellLimit"),
-    TRADE_BUY("PrivateBuyLimit"),
-    RECIPE_DWARVEN("DwarfRecipeLimit"),
-    RECIPE_COMMON("CommonRecipeLimit"),
+    INVENTORY_NORMAL,
+    STORAGE_PRIVATE,
+    TRADE_SELL,
+    TRADE_BUY,
+    RECIPE_DWARVEN,
+    RECIPE_COMMON,
 
     // Skill mastery
-    SKILL_CRITICAL("skillCritical"),
-    SKILL_CRITICAL_PROBABILITY("skillCriticalProbability"),
+    SKILL_CRITICAL,
+    SKILL_CRITICAL_PROBABILITY,
 
     // Vitality
-    VITALITY_CONSUME_RATE("vitalityConsumeRate"),
-    VITALITY_EXP_RATE("vitalityExpRate"),
+    VITALITY_CONSUME_RATE,
+    VITALITY_EXP_RATE,
 
     // Souls
-    MAX_SOULS("maxSouls"),
+    MAX_SOULS,
 
-    REDUCE_EXP_LOST_BY_PVP("reduceExpLostByPvp"),
-    REDUCE_EXP_LOST_BY_MOB("reduceExpLostByMob"),
-    REDUCE_EXP_LOST_BY_RAID("reduceExpLostByRaid"),
+    REDUCE_EXP_LOST_BY_PVP,
+    REDUCE_EXP_LOST_BY_MOB,
+    REDUCE_EXP_LOST_BY_RAID,
 
-    REDUCE_DEATH_PENALTY_BY_PVP("reduceDeathPenaltyByPvp"),
-    REDUCE_DEATH_PENALTY_BY_MOB("reduceDeathPenaltyByMob"),
-    REDUCE_DEATH_PENALTY_BY_RAID("reduceDeathPenaltyByRaid"),
+    REDUCE_DEATH_PENALTY_BY_PVP,
+    REDUCE_DEATH_PENALTY_BY_MOB,
+    REDUCE_DEATH_PENALTY_BY_RAID,
 
     // Brooches
-    BROOCH_JEWELS("broochJewels"),
+    BROOCH_JEWELS,
 
     // Agathions
-    AGATHION_SLOTS("agathionSlots"),
+    AGATHION_SLOTS,
 
     // Artifacts
-    ARTIFACT_SLOTS("artifactSlots"),
+    ARTIFACT_SLOTS,
 
     // Summon Points
-    MAX_SUMMON_POINTS("summonPoints"),
+    MAX_SUMMON_POINTS,
 
     // Cubic Count
-    MAX_CUBIC("cubicCount"),
+    MAX_CUBIC,
 
     // The maximum allowed range to be damaged/debuffed from.
-    SPHERIC_BARRIER_RANGE("sphericBarrier"),
+    SPHERIC_BARRIER_RANGE,
 
     // Blocks given amount of debuffs.
-    DEBUFF_BLOCK("debuffBlock"),
+    DEBUFF_BLOCK,
 
     // Affects the random weapon damage.
-    RANDOM_DAMAGE("randomDamage", new RandomDamageFinalizer()),
+    RANDOM_DAMAGE(new RandomDamageFinalizer()),
 
     // Affects the random weapon damage.
-    DAMAGE_LIMIT("damageCap"),
+    DAMAGE_LIMIT,
 
     // Maximun momentum one can charge
-    MAX_MOMENTUM("maxMomentum"),
+    MAX_MOMENTUM,
 
     // Which base stat ordinal should alter skill critical formula.
-    STAT_BONUS_SKILL_CRITICAL("statSkillCritical"),
-    STAT_BONUS_SPEED("statSpeed"),
-    SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer()),
-    WORLD_CHAT_POINTS("worldChatPoints"),
-    ENCHANT_RATE_BONUS("enchantBonus"),
-    ATTACK_DAMAGE("attackDamage"),
+    STAT_BONUS_SKILL_CRITICAL,
+    STAT_BONUS_SPEED,
+    SHOTS_BONUS(new ShotsBonusFinalizer()),
+    WORLD_CHAT_POINTS,
+    ENCHANT_RATE_BONUS,
+    ATTACK_DAMAGE,
 
-    ELEMENTAL_SPIRIT_BONUS_XP("elementalSpiritXp"),
-    ELEMENTAL_SPIRIT_FIRE_ATTACK("elementalSpiritFireAttack"),
-    ELEMENTAL_SPIRIT_FIRE_DEFENSE("elementalSpiritFireDefense"),
-    ELEMENTAL_SPIRIT_WATER_ATTACK("elementalSpiritWaterAttack"),
-    ELEMENTAL_SPIRIT_WATER_DEFENSE("elementalSpiritWaterDefense"),
-    ELEMENTAL_SPIRIT_WIND_ATTACK("elementalSpiritWindAttack"),
-    ELEMENTAL_SPIRIT_WIND_DEFENSE("elementalSpiritWindDefense"),
-    ELEMENTAL_SPIRIT_EARTH_ATTACK("elementalSpiritEarthAttack"),
-    ELEMENTAL_SPIRIT_EARTH_DEFENSE("elementalSpiritEarthDefense"),
-    ELEMENTAL_SPIRIT_CRITICAL_RATE("elementalSpiritCriticalRate"),
-    ELEMENTAL_SPIRIT_CRITICAL_DAMAGE("elementalSpiritCriticalDamage")
+    ELEMENTAL_SPIRIT_BONUS_XP,
+    ELEMENTAL_SPIRIT_FIRE_ATTACK,
+    ELEMENTAL_SPIRIT_FIRE_DEFENSE,
+    ELEMENTAL_SPIRIT_WATER_ATTACK,
+    ELEMENTAL_SPIRIT_WATER_DEFENSE,
+    ELEMENTAL_SPIRIT_WIND_ATTACK,
+    ELEMENTAL_SPIRIT_WIND_DEFENSE,
+    ELEMENTAL_SPIRIT_EARTH_ATTACK,
+    ELEMENTAL_SPIRIT_EARTH_DEFENSE,
+    ELEMENTAL_SPIRIT_CRITICAL_RATE,
+    ELEMENTAL_SPIRIT_CRITICAL_DAMAGE
     ;
 
-    private final String _value;
     private final IStatsFunction _valueFinalizer;
     private final BiFunction<Double, Double, Double> _addFunction;
     private final BiFunction<Double, Double, Double> _mulFunction;
@@ -268,34 +266,22 @@ public enum Stat {
     private final Double _resetMulValue;
     private boolean hasDefaultFinalizer ;
 
-    Stat(String xmlString) {
-        this(xmlString, Stat::defaultValue, MathUtil::add, MathUtil::mul, null, null);
+    Stat() {
+        this(Stat::defaultValue, MathUtil::add, MathUtil::mul, null, null);
         hasDefaultFinalizer = true;
     }
 
-    Stat(String xmlString, IStatsFunction valueFinalizer) {
-        this(xmlString, valueFinalizer, MathUtil::add, MathUtil::mul, null, null);
+    Stat(IStatsFunction valueFinalizer) {
+        this(valueFinalizer, MathUtil::add, MathUtil::mul, null, null);
 
     }
 
-    Stat(String xmlString, IStatsFunction valueFinalizer, BiFunction<Double, Double, Double> addFunction, BiFunction<Double, Double, Double> mulFunction, Double resetAddValue, Double resetMulValue) {
-        _value = xmlString;
+    Stat(IStatsFunction valueFinalizer, BiFunction<Double, Double, Double> addFunction, BiFunction<Double, Double, Double> mulFunction, Double resetAddValue, Double resetMulValue) {
         _valueFinalizer = valueFinalizer;
         _addFunction = addFunction;
         _mulFunction = mulFunction;
         _resetAddValue = resetAddValue;
         _resetMulValue = resetMulValue;
-    }
-
-    public static Stat valueOfXml(String name) {
-        name = name.intern();
-        for (Stat s : values()) {
-            if (s.getValue().equals(name)) {
-                return s;
-            }
-        }
-
-        throw new NoSuchElementException("Unknown name '" + name + "' for enum " + Stat.class.getSimpleName());
     }
 
     public static double weaponBaseValue(Creature creature, Stat stat) {
@@ -305,7 +291,7 @@ public enum Stat {
     public static double defaultValue(Creature creature, Optional<Double> base, Stat stat) {
         final double mul = creature.getStats().getMul(stat);
         final double add = creature.getStats().getAdd(stat);
-        return base.isPresent() ? defaultValue(creature, stat, base.get()) : mul * (add + creature.getStats().getMoveTypeValue(stat, creature.getMoveType()));
+        return base.map(aDouble -> defaultValue(creature, stat, aDouble)).orElseGet(() -> mul * (add + creature.getStats().getMoveTypeValue(stat, creature.getMoveType())));
     }
 
     public static double defaultValue(Creature creature, Stat stat, double baseValue) {
@@ -314,15 +300,6 @@ public enum Stat {
         return (baseValue * mul) + add + creature.getStats().getMoveTypeValue(stat, creature.getMoveType());
     }
 
-    public String getValue() {
-        return _value;
-    }
-
-    /**
-     * @param creature
-     * @param baseValue
-     * @return the final value
-     */
     public Double finalize(Creature creature, Optional<Double> baseValue) {
         try {
             return _valueFinalizer.calc(creature, baseValue, this);

@@ -653,7 +653,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="28.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
 		</stats>
 	</armor>
 
@@ -663,7 +663,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="28.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="28.0"/>
 		</stats>
 	</armor>
 
@@ -673,8 +673,8 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="80.0"/>
-			<stat type="maxMp" value="34.0"/>
+			<stat type="MAGICAL_DEFENCE" value="80.0"/>
+			<stat type="MAX_MP" value="34.0"/>
 		</stats>
 		<skills>
 			<skill id="45017" level="3" value="-1"/>  <!-- TODO Skill not found -->
@@ -687,8 +687,8 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3561" level="3" value="-1"/>  <!-- Damaged Baium's Ring -->
@@ -701,8 +701,8 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
@@ -715,8 +715,8 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
@@ -730,8 +730,8 @@
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="71.0"/>
-			<stat type="maxMp" value="31.0"/>
+			<stat type="MAGICAL_DEFENCE" value="71.0"/>
+			<stat type="MAX_MP" value="31.0"/>
 		</stats>
 		<skills>
 			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->

@@ -6,7 +6,7 @@
 		<attributes weight="1170" price="519000" commission-type="FEET" />
 		<crystal type="B" count="69"/>
 		<stats>
-			<stat type="pDef" value="41.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="41.0"/>
 		</stats>
 	</armor>
 
@@ -16,7 +16,7 @@
 		<attributes weight="1130" price="804000" commission-type="FEET" />
 		<crystal type="B" count="107"/>
 		<stats>
-			<stat type="pDef" value="44.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="44.0"/>
 		</stats>
 	</armor>
 
@@ -25,7 +25,7 @@
 		<attributes weight="1200" price="358000" commission-type="FEET" />
 		<crystal type="C" count="143"/>
 		<stats>
-			<stat type="pDef" value="39.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
 		</stats>
 	</armor>
 
@@ -34,7 +34,7 @@
 		<attributes weight="650" price="20900" commission-type="GLOVES" />
 		<crystal type="D" count="38"/>
 		<stats>
-			<stat type="pDef" value="19.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="19.0"/>
 		</stats>
 	</armor>
 
@@ -43,7 +43,7 @@
 		<attributes weight="640" price="33300" commission-type="GLOVES" />
 		<crystal type="D" count="60"/>
 		<stats>
-			<stat type="pDef" value="22.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -52,7 +52,7 @@
 		<attributes weight="630" price="74700" commission-type="GLOVES" />
 		<crystal type="D" count="135"/>
 		<stats>
-			<stat type="pDef" value="27.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="27.0"/>
 		</stats>
 	</armor>
 
@@ -61,7 +61,7 @@
 		<attributes weight="620" price="97800" commission-type="GLOVES" />
 		<crystal type="D" count="177"/>
 		<stats>
-			<stat type="pDef" value="29.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
 		</stats>
 	</armor>
 
@@ -70,7 +70,7 @@
 		<attributes weight="600" price="245000" commission-type="GLOVES" />
 		<crystal type="C" count="98"/>
 		<stats>
-			<stat type="pDef" value="36.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 
@@ -79,7 +79,7 @@
 		<attributes weight="1920" price="275100" commission-type="GLOVES" />
 		<crystal type="C" count="143"/>
 		<stats>
-			<stat type="pDef" value="39.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
 		</stats>
 	</armor>
 
@@ -89,7 +89,7 @@
 		<attributes weight="590" price="519000" commission-type="GLOVES" />
 		<crystal type="B" count="69"/>
 		<stats>
-			<stat type="pDef" value="41.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="41.0"/>
 		</stats>
 	</armor>
 
@@ -98,9 +98,9 @@
 		<attributes weight="1380" price="12900" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="90.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="90.0"/>
 		</stats>
 	</armor>
 
@@ -109,9 +109,9 @@
 		<attributes weight="1370" price="21900" commission-type="SHIELD" />
 		<crystal type="D" count="39"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="101.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="101.0"/>
 		</stats>
 	</armor>
 
@@ -120,9 +120,9 @@
 		<attributes weight="1350" price="35000" commission-type="SHIELD" />
 		<crystal type="D" count="63"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="114.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="114.0"/>
 		</stats>
 	</armor>
 
@@ -131,9 +131,9 @@
 		<attributes weight="1340" price="53300" commission-type="SHIELD" />
 		<crystal type="D" count="96"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="128.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="128.0"/>
 		</stats>
 	</armor>
 
@@ -142,9 +142,9 @@
 		<attributes weight="1320" price="78400" commission-type="SHIELD" />
 		<crystal type="D" count="142"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="142.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="142.0"/>
 		</stats>
 	</armor>
 
@@ -153,9 +153,9 @@
 		<attributes weight="1310" price="103000" commission-type="SHIELD" />
 		<crystal type="D" count="187"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="154.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="154.0"/>
 		</stats>
 	</armor>
 
@@ -164,9 +164,9 @@
 		<attributes weight="1290" price="133000" commission-type="SHIELD" />
 		<crystal type="C" count="53"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="166.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="166.0"/>
 		</stats>
 	</armor>
 
@@ -175,9 +175,9 @@
 		<attributes weight="1260" price="169000" commission-type="SHIELD" />
 		<crystal type="C" count="67"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="178.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="178.0"/>
 		</stats>
 	</armor>
 
@@ -186,9 +186,9 @@
 		<attributes weight="1210" price="545000" commission-type="SHIELD" />
 		<crystal type="B" count="72"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="216.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="216.0"/>
 		</stats>
 	</armor>
 
@@ -197,9 +197,9 @@
 		<attributes weight="1190" price="935000" commission-type="SHIELD" />
 		<crystal type="A" count="75"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="243.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="243.0"/>
 		</stats>
 	</armor>
 
@@ -208,9 +208,9 @@
 		<attributes weight="1210" price="545000" commission-type="SHIELD" />
 		<crystal type="B" count="72"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="216.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="216.0"/>
 		</stats>
 	</armor>
 

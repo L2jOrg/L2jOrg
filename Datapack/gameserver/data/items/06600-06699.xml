@@ -8,12 +8,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="301.0"/>
-			<stat type="mAtk" value="166.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="301.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3578" value="-1"/>  <!-- Special Ability: Infinity Sword -->
@@ -29,12 +29,12 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="368.0"/>
-			<stat type="mAtk" value="166.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="368.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3582" value="-1"/>  <!-- Special Ability: Infinity Slasher -->
@@ -50,13 +50,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="301.0"/>
-			<stat type="mAtk" value="166.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="301.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3580" value="-1"/>  <!-- Special Ability: Infinity Axe -->
@@ -72,13 +72,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="255.0"/>
-			<stat type="mAtk" value="204.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="255.0"/>
+			<stat type="MAGIC_ATTACK" value="204.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3597" value="-1"/>  <!-- Special Ability: Infinity Rod -->
@@ -94,13 +94,13 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="295.0"/>
-			<stat type="mAtk" value="219.0"/>
-			<stat type="rCrit" value="6.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="20.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="295.0"/>
+			<stat type="MAGIC_ATTACK" value="219.0"/>
+			<stat type="CRITICAL_RATE" value="6.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3595" value="-1"/>  <!-- Special Ability: Infinity Scepter -->
@@ -116,13 +116,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="272.0"/>
-			<stat type="mAtk" value="166.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="433.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="272.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3589" value="-1"/>  <!-- Special Ability: Infinity Dagger -->
@@ -138,13 +138,13 @@
 		<damage radius="32" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="368.0"/>
-			<stat type="mAtk" value="166.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="368.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3587" value="-1"/>  <!-- Special Ability: Infinity Fighter -->
@@ -160,13 +160,13 @@
 		<damage radius="10" angle="360"/>
 		<consume  soulshots="2" mana="6"/>
 		<stats>
-			<stat type="pAtk" value="665.0"/>
-			<stat type="mAtk" value="177.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="293.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="500.0"/>
+			<stat type="PHYSICAL_ATTACK" value="665.0"/>
+			<stat type="MAGIC_ATTACK" value="177.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
 		</stats>
 		<skills>
 			<skill id="3593" value="-1"/>  <!-- Special Ability: Infinity Bow -->
@@ -182,12 +182,12 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="361.0"/>
-			<stat type="mAtk" value="164.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="361.0"/>
+			<stat type="MAGIC_ATTACK" value="164.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3585" value="-1"/>  <!-- Special Ability: Infinity Dualsword -->
@@ -203,13 +203,13 @@
 		<damage radius="66" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="301.0"/>
-			<stat type="mAtk" value="166.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="80.0"/>
+			<stat type="PHYSICAL_ATTACK" value="301.0"/>
+			<stat type="MAGIC_ATTACK" value="166.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 		</stats>
 		<skills>
 			<skill id="3591" value="-1"/>  <!-- Special Ability: Infinity Spear -->
@@ -250,8 +250,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
-			<stat type="maxMp" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
+			<stat type="MAX_MP" value="21.0"/>
 		</stats>
 		<skills>
 			<skill id="3562" value="-1"/>  <!-- Queen Ant's Ring -->
@@ -264,8 +264,8 @@
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="51.0"/>
-			<stat type="maxMp" value="19.0"/>
+			<stat type="MAGICAL_DEFENCE" value="51.0"/>
+			<stat type="MAX_MP" value="19.0"/>
 		</stats>
 		<skills>
 			<skill id="3560" value="-1"/>  <!-- Orfen's Earring -->
@@ -278,8 +278,8 @@
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="32.0"/>
-			<stat type="maxMp" value="9.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
+			<stat type="MAX_MP" value="9.0"/>
 		</stats>
 		<skills>
 			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
@@ -292,7 +292,7 @@
 		<attributes weight="7620" price="12781000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="193.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="193.0"/>
 		</stats>
 	</armor>
 
@@ -302,7 +302,7 @@
 		<attributes weight="3260" price="7988000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="121.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="121.0"/>
 		</stats>
 	</armor>
 
@@ -312,7 +312,7 @@
 		<attributes weight="540" price="3195000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="55.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="55.0"/>
 		</stats>
 	</armor>
 
@@ -322,7 +322,7 @@
 		<attributes weight="1110" price="3195000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="55.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="55.0"/>
 		</stats>
 	</armor>
 
@@ -332,9 +332,9 @@
 		<attributes weight="1170" price="3355000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="276.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="276.0"/>
 		</stats>
 	</armor>
 
@@ -344,7 +344,7 @@
 		<attributes weight="550" price="4793000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="83.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="83.0"/>
 		</stats>
 	</armor>
 
@@ -354,7 +354,7 @@
 		<attributes weight="4950" price="15577000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="236.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="236.0"/>
 		</stats>
 	</armor>
 
@@ -364,7 +364,7 @@
 		<attributes weight="540" price="3195000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="55.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="55.0"/>
 		</stats>
 	</armor>
 
@@ -374,7 +374,7 @@
 		<attributes weight="1110" price="3195000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="55.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="55.0"/>
 		</stats>
 	</armor>
 
@@ -384,7 +384,7 @@
 		<attributes weight="550" price="4793000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="83.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="83.0"/>
 		</stats>
 	</armor>
 
@@ -394,8 +394,8 @@
 		<attributes weight="2300" price="15577000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="157.0"/>
-			<stat type="maxMp" value="866.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="157.0"/>
+			<stat type="MAX_MP" value="866.0"/>
 		</stats>
 	</armor>
 
@@ -405,7 +405,7 @@
 		<attributes weight="540" price="3195000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="55.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="55.0"/>
 		</stats>
 	</armor>
 
@@ -415,7 +415,7 @@
 		<attributes weight="1110" price="3195000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="55.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="55.0"/>
 		</stats>
 	</armor>
 
@@ -425,7 +425,7 @@
 		<attributes weight="550" price="4793000" />
 		<crystal type="S"/>
 		<stats>
-			<stat type="pDef" value="83.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="83.0"/>
 		</stats>
 	</armor>
 

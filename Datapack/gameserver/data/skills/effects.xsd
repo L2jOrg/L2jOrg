@@ -278,7 +278,7 @@
     <xs:complexType name="StatByMoveType">
         <xs:complexContent>
             <xs:extension base="Effect">
-                <xs:attribute name="stat" type="StatName" use="required"/>
+                <xs:attribute name="stat" type="Stat" use="required"/>
                 <xs:attribute name="type" type="MoveType" use="required"/>
             </xs:extension>
         </xs:complexContent>
@@ -341,7 +341,7 @@
         <xs:sequence>
             <xs:element name="power" type="MappedLevelValue"/>
         </xs:sequence>
-        <xs:attribute name="type" type="StatName" use="required"/>
+        <xs:attribute name="type" type="Stat" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="ClanSystemMessageEffect">
@@ -718,7 +718,7 @@
         <xs:complexContent>
             <xs:extension base="Effect">
                 <xs:attribute name="position" type="POSITION" use="required"/>
-                <xs:attribute name="stat" type="StatName" use="required"/>
+                <xs:attribute name="stat" type="Stat" use="required"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -840,8 +840,8 @@
                     <xs:element name="weapon-type" type="WeaponTypeList" minOccurs="0"/>
                     <xs:element name="armor-type" type="ArmorTypeList" minOccurs="0"/>
                 </xs:sequence>
-                <xs:attribute name="stat" type="StatName" use="required"/>
-                <xs:attribute name="stat-add" type="StatName"/>
+                <xs:attribute name="stat" type="Stat" use="required"/>
+                <xs:attribute name="stat-add" type="Stat"/>
                 <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
             </xs:extension>
         </xs:complexContent>
@@ -908,189 +908,6 @@
             <xs:enumeration value="PVP"/>
             <xs:enumeration value="PVE"/>
             <xs:enumeration value="END"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <!-- TODO use Stats. Change the Stats simpleType on commons.xsd -->
-    <xs:simpleType name="StatName">
-        <xs:restriction base="xs:token">
-            <xs:enumeration value="MAX_HP"/>
-            <xs:enumeration value="MAX_MP"/>
-            <xs:enumeration value="MAX_CP"/>
-            <xs:enumeration value="MAX_RECOVERABLE_HP"/>
-            <xs:enumeration value="MAX_RECOVERABLE_MP"/>
-            <xs:enumeration value="MAX_RECOVERABLE_CP"/>
-            <xs:enumeration value="REGENERATE_HP_RATE"/>
-            <xs:enumeration value="REGENERATE_CP_RATE"/>
-            <xs:enumeration value="REGENERATE_MP_RATE"/>
-            <xs:enumeration value="ADDITIONAL_POTION_HP"/>
-            <xs:enumeration value="ADDITIONAL_POTION_MP"/>
-            <xs:enumeration value="ADDITIONAL_POTION_CP"/>
-            <xs:enumeration value="MANA_CHARGE"/>
-            <xs:enumeration value="HEAL_EFFECT"/>
-            <xs:enumeration value="HEAL_EFFECT_ADD"/>
-            <xs:enumeration value="PHYSICAL_DEFENCE"/>
-            <xs:enumeration value="MAGICAL_DEFENCE"/>
-            <xs:enumeration value="PHYSICAL_ATTACK"/>
-            <xs:enumeration value="MAGIC_ATTACK"/>
-            <xs:enumeration value="PHYSICAL_ATTACK_SPEED"/>
-            <xs:enumeration value="MAGIC_ATTACK_SPEED"/>
-            <xs:enumeration value="ATK_REUSE"/>
-            <xs:enumeration value="SHIELD_DEFENCE"/>
-            <xs:enumeration value="CRITICAL_DAMAGE"/>
-            <xs:enumeration value="CRITICAL_DAMAGE_ADD"/>
-            <xs:enumeration value="HATE_ATTACK"/>
-            <xs:enumeration value="REAR_DAMAGE_RATE"/>
-            <xs:enumeration value="PVP_PHYSICAL_ATTACK_DAMAGE"/>
-            <xs:enumeration value="PVP_MAGICAL_SKILL_DAMAGE"/>
-            <xs:enumeration value="PVP_PHYSICAL_SKILL_DAMAGE"/>
-            <xs:enumeration value="PVP_PHYSICAL_ATTACK_DEFENCE"/>
-            <xs:enumeration value="PVP_MAGICAL_SKILL_DEFENCE"/>
-            <xs:enumeration value="PVP_PHYSICAL_SKILL_DEFENCE"/>
-            <xs:enumeration value="PVE_PHYSICAL_ATTACK_DAMAGE"/>
-            <xs:enumeration value="PVE_PHYSICAL_SKILL_DAMAGE"/>
-            <xs:enumeration value="PVE_MAGICAL_SKILL_DAMAGE"/>
-            <xs:enumeration value="PVE_PHYSICAL_ATTACK_DEFENCE"/>
-            <xs:enumeration value="PVE_PHYSICAL_SKILL_DEFENCE"/>
-            <xs:enumeration value="PVE_MAGICAL_SKILL_DEFENCE"/>
-            <xs:enumeration value="PVE_RAID_PHYSICAL_ATTACK_DEFENCE"/>
-            <xs:enumeration value="PVE_RAID_PHYSICAL_SKILL_DEFENCE"/>
-            <xs:enumeration value="PVE_RAID_MAGICAL_SKILL_DEFENCE"/>
-            <xs:enumeration value="PVP_DAMAGE_TAKEN"/>
-            <xs:enumeration value="PVE_DAMAGE_TAKEN"/>
-            <xs:enumeration value="MAGIC_CRITICAL_DAMAGE"/>
-            <xs:enumeration value="PHYSICAL_SKILL_POWER"/>
-            <xs:enumeration value="MAGICAL_SKILL_POWER"/>
-            <xs:enumeration value="SKILL_POWER_ADD"/>
-            <xs:enumeration value="CRITICAL_DAMAGE_SKILL"/>
-            <xs:enumeration value="CRITICAL_DAMAGE_SKILL_ADD"/>
-            <xs:enumeration value="MAGIC_CRITICAL_DAMAGE_ADD"/>
-            <xs:enumeration value="SHIELD_DEFENCE_RATE"/>
-            <xs:enumeration value="CRITICAL_RATE"/>
-            <xs:enumeration value="CRITICAL_RATE_SKILL"/>
-            <xs:enumeration value="MAGIC_CRITICAL_RATE"/>
-            <xs:enumeration value="BLOW_RATE"/>
-            <xs:enumeration value="DEFENCE_CRITICAL_RATE"/>
-            <xs:enumeration value="DEFENCE_CRITICAL_RATE_ADD"/>
-            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_RATE"/>
-            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_RATE_ADD"/>
-            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE"/>
-            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_DAMAGE"/>
-            <xs:enumeration value="DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD"/>
-            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE_ADD"/>
-            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE_SKILL"/>
-            <xs:enumeration value="DEFENCE_CRITICAL_DAMAGE_SKILL_ADD"/>
-            <xs:enumeration value="INSTANT_KILL_RESIST"/>
-            <xs:enumeration value="EXPSP_RATE"/>
-            <xs:enumeration value="BONUS_EXP"/>
-            <xs:enumeration value="BONUS_SP"/>
-            <xs:enumeration value="BONUS_DROP_AMOUNT"/>
-            <xs:enumeration value="BONUS_DROP_RATE"/>
-            <xs:enumeration value="BONUS_SPOIL_RATE"/>
-            <xs:enumeration value="ATTACK_CANCEL"/>
-            <xs:enumeration value="ACCURACY"/>
-            <xs:enumeration value="ACCURACY_MAGIC"/>
-            <xs:enumeration value="EVASION_RATE"/>
-            <xs:enumeration value="MAGIC_EVASION_RATE"/>
-            <xs:enumeration value="PHYSICAL_ATTACK_RANGE"/>
-            <xs:enumeration value="MAGIC_ATTACK_RANGE"/>
-            <xs:enumeration value="ATTACK_COUNT_MAX"/>
-            <xs:enumeration value="PHYSICAL_POLEARM_TARGET_SINGLE"/>
-            <xs:enumeration value="HIT_AT_NIGHT"/>
-            <xs:enumeration value="SPEED"/>
-            <xs:enumeration value="RUN_SPEED"/>
-            <xs:enumeration value="WALK_SPEED"/>
-            <xs:enumeration value="SWIM_RUN_SPEED"/>
-            <xs:enumeration value="SWIM_WALK_SPEED"/>
-            <xs:enumeration value="FLY_RUN_SPEED"/>
-            <xs:enumeration value="FLY_WALK_SPEED"/>
-            <xs:enumeration value="STAT_STR"/>
-            <xs:enumeration value="STAT_CON"/>
-            <xs:enumeration value="STAT_DEX"/>
-            <xs:enumeration value="STAT_INT"/>
-            <xs:enumeration value="STAT_WIT"/>
-            <xs:enumeration value="STAT_MEN"/>
-            <xs:enumeration value="BREATH"/>
-            <xs:enumeration value="FALL"/>
-            <xs:enumeration value="FISHING_EXP_SP_BONUS"/>
-            <xs:enumeration value="DAMAGE_ZONE_VULN"/>
-            <xs:enumeration value="RESIST_DISPEL_BUFF"/>
-            <xs:enumeration value="RESIST_ABNORMAL_DEBUFF"/>
-            <xs:enumeration value="FIRE_RES"/>
-            <xs:enumeration value="WIND_RES"/>
-            <xs:enumeration value="WATER_RES"/>
-            <xs:enumeration value="EARTH_RES"/>
-            <xs:enumeration value="HOLY_RES"/>
-            <xs:enumeration value="DARK_RES"/>
-            <xs:enumeration value="BASE_ATTRIBUTE_RES"/>
-            <xs:enumeration value="MAGIC_SUCCESS_RES"/>
-            <xs:enumeration value="ABNORMAL_RESIST_PHYSICAL"/>
-            <xs:enumeration value="ABNORMAL_RESIST_MAGICAL"/>
-            <xs:enumeration value="FIRE_POWER"/>
-            <xs:enumeration value="WATER_POWER"/>
-            <xs:enumeration value="WIND_POWER"/>
-            <xs:enumeration value="EARTH_POWER"/>
-            <xs:enumeration value="HOLY_POWER"/>
-            <xs:enumeration value="DARK_POWER"/>
-            <xs:enumeration value="REFLECT_DAMAGE_PERCENT"/>
-            <xs:enumeration value="REFLECT_DAMAGE_PERCENT_DEFENSE"/>
-            <xs:enumeration value="REFLECT_SKILL_MAGIC"/>
-            <xs:enumeration value="REFLECT_SKILL_PHYSIC"/>
-            <xs:enumeration value="VENGEANCE_SKILL_MAGIC_DAMAGE"/>
-            <xs:enumeration value="VENGEANCE_SKILL_PHYSICAL_DAMAGE"/>
-            <xs:enumeration value="ABSORB_DAMAGE_PERCENT"/>
-            <xs:enumeration value="ABSORB_DAMAGE_CHANCE"/>
-            <xs:enumeration value="ABSORB_DAMAGE_DEFENCE"/>
-            <xs:enumeration value="TRANSFER_DAMAGE_SUMMON_PERCENT"/>
-            <xs:enumeration value="MANA_SHIELD_PERCENT"/>
-            <xs:enumeration value="TRANSFER_DAMAGE_TO_PLAYER"/>
-            <xs:enumeration value="ABSORB_MANA_DAMAGE_PERCENT"/>
-            <xs:enumeration value="WEIGHT_LIMIT"/>
-            <xs:enumeration value="WEIGHT_PENALTY"/>
-            <xs:enumeration value="INVENTORY_NORMAL"/>
-            <xs:enumeration value="STORAGE_PRIVATE"/>
-            <xs:enumeration value="TRADE_SELL"/>
-            <xs:enumeration value="TRADE_BUY"/>
-            <xs:enumeration value="RECIPE_DWARVEN"/>
-            <xs:enumeration value="RECIPE_COMMON"/>
-            <xs:enumeration value="SKILL_CRITICAL"/>
-            <xs:enumeration value="SKILL_CRITICAL_PROBABILITY"/>
-            <xs:enumeration value="VITALITY_CONSUME_RATE"/>
-            <xs:enumeration value="VITALITY_EXP_RATE"/>
-            <xs:enumeration value="MAX_SOULS"/>
-            <xs:enumeration value="REDUCE_EXP_LOST_BY_PVP"/>
-            <xs:enumeration value="REDUCE_EXP_LOST_BY_MOB"/>
-            <xs:enumeration value="REDUCE_EXP_LOST_BY_RAID"/>
-            <xs:enumeration value="REDUCE_DEATH_PENALTY_BY_PVP"/>
-            <xs:enumeration value="REDUCE_DEATH_PENALTY_BY_MOB"/>
-            <xs:enumeration value="REDUCE_DEATH_PENALTY_BY_RAID"/>
-            <xs:enumeration value="BROOCH_JEWELS"/>
-            <xs:enumeration value="AGATHION_SLOTS"/>
-            <xs:enumeration value="ARTIFACT_SLOTS"/>
-            <xs:enumeration value="MAX_SUMMON_POINTS"/>
-            <xs:enumeration value="MAX_CUBIC"/>
-            <xs:enumeration value="SPHERIC_BARRIER_RANGE"/>
-            <xs:enumeration value="DEBUFF_BLOCK"/>
-            <xs:enumeration value="RANDOM_DAMAGE"/>
-            <xs:enumeration value="DAMAGE_LIMIT"/>
-            <xs:enumeration value="MAX_MOMENTUM"/>
-            <xs:enumeration value="STAT_BONUS_SKILL_CRITICAL"/>
-            <xs:enumeration value="STAT_BONUS_SPEED"/>
-            <xs:enumeration value="SHOTS_BONUS"/>
-            <xs:enumeration value="WORLD_CHAT_POINTS"/>
-            <xs:enumeration value="ATTACK_DAMAGE"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_BONUS_XP"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_FIRE_ATTACK"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_FIRE_DEFENSE"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_WATER_ATTACK"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_WATER_DEFENSE"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_WIND_ATTACK"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_WIND_DEFENSE"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_EARTH_ATTACK"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_EARTH_DEFENSE"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_RATE"/>
-            <xs:enumeration value="ELEMENTAL_SPIRIT_CRITICAL_DAMAGE"/>
-            <xs:enumeration value="ENCHANT_RATE_BONUS"/>
         </xs:restriction>
     </xs:simpleType>
 

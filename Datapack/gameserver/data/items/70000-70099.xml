@@ -780,7 +780,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="19.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="19.0"/>
 		</stats>
 	</armor>
 
@@ -790,7 +790,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="47.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="47.0"/>
 		</stats>
 	</armor>
 
@@ -800,7 +800,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="29.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
 		</stats>
 	</armor>
 
@@ -810,7 +810,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="23.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="23.0"/>
 		</stats>
 	</armor>
 
@@ -820,8 +820,8 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="30.0"/>
-			<stat type="maxMp" value="67.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="30.0"/>
+			<stat type="MAX_MP" value="67.0"/>
 		</stats>
 	</armor>
 

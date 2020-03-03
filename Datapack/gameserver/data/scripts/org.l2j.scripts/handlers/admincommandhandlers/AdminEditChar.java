@@ -880,22 +880,8 @@ public class AdminEditChar implements IAdminCommandHandler
 				return false;
 			}
 			
-			try
-			{
-				Stat stat = null;
-				for (Stat stats : Stat.values())
-				{
-					if (statName.equalsIgnoreCase(stats.name()) || statName.equalsIgnoreCase(stats.getValue()))
-					{
-						stat = stats;
-						break;
-					}
-				}
-				if (stat == null)
-				{
-					BuilderUtil.sendSysMessage(activeChar, "Couldn't find such stat!");
-					return false;
-				}
+			try {
+				Stat stat = Stat.valueOf(statName);
 				
 				final double value = Double.parseDouble(st.nextToken());
 				final Creature targetCreature = (Creature) target;
@@ -910,8 +896,8 @@ public class AdminEditChar implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "Non negative values are only allowed!");
 				}
 			}
-			catch (Exception e)
-			{
+			catch (Exception e) {
+				BuilderUtil.sendSysMessage(activeChar, "Couldn't find such stat!");
 				BuilderUtil.sendSysMessage(activeChar, "Syntax: //setparam <stat> <value>");
 				return false;
 			}
@@ -932,26 +918,17 @@ public class AdminEditChar implements IAdminCommandHandler
 				return false;
 			}
 			final String statName = st.nextToken();
-			
-			Stat stat = null;
-			for (Stat stats : Stat.values())
-			{
-				if (statName.equalsIgnoreCase(stats.name()) || statName.equalsIgnoreCase(stats.getValue()))
-				{
-					stat = stats;
-					break;
-				}
-			}
-			if (stat == null)
-			{
+
+			try {
+				Stat stat = Stat.valueOf(statName);
+				final Creature targetCreature = (Creature) target;
+				targetCreature.getStats().removeFixedValue(stat);
+				targetCreature.getStats().recalculateStats(true);
+				BuilderUtil.sendSysMessage(activeChar, "Fixed stat: " + stat + " has been removed.");
+			} catch (Exception e) {
 				BuilderUtil.sendSysMessage(activeChar, "Couldn't find such stat!");
 				return false;
 			}
-			
-			final Creature targetCreature = (Creature) target;
-			targetCreature.getStats().removeFixedValue(stat);
-			targetCreature.getStats().recalculateStats(true);
-			BuilderUtil.sendSysMessage(activeChar, "Fixed stat: " + stat + " has been removed.");
 		}
 		return true;
 	}

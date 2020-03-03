@@ -20,9 +20,9 @@
 		<attributes weight="1380" price="2580" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="90.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="90.0"/>
 		</stats>
 	</armor>
 
@@ -31,9 +31,9 @@
 		<attributes weight="1320" price="15680" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="142.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="142.0"/>
 		</stats>
 	</armor>
 

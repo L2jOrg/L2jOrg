@@ -141,8 +141,8 @@
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="94.0"/>
-			<stat type="maxMp" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="94.0"/>
+			<stat type="MAX_MP" value="40.0"/>
 		</stats>
 	</armor>
 
@@ -279,7 +279,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="78.0"/>
+			<stat type="MAGICAL_DEFENCE" value="78.0"/>
 		</stats>
 	</armor>
 
@@ -289,7 +289,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="39.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
 		</stats>
 	</armor>
 
@@ -299,7 +299,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="48.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="48.0"/>
 		</stats>
 	</armor>
 
@@ -309,7 +309,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="57.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="57.0"/>
 		</stats>
 	</armor>
 
@@ -319,7 +319,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="66.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="66.0"/>
 		</stats>
 	</armor>
 
@@ -329,7 +329,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="75.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="75.0"/>
 		</stats>
 	</armor>
 

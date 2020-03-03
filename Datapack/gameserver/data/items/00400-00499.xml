@@ -5,7 +5,7 @@
 		<attributes weight="4370" price="825000" commission-type="ARMOR_TOP" />
 		<crystal type="C" count="330"/>
 		<stats>
-			<stat type="pDef" value="106.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="106.0"/>
 		</stats>
 	</armor>
 
@@ -15,7 +15,7 @@
 		<attributes weight="5800" price="1570000" commission-type="FULL_BODY" />
 		<crystal type="C" count="628"/>
 		<stats>
-			<stat type="pDef" value="179.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="179.0"/>
 		</stats>
 	</armor>
 
@@ -24,7 +24,7 @@
 		<attributes weight="1630" price="12700" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="32.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -33,7 +33,7 @@
 		<attributes weight="1600" price="39100" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="71"/>
 		<stats>
-			<stat type="pDef" value="36.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 
@@ -42,7 +42,7 @@
 		<attributes weight="1570" price="62500" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="113"/>
 		<stats>
-			<stat type="pDef" value="41.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="41.0"/>
 		</stats>
 	</armor>
 
@@ -51,7 +51,7 @@
 		<attributes weight="1580" price="95200" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="173"/>
 		<stats>
-			<stat type="pDef" value="46.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
 		</stats>
 	</armor>
 
@@ -60,7 +60,7 @@
 		<attributes weight="1570" price="95200" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="173"/>
 		<stats>
-			<stat type="pDef" value="46.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
 		</stats>
 	</armor>
 
@@ -69,7 +69,7 @@
 		<attributes weight="1550" price="140000" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="254"/>
 		<stats>
-			<stat type="pDef" value="48.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="48.0"/>
 		</stats>
 	</armor>
 
@@ -78,7 +78,7 @@
 		<attributes weight="1560" price="279000" commission-type="ARMOR_PANTS" />
 		<crystal type="C" count="111"/>
 		<stats>
-			<stat type="pDef" value="59.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="59.0"/>
 		</stats>
 	</armor>
 
@@ -87,7 +87,7 @@
 		<attributes weight="1550" price="302000" commission-type="ARMOR_PANTS" />
 		<crystal type="C" count="120"/>
 		<stats>
-			<stat type="pDef" value="60.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="60.0"/>
 		</stats>
 	</armor>
 
@@ -96,7 +96,7 @@
 		<attributes weight="1530" price="516000" commission-type="ARMOR_PANTS" />
 		<crystal type="C" count="206"/>
 		<stats>
-			<stat type="pDef" value="66.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="66.0"/>
 		</stats>
 	</armor>
 
@@ -105,8 +105,8 @@
 		<attributes weight="2150" price="26" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="17.0"/>
-			<stat type="maxMp" value="19.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="17.0"/>
+			<stat type="MAX_MP" value="19.0"/>
 		</stats>
 	</armor>
 
@@ -115,8 +115,8 @@
 		<attributes weight="2150" price="147" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="18.0"/>
-			<stat type="maxMp" value="24.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="18.0"/>
+			<stat type="MAX_MP" value="24.0"/>
 		</stats>
 	</armor>
 
@@ -125,8 +125,8 @@
 		<attributes weight="2140" price="2430" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="21.0"/>
-			<stat type="maxMp" value="38.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="21.0"/>
+			<stat type="MAX_MP" value="38.0"/>
 		</stats>
 	</armor>
 
@@ -135,8 +135,8 @@
 		<attributes weight="2110" price="7960" commission-type="ARMOR_TOP" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="25.0"/>
-			<stat type="maxMp" value="52.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="25.0"/>
+			<stat type="MAX_MP" value="52.0"/>
 		</stats>
 	</armor>
 
@@ -146,8 +146,8 @@
 		<attributes weight="2600" price="53900" commission-type="FULL_BODY" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="56.0"/>
-			<stat type="maxMp" value="140.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="56.0"/>
+			<stat type="MAX_MP" value="140.0"/>
 		</stats>
 	</armor>
 
@@ -156,8 +156,8 @@
 		<attributes weight="2090" price="62600" commission-type="ARMOR_TOP" />
 		<crystal type="D" count="113"/>
 		<stats>
-			<stat type="pDef" value="39.0"/>
-			<stat type="maxMp" value="106.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
+			<stat type="MAX_MP" value="106.0"/>
 		</stats>
 	</armor>
 
@@ -166,8 +166,8 @@
 		<attributes weight="2080" price="99900" commission-type="ARMOR_TOP" />
 		<crystal type="D" count="181"/>
 		<stats>
-			<stat type="pDef" value="43.0"/>
-			<stat type="maxMp" value="126.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
+			<stat type="MAX_MP" value="126.0"/>
 		</stats>
 	</armor>
 
@@ -176,8 +176,8 @@
 		<attributes weight="2040" price="99900" commission-type="ARMOR_TOP" />
 		<crystal type="D" count="181"/>
 		<stats>
-			<stat type="pDef" value="43.0"/>
-			<stat type="maxMp" value="126.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
+			<stat type="MAX_MP" value="126.0"/>
 		</stats>
 	</armor>
 
@@ -186,8 +186,8 @@
 		<attributes weight="2030" price="99900" commission-type="ARMOR_TOP" />
 		<crystal type="D" count="181"/>
 		<stats>
-			<stat type="pDef" value="43.0"/>
-			<stat type="maxMp" value="126.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
+			<stat type="MAX_MP" value="126.0"/>
 		</stats>
 	</armor>
 
@@ -196,8 +196,8 @@
 		<attributes weight="2020" price="152000" commission-type="ARMOR_TOP" />
 		<crystal type="D" count="276"/>
 		<stats>
-			<stat type="pDef" value="49.0"/>
-			<stat type="maxMp" value="147.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
+			<stat type="MAX_MP" value="147.0"/>
 		</stats>
 	</armor>
 
@@ -206,8 +206,8 @@
 		<attributes weight="2010" price="224000" commission-type="ARMOR_TOP" />
 		<crystal type="D" count="407"/>
 		<stats>
-			<stat type="pDef" value="52.0"/>
-			<stat type="maxMp" value="169.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="52.0"/>
+			<stat type="MAX_MP" value="169.0"/>
 		</stats>
 	</armor>
 
@@ -217,8 +217,8 @@
 		<attributes weight="2580" price="429000" commission-type="FULL_BODY" />
 		<crystal type="D" count="780"/>
 		<stats>
-			<stat type="pDef" value="90.0"/>
-			<stat type="maxMp" value="320.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="90.0"/>
+			<stat type="MAX_MP" value="320.0"/>
 		</stats>
 	</armor>
 
@@ -227,8 +227,8 @@
 		<attributes weight="1980" price="379000" commission-type="ARMOR_TOP" />
 		<crystal type="C" count="151"/>
 		<stats>
-			<stat type="pDef" value="60.0"/>
-			<stat type="maxMp" value="225.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="60.0"/>
+			<stat type="MAX_MP" value="225.0"/>
 		</stats>
 	</armor>
 
@@ -238,8 +238,8 @@
 		<attributes weight="2500" price="707000" commission-type="FULL_BODY" />
 		<crystal type="C" count="282"/>
 		<stats>
-			<stat type="pDef" value="105.0"/>
-			<stat type="maxMp" value="413.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="105.0"/>
+			<stat type="MAX_MP" value="413.0"/>
 		</stats>
 	</armor>
 
@@ -248,8 +248,8 @@
 		<attributes weight="1990" price="736000" commission-type="ARMOR_TOP" />
 		<crystal type="C" count="294"/>
 		<stats>
-			<stat type="pDef" value="69.0"/>
-			<stat type="maxMp" value="284.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
+			<stat type="MAX_MP" value="284.0"/>
 		</stats>
 	</armor>
 
@@ -258,8 +258,8 @@
 		<attributes weight="1980" price="1070000" commission-type="ARMOR_TOP" />
 		<crystal type="C" count="428"/>
 		<stats>
-			<stat type="pDef" value="74.0"/>
-			<stat type="maxMp" value="314.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="74.0"/>
+			<stat type="MAX_MP" value="314.0"/>
 		</stats>
 	</armor>
 
@@ -268,8 +268,8 @@
 		<attributes weight="1100" price="6" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="10.0"/>
-			<stat type="maxMp" value="10.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
+			<stat type="MAX_MP" value="10.0"/>
 		</stats>
 	</armor>
 
@@ -278,8 +278,8 @@
 		<attributes weight="1080" price="92" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="11.0"/>
-			<stat type="maxMp" value="15.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="11.0"/>
+			<stat type="MAX_MP" value="15.0"/>
 		</stats>
 	</armor>
 
@@ -288,8 +288,8 @@
 		<attributes weight="1070" price="1520" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="13.0"/>
-			<stat type="maxMp" value="23.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="13.0"/>
+			<stat type="MAX_MP" value="23.0"/>
 		</stats>
 	</armor>
 
@@ -298,8 +298,8 @@
 		<attributes weight="1020" price="4970" commission-type="ARMOR_PANTS" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="16.0"/>
-			<stat type="maxMp" value="33.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="16.0"/>
+			<stat type="MAX_MP" value="33.0"/>
 		</stats>
 	</armor>
 
@@ -308,8 +308,8 @@
 		<attributes weight="1020" price="39100" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="71"/>
 		<stats>
-			<stat type="pDef" value="24.0"/>
-			<stat type="maxMp" value="66.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="24.0"/>
+			<stat type="MAX_MP" value="66.0"/>
 		</stats>
 	</armor>
 
@@ -318,8 +318,8 @@
 		<attributes weight="1010" price="62500" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="113"/>
 		<stats>
-			<stat type="pDef" value="27.0"/>
-			<stat type="maxMp" value="79.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="27.0"/>
+			<stat type="MAX_MP" value="79.0"/>
 		</stats>
 	</armor>
 
@@ -328,8 +328,8 @@
 		<attributes weight="1000" price="62500" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="113"/>
 		<stats>
-			<stat type="pDef" value="27.0"/>
-			<stat type="maxMp" value="79.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="27.0"/>
+			<stat type="MAX_MP" value="79.0"/>
 		</stats>
 	</armor>
 
@@ -338,8 +338,8 @@
 		<attributes weight="990" price="62500" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="113"/>
 		<stats>
-			<stat type="pDef" value="27.0"/>
-			<stat type="maxMp" value="79.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="27.0"/>
+			<stat type="MAX_MP" value="79.0"/>
 		</stats>
 	</armor>
 
@@ -348,8 +348,8 @@
 		<attributes weight="1000" price="95200" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="173"/>
 		<stats>
-			<stat type="pDef" value="30.0"/>
-			<stat type="maxMp" value="92.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="30.0"/>
+			<stat type="MAX_MP" value="92.0"/>
 		</stats>
 	</armor>
 
@@ -358,8 +358,8 @@
 		<attributes weight="980" price="140000" commission-type="ARMOR_PANTS" />
 		<crystal type="D" count="254"/>
 		<stats>
-			<stat type="pDef" value="32.0"/>
-			<stat type="maxMp" value="105.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
+			<stat type="MAX_MP" value="105.0"/>
 		</stats>
 	</armor>
 
@@ -368,8 +368,8 @@
 		<attributes weight="970" price="237000" commission-type="ARMOR_PANTS" />
 		<crystal type="C" count="94"/>
 		<stats>
-			<stat type="pDef" value="37.0"/>
-			<stat type="maxMp" value="141.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="37.0"/>
+			<stat type="MAX_MP" value="141.0"/>
 		</stats>
 	</armor>
 
@@ -378,8 +378,8 @@
 		<attributes weight="980" price="460000" commission-type="ARMOR_PANTS" />
 		<crystal type="C" count="184"/>
 		<stats>
-			<stat type="pDef" value="43.0"/>
-			<stat type="maxMp" value="177.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
+			<stat type="MAX_MP" value="177.0"/>
 		</stats>
 	</armor>
 
@@ -388,8 +388,8 @@
 		<attributes weight="960" price="671000" commission-type="ARMOR_PANTS" />
 		<crystal type="C" count="268"/>
 		<stats>
-			<stat type="pDef" value="46.0"/>
-			<stat type="maxMp" value="196.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
+			<stat type="MAX_MP" value="196.0"/>
 		</stats>
 	</armor>
 
@@ -398,7 +398,7 @@
 		<attributes weight="620" price="147000" commission-type="HELMET" />
 		<crystal type="C" count="59"/>
 		<stats>
-			<stat type="pDef" value="45.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="45.0"/>
 		</stats>
 	</armor>
 
@@ -407,7 +407,7 @@
 		<attributes weight="610" price="206000" commission-type="HELMET" />
 		<crystal type="C" count="82"/>
 		<stats>
-			<stat type="pDef" value="49.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
 		</stats>
 	</armor>
 
@@ -416,7 +416,7 @@
 		<attributes weight="240" price="536000" commission-type="HELMET" />
 		<crystal type="C" count="214"/>
 		<stats>
-			<stat type="pDef" value="58.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="58.0"/>
 		</stats>
 	</armor>
 

@@ -8,11 +8,11 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="1.0"/>
-			<stat type="mAtk" value="1.0"/>
-			<stat type="rCrit" value="1.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK" value="1.0"/>
+			<stat type="MAGIC_ATTACK" value="1.0"/>
+			<stat type="CRITICAL_RATE" value="1.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
 	</weapon>
 
@@ -99,7 +99,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="maxMp" value="22.0"/>
+			<stat type="MAX_MP" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -109,7 +109,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="maxMp" value="28.0"/>
+			<stat type="MAX_MP" value="28.0"/>
 		</stats>
 	</armor>
 
@@ -119,7 +119,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="maxMp" value="34.0"/>
+			<stat type="MAX_MP" value="34.0"/>
 		</stats>
 	</armor>
 
@@ -129,7 +129,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="maxMp" value="22.0"/>
+			<stat type="MAX_MP" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -328,7 +328,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -338,7 +338,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
 		</stats>
 	</armor>
 
@@ -348,7 +348,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="64.0"/>
+			<stat type="MAGICAL_DEFENCE" value="64.0"/>
 		</stats>
 	</armor>
 

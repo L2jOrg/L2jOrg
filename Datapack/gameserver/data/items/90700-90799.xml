@@ -384,8 +384,8 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="60.0"/>
-			<stat type="maxMp" value="22.0"/>
+			<stat type="MAGICAL_DEFENCE" value="60.0"/>
+			<stat type="MAX_MP" value="22.0"/>
 		</stats>
 		<skills>
 			<skill id="45017" value="-1"/>  <!-- Orfen's Earring - Special Ability -->
@@ -398,8 +398,8 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="70.0"/>
-			<stat type="maxMp" value="28.0"/>
+			<stat type="MAGICAL_DEFENCE" value="70.0"/>
+			<stat type="MAX_MP" value="28.0"/>
 		</stats>
 		<skills>
 			<skill id="45017" level="2" value="-1"/>  <!-- TODO Skill not found -->
@@ -412,8 +412,8 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="80.0"/>
-			<stat type="maxMp" value="34.0"/>
+			<stat type="MAGICAL_DEFENCE" value="80.0"/>
+			<stat type="MAX_MP" value="34.0"/>
 		</stats>
 		<skills>
 			<skill id="45017" level="3" value="-1"/>  <!-- TODO Skill not found -->
@@ -432,8 +432,8 @@
 		<attributes weight="150" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="60.0"/>
-			<stat type="maxMp" value="22.0"/>
+			<stat type="MAGICAL_DEFENCE" value="60.0"/>
+			<stat type="MAX_MP" value="22.0"/>
 		</stats>
 	</armor>
 
@@ -484,7 +484,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="31.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="31.0"/>
 		</stats>
 	</armor>
 
@@ -501,7 +501,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="34.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="34.0"/>
 		</stats>
 	</armor>
 
@@ -518,7 +518,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="37.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="37.0"/>
 		</stats>
 	</armor>
 
@@ -535,7 +535,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="40.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="40.0"/>
 		</stats>
 	</armor>
 
@@ -552,7 +552,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="43.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="43.0"/>
 		</stats>
 	</armor>
 
@@ -597,7 +597,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 
@@ -614,7 +614,7 @@
 		<attributes duration="10080" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="46.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
 		</stats>
 	</armor>
 

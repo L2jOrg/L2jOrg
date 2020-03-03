@@ -5,7 +5,7 @@
 		<attributes weight="150" price="404000" />
 		<crystal type="B"/>
 		<stats>
-			<stat type="mDef" value="34.0"/>
+			<stat type="MAGICAL_DEFENCE" value="34.0"/>
 		</stats>
 	</armor>
 
@@ -15,8 +15,8 @@
 		<attributes weight="150" price="670000" commission-type="RING" />
 		<crystal type="A" count="54"/>
 		<stats>
-			<stat type="mDef" value="40.0"/>
-			<stat type="maxMp" value="13.0"/>
+			<stat type="MAGICAL_DEFENCE" value="40.0"/>
+			<stat type="MAX_MP" value="13.0"/>
 		</stats>
 	</armor>
 
@@ -25,7 +25,7 @@
 		<attributes weight="150" price="404000" commission-type="RING" />
 		<crystal type="B" count="54"/>
 		<stats>
-			<stat type="mDef" value="34.0"/>
+			<stat type="MAGICAL_DEFENCE" value="34.0"/>
 		</stats>
 	</armor>
 
@@ -35,7 +35,7 @@
 		<attributes weight="150" price="1080" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="18.0"/>
+			<stat type="MAGICAL_DEFENCE" value="18.0"/>
 		</stats>
 	</armor>
 
@@ -45,7 +45,7 @@
 		<attributes weight="150" price="4680" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="21.0"/>
+			<stat type="MAGICAL_DEFENCE" value="21.0"/>
 		</stats>
 	</armor>
 
@@ -54,7 +54,7 @@
 		<attributes weight="150" price="11900" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="25.0"/>
+			<stat type="MAGICAL_DEFENCE" value="25.0"/>
 		</stats>
 	</armor>
 
@@ -63,7 +63,7 @@
 		<attributes weight="150" price="21300" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="28.0"/>
+			<stat type="MAGICAL_DEFENCE" value="28.0"/>
 		</stats>
 	</armor>
 
@@ -72,7 +72,7 @@
 		<attributes weight="150" price="35900" commission-type="NECKLACE" />
 		<crystal type="D" count="65"/>
 		<stats>
-			<stat type="mDef" value="32.0"/>
+			<stat type="MAGICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
@@ -81,7 +81,7 @@
 		<attributes weight="150" price="56800" commission-type="NECKLACE" />
 		<crystal type="D" count="103"/>
 		<stats>
-			<stat type="mDef" value="36.0"/>
+			<stat type="MAGICAL_DEFENCE" value="36.0"/>
 		</stats>
 	</armor>
 
@@ -90,7 +90,7 @@
 		<attributes weight="150" price="85700" commission-type="NECKLACE" />
 		<crystal type="D" count="155"/>
 		<stats>
-			<stat type="mDef" value="40.0"/>
+			<stat type="MAGICAL_DEFENCE" value="40.0"/>
 		</stats>
 	</armor>
 
@@ -99,7 +99,7 @@
 		<attributes weight="150" price="125000" commission-type="NECKLACE" />
 		<crystal type="D" count="227"/>
 		<stats>
-			<stat type="mDef" value="45.0"/>
+			<stat type="MAGICAL_DEFENCE" value="45.0"/>
 		</stats>
 	</armor>
 
@@ -108,7 +108,7 @@
 		<attributes weight="150" price="162000" commission-type="NECKLACE" />
 		<crystal type="D" count="294"/>
 		<stats>
-			<stat type="mDef" value="48.0"/>
+			<stat type="MAGICAL_DEFENCE" value="48.0"/>
 		</stats>
 	</armor>
 
@@ -117,7 +117,7 @@
 		<attributes weight="150" price="207000" commission-type="NECKLACE" />
 		<crystal type="C" count="82"/>
 		<stats>
-			<stat type="mDef" value="52.0"/>
+			<stat type="MAGICAL_DEFENCE" value="52.0"/>
 		</stats>
 	</armor>
 
@@ -126,7 +126,7 @@
 		<attributes weight="150" price="261000" commission-type="NECKLACE" />
 		<crystal type="C" count="104"/>
 		<stats>
-			<stat type="mDef" value="56.0"/>
+			<stat type="MAGICAL_DEFENCE" value="56.0"/>
 		</stats>
 	</armor>
 
@@ -135,7 +135,7 @@
 		<attributes weight="150" price="393000" commission-type="NECKLACE" />
 		<crystal type="C" count="157"/>
 		<stats>
-			<stat type="mDef" value="60.0"/>
+			<stat type="MAGICAL_DEFENCE" value="60.0"/>
 		</stats>
 	</armor>
 
@@ -144,7 +144,7 @@
 		<attributes weight="150" price="808000" commission-type="NECKLACE" />
 		<crystal type="B" count="107"/>
 		<stats>
-			<stat type="mDef" value="68.0"/>
+			<stat type="MAGICAL_DEFENCE" value="68.0"/>
 		</stats>
 	</armor>
 
@@ -153,7 +153,7 @@
 		<attributes weight="150" price="565000" commission-type="NECKLACE" />
 		<crystal type="C" count="226"/>
 		<stats>
-			<stat type="mDef" value="64.0"/>
+			<stat type="MAGICAL_DEFENCE" value="64.0"/>
 		</stats>
 	</armor>
 
@@ -163,8 +163,8 @@
 		<attributes weight="150" price="4361000" />
 		<crystal type="S" count="209"/>
 		<stats>
-			<stat type="mDef" value="120.0"/>
-			<stat type="maxMp" value="42.0"/>
+			<stat type="MAGICAL_DEFENCE" value="120.0"/>
+			<stat type="MAX_MP" value="42.0"/>
 		</stats>
 	</armor>
 
@@ -173,7 +173,7 @@
 		<attributes weight="150" price="1230000" commission-type="NECKLACE" />
 		<crystal type="B" count="226"/>
 		<stats>
-			<stat type="mDef" value="72.0"/>
+			<stat type="MAGICAL_DEFENCE" value="72.0"/>
 		</stats>
 	</armor>
 
@@ -183,8 +183,8 @@
 		<attributes weight="150" price="1998000" commission-type="NECKLACE" />
 		<crystal type="A" count="226"/>
 		<stats>
-			<stat type="mDef" value="85.0"/>
-			<stat type="maxMp" value="33.0"/>
+			<stat type="MAGICAL_DEFENCE" value="85.0"/>
+			<stat type="MAX_MP" value="33.0"/>
 		</stats>
 	</armor>
 
@@ -193,7 +193,7 @@
 		<attributes weight="150" price="1230000" commission-type="NECKLACE" />
 		<crystal type="B" count="164"/>
 		<stats>
-			<stat type="mDef" value="72.0"/>
+			<stat type="MAGICAL_DEFENCE" value="72.0"/>
 		</stats>
 	</armor>
 
@@ -202,7 +202,7 @@
 		<attributes weight="150" price="808000" commission-type="NECKLACE" />
 		<crystal type="B" count="164"/>
 		<stats>
-			<stat type="mDef" value="68.0"/>
+			<stat type="MAGICAL_DEFENCE" value="68.0"/>
 		</stats>
 	</armor>
 
@@ -212,8 +212,8 @@
 		<attributes weight="150" price="1340000" commission-type="NECKLACE" />
 		<crystal type="A" count="164"/>
 		<stats>
-			<stat type="mDef" value="80.0"/>
-			<stat type="maxMp" value="26.0"/>
+			<stat type="MAGICAL_DEFENCE" value="80.0"/>
+			<stat type="MAX_MP" value="26.0"/>
 		</stats>
 	</armor>
 
@@ -222,7 +222,7 @@
 		<attributes weight="150" price="808000" commission-type="NECKLACE" />
 		<crystal type="B" count="164"/>
 		<stats>
-			<stat type="mDef" value="68.0"/>
+			<stat type="MAGICAL_DEFENCE" value="68.0"/>
 		</stats>
 	</armor>
 
@@ -273,9 +273,9 @@
 		<attributes weight="1400" price="3440" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="69.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="69.0"/>
 		</stats>
 	</armor>
 
@@ -286,13 +286,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="16.0"/>
-			<stat type="mAtk" value="13.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="433.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="16.0"/>
+			<stat type="MAGIC_ATTACK" value="13.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -432,12 +432,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="14.0"/>
-			<stat type="mAtk" value="11.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="379.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="14.0"/>
+			<stat type="MAGIC_ATTACK" value="11.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -473,12 +473,12 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="16.0"/>
-			<stat type="mAtk" value="10.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="16.0"/>
+			<stat type="MAGIC_ATTACK" value="10.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -532,13 +532,13 @@
 		<damage radius="40" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="11.0"/>
-			<stat type="mAtk" value="10.0"/>
-			<stat type="rCrit" value="12.0"/>
-			<stat type="accCombat" value="-3.75"/>
-			<stat type="pAtkSpd" value="433.0"/>
-			<stat type="randomDamage" value="5.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="11.0"/>
+			<stat type="MAGIC_ATTACK" value="10.0"/>
+			<stat type="CRITICAL_RATE" value="12.0"/>
+			<stat type="ACCURACY" value="-3.75"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
+			<stat type="RANDOM_DAMAGE" value="5.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -547,7 +547,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -556,7 +556,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -565,7 +565,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -574,7 +574,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -583,7 +583,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -592,7 +592,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -601,7 +601,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -610,7 +610,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -619,7 +619,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 
@@ -628,7 +628,7 @@
 		<attributes weight="60" price="37" commission-type="GLOVES" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="9.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="9.0"/>
 		</stats>
 	</armor>
 

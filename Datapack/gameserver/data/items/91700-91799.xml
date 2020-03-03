@@ -442,7 +442,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="78.0"/>
+			<stat type="MAGICAL_DEFENCE" value="78.0"/>
 		</stats>
 	</armor>
 
@@ -452,7 +452,7 @@
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="mDef" value="78.0"/>
+			<stat type="MAGICAL_DEFENCE" value="78.0"/>
 		</stats>
 	</armor>
 
@@ -576,7 +576,7 @@
 		<attributes enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="pDef" value="14.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="14.0"/>
 		</stats>
 	</armor>
 

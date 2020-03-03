@@ -170,12 +170,12 @@
 		<damage radius="44" angle="240"/>
 		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
-			<stat type="pAtk" value="259.0"/>
-			<stat type="mAtk" value="107.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="259.0"/>
+			<stat type="MAGIC_ATTACK" value="107.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 		<skills>
 			<skill id="3045" level="17" type="ON_ENCHANT" value="-1"/>  <!-- TODO Skill not found -->
@@ -552,12 +552,12 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="38.0"/>
-			<stat type="mAtk" value="21.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="38.0"/>
+			<stat type="MAGIC_ATTACK" value="21.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -568,12 +568,12 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="49.0"/>
-			<stat type="mAtk" value="26.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="49.0"/>
+			<stat type="MAGIC_ATTACK" value="26.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -584,12 +584,12 @@
 		<damage radius="44" angle="240"/>
 		<consume />
 		<stats>
-			<stat type="pAtk" value="190.0"/>
-			<stat type="mAtk" value="83.0"/>
-			<stat type="rCrit" value="8.0"/>
-			<stat type="pAtkSpd" value="325.0"/>
-			<stat type="randomDamage" value="10.0"/>
-			<stat type="pAtkRange" value="40.0"/>
+			<stat type="PHYSICAL_ATTACK" value="190.0"/>
+			<stat type="MAGIC_ATTACK" value="83.0"/>
+			<stat type="CRITICAL_RATE" value="8.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
+			<stat type="RANDOM_DAMAGE" value="10.0"/>
+			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 		</stats>
 	</weapon>
 
@@ -599,7 +599,7 @@
 		<attributes weight="7700" price="3562000" commission-type="ARMOR_TOP" />
 		<crystal type="A" count="2452"/>
 		<stats>
-			<stat type="pDef" value="171.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="171.0"/>
 		</stats>
 	</armor>
 
@@ -609,7 +609,7 @@
 		<attributes weight="3320" price="2226000" commission-type="ARMOR_PANTS" />
 		<crystal type="A" count="178"/>
 		<stats>
-			<stat type="pDef" value="107.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="107.0"/>
 		</stats>
 	</armor>
 
@@ -619,7 +619,7 @@
 		<attributes weight="570" price="1336000" commission-type="HELMET" />
 		<crystal type="A" count="107"/>
 		<stats>
-			<stat type="pDef" value="69.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
 	</armor>
 
@@ -629,7 +629,7 @@
 		<attributes weight="580" price="890000" commission-type="GLOVES" />
 		<crystal type="A" count="71"/>
 		<stats>
-			<stat type="pDef" value="46.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
 		</stats>
 	</armor>
 
@@ -639,7 +639,7 @@
 		<attributes weight="1110" price="890000" commission-type="FEET" />
 		<crystal type="A" count="71"/>
 		<stats>
-			<stat type="pDef" value="46.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
 		</stats>
 	</armor>
 
@@ -649,9 +649,9 @@
 		<attributes weight="1190" price="935000" commission-type="SHIELD" />
 		<crystal type="A" count="75"/>
 		<stats>
-			<stat type="rEvas" value="-8.0"/>
-			<stat type="rShld" value="20.0"/>
-			<stat type="sDef" value="243.0"/>
+			<stat type="EVASION_RATE" value="-8.0"/>
+			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
+			<stat type="SHIELD_DEFENCE" value="243.0"/>
 		</stats>
 	</armor>
 
@@ -661,7 +661,7 @@
 		<attributes weight="9780" price="5788000" commission-type="FULL_BODY" />
 		<crystal type="A" count="463"/>
 		<stats>
-			<stat type="pDef" value="278.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="278.0"/>
 		</stats>
 	</armor>
 
@@ -671,7 +671,7 @@
 		<attributes weight="570" price="1336000" commission-type="HELMET" />
 		<crystal type="A" count="107"/>
 		<stats>
-			<stat type="pDef" value="69.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
 	</armor>
 
@@ -681,7 +681,7 @@
 		<attributes weight="580" price="890000" commission-type="GLOVES" />
 		<crystal type="A" count="71"/>
 		<stats>
-			<stat type="pDef" value="46.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
 		</stats>
 	</armor>
 
@@ -691,7 +691,7 @@
 		<attributes weight="1130" price="890000" commission-type="FEET" />
 		<crystal type="A" count="71"/>
 		<stats>
-			<stat type="pDef" value="46.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="46.0"/>
 		</stats>
 	</armor>
 
@@ -701,7 +701,7 @@
 		<attributes weight="4300" price="2671000" commission-type="ARMOR_TOP" />
 		<crystal type="A" count="214"/>
 		<stats>
-			<stat type="pDef" value="128.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="128.0"/>
 		</stats>
 	</armor>
 
@@ -711,7 +711,7 @@
 		<attributes weight="1480" price="1670000" commission-type="ARMOR_PANTS" />
 		<crystal type="A" count="134"/>
 		<stats>
-			<stat type="pDef" value="80.0"/>
+			<stat type="PHYSICAL_DEFENCE" value="80.0"/>
 		</stats>
 	</armor>
 
