@@ -25,7 +25,7 @@ public final class ExSendManorList extends ServerPacket {
         final Collection<Castle> castles = CastleManager.getInstance().getCastles();
         writeInt(castles.size());
         for (Castle castle : castles) {
-            writeInt(castle.getResidenceId());
+            writeInt(castle.getId());
         }
     }
 

@@ -17,7 +17,7 @@ public class ItemAction implements IActionHandler
 	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(target);
-		if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), target.getId()) != null))
+		if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getId(), target.getId()) != null))
 		{
 			if ((activeChar.getClan() == null) || (castle.getOwnerId() != activeChar.getClanId()) || !activeChar.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
 			{

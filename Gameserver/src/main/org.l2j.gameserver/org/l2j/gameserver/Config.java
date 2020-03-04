@@ -22,7 +22,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.Duration;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -48,7 +47,7 @@ public final class Config {
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
     private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
-    private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
+    private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
     private static final String GENERAL_CONFIG_FILE = "config/general.properties";
     private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
@@ -243,7 +242,6 @@ public final class Config {
     public static long CS_SUPPORT_FEE_RATIO;
     public static int CS_SUPPORT1_FEE;
     public static int CS_SUPPORT2_FEE;
-    public static List<Integer> SIEGE_HOUR_LIST;
     public static int CASTLE_BUY_TAX_NEUTRAL;
     public static int CASTLE_BUY_TAX_LIGHT;
     public static int CASTLE_BUY_TAX_DARK;
@@ -918,12 +916,7 @@ public final class Config {
 
         // Load Feature config file (if exists)
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
-        SIEGE_HOUR_LIST = new ArrayList<>();
-        for (String hour : Feature.getString("SiegeHourList", "").split(",")) {
-            if (Util.isInteger(hour)) {
-                SIEGE_HOUR_LIST.add(Integer.parseInt(hour));
-            }
-        }
+
         CASTLE_BUY_TAX_NEUTRAL = Feature.getInt("BuyTaxForNeutralSide", 15);
         CASTLE_BUY_TAX_LIGHT = Feature.getInt("BuyTaxForLightSide", 0);
         CASTLE_BUY_TAX_DARK = Feature.getInt("BuyTaxForDarkSide", 30);

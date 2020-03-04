@@ -1,16 +1,18 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Calendar;
+import java.time.ZoneId;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Shows the Siege Info<BR>
@@ -46,7 +48,7 @@ public class SiegeInfo extends ServerPacket {
         writeId(ServerPacketId.CASTLE_SIEGE_INFO);
 
         if (_castle != null) {
-            writeInt(_castle.getResidenceId());
+            writeInt(_castle.getId());
 
             final int ownerId = _castle.getOwnerId();
 
@@ -70,20 +72,19 @@ public class SiegeInfo extends ServerPacket {
             }
 
             writeInt((int) (System.currentTimeMillis() / 1000));
-            if (!_castle.getIsTimeRegistrationOver() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId())) {
-                final Calendar cal = Calendar.getInstance();
-                cal.setTimeInMillis(_castle.getSiegeDate().getTimeInMillis());
-                cal.set(Calendar.MINUTE, 0);
-                cal.set(Calendar.SECOND, 0);
+
+            var siegeDate = _castle.getSiegeDate().atZone(ZoneId.systemDefault());
+            if (!_castle.isTimeRegistrationOver() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId())) {
+
+                var hours = getSettings(FeatureSettings.class).siegeHours();
 
                 writeInt(0x00);
-                writeInt(Config.SIEGE_HOUR_LIST.size());
-                for (int hour : Config.SIEGE_HOUR_LIST) {
-                    cal.set(Calendar.HOUR_OF_DAY, hour);
-                    writeInt((int) (cal.getTimeInMillis() / 1000));
+                writeInt(hours.length);
+                for (int hour : hours) {
+                    writeInt((int) siegeDate.withHour(hour).toEpochSecond());
                 }
             } else {
-                writeInt((int) (_castle.getSiegeDate().getTimeInMillis() / 1000));
+                writeInt((int) siegeDate.toEpochSecond());
                 writeInt(0x00);
             }
         }

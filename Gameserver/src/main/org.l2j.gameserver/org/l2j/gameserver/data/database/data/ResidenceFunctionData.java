@@ -1,4 +1,4 @@
-package org.l2j.gameserver.model.residences;
+package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -6,35 +6,45 @@ import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.residences.AbstractResidence;
+import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
+import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.network.serverpackets.AgitDecoInfo;
 
 import java.time.Instant;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.Objects.isNull;
+
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class ResidenceFunction {
-    private final int _id;
-    private final int _level;
-    private final AbstractResidence _residense;
-    private long _expiration;
+public class ResidenceFunctionData {
+    private int id;
+    private int level;
+    private long expiration;
+
+    private AbstractResidence residence;
     private ScheduledFuture<?> _task;
 
-    public ResidenceFunction(int id, int level, long expiration, AbstractResidence residense) {
-        _id = id;
-        _level = level;
-        _expiration = expiration;
-        _residense = residense;
+    public ResidenceFunctionData() {
+    }
+
+    public ResidenceFunctionData(int id, int level, long expiration, AbstractResidence residence) {
+        this.id = id;
+        this.level = level;
+        this.expiration = expiration;
+        this.residence = residence;
         init();
     }
 
-    public ResidenceFunction(int id, int level, AbstractResidence residense) {
-        _id = id;
-        _level = level;
+    public ResidenceFunctionData(int id, int level, AbstractResidence residence) {
+        this.id = id;
+        this.level = level;
         final ResidenceFunctionTemplate template = getTemplate();
-        _expiration = Instant.now().toEpochMilli() + template.getDuration().toMillis();
-        _residense = residense;
+        expiration = Instant.now().toEpochMilli() + template.getDuration().toMillis();
+        this.residence = residence;
         init();
     }
 
@@ -43,8 +53,8 @@ public class ResidenceFunction {
      */
     private void init() {
         final ResidenceFunctionTemplate template = getTemplate();
-        if ((template != null) && (_expiration > System.currentTimeMillis())) {
-            _task = ThreadPool.schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
+        if ((template != null) && (expiration > System.currentTimeMillis())) {
+            _task = ThreadPool.schedule(this::onFunctionExpiration, expiration - System.currentTimeMillis());
         }
     }
 
@@ -52,28 +62,28 @@ public class ResidenceFunction {
      * @return the function id
      */
     public int getId() {
-        return _id;
+        return id;
     }
 
     /**
      * @return the function level
      */
     public int getLevel() {
-        return _level;
+        return level;
     }
 
     /**
      * @return the expiration of this function instance
      */
     public long getExpiration() {
-        return _expiration;
+        return expiration;
     }
 
     /**
      * @return the owner (clan) of this function instance
      */
     public int getOwnerId() {
-        return _residense.getOwnerId();
+        return residence.getOwnerId();
     }
 
     /**
@@ -96,7 +106,7 @@ public class ResidenceFunction {
      * @return the template of this function instance
      */
     public ResidenceFunctionTemplate getTemplate() {
-        return ResidenceFunctionsData.getInstance().getFunction(_id, _level);
+        return ResidenceFunctionsData.getInstance().getFunction(id, level);
     }
 
     /**
@@ -104,11 +114,11 @@ public class ResidenceFunction {
      */
     private void onFunctionExpiration() {
         if (!reactivate()) {
-            _residense.removeFunction(this);
+            residence.removeFunction(this);
 
-            final Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
+            final Clan clan = ClanTable.getInstance().getClan(residence.getOwnerId());
             if (clan != null) {
-                clan.broadcastToOnlineMembers(new AgitDecoInfo(_residense));
+                clan.broadcastToOnlineMembers(new AgitDecoInfo(residence));
             }
         }
     }
@@ -122,7 +132,7 @@ public class ResidenceFunction {
             return false;
         }
 
-        final Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
+        final Clan clan = ClanTable.getInstance().getClan(residence.getOwnerId());
         if (clan == null) {
             return false;
         }
@@ -134,7 +144,7 @@ public class ResidenceFunction {
         }
 
         if (wh.destroyItem("FunctionFee", item, template.getCost().getCount(), null, this) != null) {
-            _expiration = System.currentTimeMillis() + (template.getDuration().getSeconds() * 1000);
+            expiration = System.currentTimeMillis() + (template.getDuration().getSeconds() * 1000);
             init();
         }
         return true;
@@ -148,5 +158,12 @@ public class ResidenceFunction {
             _task.cancel(true);
         }
         _task = null;
+    }
+
+    public void initResidence(AbstractResidence residence) {
+        this.residence = residence;
+        if(isNull(_task)) {
+            init();
+        }
     }
 }

@@ -42,8 +42,8 @@ public final class AdminManor implements IAdminCommandHandler
 		for (Castle c : CastleManager.getInstance().getCastles())
 		{
 			sb.append("<tr><td>Name:</td><td><font color=008000>" + c.getName() + "</font></td></tr>");
-			sb.append("<tr><td>Current period cost:</td><td><font color=FF9900>" + GameUtils.formatAdena(manor.getManorCost(c.getResidenceId(), false)) + " Adena</font></td></tr>");
-			sb.append("<tr><td>Next period cost:</td><td><font color=FF9900>" + GameUtils.formatAdena(manor.getManorCost(c.getResidenceId(), true)) + " Adena</font></td></tr>");
+			sb.append("<tr><td>Current period cost:</td><td><font color=FF9900>" + GameUtils.formatAdena(manor.getManorCost(c.getId(), false)) + " Adena</font></td></tr>");
+			sb.append("<tr><td>Next period cost:</td><td><font color=FF9900>" + GameUtils.formatAdena(manor.getManorCost(c.getId(), true)) + " Adena</font></td></tr>");
 			sb.append("<tr><td><font color=808080>--------------------------</font></td><td><font color=808080>--------------------------</font></td></tr>");
 		}
 		msg.replace("%castleInfo%", sb.toString());

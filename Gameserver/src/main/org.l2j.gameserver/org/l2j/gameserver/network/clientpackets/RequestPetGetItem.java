@@ -29,7 +29,7 @@ public final class RequestPetGetItem extends ClientPacket {
         }
 
         final Castle castle = CastleManager.getInstance().getCastle(item);
-        if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), item.getId()) != null)) {
+        if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getId(), item.getId()) != null)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

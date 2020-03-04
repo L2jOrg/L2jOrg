@@ -88,7 +88,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 				else if (fort.getSiege().addAttacker(player, false) == 4)
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE);
-					sm.addCastleId(fort.getResidenceId());
+					sm.addCastleId(fort.getId());
 					player.sendPacket(sm);
 				}
 				else
@@ -158,7 +158,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		{
 			if (fort != null)
 			{
-				cList.append("<td fixwidth=90><a action=\"bypass -h admin_fortsiege " + fort.getResidenceId() + "\">" + fort.getName() + " id: " + fort.getResidenceId() + "</a></td>");
+				cList.append("<td fixwidth=90><a action=\"bypass -h admin_fortsiege " + fort.getId() + "\">" + fort.getName() + " id: " + fort.getId() + "</a></td>");
 				i++;
 			}
 			
@@ -178,7 +178,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/fort.htm");
 		adminReply.replace("%fortName%", fort.getName());
-		adminReply.replace("%fortId%", String.valueOf(fort.getResidenceId()));
+		adminReply.replace("%fortId%", String.valueOf(fort.getId()));
 		activeChar.sendPacket(adminReply);
 	}
 	

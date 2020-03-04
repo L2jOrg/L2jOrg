@@ -20,7 +20,7 @@ public class ExShowFortressSiegeInfo extends ServerPacket {
     private final int _csize2;
 
     public ExShowFortressSiegeInfo(Fort fort) {
-        _fortId = fort.getResidenceId();
+        _fortId = fort.getId();
         _size = fort.getFortSize();
         final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortId);
         _csize = ((commanders == null) ? 0 : commanders.size());

@@ -74,7 +74,7 @@ public final class AdminCastle implements IAdminCommandHandler
 				
 				if (!st.hasMoreTokens())
 				{
-					showCastleMenu(activeChar, castle.getResidenceId());
+					showCastleMenu(activeChar, castle.getId());
 				}
 				else
 				{
@@ -157,7 +157,7 @@ public final class AdminCastle implements IAdminCommandHandler
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Castle siege is not currently in progress!");
 							}
-							showCastleMenu(activeChar, castle.getResidenceId());
+							showCastleMenu(activeChar, castle.getId());
 							break;
 						}
 						case "setOwner":
@@ -187,7 +187,7 @@ public final class AdminCastle implements IAdminCommandHandler
 									castle.setOwner(target.getClan());
 								}
 							}
-							showCastleMenu(activeChar, castle.getResidenceId());
+							showCastleMenu(activeChar, castle.getId());
 							break;
 						}
 						case "takeCastle":
@@ -201,7 +201,7 @@ public final class AdminCastle implements IAdminCommandHandler
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Error during removing castle!");
 							}
-							showCastleMenu(activeChar, castle.getResidenceId());
+							showCastleMenu(activeChar, castle.getId());
 							break;
 						}
 						case "switchSide":
@@ -218,7 +218,7 @@ public final class AdminCastle implements IAdminCommandHandler
 							{
 								BuilderUtil.sendSysMessage(activeChar, "You can't switch sides when is castle neutral!");
 							}
-							showCastleMenu(activeChar, castle.getResidenceId());
+							showCastleMenu(activeChar, castle.getId());
 							break;
 						}
 					}
@@ -243,7 +243,7 @@ public final class AdminCastle implements IAdminCommandHandler
 			final Clan ownerClan = castle.getOwner();
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			html.setHtml(HtmCache.getInstance().getHtm(player, "data/html/admin/castlemanage_selected.htm"));
-			html.replace("%castleId%", castle.getResidenceId());
+			html.replace("%castleId%", castle.getId());
 			html.replace("%castleName%", castle.getName());
 			html.replace("%ownerName%", ownerClan != null ? ownerClan.getLeaderName() : "NPC");
 			html.replace("%ownerClan%", ownerClan != null ? ownerClan.getName() : "NPC");

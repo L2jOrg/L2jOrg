@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.communityboard;
 
 import org.l2j.commons.database.DatabaseFactory;
@@ -21,7 +5,6 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.util.GameUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -34,15 +17,13 @@ import static org.l2j.commons.util.Util.isDigit;
  * Favorite board.
  * @author Zoey76
  */
-public class FavoriteBoard implements IParseBoardHandler
-{
+public class FavoriteBoard implements IParseBoardHandler {
 	// SQL Queries
 	private static final String SELECT_FAVORITES = "SELECT * FROM `bbs_favorites` WHERE `playerId`=? ORDER BY `favAddDate` DESC";
 	private static final String DELETE_FAVORITE = "DELETE FROM `bbs_favorites` WHERE `playerId`=? AND `favId`=?";
 	private static final String ADD_FAVORITE = "REPLACE INTO `bbs_favorites`(`playerId`, `favTitle`, `favBypass`) VALUES(?, ?, ?)";
 	
-	private static final String[] COMMANDS =
-	{
+	private static final String[] COMMANDS = {
 		"_bbsgetfav",
 		"bbs_add_fav",
 		"_bbsdelfav_"
@@ -55,8 +36,7 @@ public class FavoriteBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, Player activeChar)
-	{
+	public boolean parseCommunityBoardCommand(String command, Player activeChar) {
 		// None of this commands can be added to favorites.
 		if (command.startsWith("_bbsgetfav"))
 		{

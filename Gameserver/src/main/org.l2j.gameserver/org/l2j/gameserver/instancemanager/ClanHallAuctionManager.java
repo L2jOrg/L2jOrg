@@ -47,7 +47,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
 
         //@formatter:off
         ClanHallData.getInstance().getFreeAuctionableHall()
-                .forEach(c -> AUCTIONS.put(c.getResidenceId(), new ClanHallAuction(c.getResidenceId())));
+                .forEach(c -> AUCTIONS.put(c.getId(), new ClanHallAuction(c.getId())));
         //@formatter:on
     }
 

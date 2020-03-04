@@ -740,7 +740,7 @@ public class FortManager extends Merchant {
     }
 
     protected int validateCondition(Player player) {
-        if ((getFort() != null) && (getFort().getResidenceId() > 0)) {
+        if ((getFort() != null) && (getFort().getId() > 0)) {
             if (player.getClan() != null) {
                 if (getFort().getZone().isActive()) {
                     return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege

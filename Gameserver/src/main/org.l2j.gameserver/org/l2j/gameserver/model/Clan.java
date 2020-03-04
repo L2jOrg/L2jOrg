@@ -34,6 +34,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
 import org.l2j.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusMarkReset;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.EnumIntBitmask;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -52,6 +53,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 public class Clan implements IIdentifiable, INamable {
@@ -353,7 +355,7 @@ public class Clan implements IIdentifiable, INamable {
             }
         }
         exMember.saveApprenticeAndSponsor(0, 0);
-        if (Config.REMOVE_CASTLE_CIRCLETS) {
+        if (getSettings(CharacterSettings.class).removeCastleCirclets()) {
             CastleManager.getInstance().removeCirclet(exMember, getCastleId());
         }
         if (exMember.isOnline()) {

@@ -21,9 +21,9 @@ public class ExShowProcureCropDetail extends ServerPacket {
         _cropId = cropId;
 
         for (Castle c : CastleManager.getInstance().getCastles()) {
-            final CropProcure cropItem = CastleManorManager.getInstance().getCropProcure(c.getResidenceId(), cropId, false);
+            final CropProcure cropItem = CastleManorManager.getInstance().getCropProcure(c.getId(), cropId, false);
             if ((cropItem != null) && (cropItem.getAmount() > 0)) {
-                _castleCrops.put(c.getResidenceId(), cropItem);
+                _castleCrops.put(c.getId(), cropItem);
             }
         }
     }

@@ -1,5 +1,7 @@
 package org.l2j.commons.threading;
 
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 import java.util.concurrent.*;
 
 import static java.util.Objects.isNull;
@@ -52,6 +54,10 @@ public class ThreadPool {
     public boolean isShutdown()
     {
         return shutdown;
+    }
+
+    public static ScheduledFuture<?> schedule(Runnable r, Duration delay) {
+        return schedule(r, delay.toSeconds(), TimeUnit.SECONDS);
     }
 
     public static ScheduledFuture<?> schedule(Runnable r, long delay){

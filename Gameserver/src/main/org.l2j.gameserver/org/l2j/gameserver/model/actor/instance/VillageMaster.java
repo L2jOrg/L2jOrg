@@ -113,13 +113,13 @@ public class VillageMaster extends Folk {
         }
 
         for (Castle castle : CastleManager.getInstance().getCastles()) {
-            if (SiegeManager.getInstance().checkIsRegistered(clan, castle.getResidenceId())) {
+            if (SiegeManager.getInstance().checkIsRegistered(clan, castle.getId())) {
                 player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_DURING_A_SIEGE_OR_WHILE_PROTECTING_A_CASTLE);
                 return;
             }
         }
         for (Fort fort : FortDataManager.getInstance().getForts()) {
-            if (FortSiegeManager.getInstance().checkIsRegistered(clan, fort.getResidenceId())) {
+            if (FortSiegeManager.getInstance().checkIsRegistered(clan, fort.getId())) {
                 player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_DURING_A_SIEGE_OR_WHILE_PROTECTING_A_CASTLE);
                 return;
             }

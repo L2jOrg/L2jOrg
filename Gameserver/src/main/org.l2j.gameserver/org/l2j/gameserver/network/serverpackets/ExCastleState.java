@@ -13,7 +13,7 @@ public class ExCastleState extends ServerPacket {
     private final CastleSide _castleSide;
 
     public ExCastleState(Castle castle) {
-        _castleId = castle.getResidenceId();
+        _castleId = castle.getId();
         _castleSide = castle.getSide();
     }
 

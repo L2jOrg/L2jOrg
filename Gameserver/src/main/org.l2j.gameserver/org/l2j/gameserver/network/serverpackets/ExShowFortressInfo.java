@@ -28,7 +28,7 @@ public class ExShowFortressInfo extends ServerPacket {
         writeInt(forts.size());
         for (Fort fort : forts) {
             final Clan clan = fort.getOwnerClan();
-            writeInt(fort.getResidenceId());
+            writeInt(fort.getId());
             writeString(clan != null ? clan.getName() : "");
             writeInt(fort.getSiege().isInProgress() ? 0x01 : 0x00);
             // Time of possession

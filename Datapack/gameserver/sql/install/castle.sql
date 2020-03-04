@@ -1,25 +1,20 @@
 DROP TABLE IF EXISTS `castle`;
 CREATE TABLE IF NOT EXISTS `castle` (
-  `id` INT NOT NULL DEFAULT 0,
-  `name` varchar(25) NOT NULL,
-  `side` enum('NEUTRAL','LIGHT','DARK') DEFAULT 'NEUTRAL' NOT NULL,
+  `id` INT NOT NULL,
+  `name` VARCHAR(25) NOT NULL,
+  `side` ENUM('NEUTRAL','LIGHT','DARK') NOT NULL DEFAULT 'NEUTRAL',
   `treasury` BIGINT NOT NULL DEFAULT 0,
-  `siegeDate` bigint(13) unsigned NOT NULL DEFAULT '0',
-  `regTimeOver` enum('true','false') DEFAULT 'true' NOT NULL,
-  `regTimeEnd` bigint(13) unsigned NOT NULL DEFAULT '0',
-  `showNpcCrest` enum('true','false') DEFAULT 'false' NOT NULL,
-  `ticketBuyCount` smallint(3) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`name`),
-  KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `siege_date` DATETIME ,
+  `siege_time_registration_end` DATETIME,
+  `show_npc_crest` BOOLEAN NOT NULL DEFAULT FALSE,
+  `ticket_buy_count` SMALLINT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY (`name`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8MB4;
 
-INSERT IGNORE INTO `castle` VALUES
-(1,'Gludio','NEUTRAL',0,0,'true',0,'false',0),
-(2,'Dion','NEUTRAL',0,0,'true',0,'false',0),
-(3,'Giran','NEUTRAL',0,0,'true',0,'false',0),
-(4,'Oren','NEUTRAL',0,0,'true',0,'false',0),
-(5,'Aden','NEUTRAL',0,0,'true',0,'false',0);
--- (6,'Innadril','NEUTRAL',0,0,'true',0,'false',0),
--- (7,'Goddard','NEUTRAL',0,0,'true',0,'false',0),
--- (8,'Rune','NEUTRAL',0,0,'true',0,'false',0),
--- (9,'Schuttgart','NEUTRAL',0,0,'true',0,'false',0);
+INSERT IGNORE INTO `castle`(`id`, `name`) VALUES
+(1,'Gludio'),
+(2,'Dion'),
+(3,'Giran'),
+(4,'Oren'),
+(5,'Aden');

@@ -143,7 +143,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
              PreparedStatement stProduction = con.prepareStatement("SELECT * FROM castle_manor_production WHERE castle_id=?");
              PreparedStatement stProcure = con.prepareStatement("SELECT * FROM castle_manor_procure WHERE castle_id=?")) {
             for (Castle castle : CastleManager.getInstance().getCastles()) {
-                final int castleId = castle.getResidenceId();
+                final int castleId = castle.getId();
 
                 // Clear params
                 stProduction.clearParameters();
@@ -246,7 +246,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
                         continue;
                     }
 
-                    final int castleId = castle.getResidenceId();
+                    final int castleId = castle.getId();
                     final ItemContainer cwh = owner.getWarehouse();
                     for (CropProcure crop : _procure.get(castleId)) {
                         if (crop.getStartAmount() > 0) {
@@ -321,7 +321,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
                     }
 
                     int slots = 0;
-                    final int castleId = castle.getResidenceId();
+                    final int castleId = castle.getId();
                     final ItemContainer cwh = owner.getWarehouse();
                     for (CropProcure crop : _procureNext.get(castleId)) {
                         if ((crop.getStartAmount() > 0) && (cwh.getItemsByItemId(getSeedByCrop(crop.getId()).getMatureId()) == null)) {

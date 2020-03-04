@@ -40,7 +40,7 @@ public class PossessHolythingSkillCondition implements SkillCondition {
 		
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		SystemMessage sm;
-		if ((castle == null) || (castle.getResidenceId() <= 0) || !castle.getSiege().isInProgress() || (castle.getSiege().getAttackerClan(player.getClan()) == null))
+		if ((castle == null) || (castle.getId() <= 0) || !castle.getSiege().isInProgress() || (castle.getSiege().getAttackerClan(player.getClan()) == null))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(skill);

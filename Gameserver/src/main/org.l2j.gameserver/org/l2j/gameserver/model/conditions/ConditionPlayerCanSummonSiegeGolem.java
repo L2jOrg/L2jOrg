@@ -58,7 +58,7 @@ public class ConditionPlayerCanSummonSiegeGolem extends Condition {
             canSummonSiegeGolem = false;
         }
 
-        if (((fort != null) && (fort.getResidenceId() == 0)) || ((castle != null) && (castle.getResidenceId() == 0))) {
+        if (((fort != null) && (fort.getId() == 0)) || ((castle != null) && (castle.getId() == 0))) {
             player.sendPacket(SystemMessageId.INVALID_TARGET);
             canSummonSiegeGolem = false;
         } else if (((castle != null) && !castle.getSiege().isInProgress()) || ((fort != null) && !fort.getSiege().isInProgress())) {

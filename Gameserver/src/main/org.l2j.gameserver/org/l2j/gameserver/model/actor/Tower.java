@@ -37,13 +37,13 @@ public abstract class Tower extends Npc {
     @Override
     public boolean canBeAttacked() {
         // Attackable during siege by attacker only
-        return (getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress();
+        return (getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiege().isInProgress();
     }
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
         // Attackable during siege by attacker only
-        return GameUtils.isPlayer(attacker) && (getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress() && getCastle().getSiege().checkIsAttacker(attacker.getClan());
+        return GameUtils.isPlayer(attacker) && (getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiege().isInProgress() && getCastle().getSiege().checkIsAttacker(attacker.getClan());
     }
 
     @Override

@@ -69,7 +69,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 			return false;
 		}
 		
-		final int castleId = castle.getResidenceId();
+		final int castleId = castle.getId();
 		final SiegeGuardHolder holder = SiegeGuardManager.getInstance().getSiegeGuardByItem(castleId, item.getId());
 		if ((holder == null) || (castleId != holder.getCastleId()))
 		{

@@ -71,7 +71,7 @@ public final class ConditionSiegeZone extends Condition {
 
         final Player player = (Player) activeChar;
 
-        if (((castle == null) || (castle.getResidenceId() <= 0))) {
+        if (((castle == null) || (castle.getId() <= 0))) {
             if ((value & COND_NOT_ZONE) != 0) {
                 return true;
             }
@@ -79,9 +79,9 @@ public final class ConditionSiegeZone extends Condition {
             if ((value & COND_NOT_ZONE) != 0) {
                 return true;
             }
-        } else if (((value & COND_CAST_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(castle.getResidenceId()) && (player.getSiegeState() == 1)) {
+        } else if (((value & COND_CAST_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(castle.getId()) && (player.getSiegeState() == 1)) {
             return true;
-        } else if (((value & COND_CAST_DEFEND) != 0) && player.isRegisteredOnThisSiegeField(castle.getResidenceId()) && (player.getSiegeState() == 2)) {
+        } else if (((value & COND_CAST_DEFEND) != 0) && player.isRegisteredOnThisSiegeField(castle.getId()) && (player.getSiegeState() == 2)) {
             return true;
         } else if (((value & COND_CAST_NEUTRAL) != 0) && (player.getSiegeState() == 0)) {
             return true;
@@ -105,7 +105,7 @@ public final class ConditionSiegeZone extends Condition {
 
         final Player player = (Player) activeChar;
 
-        if (((fort == null) || (fort.getResidenceId() <= 0))) {
+        if (((fort == null) || (fort.getId() <= 0))) {
             if ((value & COND_NOT_ZONE) != 0) {
                 return true;
             }
@@ -113,9 +113,9 @@ public final class ConditionSiegeZone extends Condition {
             if ((value & COND_NOT_ZONE) != 0) {
                 return true;
             }
-        } else if (((value & COND_FORT_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(fort.getResidenceId()) && (player.getSiegeState() == 1)) {
+        } else if (((value & COND_FORT_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(fort.getId()) && (player.getSiegeState() == 1)) {
             return true;
-        } else if (((value & COND_FORT_DEFEND) != 0) && player.isRegisteredOnThisSiegeField(fort.getResidenceId()) && (player.getSiegeState() == 2)) {
+        } else if (((value & COND_FORT_DEFEND) != 0) && player.isRegisteredOnThisSiegeField(fort.getId()) && (player.getSiegeState() == 2)) {
             return true;
         } else if (((value & COND_FORT_NEUTRAL) != 0) && (player.getSiegeState() == 0)) {
             return true;

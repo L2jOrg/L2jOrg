@@ -163,10 +163,10 @@ public class EnterWorld extends ClientPacket {
 
                 if (siege.checkIsAttacker(clan)) {
                     player.setSiegeState((byte) 1);
-                    player.setSiegeSide(siege.getCastle().getResidenceId());
+                    player.setSiegeSide(siege.getCastle().getId());
                 } else if (siege.checkIsDefender(clan)) {
                     player.setSiegeState((byte) 2);
-                    player.setSiegeSide(siege.getCastle().getResidenceId());
+                    player.setSiegeSide(siege.getCastle().getId());
                 }
             }
 
@@ -177,10 +177,10 @@ public class EnterWorld extends ClientPacket {
 
                 if (siege.checkIsAttacker(clan)) {
                     player.setSiegeState((byte) 1);
-                    player.setSiegeSide(siege.getFort().getResidenceId());
+                    player.setSiegeSide(siege.getFort().getId());
                 } else if (siege.checkIsDefender(clan)) {
                     player.setSiegeState((byte) 2);
-                    player.setSiegeSide(siege.getFort().getResidenceId());
+                    player.setSiegeSide(siege.getFort().getId());
                 }
             }
 
@@ -313,7 +313,7 @@ public class EnterWorld extends ClientPacket {
         if (player.getInventory().getItemByItemId(9819) != null) {
             final Fort fort = FortDataManager.getInstance().getFort(player);
             if (fort != null) {
-                FortSiegeManager.getInstance().dropCombatFlag(player, fort.getResidenceId());
+                FortSiegeManager.getInstance().dropCombatFlag(player, fort.getId());
             } else {
                 var bodyPart = BodyPart.fromEquippedPaperdoll(player.getInventory().getItemByItemId(9819));
                 player.getInventory().unEquipItemInBodySlot(bodyPart);

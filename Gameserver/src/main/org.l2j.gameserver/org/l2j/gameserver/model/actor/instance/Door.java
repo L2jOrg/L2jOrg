@@ -216,9 +216,9 @@ public final class Door extends Creature {
     }
 
     public boolean isEnemy() {
-        if ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && getIsShowHp()) {
+        if ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getZone().isActive() && getIsShowHp()) {
             return true;
-        } else if ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && getIsShowHp()) {
+        } else if ((getFort() != null) && (getFort().getId() > 0) && getFort().getZone().isActive() && getIsShowHp()) {
             return true;
         }
         return false;
@@ -238,8 +238,8 @@ public final class Door extends Creature {
         final Player actingPlayer = attacker.getActingPlayer();
 
         // Attackable only during siege by everyone (not owner)
-        final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
-        final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
+        final boolean isCastle = ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getZone().isActive());
+        final boolean isFort = ((getFort() != null) && (getFort().getId() > 0) && getFort().getZone().isActive());
 
         if (isFort) {
             final Clan clan = actingPlayer.getClan();
@@ -290,7 +290,7 @@ public final class Door extends Creature {
     }
 
     private void sendUpdateToPlayer(Player player, StaticObject su, StaticObject targetableSu, DoorStatusUpdate dsu, OnEventTrigger oe) {
-        if (player.isGM() || (((getCastle() != null) && (getCastle().getResidenceId() > 0)) || ((getFort() != null) && (getFort().getResidenceId() > 0)))) {
+        if (player.isGM() || (((getCastle() != null) && (getCastle().getId() > 0)) || ((getFort() != null) && (getFort().getId() > 0)))) {
             player.sendPacket(targetableSu);
         } else {
             player.sendPacket(su);
@@ -440,8 +440,8 @@ public final class Door extends Creature {
             return false;
         }
 
-        final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
-        final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
+        final boolean isFort = ((getFort() != null) && (getFort().getId() > 0) && getFort().getSiege().isInProgress());
+        final boolean isCastle = ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiege().isInProgress());
 
         if (isFort || isCastle) {
             broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));

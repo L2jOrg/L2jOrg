@@ -43,7 +43,7 @@ public final class SiegeDefenderList extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.CASTLE_SIEGE_DEFENDER_LIST);
 
-        writeInt(_castle.getResidenceId());
+        writeInt(_castle.getId());
         writeInt(0x00); // Unknown
         writeInt(0x01); // Unknown
         writeInt(0x00); // Unknown

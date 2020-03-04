@@ -25,11 +25,11 @@ public class ExShowFortressMapInfo extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_SHOW_FORTRESS_MAP_INFO);
 
-        writeInt(_fortress.getResidenceId());
+        writeInt(_fortress.getId());
         writeInt(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
         writeInt(_fortress.getFortSize()); // barracks count
 
-        final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
+        final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getId());
         if ((commanders != null) && (commanders.size() != 0) && _fortress.getSiege().isInProgress()) {
             switch (commanders.size()) {
                 case 3: {

@@ -153,7 +153,7 @@ public final class ClanHallData extends GameXmlReader {
     }
 
     public List<ClanHall> getFreeAuctionableHall() {
-        return _clanHalls.values().stream().filter(ch -> (ch.getType() == ClanHallType.AUCTIONABLE) && (ch.getOwner() == null)).sorted(Comparator.comparingInt(ClanHall::getResidenceId)).collect(Collectors.toList());
+        return _clanHalls.values().stream().filter(ch -> (ch.getType() == ClanHallType.AUCTIONABLE) && (ch.getOwner() == null)).sorted(Comparator.comparingInt(ClanHall::getId)).collect(Collectors.toList());
     }
 
     public static ClanHallData getInstance() {

@@ -496,6 +496,8 @@ public final class ItemEngine extends GameXmlReader {
         EnchantItemOptionsData.init();
         ItemCrystallizationData.init();
         AugmentationEngine.init();
+        VariationData.init();
+        EnsoulData.init();
     }
 
     public static ItemEngine getInstance() {

@@ -46,7 +46,7 @@ public final class FortDataManager implements InstanceListManager {
 
     public final Fort getFortById(int fortId) {
         for (Fort f : _forts.values()) {
-            if (f.getResidenceId() == fortId) {
+            if (f.getId() == fortId) {
                 return f;
             }
         }

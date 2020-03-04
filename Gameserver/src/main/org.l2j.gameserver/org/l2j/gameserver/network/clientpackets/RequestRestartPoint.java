@@ -4,10 +4,9 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -18,6 +17,7 @@ import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
+import org.l2j.gameserver.world.MapRegionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -129,9 +129,9 @@ public final class RequestRestartPoint extends ClientPacket {
                 if (clan != null) {
                     castle = CastleManager.getInstance().getCastleByOwner(clan);
                     if (castle != null) {
-                        final Castle.CastleFunction castleFunction = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
+                        var castleFunction = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
                         if (castleFunction != null) {
-                            player.restoreExp(castleFunction.getLvl());
+                            player.restoreExp(castleFunction.getLevel());
                         }
                     }
                 }

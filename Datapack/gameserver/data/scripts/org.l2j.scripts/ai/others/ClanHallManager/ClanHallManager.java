@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.residences.ResidenceFunction;
+import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
@@ -146,9 +146,9 @@ public final class ClanHallManager extends AbstractNpcAI
 					{
 						if (!st.hasMoreTokens())
 						{
-							final ResidenceFunction hpFunc = clanHall.getFunction(ResidenceFunctionType.HP_REGEN);
-							final ResidenceFunction mpFunc = clanHall.getFunction(ResidenceFunctionType.MP_REGEN);
-							final ResidenceFunction xpFunc = clanHall.getFunction(ResidenceFunctionType.EXP_RESTORE);
+							final ResidenceFunctionData hpFunc = clanHall.getFunction(ResidenceFunctionType.HP_REGEN);
+							final ResidenceFunctionData mpFunc = clanHall.getFunction(ResidenceFunctionType.MP_REGEN);
+							final ResidenceFunctionData xpFunc = clanHall.getFunction(ResidenceFunctionType.EXP_RESTORE);
 							htmltext = getHtm(player, "ClanHallManager-09.html");
 							htmltext = htmltext.replaceAll("%hpFunction%", hpFunc != null ? String.valueOf((int) hpFunc.getValue()) : "0");
 							htmltext = htmltext.replaceAll("%mpFunction%", mpFunc != null ? String.valueOf((int) mpFunc.getValue()) : "0");
@@ -303,7 +303,7 @@ public final class ClanHallManager extends AbstractNpcAI
 										final int funcId = Integer.parseInt(st.nextToken());
 										final int funcLv = Integer.parseInt(st.nextToken());
 										
-										final ResidenceFunction oldFunc = clanHall.getFunction(funcId, funcLv);
+										final ResidenceFunctionData oldFunc = clanHall.getFunction(funcId, funcLv);
 										if (oldFunc != null)
 										{
 											final int funcVal = (int) oldFunc.getTemplate().getValue();
@@ -366,7 +366,7 @@ public final class ClanHallManager extends AbstractNpcAI
 											}
 											else if (act.equals("remove"))
 											{
-												final ResidenceFunction func = clanHall.getFunction(funcType);
+												final ResidenceFunctionData func = clanHall.getFunction(funcType);
 												if (func != null)
 												{
 													clanHall.removeFunction(func);
@@ -452,7 +452,7 @@ public final class ClanHallManager extends AbstractNpcAI
 		World.getInstance().forEachVisibleObject(npc, Player.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
 	}
 	
-	private String getFunctionInfo(ResidenceFunction func, String htmltext, String name)
+	private String getFunctionInfo(ResidenceFunctionData func, String htmltext, String name)
 	{
 		if (func != null)
 		{

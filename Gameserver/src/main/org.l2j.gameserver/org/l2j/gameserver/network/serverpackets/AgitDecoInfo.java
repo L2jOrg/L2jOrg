@@ -18,7 +18,7 @@ public class AgitDecoInfo extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.AGIT_DECO_INFO);
-        writeInt(_residense.getResidenceId());
+        writeInt(_residense.getId());
         for (ResidenceFunctionType type : ResidenceFunctionType.values()) {
             if (type == ResidenceFunctionType.NONE) {
                 continue;

@@ -67,7 +67,7 @@ public class FortLogistics extends Merchant {
         final StringTokenizer st = new StringTokenizer(command, " ");
         final String actualCommand = st.nextToken(); // Get actual command
 
-        final boolean isMyLord = player.isClanLeader() ? (player.getClan().getFortId() == (getFort() != null ? getFort().getResidenceId() : -1)) : false;
+        final boolean isMyLord = player.isClanLeader() ? (player.getClan().getFortId() == (getFort() != null ? getFort().getId() : -1)) : false;
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         if (actualCommand.equalsIgnoreCase("rewards")) {
             if (isMyLord) {

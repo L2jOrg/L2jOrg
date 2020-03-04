@@ -55,7 +55,7 @@ public final class CastleWarehouse extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
-		final boolean isMyLord = player.isClanLeader() ? (player.getClan().getCastleId() == (npc.getCastle() != null ? npc.getCastle().getResidenceId() : -1)) : false;
+		final boolean isMyLord = player.isClanLeader() ? (player.getClan().getCastleId() == (npc.getCastle() != null ? npc.getCastle().getId() : -1)) : false;
 		switch (event)
 		{
 			case "warehouse-01.html":

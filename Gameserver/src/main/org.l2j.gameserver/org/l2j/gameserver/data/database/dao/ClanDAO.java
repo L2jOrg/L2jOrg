@@ -16,4 +16,7 @@ public interface ClanDAO extends DAO<Object> {
 
     @Query("UPDATE clan_subpledges SET leader_id=0 WHERE clan_subpledges.leader_id NOT IN (SELECT charId FROM characters) AND leader_id > 0;")
     void resetSubpledgeLeaderWithoutCharacter();
+
+    @Query("SELECT clan_id FROM clan_data WHERE hasCastle = :castleId:")
+    int findClanIdByCastle(int castleId);
 }

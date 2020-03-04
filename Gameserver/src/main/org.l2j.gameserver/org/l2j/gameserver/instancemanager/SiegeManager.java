@@ -12,7 +12,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -136,11 +135,11 @@ public final class SiegeManager {
                     LOGGER.warn(": Error while loading flame tower(s) for " + castle.getName() + " castle.");
                 }
             }
-            _controlTowers.put(castle.getResidenceId(), controlTowers);
-            _flameTowers.put(castle.getResidenceId(), flameTowers);
+            _controlTowers.put(castle.getId(), controlTowers);
+            _flameTowers.put(castle.getId(), flameTowers);
 
             if (castle.getOwnerId() != 0) {
-                loadTrapUpgrade(castle.getResidenceId());
+                loadTrapUpgrade(castle.getId());
             }
         }
     }

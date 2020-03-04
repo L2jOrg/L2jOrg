@@ -178,7 +178,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
                 final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
                 htmltext = getHtm(player, "ClanHallAuctioneer-bidInfo.html");
-                htmltext = htmltext.replaceAll("%id%", String.valueOf(clanHall.getResidenceId()));
+                htmltext = htmltext.replaceAll("%id%", String.valueOf(clanHall.getId()));
                 htmltext = htmltext.replace("%owner%", owner != null ? owner.getName() : "");
                 htmltext = htmltext.replace("%clanLeader%", owner != null ? owner.getLeaderName() : "");
                 htmltext = htmltext.replace("%rent%", String.valueOf(clanHall.getLease()));
@@ -237,7 +237,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                 final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
                 html.setHtml(getHtm(player, "ClanHallAuctioneer-info.html"));
 
-                html.replace("%id%", clanHall.getResidenceId());
+                html.replace("%id%", clanHall.getId());
                 html.replace("%owner%", owner != null ? owner.getName() : "");
                 html.replace("%clanLeader%", owner != null ? owner.getLeaderName() : "");
                 html.replace("%rent%", clanHall.getLease());
@@ -268,18 +268,18 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                         .style(ButtonsStyle.INSTANCE)
                         .bodyHandler((pages, clanHall, sb) ->
                         {
-                            final ClanHallAuction auction = ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHall.getResidenceId());
+                            final ClanHallAuction auction = ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHall.getId());
                             if(auction == null)
                             {
-                                System.out.println(clanHall.getResidenceId());
+                                System.out.println(clanHall.getId());
                                 return;
                             }
                             sb.append("<tr><td width=50><font color=\"aaaaff\">&^");
-                            sb.append(clanHall.getResidenceId());
+                            sb.append(clanHall.getId());
                             sb.append(";</font></td><td width=100><a action=\"bypass -h Quest ClanHallAuctioneer auctionList id=");
-                            sb.append(clanHall.getResidenceId());
+                            sb.append(clanHall.getId());
                             sb.append("\"><font color=\"ffffaa\">&%");
-                            sb.append(clanHall.getResidenceId());
+                            sb.append(clanHall.getId());
                             sb.append(";[0]</font></a></td><td width=50>");
                             sb.append(DateTimeFormatter.ofPattern("dd/MM/yyyy").format(Instant.ofEpochMilli(System.currentTimeMillis() + auction.getRemaingTime()).atZone(ZoneId.systemDefault())));
                             sb.append("</td><td width=70 align=right><font color=\"aaffff\">");
@@ -336,7 +336,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                 html.setHtml(getHtm(player, "ClanHallAuctioneer-bid1.html"));
                 html.replace("%clanAdena%", clan.getWarehouse().getAdena());
                 html.replace("%minBid%", ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHallId).getHighestBid());
-                html.replace("%id%", clanHall.getResidenceId());
+                html.replace("%id%", clanHall.getId());
                 player.sendPacket(html);
             }
             else

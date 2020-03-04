@@ -55,7 +55,7 @@ public final class SiegeGuardManager {
                     continue;
                 }
 
-                final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), npcId);
+                final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getId(), npcId);
                 if ((holder != null) && !castle.getSiege().isInProgress()) {
                     final Item dropticket = new Item(holder.getItemId());
                     dropticket.setItemLocation(ItemLocation.VOID);
@@ -127,15 +127,15 @@ public final class SiegeGuardManager {
             return;
         }
 
-        if (isAtNpcLimit(castle.getResidenceId(), itemId)) {
+        if (isAtNpcLimit(castle.getId(), itemId)) {
             return;
         }
 
-        final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getResidenceId(), itemId);
+        final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getId(), itemId);
         if (holder != null) {
             try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)")) {
-                statement.setInt(1, castle.getResidenceId());
+                statement.setInt(1, castle.getId());
                 statement.setInt(2, holder.getNpcId());
                 statement.setInt(3, player.getX());
                 statement.setInt(4, player.getY());
@@ -201,7 +201,7 @@ public final class SiegeGuardManager {
             return;
         }
 
-        final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getResidenceId(), item.getId());
+        final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getId(), item.getId());
         if (holder == null) {
             return;
         }
@@ -218,7 +218,7 @@ public final class SiegeGuardManager {
     private void loadSiegeGuard(Castle castle) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?")) {
-            ps.setInt(1, castle.getResidenceId());
+            ps.setInt(1, castle.getId());
             ps.setInt(2, castle.getOwnerId() > 0 ? 1 : 0);
 
             try (ResultSet rs = ps.executeQuery()) {
@@ -230,7 +230,7 @@ public final class SiegeGuardManager {
                     spawn.setRespawnDelay(rs.getInt("respawnDelay"));
                     spawn.setLocationId(0);
 
-                    getSpawnedGuards(castle.getResidenceId()).add(spawn);
+                    getSpawnedGuards(castle.getId()).add(spawn);
                 }
             }
         } catch (Exception e) {
@@ -265,7 +265,7 @@ public final class SiegeGuardManager {
     public void removeSiegeGuards(Castle castle) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1")) {
-            ps.setInt(1, castle.getResidenceId());
+            ps.setInt(1, castle.getId());
             ps.execute();
         } catch (Exception e) {
             LOGGER.warn("Error deleting hired siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
@@ -282,14 +282,14 @@ public final class SiegeGuardManager {
             final boolean isHired = (castle.getOwnerId() > 0);
             loadSiegeGuard(castle);
 
-            for (Spawn spawn : getSpawnedGuards(castle.getResidenceId())) {
+            for (Spawn spawn : getSpawnedGuards(castle.getId())) {
                 if (spawn != null) {
                     spawn.init();
                     if (isHired || (spawn.getRespawnDelay() == 0)) {
                         spawn.stopRespawn();
                     }
 
-                    final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), spawn.getLastSpawn().getId());
+                    final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getId(), spawn.getLastSpawn().getId());
                     if (holder == null) {
                         continue;
                     }
@@ -308,13 +308,13 @@ public final class SiegeGuardManager {
      * @param castle the castle instance
      */
     public void unspawnSiegeGuard(Castle castle) {
-        for (Spawn spawn : getSpawnedGuards(castle.getResidenceId())) {
+        for (Spawn spawn : getSpawnedGuards(castle.getId())) {
             if ((spawn != null) && (spawn.getLastSpawn() != null)) {
                 spawn.stopRespawn();
                 spawn.getLastSpawn().doDie(spawn.getLastSpawn());
             }
         }
-        getSpawnedGuards(castle.getResidenceId()).clear();
+        getSpawnedGuards(castle.getId()).clear();
     }
 
     public Set<Spawn> getSpawnedGuards(int castleId) {

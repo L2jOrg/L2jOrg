@@ -5,6 +5,7 @@ import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
@@ -38,7 +39,7 @@ public interface Siegable {
 
     Set<Npc> getFlag(Clan clan);
 
-    Calendar getSiegeDate();
+    LocalDateTime getSiegeDate();
 
     boolean giveFame();
 

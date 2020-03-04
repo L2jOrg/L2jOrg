@@ -70,7 +70,7 @@ public class RequestProcureCropList extends ClientPacket {
             return;
         }
 
-        final int castleId = manager.getCastle().getResidenceId();
+        final int castleId = manager.getCastle().getId();
         if (manager.getParameters().getInt("manor_id", -1) != castleId) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

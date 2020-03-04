@@ -815,7 +815,7 @@ public class Npc extends Creature {
             WalkingManager.getInstance().onSpawn(this);
         }
 
-        if (isInsideZone(ZoneType.TAX) && (getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || getCastle().getShowNpcCrest()) && (getCastle().getOwnerId() != 0)) {
+        if (isInsideZone(ZoneType.TAX) && (getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || getCastle().isShowNpcCrest()) && (getCastle().getOwnerId() != 0)) {
             setClanId(getCastle().getOwnerId());
         }
     }

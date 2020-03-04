@@ -34,7 +34,7 @@ public class OpCheckResidenceSkillCondition implements SkillCondition {
 			if (nonNull(clan)) {
 				final ClanHall clanHall = ClanHallData.getInstance().getClanHallByClan(clan);
 				if (nonNull(clanHall)) {
-					return isWithin == residencesId.contains(clanHall.getResidenceId());
+					return isWithin == residencesId.contains(clanHall.getId());
 				}
 			}
 		}

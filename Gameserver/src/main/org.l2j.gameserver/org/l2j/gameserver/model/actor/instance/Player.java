@@ -4206,7 +4206,7 @@ public final class Player extends Playable {
             } else if (combatFlagEquipped) {
                 final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
-                    FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
+                    FortSiegeManager.getInstance().dropCombatFlag(this, fort.getId());
                 } else {
                     var bodyPart = BodyPart.fromEquippedPaperdoll(inventory.getItemByItemId(9819));
                     inventory.unEquipItemInBodySlot(bodyPart);
@@ -8660,7 +8660,7 @@ public final class Player extends Playable {
             if (inventory.getItemByItemId(9819) != null) {
                 final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
-                    FortSiegeManager.getInstance().dropCombatFlag(this, fort.getResidenceId());
+                    FortSiegeManager.getInstance().dropCombatFlag(this, fort.getId());
                 } else {
                     var bodyPart = BodyPart.fromEquippedPaperdoll(inventory.getItemByItemId(9819));
                     inventory.unEquipItemInBodySlot(bodyPart);

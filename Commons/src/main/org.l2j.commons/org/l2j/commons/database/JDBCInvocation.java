@@ -16,10 +16,12 @@ import org.slf4j.LoggerFactory;
 
 import javax.cache.Cache;
 import java.lang.reflect.*;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ServiceLoader;
+import java.util.function.Consumer;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -64,8 +66,32 @@ class JDBCInvocation implements InvocationHandler {
         try(var query = buildQuery(method);
             var con = DatabaseFactory.getInstance().getConnection()) {
             query.execute(con, args);
-            return handler.handleResult(query);
+            if(hasResultConsumer(method)) {
+                var consumer = resultSetConsumer(args);
+                if(nonNull(consumer)) {
+                    consumer.accept(query.getResultSet());
+                }  else {
+                    LOGGER.warn("Should be a consumer on last parameter of method {}", method);
+                }
+                return null;
+            } else {
+                return handler.handleResult(query);
+            }
         }
+    }
+
+    @SuppressWarnings("unchecked")
+    private Consumer<ResultSet> resultSetConsumer(Object[] args) {
+        var consumer = args[args.length-1];
+        if(consumer instanceof Consumer) {
+            return  (Consumer<ResultSet>) consumer;
+        }
+        return null;
+    }
+
+    private boolean hasResultConsumer(Method method) {
+        var size = method.getParameterCount();
+        return size >= 1 && method.getParameterTypes()[size -1] == Consumer.class;
     }
 
     private boolean save(Method method, Object[] args) throws SQLException {

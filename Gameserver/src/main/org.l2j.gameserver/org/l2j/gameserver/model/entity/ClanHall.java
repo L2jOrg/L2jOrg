@@ -84,18 +84,18 @@ public final class ClanHall extends AbstractResidence {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement loadStatement = con.prepareStatement(LOAD_CLANHALL);
              PreparedStatement insertStatement = con.prepareStatement(INSERT_CLANHALL)) {
-            loadStatement.setInt(1, getResidenceId());
+            loadStatement.setInt(1, getId());
 
             try (ResultSet rset = loadStatement.executeQuery()) {
                 if (rset.next()) {
                     setPaidUntil(rset.getLong("paidUntil"));
                     setOwner(rset.getInt("ownerId"));
                 } else {
-                    insertStatement.setInt(1, getResidenceId());
+                    insertStatement.setInt(1, getId());
                     insertStatement.setInt(2, 0); // New clanhall should not have owner
                     insertStatement.setInt(3, 0); // New clanhall should not have paid until
                     if (insertStatement.execute()) {
-                        LOGGER.info("Clan Hall " + getName() + " (" + getResidenceId() + ") was sucessfully created.");
+                        LOGGER.info("Clan Hall " + getName() + " (" + getId() + ") was sucessfully created.");
                     }
                 }
             }
@@ -109,7 +109,7 @@ public final class ClanHall extends AbstractResidence {
              PreparedStatement statement = con.prepareStatement(UPDATE_CLANHALL)) {
             statement.setInt(1, getOwnerId());
             statement.setLong(2, _paidUntil);
-            statement.setInt(3, getResidenceId());
+            statement.setInt(3, getId());
             statement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -118,7 +118,7 @@ public final class ClanHall extends AbstractResidence {
 
     @Override
     protected void initResidenceZone() {
-        final ClanHallZone zone = ZoneManager.getInstance().getAllZones(ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getResidenceId()).findFirst().orElse(null);
+        final ClanHallZone zone = ZoneManager.getInstance().getAllZones(ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getId()).findFirst().orElse(null);
         if (zone != null) {
             setResidenceZone(zone);
         }
@@ -207,7 +207,7 @@ public final class ClanHall extends AbstractResidence {
     public void setOwner(Clan clan) {
         if (clan != null) {
             _owner = clan;
-            clan.setHideoutId(getResidenceId());
+            clan.setHideoutId(getId());
             clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
             if (_paidUntil == 0) {
                 setPaidUntil(Instant.now().plus(Duration.ofDays(7)).toEpochMilli());
@@ -300,7 +300,7 @@ public final class ClanHall extends AbstractResidence {
 
     @Override
     public String toString() {
-        return (getClass().getSimpleName() + ":" + getName() + "[" + getResidenceId() + "]");
+        return (getClass().getSimpleName() + ":" + getName() + "[" + getId() + "]");
     }
 
     class CheckPaymentTask implements Runnable {

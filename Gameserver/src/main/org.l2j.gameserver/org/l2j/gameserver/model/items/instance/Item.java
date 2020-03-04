@@ -257,7 +257,7 @@ public final class Item extends WorldObject {
 
         // if this item is a mercenary ticket, remove the spawns!
         final Castle castle = CastleManager.getInstance().getCastle(this);
-        if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), getId()) != null)) {
+        if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getId(), getId()) != null)) {
             SiegeGuardManager.getInstance().removeTicket(this);
             ItemsOnGroundManager.getInstance().removeObject(this);
         }

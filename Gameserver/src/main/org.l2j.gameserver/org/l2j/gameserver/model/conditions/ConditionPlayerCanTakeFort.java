@@ -54,7 +54,7 @@ public class ConditionPlayerCanTakeFort extends Condition {
 
         final Fort fort = FortDataManager.getInstance().getFort(player);
         final SystemMessage sm;
-        if ((fort == null) || (fort.getResidenceId() <= 0) || !fort.getSiege().isInProgress() || (fort.getSiege().getAttackerClan(player.getClan()) == null)) {
+        if ((fort == null) || (fort.getId() <= 0) || !fort.getSiege().isInProgress() || (fort.getSiege().getAttackerClan(player.getClan()) == null)) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addSkillName(skill);
             player.sendPacket(sm);

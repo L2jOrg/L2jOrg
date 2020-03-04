@@ -1,139 +1,177 @@
 package org.l2j.gameserver.model.entity;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.CastleDAO;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
+import org.l2j.gameserver.data.database.data.CastleFunctionData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.CastleData;
 import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.data.xml.impl.CastleData;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.enums.TaxType;
-import org.l2j.gameserver.instancemanager.*;
+import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.CastleManorManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
+import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Artefact;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.world.zone.type.CastleZone;
-import org.l2j.gameserver.world.zone.type.ResidenceTeleportZone;
-import org.l2j.gameserver.world.zone.type.SiegeZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCastleState;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.PledgeShowInfoUpdate;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.type.CastleZone;
+import org.l2j.gameserver.world.zone.type.ResidenceTeleportZone;
+import org.l2j.gameserver.world.zone.type.SiegeZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.falseIfNullOrElse;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
+/**
+ * @author JoeAlisson
+ */
 public final class Castle extends AbstractResidence {
-    /**
-     * Castle Functions
-     */
+
     public static final int FUNC_TELEPORT = 1;
     public static final int FUNC_RESTORE_HP = 2;
     public static final int FUNC_RESTORE_MP = 3;
     public static final int FUNC_RESTORE_EXP = 4;
     public static final int FUNC_SUPPORT = 5;
+
     protected static final Logger LOGGER = LoggerFactory.getLogger(Castle.class);
-    private final List<Door> _doors = new ArrayList<>();
-    private final List<Npc> _sideNpcs = new ArrayList<>();
-    private final List<Artefact> _artefacts = new ArrayList<>(1);
-    private final Map<Integer, CastleFunction> _function = new ConcurrentHashMap<>();
-    int _ownerId = 0;
-    private Siege _siege = null;
-    private Calendar _siegeDate;
-    private boolean _isTimeRegistrationOver = true; // true if Castle Lords set the time, or 24h is elapsed after the siege
-    private Calendar _siegeTimeRegistrationEndDate; // last siege end date + 1 day
-    private CastleSide _castleSide = null;
-    private long _treasury = 0;
-    private boolean _showNpcCrest = false;
-    private SiegeZone _zone = null;
-    private ResidenceTeleportZone _teleZone;
-    private Clan _formerOwner = null;
-    private int _ticketBuyCount = 0;
+
+    private final IntMap<Door> doors = new HashIntMap<>();
+    private final List<Npc> sideNpcs = new ArrayList<>();
+    private final List<Artefact> artefacts = new ArrayList<>(1);
+    private final IntMap<CastleFunction> functions = new CHashIntMap<>();
+
+    int ownerId = 0;
+    private Siege siege = null;
+    private SiegeZone zone = null;
+    private ResidenceTeleportZone teleZone;
+    private Clan formerOwner = null;
+
+    private org.l2j.gameserver.data.database.data.CastleData data;
 
     public Castle(int castleId) {
         super(castleId);
         load();
         initResidenceZone();
-        // initFunctions();
         spawnSideNpcs();
-        if (_ownerId != 0) {
+        if (ownerId != 0) {
             loadFunctions();
             loadDoorUpgrade();
         }
     }
 
-    /**
-     * Return function with id
-     *
-     * @param type
-     * @return
-     */
+    @Override
+    protected void load() {
+        data = getDAO(CastleDAO.class).findById(getId());
+        setName(data.getName());
+        ownerId = getDAO(ClanDAO.class).findClanIdByCastle(getId());
+    }
+
+    @Override
+    protected void initResidenceZone() {
+        for (CastleZone zone : ZoneManager.getInstance().getAllZones(CastleZone.class)) {
+            if (zone.getResidenceId() == getId()) {
+                setResidenceZone(zone);
+                break;
+            }
+        }
+    }
+
+    private void spawnSideNpcs() {
+        sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
+        sideNpcs.clear();
+
+        for (CastleSpawnHolder holder : getSideSpawns()) {
+            try {
+                var spawn = new Spawn(holder.getNpcId());
+                spawn.setXYZ(holder);
+                spawn.setHeading(holder.getHeading());
+                final Npc npc = spawn.doSpawn(false);
+                spawn.stopRespawn();
+                npc.broadcastInfo();
+                sideNpcs.add(npc);
+            } catch (Exception e) {
+                LOGGER.warn(e.getMessage(), e);
+            }
+        }
+    }
+
+    private void loadFunctions() {
+        getDAO(CastleDAO.class).findFunctionsByCastle(getId()).forEach(functionData -> functions.put(functionData.getType(), new CastleFunction(functionData, 0, true)));
+    }
+
     public CastleFunction getCastleFunction(int type) {
-        if (_function.containsKey(type)) {
-            return _function.get(type);
+        if (functions.containsKey(type)) {
+            return functions.get(type);
         }
         return null;
     }
 
     public synchronized void engrave(Clan clan, WorldObject target, CastleSide side) {
-        if (!_artefacts.contains(target)) {
+        if (!(target instanceof Artefact) || !artefacts.contains(target)) {
             return;
         }
         setSide(side);
         setOwner(clan);
-        final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCEEDED_IN_S2);
-        msg.addString(clan.getName());
-        msg.addString(getName());
-        getSiege().announceToPlayer(msg, true);
+        getSiege().announceToPlayer(getSystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCEEDED_IN_S2).addString(clan.getName()).addString(getName()), true);
     }
 
     /**
      * Add amount to castle instance's treasury (warehouse).
      *
-     * @param amount
      */
     public void addToTreasury(long amount) {
         // check if owned
-        if (_ownerId <= 0) {
+        if (ownerId <= 0) {
             return;
         }
 
         switch (getName().toLowerCase()) {
-            case "schuttgart":
-            case "goddard": {
+            case "schuttgart", "goddard" -> {
                 final Castle rune = CastleManager.getInstance().getCastle("rune");
-                if (rune != null) {
+                if (nonNull(rune)) {
                     final long runeTax = (long) (amount * rune.getTaxRate(TaxType.BUY));
                     if (rune.getOwnerId() > 0) {
                         rune.addToTreasury(runeTax);
                     }
                     amount -= runeTax;
                 }
-                break;
             }
-            case "dion":
-            case "giran":
-            case "gludio":
-            case "innadril":
-            case "oren": {
+            case "dion", "giran", "gludio", "innadril", "oren" -> {
                 final Castle aden = CastleManager.getInstance().getCastle("aden");
                 if (aden != null) {
                     final long adenTax = (long) (amount * aden.getTaxRate(TaxType.BUY)); // Find out what Aden gets from the current castle instance's income
@@ -142,45 +180,29 @@ public final class Castle extends AbstractResidence {
                     }
                     amount -= adenTax; // Subtract Aden's income from current castle instance's income
                 }
-                break;
             }
         }
         addToTreasuryNoTax(amount);
     }
 
-    // This method add to the treasury
-
-    /**
-     * Add amount to castle instance's treasury (warehouse), no tax paying.
-     *
-     * @param amount
-     * @return
-     */
     public boolean addToTreasuryNoTax(long amount) {
-        if (_ownerId <= 0) {
+        if (ownerId <= 0) {
             return false;
         }
 
         if (amount < 0) {
             amount *= -1;
-            if (_treasury < amount) {
+            if (data.getTreasury() < amount) {
                 return false;
             }
-            _treasury -= amount;
-        } else if ((_treasury + amount) > Inventory.MAX_ADENA) {
-            _treasury = Inventory.MAX_ADENA;
+            data.updateTreasury(-amount);
+        } else if (data.getTreasury() + amount > Inventory.MAX_ADENA) {
+            data.setTreasury(Inventory.MAX_ADENA);
         } else {
-            _treasury += amount;
+            data.updateTreasury(amount);
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE castle SET treasury = ? WHERE id = ?")) {
-            ps.setLong(1, _treasury);
-            ps.setInt(2, getResidenceId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn(e.getMessage(), e);
-        }
+        getDAO(CastleDAO.class).updateTreasury(getId(), data.getTreasury());
         return true;
     }
 
@@ -188,31 +210,23 @@ public final class Castle extends AbstractResidence {
      * Move non clan members off castle area and to nearest town.
      */
     public void banishForeigners() {
-        getResidenceZone().banishForeigners(_ownerId);
+        getResidenceZone().banishForeigners(ownerId);
     }
 
-    /**
-     * Return true if object is inside the zone
-     *
-     * @param x
-     * @param y
-     * @param z
-     * @return
-     */
     public boolean checkIfInZone(int x, int y, int z) {
         return getZone().isInsideZone(x, y, z);
     }
 
     public SiegeZone getZone() {
-        if (_zone == null) {
+        if (isNull(zone)) {
             for (SiegeZone zone : ZoneManager.getInstance().getAllZones(SiegeZone.class)) {
-                if (zone.getSiegeObjectId() == getResidenceId()) {
-                    _zone = zone;
+                if (zone.getSiegeObjectId() == getId()) {
+                    this.zone = zone;
                     break;
                 }
             }
         }
-        return _zone;
+        return zone;
     }
 
     @Override
@@ -221,84 +235,58 @@ public final class Castle extends AbstractResidence {
     }
 
     public ResidenceTeleportZone getTeleZone() {
-        if (_teleZone == null) {
+        if (isNull(teleZone)) {
             for (ResidenceTeleportZone zone : ZoneManager.getInstance().getAllZones(ResidenceTeleportZone.class)) {
-                if (zone.getResidenceId() == getResidenceId()) {
-                    _teleZone = zone;
+                if (zone.getResidenceId() == getId()) {
+                    teleZone = zone;
                     break;
                 }
             }
         }
-        return _teleZone;
+        return teleZone;
     }
 
     public void oustAllPlayers() {
         getTeleZone().oustAllPlayers();
     }
 
-    /**
-     * Get the objects distance to this castle
-     *
-     * @param obj
-     * @return
-     */
     public double getDistance(WorldObject obj) {
         return getZone().getDistanceToZone(obj);
     }
 
-    public void closeDoor(Player activeChar, int doorId) {
-        openCloseDoor(activeChar, doorId, false);
-    }
-
-    public void openDoor(Player activeChar, int doorId) {
-        openCloseDoor(activeChar, doorId, true);
-    }
-
-    public void openCloseDoor(Player activeChar, int doorId, boolean open) {
-        if ((activeChar.getClanId() != _ownerId) && !activeChar.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS)) {
+    private void openCloseDoor(Player player, Door door, boolean open) {
+        if (isNull(door) || (player.getClanId() != ownerId && !player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS))) {
             return;
         }
-
-        final Door door = getDoor(doorId);
-        if (door != null) {
-            if (open) {
-                door.openMe();
-            } else {
-                door.closeMe();
-            }
+        if(open) {
+            door.openMe();
+        } else {
+            door.closeMe();
         }
+    }
+
+    public void openCloseDoor(Player player, int doorId, boolean open) {
+        openCloseDoor(player, getDoor(doorId), open);
+
     }
 
     public void openCloseDoor(Player activeChar, String doorName, boolean open) {
-        if ((activeChar.getClanId() != _ownerId) && !activeChar.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS)) {
-            return;
-        }
-
-        final Door door = getDoor(doorName);
-        if (door != null) {
-            if (open) {
-                door.openMe();
-            } else {
-                door.closeMe();
-            }
-        }
+        openCloseDoor(activeChar, getDoor(doorName), open);
     }
 
     // This method is used to begin removing all castle upgrades
     public void removeUpgrade() {
         removeDoorUpgrade();
         removeTrapUpgrade();
-        for (Integer fc : _function.keySet()) {
-            removeFunction(fc);
-        }
-        _function.clear();
+        functions.keySet().forEach(this::removeFunction);
+        functions.clear();
     }
 
     public void removeOwner(Clan clan) {
-        if (clan != null) {
-            _formerOwner = clan;
-            if (Config.REMOVE_CASTLE_CIRCLETS) {
-                CastleManager.getInstance().removeCirclet(_formerOwner, getResidenceId());
+        if (nonNull(clan)) {
+            formerOwner = clan;
+            if (getSettings(CharacterSettings.class).removeCastleCirclets()) {
+                CastleManager.getInstance().removeCirclet(formerOwner, getId());
             }
             for (Player member : clan.getOnlineMembers(0)) {
                 removeResidentialSkills(member);
@@ -313,11 +301,8 @@ public final class Castle extends AbstractResidence {
         if (getSiege().isInProgress()) {
             getSiege().midVictory();
         }
-
-        for (Integer fc : _function.keySet()) {
-            removeFunction(fc);
-        }
-        _function.clear();
+        functions.keySet().forEach(this::removeFunction);
+        functions.clear();
     }
 
     /**
@@ -330,14 +315,12 @@ public final class Castle extends AbstractResidence {
     /**
      * Respawn all doors on castle grounds<BR>
      * <BR>
-     *
-     * @param isDoorWeak
      */
     public void spawnDoor(boolean isDoorWeak) {
-        for (Door door : _doors) {
+        for (Door door : doors.values()) {
             if (door.isDead()) {
                 door.doRevive();
-                door.setCurrentHp((isDoorWeak) ? (door.getMaxHp() / 2) : (door.getMaxHp()));
+                door.setCurrentHp((isDoorWeak) ? door.getMaxHp() / 2f : door.getMaxHp());
             }
 
             if (door.isOpen()) {
@@ -346,81 +329,13 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    // This method loads castle
-    @Override
-    protected void load() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps1 = con.prepareStatement("SELECT * FROM castle WHERE id = ?");
-             PreparedStatement ps2 = con.prepareStatement("SELECT clan_id FROM clan_data WHERE hasCastle = ?")) {
-            ps1.setInt(1, getResidenceId());
-            try (ResultSet rs = ps1.executeQuery()) {
-                while (rs.next()) {
-                    setName(rs.getString("name"));
-                    // _OwnerId = rs.getInt("ownerId");
-
-                    _siegeDate = Calendar.getInstance();
-                    _siegeDate.setTimeInMillis(rs.getLong("siegeDate"));
-                    _siegeTimeRegistrationEndDate = Calendar.getInstance();
-                    _siegeTimeRegistrationEndDate.setTimeInMillis(rs.getLong("regTimeEnd"));
-                    _isTimeRegistrationOver = rs.getBoolean("regTimeOver");
-
-                    _castleSide = Enum.valueOf(CastleSide.class, rs.getString("side"));
-
-                    _treasury = rs.getLong("treasury");
-
-                    _showNpcCrest = rs.getBoolean("showNpcCrest");
-
-                    _ticketBuyCount = rs.getInt("ticketBuyCount");
-                }
-            }
-
-            ps2.setInt(1, getResidenceId());
-            try (ResultSet rs = ps2.executeQuery()) {
-                while (rs.next()) {
-                    _ownerId = rs.getInt("clan_id");
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Exception: loadCastleData(): " + e.getMessage(), e);
-        }
-    }
-
-    /**
-     * Load All Functions
-     */
-    private void loadFunctions() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_functions WHERE castle_id = ?")) {
-            ps.setInt(1, getResidenceId());
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    _function.put(rs.getInt("type"), new CastleFunction(rs.getInt("type"), rs.getInt("lvl"), rs.getInt("lease"), 0, rs.getLong("rate"), rs.getLong("endTime"), true));
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Exception: Castle.loadFunctions(): " + e.getMessage(), e);
-        }
-    }
-
-    /**
-     * Remove function In List and in DB
-     *
-     * @param functionType
-     */
     public void removeFunction(int functionType) {
-        _function.remove(functionType);
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM castle_functions WHERE castle_id=? AND type=?")) {
-            ps.setInt(1, getResidenceId());
-            ps.setInt(2, functionType);
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.error("Exception: Castle.removeFunctions(int functionType): " + e.getMessage(), e);
-        }
+        functions.remove(functionType);
+        getDAO(CastleDAO.class).deleteFunction(getId(), functionType);
     }
 
-    public boolean updateFunctions(Player player, int type, int lvl, int lease, long rate, boolean addNew) {
-        if (player == null) {
+    public boolean updateFunctions(Player player, int type, int level, int lease, long rate, boolean addNew) {
+        if (isNull(player)) {
             return false;
         }
         if (lease > 0) {
@@ -429,18 +344,18 @@ public final class Castle extends AbstractResidence {
             }
         }
         if (addNew) {
-            _function.put(type, new CastleFunction(type, lvl, lease, 0, rate, 0, false));
-        } else if ((lvl == 0) && (lease == 0)) {
+            functions.put(type, new CastleFunction(type, level, lease, 0, rate, 0, false));
+        } else if (level == 0 && lease == 0) {
             removeFunction(type);
         } else {
-            final int diffLease = lease - _function.get(type).getLease();
+            final int diffLease = lease - functions.get(type).getLease();
             if (diffLease > 0) {
-                _function.remove(type);
-                _function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
+                functions.remove(type);
+                functions.put(type, new CastleFunction(type, level, lease, 0, rate, -1, false));
             } else {
-                _function.get(type).setLease(lease);
-                _function.get(type).setLvl(lvl);
-                _function.get(type).dbSave();
+                functions.get(type).setLease(lease);
+                functions.get(type).setLevel(level);
+                functions.get(type).dbSave();
             }
         }
         return true;
@@ -450,48 +365,27 @@ public final class Castle extends AbstractResidence {
         loadDoor();
     }
 
-    // This method loads castle door data from database
     private void loadDoor() {
-        for (Door door : DoorDataManager.getInstance().getDoors()) {
-            if ((door.getCastle() != null) && (door.getCastle().getResidenceId() == getResidenceId())) {
-                _doors.add(door);
-            }
-        }
+        DoorDataManager.getInstance().getDoors().stream().filter(d -> falseIfNullOrElse(d.getCastle(), c -> c.getId() == getId())).forEach(d -> doors.put(d.getId(), d));
     }
 
-    // This method loads castle door upgrade data from database
     private void loadDoorUpgrade() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_doorupgrade WHERE castleId=?")) {
-            ps.setInt(1, getResidenceId());
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    setDoorUpgrade(rs.getInt("doorId"), rs.getInt("ratio"), false);
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Exception: loadCastleDoorUpgrade(): " + e.getMessage(), e);
-        }
+        getDAO(CastleDAO.class).findDoorUpgrade(getId(), this::processDoorUpgrade);
     }
 
-    private void removeDoorUpgrade() {
-        for (Door door : _doors) {
-            door.getStats().setUpgradeHpRatio(1);
-            door.setCurrentHp(door.getCurrentHp());
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM castle_doorupgrade WHERE castleId=?")) {
-            ps.setInt(1, getResidenceId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Exception: removeDoorUpgrade(): " + e.getMessage(), e);
+    private void processDoorUpgrade(ResultSet resultSet) {
+        try {
+            while(!resultSet.next()) {
+                setDoorUpgrade(resultSet.getInt(1), resultSet.getInt(2), false);
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
     public void setDoorUpgrade(int doorId, int ratio, boolean save) {
-        final Door door = (getDoors().isEmpty()) ? DoorDataManager.getInstance().getDoor(doorId) : getDoor(doorId);
-        if (door == null) {
+        final Door door = doors.isEmpty() ? DoorDataManager.getInstance().getDoor(doorId) : getDoor(doorId);
+        if (isNull(door)) {
             return;
         }
 
@@ -503,7 +397,7 @@ public final class Castle extends AbstractResidence {
                  PreparedStatement ps = con.prepareStatement("REPLACE INTO castle_doorupgrade (doorId, ratio, castleId) values (?,?,?)")) {
                 ps.setInt(1, doorId);
                 ps.setInt(2, ratio);
-                ps.setInt(3, getResidenceId());
+                ps.setInt(3, getId());
                 ps.execute();
             } catch (Exception e) {
                 LOGGER.warn("Exception: setDoorUpgrade(int doorId, int ratio, int castleId): " + e.getMessage(), e);
@@ -511,30 +405,45 @@ public final class Castle extends AbstractResidence {
         }
     }
 
+    private void removeDoorUpgrade() {
+        for (Door door : doors.values()) {
+            door.getStats().setUpgradeHpRatio(1);
+            door.setCurrentHp(door.getCurrentHp());
+        }
+
+        try (Connection con = DatabaseFactory.getInstance().getConnection();
+             PreparedStatement ps = con.prepareStatement("DELETE FROM castle_doorupgrade WHERE castleId=?")) {
+            ps.setInt(1, getId());
+            ps.execute();
+        } catch (Exception e) {
+            LOGGER.warn("Exception: removeDoorUpgrade(): " + e.getMessage(), e);
+        }
+    }
+
     private void updateOwnerInDB(Clan clan) {
         if (clan != null) {
-            _ownerId = clan.getId(); // Update owner id property
+            ownerId = clan.getId(); // Update owner id property
         } else {
-            _ownerId = 0; // Remove owner
-            CastleManorManager.getInstance().resetManorData(getResidenceId());
+            ownerId = 0; // Remove owner
+            CastleManorManager.getInstance().resetManorData(getId());
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
             // Need to remove has castle flag from clan_data, should be checked from castle table.
             try (PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET hasCastle = 0 WHERE hasCastle = ?")) {
-                ps.setInt(1, getResidenceId());
+                ps.setInt(1, getId());
                 ps.execute();
             }
 
             try (PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET hasCastle = ? WHERE clan_id = ?")) {
-                ps.setInt(1, getResidenceId());
-                ps.setInt(2, _ownerId);
+                ps.setInt(1, getId());
+                ps.setInt(2, ownerId);
                 ps.execute();
             }
 
             // Announce to clan members
             if (clan != null) {
-                clan.setCastleId(getResidenceId()); // Set has castle flag for new owner
+                clan.setCastleId(getId()); // Set has castle flag for new owner
                 clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
                 clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
             }
@@ -544,36 +453,36 @@ public final class Castle extends AbstractResidence {
     }
 
     public final Door getDoor(int doorId) {
-        return _doors.stream().filter(d -> d.getId() == doorId).findFirst().orElse(null);
+        return doors.get(doorId);
     }
 
     public final Door getDoor(String doorName) {
-        return _doors.stream().filter(d -> d.getTemplate().getName().equals(doorName)).findFirst().orElse(null);
+        return doors.values().stream().filter(d -> d.getTemplate().getName().equals(doorName)).findFirst().orElse(null);
     }
 
-    public final List<Door> getDoors() {
-        return _doors;
+    public final Collection<Door> getDoors() {
+        return doors.values();
     }
 
     @Override
     public final int getOwnerId() {
-        return _ownerId;
+        return ownerId;
     }
 
     public final Clan getOwner() {
-        return (_ownerId != 0) ? ClanTable.getInstance().getClan(_ownerId) : null;
+        return (ownerId != 0) ? ClanTable.getInstance().getClan(ownerId) : null;
     }
 
     // This method updates the castle tax rate
     public void setOwner(Clan clan) {
         // Remove old owner
-        if ((_ownerId > 0) && ((clan == null) || (clan.getId() != _ownerId))) {
+        if ((ownerId > 0) && ((clan == null) || (clan.getId() != ownerId))) {
             final Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
             if (oldOwner != null) {
-                if (_formerOwner == null) {
-                    _formerOwner = oldOwner;
-                    if (Config.REMOVE_CASTLE_CIRCLETS) {
-                        CastleManager.getInstance().removeCirclet(_formerOwner, getResidenceId());
+                if (formerOwner == null) {
+                    formerOwner = oldOwner;
+                    if (getSettings(CharacterSettings.class).removeCastleCirclets()) {
+                        CastleManager.getInstance().removeCirclet(formerOwner, getId());
                     }
                 }
                 try {
@@ -616,48 +525,34 @@ public final class Castle extends AbstractResidence {
     }
 
     public final Siege getSiege() {
-        if (_siege == null) {
-            _siege = new Siege(this);
+        if (siege == null) {
+            siege = new Siege(this);
         }
-        return _siege;
+        return siege;
     }
 
-    public final Calendar getSiegeDate() {
-        return _siegeDate;
+    public final LocalDateTime getSiegeDate() {
+        return data.getSiegeDate();
     }
 
-    public boolean getIsTimeRegistrationOver() {
-        return _isTimeRegistrationOver;
+    public boolean isTimeRegistrationOver() {
+        return data.getSiegeTimeRegistrationEnd().isBefore(LocalDateTime.now());
     }
 
-    public void setIsTimeRegistrationOver(boolean val) {
-        _isTimeRegistrationOver = val;
+    public LocalDateTime getSiegeTimeRegistrationEnd() {
+        return data.getSiegeTimeRegistrationEnd();
     }
 
-    public Calendar getTimeRegistrationOverDate() {
-        if (_siegeTimeRegistrationEndDate == null) {
-            _siegeTimeRegistrationEndDate = Calendar.getInstance();
-        }
-        return _siegeTimeRegistrationEndDate;
+    public void setSiegeTimeRegistrationEnd(LocalDateTime date) {
+        data.setSiegeTimeRegistrationEnd(date);
     }
 
     public final int getTaxPercent(TaxType type) {
-        final int taxPercent;
-        switch (_castleSide) {
-            case LIGHT: {
-                taxPercent = type == TaxType.BUY ? Config.CASTLE_BUY_TAX_LIGHT : Config.CASTLE_SELL_TAX_LIGHT;
-                break;
-            }
-            case DARK: {
-                taxPercent = type == TaxType.BUY ? Config.CASTLE_BUY_TAX_DARK : Config.CASTLE_SELL_TAX_DARK;
-                break;
-            }
-            default: {
-                taxPercent = type == TaxType.BUY ? Config.CASTLE_BUY_TAX_NEUTRAL : Config.CASTLE_SELL_TAX_NEUTRAL;
-                break;
-            }
-        }
-        return taxPercent;
+        return switch (data.getSide()) {
+            case LIGHT -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_LIGHT : Config.CASTLE_SELL_TAX_LIGHT;
+            case DARK -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_DARK : Config.CASTLE_SELL_TAX_DARK;
+            default -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_NEUTRAL : Config.CASTLE_SELL_TAX_NEUTRAL;
+        };
     }
 
     public final double getTaxRate(TaxType taxType) {
@@ -665,31 +560,31 @@ public final class Castle extends AbstractResidence {
     }
 
     public final long getTreasury() {
-        return _treasury;
+        return data.getTreasury();
     }
 
-    public final boolean getShowNpcCrest() {
-        return _showNpcCrest;
+    public final boolean isShowNpcCrest() {
+        return data.isShowNpcCrest();
     }
 
     public final void setShowNpcCrest(boolean showNpcCrest) {
-        if (_showNpcCrest != showNpcCrest) {
-            _showNpcCrest = showNpcCrest;
+        if (data.isShowNpcCrest() != showNpcCrest) {
+            data.setShowNpcCrest(showNpcCrest);
             updateShowNpcCrest();
         }
     }
 
     public void updateClansReputation() {
-        if (_formerOwner != null) {
-            if (_formerOwner != ClanTable.getInstance().getClan(getOwnerId())) {
-                final int maxreward = Math.max(0, _formerOwner.getReputationScore());
-                _formerOwner.takeReputationScore(Config.LOOSE_CASTLE_POINTS, true);
+        if (formerOwner != null) {
+            if (formerOwner != ClanTable.getInstance().getClan(getOwnerId())) {
+                final int maxreward = Math.max(0, formerOwner.getReputationScore());
+                formerOwner.takeReputationScore(Config.LOOSE_CASTLE_POINTS, true);
                 final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
                 if (owner != null) {
                     owner.addReputationScore(Math.min(Config.TAKE_CASTLE_POINTS, maxreward), true);
                 }
             } else {
-                _formerOwner.addReputationScore(Config.CASTLE_DEFENDED_POINTS, true);
+                formerOwner.addReputationScore(Config.CASTLE_DEFENDED_POINTS, true);
             }
         } else {
             final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
@@ -700,14 +595,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public void updateShowNpcCrest() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE castle SET showNpcCrest = ? WHERE id = ?")) {
-            ps.setString(1, String.valueOf(_showNpcCrest));
-            ps.setInt(2, getResidenceId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.info("Error saving showNpcCrest for castle " + getName() + ": " + e.getMessage());
-        }
+        getDAO(CastleDAO.class).updateShowNpcCrest(getId(), data.isShowNpcCrest());
     }
 
     /**
@@ -716,18 +604,11 @@ public final class Castle extends AbstractResidence {
      * @param artefact
      */
     public void registerArtefact(Artefact artefact) {
-        _artefacts.add(artefact);
+        artefacts.add(artefact);
     }
 
     public List<Artefact> getArtefacts() {
-        return _artefacts;
-    }
-
-    /**
-     * @return the tickets exchanged for this castle
-     */
-    public int getTicketBuyCount() {
-        return _ticketBuyCount;
+        return artefacts;
     }
 
     /**
@@ -737,20 +618,12 @@ public final class Castle extends AbstractResidence {
      * @param count the ticket count to set
      */
     public void setTicketBuyCount(int count) {
-        _ticketBuyCount = count;
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE castle SET ticketBuyCount = ? WHERE id = ?")) {
-            ps.setInt(1, _ticketBuyCount);
-            ps.setInt(2, getResidenceId());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.warn(e.getMessage(), e);
-        }
+        data.setTicketBuyCount(count);
+        getDAO(CastleDAO.class).updateTicketBuyCount(getId(), data.getTicketBuyCount());
     }
 
     public int getTrapUpgradeLevel(int towerIndex) {
-        final TowerSpawn spawn = SiegeManager.getInstance().getFlameTowers(getResidenceId()).get(towerIndex);
+        final TowerSpawn spawn = SiegeManager.getInstance().getFlameTowers(getId()).get(towerIndex);
         return (spawn != null) ? spawn.getUpgradeLevel() : 0;
     }
 
@@ -758,7 +631,7 @@ public final class Castle extends AbstractResidence {
         if (save) {
             try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement ps = con.prepareStatement("REPLACE INTO castle_trapupgrade (castleId, towerIndex, level) values (?,?,?)")) {
-                ps.setInt(1, getResidenceId());
+                ps.setInt(1, getId());
                 ps.setInt(2, towerIndex);
                 ps.setInt(3, level);
                 ps.execute();
@@ -766,20 +639,20 @@ public final class Castle extends AbstractResidence {
                 LOGGER.warn("Exception: setTrapUpgradeLevel(int towerIndex, int level, int castleId): " + e.getMessage(), e);
             }
         }
-        final TowerSpawn spawn = SiegeManager.getInstance().getFlameTowers(getResidenceId()).get(towerIndex);
+        final TowerSpawn spawn = SiegeManager.getInstance().getFlameTowers(getId()).get(towerIndex);
         if (spawn != null) {
             spawn.setUpgradeLevel(level);
         }
     }
 
     private void removeTrapUpgrade() {
-        for (TowerSpawn ts : SiegeManager.getInstance().getFlameTowers(getResidenceId())) {
+        for (TowerSpawn ts : SiegeManager.getInstance().getFlameTowers(getId())) {
             ts.setUpgradeLevel(0);
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("DELETE FROM castle_trapupgrade WHERE castleId=?")) {
-            ps.setInt(1, getResidenceId());
+            ps.setInt(1, getId());
             ps.execute();
         } catch (Exception e) {
             LOGGER.warn("Exception: removeDoorUpgrade(): " + e.getMessage(), e);
@@ -787,19 +660,9 @@ public final class Castle extends AbstractResidence {
     }
 
     @Override
-    protected void initResidenceZone() {
-        for (CastleZone zone : ZoneManager.getInstance().getAllZones(CastleZone.class)) {
-            if (zone.getResidenceId() == getResidenceId()) {
-                setResidenceZone(zone);
-                break;
-            }
-        }
-    }
-
-    @Override
     public void giveResidentialSkills(Player player) {
         super.giveResidentialSkills(player);
-        final Skill skill = _castleSide == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill();
+        final Skill skill = data.getSide() == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill();
         player.addSkill(skill);
     }
 
@@ -810,51 +673,28 @@ public final class Castle extends AbstractResidence {
         player.removeSkill(CommonSkill.ABILITY_OF_LIGHT.getId());
     }
 
-    public void spawnSideNpcs() {
-        _sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
-        _sideNpcs.clear();
-
-        for (CastleSpawnHolder holder : getSideSpawns()) {
-            if (holder != null) {
-                Spawn spawn;
-                try {
-                    spawn = new Spawn(holder.getNpcId());
-                } catch (Exception e) {
-                    LOGGER.warn(Castle.class.getSimpleName() + ": " + e.getMessage());
-                    return;
-                }
-                spawn.setXYZ(holder);
-                spawn.setHeading(holder.getHeading());
-                final Npc npc = spawn.doSpawn(false);
-                spawn.stopRespawn();
-                npc.broadcastInfo();
-                _sideNpcs.add(npc);
-            }
-        }
-    }
-
     public List<CastleSpawnHolder> getSideSpawns() {
-        return CastleData.getInstance().getSpawnsForSide(getResidenceId(), getSide());
+        return CastleData.getInstance().getSpawnsForSide(getId(), getSide());
     }
 
     public CastleSide getSide() {
-        return _castleSide;
+        return data.getSide();
     }
 
     public void setSide(CastleSide side) {
-        if (_castleSide == side) {
+        if (getSide() == side) {
             return;
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("UPDATE castle SET side = ? WHERE id = ?")) {
             ps.setString(1, side.toString());
-            ps.setInt(2, getResidenceId());
+            ps.setInt(2, getId());
             ps.execute();
         } catch (Exception e) {
             LOGGER.warn(e.getMessage(), e);
         }
-        _castleSide = side;
+        data.setSide(side);
         Broadcast.toAllOnlinePlayers(new ExCastleState(this));
         spawnSideNpcs();
     }
@@ -863,65 +703,41 @@ public final class Castle extends AbstractResidence {
         return getSiege().isInProgress();
     }
 
-    public class CastleFunction {
-        final int _type;
-        final long _rate;
-        public boolean _cwh;
-        protected int _fee;
-        protected int _tempFee;
-        protected boolean _inDebt;
-        long _endDate;
-        private int _lvl;
+    public void updateSiegeDate() {
+        getDAO(CastleDAO.class).save(data);
+    }
 
-        public CastleFunction(int type, int lvl, int lease, int tempLease, long rate, long time, boolean cwh) {
-            _type = type;
-            _lvl = lvl;
-            _fee = lease;
-            _tempFee = tempLease;
-            _rate = rate;
-            _endDate = time;
+    public void setSiegeDate(LocalDateTime siegeDate) {
+        data.setSiegeDate(siegeDate);
+        updateSiegeDate();
+    }
+
+    public class CastleFunction {
+
+        private CastleFunctionData functionData;
+        public boolean cwh;
+        private final int tempFee;
+
+
+        CastleFunction(CastleFunctionData data, int tempLease, boolean cwh) {
+            this.functionData = data;
+            this.tempFee = tempLease;
             initializeTask(cwh);
         }
 
-        public int getType() {
-            return _type;
-        }
-
-        public int getLvl() {
-            return _lvl;
-        }
-
-        public void setLvl(int lvl) {
-            _lvl = lvl;
-        }
-
-        public int getLease() {
-            return _fee;
-        }
-
-        public void setLease(int lease) {
-            _fee = lease;
-        }
-
-        public long getRate() {
-            return _rate;
-        }
-
-        public long getEndTime() {
-            return _endDate;
-        }
-
-        public void setEndTime(long time) {
-            _endDate = time;
+        public CastleFunction(int type, int level, int lease, int tempLease, long rate, int time, boolean cwh) {
+            this.functionData = new CastleFunctionData(type, level, lease, rate, time);
+            this.cwh = cwh;
+            this.tempFee = tempLease;
         }
 
         private void initializeTask(boolean cwh) {
-            if (_ownerId <= 0) {
+            if (ownerId <= 0) {
                 return;
             }
             final long currentTime = System.currentTimeMillis();
-            if (_endDate > currentTime) {
-                ThreadPool.schedule(new FunctionTask(cwh), _endDate - currentTime);
+            if (functionData.getEndTime() > currentTime) {
+                ThreadPool.schedule(new FunctionTask(cwh), functionData.getEndTime() - currentTime);
             } else {
                 ThreadPool.schedule(new FunctionTask(cwh), 0);
             }
@@ -930,46 +746,70 @@ public final class Castle extends AbstractResidence {
         public void dbSave() {
             try (Connection con = DatabaseFactory.getInstance().getConnection();
                  PreparedStatement ps = con.prepareStatement("REPLACE INTO castle_functions (castle_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)")) {
-                ps.setInt(1, getResidenceId());
-                ps.setInt(2, _type);
-                ps.setInt(3, _lvl);
-                ps.setInt(4, _fee);
-                ps.setLong(5, _rate);
-                ps.setLong(6, _endDate);
+                ps.setInt(1, getId());
+                ps.setInt(2, functionData.getType());
+                ps.setInt(3, functionData.getLevel());
+                ps.setInt(4, functionData.getLease());
+                ps.setLong(5, functionData.getRate());
+                ps.setLong(6, functionData.getEndTime());
                 ps.execute();
             } catch (Exception e) {
-                LOGGER.error("Exception: Castle.updateFunctions(int type, int lvl, int lease, long rate, long time, boolean addNew): " + e.getMessage(), e);
+                Castle.LOGGER.error("Exception: Castle.updateFunctions(int type, int lvl, int lease, long rate, long time, boolean addNew): " + e.getMessage(), e);
             }
+        }
+
+        public int getLease() {
+            return functionData.getLease();
+        }
+
+        public void setLease(int lease) {
+            functionData.setLease(lease);
+        }
+
+        public void setLevel(int level) {
+            functionData.setLevel(level);
+        }
+
+        public int getLevel() {
+            return functionData.getLevel();
+        }
+
+        public long getEndTime() {
+            return functionData.getEndTime();
+        }
+
+        public long getRate() {
+            return functionData.getRate();
         }
 
         private class FunctionTask implements Runnable {
             public FunctionTask(boolean cwh) {
-                _cwh = cwh;
+                CastleFunction.this.cwh = cwh;
             }
 
             @Override
             public void run() {
                 try {
-                    if (_ownerId <= 0) {
+                    if (ownerId <= 0) {
                         return;
                     }
-                    if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= _fee) || !_cwh) {
-                        int fee = _fee;
-                        if (_endDate == -1) {
-                            fee = _tempFee;
+                    if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= functionData.getLease()) || !cwh) {
+                        int fee = functionData.getLease();
+                        if (functionData.getEndTime() == -1) {
+                            fee = tempFee;
                         }
 
-                        setEndTime(System.currentTimeMillis() + _rate);
+                        functionData.setEndTime(System.currentTimeMillis() + functionData.getRate());
                         dbSave();
-                        if (_cwh) {
+                        if (cwh) {
                             ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CS_function_fee", CommonItem.ADENA, fee, null, null);
                         }
-                        ThreadPool.schedule(new FunctionTask(true), _rate);
+                        ThreadPool.schedule(new FunctionTask(true), functionData.getRate());
                     } else {
-                        removeFunction(_type);
+                        removeFunction(functionData.getType());
                     }
                 } catch (Exception e) {
-                    LOGGER.error("", e);
+                    Castle.LOGGER.error("", e);
                 }
             }
         }

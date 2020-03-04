@@ -242,7 +242,7 @@ public final class MapRegionManager extends GameXmlReader {
             }
         }
 
-        if (castle.getResidenceId() > 0) {
+        if (castle.getId() > 0) {
             if (player.getReputation() < 0) {
                 return castle.getResidenceZone().getChaoticSpawnLoc();
             }
@@ -261,7 +261,7 @@ public final class MapRegionManager extends GameXmlReader {
             }
         }
 
-        if (fort.getResidenceId() > 0) {
+        if (fort.getId() > 0) {
             if (player.getReputation() < 0) {
                 return fort.getResidenceZone().getChaoticSpawnLoc();
             }

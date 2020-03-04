@@ -14,6 +14,7 @@ public class CharacterSettings implements Settings {
     private boolean initialEquipEvent;
     private boolean delevel;
     private float weightLimitMultiplier;
+    private boolean removeCastleCirclets;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -29,6 +30,8 @@ public class CharacterSettings implements Settings {
         delevel = settingsFile.getBoolean("Delevel", true);
 
         weightLimitMultiplier = settingsFile.getFloat("AltWeightLimit", 1f);
+
+        removeCastleCirclets = settingsFile.getBoolean("RemoveCastleCirclets", true);
     }
 
     public int partyRange() {
@@ -61,5 +64,9 @@ public class CharacterSettings implements Settings {
 
     public float weightLimitMultiplier() {
         return weightLimitMultiplier;
+    }
+
+    public boolean removeCastleCirclets() {
+        return removeCastleCirclets;
     }
 }

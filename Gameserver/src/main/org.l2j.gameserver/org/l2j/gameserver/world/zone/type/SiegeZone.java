@@ -126,7 +126,7 @@ public class SiegeZone extends Zone {
                 // drop combat flag
                 final Fort fort = FortDataManager.getInstance().getFortById(getSettings().getSiegeableId());
                 if (fort != null) {
-                    FortSiegeManager.getInstance().dropCombatFlag(player, fort.getResidenceId());
+                    FortSiegeManager.getInstance().dropCombatFlag(player, fort.getId());
                 } else {
                     var bodyPart = BodyPart.fromEquippedPaperdoll(player.getInventory().getItemByItemId(9819));
                     player.getInventory().unEquipItemInBodySlot(bodyPart);

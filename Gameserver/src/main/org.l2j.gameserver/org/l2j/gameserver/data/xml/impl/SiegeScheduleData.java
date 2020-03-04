@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.SiegeScheduleDate;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.util.GameXmlReader;

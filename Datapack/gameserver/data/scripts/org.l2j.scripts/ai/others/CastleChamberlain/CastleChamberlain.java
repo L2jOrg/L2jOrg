@@ -32,7 +32,6 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.Castle.CastleFunction;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
@@ -153,7 +152,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				html = getHtmlPacket(player, npc, "castleresetdeco.html");
 				html.replace("%AgitDecoSubmit%", Integer.toString(func));
 			}
-			else if ((castle.getCastleFunction(func) != null) && (castle.getCastleFunction(func).getLvl() == level))
+			else if ((castle.getCastleFunction(func) != null) && (castle.getCastleFunction(func).getLevel() == level))
 			{
 				html = getHtmlPacket(player, npc, "castledecoalreadyset.html");
 				html.replace("%AgitDecoEffect%", "<fstring p1=\"" + level + "\">" + fstring + "</fstring>");
@@ -173,7 +172,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	
 	private final void funcReplace(Castle castle, NpcHtmlMessage html, int func, String str)
 	{
-		final CastleFunction function = castle.getCastleFunction(func);
+		var function = castle.getCastleFunction(func);
 		if (function == null)
 		{
 			html.replace("%" + str + "Depth%", "<fstring>4</fstring>");
@@ -186,7 +185,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 			final String fstring = ((func == Castle.FUNC_SUPPORT) || (func == Castle.FUNC_TELEPORT)) ? "9" : "10";
 			final Calendar calendar = Calendar.getInstance();
 			calendar.setTimeInMillis(function.getEndTime());
-			html.replace("%" + str + "Depth%", "<fstring p1=\"" + function.getLvl() + "\">" + fstring + "</fstring>");
+			html.replace("%" + str + "Depth%", "<fstring p1=\"" + function.getLevel() + "\">" + fstring + "</fstring>");
 			html.replace("%" + str + "Cost%", "<fstring p1=\"" + function.getLease() + "\" p2=\"" + (function.getRate() / 86400000) + "\">6</fstring>");
 			html.replace("%" + str + "Expire%", "<fstring p1=\"" + calendar.get(Calendar.DATE) + "\" p2=\"" + (calendar.get(Calendar.MONTH) + 1) + "\" p3=\"" + calendar.get(Calendar.YEAR) + "\">5</fstring>");
 			html.replace("%" + str + "Reset%", "[<a action=\"bypass -h Quest CastleChamberlain " + str + " 0\">Deactivate</a>]");
@@ -391,7 +390,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 		final Castle castle = npc.getCastle();
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		String htmltext = null;
-		final boolean isMyLord = player.isClanLeader() ? (player.getClan().getCastleId() == (npc.getCastle() != null ? npc.getCastle().getResidenceId() : -1)) : false;
+		final boolean isMyLord = player.isClanLeader() ? (player.getClan().getCastleId() == (npc.getCastle() != null ? npc.getCastle().getId() : -1)) : false;
 		
 		switch (st.nextToken())
 		{
@@ -409,14 +408,14 @@ public final class CastleChamberlain extends AbstractNpcAI
 				if (isMyLord)
 				{
 					final StringBuilder sb = new StringBuilder();
-					final List<Integer> fort = FORTRESS.get(castle.getResidenceId());
+					final List<Integer> fort = FORTRESS.get(castle.getId());
 					for (int id : fort)
 					{
 						final Fort fortress = FortDataManager.getInstance().getFortById(id);
 						if (fortress == null) {
 							continue;
 						}
-						final int fortId = fortress.getResidenceId();
+						final int fortId = fortress.getId();
 						final String fortType = (fortId < 112) ? "1300133" : "1300134";
 						final String fortStatus;
 						switch (fortress.getFortState())
@@ -669,7 +668,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-02.html");
 						html.replace("%clanleadername%", clan.getLeaderName());
 						html.replace("%clanname%", clan.getName());
-						html.replace("%castlename%", String.valueOf(1001000 + castle.getResidenceId()));
+						html.replace("%castlename%", String.valueOf(1001000 + castle.getId()));
 						player.sendPacket(html);
 					}
 				}
@@ -951,13 +950,13 @@ public final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
-					final CastleFunction HP = castle.getCastleFunction(Castle.FUNC_RESTORE_HP);
-					final CastleFunction MP = castle.getCastleFunction(Castle.FUNC_RESTORE_MP);
-					final CastleFunction XP = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
+					var HP = castle.getCastleFunction(Castle.FUNC_RESTORE_HP);
+					var MP = castle.getCastleFunction(Castle.FUNC_RESTORE_MP);
+					var XP = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castledecofunction.html");
-					html.replace("%HPDepth%", (HP == null) ? "0" : Integer.toString(HP.getLvl()));
-					html.replace("%MPDepth%", (MP == null) ? "0" : Integer.toString(MP.getLvl()));
-					html.replace("%XPDepth%", (XP == null) ? "0" : Integer.toString(XP.getLvl()));
+					html.replace("%HPDepth%", (HP == null) ? "0" : Integer.toString(HP.getLevel()));
+					html.replace("%MPDepth%", (MP == null) ? "0" : Integer.toString(MP.getLevel()));
+					html.replace("%XPDepth%", (XP == null) ? "0" : Integer.toString(XP.getLevel()));
 					player.sendPacket(html);
 				}
 				else
@@ -978,7 +977,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				else
 				{
-					final String listName = "tel" + castle.getCastleFunction(Castle.FUNC_TELEPORT).getLvl();
+					final String listName = "tel" + castle.getCastleFunction(Castle.FUNC_TELEPORT).getLevel();
 					final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), listName);
 					if (holder != null)
 					{
@@ -991,7 +990,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS) && (st.countTokens() >= 2))
 				{
-					final CastleFunction func = castle.getCastleFunction(Castle.FUNC_TELEPORT);
+					var func = castle.getCastleFunction(Castle.FUNC_TELEPORT);
 					if (func == null)
 					{
 						return "castlefuncdisabled.html";
@@ -999,7 +998,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					
 					final String listId = st.nextToken();
 					final int funcLvl = (listId.length() >= 4) ? CommonUtil.parseInt(listId.substring(3), -1) : -1;
-					if (func.getLvl() == funcLvl)
+					if (func.getLevel() == funcLvl)
 					{
 						final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), listId);
 						if (holder != null)
@@ -1024,7 +1023,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlebuff-0" + castle.getCastleFunction(Castle.FUNC_SUPPORT).getLvl() + ".html");
+						final NpcHtmlMessage html = getHtmlPacket(player, npc, "castlebuff-0" + castle.getCastleFunction(Castle.FUNC_SUPPORT).getLevel() + ".html");
 						html.replace("%MPLeft%", Integer.toString((int) npc.getCurrentMp()));
 						player.sendPacket(html);
 					}
@@ -1162,7 +1161,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					{
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-25.html");
 						html.replace("%owner_name%", player.getName());
-						html.replace("%feud_name%", String.valueOf(1001000 + castle.getResidenceId()));
+						html.replace("%feud_name%", String.valueOf(1001000 + castle.getId()));
 						player.sendPacket(html);
 						giveItems(player, CROWN, 1);
 					}
@@ -1201,7 +1200,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				return;
 			}
 			
-			final int castleId = (evt.getManorId() == -1) ? npc.getCastle().getResidenceId() : evt.getManorId();
+			final int castleId = (evt.getManorId() == -1) ? npc.getCastle().getId() : evt.getManorId();
 			switch (evt.getRequest())
 			{
 				case 3: // Seed info

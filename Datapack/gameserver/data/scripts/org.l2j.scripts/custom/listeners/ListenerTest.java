@@ -96,7 +96,7 @@ public class ListenerTest extends AbstractNpcAI
 	@Range(from = 1, to = 9)
 	private void onSiegeStart(OnCastleSiegeStart event)
 	{
-		LOGGER.info(getClass().getSimpleName() + ": The siege of " + event.getSiege().getCastle().getName() + " (" + event.getSiege().getCastle().getResidenceId() + ") has started!");
+		LOGGER.info(getClass().getSimpleName() + ": The siege of " + event.getSiege().getCastle().getName() + " (" + event.getSiege().getCastle().getId() + ") has started!");
 	}
 	
 	/**

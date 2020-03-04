@@ -39,7 +39,7 @@ public class FortCommander extends Defender {
         }
 
         // Attackable during siege by all except defenders
-        return ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(attacker.getClan()));
+        return ((getFort() != null) && (getFort().getId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(attacker.getClan()));
     }
 
     @Override
@@ -86,7 +86,7 @@ public class FortCommander extends Defender {
     public final void addDamage(Creature attacker, int damage, Skill skill) {
         final Spawn spawn = getSpawn();
         if ((spawn != null) && canTalk()) {
-            final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
+            final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getId());
             for (FortSiegeSpawn spawn2 : commanders) {
                 if (spawn2.getId() == spawn.getId()) {
                     NpcStringId npcString = null;

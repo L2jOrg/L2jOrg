@@ -25,7 +25,7 @@ public class ExShowAgitInfo extends ServerPacket {
         writeInt(clanHalls.size());
         clanHalls.forEach(clanHall ->
         {
-            writeInt(clanHall.getResidenceId());
+            writeInt(clanHall.getId());
             writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getName()); // owner clan name
             writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getLeaderName()); // leader name
             writeInt(clanHall.getType().getClientVal()); // Clan hall type

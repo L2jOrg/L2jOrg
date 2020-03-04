@@ -529,13 +529,7 @@ public final class SkillTreesData extends GameXmlReader {
      * @return all the available Residential skills for a given {@code residenceId}
      */
     public List<SkillLearn> getAvailableResidentialSkills(int residenceId) {
-        final List<SkillLearn> result = new ArrayList<>();
-        for (SkillLearn skill : pledgeSkillTree.values()) {
-            if (skill.isResidencialSkill() && skill.getResidenceIds().contains(residenceId)) {
-                result.add(skill);
-            }
-        }
-        return result;
+        return pledgeSkillTree.values().stream().filter( s -> s.isResidencialSkill() && s.getResidenceIds().contains(residenceId)).collect(Collectors.toList());
     }
 
     /**

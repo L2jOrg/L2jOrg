@@ -59,7 +59,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition {
             canCreateOutpost = false;
         }
 
-        if (((fort != null) && (fort.getResidenceId() == 0)) || ((castle != null) && (castle.getResidenceId() == 0))) {
+        if (((fort != null) && (fort.getId() == 0)) || ((castle != null) && (castle.getId() == 0))) {
             player.sendMessage("You must be on fort or castle ground to construct an outpost or flag.");
             canCreateOutpost = false;
         } else if (((fort != null) && !fort.getZone().isActive()) || ((castle != null) && !castle.getZone().isActive())) {

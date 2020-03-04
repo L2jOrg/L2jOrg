@@ -114,7 +114,7 @@ public class SiegeGuards extends AbstractNpcAI
         }
         final Castle castle = npc.getCastle();
         final Fort fortress = npc.getFort();
-        npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
+        npc.setScriptValue(fortress != null ? fortress.getId() : (castle != null ? castle.getId() : 0));
         SPAWNED_GUARDS.add(npc);
         return super.onSpawn(npc);
     }

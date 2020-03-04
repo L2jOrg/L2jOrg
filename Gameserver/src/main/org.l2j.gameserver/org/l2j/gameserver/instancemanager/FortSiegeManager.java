@@ -123,13 +123,13 @@ public final class FortSiegeManager {
                     final int heading = Integer.parseInt(st.nextToken());
                     final int npc_id = Integer.parseInt(st.nextToken());
 
-                    _commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
+                    _commanderSpawns.add(new FortSiegeSpawn(fort.getId(), x, y, z, heading, npc_id, i));
                 } catch (Exception e) {
                     LOGGER.warn("Error while loading commander(s) for " + fort.getName() + " fort.");
                 }
             }
 
-            _commanderSpawnList.put(fort.getResidenceId(), _commanderSpawns);
+            _commanderSpawnList.put(fort.getId(), _commanderSpawns);
 
             for (int i = 1; i < 4; i++) {
                 final String _spawnParams = siegeSettings.getProperty(fort.getName().replace(" ", "") + "Flag" + i, "");
@@ -144,12 +144,12 @@ public final class FortSiegeManager {
                     final int z = Integer.parseInt(st.nextToken());
                     final int flag_id = Integer.parseInt(st.nextToken());
 
-                    _flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
+                    _flagSpawns.add(new CombatFlag(fort.getId(), x, y, z, 0, flag_id));
                 } catch (Exception e) {
                     LOGGER.warn("Error while loading flag(s) for " + fort.getName() + " fort.");
                 }
             }
-            _flagList.put(fort.getResidenceId(), _flagSpawns);
+            _flagList.put(fort.getId(), _flagSpawns);
         }
     }
 
@@ -224,7 +224,7 @@ public final class FortSiegeManager {
 
         final Fort fort = FortDataManager.getInstance().getFort(player);
 
-        final Collection<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
+        final Collection<CombatFlag> fcf = _flagList.get(fort.getId());
         for (CombatFlag cf : fcf) {
             if (cf.getCombatFlagInstance() == item) {
                 cf.activate(player, item);
@@ -246,7 +246,7 @@ public final class FortSiegeManager {
         // here check if is siege is attacker
         final Fort fort = FortDataManager.getInstance().getFort(player);
 
-        if ((fort == null) || (fort.getResidenceId() <= 0)) {
+        if ((fort == null) || (fort.getId() <= 0)) {
             player.sendPacket(sm);
             return false;
         } else if (!fort.getSiege().isInProgress()) {
@@ -261,7 +261,7 @@ public final class FortSiegeManager {
 
     public void dropCombatFlag(Player player, int fortId) {
         final Fort fort = FortDataManager.getInstance().getFortById(fortId);
-        final Collection<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
+        final Collection<CombatFlag> fcf = _flagList.get(fort.getId());
         for (CombatFlag cf : fcf) {
             if (cf.getPlayerObjectId() == player.getObjectId()) {
                 cf.dropIt();

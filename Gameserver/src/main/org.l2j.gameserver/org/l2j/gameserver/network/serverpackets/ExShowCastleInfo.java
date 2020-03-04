@@ -9,6 +9,7 @@ import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.ZoneId;
 import java.util.Collection;
 
 /**
@@ -29,7 +30,7 @@ public class ExShowCastleInfo extends ServerPacket {
         final Collection<Castle> castles = CastleManager.getInstance().getCastles();
         writeInt(castles.size());
         for (Castle castle : castles) {
-            writeInt(castle.getResidenceId());
+            writeInt(castle.getId());
             if (castle.getOwnerId() > 0) {
                 if (ClanTable.getInstance().getClan(castle.getOwnerId()) != null) {
                     writeString(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
@@ -41,7 +42,7 @@ public class ExShowCastleInfo extends ServerPacket {
                 writeString("");
             }
             writeInt(castle.getTaxPercent(TaxType.BUY));
-            writeInt((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
+            writeInt((int) (castle.getSiege().getSiegeDate().atZone(ZoneId.systemDefault()).toEpochSecond()));
 
             writeByte((byte)( castle.getSiege().isInProgress() ? 0x01 : 0x00)); // Grand Crusade
             writeByte((byte) castle.getSide().ordinal()); // Grand Crusade

@@ -9,6 +9,7 @@ import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
+import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.*;
@@ -92,8 +93,6 @@ public class GameServer {
 
         printSection("Items");
         ItemEngine.init();
-        VariationData.init();
-        EnsoulData.getInstance();
         EnchantItemHPBonusData.getInstance();
         BuyListData.getInstance();
         MultisellData.getInstance();
