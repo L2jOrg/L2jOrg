@@ -4,11 +4,15 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.data.database.data.CastleFunctionData;
+import org.l2j.gameserver.enums.CastleSide;
 
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.function.Consumer;
 
+/**
+ * @author JoeAlisson
+ */
 public interface CastleDAO extends DAO<CastleData> {
 
     @Query("UPDATE castle SET side='NEUTRAL' WHERE castle.id NOT IN (SELECT hasCastle FROM clan_data);")
@@ -26,12 +30,29 @@ public interface CastleDAO extends DAO<CastleData> {
     @Query("UPDATE castle SET ticket_buy_count = :ticketBuyCount: WHERE id = :id:")
     void updateTicketBuyCount(int id, int ticketBuyCount);
 
-    @Query("SELECT type, castle_id, lvl, lease, endTime FROM castle_functions WHERE castle_id = ?")
+    @Query("SELECT type, castle_id, level, lease, endTime FROM castle_functions WHERE castle_id = :id:")
     List<CastleFunctionData> findFunctionsByCastle(int id);
 
     @Query("DELETE FROM castle_functions WHERE castle_id=:id: AND type=:type:")
     void deleteFunction(int id, int type);
 
     @Query("SELECT doorId, ratio FROM castle_doorupgrade WHERE castleId= :castleId:")
-    void findDoorUpgrade(int castleId, Consumer<ResultSet> action);
+    void withDoorUpgradeDo(int castleId, Consumer<ResultSet> action);
+
+    @Query("REPLACE INTO castle_doorupgrade (doorId, ratio, castleId) values (:doorId:, :ratio:, :castleId:)")
+    void saveDoorUpgrade(int castleId, int doorId, int ratio);
+
+    @Query("DELETE FROM castle_doorupgrade WHERE castleId=:castleId:")
+    void deleteDoorUpgradeByCastle(int castleId);
+
+    @Query("REPLACE INTO castle_trap_upgrade (castle_id, tower_index, level) values (:id:,:towerIndex:,:level:)")
+    void saveTrapUpgrade(int id, int towerIndex, int level);
+
+    @Query("DELETE FROM castle_trap_upgrade WHERE castle_id= :id:")
+    void deleteTrapUpgradeByCastle(int id);
+
+    @Query("UPDATE castle SET side = :side: WHERE id = :id:")
+    void updateSide(int id, CastleSide side);
+
+    void save(CastleFunctionData functionData);
 }

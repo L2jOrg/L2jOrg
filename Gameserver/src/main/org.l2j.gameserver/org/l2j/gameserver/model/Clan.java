@@ -8,8 +8,9 @@ import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -28,7 +29,6 @@ import org.l2j.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.variables.ClanVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -52,6 +52,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
@@ -524,8 +525,16 @@ public class Clan implements IIdentifiable, INamable {
         //@formatter:on
     }
 
+    public void forEachOnlineMember(Consumer<Player> action) {
+        onlineMembersStream().forEach(action);
+    }
+
     public void forEachOnlineMember(Consumer<Player> action, Predicate<Player> filter) {
-        members.values().stream().filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance).filter(filter).forEach(action);
+        onlineMembersStream().filter(filter).forEach(action);
+    }
+
+    private Stream<Player> onlineMembersStream() {
+        return members.values().stream().filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance);
     }
 
     /**
@@ -1229,7 +1238,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastToOnlineMembers(ServerPacket packet) {
-        members.values().stream().filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance).forEach(packet::sendTo);
+        onlineMembersStream().forEach(packet::sendTo);
     }
 
     public void broadcastCSToOnlineMembers(CreatureSay packet, Player broadcaster) {

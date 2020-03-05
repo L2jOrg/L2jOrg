@@ -3,6 +3,9 @@ package org.l2j.gameserver.data.database.dao;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 
+/**
+ * @author JoeAlisson
+ */
 public interface ClanDAO extends DAO<Object> {
 
     @Query("DELETE FROM clan_data WHERE clan_data.clan_id NOT IN (SELECT clanid FROM characters)")
@@ -18,5 +21,11 @@ public interface ClanDAO extends DAO<Object> {
     void resetSubpledgeLeaderWithoutCharacter();
 
     @Query("SELECT clan_id FROM clan_data WHERE hasCastle = :castleId:")
-    int findClanIdByCastle(int castleId);
+    int findOwnerClanIdByCastle(int castleId);
+
+    @Query("UPDATE clan_data SET hasCastle = 0 WHERE hasCastle = :castleId:")
+    void removeOwnerClanByCastle(int castleId);
+
+    @Query("UPDATE clan_data SET hasCastle = :castleId: WHERE clan_id = :id:")
+    void updateOwnedCastle(int id, int castleId);
 }
