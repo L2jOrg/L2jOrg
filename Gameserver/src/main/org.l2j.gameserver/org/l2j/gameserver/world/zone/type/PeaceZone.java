@@ -3,6 +3,9 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneEnter;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneExit;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -36,6 +39,9 @@ public class PeaceZone extends Zone {
 
         if (Config.PEACE_ZONE_MODE != 2) {
             creature.setInsideZone(ZoneType.PEACE, true);
+            if(isPlayer(creature)) {
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPeaceZoneEnter(creature.getActingPlayer()), creature);
+            }
         }
 
         if (!getAllowStore()) {
@@ -47,6 +53,9 @@ public class PeaceZone extends Zone {
     protected void onExit(Creature creature) {
         if (Config.PEACE_ZONE_MODE != 2) {
             creature.setInsideZone(ZoneType.PEACE, false);
+            if(isPlayer(creature)) {
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPeaceZoneExit(creature.getActingPlayer()), creature);
+            }
         }
 
         if (!getAllowStore()) {

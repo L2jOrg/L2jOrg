@@ -1,6 +1,7 @@
 package org.l2j.gameserver.data.database;
 
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.data.database.data.RankHistoryData;
@@ -8,13 +9,20 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneEnter;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneExit;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.network.serverpackets.rank.ExBowAction;
+import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
@@ -28,10 +36,27 @@ import static org.l2j.commons.util.Util.doIfNonNull;
 public class RankManager {
 
     private IntMap<RankData> rankersSnapshot;
+    private ScheduledFuture<?> bowTask;
 
     private RankManager() {
         var listeners = Listeners.players();
-        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> addRankersSkills(event.getPlayer()), this));
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) e -> addRankersSkills(e.getPlayer()), this));
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_PEACE_ZONE_ENTER, (Consumer<OnPlayerPeaceZoneEnter>) this::scheduleBow, this));
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_PEACE_ZONE_EXIT, (Consumer<OnPlayerPeaceZoneExit>) this::cancelBowTask, this));
+    }
+
+    private void cancelBowTask(OnPlayerPeaceZoneExit event) {
+        if(event.getPlayer().getRank() == 1 && nonNull(bowTask)) {
+            bowTask.cancel(false);
+            bowTask = null;
+        }
+    }
+
+    private void scheduleBow(OnPlayerPeaceZoneEnter event) {
+        var player = event.getPlayer();
+        if(player.getRank() == 1 && ( isNull(bowTask) || bowTask.isCancelled())) {
+            bowTask = ThreadPool.scheduleAtFixedDelay(() -> Broadcast.toSelfAndKnownPlayersInRadius(player, new ExBowAction(player), 1000, p -> p.isInsideZone(ZoneType.PEACE)), 20, 180, TimeUnit.SECONDS);
+        }
     }
 
     private void addRankersSkills(Player player) {

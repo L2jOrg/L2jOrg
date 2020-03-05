@@ -1,13 +1,15 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.function.Predicate;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -115,8 +117,11 @@ public final class Broadcast {
         toKnownPlayers(character, mov);
     }
 
-    // To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
     public static void toSelfAndKnownPlayersInRadius(Creature character, ServerPacket mov, int radius) {
+        toSelfAndKnownPlayersInRadius(character, mov, radius, o -> true);
+    }
+
+    public static void toSelfAndKnownPlayersInRadius(Creature character, ServerPacket mov, int radius, Predicate<Player> filter) {
         if (radius < 0) {
             radius = 600;
         }
@@ -125,7 +130,7 @@ public final class Broadcast {
             character.sendPacket(mov);
         }
 
-        World.getInstance().forEachVisibleObjectInRange(character, Player.class, radius, mov::sendTo);
+        World.getInstance().forEachVisibleObjectInRange(character, Player.class, radius, mov::sendTo, filter);
     }
 
     /**
