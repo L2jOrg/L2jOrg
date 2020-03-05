@@ -19,18 +19,18 @@ package handlers.admincommandhandlers;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.World;
 
 import java.util.StringTokenizer;
 
@@ -77,7 +77,7 @@ public class AdminClan implements IAdminCommandHandler
 				html.replace("%clan_leader%", clan.getLeaderName());
 				html.replace("%clan_level%", String.valueOf(clan.getLevel()));
 				html.replace("%clan_has_castle%", clan.getCastleId() > 0 ? CastleManager.getInstance().getCastleById(clan.getCastleId()).getName() : "No");
-				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallData.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
+				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
 				html.replace("%clan_has_fortress%", clan.getFortId() > 0 ? FortDataManager.getInstance().getFortById(clan.getFortId()).getName() : "No");
 				html.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
 				html.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));

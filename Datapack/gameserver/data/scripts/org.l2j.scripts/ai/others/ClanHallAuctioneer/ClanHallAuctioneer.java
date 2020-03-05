@@ -1,7 +1,7 @@
 package ai.others.ClanHallAuctioneer;
 
 import ai.AbstractNpcAI;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
@@ -171,7 +171,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
                 // THE_CLAN_DOES_NOT_OWN_A_CLAN_HALL
 
-                final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallAuction.getClanHallId());
+                final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallAuction.getClanHallId());
                 final Clan owner = clanHall.getOwner();
                 final long remainingTime = clanHallAuction.getRemaingTime();
                 final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
@@ -226,7 +226,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
         if (clanHallId > 0)
         {
-            final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
+            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
             if (clanHall != null)
             {
                 final ClanHallAuction clanHallAuction = ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHallId);
@@ -252,7 +252,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
         }
         else
         {
-            final List<ClanHall> clanHalls = ClanHallData.getInstance().getFreeAuctionableHall();
+            final List<ClanHall> clanHalls = ClanHallManager.getInstance().getFreeAuctionableHall();
             if (clanHalls.isEmpty())
             {
                 player.sendPacket(SystemMessageId.THERE_ARE_NO_CLAN_HALLS_UP_FOR_AUCTION);
@@ -301,7 +301,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
         if (clanHallId > 0)
         {
-            final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
+            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
             if (clanHall == null)
             {
                 return;
@@ -318,7 +318,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                 player.sendPacket(SystemMessageId.TO_PARTICIPATE_IN_THE_32_CLAN_HALL_AUCTION_THE_CLAN_LEVEL_MUST_BE_2_OR_HIGHER_AND_THE_CHARACTER_MUST_BE_A_CLAN_LEADER_OR_HAVE_THE_RIGHT_TO_BID_AND_SELL);
                 return;
             }
-            final ClanHall playerClanHall = ClanHallData.getInstance().getClanHallByClan(clan);
+            final ClanHall playerClanHall = ClanHallManager.getInstance().getClanHallByClan(clan);
             if (playerClanHall != null)
             {
                 player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_PARTICIPATE_IN_AN_AUCTION);

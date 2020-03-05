@@ -3,23 +3,23 @@ package ai.others.ClanHallManager;
 import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.AgitDecoInfo;
+import org.l2j.gameserver.world.World;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -275,7 +275,7 @@ public final class ClanHallManager extends AbstractNpcAI
 							{
 								case "recovery":
 								{
-									htmltext = getHtm(player, clanHall.getGrade() == ClanHallGrade.GRADE_S ? "ClanHallManager-manageFuncRecoverySGrade.html" : "ClanHallManager-manageFuncRecoveryBGrade.html");
+									htmltext = getHtm(player, clanHall.getGrade() == ClanHallGrade.S ? "ClanHallManager-manageFuncRecoverySGrade.html" : "ClanHallManager-manageFuncRecoveryBGrade.html");
 									htmltext = getFunctionInfo(clanHall.getFunction(ResidenceFunctionType.HP_REGEN), htmltext, "HP");
 									htmltext = getFunctionInfo(clanHall.getFunction(ResidenceFunctionType.MP_REGEN), htmltext, "MP");
 									htmltext = getFunctionInfo(clanHall.getFunction(ResidenceFunctionType.EXP_RESTORE), htmltext, "XP");

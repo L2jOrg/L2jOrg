@@ -184,15 +184,15 @@ public final class Castle extends AbstractResidence {
         addToTreasuryNoTax(amount);
     }
 
-    public boolean addToTreasuryNoTax(long amount) {
+    public void addToTreasuryNoTax(long amount) {
         if (ownerId <= 0) {
-            return false;
+            return;
         }
 
         if (amount < 0) {
             amount *= -1;
             if (data.getTreasury() < amount) {
-                return false;
+                return;
             }
             data.updateTreasury(-amount);
         } else if (data.getTreasury() + amount > Inventory.MAX_ADENA) {
@@ -202,7 +202,6 @@ public final class Castle extends AbstractResidence {
         }
 
         getDAO(CastleDAO.class).updateTreasury(getId(), data.getTreasury());
-        return true;
     }
 
     /**
@@ -507,8 +506,8 @@ public final class Castle extends AbstractResidence {
         return data.getSiegeDate();
     }
 
-    public boolean isTimeRegistrationOver() {
-        return data.getSiegeTimeRegistrationEnd().isBefore(LocalDateTime.now());
+    public boolean isSiegeTimeRegistrationSeason() {
+        return data.getSiegeTimeRegistrationEnd().isAfter(LocalDateTime.now());
     }
 
     public LocalDateTime getSiegeTimeRegistrationEnd() {

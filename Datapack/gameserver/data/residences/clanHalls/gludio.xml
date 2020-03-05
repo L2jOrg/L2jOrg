@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org clanHall.xsd" >
+
+    <clanHall id="22" name="Moonstone Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="35384" /> <!-- Renny -->
+            <npc id="35385" /> <!-- Black -->
+        </npcs>
+        <doors>
+            <door id="19210017" />
+            <door id="19210018" />
+        </doors>
+        <ownerRestartPoint x="-16029" y="123642" z="-3101" />
+        <banishPoint x="-15872" y="123824" z="-3116" />
+    </clanHall>
+
+    <clanHall id="23" name="Onyx Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="35387" /> <!-- Baback -->
+            <npc id="35386" /> <!-- Boyer -->
+        </npcs>
+        <doors>
+            <door id="19210011" />
+            <door id="19210012" />
+        </doors>
+        <ownerRestartPoint x="-14848" y="125552" z="-3128" />
+        <banishPoint x="-14684" y="125655" z="-3142" />
+    </clanHall>
+
+    <clanHall id="24" name="Topaz Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="35389" /> <!-- Loring -->
+            <npc id="35388" /> <!-- Tim -->
+        </npcs>
+        <doors>
+            <door id="19210013" />
+            <door id="19210014" />
+        </doors>
+        <ownerRestartPoint x="-13879" y="125413" z="-3128" />
+        <banishPoint x="-14192" y="125584" z="-3139" />
+    </clanHall>
+
+    <clanHall id="25" name="Ruby Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="35391" /> <!-- Latif -->
+            <npc id="35390" /> <!-- Dillon -->
+        </npcs>
+        <doors>
+            <door id="19210015" />
+            <door id="19210016" />
+        </doors>
+        <ownerRestartPoint x="-12710" y="124029" z="-3096" />
+        <banishPoint x="-12688" y="123760" z="-3115" />
+    </clanHall>
+
+    <clanHall id="65" name="Emerald Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="36722" /> <!-- Bini -->
+            <npc id="36721" /> <!-- Leina -->
+        </npcs>
+        <doors>
+            <door id="19210117" />
+            <door id="19210118" />
+        </doors>
+        <ownerRestartPoint x="-27289" y="122437" z="-3706" />
+        <banishPoint x="-27983" y="122380" z="-3722" />
+    </clanHall>
+
+    <clanHall id="66" name="Crystal Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="36724" /> <!-- Varin -->
+            <npc id="36723" /> <!-- Bubek -->
+        </npcs>
+        <doors>
+            <door id="19210111" />
+            <door id="19210112" />
+        </doors>
+        <ownerRestartPoint x="-28489" y="121765" z="-3706" />
+        <banishPoint x="-27983" y="122380" z="-3722" />
+    </clanHall>
+
+    <clanHall id="67" name="Sapphire Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="36726" /> <!-- Loneiren -->
+            <npc id="36725" /> <!-- Sarina -->
+        </npcs>
+        <doors>
+            <door id="19210113" />
+            <door id="19210014" />
+        </doors>
+        <ownerRestartPoint x="-28048" y="120800" z="-3706" />
+        <banishPoint x="-27983" y="122380" z="-3722" />
+    </clanHall>
+
+    <clanHall id="68" name="Aquamarine Hall" grade="B" type="AUCTIONABLE">
+        <auction min-bid="5000000" lease="500000" deposit="500000" />
+        <npcs>
+            <npc id="36728" /> <!-- Cardiff -->
+            <npc id="36727" /> <!-- Arinas -->
+        </npcs>
+        <doors>
+            <door id="19210115" />
+            <door id="19210116" />
+        </doors>
+        <ownerRestartPoint x="-27479" y="121669" z="-3706" />
+        <banishPoint x="-27983" y="122380" z="-3722" />
+    </clanHall>
+</list>

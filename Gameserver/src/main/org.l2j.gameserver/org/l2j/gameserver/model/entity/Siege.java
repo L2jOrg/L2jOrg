@@ -1312,7 +1312,7 @@ public class Siege implements Siegable {
                 return;
             }
 
-            if (!castle.isTimeRegistrationOver()) {
+            if (castle.isSiegeTimeRegistrationSeason()) {
                 var regTimeRemaining = Duration.between(Instant.now(), castle.getSiegeTimeRegistrationEnd());
                 if (regTimeRemaining.compareTo(Duration.ZERO) > 0) {
                     scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);

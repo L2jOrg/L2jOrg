@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org clanHall.xsd" >
+    <clanHall id="36" name="Golden Chamber" grade="S" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35440" /> <!-- Daniel -->
+            <npc id="35439" /> <!-- Carey -->
+        </npcs>
+        <doors>
+            <door id="24180024" />
+            <door id="24180025" />
+        </doors>
+        <ownerRestartPoint x="149134" y="23140" z="-2160" />
+        <banishPoint x="149568" y="23024" z="-2128" />
+    </clanHall>
+
+    <clanHall id="37" name="Silver Chamber" grade="S" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35442" /> <!-- Jacques -->
+            <npc id="35441" /> <!-- Dianne -->
+        </npcs>
+        <doors>
+            <door id="24180027" />
+            <door id="24180026" />
+        </doors>
+        <ownerRestartPoint x="150644" y="23653" z="-2150" />
+        <banishPoint x="150192" y="23808" z="-2128" />
+    </clanHall>
+
+    <clanHall id="38" name="Mithril Chamber" grade="S" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35444" /> <!-- Joff-->
+            <npc id="35443" /> <!-- Crissy -->
+        </npcs>
+        <doors>
+            <door id="24180023" />
+            <door id="24180022" />
+        </doors>
+        <ownerRestartPoint x="145667" y="25356" z="-2150" />
+        <banishPoint x="150320" y="26368" z="-2128" />
+    </clanHall>
+
+    <clanHall id="39" name="Silver Manor" grade="S" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35446" /> <!-- Niels-->
+            <npc id="35445" /> <!-- Albert -->
+        </npcs>
+        <doors>
+            <door id="24180029" />
+            <door id="24180028" />
+        </doors>
+        <ownerRestartPoint x="150748" y="26540" z="-2280" />
+        <banishPoint x="145280" y="25184" z="-2128" />
+    </clanHall>
+
+    <clanHall id="40" name="Gold Manor" grade="S" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35448" /> <!-- Rudy-->
+            <npc id="35447" /> <!-- Korgen -->
+        </npcs>
+        <doors>
+            <door id="24180032" />
+            <door id="24180033" />
+        </doors>
+        <ownerRestartPoint x="143992" y="27092" z="-2290" />
+        <banishPoint x="144432" y="26896" z="-2256" />
+    </clanHall>
+
+    <clanHall id="41" name="Bronze Chamber" grade="S" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35450" /> <!-- Gellar -->
+            <npc id="35449" /> <!-- DiMaggio -->
+        </npcs>
+        <doors>
+            <door id="24180030" />
+            <door id="24180031" />
+        </doors>
+        <ownerRestartPoint x="144014" y="28202" z="-2280" />
+        <banishPoint x="144448" y="28384" z="-2256" />
+    </clanHall>
+</list>

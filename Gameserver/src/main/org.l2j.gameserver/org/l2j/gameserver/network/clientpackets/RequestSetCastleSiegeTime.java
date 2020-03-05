@@ -46,7 +46,7 @@ public class RequestSetCastleSiegeTime extends ClientPacket {
             LOGGER.warn("player {} is trying to change siege date of not his own castle {}!", player, castle);
         } else if(!player.isClanLeader()) {
             LOGGER.warn("player {} is trying to change siege date of castle {} but is not clan leader!", player, castle);
-        } else if(!castle.isTimeRegistrationOver()) {
+        } else if(castle.isSiegeTimeRegistrationSeason()) {
 
             var requestedTime = Instant.ofEpochSecond(time).atZone(ZoneId.systemDefault());
             var requestedHour = requestedTime.getHour();

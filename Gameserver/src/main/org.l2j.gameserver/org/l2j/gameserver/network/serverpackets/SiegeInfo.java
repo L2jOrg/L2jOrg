@@ -74,7 +74,7 @@ public class SiegeInfo extends ServerPacket {
             writeInt((int) (System.currentTimeMillis() / 1000));
 
             var siegeDate = _castle.getSiegeDate().atZone(ZoneId.systemDefault());
-            if (!_castle.isTimeRegistrationOver() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId())) {
+            if (_castle.isSiegeTimeRegistrationSeason() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId())) {
 
                 var hours = getSettings(FeatureSettings.class).siegeHours();
 

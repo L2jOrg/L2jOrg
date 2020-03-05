@@ -1,10 +1,10 @@
 package org.l2j.gameserver.data.sql.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -204,7 +204,7 @@ public class ClanTable {
             }
         }
 
-        final ClanHall hall = ClanHallData.getInstance().getClanHallByClan(clan);
+        final ClanHall hall = ClanHallManager.getInstance().getClanHallByClan(clan);
         if (hall != null) {
             hall.setOwner(null);
         }

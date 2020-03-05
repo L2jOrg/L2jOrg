@@ -9,7 +9,6 @@ import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
-import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.*;
@@ -128,7 +127,7 @@ public class GameServer {
         printSection("Clans");
         ClanTable.getInstance();
         ResidenceFunctionsData.getInstance();
-        ClanHallData.getInstance();
+        ClanHallManager.init();
         ClanHallAuctionManager.getInstance();
         ClanEntryManager.getInstance();
 

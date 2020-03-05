@@ -3,7 +3,7 @@ package handlers.actionshifthandlers;
 import handlers.bypasshandlers.NpcViewMod;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
@@ -40,7 +40,7 @@ public class NpcActionShift implements IActionShiftHandler
 			
 			final Npc npc = (Npc) target;
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-			final ClanHall clanHall = ClanHallData.getInstance().getClanHallByNpcId(npc.getId());
+			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByNpcId(npc.getId());
 			html.setFile(activeChar, "data/html/admin/npcinfo.htm");
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));

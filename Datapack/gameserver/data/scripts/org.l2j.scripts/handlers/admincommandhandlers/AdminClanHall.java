@@ -16,7 +16,8 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
@@ -27,7 +28,6 @@ import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
 import org.l2j.gameserver.model.html.pagehandlers.NextPrevPageHandler;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
-import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BypassParser;
@@ -65,7 +65,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	
 	private void doAction(Player player, int clanHallId, String action, String actionVal)
 	{
-		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
+		final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
 		{
 			switch (action)
@@ -158,7 +158,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
-		final List<ClanHall> clanHallList = ClanHallData.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getId)).collect(Collectors.toList());
+		final List<ClanHall> clanHallList = ClanHallManager.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getId)).collect(Collectors.toList());
 		
 		//@formatter:off
 		final PageResult result = PageBuilder.newBuilder(clanHallList, 4, "bypass -h admin_clanhall")
@@ -204,7 +204,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	
 	private void sendClanHallDetails(Player player, int clanHallId)
 	{
-		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
+		final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);

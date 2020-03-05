@@ -1,6 +1,6 @@
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.entity.ClanHall;
@@ -45,7 +45,7 @@ public class ClanHallZone extends ResidenceZone {
 
     @Override
     public final Location getBanishSpawnLoc() {
-        final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(getResidenceId());
+        final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(getResidenceId());
         return isNull(clanHall) ? null : clanHall.getBanishLocation();
     }
 }

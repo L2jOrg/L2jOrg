@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
@@ -98,7 +98,7 @@ public final class RequestRestartPoint extends ClientPacket {
                     return;
                 }
                 loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CLANHALL);
-                final ClanHall residense = ClanHallData.getInstance().getClanHallByClan(player.getClan());
+                final ClanHall residense = ClanHallManager.getInstance().getClanHallByClan(player.getClan());
 
                 if ((residense != null) && (residense.hasFunction(ResidenceFunctionType.EXP_RESTORE))) {
                     player.restoreExp(residense.getFunction(ResidenceFunctionType.EXP_RESTORE).getValue());

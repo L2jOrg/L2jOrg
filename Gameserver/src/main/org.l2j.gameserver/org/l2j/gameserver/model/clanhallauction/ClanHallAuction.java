@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.clanhallauction;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.ClanHall;
@@ -112,7 +112,7 @@ public class ClanHallAuction {
     }
 
     public long getHighestBid() {
-        final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(_clanHallId);
+        final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
         return getBids().values().stream().mapToLong(Bidder::getBid).max().orElse(clanHall.getMinBid());
     }
 
@@ -137,7 +137,7 @@ public class ClanHallAuction {
 
         if (potentialHighestBidder.isPresent()) {
             final Bidder highestBidder = potentialHighestBidder.get();
-            final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(_clanHallId);
+            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
             clanHall.setOwner(highestBidder.getClan());
             getBids().clear();
 

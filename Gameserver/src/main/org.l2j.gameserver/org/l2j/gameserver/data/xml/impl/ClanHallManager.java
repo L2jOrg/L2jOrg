@@ -1,5 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.enums.ClanHallType;
@@ -19,31 +21,35 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author St3eT
+ * @author JoeAlisson
  */
-public final class ClanHallData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallData.class);
-    private static final Map<Integer, ClanHall> _clanHalls = new HashMap<>();
+public final class ClanHallManager extends GameXmlReader {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallManager.class);
 
-    private ClanHallData() {
-        load();
+    private final IntMap<ClanHall> clanHalls = new HashIntMap<>();
+
+    private ClanHallManager() {
     }
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/clanHall.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/residences/clanHalls/clanHall.xsd");
     }
 
     @Override
     public void load() {
         parseDatapackDirectory("data/residences/clanHalls", true);
-        LOGGER.info(getClass().getSimpleName() + ": Succesfully loaded " + _clanHalls.size() + " Clan Halls.");
+        LOGGER.info("Loaded {} Clan Halls.", clanHalls.size());
     }
 
     @Override
@@ -59,14 +65,14 @@ public final class ClanHallData extends GameXmlReader {
                     if ("clanHall".equals(clanHallNode.getNodeName())) {
                         params.set("id", parseInteger(clanHallNode.getAttributes(), "id"));
                         params.set("name", parseString(clanHallNode.getAttributes(), "name", "None"));
-                        params.set("grade", parseEnum(clanHallNode.getAttributes(), ClanHallGrade.class, "grade", ClanHallGrade.GRADE_NONE));
+                        params.set("grade", parseEnum(clanHallNode.getAttributes(), ClanHallGrade.class, "grade", ClanHallGrade.NONE));
                         params.set("type", parseEnum(clanHallNode.getAttributes(), ClanHallType.class, "type", ClanHallType.OTHER));
 
                         for (Node tpNode = clanHallNode.getFirstChild(); tpNode != null; tpNode = tpNode.getNextSibling()) {
                             switch (tpNode.getNodeName()) {
                                 case "auction": {
                                     final NamedNodeMap at = tpNode.getAttributes();
-                                    params.set("minBid", parseInteger(at, "minBid"));
+                                    params.set("minBid", parseInteger(at, "min-bid"));
                                     params.set("lease", parseInteger(at, "lease"));
                                     params.set("deposit", parseInteger(at, "deposit"));
                                     break;
@@ -82,7 +88,7 @@ public final class ClanHallData extends GameXmlReader {
                                     params.set("npcList", npcs);
                                     break;
                                 }
-                                case "doorlist": {
+                                case "doors": {
                                     for (Node npcNode = tpNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling()) {
                                         if ("door".equals(npcNode.getNodeName())) {
                                             final NamedNodeMap np = npcNode.getAttributes();
@@ -128,39 +134,43 @@ public final class ClanHallData extends GameXmlReader {
                 }
             }
         }
-        _clanHalls.put(params.getInt("id"), new ClanHall(params));
+        clanHalls.put(params.getInt("id"), new ClanHall(params));
     }
 
     public ClanHall getClanHallById(int clanHallId) {
-        return _clanHalls.get(clanHallId);
+        return clanHalls.get(clanHallId);
     }
 
     public Collection<ClanHall> getClanHalls() {
-        return _clanHalls.values();
+        return clanHalls.values();
     }
 
     public ClanHall getClanHallByNpcId(int npcId) {
-        return _clanHalls.values().stream().filter(ch -> ch.getNpcs().contains(npcId)).findFirst().orElse(null);
+        return clanHalls.values().stream().filter(ch -> ch.getNpcs().contains(npcId)).findFirst().orElse(null);
     }
 
     public ClanHall getClanHallByClan(Clan clan) {
-        return _clanHalls.values().stream().filter(ch -> ch.getOwner() == clan).findFirst().orElse(null);
+        return clanHalls.values().stream().filter(ch -> ch.getOwner() == clan).findFirst().orElse(null);
     }
 
     public ClanHall getClanHallByDoorId(int doorId) {
         final Door door = DoorDataManager.getInstance().getDoor(doorId);
-        return _clanHalls.values().stream().filter(ch -> ch.getDoors().contains(door)).findFirst().orElse(null);
+        return clanHalls.values().stream().filter(ch -> ch.getDoors().contains(door)).findFirst().orElse(null);
     }
 
     public List<ClanHall> getFreeAuctionableHall() {
-        return _clanHalls.values().stream().filter(ch -> (ch.getType() == ClanHallType.AUCTIONABLE) && (ch.getOwner() == null)).sorted(Comparator.comparingInt(ClanHall::getId)).collect(Collectors.toList());
+        return clanHalls.values().stream().filter(ch -> (ch.getType() == ClanHallType.AUCTIONABLE) && (ch.getOwner() == null)).sorted(Comparator.comparingInt(ClanHall::getId)).collect(Collectors.toList());
     }
 
-    public static ClanHallData getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static ClanHallManager getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final ClanHallData INSTANCE = new ClanHallData();
+        private static final ClanHallManager INSTANCE = new ClanHallManager();
     }
 }

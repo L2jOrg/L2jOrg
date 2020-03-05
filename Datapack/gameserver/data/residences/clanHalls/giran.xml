@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org clanHall.xsd" >
+
+    <clanHall id="42" name="Golden Chamber" grade="A" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35452" /> <!-- Theobolt -->
+            <npc id="35451" /> <!-- Emma -->
+        </npcs>
+        <doors>
+            <door id="22220008" />
+            <door id="22220007" />
+        </doors>
+        <ownerRestartPoint x="78592" y="148080" z="-3581" />
+        <banishPoint x="83409" y="148578" z="-3300" />
+    </clanHall>
+
+    <clanHall id="43" name="Silver Chamber" grade="A" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35454" /> <!-- Rosconne -->
+            <npc id="35453" /> <!-- Adrienne -->
+        </npcs>
+        <doors>
+            <door id="22220010" />
+            <door id="22220009" />
+        </doors>
+        <ownerRestartPoint x="82032" y="145328" z="-3520" />
+        <banishPoint x="83409" y="148578" z="-3300" />
+    </clanHall>
+
+    <clanHall id="44" name="Mithril Chamber" grade="A" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35456" /> <!-- Stewart -->
+            <npc id="35455" /> <!-- Bianca -->
+        </npcs>
+        <doors>
+            <door id="22220011" />
+            <door id="22220012" />
+        </doors>
+        <ownerRestartPoint x="83392" y="145328" z="-3389" />
+        <banishPoint x="83409" y="148578" z="-3300" />
+    </clanHall>
+
+    <clanHall id="45" name="Bronze Chamber" grade="A" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35458" /> <!-- Theron -->
+            <npc id="35457" /> <!-- Gladys -->
+        </npcs>
+        <doors>
+            <door id="22220005" />
+            <door id="22220006" />
+        </doors>
+        <ownerRestartPoint x="80960" y="151600" z="-3517" />
+        <banishPoint x="83409" y="148578" z="-3300" />
+    </clanHall>
+
+    <clanHall id="46" name="Silver Manor" grade="A" type="AUCTIONABLE">
+        <auction min-bid="10000000" lease="1000000" deposit="1000000" />
+        <npcs>
+            <npc id="35460" /> <!-- Trey-->
+            <npc id="35459" /> <!-- Regina -->
+        </npcs>
+        <doors>
+            <door id="22220004" />
+            <door id="22220003" />
+        </doors>
+        <ownerRestartPoint x="80960" y="151904" z="-3520" />
+        <banishPoint x="83409" y="148578" z="-3300" />
+    </clanHall>
+</list>

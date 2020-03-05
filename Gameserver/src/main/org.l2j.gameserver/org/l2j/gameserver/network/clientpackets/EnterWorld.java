@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -199,7 +199,7 @@ public class EnterWorld extends ClientPacket {
             PledgeShowMemberListAll.sendAllTo(player);
             clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
             player.sendPacket(new PledgeSkillList(clan));
-            final ClanHall ch = ClanHallData.getInstance().getClanHallByClan(clan);
+            final ClanHall ch = ClanHallManager.getInstance().getClanHallByClan(clan);
             if ((ch != null) && (ch.getCostFailDay() > 0)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
                 sm.addInt(ch.getLease());

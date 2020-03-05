@@ -4,10 +4,11 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
-import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
@@ -29,7 +30,6 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
 import org.l2j.gameserver.network.NpcStringId;
@@ -451,7 +451,7 @@ public class Npc extends Creature {
     }
 
     public final ClanHall getClanHall() {
-        return ClanHallData.getInstance().getClanHallByNpcId(getId());
+        return ClanHallManager.getInstance().getClanHallByNpcId(getId());
     }
 
     /**
