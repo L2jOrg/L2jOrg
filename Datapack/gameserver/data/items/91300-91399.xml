@@ -21,18 +21,26 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="91303" name="Brooch Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
+	<armor id="91303" name="Brooch Lv. 4" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i05">
 	<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. Can combine 2 Brooches of the same level. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13659"/> <!-- Brooch Lv. 4 -->
+			<skill id="13661" level="4"/> <!-- Brooch Additional Effect -->
+		</skills>
 	</armor>
 
-	<armor id="91304" name="Brooch Lv. 5" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i06">
+	<armor id="91304" name="Brooch Lv. 5" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i06">
 	<!-- Activates 6 jewel slots when equipped. Inventory Slot +15. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13660"/> <!-- Brooch Lv. 5 -->
+			<skill id="13661" level="5"/> <!-- Brooch Additional Effect -->
+		</skills>
 	</armor>
 
 	<armor id="91305" name="Greater Topaz Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">

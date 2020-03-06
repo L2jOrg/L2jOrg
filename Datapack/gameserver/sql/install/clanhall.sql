@@ -6,3 +6,4 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
   PRIMARY KEY `id` (`id`),
   KEY `ownerId` (owner_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8MB4;
+

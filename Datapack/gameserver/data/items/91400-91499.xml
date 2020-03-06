@@ -108,14 +108,18 @@
 		<crystal />
 	</armor>
 
-	<armor id="91417" name="Brooch Lv. 4 " type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
+	<armor id="91417" name="Brooch Lv. 4" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i05">
 	<!-- A 30-day item. When equipped, opens up 5 Gem slots and adds 12 slots to the inventory.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13659"/> <!-- Brooch Lv. 4 -->
+			<skill id="13661" level="4"/> <!-- Brooch Additional Effect -->
+		</skills>
 	</armor>
 
-	<armor id="91418" name="Ruby Lv. 5 " type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
+	<armor id="91418" name="Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- A 30-day item. When equipped, Soulshot/Blessed Soulshot/Beast Soulshot damage +16%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />

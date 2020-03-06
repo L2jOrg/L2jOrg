@@ -161,6 +161,10 @@
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13658"/> <!-- Brooch Lv. 3 -->
+			<skill id="13661" level="3"/> <!-- Brooch Additional Effect -->
+		</skills>
 	</armor>
 
 	<item id="70527" name="Aquamarine Treasure Chest of Good Fortune" type="NONE" icon="icon.etc_bm_jewelbox_aquamarine_i00">

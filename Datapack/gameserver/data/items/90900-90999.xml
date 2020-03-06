@@ -240,6 +240,10 @@
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13658"/>
+			<skill id="13661" level="3"/>
+		</skills>
 	</armor>
 
 	<item id="90935" name="Greater Jewel Box Lv. 4" type="NONE" icon="icon.bm_special_jewelbox_lv4">

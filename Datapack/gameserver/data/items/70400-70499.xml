@@ -344,11 +344,14 @@
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
-	<armor id="70431" name="Lv. 1 Brooch" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i00">
+	<armor id="70431" name="Lv. 1 Brooch" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i00">
 	<!-- Lv. 1 Brooch. 30-day. Activates 2 jewel slots when equipped.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="false" duration="43200"/>
 		<crystal />
+		<skills>
+			<skill id="55468"/> <!-- Lv. 1 Brooch -->
+		</skills>
 	</armor>
 
 	<armor id="70432" name="Lv. 5 Jade" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
@@ -370,6 +373,10 @@
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13656"/> <!-- Brooch Lv. 1 -->
+			<skill id="13661"/> <!-- Brooch Additional Effect -->
+		</skills>
 	</armor>
 
 	<armor id="70435" name="Brooch Lv. 2" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i01">
@@ -377,6 +384,10 @@
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13657"/>  <!-- Brooch Lv. 2 -->
+			<skill id="13661" level="2"/> <!-- Brooch Additional Effect -->
+		</skills>
 	</armor>
 
 	<armor id="70436" name="Topaz Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_topaz_i00">

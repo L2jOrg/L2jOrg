@@ -87,30 +87,22 @@
 	<skill id="13656" name="Brooch Lv. 1">
 	<!-- 2 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
-				<power initial="2.0"/>
+			<stat-modify stat="BROOCH_JEWELS">
+				<power initial="2"/>
 			</stat-modify>
 		</effects>
 	</skill>
 	<skill id="13657" name="Brooch Lv. 2">
 	<!-- 3 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
-				<power initial="3.0"/>
+			<stat-modify stat="BROOCH_JEWELS">
+				<power initial="3"/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -124,38 +116,30 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
-				<power initial="4.0"/>
+			<stat-modify stat="BROOCH_JEWELS">
+				<power initial="4"/>
 			</stat-modify>
 		</effects>
 	</skill>
 	<skill id="13659" name="Brooch Lv. 4">
 	<!-- 5 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i05"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
-				<power initial="5.0"/>
+			<stat-modify stat="BROOCH_JEWELS">
+				<power initial="5"/>
 			</stat-modify>
 		</effects>
 	</skill>
 	<skill id="13660" name="Brooch Lv. 5">
 	<!-- 6 Gems can be equipped. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i06"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
-				<power initial="6.0"/>
+			<stat-modify stat="BROOCH_JEWELS">
+				<power initial="6"/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -172,17 +156,14 @@
 			<value level="4">icon.etc_bm_brooch_lavianrose_i05</value>
 			<value level="5">icon.etc_bm_brooch_lavianrose_i06</value>
 		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 		<effects>
-			<enlarge-slot type="INVENTORY_NORMAL">				<power initial="5.0">
-					<value level="2">9.0</value>
-					<value level="3">12.0</value>
-					<value level="5">15.0</value>
+			<enlarge-slot type="INVENTORY_NORMAL">
+				<power initial="5">
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="5">15</value>
 				</power>
 			</enlarge-slot>
 		</effects>

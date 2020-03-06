@@ -1062,6 +1062,11 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="BROOCH_JEWELS">
+				<power initial="1"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="50184" name="Adventurer's Agathion Bracelet">
 	<!-- Opens Agathion main slot. -->

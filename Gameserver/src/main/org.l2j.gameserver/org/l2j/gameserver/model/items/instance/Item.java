@@ -1372,7 +1372,9 @@ public final class Item extends WorldObject {
     public void scheduleLifeTimeTask() {
         if (!isTimeLimitedItem()) {
             return;
-        } else if (getRemainingTime() <= 0) {
+        }
+
+        if (getRemainingTime() <= 0) {
             endOfLife();
         } else {
             if (_lifeTimeTask != null) {

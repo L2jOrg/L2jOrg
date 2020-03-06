@@ -190,11 +190,15 @@
 		<crystal />
 	</armor>
 
-	<armor id="92326" name="Brooch Lv. 4" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i05">
+	<armor id="92326" name="Brooch Lv. 4" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i05">
 	<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" />
 		<crystal />
+		<skills>
+			<skill id="13659"/>
+			<skill id="13661" level="3"/>
+		</skills>
 	</armor>
 
 	<armor id="92327" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i00">

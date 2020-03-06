@@ -296,11 +296,14 @@
 		<attributes weight="10" immediate-effect="true" action="SHOW_HTML"/>
 	</item>
 
-	<armor id="91932" name="Adventurer's Brooch" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i00">
+	<armor id="91932" name="Adventurer's Brooch" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i00">
 	<!-- It opens 1 Gem slot when equipped. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="50183"/>
+		</skills>
 	</armor>
 
 	<armor id="91933" name="Adventurer's Agathion Bracelet" type="NONE" body-part="LEFT_BRACELET" icon="icon.agathion_magmeld_teleport">

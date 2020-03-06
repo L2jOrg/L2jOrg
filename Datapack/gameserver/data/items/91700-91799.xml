@@ -232,11 +232,14 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<armor id="91737" name="Brooch Lv. 1" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i00">
+	<armor id="91737" name="Brooch Lv. 1" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i00">
 	<!-- Brooch Lv. 1, 15-day. When equipped, it opens up 2 Gem slots. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="false" duration="21600"/>
 		<crystal />
+		<skills>
+			<skill id="13656"/> <!-- Brooch Lv. 1 -->
+		</skills>
 	</armor>
 
 	<item id="91738" name="Brooch Lv. 1 Box" type="NONE" icon="icon.etc_treasure_box_i00">
@@ -381,11 +384,15 @@
 		<crystal />
 	</armor>
 
-	<armor id="91760" name="Brooch Lv. 5" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i06">
+	<armor id="91760" name="Brooch Lv. 5" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i06">
 	<!-- 30-day. When equipped, it opens up 6 Gem slots and adds 15 slots to the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<attributes weight="10" enchant-enabled="false" duration="43200"/>
 		<crystal />
+		<skills>
+			<skill id="13660"/> <!-- Brooch Lv. 5 -->
+			<skill id="13661" level="5"/> <!-- Brooch Additional Effect -->
+		</skills>
 	</armor>
 
 	<item id="91761" name="Player Commendation Treasure Chest" type="NONE" icon="icon.bm_dragon_present">

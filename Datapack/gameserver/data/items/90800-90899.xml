@@ -432,11 +432,14 @@
 		</stats>
 	</armor>
 
-	<armor id="90862" name="Brooch Lv. 2" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i01">
+	<armor id="90862" name="Brooch Lv. 2" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i01">
 	<!-- A 30-day item. Occupies 3 Hair Accessory slots.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="13657"/>
+		</skills>
 	</armor>
 
 	<armor id="90863" name="Diamond Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">

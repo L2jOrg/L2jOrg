@@ -944,15 +944,11 @@
 	<skill id="55468" name="Lv. 1 Brooch">
 	<!-- Activates 2 jewel slots. -->
 		<icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
 		<effects>
-			<stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
-				<power initial="2.0"/>
+			<stat-modify stat="BROOCH_JEWELS">
+				<power initial="2"/>
 			</stat-modify>
 		</effects>
 	</skill>
