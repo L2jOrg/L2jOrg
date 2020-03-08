@@ -843,6 +843,7 @@ public final class Player extends Playable {
         }
         var template = PlayerTemplateData.getInstance().getTemplate(character.getClassId());
         Player player = new Player(character, template);
+        player.setAccessLevel(character.getAccessLevel(), false, false);
 
         player.setHeading(character.getHeading());
         player.getStats().setExp(character.getExp());
@@ -890,7 +891,6 @@ public final class Player extends Playable {
         }
 
         player.setTitle(character.getTitle());
-        player.setAccessLevel(character.getAccessLevel(), false, false);
 
 
         if (character.getTitleColr() != PlayerAppearance.DEFAULT_TITLE_COLOR) {

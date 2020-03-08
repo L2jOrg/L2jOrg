@@ -991,7 +991,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         boolean crit = false;
         boolean miss = Formulas.calcHitMiss(this, target);
         if (!shotConsumed) {
-            shotConsumed = !miss && unchargeShot(ShotType.SOULSHOTS);
+            shotConsumed = !miss && unchargeShot(isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS);
         }
 
         int ssGrade = (shotConsumed && (weapon != null)) ? weapon.getItemGrade().ordinal() : 0;
