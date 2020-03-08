@@ -621,7 +621,7 @@ public abstract class Inventory extends ItemContainer {
             if(!isPaperdollSlotEmpty(slot) && item.getId() == getPaperdollItemId(slot)) {
                 setPaperdollItem(slot, item);
                 return;
-            } else if(isNull(emptySlot)) {
+            } else if(isNull(emptySlot) && isPaperdollSlotEmpty(slot)) {
                 emptySlot = slot;
             }
         }
