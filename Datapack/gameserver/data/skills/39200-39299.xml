@@ -788,31 +788,19 @@
 		level 2: Beast Spiritshot Damage +3%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="39240" name="Sapphire" action="A1">
 	<!-- Beast Spiritshot Damage +5%. -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="39241" name="Sapphire" action="A1">
 	<!-- Beast Spiritshot Damage +8%. -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="39242" name="Sapphire" max-level="5" action="A1">
@@ -826,11 +814,7 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="2">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="39243" name="Topaz Jewelry Box" action="A1">

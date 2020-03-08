@@ -146,10 +146,9 @@
     <xs:complexType name="TriggerSkillByChargeShotEffect">
         <xs:complexContent>
             <xs:extension base="Effect">
-                <xs:sequence>
-                    <xs:element name="skill" type="MappedLevelInt"/>
-                </xs:sequence>
+                <xs:attribute name="skill" type="xs:int"/>
                 <xs:attribute name="type" type="ShotType" default="SOULSHOTS"/>
+                <xs:attribute name="for-beast" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

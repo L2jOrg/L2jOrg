@@ -65,9 +65,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
                 client.sendPacket(new ExAutoSoulShot(itemId, enable, type));
 
                 // Send message
-                final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
-                sm.addItemName(item);
-                client.sendPacket(sm);
+                client.sendPacket(getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(item));
 
                 // Recharge player's shots
                 player.rechargeShots(isSoulshot, isSpiritshot, isFishingshot);
@@ -130,9 +128,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
         for (Summon summon : player.getServitors().values()) {
             // Send message
             if (!summon.isChargedShot(item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS)) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
-                sm.addItemName(item);
-                client.sendPacket(sm);
+                client.sendPacket(getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(item));
             }
             // Charge
             summon.rechargeShots(isSoulshot, isSpiritshot, false);

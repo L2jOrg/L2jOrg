@@ -144,21 +144,13 @@
 	<skill id="17889" name="Ruby" action="A1">
 	<!-- Beast Soulshot damage +5% -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17890" name="Ruby" action="A1">
 	<!-- Beast Soulshot damage +8% -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17891" name="Ruby" max-level="5" action="A1">
@@ -172,11 +164,7 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="2">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17896" name="Aquamarine - Mana Drain">

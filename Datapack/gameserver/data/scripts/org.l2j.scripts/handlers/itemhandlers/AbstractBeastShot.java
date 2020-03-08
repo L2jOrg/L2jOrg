@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayeableChargeShots;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -93,6 +95,7 @@ public abstract class AbstractBeastShot implements IItemHandler {
         if (!s.isChargedShot(shotType)) {
             sendUsesMessage(owner);
             s.chargeShot(shotType);
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(s, shotType), owner);
             skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
         }
     }

@@ -6,7 +6,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerChargeShots;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayeableChargeShots;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -62,7 +62,7 @@ public abstract class AbstractShot implements IItemHandler {
         if (!player.getAutoSoulShot().contains(item.getId())) {
             player.sendPacket(getEnabledShotsMessage());
         }
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerChargeShots(player, getShotType()), player);
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(player, getShotType()), player);
         skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
         return true;
     }

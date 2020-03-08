@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerChargeShots;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayeableChargeShots;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -15,26 +15,30 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 
 import java.util.function.Consumer;
 
+import static org.l2j.gameserver.util.GameUtils.isSummon;
+
 /**
  * @author JoeAlisson
  */
 public final class TriggerSkillByChargeShot extends AbstractEffect {
     private final SkillHolder skill;
     private final ShotType type;
+    private final boolean forBeast;
 
     private TriggerSkillByChargeShot(StatsSet data) {
         skill = new SkillHolder(data.getInt("skill"), data.getInt("power", 1));
-        type = data.getEnum("type", ShotType.class, ShotType.SOULSHOTS);
+        type = data.getEnum("type", ShotType.class);
+        forBeast = data.getBoolean("for-beast");
     }
 
-    private void onChargeShotEvent(OnPlayerChargeShots event) {
-        if(event.getShotType() != type) {
+    private void onChargeShotEvent(OnPlayeableChargeShots event) {
+        if(event.getShotType() != type || forBeast != isSummon(event.getPlayable())) {
             return;
         }
         var triggerSkill = skill.getSkill();
-        var player = event.getPlayer();
-        var target = triggerSkill.getTarget(player, false, false, false);
-        SkillCaster.triggerCast(player, (Creature) target, triggerSkill);
+        var playable = event.getPlayable();
+        var target = triggerSkill.getTarget(playable, false, false, false);
+        SkillCaster.triggerCast(playable, (Creature) target, triggerSkill);
     }
 
     @Override
@@ -45,7 +49,7 @@ public final class TriggerSkillByChargeShot extends AbstractEffect {
 
     @Override
     public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
-        effected.addListener(new ConsumerEventListener(effected, EventType.ON_PLAYER_CHARGE_SHOTS, (Consumer<OnPlayerChargeShots>) this::onChargeShotEvent, this));
+        effected.addListener(new ConsumerEventListener(effected, EventType.ON_PLAYER_CHARGE_SHOTS, (Consumer<OnPlayeableChargeShots>) this::onChargeShotEvent, this));
     }
 
     public static class Factory implements SkillEffectFactory {
