@@ -617,6 +617,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="4"/>
+		</skills>
 	</armor>
 
 	<armor id="92389" name="Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -624,6 +627,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" />
 		<crystal />
+		<skills>
+			<skill id="59151" level="4"/>
+		</skills>
 	</armor>
 
 	<armor id="92390" name="Diamond Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">

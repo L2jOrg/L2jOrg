@@ -8,11 +8,7 @@
 		level 4: Blessed Soulshot damage +3%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17815" name="Ruby" max-level="2" action="A1">
@@ -21,11 +17,7 @@
 		level 2: Blessed Soulshot damage +5%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17816" name="Ruby" max-level="2" action="A1">
@@ -34,11 +26,7 @@
 		level 2: Blessed Soulshot damage +8%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_ruby_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17817" name="Ruby" max-level="10" action="A1">
@@ -57,11 +45,7 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="3">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17818" name="Sapphire" max-level="4" action="A1">
@@ -72,31 +56,19 @@
 		level 4: Spiritshot damage +3%.
 	 -->
 		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17819" name="Sapphire" max-level="2" action="A1">
 	<!-- Spiritshot damage +5%. -->
 		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17820" name="Sapphire" max-level="2" action="A1">
 	<!-- Spiritshot damage +8%. -->
 		<icon initial="icon.etc_bm_jewel_sapphire_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17821" name="Sapphire" max-level="10" action="A1">
@@ -110,11 +82,7 @@
 		<icon initial="icon.etc_bm_jewel_sapphire_i00">
 			<value level="3">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes/>
 		<target />
 	</skill>
 	<skill id="17823" name="Aquamarine" max-level="10" >

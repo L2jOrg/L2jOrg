@@ -1,6 +1,5 @@
 package handlers.itemhandlers;
 
-import org.l2j.gameserver.enums.BroochJewel;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.Weapon;
@@ -32,11 +31,6 @@ public class SpiritShot extends AbstractShot {
     @Override
     protected int getConsumeCount(Weapon weapon) {
         return weapon.getSpiritShotCount();
-    }
-
-    @Override
-    protected BroochJewel getModifyingJewel(Player player) {
-        return player.getActiveShappireJewel();
     }
 
     @Override

@@ -1,7 +1,6 @@
 package handlers.itemhandlers;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.enums.BroochJewel;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.Weapon;
@@ -36,11 +35,6 @@ public class SoulShots extends AbstractShot {
             return weapon.getReducedSoulShot();
         }
         return weapon.getSoulShot();
-    }
-
-    @Override
-    protected BroochJewel getModifyingJewel(Player player) {
-        return player.getActiveRubyJewel();
     }
 
     @Override

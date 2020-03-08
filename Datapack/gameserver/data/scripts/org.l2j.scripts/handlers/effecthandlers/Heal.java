@@ -63,7 +63,7 @@ public final class Heal extends AbstractEffect {
 		double mAtkMul = 1;
 		final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.isMagic() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final double shotsBonus = effector.getStats().getValue(Stat.SHOTS_BONUS);
+		final double shotsBonus = effector.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS);
 
 		if (((sps || bss) && (isPlayer(effector) && effector.getActingPlayer().isMageClass())) || isSummon(effector)) {
 			staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots

@@ -722,11 +722,7 @@ public final class Player extends Playable {
      */
     private Weapon _fistsWeaponItem;
     private volatile Map<Class<? extends AbstractRequest>, AbstractRequest> requests;
-    /**
-     * Active Brooch Jewels
-     **/
-    private BroochJewel _activeRubyJewel = null;
-    private BroochJewel _activeShappireJewel = null;
+
     /**
      * Event parameters
      */
@@ -7139,53 +7135,6 @@ public final class Player extends Playable {
             sendPacket(sm);
         }
         _activeSoulShots.clear();
-    }
-
-    public BroochJewel getActiveRubyJewel() {
-        return _activeRubyJewel;
-    }
-
-    public void setActiveRubyJewel(BroochJewel jewel) {
-        _activeRubyJewel = jewel;
-    }
-
-    public BroochJewel getActiveShappireJewel() {
-        return _activeShappireJewel;
-    }
-
-    public void setActiveShappireJewel(BroochJewel jewel) {
-        _activeShappireJewel = jewel;
-    }
-
-    public void updateActiveBroochJewel() {
-        // Update active Ruby jewel.
-        if ((inventory.getItemByItemId(BroochJewel.RUBY_LV5.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped())) {
-            setActiveRubyJewel(BroochJewel.RUBY_LV5);
-        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV4.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV4.getItemId()).isEquipped())) {
-            setActiveRubyJewel(BroochJewel.RUBY_LV4);
-        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV3.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV3.getItemId()).isEquipped())) {
-            setActiveRubyJewel(BroochJewel.RUBY_LV3);
-        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV2.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV2.getItemId()).isEquipped())) {
-            setActiveRubyJewel(BroochJewel.RUBY_LV2);
-        } else if ((inventory.getItemByItemId(BroochJewel.RUBY_LV1.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.RUBY_LV1.getItemId()).isEquipped())) {
-            setActiveRubyJewel(BroochJewel.RUBY_LV1);
-        } else {
-            setActiveRubyJewel(null);
-        }
-        // Update active Sapphire jewel.
-        if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()).isEquipped())) {
-            setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV5);
-        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()).isEquipped())) {
-            setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV4);
-        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()).isEquipped())) {
-            setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV3);
-        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()).isEquipped())) {
-            setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV2);
-        } else if ((inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()) != null) && (inventory.getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()).isEquipped())) {
-            setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV1);
-        } else {
-            setActiveShappireJewel(null);
-        }
     }
 
     public EnumIntBitmask<ClanPrivilege> getClanPrivileges() {

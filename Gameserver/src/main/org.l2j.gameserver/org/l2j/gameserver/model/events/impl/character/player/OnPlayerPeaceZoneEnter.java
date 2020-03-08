@@ -6,6 +6,9 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
 
 import static org.l2j.gameserver.model.events.EventType.ON_PLAYER_PEACE_ZONE_ENTER;
 
+/**
+ * @author JoeAlisson
+ */
 public class OnPlayerPeaceZoneEnter implements IBaseEvent {
 
     private final Player player;

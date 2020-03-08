@@ -215,6 +215,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="1"/>
+		</skills>
 	</armor>
 
 	<armor id="90329" name="Ruby Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
@@ -222,6 +225,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="2"/>
+		</skills>
 	</armor>
 
 	<armor id="90330" name="Ruby Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
@@ -229,6 +235,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="3"/>
+		</skills>
 	</armor>
 
 	<armor id="90331" name="Ruby Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
@@ -236,6 +245,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="4"/>
+		</skills>
 	</armor>
 
 	<armor id="90332" name="Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
@@ -243,6 +255,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="5"/>
+		</skills>
 	</armor>
 
 	<armor id="90333" name="Sapphire Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -250,6 +265,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59151"/>
+		</skills>
 	</armor>
 
 	<armor id="90334" name="Sapphire Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -257,6 +275,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59152"/>
+		</skills>
 	</armor>
 
 	<armor id="90335" name="Sapphire Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -264,6 +285,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59153"/>
+		</skills>
 	</armor>
 
 	<armor id="90336" name="Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -271,6 +295,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59154"/>
+		</skills>
 	</armor>
 
 	<armor id="90337" name="Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -278,6 +305,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59155"/>
+		</skills>
 	</armor>
 
 	<armor id="90338" name="Diamond Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">

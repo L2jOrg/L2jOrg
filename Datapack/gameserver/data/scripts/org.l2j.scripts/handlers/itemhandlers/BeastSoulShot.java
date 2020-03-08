@@ -1,6 +1,5 @@
 package handlers.itemhandlers;
 
-import org.l2j.gameserver.enums.BroochJewel;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -20,11 +19,6 @@ public class BeastSoulShot extends AbstractBeastShot {
     @Override
     protected void sendUsesMessage(Player player) {
         player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1).addString("soulshot"));
-    }
-
-    @Override
-    protected BroochJewel getModifyingJewel(Player player) {
-        return player.getActiveRubyJewel();
     }
 
     @Override

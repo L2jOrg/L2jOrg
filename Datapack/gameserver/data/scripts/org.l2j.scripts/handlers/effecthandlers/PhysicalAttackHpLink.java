@@ -88,9 +88,9 @@ public final class PhysicalAttackHpLink extends AbstractEffect {
 
 			if (skill.useSoulShot()) {
 				if (effector.isChargedShot(ShotType.SOULSHOTS)) {
-					ssmod = 2 * effector.getStats().getValue(Stat.SHOTS_BONUS); // 2.04 for dual weapon?
+					ssmod = 2 * effector.getStats().getValue(Stat.SOUL_SHOTS_BONUS); // 2.04 for dual weapon?
 				} else if (effector.isChargedShot(ShotType.BLESSED_SOULSHOTS)) {
-					ssmod = 4 * effector.getStats().getValue(Stat.SHOTS_BONUS);
+					ssmod = 4 * effector.getStats().getValue(Stat.SOUL_SHOTS_BONUS);
 				}
 			}
 			

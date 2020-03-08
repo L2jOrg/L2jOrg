@@ -12,7 +12,6 @@ import org.l2j.gameserver.model.items.instance.Item;
 public final class BroochListener implements PlayerInventoryListener {
 
     private BroochListener() {
-
     }
 
     @Override
@@ -22,7 +21,6 @@ public final class BroochListener implements PlayerInventoryListener {
         }
     }
 
-    // Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
     @Override
     public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
     }

@@ -375,6 +375,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="5"/>
+		</skills>
 	</armor>
 
 	<armor id="91759" name="Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -382,6 +385,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59151" level="5"/>
+		</skills>
 	</armor>
 
 	<armor id="91760" name="Brooch Lv. 5" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i06">

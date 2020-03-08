@@ -1,6 +1,5 @@
 package handlers.itemhandlers;
 
-import org.l2j.gameserver.enums.BroochJewel;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -91,23 +90,16 @@ public abstract class AbstractBeastShot implements IItemHandler {
     }
 
     private void chargeShot(Player owner, List<ItemSkillHolder> skills, ShotType shotType, Summon s) {
-        var jewel = getModifyingJewel(owner);
         if (!s.isChargedShot(shotType)) {
             sendUsesMessage(owner);
             s.chargeShot(shotType);
-            if (nonNull(jewel)) {
-                Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(s, s, jewel.getEffectId(), 1, 0, 0), 600);
-            } else {
-                skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
-            }
+            skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getLevel(), 0, 0), 600));
         }
     }
 
     protected abstract ShotType getShotType(Item item);
 
     protected abstract void sendUsesMessage(Player player);
-
-    protected abstract BroochJewel getModifyingJewel(Player player);
 
     protected abstract SystemMessageId getNotEnoughMessage();
 

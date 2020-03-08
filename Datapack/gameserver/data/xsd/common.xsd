@@ -287,6 +287,16 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="ShotType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="SOULSHOTS"/>
+            <xs:enumeration value="SPIRITSHOTS"/>
+            <xs:enumeration value="BLESSED_SOULSHOTS"/>
+            <xs:enumeration value="BLESSED_SPIRITSHOTS"/>
+            <xs:enumeration value="FISH_SOULSHOTS"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="TargetType">
         <xs:restriction base="xs:token">
             <xs:enumeration value="ADVANCE_BASE"/>
@@ -451,22 +461,22 @@
             <xs:enumeration value="ADDITIONAL_POTION_MP"/>
             <xs:enumeration value="ATTACK_CANCEL"/>
             <xs:enumeration value="EVASION_RATE"/>
+            <xs:enumeration value="HEAL_EFFECT"/>
+            <xs:enumeration value="HEAL_EFFECT_ADD"/>
+            <xs:enumeration value="MAGIC_ATTACK"/>
+            <xs:enumeration value="MAGICAL_DEFENCE"/>
+            <xs:enumeration value="MANA_CHARGE"/>
             <xs:enumeration value="MAX_CP"/>
             <xs:enumeration value="MAX_HP"/>
             <xs:enumeration value="MAX_MP"/>
             <xs:enumeration value="MAX_RECOVERABLE_HP"/>
             <xs:enumeration value="MAX_RECOVERABLE_MP"/>
             <xs:enumeration value="MAX_RECOVERABLE_CP"/>
+            <xs:enumeration value="PHYSICAL_DEFENCE"/>
+            <xs:enumeration value="PHYSICAL_ATTACK"/>
             <xs:enumeration value="REGENERATE_HP_RATE"/>
             <xs:enumeration value="REGENERATE_CP_RATE"/>
             <xs:enumeration value="REGENERATE_MP_RATE"/>
-            <xs:enumeration value="MANA_CHARGE"/>
-            <xs:enumeration value="HEAL_EFFECT"/>
-            <xs:enumeration value="HEAL_EFFECT_ADD"/>
-            <xs:enumeration value="PHYSICAL_DEFENCE"/>
-            <xs:enumeration value="MAGICAL_DEFENCE"/>
-            <xs:enumeration value="PHYSICAL_ATTACK"/>
-            <xs:enumeration value="MAGIC_ATTACK"/>
             <xs:enumeration value="PHYSICAL_ATTACK_SPEED"/>
             <xs:enumeration value="MAGIC_ATTACK_SPEED"/>
             <xs:enumeration value="ATK_REUSE"/>
@@ -606,7 +616,8 @@
             <xs:enumeration value="MAX_MOMENTUM"/>
             <xs:enumeration value="STAT_BONUS_SKILL_CRITICAL"/>
             <xs:enumeration value="STAT_BONUS_SPEED"/>
-            <xs:enumeration value="SHOTS_BONUS"/>
+            <xs:enumeration value="SOUL_SHOTS_BONUS"/>
+            <xs:enumeration value="SPIRIT_SHOTS_BONUS"/>
             <xs:enumeration value="WORLD_CHAT_POINTS"/>
             <xs:enumeration value="ATTACK_DAMAGE"/>
             <xs:enumeration value="ELEMENTAL_SPIRIT_BONUS_XP"/>

@@ -254,7 +254,7 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91927" name="Soulshot" type="SOULSHOT" icon="icon.etc_spirit_bullet_gold_i00">
+		<item id="91927" name="Soulshot" type="SOULSHOT" icon="icon.etc_spirit_bullet_gold_i00">
 	<!-- Weapon containing the light of Spirits; instantly inflicts a powerful attack on the enemy.\n\n<Use Effect>\nP. Atk. Bonus 100% -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="20" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>

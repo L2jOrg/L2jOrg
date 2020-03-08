@@ -91,7 +91,7 @@ public final class Formulas {
         final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
 
         // Initial damage
-        final double ssmod = ss ? (2 * attacker.getStats().getValue(Stat.SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
+        final double ssmod = ss ? (2 * attacker.getStats().getValue(Stat.SOUL_SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
         final double cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
         final double cdPatk = criticalAddMod + criticalAddVuln;
         final Position position = Position.getPosition(attacker, target);
@@ -108,7 +108,7 @@ public final class Formulas {
 
     public static double calcMagicDam(Creature attacker, Creature target, Skill skill, double mAtk, double power, double mDef, boolean sps, boolean bss, boolean mcrit) {
         // Bonus Spirit shot
-        final double shotsBonus = bss ? (4 * attacker.getStats().getValue(Stat.SHOTS_BONUS)) : sps ? (2 * attacker.getStats().getValue(Stat.SHOTS_BONUS)) : 1;
+        final double shotsBonus = bss ? (4 * attacker.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS)) : sps ? (2 * attacker.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS)) : 1;
         final double critMod = mcrit ? calcCritDamage(attacker, target, skill) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
 
         // Trait, elements
@@ -680,12 +680,8 @@ public final class Formulas {
         }
 
         // Bonus Spiritshot
-        final double shotsBonus = attacker.getStats().getValue(Stat.SHOTS_BONUS);
-        double sapphireBonus = 0;
-        if (isPlayer(attacker) && (attacker.getActingPlayer().getActiveShappireJewel() != null)) {
-            sapphireBonus = attacker.getActingPlayer().getActiveShappireJewel().getBonus();
-        }
-        mAtk *= bss ? 4 * (shotsBonus + sapphireBonus) : sps ? 2 * (shotsBonus + sapphireBonus) : 1;
+        final double shotsBonus = attacker.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS);
+        mAtk *= bss ? 4 * shotsBonus : sps ? 2 * shotsBonus : 1;
 
         double damage = (Math.sqrt(mAtk) * power * (mp / 97)) / mDef;
         damage *= calcGeneralTraitBonus(attacker, target, skill.getTrait(), false);
@@ -1160,7 +1156,7 @@ public final class Formulas {
 
         final Weapon weapon = attacker.getActiveWeaponItem();
         final boolean isRanged = (weapon != null) && weapon.getItemType().isRanged();
-        final double shotsBonus = attacker.getStats().getValue(Stat.SHOTS_BONUS);
+        final double shotsBonus = attacker.getStats().getValue(Stat.SOUL_SHOTS_BONUS);
 
         final double cAtk = crit ? calcCritDamage(attacker, target, null) : 1;
         final double cAtkAdd = crit ? calcCritDamageAdd(attacker, target, null) : 0;

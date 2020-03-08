@@ -159,7 +159,8 @@ public enum EventType {
     ON_PLAYER_SUMMON_AGATHION(OnPlayerSummonAgathion.class, void.class),
     ON_PLAYER_UNSUMMON_AGATHION(OnPlayerUnsummonAgathion.class, void.class),
     ON_PLAYER_PEACE_ZONE_ENTER(OnPlayerPeaceZoneEnter.class, void.class),
-    ON_PLAYER_PEACE_ZONE_EXIT(OnPlayerPeaceZoneEnter.class, void.class),
+    ON_PLAYER_PEACE_ZONE_EXIT(OnPlayerPeaceZoneExit.class, void.class),
+    ON_PLAYER_CHARGE_SHOTS(OnPlayerChargeShots.class, Boolean.class),
 
     // Trap events
     ON_TRAP_ACTION(OnTrapAction.class, void.class),

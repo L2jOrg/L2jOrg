@@ -675,12 +675,63 @@
 		<icon initial="icon.etc_bm_jewel_ruby_i00">
 			<value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
+		<effects>
+			<stat-modify stat="SOUL_SHOTS_BONUS" mode="PER">
+				<power initial="2">
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">8</value>
+					<value level="5">16</value>
+					<value level="6">17</value>
+					<value level="7">18</value>
+					<value level="8">19</value>
+					<value level="9">20</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER" start-level="6">
+				<power initial="1">
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">5</value>
+					<value level="10">7</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_RATE" mode="PER" start-level="10">
+				<power initial="5"/>
+			</stat-modify>
+			<trigger-skill-by-charge-shot>
+				<power initial="1">
+					<value level="2">2</value>
+					<value level="3">1</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">7</value>
+					<value level="9">9</value>
+				</power>
+				<skill initial="17814">
+					<value level="3">17815</value>
+					<value level="4">17816</value>
+					<value level="5">17817</value>
+				</skill>
+			</trigger-skill-by-charge-shot>
+			<trigger-skill-by-charge-shot type="BLESSED_SOULSHOTS">
+				<power initial="3">
+					<value level="2">4</value>
+					<value level="3">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+					<value level="8">8</value>
+					<value level="9">10</value>
+				</power>
+				<skill initial="17814">
+					<value level="3">17815</value>
+					<value level="4">17816</value>
+					<value level="5">17817</value>
+				</skill>
+			</trigger-skill-by-charge-shot>
+		</effects>
 	</skill>
 	<skill id="59151" name="Sapphire" max-level="10" >
 	<!-- 
@@ -698,12 +749,63 @@
 		<icon initial="icon.etc_bm_jewel_sapphire_i00">
 			<value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target />
+		<effects>
+			<stat-modify stat="SPIRIT_SHOTS_BONUS" mode="PER">
+				<power initial="2">
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">8</value>
+					<value level="5">16</value>
+					<value level="6">17</value>
+					<value level="7">18</value>
+					<value level="8">19</value>
+					<value level="9">20</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK" mode="PER" start-level="6">
+				<power initial="2">
+					<value level="7">4</value>
+					<value level="8">6</value>
+					<value level="9">10</value>
+					<value level="10">14</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER" start-level="10">
+				<power initial="10"/>
+			</stat-modify>
+			<trigger-skill-by-charge-shot type="SPIRITSHOTS">
+				<power initial="1">
+					<value level="2">2</value>
+					<value level="3">1</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">7</value>
+					<value level="9">9</value>
+				</power>
+				<skill initial="17818">
+					<value level="3">17819</value>
+					<value level="4">17820</value>
+					<value level="5">17821</value>
+				</skill>
+			</trigger-skill-by-charge-shot>
+			<trigger-skill-by-charge-shot type="BLESSED_SPIRITSHOTS">
+				<power initial="3">
+					<value level="2">4</value>
+					<value level="3">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+					<value level="8">8</value>
+					<value level="9">10</value>
+				</power>
+				<skill initial="17818">
+					<value level="3">17819</value>
+					<value level="4">17820</value>
+					<value level="5">17821</value>
+				</skill>
+			</trigger-skill-by-charge-shot>
+		</effects>
 	</skill>
 	<skill id="59152" name="Emerald" max-level="10" >
 	<!-- 

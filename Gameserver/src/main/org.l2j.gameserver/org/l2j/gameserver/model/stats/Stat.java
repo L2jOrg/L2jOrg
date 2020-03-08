@@ -241,7 +241,8 @@ public enum Stat {
     // Which base stat ordinal should alter skill critical formula.
     STAT_BONUS_SKILL_CRITICAL,
     STAT_BONUS_SPEED,
-    SHOTS_BONUS(new ShotsBonusFinalizer()),
+    SOUL_SHOTS_BONUS(new ShotsBonusFinalizer()),
+    SPIRIT_SHOTS_BONUS(new ShotsBonusFinalizer()),
     WORLD_CHAT_POINTS,
     ENCHANT_RATE_BONUS,
     ATTACK_DAMAGE,

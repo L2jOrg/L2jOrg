@@ -218,6 +218,7 @@ open module org.l2j.scripts {
                 TriggerSkillByAttack.Factory,
                 TriggerSkillByAvoid.Factory,
                 TriggerSkillByDamage.Factory,
+                TriggerSkillByChargeShot.Factory,
                 TriggerSkillByMagicType.Factory,
                 TriggerSkillBySkill.Factory,
                 TwoHandedBluntBonus.Factory,

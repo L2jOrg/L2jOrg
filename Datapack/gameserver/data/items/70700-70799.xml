@@ -638,6 +638,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="4"/>
+		</skills>
 	</armor>
 
 	<armor id="70770" name="Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_sapphire_i00">
@@ -645,6 +648,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="59150" level="1"/>
+		</skills>
 	</armor>
 
 	<armor id="70771" name="Fire Dragon Pendant Lv. 5" type="NONE" body-part="CHEST" icon="BranchIcon.Icon.bm_pendant_pve">

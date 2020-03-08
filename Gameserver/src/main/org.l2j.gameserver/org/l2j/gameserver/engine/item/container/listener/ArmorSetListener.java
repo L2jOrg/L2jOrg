@@ -128,10 +128,6 @@ public final class ArmorSetListener implements PlayerInventoryListener {
         if (update) {
             player.sendSkillList();
         }
-
-        if ((item.getBodyPart().isAnyOf(BodyPart.BROOCH_JEWEL, BodyPart.BROOCH))) {
-            player.updateActiveBroochJewel();
-        }
     }
 
     @Override
@@ -151,10 +147,6 @@ public final class ArmorSetListener implements PlayerInventoryListener {
         if (remove) {
             player.checkItemRestriction();
             player.sendSkillList();
-        }
-
-        if ((item.getBodyPart().isAnyOf(BodyPart.BROOCH_JEWEL, BodyPart.BROOCH))) {
-            player.updateActiveBroochJewel();
         }
     }
 

@@ -79,6 +79,7 @@
     <xs:element name="transformation" type="TransformationEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-attack" type="TriggerSkillByAttackEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-avoid" type="TriggerSkillByAvoidEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-charge-shot" type="TriggerSkillByChargeShotEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-damage" type="TriggerSkillByDamageEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-magic" type="TriggerSkillByMagicEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-skill" type="TriggerSkillBySkillEffect" substitutionGroup="abstractEffect"/>
@@ -138,6 +139,17 @@
                 <xs:attribute name="skill" type="xs:int" use="required"/>
                 <xs:attribute name="chance" type="xs:int" use="required"/>
                 <xs:attribute name="target" type="TargetType" default="TARGET"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TriggerSkillByChargeShotEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:sequence>
+                    <xs:element name="skill" type="MappedLevelInt"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="ShotType" default="SOULSHOTS"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
