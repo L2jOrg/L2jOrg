@@ -37,7 +37,7 @@ import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRe
 import org.l2j.gameserver.network.clientpackets.primeshop.*;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestKillerLocation;
 import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestPvpBookList;
-import org.l2j.gameserver.network.clientpackets.pvpbook.ExTelepotToKiller;
+import org.l2j.gameserver.network.clientpackets.pvpbook.ExTeleportToKiller;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
@@ -427,7 +427,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x186,null, ConnectionState.IN_GAME),
     EX_PVP_BOOK_LIST(0x18B, ExRequestPvpBookList::new, ConnectionState.IN_GAME),
     EX_PVP_BOOK_KILLER_LOCATION(0x18C, ExRequestKillerLocation::new, ConnectionState.IN_GAME),
-    EX_PVP_BOOK_TELEPORT_TO_KILLER(0x18D, ExTelepotToKiller::new, ConnectionState.IN_GAME),
+    EX_PVP_BOOK_TELEPORT_TO_KILLER(0x18D, ExTeleportToKiller::new, ConnectionState.IN_GAME),
     EX_LETTER_COLLECTOR_TAKE_REWARD(0x18E, null, ConnectionState.IN_GAME);
 
     public static final ExIncomingPackets[] PACKET_ARRAY;

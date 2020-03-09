@@ -263,8 +263,23 @@ public final class AutoPlayEngine {
         }
 
         private boolean canBeTargeted(Player player, AutoPlaySettings setting, Monster monster) {
-            return  monster.isTargetable() && !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || isNull(monster.getTarget()) || monster.getTarget().equals(player)) &&
+            return  monster.isTargetable() && !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || hasBeenAggresive(player, monster)) &&
                     GeoEngine.getInstance().canSeeTarget(player, monster) && GeoEngine.getInstance().canMoveToTarget(player, monster);
+        }
+
+        private boolean hasBeenAggresive(Player player, Monster monster) {
+            return isNull(monster.getTarget()) || monster.getTarget().equals(player) || monster.getAggroList().isEmpty() || isInAggroList(monster, player);
+        }
+
+        private boolean isInAggroList(Monster monster, Player player) {
+            var aggroList = monster.getAggroList();
+            if(aggroList.containsKey(player)) {
+                return true;
+            }
+            if(player.hasPet() && (monster.getTarget().equals(player.getPet()) || aggroList.containsKey(player.getPet()))) {
+                return true;
+            }
+            return player.hasServitors() &&  player.getServitors().values().stream().anyMatch(s -> monster.getTarget().equals(s) || aggroList.containsKey(s));
         }
     }
 

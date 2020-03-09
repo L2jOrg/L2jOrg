@@ -11,7 +11,7 @@ import static org.l2j.gameserver.network.SystemMessageId.CANNOT_LOCATE_THE_SELEC
 /**
  * @author JoeAlisson
  */
-public class ExTelepotToKiller extends ClientPacket {
+public class ExTeleportToKiller extends ClientPacket {
 
     private String killerName;
 
