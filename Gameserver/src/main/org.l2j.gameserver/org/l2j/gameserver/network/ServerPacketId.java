@@ -2,9 +2,9 @@ package org.l2j.gameserver.network;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public enum ServerPacketId {
-    // Packets
     DIE(0x00),
     REVIVE(0x01),
     ATTACK_OUT_OF_RANGE(0x02),
@@ -863,7 +863,9 @@ public enum ServerPacketId {
     EX_RANKING_CHAR_RANKERS(0xFE, 0x230),
     EX_BOW_ACTION_TO(0xFE, 0x231),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO(0xFE, 0x235),
-    EX_PVPBOOK_LIST(0xFE, 0x23A);
+    EX_PVPBOOK_LIST(0xFE, 0x238),
+    EX_PVPBOOK_KILLER_LOCATION(0xFE, 0x239),
+    EX_PVPBOOK_NEW_PK(0xFE, 0x23A);
 
     private final int id;
     private final int extId;

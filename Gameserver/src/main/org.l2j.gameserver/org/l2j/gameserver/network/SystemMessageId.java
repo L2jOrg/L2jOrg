@@ -12690,8 +12690,6 @@ public final class SystemMessageId {
     @ClientString(id = 7089, message = "You've already registered a password for the private warehouse.")
     public static SystemMessageId YOU_VE_ALREADY_REGISTERED_A_PASSWORD_FOR_THE_PRIVATE_WAREHOUSE;
 
-    @ClientString(id = 7090, message = "Cannot locate the selected foe. The foe is not online.")
-    public static SystemMessageId CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE;
 
     @ClientString(id = 7091, message = "You have no Blood Crystal in the inventory. You need to buy the Blood Crystal to use this function.")
     public static SystemMessageId YOU_HAVE_NO_BLOOD_CRYSTAL_IN_THE_INVENTORY_YOU_NEED_TO_BUY_THE_BLOOD_CRYSTAL_TO_USE_THIS_FUNCTION;
@@ -17717,6 +17715,10 @@ public final class SystemMessageId {
 
     @ClientString(id = 6827, message = "Your clan has achieved hunting bonus Lv. $s1.")
     public static SystemMessageId YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1;
+
+    @ClientString(id = 7090, message = "Cannot locate the selected foe. The foe is not online.")
+    public static SystemMessageId CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE;
+
 
     @ClientString(id = 7238, message = "You are too far way to trade.")
     public static SystemMessageId YOU_ARE_TOO_FAR_WAY_TO_TRADE;

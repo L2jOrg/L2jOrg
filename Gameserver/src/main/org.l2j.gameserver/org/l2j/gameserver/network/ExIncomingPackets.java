@@ -35,6 +35,9 @@ import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOp
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
 import org.l2j.gameserver.network.clientpackets.primeshop.*;
+import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestKillerLocation;
+import org.l2j.gameserver.network.clientpackets.pvpbook.ExRequestPvpBookList;
+import org.l2j.gameserver.network.clientpackets.pvpbook.ExTelepotToKiller;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
@@ -413,6 +416,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
     EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME),
     EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME),
+    EX_PAYBACK_LIST(0x175, null, ConnectionState.IN_GAME),
+    EX_PAYBACK_GIVE_REWARD(0x176, null, ConnectionState.IN_GAME),
     EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME),
     EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME),
     EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME),
@@ -420,8 +425,10 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RANKING_CHAR_HISTORY(0x182, ExRequestRankingCharHistory::new, ConnectionState.IN_GAME),
     EX_RANKING_CHAR_RANKERS(0x183, ExRankingCharRankers::new, ConnectionState.IN_GAME),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x186,null, ConnectionState.IN_GAME),
-    EX_PVP_BOOK_LIST(0x18B, ExPvpBookList::new, ConnectionState.IN_GAME),
-    EX_LETTER_COLLECTOR_TAKE_REWARD(0x18D, null, ConnectionState.IN_GAME);
+    EX_PVP_BOOK_LIST(0x18B, ExRequestPvpBookList::new, ConnectionState.IN_GAME),
+    EX_PVP_BOOK_KILLER_LOCATION(0x18C, ExRequestKillerLocation::new, ConnectionState.IN_GAME),
+    EX_PVP_BOOK_TELEPORT_TO_KILLER(0x18D, ExTelepotToKiller::new, ConnectionState.IN_GAME),
+    EX_LETTER_COLLECTOR_TAKE_REWARD(0x18E, null, ConnectionState.IN_GAME);
 
     public static final ExIncomingPackets[] PACKET_ARRAY;
 

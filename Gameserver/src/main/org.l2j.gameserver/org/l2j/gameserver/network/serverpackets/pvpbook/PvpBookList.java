@@ -1,19 +1,22 @@
-package org.l2j.gameserver.network.serverpackets.revenge;
+package org.l2j.gameserver.network.serverpackets.pvpbook;
 
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.time.ZoneId;
 
+/**
+ * @author JoeAlisson
+ */
 public class PvpBookList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
         writeId(ServerPacketId.EX_PVPBOOK_LIST);
-        var size = 1;
-        writeInt(4); // show killer's location count
+        var size = 4;
+        writeInt(4); // show killers location count
         writeInt(5); // teleport count
 
         writeInt(size); // killer count
@@ -24,7 +27,7 @@ public class PvpBookList extends ServerPacket {
             writeInt(15); // killer level
             writeInt(2); // killer race
             writeInt(10); // killer class
-            writeInt((int) LocalDateTime.now().atZone(ZoneId.systemDefault()).toEpochSecond()); // kill time
+            writeInt((int) Instant.now().atZone(ZoneId.systemDefault()).toEpochSecond()); // kill time
             writeByte(true); // is online
         }
     }
