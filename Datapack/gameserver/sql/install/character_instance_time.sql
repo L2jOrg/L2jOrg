@@ -5,5 +5,5 @@ CREATE TABLE IF NOT EXISTS `character_instance_time` (
   `time` bigint(13) unsigned NOT NULL DEFAULT '0',
 
   PRIMARY KEY (`charId`,`instanceId`),
-  FOREIGN KEY FK_FRIENDS_FRIEND (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  FOREIGN KEY FK_CHARACTER_INSTANCE (`charId`) REFERENCES characters (`charId`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
