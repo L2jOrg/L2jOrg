@@ -10,12 +10,12 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.CategoryManager;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.TimersManager;
@@ -30,13 +30,14 @@ import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.*;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
 import org.l2j.gameserver.model.events.returns.LocationReturn;
+import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.IgnoreSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -77,6 +78,7 @@ import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.util.GameUtils.*;
@@ -1304,33 +1306,30 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 return false;
             }
 
+            final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this, TerminateReturn.class);
+            if (nonNull(returnBack) && returnBack.terminate()) {
+                return false;
+            }
+
             // now reset currentHp to zero
             setCurrentHp(0);
-            setIsDead(true);
+            _isDead = true;
         }
-        EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this);
+
         EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), killer);
 
-        forgetTarget();
-
-        calculateRewards(killer);
-
-        // Set target to null and cancel Attack or Cast
-
-        // Stop movement
         stopMove(null);
+        forgetTarget();
+        calculateRewards(killer);
 
         // Stop HP/MP/CP Regeneration task
         _status.stopHpMpRegeneration();
 
-        if (isMonster(this)) {
+        if (isMonster(this)) { // TODO move to monster
             final Spawn spawn = ((Npc) this).getSpawn();
-            if ((spawn != null) && spawn.isRespawnEnabled())
-            {
+            if ((spawn != null) && spawn.isRespawnEnabled()) {
                 stopAllEffects();
-            }
-            else
-            {
+            } else {
                 _effectList.stopAllEffectsWithoutExclusions(true, true);
             }
         } else {

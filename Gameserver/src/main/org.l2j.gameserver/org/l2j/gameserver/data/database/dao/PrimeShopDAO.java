@@ -3,6 +3,9 @@ package org.l2j.gameserver.data.database.dao;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 
+/**
+ * @author JoeAlisson
+ */
 public interface PrimeShopDAO extends DAO<Object> {
 
     @Query("SELECT SUM(count) FROM shop_history WHERE product_id = :productId: AND bidder=:playerObjectId: AND sell_date = CURRENT_DATE")

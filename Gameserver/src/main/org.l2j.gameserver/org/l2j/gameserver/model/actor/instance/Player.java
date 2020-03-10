@@ -13,6 +13,8 @@ import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.PlayerAI;
 import org.l2j.gameserver.ai.SummonAI;
+import org.l2j.gameserver.api.elemental.ElementalSpirit;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
@@ -21,20 +23,18 @@ import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.database.data.Shortcut;
-import org.l2j.gameserver.data.xml.CategoryManager;
-import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
-import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
-import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.api.elemental.ElementalSpirit;
-import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
+import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.*;
-import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.*;
@@ -108,6 +108,7 @@ import org.l2j.gameserver.world.zone.type.WaterZone;
 
 import java.sql.Date;
 import java.sql.*;
+import java.time.Instant;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.*;
@@ -122,6 +123,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.model.items.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
@@ -785,7 +787,7 @@ public final class Player extends Playable {
     private Future<?> _autoSaveTask = null;
     // Save responder name for log it
     private String _lastPetitionGmName = null;
-    private boolean _hasCharmOfCourage = false;
+    private boolean hasCharmOfCourage = false;
     // Selling buffs system
     private boolean _isSellingBuffs = false;
     private List<SellBuffHolder> _sellingBuffs = null;
@@ -4140,61 +4142,19 @@ public final class Player extends Playable {
      */
     @Override
     public boolean doDie(Creature killer) {
-        if (killer != null) {
-            final Player pk = killer.getActingPlayer();
-            if ((pk != null)) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
-
-                if (Event.isParticipant(pk)) {
-                    pk.getEventStatus().addKill(this);
-                }
-
-                // pvp/pk item rewards
-                if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
-                        !(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneType.PVP))) {
-                    // pvp
-                    if (Config.REWARD_PVP_ITEM && (_pvpFlag != 0)) {
-                        pk.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
-                    }
-                    // pk
-                    if (Config.REWARD_PK_ITEM && (_pvpFlag == 0)) {
-                        pk.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
-                    }
-                }
-
-                // announce pvp/pk
-                if (Config.ANNOUNCE_PK_PVP && (((pk != null) && !pk.isGM()))) {
-                    String msg = "";
-                    if (_pvpFlag == 0) {
-                        msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
-                        if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                            final SystemMessage sm = getSystemMessage(SystemMessageId.S1);
-                            sm.addString(msg);
-                            Broadcast.toAllOnlinePlayers(sm);
-                        } else {
-                            Broadcast.toAllOnlinePlayers(msg, false);
-                        }
-                    } else if (_pvpFlag != 0) {
-                        msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", killer.getName()).replace("$target", getName());
-                        if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                            final SystemMessage sm = getSystemMessage(SystemMessageId.S1);
-                            sm.addString(msg);
-                            Broadcast.toAllOnlinePlayers(sm);
-                        } else {
-                            Broadcast.toAllOnlinePlayers(msg, false);
-                        }
-                    }
-                }
-            }
-
-            broadcastStatusUpdate();
-            // Clear resurrect xp calculation
-            model.setExpBeforeDeath(0);
-
-            // Kill the Player
+        if (nonNull(killer)) {
             if (!super.doDie(killer)) {
                 return false;
             }
+
+            var pk = killer.getActingPlayer();
+
+            if (nonNull(pk)) {
+                onKilledByPlayer(pk);
+            }
+
+            // Clear resurrect xp calculation
+            model.setExpBeforeDeath(0);
 
             // Issues drop of Cursed Weapon.
             if (isCursedWeaponEquipped()) {
@@ -4245,16 +4205,22 @@ public final class Player extends Playable {
             _cubics.clear();
         }
 
-        if (isChannelized()) {
-            getSkillChannelized().abortChannelization();
-        }
-
         if (_agathionId != 0) {
             setAgathionId(0);
         }
 
         stopRentPet();
         stopWaterTask();
+
+        if (hasCharmOfCourage) {
+            if (isInSiege()) {
+                reviveRequest(this, null, false, 0);
+            }
+            hasCharmOfCourage = false;
+            sendPacket(new EtcStatusUpdate(this));
+        }
+
+        doIfNonNull(getInstanceWorld(), instance -> instance.onDeath(this));
 
         AntiFeedManager.getInstance().setLastDeathTime(getObjectId());
         // FIXME: Karma reduction tempfix.
@@ -4264,6 +4230,48 @@ public final class Player extends Playable {
         }
 
         return true;
+    }
+
+    private void onKilledByPlayer(Player killer) {
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(killer, this), this);
+
+        if (Event.isParticipant(killer)) {
+            killer.getEventStatus().addKill(this);
+        } else {
+            getDAO(CharacterDAO.class).updatePlayerKiller(objectId, killer.objectId, Instant.now().getEpochSecond());
+        }
+
+        // pvp/pk item rewards
+        if (!(Config.DISABLE_REWARDS_IN_INSTANCES && getInstanceId() != 0) && !(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneType.PVP))) {
+            if (Config.REWARD_PVP_ITEM && _pvpFlag != 0) {
+                killer.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
+            }
+
+            if (Config.REWARD_PK_ITEM && _pvpFlag == 0) {
+                killer.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
+            }
+        }
+
+        // announce pvp/pk
+        if (Config.ANNOUNCE_PK_PVP && !killer.isGM()) {
+            String msg = "";
+            if (_pvpFlag == 0) {
+                msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
+
+                if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
+                    Broadcast.toAllOnlinePlayers( getSystemMessage(SystemMessageId.S1).addString(msg));
+                } else {
+                    Broadcast.toAllOnlinePlayers(msg, false);
+                }
+            } else {
+                msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", killer.getName()).replace("$target", getName());
+                if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
+                    Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.S1).addString(msg));
+                } else {
+                    Broadcast.toAllOnlinePlayers(msg, false);
+                }
+            }
+        }
     }
 
     private void onDieDropItem(Creature killer) {
@@ -4346,7 +4354,7 @@ public final class Player extends Playable {
         }
     }
 
-    public void onPlayerKill(Playable killedPlayable) {
+    public void onPlayeableKill(Playable killedPlayable) {
         final Player killedPlayer = killedPlayable.getActingPlayer();
 
         // Avoid nulls && check if player != killedPlayer
@@ -4355,7 +4363,7 @@ public final class Player extends Playable {
         }
 
         // Cursed weapons progress
-        if (isCursedWeaponEquipped() && GameUtils.isPlayer(killedPlayer)) {
+        if (isCursedWeaponEquipped()) {
             CursedWeaponsManager.getInstance().increaseKills(getCursedWeaponEquippedId());
             return;
         }
@@ -4397,7 +4405,7 @@ public final class Player extends Playable {
             updatePvpTitleAndColor(true);
         } else if ((getReputation() > 0) && (_pkKills == 0)) {
             setReputation(0);
-            setPkKills(getPkKills() + 1);
+            setPkKills(1);
         } else {
             // Calculate new karma and increase pk count
             setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), GameUtils.isSummon(killedPlayable)));
@@ -10563,14 +10571,14 @@ public final class Player extends Playable {
      * @param val true/false
      */
     public void setCharmOfCourage(boolean val) {
-        _hasCharmOfCourage = val;
+        hasCharmOfCourage = val;
     }
 
     /**
      * @return {@code true} if effect is present, {@code false} otherwise.
      */
     public boolean hasCharmOfCourage() {
-        return _hasCharmOfCourage;
+        return hasCharmOfCourage;
 
     }
 

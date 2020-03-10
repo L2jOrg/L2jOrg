@@ -10,8 +10,9 @@ import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -37,7 +38,6 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -506,17 +506,16 @@ public class Pet extends Summon {
 
     @Override
     public boolean doDie(Creature killer) {
+        if (!super.doDie(killer, true)) {
+            return false;
+        }
         final Player owner = getOwner();
         if ((owner != null) && !owner.isInDuel() && (!isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE))) {
             deathPenalty();
         }
-        if (!super.doDie(killer, true)) {
-            return false;
-        }
+
         stopFeed();
         sendPacket(SystemMessageId.THE_PET_HAS_BEEN_KILLED_IF_YOU_DON_T_RESURRECT_IT_WITHIN_24_HOURS_THE_PET_S_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PET_S_ITEMS);
-        DecayTaskManager.getInstance().add(this);
-        // do not decrease exp if is in duel, arena
         return true;
     }
 

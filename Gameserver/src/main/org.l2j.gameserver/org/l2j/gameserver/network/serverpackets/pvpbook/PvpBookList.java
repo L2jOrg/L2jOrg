@@ -1,34 +1,44 @@
 package org.l2j.gameserver.network.serverpackets.pvpbook;
 
+import org.l2j.gameserver.data.database.data.KillerData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.world.World;
 
-import java.time.Instant;
-import java.time.ZoneId;
+import java.util.List;
+
+import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
  */
 public class PvpBookList extends ServerPacket {
 
+    private final List<KillerData> killers;
+
+    public PvpBookList(List<KillerData> killers) {
+        this.killers = killers;
+    }
+
     @Override
     protected void writeImpl(GameClient client)  {
         writeId(ServerPacketId.EX_PVPBOOK_LIST);
-        var size = 4;
+        var player = client.getPlayer();
+        player.getVariables();
+
         writeInt(4); // show killers location count
         writeInt(5); // teleport count
 
-        writeInt(size); // killer count
-
-        for (int i = 0; i < size; i++) {
-            writeSizedString("killer" + i); // killer name
-            writeSizedString("clanKiller" + i); // killer clan name
-            writeInt(15); // killer level
-            writeInt(2); // killer race
-            writeInt(10); // killer class
-            writeInt((int) Instant.now().atZone(ZoneId.systemDefault()).toEpochSecond()); // kill time
-            writeByte(true); // is online
+        writeInt(killers.size());
+        for (KillerData killer : killers) {
+            writeSizedString(killer.getName());
+            writeSizedString(killer.getClan());
+            writeInt(killer.getLevel());
+            writeInt(killer.getRace());
+            writeInt(killer.getActiveClass());
+            writeInt(killer.getKillTime());
+            writeByte(nonNull(World.getInstance().findObject(killer.getKilleId())));
         }
     }
 }

@@ -7,16 +7,19 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.world.zone.ZoneManager;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.AggroInfo;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.Party;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.SummonStats;
 import org.l2j.gameserver.model.actor.status.SummonStatus;
@@ -30,16 +33,16 @@ import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
-import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneRegion;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.commons.util.Util.contains;
 
@@ -239,13 +242,6 @@ public abstract class Summon extends Playable {
 
     @Override
     public boolean doDie(Creature killer) {
-        if (isNoblesseBlessedAffected()) {
-            stopEffects(EffectFlag.NOBLESS_BLESSING);
-            storeEffect(true);
-        } else {
-            storeEffect(false);
-        }
-
         if (!super.doDie(killer)) {
             return false;
         }

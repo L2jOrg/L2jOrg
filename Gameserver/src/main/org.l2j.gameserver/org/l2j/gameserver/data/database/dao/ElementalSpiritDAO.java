@@ -6,6 +6,9 @@ import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 
 import java.util.List;
 
+/**
+ * @author JoeAlisson
+ */
 public interface ElementalSpiritDAO extends DAO<ElementalSpiritData> {
 
     @Query("SELECT * FROM character_spirits WHERE charId = :playerId:")

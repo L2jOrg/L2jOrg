@@ -7,6 +7,9 @@ import org.l2j.gameserver.data.database.data.BotReportData;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * @author JoeAlisson
+ */
 public interface BotReportDAO extends DAO<BotReportData> {
 
     @Query("SELECT * FROM bot_reported_char_data")

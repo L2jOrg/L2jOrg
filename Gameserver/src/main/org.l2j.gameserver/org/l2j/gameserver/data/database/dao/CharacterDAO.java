@@ -4,9 +4,13 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CharacterData;
+import org.l2j.gameserver.data.database.data.KillerData;
 
 import java.util.List;
 
+/**
+ * @author JoeAlisson
+ */
 public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("UPDATE characters SET online = 0")
@@ -62,4 +66,16 @@ public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE charId=:objectId:")
     void updateToValidLocation(int objectId);
+
+    @Query("REPLACE INTO player_killers (player_id, killer_id, kill_time) VALUES (:player:, :killer:, :time: )")
+    void updatePlayerKiller(int player, int killer, long time);
+
+    @Query("""
+            SELECT pk.killer_id, pk.kill_time, c.char_name as name, IFNULL(cd.clan_name, '') AS clan, c.level, c.race, c.classid as active_class
+            FROM player_killers pk
+            JOIN characters c on pk.killer_id = c.charId
+            JOIN clan_data cd on c.clanid = cd.clan_id
+            WHERE pk.player_id = :player: AND pk.kill_time >= :since:
+            """)
+    List<KillerData> findKillersByPlayer(int player, long since);
 }

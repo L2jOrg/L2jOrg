@@ -1,26 +1,18 @@
 package org.l2j.gameserver.model.actor;
 
-import org.l2j.gameserver.ai.CtrlEvent;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.world.zone.ZoneManager;
-import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayableStats;
 import org.l2j.gameserver.model.actor.status.PlayableStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
-import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
-import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class represents all Playable characters in the world.<br>
@@ -78,32 +70,9 @@ public abstract class Playable extends Creature {
 
     @Override
     public boolean doDie(Creature killer) {
-        final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this, TerminateReturn.class);
-        if ((returnBack != null) && returnBack.terminate()) {
+        if(!super.doDie(killer)) {
             return false;
         }
-
-        // killing is only possible one time
-        synchronized (this) {
-            if (isDead()) {
-                return false;
-            }
-            // now reset currentHp to zero
-            setCurrentHp(0);
-            setIsDead(true);
-        }
-
-        abortAttack();
-        abortCast();
-
-        // Set target to null and cancel Attack or Cast
-        setTarget(null);
-
-        // Stop movement
-        stopMove(null);
-
-        // Stop HP/MP/CP Regeneration task
-        getStatus().stopHpMpRegeneration();
 
         boolean deleteBuffs = true;
 
@@ -111,30 +80,15 @@ public abstract class Playable extends Creature {
             stopEffects(EffectFlag.NOBLESS_BLESSING);
             deleteBuffs = false;
         }
+
         if (isResurrectSpecialAffected()) {
             stopEffects(EffectFlag.RESURRECTION_SPECIAL);
             deleteBuffs = false;
-        }
-        if (GameUtils.isPlayer(this)) {
-            final Player activeChar = getActingPlayer();
-
-            if (activeChar.hasCharmOfCourage()) {
-                if (activeChar.isInSiege()) {
-                    getActingPlayer().reviveRequest(getActingPlayer(), null, false, 0);
-                }
-                activeChar.setCharmOfCourage(false);
-                activeChar.sendPacket(new EtcStatusUpdate(activeChar));
-            }
         }
 
         if (deleteBuffs) {
             stopAllEffectsExceptThoseThatLastThroughDeath();
         }
-
-        // Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
-        broadcastStatusUpdate();
-
-        ZoneManager.getInstance().getRegion(this).onDeath(this);
 
         // Notify Quest of Playable's death
         final Player actingPlayer = getActingPlayer();
@@ -144,23 +98,14 @@ public abstract class Playable extends Creature {
                 qs.getQuest().notifyDeath((killer == null ? this : killer), this, qs);
             }
         }
-        // Notify instance
-        if (GameUtils.isPlayer(this)) {
-            final Instance instance = getInstanceWorld();
-            if (instance != null) {
-                instance.onDeath(getActingPlayer());
-            }
-        }
 
         if (killer != null) {
             final Player killerPlayer = killer.getActingPlayer();
             if ((killerPlayer != null)) {
-                killerPlayer.onPlayerKill(this);
+                killerPlayer.onPlayeableKill(this);
             }
         }
 
-        // Notify Creature AI
-        getAI().notifyEvent(CtrlEvent.EVT_DEAD);
         return true;
     }
 
