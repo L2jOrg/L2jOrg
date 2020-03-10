@@ -20,8 +20,10 @@ import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
+import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
+import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -145,6 +147,7 @@ public final class Player extends Playable {
     private AutoPlaySettings autoPlaySettings;
     private int rank;
     private int rankRace;
+    private PlayerVariableData variables;
 
     private Player(CharacterData characterData, PlayerTemplate template) {
         super(characterData.getCharId(), template);
@@ -165,7 +168,6 @@ public final class Player extends Playable {
 
     public static Player create(CharacterData characterData, PlayerTemplate template) {
         final Player player = new Player(characterData, template);
-
         player.setAccessLevel(0, false, false);
         player.setCreateDate(Calendar.getInstance());
         player.setBaseClass(player.getClassId());
@@ -174,6 +176,7 @@ public final class Player extends Playable {
             if (getSettings(GeneralSettings.class).cachePlayersName()) {
                 PlayerNameTable.getInstance().addName(player);
             }
+            getDAO(PlayerVariablesDAO.class).save(PlayerVariableData.init());
             return player;
         }
         return null;
@@ -367,13 +370,32 @@ public final class Player extends Playable {
         return rank;
     }
 
-
     public void setRankRace(int rankRace) {
         this.rankRace = rankRace;
     }
 
     public int getRankRace() {
         return rankRace;
+    }
+
+    public int getRevengeUsableLocation() {
+        return variables.getRevengeLocations();
+    }
+
+    public int getRevengeUsableTeleport() {
+        return variables.getRevengeTeleports();
+    }
+
+    public void useRevengeLocation() {
+        variables.useRevengeLocation();
+    }
+
+    public void useRevengeTeleport() {
+        variables.useRevengeTeleport();
+    }
+
+    public void resetRevengeData() {
+        variables.resetRevengeData();
     }
 
     // Unchecked
@@ -845,8 +867,9 @@ public final class Player extends Playable {
         }
         var template = PlayerTemplateData.getInstance().getTemplate(character.getClassId());
         Player player = new Player(character, template);
-        player.setAccessLevel(character.getAccessLevel(), false, false);
+        player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
 
+        player.setAccessLevel(character.getAccessLevel(), false, false);
         player.setHeading(character.getHeading());
         player.getStats().setExp(character.getExp());
         player.getStats().setLevel(character.getLevel());
@@ -5688,6 +5711,7 @@ public final class Player extends Playable {
         }
 
         shortcuts.storeMe();
+        getDAO(PlayerVariablesDAO.class).save(variables);
     }
 
     @Override

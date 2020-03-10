@@ -4,11 +4,8 @@ import org.l2j.gameserver.data.database.data.KillerData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.world.World;
 
 import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
@@ -27,8 +24,8 @@ public class PvpBookList extends ServerPacket {
         var player = client.getPlayer();
         player.getVariables();
 
-        writeInt(4); // show killers location count
-        writeInt(5); // teleport count
+        writeInt(player.getRevengeUsableLocation());
+        writeInt(player.getRevengeUsableTeleport());
 
         writeInt(killers.size());
         for (KillerData killer : killers) {
@@ -38,7 +35,7 @@ public class PvpBookList extends ServerPacket {
             writeInt(killer.getRace());
             writeInt(killer.getActiveClass());
             writeInt(killer.getKillTime());
-            writeByte(nonNull(World.getInstance().findObject(killer.getKilleId())));
+            writeByte(killer.isOnline());
         }
     }
 }

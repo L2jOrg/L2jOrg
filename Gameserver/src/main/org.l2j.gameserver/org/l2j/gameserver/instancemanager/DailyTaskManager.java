@@ -3,6 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.RankManager;
+import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.vip.VipEngine;
@@ -31,6 +32,7 @@ import java.util.List;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author UnAfraid
@@ -56,6 +58,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
         resetTrainingCamp();
         resetVipTierExpired();
         resetRankers();
+        resetRevengeData();
     }
 
     @ScheduleTarget
@@ -151,6 +154,11 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
             LOGGER.error("Could not reset daily skill reuse: ", e);
         }
         LOGGER.info("Daily skill reuse cleaned.");
+    }
+
+    private void resetRevengeData() {
+        getDAO(PlayerVariablesDAO.class).resetRevengeData();
+        World.getInstance().forEachPlayer(player -> player.resetRevengeData());
     }
 
     private void resetWorldChatPoints() {

@@ -19,6 +19,7 @@ public class KillerData {
 
     @Column("kill_time")
     private int killTime;
+    private boolean online;
 
     public int getKilleId() {
         return killeId;
@@ -46,5 +47,9 @@ public class KillerData {
 
     public int getKillTime() {
         return killTime;
+    }
+
+    public boolean isOnline() {
+        return online;
     }
 }

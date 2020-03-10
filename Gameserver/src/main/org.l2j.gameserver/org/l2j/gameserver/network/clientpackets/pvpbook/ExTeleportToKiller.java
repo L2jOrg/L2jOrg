@@ -34,7 +34,8 @@ public class ExTeleportToKiller extends ClientPacket {
         }
 
         var player = client.getPlayer();
-        if(player.reduceAdena("Teleport To Killer", 140000, player, true)) {
+        if(player.getRevengeUsableTeleport() > 0 && player.reduceAdena("Teleport To Killer", 140000, player, true)) {
+            player.useRevengeTeleport();
             CommonSkill.HIDE.getSkill().applyEffects(player, player);
             player.teleToLocation(killer.getLocation());
         }

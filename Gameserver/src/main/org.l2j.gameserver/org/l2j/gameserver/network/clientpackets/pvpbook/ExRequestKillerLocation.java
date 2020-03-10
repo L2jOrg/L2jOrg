@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.pvpbook;
 
+import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExKillerLocation;
 import org.l2j.gameserver.world.World;
@@ -26,8 +27,9 @@ public class ExRequestKillerLocation extends ClientPacket {
             client.sendPacket(CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE);
         } else {
             var player = client.getPlayer();
-            if(player.reduceAdena("Killer Location",50000, player, true)) {
+            if(player.getRevengeUsableLocation() > 0 && (player.getRevengeUsableLocation() == PlayerVariableData.REVENGE_USABLE_FUNCTIONS || player.reduceAdena("Killer Location",50000, player, true))) {
                 client.sendPacket(new ExKillerLocation(killer));
+                player.useRevengeLocation();
             }
         }
     }

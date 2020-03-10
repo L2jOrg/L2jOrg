@@ -71,7 +71,7 @@ public interface CharacterDAO extends DAO<CharacterData> {
     void updatePlayerKiller(int player, int killer, long time);
 
     @Query("""
-            SELECT pk.killer_id, pk.kill_time, c.char_name as name, IFNULL(cd.clan_name, '') AS clan, c.level, c.race, c.classid as active_class
+            SELECT pk.killer_id, pk.kill_time, c.char_name as name, IFNULL(cd.clan_name, '') AS clan, c.level, c.race, c.classid as active_class, c.online
             FROM player_killers pk
             JOIN characters c on pk.killer_id = c.charId
             JOIN clan_data cd on c.clanid = cd.clan_id
