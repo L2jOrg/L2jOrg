@@ -7,6 +7,13 @@ import java.time.LocalDate;
 public class CharacterData {
 
     private int charId;
+
+    @Column("account_name")
+    private String accountName;
+    @Column("char_name")
+    private String name;
+    private byte level;
+
     @Column("sex")
     private boolean female;
     private byte face;
@@ -14,15 +21,9 @@ public class CharacterData {
     private byte hairStyle;
     private int classId;
 
-    @Column("account_name")
-    private String accountName;
-
-    @Column("char_name")
-    private String name;
     private long lastAccess;
     private long exp;
     private long expBeforeDeath;
-    private byte level;
     private long sp;
     private boolean wantsPeace;
     private int heading;
@@ -296,6 +297,10 @@ public class CharacterData {
 
     public LocalDate getCreateDate() {
         return createDate;
+    }
+
+    public void setCreateDate(LocalDate date) {
+        createDate = date;
     }
 
     public String getLanguage() {

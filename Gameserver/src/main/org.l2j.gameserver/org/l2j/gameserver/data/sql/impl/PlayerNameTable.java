@@ -3,7 +3,6 @@ package org.l2j.gameserver.data.sql.impl;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -38,7 +37,6 @@ public class PlayerNameTable {
 
     public final void addName(Player player) {
         if (nonNull(player)) {
-
             addName(player.getObjectId(), player.getName());
             accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());
         }

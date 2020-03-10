@@ -108,9 +108,13 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.WaterZone;
 
-import java.sql.Date;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.*;
@@ -135,6 +139,8 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
 /**
  * This class represents all player characters in the world.<br>
  * There is always a client-thread connected to this (except if a player-store is activated upon logout).
+ *
+ * @author JoeAlisson
  */
 public final class Player extends Playable {
 
@@ -164,22 +170,7 @@ public final class Player extends Playable {
 
         Arrays.fill(htmlActionCaches, new LinkedList<>());
         running = true;
-    }
-
-    public static Player create(CharacterData characterData, PlayerTemplate template) {
-        final Player player = new Player(characterData, template);
-        player.setAccessLevel(0, false, false);
-        player.setCreateDate(Calendar.getInstance());
-        player.setBaseClass(player.getClassId());
-        player.setRecomLeft(20);
-        if (player.createDb()) {
-            if (getSettings(GeneralSettings.class).cachePlayersName()) {
-                PlayerNameTable.getInstance().addName(player);
-            }
-            getDAO(PlayerVariablesDAO.class).save(PlayerVariableData.init());
-            return player;
-        }
-        return null;
+        setAccessLevel(characterData.getAccessLevel(), false, false);
     }
 
     public void deleteShortcuts(Predicate<Shortcut> filter) {
@@ -229,6 +220,27 @@ public final class Player extends Playable {
                     activeElementalSpiritType = ElementalType.of(spiritData.getType());
                 }
             }
+        }
+    }
+
+    public void setAccessLevel(int level, boolean broadcast, boolean updateInDb) {
+        this.accessLevel = AdminData.getInstance().getAccessLevelOrDefault(level);
+
+        appearance.setNameColor(this.accessLevel.getNameColor());
+        appearance.setTitleColor(this.accessLevel.getTitleColor());
+
+        if (broadcast) {
+            broadcastUserInfo();
+        }
+
+        if (updateInDb) {
+            getDAO(CharacterDAO.class).updateAccessLevel(objectId, accessLevel.getLevel());
+        }
+
+        PlayerNameTable.getInstance().addName(this);
+
+        if (level > 0) {
+            LOGGER.warn("{} access level set for player {} ! Just a warning to be careful ;)", this.accessLevel.getName(), this);
         }
     }
 
@@ -398,6 +410,25 @@ public final class Player extends Playable {
         variables.resetRevengeData();
     }
 
+    public LocalDate getCreateDate() {
+        return model.getCreateDate();
+    }
+
+    public static Player create(CharacterData characterData, PlayerTemplate template) {
+        final Player player = new Player(characterData, template);
+        player.setBaseClass(player.getClassId());
+        player.setRecomLeft(20);
+        if (player.createDb()) {
+            if (getSettings(GeneralSettings.class).cachePlayersName()) {
+                PlayerNameTable.getInstance().addName(player);
+            }
+            player.variables = PlayerVariableData.init();
+            getDAO(PlayerVariablesDAO.class).save(player.variables);
+            return player;
+        }
+        return null;
+    }
+
     // Unchecked
 
     // TODO: This needs to be better integrated and saved/loaded
@@ -426,7 +457,6 @@ public final class Player extends Playable {
     // Character Character SQL String Definitions:
     private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,reputation,fame,raidbossPoints,pvpkills,pkkills,clanid,race,classid,cancraft,title,title_color,online,clan_privs,wantspeace,base_class,nobless,power_grade,vitality_points,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,pccafe_points=? WHERE charId=?";
-    private static final String UPDATE_CHARACTER_ACCESS = "UPDATE characters SET accesslevel = ? WHERE charId = ?";
 
     // Character Teleport Bookmark:
     private static final String INSERT_TP_BOOKMARK = "INSERT INTO character_tpbookmark (charId,Id,x,y,z,icon,tag,name) values (?,?,?,?,?,?,?,?)";
@@ -543,7 +573,6 @@ public final class Player extends Playable {
     private GameClient _client;
     private String _ip = "N/A";
 
-    private Calendar _createDate = Calendar.getInstance();
     private String _lang = null;
     private String _htmlPrefix = null;
     private volatile boolean _isOnline = false;
@@ -718,7 +747,7 @@ public final class Player extends Playable {
     private ScheduledFuture<?> _soulTask = null;
     // WorldPosition used by TARGET_SIGNET_GROUND
     private Location _currentSkillWorldPosition;
-    private AccessLevel _accessLevel;
+    private AccessLevel accessLevel;
 
     // private byte _updateKnownCounter = 0;
     private boolean messageRefusing = false; // message refusal mode
@@ -869,7 +898,6 @@ public final class Player extends Playable {
         Player player = new Player(character, template);
         player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
 
-        player.setAccessLevel(character.getAccessLevel(), false, false);
         player.setHeading(character.getHeading());
         player.getStats().setExp(character.getExp());
         player.getStats().setLevel(character.getLevel());
@@ -959,7 +987,6 @@ public final class Player extends Playable {
         player.setLastServerPosition(character.getX(), character.getY(), character.getZ());
 
         player.setBookMarkSlot(character.getBookMarkSlot());
-        player.getCreateDate().setTime(Date.valueOf(character.getCreateDate()));
         player.setLang(character.getLanguage());
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -5298,59 +5325,9 @@ public final class Player extends Playable {
      */
     @Override
     public boolean isGM() {
-        return _accessLevel.isGm();
+        return accessLevel.isGm();
     }
 
-    /**
-     * Set the _accessLevel of the Player.
-     *
-     * @param level
-     * @param broadcast
-     * @param updateInDb
-     */
-    public void setAccessLevel(int level, boolean broadcast, boolean updateInDb) {
-        AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
-        if (accessLevel == null) {
-            LOGGER.warn("Can't find access level " + level + " for character " + toString());
-            accessLevel = AdminData.getInstance().getAccessLevel(0);
-        }
-
-        if ((accessLevel.getLevel() == 0) && (Config.DEFAULT_ACCESS_LEVEL > 0)) {
-            accessLevel = AdminData.getInstance().getAccessLevel(Config.DEFAULT_ACCESS_LEVEL);
-            if (accessLevel == null) {
-                LOGGER.warn("Config's default access level (" + Config.DEFAULT_ACCESS_LEVEL + ") is not defined, defaulting to 0!");
-                accessLevel = AdminData.getInstance().getAccessLevel(0);
-                Config.DEFAULT_ACCESS_LEVEL = 0;
-            }
-        }
-
-        _accessLevel = accessLevel;
-
-        appearance.setNameColor(_accessLevel.getNameColor());
-        appearance.setTitleColor(_accessLevel.getTitleColor());
-        if (broadcast) {
-            broadcastUserInfo();
-        }
-
-        if (updateInDb) {
-            try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement(UPDATE_CHARACTER_ACCESS)) {
-                ps.setInt(1, accessLevel.getLevel());
-                ps.setInt(2, getObjectId());
-                ps.executeUpdate();
-            } catch (SQLException e) {
-                LOGGER.warn("Failed to update character's accesslevel in db: " + toString(), e);
-            }
-        }
-
-        PlayerNameTable.getInstance().addName(this);
-
-        if (accessLevel == null) {
-            LOGGER.warn("Tryed to set unregistered access level " + level + " for " + toString() + ". Setting access level without privileges!");
-        } else if (level > 0) {
-            LOGGER.warn(_accessLevel.getName() + " access level set for character " + getName() + "! Just a warning to be careful ;)");
-        }
-    }
 
     public void setAccountAccesslevel(int level) {
         AuthServerCommunication.getInstance().sendPacket(new ChangeAccessLevel(getAccountName(), level, 0));
@@ -5361,7 +5338,7 @@ public final class Player extends Playable {
      */
     @Override
     public AccessLevel getAccessLevel() {
-        return _accessLevel;
+        return accessLevel;
     }
 
     /**
@@ -5443,11 +5420,6 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * Create a new player in the characters table of the database.
-     *
-     * @return
-     */
     private boolean createDb() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(INSERT_CHARACTER)) {
@@ -5485,7 +5457,7 @@ public final class Player extends Playable {
             statement.setInt(32, isNoble() ? 1 : 0);
             statement.setLong(33, 0);
             statement.setInt(34, PlayerStats.MIN_VITALITY_POINTS);
-            statement.setDate(35, new Date(_createDate.getTimeInMillis()));
+            statement.setObject(35, model.getCreateDate());
             statement.executeUpdate();
         } catch (Exception e) {
             LOGGER.error("Could not insert char data: " + e.getMessage(), e);
@@ -9791,57 +9763,12 @@ public final class Player extends Playable {
         if (isCastingNow()) {
             return false;
         }
-        if (isInBoat() || isInAirShip()) {
-            return false;
-        }
-        return true;
-    }
 
-    /**
-     * @return the _createDate of the Player.
-     */
-    public Calendar getCreateDate() {
-        return _createDate;
-    }
-
-    /**
-     * Set the _createDate of the Player.
-     *
-     * @param createDate
-     */
-    public void setCreateDate(Calendar createDate) {
-        _createDate = createDate;
-    }
-
-    /**
-     * @return number of days to char birthday.
-     */
-    public int checkBirthDay() {
-        final Calendar now = Calendar.getInstance();
-
-        // "Characters with a February 29 creation date will receive a gift on February 28."
-        if ((_createDate.get(Calendar.DAY_OF_MONTH) == 29) && (_createDate.get(Calendar.MONTH) == 1)) {
-            _createDate.add(Calendar.HOUR_OF_DAY, -24);
-        }
-
-        if ((now.get(Calendar.MONTH) == _createDate.get(Calendar.MONTH)) && (now.get(Calendar.DAY_OF_MONTH) == _createDate.get(Calendar.DAY_OF_MONTH)) && (now.get(Calendar.YEAR) != _createDate.get(Calendar.YEAR))) {
-            return 0;
-        }
-
-        int i;
-        for (i = 1; i < 6; i++) {
-            now.add(Calendar.HOUR_OF_DAY, 24);
-            if ((now.get(Calendar.MONTH) == _createDate.get(Calendar.MONTH)) && (now.get(Calendar.DAY_OF_MONTH) == _createDate.get(Calendar.DAY_OF_MONTH)) && (now.get(Calendar.YEAR) != _createDate.get(Calendar.YEAR))) {
-                return i;
-            }
-        }
-        return -1;
+        return !isInBoat() && !isInAirShip();
     }
 
     public int getBirthdays() {
-        long time = (System.currentTimeMillis() - _createDate.getTimeInMillis()) / 1000;
-        time /= TimeUnit.DAYS.toMillis(365);
-        return (int) time;
+        return (int) ChronoUnit.YEARS.between(model.getCreateDate(), LocalDate.now());
     }
 
     public IntSet getFriendList() {
@@ -9971,16 +9898,8 @@ public final class Player extends Playable {
         return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
     }
 
-    public final int getClientX() {
-        return _clientX;
-    }
-
     public final void setClientX(int val) {
         _clientX = val;
-    }
-
-    public final int getClientY() {
-        return _clientY;
     }
 
     public final void setClientY(int val) {
@@ -9993,10 +9912,6 @@ public final class Player extends Playable {
 
     public final void setClientZ(int val) {
         _clientZ = val;
-    }
-
-    public final int getClientHeading() {
-        return _clientHeading;
     }
 
     public final void setClientHeading(int val) {

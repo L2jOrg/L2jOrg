@@ -62,7 +62,7 @@ public interface CharacterDAO extends DAO<CharacterData> {
     void removeClanPenalty(String name);
 
     @Query("UPDATE characters SET accesslevel=:level: WHERE char_name=:name:")
-    boolean updateAccessLevel(String name, int level);
+    boolean updateAccessLevelByName(String name, int level);
 
     @Query("UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE charId=:objectId:")
     void updateToValidLocation(int objectId);
@@ -78,4 +78,7 @@ public interface CharacterDAO extends DAO<CharacterData> {
             WHERE pk.player_id = :player: AND pk.kill_time >= :since:
             """)
     List<KillerData> findKillersByPlayer(int player, long since);
+
+    @Query("UPDATE characters SET accesslevel=:level: WHERE charId=:playerId:")
+    void updateAccessLevel(int playerId, int level);
 }

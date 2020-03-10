@@ -345,16 +345,6 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
         }
 
-        final int birthday = player.checkBirthDay();
-        if (birthday == 0) {
-            player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
-            // activeChar.sendPacket(new ExBirthdayPopup()); Removed in H5?
-        } else if (birthday != -1) {
-            sm = getSystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
-            sm.addString(Integer.toString(birthday));
-            player.sendPacket(sm);
-        }
-
         if (!player.getPremiumItemList().isEmpty()) {
             player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
         }

@@ -74,7 +74,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 				onlineChange(gm, player, level);
 			}
 			else {
-				if(getDAO(CharacterDAO.class).updateAccessLevel(name, level)) {
+				if(getDAO(CharacterDAO.class).updateAccessLevelByName(name, level)) {
 					BuilderUtil.sendSysMessage(gm, "Character's access level is now set to " + level);
 				} else {
 					BuilderUtil.sendSysMessage(gm, "Character not found or access level unaltered.");

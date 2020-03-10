@@ -12,8 +12,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import org.l2j.gameserver.model.items.PcItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -26,6 +26,7 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static java.util.Objects.isNull;
@@ -132,6 +133,7 @@ public final class CharacterCreate extends ClientPacket {
             character.setHairStyle(hairStyle);
             character.setFemale(female);
             character.setAccountName(client.getAccountName());
+            character.setCreateDate(LocalDate.now());
 
             newChar = Player.create(character, template);
 

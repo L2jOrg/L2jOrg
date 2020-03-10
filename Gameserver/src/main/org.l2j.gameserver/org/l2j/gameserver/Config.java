@@ -2,7 +2,6 @@ package org.l2j.gameserver;
 
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.util.FloodProtectorConfig;
@@ -308,7 +307,7 @@ public final class Config {
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-    public static int DEFAULT_ACCESS_LEVEL;
+
     public static boolean SERVER_GMONLY;
     public static boolean GM_HERO_AURA;
     public static boolean GM_STARTUP_BUILDER_HIDE;
@@ -1218,7 +1217,7 @@ public final class Config {
 
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-        DEFAULT_ACCESS_LEVEL = General.getInt("DefaultAccessLevel", 0);
+
         SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
         GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
         GM_STARTUP_BUILDER_HIDE = General.getBoolean("GMStartupBuilderHide", false);

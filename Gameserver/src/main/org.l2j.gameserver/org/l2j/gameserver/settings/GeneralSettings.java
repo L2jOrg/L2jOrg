@@ -22,6 +22,7 @@ public class GeneralSettings implements Settings {
 
     private IllegalActionPunishmentType defaultPunishment;
     private boolean disableChatInJail;
+    private int defaultAccessLevel;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -45,6 +46,8 @@ public class GeneralSettings implements Settings {
 
         defaultPunishment = settingsFile.getEnum("DefaultPunish", IllegalActionPunishmentType.class, IllegalActionPunishmentType.KICK);
         disableChatInJail = settingsFile.getBoolean("JailDisableChat", true);
+
+        defaultAccessLevel = settingsFile.getInteger("DefaultAccessLevel", 0);
      }
 
     public int banChatAdenaAdsReportCount() {
@@ -97,5 +100,13 @@ public class GeneralSettings implements Settings {
 
     public boolean disableChatInJail() {
         return disableChatInJail;
+    }
+
+    public int defaultAccessLevel() {
+        return defaultAccessLevel;
+    }
+
+    public void setDefaultAccessLevel(int accessLevel) {
+        defaultAccessLevel = accessLevel;
     }
 }
