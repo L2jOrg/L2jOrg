@@ -1,7 +1,11 @@
 package org.l2j.gameserver.instancemanager;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.CursedWeaponDAO;
 import org.l2j.gameserver.model.CursedWeapon;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -20,24 +24,25 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
 /**
- * UnAfraid: TODO: Rewrite with DocumentParser
  *
  * @author Micht
+ * @author JoeAlisson
  */
 public final class CursedWeaponsManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(CursedWeaponsManager.class);
 
-    private final Map<Integer, CursedWeapon> _cursedWeapons = new HashMap<>();
+    private final IntMap<CursedWeapon> _cursedWeapons = new HashIntMap<>();
 
     private CursedWeaponsManager() {
         load();
@@ -53,13 +58,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
     }
 
     public static void removeFromDb(int itemId) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?")) {
-            ps.setInt(1, itemId);
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            LOGGER.error("Failed to remove data: " + e.getMessage(), e);
-        }
+        getDAO(CursedWeaponDAO.class).deleteByItem(itemId);
     }
 
     @Override
@@ -290,7 +289,7 @@ public final class CursedWeaponsManager extends GameXmlReader {
         return _cursedWeapons.values();
     }
 
-    public Set<Integer> getCursedWeaponsIds() {
+    public IntSet getCursedWeaponsIds() {
         return _cursedWeapons.keySet();
     }
 

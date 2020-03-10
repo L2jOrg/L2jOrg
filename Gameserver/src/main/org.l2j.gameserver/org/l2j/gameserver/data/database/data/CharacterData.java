@@ -267,6 +267,10 @@ public class CharacterData {
         return baseClass;
     }
 
+    public void setBaseClass(int classId) {
+        baseClass = classId;
+    }
+
     public int getApprentice() {
         return apprentice;
     }

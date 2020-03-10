@@ -28,4 +28,7 @@ public interface ClanDAO extends DAO<Object> {
 
     @Query("UPDATE clan_data SET hasCastle = :castleId: WHERE clan_id = :id:")
     void updateOwnedCastle(int id, int castleId);
+
+    @Query("DELETE FROM clan_wars WHERE clan1=:clan1: AND clan2=:clan2:")
+    void deleteClanWar(int clan1, int clan2);
 }

@@ -4,6 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
@@ -44,6 +45,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 
@@ -321,14 +323,7 @@ public class ClanTable {
         clan1.broadcastClanStatus();
         clan2.broadcastClanStatus();
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("DELETE FROM clan_wars WHERE clan1=? AND clan2=?")) {
-            ps.setInt(1, clanId1);
-            ps.setInt(2, clanId2);
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.error(getClass().getSimpleName() + ": Error removing clan wars data.", e);
-        }
+        getDAO(ClanDAO.class).deleteClanWar(clanId1, clanId2);
     }
 
     private void restoreClanWars() {

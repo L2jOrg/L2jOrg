@@ -416,7 +416,6 @@ public final class Player extends Playable {
 
     public static Player create(CharacterData characterData, PlayerTemplate template) {
         final Player player = new Player(characterData, template);
-        player.setBaseClass(player.getClassId());
         player.setRecomLeft(20);
         if (player.createDb()) {
             if (getSettings(GeneralSettings.class).cachePlayersName()) {
@@ -556,7 +555,6 @@ public final class Player extends Playable {
      * list of character friends
      */
     private final IntSet friends = CHashIntMap.newKeySet();
-    protected int _baseClass;
     protected int _activeClass;
     protected int _classIndex = 0;
     protected Future<?> _mountFeedTask;
@@ -955,12 +953,7 @@ public final class Player extends Playable {
         player.setUptime(System.currentTimeMillis());
 
         player.setClassIndex(0);
-        try {
-            player.setBaseClass(character.getBaseClass());
-        } catch (Exception e) {
-            player.setBaseClass(character.getClassId());
-            LOGGER.warn("Exception during player.setBaseClass for player: " + player + " base class: " + character.getBaseClass(), e);
-        }
+
 
         if (restoreSubClassData(player)) {
             if (character.getClassId() != player.getBaseClass()) {
@@ -1312,11 +1305,8 @@ public final class Player extends Playable {
         getVariables().set(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, enabled);
     }
 
-    /**
-     * @return the base PlayerTemplate link to the Player.
-     */
     public final PlayerTemplate getBaseTemplate() {
-        return PlayerTemplateData.getInstance().getTemplate(_baseClass);
+        return PlayerTemplateData.getInstance().getTemplate(model.getBaseClass());
     }
 
     /**
@@ -2384,29 +2374,16 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * @return the Race object of the Player.
-     */
     @Override
     public Race getRace() {
         if (!isSubClassActive()) {
             return getTemplate().getRace();
         }
-        return PlayerTemplateData.getInstance().getTemplate(_baseClass).getRace();
+        return PlayerTemplateData.getInstance().getTemplate(model.getBaseClass()).getRace();
     }
 
     public Radar getRadar() {
         return radar;
-    }
-
-    /* Return true if Hellbound minimap allowed */
-    public boolean isMinimapAllowed() {
-        return _minimapAllowed;
-    }
-
-    /* Enable or disable minimap on Hellbound */
-    public void setMinimapAllowed(boolean b) {
-        _minimapAllowed = b;
     }
 
     /**
@@ -5446,14 +5423,14 @@ public final class Player extends Playable {
             statement.setInt(21, _pkKills);
             statement.setInt(22, clanId);
             statement.setInt(23, getRace().ordinal());
-            statement.setInt(24, getClassId().getId());
+            statement.setInt(24, model.getClassId());
             statement.setInt(25, hasDwarvenCraft() ? 1 : 0);
             statement.setString(26, getTitle());
             statement.setInt(27, appearance.getTitleColor());
             statement.setInt(28, isOnlineInt());
             statement.setInt(29, _clanPrivileges.getBitmask());
             statement.setBoolean(30, wantsPeace());
-            statement.setInt(31, _baseClass);
+            statement.setInt(31, model.getBaseClass());
             statement.setInt(32, isNoble() ? 1 : 0);
             statement.setLong(33, 0);
             statement.setInt(34, PlayerStats.MIN_VITALITY_POINTS);
@@ -5729,7 +5706,7 @@ public final class Player extends Playable {
             statement.setInt(29, isOnlineInt());
             statement.setInt(30, _clanPrivileges.getBitmask());
             statement.setBoolean(31, wantsPeace());
-            statement.setInt(32, _baseClass);
+            statement.setInt(32, model.getBaseClass());
 
             long totalOnlineTime = _onlineTime;
             if (_onlineBeginTime > 0) {
@@ -7417,7 +7394,7 @@ public final class Player extends Playable {
     }
 
     public void setHero(boolean hero) {
-        if (hero && (_baseClass == _activeClass)) {
+        if (hero && (model.getBaseClass() == _activeClass)) {
             for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
                 addSkill(skill, false); // Don't persist hero skills into database
             }
@@ -7808,15 +7785,11 @@ public final class Player extends Playable {
     }
 
     public int getBaseClass() {
-        return _baseClass;
+        return model.getBaseClass();
     }
 
     public void setBaseClass(int baseClass) {
-        _baseClass = baseClass;
-    }
-
-    public void setBaseClass(ClassId classId) {
-        _baseClass = classId.getId();
+        model.setBaseClass(baseClass);
     }
 
     public int getActiveClass() {
@@ -7896,7 +7869,7 @@ public final class Player extends Playable {
             }
 
             if (classIndex == 0) {
-                setClassTemplate(_baseClass);
+                setClassTemplate(model.getBaseClass());
             } else {
                 try {
                     setClassTemplate(getSubClasses().get(classIndex).getClassId());
@@ -8007,12 +7980,6 @@ public final class Player extends Playable {
                 _taskRentPet.cancel(true);
                 _taskRentPet = null;
             }
-        }
-    }
-
-    public void startRentPet(int seconds) {
-        if (_taskRentPet == null) {
-            _taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(this), seconds * 1000, seconds * 1000);
         }
     }
 

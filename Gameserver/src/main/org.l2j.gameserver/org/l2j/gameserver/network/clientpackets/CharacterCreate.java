@@ -127,6 +127,7 @@ public final class CharacterCreate extends ClientPacket {
             var character = new CharacterData();
             character.setId(IdFactory.getInstance().getNextId());
             character.setName(name);
+            character.setBaseClass(classId);
             character.setClassId(classId);
             character.setFace(face);
             character.setHairColor(hairColor);
