@@ -4,6 +4,7 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.data.database.data.CastleFunctionData;
+import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.enums.CastleSide;
 
 import java.sql.ResultSet;
@@ -55,4 +56,16 @@ public interface CastleDAO extends DAO<CastleData> {
     void updateSide(int id, CastleSide side);
 
     void save(CastleFunctionData functionData);
+
+    @Query("DELETE FROM siege_clans WHERE castle_id=:castleId:")
+    void deleteSiegeByCastle(int castleId);
+
+    @Query("DELETE FROM siege_clans WHERE clan_id=:clanId:")
+    void deleteSiegeByClan(int clanId);
+
+    @Query("DELETE FROM siege_clans WHERE castle_id=:castleId: and type = 2")
+    void deleteWaintingClansByCastle(int castleId);
+
+    @Query("SELECT clan_id,type FROM siege_clans where castle_id=:castleId:")
+    List<SiegeClanData> findSiegeClansByCastle(int castleId);
 }

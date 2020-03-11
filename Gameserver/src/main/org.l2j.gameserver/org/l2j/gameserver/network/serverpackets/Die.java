@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
@@ -31,7 +31,7 @@ public class Die extends ServerPacket {
             boolean isInCastleDefense = false;
             boolean isInFortDefense = false;
 
-            SiegeClan siegeClan = null;
+            SiegeClanData siegeClan = null;
             final Castle castle = CastleManager.getInstance().getCastle(activeChar);
             final Fort fort = FortDataManager.getInstance().getFort(activeChar);
             if ((castle != null) && castle.getSiege().isInProgress()) {
@@ -45,7 +45,7 @@ public class Die extends ServerPacket {
             flags += nonNull(clan) && clan.getHideoutId() > 0 ? 2 : 0; // clan hall
             flags += (nonNull(clan) && (clan.getCastleId() > 0)) || isInCastleDefense ? 4 : 0; // castle
             flags += (nonNull(clan) && (clan.getFortId() > 0)) || isInFortDefense ? 8 : 0; // fortress
-            flags += nonNull(siegeClan) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty() ? 16 : 0; // outpost
+            flags += nonNull(siegeClan) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlags().isEmpty() ? 16 : 0; // outpost
             flags += activeChar.getAccessLevel().allowFixedRes() || activeChar.getInventory().haveItemForSelfResurrection() ? 32 : 0; // feather
         }
     }

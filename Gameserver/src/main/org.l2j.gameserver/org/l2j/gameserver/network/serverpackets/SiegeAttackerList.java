@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -51,7 +50,7 @@ public final class SiegeAttackerList extends ServerPacket {
 
             writeInt(size);
             writeInt(size);
-            for (SiegeClan siegeclan : _castle.getSiege().getAttackerClans()) {
+            for (var siegeclan : _castle.getSiege().getAttackerClans().values()) {
                 clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
                 if (clan == null) {
                     continue;

@@ -6,7 +6,6 @@ import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
-import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -36,18 +35,18 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author UnAfraid
  */
 public class RegenHPFinalizer implements IStatsFunction {
-    private static double calcSiegeRegenModifier(Player activeChar) {
-        if ((activeChar == null) || (activeChar.getClan() == null)) {
+    private static double calcSiegeRegenModifier(Player player) {
+        if ((player == null) || (player.getClan() == null)) {
             return 0;
         }
 
-        final Siege siege = SiegeManager.getInstance().getSiege(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+        final Siege siege = SiegeManager.getInstance().getSiege(player);
         if ((siege == null) || !siege.isInProgress()) {
             return 0;
         }
 
-        final SiegeClan siegeClan = siege.getAttackerClan(activeChar.getClan().getId());
-        if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !GameUtils.checkIfInRange(200, activeChar, siegeClan.getFlag().stream().findAny().get(), true)) {
+        final var siegeClan = siege.getAttackerClan(player.getClan().getId());
+        if ((siegeClan == null) || siegeClan.getFlags().isEmpty() || !GameUtils.checkIfInRange(200, player, siegeClan.getFlags().stream().findAny().get(), true)) {
             return 0;
         }
 

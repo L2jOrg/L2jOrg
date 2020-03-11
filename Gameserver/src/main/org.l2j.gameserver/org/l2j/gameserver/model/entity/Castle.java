@@ -24,6 +24,7 @@ import org.l2j.gameserver.model.actor.instance.Artefact;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
@@ -213,6 +214,10 @@ public final class Castle extends AbstractResidence {
 
     public boolean checkIfInZone(int x, int y, int z) {
         return getZone().isInsideZone(x, y, z);
+    }
+
+    public boolean checkIfInZone(ILocational loc) {
+        return getZone().isInsideZone(loc);
     }
 
     public SiegeZone getZone() {

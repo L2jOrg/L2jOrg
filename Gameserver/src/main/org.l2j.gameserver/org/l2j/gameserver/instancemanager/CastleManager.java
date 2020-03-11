@@ -10,6 +10,8 @@ import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.model.entity.Siege;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,25 +23,27 @@ import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Collection;
-import java.util.Map;
-import java.util.concurrent.ConcurrentSkipListMap;
 
+/**
+ * @author JoeAlisson
+ */
 public final class CastleManager implements InstanceListManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(CastleManager.class);
-    private static final int[] _castleCirclets =
-            {
-                    0,
-                    6838,
-                    6835,
-                    6839,
-                    6837,
-                    6840,
-                    6834,
-                    6836,
-                    8182,
-                    8183
-            };
-    private final Map<Integer, Castle> castles = new ConcurrentSkipListMap<>();
+
+    private static final int[] castleCirclets = {
+        0,
+        6838,
+        6835,
+        6839,
+        6837,
+        6840,
+        6834,
+        6836,
+        8182,
+        8183
+    };
+
+    private final IntMap<Castle> castles = new CHashIntMap<>();
     private final IntMap<LocalDateTime> castleSiegesDate = new CHashIntMap<>();
 
     private CastleManager() {
@@ -51,6 +55,7 @@ public final class CastleManager implements InstanceListManager {
 
     public final Castle findNearestCastle(WorldObject obj, long maxDistance) {
         Castle nearestCastle = getCastle(obj);
+
         if (nearestCastle == null) {
             double distance;
             for (Castle castle : castles.values()) {
@@ -87,36 +92,20 @@ public final class CastleManager implements InstanceListManager {
     }
 
     public final Castle getCastle(int x, int y, int z) {
-        for (Castle temp : castles.values()) {
-            if (temp.checkIfInZone(x, y, z)) {
-                return temp;
-            }
-        }
-        return null;
+        return castles.values().stream().filter(c -> c.checkIfInZone(x, y, z)).findFirst().orElse(null);
     }
 
-    public final Castle getCastle(WorldObject activeObject) {
-        return getCastle(activeObject.getX(), activeObject.getY(), activeObject.getZ());
+    public final Castle getCastle(ILocational loc) {
+        return getCastle(loc.getX(), loc.getY(), loc.getZ());
     }
 
     public final Collection<Castle> getCastles() {
         return castles.values();
     }
 
-    public boolean hasOwnedCastle() {
-        boolean hasOwnedCastle = false;
-        for (Castle castle : castles.values()) {
-            if (castle.getOwnerId() > 0) {
-                hasOwnedCastle = true;
-                break;
-            }
-        }
-        return hasOwnedCastle;
-    }
-
     public int getCircletByCastleId(int castleId) {
         if ((castleId > 0) && (castleId < 10)) {
-            return _castleCirclets[castleId];
+            return castleCirclets[castleId];
         }
 
         return 0;
@@ -191,6 +180,10 @@ public final class CastleManager implements InstanceListManager {
     public void registerSiegeDate(Castle castle, LocalDateTime siegeDate) {
         castle.setSiegeDate(siegeDate);
         castleSiegesDate.put(castle.getId(), siegeDate);
+    }
+
+    public Siege getSiegeOnLocation(ILocational loc) {
+        return castles.values().stream().map(Castle::getSiege).filter(s -> s.checkIfInZone(loc)).findFirst().orElse(null);
     }
 
     public int getSiegesOnDate(LocalDateTime siegeDate) {

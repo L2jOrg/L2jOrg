@@ -1,20 +1,20 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
+import org.l2j.gameserver.world.World;
 
 import java.util.Comparator;
 
@@ -93,7 +93,7 @@ public class Defender extends Attackable {
         super.onSpawn();
 
         _fort = FortDataManager.getInstance().getFort(getX(), getY(), getZ());
-        _castle = CastleManager.getInstance().getCastle(getX(), getY(), getZ());
+        _castle = CastleManager.getInstance().getCastle(this);
 
         if ((_fort == null) && (_castle == null)) {
             LOGGER.warn("Defender spawned outside of Fortress or Castle zone!" + this);

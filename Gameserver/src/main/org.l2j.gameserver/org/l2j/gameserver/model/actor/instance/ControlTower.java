@@ -39,7 +39,7 @@ public class ControlTower extends Tower {
     @Override
     public boolean doDie(Creature killer) {
         if (getCastle().getSiege().isInProgress()) {
-            getCastle().getSiege().killedCT(this);
+            getCastle().getSiege().killedControlTower(this);
 
             if ((_guards != null) && !_guards.isEmpty()) {
                 for (Spawn spawn : _guards) {

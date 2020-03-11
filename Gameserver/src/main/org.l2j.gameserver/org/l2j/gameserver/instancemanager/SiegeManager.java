@@ -5,7 +5,6 @@ import org.l2j.commons.util.PropertiesParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TowerSpawn;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -20,7 +19,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 
-
+/**
+ * @author JoeAlisson
+ */
 public final class SiegeManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeManager.class);
 
@@ -169,20 +170,7 @@ public final class SiegeManager {
     }
 
     public final Siege getSiege(ILocational loc) {
-        return getSiege(loc.getX(), loc.getY(), loc.getZ());
-    }
-
-    public final Siege getSiege(WorldObject activeObject) {
-        return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
-    }
-
-    public final Siege getSiege(int x, int y, int z) {
-        for (Castle castle : CastleManager.getInstance().getCastles()) {
-            if (castle.getSiege().checkIfInZone(x, y, z)) {
-                return castle.getSiege();
-            }
-        }
-        return null;
+        return CastleManager.getInstance().getSiegeOnLocation(loc);
     }
 
     public final int getSiegeClanMinLevel() {

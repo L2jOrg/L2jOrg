@@ -2,17 +2,16 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.status.SiegeFlagStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Siegable;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -29,7 +28,7 @@ public class SiegeFlag extends Npc {
 
         _clan = player.getClan();
         _canTalk = true;
-        _siege = SiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
+        _siege = SiegeManager.getInstance().getSiege(player);
         if (_siege == null) {
             _siege = FortSiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
         }
@@ -37,7 +36,7 @@ public class SiegeFlag extends Npc {
             throw new NullPointerException(getClass().getSimpleName() + ": Initialization failed.");
         }
 
-        final SiegeClan sc = _siege.getAttackerClan(_clan);
+        final var sc = _siege.getAttackerClan(_clan);
         if (sc == null) {
             throw new NullPointerException(getClass().getSimpleName() + ": Cannot find siege clan.");
         }
@@ -64,7 +63,7 @@ public class SiegeFlag extends Npc {
             return false;
         }
         if ((_siege != null) && (_clan != null)) {
-            final SiegeClan sc = _siege.getAttackerClan(_clan);
+            final var sc = _siege.getAttackerClan(_clan);
             if (sc != null) {
                 sc.removeFlag(this);
             }

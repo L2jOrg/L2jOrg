@@ -6598,7 +6598,7 @@ public final class Player extends Playable {
             final Clan clan = getClan();
             final Clan attackerClan = attackerPlayer.getClan();
             if (clan != null) {
-                final Siege siege = SiegeManager.getInstance().getSiege(getX(), getY(), getZ());
+                final Siege siege = SiegeManager.getInstance().getSiege(this);
                 if (siege != null) {
                     // Check if a siege is in progress and if attacker and the Player aren't in the Defender clan
                     if (siege.checkIsDefender(attackerClan) && siege.checkIsDefender(clan)) {

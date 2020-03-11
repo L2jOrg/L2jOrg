@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -48,7 +47,7 @@ public final class SiegeDefenderList extends ServerPacket {
         writeInt(0x01); // Unknown
         writeInt(0x00); // Unknown
 
-        final int size = _castle.getSiege().getDefenderWaitingClans().size() + _castle.getSiege().getDefenderClans().size() + (_castle.getOwner() != null ? 1 : 0);
+        final int size = _castle.getSiege().getDefendersWaiting().size() + _castle.getSiege().getDefenderClans().size() + (_castle.getOwner() != null ? 1 : 0);
 
         writeInt(size);
         writeInt(size);
@@ -69,7 +68,7 @@ public final class SiegeDefenderList extends ServerPacket {
         }
 
         // List of confirmed defenders
-        for (SiegeClan siegeClan : _castle.getSiege().getDefenderClans()) {
+        for (var siegeClan : _castle.getSiege().getDefenderClans().values()) {
             final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
             if ((defendingClan == null) || (defendingClan == _castle.getOwner())) {
                 continue;
@@ -88,7 +87,7 @@ public final class SiegeDefenderList extends ServerPacket {
         }
 
         // List of not confirmed defenders
-        for (SiegeClan siegeClan : _castle.getSiege().getDefenderWaitingClans()) {
+        for (var siegeClan : _castle.getSiege().getDefendersWaiting().values()) {
             final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
             if (defendingClan == null) {
                 continue;

@@ -1,8 +1,11 @@
 package org.l2j.gameserver.model.entity;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.FortTeleportWhoType;
@@ -41,7 +44,7 @@ public class FortSiege implements Siegable {
     private static final String DELETE_FORT_SIEGECLANS_BY_CLAN_ID = "DELETE FROM fortsiege_clans WHERE fort_id = ? AND clan_id = ?";
     private static final String DELETE_FORT_SIEGECLANS = "DELETE FROM fortsiege_clans WHERE fort_id = ?";
     protected final Fort fort;
-    private final Set<SiegeClan> _attackerClans = ConcurrentHashMap.newKeySet();
+    private final IntMap<SiegeClanData> _attackerClans = new CHashIntMap<>();
     private final Collection<Spawn> _siegeGuards = new LinkedList<>();
     // Fort setting
     protected Set<Spawn> _commanders = ConcurrentHashMap.newKeySet();
@@ -163,7 +166,7 @@ public class FortSiege implements Siegable {
     public void announceToPlayer(SystemMessage sm) {
         // announce messages only for participants
         Clan clan;
-        for (SiegeClan siegeclan : _attackerClans) {
+        for (var siegeclan : _attackerClans.values()) {
             clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
             for (Player member : clan.getOnlineMembers(0)) {
                 if (member != null) {
@@ -188,7 +191,7 @@ public class FortSiege implements Siegable {
 
     public void updatePlayerSiegeStateFlags(boolean clear) {
         Clan clan;
-        for (SiegeClan siegeclan : _attackerClans) {
+        for (var siegeclan : _attackerClans.values()) {
             clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
             for (Player member : clan.getOnlineMembers(0)) {
                 if (member == null) {
@@ -322,7 +325,7 @@ public class FortSiege implements Siegable {
     @Override
     public List<Player> getAttackersInZone() {
         final List<Player> players = new LinkedList<>();
-        for (SiegeClan siegeclan : _attackerClans) {
+        for (var siegeclan : _attackerClans.values()) {
             final Clan clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
             for (Player player : clan.getOnlineMembers(0)) {
                 if (player == null) {
@@ -439,7 +442,7 @@ public class FortSiege implements Siegable {
             return;
         }
 
-        for (SiegeClan clan : _attackerClans) {
+        for (var clan : _attackerClans.values()) {
             if (clan.removeFlag(flag)) {
                 return;
             }
@@ -613,7 +616,7 @@ public class FortSiege implements Siegable {
     }
 
     private void teleportAttackersInZone(TeleportWhereType teleportWhere) {
-        _attackerClans.stream().map(siegeClan -> ClanTable.getInstance().getClan(siegeClan.getClanId()))
+        _attackerClans.values().stream().map(siegeClan -> ClanTable.getInstance().getClan(siegeClan.getClanId()))
             .forEach( clan -> clan.forEachOnlineMember(p -> p.teleToLocation(teleportWhere), p -> canTeleport(p) && p.isInSiege()));
     }
 
@@ -633,7 +636,7 @@ public class FortSiege implements Siegable {
      * @param clanId
      */
     private void addAttacker(int clanId) {
-        _attackerClans.add(new SiegeClan(clanId, SiegeClanType.ATTACKER)); // Add registered attacker to attacker list
+        _attackerClans.put(clanId, new SiegeClanData(clanId, SiegeClanType.ATTACKER)); // Add registered attacker to attacker list
     }
 
     /**
@@ -708,7 +711,7 @@ public class FortSiege implements Siegable {
      * Remove all flags.
      */
     private void removeFlags() {
-        for (SiegeClan sc : _attackerClans) {
+        for (var sc : _attackerClans.values()) {
             if (sc != null) {
                 sc.removeFlags();
             }
@@ -853,7 +856,7 @@ public class FortSiege implements Siegable {
     }
 
     @Override
-    public final SiegeClan getAttackerClan(Clan clan) {
+    public final SiegeClanData getAttackerClan(Clan clan) {
         if (clan == null) {
             return null;
         }
@@ -862,8 +865,8 @@ public class FortSiege implements Siegable {
     }
 
     @Override
-    public final SiegeClan getAttackerClan(int clanId) {
-        for (SiegeClan sc : _attackerClans) {
+    public final SiegeClanData getAttackerClan(int clanId) {
+        for (var sc : _attackerClans.values()) {
             if ((sc != null) && (sc.getClanId() == clanId)) {
                 return sc;
             }
@@ -873,7 +876,7 @@ public class FortSiege implements Siegable {
     }
 
     @Override
-    public final Collection<SiegeClan> getAttackerClans() {
+    public final IntMap<SiegeClanData> getAttackerClans() {
         return _attackerClans;
     }
 
@@ -893,9 +896,9 @@ public class FortSiege implements Siegable {
     @Override
     public Set<Npc> getFlag(Clan clan) {
         if (clan != null) {
-            final SiegeClan sc = getAttackerClan(clan);
+            final var sc = getAttackerClan(clan);
             if (sc != null) {
-                return sc.getFlag();
+                return sc.getFlags();
             }
         }
 
@@ -914,17 +917,17 @@ public class FortSiege implements Siegable {
     }
 
     @Override
-    public SiegeClan getDefenderClan(int clanId) {
+    public SiegeClanData getDefenderClan(int clanId) {
         return null;
     }
 
     @Override
-    public SiegeClan getDefenderClan(Clan clan) {
+    public SiegeClanData getDefenderClan(Clan clan) {
         return null;
     }
 
     @Override
-    public List<SiegeClan> getDefenderClans() {
+    public IntMap<SiegeClanData> getDefenderClans() {
         return null;
     }
 
