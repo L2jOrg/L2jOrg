@@ -12,7 +12,7 @@ public class ExNewPk extends ServerPacket {
 
     private final Player killer;
 
-    private ExNewPk(Player killer) {
+    public ExNewPk(Player killer) {
         this.killer = killer;
     }
 
