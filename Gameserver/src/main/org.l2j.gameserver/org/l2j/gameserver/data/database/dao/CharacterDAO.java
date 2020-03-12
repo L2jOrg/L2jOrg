@@ -6,7 +6,9 @@ import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.KillerData;
 
+import java.sql.ResultSet;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * @author JoeAlisson
@@ -84,4 +86,19 @@ public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("UPDATE characters SET x=:x:, y=:y:, z=:z: WHERE char_name=:name:")
     boolean updateLocationByName(String name, int x, int y, int z);
+
+    @Query("SELECT char_name,accesslevel FROM characters WHERE charId=:id:")
+    CharacterData findNameAndAccessLevelById(int id);
+
+    @Query("SELECT EXISTS(SELECT 1 FROM characters WHERE char_name=:name:)")
+    boolean existsByName(String name);
+
+    @Query("SELECT COUNT(1) as count FROM characters WHERE account_name=:account:")
+    int playerCountByAccount(String account);
+
+    @Query("SELECT classid FROM characters WHERE charId=:id: ")
+    int findClassIdById(int id);
+
+    @Query("SELECT charId, char_name, accesslevel FROM characters")
+    void withPlayersDataDo(Consumer<ResultSet> action);
 }
