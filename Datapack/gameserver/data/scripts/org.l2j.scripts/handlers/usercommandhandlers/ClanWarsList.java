@@ -1,132 +1,77 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.usercommandhandlers;
 
-import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
+import org.l2j.gameserver.data.database.data.ClanData;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.contains;
+import static org.l2j.commons.util.Util.isNotEmpty;
 
 /**
  * Clan War Start, Under Attack List, War List user commands.
  * @author Tempy
+ * @author JoeAlisson
  */
-public class ClanWarsList implements IUserCommandHandler
-{
-	private static final Logger LOGGER = LoggerFactory.getLogger(ClanWarsList.class);
-	private static final int[] COMMAND_IDS =
-	{
-		88,
-		89,
-		90
-	};
-	// SQL queries
-	private static final String ATTACK_LIST = "SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan1=? AND clan_id=clan2 AND clan2 NOT IN (SELECT clan1 FROM clan_wars WHERE clan2=?)";
-	private static final String UNDER_ATTACK_LIST = "SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan2=? AND clan_id=clan1 AND clan1 NOT IN (SELECT clan2 FROM clan_wars WHERE clan1=?)";
-	private static final String WAR_LIST = "SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan1=? AND clan_id=clan2 AND clan2 IN (SELECT clan1 FROM clan_wars WHERE clan2=?)";
-	
-	@Override
-	public boolean useUserCommand(int id, Player activeChar)
-	{
-		if ((id != COMMAND_IDS[0]) && (id != COMMAND_IDS[1]) && (id != COMMAND_IDS[2]))
-		{
-			return false;
-		}
-		
-		final Clan clan = activeChar.getClan();
-		if (clan == null)
-		{
-			activeChar.sendPacket(SystemMessageId.NOT_JOINED_IN_ANY_CLAN);
-			return false;
-		}
-		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
-		{
-			String query;
-			// Attack List
-			if (id == 88)
-			{
-				activeChar.sendPacket(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON);
-				query = ATTACK_LIST;
-			}
-			// Under Attack List
-			else if (id == 89)
-			{
-				activeChar.sendPacket(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU);
-				query = UNDER_ATTACK_LIST;
-			}
-			// War List
-			else
-			{
-				activeChar.sendPacket(SystemMessageId.CLAN_WAR_LIST);
-				query = WAR_LIST;
-			}
-			
-			try (PreparedStatement ps = con.prepareStatement(query))
-			{
-				ps.setInt(1, clan.getId());
-				ps.setInt(2, clan.getId());
-				
-				SystemMessage sm;
-				try (ResultSet rs = ps.executeQuery())
-				{
-					String clanName;
-					int ally_id;
-					while (rs.next())
-					{
-						clanName = rs.getString("clan_name");
-						ally_id = rs.getInt("ally_id");
-						if (ally_id > 0)
-						{
-							// Target With Ally
-							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_ALLIANCE);
-							sm.addString(clanName);
-							sm.addString(rs.getString("ally_name"));
-						}
-						else
-						{
-							// Target Without Ally
-							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS);
-							sm.addString(clanName);
-						}
-						activeChar.sendPacket(sm);
-					}
-				}
-			}
-			activeChar.sendPacket(SystemMessageId.SEPARATOR_EQUALS);
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("", e);
-		}
-		return true;
-	}
-	
-	@Override
-	public int[] getUserCommandList()
-	{
-		return COMMAND_IDS;
-	}
+public class ClanWarsList implements IUserCommandHandler {
+    private static final int[] COMMAND_IDS = { 88,  89,  90 };
+
+    @Override
+    public boolean useUserCommand(int id, Player player) {
+
+        if (!contains(COMMAND_IDS, id)) {
+            return false;
+        }
+
+        final Clan clan = player.getClan();
+        if (isNull(clan)) {
+            player.sendPacket(SystemMessageId.NOT_JOINED_IN_ANY_CLAN);
+            return false;
+        }
+
+        switch (id) {
+            case 88 -> sendAttackList(player);
+            case 89 -> sendUnderAttackList(player);
+            default -> sendWarList(player);
+        }
+        return true;
+    }
+
+    private void sendWarList(Player player) {
+        player.sendPacket(SystemMessageId.CLAN_WAR_LIST);
+        getDAO(ClanDAO.class).findWarList(player.getClanId()).forEach(clanData -> sendClanInfo(player, clanData));
+        player.sendPacket(SystemMessageId.SEPARATOR_EQUALS);
+    }
+
+    private void sendUnderAttackList(Player player) {
+        player.sendPacket(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU);
+        getDAO(ClanDAO.class).findUnderAttackList(player.getClanId()).forEach(clanData -> sendClanInfo(player, clanData));
+        player.sendPacket(SystemMessageId.SEPARATOR_EQUALS);
+    }
+
+    private void sendAttackList(Player player) {
+        player.sendPacket(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON);
+        getDAO(ClanDAO.class).findAttackList(player.getClanId()).forEach(clanData -> sendClanInfo(player, clanData));
+        player.sendPacket(SystemMessageId.SEPARATOR_EQUALS);
+    }
+
+    private void sendClanInfo(Player player, ClanData clanData) {
+        SystemMessage message;
+        if(isNotEmpty(clanData.getAllyName())) {
+            message = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_ALLIANCE).addString(clanData.getName()).addString(clanData.getAllyName());
+        } else {
+            message =SystemMessage.getSystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS).addString(clanData.getName());
+        }
+        player.sendPacket(message);
+    }
+
+    @Override
+    public int[] getUserCommandList() {
+        return COMMAND_IDS;
+    }
 }

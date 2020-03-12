@@ -1,17 +1,15 @@
 package handlers.admincommandhandlers;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
-import org.l2j.gameserver.enums.AdminTeleportType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.enums.AdminTeleportType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
@@ -21,20 +19,22 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.MapRegionManager;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands: - show_moves - show_teleport - teleport_to_character - move_to - teleport_character
  * @version $Revision: 1.3.2.6.2.4 $ $Date: 2005/04/11 10:06:06 $ con.close() change and small typo fix by Zoey76 24/02/2011
+ *
+ * @author JoeAlisson
  */
 public class AdminTeleport implements IAdminCommandHandler
 {
@@ -442,33 +442,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
-	private void changeCharacterPosition(Player activeChar, String name)
-	{
+	private void changeCharacterPosition(Player activeChar, String name) {
 		final int x = activeChar.getX();
 		final int y = activeChar.getY();
 		final int z = activeChar.getZ();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
-		{
-			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=? WHERE char_name=?");
-			statement.setInt(1, x);
-			statement.setInt(2, y);
-			statement.setInt(3, z);
-			statement.setString(4, name);
-			statement.execute();
-			final int count = statement.getUpdateCount();
-			statement.close();
-			if (count == 0)
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Character not found or position unaltered.");
-			}
-			else
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Player's [" + name + "] position is now set to (" + x + "," + y + "," + z + ").");
-			}
-		}
-		catch (SQLException se)
-		{
-			BuilderUtil.sendSysMessage(activeChar, "SQLException while changing offline character's position");
+
+		if(getDAO(CharacterDAO.class).updateLocationByName(name, x, y, z)) {
+			BuilderUtil.sendSysMessage(activeChar, "Player's [" + name + "] position is now set to (" + x + "," + y + "," + z + ").");
 		}
 	}
 	

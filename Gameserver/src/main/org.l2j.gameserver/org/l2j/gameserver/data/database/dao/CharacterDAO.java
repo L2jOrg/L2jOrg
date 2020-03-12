@@ -81,4 +81,7 @@ public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("UPDATE characters SET accesslevel=:level: WHERE charId=:playerId:")
     void updateAccessLevel(int playerId, int level);
+
+    @Query("UPDATE characters SET x=:x:, y=:y:, z=:z: WHERE char_name=:name:")
+    boolean updateLocationByName(String name, int x, int y, int z);
 }
