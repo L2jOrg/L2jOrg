@@ -621,7 +621,7 @@ public class SkillCaster implements Runnable {
         }
 
         if (Util.isNullOrEmpty(_targets)) {
-            _targets = Collections.singletonList(target);
+            return false;
         }
 
         final StatusUpdate su = new StatusUpdate(caster);
