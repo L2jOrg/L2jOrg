@@ -10,6 +10,8 @@ import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.isNull;
+
 /**
  * @author JoeAlisson
  */
@@ -57,7 +59,7 @@ public class SiegeClanData {
     }
 
     public boolean removeFlag(Npc flag) {
-        if (flag == null) {
+        if (isNull(flag)) {
             return false;
         }
 
@@ -67,9 +69,7 @@ public class SiegeClanData {
     }
 
     public void removeFlags() {
-        for (Npc flag : flags) {
-            removeFlag(flag);
-        }
+        flags.forEach(this::removeFlag);
     }
 
     public void addFlag(SiegeFlag siegeFlag) {

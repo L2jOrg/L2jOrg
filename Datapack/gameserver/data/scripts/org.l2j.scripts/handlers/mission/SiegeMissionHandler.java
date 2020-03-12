@@ -1,15 +1,15 @@
 package handlers.mission;
 
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionStatus;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.mission.MissionDataHolder;
-import org.l2j.gameserver.data.database.data.MissionPlayerData;
-import org.l2j.gameserver.engine.mission.MissionStatus;
-import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 
@@ -38,11 +38,11 @@ public class SiegeMissionHandler extends AbstractMissionHandler {
 	}
 	
 	private void onSiegeStart(OnCastleSiegeStart event) {
-		event.getSiege().getAttackerClans().forEach(this::processSiegeClan);
-		event.getSiege().getDefenderClans().forEach(this::processSiegeClan);
+		event.getSiege().getAttackerClans().values().forEach(this::processSiegeClan);
+		event.getSiege().getDefenderClans().values().forEach(this::processSiegeClan);
 	}
 	
-	private void processSiegeClan(SiegeClan siegeClan)
+	private void processSiegeClan(SiegeClanData siegeClan)
 	{
 		final Clan clan = ClanTable.getInstance().getClan(siegeClan.getClanId());
 		if (clan != null)
