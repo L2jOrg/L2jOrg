@@ -45,7 +45,6 @@ import org.slf4j.LoggerFactory;
 
 import java.lang.ref.WeakReference;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
@@ -621,7 +620,7 @@ public class SkillCaster implements Runnable {
         }
 
         if (Util.isNullOrEmpty(_targets)) {
-            _targets = Collections.singletonList(target);
+            return false;
         }
 
         final StatusUpdate su = new StatusUpdate(caster);

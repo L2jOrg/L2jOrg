@@ -950,9 +950,7 @@ public final class Player extends Playable {
         }
 
         player.setFistsWeaponItem(player.findFistsWeaponItem(character.getClassId()));
-
         player.setUptime(System.currentTimeMillis());
-
         player.setClassIndex(0);
 
 
@@ -999,6 +997,8 @@ public final class Player extends Playable {
                 player.setOverrideCond(masks);
             }
 
+            // Retrieve from the database all items of this Player and add them to _inventory
+            player.getInventory().restore();
             // Retrieve from the database all secondary data of this Player
             // Note that Clan, Noblesse and Hero skills are given separately and not here.
             // Retrieve from the database all skills of this Player and add them to _skills
@@ -1007,8 +1007,6 @@ public final class Player extends Playable {
             // Reward auto-get skills and all available skills if auto-learn skills is true.
             player.rewardSkills();
 
-            // Retrieve from the database all items of this Player and add them to _inventory
-            player.getInventory().restore();
             player.getFreight().restore();
             if (!Config.WAREHOUSE_CACHE) {
                 player.getWarehouse();
