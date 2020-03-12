@@ -27,16 +27,13 @@ public class SiegeClanData {
 
     private SiegeClanType type;
 
-    @Column("castle_owner")
-    private int ownerId;
-
     public SiegeClanData() {
     }
 
-    public SiegeClanData(int clanId, SiegeClanType type) {
-        this.clanId = clanId;
+    public SiegeClanData(int id, SiegeClanType type, int castleId) {
+        this.clanId = id;
         this.type = type;
-
+        this.castleId = castleId;
     }
 
     public int getCastleId() {
@@ -49,10 +46,6 @@ public class SiegeClanData {
 
     public SiegeClanType getType() {
         return type;
-    }
-
-    public int getOwnerId() {
-        return ownerId;
     }
 
     public void setType(SiegeClanType type) {

@@ -320,27 +320,6 @@ public class FortSiege implements Siegable {
     }
 
     /**
-     * @return list of Player registered as attacker in the zone.
-     */
-    @Override
-    public List<Player> getAttackersInZone() {
-        final List<Player> players = new LinkedList<>();
-        for (var siegeclan : _attackerClans.values()) {
-            final Clan clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-            for (Player player : clan.getOnlineMembers(0)) {
-                if (player == null) {
-                    continue;
-                }
-
-                if (player.isInSiege()) {
-                    players.add(player);
-                }
-            }
-        }
-        return players;
-    }
-
-    /**
      * @return list of Player owning the fort in the zone.
      */
     public List<Player> getOwnersInZone() {
@@ -636,7 +615,7 @@ public class FortSiege implements Siegable {
      * @param clanId
      */
     private void addAttacker(int clanId) {
-        _attackerClans.put(clanId, new SiegeClanData(clanId, SiegeClanType.ATTACKER)); // Add registered attacker to attacker list
+        _attackerClans.put(clanId, new SiegeClanData(clanId, SiegeClanType.ATTACKER, fort.getId()));
     }
 
     /**

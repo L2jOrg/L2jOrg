@@ -139,14 +139,10 @@ public final class Broadcast {
      * In order to inform other players of state modification on the Creature, server just need to go through _allPlayers to send Server->Client Packet<BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
      *
-     * @param packet
+     * @param packets
      */
-    public static void toAllOnlinePlayers(ServerPacket packet) {
-        for (Player player : World.getInstance().getPlayers()) {
-            if (player.isOnline()) {
-                player.sendPacket(packet);
-            }
-        }
+    public static void toAllOnlinePlayers(ServerPacket... packets) {
+        World.getInstance().forEachPlayer(p -> p.sendPacket(packets));
     }
 
     public static void toAllOnlinePlayers(String text) {
