@@ -4,9 +4,10 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.sql.impl.CharSummonTable;
+import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
@@ -18,10 +19,10 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SetSummonRemainTime;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +33,8 @@ import java.sql.ResultSet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -206,14 +209,14 @@ public class Servitor extends Summon implements Runnable {
             return;
         }
 
-        if (Config.RESTORE_SERVITOR_ON_RECONNECT) {
+        if (getSettings(CharacterSettings.class).restoreSummonOnReconnect()) {
             if (isDead())
             {
-                CharSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
+                PlayerSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
             }
             else
             {
-                CharSummonTable.getInstance().saveSummon(this);
+                PlayerSummonTable.getInstance().saveSummon(this);
             }
         }
     }
@@ -381,7 +384,7 @@ public class Servitor extends Summon implements Runnable {
         super.unSummon(owner);
 
         if (!_restoreSummon) {
-            CharSummonTable.getInstance().removeServitor(owner, getObjectId());
+            PlayerSummonTable.getInstance().removeServitor(owner, getObjectId());
         }
     }
 

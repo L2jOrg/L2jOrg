@@ -15,6 +15,7 @@ public class CharacterSettings implements Settings {
     private boolean delevel;
     private float weightLimitMultiplier;
     private boolean removeCastleCirclets;
+    private boolean restoreSummonOnReconnect;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -32,6 +33,7 @@ public class CharacterSettings implements Settings {
         weightLimitMultiplier = settingsFile.getFloat("AltWeightLimit", 1f);
 
         removeCastleCirclets = settingsFile.getBoolean("RemoveCastleCirclets", true);
+        restoreSummonOnReconnect = settingsFile.getBoolean("RestoreSummonOnReconnect", true);
     }
 
     public int partyRange() {
@@ -68,5 +70,9 @@ public class CharacterSettings implements Settings {
 
     public boolean removeCastleCirclets() {
         return removeCastleCirclets;
+    }
+
+    public boolean restoreSummonOnReconnect() {
+        return restoreSummonOnReconnect;
     }
 }

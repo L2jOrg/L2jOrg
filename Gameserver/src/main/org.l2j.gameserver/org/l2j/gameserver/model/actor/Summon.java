@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.SummonAI;
-import org.l2j.gameserver.data.sql.impl.CharSummonTable;
+import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -310,7 +310,7 @@ public abstract class Summon extends Playable {
             getInventory().destroyAllItems("pet deleted", _owner, this);
         }
         decayMe();
-        CharSummonTable.getInstance().removeServitor(_owner, getObjectId());
+        PlayerSummonTable.getInstance().removeServitor(_owner, getObjectId());
     }
 
     public void unSummon(Player owner) {

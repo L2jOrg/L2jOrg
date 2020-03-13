@@ -25,9 +25,9 @@ import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.data.database.data.Shortcut;
-import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
@@ -98,6 +98,7 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.settings.AttendanceSettings;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
@@ -8183,15 +8184,19 @@ public final class Player extends Playable {
     public void onActionRequest() {
         if (isSpawnProtected()) {
             setSpawnProtection(false);
+
             if (!isInsideZone(ZoneType.PEACE)) {
                 sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
             }
-            if (Config.RESTORE_SERVITOR_ON_RECONNECT && !hasSummon() && CharSummonTable.getInstance().getServitors().containsKey(getObjectId())) {
-                CharSummonTable.getInstance().restoreServitor(this);
+
+            if (getSettings(CharacterSettings.class).restoreSummonOnReconnect() && !hasSummon()) {
+                if(PlayerSummonTable.getInstance().getServitors().containsKey(getObjectId())) {
+                    PlayerSummonTable.getInstance().restoreServitor(this);
+                } else if(PlayerSummonTable.getInstance().getPets().containsKey(getObjectId())) {
+                    PlayerSummonTable.getInstance().restorePet(this);
+                }
             }
-            if (Config.RESTORE_PET_ON_RECONNECT && !hasSummon() && CharSummonTable.getInstance().getPets().containsKey(getObjectId())) {
-                CharSummonTable.getInstance().restorePet(this);
-            }
+
         }
         if (isTeleportProtected()) {
             setTeleportProtection(false);

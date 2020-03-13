@@ -119,7 +119,7 @@ public class GameServer {
         AdminData.getInstance();
         PetDataTable.getInstance();
         CubicData.getInstance();
-        CharSummonTable.getInstance().init();
+        PlayerSummonTable.getInstance().init();
         BeautyShopData.getInstance();
         MentorManager.getInstance();
         RankManager.init();

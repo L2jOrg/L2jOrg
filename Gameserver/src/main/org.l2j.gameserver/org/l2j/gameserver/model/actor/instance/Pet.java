@@ -5,7 +5,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.sql.impl.CharSummonTable;
+import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
@@ -40,6 +40,7 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
@@ -501,7 +502,7 @@ public class Pet extends Summon {
         _inventory.transferItemsToOwner();
         super.deleteMe(owner);
         destroyControlItem(owner, false); // this should also delete the pet from the db
-        CharSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
+        PlayerSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
     }
 
     @Override
@@ -688,7 +689,7 @@ public class Pet extends Summon {
             return;
         }
 
-        if (!Config.RESTORE_PET_ON_RECONNECT) {
+        if (!getSettings(CharacterSettings.class).restoreSummonOnReconnect()) {
             _restoreSummon = false;
         }
 
@@ -716,9 +717,9 @@ public class Pet extends Summon {
             _respawned = true;
 
             if (_restoreSummon) {
-                CharSummonTable.getInstance().getPets().put(getOwner().getObjectId(), getControlObjectId());
+                PlayerSummonTable.getInstance().getPets().put(getOwner().getObjectId(), getControlObjectId());
             } else {
-                CharSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
+                PlayerSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
             }
         } catch (Exception e) {
             LOGGER_PET.error("Failed to store Pet [ObjectId: " + getObjectId() + "] data", e);

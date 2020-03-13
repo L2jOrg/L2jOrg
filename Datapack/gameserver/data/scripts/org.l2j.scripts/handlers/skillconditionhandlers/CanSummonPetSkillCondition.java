@@ -1,7 +1,6 @@
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.CharSummonTable;
+import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
@@ -10,8 +9,11 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.w3c.dom.Node;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Sdw
@@ -33,7 +35,7 @@ public class CanSummonPetSkillCondition implements SkillCondition {
 		
 		boolean canSummon = true;
 		
-		if (Config.RESTORE_PET_ON_RECONNECT && CharSummonTable.getInstance().getPets().containsKey(player.getObjectId()))
+		if (getSettings(CharacterSettings.class).restoreSummonOnReconnect() && PlayerSummonTable.getInstance().getPets().containsKey(player.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_MULTIPLE_PETS_AT_THE_SAME_TIME);
 			canSummon = false;
