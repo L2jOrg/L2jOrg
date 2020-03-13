@@ -24,6 +24,9 @@ public interface CharacterDAO extends DAO<CharacterData> {
     @Query("UPDATE characters SET clanid=0, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0, clan_join_expiry_time=0, clan_create_expiry_time=0 WHERE characters.clanid > 0 AND characters.clanid NOT IN (SELECT clan_id FROM clan_data)")
     void resetClanInfoOfNonexistentClan();
 
+    @Query("UPDATE characters SET clanid=0, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0, clan_join_expiry_time=:clanJoinExpiryTime:, clan_create_expiry_time=:clanCreateExpiryTime: WHERE charId = :playerId:")
+    void deleteClanInfoOfMember(int playerId, long clanJoinExpiryTime, long clanCreateExpiryTime);
+
     @Query("DELETE FROM character_instance_time WHERE time <= :timestamp:")
     void deleteExpiredInstances(long timestamp);
 
@@ -101,4 +104,16 @@ public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("SELECT charId, char_name, accesslevel FROM characters")
     void withPlayersDataDo(Consumer<ResultSet> action);
+
+    @Query("SELECT char_name,level,classid,charId,title,power_grade,subpledge,apprentice,sponsor,sex,race FROM characters WHERE clanid=:clanId:")
+    List<CharacterData> findClanMembers(int clanId);
+
+    @Query("UPDATE characters SET apprentice=0 WHERE apprentice=:playerId:")
+    void deleteApprentice(int playerId);
+
+    @Query("UPDATE characters SET sponsor=0 WHERE sponsor=:playerId:")
+    void deleteSponsor(int playerId);
+
+    @Query("UPDATE characters SET clan_privs = :privs: WHERE charId = :id:")
+    void updateClanPrivs(int id, int privs);
 }

@@ -1,5 +1,7 @@
 package org.l2j.gameserver.data.sql.impl;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
@@ -42,48 +44,35 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
-
 /**
  * This class loads the clan related data.
+ * @author JoeAlisson
  */
 public class ClanTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanTable.class);
-    private final Map<Integer, Clan> _clans = new ConcurrentHashMap<>();
+    private final IntMap<Clan> clans = new CHashIntMap<>();
 
     private ClanTable() {
+    }
+
+    private void load() {
         // forums has to be loaded before clan data, because of last forum id used should have also memo included
         if (Config.ENABLE_COMMUNITY_BOARD) {
             ForumsBBSManager.getInstance().initRoot();
         }
 
-        // Get all clan ids.
-        final List<Integer> cids = new ArrayList<>();
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement s = con.createStatement();
-             ResultSet rs = s.executeQuery("SELECT clan_id FROM clan_data")) {
-            while (rs.next()) {
-                cids.add(rs.getInt("clan_id"));
-            }
-        } catch (Exception e) {
-            LOGGER.error("Error restoring ClanTable.", e);
-        }
+        getDAO(ClanDAO.class).findAll().forEach(data -> {
+            clans.put(data.getId(), new Clan(data));
 
-        // Create clans.
-        for (int cid : cids) {
-            final Clan clan = new Clan(cid);
-            _clans.put(cid, clan);
-            if (clan.getDissolvingExpiryTime() != 0) {
-                scheduleRemoveClan(clan.getId());
+            if (data.getDissolvingExpiryTime() != 0) {
+                scheduleRemoveClan(data.getId());
             }
-        }
+        });
 
-        LOGGER.info(getClass().getSimpleName() + ": Restored " + cids.size() + " clans from the database.");
         allianceCheck();
         restoreClanWars();
     }
@@ -94,7 +83,7 @@ public class ClanTable {
      * @return the clans
      */
     public Collection<Clan> getClans() {
-        return _clans.values();
+        return clans.values();
     }
 
     /**
@@ -103,7 +92,7 @@ public class ClanTable {
      * @return the clan count
      */
     public int getClanCount() {
-        return _clans.size();
+        return clans.size();
     }
 
     /**
@@ -111,11 +100,11 @@ public class ClanTable {
      * @return
      */
     public Clan getClan(int clanId) {
-        return _clans.get(clanId);
+        return clans.get(clanId);
     }
 
     public Clan getClanByName(String clanName) {
-        return _clans.values().stream().filter(c -> c.getName().equalsIgnoreCase(clanName)).findFirst().orElse(null);
+        return clans.values().stream().filter(c -> c.getName().equalsIgnoreCase(clanName)).findFirst().orElse(null);
     }
 
     /**
@@ -168,7 +157,7 @@ public class ClanTable {
         player.setPledgeClass(ClanMember.calculatePledgeClass(player));
         player.setClanPrivileges(new EnumIntBitmask<>(ClanPrivilege.class, true));
 
-        _clans.put(Integer.valueOf(clan.getId()), clan);
+        clans.put(Integer.valueOf(clan.getId()), clan);
 
         // should be update packet only
         player.sendPacket(new PledgeShowInfoUpdate(clan));
@@ -222,7 +211,7 @@ public class ClanTable {
             clan.removeClanMember(member.getObjectId(), 0);
         }
 
-        _clans.remove(clanId);
+        clans.remove(clanId);
         IdFactory.getInstance().releaseId(clanId);
 
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
@@ -287,7 +276,7 @@ public class ClanTable {
     }
 
     public boolean isAllyExists(String allyName) {
-        for (Clan clan : _clans.values()) {
+        for (Clan clan : clans.values()) {
             if ((clan.getAllyName() != null) && clan.getAllyName().equalsIgnoreCase(allyName)) {
                 return true;
             }
@@ -352,9 +341,9 @@ public class ClanTable {
      * Check for nonexistent alliances
      */
     private void allianceCheck() {
-        for (Clan clan : _clans.values()) {
+        for (Clan clan : clans.values()) {
             final int allyId = clan.getAllyId();
-            if ((allyId != 0) && (clan.getId() != allyId) && !_clans.containsKey(allyId)) {
+            if ((allyId != 0) && (clan.getId() != allyId) && !clans.containsKey(allyId)) {
                 clan.setAllyId(0);
                 clan.setAllyName(null);
                 clan.changeAllyCrest(0, true);
@@ -367,7 +356,7 @@ public class ClanTable {
     public List<Clan> getClanAllies(int allianceId) {
         final List<Clan> clanAllies = new ArrayList<>();
         if (allianceId != 0) {
-            for (Clan clan : _clans.values()) {
+            for (Clan clan : clans.values()) {
                 if ((clan != null) && (clan.getAllyId() == allianceId)) {
                     clanAllies.add(clan);
                 }
@@ -377,12 +366,16 @@ public class ClanTable {
     }
 
     public void shutdown() {
-        for (Clan clan : _clans.values()) {
+        for (Clan clan : clans.values()) {
             clan.updateInDB();
             for (ClanWar war : clan.getWarList().values()) {
                 storeClanWars(war);
             }
         }
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static ClanTable getInstance() {

@@ -2,6 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -11,7 +12,6 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -20,7 +20,7 @@ import java.sql.SQLException;
 public class ClanMember {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanMember.class);
 
-    private final Clan _clan;
+    private final Clan clan;
     private int _objectId;
     private String _name;
     private String _title;
@@ -35,29 +35,20 @@ public class ClanMember {
     private int _sponsor;
     private long _onlineTime;
 
-    /**
-     * Used to restore a clan member from the database.
-     *
-     * @param clan       the clan where the clan member belongs.
-     * @param clanMember the clan member result set
-     * @throws SQLException if the columnLabel is not valid or a database error occurs
-     */
-    public ClanMember(Clan clan, ResultSet clanMember) throws SQLException {
-        if (clan == null) {
-            throw new IllegalArgumentException("Cannot create a Clan Member with a null clan.");
-        }
-        _clan = clan;
-        _name = clanMember.getString("char_name");
-        _level = clanMember.getInt("level");
-        _classId = clanMember.getInt("classid");
-        _objectId = clanMember.getInt("charId");
-        _pledgeType = clanMember.getInt("subpledge");
-        _title = clanMember.getString("title");
-        _powerGrade = clanMember.getInt("power_grade");
-        _apprentice = clanMember.getInt("apprentice");
-        _sponsor = clanMember.getInt("sponsor");
-        _sex = clanMember.getInt("sex") != 0;
-        _raceOrdinal = clanMember.getInt("race");
+
+    public ClanMember(Clan clan, CharacterData memberData) {
+        this.clan = clan;
+        _name = memberData.getName();
+        _level = memberData.getLevel();
+        _classId = memberData.getClassId();
+        _objectId = memberData.getCharId();
+        _pledgeType = memberData.getSubPledge();
+        _title = memberData.getTitle();
+        _powerGrade = memberData.getPowerGrade();
+        _apprentice = memberData.getApprentice();
+        _sponsor = memberData.getSponsor();
+        _sex = memberData.isFemale();
+        _raceOrdinal = memberData.getRace();
     }
 
     /**
@@ -71,7 +62,7 @@ public class ClanMember {
             throw new IllegalArgumentException("Cannot create a Clan Member if player has a null clan.");
         }
         _player = player;
-        _clan = clan;
+        this.clan = clan;
         _name = player.getName();
         _level = player.getLevel();
         _classId = player.getClassId().getId();
@@ -430,12 +421,12 @@ public class ClanMember {
         }
 
         if (player != null) {
-            _clan.addSkillEffects(player);
-            if ((_clan.getLevel() > 3) && player.isClanLeader()) {
+            clan.addSkillEffects(player);
+            if ((clan.getLevel() > 3) && player.isClanLeader()) {
                 SiegeManager.getInstance().addSiegeSkills(player);
             }
             if (player.isClanLeader()) {
-                _clan.setLeader(this);
+                clan.setLeader(this);
             }
         }
         _player = player;
@@ -633,14 +624,14 @@ public class ClanMember {
         }
 
         if (_apprentice != 0) {
-            final ClanMember apprentice = _clan.getClanMember(_apprentice);
+            final ClanMember apprentice = clan.getClanMember(_apprentice);
             if (apprentice != null) {
                 return apprentice.getName();
             }
             return "Error";
         }
         if (_sponsor != 0) {
-            final ClanMember sponsor = _clan.getClanMember(_sponsor);
+            final ClanMember sponsor = clan.getClanMember(_sponsor);
             if (sponsor != null) {
                 return sponsor.getName();
             }
@@ -655,7 +646,7 @@ public class ClanMember {
      * @return the clan
      */
     public Clan getClan() {
-        return _clan;
+        return clan;
     }
 
     /**

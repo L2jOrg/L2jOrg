@@ -1,15 +1,20 @@
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.ConcurrentIntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.ClanData;
+import org.l2j.gameserver.data.database.data.ClanSkillData;
+import org.l2j.gameserver.data.database.data.SubPledgeData;
 
+import java.sql.ResultSet;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * @author JoeAlisson
  */
-public interface ClanDAO extends DAO<Object> {
+public interface ClanDAO extends DAO<ClanData> {
 
     @Query("DELETE FROM clan_data WHERE clan_data.clan_id NOT IN (SELECT clanid FROM characters)")
     int deleteWithoutMembers();
@@ -61,4 +66,48 @@ public interface ClanDAO extends DAO<Object> {
                 w.clan2 IN ( SELECT clan1 FROM clan_wars WHERE clan2 = :clanId:)
             """)
     List<ClanData> findWarList(int clanId);
+
+    @Query("SELECT * FROM clan_data")
+    List<ClanData> findAll();
+
+    @Query("SELECT enabled, notice FROM clan_notices WHERE clan_id=:id:")
+    void withNoticesDo(int id, Consumer<ResultSet> action);
+
+    @Query("REPLACE INTO clan_notices (clan_id, notice, enabled) values (:id:,:notice:,:enabled:)")
+    void saveNotice(int id, String notice, boolean enabled);
+
+    @Query("SELECT skill_id, skill_level, sub_pledge_id FROM clan_skills WHERE clan_id=:id:")
+    List<ClanSkillData> findSkillsByClan(int id);
+
+    @Query("UPDATE clan_skills SET skill_level= :level: WHERE skill_id=:skillId: AND clan_id=:id:")
+    void updateClanSkill(int id, int skillId, int level);
+
+    @Query("REPLACE INTO clan_skills (clan_id,skill_id,skill_level ,sub_pledge_id) VALUES (:id:, :skillId:, :level:, :subType:)")
+    void saveClanSkill(int id, int skillId, int level, int subType);
+
+    @Query("SELECT sub_pledge_id, name, leader_id FROM clan_subpledges WHERE clan_id=:id:")
+    ConcurrentIntMap<SubPledgeData> findClanSubPledges(int id);
+
+    void save(SubPledgeData subPledgeData);
+
+    @Query("SELECT privs,`rank` FROM clan_privs WHERE clan_id=:id:")
+    void withClanPrivs(int id, Consumer<ResultSet> action);
+
+    @Query("REPLACE INTO clan_privs (clan_id,`rank`, privs) VALUES (:id:,:rank:,:privs:)")
+    void saveClanPrivs(int id, int rank, int privs);
+
+    @Query("UPDATE clan_data SET clan_level = :level: WHERE clan_id = :id:")
+    void updateClanLevel(int id, int level);
+
+    @Query("UPDATE clan_data SET crest_id = :crestId: WHERE clan_id = :id:")
+    void updateClanCrest(int id, int crestId);
+
+    @Query("UPDATE clan_data SET ally_crest_id = :crestId: WHERE ally_id = :allyId:")
+    void updateAllyCrestByAlly(int allyId, int crestId);
+
+    @Query("UPDATE clan_data SET ally_crest_id = :crestId: WHERE clan_id = :id:")
+    void updateAllyCrest(int id, int crestId);
+
+    @Query("UPDATE clan_data SET crest_large_id = :crestId: WHERE clan_id = :id:")
+    void updateClanCrestLarge(int id, int crestId);
 }

@@ -13,7 +13,6 @@ import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.Clan.SubPledge;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
@@ -24,11 +23,11 @@ import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -242,7 +241,7 @@ public class VillageMaster extends Folk {
         }
 
         final Clan clan = player.getClan();
-        final SubPledge subPledge = player.getClan().getSubPledge(pledgeType);
+        final var subPledge = player.getClan().getSubPledge(pledgeType);
 
         if (subPledge == null) {
             player.sendMessage("Pledge don't exists.");
@@ -278,7 +277,7 @@ public class VillageMaster extends Folk {
         }
 
         final Clan clan = player.getClan();
-        final SubPledge subPledge = player.getClan().getSubPledge(clanName);
+        final var subPledge = player.getClan().getSubPledge(clanName);
 
         if ((null == subPledge) || (subPledge.getId() == Clan.SUBUNIT_ACADEMY)) {
             player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);

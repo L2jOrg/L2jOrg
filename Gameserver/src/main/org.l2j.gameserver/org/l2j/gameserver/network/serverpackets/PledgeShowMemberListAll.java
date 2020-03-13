@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
@@ -14,14 +15,14 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class PledgeShowMemberListAll extends ServerPacket {
     private final Clan _clan;
-    private final Clan.SubPledge _pledge;
+    private final SubPledgeData _pledge;
     private final String _name;
     private final String _leaderName;
     private final Collection<ClanMember> _members;
     private final int _pledgeId;
     private final boolean _isSubPledge;
 
-    private PledgeShowMemberListAll(Clan clan, Clan.SubPledge pledge, boolean isSubPledge) {
+    private PledgeShowMemberListAll(Clan clan, SubPledgeData pledge, boolean isSubPledge) {
         _clan = clan;
         _pledge = pledge;
         _pledgeId = _pledge == null ? 0x00 : _pledge.getId();
@@ -34,7 +35,7 @@ public class PledgeShowMemberListAll extends ServerPacket {
     public static void sendAllTo(Player player) {
         final Clan clan = player.getClan();
         if (clan != null) {
-            for (Clan.SubPledge subPledge : clan.getAllSubPledges()) {
+            for (var subPledge : clan.getAllSubPledges()) {
                 player.sendPacket(new PledgeShowMemberListAll(clan, subPledge, false));
             }
             player.sendPacket(new PledgeShowMemberListAll(clan, null, true));

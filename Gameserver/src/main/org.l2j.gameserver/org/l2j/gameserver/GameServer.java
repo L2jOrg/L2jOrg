@@ -125,7 +125,7 @@ public class GameServer {
         RankManager.init();
 
         printSection("Clans");
-        ClanTable.getInstance();
+        ClanTable.init();
         ResidenceFunctionsData.getInstance();
         ClanHallManager.init();
         ClanHallAuctionManager.getInstance();

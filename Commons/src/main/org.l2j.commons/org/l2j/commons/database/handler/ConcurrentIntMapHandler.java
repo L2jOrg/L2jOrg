@@ -1,6 +1,7 @@
 package org.l2j.commons.database.handler;
 
-import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.ConcurrentIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 
@@ -14,11 +15,11 @@ import static java.util.Objects.isNull;
 /**
  * @author JoeAlisson
  */
-public class IntMapHandler implements TypeHandler<IntMap<?>> {
+public class ConcurrentIntMapHandler implements TypeHandler<IntMap<?>> {
 
     @Override
     public IntMap<?> defaultValue() {
-        return new HashIntMap<>();
+        return new CHashIntMap<>();
     }
 
     @Override
@@ -30,8 +31,7 @@ public class IntMapHandler implements TypeHandler<IntMap<?>> {
         if(isNull(handler)) {
             throw new IllegalStateException("There is no TypeHandler to Type " + genericType);
         }
-
-        HashIntMap<Object> result = new HashIntMap<>();
+        ConcurrentIntMap<Object> result = new CHashIntMap<>();
         var resultSet = queryDescriptor.getResultSet();
         while (resultSet.next()) {
             result.put(resultSet.getInt(1), handler.handleType(resultSet, genericType));
@@ -41,12 +41,12 @@ public class IntMapHandler implements TypeHandler<IntMap<?>> {
 
     @Override
     public IntMap<?> handleType(ResultSet resultSet, Class<?> type) {
-        return new HashIntMap<>();
+        return new CHashIntMap<>();
     }
 
     @Override
     public IntMap<?> handleColumn(ResultSet resultSet, int column)  {
-        return new HashIntMap<>();
+        return new CHashIntMap<>();
     }
 
     @Override
@@ -56,6 +56,6 @@ public class IntMapHandler implements TypeHandler<IntMap<?>> {
 
     @Override
     public String type() {
-        return IntMap.class.getName();
+        return ConcurrentIntMap.class.getName();
     }
 }

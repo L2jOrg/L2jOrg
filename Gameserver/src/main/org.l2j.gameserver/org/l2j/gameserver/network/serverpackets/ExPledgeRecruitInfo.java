@@ -19,13 +19,13 @@ public class ExPledgeRecruitInfo extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_PLEDGE_RECRUIT_INFO);
 
-        final Clan.SubPledge[] subPledges = _clan.getAllSubPledges();
+        final var subPledges = _clan.getAllSubPledges();
         writeString(_clan.getName());
         writeString(_clan.getLeaderName());
         writeInt(_clan.getLevel());
         writeInt(_clan.getMembersCount());
         writeInt(subPledges.length);
-        for (Clan.SubPledge subPledge : subPledges) {
+        for (var subPledge : subPledges) {
             writeInt(subPledge.getId());
             writeString(subPledge.getName());
         }

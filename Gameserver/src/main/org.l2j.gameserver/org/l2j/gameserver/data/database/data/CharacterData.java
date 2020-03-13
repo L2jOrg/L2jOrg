@@ -77,6 +77,7 @@ public class CharacterData {
 
     private int apprentice;
     private int sponsor;
+    private int race;
 
     @Column("lvl_joined_academy")
     private int levelJoinedAcademy;
@@ -345,6 +346,14 @@ public class CharacterData {
 
     public void setLevelJoinedAcademy(int level) {
         this.levelJoinedAcademy = level;
+    }
+
+    public void setObjectId(int objectId) {
+        this.charId = objectId;
+    }
+
+    public int getRace() {
+        return race;
     }
 }
 
