@@ -99,7 +99,7 @@
 		<xs:attribute name="blocked-on-olympiad" type="xs:boolean" default="false"/>
 		<xs:attribute name="suicide" type="xs:boolean" default="false"/>
 		<xs:attribute name="triggered" type="xs:boolean" default="false"/>
-		<xs:attribute name="dispellable" type="xs:boolean" default="false"/>
+		<xs:attribute name="dispellable" type="xs:boolean" default="true"/>
 		<xs:attribute name="check" type="xs:boolean" default="true"/>
 		<xs:attribute name="without-action" type="xs:boolean" default="false"/>
 		<xs:attribute name="cast-disabled" type="xs:boolean" default="false"/>
