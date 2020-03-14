@@ -575,8 +575,10 @@ public final class Formulas {
         final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
         final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
 
-        if (Rnd.chance(finalRate) && target != attacker) {
-            attacker.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(skill));
+        if (!Rnd.chance(finalRate)) {
+            if(target != attacker) {
+                attacker.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(skill));
+            }
             return false;
         }
         return true;
