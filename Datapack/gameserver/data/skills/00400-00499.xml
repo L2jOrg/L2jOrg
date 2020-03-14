@@ -219,7 +219,6 @@
 			</effect-point>
 			<effect-range initial="400"/>
 			<hit-time initial="1300"/>
-
 			<element type="DARK" value="20"/>
 		</attributes>
 		<consume>
@@ -257,7 +256,7 @@
 		</abnormal>
 		<conditions>
 			<weapon>
-				<type>SWORD BLUNT DUAL DUAL_BLUNT</type>
+				<type>SWORD BLUNT</type>
 			</weapon>
 		</conditions>
 		<effects>

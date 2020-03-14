@@ -899,7 +899,7 @@
 		</consume>
 		<target type="TARGET" />
 		<conditions>
-			<skill id="1013"/>
+			<skill id="1013" scope="TARGET"/>
 		</conditions>
 		<effects>
 			<effect name="ManaHeal">

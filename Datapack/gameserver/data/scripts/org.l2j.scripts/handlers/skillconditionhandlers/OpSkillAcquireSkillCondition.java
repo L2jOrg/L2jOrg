@@ -39,7 +39,7 @@ public class OpSkillAcquireSkillCondition implements SkillCondition {
 		@Override
 		public SkillCondition create(Node xmlNode) {
 			var attr = xmlNode.getAttributes();
-			return new OpSkillAcquireSkillCondition(parseInt(attr, "skill"), parseBoolean(attr, "learned"));
+			return new OpSkillAcquireSkillCondition(parseInt(attr, "id"), parseBoolean(attr, "learned"));
 		}
 
 		@Override
