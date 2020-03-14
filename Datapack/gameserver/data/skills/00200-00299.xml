@@ -1330,14 +1330,14 @@
 		<icon initial="icon.skill0221"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
 			<mana initial="7"/>
 		</consume>
 		<target type="NONE" />
+		<abnormal type="STEALTH" visual="STEALTH">
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<effect name="ManaDamOverTime" ticks="5">
 				<power initial="9.0"/>
