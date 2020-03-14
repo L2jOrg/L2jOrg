@@ -51,6 +51,6 @@ public enum EffectType {
     ABNORMAL_SHIELD;
 
     public long mask() {
-        return this == NONE ? 0 :  1 << ordinal();
+        return this == NONE ? 0 :  1L << ordinal();
     }
 }
