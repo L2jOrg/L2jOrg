@@ -210,11 +210,12 @@
 			<mana-init initial="12"/>
 			<mana initial="58"/>
 			<item initial="3031"/>
-			<item-count initial="100"/>
+			<item-count initial="20"/>
 		</consume>
 		<target type="TARGET" />
 		<effects>
-			<dispel-by-category category="DEBUFF" max="10">				<power initial="100.0"/>
+			<dispel-by-category category="DEBUFF" max="10">
+				<power initial="100.0"/>
 			</dispel-by-category>
 		</effects>
 	</skill>
