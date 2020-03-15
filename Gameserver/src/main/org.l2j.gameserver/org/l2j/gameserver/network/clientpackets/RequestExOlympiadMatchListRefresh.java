@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchList;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
 
 /**
  * Format: (ch)d d: unknown (always 0?)

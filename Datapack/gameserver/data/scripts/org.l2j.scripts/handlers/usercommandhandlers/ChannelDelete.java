@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
@@ -34,18 +18,18 @@ public class ChannelDelete implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, Player activeChar)
+	public boolean useUserCommand(int id, Player player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		if (activeChar.isInParty())
+		if (player.isInParty())
 		{
-			if (activeChar.getParty().isLeader(activeChar) && activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar))
+			if (player.getParty().isLeader(player) && player.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getLeader().equals(player))
 			{
-				final CommandChannel channel = activeChar.getParty().getCommandChannel();
+				final CommandChannel channel = player.getParty().getCommandChannel();
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED);
 				channel.broadcastPacket(sm);

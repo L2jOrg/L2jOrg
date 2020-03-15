@@ -31,6 +31,7 @@ import org.l2j.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
 import org.l2j.gameserver.network.clientpackets.mentoring.*;
+import org.l2j.gameserver.network.clientpackets.olympiad.*;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
@@ -428,7 +429,12 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PVP_BOOK_LIST(0x18B, ExRequestPvpBookList::new, ConnectionState.IN_GAME),
     EX_PVP_BOOK_KILLER_LOCATION(0x18C, ExRequestKillerLocation::new, ConnectionState.IN_GAME),
     EX_PVP_BOOK_TELEPORT_TO_KILLER(0x18D, ExTeleportToKiller::new, ConnectionState.IN_GAME),
-    EX_LETTER_COLLECTOR_TAKE_REWARD(0x18E, null, ConnectionState.IN_GAME);
+    EX_LETTER_COLLECTOR_TAKE_REWARD(0x18E, null, ConnectionState.IN_GAME),
+    EX_SET_STATUS_BONUS(0x18F, null, ConnectionState.IN_GAME),
+    EX_RESET_STATUS_BONUS(0x190, null, ConnectionState.IN_GAME),
+    EX_OLYMPIAD_MY_RANKING_INFO(0x191, ExRequestOlympiadMyRank::new, ConnectionState.IN_GAME),
+    EX_OLYMPIAD_RANKING_INFO(0x192, ExRequestOlympiadRanking::new, ConnectionState.IN_GAME),
+    EX_OLYMPIAD_HERO_AND_LEGEND_INFO(0x193, ExRequestOlympiadHeroes::new, ConnectionState.IN_GAME);
 
     public static final ExIncomingPackets[] PACKET_ARRAY;
 

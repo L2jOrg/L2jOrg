@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
@@ -39,16 +23,16 @@ public class SiegeStatus implements IUserCommandHandler
 	private static final String OUTSIDE_SIEGE_ZONE = "No Castle Siege Area";
 	
 	@Override
-	public boolean useUserCommand(int id, Player activeChar)
+	public boolean useUserCommand(int id, Player player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		if (!activeChar.isNoble() || !activeChar.isClanLeader())
+		if (!player.isNoble() || !player.isClanLeader())
 		{
-			activeChar.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_OR_EXALTED_CAN_VIEW_THE_SIEGE_STATUS_WINDOW_DURING_A_SIEGE_WAR);
+			player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_OR_EXALTED_CAN_VIEW_THE_SIEGE_STATUS_WINDOW_DURING_A_SIEGE_WAR);
 			return false;
 		}
 		
@@ -59,7 +43,7 @@ public class SiegeStatus implements IUserCommandHandler
 				continue;
 			}
 			
-			final Clan clan = activeChar.getClan();
+			final Clan clan = player.getClan();
 			if (!siege.checkIsAttacker(clan) && !siege.checkIsDefender(clan))
 			{
 				continue;
@@ -77,16 +61,16 @@ public class SiegeStatus implements IUserCommandHandler
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(activeChar, "data/html/siege/siege_status.htm");
+			html.setFile(player, "data/html/siege/siege_status.htm");
 			html.replace("%kill_count%", clan.getSiegeKills());
 			html.replace("%death_count%", clan.getSiegeDeaths());
 			html.replace("%member_list%", sb.toString());
-			activeChar.sendPacket(html);
+			player.sendPacket(html);
 			
 			return true;
 		}
 		
-		activeChar.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_OR_EXALTED_CAN_VIEW_THE_SIEGE_STATUS_WINDOW_DURING_A_SIEGE_WAR);
+		player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_OR_EXALTED_CAN_VIEW_THE_SIEGE_STATUS_WINDOW_DURING_A_SIEGE_WAR);
 		
 		return false;
 	}

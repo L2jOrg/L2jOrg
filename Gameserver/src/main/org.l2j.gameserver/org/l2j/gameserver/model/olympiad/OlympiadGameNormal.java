@@ -11,8 +11,8 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchResult;
-import org.l2j.gameserver.network.serverpackets.ExOlympiadUserInfo;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchResult;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadUserInfo;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 

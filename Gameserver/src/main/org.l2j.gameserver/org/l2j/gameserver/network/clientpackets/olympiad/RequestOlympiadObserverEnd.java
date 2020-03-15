@@ -1,6 +1,7 @@
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.clientpackets.olympiad;
 
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x12

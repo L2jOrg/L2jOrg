@@ -14,7 +14,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchEnd;
 
 import java.util.ArrayList;
 import java.util.List;

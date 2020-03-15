@@ -17,6 +17,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

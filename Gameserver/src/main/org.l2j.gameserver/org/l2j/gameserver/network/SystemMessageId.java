@@ -13862,9 +13862,6 @@ public final class SystemMessageId {
     @ClientString(id = 13001, message = "KR Live/Classic new numbers (13001-19000)")
     public static SystemMessageId KR_LIVE_CLASSIC_NEW_NUMBERS_1300119000_;
 
-    @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
-    public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
-
     @ClientString(id = 13003, message = "Register a Potion on the Auto Use slots.")
     public static SystemMessageId REGISTER_A_POTION_ON_THE_AUTO_USE_SLOTS;
 
@@ -17725,6 +17722,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 7323, message = "Learned $s1 Lv. $s2.")
     public static SystemMessageId LEARNED_S1_LV_S2;
+
+    @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
+    public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
 
     private static Map<Integer, SystemMessageId> VALUES = new HashMap<>();
 

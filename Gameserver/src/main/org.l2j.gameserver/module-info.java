@@ -109,6 +109,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.item;
     exports org.l2j.gameserver.api.elemental;
     exports org.l2j.gameserver.engine.skill.api;
+    exports org.l2j.gameserver.network.serverpackets.olympiad;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

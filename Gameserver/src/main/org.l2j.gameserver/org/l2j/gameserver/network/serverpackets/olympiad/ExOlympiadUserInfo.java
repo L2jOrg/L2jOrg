@@ -1,9 +1,10 @@
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.Participant;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author godson

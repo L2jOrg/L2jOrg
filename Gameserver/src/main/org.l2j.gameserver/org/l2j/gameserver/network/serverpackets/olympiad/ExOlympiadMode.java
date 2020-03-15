@@ -1,7 +1,8 @@
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author godson
