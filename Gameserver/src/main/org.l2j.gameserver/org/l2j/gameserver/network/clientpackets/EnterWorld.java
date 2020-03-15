@@ -374,7 +374,6 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(new ExAutoSoulShot(0, true, 2));
         player.sendPacket(new ExAutoSoulShot(0, true, 3));
 
-
         // Fix for equipped item skills
         if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
             player.updateAbnormalVisualEffects();
@@ -382,6 +381,10 @@ public class EnterWorld extends ClientPacket {
 
         if (getSettings(AttendanceSettings.class).enabled()) {
             sendAttendanceInfo(player);
+        }
+
+        if(Config.RATE_XP > 1) {
+            player.sendPacket(new ExUserBoostStat(ExUserBoostStat.BoostStatType.SERVER, (short) ((Config.RATE_XP - 1) * 100)));
         }
 
         if (Config.HARDWARE_INFO_ENABLED) {

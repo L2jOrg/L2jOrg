@@ -130,8 +130,6 @@ public enum Stat {
     STAT_WIT(new BaseStatsFinalizer()),
     STAT_MEN(new BaseStatsFinalizer()),
 
-    // Special stats, share one slot in Calculator
-
     // VARIOUS
     BREATH,
     FALL,

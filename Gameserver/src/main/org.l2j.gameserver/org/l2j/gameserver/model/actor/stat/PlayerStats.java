@@ -27,6 +27,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
+import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.*;
 
 public class PlayerStats extends PlayableStats {
     public static final int MAX_VITALITY_POINTS = 140000;
@@ -476,7 +477,7 @@ public class PlayerStats extends PlayableStats {
         vitality = getVitalityExpBonus();
 
         // Bonus exp from skills
-        bonusExp = 1 + (getValue(Stat.BONUS_EXP, 0) / 100);
+        bonusExp = getValue(Stat.BONUS_EXP, 1);
 
         if (vitality > 1.0) {
             bonus += (vitality - 1);
@@ -582,5 +583,6 @@ public class PlayerStats extends PlayableStats {
         if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors()) {
             player.getServitors().values().forEach(servitor -> servitor.getStats().recalculateStats(broadcast));
         }
+        player.sendPacket(new ExUserBoostStat(BoostStatType.STAT, (short) (getExpBonusMultiplier() * 100 - 100)));
     }
 }

@@ -865,7 +865,8 @@ public enum ServerPacketId {
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO(0xFE, 0x235),
     EX_PVPBOOK_LIST(0xFE, 0x238),
     EX_PVPBOOK_KILLER_LOCATION(0xFE, 0x239),
-    EX_PVPBOOK_NEW_PK(0xFE, 0x23A);
+    EX_PVPBOOK_NEW_PK(0xFE, 0x23A),
+    EX_USER_BOOST_STAT(0xFE, 0x249);
 
     private final int id;
     private final int extId;

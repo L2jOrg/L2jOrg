@@ -1,11 +1,10 @@
 package handlers.skillconditionhandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.engine.skill.api.SkillCondition;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
