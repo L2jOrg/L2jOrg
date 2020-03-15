@@ -29,16 +29,14 @@ import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
-import org.l2j.gameserver.settings.AttendanceSettings;
-import org.l2j.gameserver.settings.ChatSettings;
-import org.l2j.gameserver.settings.GeneralSettings;
-import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -383,13 +381,13 @@ public class EnterWorld extends ClientPacket {
             sendAttendanceInfo(player);
         }
 
-        if(Config.RATE_XP > 1) {
-            player.sendPacket(new ExUserBoostStat(ExUserBoostStat.BoostStatType.SERVER, (short) ((Config.RATE_XP - 1) * 100)));
+        var rateXp = getSettings(RateSettings.class).xp();
+        if(rateXp > 1) {
+            player.sendPacket(new ExUserBoostStat(BoostStatType.SERVER, (short) (rateXp * 100 - 100)));
         }
 
         if (Config.HARDWARE_INFO_ENABLED) {
-            ThreadPool.schedule(() ->
-            {
+            ThreadPool.schedule(() -> {
                 if (client.getHardwareInfo() == null) {
                     Disconnection.of(client).defaultSequence(false);
                 }

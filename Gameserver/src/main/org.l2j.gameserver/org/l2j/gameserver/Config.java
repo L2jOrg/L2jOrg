@@ -4,6 +4,7 @@ import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.FloodProtectorConfig;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -27,6 +28,7 @@ import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
@@ -55,7 +57,7 @@ public final class Config {
 
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
-    private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
+    private static final String RATES_CONFIG_FILE = "config/Rates.properties";
     private static final String SERVER_CONFIG_FILE = "config/server.properties";
     private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
@@ -535,7 +537,6 @@ public final class Config {
     // --------------------------------------------------
     // Rate Settings
     // --------------------------------------------------
-    public static float RATE_XP;
     public static float RATE_SP;
     public static float RATE_PARTY_XP;
     public static float RATE_PARTY_SP;
@@ -1397,14 +1398,13 @@ public final class Config {
         // Load Rates config file (if exists)
         final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
 
-        RATE_XP = RatesSettings.getFloat("RateXp", 1);
         RATE_SP = RatesSettings.getFloat("RateSp", 1);
         RATE_PARTY_XP = RatesSettings.getFloat("RatePartyXp", 1);
         RATE_PARTY_SP = RatesSettings.getFloat("RatePartySp", 1);
 
         RATE_INSTANCE_XP = RatesSettings.getFloat("RateInstanceXp", -1);
         if (RATE_INSTANCE_XP < 0) {
-            RATE_INSTANCE_XP = RATE_XP;
+            RATE_INSTANCE_XP = getSettings(RateSettings.class).xp();
         }
         RATE_INSTANCE_SP = RatesSettings.getFloat("RateInstanceSp", -1);
         if (RATE_INSTANCE_SP < 0) {
@@ -1439,7 +1439,7 @@ public final class Config {
         RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
         RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
         if (RATE_KARMA_LOST == -1) {
-            RATE_KARMA_LOST = RATE_XP;
+            RATE_KARMA_LOST = getSettings(RateSettings.class).xp();
         }
         RATE_KARMA_EXP_LOST = RatesSettings.getFloat("RateKarmaExpLost", 1);
         RATE_SIEGE_GUARDS_PRICE = RatesSettings.getFloat("RateSiegeGuardsPrice", 1);

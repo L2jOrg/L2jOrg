@@ -37,6 +37,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
@@ -706,7 +707,7 @@ public class Npc extends Creature {
      */
     public double getExpReward() {
         final Instance instance = getInstanceWorld();
-        final float rateMul = instance != null ? instance.getExpRate() : Config.RATE_XP;
+        final float rateMul = instance != null ? instance.getExpRate() : getSettings(RateSettings.class).xp();
         return getTemplate().getExp() * rateMul;
     }
 
