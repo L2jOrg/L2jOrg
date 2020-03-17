@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.pvpbook;
 
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.pvpbook.PvpBookList;
 
@@ -22,7 +22,7 @@ public class ExRequestPvpBookList extends ClientPacket {
     @Override
     protected void runImpl()  {
         var since = Instant.now().minus(1, ChronoUnit.DAYS).getEpochSecond();
-        var killers = getDAO(CharacterDAO.class).findKillersByPlayer(client.getPlayer().getObjectId(), since);
+        var killers = getDAO(PlayerDAO.class).findKillersByPlayer(client.getPlayer().getObjectId(), since);
         client.sendPacket(new PvpBookList(killers));
     }
 }

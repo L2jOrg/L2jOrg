@@ -18,13 +18,10 @@ import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
-import org.l2j.gameserver.data.database.data.CharacterData;
-import org.l2j.gameserver.data.database.data.ElementalSpiritData;
-import org.l2j.gameserver.data.database.data.PlayerVariableData;
-import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
@@ -41,6 +38,7 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
@@ -147,7 +145,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class Player extends Playable {
 
-    private final CharacterData model;
+    private final PlayerData model;
     private final PlayerAppearance appearance;
 
     private byte vipTier;
@@ -157,15 +155,16 @@ public final class Player extends Playable {
     private int rank;
     private int rankRace;
     private PlayerVariableData variables;
+    private PlayerStatsData statsData;
 
-    private Player(CharacterData characterData, PlayerTemplate template) {
-        super(characterData.getCharId(), template);
-        this.model = characterData;
-        setName(characterData.getName());
+    private Player(PlayerData playerData, PlayerTemplate template) {
+        super(playerData.getCharId(), template);
+        this.model = playerData;
+        setName(playerData.getName());
         setInstanceType(InstanceType.L2PcInstance);
         initCharStatusUpdateValues();
 
-        appearance = new PlayerAppearance(this, characterData.getFace(), characterData.getHairColor(), characterData.getHairStyle(), characterData.isFemale());
+        appearance = new PlayerAppearance(this, playerData.getFace(), playerData.getHairColor(), playerData.getHairStyle(), playerData.isFemale());
 
         getAI();
 
@@ -173,7 +172,7 @@ public final class Player extends Playable {
 
         Arrays.fill(htmlActionCaches, new LinkedList<>());
         running = true;
-        setAccessLevel(characterData.getAccessLevel(), false, false);
+        setAccessLevel(playerData.getAccessLevel(), false, false);
     }
 
     public void deleteShortcuts(Predicate<Shortcut> filter) {
@@ -237,7 +236,7 @@ public final class Player extends Playable {
         }
 
         if (updateInDb) {
-            getDAO(CharacterDAO.class).updateAccessLevel(objectId, accessLevel.getLevel());
+            getDAO(PlayerDAO.class).updateAccessLevel(objectId, accessLevel.getLevel());
         }
 
         PlayerNameTable.getInstance().addName(this);
@@ -417,8 +416,12 @@ public final class Player extends Playable {
         return model.getCreateDate();
     }
 
-    public static Player create(CharacterData characterData, PlayerTemplate template) {
-        final Player player = new Player(characterData, template);
+    public PlayerStatsData getStatsData() {
+        return statsData;
+    }
+
+    public static Player create(PlayerData playerData, PlayerTemplate template) {
+        final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
         if (player.createDb()) {
             if (getSettings(GeneralSettings.class).cachePlayersName()) {
@@ -426,6 +429,10 @@ public final class Player extends Playable {
             }
             player.variables = PlayerVariableData.init();
             getDAO(PlayerVariablesDAO.class).save(player.variables);
+
+            player.statsData = new PlayerStatsData();
+            player.statsData.setPlayerId(player.getObjectId());
+            getDAO(PlayerDAO.class).save(player.statsData);
             return player;
         }
         return null;
@@ -891,13 +898,15 @@ public final class Player extends Playable {
      * @return The Player loaded from the database
      */
     private static Player restore(int objectId) {
-        var character = getDAO(CharacterDAO.class).findById(objectId);
+        var playerDAO = getDAO(PlayerDAO.class);
+        var character = playerDAO.findById(objectId);
         if(isNull(character)) {
             return null;
         }
         var template = PlayerTemplateData.getInstance().getTemplate(character.getClassId());
         Player player = new Player(character, template);
         player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
+        player.statsData = playerDAO.findPlayerStatsData(objectId);
 
         player.setHeading(character.getHeading());
         player.getStats().setExp(character.getExp());
@@ -4267,7 +4276,7 @@ public final class Player extends Playable {
             killer.getEventStatus().addKill(this);
         } else {
             sendPacket(new ExNewPk(killer));
-            getDAO(CharacterDAO.class).updatePlayerKiller(objectId, killer.objectId, Instant.now().getEpochSecond());
+            getDAO(PlayerDAO.class).updatePlayerKiller(objectId, killer.objectId, Instant.now().getEpochSecond());
         }
 
         // pvp/pk item rewards
@@ -5663,6 +5672,7 @@ public final class Player extends Playable {
 
         shortcuts.storeMe();
         getDAO(PlayerVariablesDAO.class).save(variables);
+        getDAO(PlayerDAO.class).save(statsData);
     }
 
     @Override
@@ -9750,7 +9760,7 @@ public final class Player extends Playable {
 
     public void restoreFriendList() {
         friends.clear();
-        friends.addAll(getDAO(CharacterDAO.class).findFriendsById(getObjectId()));
+        friends.addAll(getDAO(PlayerDAO.class).findFriendsById(getObjectId()));
     }
 
     public void notifyFriends(int type) {

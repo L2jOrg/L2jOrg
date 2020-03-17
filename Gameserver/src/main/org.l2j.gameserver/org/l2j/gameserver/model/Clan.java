@@ -6,7 +6,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.data.ClanData;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
@@ -167,7 +167,7 @@ public class Clan implements IIdentifiable, INamable {
             setCharPenaltyExpiryTime(0);
         }
 
-        getDAO(CharacterDAO.class).findClanMembers(data.getId()).forEach(memberData -> {
+        getDAO(PlayerDAO.class).findClanMembers(data.getId()).forEach(memberData -> {
             var member = new ClanMember(this, memberData);
             if(member.getObjectId() == data.getLeaderId()) {
                 setLeader(member);
@@ -643,7 +643,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     private void removeMemberInDatabase(ClanMember member, long clanJoinExpiryTime, long clanCreateExpiryTime) {
-        var characterDAO = getDAO(CharacterDAO.class);
+        var characterDAO = getDAO(PlayerDAO.class);
         characterDAO.deleteClanInfoOfMember(member.getObjectId(), clanJoinExpiryTime, clanCreateExpiryTime);
         characterDAO.deleteApprentice(member.getObjectId());
         characterDAO.deleteSponsor(member.getObjectId());
@@ -1693,7 +1693,7 @@ public class Clan implements IIdentifiable, INamable {
             exLeader.getClanPrivileges().clear();
             exLeader.broadcastUserInfo();
         } else {
-            getDAO(CharacterDAO.class).updateClanPrivs(getLeaderId(), 0);
+            getDAO(PlayerDAO.class).updateClanPrivs(getLeaderId(), 0);
         }
 
         setLeader(member);
@@ -1717,7 +1717,7 @@ public class Clan implements IIdentifiable, INamable {
             }
             newLeader.broadcastUserInfo();
         } else {
-            getDAO(CharacterDAO.class).updateClanPrivs(getLeaderId(), EnumIntBitmask.getAllBitmask(ClanPrivilege.class));
+            getDAO(PlayerDAO.class).updateClanPrivs(getLeaderId(), EnumIntBitmask.getAllBitmask(ClanPrivilege.class));
         }
 
         broadcastClanStatus();

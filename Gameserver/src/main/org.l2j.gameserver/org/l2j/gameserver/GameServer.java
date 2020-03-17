@@ -9,7 +9,7 @@ import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
@@ -229,7 +229,7 @@ public class GameServer {
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
         printSection("Setting All characters to offline status!");
-        getDAO(CharacterDAO.class).setAllCharactersOffline();
+        getDAO(PlayerDAO.class).setAllCharactersOffline();
 
         connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
         connectionHandler.start();

@@ -4,7 +4,7 @@ import io.github.joealisson.primitive.CHashIntIntMap;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.slf4j.Logger;
@@ -70,7 +70,7 @@ public class PlayerNameTable {
             return -1;
         }
 
-        var characterData = getDAO(CharacterDAO.class).findIdAndAccessLevelByName(name);
+        var characterData = getDAO(PlayerDAO.class).findIdAndAccessLevelByName(name);
         if(nonNull(characterData)) {
             playerData.put(characterData.getCharId(), name);
             accessLevels.put(characterData.getCharId(), characterData.getAccessLevel());
@@ -94,7 +94,7 @@ public class PlayerNameTable {
             return null;
         }
 
-        var data = getDAO(CharacterDAO.class).findNameAndAccessLevelById(id);
+        var data = getDAO(PlayerDAO.class).findNameAndAccessLevelById(id);
         if(nonNull(data)) {
             playerData.put(id, data.getName());
             accessLevels.put(id, data.getAccessLevel());
@@ -107,19 +107,19 @@ public class PlayerNameTable {
     }
 
     public synchronized boolean doesCharNameExist(String name) {
-        return getDAO(CharacterDAO.class).existsByName(name);
+        return getDAO(PlayerDAO.class).existsByName(name);
     }
 
     public int getAccountCharacterCount(String account) {
-        return getDAO(CharacterDAO.class).playerCountByAccount(account);
+        return getDAO(PlayerDAO.class).playerCountByAccount(account);
     }
 
     public int getClassIdById(int objectId) {
-        return getDAO(CharacterDAO.class).findClassIdById(objectId);
+        return getDAO(PlayerDAO.class).findClassIdById(objectId);
     }
 
     private void loadAll() {
-        getDAO(CharacterDAO.class).withPlayersDataDo(resultSet -> {
+        getDAO(PlayerDAO.class).withPlayersDataDo(resultSet -> {
             try {
                 while (resultSet.next()) {
                     final int id = resultSet.getInt("charId");

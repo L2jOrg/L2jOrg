@@ -4,7 +4,7 @@ import org.l2j.commons.database.annotation.Column;
 
 import java.time.LocalDate;
 
-public class CharacterData {
+public class PlayerData {
 
     private int charId;
 

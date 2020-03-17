@@ -1,7 +1,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.enums.SubclassInfoType;
@@ -547,7 +547,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				player = World.getInstance().findPlayer(playerName);
 				
 				if (player == null) {
-					getDAO(CharacterDAO.class).removeClanPenalty(playerName);
+					getDAO(PlayerDAO.class).removeClanPenalty(playerName);
 				}
 				else if (changeCreateExpiryTime) // removing penalty
 				{

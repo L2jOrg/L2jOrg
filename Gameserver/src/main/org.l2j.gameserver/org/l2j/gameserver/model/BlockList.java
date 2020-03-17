@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -45,9 +45,9 @@ public class BlockList {
 
     private void updateInDB(int targetId, boolean add) {
         if (add) {
-            getDAO(CharacterDAO.class).saveBlockedPlayer(owner.getObjectId(), targetId);
+            getDAO(PlayerDAO.class).saveBlockedPlayer(owner.getObjectId(), targetId);
         } else {
-            getDAO(CharacterDAO.class).deleteBlockedPlayer(owner.getObjectId(), targetId);
+            getDAO(PlayerDAO.class).deleteBlockedPlayer(owner.getObjectId(), targetId);
         }
     }
 
@@ -72,7 +72,7 @@ public class BlockList {
     }
 
     private static IntSet loadList(int objId) {
-        return getDAO(CharacterDAO.class).findBlockListById(objId);
+        return getDAO(PlayerDAO.class).findBlockListById(objId);
     }
 
     public static boolean isBlocked(Player listOwner, Player target) {

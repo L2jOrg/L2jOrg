@@ -6,7 +6,7 @@ import org.l2j.commons.network.SessionKey;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -95,7 +95,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
                 ps.execute();
             }
 
-            getDAO(CharacterDAO.class).deleteFriendship(objId);
+            getDAO(PlayerDAO.class).deleteFriendship(objId);
 
             try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_hennas WHERE charId=?")) {
                 ps.setInt(1, objId);

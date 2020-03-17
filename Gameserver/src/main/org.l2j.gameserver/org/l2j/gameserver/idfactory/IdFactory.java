@@ -44,7 +44,7 @@ public abstract class IdFactory {
         clanDao.resetSubpledgeLeaderWithoutCharacter();
 
         getDAO(CastleDAO.class).updateToNeutralWithoutOwner();
-        getDAO(CharacterDAO.class).resetClanInfoOfNonexistentClan();
+        getDAO(PlayerDAO.class).resetClanInfoOfNonexistentClan();
         getDAO(FortDAO.class).resetWithoutOwner();
 
         LOGGER.info("Cleaned {} elements from database in {} s", cleanCount, (System.currentTimeMillis() - cleanupStart) / 1000);
@@ -52,7 +52,7 @@ public abstract class IdFactory {
 
     private void cleanUpTimeStamps() {
         var timestamp = System.currentTimeMillis();
-        var characterDAO = getDAO(CharacterDAO.class);
+        var characterDAO = getDAO(PlayerDAO.class);
         characterDAO.deleteExpiredInstances(timestamp);
         characterDAO.deleteExpiredSavedSkills(timestamp);
     }

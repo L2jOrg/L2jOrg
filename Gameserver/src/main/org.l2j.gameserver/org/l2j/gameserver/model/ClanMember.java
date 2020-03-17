@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.data.CharacterData;
+import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -36,7 +36,7 @@ public class ClanMember {
     private long _onlineTime;
 
 
-    public ClanMember(Clan clan, CharacterData memberData) {
+    public ClanMember(Clan clan, PlayerData memberData) {
         this.clan = clan;
         _name = memberData.getName();
         _level = memberData.getLevel();

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.friend;
 
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -65,7 +65,7 @@ public final class RequestAnswerFriendInvite extends ClientPacket {
         }
 
         if (_response == 1) {
-            getDAO(CharacterDAO.class).saveFriendship(requestor.getObjectId(), player.getObjectId());
+            getDAO(PlayerDAO.class).saveFriendship(requestor.getObjectId(), player.getObjectId());
             SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST);
             requestor.sendPacket(msg);
 

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Clan;
@@ -31,7 +31,7 @@ public class ExFriendDetailInfo extends ServerPacket {
 
         friend = World.getInstance().findPlayer(friendId);
         if(isNull(friend)) {
-            info = new FriendInfo(friendId, getDAO(CharacterDAO.class).findFriendData(friendId));
+            info = new FriendInfo(friendId, getDAO(PlayerDAO.class).findFriendData(friendId));
         }
     }
 

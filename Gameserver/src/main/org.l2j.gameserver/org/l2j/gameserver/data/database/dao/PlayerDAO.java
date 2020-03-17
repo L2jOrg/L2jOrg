@@ -3,8 +3,9 @@ package org.l2j.gameserver.data.database.dao;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.CharacterData;
+import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.KillerData;
+import org.l2j.gameserver.data.database.data.PlayerStatsData;
 
 import java.sql.ResultSet;
 import java.util.List;
@@ -13,13 +14,13 @@ import java.util.function.Consumer;
 /**
  * @author JoeAlisson
  */
-public interface CharacterDAO extends DAO<CharacterData> {
+public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("UPDATE characters SET online = 0")
     void setAllCharactersOffline();
 
     @Query("SELECT * FROM characters WHERE charId = :objectId:")
-    CharacterData findById(int objectId);
+    PlayerData findById(int objectId);
 
     @Query("UPDATE characters SET clanid=0, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0, clan_join_expiry_time=0, clan_create_expiry_time=0 WHERE characters.clanid > 0 AND characters.clanid NOT IN (SELECT clan_id FROM clan_data)")
     void resetClanInfoOfNonexistentClan();
@@ -34,10 +35,10 @@ public interface CharacterDAO extends DAO<CharacterData> {
     void deleteExpiredSavedSkills(long timestamp);
 
     @Query("SELECT charId, createDate FROM characters WHERE DAYOFMONTH(createDate) = :day: AND MONTH(createDate) = :month: AND YEAR(createDate) < :year:")
-    List<CharacterData> findBirthdayCharacters(int year, int month, int day);
+    List<PlayerData> findBirthdayCharacters(int year, int month, int day);
 
     @Query("SELECT charId, accesslevel FROM characters WHERE char_name=:name:")
-    CharacterData findIdAndAccessLevelByName(String name);
+    PlayerData findIdAndAccessLevelByName(String name);
 
     @Query("REPLACE INTO character_relationship (char_id, friend_id) VALUES (:playerId:, :otherId:), (:otherId:, :playerId:)")
     void saveFriendship(int playerId, int otherId);
@@ -61,7 +62,7 @@ public interface CharacterDAO extends DAO<CharacterData> {
     void deleteBlockedPlayer(int playerId, int blockedId);
 
     @Query("SELECT char_name, classid, level, lastAccess, clanid, createDate FROM characters WHERE charId = :friendId:")
-    CharacterData findFriendData(int friendId);
+    PlayerData findFriendData(int friendId);
 
     @Query("UPDATE characters SET clan_create_expiry_time = 0, clan_join_expiry_time = 0 WHERE char_name=:name:")
     void removeClanPenalty(String name);
@@ -91,7 +92,7 @@ public interface CharacterDAO extends DAO<CharacterData> {
     boolean updateLocationByName(String name, int x, int y, int z);
 
     @Query("SELECT char_name,accesslevel FROM characters WHERE charId=:id:")
-    CharacterData findNameAndAccessLevelById(int id);
+    PlayerData findNameAndAccessLevelById(int id);
 
     @Query("SELECT EXISTS(SELECT 1 FROM characters WHERE char_name=:name:)")
     boolean existsByName(String name);
@@ -106,7 +107,7 @@ public interface CharacterDAO extends DAO<CharacterData> {
     void withPlayersDataDo(Consumer<ResultSet> action);
 
     @Query("SELECT char_name,level,classid,charId,title,power_grade,subpledge,apprentice,sponsor,sex,race FROM characters WHERE clanid=:clanId:")
-    List<CharacterData> findClanMembers(int clanId);
+    List<PlayerData> findClanMembers(int clanId);
 
     @Query("UPDATE characters SET apprentice=0 WHERE apprentice=:playerId:")
     void deleteApprentice(int playerId);
@@ -116,4 +117,9 @@ public interface CharacterDAO extends DAO<CharacterData> {
 
     @Query("UPDATE characters SET clan_privs = :privs: WHERE charId = :id:")
     void updateClanPrivs(int id, int privs);
+
+    void save(PlayerStatsData statsData);
+
+    @Query("SELECT  * FROM player_stats_points WHERE player_id=:playerId:")
+    PlayerStatsData findPlayerStatsData(int playerId);
 }

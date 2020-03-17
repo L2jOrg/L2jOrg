@@ -16,7 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.AccessLevel;
@@ -74,7 +74,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 				onlineChange(gm, player, level);
 			}
 			else {
-				if(getDAO(CharacterDAO.class).updateAccessLevelByName(name, level)) {
+				if(getDAO(PlayerDAO.class).updateAccessLevelByName(name, level)) {
 					BuilderUtil.sendSysMessage(gm, "Character's access level is now set to " + level);
 				} else {
 					BuilderUtil.sendSysMessage(gm, "Character not found or access level unaltered.");

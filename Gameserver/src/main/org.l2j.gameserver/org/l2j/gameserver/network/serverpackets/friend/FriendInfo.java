@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
-import org.l2j.gameserver.data.database.data.CharacterData;
+import org.l2j.gameserver.data.database.data.PlayerData;
 
 import java.time.LocalDate;
 
@@ -15,7 +15,7 @@ class FriendInfo {
     LocalDate createDate;
     long lastAccess;
 
-    FriendInfo(int friendId, CharacterData friendData) {
+    FriendInfo(int friendId, PlayerData friendData) {
         this(friendId, friendData.getName(), false, friendData.getLevel(), friendData.getClassId());
         clanId = friendData.getClanId();
         createDate = friendData.getCreateDate();

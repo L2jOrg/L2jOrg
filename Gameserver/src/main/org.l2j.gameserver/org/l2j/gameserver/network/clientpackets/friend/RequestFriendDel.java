@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -46,7 +46,7 @@ public final class RequestFriendDel extends ClientPacket {
             return;
         }
 
-        getDAO(CharacterDAO.class).deleteFriendship(activeChar.getObjectId(), id);
+        getDAO(PlayerDAO.class).deleteFriendship(activeChar.getObjectId(), id);
 
         sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST);
         sm.addString(name);

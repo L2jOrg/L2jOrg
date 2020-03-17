@@ -337,18 +337,19 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if(containsMask(UserInfoType.STATS_POINTS)) {
             writeShort(UserInfoType.STATS_POINTS.getBlockLength());
-            writeShort(0x00); // usable points
-            writeShort(0x00); // STR points
-            writeShort(0x00); // DEX points
-            writeShort(0x00); // CON points
-            writeShort(0x00); // INT points
-            writeShort(0x00); // WIT points
-            writeShort(0x00); // MEN points
+            var statsData = player.getStatsData();
+            writeShort(statsData.getPoints());
+            writeShort(statsData.getStrength());
+            writeShort(statsData.getDexterity());
+            writeShort(statsData.getConstitution());
+            writeShort(statsData.getIntelligence());
+            writeShort(statsData.getWitness());
+            writeShort(statsData.getMentality());
         }
 
         if(containsMask(UserInfoType.STATS_ABILITIES)) {
             writeShort(UserInfoType.STATS_ABILITIES.getBlockLength());
-            writeShort(0x00); // STR additional abilities
+            writeShort(0x02); // STR additional abilities
             writeShort(0x00); // DEX additional abilities
             writeShort(0x00); // CON additional abilities
             writeShort(0x00); // INT additional abilities

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -23,6 +23,6 @@ abstract class AbstractFriendListPacket extends ServerPacket {
         if(nonNull(friend)) {
             return new FriendInfo(friendId, friend.getName(), true, friend.getLevel(), friend.getClassId().getId());
         }
-        return new FriendInfo(friendId, getDAO(CharacterDAO.class).findFriendData(friendId));
+        return new FriendInfo(friendId, getDAO(PlayerDAO.class).findFriendData(friendId));
     }
 }

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.data.CharacterData;
+import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.InitialEquipmentData;
 import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
@@ -124,7 +124,7 @@ public final class CharacterCreate extends ClientPacket {
                 return;
             }
 
-            var character = new CharacterData();
+            var character = new PlayerData();
             character.setId(IdFactory.getInstance().getNextId());
             character.setName(name);
             character.setBaseClass(classId);

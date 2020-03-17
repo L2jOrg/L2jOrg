@@ -1,6 +1,6 @@
 package handlers.admincommandhandlers;
 
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -34,7 +34,7 @@ public class AdminRepairChar implements IAdminCommandHandler {
 		var name = parts[1];
 
 		var objectId = PlayerNameTable.getInstance().getIdByName(name);
-		getDAO(CharacterDAO.class).updateToValidLocation(objectId);
+		getDAO(PlayerDAO.class).updateToValidLocation(objectId);
 		getDAO(ShortcutDAO.class).deleteAll(objectId);
 		getDAO(ItemDAO.class).updateToInventory(objectId);
 	}

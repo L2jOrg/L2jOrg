@@ -17,7 +17,7 @@
 package org.l2j.gameserver.taskmanager.tasks;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
@@ -67,7 +67,7 @@ public class TaskBirthday extends Task {
     }
 
     private void checkBirthday(int year, int month, int day) {
-        var charactersData = getDAO(CharacterDAO.class).findBirthdayCharacters(year, month, day);
+        var charactersData = getDAO(PlayerDAO.class).findBirthdayCharacters(year, month, day);
         charactersData.forEach(characterData -> {
             var name = PlayerNameTable.getInstance().getNameById(characterData.getCharId());
             if(isNull(name)) {

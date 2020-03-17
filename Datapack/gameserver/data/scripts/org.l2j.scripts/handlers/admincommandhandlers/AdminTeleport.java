@@ -1,7 +1,7 @@
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.engine.geo.GeoEngine;
@@ -447,7 +447,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		final int y = activeChar.getY();
 		final int z = activeChar.getZ();
 
-		if(getDAO(CharacterDAO.class).updateLocationByName(name, x, y, z)) {
+		if(getDAO(PlayerDAO.class).updateLocationByName(name, x, y, z)) {
 			BuilderUtil.sendSysMessage(activeChar, "Player's [" + name + "] position is now set to (" + x + "," + y + "," + z + ").");
 		}
 	}
