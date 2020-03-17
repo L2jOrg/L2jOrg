@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.olympiad;
 
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.world.World;
 
 /**
  * @author DS, Zoey76
@@ -25,7 +25,7 @@ public final class Participant {
         name = plr.getName();
         side = olympiadSide;
         baseClass = plr.getBaseClass();
-        stats = Olympiad.getNobleStats(objectId);
+        stats = Olympiad.getInstance().getNobleStats(objectId);
         clanName = plr.getClan() != null ? plr.getClan().getName() : "";
         clanId = plr.getClanId();
     }
