@@ -57,7 +57,7 @@ public final class Config {
 
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
-    private static final String RATES_CONFIG_FILE = "config/Rates.properties";
+    private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String SERVER_CONFIG_FILE = "config/server.properties";
     private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
