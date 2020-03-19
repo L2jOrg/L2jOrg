@@ -2,12 +2,12 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.World;
 
 import java.util.StringTokenizer;
 
@@ -135,7 +135,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					
 					if (player.isNoble())
 					{
-						final StatsSet playerStat = Olympiad.getNobleStats(player.getObjectId());
+						final StatsSet playerStat = Olympiad.getInstance().getNobleStats(player.getObjectId());
 						if (playerStat == null)
 						{
 							BuilderUtil.sendSysMessage(activeChar, "This player hasn't played on Olympiad yet!");
@@ -219,7 +219,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 	
 	private StatsSet getPlayerSet(Player player)
 	{
-		StatsSet statDat = Olympiad.getNobleStats(player.getObjectId());
+		StatsSet statDat = Olympiad.getInstance().getNobleStats(player.getObjectId());
 		if (statDat == null)
 		{
 			statDat = new StatsSet();
@@ -232,7 +232,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			statDat.set(Olympiad.COMP_DRAWN, 0);
 			statDat.set(Olympiad.COMP_DONE_WEEK, 0);
 			statDat.set("to_save", true);
-			Olympiad.addNobleStats(player.getObjectId(), statDat);
+			Olympiad.getInstance().addNobleStats(player.getObjectId(), statDat);
 		}
 		return statDat;
 	}
