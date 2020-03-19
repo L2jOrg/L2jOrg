@@ -427,11 +427,10 @@ public final class Player extends Playable {
             if (getSettings(GeneralSettings.class).cachePlayersName()) {
                 PlayerNameTable.getInstance().addName(player);
             }
-            player.variables = PlayerVariableData.init();
+            player.variables = PlayerVariableData.init(player.getObjectId());
             getDAO(PlayerVariablesDAO.class).save(player.variables);
 
-            player.statsData = new PlayerStatsData();
-            player.statsData.setPlayerId(player.getObjectId());
+            player.statsData = PlayerStatsData.init(player.getObjectId());
             getDAO(PlayerDAO.class).save(player.statsData);
             return player;
         }

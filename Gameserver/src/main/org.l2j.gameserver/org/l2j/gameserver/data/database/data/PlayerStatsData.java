@@ -19,6 +19,12 @@ public class PlayerStatsData {
     private short witness;
     private short mentality;
 
+    public static PlayerStatsData init(int playerId) {
+        var data = new PlayerStatsData();
+        data.playerId = playerId;
+        return data;
+    }
+
     public int getPlayerId() {
         return playerId;
     }

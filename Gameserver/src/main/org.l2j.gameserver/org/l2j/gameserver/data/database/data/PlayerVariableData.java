@@ -11,6 +11,9 @@ public class PlayerVariableData {
 
     public static final int REVENGE_USABLE_FUNCTIONS = 5;
 
+    @Column("player_id")
+    private int playerId;
+
     @Column("revenge_teleports")
     private byte revengeTeleports;
 
@@ -25,10 +28,11 @@ public class PlayerVariableData {
         return revengeLocations;
     }
 
-    public static PlayerVariableData init() {
+    public static PlayerVariableData init(int playerId) {
         var data = new PlayerVariableData();
         data.revengeTeleports = REVENGE_USABLE_FUNCTIONS;
         data.revengeLocations = REVENGE_USABLE_FUNCTIONS;
+        data.playerId = playerId;
         return data;
     }
 
