@@ -8,6 +8,6 @@ CREATE TABLE IF NOT EXISTS `clan_wars` (
   `startTime` bigint(13) NOT NULL DEFAULT 0,
   `endTime` bigint(13) NOT NULL DEFAULT 0,
   `state` tinyint(4) NOT NULL DEFAULT 0,
-  KEY `clan1` (`clan1`),
-  KEY `clan2` (`clan2`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  FOREIGN KEY (`clan1`) REFERENCES clan_data(clan_id) ON DELETE CASCADE,
+  FOREIGN KEY (`clan2`) REFERENCES clan_data(clan_id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8MB4;

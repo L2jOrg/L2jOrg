@@ -1,32 +1,41 @@
-package org.l2j.gameserver.model;
+package org.l2j.gameserver.data.database.data;
 
+import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 
 /**
  * @author NosBit
+ * @author JoeAlisson
  */
-public final class Crest implements IIdentifiable {
-    private final int _id;
-    private final byte[] _data;
-    private final CrestType _type;
+@Table("crests")
+public final class CrestData implements IIdentifiable {
 
-    public Crest(int id, byte[] data, CrestType type) {
-        _id = id;
-        _data = data;
-        _type = type;
+    @Column("crest_id")
+    private int id;
+    private byte[] data;
+    private CrestType type;
+
+    public CrestData() {
+    }
+
+    public CrestData(int id, byte[] data, CrestType type) {
+        this.id = id;
+        this.data = data;
+        this.type = type;
     }
 
     @Override
     public int getId() {
-        return _id;
+        return id;
     }
 
     public byte[] getData() {
-        return _data;
+        return data;
     }
 
     public CrestType getType() {
-        return _type;
+        return type;
     }
 
     public enum CrestType {

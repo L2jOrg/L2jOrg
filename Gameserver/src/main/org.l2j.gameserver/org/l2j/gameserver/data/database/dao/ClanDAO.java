@@ -1,10 +1,12 @@
 package org.l2j.gameserver.data.database.dao;
 
 import io.github.joealisson.primitive.ConcurrentIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.ClanData;
 import org.l2j.gameserver.data.database.data.ClanSkillData;
+import org.l2j.gameserver.data.database.data.CrestData;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 
 import java.sql.ResultSet;
@@ -110,4 +112,25 @@ public interface ClanDAO extends DAO<ClanData> {
 
     @Query("UPDATE clan_data SET crest_large_id = :crestId: WHERE clan_id = :id:")
     void updateClanCrestLarge(int id, int crestId);
+
+    @Query("""
+            DELETE FROM crests cr WHERE cr.id NOT IN (
+                SELECT crest_id AS id FROM clan_data
+                UNION ALL
+                SELECT ally_crest_id AS id FROM clan_data
+                UNION ALL
+                SELECT crest_large_id AS id FROM clan_data)
+            """)
+    void removeUnusedCrests();
+
+    @Query("SELECT * FROM crests")
+    IntMap<CrestData> findAllCrests();
+
+    void save(CrestData crest);
+
+    @Query("DELETE FROM crests where id = :crestId:")
+    void deleteCrest(int crestId);
+
+    @Query("DELETE FROM clan_data WHERE clan_id = :clanId:")
+    void deleteClan(int clanId);
 }

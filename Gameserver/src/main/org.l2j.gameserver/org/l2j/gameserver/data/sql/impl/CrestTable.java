@@ -1,178 +1,87 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.data.sql.impl;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
+import org.l2j.gameserver.data.database.data.CrestData;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.Crest;
+import org.l2j.gameserver.util.PrimeFinder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.*;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * Loads and saves crests from database.
  *
  * @author NosBit
+ * @author JoeAlisson
  */
 public final class CrestTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(CrestTable.class);
+    private static final int INITIAL_CREST_SIZE = 100;
 
-    private final Map<Integer, Crest> _crests = new ConcurrentHashMap<>();
-    private final AtomicInteger _nextId = new AtomicInteger(1);
+    private final AtomicInteger nextId = new AtomicInteger(1);
+
+    private IntMap<CrestData> crests;
+    private  BitSet crestIds = new BitSet(PrimeFinder.nextPrime(INITIAL_CREST_SIZE));
 
     private CrestTable() {
         load();
     }
 
     public synchronized void load() {
-        _crests.clear();
-        final Set<Integer> crestsInUse = new HashSet<>();
-        for (Clan clan : ClanTable.getInstance().getClans()) {
-            if (clan.getCrestId() != 0) {
-                crestsInUse.add(clan.getCrestId());
-            }
-
-            if (clan.getCrestLargeId() != 0) {
-                crestsInUse.add(clan.getCrestLargeId());
-            }
-
-            if (clan.getAllyCrestId() != 0) {
-                crestsInUse.add(clan.getAllyCrestId());
-            }
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement statement = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-             ResultSet rs = statement.executeQuery("SELECT `crest_id`, `data`, `type` FROM `crests` ORDER BY `crest_id` DESC")) {
-            while (rs.next()) {
-                final int id = rs.getInt("crest_id");
-
-                if (_nextId.get() <= id) {
-                    _nextId.set(id + 1);
-                }
-
-                // delete all unused crests except the last one we dont want to reuse
-                // a crest id because client will display wrong crest if its reused
-                if (!crestsInUse.contains(id) && (id != (_nextId.get() - 1))) {
-                    rs.deleteRow();
-                    continue;
-                }
-
-                final byte[] data = rs.getBytes("data");
-                final Crest.CrestType crestType = Crest.CrestType.getById(rs.getInt("type"));
-                if (crestType != null) {
-                    _crests.put(id, new Crest(id, data, crestType));
-                } else {
-                    LOGGER.warn("Unknown crest type found in database. Type:" + rs.getInt("type"));
-                }
-            }
-        } catch (SQLException e) {
-            LOGGER.warn("There was an error while loading crests from database:", e);
-        }
-
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _crests.size() + " Crests.");
-
-        for (Clan clan : ClanTable.getInstance().getClans()) {
-            if ((clan.getCrestId() != 0) && (getCrest(clan.getCrestId()) == null)) {
-                LOGGER.info("Removing non-existent crest for clan " + clan.getName() + " [" + clan.getId() + "], crestId:" + clan.getCrestId());
-                clan.setCrestId(0);
-                clan.changeClanCrest(0);
-            }
-
-            if ((clan.getCrestLargeId() != 0) && (getCrest(clan.getCrestLargeId()) == null)) {
-                LOGGER.info("Removing non-existent large crest for clan " + clan.getName() + " [" + clan.getId() + "], crestLargeId:" + clan.getCrestLargeId());
-                clan.setCrestLargeId(0);
-                clan.changeLargeCrest(0);
-            }
-
-            if ((clan.getAllyCrestId() != 0) && (getCrest(clan.getAllyCrestId()) == null)) {
-                LOGGER.info("Removing non-existent ally crest for clan " + clan.getName() + " [" + clan.getId() + "], allyCrestId:" + clan.getAllyCrestId());
-                clan.setAllyCrestId(0);
-                clan.changeAllyCrest(0, true);
-            }
-        }
+        var clanDAO = getDAO(ClanDAO.class);
+        clanDAO.removeUnusedCrests();
+        crests = clanDAO.findAllCrests();
+        crests.keySet().forEach(crestIds::set);
+        nextId.set(crestIds.nextClearBit(0));
+        LOGGER.info("Loaded {} Crests.", crests.size());
     }
 
-    /**
-     * @param crestId The crest id
-     * @return {@code Crest} if crest is found, {@code null} if crest was not found.
-     */
-    public Crest getCrest(int crestId) {
-        return _crests.get(crestId);
+    public CrestData getCrest(int crestId) {
+        return crests.get(crestId);
     }
 
-    /**
-     * Creates a {@code Crest} object and inserts it in database and cache.
-     *
-     * @param data
-     * @param crestType
-     * @return {@code Crest} on success, {@code null} on failure.
-     */
-    public Crest createCrest(byte[] data, Crest.CrestType crestType) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("INSERT INTO `crests`(`crest_id`, `data`, `type`) VALUES(?, ?, ?)")) {
-            final Crest crest = new Crest(_nextId.getAndIncrement(), data, crestType);
-            statement.setInt(1, crest.getId());
-            statement.setBytes(2, crest.getData());
-            statement.setInt(3, crest.getType().getId());
-            statement.executeUpdate();
-            _crests.put(crest.getId(), crest);
-            return crest;
-        } catch (SQLException e) {
-            LOGGER.warn("There was an error while saving crest in database:", e);
+    public CrestData createCrest(byte[] data, CrestData.CrestType crestType) {
+        var crest = new CrestData(getNextId(), data, crestType);
+        getDAO(ClanDAO.class).save(crest);
+        crests.put(crest.getId(), crest);
+        return crest;
+    }
+
+    private synchronized int getNextId() {
+        var id = nextId.get();
+        var next = crestIds.nextClearBit(id);
+        if(next < 0) {
+            next = crestIds.nextClearBit(0);
         }
-        return null;
+        if(next < 0) {
+            increaseCrests();
+            next = crestIds.nextClearBit(id);
+        }
+        nextId.set(next);
+        return id;
     }
 
-    /**
-     * Removes crest from database and cache.
-     *
-     * @param crestId the id of crest to be removed.
-     */
+    private void increaseCrests() {
+        var expanded = new BitSet((int) (crestIds.size() * 1.5));
+        expanded.or(crestIds);
+        crestIds = expanded;
+    }
+
     public void removeCrest(int crestId) {
-        _crests.remove(crestId);
-
-        // avoid removing last crest id we dont want to lose index...
-        // because client will display wrong crest if its reused
-        if (crestId == (_nextId.get() - 1)) {
-            return;
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("DELETE FROM `crests` WHERE `crest_id` = ?")) {
-            statement.setInt(1, crestId);
-            statement.executeUpdate();
-        } catch (SQLException e) {
-            LOGGER.warn("There was an error while deleting crest from database:", e);
+        if(nonNull(crests.remove(crestId))) {
+            getDAO(ClanDAO.class).deleteCrest(crestId);
         }
     }
 
-    /**
-     * @return The next crest id.
-     */
-    public int getNextId() {
-        return _nextId.getAndIncrement();
+    public void removeCrests(Clan clan) {
+        removeCrest(clan.getCrestId());
+        removeCrest(clan.getCrestLargeId());
     }
 
     public static CrestTable getInstance() {

@@ -1,7 +1,8 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.ClanWarData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -32,16 +33,17 @@ public final class ClanWar {
     private Future<?> _cancelTask;
     private long _endTime = 0;
 
+    private ClanWarData data;
+
     public ClanWar(Clan attacker, Clan attacked) {
+        data = ClanWarData.of(attacker, attacked);
+
         _attackerClanId = attacker.getId();
         _attackedClanId = attacked.getId();
         _startTime = System.currentTimeMillis();
         _state = ClanWarState.BLOOD_DECLARATION;
 
-        _cancelTask = ThreadPool.schedule(() ->
-        {
-            clanWarTimeout();
-        }, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
+        _cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
 
         attacker.addWar(attacked.getId(), this);
         attacked.addWar(attacker.getId(), this);
@@ -58,6 +60,13 @@ public final class ClanWar {
     }
 
     public ClanWar(Clan attacker, Clan attacked, int attackerKillCount, int attackedKillCount, int winnerClan, long startTime, long endTime, ClanWarState state) {
+        data = ClanWarData.of(attacker, attacked);
+        data.setStartTime(startTime);
+        data.setEndTime(endTime);
+        data.setState(state);
+        data.setAttackerKills(attackerKillCount);
+        data.setAttackedKills(attackedKillCount);
+
         _attackerClanId = attacker.getId();
         _attackedClanId = attacked.getId();
         _startTime = startTime;
@@ -68,10 +77,7 @@ public final class ClanWar {
         _winnerClanId = winnerClan;
 
         if ((_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) > System.currentTimeMillis()) {
-            _cancelTask = ThreadPool.schedule(() ->
-            {
-                clanWarTimeout();
-            }, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
+            _cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
         }
 
         if (_endTime > 0) {

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.data.database.data.CrestData;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
-import org.l2j.gameserver.model.Crest;
 import org.l2j.gameserver.network.serverpackets.ExPledgeEmblem;
 
 /**
@@ -19,7 +19,7 @@ public final class RequestExPledgeCrestLarge extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Crest crest = CrestTable.getInstance().getCrest(_crestId);
+        final CrestData crest = CrestTable.getInstance().getCrest(_crestId);
         final byte[] data = crest != null ? crest.getData() : null;
         if (data != null) {
             for (int i = 0; i <= 4; i++) {

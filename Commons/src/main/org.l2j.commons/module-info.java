@@ -24,6 +24,7 @@ module org.l2j.commons {
     uses TypeHandler;
     provides TypeHandler
         with org.l2j.commons.database.handler.ByteHandler,
+             org.l2j.commons.database.handler.ByteArrayHandler,
              org.l2j.commons.database.handler.IntegerHandler,
              org.l2j.commons.database.handler.IntMapHandler,
              org.l2j.commons.database.handler.IntSetHandler,

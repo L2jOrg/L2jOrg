@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.data.database.data.CrestData;
+import org.l2j.gameserver.data.database.data.CrestData.CrestType;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.Crest;
-import org.l2j.gameserver.model.Crest.CrestType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -67,7 +67,7 @@ public final class RequestExSetPledgeCrestLarge extends ClientPacket {
                 return;
             }
 
-            final Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.PLEDGE_LARGE);
+            final CrestData crest = CrestTable.getInstance().createCrest(_data, CrestType.PLEDGE_LARGE);
             if (crest != null) {
                 clan.changeLargeCrest(crest.getId());
                 client.sendPacket(SystemMessageId.THE_CLAN_MARK_WAS_SUCCESSFULLY_REGISTERED_THE_SYMBOL_WILL_APPEAR_ON_THE_CLAN_FLAG_AND_THE_INSIGNIA_IS_ONLY_DISPLAYED_ON_ITEMS_PERTAINING_TO_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE);

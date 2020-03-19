@@ -6,6 +6,9 @@ import org.l2j.gameserver.util.PrimeFinder;
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * @author JoeAlisson
+ */
 public final class BitSetIDFactory extends IdFactory {
 
     private static final int INITIAL_CAPACITY = 100000;
@@ -25,7 +28,6 @@ public final class BitSetIDFactory extends IdFactory {
     public void initialize() {
         try {
             freeIds = new BitSet(PrimeFinder.nextPrime(INITIAL_CAPACITY));
-            freeIds.clear();
             freeIdCount = new AtomicInteger(FREE_OBJECT_ID_SIZE);
 
             extractUsedObjectIDTable().forEach(usedObjectId -> {

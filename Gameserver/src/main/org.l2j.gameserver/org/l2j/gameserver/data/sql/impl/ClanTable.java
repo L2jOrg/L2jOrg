@@ -157,7 +157,7 @@ public class ClanTable {
         player.setPledgeClass(ClanMember.calculatePledgeClass(player));
         player.setClanPrivileges(new EnumIntBitmask<>(ClanPrivilege.class, true));
 
-        clans.put(Integer.valueOf(clan.getId()), clan);
+        clans.put(clan.getId(), clan);
 
         // should be update packet only
         player.sendPacket(new PledgeShowInfoUpdate(clan));
@@ -213,50 +213,17 @@ public class ClanTable {
 
         clans.remove(clanId);
         IdFactory.getInstance().releaseId(clanId);
+        getDAO(ClanDAO.class).deleteClan(clanId);
+        CrestTable.getInstance().removeCrests(clan);
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_data WHERE clan_id=?")) {
-                ps.setInt(1, clanId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_privs WHERE clan_id=?")) {
-                ps.setInt(1, clanId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_skills WHERE clan_id=?")) {
-                ps.setInt(1, clanId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_subpledges WHERE clan_id=?")) {
-                ps.setInt(1, clanId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_wars WHERE clan1=? OR clan2=?")) {
-                ps.setInt(1, clanId);
-                ps.setInt(2, clanId);
-                ps.execute();
-            }
-
-            try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_notices WHERE clan_id=?")) {
-                ps.setInt(1, clanId);
-                ps.execute();
-            }
-
-            if (fortId != 0) {
-                final Fort fort = FortDataManager.getInstance().getFortById(fortId);
-                if (fort != null) {
-                    final Clan owner = fort.getOwnerClan();
-                    if (clan == owner) {
-                        fort.removeOwner(true);
-                    }
+        if (fortId != 0) {
+            final Fort fort = FortDataManager.getInstance().getFortById(fortId);
+            if (fort != null) {
+                final Clan owner = fort.getOwnerClan();
+                if (clan == owner) {
+                    fort.removeOwner(true);
                 }
             }
-        } catch (Exception e) {
-            LOGGER.error(getClass().getSimpleName() + ": Error removing clan from DB.", e);
         }
 
         // Notify to scripts
