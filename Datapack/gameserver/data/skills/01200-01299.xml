@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
 	<skill id="1201" name="Dryad Root" max-level="41" debuff="true" action="A2" type="MAGIC">
-	<!-- Holds the enemy for 15 seconds. -->
+		<!-- Holds the enemy for 15 seconds. -->
 		<icon initial="icon.skill1201"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="23">
@@ -159,14 +159,14 @@
 		</effects>
 	</skill>
 	<skill id="1204" name="Wind Walk" max-level="6" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Increases Speed by 20 for 20 minutes.
-		level 2: Increases Speed by 33 for 20 minutes.
-		level 3: Increases Speed by 20 for 20 minutes.
-		level 4: Increases Speed by 33 for 20 minutes.
-		level 5: Increases Speed by 20 for 10 min.
-		level 6: Increases Speed by 33 for 10 min.
-	 -->
+		<!--
+            level 1: Increases Speed by 20 for 20 minutes.
+            level 2: Increases Speed by 33 for 20 minutes.
+            level 3: Increases Speed by 20 for 20 minutes.
+            level 4: Increases Speed by 33 for 20 minutes.
+            level 5: Increases Speed by 20 for 10 min.
+            level 6: Increases Speed by 33 for 10 min.
+         -->
 		<icon initial="icon.skill1204"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="20">
@@ -229,11 +229,11 @@
 		</effects>
 	</skill>
 	<skill id="1206" name="Wind Shackle" max-level="27" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Decreases the enemy's Atk. Spd. by 17% for 30 seconds.
-		level 2: Decreases the enemy's Atk. Spd. by 20% for 30 seconds.
-		level 6: Decreases the enemy's Atk. Spd. by 23% for 30 seconds.
-	 -->
+		<!--
+            level 1: Decreases the enemy's Atk. Spd. by 17% for 30 seconds.
+            level 2: Decreases the enemy's Atk. Spd. by 20% for 30 seconds.
+            level 6: Decreases the enemy's Atk. Spd. by 23% for 30 seconds.
+         -->
 		<icon initial="icon.skill1206"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="14">
@@ -358,10 +358,10 @@
 		</effects>
 	</skill>
 	<skill id="1208" name="Seal of Binding" max-level="25" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Holds nearby enemies for 15 seconds. Immune to Hold while the effect is on.
-		level 18: For 15 seconds inflicts Hold on the nearby targets. The target cannot be affected by any additional hold attacks while the effect lasts.
-	 -->
+		<!--
+            level 1: Holds nearby enemies for 15 seconds. Immune to Hold while the effect is on.
+            level 18: For 15 seconds inflicts Hold on the nearby targets. The target cannot be affected by any additional hold attacks while the effect lasts.
+         -->
 		<icon initial="icon.skill1208"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30">
 			<magic-level initial="25">
@@ -479,14 +479,14 @@
 		</effects>
 	</skill>
 	<skill id="1209" name="Seal of Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Poisons nearby enemies, causing loss of 14 HP per second for 30 seconds.
-		level 2: Poisons nearby enemies, causing loss of 19 HP per second for 30 seconds.
-		level 3: Poisons nearby enemies, causing loss of 24 HP per second for 30 seconds.
-		level 4: Poisons nearby enemies, causing loss of 30 HP per second for 30 seconds.
-		level 5: Poisons nearby enemies, causing loss of 34 HP per second for 30 seconds.
-		level 6: Poisons nearby enemies, causing loss of 37 HP per second for 30 seconds.
-	 -->
+		<!--
+            level 1: Poisons nearby enemies, causing loss of 14 HP per second for 30 seconds.
+            level 2: Poisons nearby enemies, causing loss of 19 HP per second for 30 seconds.
+            level 3: Poisons nearby enemies, causing loss of 24 HP per second for 30 seconds.
+            level 4: Poisons nearby enemies, causing loss of 30 HP per second for 30 seconds.
+            level 5: Poisons nearby enemies, causing loss of 34 HP per second for 30 seconds.
+            level 6: Poisons nearby enemies, causing loss of 37 HP per second for 30 seconds.
+         -->
 		<icon initial="icon.skill1209"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="20">
 			<magic-level initial="20">
@@ -549,12 +549,12 @@
 		</effects>
 	</skill>
 	<skill id="1210" name="Seal of Gloom" max-level="4" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Burns the MP of nearby enemies with bonus 29 M. Atk. Power and decreases 9 MP per second for 15 seconds.
-		level 2: Burns the MP of nearby enemies with bonus 36 M. Atk. Power and decreases 11 MP per second for 15 seconds.
-		level 3: Burns the MP of nearby enemies with bonus 46 M. Atk. Power and decreases 14 MP per second for 15 seconds.
-		level 4: Burns the MP of nearby enemies with bonus 53 M. Atk. Power and decreases 15 MP per second for 15 seconds.
-	 -->
+		<!--
+            level 1: Burns the MP of nearby enemies with bonus 29 M. Atk. Power and decreases 9 MP per second for 15 seconds.
+            level 2: Burns the MP of nearby enemies with bonus 36 M. Atk. Power and decreases 11 MP per second for 15 seconds.
+            level 3: Burns the MP of nearby enemies with bonus 46 M. Atk. Power and decreases 14 MP per second for 15 seconds.
+            level 4: Burns the MP of nearby enemies with bonus 53 M. Atk. Power and decreases 15 MP per second for 15 seconds.
+         -->
 		<icon initial="icon.skill1210"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
 			<magic-level initial="44">
@@ -612,7 +612,7 @@
 		</effects>
 	</skill>
 	<skill id="1213" name="Seal of Mirage" max-level="13" debuff="true" action="A1" type="MAGIC">
-	<!-- Throws nearby enemies into chaos, causing them to attack anybody randomly. -->
+		<!-- Throws nearby enemies into chaos, causing them to attack anybody randomly. -->
 		<icon initial="icon.skill1213"/>
 		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
 			<magic-level initial="44">
@@ -683,7 +683,7 @@
 		</effects>
 	</skill>
 	<skill id="1216" name="Self Heal" action="A1" type="MAGIC">
-	<!-- Restores HP with 42 Power. -->
+		<!-- Restores HP with 42 Power. -->
 		<icon initial="icon.skill1216"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="1"/>
@@ -706,49 +706,49 @@
 		</effects>
 	</skill>
 	<skill id="1217" name="Greater Heal" max-level="41" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Restores the target's HP with 326 Power.
-		level 2: Restores the target's HP with 339 Power.
-		level 3: Restores the target's HP with 350 Power.
-		level 4: Restores the target's HP with 376 Power.
-		level 5: Restores the target's HP with 389 Power.
-		level 6: Restores the target's HP with 402 Power.
-		level 7: Restores the target's HP with 427 Power.
-		level 8: Restores the target's HP with 440 Power.
-		level 9: Restores the target's HP with 453 Power.
-		level 10: Restores the target's HP with 478 Power.
-		level 11: Restores the target's HP with 491 Power.
-		level 12: Restores the target's HP with 506 Power.
-		level 13: Restores the target's HP with 531 Power.
-		level 14: Restores the target's HP with 544 Power.
-		level 15: Restores the target's HP with 557 Power.
-		level 16: Restores the target's HP with 570 Power.
-		level 17: Restores the target's HP with 582 Power.
-		level 18: Restores the target's HP with 595 Power.
-		level 19: Restores the target's HP with 608 Power.
-		level 20: Restores the target's HP with 621 Power.
-		level 21: Restores the target's HP with 632 Power.
-		level 22: Restores the target's HP with 643 Power.
-		level 23: Restores the target's HP with 656 Power.
-		level 24: Restores the target's HP with 667 Power.
-		level 25: Restores the target's HP with 678 Power.
-		level 26: Restores the target's HP with 690 Power.
-		level 27: Restores the target's HP with 699 Power.
-		level 28: Restores the target's HP with 710 Power.
-		level 29: Restores the target's HP with 720 Power.
-		level 30: Restores the target's HP with 730 Power.
-		level 31: Restores the target's HP with 739 Power.
-		level 32: Restores the target's HP with 747 Power.
-		level 33: Restores the target's HP with 755 Power.
-		level 34: Restores the target's HP with 763 Power.
-		level 35: Restores the target's HP with 771 Power.
-		level 36: Restores the target's HP with 779 Power.
-		level 37: Restores the target's HP with 812 Power.
-		level 38: Restores the target's HP with 824 Power.
-		level 39: Restores the target's HP with 836 Power.
-		level 40: Restores the target's HP with 848 Power.
-		level 41: Restores the target's HP with 860 Power.
-	 -->
+		<!--
+            level 1: Restores the target's HP with 326 Power.
+            level 2: Restores the target's HP with 339 Power.
+            level 3: Restores the target's HP with 350 Power.
+            level 4: Restores the target's HP with 376 Power.
+            level 5: Restores the target's HP with 389 Power.
+            level 6: Restores the target's HP with 402 Power.
+            level 7: Restores the target's HP with 427 Power.
+            level 8: Restores the target's HP with 440 Power.
+            level 9: Restores the target's HP with 453 Power.
+            level 10: Restores the target's HP with 478 Power.
+            level 11: Restores the target's HP with 491 Power.
+            level 12: Restores the target's HP with 506 Power.
+            level 13: Restores the target's HP with 531 Power.
+            level 14: Restores the target's HP with 544 Power.
+            level 15: Restores the target's HP with 557 Power.
+            level 16: Restores the target's HP with 570 Power.
+            level 17: Restores the target's HP with 582 Power.
+            level 18: Restores the target's HP with 595 Power.
+            level 19: Restores the target's HP with 608 Power.
+            level 20: Restores the target's HP with 621 Power.
+            level 21: Restores the target's HP with 632 Power.
+            level 22: Restores the target's HP with 643 Power.
+            level 23: Restores the target's HP with 656 Power.
+            level 24: Restores the target's HP with 667 Power.
+            level 25: Restores the target's HP with 678 Power.
+            level 26: Restores the target's HP with 690 Power.
+            level 27: Restores the target's HP with 699 Power.
+            level 28: Restores the target's HP with 710 Power.
+            level 29: Restores the target's HP with 720 Power.
+            level 30: Restores the target's HP with 730 Power.
+            level 31: Restores the target's HP with 739 Power.
+            level 32: Restores the target's HP with 747 Power.
+            level 33: Restores the target's HP with 755 Power.
+            level 34: Restores the target's HP with 763 Power.
+            level 35: Restores the target's HP with 771 Power.
+            level 36: Restores the target's HP with 779 Power.
+            level 37: Restores the target's HP with 812 Power.
+            level 38: Restores the target's HP with 824 Power.
+            level 39: Restores the target's HP with 836 Power.
+            level 40: Restores the target's HP with 848 Power.
+            level 41: Restores the target's HP with 860 Power.
+         -->
 		<icon initial="icon.skill1217"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -948,49 +948,49 @@
 		</effects>
 	</skill>
 	<skill id="1218" name="Greater Battle Heal" max-level="41" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Immediately restores the target's HP with 371 Power.
-		level 2: Immediately restores the target's HP with 384 Power.
-		level 3: Immediately restores the target's HP with 398 Power.
-		level 4: Immediately restores the target's HP with 426 Power.
-		level 5: Immediately restores the target's HP with 441 Power.
-		level 6: Immediately restores the target's HP with 455 Power.
-		level 7: Immediately restores the target's HP with 484 Power.
-		level 8: Immediately restores the target's HP with 499 Power.
-		level 9: Immediately restores the target's HP with 514 Power.
-		level 10: Immediately restores the target's HP with 544 Power.
-		level 11: Immediately restores the target's HP with 559 Power.
-		level 12: Immediately restores the target's HP with 573 Power.
-		level 13: Immediately restores the target's HP with 603 Power.
-		level 14: Immediately restores the target's HP with 618 Power.
-		level 15: Immediately restores the target's HP with 633 Power.
-		level 16: Immediately restores the target's HP with 647 Power.
-		level 17: Immediately restores the target's HP with 662 Power.
-		level 18: Immediately restores the target's HP with 676 Power.
-		level 19: Immediately restores the target's HP with 690 Power.
-		level 20: Immediately restores the target's HP with 704 Power.
-		level 21: Immediately restores the target's HP with 718 Power.
-		level 22: Immediately restores the target's HP with 731 Power.
-		level 23: Immediately restores the target's HP with 745 Power.
-		level 24: Immediately restores the target's HP with 758 Power.
-		level 25: Immediately restores the target's HP with 770 Power.
-		level 26: Immediately restores the target's HP with 782 Power.
-		level 27: Immediately restores the target's HP with 795 Power.
-		level 28: Immediately restores the target's HP with 806 Power.
-		level 29: Immediately restores the target's HP with 817 Power.
-		level 30: Immediately restores the target's HP with 828 Power.
-		level 31: Immediately restores the target's HP with 839 Power.
-		level 32: Immediately restores the target's HP with 849 Power.
-		level 33: Immediately restores the target's HP with 858 Power.
-		level 34: Immediately restores the target's HP with 863 Power.
-		level 35: Immediately restores the target's HP with 868 Power.
-		level 36: Immediately restores the target's HP with 873 Power.
-		level 37: Immediately restores the target's HP with 890 Power.
-		level 38: Immediately restores the target's HP with 903 Power.
-		level 39: Immediately restores the target's HP with 916 Power.
-		level 40: Immediately restores the target's HP with 929 Power.
-		level 41: Immediately restores the target's HP with 941 Power.
-	 -->
+		<!--
+            level 1: Immediately restores the target's HP with 371 Power.
+            level 2: Immediately restores the target's HP with 384 Power.
+            level 3: Immediately restores the target's HP with 398 Power.
+            level 4: Immediately restores the target's HP with 426 Power.
+            level 5: Immediately restores the target's HP with 441 Power.
+            level 6: Immediately restores the target's HP with 455 Power.
+            level 7: Immediately restores the target's HP with 484 Power.
+            level 8: Immediately restores the target's HP with 499 Power.
+            level 9: Immediately restores the target's HP with 514 Power.
+            level 10: Immediately restores the target's HP with 544 Power.
+            level 11: Immediately restores the target's HP with 559 Power.
+            level 12: Immediately restores the target's HP with 573 Power.
+            level 13: Immediately restores the target's HP with 603 Power.
+            level 14: Immediately restores the target's HP with 618 Power.
+            level 15: Immediately restores the target's HP with 633 Power.
+            level 16: Immediately restores the target's HP with 647 Power.
+            level 17: Immediately restores the target's HP with 662 Power.
+            level 18: Immediately restores the target's HP with 676 Power.
+            level 19: Immediately restores the target's HP with 690 Power.
+            level 20: Immediately restores the target's HP with 704 Power.
+            level 21: Immediately restores the target's HP with 718 Power.
+            level 22: Immediately restores the target's HP with 731 Power.
+            level 23: Immediately restores the target's HP with 745 Power.
+            level 24: Immediately restores the target's HP with 758 Power.
+            level 25: Immediately restores the target's HP with 770 Power.
+            level 26: Immediately restores the target's HP with 782 Power.
+            level 27: Immediately restores the target's HP with 795 Power.
+            level 28: Immediately restores the target's HP with 806 Power.
+            level 29: Immediately restores the target's HP with 817 Power.
+            level 30: Immediately restores the target's HP with 828 Power.
+            level 31: Immediately restores the target's HP with 839 Power.
+            level 32: Immediately restores the target's HP with 849 Power.
+            level 33: Immediately restores the target's HP with 858 Power.
+            level 34: Immediately restores the target's HP with 863 Power.
+            level 35: Immediately restores the target's HP with 868 Power.
+            level 36: Immediately restores the target's HP with 873 Power.
+            level 37: Immediately restores the target's HP with 890 Power.
+            level 38: Immediately restores the target's HP with 903 Power.
+            level 39: Immediately restores the target's HP with 916 Power.
+            level 40: Immediately restores the target's HP with 929 Power.
+            level 41: Immediately restores the target's HP with 941 Power.
+         -->
 		<icon initial="icon.skill1218"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -1197,49 +1197,49 @@
 		</effects>
 	</skill>
 	<skill id="1219" name="Greater Group Heal" max-level="41" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Restores all party members' HP with 261 Power.
-		level 2: Restores all party members' HP with 270 Power.
-		level 3: Restores all party members' HP with 280 Power.
-		level 4: Restores all party members' HP with 301 Power.
-		level 5: Restores all party members' HP with 310 Power.
-		level 6: Restores all party members' HP with 322 Power.
-		level 7: Restores all party members' HP with 341 Power.
-		level 8: Restores all party members' HP with 352 Power.
-		level 9: Restores all party members' HP with 362 Power.
-		level 10: Restores all party members' HP with 382 Power.
-		level 11: Restores all party members' HP with 394 Power.
-		level 12: Restores all party members' HP with 405 Power.
-		level 13: Restores all party members' HP with 426 Power.
-		level 14: Restores all party members' HP with 435 Power.
-		level 15: Restores all party members' HP with 446 Power.
-		level 16: Restores all party members' HP with 456 Power.
-		level 17: Restores all party members' HP with 466 Power.
-		level 18: Restores all party members' HP with 477 Power.
-		level 19: Restores all party members' HP with 486 Power.
-		level 20: Restores all party members' HP with 496 Power.
-		level 21: Restores all party members' HP with 506 Power.
-		level 22: Restores all party members' HP with 515 Power.
-		level 23: Restores all party members' HP with 525 Power.
-		level 24: Restores all party members' HP with 534 Power.
-		level 25: Restores all party members' HP with 542 Power.
-		level 26: Restores all party members' HP with 552 Power.
-		level 27: Restores all party members' HP with 560 Power.
-		level 28: Restores all party members' HP with 568 Power.
-		level 29: Restores all party members' HP with 576 Power.
-		level 30: Restores all party members' HP with 584 Power.
-		level 31: Restores all party members' HP with 590 Power.
-		level 32: Restores all party members' HP with 598 Power.
-		level 33: Restores all party members' HP with 605 Power.
-		level 34: Restores all party members' HP with 613 Power.
-		level 35: Restores all party members' HP with 621 Power.
-		level 36: Restores all party members' HP with 628 Power.
-		level 37: Restores all party members' HP with 665 Power.
-		level 38: Restores all party members' HP with 678 Power.
-		level 39: Restores all party members' HP with 691 Power.
-		level 40: Restores all party members' HP with 704 Power.
-		level 41: Restores all party members' HP with 717 Power.
-	 -->
+		<!--
+            level 1: Restores all party members' HP with 261 Power.
+            level 2: Restores all party members' HP with 270 Power.
+            level 3: Restores all party members' HP with 280 Power.
+            level 4: Restores all party members' HP with 301 Power.
+            level 5: Restores all party members' HP with 310 Power.
+            level 6: Restores all party members' HP with 322 Power.
+            level 7: Restores all party members' HP with 341 Power.
+            level 8: Restores all party members' HP with 352 Power.
+            level 9: Restores all party members' HP with 362 Power.
+            level 10: Restores all party members' HP with 382 Power.
+            level 11: Restores all party members' HP with 394 Power.
+            level 12: Restores all party members' HP with 405 Power.
+            level 13: Restores all party members' HP with 426 Power.
+            level 14: Restores all party members' HP with 435 Power.
+            level 15: Restores all party members' HP with 446 Power.
+            level 16: Restores all party members' HP with 456 Power.
+            level 17: Restores all party members' HP with 466 Power.
+            level 18: Restores all party members' HP with 477 Power.
+            level 19: Restores all party members' HP with 486 Power.
+            level 20: Restores all party members' HP with 496 Power.
+            level 21: Restores all party members' HP with 506 Power.
+            level 22: Restores all party members' HP with 515 Power.
+            level 23: Restores all party members' HP with 525 Power.
+            level 24: Restores all party members' HP with 534 Power.
+            level 25: Restores all party members' HP with 542 Power.
+            level 26: Restores all party members' HP with 552 Power.
+            level 27: Restores all party members' HP with 560 Power.
+            level 28: Restores all party members' HP with 568 Power.
+            level 29: Restores all party members' HP with 576 Power.
+            level 30: Restores all party members' HP with 584 Power.
+            level 31: Restores all party members' HP with 590 Power.
+            level 32: Restores all party members' HP with 598 Power.
+            level 33: Restores all party members' HP with 605 Power.
+            level 34: Restores all party members' HP with 613 Power.
+            level 35: Restores all party members' HP with 621 Power.
+            level 36: Restores all party members' HP with 628 Power.
+            level 37: Restores all party members' HP with 665 Power.
+            level 38: Restores all party members' HP with 678 Power.
+            level 39: Restores all party members' HP with 691 Power.
+            level 40: Restores all party members' HP with 704 Power.
+            level 41: Restores all party members' HP with 717 Power.
+         -->
 		<icon initial="icon.skill1219"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -1451,41 +1451,41 @@
 		</effects>
 	</skill>
 	<skill id="1220" name="Blaze" max-level="33" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Erupts flames on the body, inflicting damage on an enemy with bonus 32 M. Atk. Power.
-		level 2: Erupts flames on the body, inflicting damage on an enemy with bonus 34 M. Atk. Power.
-		level 3: Erupts flames on the body, inflicting damage on an enemy with bonus 40 M. Atk. Power.
-		level 4: Erupts flames on the body, inflicting damage on an enemy with bonus 43 M. Atk. Power.
-		level 5: Erupts flames on the body, inflicting damage on an enemy with bonus 48 M. Atk. Power.
-		level 6: Erupts flames on the body, inflicting damage on an enemy with bonus 51 M. Atk. Power.
-		level 7: Erupts flames on the body, inflicting damage on an enemy with bonus 57 M. Atk. Power.
-		level 8: Erupts flames on the body, inflicting damage on an enemy with bonus 60 M. Atk. Power.
-		level 9: Erupts flames on the body, inflicting damage on an enemy with bonus 68 M. Atk. Power.
-		level 10: Erupts flames on the body, inflicting damage on an enemy with bonus 70 M. Atk. Power.
-		level 11: Erupts flames on the body, inflicting damage on an enemy with bonus 72 M. Atk. Power.
-		level 12: Erupts flames on the body, inflicting damage on an enemy with bonus 74 M. Atk. Power.
-		level 13: Erupts flames on the body, inflicting damage on an enemy with bonus 75 M. Atk. Power.
-		level 14: Erupts flames on the body, inflicting damage on an enemy with bonus 77 M. Atk. Power.
-		level 15: Erupts flames on the body, inflicting damage on an enemy with bonus 79 M. Atk. Power.
-		level 16: Erupts flames on the body, inflicting damage on an enemy with bonus 80 M. Atk. Power.
-		level 17: Erupts flames on the body, inflicting damage on an enemy with bonus 83 M. Atk. Power.
-		level 18: Erupts flames on the body, inflicting damage on an enemy with bonus 86 M. Atk. Power.
-		level 19: Erupts flames on the body, inflicting damage on an enemy with bonus 90 M. Atk. Power.
-		level 20: Erupts flames on the body, inflicting damage on an enemy with bonus 91 M. Atk. Power.
-		level 21: Erupts flames on the body, inflicting damage on an enemy with bonus 93 M. Atk. Power.
-		level 22: Erupts flames on the body, inflicting damage on an enemy with bonus 96 M. Atk. Power.
-		level 23: Erupts flames on the body, inflicting damage on an enemy with bonus 99 M. Atk. Power.
-		level 24: Erupts flames on the body, inflicting damage on an enemy with bonus 102 M. Atk. Power.
-		level 25: Erupts flames on the body, inflicting damage on an enemy with bonus 105 M. Atk. Power.
-		level 26: Erupts flames on the body, inflicting damage on an enemy with bonus 109 M. Atk. Power.
-		level 27: Erupts flames on the body, inflicting damage on an enemy with bonus 113 M. Atk. Power.
-		level 28: Erupts flames on the body, inflicting damage on an enemy with bonus 116 M. Atk. Power.
-		level 29: Erupts flames on the body, inflicting damage on an enemy with bonus 119 M. Atk. Power.
-		level 30: Erupts flames on the body, inflicting damage on an enemy with bonus 121 M. Atk. Power.
-		level 31: Erupts flames on the body, inflicting damage on an enemy with bonus 123 M. Atk. Power.
-		level 32: Erupts flames on the body, inflicting damage on an enemy with bonus 125 M. Atk. Power.
-		level 33: Erupts flames on the body, inflicting damage on an enemy with bonus 126 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Erupts flames on the body, inflicting damage on an enemy with bonus 32 M. Atk. Power.
+            level 2: Erupts flames on the body, inflicting damage on an enemy with bonus 34 M. Atk. Power.
+            level 3: Erupts flames on the body, inflicting damage on an enemy with bonus 40 M. Atk. Power.
+            level 4: Erupts flames on the body, inflicting damage on an enemy with bonus 43 M. Atk. Power.
+            level 5: Erupts flames on the body, inflicting damage on an enemy with bonus 48 M. Atk. Power.
+            level 6: Erupts flames on the body, inflicting damage on an enemy with bonus 51 M. Atk. Power.
+            level 7: Erupts flames on the body, inflicting damage on an enemy with bonus 57 M. Atk. Power.
+            level 8: Erupts flames on the body, inflicting damage on an enemy with bonus 60 M. Atk. Power.
+            level 9: Erupts flames on the body, inflicting damage on an enemy with bonus 68 M. Atk. Power.
+            level 10: Erupts flames on the body, inflicting damage on an enemy with bonus 70 M. Atk. Power.
+            level 11: Erupts flames on the body, inflicting damage on an enemy with bonus 72 M. Atk. Power.
+            level 12: Erupts flames on the body, inflicting damage on an enemy with bonus 74 M. Atk. Power.
+            level 13: Erupts flames on the body, inflicting damage on an enemy with bonus 75 M. Atk. Power.
+            level 14: Erupts flames on the body, inflicting damage on an enemy with bonus 77 M. Atk. Power.
+            level 15: Erupts flames on the body, inflicting damage on an enemy with bonus 79 M. Atk. Power.
+            level 16: Erupts flames on the body, inflicting damage on an enemy with bonus 80 M. Atk. Power.
+            level 17: Erupts flames on the body, inflicting damage on an enemy with bonus 83 M. Atk. Power.
+            level 18: Erupts flames on the body, inflicting damage on an enemy with bonus 86 M. Atk. Power.
+            level 19: Erupts flames on the body, inflicting damage on an enemy with bonus 90 M. Atk. Power.
+            level 20: Erupts flames on the body, inflicting damage on an enemy with bonus 91 M. Atk. Power.
+            level 21: Erupts flames on the body, inflicting damage on an enemy with bonus 93 M. Atk. Power.
+            level 22: Erupts flames on the body, inflicting damage on an enemy with bonus 96 M. Atk. Power.
+            level 23: Erupts flames on the body, inflicting damage on an enemy with bonus 99 M. Atk. Power.
+            level 24: Erupts flames on the body, inflicting damage on an enemy with bonus 102 M. Atk. Power.
+            level 25: Erupts flames on the body, inflicting damage on an enemy with bonus 105 M. Atk. Power.
+            level 26: Erupts flames on the body, inflicting damage on an enemy with bonus 109 M. Atk. Power.
+            level 27: Erupts flames on the body, inflicting damage on an enemy with bonus 113 M. Atk. Power.
+            level 28: Erupts flames on the body, inflicting damage on an enemy with bonus 116 M. Atk. Power.
+            level 29: Erupts flames on the body, inflicting damage on an enemy with bonus 119 M. Atk. Power.
+            level 30: Erupts flames on the body, inflicting damage on an enemy with bonus 121 M. Atk. Power.
+            level 31: Erupts flames on the body, inflicting damage on an enemy with bonus 123 M. Atk. Power.
+            level 32: Erupts flames on the body, inflicting damage on an enemy with bonus 125 M. Atk. Power.
+            level 33: Erupts flames on the body, inflicting damage on an enemy with bonus 126 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1220"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="20">
@@ -1646,10 +1646,10 @@
 		</effects>
 	</skill>
 	<skill id="1222" name="Curse Chaos" max-level="17" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 30 seconds, enemy's P. Accuracy -9.
-		level 2: For 30 seconds, enemy's P. Accuracy -12.
-	 -->
+		<!--
+            level 1: For 30 seconds, enemy's P. Accuracy -9.
+            level 2: For 30 seconds, enemy's P. Accuracy -12.
+         -->
 		<icon initial="icon.skill1222"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="35">
@@ -1741,10 +1741,10 @@
 		</effects>
 	</skill>
 	<skill id="1224" name="Surrender to Poison" max-level="17" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 30 seconds, enemy's Poison Resistance -25.
-		level 4: For 30 seconds, enemy's Poison Resistance -30.
-	 -->
+		<!--
+            level 1: For 30 seconds, enemy's Poison Resistance -25.
+            level 4: For 30 seconds, enemy's Poison Resistance -30.
+         -->
 		<icon initial="icon.skill1224"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="25">
@@ -1834,24 +1834,24 @@
 			<defence-trait>
 				<trait type="POISON">
 					<power initial="-25">
-					<value level="4">-30</value>
-				</power>
+						<value level="4">-30</value>
+					</power>
 				</trait>
 			</defence-trait>
 		</effects>
 	</skill>
 	<skill id="1225" name="Summon Mew the Cat" max-level="18" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
-		level 3: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
-		level 5: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 3 Spirit Ore when summoned.
-		level 7: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 4 Spirit Ore when summoned.
-		level 9: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 5 Spirit Ore when summoned.
-		level 11: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 6 Spirit Ore when summoned.
-		level 13: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 7 Spirit Ore when summoned.
-		level 15: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 8 Spirit Ore when summoned.
-		level 17: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 9 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
+            level 3: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
+            level 5: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 3 Spirit Ore when summoned.
+            level 7: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 4 Spirit Ore when summoned.
+            level 9: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 5 Spirit Ore when summoned.
+            level 11: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 6 Spirit Ore when summoned.
+            level 13: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 7 Spirit Ore when summoned.
+            level 15: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 8 Spirit Ore when summoned.
+            level 17: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 9 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1225"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="20">
@@ -1960,17 +1960,17 @@
 		</effects>
 	</skill>
 	<skill id="1226" name="Summon Boxer the Unicorn" max-level="18" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons Boxer the Unicorn. Consumes 1 Spirit Ore when summoned.
-		level 3: Summons Boxer the Unicorn. Consumes 2 Spirit Ore when summoned.
-		level 5: Summons Boxer the Unicorn. Consumes 3 Spirit Ore when summoned.
-		level 7: Summons Boxer the Unicorn. Consumes 4 Spirit Ore when summoned.
-		level 9: Summons Boxer the Unicorn. Consumes 5 Spirit Ore when summoned.
-		level 11: Summons Boxer the Unicorn. Consumes 6 Spirit Ore when summoned.
-		level 13: Summons Boxer the Unicorn. Consumes 7 Spirit Ore when summoned.
-		level 15: Summons Boxer the Unicorn. Consumes 8 Spirit Ore when summoned.
-		level 17: Summons Boxer the Unicorn. Consumes 9 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons Boxer the Unicorn. Consumes 1 Spirit Ore when summoned.
+            level 3: Summons Boxer the Unicorn. Consumes 2 Spirit Ore when summoned.
+            level 5: Summons Boxer the Unicorn. Consumes 3 Spirit Ore when summoned.
+            level 7: Summons Boxer the Unicorn. Consumes 4 Spirit Ore when summoned.
+            level 9: Summons Boxer the Unicorn. Consumes 5 Spirit Ore when summoned.
+            level 11: Summons Boxer the Unicorn. Consumes 6 Spirit Ore when summoned.
+            level 13: Summons Boxer the Unicorn. Consumes 7 Spirit Ore when summoned.
+            level 15: Summons Boxer the Unicorn. Consumes 8 Spirit Ore when summoned.
+            level 17: Summons Boxer the Unicorn. Consumes 9 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1226"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="20">
@@ -2079,17 +2079,17 @@
 		</effects>
 	</skill>
 	<skill id="1227" name="Summon Mirage the Unicorn" max-level="18" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons a Unicorn that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
-		level 3: Summons a Unicorn that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
-		level 5: Summons a Unicorn that uses combat magic to support you in battle. Consumes 3 Spirit Ore when summoned.
-		level 7: Summons a Unicorn that uses combat magic to support you in battle. Consumes 4 Spirit Ore when summoned.
-		level 9: Summons a Unicorn that uses combat magic to support you in battle. Consumes 5 Spirit Ore when summoned.
-		level 11: Summons a Unicorn that uses combat magic to support you in battle. Consumes 6 Spirit Ore when summoned.
-		level 13: Summons a Unicorn that uses combat magic to support you in battle. Consumes 7 Spirit Ore when summoned.
-		level 15: Summons a Unicorn that uses combat magic to support you in battle. Consumes 8 Spirit Ore when summoned.
-		level 17: Summons a Unicorn that uses combat magic to support you in battle. Consumes 9 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons a Unicorn that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
+            level 3: Summons a Unicorn that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
+            level 5: Summons a Unicorn that uses combat magic to support you in battle. Consumes 3 Spirit Ore when summoned.
+            level 7: Summons a Unicorn that uses combat magic to support you in battle. Consumes 4 Spirit Ore when summoned.
+            level 9: Summons a Unicorn that uses combat magic to support you in battle. Consumes 5 Spirit Ore when summoned.
+            level 11: Summons a Unicorn that uses combat magic to support you in battle. Consumes 6 Spirit Ore when summoned.
+            level 13: Summons a Unicorn that uses combat magic to support you in battle. Consumes 7 Spirit Ore when summoned.
+            level 15: Summons a Unicorn that uses combat magic to support you in battle. Consumes 8 Spirit Ore when summoned.
+            level 17: Summons a Unicorn that uses combat magic to support you in battle. Consumes 9 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1227"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="20">
@@ -2198,17 +2198,17 @@
 		</effects>
 	</skill>
 	<skill id="1228" name="Summon Silhouette" max-level="18" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons a Shadow that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
-		level 3: Summons a Shadow that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
-		level 5: Summons a Shadow that uses combat magic to support you in battle. Consumes 3 Spirit Ore when summoned.
-		level 7: Summons a Shadow that uses combat magic to support you in battle. Consumes 4 Spirit Ore when summoned.
-		level 9: Summons a Shadow that uses combat magic to support you in battle. Consumes 5 Spirit Ore when summoned.
-		level 11: Summons a Shadow that uses combat magic to support you in battle. Consumes 6 Spirit Ore when summoned.
-		level 13: Summons a Shadow that uses combat magic to support you in battle. Consumes 7 Spirit Ore when summoned.
-		level 15: Summons a Shadow that uses combat magic to support you in battle. Consumes 8 Spirit Ore when summoned.
-		level 17: Summons a Shadow that uses combat magic to support you in battle. Consumes 9 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons a Shadow that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
+            level 3: Summons a Shadow that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
+            level 5: Summons a Shadow that uses combat magic to support you in battle. Consumes 3 Spirit Ore when summoned.
+            level 7: Summons a Shadow that uses combat magic to support you in battle. Consumes 4 Spirit Ore when summoned.
+            level 9: Summons a Shadow that uses combat magic to support you in battle. Consumes 5 Spirit Ore when summoned.
+            level 11: Summons a Shadow that uses combat magic to support you in battle. Consumes 6 Spirit Ore when summoned.
+            level 13: Summons a Shadow that uses combat magic to support you in battle. Consumes 7 Spirit Ore when summoned.
+            level 15: Summons a Shadow that uses combat magic to support you in battle. Consumes 8 Spirit Ore when summoned.
+            level 17: Summons a Shadow that uses combat magic to support you in battle. Consumes 9 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1228"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="20">
@@ -2317,31 +2317,31 @@
 		</effects>
 	</skill>
 	<skill id="1229" name="Chant of Life" max-level="23" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Recovers 19 HP per second for all party members for 10 seconds.
-		level 2: Recovers 24 HP per second for all party members for 10 seconds.
-		level 3: Recovers 29 HP per second for all party members for 10 seconds.
-		level 4: Recovers 37 HP per second for all party members for 10 seconds.
-		level 5: Recovers 44 HP per second for all party members for 10 seconds.
-		level 6: Recovers 51 HP per second for all party members for 10 seconds.
-		level 7: Recovers 57 HP per second for all party members for 10 seconds.
-		level 8: Recovers 64 HP per second for all party members for 10 seconds.
-		level 9: Recovers 70 HP per second for all party members for 10 seconds.
-		level 10: Recovers 74 HP per second for all party members for 10 seconds.
-		level 11: Recovers 75 HP per second for all party members for 10 seconds.
-		level 12: Recovers 79 HP per second for all party members for 10 seconds.
-		level 13: Recovers 82 HP per second for all party members for 10 seconds.
-		level 14: Recovers 85 HP per second for all party members for 10 seconds.
-		level 15: Recovers 87 HP per second for all party members for 10 seconds.
-		level 16: Recovers 90 HP per second for all party members for 10 seconds.
-		level 17: Recovers 92 HP per second for all party members for 10 seconds.
-		level 18: Recovers 95 HP per second for all party members for 10 seconds.
-		level 19: Recovers 99 HP per second for all party members for 10 seconds.
-		level 20: Recovers 102 HP per second for all party members for 10 seconds.
-		level 21: Recovers 105 HP per second for all party members for 10 seconds.
-		level 22: Recovers 108 HP per second for all party members for 10 seconds.
-		level 23: Recovers 112 HP per second for all party members for 10 seconds.
-	 -->
+		<!--
+            level 1: Recovers 19 HP per second for all party members for 10 seconds.
+            level 2: Recovers 24 HP per second for all party members for 10 seconds.
+            level 3: Recovers 29 HP per second for all party members for 10 seconds.
+            level 4: Recovers 37 HP per second for all party members for 10 seconds.
+            level 5: Recovers 44 HP per second for all party members for 10 seconds.
+            level 6: Recovers 51 HP per second for all party members for 10 seconds.
+            level 7: Recovers 57 HP per second for all party members for 10 seconds.
+            level 8: Recovers 64 HP per second for all party members for 10 seconds.
+            level 9: Recovers 70 HP per second for all party members for 10 seconds.
+            level 10: Recovers 74 HP per second for all party members for 10 seconds.
+            level 11: Recovers 75 HP per second for all party members for 10 seconds.
+            level 12: Recovers 79 HP per second for all party members for 10 seconds.
+            level 13: Recovers 82 HP per second for all party members for 10 seconds.
+            level 14: Recovers 85 HP per second for all party members for 10 seconds.
+            level 15: Recovers 87 HP per second for all party members for 10 seconds.
+            level 16: Recovers 90 HP per second for all party members for 10 seconds.
+            level 17: Recovers 92 HP per second for all party members for 10 seconds.
+            level 18: Recovers 95 HP per second for all party members for 10 seconds.
+            level 19: Recovers 99 HP per second for all party members for 10 seconds.
+            level 20: Recovers 102 HP per second for all party members for 10 seconds.
+            level 21: Recovers 105 HP per second for all party members for 10 seconds.
+            level 22: Recovers 108 HP per second for all party members for 10 seconds.
+            level 23: Recovers 112 HP per second for all party members for 10 seconds.
+         -->
 		<icon initial="icon.skill1229"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="20">
@@ -2504,44 +2504,44 @@
 		</effects>
 	</skill>
 	<skill id="1230" name="Prominence" max-level="36" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Detonates flames to inflict damage on the enemy with bonus 76 M. Atk. Power.
-		level 2: Detonates flames to inflict damage on the enemy with bonus 80 M. Atk. Power.
-		level 3: Detonates flames to inflict damage on the enemy with bonus 82 M. Atk. Power.
-		level 4: Detonates flames to inflict damage on the enemy with bonus 84 M. Atk. Power.
-		level 5: Detonates flames to inflict damage on the enemy with bonus 86 M. Atk. Power.
-		level 6: Detonates flames to inflict damage on the enemy with bonus 88 M. Atk. Power.
-		level 7: Detonates flames to inflict damage on the enemy with bonus 90 M. Atk. Power.
-		level 8: Detonates flames to inflict damage on the enemy with bonus 92 M. Atk. Power.
-		level 9: Detonates flames to inflict damage on the enemy with bonus 94 M. Atk. Power.
-		level 10: Detonates flames to inflict damage on the enemy with bonus 97 M. Atk. Power.
-		level 11: Detonates flames to inflict damage on the enemy with bonus 99 M. Atk. Power.
-		level 12: Detonates flames to inflict damage on the enemy with bonus 101 M. Atk. Power.
-		level 13: Detonates flames to inflict damage on the enemy with bonus 103 M. Atk. Power.
-		level 14: Detonates flames to inflict damage on the enemy with bonus 105 M. Atk. Power.
-		level 15: Detonates flames to inflict damage on the enemy with bonus 106 M. Atk. Power.
-		level 16: Detonates flames to inflict damage on the enemy with bonus 107 M. Atk. Power.
-		level 17: Detonates flames to inflict damage on the enemy with bonus 108 M. Atk. Power.
-		level 18: Detonates flames to inflict damage on the enemy with bonus 109 M. Atk. Power.
-		level 19: Detonates flames to inflict damage on the enemy with bonus 110 M. Atk. Power.
-		level 20: Detonates flames to inflict damage on the enemy with bonus 112 M. Atk. Power.
-		level 21: Detonates flames to inflict damage on the enemy with bonus 114 M. Atk. Power.
-		level 22: Detonates flames to inflict damage on the enemy with bonus 116 M. Atk. Power.
-		level 23: Detonates flames to inflict damage on the enemy with bonus 118 M. Atk. Power.
-		level 24: Detonates flames to inflict damage on the enemy with bonus 120 M. Atk. Power.
-		level 25: Detonates flames to inflict damage on the enemy with bonus 122 M. Atk. Power.
-		level 26: Detonates flames to inflict damage on the enemy with bonus 124 M. Atk. Power.
-		level 27: Detonates flames to inflict damage on the enemy with bonus 126 M. Atk. Power.
-		level 28: Detonates flames to inflict damage on the enemy with bonus 128 M. Atk. Power.
-		level 29: Detonates flames to inflict damage on the enemy with bonus 132 M. Atk. Power.
-		level 30: Detonates flames to inflict damage on the enemy with bonus 134 M. Atk. Power.
-		level 31: Detonates flames to inflict damage on the enemy with bonus 136 M. Atk. Power.
-		level 32: Detonates flames to inflict damage on the enemy with bonus 140 M. Atk. Power.
-		level 33: Detonates flames to inflict damage on the enemy with bonus 142 M. Atk. Power.
-		level 34: Detonates flames to inflict damage on the enemy with bonus 144 M. Atk. Power.
-		level 35: Detonates flames to inflict damage on the enemy with bonus 146 M. Atk. Power.
-		level 36: Detonates flames to inflict damage on the enemy with bonus 148 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Detonates flames to inflict damage on the enemy with bonus 76 M. Atk. Power.
+            level 2: Detonates flames to inflict damage on the enemy with bonus 80 M. Atk. Power.
+            level 3: Detonates flames to inflict damage on the enemy with bonus 82 M. Atk. Power.
+            level 4: Detonates flames to inflict damage on the enemy with bonus 84 M. Atk. Power.
+            level 5: Detonates flames to inflict damage on the enemy with bonus 86 M. Atk. Power.
+            level 6: Detonates flames to inflict damage on the enemy with bonus 88 M. Atk. Power.
+            level 7: Detonates flames to inflict damage on the enemy with bonus 90 M. Atk. Power.
+            level 8: Detonates flames to inflict damage on the enemy with bonus 92 M. Atk. Power.
+            level 9: Detonates flames to inflict damage on the enemy with bonus 94 M. Atk. Power.
+            level 10: Detonates flames to inflict damage on the enemy with bonus 97 M. Atk. Power.
+            level 11: Detonates flames to inflict damage on the enemy with bonus 99 M. Atk. Power.
+            level 12: Detonates flames to inflict damage on the enemy with bonus 101 M. Atk. Power.
+            level 13: Detonates flames to inflict damage on the enemy with bonus 103 M. Atk. Power.
+            level 14: Detonates flames to inflict damage on the enemy with bonus 105 M. Atk. Power.
+            level 15: Detonates flames to inflict damage on the enemy with bonus 106 M. Atk. Power.
+            level 16: Detonates flames to inflict damage on the enemy with bonus 107 M. Atk. Power.
+            level 17: Detonates flames to inflict damage on the enemy with bonus 108 M. Atk. Power.
+            level 18: Detonates flames to inflict damage on the enemy with bonus 109 M. Atk. Power.
+            level 19: Detonates flames to inflict damage on the enemy with bonus 110 M. Atk. Power.
+            level 20: Detonates flames to inflict damage on the enemy with bonus 112 M. Atk. Power.
+            level 21: Detonates flames to inflict damage on the enemy with bonus 114 M. Atk. Power.
+            level 22: Detonates flames to inflict damage on the enemy with bonus 116 M. Atk. Power.
+            level 23: Detonates flames to inflict damage on the enemy with bonus 118 M. Atk. Power.
+            level 24: Detonates flames to inflict damage on the enemy with bonus 120 M. Atk. Power.
+            level 25: Detonates flames to inflict damage on the enemy with bonus 122 M. Atk. Power.
+            level 26: Detonates flames to inflict damage on the enemy with bonus 124 M. Atk. Power.
+            level 27: Detonates flames to inflict damage on the enemy with bonus 126 M. Atk. Power.
+            level 28: Detonates flames to inflict damage on the enemy with bonus 128 M. Atk. Power.
+            level 29: Detonates flames to inflict damage on the enemy with bonus 132 M. Atk. Power.
+            level 30: Detonates flames to inflict damage on the enemy with bonus 134 M. Atk. Power.
+            level 31: Detonates flames to inflict damage on the enemy with bonus 136 M. Atk. Power.
+            level 32: Detonates flames to inflict damage on the enemy with bonus 140 M. Atk. Power.
+            level 33: Detonates flames to inflict damage on the enemy with bonus 142 M. Atk. Power.
+            level 34: Detonates flames to inflict damage on the enemy with bonus 144 M. Atk. Power.
+            level 35: Detonates flames to inflict damage on the enemy with bonus 146 M. Atk. Power.
+            level 36: Detonates flames to inflict damage on the enemy with bonus 148 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1230"/>
 		<attributes magic-critical-rate="5.0" level-bonus-rate="1" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -2672,80 +2672,80 @@
 		<target type="ENEMY" />
 		<effects>
 			<magical-attack-range shield-defense="40">
-				<power initial="49.0">
-					<value level="2">52.0</value>
-					<value level="3">55.0</value>
-					<value level="4">58.0</value>
-					<value level="5">61.0</value>
-					<value level="6">65.0</value>
-					<value level="7">68.0</value>
-					<value level="8">72.0</value>
-					<value level="9">75.0</value>
-					<value level="10">78.0</value>
-					<value level="11">80.0</value>
-					<value level="12">82.0</value>
-					<value level="13">84.0</value>
-					<value level="14">85.0</value>
-					<value level="15">87.0</value>
-					<value level="16">89.0</value>
-					<value level="17">90.0</value>
-					<value level="18">92.0</value>
-					<value level="19">94.0</value>
-					<value level="20">96.0</value>
-					<value level="21">97.0</value>
-					<value level="22">99.0</value>
-					<value level="23">100.0</value>
-					<value level="24">102.0</value>
-					<value level="25">104.0</value>
-					<value level="26">105.0</value>
-					<value level="27">107.0</value>
-					<value level="28">108.0</value>
-					<value level="29">110.0</value>
-					<value level="30">111.0</value>
-					<value level="31">112.0</value>
-					<value level="32">114.0</value>
-					<value level="33">115.0</value>
-					<value level="34">116.0</value>
-					<value level="35">117.0</value>
-					<value level="36">118.0</value>
+				<power initial="76.0">
+					<value level="2">76.0</value>
+					<value level="3">80.0</value>
+					<value level="4">82.0</value>
+					<value level="5">84.0</value>
+					<value level="6">86.0</value>
+					<value level="7">88.0</value>
+					<value level="8">90.0</value>
+					<value level="9">92.0</value>
+					<value level="10">94.0</value>
+					<value level="11">97.0</value>
+					<value level="12">99.0</value>
+					<value level="13">101.0</value>
+					<value level="14">103.0</value>
+					<value level="15">105.0</value>
+					<value level="16">106.0</value>
+					<value level="17">107.0</value>
+					<value level="18">108.0</value>
+					<value level="19">109.0</value>
+					<value level="20">110.0</value>
+					<value level="21">112.0</value>
+					<value level="22">114.0</value>
+					<value level="23">116.0</value>
+					<value level="24">118.0</value>
+					<value level="25">120.0</value>
+					<value level="26">122.0</value>
+					<value level="27">124.0</value>
+					<value level="28">126.0</value>
+					<value level="29">128.0</value>
+					<value level="30">132.0</value>
+					<value level="31">134.0</value>
+					<value level="32">136.0</value>
+					<value level="33">140.0</value>
+					<value level="34">142.0</value>
+					<value level="35">144.0</value>
+					<value level="36">146.0</value>
 				</power>
 			</magical-attack-range>
 		</effects>
 	</skill>
 	<skill id="1231" name="Aura Flare" max-level="31" action="A3" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 54 M. Atk. Power.
-		level 2: Inflicts damage on the enemy with bonus 56 M. Atk. Power.
-		level 3: Inflicts damage on the enemy with bonus 58 M. Atk. Power.
-		level 4: Inflicts damage on the enemy with bonus 59 M. Atk. Power.
-		level 5: Inflicts damage on the enemy with bonus 61 M. Atk. Power.
-		level 6: Inflicts damage on the enemy with bonus 62 M. Atk. Power.
-		level 7: Inflicts damage on the enemy with bonus 63 M. Atk. Power.
-		level 8: Inflicts damage on the enemy with bonus 65 M. Atk. Power.
-		level 9: Inflicts damage on the enemy with bonus 66 M. Atk. Power.
-		level 10: Inflicts damage on the enemy with bonus 68 M. Atk. Power.
-		level 11: Inflicts damage on the enemy with bonus 70 M. Atk. Power.
-		level 12: Inflicts damage on the enemy with bonus 71 M. Atk. Power.
-		level 13: Inflicts damage on the enemy with bonus 72 M. Atk. Power.
-		level 14: Inflicts damage on the enemy with bonus 73 M. Atk. Power.
-		level 15: Inflicts damage on the enemy with bonus 74 M. Atk. Power.
-		level 16: Inflicts damage on the enemy with bonus 75 M. Atk. Power.
-		level 17: Inflicts damage on the enemy with bonus 76 M. Atk. Power.
-		level 18: Inflicts damage on the enemy with bonus 77 M. Atk. Power.
-		level 19: Inflicts damage on the enemy with bonus 78 M. Atk. Power.
-		level 20: Inflicts damage on the enemy with bonus 79 M. Atk. Power.
-		level 21: Inflicts damage on the enemy with bonus 80 M. Atk. Power.
-		level 22: Inflicts damage on the enemy with bonus 82 M. Atk. Power.
-		level 23: Inflicts damage on the enemy with bonus 83 M. Atk. Power.
-		level 24: Inflicts damage on the enemy with bonus 84 M. Atk. Power.
-		level 25: Inflicts damage on the enemy with bonus 86 M. Atk. Power.
-		level 26: Inflicts damage on the enemy with bonus 87 M. Atk. Power.
-		level 27: Inflicts damage on the enemy with bonus 89 M. Atk. Power.
-		level 28: Inflicts damage on the enemy with bonus 90 M. Atk. Power.
-		level 29: Inflicts damage on the enemy with bonus 93 M. Atk. Power.
-		level 30: Inflicts damage on the enemy with bonus 94 M. Atk. Power.
-		level 31: Inflicts damage on the enemy with bonus 96 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 54 M. Atk. Power.
+            level 2: Inflicts damage on the enemy with bonus 56 M. Atk. Power.
+            level 3: Inflicts damage on the enemy with bonus 58 M. Atk. Power.
+            level 4: Inflicts damage on the enemy with bonus 59 M. Atk. Power.
+            level 5: Inflicts damage on the enemy with bonus 61 M. Atk. Power.
+            level 6: Inflicts damage on the enemy with bonus 62 M. Atk. Power.
+            level 7: Inflicts damage on the enemy with bonus 63 M. Atk. Power.
+            level 8: Inflicts damage on the enemy with bonus 65 M. Atk. Power.
+            level 9: Inflicts damage on the enemy with bonus 66 M. Atk. Power.
+            level 10: Inflicts damage on the enemy with bonus 68 M. Atk. Power.
+            level 11: Inflicts damage on the enemy with bonus 70 M. Atk. Power.
+            level 12: Inflicts damage on the enemy with bonus 71 M. Atk. Power.
+            level 13: Inflicts damage on the enemy with bonus 72 M. Atk. Power.
+            level 14: Inflicts damage on the enemy with bonus 73 M. Atk. Power.
+            level 15: Inflicts damage on the enemy with bonus 74 M. Atk. Power.
+            level 16: Inflicts damage on the enemy with bonus 75 M. Atk. Power.
+            level 17: Inflicts damage on the enemy with bonus 76 M. Atk. Power.
+            level 18: Inflicts damage on the enemy with bonus 77 M. Atk. Power.
+            level 19: Inflicts damage on the enemy with bonus 78 M. Atk. Power.
+            level 20: Inflicts damage on the enemy with bonus 79 M. Atk. Power.
+            level 21: Inflicts damage on the enemy with bonus 80 M. Atk. Power.
+            level 22: Inflicts damage on the enemy with bonus 82 M. Atk. Power.
+            level 23: Inflicts damage on the enemy with bonus 83 M. Atk. Power.
+            level 24: Inflicts damage on the enemy with bonus 84 M. Atk. Power.
+            level 25: Inflicts damage on the enemy with bonus 86 M. Atk. Power.
+            level 26: Inflicts damage on the enemy with bonus 87 M. Atk. Power.
+            level 27: Inflicts damage on the enemy with bonus 89 M. Atk. Power.
+            level 28: Inflicts damage on the enemy with bonus 90 M. Atk. Power.
+            level 29: Inflicts damage on the enemy with bonus 93 M. Atk. Power.
+            level 30: Inflicts damage on the enemy with bonus 94 M. Atk. Power.
+            level 31: Inflicts damage on the enemy with bonus 96 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1231"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -2865,36 +2865,36 @@
 		<effects>
 			<magical-attack>
 				<power initial="39.0">
-					<value level="2">42.0</value>
-					<value level="3">44.0</value>
-					<value level="4">47.0</value>
-					<value level="5">49.0</value>
-					<value level="6">52.0</value>
-					<value level="7">55.0</value>
-					<value level="8">57.0</value>
-					<value level="9">60.0</value>
-					<value level="10">63.0</value>
-					<value level="11">64.0</value>
-					<value level="12">66.0</value>
-					<value level="13">67.0</value>
-					<value level="14">68.0</value>
-					<value level="15">70.0</value>
-					<value level="16">71.0</value>
-					<value level="17">72.0</value>
-					<value level="18">74.0</value>
-					<value level="19">75.0</value>
-					<value level="20">77.0</value>
-					<value level="21">78.0</value>
-					<value level="22">79.0</value>
-					<value level="23">80.0</value>
-					<value level="24">82.0</value>
-					<value level="25">83.0</value>
-					<value level="26">84.0</value>
-					<value level="27">85.0</value>
-					<value level="28">87.0</value>
-					<value level="29">89.0</value>
-					<value level="30">91.0</value>
-					<value level="31">93.0</value>
+					<value level="2"> 54.0</value>
+					<value level="3"> 56.0</value>
+					<value level="4"> 58.0</value>
+					<value level="5"> 59.0</value>
+					<value level="6"> 61.0</value>
+					<value level="7"> 62.0</value>
+					<value level="8"> 63.0</value>
+					<value level="9"> 65.0</value>
+					<value level="10">66.0</value>
+					<value level="11"> 68.0</value>
+					<value level="12"> 70.0</value>
+					<value level="13"> 71.0</value>
+					<value level="14"> 72.0</value>
+					<value level="15"> 73.0</value>
+					<value level="16"> 74.0</value>
+					<value level="17"> 75.0</value>
+					<value level="18"> 76.0</value>
+					<value level="19"> 77.0</value>
+					<value level="20"> 78.0</value>
+					<value level="21"> 79.0</value>
+					<value level="22"> 80.0</value>
+					<value level="23"> 82.0</value>
+					<value level="24"> 83.0</value>
+					<value level="25"> 84.0</value>
+					<value level="26"> 86.0</value>
+					<value level="27"> 87.0</value>
+					<value level="28"> 89.0</value>
+					<value level="29"> 90.0</value>
+					<value level="30"> 93.0</value>
+					<value level="31"> 94.0</value>
 				</power>
 			</magical-attack>
 			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" stat-add="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
@@ -2903,11 +2903,11 @@
 		</effects>
 	</skill>
 	<skill id="1232" name="Blazing Skin" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, transfers 10% of the target's received damage back to the enemy. (Can only be used on party members.)
-		level 2: For 20 minutes, transfers 15% of the target's received damage back to the enemy. (Can only be used on party members.)
-		level 3: For 20 minutes, transfers 20% of the target's received damage back to the enemy. (Can only be used on party members.)
-	 -->
+		<!--
+            level 1: For 20 minutes, transfers 10% of the target's received damage back to the enemy. (Can only be used on party members.)
+            level 2: For 20 minutes, transfers 15% of the target's received damage back to the enemy. (Can only be used on party members.)
+            level 3: For 20 minutes, transfers 20% of the target's received damage back to the enemy. (Can only be used on party members.)
+         -->
 		<icon initial="icon.skill1232"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -2957,12 +2957,12 @@
 		</effects>
 	</skill>
 	<skill id="1233" name="Decay" max-level="4" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Rots the enemy, causing loss of 102 HP per second for 15 seconds.
-		level 2: Rots the enemy, causing loss of 125 HP per second for 15 seconds.
-		level 3: Rots the enemy, causing loss of 144 HP per second for 15 seconds.
-		level 4: Rots the enemy, causing loss of 157 HP per second for 15 seconds.
-	 -->
+		<!--
+            level 1: Rots the enemy, causing loss of 102 HP per second for 15 seconds.
+            level 2: Rots the enemy, causing loss of 125 HP per second for 15 seconds.
+            level 3: Rots the enemy, causing loss of 144 HP per second for 15 seconds.
+            level 4: Rots the enemy, causing loss of 157 HP per second for 15 seconds.
+         -->
 		<icon initial="icon.skill1233"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
 			<magic-level initial="48">
@@ -3015,44 +3015,44 @@
 		</effects>
 	</skill>
 	<skill id="1234" name="Vampiric Claw" max-level="36" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 69 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 2: Inflicts damage on the enemy with bonus 72 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 3: Inflicts damage on the enemy with bonus 74 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 4: Inflicts damage on the enemy with bonus 76 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 5: Inflicts damage on the enemy with bonus 78 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 6: Inflicts damage on the enemy with bonus 80 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 7: Inflicts damage on the enemy with bonus 81 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 8: Inflicts damage on the enemy with bonus 83 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 9: Inflicts damage on the enemy with bonus 85 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 10: Inflicts damage on the enemy with bonus 88 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 11: Inflicts damage on the enemy with bonus 90 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 12: Inflicts damage on the enemy with bonus 91 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 13: Inflicts damage on the enemy with bonus 93 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 14: Inflicts damage on the enemy with bonus 95 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 15: Inflicts damage on the enemy with bonus 96 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 16: Inflicts damage on the enemy with bonus 97 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 17: Inflicts damage on the enemy with bonus 98 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 18: Inflicts damage on the enemy with bonus 99 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 19: Inflicts damage on the enemy with bonus 101 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 20: Inflicts damage on the enemy with bonus 103 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 21: Inflicts damage on the enemy with bonus 105 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 22: Inflicts damage on the enemy with bonus 107 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 23: Inflicts damage on the enemy with bonus 108 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 24: Inflicts damage on the enemy with bonus 110 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 25: Inflicts damage on the enemy with bonus 112 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 26: Inflicts damage on the enemy with bonus 114 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 27: Inflicts damage on the enemy with bonus 116 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 28: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 29: Inflicts damage on the enemy with bonus 121 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 30: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 31: Inflicts damage on the enemy with bonus 126 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 32: Inflicts damage on the enemy with bonus 128 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 33: Inflicts damage on the enemy with bonus 130 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 34: Inflicts damage on the enemy with bonus 132 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 35: Inflicts damage on the enemy with bonus 134 M. Atk. Power. Absorbs 40% of the damage as HP.
-		level 36: Inflicts damage on the enemy with bonus 133 M. Atk. Power. Absorbs 40% of the damage as HP.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 69 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 2: Inflicts damage on the enemy with bonus 72 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 3: Inflicts damage on the enemy with bonus 74 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 4: Inflicts damage on the enemy with bonus 76 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 5: Inflicts damage on the enemy with bonus 78 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 6: Inflicts damage on the enemy with bonus 80 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 7: Inflicts damage on the enemy with bonus 81 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 8: Inflicts damage on the enemy with bonus 83 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 9: Inflicts damage on the enemy with bonus 85 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 10: Inflicts damage on the enemy with bonus 88 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 11: Inflicts damage on the enemy with bonus 90 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 12: Inflicts damage on the enemy with bonus 91 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 13: Inflicts damage on the enemy with bonus 93 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 14: Inflicts damage on the enemy with bonus 95 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 15: Inflicts damage on the enemy with bonus 96 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 16: Inflicts damage on the enemy with bonus 97 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 17: Inflicts damage on the enemy with bonus 98 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 18: Inflicts damage on the enemy with bonus 99 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 19: Inflicts damage on the enemy with bonus 101 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 20: Inflicts damage on the enemy with bonus 103 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 21: Inflicts damage on the enemy with bonus 105 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 22: Inflicts damage on the enemy with bonus 107 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 23: Inflicts damage on the enemy with bonus 108 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 24: Inflicts damage on the enemy with bonus 110 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 25: Inflicts damage on the enemy with bonus 112 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 26: Inflicts damage on the enemy with bonus 114 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 27: Inflicts damage on the enemy with bonus 116 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 28: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 29: Inflicts damage on the enemy with bonus 121 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 30: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 31: Inflicts damage on the enemy with bonus 126 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 32: Inflicts damage on the enemy with bonus 128 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 33: Inflicts damage on the enemy with bonus 130 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 34: Inflicts damage on the enemy with bonus 132 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 35: Inflicts damage on the enemy with bonus 134 M. Atk. Power. Absorbs 40% of the damage as HP.
+            level 36: Inflicts damage on the enemy with bonus 136 M. Atk. Power. Absorbs 40% of the damage as HP.
+         -->
 		<icon initial="icon.skill1234"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -3195,84 +3195,84 @@
 		<effects>
 			<hp-drain percentage="40">
 				<power initial="49.0">
-					<value level="2">52.0</value>
-					<value level="3">55.0</value>
-					<value level="4">58.0</value>
-					<value level="5">61.0</value>
-					<value level="6">65.0</value>
-					<value level="7">68.0</value>
-					<value level="8">72.0</value>
-					<value level="9">75.0</value>
-					<value level="10">78.0</value>
-					<value level="11">80.0</value>
-					<value level="12">82.0</value>
-					<value level="13">84.0</value>
-					<value level="14">85.0</value>
-					<value level="15">87.0</value>
-					<value level="16">89.0</value>
-					<value level="17">90.0</value>
-					<value level="18">92.0</value>
-					<value level="19">94.0</value>
-					<value level="20">96.0</value>
-					<value level="21">97.0</value>
-					<value level="22">99.0</value>
-					<value level="23">100.0</value>
-					<value level="24">102.0</value>
-					<value level="25">104.0</value>
-					<value level="26">105.0</value>
-					<value level="27">107.0</value>
-					<value level="28">108.0</value>
-					<value level="29">109.0</value>
-					<value level="30">110.0</value>
-					<value level="31">111.0</value>
-					<value level="32">113.0</value>
-					<value level="33">114.0</value>
-					<value level="34">115.0</value>
-					<value level="35">116.0</value>
-					<value level="36">117.0</value>
+					<value level="2"> 69.0</value>
+					<value level="3"> 72.0</value>
+					<value level="4"> 74.0</value>
+					<value level="5"> 76.0</value>
+					<value level="6"> 78.0</value>
+					<value level="7"> 80.0</value>
+					<value level="8"> 81.0</value>
+					<value level="9"> 83.0</value>
+					<value level="10">85.0</value>
+					<value level="11">88.0</value>
+					<value level="12">90.0</value>
+					<value level="13">91.0</value>
+					<value level="14">93.0</value>
+					<value level="15">95.0</value>
+					<value level="16">96.0</value>
+					<value level="17">97.0</value>
+					<value level="18">98.0</value>
+					<value level="19">99.0</value>
+					<value level="20">101.0</value>
+					<value level="21">103.0</value>
+					<value level="22">105.0</value>
+					<value level="23">107.0</value>
+					<value level="24">108.0</value>
+					<value level="25">110.0</value>
+					<value level="26">112.0</value>
+					<value level="27">114.0</value>
+					<value level="28">116.0</value>
+					<value level="29">119.0</value>
+					<value level="30">121.0</value>
+					<value level="31">123.0</value>
+					<value level="32">126.0</value>
+					<value level="33">128.0</value>
+					<value level="34">130.0</value>
+					<value level="35">132.0</value>
+					<value level="36">134.0</value>
 				</power>
 			</hp-drain>
 		</effects>
 	</skill>
 	<skill id="1235" name="Hydro Blast" max-level="36" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Releases a high pressure current to inflict damage on the enemy with bonus 76 M. Atk. Power.
-		level 2: Releases a high pressure current to inflict damage on the enemy with bonus 80 M. Atk. Power.
-		level 3: Releases a high pressure current to inflict damage on the enemy with bonus 82 M. Atk. Power.
-		level 4: Releases a high pressure current to inflict damage on the enemy with bonus 84 M. Atk. Power.
-		level 5: Releases a high pressure current to inflict damage on the enemy with bonus 86 M. Atk. Power.
-		level 6: Releases a high pressure current to inflict damage on the enemy with bonus 88 M. Atk. Power.
-		level 7: Releases a high pressure current to inflict damage on the enemy with bonus 90 M. Atk. Power.
-		level 8: Releases a high pressure current to inflict damage on the enemy with bonus 92 M. Atk. Power.
-		level 9: Releases a high pressure current to inflict damage on the enemy with bonus 94 M. Atk. Power.
-		level 10: Releases a high pressure current to inflict damage on the enemy with bonus 97 M. Atk. Power.
-		level 11: Releases a high pressure current to inflict damage on the enemy with bonus 99 M. Atk. Power.
-		level 12: Releases a high pressure current to inflict damage on the enemy with bonus 101 M. Atk. Power.
-		level 13: Releases a high pressure current to inflict damage on the enemy with bonus 103 M. Atk. Power.
-		level 14: Releases a high pressure current to inflict damage on the enemy with bonus 105 M. Atk. Power.
-		level 15: Releases a high pressure current to inflict damage on the enemy with bonus 106 M. Atk. Power.
-		level 16: Releases a high pressure current to inflict damage on the enemy with bonus 107 M. Atk. Power.
-		level 17: Releases a high pressure current to inflict damage on the enemy with bonus 108 M. Atk. Power.
-		level 18: Releases a high pressure current to inflict damage on the enemy with bonus 109 M. Atk. Power.
-		level 19: Releases a high pressure current to inflict damage on the enemy with bonus 110 M. Atk. Power.
-		level 20: Releases a high pressure current to inflict damage on the enemy with bonus 112 M. Atk. Power.
-		level 21: Releases a high pressure current to inflict damage on the enemy with bonus 114 M. Atk. Power.
-		level 22: Releases a high pressure current to inflict damage on the enemy with bonus 116 M. Atk. Power.
-		level 23: Releases a high pressure current to inflict damage on the enemy with bonus 118 M. Atk. Power.
-		level 24: Releases a high pressure current to inflict damage on the enemy with bonus 120 M. Atk. Power.
-		level 25: Releases a high pressure current to inflict damage on the enemy with bonus 122 M. Atk. Power.
-		level 26: Releases a high pressure current to inflict damage on the enemy with bonus 124 M. Atk. Power.
-		level 27: Releases a high pressure current to inflict damage on the enemy with bonus 126 M. Atk. Power.
-		level 28: Releases a high pressure current to inflict damage on the enemy with bonus 128 M. Atk. Power.
-		level 29: Releases a high pressure current to inflict damage on the enemy with bonus 132 M. Atk. Power.
-		level 30: Releases a high pressure current to inflict damage on the enemy with bonus 134 M. Atk. Power.
-		level 31: Releases a high pressure current to inflict damage on the enemy with bonus 136 M. Atk. Power.
-		level 32: Releases a high pressure current to inflict damage on the enemy with bonus 140 M. Atk. Power.
-		level 33: Releases a high pressure current to inflict damage on the enemy with bonus 142 M. Atk. Power.
-		level 34: Releases a high pressure current to inflict damage on the enemy with bonus 144 M. Atk. Power.
-		level 35: Releases a high pressure current to inflict damage on the enemy with bonus 146 M. Atk. Power.
-		level 36: Releases a high pressure current to inflict damage on the enemy with bonus 148 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Releases a high pressure current to inflict damage on the enemy with bonus 76 M. Atk. Power.
+            level 2: Releases a high pressure current to inflict damage on the enemy with bonus 80 M. Atk. Power.
+            level 3: Releases a high pressure current to inflict damage on the enemy with bonus 82 M. Atk. Power.
+            level 4: Releases a high pressure current to inflict damage on the enemy with bonus 84 M. Atk. Power.
+            level 5: Releases a high pressure current to inflict damage on the enemy with bonus 86 M. Atk. Power.
+            level 6: Releases a high pressure current to inflict damage on the enemy with bonus 88 M. Atk. Power.
+            level 7: Releases a high pressure current to inflict damage on the enemy with bonus 90 M. Atk. Power.
+            level 8: Releases a high pressure current to inflict damage on the enemy with bonus 92 M. Atk. Power.
+            level 9: Releases a high pressure current to inflict damage on the enemy with bonus 94 M. Atk. Power.
+            level 10: Releases a high pressure current to inflict damage on the enemy with bonus 97 M. Atk. Power.
+            level 11: Releases a high pressure current to inflict damage on the enemy with bonus 99 M. Atk. Power.
+            level 12: Releases a high pressure current to inflict damage on the enemy with bonus 101 M. Atk. Power.
+            level 13: Releases a high pressure current to inflict damage on the enemy with bonus 103 M. Atk. Power.
+            level 14: Releases a high pressure current to inflict damage on the enemy with bonus 105 M. Atk. Power.
+            level 15: Releases a high pressure current to inflict damage on the enemy with bonus 106 M. Atk. Power.
+            level 16: Releases a high pressure current to inflict damage on the enemy with bonus 107 M. Atk. Power.
+            level 17: Releases a high pressure current to inflict damage on the enemy with bonus 108 M. Atk. Power.
+            level 18: Releases a high pressure current to inflict damage on the enemy with bonus 109 M. Atk. Power.
+            level 19: Releases a high pressure current to inflict damage on the enemy with bonus 110 M. Atk. Power.
+            level 20: Releases a high pressure current to inflict damage on the enemy with bonus 112 M. Atk. Power.
+            level 21: Releases a high pressure current to inflict damage on the enemy with bonus 114 M. Atk. Power.
+            level 22: Releases a high pressure current to inflict damage on the enemy with bonus 116 M. Atk. Power.
+            level 23: Releases a high pressure current to inflict damage on the enemy with bonus 118 M. Atk. Power.
+            level 24: Releases a high pressure current to inflict damage on the enemy with bonus 120 M. Atk. Power.
+            level 25: Releases a high pressure current to inflict damage on the enemy with bonus 122 M. Atk. Power.
+            level 26: Releases a high pressure current to inflict damage on the enemy with bonus 124 M. Atk. Power.
+            level 27: Releases a high pressure current to inflict damage on the enemy with bonus 126 M. Atk. Power.
+            level 28: Releases a high pressure current to inflict damage on the enemy with bonus 128 M. Atk. Power.
+            level 29: Releases a high pressure current to inflict damage on the enemy with bonus 132 M. Atk. Power.
+            level 30: Releases a high pressure current to inflict damage on the enemy with bonus 134 M. Atk. Power.
+            level 31: Releases a high pressure current to inflict damage on the enemy with bonus 136 M. Atk. Power.
+            level 32: Releases a high pressure current to inflict damage on the enemy with bonus 140 M. Atk. Power.
+            level 33: Releases a high pressure current to inflict damage on the enemy with bonus 142 M. Atk. Power.
+            level 34: Releases a high pressure current to inflict damage on the enemy with bonus 144 M. Atk. Power.
+            level 35: Releases a high pressure current to inflict damage on the enemy with bonus 146 M. Atk. Power.
+            level 36: Releases a high pressure current to inflict damage on the enemy with bonus 148 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1235"/>
 		<attributes magic-critical-rate="5.0" level-bonus-rate="1" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -3403,70 +3403,70 @@
 		<target type="ENEMY" />
 		<effects>
 			<magical-attack>
-				<power initial="49.0">
-					<value level="2">52.0</value>
-					<value level="3">55.0</value>
-					<value level="4">58.0</value>
-					<value level="5">61.0</value>
-					<value level="6">65.0</value>
-					<value level="7">68.0</value>
-					<value level="8">72.0</value>
-					<value level="9">75.0</value>
-					<value level="10">78.0</value>
-					<value level="11">80.0</value>
-					<value level="12">82.0</value>
-					<value level="13">84.0</value>
-					<value level="14">85.0</value>
-					<value level="15">87.0</value>
-					<value level="16">89.0</value>
-					<value level="17">90.0</value>
-					<value level="18">92.0</value>
-					<value level="19">94.0</value>
-					<value level="20">96.0</value>
-					<value level="21">97.0</value>
-					<value level="22">99.0</value>
-					<value level="23">100.0</value>
-					<value level="24">102.0</value>
-					<value level="25">104.0</value>
-					<value level="26">105.0</value>
-					<value level="27">107.0</value>
-					<value level="28">108.0</value>
-					<value level="29">109.0</value>
-					<value level="30">110.0</value>
-					<value level="31">111.0</value>
-					<value level="32">113.0</value>
-					<value level="33">114.0</value>
-					<value level="34">115.0</value>
-					<value level="35">116.0</value>
-					<value level="36">117.0</value>
+				<power initial="76.0">
+					<value level="2">76.0</value>
+					<value level="3">80.0</value>
+					<value level="4">82.0</value>
+					<value level="5">84.0</value>
+					<value level="6">86.0</value>
+					<value level="7">88.0</value>
+					<value level="8">90.0</value>
+					<value level="9">92.0</value>
+					<value level="10">94.0</value>
+					<value level="11">97.0</value>
+					<value level="12">99.0</value>
+					<value level="13">101.0</value>
+					<value level="14">103.0</value>
+					<value level="15">105.0</value>
+					<value level="16">106.0</value>
+					<value level="17">107.0</value>
+					<value level="18">108.0</value>
+					<value level="19">109.0</value>
+					<value level="20">110.0</value>
+					<value level="21">112.0</value>
+					<value level="22">114.0</value>
+					<value level="23">116.0</value>
+					<value level="24">118.0</value>
+					<value level="25">120.0</value>
+					<value level="26">122.0</value>
+					<value level="27">124.0</value>
+					<value level="28">126.0</value>
+					<value level="29">128.0</value>
+					<value level="30">132.0</value>
+					<value level="31">134.0</value>
+					<value level="32">136.0</value>
+					<value level="33">140.0</value>
+					<value level="34">142.0</value>
+					<value level="35">144.0</value>
+					<value level="36">146.0</value>
 				</power>
 			</magical-attack>
 		</effects>
 	</skill>
 	<skill id="1236" name="Frost Bolt" max-level="21" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 42 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 2: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 44 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 3: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 46 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 4: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 47 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 5: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 48 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 6: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 49 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 7: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 50 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 8: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 51 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 9: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 52 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 10: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 54 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 11: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 56 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 12: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 58 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 13: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 59 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 14: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 60 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 15: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 62 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 16: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 64 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 17: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 66 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 18: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 69 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 19: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 71 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 20: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 73 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-		level 21: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 75 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
-	 -->
+		<!--
+            level 1: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 42 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 2: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 44 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 3: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 46 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 4: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 47 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 5: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 48 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 6: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 49 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 7: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 50 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 8: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 51 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 9: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 52 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 10: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 54 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 11: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 56 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 12: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 58 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 13: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 59 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 14: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 60 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 15: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 62 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 16: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 64 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 17: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 66 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 18: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 69 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 19: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 71 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 20: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 73 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+            level 21: Spontaneously freezes the surrounding air, inflicting damage on the enemy with bonus 75 M. Atk. Power. For 60 seconds, enemy's Movement Speed -20%%.
+         -->
 		<icon initial="icon.skill1236"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -3564,26 +3564,26 @@
 		<effects>
 			<magical-attack>
 				<power initial="30.0">
-					<value level="2">31.0</value>
-					<value level="3">33.0</value>
-					<value level="4">35.0</value>
-					<value level="5">37.0</value>
-					<value level="6">39.0</value>
-					<value level="7">41.0</value>
-					<value level="8">43.0</value>
-					<value level="9">45.0</value>
-					<value level="10">47.0</value>
-					<value level="11">49.0</value>
-					<value level="12">51.0</value>
-					<value level="13">53.0</value>
-					<value level="14">56.0</value>
-					<value level="15">58.0</value>
-					<value level="16">59.0</value>
-					<value level="17">61.0</value>
-					<value level="18">63.0</value>
-					<value level="19">65.0</value>
-					<value level="20">66.0</value>
-					<value level="21">68.0</value>
+					<value level="2">42.0</value>
+					<value level="3">44.0</value>
+					<value level="4">46.0</value>
+					<value level="5">47.0</value>
+					<value level="6">48.0</value>
+					<value level="7">49.0</value>
+					<value level="8">50.0</value>
+					<value level="9">51.0</value>
+					<value level="10">52.0</value>
+					<value level="11"> 54.0</value>
+					<value level="12"> 56.0</value>
+					<value level="13"> 58.0</value>
+					<value level="14"> 59.0</value>
+					<value level="15"> 60.0</value>
+					<value level="16"> 62.0</value>
+					<value level="17"> 64.0</value>
+					<value level="18"> 66.0</value>
+					<value level="19"> 69.0</value>
+					<value level="20"> 71.0</value>
+					<value level="21"> 73.0</value>
 				</power>
 			</magical-attack>
 			<speed mode="PER">
@@ -3592,27 +3592,27 @@
 		</effects>
 	</skill>
 	<skill id="1237" name="Ice Dagger" max-level="19" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Hurls a blade of ice, inflicting damage on the enemy with bonus 28 M. Atk. Power, and decreasing 44 HP for 15 seconds.
-		level 2: Hurls a blade of ice, inflicting damage on the enemy with bonus 29 M. Atk. Power, and decreasing 44 HP for 15 seconds.
-		level 3: Hurls a blade of ice, inflicting damage on the enemy with bonus 31 M. Atk. Power, and decreasing 44 HP for 15 seconds.
-		level 4: Hurls a blade of ice, inflicting damage on the enemy with bonus 33 M. Atk. Power, and decreasing 44 HP for 15 seconds.
-		level 5: Hurls a blade of ice, inflicting damage on the enemy with bonus 34 M. Atk. Power, and decreasing 54 HP for 15 seconds.
-		level 6: Hurls a blade of ice, inflicting damage on the enemy with bonus 36 M. Atk. Power, and decreasing 54 HP for 15 seconds.
-		level 7: Hurls a blade of ice, inflicting damage on the enemy with bonus 38 M. Atk. Power, and decreasing 54 HP for 15 seconds.
-		level 8: Hurls a blade of ice, inflicting damage on the enemy with bonus 39 M. Atk. Power, and decreasing 54 HP for 15 seconds.
-		level 9: Hurls a blade of ice, inflicting damage on the enemy with bonus 41 M. Atk. Power, and decreasing 54 HP for 15 seconds.
-		level 10: Hurls a blade of ice, inflicting damage on the enemy with bonus 43 M. Atk. Power, and decreasing 62 HP for 15 seconds.
-		level 11: Hurls a blade of ice, inflicting damage on the enemy with bonus 45 M. Atk. Power, and decreasing 62 HP for 15 seconds.
-		level 12: Hurls a blade of ice, inflicting damage on the enemy with bonus 46 M. Atk. Power, and decreasing 62 HP for 15 seconds.
-		level 13: Hurls a blade of ice, inflicting damage on the enemy with bonus 48 M. Atk. Power, and decreasing 62 HP for 15 seconds.
-		level 14: Hurls a blade of ice, inflicting damage on the enemy with bonus 50 M. Atk. Power, and decreasing 62 HP for 15 seconds.
-		level 15: Hurls a blade of ice, inflicting damage on the enemy with bonus 51 M. Atk. Power, and decreasing 67 HP for 15 seconds.
-		level 16: Hurls a blade of ice, inflicting damage on the enemy with bonus 53 M. Atk. Power, and decreasing 67 HP for 15 seconds.
-		level 17: Hurls a blade of ice, inflicting damage on the enemy with bonus 54 M. Atk. Power, and decreasing 67 HP for 15 seconds.
-		level 18: Hurls a blade of ice, inflicting damage on the enemy with bonus 55 M. Atk. Power, and decreasing 67 HP for 15 seconds.
-		level 19: Hurls a blade of ice, inflicting damage on the enemy with bonus 57 M. Atk. Power, and decreasing 68 HP for 15 seconds.
-	 -->
+		<!--
+            level 1: Hurls a blade of ice, inflicting damage on the enemy with bonus 28 M. Atk. Power, and decreasing 44 HP for 15 seconds.
+            level 2: Hurls a blade of ice, inflicting damage on the enemy with bonus 29 M. Atk. Power, and decreasing 44 HP for 15 seconds.
+            level 3: Hurls a blade of ice, inflicting damage on the enemy with bonus 31 M. Atk. Power, and decreasing 44 HP for 15 seconds.
+            level 4: Hurls a blade of ice, inflicting damage on the enemy with bonus 33 M. Atk. Power, and decreasing 44 HP for 15 seconds.
+            level 5: Hurls a blade of ice, inflicting damage on the enemy with bonus 34 M. Atk. Power, and decreasing 54 HP for 15 seconds.
+            level 6: Hurls a blade of ice, inflicting damage on the enemy with bonus 36 M. Atk. Power, and decreasing 54 HP for 15 seconds.
+            level 7: Hurls a blade of ice, inflicting damage on the enemy with bonus 38 M. Atk. Power, and decreasing 54 HP for 15 seconds.
+            level 8: Hurls a blade of ice, inflicting damage on the enemy with bonus 39 M. Atk. Power, and decreasing 54 HP for 15 seconds.
+            level 9: Hurls a blade of ice, inflicting damage on the enemy with bonus 41 M. Atk. Power, and decreasing 54 HP for 15 seconds.
+            level 10: Hurls a blade of ice, inflicting damage on the enemy with bonus 43 M. Atk. Power, and decreasing 62 HP for 15 seconds.
+            level 11: Hurls a blade of ice, inflicting damage on the enemy with bonus 45 M. Atk. Power, and decreasing 62 HP for 15 seconds.
+            level 12: Hurls a blade of ice, inflicting damage on the enemy with bonus 46 M. Atk. Power, and decreasing 62 HP for 15 seconds.
+            level 13: Hurls a blade of ice, inflicting damage on the enemy with bonus 48 M. Atk. Power, and decreasing 62 HP for 15 seconds.
+            level 14: Hurls a blade of ice, inflicting damage on the enemy with bonus 50 M. Atk. Power, and decreasing 62 HP for 15 seconds.
+            level 15: Hurls a blade of ice, inflicting damage on the enemy with bonus 51 M. Atk. Power, and decreasing 67 HP for 15 seconds.
+            level 16: Hurls a blade of ice, inflicting damage on the enemy with bonus 53 M. Atk. Power, and decreasing 67 HP for 15 seconds.
+            level 17: Hurls a blade of ice, inflicting damage on the enemy with bonus 54 M. Atk. Power, and decreasing 67 HP for 15 seconds.
+            level 18: Hurls a blade of ice, inflicting damage on the enemy with bonus 55 M. Atk. Power, and decreasing 67 HP for 15 seconds.
+            level 19: Hurls a blade of ice, inflicting damage on the enemy with bonus 57 M. Atk. Power, and decreasing 68 HP for 15 seconds.
+         -->
 		<icon initial="icon.skill1237"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="42">
@@ -3737,11 +3737,11 @@
 		</effects>
 	</skill>
 	<skill id="1238" name="Freezing Skin" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, returns 10% of damage received by the target back to the enemy. (Can only be used on party members.)
-		level 2: For 20 minutes, returns 15% of damage received by the target back to the enemy. (Can only be used on party members.)
-		level 3: For 20 minutes, returns 20% of damage received by the target back to the enemy. (Can only be used on party members.)
-	 -->
+		<!--
+            level 1: For 20 minutes, returns 10% of damage received by the target back to the enemy. (Can only be used on party members.)
+            level 2: For 20 minutes, returns 15% of damage received by the target back to the enemy. (Can only be used on party members.)
+            level 3: For 20 minutes, returns 20% of damage received by the target back to the enemy. (Can only be used on party members.)
+         -->
 		<icon initial="icon.skill1238"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -3791,44 +3791,44 @@
 		</effects>
 	</skill>
 	<skill id="1239" name="Hurricane" max-level="36" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Creates a cyclone, inflicting damage on the enemy with bonus 76 M. Atk. Power.
-		level 2: Creates a cyclone, inflicting damage on the enemy with bonus 80 M. Atk. Power.
-		level 3: Creates a cyclone, inflicting damage on the enemy with bonus 82 M. Atk. Power.
-		level 4: Creates a cyclone, inflicting damage on the enemy with bonus 84 M. Atk. Power.
-		level 5: Creates a cyclone, inflicting damage on the enemy with bonus 86 M. Atk. Power.
-		level 6: Creates a cyclone, inflicting damage on the enemy with bonus 88 M. Atk. Power.
-		level 7: Creates a cyclone, inflicting damage on the enemy with bonus 90 M. Atk. Power.
-		level 8: Creates a cyclone, inflicting damage on the enemy with bonus 92 M. Atk. Power.
-		level 9: Creates a cyclone, inflicting damage on the enemy with bonus 94 M. Atk. Power.
-		level 10: Creates a cyclone, inflicting damage on the enemy with bonus 97 M. Atk. Power.
-		level 11: Creates a cyclone, inflicting damage on the enemy with bonus 99 M. Atk. Power.
-		level 12: Creates a cyclone, inflicting damage on the enemy with bonus 101 M. Atk. Power.
-		level 13: Creates a cyclone, inflicting damage on the enemy with bonus 103 M. Atk. Power.
-		level 14: Creates a cyclone, inflicting damage on the enemy with bonus 105 M. Atk. Power.
-		level 15: Creates a cyclone, inflicting damage on the enemy with bonus 106 M. Atk. Power.
-		level 16: Creates a cyclone, inflicting damage on the enemy with bonus 107 M. Atk. Power.
-		level 17: Creates a cyclone, inflicting damage on the enemy with bonus 108 M. Atk. Power.
-		level 18: Creates a cyclone, inflicting damage on the enemy with bonus 109 M. Atk. Power.
-		level 19: Creates a cyclone, inflicting damage on the enemy with bonus 110 M. Atk. Power.
-		level 20: Creates a cyclone, inflicting damage on the enemy with bonus 112 M. Atk. Power.
-		level 21: Creates a cyclone, inflicting damage on the enemy with bonus 114 M. Atk. Power.
-		level 22: Creates a cyclone, inflicting damage on the enemy with bonus 116 M. Atk. Power.
-		level 23: Creates a cyclone, inflicting damage on the enemy with bonus 118 M. Atk. Power.
-		level 24: Creates a cyclone, inflicting damage on the enemy with bonus 120 M. Atk. Power.
-		level 25: Creates a cyclone, inflicting damage on the enemy with bonus 122 M. Atk. Power.
-		level 26: Creates a cyclone, inflicting damage on the enemy with bonus 124 M. Atk. Power.
-		level 27: Creates a cyclone, inflicting damage on the enemy with bonus 126 M. Atk. Power.
-		level 28: Creates a cyclone, inflicting damage on the enemy with bonus 128 M. Atk. Power.
-		level 29: Creates a cyclone, inflicting damage on the enemy with bonus 132 M. Atk. Power.
-		level 30: Creates a cyclone, inflicting damage on the enemy with bonus 134 M. Atk. Power.
-		level 31: Creates a cyclone, inflicting damage on the enemy with bonus 136 M. Atk. Power.
-		level 32: Creates a cyclone, inflicting damage on the enemy with bonus 140 M. Atk. Power.
-		level 33: Creates a cyclone, inflicting damage on the enemy with bonus 142 M. Atk. Power.
-		level 34: Creates a cyclone, inflicting damage on the enemy with bonus 144 M. Atk. Power.
-		level 35: Creates a cyclone, inflicting damage on the enemy with bonus 146 M. Atk. Power.
-		level 36: Creates a cyclone, inflicting damage on the enemy with bonus 148 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Creates a cyclone, inflicting damage on the enemy with bonus 76 M. Atk. Power.
+            level 2: Creates a cyclone, inflicting damage on the enemy with bonus 80 M. Atk. Power.
+            level 3: Creates a cyclone, inflicting damage on the enemy with bonus 82 M. Atk. Power.
+            level 4: Creates a cyclone, inflicting damage on the enemy with bonus 84 M. Atk. Power.
+            level 5: Creates a cyclone, inflicting damage on the enemy with bonus 86 M. Atk. Power.
+            level 6: Creates a cyclone, inflicting damage on the enemy with bonus 88 M. Atk. Power.
+            level 7: Creates a cyclone, inflicting damage on the enemy with bonus 90 M. Atk. Power.
+            level 8: Creates a cyclone, inflicting damage on the enemy with bonus 92 M. Atk. Power.
+            level 9: Creates a cyclone, inflicting damage on the enemy with bonus 94 M. Atk. Power.
+            level 10: Creates a cyclone, inflicting damage on the enemy with bonus 97 M. Atk. Power.
+            level 11: Creates a cyclone, inflicting damage on the enemy with bonus 99 M. Atk. Power.
+            level 12: Creates a cyclone, inflicting damage on the enemy with bonus 101 M. Atk. Power.
+            level 13: Creates a cyclone, inflicting damage on the enemy with bonus 103 M. Atk. Power.
+            level 14: Creates a cyclone, inflicting damage on the enemy with bonus 105 M. Atk. Power.
+            level 15: Creates a cyclone, inflicting damage on the enemy with bonus 106 M. Atk. Power.
+            level 16: Creates a cyclone, inflicting damage on the enemy with bonus 107 M. Atk. Power.
+            level 17: Creates a cyclone, inflicting damage on the enemy with bonus 108 M. Atk. Power.
+            level 18: Creates a cyclone, inflicting damage on the enemy with bonus 109 M. Atk. Power.
+            level 19: Creates a cyclone, inflicting damage on the enemy with bonus 110 M. Atk. Power.
+            level 20: Creates a cyclone, inflicting damage on the enemy with bonus 112 M. Atk. Power.
+            level 21: Creates a cyclone, inflicting damage on the enemy with bonus 114 M. Atk. Power.
+            level 22: Creates a cyclone, inflicting damage on the enemy with bonus 116 M. Atk. Power.
+            level 23: Creates a cyclone, inflicting damage on the enemy with bonus 118 M. Atk. Power.
+            level 24: Creates a cyclone, inflicting damage on the enemy with bonus 120 M. Atk. Power.
+            level 25: Creates a cyclone, inflicting damage on the enemy with bonus 122 M. Atk. Power.
+            level 26: Creates a cyclone, inflicting damage on the enemy with bonus 124 M. Atk. Power.
+            level 27: Creates a cyclone, inflicting damage on the enemy with bonus 126 M. Atk. Power.
+            level 28: Creates a cyclone, inflicting damage on the enemy with bonus 128 M. Atk. Power.
+            level 29: Creates a cyclone, inflicting damage on the enemy with bonus 132 M. Atk. Power.
+            level 30: Creates a cyclone, inflicting damage on the enemy with bonus 134 M. Atk. Power.
+            level 31: Creates a cyclone, inflicting damage on the enemy with bonus 136 M. Atk. Power.
+            level 32: Creates a cyclone, inflicting damage on the enemy with bonus 140 M. Atk. Power.
+            level 33: Creates a cyclone, inflicting damage on the enemy with bonus 142 M. Atk. Power.
+            level 34: Creates a cyclone, inflicting damage on the enemy with bonus 144 M. Atk. Power.
+            level 35: Creates a cyclone, inflicting damage on the enemy with bonus 146 M. Atk. Power.
+            level 36: Creates a cyclone, inflicting damage on the enemy with bonus 148 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1239"/>
 		<attributes magic-critical-rate="5.0" level-bonus-rate="1" auto-use="ACTIVE">
 			<magic-level initial="38">
@@ -3959,55 +3959,55 @@
 		<target type="ENEMY" />
 		<effects>
 			<magical-attack-range shield-defense="40">
-				<power initial="49.0">
-					<value level="2">52.0</value>
-					<value level="3">55.0</value>
-					<value level="4">58.0</value>
-					<value level="5">61.0</value>
-					<value level="6">65.0</value>
-					<value level="7">68.0</value>
-					<value level="8">72.0</value>
-					<value level="9">75.0</value>
-					<value level="10">78.0</value>
-					<value level="11">80.0</value>
-					<value level="12">82.0</value>
-					<value level="13">84.0</value>
-					<value level="14">85.0</value>
-					<value level="15">87.0</value>
-					<value level="16">89.0</value>
-					<value level="17">90.0</value>
-					<value level="18">92.0</value>
-					<value level="19">94.0</value>
-					<value level="20">96.0</value>
-					<value level="21">97.0</value>
-					<value level="22">99.0</value>
-					<value level="23">100.0</value>
-					<value level="24">102.0</value>
-					<value level="25">104.0</value>
-					<value level="26">105.0</value>
-					<value level="27">107.0</value>
-					<value level="28">108.0</value>
-					<value level="29">109.0</value>
-					<value level="30">110.0</value>
-					<value level="31">111.0</value>
-					<value level="32">113.0</value>
-					<value level="33">114.0</value>
-					<value level="34">115.0</value>
-					<value level="35">116.0</value>
-					<value level="36">117.0</value>
+				<power initial="76.0">
+					<value level="2">76.0</value>
+					<value level="3">80.0</value>
+					<value level="4">82.0</value>
+					<value level="5">84.0</value>
+					<value level="6">86.0</value>
+					<value level="7">88.0</value>
+					<value level="8">90.0</value>
+					<value level="9">92.0</value>
+					<value level="10">94.0</value>
+					<value level="11">97.0</value>
+					<value level="12">99.0</value>
+					<value level="13">101.0 </value>
+					<value level="14">103.0 </value>
+					<value level="15">105.0 </value>
+					<value level="16">106.0 </value>
+					<value level="17">107.0 </value>
+					<value level="18">108.0 </value>
+					<value level="19">109.0 </value>
+					<value level="20">110.0 </value>
+					<value level="21">112.0 </value>
+					<value level="22">114.0 </value>
+					<value level="23">116.0</value>
+					<value level="24">118.0</value>
+					<value level="25">120.0</value>
+					<value level="26">122.0</value>
+					<value level="27">124.0</value>
+					<value level="28">126.0</value>
+					<value level="29">128.0</value>
+					<value level="30">132.0</value>
+					<value level="31">134.0</value>
+					<value level="32">136.0</value>
+					<value level="33">140.0</value>
+					<value level="34">142.0</value>
+					<value level="35">144.0</value>
+					<value level="36">146.0</value>
 				</power>
 			</magical-attack-range>
 		</effects>
 	</skill>
 	<skill id="1240" name="Guidance" max-level="6" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, P. Accuracy +2.
-		level 2: For 20 minutes, P. Accuracy +3.
-		level 3: For 20 minutes, P. Accuracy +4.
-		level 4: For 20 minutes, P. Accuracy +2.
-		level 5: For 20 minutes, P. Accuracy +3.
-		level 6: For 20 minutes, P. Accuracy +4.
-	 -->
+		<!--
+            level 1: For 20 minutes, P. Accuracy +2.
+            level 2: For 20 minutes, P. Accuracy +3.
+            level 3: For 20 minutes, P. Accuracy +4.
+            level 4: For 20 minutes, P. Accuracy +2.
+            level 5: For 20 minutes, P. Accuracy +3.
+            level 6: For 20 minutes, P. Accuracy +4.
+         -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -4070,14 +4070,14 @@
 		</effects>
 	</skill>
 	<skill id="1242" name="Death Whisper" max-level="6" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, P. Critical Damage +25%.
-		level 2: For 20 minutes, P. Critical Damage +30%.
-		level 3: For 20 minutes, P. Critical Damage +35%.
-		level 4: For 20 minutes, P. Critical Damage +25%.
-		level 5: For 20 minutes, P. Critical Damage +30%.
-		level 6: For 20 minutes, P. Critical Damage +35%.
-	 -->
+		<!--
+            level 1: For 20 minutes, P. Critical Damage +25%.
+            level 2: For 20 minutes, P. Critical Damage +30%.
+            level 3: For 20 minutes, P. Critical Damage +35%.
+            level 4: For 20 minutes, P. Critical Damage +25%.
+            level 5: For 20 minutes, P. Critical Damage +30%.
+            level 6: For 20 minutes, P. Critical Damage +35%.
+         -->
 		<icon initial="icon.skill1242"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -4140,14 +4140,14 @@
 		</effects>
 	</skill>
 	<skill id="1243" name="Blessed Shield" max-level="6" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, Shield Defense Rate +5%.
-		level 2: For 20 minutes, Shield Defense Rate +10%.
-		level 3: For 20 minutes, Shield Defense Rate +15%.
-		level 4: For 20 minutes, Shield Defense Rate +20%.
-		level 5: For 20 minutes, Shield Defense Rate +25%.
-		level 6: For 20 minutes, Shield Defense Rate +30%.
-	 -->
+		<!--
+            level 1: For 20 minutes, Shield Defense Rate +5%.
+            level 2: For 20 minutes, Shield Defense Rate +10%.
+            level 3: For 20 minutes, Shield Defense Rate +15%.
+            level 4: For 20 minutes, Shield Defense Rate +20%.
+            level 5: For 20 minutes, Shield Defense Rate +25%.
+            level 6: For 20 minutes, Shield Defense Rate +30%.
+         -->
 		<icon initial="icon.skill1243"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -4209,22 +4209,22 @@
 		</effects>
 	</skill>
 	<skill id="1244" name="Freezing Flame" max-level="14" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Strikes the target with a magical cold flame. For 10 seconds, causes - 132 HP per second on the enemy.
-		level 2: Strikes the target with a magical cold flame. For 10 seconds, causes - 162 HP per second on the enemy.
-		level 3: Strikes the target with a magical cold flame. For 10 seconds, causes - 187 HP per second on the enemy.
-		level 4: Strikes the target with a magical cold flame. For 10 seconds, causes - 204 HP per second on the enemy.
-		level 5: Strikes the target with a magical cold flame. For 10 seconds, causes - 234 HP per second on the enemy.
-		level 6: Strikes the target with a magical cold flame. For 10 seconds, causes - 241 HP per second on the enemy.
-		level 7: Strikes the target with a magical cold flame. For 10 seconds, causes - 249 HP per second on the enemy.
-		level 8: Strikes the target with a magical cold flame. For 10 seconds, causes - 256 HP per second on the enemy.
-		level 9: Strikes the target with a magical cold flame. For 10 seconds, causes - 264 HP per second on the enemy.
-		level 10: Strikes the target with a magical cold flame. For 10 seconds, causes - 271 HP per second on the enemy.
-		level 11: Strikes the target with a magical cold flame. For 10 seconds, causes - 279 HP per second on the enemy.
-		level 12: Strikes the target with a magical cold flame. For 10 seconds, causes - 286 HP per second on the enemy.
-		level 13: Strikes the target with a magical cold flame. For 10 seconds, causes - 294 HP per second on the enemy.
-		level 14: Strikes the target with a magical cold flame. For 10 seconds, causes - 301 HP per second on the enemy.
-	 -->
+		<!--
+            level 1: Strikes the target with a magical cold flame. For 10 seconds, causes - 132 HP per second on the enemy.
+            level 2: Strikes the target with a magical cold flame. For 10 seconds, causes - 162 HP per second on the enemy.
+            level 3: Strikes the target with a magical cold flame. For 10 seconds, causes - 187 HP per second on the enemy.
+            level 4: Strikes the target with a magical cold flame. For 10 seconds, causes - 204 HP per second on the enemy.
+            level 5: Strikes the target with a magical cold flame. For 10 seconds, causes - 234 HP per second on the enemy.
+            level 6: Strikes the target with a magical cold flame. For 10 seconds, causes - 241 HP per second on the enemy.
+            level 7: Strikes the target with a magical cold flame. For 10 seconds, causes - 249 HP per second on the enemy.
+            level 8: Strikes the target with a magical cold flame. For 10 seconds, causes - 256 HP per second on the enemy.
+            level 9: Strikes the target with a magical cold flame. For 10 seconds, causes - 264 HP per second on the enemy.
+            level 10: Strikes the target with a magical cold flame. For 10 seconds, causes - 271 HP per second on the enemy.
+            level 11: Strikes the target with a magical cold flame. For 10 seconds, causes - 279 HP per second on the enemy.
+            level 12: Strikes the target with a magical cold flame. For 10 seconds, causes - 286 HP per second on the enemy.
+            level 13: Strikes the target with a magical cold flame. For 10 seconds, causes - 294 HP per second on the enemy.
+            level 14: Strikes the target with a magical cold flame. For 10 seconds, causes - 301 HP per second on the enemy.
+         -->
 		<icon initial="icon.skill1244"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
 			<magic-level initial="40">
@@ -4350,27 +4350,27 @@
 		</effects>
 	</skill>
 	<skill id="1245" name="Steal Essence" max-level="19" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 72 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 2: Inflicts damage on the enemy with bonus 76 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 3: Inflicts damage on the enemy with bonus 80 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 4: Inflicts damage on the enemy with bonus 83 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 5: Inflicts damage on the enemy with bonus 88 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 6: Inflicts damage on the enemy with bonus 91 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 7: Inflicts damage on the enemy with bonus 95 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 8: Inflicts damage on the enemy with bonus 97 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 9: Inflicts damage on the enemy with bonus 99 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 10: Inflicts damage on the enemy with bonus 101 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 11: Inflicts damage on the enemy with bonus 105 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 12: Inflicts damage on the enemy with bonus 108 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 13: Inflicts damage on the enemy with bonus 112 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 14: Inflicts damage on the enemy with bonus 116 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 15: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 16: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 17: Inflicts damage on the enemy with bonus 126 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 18: Inflicts damage on the enemy with bonus 130 M. Atk. Power. Absorbs 80% of the damage as HP.
-		level 19: Inflicts damage on the enemy with bonus 134 M. Atk. Power. Absorbs 80% of the damage as HP.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 72 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 2: Inflicts damage on the enemy with bonus 76 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 3: Inflicts damage on the enemy with bonus 80 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 4: Inflicts damage on the enemy with bonus 83 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 5: Inflicts damage on the enemy with bonus 88 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 6: Inflicts damage on the enemy with bonus 91 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 7: Inflicts damage on the enemy with bonus 95 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 8: Inflicts damage on the enemy with bonus 97 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 9: Inflicts damage on the enemy with bonus 99 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 10: Inflicts damage on the enemy with bonus 101 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 11: Inflicts damage on the enemy with bonus 105 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 12: Inflicts damage on the enemy with bonus 108 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 13: Inflicts damage on the enemy with bonus 112 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 14: Inflicts damage on the enemy with bonus 116 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 15: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 16: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 17: Inflicts damage on the enemy with bonus 126 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 18: Inflicts damage on the enemy with bonus 130 M. Atk. Power. Absorbs 80% of the damage as HP.
+            level 19: Inflicts damage on the enemy with bonus 134 M. Atk. Power. Absorbs 80% of the damage as HP.
+         -->
 		<icon initial="icon.skill1245"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="40">
@@ -4461,31 +4461,31 @@
 		<target type="ENEMY" />
 		<effects>
 			<hp-drain percentage="80">
-				<power initial="52.0">
-					<value level="2">58.0</value>
-					<value level="3">65.0</value>
-					<value level="4">72.0</value>
-					<value level="5">78.0</value>
-					<value level="6">82.0</value>
-					<value level="7">85.0</value>
-					<value level="8">89.0</value>
-					<value level="9">92.0</value>
-					<value level="10">96.0</value>
-					<value level="11">99.0</value>
-					<value level="12">102.0</value>
-					<value level="13">105.0</value>
-					<value level="14">108.0</value>
-					<value level="15">109.0</value>
-					<value level="16">111.0</value>
-					<value level="17">113.0</value>
-					<value level="18">115.0</value>
-					<value level="19">117.0</value>
+				<power initial="72.0">
+					<value level="2">76.0</value>
+					<value level="3">80.0</value>
+					<value level="4">83.0</value>
+					<value level="5">88.0</value>
+					<value level="6">91.0</value>
+					<value level="7">95.0</value>
+					<value level="8">97.0</value>
+					<value level="9">99.0</value>
+					<value level="10">101.0</value>
+					<value level="11">105.0</value>
+					<value level="12">108.0</value>
+					<value level="13">112.0</value>
+					<value level="14">116.0</value>
+					<value level="15">119.0</value>
+					<value level="16">123.0</value>
+					<value level="17">126.0</value>
+					<value level="18">130.0</value>
+					<value level="19">134.0</value>
 				</power>
 			</hp-drain>
 		</effects>
 	</skill>
 	<skill id="1246" name="Seal of Silence" max-level="20" debuff="true" action="A2" type="MAGIC">
-	<!-- Blocks nearby enemies' use of magic for 24 seconds. -->
+		<!-- Blocks nearby enemies' use of magic for 24 seconds. -->
 		<icon initial="icon.skill1246"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
 			<magic-level initial="48">
@@ -4578,7 +4578,7 @@
 		</effects>
 	</skill>
 	<skill id="1247" name="Seal of Scourge" max-level="16" debuff="true" action="A2" type="MAGIC">
-	<!-- Blocks nearby enemies' natural HP Recovery Bonus by 100% for 2 minutes. -->
+		<!-- Blocks nearby enemies' natural HP Recovery Bonus by 100% for 2 minutes. -->
 		<icon initial="icon.skill1247"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BOSS" level-bonus-rate="20">
 			<magic-level initial="40">
@@ -4663,7 +4663,7 @@
 		</effects>
 	</skill>
 	<skill id="1248" name="Seal of Suspension" max-level="20" debuff="true" action="A2" type="MAGIC">
-	<!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +200%. -->
+		<!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +200%. -->
 		<icon initial="icon.skill1248"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
 			<magic-level initial="48">
@@ -4758,11 +4758,11 @@
 		</effects>
 	</skill>
 	<skill id="1249" name="Pa'agrio's Vision" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, nearby clan member's P. Accuracy +2.
-		level 2: For 20 minutes, nearby clan member's P. Accuracy +3.
-		level 3: For 20 minutes, nearby clan member's P. Accuracy +4.
-	 -->
+		<!--
+            level 1: For 20 minutes, nearby clan member's P. Accuracy +2.
+            level 2: For 20 minutes, nearby clan member's P. Accuracy +3.
+            level 3: For 20 minutes, nearby clan member's P. Accuracy +4.
+         -->
 		<icon initial="icon.skill1249"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="44">
@@ -4807,11 +4807,11 @@
 		</effects>
 	</skill>
 	<skill id="1250" name="Pa'agrio's Protection" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, clan member's Shield Defense Rate +30%.
-		level 2: For 20 minutes, clan member's Shield Defense Rate +40%.
-		level 3: For 20 minutes, clan member's Shield Defense Rate +50%.
-	 -->
+		<!--
+            level 1: For 20 minutes, clan member's Shield Defense Rate +30%.
+            level 2: For 20 minutes, clan member's Shield Defense Rate +40%.
+            level 3: For 20 minutes, clan member's Shield Defense Rate +50%.
+         -->
 		<icon initial="icon.skill1250"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -4856,10 +4856,10 @@
 		</effects>
 	</skill>
 	<skill id="1251" name="Chant of Fury" max-level="2" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Increases Atk. Spd. of all party members by 15% for 20 minutes.
-		level 2: Increases Atk. Spd. of all party members by 33% for 20 minutes.
-	 -->
+		<!--
+            level 1: Increases Atk. Spd. of all party members by 15% for 20 minutes.
+            level 2: Increases Atk. Spd. of all party members by 33% for 20 minutes.
+         -->
 		<icon initial="icon.skill1251"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="48">
@@ -4898,11 +4898,11 @@
 		</effects>
 	</skill>
 	<skill id="1252" name="Chant of Evasion" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, all party members' P. Evasion +2.
-		level 2: For 20 minutes, all party members' P. Evasion +3.
-		level 3: For 20 minutes, all party members' P. Evasion +4.
-	 -->
+		<!--
+            level 1: For 20 minutes, all party members' P. Evasion +2.
+            level 2: For 20 minutes, all party members' P. Evasion +3.
+            level 3: For 20 minutes, all party members' P. Evasion +4.
+         -->
 		<icon initial="icon.skill1252"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -4947,11 +4947,11 @@
 		</effects>
 	</skill>
 	<skill id="1253" name="Chant of Rage" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, all party members' P. Critical Damage +25%.
-		level 2: For 20 minutes, all party members' P. Critical Damage +30%.
-		level 3: For 20 minutes, all party members' P. Critical Damage +35%.
-	 -->
+		<!--
+            level 1: For 20 minutes, all party members' P. Critical Damage +25%.
+            level 2: For 20 minutes, all party members' P. Critical Damage +30%.
+            level 3: For 20 minutes, all party members' P. Critical Damage +35%.
+         -->
 		<icon initial="icon.skill1253"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="44">
@@ -4996,14 +4996,14 @@
 		</effects>
 	</skill>
 	<skill id="1254" name="Mass Resurrection" max-level="6" action="A1">
-	<!-- 
-		level 1: Resurrect a dead clan member.
-		level 2: Resurrects a dead clan member. Also restores 20% XP.
-		level 3: Resurrects a dead clan member. Also restores 30% XP.
-		level 4: Resurrects a dead clan member. Also restores 40% XP.
-		level 5: Resurrects a dead clan member. Also restores 50% XP.
-		level 6: Resurrects a dead clan member. Also restores 55% XP.
-	 -->
+		<!--
+            level 1: Resurrect a dead clan member.
+            level 2: Resurrects a dead clan member. Also restores 20% XP.
+            level 3: Resurrects a dead clan member. Also restores 30% XP.
+            level 4: Resurrects a dead clan member. Also restores 40% XP.
+            level 5: Resurrects a dead clan member. Also restores 50% XP.
+            level 6: Resurrects a dead clan member. Also restores 55% XP.
+         -->
 		<icon initial="icon.skill1254"/>
 		<attributes static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true">
 			<magic-level initial="40">
@@ -5060,7 +5060,7 @@
 		</effects>
 	</skill>
 	<skill id="1255" name="Party Return" max-level="2" action="A1" type="MAGIC">
-	<!-- Teleports party members to a village. This skill cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<!-- Teleports party members to a village. This skill cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<icon initial="icon.skill1255"/>
 		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true" auto-use="ACTIVE">
 			<magic-level initial="48">
@@ -5091,26 +5091,26 @@
 		</effects>
 	</skill>
 	<skill id="1256" name="Pa'agrio's Heart" max-level="18" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Restores a clan member's HP with 91 Power and recovers 31 HP per second for 15 seconds.
-		level 2: Restores a clan member's HP with 103 Power and recovers 35 HP per second for 15 seconds.
-		level 3: Restores a clan member's HP with 115 Power and recovers 39 HP per second for 15 seconds.
-		level 4: Restores a clan member's HP with 127 Power and recovers 43 HP per second for 15 seconds.
-		level 5: Restores a clan member's HP with 133 Power and recovers 45 HP per second for 15 seconds.
-		level 6: Restores a clan member's HP with 138 Power and recovers 46 HP per second for 15 seconds.
-		level 7: Restores a clan member's HP with 144 Power and recovers 48 HP per second for 15 seconds.
-		level 8: Restores a clan member's HP with 149 Power and recovers 50 HP per second for 15 seconds.
-		level 9: Restores a clan member's HP with 154 Power and recovers 52 HP per second for 15 seconds.
-		level 10: Restores a clan member's HP with 159 Power and recovers 53 HP per second for 15 seconds.
-		level 11: Restores a clan member's HP with 164 Power and recovers 55 HP per second for 15 seconds.
-		level 12: Restores a clan member's HP with 168 Power and recovers 56 HP per second for 15 seconds.
-		level 13: Restores a clan member's HP with 172 Power and recovers 58 HP per second for 15 seconds.
-		level 14: Restores a clan member's HP with 175 Power and recovers 60 HP per second for 15 seconds.
-		level 15: Restores a clan member's HP with 178 Power and recovers 62 HP per second for 15 seconds.
-		level 16: Restores a clan member's HP with 181 Power and recovers 64 HP per second for 15 seconds.
-		level 17: Restores a clan member's HP with 184 Power and recovers 66 HP per second for 15 seconds.
-		level 18: Restores a clan member's HP with 187 Power and recovers 68 HP per second for 15 seconds.
-	 -->
+		<!--
+            level 1: Restores a clan member's HP with 91 Power and recovers 31 HP per second for 15 seconds.
+            level 2: Restores a clan member's HP with 103 Power and recovers 35 HP per second for 15 seconds.
+            level 3: Restores a clan member's HP with 115 Power and recovers 39 HP per second for 15 seconds.
+            level 4: Restores a clan member's HP with 127 Power and recovers 43 HP per second for 15 seconds.
+            level 5: Restores a clan member's HP with 133 Power and recovers 45 HP per second for 15 seconds.
+            level 6: Restores a clan member's HP with 138 Power and recovers 46 HP per second for 15 seconds.
+            level 7: Restores a clan member's HP with 144 Power and recovers 48 HP per second for 15 seconds.
+            level 8: Restores a clan member's HP with 149 Power and recovers 50 HP per second for 15 seconds.
+            level 9: Restores a clan member's HP with 154 Power and recovers 52 HP per second for 15 seconds.
+            level 10: Restores a clan member's HP with 159 Power and recovers 53 HP per second for 15 seconds.
+            level 11: Restores a clan member's HP with 164 Power and recovers 55 HP per second for 15 seconds.
+            level 12: Restores a clan member's HP with 168 Power and recovers 56 HP per second for 15 seconds.
+            level 13: Restores a clan member's HP with 172 Power and recovers 58 HP per second for 15 seconds.
+            level 14: Restores a clan member's HP with 175 Power and recovers 60 HP per second for 15 seconds.
+            level 15: Restores a clan member's HP with 178 Power and recovers 62 HP per second for 15 seconds.
+            level 16: Restores a clan member's HP with 181 Power and recovers 64 HP per second for 15 seconds.
+            level 17: Restores a clan member's HP with 184 Power and recovers 66 HP per second for 15 seconds.
+            level 18: Restores a clan member's HP with 187 Power and recovers 68 HP per second for 15 seconds.
+         -->
 		<icon initial="icon.skill1256"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="44">
@@ -5263,11 +5263,11 @@
 		</effects>
 	</skill>
 	<skill id="1257" name="Decrease Weight" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, Weight Penalty Segment +3000.
-		level 2: For 20 minutes, Weight Penalty Segment +6000.
-		level 3: For 20 minutes, Weight Penalty Segment +9000.
-	 -->
+		<!--
+            level 1: For 20 minutes, Weight Penalty Segment +3000.
+            level 2: For 20 minutes, Weight Penalty Segment +6000.
+            level 3: For 20 minutes, Weight Penalty Segment +9000.
+         -->
 		<icon initial="icon.skill1257"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="35">
@@ -5312,12 +5312,12 @@
 		</effects>
 	</skill>
 	<skill id="1258" name="Restore Life" max-level="4" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Recovers HP by 15%.
-		level 2: Recovers HP by 20%.
-		level 3: Recovers HP by 25%.
-		level 4: Recovers HP by 30%.
-	 -->
+		<!--
+            level 1: Recovers HP by 15%.
+            level 2: Recovers HP by 20%.
+            level 3: Recovers HP by 25%.
+            level 4: Recovers HP by 30%.
+         -->
 		<icon initial="icon.skill1258"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="44">
@@ -5360,12 +5360,12 @@
 		</effects>
 	</skill>
 	<skill id="1259" name="Stun Resistance" max-level="4" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For, 20 minutes Stun Attack Resistance +15%.
-		level 2: For, 20 minutes Stun Attack Resistance +20%.
-		level 3: For, 20 minutes Stun Attack Resistance +30%.
-		level 4: For, 20 minutes Stun Attack Resistance +40%.
-	 -->
+		<!--
+            level 1: For, 20 minutes Stun Attack Resistance +15%.
+            level 2: For, 20 minutes Stun Attack Resistance +20%.
+            level 3: For, 20 minutes Stun Attack Resistance +30%.
+            level 4: For, 20 minutes Stun Attack Resistance +40%.
+         -->
 		<icon initial="icon.skill1259"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -5409,20 +5409,20 @@
 			<defence-trait>
 				<trait type="SHOCK">
 					<power initial="15">
-					<value level="2">20</value>
-					<value level="3">30</value>
-					<value level="4">40</value>
-				</power>
+						<value level="2">20</value>
+						<value level="3">30</value>
+						<value level="4">40</value>
+					</power>
 				</trait>
 			</defence-trait>
 		</effects>
 	</skill>
 	<skill id="1260" name="Pa'agrio's Tact" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, nearby clan member's P. Evasion +2.
-		level 2: For 20 minutes, nearby clan member's P. Evasion +3.
-		level 3: For 20 minutes, nearby clan member's P. Evasion +4.
-	 -->
+		<!--
+            level 1: For 20 minutes, nearby clan member's P. Evasion +2.
+            level 2: For 20 minutes, nearby clan member's P. Evasion +3.
+            level 3: For 20 minutes, nearby clan member's P. Evasion +4.
+         -->
 		<icon initial="icon.skill1260"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -5467,10 +5467,10 @@
 		</effects>
 	</skill>
 	<skill id="1261" name="Pa'agrio's Rage" max-level="2" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, nearby clan member's P. Def -5%, M. Def -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, and Movement Speed +5.
-		level 2: For 20 minutes, nearby clan member's P. Def -8%, M. Def -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8.
-	 -->
+		<!--
+            level 1: For 20 minutes, nearby clan member's P. Def -5%, M. Def -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, and Movement Speed +5.
+            level 2: For 20 minutes, nearby clan member's P. Def -8%, M. Def -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8.
+         -->
 		<icon initial="icon.skill1261"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="44">
@@ -5527,8 +5527,8 @@
 				</power>
 			</stat-modify>
 			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-2.0">
-					<value level="2">-4.0</value>
-				</power>
+				<value level="2">-4.0</value>
+			</power>
 			</stat-hp-based>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
 				<power initial="5.0">
@@ -5543,13 +5543,13 @@
 		</effects>
 	</skill>
 	<skill id="1262" name="Transfer Pain" max-level="5" action="T" type="MAGIC">
-	<!-- 
-		level 1: Transfers 10% of received damage to a servitor. Consumes MP proportionately to your level.
-		level 2: Transfers 20% of received damage to a servitor. Consumes MP proportionately to your level.
-		level 3: Transfers 30% of received damage to a servitor. Consumes MP proportionately to your level.
-		level 4: Transfers 40% of received damage to a servitor. Consumes MP proportionately to your level.
-		level 5: Transfers 50% of received damage to a servitor. Consumes MP proportionately to your level.
-	 -->
+		<!--
+            level 1: Transfers 10% of received damage to a servitor. Consumes MP proportionately to your level.
+            level 2: Transfers 20% of received damage to a servitor. Consumes MP proportionately to your level.
+            level 3: Transfers 30% of received damage to a servitor. Consumes MP proportionately to your level.
+            level 4: Transfers 40% of received damage to a servitor. Consumes MP proportionately to your level.
+            level 5: Transfers 50% of received damage to a servitor. Consumes MP proportionately to your level.
+         -->
 		<icon initial="icon.skill1262"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -5592,7 +5592,7 @@
 		</effects>
 	</skill>
 	<skill id="1263" name="Curse Gloom" max-level="20" debuff="true" action="A2" type="MAGIC">
-	<!-- Temporarily curses the enemy. Enemy's M. Def -23%. -->
+		<!-- Temporarily curses the enemy. Enemy's M. Def -23%. -->
 		<icon initial="icon.skill1263"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="44">
@@ -5704,11 +5704,11 @@
 		</effects>
 	</skill>
 	<skill id="1264" name="Solar Spark" max-level="3" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 39 M. Atk. Power. Over-hit.
-		level 2: Inflicts damage on the enemy with bonus 47 M. Atk. Power. Over-hit.
-		level 3: Inflicts damage on the enemy with bonus 55 M. Atk. Power. Over-hit.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 39 M. Atk. Power. Over-hit.
+            level 2: Inflicts damage on the enemy with bonus 47 M. Atk. Power. Over-hit.
+            level 3: Inflicts damage on the enemy with bonus 55 M. Atk. Power. Over-hit.
+         -->
 		<icon initial="icon.skill1264"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="25">
@@ -5748,22 +5748,22 @@
 		</effects>
 	</skill>
 	<skill id="1265" name="Solar Flare" max-level="14" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 65 M. Atk. Power. Over-hit.
-		level 2: Inflicts damage on the enemy with bonus 73 M. Atk. Power. Over-hit.
-		level 3: Inflicts damage on the enemy with bonus 81 M. Atk. Power. Over-hit.
-		level 4: Inflicts damage on the enemy with bonus 89 M. Atk. Power. Over-hit.
-		level 5: Inflicts damage on the enemy with bonus 98 M. Atk. Power. Over-hit.
-		level 6: Inflicts damage on the enemy with bonus 102 M. Atk. Power. Over-hit.
-		level 7: Inflicts damage on the enemy with bonus 107 M. Atk. Power. Over-hit.
-		level 8: Inflicts damage on the enemy with bonus 111 M. Atk. Power. Over-hit.
-		level 9: Inflicts damage on the enemy with bonus 115 M. Atk. Power. Over-hit.
-		level 10: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Over-hit.
-		level 11: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Over-hit.
-		level 12: Inflicts damage on the enemy with bonus 127 M. Atk. Power. Over-hit.
-		level 13: Inflicts damage on the enemy with bonus 131 M. Atk. Power. Over-hit.
-		level 14: Inflicts damage on the enemy with bonus 135 M. Atk. Power. Over-hit.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 65 M. Atk. Power. Over-hit.
+            level 2: Inflicts damage on the enemy with bonus 73 M. Atk. Power. Over-hit.
+            level 3: Inflicts damage on the enemy with bonus 81 M. Atk. Power. Over-hit.
+            level 4: Inflicts damage on the enemy with bonus 89 M. Atk. Power. Over-hit.
+            level 5: Inflicts damage on the enemy with bonus 98 M. Atk. Power. Over-hit.
+            level 6: Inflicts damage on the enemy with bonus 102 M. Atk. Power. Over-hit.
+            level 7: Inflicts damage on the enemy with bonus 107 M. Atk. Power. Over-hit.
+            level 8: Inflicts damage on the enemy with bonus 111 M. Atk. Power. Over-hit.
+            level 9: Inflicts damage on the enemy with bonus 115 M. Atk. Power. Over-hit.
+            level 10: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Over-hit.
+            level 11: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Over-hit.
+            level 12: Inflicts damage on the enemy with bonus 127 M. Atk. Power. Over-hit.
+            level 13: Inflicts damage on the enemy with bonus 131 M. Atk. Power. Over-hit.
+            level 14: Inflicts damage on the enemy with bonus 135 M. Atk. Power. Over-hit.
+         -->
 		<icon initial="icon.skill1265"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="40">
@@ -5853,11 +5853,11 @@
 		</effects>
 	</skill>
 	<skill id="1266" name="Shadow Spark" max-level="3" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 39 M. Atk. Power. Over-hit.
-		level 2: Inflicts damage on the enemy with bonus 47 M. Atk. Power. Over-hit.
-		level 3: Inflicts damage on the enemy with bonus 55 M. Atk. Power. Over-hit.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 39 M. Atk. Power. Over-hit.
+            level 2: Inflicts damage on the enemy with bonus 47 M. Atk. Power. Over-hit.
+            level 3: Inflicts damage on the enemy with bonus 55 M. Atk. Power. Over-hit.
+         -->
 		<icon initial="icon.skill1266"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="25">
@@ -5897,22 +5897,22 @@
 		</effects>
 	</skill>
 	<skill id="1267" name="Shadow Flare" max-level="14" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 65 M. Atk. Power. Over-hit.
-		level 2: Inflicts damage on the enemy with bonus 73 M. Atk. Power. Over-hit.
-		level 3: Inflicts damage on the enemy with bonus 81 M. Atk. Power. Over-hit.
-		level 4: Inflicts damage on the enemy with bonus 89 M. Atk. Power. Over-hit.
-		level 5: Inflicts damage on the enemy with bonus 98 M. Atk. Power. Over-hit.
-		level 6: Inflicts damage on the enemy with bonus 102 M. Atk. Power. Over-hit.
-		level 7: Inflicts damage on the enemy with bonus 107 M. Atk. Power. Over-hit.
-		level 8: Inflicts damage on the enemy with bonus 111 M. Atk. Power. Over-hit.
-		level 9: Inflicts damage on the enemy with bonus 115 M. Atk. Power. Over-hit.
-		level 10: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Over-hit.
-		level 11: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Over-hit.
-		level 12: Inflicts damage on the enemy with bonus 127 M. Atk. Power. Over-hit.
-		level 13: Inflicts damage on the enemy with bonus 131 M. Atk. Power. Over-hit.
-		level 14: Inflicts damage on the enemy with bonus 135 M. Atk. Power. Over-hit.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 65 M. Atk. Power. Over-hit.
+            level 2: Inflicts damage on the enemy with bonus 73 M. Atk. Power. Over-hit.
+            level 3: Inflicts damage on the enemy with bonus 81 M. Atk. Power. Over-hit.
+            level 4: Inflicts damage on the enemy with bonus 89 M. Atk. Power. Over-hit.
+            level 5: Inflicts damage on the enemy with bonus 98 M. Atk. Power. Over-hit.
+            level 6: Inflicts damage on the enemy with bonus 102 M. Atk. Power. Over-hit.
+            level 7: Inflicts damage on the enemy with bonus 107 M. Atk. Power. Over-hit.
+            level 8: Inflicts damage on the enemy with bonus 111 M. Atk. Power. Over-hit.
+            level 9: Inflicts damage on the enemy with bonus 115 M. Atk. Power. Over-hit.
+            level 10: Inflicts damage on the enemy with bonus 119 M. Atk. Power. Over-hit.
+            level 11: Inflicts damage on the enemy with bonus 123 M. Atk. Power. Over-hit.
+            level 12: Inflicts damage on the enemy with bonus 127 M. Atk. Power. Over-hit.
+            level 13: Inflicts damage on the enemy with bonus 131 M. Atk. Power. Over-hit.
+            level 14: Inflicts damage on the enemy with bonus 135 M. Atk. Power. Over-hit.
+         -->
 		<icon initial="icon.skill1267"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="40">
@@ -6002,12 +6002,12 @@
 		</effects>
 	</skill>
 	<skill id="1268" name="Vampiric Rage" max-level="4" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, has a chance of recovering 6% of the damage inflicted on the enemy as HP.
-		level 2: For 20 minutes, has a chance of recovering 7% of the damage inflicted on the enemy as HP.
-		level 3: For 20 minutes, has a chance of recovering 8% of the damage inflicted on the enemy as HP.
-		level 4: For 20 minutes, has a chance of recovering 9% of the damage inflicted on the enemy as HP.
-	 -->
+		<!--
+            level 1: For 20 minutes, has a chance of recovering 6% of the damage inflicted on the enemy as HP.
+            level 2: For 20 minutes, has a chance of recovering 7% of the damage inflicted on the enemy as HP.
+            level 3: For 20 minutes, has a chance of recovering 8% of the damage inflicted on the enemy as HP.
+            level 4: For 20 minutes, has a chance of recovering 9% of the damage inflicted on the enemy as HP.
+         -->
 		<icon initial="icon.skill1268"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="30">
@@ -6058,7 +6058,7 @@
 		</effects>
 	</skill>
 	<skill id="1269" name="Curse Disease" max-level="16" debuff="true" action="A2" type="MAGIC">
-	<!-- For 2 minutes, enemy's Heal Received -50%. -->
+		<!-- For 2 minutes, enemy's Heal Received -50%. -->
 		<icon initial="icon.skill1269"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="58">
@@ -6138,10 +6138,10 @@
 		</effects>
 	</skill>
 	<skill id="1271" name="Benediction" max-level="2" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Fully recovers a party member's HP. Available when MP is at 25% or below.
-		level 2: Fully recovers a party member's HP. Available when MP is at 30% or below.
-	 -->
+		<!--
+            level 1: Fully recovers a party member's HP. Available when MP is at 25% or below.
+            level 2: Fully recovers a party member's HP. Available when MP is at 30% or below.
+         -->
 		<icon initial="icon.skill1271"/>
 		<attributes magic-critical-rate="5.0" hit-cancel-time="6.0" auto-use="ACTIVE">
 			<magic-level initial="66">
@@ -6173,7 +6173,7 @@
 		</effects>
 	</skill>
 	<skill id="1272" name="Word of Fear" max-level="15" debuff="true" action="A2" type="MAGIC">
-	<!-- Frightens nearby enemies into fleeing for 7 seconds. -->
+		<!-- Frightens nearby enemies into fleeing for 7 seconds. -->
 		<icon initial="icon.skill1272"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
 			<magic-level initial="44">
@@ -6258,7 +6258,7 @@
 		</effects>
 	</skill>
 	<skill id="1273" name="Eva's Serenade" max-level="15" action="A1" type="MAGIC">
-	<!-- Soothes surrounding enemies, eliminating their desire to attack. -->
+		<!-- Soothes surrounding enemies, eliminating their desire to attack. -->
 		<icon initial="icon.skill1273"/>
 		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
 			<magic-level initial="44">
@@ -6324,12 +6324,12 @@
 		</effects>
 	</skill>
 	<skill id="1274" name="Energy Bolt" max-level="4" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 26 M. Atk. Power.
-		level 2: Inflicts damage on the enemy with bonus 33 M. Atk. Power.
-		level 3: Inflicts damage on the enemy with bonus 39 M. Atk. Power.
-		level 4: Inflicts damage on the enemy with bonus 46 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 26 M. Atk. Power.
+            level 2: Inflicts damage on the enemy with bonus 33 M. Atk. Power.
+            level 3: Inflicts damage on the enemy with bonus 39 M. Atk. Power.
+            level 4: Inflicts damage on the enemy with bonus 46 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1274"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="20">
@@ -6361,31 +6361,31 @@
 		<target type="ENEMY" />
 		<effects>
 			<magical-attack>
-				<power initial="13.0">
-					<value level="2">16.0</value>
-					<value level="3">19.0</value>
-					<value level="4">22.0</value>
+				<power initial="26.0">
+					<value level="2">33.0</value>
+					<value level="3">39.0</value>
+					<value level="4">46.0</value>
 				</power>
 			</magical-attack>
 		</effects>
 	</skill>
 	<skill id="1275" name="Aura Bolt" max-level="14" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 52 M. Atk. Power.
-		level 2: Inflicts damage on the enemy with bonus 55 M. Atk. Power.
-		level 3: Inflicts damage on the enemy with bonus 58 M. Atk. Power.
-		level 4: Inflicts damage on the enemy with bonus 60 M. Atk. Power.
-		level 5: Inflicts damage on the enemy with bonus 64 M. Atk. Power.
-		level 6: Inflicts damage on the enemy with bonus 66 M. Atk. Power.
-		level 7: Inflicts damage on the enemy with bonus 69 M. Atk. Power.
-		level 8: Inflicts damage on the enemy with bonus 70 M. Atk. Power.
-		level 9: Inflicts damage on the enemy with bonus 71 M. Atk. Power.
-		level 10: Inflicts damage on the enemy with bonus 73 M. Atk. Power.
-		level 11: Inflicts damage on the enemy with bonus 76 M. Atk. Power.
-		level 12: Inflicts damage on the enemy with bonus 78 M. Atk. Power.
-		level 13: Inflicts damage on the enemy with bonus 81 M. Atk. Power.
-		level 14: Inflicts damage on the enemy with bonus 84 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 52 M. Atk. Power.
+            level 2: Inflicts damage on the enemy with bonus 55 M. Atk. Power.
+            level 3: Inflicts damage on the enemy with bonus 58 M. Atk. Power.
+            level 4: Inflicts damage on the enemy with bonus 60 M. Atk. Power.
+            level 5: Inflicts damage on the enemy with bonus 64 M. Atk. Power.
+            level 6: Inflicts damage on the enemy with bonus 66 M. Atk. Power.
+            level 7: Inflicts damage on the enemy with bonus 69 M. Atk. Power.
+            level 8: Inflicts damage on the enemy with bonus 70 M. Atk. Power.
+            level 9: Inflicts damage on the enemy with bonus 71 M. Atk. Power.
+            level 10: Inflicts damage on the enemy with bonus73 M. Atk. Power.
+            level 11: Inflicts damage on the enemy with bonus76 M. Atk. Power.
+            level 12: Inflicts damage on the enemy with bonus78 M. Atk. Power.
+            level 13: Inflicts damage on the enemy with bonus81 M. Atk. Power.
+            level 14: Inflicts damage on the enemy with bonus84 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1275"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="40">
@@ -6447,34 +6447,34 @@
 		<target type="ENEMY" />
 		<effects>
 			<magical-attack>
-				<power initial="26.0">
-					<value level="2">29.0</value>
-					<value level="3">33.0</value>
-					<value level="4">36.0</value>
-					<value level="5">39.0</value>
-					<value level="6">41.0</value>
-					<value level="7">43.0</value>
-					<value level="8">45.0</value>
-					<value level="9">46.0</value>
-					<value level="10">48.0</value>
-					<value level="11">50.0</value>
-					<value level="12">51.0</value>
-					<value level="13">53.0</value>
-					<value level="14">54.0</value>
+				<power initial="52.0">
+					<value level="2">55.0</value>
+					<value level="3">58.0</value>
+					<value level="4">60.0</value>
+					<value level="5">64.0</value>
+					<value level="6">66.0</value>
+					<value level="7">69.0</value>
+					<value level="8">70.0</value>
+					<value level="9">71.0</value>
+					<value level="10">73.0</value>
+					<value level="11">76.0</value>
+					<value level="12">78.0</value>
+					<value level="13">81.0</value>
+					<value level="14">84.0</value>
 				</power>
 			</magical-attack>
 		</effects>
 	</skill>
 	<skill id="1276" name="Summon Kai the Cat" max-level="14" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons Servitor Kai the Cat. Consumes 4 Spirit Ore when summoned.
-		level 3: Summons Servitor Kai the Cat. Consumes 5 Spirit Ore when summoned.
-		level 5: Summons Servitor Kai the Cat. Consumes 6 Spirit Ore when summoned.
-		level 7: Summons Servitor Kai the Cat. Consumes 7 Spirit Ore when summoned.
-		level 9: Summons Servitor Kai the Cat. Consumes 8 Spirit Ore when summoned.
-		level 11: Summons Servitor Kai the Cat. Consumes 9 Spirit Ore when summoned.
-		level 13: Summons Servitor Kai the Cat. Consumes 10 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons Servitor Kai the Cat. Consumes 4 Spirit Ore when summoned.
+            level 3: Summons Servitor Kai the Cat. Consumes 5 Spirit Ore when summoned.
+            level 5: Summons Servitor Kai the Cat. Consumes 6 Spirit Ore when summoned.
+            level 7: Summons Servitor Kai the Cat. Consumes 7 Spirit Ore when summoned.
+            level 9: Summons Servitor Kai the Cat. Consumes 8 Spirit Ore when summoned.
+            level 11: Summons Servitor Kai the Cat. Consumes 9 Spirit Ore when summoned.
+            level 13: Summons Servitor Kai the Cat. Consumes 10 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1276"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -6563,15 +6563,15 @@
 		</effects>
 	</skill>
 	<skill id="1277" name="Summon Merrow the Unicorn" max-level="14" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons Servitor Merrow the Unicorn. Consumes 4 Spirit Ore when summoned.
-		level 3: Summons Servitor Merrow the Unicorn. Consumes 5 Spirit Ore when summoned.
-		level 5: Summons Servitor Merrow the Unicorn. Consumes 6 Spirit Ore when summoned.
-		level 7: Summons Servitor Merrow the Unicorn. Consumes 7 Spirit Ore when summoned.
-		level 9: Summons Servitor Merrow the Unicorn. Consumes 8 Spirit Ore when summoned.
-		level 11: Summons Servitor Merrow the Unicorn. Consumes 9 Spirit Ore when summoned.
-		level 13: Summons Servitor Merrow the Unicorn. Consumes 10 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons Servitor Merrow the Unicorn. Consumes 4 Spirit Ore when summoned.
+            level 3: Summons Servitor Merrow the Unicorn. Consumes 5 Spirit Ore when summoned.
+            level 5: Summons Servitor Merrow the Unicorn. Consumes 6 Spirit Ore when summoned.
+            level 7: Summons Servitor Merrow the Unicorn. Consumes 7 Spirit Ore when summoned.
+            level 9: Summons Servitor Merrow the Unicorn. Consumes 8 Spirit Ore when summoned.
+            level 11: Summons Servitor Merrow the Unicorn. Consumes 9 Spirit Ore when summoned.
+            level 13: Summons Servitor Merrow the Unicorn. Consumes 10 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1277"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -6660,15 +6660,15 @@
 		</effects>
 	</skill>
 	<skill id="1278" name="Summon Soulless" max-level="14" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons Servitor Soulless. Consumes 4 Spirit Ore when summoned.
-		level 3: Summons Servitor Soulless. Consumes 5 Spirit Ore when summoned.
-		level 5: Summons Servitor Soulless. Consumes 6 Spirit Ore when summoned.
-		level 7: Summons Servitor Soulless. Consumes 7 Spirit Ore when summoned.
-		level 9: Summons Servitor Soulless. Consumes 8 Spirit Ore when summoned.
-		level 11: Summons Servitor Soulless. Consumes 9 Spirit Ore when summoned.
-		level 13: Summons Servitor Soulless. Consumes 10 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons Servitor Soulless. Consumes 4 Spirit Ore when summoned.
+            level 3: Summons Servitor Soulless. Consumes 5 Spirit Ore when summoned.
+            level 5: Summons Servitor Soulless. Consumes 6 Spirit Ore when summoned.
+            level 7: Summons Servitor Soulless. Consumes 7 Spirit Ore when summoned.
+            level 9: Summons Servitor Soulless. Consumes 8 Spirit Ore when summoned.
+            level 11: Summons Servitor Soulless. Consumes 9 Spirit Ore when summoned.
+            level 13: Summons Servitor Soulless. Consumes 10 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1278"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -6757,13 +6757,13 @@
 		</effects>
 	</skill>
 	<skill id="1279" name="Summon Binding Cubic" max-level="15" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 2 Spirit Ore when summoned.
-		level 4: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 3 Spirit Ore when summoned.
-		level 6: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 4 Spirit Ore when summoned.
-		level 9: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 5 Spirit Ore when summoned.
-		level 13: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 6 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 2 Spirit Ore when summoned.
+            level 4: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 3 Spirit Ore when summoned.
+            level 6: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 4 Spirit Ore when summoned.
+            level 9: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 5 Spirit Ore when summoned.
+            level 13: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 6 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1279"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -6850,13 +6850,13 @@
 		</effects>
 	</skill>
 	<skill id="1280" name="Summon Aqua Cubic" max-level="14" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 2 Spirit Ore when summoned.
-		level 4: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 3 Spirit Ore when summoned.
-		level 6: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 4 Spirit Ore when summoned.
-		level 8: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 5 Spirit Ore when summoned.
-		level 12: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 6 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 2 Spirit Ore when summoned.
+            level 4: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 3 Spirit Ore when summoned.
+            level 6: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 4 Spirit Ore when summoned.
+            level 8: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 5 Spirit Ore when summoned.
+            level 12: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 6 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1280"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -6933,13 +6933,13 @@
 		</effects>
 	</skill>
 	<skill id="1281" name="Summon Spark Cubic" max-level="15" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 2 Spirit Ore when summoned.
-		level 4: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 3 Spirit Ore when summoned.
-		level 6: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 4 Spirit Ore when summoned.
-		level 9: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 5 Spirit Ore when summoned.
-		level 13: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 6 Spirit Ore when summoned.
-	 -->
+		<!--
+            level 1: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 2 Spirit Ore when summoned.
+            level 4: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 3 Spirit Ore when summoned.
+            level 6: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 4 Spirit Ore when summoned.
+            level 9: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 5 Spirit Ore when summoned.
+            level 13: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 6 Spirit Ore when summoned.
+         -->
 		<icon initial="icon.skill1281"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -7020,10 +7020,10 @@
 		</effects>
 	</skill>
 	<skill id="1282" name="Pa'agrio's Haste" max-level="2" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Increases Speed of nearby clan members by 20 for 20 minutes.
-		level 2: Increases Speed of nearby clan members by 33 for 20 minutes.
-	 -->
+		<!--
+            level 1: Increases Speed of nearby clan members by 20 for 20 minutes.
+            level 2: Increases Speed of nearby clan members by 33 for 20 minutes.
+         -->
 		<icon initial="icon.skill1282"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="58">
@@ -7062,21 +7062,21 @@
 		</effects>
 	</skill>
 	<skill id="1283" name="Spirit Guard" max-level="13" action="T" type="MAGIC">
-	<!-- 
-		level 1: Increases P. Def. by 293.3 with the power of Ancient Soul. Continuously consumes MP.
-		level 2: Increases P. Def. by 333.2 with the power of Ancient Soul. Continuously consumes MP.
-		level 3: Increases P. Def. by 375.9 with the power of Ancient Soul. Continuously consumes MP.
-		level 4: Increases P. Def. by 421.4 with the power of Ancient Soul. Continuously consumes MP.
-		level 5: Increases P. Def. by 445.2 with the power of Ancient Soul. Continuously consumes MP.
-		level 6: Increases P. Def. by 469.7 with the power of Ancient Soul. Continuously consumes MP.
-		level 7: Increases P. Def. by 494.9 with the power of Ancient Soul. Continuously consumes MP.
-		level 8: Increases P. Def. by 520.1 with the power of Ancient Soul. Continuously consumes MP.
-		level 9: Increases P. Def. by 546 with the power of Ancient Soul. Continuously consumes MP.
-		level 10: Increases P. Def. by 571.9 with the power of Ancient Soul. Continuously consumes MP.
-		level 11: Increases P. Def. by 598.5 with the power of Ancient Soul. Continuously consumes MP.
-		level 12: Increases P. Def. by 625.8 with the power of Ancient Soul. Continuously consumes MP.
-		level 13: Increases P. Def. by 653.1 with the power of Ancient Soul. Continuously consumes MP.
-	 -->
+		<!--
+            level 1: Increases P. Def. by 293.3 with the power of Ancient Soul. Continuously consumes MP.
+            level 2: Increases P. Def. by 333.2 with the power of Ancient Soul. Continuously consumes MP.
+            level 3: Increases P. Def. by 375.9 with the power of Ancient Soul. Continuously consumes MP.
+            level 4: Increases P. Def. by 421.4 with the power of Ancient Soul. Continuously consumes MP.
+            level 5: Increases P. Def. by 445.2 with the power of Ancient Soul. Continuously consumes MP.
+            level 6: Increases P. Def. by 469.7 with the power of Ancient Soul. Continuously consumes MP.
+            level 7: Increases P. Def. by 494.9 with the power of Ancient Soul. Continuously consumes MP.
+            level 8: Increases P. Def. by 520.1 with the power of Ancient Soul. Continuously consumes MP.
+            level 9: Increases P. Def. by 546 with the power of Ancient Soul. Continuously consumes MP.
+            level 10: Increases P. Def. by 571.9 with the power of Ancient Soul. Continuously consumes MP.
+            level 11: Increases P. Def. by 598.5 with the power of Ancient Soul. Continuously consumes MP.
+            level 12: Increases P. Def. by 625.8 with the power of Ancient Soul. Continuously consumes MP.
+            level 13: Increases P. Def. by 653.1 with the power of Ancient Soul. Continuously consumes MP.
+         -->
 		<icon initial="icon.skill1283"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="44">
@@ -7145,11 +7145,11 @@
 		</effects>
 	</skill>
 	<skill id="1284" name="Chant of Revenge" max-level="3" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 20 minutes, gives a party member the ability to transfer 10% of received damage back to the enemy.
-		level 2: For 20 minutes, gives a party member the ability to transfer 15% of received damage back to the enemy.
-		level 3: For 20 minutes, gives a party member the ability to transfer 20% of received damage back to the enemy.
-	 -->
+		<!--
+            level 1: For 20 minutes, gives a party member the ability to transfer 10% of received damage back to the enemy.
+            level 2: For 20 minutes, gives a party member the ability to transfer 15% of received damage back to the enemy.
+            level 3: For 20 minutes, gives a party member the ability to transfer 20% of received damage back to the enemy.
+         -->
 		<icon initial="icon.skill1284"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="62">
@@ -7194,7 +7194,7 @@
 		</effects>
 	</skill>
 	<skill id="1288" name="Aura Symphony" action="A1" type="MAGIC">
-	<!-- Inflicts damage on the enemy with bonus 150 M. Atk. Power. -->
+		<!-- Inflicts damage on the enemy with bonus 150 M. Atk. Power. -->
 		<icon initial="icon.skill1288"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="68"/>
@@ -7217,14 +7217,14 @@
 		</effects>
 	</skill>
 	<skill id="1289" name="Inferno" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Appropriates fire energy to deal damage on an enemy with bonus 150 M. Atk. Power, and burns 5% of their mana. Decreases 60 per second for 15 seconds.
-		level 2: Appropriates fire energy to deal damage on an enemy with bonus 155 M. Atk. Power, and burns 6% of their mana. Decreases 80 per second for 15 seconds.
-		level 3: Appropriates fire energy to deal damage on an enemy with bonus 160 M. Atk. Power, and burns 7% of their mana. Decreases 100 per second for 15 seconds.
-		level 4: Appropriates fire energy to deal damage on an enemy with bonus 165 M. Atk. Power, and burns 8% of their mana. Decreases 120 per second for 15 seconds.
-		level 5: Appropriates fire energy to deal damage on an enemy with bonus 170 M. Atk. Power, and burns 9% of their mana. Decreases 150 per second for 15 seconds.
-		level 6: Appropriates fire energy to deal damage on an enemy with bonus 175 M. Atk. Power, and burns 10% of their mana. Decreases 180 per second for 15 seconds.
-	 -->
+		<!--
+            level 1: Appropriates fire energy to deal damage on an enemy with bonus 150 M. Atk. Power, and burns 5% of their mana. Decreases 60 per second for 15 seconds.
+            level 2: Appropriates fire energy to deal damage on an enemy with bonus 155 M. Atk. Power, and burns 6% of their mana. Decreases 80 per second for 15 seconds.
+            level 3: Appropriates fire energy to deal damage on an enemy with bonus 160 M. Atk. Power, and burns 7% of their mana. Decreases 100 per second for 15 seconds.
+            level 4: Appropriates fire energy to deal damage on an enemy with bonus 165 M. Atk. Power, and burns 8% of their mana. Decreases 120 per second for 15 seconds.
+            level 5: Appropriates fire energy to deal damage on an enemy with bonus 170 M. Atk. Power, and burns 9% of their mana. Decreases 150 per second for 15 seconds.
+            level 6: Appropriates fire energy to deal damage on an enemy with bonus 175 M. Atk. Power, and burns 10% of their mana. Decreases 180 per second for 15 seconds.
+         -->
 		<icon initial="icon.skill1289"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="70">
@@ -7295,14 +7295,14 @@
 		</effects>
 	</skill>
 	<skill id="1290" name="Blizzard" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 150 M. Atk. Power. For 30 seconds, Movement Speed -50%.
-		level 2: Inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Movement Speed -50%.
-		level 3: Inflicts damage on the enemy with bonus 160 M. Atk. Power. For 30 seconds, Movement Speed -50%.
-		level 4: Inflicts damage on the enemy with bonus 165 M. Atk. Power. For 30 seconds, Movement Speed -50%.
-		level 5: Inflicts damage on the enemy with bonus 170 M. Atk. Power. For 30 seconds, Movement Speed -50%.
-		level 6: Inflicts damage on the enemy with bonus 175 M. Atk. Power. For 30 seconds, Movement Speed -50%.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 150 M. Atk. Power. For 30 seconds, Movement Speed -50%.
+            level 2: Inflicts damage on the enemy with bonus 155 M. Atk. Power. For 30 seconds, Movement Speed -50%.
+            level 3: Inflicts damage on the enemy with bonus 160 M. Atk. Power. For 30 seconds, Movement Speed -50%.
+            level 4: Inflicts damage on the enemy with bonus 165 M. Atk. Power. For 30 seconds, Movement Speed -50%.
+            level 5: Inflicts damage on the enemy with bonus 170 M. Atk. Power. For 30 seconds, Movement Speed -50%.
+            level 6: Inflicts damage on the enemy with bonus 175 M. Atk. Power. For 30 seconds, Movement Speed -50%.
+         -->
 		<icon initial="icon.skill1290"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
 			<magic-level initial="70">
@@ -7358,14 +7358,14 @@
 		</effects>
 	</skill>
 	<skill id="1291" name="Demon Wind" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- 
-		level 1: Inflicts damage on the enemy with bonus 150 M. Atk. Power. For 2 minutes, Heal Received -50%.
-		level 2: Inflicts damage on the enemy with bonus 155 M. Atk. Power. For 2 minutes, Heal Received -52%.
-		level 3: Inflicts damage on the enemy with bonus 160 M. Atk. Power. For 2 minutes, Heal Received -54%.
-		level 4: Inflicts damage on the enemy with bonus 165 M. Atk. Power. For 2 minutes, Heal Received -56%.
-		level 5: Inflicts damage on the enemy with bonus 170 M. Atk. Power. For 2 minutes, Heal Received -58%.
-		level 6: Inflicts damage on the enemy with bonus 175 M. Atk. Power. For 2 minutes, Heal Received -60%.
-	 -->
+		<!--
+            level 1: Inflicts damage on the enemy with bonus 150 M. Atk. Power. For 2 minutes, Heal Received -50%.
+            level 2: Inflicts damage on the enemy with bonus 155 M. Atk. Power. For 2 minutes, Heal Received -52%.
+            level 3: Inflicts damage on the enemy with bonus 160 M. Atk. Power. For 2 minutes, Heal Received -54%.
+            level 4: Inflicts damage on the enemy with bonus 165 M. Atk. Power. For 2 minutes, Heal Received -56%.
+            level 5: Inflicts damage on the enemy with bonus 170 M. Atk. Power. For 2 minutes, Heal Received -58%.
+            level 6: Inflicts damage on the enemy with bonus 175 M. Atk. Power. For 2 minutes, Heal Received -60%.
+         -->
 		<icon initial="icon.skill1291"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="70">
@@ -7427,7 +7427,7 @@
 		</effects>
 	</skill>
 	<skill id="1292" name="Elemental Assault" action="A1" type="MAGIC">
-	<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
+		<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
 		<icon initial="icon.skill1292"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="72"/>
@@ -7450,7 +7450,7 @@
 		</effects>
 	</skill>
 	<skill id="1293" name="Elemental Symphony" action="A1" type="MAGIC">
-	<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
+		<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
 		<icon initial="icon.skill1293"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="72"/>
@@ -7473,7 +7473,7 @@
 		</effects>
 	</skill>
 	<skill id="1294" name="Elemental Storm" action="A1" type="MAGIC">
-	<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
+		<!-- Inflicts damage on the enemy with bonus 200 M. Atk. Power. Over-hit. -->
 		<icon initial="icon.skill1294"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="72"/>
@@ -7496,25 +7496,25 @@
 		</effects>
 	</skill>
 	<skill id="1295" name="Aqua Splash" max-level="17" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 60 M. Atk. Power.
-		level 2: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 62 M. Atk. Power.
-		level 3: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 64 M. Atk. Power.
-		level 4: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 66 M. Atk. Power.
-		level 5: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 68 M. Atk. Power.
-		level 6: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 70 M. Atk. Power.
-		level 7: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 72 M. Atk. Power.
-		level 8: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 74 M. Atk. Power.
-		level 9: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 76 M. Atk. Power.
-		level 10: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 78 M. Atk. Power.
-		level 11: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 81 M. Atk. Power.
-		level 12: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 84 M. Atk. Power.
-		level 13: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 88 M. Atk. Power.
-		level 14: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 91 M. Atk. Power.
-		level 15: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 94 M. Atk. Power.
-		level 16: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 97 M. Atk. Power.
-		level 17: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 100 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 60 M. Atk. Power.
+            level 2: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 62 M. Atk. Power.
+            level 3: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 64 M. Atk. Power.
+            level 4: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 66 M. Atk. Power.
+            level 5: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 68 M. Atk. Power.
+            level 6: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 70 M. Atk. Power.
+            level 7: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 72 M. Atk. Power.
+            level 8: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 74 M. Atk. Power.
+            level 9: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 76 M. Atk. Power.
+            level 10: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 78 M. Atk. Power.
+            level 11: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 81 M. Atk. Power.
+            level 12: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 84 M. Atk. Power.
+            level 13: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 88 M. Atk. Power.
+            level 14: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 91 M. Atk. Power.
+            level 15: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 94 M. Atk. Power.
+            level 16: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 97 M. Atk. Power.
+            level 17: Creates a massive tidal wave and inflicts damage on the enemy's surroundings with bonus 100 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1295"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="58">
@@ -7590,47 +7590,47 @@
 		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
 		<effects>
 			<magical-attack>
-				<power initial="41.0">
-					<value level="2">43.0</value>
-					<value level="3">45.0</value>
-					<value level="4">46.0</value>
-					<value level="5">48.0</value>
-					<value level="6">50.0</value>
-					<value level="7">51.0</value>
-					<value level="8">53.0</value>
-					<value level="9">54.0</value>
-					<value level="10">55.0</value>
-					<value level="11">56.0</value>
-					<value level="12">57.0</value>
-					<value level="13">59.0</value>
-					<value level="14">61.0</value>
-					<value level="15">63.0</value>
-					<value level="16">65.0</value>
-					<value level="17">67.0</value>
+				<power initial="60.0">
+					<value level="2">62.0</value>
+					<value level="3">64.0</value>
+					<value level="4">66.0</value>
+					<value level="5">68.0</value>
+					<value level="6">70.0</value>
+					<value level="7">72.0</value>
+					<value level="8">74.0</value>
+					<value level="9">76.0</value>
+					<value level="10">78.0</value>
+					<value level="11">81.0</value>
+					<value level="12">84.0</value>
+					<value level="13">88.0</value>
+					<value level="14">91.0</value>
+					<value level="15">94.0</value>
+					<value level="16">97.0</value>
+					<value level="17">100.0</value>
 				</power>
 			</magical-attack>
 		</effects>
 	</skill>
 	<skill id="1296" name="Rain of Fire" max-level="17" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 60 M. Atk. Power.
-		level 2: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 62 M. Atk. Power.
-		level 3: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 64 M. Atk. Power.
-		level 4: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 66 M. Atk. Power.
-		level 5: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 68 M. Atk. Power.
-		level 6: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 70 M. Atk. Power.
-		level 7: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 72 M. Atk. Power.
-		level 8: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 74 M. Atk. Power.
-		level 9: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 76 M. Atk. Power.
-		level 10: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 78 M. Atk. Power.
-		level 11: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 81 M. Atk. Power.
-		level 12: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 84 M. Atk. Power.
-		level 13: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 88 M. Atk. Power.
-		level 14: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 91 M. Atk. Power.
-		level 15: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 94 M. Atk. Power.
-		level 16: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 97 M. Atk. Power.
-		level 17: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 100 M. Atk. Power.
-	 -->
+		<!--
+            level 1: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 60 M. Atk. Power.
+            level 2: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 62 M. Atk. Power.
+            level 3: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 64 M. Atk. Power.
+            level 4: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 66 M. Atk. Power.
+            level 5: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 68 M. Atk. Power.
+            level 6: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 70 M. Atk. Power.
+            level 7: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 72 M. Atk. Power.
+            level 8: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 74 M. Atk. Power.
+            level 9: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 76 M. Atk. Power.
+            level 10: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 78 M. Atk. Power.
+            level 11: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 81 M. Atk. Power.
+            level 12: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 84 M. Atk. Power.
+            level 13: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 88 M. Atk. Power.
+            level 14: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 91 M. Atk. Power.
+            level 15: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 94 M. Atk. Power.
+            level 16: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 97 M. Atk. Power.
+            level 17: Creates a massive explosion and inflicts  damage on the enemy's surroundings with bonus 100 M. Atk. Power.
+         -->
 		<icon initial="icon.skill1296"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="58">
@@ -7728,14 +7728,14 @@
 		</effects>
 	</skill>
 	<skill id="1297" name="Clear Mind" max-level="6" >
-	<!-- 
-		level 1: Increases MP Recovery Bonus by 2.6 while standing and by 3.2 when walking.
-		level 2: Increases MP Recovery Bonus by 3.2 while standing and by 4 when walking.
-		level 3: Increases MP Recovery Bonus by 3.5 while standing and by 4.3 when walking.
-		level 4: Increases MP Recovery Bonus by 4.1 while standing and by 5.1 when walking.
-		level 5: Increases MP Recovery Bonus by 4.7 while standing and by 5.8 when walking.
-		level 6: Increases MP Recovery Bonus by 4.9 while standing and by 6.2 when walking.
-	 -->
+		<!--
+            level 1: Increases MP Recovery Bonus by 2.6 while standing and by 3.2 when walking.
+            level 2: Increases MP Recovery Bonus by 3.2 while standing and by 4 when walking.
+            level 3: Increases MP Recovery Bonus by 3.5 while standing and by 4.3 when walking.
+            level 4: Increases MP Recovery Bonus by 4.1 while standing and by 5.1 when walking.
+            level 5: Increases MP Recovery Bonus by 4.7 while standing and by 5.8 when walking.
+            level 6: Increases MP Recovery Bonus by 4.9 while standing and by 6.2 when walking.
+         -->
 		<icon initial="icon.skill1297"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
@@ -7762,7 +7762,7 @@
 		</effects>
 	</skill>
 	<skill id="1298" name="Mass Slow" max-level="17" debuff="true" action="A2" type="MAGIC">
-	<!-- Decreases Speed near the enemy by 30% for 1 minute. -->
+		<!-- Decreases Speed near the enemy by 30% for 1 minute. -->
 		<icon initial="icon.skill1298"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
 			<magic-level initial="61">
@@ -7842,10 +7842,10 @@
 		</effects>
 	</skill>
 	<skill id="1299" name="Servitor Empowerment" max-level="2" action="A2" type="MAGIC">
-	<!-- 
-		level 1: For 30 seconds, increases the servitor's P. Def. by 1800, M. Def. by 1350, and Buff-canceling Attack Resistance by 80%.
-		level 2: For 30 seconds, increases the servitor's P. Def. by 3600, M. Def. by 2700, and Buff-canceling Attack Resistance by 80%.
-	 -->
+		<!--
+            level 1: For 30 seconds, increases the servitor's P. Def. by 1800, M. Def. by 1350, and Buff-canceling Attack Resistance by 80%.
+            level 2: For 30 seconds, increases the servitor's P. Def. by 3600, M. Def. by 2700, and Buff-canceling Attack Resistance by 80%.
+         -->
 		<icon initial="icon.skill1299"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
 			<magic-level initial="52">
