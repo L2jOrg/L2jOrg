@@ -8,7 +8,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
-import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
@@ -39,12 +38,11 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
@@ -66,10 +64,11 @@ public class ClanTable {
         }
 
         getDAO(ClanDAO.class).findAll().forEach(data -> {
-            clans.put(data.getId(), new Clan(data));
+            var clan = new Clan(data);
+            clans.put(data.getId(), clan);
 
             if (data.getDissolvingExpiryTime() != 0) {
-                scheduleRemoveClan(data.getId());
+                scheduleRemoveClan(clan);
             }
         });
 
@@ -77,28 +76,42 @@ public class ClanTable {
         restoreClanWars();
     }
 
-    /**
-     * Gets the clans.
-     *
-     * @return the clans
-     */
+    private void allianceCheck() {
+        for (Clan clan : clans.values()) {
+            final int allyId = clan.getAllyId();
+            if (allyId != 0 && clan.getId() != allyId && !clans.containsKey(allyId)) {
+                clan.setAllyId(0);
+                clan.setAllyName(null);
+                clan.changeAllyCrest(0, true);
+                clan.updateClanInDB();
+                LOGGER.info("Removed alliance from clan: {}", clan);
+            }
+        }
+    }
+
+    private void restoreClanWars() {
+        getDAO(ClanDAO.class).findAllWars().forEach(warData -> {
+            var attacker = getClan(warData.getAttacker());
+            var attacked = getClan(warData.getAttacked());
+
+            if (nonNull(attacker) && nonNull(attacked)) {
+                var clanWar = new ClanWar(warData);
+                attacker.addWar(attacked.getId(), clanWar);
+                attacked.addWar(attacker.getId(), clanWar);
+            } else {
+                LOGGER.warn("Restore wars one of clans is null attacker: {} attacked: {}", attacker, attacked);
+            }
+        });
+    }
+
     public Collection<Clan> getClans() {
         return clans.values();
     }
 
-    /**
-     * Gets the clan count.
-     *
-     * @return the clan count
-     */
     public int getClanCount() {
         return clans.size();
     }
 
-    /**
-     * @param clanId
-     * @return
-     */
     public Clan getClan(int clanId) {
         return clans.get(clanId);
     }
@@ -107,13 +120,6 @@ public class ClanTable {
         return clans.values().stream().filter(c -> c.getName().equalsIgnoreCase(clanName)).findFirst().orElse(null);
     }
 
-    /**
-     * Creates a new clan and store clan info to database
-     *
-     * @param player
-     * @param clanName
-     * @return NULL if clan with same name already exists
-     */
     public Clan createClan(Player player, String clanName) {
         if (null == player) {
             return null;
@@ -171,12 +177,7 @@ public class ClanTable {
         return clan;
     }
 
-    public synchronized void destroyClan(int clanId) {
-        final Clan clan = getClan(clanId);
-        if (clan == null) {
-            return;
-        }
-
+    public synchronized void destroyClan(Clan clan) {
         clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
 
         ClanEntryManager.getInstance().removeFromClanList(clan.getId());
@@ -211,6 +212,7 @@ public class ClanTable {
             clan.removeClanMember(member.getObjectId(), 0);
         }
 
+        var clanId = clan.getId();
         clans.remove(clanId);
         IdFactory.getInstance().releaseId(clanId);
         getDAO(ClanDAO.class).deleteClan(clanId);
@@ -230,16 +232,12 @@ public class ClanTable {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanDestroy(leaderMember, clan));
     }
 
-    public void scheduleRemoveClan(int clanId) {
-        ThreadPool.schedule(() ->
-        {
-            if (getClan(clanId) == null) {
-                return;
+    public void scheduleRemoveClan(Clan clan) {
+        ThreadPool.schedule(() -> {
+            if (clan.getDissolvingExpiryTime() != 0) {
+                destroyClan(clan);
             }
-            if (getClan(clanId).getDissolvingExpiryTime() != 0) {
-                destroyClan(clanId);
-            }
-        }, Math.max(getClan(clanId).getDissolvingExpiryTime() - System.currentTimeMillis(), 300000));
+        }, Math.max(clan.getDissolvingExpiryTime() - System.currentTimeMillis(), 300000));
     }
 
     public boolean isAllyExists(String allyName) {
@@ -280,44 +278,6 @@ public class ClanTable {
         clan2.broadcastClanStatus();
 
         getDAO(ClanDAO.class).deleteClanWar(clanId1, clanId2);
-    }
-
-    private void restoreClanWars() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement statement = con.createStatement();
-             ResultSet rset = statement.executeQuery("SELECT clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state FROM clan_wars")) {
-            while (rset.next()) {
-                final Clan attacker = getClan(rset.getInt("clan1"));
-                final Clan attacked = getClan(rset.getInt("clan2"));
-                if ((attacker != null) && (attacked != null)) {
-                    final ClanWarState state = ClanWarState.values()[rset.getInt("state")];
-
-                    final ClanWar clanWar = new ClanWar(attacker, attacked, rset.getInt("clan1Kill"), rset.getInt("clan2Kill"), rset.getInt("winnerClan"), rset.getLong("startTime"), rset.getLong("endTime"), state);
-                    attacker.addWar(attacked.getId(), clanWar);
-                    attacked.addWar(attacker.getId(), clanWar);
-                } else {
-                    LOGGER.warn(getClass().getSimpleName() + ": Restorewars one of clans is null attacker:" + attacker + " attacked:" + attacked);
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error(getClass().getSimpleName() + ": Error restoring clan wars data.", e);
-        }
-    }
-
-    /**
-     * Check for nonexistent alliances
-     */
-    private void allianceCheck() {
-        for (Clan clan : clans.values()) {
-            final int allyId = clan.getAllyId();
-            if ((allyId != 0) && (clan.getId() != allyId) && !clans.containsKey(allyId)) {
-                clan.setAllyId(0);
-                clan.setAllyName(null);
-                clan.changeAllyCrest(0, true);
-                clan.updateClanInDB();
-                LOGGER.info(getClass().getSimpleName() + ": Removed alliance from clan: " + clan);
-            }
-        }
     }
 
     public List<Clan> getClanAllies(int allianceId) {

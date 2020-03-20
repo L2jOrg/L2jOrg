@@ -138,7 +138,7 @@ public class VillageMaster extends Folk {
 
         // The clan leader should take the XP penalty of a full death.
         player.calculateDeathExpPenalty(null);
-        ClanTable.getInstance().scheduleRemoveClan(clan.getId());
+        ClanTable.getInstance().scheduleRemoveClan(clan);
     }
 
     private static void recoverClan(Player player, int clanId) {

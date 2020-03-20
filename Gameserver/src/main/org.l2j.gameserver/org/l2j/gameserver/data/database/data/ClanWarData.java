@@ -101,4 +101,12 @@ public class ClanWarData {
     public void setState(ClanWarState state) {
         this.state = state;
     }
+
+    public synchronized void incrementAttackerKill() {
+        attackerKills++;
+    }
+
+    public synchronized int incrementAttackedKill() {
+        return ++attackedKills;
+    }
 }
