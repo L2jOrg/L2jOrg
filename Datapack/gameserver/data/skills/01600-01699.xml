@@ -136,7 +136,7 @@
 			</block-all-actions>
 		</effects>
 	</skill>
-	<skill id="1607" name="Quake Attack" max-level="45" action="A1">
+	<skill id="1607" name="Excruciating Strike" max-level="45" action="A1">
 	<!-- 
 		level 1: Attacks frontal enemies with bonus 465 Power. Requires a sword or blunt weapon. Ignores Shield Defense. Over-hit.
 		level 2: Attacks frontal enemies with bonus 494 Power. Requires a sword or blunt weapon. Ignores Shield Defense. Over-hit.
@@ -330,7 +330,7 @@
 		<target type="ENEMY_ONLY" />
 		<conditions>
 			<weapon>
-				<type>SWORD TWO_HAND_SWORD BLUNT</type>
+				<type>SWORD TWO_HAND_SWORD BLUNT DUAL_BLUNT</type>
 			</weapon>
 		</conditions>
 		<effects>
@@ -659,7 +659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1611" name="Physical Transcendence" max-level="6" action="T" type="MAGIC">
+	<skill id="1611" name="Power Supremacy" max-level="6" action="T">
 	<!-- 
 		level 1: Gathers power that exceeds your physical limit. P. Atk. +10% and Max HP -10%.
 		level 2: Gathers power that exceeds your physical limit. P. Atk. +12% and Max HP -11%.
@@ -1546,7 +1546,7 @@
 		</abnormal>
 		<conditions>
 			<weapon>
-				<type>DUAL</type>
+				<type>SWORD BLUNT DUAL</type>
 			</weapon>
 		</conditions>
 		<effects>
