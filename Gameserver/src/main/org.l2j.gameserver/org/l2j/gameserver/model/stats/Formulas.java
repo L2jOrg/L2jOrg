@@ -557,7 +557,7 @@ public final class Formulas {
         }
 
         final int activateRate = skill.getActivateRate();
-        if (activateRate == -1) {
+        if (activateRate <= 0 || activateRate >= 100) {
             return true;
         }
 

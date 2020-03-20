@@ -20,12 +20,11 @@ public class AbnormalStatusUpdate extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.ABNORMAL_STATUS_UPDATE);
 
-        writeShort((short) _effects.size());
+        writeShort(_effects.size());
         for (BuffInfo info : _effects) {
             if ((info != null) && info.isInUse()) {
                 writeInt(info.getSkill().getDisplayId());
-                writeShort((short) info.getSkill().getDisplayLevel());
-                // writeShort((short)info.getSkill().getSubLevel());
+                writeShort(info.getSkill().getDisplayLevel());
                 writeInt(info.getSkill().getAbnormalType().getClientId());
                 writeOptionalD(info.getSkill().isAura() ? -1 : info.getTime());
             }

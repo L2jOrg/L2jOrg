@@ -334,9 +334,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeInt(player.getActiveElementalSpiritType());
         }
 
-        if (containsMask(UserInfoType.UNK)) {
-            writeShort(UserInfoType.UNK.getBlockLength()); // 196
-            writeInt(0x00); // 196
+        if (containsMask(UserInfoType.RANKER)) {
+            writeShort(UserInfoType.RANKER.getBlockLength());
+            writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
         }
 
         if(containsMask(UserInfoType.STATS_POINTS)) {
