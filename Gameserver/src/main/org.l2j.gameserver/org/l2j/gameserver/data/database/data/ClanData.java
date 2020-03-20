@@ -21,7 +21,7 @@ public class ClanData {
     @Column("reputation_score")
     private int reputation;
 
-    @Column("castle")
+    @Column("hasCastle")
     private int castle;
 
     @Column("blood_alliance_count")
