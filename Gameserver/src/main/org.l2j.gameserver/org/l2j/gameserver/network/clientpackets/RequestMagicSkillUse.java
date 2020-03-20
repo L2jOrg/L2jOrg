@@ -1,10 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,13 +47,6 @@ public final class RequestMagicSkillUse extends ClientPacket {
 
         // Skill is blocked from player use.
         if (skill.isBlockActionUseSkill()) {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        // Avoid Use of Skills in AirShip.
-        if (player.isInAirShip()) {
-            player.sendPacket(SystemMessageId.THIS_ACTION_IS_PROHIBITED_WHILE_MOUNTED_OR_ON_AN_AIRSHIP);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

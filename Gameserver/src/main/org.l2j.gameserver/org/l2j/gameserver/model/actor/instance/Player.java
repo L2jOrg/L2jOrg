@@ -18,8 +18,8 @@ import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -37,8 +37,8 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.PetData;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.appearance.PlayerAppearance;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
@@ -130,7 +130,8 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.*;
+import static org.l2j.commons.util.Util.doIfNonNull;
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.model.items.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
@@ -652,9 +653,7 @@ public final class Player extends Playable {
     private int _duelState = Duel.DUELSTATE_NODUEL;
     private int _duelId = 0;
     private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
-    /**
-     * Boat and AirShip
-     */
+
     private Vehicle _vehicle = null;
     private Location _inVehiclePosition;
     private MountType _mountType = MountType.NONE;
@@ -8243,12 +8242,7 @@ public final class Player extends Playable {
     public final void onTeleported() {
         super.onTeleported();
 
-        if (isInAirShip()) {
-            getAirShip().sendInfo(this);
-        } else // Update last player position upon teleport.
-        {
-            setLastServerPosition(getX(), getY(), getZ());
-        }
+        setLastServerPosition(getX(), getY(), getZ());
 
         // Force a revalidation
         revalidateZone(true);
@@ -8487,20 +8481,6 @@ public final class Player extends Playable {
         return (Boat) _vehicle;
     }
 
-    /**
-     * @return Returns the inAirShip.
-     */
-    public boolean isInAirShip() {
-        return (_vehicle != null) && _vehicle.isAirShip();
-    }
-
-    /**
-     * @return
-     */
-    public AirShip getAirShip() {
-        return (AirShip) _vehicle;
-    }
-
     public boolean isInShuttle() {
         return _vehicle instanceof Shuttle;
     }
@@ -8533,9 +8513,6 @@ public final class Player extends Playable {
         _inCrystallize = inCrystallize;
     }
 
-    /**
-     * @return
-     */
     public Location getInVehiclePosition() {
         return _inVehiclePosition;
     }
@@ -9588,7 +9565,7 @@ public final class Player extends Playable {
         } else if ((type == 1) && (isInsideZone(ZoneType.SIEGE) || isInsideZone(ZoneType.CLAN_HALL) || isInsideZone(ZoneType.JAIL) || isInsideZone(ZoneType.CASTLE) || isInsideZone(ZoneType.NO_SUMMON_FRIEND) || isInsideZone(ZoneType.FORT))) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
             return false;
-        } else if (isInsideZone(ZoneType.NO_BOOKMARK) || isInBoat() || isInAirShip()) {
+        } else if (isInsideZone(ZoneType.NO_BOOKMARK) || isInBoat()) {
             if (type == 0) {
                 sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
             } else if (type == 1) {
@@ -9671,10 +9648,6 @@ public final class Player extends Playable {
 
             player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
             player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), _inVehiclePosition));
-        } else if (isInAirShip()) {
-            setXYZ(getAirShip().getLocation());
-            player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
-            player.sendPacket(new ExGetOnAirShip(this, getAirShip()));
         } else {
             player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
         }
@@ -9757,7 +9730,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        return !isInBoat() && !isInAirShip();
+        return !isInBoat();
     }
 
     public int getBirthdays() {

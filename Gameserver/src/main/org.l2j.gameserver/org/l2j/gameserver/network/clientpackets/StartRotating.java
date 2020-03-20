@@ -29,11 +29,6 @@ public final class StartRotating extends ClientPacket {
         if (activeChar == null) {
             return;
         }
-
-        if (activeChar.isInAirShip() && activeChar.getAirShip().isCaptain(activeChar)) {
-            activeChar.getAirShip().broadcastPacket(new StartRotation(activeChar.getAirShip().getObjectId(), _degree, _side, 0));
-        } else {
-            activeChar.broadcastPacket(new StartRotation(activeChar.getObjectId(), _degree, _side, 0));
-        }
+        activeChar.broadcastPacket(new StartRotation(activeChar.getObjectId(), _degree, _side, 0));
     }
 }

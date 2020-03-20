@@ -254,7 +254,6 @@ open module org.l2j.scripts {
                 OpBlinkSkillCondition.Factory,
                 OpCallPcSkillCondition.Factory,
                 OpCanEscapeSkillCondition.Factory,
-                OpCanNotUseAirshipSkillCondition.Factory,
                 OpChangeWeaponSkillCondition.Factory,
                 OpCheckAbnormalSkillCondition.Factory,
                 OpCheckClassListSkillCondition.Factory,
@@ -692,8 +691,7 @@ open module org.l2j.scripts {
             handlers.playeractions.PetHold,
             handlers.playeractions.PetAttack,
             handlers.playeractions.InstanceZoneInfo,
-            handlers.playeractions.BotReport,
-            handlers.playeractions.AirshipAction;
+            handlers.playeractions.BotReport;
 
     provides org.l2j.gameserver.model.quest.Quest
         with

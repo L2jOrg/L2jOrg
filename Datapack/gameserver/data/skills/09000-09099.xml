@@ -16,9 +16,6 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<conditions>
-			<condition name="OpCanNotUseAirship"/>
-		</conditions>
 		<effects>
 			<summon-npc>
 				<npc initial="13271.0"/>
@@ -41,9 +38,6 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<conditions>
-			<condition name="OpCanNotUseAirship"/>
-		</conditions>
 		<effects>
 			<summon-npc>
 				<npc initial="13275.0"/>
@@ -66,9 +60,6 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<conditions>
-			<condition name="OpCanNotUseAirship"/>
-		</conditions>
 		<effects>
 			<summon-npc>
 				<npc initial="13271.0"/>
@@ -91,9 +82,6 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<conditions>
-			<condition name="OpCanNotUseAirship"/>
-		</conditions>
 		<effects>
 			<summon-npc>
 				<npc initial="13275.0"/>

@@ -56,9 +56,6 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<conditions>
-			<condition name="OpCanNotUseAirship"/>
-		</conditions>
 		<effects>
 			<summon-npc despawn-delay="180000">
 				<npc initial="12774.0"/>
@@ -81,9 +78,6 @@
 			<item-count initial="1"/>
 		</consume>
 		<target />
-		<conditions>
-			<condition name="OpCanNotUseAirship"/>
-		</conditions>
 		<effects>
 			<summon-npc despawn-delay="180000">
 				<npc initial="12777.0"/>
@@ -107,8 +101,8 @@
 		</consume>
 		<target type="OTHERS" />
 		<conditions>
-			<condition name="OpCanNotUseAirship"/>
-			<target>				<npc>
+			<target>
+				<npc>
 					<ids>12774 12775 12776 13016 12777 13017 12778 12779</ids>
 				</npc>
 			</target>

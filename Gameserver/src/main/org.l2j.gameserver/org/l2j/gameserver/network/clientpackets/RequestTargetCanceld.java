@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.TargetUnselected;
 
 /**
  * This class ...
@@ -37,8 +36,6 @@ public final class RequestTargetCanceld extends ClientPacket {
             }
         } else if (activeChar.getTarget() != null) {
             activeChar.setTarget(null);
-        } else if (activeChar.isInAirShip()) {
-            activeChar.broadcastPacket(new TargetUnselected(activeChar));
         }
     }
 }

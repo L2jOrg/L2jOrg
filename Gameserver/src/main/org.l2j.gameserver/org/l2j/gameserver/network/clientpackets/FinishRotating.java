@@ -31,14 +31,7 @@ public final class FinishRotating extends ClientPacket {
             return;
         }
 
-        StopRotation sr;
-        if (activeChar.isInAirShip() && activeChar.getAirShip().isCaptain(activeChar)) {
-            activeChar.getAirShip().setHeading(_degree);
-            sr = new StopRotation(activeChar.getAirShip().getObjectId(), _degree, 0);
-            activeChar.getAirShip().broadcastPacket(sr);
-        } else {
-            sr = new StopRotation(activeChar.getObjectId(), _degree, 0);
-            activeChar.broadcastPacket(sr);
-        }
+        StopRotation sr = new StopRotation(activeChar.getObjectId(), _degree, 0);
+        activeChar.broadcastPacket(sr);
     }
 }

@@ -418,14 +418,6 @@ public class SkillCaster implements Runnable {
                 return false;
             }
 
-            // Check if not in AirShip
-            if (player.isInAirShip() && !skill.hasAnyEffectType(EffectType.REFUEL_AIRSHIP)) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-                sm.addSkillName(skill);
-                player.sendPacket(sm);
-                return false;
-            }
-
             // Check for skill reuse (fixes macro right click press exploit).
             if (caster.hasSkillReuse(skill.getReuseHashCode())) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);

@@ -6,7 +6,6 @@ import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.SystemMessageId;
 import org.w3c.dom.Node;
 
 /**
@@ -30,11 +29,6 @@ public class CanSummonSkillCondition implements SkillCondition {
 
 		if (player.isFlyingMounted() || player.isMounted() || player.inObserverMode() || player.isTeleporting())
 		{
-			canSummon = false;
-		}
-		else if (player.isInAirShip())
-		{
-			player.sendPacket(SystemMessageId.A_SERVITOR_CANNOT_BE_SUMMONED_WHILE_ON_AN_AIRSHIP);
 			canSummon = false;
 		}
 		

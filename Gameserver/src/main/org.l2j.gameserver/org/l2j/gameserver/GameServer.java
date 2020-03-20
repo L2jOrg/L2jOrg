@@ -161,7 +161,6 @@ public class GameServer {
         }
 
         printSection("Scripts");
-        AirShipManager.getInstance();
         ShuttleData.getInstance();
         GraciaSeedsManager.getInstance();
 
