@@ -7785,47 +7785,9 @@
 			</magic-level>
 			<cast-range initial="500"/>
 			<reuse initial="5000"/>
-			<effect-point initial="-574">
-				<value level="2">-582</value>
-				<value level="3">-590</value>
-				<value level="4">-597</value>
-				<value level="5">-604</value>
-				<value level="6">-611</value>
-				<value level="7">-617</value>
-				<value level="8">-624</value>
-				<value level="9">-630</value>
-				<value level="10">-635</value>
-				<value level="11">-641</value>
-				<value level="12">-646</value>
-				<value level="13">-650</value>
-				<value level="14">-655</value>
-				<value level="15">-659</value>
-				<value level="16">-663</value>
-				<value level="17">-667</value>
-			</effect-point>
 			<effect-range initial="1000"/>
 			<hit-time initial="4000"/>
 		</attributes>
-		<consume>
-			<hp initial="505">
-				<value level="2">514</value>
-				<value level="3">522</value>
-				<value level="4">531</value>
-				<value level="5">540</value>
-				<value level="6">548</value>
-				<value level="7">557</value>
-				<value level="8">565</value>
-				<value level="9">573</value>
-				<value level="10">581</value>
-				<value level="11">589</value>
-				<value level="12">596</value>
-				<value level="13">603</value>
-				<value level="14">610</value>
-				<value level="15">617</value>
-				<value level="16">624</value>
-				<value level="17">631</value>
-			</hp>
-		</consume>
 		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
 		<abnormal type="SPEED_DOWN">
 			<level initial="3">

@@ -643,9 +643,10 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
-				<power initial="-6.0">
-					<value level="6">-9.0</value>
-					<value level="10">-12.0</value>
+				<power initial="-4.0">
+					<value level="6">-7.0</value>
+					<value level="10">-10.0</value>
+					<value level="11">-12.0</value>
 				</power>
 			</stat-modify>
 		</effects>
@@ -740,10 +741,14 @@
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_RANGE" mode="PER">
 				<power initial="-50.0">
-					<value level="3">-40.0</value>
-					<value level="5">-30.0</value>
-					<value level="7">-20.0</value>
-					<value level="9">-10.0</value>
+					<value level="2">-40.0</value>
+					<value level="3">-35.0</value>
+					<value level="4">-30.0</value>
+					<value level="5">-25.0</value>
+					<value level="6">-20.0</value>
+					<value level="7">-15.0</value>
+					<value level="8">-10.0</value>
+					<value level="9">-5.0</value>
 				</power>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
@@ -834,13 +839,28 @@
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
 				<power initial="1.0">
+					<value level="2">1.0</value>
 					<value level="3">2.0</value>
+					<value level="4">2.0</value>
+					<value level="5">2.0</value>
 					<value level="6">3.0</value>
+					<value level="7">3.0</value>
+					<value level="8">3.0</value>
+					<value level="9">3.0</value>
 				</power>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-10.0"/>
+				<power initial="-10.0">
+				<value level="2">-10.0</value>
+				<value level="3">-5.0</value>
+				<value level="4">-5.0</value>
+				<value level="5">-5.0</value>
+				<value level="6">-5.0</value>
+				<value level="7">-5.0</value>
+				<value level="8">-5.0</value>
+				<value level="9">-5.0</value>
+				</power>
 				<weapon-type>BOW </weapon-type>
 			</stat-modify>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
