@@ -113,7 +113,7 @@ public class CharInfo extends ServerPacket {
             writeInt(augment != null ? augment.getOption2Id() : 0); // Confirmed
         }
 
-        writeByte((byte) _armorEnchant);
+        writeByte(_armorEnchant);
 
         writeInt(0x00); // RHAND Visual ID is not used on Classic
         writeInt(0x00); // LHAND Visual ID is not used on Classic
