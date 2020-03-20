@@ -8,7 +8,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -914,7 +914,7 @@ public class Pet extends Summon {
 
     @Override
     public long getExpForThisLevel() {
-        if (getLevel() >= ExperienceData.getInstance().getMaxPetLevel()) {
+        if (getLevel() >= LevelData.getInstance().getMaxLevel()) {
             return 0;
         }
         return getStats().getExpForLevel(getLevel());
@@ -922,7 +922,7 @@ public class Pet extends Summon {
 
     @Override
     public long getExpForNextLevel() {
-        if (getLevel() >= (ExperienceData.getInstance().getMaxPetLevel() - 1)) {
+        if (getLevel() >= (LevelData.getInstance().getMaxLevel() - 1)) {
             return 0;
         }
         return getStats().getExpForLevel(getLevel() + 1);

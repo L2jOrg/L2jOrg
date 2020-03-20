@@ -48,6 +48,8 @@ import org.l2j.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShutt
 import org.l2j.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
+import org.l2j.gameserver.network.clientpackets.stats.ExResetStatusBonus;
+import org.l2j.gameserver.network.clientpackets.stats.ExSetStatusBonus;
 import org.l2j.gameserver.network.clientpackets.timedhunter.ExTimedHuntingZoneList;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 import org.l2j.gameserver.network.clientpackets.vip.ExRequestVipInfo;
@@ -430,8 +432,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PVP_BOOK_KILLER_LOCATION(0x18C, ExRequestKillerLocation::new, ConnectionState.IN_GAME),
     EX_PVP_BOOK_TELEPORT_TO_KILLER(0x18D, ExTeleportToKiller::new, ConnectionState.IN_GAME),
     EX_LETTER_COLLECTOR_TAKE_REWARD(0x18E, null, ConnectionState.IN_GAME),
-    EX_SET_STATUS_BONUS(0x18F, null, ConnectionState.IN_GAME),
-    EX_RESET_STATUS_BONUS(0x190, null, ConnectionState.IN_GAME),
+    EX_SET_STATUS_BONUS(0x18F, ExSetStatusBonus::new, ConnectionState.IN_GAME),
+    EX_RESET_STATUS_BONUS(0x190, ExResetStatusBonus::new, ConnectionState.IN_GAME),
     EX_OLYMPIAD_MY_RANKING_INFO(0x191, ExRequestOlympiadMyRank::new, ConnectionState.IN_GAME),
     EX_OLYMPIAD_RANKING_INFO(0x192, ExRequestOlympiadRanking::new, ConnectionState.IN_GAME),
     EX_OLYMPIAD_HERO_AND_LEGEND_INFO(0x193, ExRequestOlympiadHeroes::new, ConnectionState.IN_GAME);

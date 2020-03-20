@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
@@ -33,6 +17,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class BaseStatsFinalizer implements IStatsFunction {
     @Override
@@ -48,20 +33,22 @@ public class BaseStatsFinalizer implements IStatsFunction {
             final Player player = creature.getActingPlayer();
             final Set<ArmorSet> appliedSets = new HashSet<>(2);
 
+            var baseStat = BaseStats.valueOf(stat);
+
             // Armor sets calculation
             for (Item item : player.getInventory().getPaperdollItems()) {
                 for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
                     if ((set.getPiecesCount(player, Item::getId) >= set.getMinimumPieces()) && appliedSets.add(set)) {
-                        baseValue += set.getStatsBonus(BaseStats.valueOf(stat));
+                        baseValue += set.getStatsBonus(baseStat);
                     }
                 }
             }
 
             // Henna calculation
-            baseValue += player.getHennaValue(BaseStats.valueOf(stat));
+            baseValue += player.getHennaValue(baseStat);
+            baseValue += player.getStatsData().getValue(baseStat);
         }
 
         return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, BaseStats.MAX_STAT_VALUE - 1);
     }
-
 }

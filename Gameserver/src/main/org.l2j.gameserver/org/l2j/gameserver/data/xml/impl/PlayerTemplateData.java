@@ -119,10 +119,11 @@ public final class PlayerTemplateData extends GameXmlReader {
                                 attrs = lvlNode.getAttributes();
                                 level = parseInteger(attrs, "val");
 
+                                var maxLevel = LevelData.getInstance().getMaxLevel();
                                 for (Node valNode = lvlNode.getFirstChild(); valNode != null; valNode = valNode.getNextSibling()) {
                                     final String nodeName = valNode.getNodeName();
 
-                                    if (level < ExperienceData.getInstance().getMaxLevel() && (nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId))) {
+                                    if (level < maxLevel && (nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId))) {
                                         _playerTemplates.get(ClassId.getClassId(classId)).setUpgainValue(nodeName, level, Double.parseDouble(valNode.getTextContent()));
                                         _dataCount++;
                                     }

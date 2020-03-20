@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.base;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 
 /**
  * Character Sub-Class Definition <BR>
@@ -10,11 +10,11 @@ import org.l2j.gameserver.data.xml.impl.ExperienceData;
  * @author Tempy
  */
 public final class SubClass {
-    private static final byte _maxLevel = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+    private static final byte _maxLevel = Config.MAX_SUBCLASS_LEVEL < LevelData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (LevelData.getInstance().getMaxLevel() - 1);
     private static final int MAX_VITALITY_POINTS = 140000;
     private static final int MIN_VITALITY_POINTS = 0;
     private ClassId _class;
-    private long _exp = ExperienceData.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);
+    private long _exp = LevelData.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);
     private long _sp = 0;
     private byte _level = Config.BASE_SUBCLASS_LEVEL;
     private int _classIndex = 1;
@@ -43,8 +43,8 @@ public final class SubClass {
     }
 
     public void setExp(long expValue) {
-        if (!_dualClass && (expValue > (ExperienceData.getInstance().getExpForLevel(_maxLevel + 1) - 1))) {
-            expValue = ExperienceData.getInstance().getExpForLevel(_maxLevel + 1) - 1;
+        if (!_dualClass && (expValue > (LevelData.getInstance().getExpForLevel(_maxLevel + 1) - 1))) {
+            expValue = LevelData.getInstance().getExpForLevel(_maxLevel + 1) - 1;
         }
 
         _exp = expValue;

@@ -1,7 +1,8 @@
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.StatsSet;
@@ -14,7 +15,6 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -73,13 +73,13 @@ public final class Summon extends AbstractEffect {
         summon.setItemConsume(consumeItem);
         summon.setItemConsumeInterval(consumeItemInterval);
 
-        var maxLevel = ExperienceData.getInstance().getMaxLevel();
+        var maxLevel = LevelData.getInstance().getMaxLevel();
 
         if (summon.getLevel() >= maxLevel) {
-            summon.getStats().setExp(ExperienceData.getInstance().getExpForLevel(maxLevel - 1));
+            summon.getStats().setExp(LevelData.getInstance().getExpForLevel(maxLevel - 1));
             LOGGER.warn("({}) NpcID: {} has a level above {}. Please rectify.", summon.getName(), summon.getId(), maxLevel);
         } else {
-            summon.getStats().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % ExperienceData.getInstance().getMaxPetLevel()));
+            summon.getStats().setExp(LevelData.getInstance().getExpForLevel(summon.getLevel() % LevelData.getInstance().getMaxLevel()));
         }
 
         // Summons must have their master buffs upon spawn.

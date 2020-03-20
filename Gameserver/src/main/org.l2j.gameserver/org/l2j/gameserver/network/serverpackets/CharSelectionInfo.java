@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
@@ -249,7 +249,7 @@ public class CharSelectionInfo extends ServerPacket {
 
             writeLong(charInfoPackage.getSp());
             writeLong(charInfoPackage.getExp());
-            writeDouble((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
+            writeDouble((float) (charInfoPackage.getExp() - LevelData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (LevelData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - LevelData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
 
             writeInt(charInfoPackage.getLevel());
 

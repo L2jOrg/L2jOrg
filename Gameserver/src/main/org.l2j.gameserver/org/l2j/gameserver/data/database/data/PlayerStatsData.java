@@ -2,6 +2,7 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.model.stats.BaseStats;
 
 /**
  * @author JoeAlisson
@@ -41,51 +42,31 @@ public class PlayerStatsData {
         this.points = points;
     }
 
-    public short getStrength() {
-        return strength;
+    public boolean update(short str, short dex, short con, short intt, short wit, short men) {
+        if(strength + dexterity + constitution + intelligence + witness + mentality + str + dex + con + intt + wit + men <= points) {
+            strength += str;
+            dexterity += dex;
+            constitution += con;
+            intelligence += intt;
+            witness += wit;
+            mentality += men;
+            return true;
+        }
+        return false;
     }
 
-    public void setStrength(short strength) {
-        this.strength = strength;
+    public void reset() {
+        strength = dexterity = constitution = intelligence = witness = mentality = 0;
     }
 
-    public short getDexterity() {
-        return dexterity;
-    }
-
-    public void setDexterity(short dexterity) {
-        this.dexterity = dexterity;
-    }
-
-    public short getConstitution() {
-        return constitution;
-    }
-
-    public void setConstitution(short constitution) {
-        this.constitution = constitution;
-    }
-
-    public short getIntelligence() {
-        return intelligence;
-    }
-
-    public void setIntelligence(short intelligence) {
-        this.intelligence = intelligence;
-    }
-
-    public short getWitness() {
-        return witness;
-    }
-
-    public void setWitness(short witness) {
-        this.witness = witness;
-    }
-
-    public short getMentality() {
-        return mentality;
-    }
-
-    public void setMentality(short mentality) {
-        this.mentality = mentality;
+    public int getValue(BaseStats stat) {
+        return switch (stat) {
+            case CON -> constitution;
+            case DEX -> dexterity;
+            case MEN -> mentality;
+            case STR -> strength;
+            case WIT -> witness;
+            case INT -> intelligence;
+        };
     }
 }

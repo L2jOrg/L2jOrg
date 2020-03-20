@@ -7,32 +7,18 @@ import org.l2j.gameserver.network.serverpackets.UserInfo;
 /**
  * @author JoeAlisson
  */
-public class ExSetStatusBonus extends ClientPacket {
-
-    private short str;
-    private short dex;
-    private short con;
-    private short intt;
-    private short wit;
-    private short men;
+public class ExResetStatusBonus extends ClientPacket {
 
     @Override
     protected void readImpl() throws Exception {
-        var unk = readShort();
-        var unk1 = readShort();
-        str = readShort();
-        dex = readShort();
-        con = readShort();
-        intt = readShort();
-        wit = readShort();
-        men = readShort();
+
     }
 
     @Override
     protected void runImpl() {
         var player = client.getPlayer();
-        var statsData = player.getStatsData();
-        if(statsData.update(str, dex, con, intt, wit, men)) {
+        if(player.reduceAdena("Reset Stats", 2900000, player, true)) {
+            player.getStatsData().reset();
             client.sendPacket(new UserInfo(player, UserInfoType.STATS_POINTS, UserInfoType.BASE_STATS ));
         }
     }

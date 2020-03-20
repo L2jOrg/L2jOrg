@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Party;
@@ -18,8 +18,8 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
+import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
-import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.*;
+import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
 
 public class PlayerStats extends PlayableStats {
     public static final int MAX_VITALITY_POINTS = 140000;
@@ -178,7 +178,7 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final boolean addLevel(byte value) {
-        if ((getLevel() + value) > (ExperienceData.getInstance().getMaxLevel() - 1)) {
+        if ((getLevel() + value) > LevelData.getInstance().getMaxLevel() - 1) {
             return false;
         }
 
@@ -251,7 +251,7 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final long getExpForLevel(int level) {
-        return ExperienceData.getInstance().getExpForLevel(level);
+        return LevelData.getInstance().getExpForLevel(level);
     }
 
     @Override
@@ -325,8 +325,8 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final void setLevel(byte value) {
-        if (value > (ExperienceData.getInstance().getMaxLevel() - 1)) {
-            value = (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+        if (value > LevelData.getInstance().getMaxLevel() -1) {
+            value = (byte) (LevelData.getInstance().getMaxLevel() -1);
         }
 
         if (getCreature().isSubClassActive()) {
@@ -574,6 +574,8 @@ public class PlayerStats extends PlayableStats {
     public double getEnchantRateBonus() {
         return getValue(Stat.ENCHANT_RATE_BONUS, 0);
     }
+
+
 
     @Override
     protected void onRecalculateStats(boolean broadcast) {

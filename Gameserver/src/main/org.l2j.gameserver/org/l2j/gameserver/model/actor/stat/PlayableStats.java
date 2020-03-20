@@ -1,12 +1,12 @@
 package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
@@ -179,7 +179,7 @@ public class PlayableStats extends CreatureStats {
     }
 
     public long getExpForLevel(int level) {
-        return ExperienceData.getInstance().getExpForLevel(level);
+        return LevelData.getInstance().getExpForLevel(level);
     }
 
     @Override
@@ -188,7 +188,7 @@ public class PlayableStats extends CreatureStats {
     }
 
     public int getMaxLevel() {
-        return ExperienceData.getInstance().getMaxLevel();
+        return LevelData.getInstance().getMaxLevel();
     }
 
     @Override

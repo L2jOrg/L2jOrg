@@ -6,7 +6,7 @@ import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -176,17 +176,17 @@ public abstract class Summon extends Playable {
     }
 
     public long getExpForThisLevel() {
-        if (getLevel() >= ExperienceData.getInstance().getMaxPetLevel()) {
+        if (getLevel() >= LevelData.getInstance().getMaxLevel()) {
             return 0;
         }
-        return ExperienceData.getInstance().getExpForLevel(getLevel());
+        return LevelData.getInstance().getExpForLevel(getLevel());
     }
 
     public long getExpForNextLevel() {
-        if (getLevel() >= (ExperienceData.getInstance().getMaxPetLevel() - 1)) {
+        if (getLevel() >= (LevelData.getInstance().getMaxLevel() - 1)) {
             return 0;
         }
-        return ExperienceData.getInstance().getExpForLevel(getLevel() + 1);
+        return LevelData.getInstance().getExpForLevel(getLevel() + 1);
     }
 
     @Override

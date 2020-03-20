@@ -110,8 +110,7 @@ public class GameServer {
         ClassListData.getInstance();
         InitialEquipmentData.getInstance();
         InitialShortcutData.getInstance();
-        ExperienceData.getInstance();
-        PlayerXpPercentLostData.getInstance();
+        LevelData.init();
         KarmaData.getInstance();
         HitConditionBonusData.getInstance();
         PlayerTemplateData.getInstance();

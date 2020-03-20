@@ -130,8 +130,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.doIfNonNull;
-import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.items.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
@@ -418,6 +417,11 @@ public final class Player extends Playable {
 
     public PlayerStatsData getStatsData() {
         return statsData;
+    }
+
+    public void updateCharacteristicPoints() {
+        statsData.setPoints(LevelData.getInstance().getCharacteristicPoints(getLevel()));
+        getDAO(PlayerDAO.class).save(statsData);
     }
 
     public static Player create(PlayerData playerData, PlayerTemplate template) {
@@ -906,6 +910,11 @@ public final class Player extends Playable {
         Player player = new Player(character, template);
         player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
         player.statsData = playerDAO.findPlayerStatsData(objectId);
+
+        if(isNull(player.statsData)) { // TODO remove late, just temp fix to already created players
+            player.statsData = PlayerStatsData.init(objectId);
+            player.updateCharacteristicPoints();
+        }
 
         player.setHeading(character.getHeading());
         player.getStats().setExp(character.getExp());
@@ -4549,7 +4558,10 @@ public final class Player extends Playable {
      */
     public void calculateDeathExpPenalty(Creature killer) {
         final int lvl = getLevel();
-        double percentLost = PlayerXpPercentLostData.getInstance().getXpPercent(getLevel());
+
+        var levelData = LevelData.getInstance();
+
+        float percentLost = levelData.getXpPercentLost(getLevel());
 
         if (killer != null) {
             if (killer.isRaid()) {
@@ -4565,14 +4577,13 @@ public final class Player extends Playable {
             percentLost *= Config.RATE_KARMA_EXP_LOST;
         }
 
-
         // Calculate the Experience loss
         long lostExp = 0;
         if (!Event.isParticipant(this)) {
-            if (lvl < ExperienceData.getInstance().getMaxLevel()) {
+            if (lvl < LevelData.getInstance().getMaxLevel()) {
                 lostExp = Math.round(((getStats().getExpForLevel(lvl + 1) - getStats().getExpForLevel(lvl)) * percentLost) / 100);
             } else {
-                lostExp = Math.round(((getStats().getExpForLevel(ExperienceData.getInstance().getMaxLevel()) - getStats().getExpForLevel(ExperienceData.getInstance().getMaxLevel() - 1)) * percentLost) / 100);
+                lostExp = Math.round(((getStats().getExpForLevel(LevelData.getInstance().getMaxLevel()) - getStats().getExpForLevel(LevelData.getInstance().getMaxLevel() - 1)) * percentLost) / 100);
             }
         }
 
@@ -7630,7 +7641,7 @@ public final class Player extends Playable {
             newClass.setVitalityPoints(PlayerStats.MAX_VITALITY_POINTS);
             if (isDualClass) {
                 newClass.setIsDualClass(true);
-                newClass.setExp(ExperienceData.getInstance().getExpForLevel(Config.BASE_DUALCLASS_LEVEL));
+                newClass.setExp(LevelData.getInstance().getExpForLevel(Config.BASE_DUALCLASS_LEVEL));
                 newClass.setLevel(Config.BASE_DUALCLASS_LEVEL);
             }
 

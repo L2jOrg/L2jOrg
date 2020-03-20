@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -43,7 +43,7 @@ public class GMViewCharacterInfo extends ServerPacket {
         writeInt(_activeChar.getClassId().getId());
         writeInt(_activeChar.getLevel());
         writeLong(_activeChar.getExp());
-        writeDouble((float) (_activeChar.getExp() - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel()))); // High Five exp %
+        writeDouble((float) (_activeChar.getExp() - LevelData.getInstance().getExpForLevel(_activeChar.getLevel())) / (LevelData.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - LevelData.getInstance().getExpForLevel(_activeChar.getLevel()))); // High Five exp %
         writeInt(_activeChar.getSTR());
         writeInt(_activeChar.getDEX());
         writeInt(_activeChar.getCON());

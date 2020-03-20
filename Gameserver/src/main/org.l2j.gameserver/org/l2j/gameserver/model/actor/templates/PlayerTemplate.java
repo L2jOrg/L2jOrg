@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.templates;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
@@ -39,12 +39,13 @@ public class PlayerTemplate extends CreatureTemplate {
         super(set);
         classId = ClassId.getClassId(set.getInt("classId"));
         setRace(classId.getRace());
-        baseHp = new float[ExperienceData.getInstance().getMaxLevel()];
-        baseMp = new float[ExperienceData.getInstance().getMaxLevel()];
-        baseCp = new float[ExperienceData.getInstance().getMaxLevel()];
-        baseHpReg = new double[ExperienceData.getInstance().getMaxLevel()];
-        baseMpReg = new double[ExperienceData.getInstance().getMaxLevel()];
-        baseCpReg = new double[ExperienceData.getInstance().getMaxLevel()];
+        var maxLevel = LevelData.getInstance().getMaxLevel();
+        baseHp = new float[maxLevel];
+        baseMp = new float[maxLevel];
+        baseCp = new float[maxLevel];
+        baseHpReg = new double[maxLevel];
+        baseMpReg = new double[maxLevel];
+        baseCpReg = new double[maxLevel];
 
 
         baseSlotDef = new EnumMap<>(InventorySlot.class);

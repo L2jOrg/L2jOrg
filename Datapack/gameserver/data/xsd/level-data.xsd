@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="level-data" type="LevelData" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="max-level" type="xs:int" use="required"/>
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:complexType name="LevelData">
+        <xs:attribute name="level" type="xs:byte" use="required"/>
+        <xs:attribute name="characteristic-points" type="xs:short" default="0"/>
+        <xs:attribute name="xp-percent-lost" type="xs:float" default="1.0"/>
+        <xs:attribute name="experience" type="xs:long" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

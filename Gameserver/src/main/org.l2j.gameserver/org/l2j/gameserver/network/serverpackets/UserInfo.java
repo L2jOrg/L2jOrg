@@ -1,15 +1,19 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneType;
+import org.l2j.gameserver.model.stats.BaseStats;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.world.zone.ZoneType;
+
+import java.util.Optional;
 
 import static java.util.Objects.nonNull;
 
@@ -144,7 +148,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeInt((int) Math.round(player.getCurrentCp()));
             writeLong(player.getSp());
             writeLong(player.getExp());
-            writeDouble((float) (player.getExp() - ExperienceData.getInstance().getExpForLevel(player.getLevel())) / (ExperienceData.getInstance().getExpForLevel(player.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(player.getLevel())));
+            writeDouble((float) (player.getExp() - LevelData.getInstance().getExpForLevel(player.getLevel())) / (LevelData.getInstance().getExpForLevel(player.getLevel() + 1) - LevelData.getInstance().getExpForLevel(player.getLevel())));
         }
 
         if (containsMask(UserInfoType.ENCHANTLEVEL)) {
@@ -339,22 +343,22 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeShort(UserInfoType.STATS_POINTS.getBlockLength());
             var statsData = player.getStatsData();
             writeShort(statsData.getPoints());
-            writeShort(statsData.getStrength());
-            writeShort(statsData.getDexterity());
-            writeShort(statsData.getConstitution());
-            writeShort(statsData.getIntelligence());
-            writeShort(statsData.getWitness());
-            writeShort(statsData.getMentality());
+            writeShort(statsData.getValue(BaseStats.STR));
+            writeShort(statsData.getValue(BaseStats.DEX));
+            writeShort(statsData.getValue(BaseStats.CON));
+            writeShort(statsData.getValue(BaseStats.INT));
+            writeShort(statsData.getValue(BaseStats.WIT));
+            writeShort(statsData.getValue(BaseStats.MEN));
         }
 
         if(containsMask(UserInfoType.STATS_ABILITIES)) {
             writeShort(UserInfoType.STATS_ABILITIES.getBlockLength());
-            writeShort(0x02); // STR additional abilities
-            writeShort(0x00); // DEX additional abilities
-            writeShort(0x00); // CON additional abilities
-            writeShort(0x00); // INT additional abilities
-            writeShort(0x00); // WIT additional abilities
-            writeShort(0x00); // MEN additional abilities
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_STR));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_DEX));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_CON));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_INT));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_WIT));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_MEN));
             writeShort(0x01);
             writeShort(0x01);
         }

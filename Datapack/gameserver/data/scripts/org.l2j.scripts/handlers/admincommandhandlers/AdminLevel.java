@@ -1,22 +1,6 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
-import org.l2j.gameserver.data.xml.impl.ExperienceData;
+import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
@@ -66,7 +50,7 @@ public class AdminLevel implements IAdminCommandHandler
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_set_level"))
 		{
-			final int maxLevel = ExperienceData.getInstance().getMaxLevel();
+			final int maxLevel = LevelData.getInstance().getMaxLevel();
 			try
 			{
 				if (!isPlayer(targetChar))
@@ -79,10 +63,11 @@ public class AdminLevel implements IAdminCommandHandler
 				final byte lvl = Byte.parseByte(val);
 				if ((lvl >= 1) && (lvl <= maxLevel))
 				{
-					targetPlayer.setExp(ExperienceData.getInstance().getExpForLevel(lvl));
+					targetPlayer.setExp(LevelData.getInstance().getExpForLevel(lvl));
 					targetPlayer.getStats().setLevel(lvl);
 					targetPlayer.setCurrentHpMp(targetPlayer.getMaxHp(), targetPlayer.getMaxMp());
 					targetPlayer.setCurrentCp(targetPlayer.getMaxCp());
+					targetPlayer.updateCharacteristicPoints();
 					targetPlayer.broadcastUserInfo();
 				}
 				else
