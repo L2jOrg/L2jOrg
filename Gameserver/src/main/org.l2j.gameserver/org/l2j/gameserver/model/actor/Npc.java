@@ -627,7 +627,7 @@ public class Npc extends Creature {
             }
         }
 
-        if (getTemplate().isType("L2Auctioneer") && (val == 0)) {
+        if (getTemplate().isType("Auctioneer") && (val == 0)) {
             return;
         }
 

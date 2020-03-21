@@ -8,7 +8,6 @@ import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Decoy;
 import org.l2j.gameserver.model.actor.instance.EffectPoint;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -87,17 +86,8 @@ public final class SummonNpc extends AbstractEffect {
         }
 
         switch (npcTemplate.getType()) {
-            case "L2Decoy" -> {
-                final Decoy decoy = new Decoy(npcTemplate, player, despawnDelay);
-                decoy.setCurrentHp(decoy.getMaxHp());
-                decoy.setCurrentMp(decoy.getMaxMp());
-                decoy.setHeading(player.getHeading());
-                decoy.setInstance(player.getInstanceWorld());
-                decoy.setSummoner(player);
-                decoy.spawnMe(x, y, z);
-            }
             // TODO: Implement proper signet skills.
-            case "L2EffectPoint" -> {
+            case "EffectPoint" -> {
                 final EffectPoint effectPoint = new EffectPoint(npcTemplate, player);
                 effectPoint.setCurrentHp(effectPoint.getMaxHp());
                 effectPoint.setCurrentMp(effectPoint.getMaxMp());

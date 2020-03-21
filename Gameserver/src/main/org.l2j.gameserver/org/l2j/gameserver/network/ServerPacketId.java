@@ -872,7 +872,8 @@ public enum ServerPacketId {
     EX_OLYMPIAD_MY_RANKING_INFO(0xFE, 0x23E),
     EX_OLYMPIAD_RANKING_INFO(0xFE, 0x23F),
     EX_OLYMPIAD_HERO_AND_LEGEND_INFO(0xFE, 0x240),
-    EX_USER_BOOST_STAT(0xFE, 0x249)
+    EX_USER_BOOST_STAT(0xFE, 0x249),
+    EX_CHAR_INFO(0xFE, 0x251)
     ;
 
     private final int id;

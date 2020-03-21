@@ -326,7 +326,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     public Npc doSpawn(boolean isSummonSpawn) {
         try {
             // Check if the Spawn is not a L2Pet or L2Minion or L2Decoy spawn
-            if (_template.isType("L2Pet") || _template.isType("L2Decoy") || _template.isType("L2Trap")) {
+            if (_template.isType("Pet") || _template.isType("Decoy") || _template.isType("Trap")) {
                 _currentCount++;
                 return null;
             }

@@ -162,7 +162,7 @@ public class SpawnsData extends GameXmlReader {
             return;
         }
 
-        if (template.isType("L2Servitor") || template.isType("L2Pet")) {
+        if (template.isType("Servitor") || template.isType("Pet")) {
             LOGGER.warn("Requested spawn for {} {} ({}) file: {}", template.getType(), template.getName(), template.getId(), spawnTemplate.getFilePath());
             return;
         }

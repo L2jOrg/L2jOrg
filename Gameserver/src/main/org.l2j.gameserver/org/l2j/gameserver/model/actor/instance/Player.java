@@ -3605,13 +3605,11 @@ public final class Player extends Playable {
     }
 
     public final void broadcastCharInfo() {
-        final CharInfo charInfo = new CharInfo(this, false);
+        var charInfo = new ExCharInfo(this);
         World.getInstance().forEachVisibleObject(this, Player.class, player ->
         {
             if (isVisibleFor(player)) {
-                if (isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
-                    player.sendPacket(new CharInfo(this, true));
-                } else {
+                if (!isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
                     player.sendPacket(charInfo);
                 }
 
@@ -3647,8 +3645,8 @@ public final class Player extends Playable {
 
     @Override
     public final void broadcastPacket(ServerPacket mov) {
-        if (mov instanceof CharInfo) {
-            throw new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
+        if (mov instanceof ExCharInfo) {
+            throw new IllegalArgumentException("ExCharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
 
         sendPacket(mov);
@@ -3659,8 +3657,8 @@ public final class Player extends Playable {
     @Override
     public void broadcastPacket(ServerPacket mov, int radiusInKnownlist) {
 
-        if (mov instanceof CharInfo) {
-            LOGGER.warn("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
+        if (mov instanceof ExCharInfo) {
+            LOGGER.warn("ExCharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
 
         sendPacket(mov);
@@ -9637,19 +9635,19 @@ public final class Player extends Playable {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("Failed restoing character teleport bookmark.", e);
+            LOGGER.error("Failed restoring character teleport bookmark.", e);
         }
     }
 
     @Override
     public void sendInfo(Player player) {
-        if (isInBoat()) {
-            setXYZ(getBoat().getLocation());
+        if(!isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
+            player.sendPacket(new ExCharInfo(this));
+        }
 
-            player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
+        if (isInBoat() && isInvisible()) {
+            setXYZ(getBoat().getLocation());
             player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), _inVehiclePosition));
-        } else {
-            player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
         }
 
         final int relation1 = getRelation(player);

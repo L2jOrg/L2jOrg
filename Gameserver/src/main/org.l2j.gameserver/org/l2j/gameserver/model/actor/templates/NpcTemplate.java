@@ -172,7 +172,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _isQuestMonster = _title.contains("Quest");
         _undying = set.getBoolean("undying", true);
         _showName = set.getBoolean("showName", true);
-        _randomWalk = set.getBoolean("randomWalk", !_type.equals("L2Guard"));
+        _randomWalk = set.getBoolean("randomWalk", !_type.equals("Guard"));
         _randomAnimation = set.getBoolean("randomAnimation", true);
         _flying = set.getBoolean("flying", false);
         _canMove = set.getBoolean("canMove", true);
@@ -216,7 +216,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         if (Config.ENABLE_NPC_STAT_MULTIPIERS) // Custom NPC Stat Multipliers
         {
             switch (_type) {
-                case "L2Monster": {
+                case "Monster": {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.MONSTER_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.MONSTER_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.MONSTER_PATK_MULTIPLIER);
@@ -227,8 +227,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _clanHelpRange *= Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER;
                     break;
                 }
-                case "L2RaidBoss":
-                case "L2GrandBoss": {
+                case "RaidBoss":
+                case "GrandBoss": {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.RAIDBOSS_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.RAIDBOSS_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.RAIDBOSS_PATK_MULTIPLIER);
@@ -239,7 +239,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _clanHelpRange *= Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
                     break;
                 }
-                case "L2Guard": {
+                case "Guard": {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.GUARD_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.GUARD_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.GUARD_PATK_MULTIPLIER);
@@ -250,7 +250,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _clanHelpRange *= Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER;
                     break;
                 }
-                case "L2Defender": {
+                case "Defender": {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.DEFENDER_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.DEFENDER_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.DEFENDER_PATK_MULTIPLIER);

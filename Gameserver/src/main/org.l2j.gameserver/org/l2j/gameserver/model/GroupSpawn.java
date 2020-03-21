@@ -36,7 +36,7 @@ public class GroupSpawn extends Spawn {
 
     public Npc doGroupSpawn() {
         try {
-            if (_template.isType("L2Pet") || _template.isType("L2Minion")) {
+            if (_template.isType("Pet") || _template.isType("Minion")) {
                 return null;
             }
 

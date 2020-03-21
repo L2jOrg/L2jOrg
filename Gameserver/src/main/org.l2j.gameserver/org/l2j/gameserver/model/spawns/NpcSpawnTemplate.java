@@ -262,7 +262,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
                 return;
             }
 
-            if (npcTemplate.isType("L2Defender")) {
+            if (npcTemplate.isType("Defender")) {
                 LOGGER.warn("Attempting to spawn npc id: {} type: {} file: {} spawn: {} group: {}", id, npcTemplate.getType(),  spawnTemplate.getFilePath(), spawnTemplate.getName(), group.getName());
                 return;
             }
