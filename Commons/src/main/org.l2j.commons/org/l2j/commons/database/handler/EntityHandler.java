@@ -44,7 +44,7 @@ public class EntityHandler implements TypeHandler<Object> {
 
             var metaData = resultSet.getMetaData();
             for (int i = 1; i <= metaData.getColumnCount(); i++) {
-                var columnName = metaData.getColumnName(i);
+                var columnName = metaData.getColumnLabel(i);
 
                 Field f = findField(fields, columnName);
                 if(isNull(f)) {
