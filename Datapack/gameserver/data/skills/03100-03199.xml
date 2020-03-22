@@ -1159,7 +1159,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="4.0">
 					<value level="4">5.0</value>
 					<value level="7">6.0</value>
@@ -2130,7 +2130,7 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_POWER" mode="PER">
 				<power initial="44.0">
 					<value level="2">49.0</value>
 					<value level="3">53.0</value>

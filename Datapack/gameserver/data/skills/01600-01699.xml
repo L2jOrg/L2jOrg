@@ -1067,7 +1067,7 @@
 					<value level="5">25.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<call-skill skill="1622" scope="SELF">

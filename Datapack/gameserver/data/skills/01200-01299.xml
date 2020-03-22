@@ -6131,7 +6131,7 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
 		</effects>
@@ -7414,7 +7414,7 @@
 					<value level="6">175.0</value>
 				</power>
 			</magical-attack>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="-50.0">
 					<value level="2">-52.0</value>
 					<value level="3">-54.0</value>

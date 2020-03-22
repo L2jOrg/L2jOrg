@@ -247,7 +247,7 @@
 			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
@@ -837,7 +837,7 @@
 				<value level="2">6</value>
 			</item-count>
 		</consume>
-		<target type="ENEMY_NOT" scope="RANGE_SORT_BY_HP" object="FRIEND" range="300" affect-min="9"/>
+		<target type="ENEMY_NOT" scope="RANGE_SORT_BY_HP" object="FRIEND" range="300" affect-min="11"/>
 		<effects>
 			<effect name="HealPercent">
 				<power initial="30.0">

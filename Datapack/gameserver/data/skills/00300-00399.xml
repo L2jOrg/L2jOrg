@@ -850,7 +850,7 @@
 			<effect name="HealPercent">
 				<power initial="30.0"/>
 			</effect>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -882,12 +882,13 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<dispel-by-category category="BUFF" max="3">				<power initial="25.0"/>
+			<dispel-by-category category="BUFF" max="3">
+				<power initial="25.0"/>
 			</dispel-by-category>
 			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP" mode="PER">
 				<power initial="-50.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="-10.0"/>
 			</stat-modify>
 			<resist-abnormal-by-category category="DEBUFF">
@@ -2728,7 +2729,7 @@
 			<resist-dispel-by-category category="BUFF">
 				<power initial="-80.0"/>
 			</resist-dispel-by-category>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="100.0"/>
 			</stat-modify>
 			<effect name="DebuffBlock"/>

@@ -572,7 +572,7 @@
 					<value level="3">-40.0</value>
 				</power>
 			</resist-abnormal-by-category>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE">
 				<power initial="-40.0">
 					<value level="2">-50.0</value>
 					<value level="3">-60.0</value>
@@ -642,7 +642,14 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
+			<stat-modify stat="ACCURACY">
+				<power initial="-4.0">
+					<value level="6">-7.0</value>
+					<value level="10">-10.0</value>
+					<value level="11">-12.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
 				<power initial="-4.0">
 					<value level="6">-7.0</value>
 					<value level="10">-10.0</value>
@@ -1053,7 +1060,7 @@
 				</power>
 				<weapon-type>BLUNT FIST </weapon-type>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE">
 				<power initial="-50.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">

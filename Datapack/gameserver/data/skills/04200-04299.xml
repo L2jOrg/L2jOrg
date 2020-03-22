@@ -1040,7 +1040,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="-100.0"/>
 			</stat-modify>
 		</effects>
@@ -1415,7 +1415,7 @@
 			<physical-attack critical-chance="0.0">
 				<power initial="51.0"/>
 			</physical-attack>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
 		</effects>
