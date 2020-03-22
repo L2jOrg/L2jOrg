@@ -497,7 +497,7 @@
 			<item initial="3031"/>
 			<item-count initial="200"/>
 		</consume>
-		<target scope="PLEDGE" object="FRIEND" range="1000" />
+		<target scope="RANGE" object="CLAN" range="1000" />
 		<effects>
 			<effect name="HealPercent">
 				<power initial="100.0"/>
