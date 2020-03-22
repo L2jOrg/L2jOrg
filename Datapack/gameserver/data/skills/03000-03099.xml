@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
 	<skill id="3001" name="int_1">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
@@ -11,7 +11,7 @@
 		<target />
 	</skill>
 	<skill id="3002" name="int_2">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
@@ -21,7 +21,7 @@
 		<target />
 	</skill>
 	<skill id="3003" name="str_2">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
@@ -31,7 +31,7 @@
 		<target />
 	</skill>
 	<skill id="3004" name="maxmp_5">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
@@ -41,7 +41,7 @@
 		<target />
 	</skill>
 	<skill id="3005" name="Bleed" debuff="true" action="A2">
-	<!-- HP continuously decreases. -->
+		<!-- HP continuously decreases. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="40"/>
@@ -61,7 +61,7 @@
 		</effects>
 	</skill>
 	<skill id="3006" name="Equip Set Items">
-	<!-- Equipping set items additionally increases stats. -->
+		<!-- Equipping set items additionally increases stats. -->
 		<icon initial="icon.skill0042"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<cast-range initial="-1"/>
@@ -71,7 +71,7 @@
 		<target />
 	</skill>
 	<skill id="3007" name="Special Ability: Guidance" max-level="6" >
-	<!-- Increases P. Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -99,7 +99,7 @@
 		</effects>
 	</skill>
 	<skill id="3008" name="Special Ability: Guidance" max-level="6" >
-	<!-- Increases P. Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -127,7 +127,7 @@
 		</effects>
 	</skill>
 	<skill id="3009" name="Special Ability: Evasion" max-level="8" >
-	<!-- Increases P. Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<icon initial="icon.skill0198"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -158,7 +158,7 @@
 		</effects>
 	</skill>
 	<skill id="3010" name="Special Ability: Focus" max-level="9" >
-	<!-- Increases P. Critical Rate. -->
+		<!-- Increases P. Critical Rate. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -186,7 +186,7 @@
 		</effects>
 	</skill>
 	<skill id="3011" name="Special Ability: Focus" max-level="7" >
-	<!-- Increases P. Critical Rate. -->
+		<!-- Increases P. Critical Rate. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -214,7 +214,7 @@
 		</effects>
 	</skill>
 	<skill id="3012" name="Special Ability: Anger" max-level="6" >
-	<!-- Decreases Max HP and increases P. Atk. -->
+		<!-- Decreases Max HP and increases P. Atk. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -245,10 +245,10 @@
 		</effects>
 	</skill>
 	<skill id="3013" name="Special Ability: Health" max-level="2" >
-	<!-- 
-		level 1: Increases Max HP.
-		level 2: Increases Max HP. Enables the character to attack multiple opponents.
-	 -->
+		<!--
+            level 1: Increases Max HP.
+            level 2: Increases Max HP. Enables the character to attack multiple opponents.
+         -->
 		<icon initial="icon.skill0211"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
@@ -278,7 +278,7 @@
 		</effects>
 	</skill>
 	<skill id="3014" name="Special Ability: Mana Up">
-	<!-- Increases Max MP. -->
+		<!-- Increases Max MP. -->
 		<icon initial="icon.skill0213"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
@@ -303,7 +303,7 @@
 		</effects>
 	</skill>
 	<skill id="3016" name="Special Ability: Critical Stun" max-level="7" debuff="true" action="A2">
-	<!-- Stunned and temporarily rendered immobile. -->
+		<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0000"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -334,12 +334,12 @@
 		</effects>
 	</skill>
 	<skill id="3017" name="Special Ability: Magic Regeneration" max-level="4" action="A1">
-	<!-- 
-		level 1: Increases MP Recovery Bonus by 12% for 10 minutes.
-		level 2: Increases MP Recovery Bonus by 14% for 10 minutes.
-		level 3: Increases MP Recovery Bonus by 16% for 10 minutes.
-		level 4: Increases MP Recovery Bonus by 20% for 10 minutes.
-	 -->
+		<!--
+            level 1: Increases MP Recovery Bonus by 12% for 10 minutes.
+            level 2: Increases MP Recovery Bonus by 14% for 10 minutes.
+            level 3: Increases MP Recovery Bonus by 16% for 10 minutes.
+            level 4: Increases MP Recovery Bonus by 20% for 10 minutes.
+         -->
 		<icon initial="icon.skill1044"/>
 		<attributes property="PHYSIC">
 			<cast-range initial="-1"/>
@@ -355,7 +355,7 @@
 		<target />
 	</skill>
 	<skill id="3018" name="Special Ability: Back Blow" max-level="6" >
-	<!-- Increases P. Critical Rate when attacking from behind. -->
+		<!-- Increases P. Critical Rate when attacking from behind. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -372,17 +372,17 @@
 		<target />
 		<effects>
 			<stat-position-based stat="CRITICAL_RATE" position="BACK">				<power initial="71.0">
-					<value level="2">67.0</value>
-					<value level="3">63.0</value>
-					<value level="4">60.0</value>
-					<value level="5">56.0</value>
-					<value level="6">53.0</value>
-				</power>
+				<value level="2">67.0</value>
+				<value level="3">63.0</value>
+				<value level="4">60.0</value>
+				<value level="5">56.0</value>
+				<value level="6">53.0</value>
+			</power>
 			</stat-position-based>
 		</effects>
 	</skill>
 	<skill id="3019" name="Special Ability: Back Blow" max-level="6" >
-	<!-- Increases P. Critical Rate when attacking from behind. -->
+		<!-- Increases P. Critical Rate when attacking from behind. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -399,17 +399,17 @@
 		<target />
 		<effects>
 			<stat-position-based stat="CRITICAL_RATE" position="BACK">				<power initial="50.0">
-					<value level="2">47.0</value>
-					<value level="3">45.0</value>
-					<value level="4">42.0</value>
-					<value level="5">40.0</value>
-					<value level="6">37.0</value>
-				</power>
+				<value level="2">47.0</value>
+				<value level="3">45.0</value>
+				<value level="4">42.0</value>
+				<value level="5">40.0</value>
+				<value level="6">37.0</value>
+			</power>
 			</stat-position-based>
 		</effects>
 	</skill>
 	<skill id="3020" name="Special Ability: Critical Bleed" max-level="6" debuff="true" action="A2">
-	<!-- HP has been momentarily decreased due to Bleed. -->
+		<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="46">
@@ -444,7 +444,7 @@
 		</effects>
 	</skill>
 	<skill id="3021" name="Special Ability: Critical Bleed" max-level="6" debuff="true" action="A2">
-	<!-- HP has been momentarily decreased due to Bleed. -->
+		<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="46">
@@ -478,7 +478,7 @@
 		</effects>
 	</skill>
 	<skill id="3022" name="Special Ability: Critical Drain" max-level="6" action="A1" type="MAGIC">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0070"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -515,7 +515,7 @@
 		</effects>
 	</skill>
 	<skill id="3023" name="Special Ability: Critical Damage" max-level="9" >
-	<!-- Increases P. Critical Damage. -->
+		<!-- Increases P. Critical Damage. -->
 		<icon initial="icon.skill1242"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -543,7 +543,7 @@
 		</effects>
 	</skill>
 	<skill id="3024" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- HP has been momentarily decreased due to Poison. -->
+		<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill1168"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="46">
@@ -586,7 +586,7 @@
 		</effects>
 	</skill>
 	<skill id="3025" name="Special Ability: Critical Anger" max-level="6" action="A1">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -603,7 +603,7 @@
 		<target type="NONE" scope="NONE" />
 	</skill>
 	<skill id="3026" name="Special Ability: Critical Anger" max-level="6" >
-	<!-- Deals additional damage by spending your HP upon P. Critical. -->
+		<!-- Deals additional damage by spending your HP upon P. Critical. -->
 		<icon initial="icon.skill1062"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -631,7 +631,7 @@
 		</effects>
 	</skill>
 	<skill id="3027" name="Special Ability: Risk Focus" max-level="7" >
-	<!-- Increases P. Critical Rate when in danger. -->
+		<!-- Increases P. Critical Rate when in danger. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -676,7 +676,7 @@
 		</effects>
 	</skill>
 	<skill id="3028" name="Special Ability: Risk Evasion" max-level="6" >
-	<!-- Increases P. Evasion when in danger. -->
+		<!-- Increases P. Evasion when in danger. -->
 		<icon initial="icon.skill0198"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -704,7 +704,7 @@
 		</effects>
 	</skill>
 	<skill id="3029" name="Special Ability: Risk Evasion" max-level="6" >
-	<!-- Increases P. Evasion when in danger. -->
+		<!-- Increases P. Evasion when in danger. -->
 		<icon initial="icon.skill0198"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -732,7 +732,7 @@
 		</effects>
 	</skill>
 	<skill id="3030" name="Special Ability: Risk Evasion" max-level="6" >
-	<!-- Increases P. Evasion when in danger. -->
+		<!-- Increases P. Evasion when in danger. -->
 		<icon initial="icon.skill0198"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -760,7 +760,7 @@
 		</effects>
 	</skill>
 	<skill id="3031" name="Special Ability: Risk Evasion" max-level="6" >
-	<!-- Increases P. Evasion when in danger. -->
+		<!-- Increases P. Evasion when in danger. -->
 		<icon initial="icon.skill0198"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -788,7 +788,7 @@
 		</effects>
 	</skill>
 	<skill id="3032" name="Special Ability: Risk Haste" max-level="6" >
-	<!-- Increases Atk. Spd. when in danger. -->
+		<!-- Increases Atk. Spd. when in danger. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -815,7 +815,7 @@
 		</effects>
 	</skill>
 	<skill id="3033" name="Special Ability: Risk Haste" max-level="6" >
-	<!-- Increases Atk. Spd. when in danger. -->
+		<!-- Increases Atk. Spd. when in danger. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -842,7 +842,7 @@
 		</effects>
 	</skill>
 	<skill id="3034" name="Special Ability: Risk Haste" max-level="6" >
-	<!-- Increases Atk. Spd. when in danger. -->
+		<!-- Increases Atk. Spd. when in danger. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -878,7 +878,7 @@
 		</effects>
 	</skill>
 	<skill id="3035" name="Special Ability: Mortal Strike" max-level="6" >
-	<!-- Increases Deadly Stab rate. -->
+		<!-- Increases Deadly Stab rate. -->
 		<icon initial="icon.skill0410">
 			<value level="3">icon.skill0016</value>
 		</icon>
@@ -908,7 +908,7 @@
 		</effects>
 	</skill>
 	<skill id="3036" name="Special Ability: Haste" max-level="6" >
-	<!-- Increases Atk. Spd. -->
+		<!-- Increases Atk. Spd. -->
 		<icon initial="icon.skill1241">
 			<value level="3">icon.skill1086</value>
 		</icon>
@@ -935,7 +935,7 @@
 		</effects>
 	</skill>
 	<skill id="3037" name="Special Ability: Haste" max-level="6" >
-	<!-- Increases Atk. Spd. -->
+		<!-- Increases Atk. Spd. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -960,7 +960,7 @@
 		</effects>
 	</skill>
 	<skill id="3038" name="Special Ability: Haste" max-level="6" >
-	<!-- Increases Atk. Spd. -->
+		<!-- Increases Atk. Spd. -->
 		<icon initial="icon.skill1241">
 			<value level="2">icon.skill1086</value>
 		</icon>
@@ -987,7 +987,7 @@
 		</effects>
 	</skill>
 	<skill id="3039" name="Special Ability: Critical Drain" max-level="7" action="A1" type="MAGIC">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -1030,7 +1030,7 @@
 		</effects>
 	</skill>
 	<skill id="3040" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- HP has been momentarily decreased due to Poison. -->
+		<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill1168"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="46">
@@ -1072,7 +1072,7 @@
 		</effects>
 	</skill>
 	<skill id="3041" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- HP has been momentarily decreased due to Poison. -->
+		<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill1168"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="46">
@@ -1114,7 +1114,7 @@
 		</effects>
 	</skill>
 	<skill id="3042" name="Special Ability: Critical Damage" max-level="16" >
-	<!-- Increases P. Critical Damage. -->
+		<!-- Increases P. Critical Damage. -->
 		<icon initial="icon.skill0193">
 			<value level="4">icon.skill1242</value>
 			<value level="14">icon.skill0193</value>
@@ -1174,7 +1174,7 @@
 		</effects>
 	</skill>
 	<skill id="3043" name="Special Ability: Critical Damage" max-level="8" >
-	<!-- Increases P. Critical Damage. -->
+		<!-- Increases P. Critical Damage. -->
 		<icon initial="icon.skill0193"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -1202,7 +1202,7 @@
 		</effects>
 	</skill>
 	<skill id="3044" name="Special Ability: Focus" max-level="16" >
-	<!-- Increases P. Critical Rate. -->
+		<!-- Increases P. Critical Rate. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="48">
@@ -1259,7 +1259,7 @@
 		</effects>
 	</skill>
 	<skill id="3045" name="Special Ability: Haste" max-level="16" >
-	<!-- Increases Atk. Spd. -->
+		<!-- Increases Atk. Spd. -->
 		<icon initial="icon.skill1086">
 			<value level="4">icon.skill1241</value>
 			<value level="5">icon.skill1086</value>
@@ -1320,7 +1320,7 @@
 		</effects>
 	</skill>
 	<skill id="3046" name="Special Ability: Guidance" max-level="16" >
-	<!-- Increases P. Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon initial="icon.skill1240"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="48">
@@ -1376,7 +1376,7 @@
 		</effects>
 	</skill>
 	<skill id="3047" name="Special Ability: Acumen" max-level="2" >
-	<!-- Increases Casting Spd. -->
+		<!-- Increases Casting Spd. -->
 		<icon initial="icon.skill1085"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="64"/>
@@ -1407,7 +1407,7 @@
 		</effects>
 	</skill>
 	<skill id="3048" name="Special Ability: Conversion">
-	<!-- Decreases Max HP and increases Max MP. -->
+		<!-- Decreases Max HP and increases Max MP. -->
 		<icon initial="icon.skill1048"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="64"/>
@@ -1435,7 +1435,7 @@
 		</effects>
 	</skill>
 	<skill id="3049" name="Special Ability: Magic Damage" max-level="2" action="A1" type="MAGIC">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="64">
@@ -1454,7 +1454,7 @@
 		</effects>
 	</skill>
 	<skill id="3052" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-	<!-- HP has been momentarily decreased due to Bleed. -->
+		<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="64">
@@ -1476,7 +1476,7 @@
 		</effects>
 	</skill>
 	<skill id="3053" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-	<!-- HP has been momentarily decreased due to Bleed. -->
+		<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="64">
@@ -1501,7 +1501,7 @@
 		</effects>
 	</skill>
 	<skill id="3054" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-	<!-- HP has been momentarily decreased due to Bleed. -->
+		<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="64">
@@ -1526,7 +1526,7 @@
 		</effects>
 	</skill>
 	<skill id="3055" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-	<!-- HP has been momentarily decreased due to Bleed. -->
+		<!-- HP has been momentarily decreased due to Bleed. -->
 		<icon initial="icon.skill0223"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="64">
@@ -1551,7 +1551,7 @@
 		</effects>
 	</skill>
 	<skill id="3056" name="Special Ability: Risk Haste">
-	<!-- Increases Atk. Spd. when in danger. -->
+		<!-- Increases Atk. Spd. when in danger. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="64"/>
@@ -1576,7 +1576,7 @@
 		</effects>
 	</skill>
 	<skill id="3059" name="Special Ability: Critical Drain" max-level="2" action="A1" type="MAGIC">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="64">
@@ -1596,7 +1596,7 @@
 		</effects>
 	</skill>
 	<skill id="3060" name="Special Ability: Critical Drain" max-level="2" action="A1" type="MAGIC">
-	<!-- none -->
+		<!-- none -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="64">
@@ -1616,7 +1616,7 @@
 		</effects>
 	</skill>
 	<skill id="3061" name="Special Ability: Critical Poison" max-level="3" debuff="true" action="A2" type="MAGIC">
-	<!-- HP has been momentarily decreased due to Poison. -->
+		<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill1168"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="64">
@@ -1641,7 +1641,7 @@
 		</effects>
 	</skill>
 	<skill id="3062" name="Special Ability: Critical Poison" max-level="2" debuff="true" action="A2" type="MAGIC">
-	<!-- HP has been momentarily decreased due to Poison. -->
+		<!-- HP has been momentarily decreased due to Poison. -->
 		<icon initial="icon.skill1168"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="64">
@@ -1663,7 +1663,7 @@
 		</effects>
 	</skill>
 	<skill id="3068" name="Special Ability: Haste">
-	<!-- Increases Atk. Spd. -->
+		<!-- Increases Atk. Spd. -->
 		<icon initial="icon.skill1086"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="64"/>
@@ -1688,7 +1688,7 @@
 		</effects>
 	</skill>
 	<skill id="3069" name="Special Ability: Risk Evasion">
-	<!-- Increases P. Evasion when in danger. -->
+		<!-- Increases P. Evasion when in danger. -->
 		<icon initial="icon.skill0198"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="1"/>
@@ -1704,7 +1704,7 @@
 		</effects>
 	</skill>
 	<skill id="3070" name="Special Ability: Critical Stun" max-level="4" debuff="true" action="A2">
-	<!-- Stunned and temporarily rendered immobile. -->
+		<!-- Stunned and temporarily rendered immobile. -->
 		<icon initial="icon.skill0100"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
 			<magic-level initial="64">
@@ -1729,7 +1729,7 @@
 		</effects>
 	</skill>
 	<skill id="3071" name="Special Ability: Risk Focus">
-	<!-- Increases P. Critical Rate when in danger. -->
+		<!-- Increases P. Critical Rate when in danger. -->
 		<icon initial="icon.skill1077"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="64"/>
@@ -1754,7 +1754,7 @@
 		</effects>
 	</skill>
 	<skill id="3074" name="Special Ability: Magic Silence" max-level="2" debuff="true" action="A2" type="MAGIC">
-	<!-- Temporarily blocks the ability to use magic skills. -->
+		<!-- Temporarily blocks the ability to use magic skills. -->
 		<icon initial="icon.skill1064"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="64">
@@ -1775,7 +1775,7 @@
 		</effects>
 	</skill>
 	<skill id="3075" name="Special Ability: Magic Paralyze" max-level="2" debuff="true" action="A2" type="MAGIC">
-	<!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
+		<!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
 			<magic-level initial="64">
@@ -1807,7 +1807,7 @@
 		</effects>
 	</skill>
 	<skill id="3076" name="Special Ability: Empower" max-level="9" >
-	<!-- Increases M. Atk. -->
+		<!-- Increases M. Atk. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -1835,7 +1835,7 @@
 		</effects>
 	</skill>
 	<skill id="3077" name="Special Ability: Magic Power" max-level="6" >
-	<!-- Increases MP Consumption and M. Atk. -->
+		<!-- Increases MP Consumption and M. Atk. -->
 		<icon initial="icon.skill1059"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -1866,7 +1866,7 @@
 		</effects>
 	</skill>
 	<skill id="3078" name="Special Ability: Magic Silence" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- Temporarily blocks the ability to use magic skills. -->
+		<!-- Temporarily blocks the ability to use magic skills. -->
 		<icon initial="icon.skill1064"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -1891,7 +1891,7 @@
 		</effects>
 	</skill>
 	<skill id="3079" name="Special Ability: Magic Paralyze" max-level="6" debuff="true" action="A2" type="MAGIC">
-	<!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
+		<!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
 		<icon initial="icon.skill1170"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -1927,18 +1927,18 @@
 		</effects>
 	</skill>
 	<skill id="3080" name="Item Skill: Aggression" max-level="15" action="A1">
-	<!-- 
-		level 1: Effect: Provokes a target to attack during a normal physical attack. Power: 438..
-		level 2: Effect: Provokes a target to attack during a normal physical attack. Power: 467..
-		level 3: Effect: Provokes a target to attack during a normal physical attack. Power: 495..
-		level 4: Effect: Provokes a target to attack during a normal physical attack. Power: 523..
-		level 5: Effect: Provokes a target to attack during a normal physical attack. Power: 549..
-		level 6: Effect: Provokes a target to attack during a normal physical attack. Power: 574..
-		level 7: Effect: Provokes a target to attack during a normal physical attack. Power: 597..
-		level 8: Effect: Provokes a target to attack during a normal physical attack. Power: 617..
-		level 9: Effect: Provokes a target to attack during a normal physical attack. Power: 635..
-		level 10: Effect: Provokes a target to attack during a normal physical attack. Power: 659..
-	 -->
+		<!--
+            level 1: Effect: Provokes a target to attack during a normal physical attack. Power: 438..
+            level 2: Effect: Provokes a target to attack during a normal physical attack. Power: 467..
+            level 3: Effect: Provokes a target to attack during a normal physical attack. Power: 495..
+            level 4: Effect: Provokes a target to attack during a normal physical attack. Power: 523..
+            level 5: Effect: Provokes a target to attack during a normal physical attack. Power: 549..
+            level 6: Effect: Provokes a target to attack during a normal physical attack. Power: 574..
+            level 7: Effect: Provokes a target to attack during a normal physical attack. Power: 597..
+            level 8: Effect: Provokes a target to attack during a normal physical attack. Power: 617..
+            level 9: Effect: Provokes a target to attack during a normal physical attack. Power: 635..
+            level 10: Effect: Provokes a target to attack during a normal physical attack. Power: 659..
+         -->
 		<icon initial="icon.skill3080"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -1981,23 +1981,23 @@
 		</effects>
 	</skill>
 	<skill id="3081" name="Item Skill: Charm (Physical)" max-level="15" action="A1">
-	<!-- 
-		level 1: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 219..
-		level 2: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 234..
-		level 3: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 248..
-		level 4: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 262..
-		level 5: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 275..
-		level 6: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 287..
-		level 7: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 299..
-		level 8: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 309..
-		level 9: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 318..
-		level 10: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 330..
-		level 11: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 342..
-		level 12: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 354..
-		level 13: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 366..
-		level 14: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 378..
-		level 15: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 390..
-	 -->
+		<!--
+            level 1: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 219..
+            level 2: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 234..
+            level 3: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 248..
+            level 4: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 262..
+            level 5: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 275..
+            level 6: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 287..
+            level 7: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 299..
+            level 8: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 309..
+            level 9: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 318..
+            level 10: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 330..
+            level 11: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 342..
+            level 12: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 354..
+            level 13: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 366..
+            level 14: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 378..
+            level 15: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 390..
+         -->
 		<icon initial="icon.skill3080"/>
 		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
 			<magic-level initial="46">
@@ -2044,18 +2044,18 @@
 		</effects>
 	</skill>
 	<skill id="3082" name="Item Skill: Mana Burn" max-level="10" action="A1">
-	<!-- 
-		level 1: Effect: Burns the target's MP during a normal physical attack. Power: 49..
-		level 2: Effect: Burns the target's MP during a normal physical attack. Power: 53..
-		level 3: Effect: Burns the target's MP during a normal physical attack. Power: 57..
-		level 4: Effect: Burns the target's MP during a normal physical attack. Power: 61..
-		level 5: Effect: Burns the target's MP during a normal physical attack. Power: 66..
-		level 6: Effect: Burns the target's MP during a normal physical attack. Power: 70..
-		level 7: Effect: Burns the target's MP during a normal physical attack. Power: 74..
-		level 8: Effect: Burns the target's MP during a normal physical attack. Power: 78..
-		level 9: Effect: Burns the target's MP during a normal physical attack. Power: 82..
-		level 10: Effect: Burns the target's MP during a normal physical attack. Power: 88..
-	 -->
+		<!--
+            level 1: Effect: Burns the target's MP during a normal physical attack. Power: 49..
+            level 2: Effect: Burns the target's MP during a normal physical attack. Power: 53..
+            level 3: Effect: Burns the target's MP during a normal physical attack. Power: 57..
+            level 4: Effect: Burns the target's MP during a normal physical attack. Power: 61..
+            level 5: Effect: Burns the target's MP during a normal physical attack. Power: 66..
+            level 6: Effect: Burns the target's MP during a normal physical attack. Power: 70..
+            level 7: Effect: Burns the target's MP during a normal physical attack. Power: 74..
+            level 8: Effect: Burns the target's MP during a normal physical attack. Power: 78..
+            level 9: Effect: Burns the target's MP during a normal physical attack. Power: 82..
+            level 10: Effect: Burns the target's MP during a normal physical attack. Power: 88..
+         -->
 		<icon initial="icon.skill3080"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -2092,7 +2092,7 @@
 		</effects>
 	</skill>
 	<skill id="3083" name="Item Skill: Slow (Physical)" max-level="15" debuff="true" action="A2">
-	<!-- Effect: Target's Movement Speed -30%% during a normal physical attack. -->
+		<!-- Effect: Target's Movement Speed -30%% during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2128,7 +2128,7 @@
 		</effects>
 	</skill>
 	<skill id="3084" name="Item Skill: Winter (Physical)" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Target's Atk. Spd. -23%% during a normal physical attack. -->
+		<!-- Effect: Target's Atk. Spd. -23%% during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2159,7 +2159,7 @@
 		</effects>
 	</skill>
 	<skill id="3085" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Stuns the target during a normal physical attack. -->
+		<!-- Effect: Stuns the target during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2188,7 +2188,7 @@
 		</effects>
 	</skill>
 	<skill id="3086" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
-	<!-- Effect: Momentarily inflicts Hold on the target during a normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- Effect: Momentarily inflicts Hold on the target during a normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2227,7 +2227,7 @@
 		</effects>
 	</skill>
 	<skill id="3087" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Momentarily inflicts Sleep on the target during a normal physical attack. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
+		<!-- Effect: Momentarily inflicts Sleep on the target during a normal physical attack. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2261,7 +2261,7 @@
 		</effects>
 	</skill>
 	<skill id="3088" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2">
-	<!-- Skill Effect: Petrifies an enemy for 15 seconds upon a normal physical attack. When fully petrified, becomes paralyzed for 10 seconds. -->
+		<!-- Skill Effect: Petrifies an enemy for 15 seconds upon a normal physical attack. When fully petrified, becomes paralyzed for 10 seconds. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2301,7 +2301,7 @@
 		</effects>
 	</skill>
 	<skill id="3089" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Momentarily petrifies the target during a normal physical attack. -->
+		<!-- Effect: Momentarily petrifies the target during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2332,7 +2332,7 @@
 		</effects>
 	</skill>
 	<skill id="3090" name="Item Skill: Fear" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Momentarily inflicts Fear on the target and causes them to flee during a normal physical attack. -->
+		<!-- Effect: Momentarily inflicts Fear on the target and causes them to flee during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2362,7 +2362,7 @@
 		</effects>
 	</skill>
 	<skill id="3091" name="Item Skill: Poison (Physical)" max-level="15" debuff="true" action="A2">
-	<!-- Effect: Momentarily inflicts Poison on the target during a normal physical attack. -->
+		<!-- Effect: Momentarily inflicts Poison on the target during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
 			<magic-level initial="46">
@@ -2409,7 +2409,7 @@
 		</effects>
 	</skill>
 	<skill id="3092" name="Item Skill: Bleed (Physical)" max-level="15" debuff="true" action="A2">
-	<!-- Effect: Momentarily inflicts Bleed on the target during a normal physical attack. -->
+		<!-- Effect: Momentarily inflicts Bleed on the target during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
 			<magic-level initial="46">
@@ -2455,7 +2455,7 @@
 		</effects>
 	</skill>
 	<skill id="3093" name="Item Skill: Silence" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Momentarily blocks the target's M. Skill during a normal physical attack. -->
+		<!-- Effect: Momentarily blocks the target's M. Skill during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2484,7 +2484,7 @@
 		</effects>
 	</skill>
 	<skill id="3094" name="Item Skill: Doom" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Momentarily blocks all of the target's P. Skills/M. Skills during a normal physical attack. -->
+		<!-- Effect: Momentarily blocks all of the target's P. Skills/M. Skills during a normal physical attack. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2514,18 +2514,18 @@
 		</effects>
 	</skill>
 	<skill id="3095" name="Item Skill: Mana Burn" max-level="10" action="A1">
-	<!-- 
-		level 1: Chance: Burns up the target's MP during magic use. Power 49.
-		level 2: Chance: Burns up the target's MP during magic use. Power 53.
-		level 3: Chance: Burns up the target's MP during magic use. Power 57.
-		level 4: Chance: Burns up the target's MP during magic use. Power 61.
-		level 5: Chance: Burns up the target's MP during magic use. Power 66.
-		level 6: Chance: Burns up the target's MP during magic use. Power 70.
-		level 7: Chance: Burns up the target's MP during magic use. Power 74.
-		level 8: Chance: Burns up the target's MP during magic use. Power 78.
-		level 9: Chance: Burns up the target's MP during magic use. Power 82.
-		level 10: Chance: Burns up the target's MP during magic use. Power 88.
-	 -->
+		<!--
+            level 1: Chance: Burns up the target's MP during magic use. Power 49.
+            level 2: Chance: Burns up the target's MP during magic use. Power 53.
+            level 3: Chance: Burns up the target's MP during magic use. Power 57.
+            level 4: Chance: Burns up the target's MP during magic use. Power 61.
+            level 5: Chance: Burns up the target's MP during magic use. Power 66.
+            level 6: Chance: Burns up the target's MP during magic use. Power 70.
+            level 7: Chance: Burns up the target's MP during magic use. Power 74.
+            level 8: Chance: Burns up the target's MP during magic use. Power 78.
+            level 9: Chance: Burns up the target's MP during magic use. Power 82.
+            level 10: Chance: Burns up the target's MP during magic use. Power 88.
+         -->
 		<icon initial="icon.skill3080"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="46">
@@ -2563,7 +2563,7 @@
 		</effects>
 	</skill>
 	<skill id="3096" name="Item Skill: Slow (Magic)" max-level="15" debuff="true" action="A2">
-	<!-- Effect: Upon using magic, target's Movement Speed -30%%. -->
+		<!-- Effect: Upon using magic, target's Movement Speed -30%%. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2600,7 +2600,7 @@
 		</effects>
 	</skill>
 	<skill id="3097" name="Item Skill: Winter (Magic)" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Upon using magic, target's Atk. Spd.-23%%. -->
+		<!-- Effect: Upon using magic, target's Atk. Spd.-23%%. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2632,7 +2632,7 @@
 		</effects>
 	</skill>
 	<skill id="3098" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
-	<!-- Effect: Upon using magic, momentarily inflicts Stun on the target. -->
+		<!-- Effect: Upon using magic, momentarily inflicts Stun on the target. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
 			<magic-level initial="46">
@@ -2662,7 +2662,7 @@
 		</effects>
 	</skill>
 	<skill id="3099" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
-	<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<icon initial="icon.skill3080"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
 			<magic-level initial="46">
