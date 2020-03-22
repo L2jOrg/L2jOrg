@@ -1878,7 +1878,6 @@
 				<value level="11">1000</value>
 				<value level="12">1500</value>
 			</hit-time>
-
 			<element type="DARK" value="20"/>
 		</attributes>
 		<consume>
@@ -1971,7 +1970,7 @@
 		</consume>
 		<target type="ENEMY" />
 		<effects>
-			<fatal-blow chance-boost="200.0" over-hit="false">
+			<fatal-blow chance-boost="500.0" over-hit="false">
 				<power initial="3408.0">
 					<value level="2">3980.0</value>
 					<value level="3">4575.0</value>

@@ -1019,7 +1019,7 @@
 			</lethal>
 		</effects>
 	</skill>
-	<skill id="345" name="Sonic Rage" max-level="5" debuff="true" action="A1">
+	<skill id="345" name="Sonic Rage" max-level="5" debuff="true" action="A2">
 	<!-- 
 		level 1: Attacks the target with a blast of force from the sword with 195 P. Atk. Power. P. Def. -30%% and absorbs Momentum. Requires a Sword, blunt Weapon, or Dualsword.
 		level 2: Attacks the target with a blast of force from the sword with 205 P. Atk. Power. P. Def. -30%% and absorbs Momentum. Requires a Sword, blunt Weapon, or Dualsword.
@@ -1074,10 +1074,10 @@
 					<value level="5">235.0</value>
 				</power>
 			</physical-attack>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="-23.0"/>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-30"/>
 			</stat-modify>
-			<effect  name="FocusMomentum" scope="SELF">
+			<effect name="FocusMomentum" scope="SELF">
 				<power initial="8.0"/>
 			</effect>
 		</effects>

@@ -875,15 +875,18 @@ public final class Formulas {
      * @return
      */
     public static boolean calcBlowSuccess(Creature activeChar, Creature target, Skill skill, double chanceBoost) {
+        if(skill.getActivateRate() == -1) {
+            return true;
+        }
         final Weapon weapon = activeChar.getActiveWeaponItem();
         final double weaponCritical = weapon != null ? weapon.getStats(Stat.CRITICAL_RATE, activeChar.getTemplate().getBaseCritRate()) : activeChar.getTemplate().getBaseCritRate();
-        // double dexBonus = BaseStats.DEX.calcBonus(activeChar); Not used in GOD
+        double dexBonus = BaseStats.DEX.calcBonus(activeChar);
         final double critHeightBonus = calcCriticalHeightBonus(activeChar, target);
         final double criticalPosition = calcCriticalPositionBonus(activeChar, target); // 30% chance from back, 10% chance from side. Include buffs that give positional crit rate.
         final double chanceBoostMod = (100 + chanceBoost) / 100;
         final double blowRateMod = activeChar.getStats().getValue(Stat.BLOW_RATE, 1);
 
-        final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod;
+        final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod * dexBonus;
 
         // Blow rate is capped at 80%
         return Rnd.get(100) < Math.min(rate, 80);

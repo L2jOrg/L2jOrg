@@ -6558,7 +6558,7 @@ public final class Player extends Playable {
      */
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (attacker == null) {
+        if (isNull(attacker)) {
             return false;
         }
 
@@ -6589,10 +6589,7 @@ public final class Player extends Playable {
 
         // Check if the attacker is in olympia and olympia start
         if (GameUtils.isPlayer(attacker) && attacker.getActingPlayer().isInOlympiadMode()) {
-            if (_inOlympiadMode && _OlympiadStart && (((Player) attacker).getOlympiadGameId() == getOlympiadGameId())) {
-                return true;
-            }
-            return false;
+            return _inOlympiadMode && _OlympiadStart && (((Player) attacker).getOlympiadGameId() == getOlympiadGameId());
         }
 
         if (_isOnCustomEvent && (getTeam() == attacker.getTeam())) {
@@ -6657,6 +6654,11 @@ public final class Player extends Playable {
             if (isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE)) {
                 return true;
             }
+
+            if(getPvpFlag() > 0) {
+                return true;
+            }
+
         }
 
         if (attacker instanceof Defender) {

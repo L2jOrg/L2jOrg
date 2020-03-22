@@ -1451,7 +1451,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="1631" name="Reset Movement" max-level="2" action="A1">
+	<skill id="1631" name="Clear Movement" max-level="2" action="A1">
 	<!-- Sharpens all senses related to movement. Resets the cooldown of Hide and Shadow Step. Requires a dagger. -->
 		<icon initial="icon.skill10518"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -1483,6 +1483,7 @@
 		</conditions>
 		<effects>
 			<reuse-skill id="821"/>
+			<reuse-skill id="922"/>
 		</effects>
 	</skill>
 	<skill id="1632" name="Deadly Strike" max-level="8" debuff="true" action="A2">

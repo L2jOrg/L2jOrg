@@ -2101,7 +2101,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="MAX_MOMENTUM" stat-add="MAX_MOMENTUM">
+			<stat-modify stat="MAX_MOMENTUM">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>

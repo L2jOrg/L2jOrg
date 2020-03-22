@@ -172,7 +172,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="821" name="Shadow Step" max-level="8" debuff="true" action="A1">
+	<skill id="821" name="Shadow Step" max-level="8" debuff="true" action="A2">
 	<!-- Moves behind the target to stun them. -->
 		<icon initial="icon.skill0821"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
@@ -206,7 +206,7 @@
 		<target type="ENEMY" />
 		<abnormal type="STUN" visual="STUN" >
 			<level initial="2"/>
-			<time initial="1"/>
+			<time initial="5"/>
 			<chance initial="70"/>
 		</abnormal>
 		<effects>
