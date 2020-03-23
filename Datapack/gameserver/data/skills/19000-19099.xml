@@ -3,7 +3,7 @@
 	<skill id="19009" name="Clan Advent" action="A2">
 	<!-- When the clan leader logs in, clan members' P./M. Atk. + 2%%. -->
 		<icon initial="icon.skill19009"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" dispellable="false">
 			<magic-level initial="-2"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="100"/>

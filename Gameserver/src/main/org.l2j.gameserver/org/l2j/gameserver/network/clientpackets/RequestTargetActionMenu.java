@@ -1,10 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.model.actor.instance.Player;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
  * @author Mobius
@@ -20,14 +18,7 @@ public class RequestTargetActionMenu extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if (isNull(player)) {
-            return;
-        }
-
-        var object = World.getInstance().findVisibleObject(player, _objectId);
-        if (nonNull(object) && object.isAutoAttackable(player)) {
-            player.setTarget(object);
-        }
+        var player = client.getPlayer();
+        doIfNonNull(World.getInstance().findVisibleObject(player, _objectId), player::setTarget);
     }
 }

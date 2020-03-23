@@ -659,7 +659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1611" name="Power Supremacy" max-level="6" action="T">
+	<skill id="1611" name="Physical Transcendence" max-level="6" action="T">
 	<!-- 
 		level 1: Gathers power that exceeds your physical limit. P. Atk. +10% and Max HP -10%.
 		level 2: Gathers power that exceeds your physical limit. P. Atk. +12% and Max HP -11%.
@@ -676,7 +676,7 @@
 		</attributes>
 		<target type="NONE" />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0">
 					<value level="2">12.0</value>
 					<value level="3">14.0</value>
@@ -1067,7 +1067,7 @@
 					<value level="5">25.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<call-skill skill="1622" scope="SELF">
@@ -1451,7 +1451,7 @@
 			</physical-attack>
 		</effects>
 	</skill>
-	<skill id="1631" name="Reset Movement" max-level="2" action="A1">
+	<skill id="1631" name="Clear Movement" max-level="2" action="A1">
 	<!-- Sharpens all senses related to movement. Resets the cooldown of Hide and Shadow Step. Requires a dagger. -->
 		<icon initial="icon.skill10518"/>
 		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -1483,6 +1483,7 @@
 		</conditions>
 		<effects>
 			<reuse-skill id="821"/>
+			<reuse-skill id="922"/>
 		</effects>
 	</skill>
 	<skill id="1632" name="Deadly Strike" max-level="8" debuff="true" action="A2">

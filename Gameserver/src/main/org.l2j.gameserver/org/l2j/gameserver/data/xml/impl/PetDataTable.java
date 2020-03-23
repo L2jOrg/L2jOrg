@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 
 /**
@@ -29,7 +30,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class PetDataTable extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(PetDataTable.class);
 
-    private final Map<Integer, PetData> _pets = new HashMap<>();
+    private final Map<Integer, PetData> pets = new HashMap<>();
 
     private PetDataTable() {
         load();
@@ -53,9 +54,9 @@ public final class PetDataTable extends GameXmlReader {
 
     @Override
     public void load() {
-        _pets.clear();
+        pets.clear();
         parseDatapackDirectory("data/stats/pets", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _pets.size() + " Pets.");
+        LOGGER.info(getClass().getSimpleName() + ": Loaded " + pets.size() + " Pets.");
     }
 
     @Override
@@ -120,7 +121,7 @@ public final class PetDataTable extends GameXmlReader {
                         }
                     }
                 }
-                _pets.put(npcId, data);
+                pets.put(npcId, data);
             }
         }
     }
@@ -130,7 +131,7 @@ public final class PetDataTable extends GameXmlReader {
      * @return
      */
     public PetData getPetDataByItemId(int itemId) {
-        for (PetData data : _pets.values()) {
+        for (PetData data : pets.values()) {
             if (data.getItemId() == itemId) {
                 return data;
             }
@@ -163,10 +164,10 @@ public final class PetDataTable extends GameXmlReader {
      * @return the pet data
      */
     public PetData getPetData(int petId) {
-        if (!_pets.containsKey(petId)) {
+        if (!pets.containsKey(petId)) {
             LOGGER.info(getClass().getSimpleName() + ": Missing pet data for npcid: " + petId);
         }
-        return _pets.get(petId);
+        return pets.get(petId);
     }
 
     /**
@@ -176,17 +177,11 @@ public final class PetDataTable extends GameXmlReader {
      * @return the pet min level
      */
     public int getPetMinLevel(int petId) {
-        return _pets.get(petId).getMinLevel();
+        return pets.get(petId).getMinLevel();
     }
 
-    /**
-     * Gets the pet items by npc.
-     *
-     * @param npcId the NPC ID to get its summoning item
-     * @return summoning item for the given NPC ID
-     */
-    public int getPetItemsByNpc(int npcId) {
-        return _pets.get(npcId).getItemId();
+    public int getPetItemByNpc(int npcId) {
+        return zeroIfNullOrElse(pets.get(npcId), PetData::getItemId);
     }
 
     public static PetDataTable getInstance() {

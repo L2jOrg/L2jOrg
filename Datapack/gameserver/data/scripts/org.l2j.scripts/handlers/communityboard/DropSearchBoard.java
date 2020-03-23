@@ -69,7 +69,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			min = dropHolder.getMin();
 			max = dropHolder.getMax();
 			chance = dropHolder.getChance();
-			isRaid = npcTemplate.getType().equals("L2RaidBoss") || npcTemplate.getType().equals("L2GrandBoss");
+			isRaid = npcTemplate.getType().equals("RaidBoss") || npcTemplate.getType().equals("GrandBoss");
 		}
 		
 		/**

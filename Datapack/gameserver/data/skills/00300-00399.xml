@@ -850,7 +850,7 @@
 			<effect name="HealPercent">
 				<power initial="30.0"/>
 			</effect>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<resist-dispel-by-category category="BUFF">
@@ -882,12 +882,13 @@
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
-			<dispel-by-category category="BUFF" max="3">				<power initial="25.0"/>
+			<dispel-by-category category="BUFF" max="3">
+				<power initial="25.0"/>
 			</dispel-by-category>
 			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP" mode="PER">
 				<power initial="-50.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="-10.0"/>
 			</stat-modify>
 			<resist-abnormal-by-category category="DEBUFF">
@@ -1019,7 +1020,7 @@
 			</lethal>
 		</effects>
 	</skill>
-	<skill id="345" name="Sonic Rage" max-level="5" debuff="true" action="A1">
+	<skill id="345" name="Sonic Rage" max-level="5" debuff="true" action="A2">
 	<!-- 
 		level 1: Attacks the target with a blast of force from the sword with 195 P. Atk. Power. P. Def. -30%% and absorbs Momentum. Requires a Sword, blunt Weapon, or Dualsword.
 		level 2: Attacks the target with a blast of force from the sword with 205 P. Atk. Power. P. Def. -30%% and absorbs Momentum. Requires a Sword, blunt Weapon, or Dualsword.
@@ -1074,10 +1075,10 @@
 					<value level="5">235.0</value>
 				</power>
 			</physical-attack>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="-23.0"/>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="-30"/>
 			</stat-modify>
-			<effect  name="FocusMomentum" scope="SELF">
+			<effect name="FocusMomentum" scope="SELF">
 				<power initial="8.0"/>
 			</effect>
 		</effects>
@@ -2728,7 +2729,7 @@
 			<resist-dispel-by-category category="BUFF">
 				<power initial="-80.0"/>
 			</resist-dispel-by-category>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="100.0"/>
 			</stat-modify>
 			<effect name="DebuffBlock"/>

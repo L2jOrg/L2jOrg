@@ -26,11 +26,14 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="60003" name="Server Level Ranking 1st Class" action="A1">
+	<skill id="60003" name="Server Level Ranking 1st Class" action="A2">
 	<!-- Benefits applied to Server Level Ranking 1st.\nAll Stats +1, Warrior's HP Potion, Maliss's HP Potion Effect +50, Weight Limit +100000, P. Evasion +20. -->
 		<icon initial="icon.server_ranking_1"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat type="CON">
 				<power initial="1"/>
@@ -61,11 +64,14 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60004" name="Server Level Ranking 2nd Class" action="A1">
+	<skill id="60004" name="Server Level Ranking 2nd Class" action="A2">
 	<!-- Benefits applied to Server Level Ranking 2nd-30th.\nCON +1 MEN +1, DEX +1, WIT +1, Weight Limit +10000. -->
 		<icon initial="icon.server_ranking_2"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat type="CON">
 				<power initial="1"/>
@@ -84,11 +90,14 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60005" name="Server Level Ranking 3rd Class" action="A1">
+	<skill id="60005" name="Server Level Ranking 3rd Class" action="A2">
 	<!-- Benefits applied to Server Level Ranking 31st-100th.\nCON +1 MEN +1, Weight Limit +5000. -->
 		<icon initial="icon.server_ranking_3"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat type="CON">
 				<power initial="1"/>
@@ -101,11 +110,14 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60006" name="Human Level Ranking 1st Class" action="A1">
+	<skill id="60006" name="Human Level Ranking 1st Class" action="A2">
 	<!-- Benefit applied to Human Level Ranking 1st.\nP. Critical Damage/M. Critical Damage +300. -->
 		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="300"/>
@@ -115,11 +127,14 @@
 			</stat-modify>
  		</effects>
 	</skill>
-	<skill id="60007" name="Elf Level Ranking 1st Class" action="A1">
+	<skill id="60007" name="Elf Level Ranking 1st Class" action="A2">
 	<!-- Benefit applied to Elf Level Ranking 1st.\nP. Atk./M. Atk. +300. -->
 		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK">
 				<power initial="300"/>
@@ -129,11 +144,14 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60008" name="Dark Elf Level Ranking 1st Class" action="A1">
+	<skill id="60008" name="Dark Elf Level Ranking 1st Class" action="A2">
 	<!-- Benefit applied to Dark Elf Level Ranking 1st.\nAtk. Spd./Casting Spd. +200. -->
 		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="200"/>
@@ -143,11 +161,14 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60009" name="Orc Level Ranking 1st Class" action="A1">
+	<skill id="60009" name="Orc Level Ranking 1st Class" action="A2">
 	<!-- Benefit applied to Orc Level Ranking 1st.\nP. Critical Rate/M. Critical Rate +20. -->
 		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat-modify stat="CRITICAL_RATE">
 				<power initial="20"/>
@@ -157,22 +178,28 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60010" name="Dwarf Level Ranking 1st Class" action="A1">
+	<skill id="60010" name="Dwarf Level Ranking 1st Class" action="A2">
 	<!-- Benefit applied to Dwarf Level Ranking 1st.\nIncreases Enchant Success Rate. -->
 		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat-modify stat="ENCHANT_RATE_BONUS">
 				<power initial="5"/>
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="60011" name="Jin Kamael Level Ranking 1st Class" action="A1">
+	<skill id="60011" name="Jin Kamael Level Ranking 1st Class" action="A2">
 	<!-- Benefit applied to Jin Kamael Level Ranking 1st.\nP. Accuracy, M. Accuracy, P. Evasion, M. Evasion +5. -->
 		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC"/>
+		<attributes property="PHYSIC" stay-after-death="true" irreplacable="true" dispellable="false"/>
 		<target />
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat-modify stat="ACCURACY">
 				<power initial="5"/>

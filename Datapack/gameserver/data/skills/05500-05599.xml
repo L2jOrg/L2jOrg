@@ -1103,7 +1103,7 @@
 			<stat-modify stat="MAGIC_ATTACK" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="10.0"/>
 			</stat-modify>
 			<magic-cost type="MAGIC">
@@ -1274,7 +1274,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="10.0">
 					<value level="2">20.0</value>
 					<value level="3">30.0</value>

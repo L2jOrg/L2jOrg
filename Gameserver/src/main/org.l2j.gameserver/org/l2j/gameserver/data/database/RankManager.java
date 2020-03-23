@@ -5,6 +5,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.data.database.data.RankHistoryData;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
@@ -13,6 +14,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneEn
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneExit;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.rank.ExBowAction;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.World;
@@ -94,6 +96,9 @@ public class RankManager {
         if(player.getRankRace() == 1) {
             player.addSkill(CommonSkill.RANKER_RACE_BENEFIT.getSkill());
             doIfNonNull(getRaceRankerSkill(player), s -> s.getSkill().applyEffects(player, player));
+        }
+        if(player.getRank() == 1 || player.getRankRace() == 1){
+            player.sendPacket(new UserInfo(player, UserInfoType.RANKER));
         }
     }
 

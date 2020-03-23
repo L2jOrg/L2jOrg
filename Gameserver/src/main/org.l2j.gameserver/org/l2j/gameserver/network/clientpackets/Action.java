@@ -58,8 +58,6 @@ public final class Action extends ClientPacket {
         final WorldObject obj;
         if (player.getTargetId() == objectId) {
             obj = player.getTarget();
-        } else if (player.isInAirShip() && (player.getAirShip().getHelmObjectId() == objectId)) {
-            obj = player.getAirShip();
         } else {
             obj = World.getInstance().findObject(objectId);
         }

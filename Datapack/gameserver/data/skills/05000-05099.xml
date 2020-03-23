@@ -226,7 +226,7 @@
 					<value level="4">0.0</value>
 				</power>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power>
 					<value level="4">-50.0</value>
 					<value level="5">0.0</value>

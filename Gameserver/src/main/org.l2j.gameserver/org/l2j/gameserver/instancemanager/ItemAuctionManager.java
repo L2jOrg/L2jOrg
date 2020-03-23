@@ -82,7 +82,7 @@ public final class ItemAuctionManager extends GameXmlReader {
                 statement.execute();
             }
         } catch (SQLException e) {
-            LOGGER.error("L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
+            LOGGER.error("ItemAuctionManager: Failed deleting auction: " + auctionId, e);
         }
     }
 

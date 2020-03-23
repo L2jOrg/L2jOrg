@@ -56,7 +56,7 @@ public final class Broadcast {
         {
             try {
                 player.sendPacket(mov);
-                if ((mov instanceof CharInfo) && (isPlayer(character))) {
+                if ((mov instanceof ExCharInfo) && (isPlayer(character))) {
                     final int relation = ((Player) character).getRelation(player);
                     final Integer oldrelation = character.getKnownRelations().get(player.getObjectId());
                     if ((oldrelation != null) && (oldrelation != relation)) {

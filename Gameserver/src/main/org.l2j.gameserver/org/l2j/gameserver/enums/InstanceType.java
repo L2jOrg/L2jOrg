@@ -40,9 +40,7 @@ public enum InstanceType {
     // Vehicles
     L2Vehicle(Creature),
     L2BoatInstance(L2Vehicle),
-    L2AirShipInstance(L2Vehicle),
     L2ShuttleInstance(L2Vehicle),
-    L2ControllableAirShipInstance(L2AirShipInstance),
     // Siege
     L2DefenderInstance(Attackable),
     L2ArtefactInstance(L2NpcInstance),

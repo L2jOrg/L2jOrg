@@ -1524,7 +1524,7 @@
 		</attributes>
 		<target />
 		<effects>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="15.1">
 					<value level="2">18.5</value>
 					<value level="3">22.4</value>
@@ -1851,7 +1851,7 @@
 			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
 				<power initial="0.2"/>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="2.0"/>
 			</stat-modify>
 		</effects>

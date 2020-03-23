@@ -29,8 +29,8 @@ public enum Stat {
     ADDITIONAL_POTION_MP,
     ADDITIONAL_POTION_CP,
     MANA_CHARGE,
-    HEAL_EFFECT,
-    HEAL_EFFECT_ADD,
+    HEAL_RECEIVE,
+    HEAL_POWER,
 
     // ATTACK & DEFENCE
     PHYSICAL_DEFENCE(new PDefenseFinalizer()),

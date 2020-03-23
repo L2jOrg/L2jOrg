@@ -857,7 +857,7 @@
 			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE" mode="PER">
 				<power initial="5.24"/>
 			</stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD" start-level="2">
+			<stat-modify stat="HEAL_RECEIVE" start-level="2">
 				<power initial="4.0"/>
 			</stat-modify>
 			<defence-trait start-level="3">
@@ -1678,7 +1678,7 @@
 					<value level="14">6.0</value>
 				</power>
 			</vampiric-attack>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power>
 					<value level="9">2.0</value>
 					<value level="12">6.0</value>
@@ -1771,7 +1771,7 @@
 			<vampiric-attack chance="30">
 				<power initial="4.0"/>
 			</vampiric-attack>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="10.0">
 					<value level="2">15.0</value>
 				</power>
@@ -1831,7 +1831,7 @@
 				</power>
 				</trait>
 			</attack-trait>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="2.0">
 					<value level="2">4.0</value>
 					<value level="3">6.0</value>

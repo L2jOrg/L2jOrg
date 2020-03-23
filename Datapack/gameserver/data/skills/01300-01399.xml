@@ -2104,7 +2104,7 @@
 			<chance initial="40"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="-50.0"/>
 			</stat-modify>
 		</effects>

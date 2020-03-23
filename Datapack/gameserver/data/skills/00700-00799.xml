@@ -1999,12 +1999,13 @@
 			<physical-attack ignore-shield="true" critical-chance="50.0" over-hit="true">
 				<power initial="8409.0"/>
 			</physical-attack>
-			<dispel-by-category category="BUFF" max="1">				<power initial="10.0"/>
+			<dispel-by-category category="BUFF" max="1">
+				<power initial="10.0"/>
 			</dispel-by-category>
 			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP" mode="PER" heal="true">
 				<power initial="-90.0"/>
 			</vital-stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE">
 				<power initial="-30.0"/>
 			</stat-modify>
 			<resist-abnormal-by-category category="DEBUFF">
@@ -2353,7 +2354,7 @@
 				</power>
 			</magical-attack>
 			<block-all-actions/>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE">
 				<power initial="-10.0">
 					<value level="2">-20.0</value>
 					<value level="3">-30.0</value>

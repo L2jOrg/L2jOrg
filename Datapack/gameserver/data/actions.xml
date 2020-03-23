@@ -45,10 +45,6 @@
 	<action id="64" handler="TeleportBookmark" />
 	<action id="65" handler="BotReport" />
 	<action id="66" handler="SocialAction" option="15" /> <!-- Shyness -->
-	<action id="67" handler="AirshipAction" option="1" /> <!-- Steer -->
-	<action id="68" handler="AirshipAction" option="2" /> <!-- Cancel Control -->
-	<action id="69" handler="AirshipAction" option="3" /> <!-- Destination Map -->
-	<action id="70" handler="AirshipAction" option="4" /> <!-- Exit Airship -->
 	<action id="71" handler="SocialAction" option="16" /> <!-- Exchange Bows -->
 	<action id="72" handler="SocialAction" option="17" /> <!-- High Five -->
 	<action id="73" handler="SocialAction" option="18" /> <!-- Couple Dance -->

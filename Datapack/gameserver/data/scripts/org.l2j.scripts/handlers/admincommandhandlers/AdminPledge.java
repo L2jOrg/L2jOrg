@@ -105,8 +105,7 @@ public class AdminPledge implements IAdminCommandHandler
 					}
 					case "dismiss":
 					{
-						if (clan == null)
-						{
+						if (clan == null) {
 							BuilderUtil.sendSysMessage(activeChar, "Target player has no clan!");
 							break;
 						}
@@ -119,8 +118,8 @@ public class AdminPledge implements IAdminCommandHandler
 							showMainPage(activeChar);
 							return false;
 						}
-						
-						ClanTable.getInstance().destroyClan(targetPlayer.getClanId());
+
+						ClanTable.getInstance().destroyClan(clan);
 						clan = targetPlayer.getClan();
 						if (clan == null)
 						{

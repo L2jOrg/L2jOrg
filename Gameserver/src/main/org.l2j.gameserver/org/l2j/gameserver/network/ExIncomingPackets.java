@@ -21,8 +21,6 @@ import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
-import org.l2j.gameserver.network.clientpackets.mission.RequestOneDayRewardReceive;
-import org.l2j.gameserver.network.clientpackets.mission.RequestTodoList;
 import org.l2j.gameserver.network.clientpackets.elementalspirits.*;
 import org.l2j.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2j.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
@@ -31,6 +29,8 @@ import org.l2j.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
 import org.l2j.gameserver.network.clientpackets.mentoring.*;
+import org.l2j.gameserver.network.clientpackets.mission.RequestOneDayRewardReceive;
+import org.l2j.gameserver.network.clientpackets.mission.RequestTodoList;
 import org.l2j.gameserver.network.clientpackets.olympiad.*;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import org.l2j.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
@@ -42,8 +42,8 @@ import org.l2j.gameserver.network.clientpackets.pvpbook.ExTeleportToKiller;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
-import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
+import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
 import org.l2j.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
@@ -101,7 +101,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_EX_SET_TUTORIAL(0x1D, null, ConnectionState.IN_GAME),
     REQUEST_EX_RQ_ITEM_LINK(0x1E, RequestExRqItemLink::new, ConnectionState.IN_GAME),
     CANNOT_MOVE_ANYMORE_AIR_SHIP(0x1F, null, ConnectionState.IN_GAME),
-    MOVE_TO_LOCATION_IN_AIR_SHIP(0x20, MoveToLocationInAirShip::new, ConnectionState.IN_GAME),
+    MOVE_TO_LOCATION_IN_AIR_SHIP(0x20, null, ConnectionState.IN_GAME),
     REQUEST_KEY_MAPPING(0x21, RequestKeyMapping::new, ConnectionState.JOINING_GAME),
     REQUEST_SAVE_KEY_MAPPING(0x22, RequestSaveKeyMapping::new, ConnectionState.IN_GAME),
     REQUEST_EX_REMOVE_ITEM_ATTRIBUTE(0x23, RequestExRemoveItemAttribute::new, ConnectionState.IN_GAME),
@@ -120,7 +120,7 @@ public enum ExIncomingPackets implements PacketFactory {
     ANSWER_JOIN_PARTY_ROOM(0x30, AnswerJoinPartyRoom::new, ConnectionState.IN_GAME),
     REQUEST_LIST_PARTY_MATCHING_WAITING_ROOM(0x31, RequestListPartyMatchingWaitingRoom::new, ConnectionState.IN_GAME),
     REQUEST_EX_ENCHANT_ITEM_ATTRIBUTE(0x32, RequestExEnchantItemAttribute::new, ConnectionState.IN_GAME),
-    MOVE_TO_LOCATION_AIR_SHIP(0x35, MoveToLocationAirShip::new, ConnectionState.IN_GAME),
+    MOVE_TO_LOCATION_AIR_SHIP(0x35, null, ConnectionState.IN_GAME),
     REQUEST_BID_ITEM_AUCTION(0x36, RequestBidItemAuction::new, ConnectionState.IN_GAME),
     REQUEST_INFO_ITEM_AUCTION(0x37, RequestInfoItemAuction::new, ConnectionState.IN_GAME),
     REQUEST_EX_CHANGE_NAME(0x38, RequestExChangeName::new, ConnectionState.IN_GAME),

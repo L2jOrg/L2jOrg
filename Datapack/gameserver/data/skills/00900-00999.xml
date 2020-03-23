@@ -47,9 +47,10 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<dispel-by-category category="DEBUFF" max="3">				<power initial="80.0"/>
+			<dispel-by-category category="DEBUFF" max="3">
+				<power initial="80.0"/>
 			</dispel-by-category>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_RECEIVE" mode="PER">
 				<power initial="30.0"/>
 			</stat-modify>
 			<resist-abnormal-by-category category="DEBUFF">
@@ -2101,7 +2102,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify stat="MAX_MOMENTUM" stat-add="MAX_MOMENTUM">
+			<stat-modify stat="MAX_MOMENTUM">
 				<power initial="1.0">
 					<value level="2">2.0</value>
 					<value level="3">3.0</value>

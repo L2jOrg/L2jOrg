@@ -360,9 +360,7 @@
             <xs:enumeration value="L2FlyTerrainObjectInstance"/>
             <xs:enumeration value="L2Vehicle"/>
             <xs:enumeration value="L2BoatInstance"/>
-            <xs:enumeration value="L2AirShipInstance"/>
             <xs:enumeration value="L2ShuttleInstance"/>
-            <xs:enumeration value="L2ControllableAirShipInstance"/>
             <xs:enumeration value="L2DefenderInstance"/>
             <xs:enumeration value="L2ArtefactInstance"/>
             <xs:enumeration value="L2ControlTowerInstance"/>
@@ -461,8 +459,8 @@
             <xs:enumeration value="ADDITIONAL_POTION_MP"/>
             <xs:enumeration value="ATTACK_CANCEL"/>
             <xs:enumeration value="EVASION_RATE"/>
-            <xs:enumeration value="HEAL_EFFECT"/>
-            <xs:enumeration value="HEAL_EFFECT_ADD"/>
+            <xs:enumeration value="HEAL_RECEIVE"/>
+            <xs:enumeration value="HEAL_POWER"/>
             <xs:enumeration value="MAGIC_ATTACK"/>
             <xs:enumeration value="MAGICAL_DEFENCE"/>
             <xs:enumeration value="MANA_CHARGE"/>

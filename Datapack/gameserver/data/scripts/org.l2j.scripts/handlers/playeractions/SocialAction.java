@@ -3,8 +3,8 @@ package handlers.playeractions;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
-import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.data.xml.model.ActionData;
+import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -174,7 +174,7 @@ public final class SocialAction implements IPlayerActionHandler
 			player.sendPacket(sm);
 		}
 		
-		if (player.isMounted() || player.isFlyingMounted() || player.isInBoat() || player.isInAirShip())
+		if (player.isMounted() || player.isFlyingMounted() || player.isInBoat())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
@@ -264,7 +264,7 @@ public final class SocialAction implements IPlayerActionHandler
 			return;
 		}
 		
-		if (partner.isMounted() || partner.isFlyingMounted() || partner.isInBoat() || partner.isInAirShip())
+		if (partner.isMounted() || partner.isFlyingMounted() || partner.isInBoat())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);

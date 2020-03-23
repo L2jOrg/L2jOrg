@@ -4,10 +4,7 @@ import io.github.joealisson.primitive.ConcurrentIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.ClanData;
-import org.l2j.gameserver.data.database.data.ClanSkillData;
-import org.l2j.gameserver.data.database.data.CrestData;
-import org.l2j.gameserver.data.database.data.SubPledgeData;
+import org.l2j.gameserver.data.database.data.*;
 
 import java.sql.ResultSet;
 import java.util.List;
@@ -133,4 +130,7 @@ public interface ClanDAO extends DAO<ClanData> {
 
     @Query("DELETE FROM clan_data WHERE clan_id = :clanId:")
     void deleteClan(int clanId);
+
+    @Query("SELECT * FROM clan_wars")
+    List<ClanWarData> findAllWars();
 }

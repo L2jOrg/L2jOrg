@@ -618,7 +618,7 @@ public class NpcData extends GameXmlReader {
      * @return the template list for the given level.
      */
     public List<NpcTemplate> getAllMonstersOfLevel(int... lvls) {
-        return getTemplates(template -> contains(lvls, template.getLevel()) && template.isType("L2Monster"));
+        return getTemplates(template -> contains(lvls, template.getLevel()) && template.isType("Monster"));
     }
 
     /**

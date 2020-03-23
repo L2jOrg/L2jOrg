@@ -334,9 +334,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeInt(player.getActiveElementalSpiritType());
         }
 
-        if (containsMask(UserInfoType.UNK)) {
-            writeShort(UserInfoType.UNK.getBlockLength()); // 196
-            writeInt(0x00); // 196
+        if (containsMask(UserInfoType.RANKER)) {
+            writeShort(UserInfoType.RANKER.getBlockLength());
+            writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
         }
 
         if(containsMask(UserInfoType.STATS_POINTS)) {
@@ -353,12 +353,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if(containsMask(UserInfoType.STATS_ABILITIES)) {
             writeShort(UserInfoType.STATS_ABILITIES.getBlockLength());
-            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_STR));
-            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_DEX));
-            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_CON));
-            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_INT));
-            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_WIT));
-            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_MEN));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_STR) + player.getHennaValue(BaseStats.STR));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_DEX) + player.getHennaValue(BaseStats.DEX));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_CON) + player.getHennaValue(BaseStats.CON));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_INT) + player.getHennaValue(BaseStats.INT));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_WIT) + player.getHennaValue(BaseStats.WIT));
+            writeShort((short) Stat.defaultValue(player, Optional.empty(), Stat.STAT_MEN) + player.getHennaValue(BaseStats.MEN));
             writeShort(0x01);
             writeShort(0x01);
         }

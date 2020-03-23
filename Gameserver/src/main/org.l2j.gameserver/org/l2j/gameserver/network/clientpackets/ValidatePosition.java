@@ -73,9 +73,6 @@ public class ValidatePosition extends ClientPacket {
             }
             return;
         }
-        if (player.isInAirShip()) {
-            return;
-        }
 
         if (player.isFalling(_z)) {
             return; // disable validations during fall to avoid "jumping"

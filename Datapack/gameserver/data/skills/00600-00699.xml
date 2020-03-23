@@ -316,7 +316,7 @@
 					<value level="2">30.0</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="HEAL_EFFECT" stat-add="HEAL_EFFECT_ADD">
+			<stat-modify stat="HEAL_POWER">
 				<power initial="20.0"/>
 			</stat-modify>
 			<magic-cost type="MAGIC">
