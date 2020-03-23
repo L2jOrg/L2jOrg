@@ -2135,7 +2135,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20773" level="70" type="Monster" name="Conjurer Bat Lord">
+    <npc id="20773" level="70" type="Monster" name="Conjurer Bat Lord" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Conjurer_Bat_Lord -->
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
@@ -2150,7 +2150,7 @@
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
-        <acquire exp="18539" sp="556"/>
+        <acquire exp="18539" sp="556" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
             <speed>
@@ -2209,7 +2209,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20774" level="70" type="Monster" name="Conjurer Bat">
+    <npc id="20774" level="70" type="Monster" name="Conjurer Bat" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Conjurer_Bat -->
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
@@ -2224,7 +2224,7 @@
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
-        <acquire exp="18539" sp="556"/>
+        <acquire exp="18539" sp="556" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
             <speed>

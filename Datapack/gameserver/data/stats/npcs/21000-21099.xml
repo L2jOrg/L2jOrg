@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-    <npc id="21000" level="54" type="Monster" name="Soul of Ruins">
+    <npc id="21000" level="54" type="Monster" name="Soul of Ruins" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Soul_of_Ruins -->
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
@@ -16,7 +16,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="5224" sp="156"/>
+        <acquire exp="5224" sp="156" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="665.52962" hpRegen="6.5" mp="938.985" mpRegen="2.4"/>
             <speed>

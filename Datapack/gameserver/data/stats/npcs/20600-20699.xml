@@ -4344,7 +4344,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20666" level="52" type="Monster" name="Taik Orc Watchman">
+    <npc id="20666" level="52" type="Monster" name="Taik Orc Watchman" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Taik_Orc_Watchman -->
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
@@ -4360,7 +4360,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="72"/> <!-- rhand: Stormbringer -->
-        <acquire exp="4883" sp="146"/>
+        <acquire exp="4883" sp="146" attribute_exp="9"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="623.90323" hpRegen="6.5" mp="877.035" mpRegen="2.4"/>
             <speed>
@@ -4470,7 +4470,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20668" level="54" type="Monster" name="Grave Guard">
+    <npc id="20668" level="54" type="Monster" name="Grave Guard" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -4484,7 +4484,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="5224" sp="156"/>
+        <acquire exp="5224" sp="156" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="665.52962" hpRegen="6.5" mp="938.985" mpRegen="2.4"/>
             <attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -4536,7 +4536,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20669" level="55" type="Monster" name="Taik Orc Supply Officer">
+    <npc id="20669" level="55" type="Monster" name="Taik Orc Supply Officer" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Taik_Orc_Supply_Officer -->
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
@@ -4552,7 +4552,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="75"/> <!-- rhand: Caliburs -->
-        <acquire exp="5463" sp="163"/>
+        <acquire exp="5463" sp="163" attribute_exp="11"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="686.46597" hpRegen="6.5" mp="969.075" mpRegen="2.4"/>
             <speed>
@@ -4947,7 +4947,7 @@
             <height normal="45"/>
         </collision>
     </npc>
-    <npc id="20675" level="50" type="Monster" name="Tairim">
+    <npc id="20675" level="50" type="Monster" name="Tairim" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
             <param name="MoveAroundSocial1" value="82"/>
@@ -4961,7 +4961,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="4479" sp="134"/>
+        <acquire exp="4479" sp="134" attribute_exp="8"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="583.01577" hpRegen="5.5" mp="814.2" mpRegen="2.1"/>
             <attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5026,7 +5026,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20676" level="65" type="Monster" name="Judge of Marsh">
+    <npc id="20676" level="65" type="Monster" name="Judge of Marsh" element="FIRE">
         <!-- Fix me -->
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
@@ -5041,7 +5041,7 @@
         </parameters>
         <race>PLANT</race>
         <sex>MALE</sex>
-        <acquire exp="14170" sp="425"/>
+        <acquire exp="14170" sp="425" attribute_exp="22"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="900.139895" hpRegen="7.5" mp="1295.64" mpRegen="2.7"/>
             <attack physical="641.099349" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5096,7 +5096,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20677" level="66" type="Monster" name="Tulben">
+    <npc id="20677" level="66" type="Monster" name="Tulben" element="FIRE">
         <!-- Todo: Fix me -->
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
@@ -5111,7 +5111,7 @@
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
-        <acquire exp="14583" sp="437"/>
+        <acquire exp="14583" sp="437" attribute_exp="23"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="921.1994" hpRegen="7.5" mp="1329.27" mpRegen="2.7"/>
             <attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5166,7 +5166,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20678" level="53" type="Monster" name="Tortured Undead">
+    <npc id="20678" level="53" type="Monster" name="Tortured Undead" element="FIRE">
         <!-- Todo :Fix Me -->
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
@@ -5181,7 +5181,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="10129" sp="303"/>
+        <acquire exp="10129" sp="303" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="644.83958" hpRegen="6.5" mp="907.125" mpRegen="2.4"/>
             <attack physical="389.082012" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>

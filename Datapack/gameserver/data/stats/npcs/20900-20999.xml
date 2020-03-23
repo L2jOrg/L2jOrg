@@ -5202,7 +5202,7 @@
             <height normal="32"/>
         </collision>
     </npc>
-    <npc id="20996" level="50" type="Monster" name="Spiteful Ghost of Ruins">
+    <npc id="20996" level="50" type="Monster" name="Spiteful Ghost of Ruins" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Spiteful_Ghost_of_Ruins -->
         <parameters>
             <param name="MoveAroundSocial" value="120"/>
@@ -5217,7 +5217,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="5199" sp="155"/>
+        <acquire exp="5199" sp="155" attribute_exp="8"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="583.01577" hpRegen="5.5" mp="814.2" mpRegen="2.1"/>
             <speed>
@@ -5269,7 +5269,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20997" level="51" type="Monster" name="Soldier of Grief">
+    <npc id="20997" level="51" type="Monster" name="Soldier of Grief" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Soldier_of_Grief -->
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
@@ -5285,7 +5285,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="4697" sp="140"/>
+        <acquire exp="4697" sp="140" attribute_exp="8"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="603.70581" hpRegen="6.5" mp="845.175" mpRegen="2.4"/>
             <speed>
@@ -5333,7 +5333,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20998" level="52" type="Monster" name="Cruel Punisher">
+    <npc id="20998" level="52" type="Monster" name="Cruel Punisher" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Cruel_Punisher -->
         <parameters>
             <param name="MoveAroundSocial" value="130"/>
@@ -5348,7 +5348,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="4844" sp="145"/>
+        <acquire exp="4844" sp="145" attribute_exp="9"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="623.90323" hpRegen="6.5" mp="877.035" mpRegen="2.4"/>
             <speed>
@@ -5401,7 +5401,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20999" level="53" type="Monster" name="Roving Soul">
+    <npc id="20999" level="53" type="Monster" name="Roving Soul" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Roving_Soul -->
         <parameters>
             <param name="MoveAroundSocial" value="167"/>
@@ -5417,7 +5417,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="75"/> <!-- rhand: Caliburs -->
-        <acquire exp="5056" sp="151"/>
+        <acquire exp="5056" sp="151" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="644.83958" hpRegen="6.5" mp="907.125" mpRegen="2.4"/>
             <speed>
