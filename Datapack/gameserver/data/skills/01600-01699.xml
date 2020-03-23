@@ -659,7 +659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1611" name="Power Supremacy" max-level="6" action="T">
+	<skill id="1611" name="Physical Transcendence" max-level="6" action="T">
 	<!-- 
 		level 1: Gathers power that exceeds your physical limit. P. Atk. +10% and Max HP -10%.
 		level 2: Gathers power that exceeds your physical limit. P. Atk. +12% and Max HP -11%.
@@ -676,7 +676,7 @@
 		</attributes>
 		<target type="NONE" />
 		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
+			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
 				<power initial="10.0">
 					<value level="2">12.0</value>
 					<value level="3">14.0</value>

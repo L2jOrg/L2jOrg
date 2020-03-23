@@ -1393,7 +1393,7 @@
 				<value level="11">144</value>
 			</mana>
 		</consume>
-		<target type="ENEMY_ONLY" scope="RANGE" />
+		<target type="ENEMY_ONLY" scope="RANGE" range="150"/>
 		<abnormal type="PD_DOWN" visual="STIGMA_OF_SILEN" >
 			<level initial="1"/>
 			<time initial="30"/>
