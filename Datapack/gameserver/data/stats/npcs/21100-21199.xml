@@ -479,7 +479,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21108" level="67" type="Monster" name="Glow Wisp">
+    <npc id="21108" level="67" type="Monster" name="Glow Wisp" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Glow_Wisp -->
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
@@ -496,7 +496,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="30058" sp="901"/>
+        <acquire exp="30058" sp="901" attribute_exp="25"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="942.13575" hpRegen="7.5" mp="1363.785" mpRegen="2.7"/>
             <speed>
@@ -526,7 +526,7 @@
             <height normal="22"/>
         </collision>
     </npc>
-    <npc id="21109" level="68" type="Monster" name="Hames Orc Scout">
+    <npc id="21109" level="68" type="Monster" name="Hames Orc Scout" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Hames_Orc_Scout -->
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
@@ -543,7 +543,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="229"/> <!-- rhand: Kris -->
-        <acquire exp="15481" sp="464"/>
+        <acquire exp="15481" sp="464" attribute_exp="26"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="962.82579" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
             <speed>
@@ -595,7 +595,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21110" level="69" type="Monster" name="Swamp Predator">
+    <npc id="21110" level="69" type="Monster" name="Swamp Predator" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
             <param name="MoveAroundSocial1" value="82"/>
@@ -610,7 +610,7 @@
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
-        <acquire exp="15939" sp="478"/>
+        <acquire exp="15939" sp="478" attribute_exp="28"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="983.02321" hpRegen="7.5" mp="1432.815" mpRegen="2.7"/>
             <attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -658,7 +658,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21111" level="70" type="Monster" name="Lava Wyrm">
+    <npc id="21111" level="70" type="Monster" name="Lava Wyrm" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -673,7 +673,7 @@
         </parameters>
         <race>DRAGON</race>
         <sex>MALE</sex>
-        <acquire exp="16405" sp="492"/>
+        <acquire exp="16405" sp="492" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
             <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -717,7 +717,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21112" level="71" type="Monster" name="Hames Orc Foot Soldier">
+    <npc id="21112" level="71" type="Monster" name="Hames Orc Foot Soldier" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -733,7 +733,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="233" lhand="110"/> <!-- Dark Screamer / Doom Shield -->
-        <acquire exp="16877" sp="506"/>
+        <acquire exp="16877" sp="506" attribute_exp="32"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1023.17174" hpRegen="8.5" mp="1501.845" mpRegen="3"/>
             <attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -784,7 +784,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21113" level="71" type="Monster" name="Hames Orc Sniper">
+    <npc id="21113" level="71" type="Monster" name="Hames Orc Sniper" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -799,7 +799,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="287"/> <!-- Bow of Peril -->
-        <acquire exp="16877" sp="506"/>
+        <acquire exp="16877" sp="506" attribute_exp="32"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1023.17174" hpRegen="8.5" mp="1501.845" mpRegen="3"/>
             <attack physical="1625.448683" magical="499.53679" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -851,7 +851,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21114" level="70" type="Monster" name="Cursed Guardian">
+    <npc id="21114" level="70" type="Monster" name="Cursed Guardian" element="FIRE">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
@@ -867,7 +867,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="1472"/> <!-- rhand: Dreadbane -->
-        <acquire exp="16405" sp="492"/>
+        <acquire exp="16405" sp="492" attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
             <speed>
@@ -919,7 +919,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21115" level="73" type="Monster" name="Hames Orc Shaman">
+    <npc id="21115" level="73" type="Monster" name="Hames Orc Shaman" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="75"/>
@@ -936,7 +936,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="186"/> <!-- Staff of Magic -->
-        <acquire exp="35682" sp="1070"/>
+        <acquire exp="35682" sp="1070" attribute_exp="34"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1061.5961" hpRegen="8.5" mp="1572.645" mpRegen="3"/>
             <attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -969,7 +969,7 @@
             <height normal="23"/>
         </collision>
     </npc>
-    <npc id="21116" level="72" type="Monster" name="Hames Orc Prefect">
+    <npc id="21116" level="72" type="Monster" name="Hames Orc Prefect" element="FIRE">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -987,7 +987,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="75" lhand="103"/> <!-- Caliburs / Tower Shield -->
-        <acquire exp="17383" sp="521"/>
+        <acquire exp="17383" sp="521" attribute_exp="36"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1042.63023" hpRegen="8.5" mp="1537.245" mpRegen="3"/>
             <attack physical="874.179911" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
