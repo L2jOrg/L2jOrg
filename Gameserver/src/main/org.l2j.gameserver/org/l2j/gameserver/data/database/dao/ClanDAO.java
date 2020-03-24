@@ -112,7 +112,7 @@ public interface ClanDAO extends DAO<ClanData> {
     void updateClanCrestLarge(int id, int crestId);
 
     @Query("""
-            DELETE FROM crests cr WHERE cr.id NOT IN (
+            DELETE FROM crests WHERE id NOT IN (
                 SELECT crest_id AS id FROM clan_data
                 UNION ALL
                 SELECT ally_crest_id AS id FROM clan_data
