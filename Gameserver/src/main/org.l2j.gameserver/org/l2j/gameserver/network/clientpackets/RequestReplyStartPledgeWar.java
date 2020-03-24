@@ -39,7 +39,7 @@ public final class RequestReplyStartPledgeWar extends ClientPacket {
                 final ClanWar clanWar = attacker.getWarWith(attacked.getId());
                 if (clanWar.getState() == ClanWarState.BLOOD_DECLARATION) {
                     clanWar.mutualClanWarAccepted(attacker, attacked);
-                    ClanTable.getInstance().storeClanWars(clanWar);
+                    clanWar.save();
                 }
             }
         } else {

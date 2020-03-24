@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.CropProcure;
+import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -41,7 +41,7 @@ public final class RequestSetCrop extends ClientPacket {
             }
 
             if (sales > 0) {
-                _items.add(new CropProcure(itemId, sales, type, sales, price));
+                _items.add(new CropProcure(itemId, sales, type, sales, price, _manorId, true));
             }
         }
     }
@@ -68,7 +68,7 @@ public final class RequestSetCrop extends ClientPacket {
         // Filter crops with start amount lower than 0 and incorrect price
         final List<CropProcure> list = new ArrayList<>(_items.size());
         for (CropProcure cp : _items) {
-            final Seed s = manor.getSeedByCrop(cp.getId(), _manorId);
+            final Seed s = manor.getSeedByCrop(cp.getSeedId(), _manorId);
             if ((s != null) && (cp.getStartAmount() <= s.getCropLimit()) && (cp.getPrice() >= s.getCropMinPrice()) && (cp.getPrice() <= s.getCropMaxPrice())) {
                 list.add(cp);
             }

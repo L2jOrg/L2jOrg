@@ -5,6 +5,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.*;
+import org.l2j.gameserver.model.ClanWar;
 
 import java.sql.ResultSet;
 import java.util.List;
@@ -133,4 +134,6 @@ public interface ClanDAO extends DAO<ClanData> {
 
     @Query("SELECT * FROM clan_wars")
     List<ClanWarData> findAllWars();
+
+    void save(ClanWarData war);
 }

@@ -9,4 +9,6 @@ import java.sql.SQLException;
 public interface MapParameterStrategy {
 
     void setParameters(PreparedStatement statement, Object[] args) throws SQLException;
+
+    void setParameters(PreparedStatement statement, Object obj) throws SQLException;
 }

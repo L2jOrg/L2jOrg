@@ -261,10 +261,8 @@ public class Shutdown extends Thread {
         LOGGER.info("Cursed Weapons Manager: Data saved.");
 
         // Save all manor data
-        if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS) {
-            CastleManorManager.getInstance().storeMe();
-            LOGGER.info("Castle Manor Manager: Data saved.");
-        }
+        CastleManorManager.getInstance().storeMe();
+        LOGGER.info("Castle Manor Manager: Data saved.");
 
         // Save all global (non-player specific) Quest data that needs to persist after reboot
         QuestManager.getInstance().save();

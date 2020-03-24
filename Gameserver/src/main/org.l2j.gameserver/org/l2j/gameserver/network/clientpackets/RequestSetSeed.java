@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.Seed;
-import org.l2j.gameserver.model.SeedProduction;
+import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -14,6 +14,7 @@ import java.util.List;
 
 /**
  * @author l3x
+ * @author JoeAlisson
  */
 public class RequestSetSeed extends ClientPacket {
     private static final int BATCH_LENGTH = 20; // length of the one item
@@ -40,7 +41,7 @@ public class RequestSetSeed extends ClientPacket {
             }
 
             if (sales > 0) {
-                _items.add(new SeedProduction(itemId, sales, price, sales));
+                _items.add(new SeedProduction(itemId, sales, price, sales, _manorId, true));
             }
         }
     }
@@ -67,13 +68,12 @@ public class RequestSetSeed extends ClientPacket {
         // Filter seeds with start amount lower than 0 and incorrect price
         final List<SeedProduction> list = new ArrayList<>(_items.size());
         for (SeedProduction sp : _items) {
-            final Seed s = manor.getSeed(sp.getId());
+            final Seed s = manor.getSeed(sp.getSeedId());
             if ((s != null) && (sp.getStartAmount() <= s.getSeedLimit()) && (sp.getPrice() >= s.getSeedMinPrice()) && (sp.getPrice() <= s.getSeedMaxPrice())) {
                 list.add(sp);
             }
         }
 
-        // Save new list
         manor.setNextSeedProduction(list, _manorId);
     }
 

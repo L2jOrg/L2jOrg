@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.model.SeedProduction;
+import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -39,8 +39,8 @@ public final class BuyListSeed extends ServerPacket {
             writeShort((short) _list.size()); // list length
             for (SeedProduction s : _list) {
                 writeByte((byte) 0x00); // mask item 0 to print minimal item information
-                writeInt(s.getId()); // ObjectId
-                writeInt(s.getId()); // ItemId
+                writeInt(s.getSeedId()); // ObjectId
+                writeInt(s.getSeedId()); // ItemId
                 writeByte((byte) 0xFF); // T1
                 writeLong(s.getAmount()); // Quantity
                 writeByte((byte) 0x05); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item

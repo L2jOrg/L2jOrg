@@ -2,7 +2,6 @@ package org.l2j.gameserver.data.sql.impl;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
@@ -36,8 +35,6 @@ import org.l2j.gameserver.util.EnumIntBitmask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -249,23 +246,6 @@ public class ClanTable {
         return false;
     }
 
-    public void storeClanWars(ClanWar war) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state) VALUES(?,?,?,?,?,?,?,?)")) {
-            ps.setInt(1, war.getAttackerClanId());
-            ps.setInt(2, war.getAttackedClanId());
-            ps.setInt(3, war.getAttackerKillCount());
-            ps.setInt(4, war.getAttackedKillCount());
-            ps.setInt(5, war.getWinnerClanId());
-            ps.setLong(6, war.getStartTime());
-            ps.setLong(7, war.getEndTime());
-            ps.setInt(8, war.getState().ordinal());
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.error("Error storing clan wars data: " + e);
-        }
-    }
-
     public void deleteClanWars(int clanId1, int clanId2) {
         final Clan clan1 = getInstance().getClan(clanId1);
         final Clan clan2 = getInstance().getClan(clanId2);
@@ -295,9 +275,7 @@ public class ClanTable {
     public void shutdown() {
         for (Clan clan : clans.values()) {
             clan.updateInDB();
-            for (ClanWar war : clan.getWarList().values()) {
-                storeClanWars(war);
-            }
+            clan.getWarList().values().forEach(ClanWar::save);
         }
     }
 

@@ -11,4 +11,9 @@ public class NoParameterStrategy implements MapParameterStrategy {
     public void setParameters(PreparedStatement statement, Object[] args) {
         // there is no parameters
     }
+
+    @Override
+    public void setParameters(PreparedStatement statement, Object obj) {
+        // no params
+    }
 }

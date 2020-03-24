@@ -2,6 +2,7 @@ package org.l2j.commons.database.handler;
 
 import org.l2j.commons.database.helpers.QueryDescriptor;
 import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,6 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -40,7 +42,7 @@ public class EntityHandler implements TypeHandler<Object> {
     public Object handleType(ResultSet resultSet, Class<?> type) throws SQLException {
         try {
             var instance = type.getDeclaredConstructor().newInstance();
-            var fields = type.getDeclaredFields();
+            var fields = Util.fieldsOf(type);
 
             var metaData = resultSet.getMetaData();
             for (int i = 1; i <= metaData.getColumnCount(); i++) {
@@ -69,7 +71,7 @@ public class EntityHandler implements TypeHandler<Object> {
         return null;
     }
 
-    private Field findField(Field[] fields, String columnName) {
+    private Field findField(List<Field> fields, String columnName) {
         for (Field field : fields) {
             if(field.isAnnotationPresent(Column.class)) {
                 if(field.getAnnotation(Column.class).value().equalsIgnoreCase(columnName)) {

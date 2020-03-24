@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Collection;
 import java.util.regex.Pattern;
 
 import static java.util.Objects.nonNull;
@@ -71,6 +72,17 @@ public class QueryDescriptor implements AutoCloseable {
         strategy.setParameters(statement, args);
         statement.execute();
         statementLocal.set(statement);
+    }
+
+    public void executeBatch(Connection con, Collection<?> collection) throws SQLException {
+        var statement = con.prepareStatement(query);
+        for (Object obj : collection) {
+            strategy.setParameters(statement, obj);
+            statement.addBatch();
+        }
+        statement.executeBatch();
+        statementLocal.set(statement);
+
     }
 
     public int getGeneratedKey() throws SQLException{

@@ -2,6 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.data.ClanWarData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ClanWarState;
@@ -14,6 +15,8 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author Sdw
@@ -231,5 +234,9 @@ public final class ClanWar {
 
     public Clan getOpposingClan(Clan clan) {
         return data.getAttacker() == clan.getId() ? ClanTable.getInstance().getClan(data.getAttacked()) : ClanTable.getInstance().getClan(data.getAttacker());
+    }
+
+    public void save() {
+        getDAO(ClanDAO.class).save(data);
     }
 }

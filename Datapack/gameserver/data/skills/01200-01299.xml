@@ -7784,6 +7784,24 @@
 			</magic-level>
 			<cast-range initial="500"/>
 			<reuse initial="5000"/>
+			<effect-point initial="-574">
+				<value level="2">-582</value>
+				<value level="3">-590</value>
+				<value level="4">-597</value>
+				<value level="5">-604</value>
+				<value level="6">-611</value>
+				<value level="7">-617</value>
+				<value level="8">-624</value>
+				<value level="9">-630</value>
+				<value level="10">-635</value>
+				<value level="11">-641</value>
+				<value level="12">-646</value>
+				<value level="13">-650</value>
+				<value level="14">-655</value>
+				<value level="15">-659</value>
+				<value level="16">-663</value>
+				<value level="17">-667</value>
+			</effect-point>
 			<effect-range initial="1000"/>
 			<hit-time initial="4000"/>
 		</attributes>
