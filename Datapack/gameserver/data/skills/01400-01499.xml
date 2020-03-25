@@ -583,7 +583,7 @@
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
 		<effects>
-			<effect name="ManaHeal">
+			<effect name="ManaHealByLevel">
 				<power initial="240.0">
 					<value level="2">252.0</value>
 					<value level="3">265.0</value>

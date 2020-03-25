@@ -4954,7 +4954,14 @@
 			<weapon>
 				<type>FIST</type>
 			</weapon>
-			<energy-max/>
+			<energy-max on-level="1"/>
+			<energy-max on-level="2" charges="2"/>
+			<energy-max on-level="3" charges="3"/>
+			<energy-max on-level="4" charges="4"/>
+			<energy-max on-level="5" charges="5"/>
+			<energy-max on-level="6" charges="6"/>
+			<energy-max on-level="7" charges="7"/>
+			<energy-max on-level="8" charges="8"/>
 		</conditions>
 		<effects>
 			<effect  name="FocusMomentum">
