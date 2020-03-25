@@ -31,12 +31,22 @@
         <property name="restartTime" value="1800"/>
         <property name="restartAllowedTime" value="600"/>
     </zone>
-    <zone name="anakimNlilith" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
-        <polygon min-z="-5504" max-z="-5104">
-            <point x="183938" y="-13697"/>
-            <point x="186190" y="-13692"/>
-            <point x="186176" y="-8513"/>
-            <point x="183920" y="-8513"/>
+    <zone name="anakim_no_restart" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5000" max-z="-5600">
+            <point x="-5760" y="19420"/>
+            <point x="-7590" y="19420"/>
+            <point x="-7590" y="17586"/>
+            <point x="-5760" y="17586"/>
+        </polygon>
+        <property name="restartTime" value="1800"/>
+        <property name="restartAllowedTime" value="600"/>
+    </zone>
+	<zone name="lilith_no_restart" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5400" max-z="-5600">
+            <point x="185996" y="-10519"/>
+            <point x="185969" y="-8693"/>
+            <point x="184148" y="-8703"/>
+            <point x="184149" y="-10523"/>
         </polygon>
         <property name="restartTime" value="1800"/>
         <property name="restartAllowedTime" value="600"/>
