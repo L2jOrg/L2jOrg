@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListAll;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 
 /**
  * This class ...

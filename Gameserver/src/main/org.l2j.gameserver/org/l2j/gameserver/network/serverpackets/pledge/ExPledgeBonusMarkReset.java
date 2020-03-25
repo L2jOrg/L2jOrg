@@ -1,4 +1,4 @@
-package org.l2j.gameserver.network.serverpackets.pledgebonus;
+package org.l2j.gameserver.network.serverpackets.pledge;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
