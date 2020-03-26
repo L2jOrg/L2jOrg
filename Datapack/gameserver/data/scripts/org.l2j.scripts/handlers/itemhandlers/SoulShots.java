@@ -40,8 +40,4 @@ public class SoulShots extends AbstractShot {
     protected SystemMessageId getEnabledShotsMessage() {
         return SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED;
     }
-
-    protected SystemMessageId getNoEnoughShotsMessage() {
-        return SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT;
-    }
 }

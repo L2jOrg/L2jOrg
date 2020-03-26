@@ -40,8 +40,4 @@ public class SpiritShot extends AbstractShot {
     protected SystemMessageId getEnabledShotsMessage() {
         return SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED;
     }
-
-    protected SystemMessageId getNoEnoughShotsMessage() {
-        return SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOT_FOR_THAT;
-    }
 }

@@ -454,11 +454,22 @@ public final class Player extends Playable {
 
     public void disableAutoShot(ShotType type) {
         doIfNonNull(activeSoulShots.remove(type), itemId -> sendDisableShotPackets(type, itemId));
+        switch (type) {
+            case SOULSHOTS, SPIRITSHOTS -> unchargeShot(type);
+            case BEAST_SOULSHOTS, BEAST_SPIRITSHOTS -> {
+                var shotType = type == ShotType.BEAST_SOULSHOTS ? ShotType.SOULSHOTS : ShotType.SPIRITSHOTS;
+                doIfNonNull(getPet(), pet -> pet.unchargeShot(shotType));
+                getServitors().values().forEach(s -> s.unchargeShot(shotType));
+            }
+        }
     }
 
     public void disableAutoShots() {
         activeSoulShots.forEach(this::sendDisableShotPackets);
         activeSoulShots.clear();
+        unchargeAllShots();
+        doIfNonNull(getPet(), Creature::unchargeAllShots);
+        getServitors().values().forEach(Creature::unchargeAllShots);
     }
 
     private void sendDisableShotPackets(ShotType type, int itemId) {

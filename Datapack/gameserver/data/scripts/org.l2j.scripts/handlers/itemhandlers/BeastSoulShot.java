@@ -32,9 +32,4 @@ public class BeastSoulShot extends AbstractBeastShot {
     protected void sendUsesMessage(Player player) {
         player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1).addString("soulshot"));
     }
-
-    @Override
-    protected SystemMessageId getNotEnoughMessage() {
-        return SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR;
-    }
 }

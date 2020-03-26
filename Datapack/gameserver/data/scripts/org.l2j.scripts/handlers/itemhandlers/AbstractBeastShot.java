@@ -96,6 +96,4 @@ public abstract class AbstractBeastShot implements IItemHandler {
 
     protected abstract void sendUsesMessage(Player player);
 
-    protected abstract SystemMessageId getNotEnoughMessage();
-
 }

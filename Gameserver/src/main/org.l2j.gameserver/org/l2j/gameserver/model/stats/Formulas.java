@@ -1145,12 +1145,11 @@ public final class Formulas {
 
         final Weapon weapon = attacker.getActiveWeaponItem();
         final boolean isRanged = (weapon != null) && weapon.getItemType().isRanged();
-        final double shotsBonus = attacker.getStats().getValue(Stat.SOUL_SHOTS_BONUS);
 
         final double cAtk = crit ? calcCritDamage(attacker, target, null) : 1;
         final double cAtkAdd = crit ? calcCritDamageAdd(attacker, target, null) : 0;
         final double critMod = crit ? (isRanged ? 0.5 : 1) : 0;
-        final double ssBonus = ss ? 2 * shotsBonus : 1;
+        final double ssBonus = ss ? attacker.chargedShotBonus(ShotType.SOULSHOTS) : 1;
         final double random_damage = attacker.getRandomDamageMultiplier();
         final double proxBonus = (attacker.isInFrontOf(target) ? 0 : (attacker.isBehind(target) ? 0.2 : 0.05)) * attacker.getPAtk();
         double attack = (attacker.getPAtk() * random_damage) + proxBonus;

@@ -3,7 +3,6 @@ package handlers.itemhandlers;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -32,8 +31,4 @@ public class BeastSpiritShot extends AbstractBeastShot {
 		player.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 	}
 
-	@Override
-	protected SystemMessageId getNotEnoughMessage() {
-		return SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR;
-	}
 }
