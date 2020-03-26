@@ -291,9 +291,8 @@
         <xs:restriction base="xs:token">
             <xs:enumeration value="SOULSHOTS"/>
             <xs:enumeration value="SPIRITSHOTS"/>
-            <xs:enumeration value="BLESSED_SOULSHOTS"/>
-            <xs:enumeration value="BLESSED_SPIRITSHOTS"/>
-            <xs:enumeration value="FISH_SOULSHOTS"/>
+            <xs:enumeration value="BEAST_SOULSHOTS"/>
+            <xs:enumeration value="BEAST_SPIRITSHOTS"/>
         </xs:restriction>
     </xs:simpleType>
 

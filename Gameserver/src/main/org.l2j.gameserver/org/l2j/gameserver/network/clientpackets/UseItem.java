@@ -115,7 +115,7 @@ public final class UseItem extends ClientPacket {
         }
 
         if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getReputation() < 0)) {
-            final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
+            final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
             if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
                 return;
             }

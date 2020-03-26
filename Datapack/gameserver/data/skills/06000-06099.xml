@@ -1821,7 +1821,8 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<dispel-by-category category="BUFF" max="2">				<power initial="25.0"/>
+			<dispel-by-category category="BUFF" max="2">
+				<power initial="25.0"/>
 			</dispel-by-category>
 		</effects>
 	</skill>

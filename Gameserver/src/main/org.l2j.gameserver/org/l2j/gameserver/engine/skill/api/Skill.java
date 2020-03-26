@@ -439,15 +439,6 @@ public final class Skill implements IIdentifiable, Cloneable {
             }
             applyEffects(caster, caster, true, false, true, 0, item);
         }
-
-        if (cubic == null) {
-            if (useSpiritShot()) {
-                caster.unchargeShot(caster.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS);
-            } else if (useSoulShot()) {
-                caster.unchargeShot(caster.isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS);
-            }
-        }
-
         if (isSuicideAttack) {
             caster.doDie(caster);
         }

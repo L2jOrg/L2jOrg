@@ -76,9 +76,6 @@ public final class RequestBypassToServer extends ClientPacket {
     @Override
     public void runImpl() {
         var player = client.getPlayer();
-        if (isNull(player)) {
-            return;
-        }
 
         if (bypass.isEmpty()) {
             LOGGER.warn("Player {} sent empty bypass!", player);

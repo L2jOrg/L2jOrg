@@ -713,7 +713,7 @@
 					<value level="9">9</value>
 				</power>
 			</trigger-skill-by-charge-shot>
-			<trigger-skill-by-charge-shot skill="55478" type="BLESSED_SOULSHOTS">
+			<trigger-skill-by-charge-shot skill="55478" blessed="true">
 				<power initial="1">
 					<value level="2">2</value>
 					<value level="3">3</value>
@@ -793,7 +793,7 @@
 					<value level="9">9</value>
 				</power>
 			</trigger-skill-by-charge-shot>
-			<trigger-skill-by-charge-shot skill="55482" type="BLESSED_SPIRITSHOTS">
+			<trigger-skill-by-charge-shot skill="55482" type="SPIRITSHOTS" blessed="true">
 				<power initial="1">
 					<value level="2">2</value>
 					<value level="3">3</value>
@@ -817,7 +817,7 @@
 					<value level="9">9</value>
 				</power>
 			</trigger-skill-by-charge-shot>
-			<trigger-skill-by-charge-shot skill="55483" type="BLESSED_SPIRITSHOTS" for-beast="true">
+			<trigger-skill-by-charge-shot skill="55483" type="SPIRITSHOTS" for-beast="true" blessed="true">
 				<power initial="1">
 					<value level="2">2</value>
 					<value level="3">3</value>

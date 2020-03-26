@@ -34,6 +34,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
+import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.ItemType;
 import org.l2j.gameserver.model.options.EnchantOptions;
@@ -81,10 +82,6 @@ public final class Item extends WorldObject {
      * ID of the item
      */
     private final int itemId;
-
-    /**
-     * Object ItemTemplate associated to the item
-     */
     private final ItemTemplate template;
     private final ReentrantLock _dbLock = new ReentrantLock();
     private final DropProtection _dropProtection = new DropProtection();
@@ -1770,6 +1767,14 @@ public final class Item extends WorldObject {
 
     public boolean isAutoSupply() {
         return template instanceof EtcItem && ((EtcItem) template).isAutoSupply();
+    }
+
+    public ActionType getAction() {
+        return template.getDefaultAction();
+    }
+
+    public List<ItemSkillHolder> getSkills(ItemSkillType type) {
+        return template.getSkills(type);
     }
 
     static class ScheduleLifeTimeTask implements Runnable {

@@ -4,21 +4,15 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.FishingData;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ShotType;
-import org.l2j.gameserver.engine.geo.GeoEngine;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerFishing;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.world.zone.type.FishingZone;
-import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
@@ -28,6 +22,11 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndR
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndType;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
 import org.l2j.gameserver.network.serverpackets.fishing.ExUserInfoFishing;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneType;
+import org.l2j.gameserver.world.zone.type.FishingZone;
+import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -204,12 +203,7 @@ public class Fishing {
             return;
         }
 
-        if (!_player.isChargedShot(ShotType.FISH_SOULSHOTS)) {
-            _player.rechargeShots(false, false, true);
-        }
-
-        _reelInTask = ThreadPool.schedule(() ->
-        {
+        _reelInTask = ThreadPool.schedule(() -> {
             _player.getFishing().reelInWithReward();
             _startFishingTask = ThreadPool.schedule(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
         }, Rnd.get(baitData.getTimeMin(), baitData.getTimeMax()));
@@ -231,7 +225,7 @@ public class Fishing {
         }
 
         double chance = baitData.getChance();
-        if (_player.isChargedShot(ShotType.FISH_SOULSHOTS)) {
+        if (_player.isChargedShot(ShotType.SOULSHOTS)) {
             chance *= 1.5; // +50 % chance to win
         }
 
@@ -270,8 +264,7 @@ public class Fishing {
                     final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
                     msg.addItemName(fishId);
                     _player.sendPacket(msg);
-                    _player.unchargeShot(ShotType.FISH_SOULSHOTS);
-                    _player.rechargeShots(false, false, true);
+                    _player.consumeAndRechargeShots(ShotType.SOULSHOTS, 1);
                 } else {
                     LOGGER.warn("Could not find fishing rewards for bait {}", bait.getId());
                 }

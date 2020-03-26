@@ -59,12 +59,7 @@ public final class FatalBlow extends AbstractEffect {
             ((Attackable) effected).overhitEnabled(true);
         }
 
-        double power = this.power;
-
-
-        final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
-        final byte shld = Formulas.calcShldUse(effector, effected);
-        double damage = Formulas.calcBlowDamage(effector, effected, skill, false, power, shld, ss);
+        double damage = Formulas.calcBlowDamage(effector, effected, skill, power);
         final boolean crit = Formulas.calcCrit(criticalChance, effector, effected, skill);
 
         if (crit) {

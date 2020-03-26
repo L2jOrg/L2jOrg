@@ -547,6 +547,7 @@ open module org.l2j.scripts {
             handlers.itemhandlers.ItemSkills, // skills
             handlers.itemhandlers.BeastSoulShot, // skills | not used ?
             handlers.itemhandlers.BeastSpiritShot, //skills | not used ?
+            handlers.itemhandlers.BlessedBeastSpiritShot,
             handlers.itemhandlers.BlessedSoulShots, // skills
             handlers.itemhandlers.BlessedSpiritShot, // skills
             handlers.itemhandlers.Book,  // none | not used ?

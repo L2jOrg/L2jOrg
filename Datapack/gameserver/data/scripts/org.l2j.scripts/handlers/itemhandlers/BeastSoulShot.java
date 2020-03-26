@@ -1,8 +1,10 @@
 package handlers.itemhandlers;
 
 import org.l2j.gameserver.enums.ShotType;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -12,8 +14,18 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 public class BeastSoulShot extends AbstractBeastShot {
 
     @Override
-    protected ShotType getShotType(Item item) {
+    protected ShotType getShotType() {
         return ShotType.SOULSHOTS;
+    }
+
+    @Override
+    protected boolean isBlessed() {
+        return false;
+    }
+
+    @Override
+    protected double getBonus(Summon summon) {
+        return summon.getStats().getValue(Stat.SOUL_SHOTS_BONUS, 1) * 2;
     }
 
     @Override

@@ -14,6 +14,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
 
+import static java.util.Objects.isNull;
+import static org.l2j.gameserver.util.GameUtils.constrain;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -257,5 +259,19 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
 
     public void setCrystalCount(int count) {
         this.crystalCount = count;
+    }
+
+    public int getConsumeShotsCount() {
+        int count = switch (crystalType) {
+                case S -> 4;
+                case A -> 3;
+                case B -> 2;
+                default -> 1;
+            };
+
+        if(type == WeaponType.BOW) {
+            count ++;
+        }
+        return count;
     }
 }

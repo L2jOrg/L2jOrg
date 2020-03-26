@@ -42,15 +42,12 @@ public final class DeathLink extends AbstractEffect {
             return;
         }
 
-        final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-        final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-
         if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
             effected.stopFakeDeath(true);
         }
 
         final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-        final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power * (-((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2), effected.getMDef(), sps, bss, mcrit);
+        final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power * (-((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2), effected.getMDef(), mcrit);
         effector.doAttack(damage, effected, skill, false, false, mcrit, false);
     }
 

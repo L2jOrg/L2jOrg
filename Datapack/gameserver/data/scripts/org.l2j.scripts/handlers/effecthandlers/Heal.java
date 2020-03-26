@@ -60,22 +60,17 @@ public final class Heal extends AbstractEffect {
 		}
 
 		double staticShotBonus = 0;
-		double mAtkMul = 1;
-		final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = skill.isMagic() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final double shotsBonus = effector.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS);
+		double mAtkMul = skill.isMagic() ? effector.chargedShotBonus(ShotType.SPIRITSHOTS) : 1;
 
-		if (((sps || bss) && (isPlayer(effector) && effector.getActingPlayer().isMageClass())) || isSummon(effector)) {
-			staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
-			mAtkMul = bss ? 4 * shotsBonus : 2 * shotsBonus;
-			staticShotBonus *= bss ? 2.4 : 1.0;
-		} else if ((sps || bss) && isNpc(effector)) {
+		if (mAtkMul > 1 && (isPlayer(effector) && effector.getActingPlayer().isMageClass() || isSummon(effector))) {
+			staticShotBonus = skill.getMpConsume();
+			staticShotBonus *= mAtkMul >= 4 ? 2.4 : 1.0; // 2.4 if is blessed spiritshots TODO improve
+		} else if (mAtkMul > 1  && isNpc(effector)) {
 			staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
-			mAtkMul = 4 * shotsBonus;
 		}
 		else {
 			// shot dynamic bonus
-			mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;
+			mAtkMul = mAtkMul >= 4 ? mAtkMul * 4 : mAtkMul + 1;
 		}
 		
 		if (!skill.isStatic()) {

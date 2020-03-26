@@ -46,11 +46,9 @@ public final class MagicalAttackByAbnormal extends AbstractEffect {
 		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath()) {
 			effected.stopFakeDeath(true);
 		}
-		
-		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+
 		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), sps, bss, mcrit);
+		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, effected.getMDef(), mcrit);
 		
 		// each buff increase +30%
 		damage *= (((effected.getBuffCount() * 0.3) + 1.3) / 4);

@@ -76,7 +76,7 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
 
         if (item.isArmor()) {
             for (Item itm : inventory.getItems()) {
-                if (!itm.isEquipped() || (itm.getTemplate().getSkills(ItemSkillType.NORMAL) == null) || itm.equals(item)) {
+                if (!itm.isEquipped() || (itm.getSkills(ItemSkillType.NORMAL) == null) || itm.equals(item)) {
                     continue;
                 }
 

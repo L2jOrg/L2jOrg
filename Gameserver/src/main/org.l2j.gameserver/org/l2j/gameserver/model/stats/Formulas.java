@@ -62,53 +62,48 @@ public final class Formulas {
         return isDoor(cha) ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
     }
 
-    public static double calcBlowDamage(Creature attacker, Creature target, Skill skill, boolean backstab, double power, byte shld, boolean ss) {
+    public static double calcBlowDamage(Creature attacker, Creature target, Skill skill, double power) {
         double defence = target.getPDef();
 
-        switch (shld) {
-            case SHIELD_DEFENSE_SUCCEED: {
-                defence += target.getShldDef();
-                break;
-            }
-            case SHIELD_DEFENSE_PERFECT_BLOCK: // perfect block
-            {
+        switch (calcShldUse(attacker, target)) {
+            case SHIELD_DEFENSE_SUCCEED -> defence += target.getShldDef();
+            case SHIELD_DEFENSE_PERFECT_BLOCK -> {
                 return 1;
             }
         }
 
         // Critical
-        final double criticalMod = (attacker.getStats().getValue(Stat.CRITICAL_DAMAGE, 1));
-        final double criticalPositionMod = attacker.getStats().getPositionTypeValue(Stat.CRITICAL_DAMAGE, Position.getPosition(attacker, target));
-        final double criticalVulnMod = (target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1));
-        final double criticalAddMod = (attacker.getStats().getValue(Stat.CRITICAL_DAMAGE_ADD, 0));
-        final double criticalAddVuln = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
+        final var position = Position.getPosition(attacker, target);
+        final var criticalMod = attacker.getStats().getValue(Stat.CRITICAL_DAMAGE, 1);
+        final var criticalPositionMod = attacker.getStats().getPositionTypeValue(Stat.CRITICAL_DAMAGE, position);
+        final var criticalVulnMod = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
+        final var criticalAddMod = attacker.getStats().getValue(Stat.CRITICAL_DAMAGE_ADD, 0);
+        final var criticalAddVuln = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
+
         // Trait, elements
-        final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
-        final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTrait(), true);
-        final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTrait());
-        final double attributeMod = calcAttributeBonus(attacker, target, skill);
-        final double randomMod = attacker.getRandomDamageMultiplier();
-        final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
+        final var weaponTraitMod = calcWeaponTraitBonus(attacker, target);
+        final var generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTrait(), true);
+        final var weaknessMod = calcWeaknessBonus(attacker, target, skill.getTrait());
+        final var attributeMod = calcAttributeBonus(attacker, target, skill);
+        final var randomMod = attacker.getRandomDamageMultiplier();
+        final var pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
 
         // Initial damage
-        final double ssmod = ss ? (2 * attacker.getStats().getValue(Stat.SOUL_SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
-        final double cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
-        final double cdPatk = criticalAddMod + criticalAddVuln;
-        final Position position = Position.getPosition(attacker, target);
-        final double isPosition = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
+        final var ssmod = attacker.chargedShotBonus(ShotType.SOULSHOTS); // + 0.04 for dual weapon?
+        final var cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
+        final var cdPatk = criticalAddMod + criticalAddVuln;
+        final var positionMod = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
 
         // ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
         // ATTACK CALCULATION 77 * [(skillpower+patk) * 0.666 * cdbonus * cdPosBonusHalf * cdVulnHalf * ss + isBack0.2Side0.05 * (skillpower+patk*ss) * random + 6 * cd_patk] / pdef
         // ````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^
-        final double baseMod = (77 * (((power + attacker.getPAtk()) * 0.666) + (isPosition * (power + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence;
-        final double damage = baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
-
-        return damage;
+        final var baseMod = (77 * (((power + attacker.getPAtk()) * 0.666) + (positionMod * (power + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence;
+        return baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
     }
 
-    public static double calcMagicDam(Creature attacker, Creature target, Skill skill, double mAtk, double power, double mDef, boolean sps, boolean bss, boolean mcrit) {
-        // Bonus Spirit shot
-        final double shotsBonus = bss ? (4 * attacker.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS)) : sps ? (2 * attacker.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS)) : 1;
+    public static double calcMagicDam(Creature attacker, Creature target, Skill skill, double mAtk, double power, double mDef, boolean mcrit) {
+
+        var shotsBonus = skill.useSpiritShot() ? attacker.chargedShotBonus(ShotType.SPIRITSHOTS) : 1;
         final double critMod = mcrit ? calcCritDamage(attacker, target, skill) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
 
         // Trait, elements
@@ -149,11 +144,6 @@ public final class Formulas {
 
         damage = damage * critMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
         return damage * attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, 1);
-    }
-
-    public static double calcMagicDam(CubicInstance attacker, Creature target, Skill skill, double power, boolean mcrit, byte shld) {
-        final double mAtk = attacker.getTemplate().getPower();
-        return calcMagicDam(attacker.getOwner(), target, skill, mAtk, power, shld, false, false, mcrit);
     }
 
     /**
@@ -391,7 +381,7 @@ public final class Formulas {
 
         double factor = 0.0;
         if (skill.getSkillType() == SkillType.MAGIC) {
-            final double spiritshotHitTime = (creature.isChargedShot(ShotType.SPIRITSHOTS) || creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS)) ? 0.4 : 0; // TODO: Implement propper values
+            final double spiritshotHitTime = creature.isChargedShot(ShotType.SPIRITSHOTS) ? 0.4 : 0; // TODO: Implement propper values
             factor = creature.getStats().getMAttackSpeedMultiplier() + (creature.getStats().getMAttackSpeedMultiplier() * spiritshotHitTime); // matkspdmul + (matkspdmul * spiritshot_hit_time)
         } else {
             factor = creature.getAttackSpeedMultiplier();
@@ -664,26 +654,20 @@ public final class Formulas {
         return (Rnd.get(100) < rate);
     }
 
-    public static double calcManaDam(Creature attacker, Creature target, Skill skill, double power, byte shld, boolean sps, boolean bss, boolean mcrit, double critLimit) {
+    public static double calcManaDam(Creature attacker, Creature target, Skill skill, double power, boolean mcrit, double critLimit) {
         // Formula: (SQR(M.Atk)*Power*(Target Max MP/97))/M.Def
         double mAtk = attacker.getMAtk();
         double mDef = target.getMDef();
         final double mp = target.getMaxMp();
 
-        switch (shld) {
-            case SHIELD_DEFENSE_SUCCEED: {
-                mDef += target.getShldDef();
-                break;
-            }
-            case SHIELD_DEFENSE_PERFECT_BLOCK: // perfect block
-            {
+        switch (calcShldUse(attacker, target)) {
+            case SHIELD_DEFENSE_SUCCEED -> mDef += target.getShldDef();
+            case SHIELD_DEFENSE_PERFECT_BLOCK -> {
                 return 1;
             }
         }
 
-        // Bonus Spiritshot
-        final double shotsBonus = attacker.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS);
-        mAtk *= bss ? 4 * shotsBonus : sps ? 2 * shotsBonus : 1;
+        mAtk *= skill.useSpiritShot() ? attacker.chargedShotBonus(ShotType.SPIRITSHOTS) : 1;
 
         double damage = (Math.sqrt(mAtk) * power * (mp / 97)) / mDef;
         damage *= calcGeneralTraitBonus(attacker, target, skill.getTrait(), false);
