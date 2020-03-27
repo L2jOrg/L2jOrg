@@ -64,6 +64,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
                 connect();
             }
         } catch (IOException | ExecutionException | InterruptedException e) {
+            logger.debug(e.getMessage(), e);
             restart();
         }
     }
