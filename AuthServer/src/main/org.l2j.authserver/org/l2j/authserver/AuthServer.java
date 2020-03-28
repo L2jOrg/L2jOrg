@@ -9,7 +9,6 @@ import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.AuthPacketHandler;
 import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
-import org.l2j.authserver.settings.AuthServerSettings;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.slf4j.Logger;
@@ -42,7 +41,7 @@ public class AuthServer {
         var gameserverHandler = new GameServerPacketHandler();
         serverConnectionHandler = ConnectionBuilder.create(bindServerListen, ServerClient::new, gameserverHandler, gameserverHandler).build();
         serverConnectionHandler.start();
-        logger.atInfo().addArgument(AuthServerSettings::gameServerListenHost).addArgument(AuthServerSettings::gameServerListenPort).log("Listening for GameServers on {} : {}");
+        logger.info("Listening for GameServers on {}", bindServerListen);
 
 
         var bindAddress = listenHost().equals("*") ? new InetSocketAddress(listenPort()) : new InetSocketAddress(listenHost(), listenPort()) ;
@@ -50,7 +49,7 @@ public class AuthServer {
         final ConnectionHelper sh = new ConnectionHelper();
         connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).build();
         connectionHandler.start();
-        logger.atInfo().addArgument(bindAddress::getHostString).addArgument(AuthServerSettings::listenPort).log("Login Server ready on {}:{}");
+        logger.info("Login Server ready on {}", bindAddress);
     }
 
     private void shutdown() {
