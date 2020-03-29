@@ -48,34 +48,24 @@ public class Q10960_Tutorial extends Tutorial {
     // NPCs
     private static final int[] NEWBIE_HELPERS = {
             30530, // dwarf
-            30575, // orc
     };
 
     private static final int[] SUPERVISORS = {
             30528, // dwarf
-            30573, // orc
             34109, // jin kamael
     };
 
     // Others
     private static final IntMap<QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashIntMap<>();{
-        STARTING_VOICE_HTML.put(44, new QuestSoundHtmlHolder("tutorial_voice_001g", "tutorial_orc_fighter001.html"));
-        STARTING_VOICE_HTML.put(49, new QuestSoundHtmlHolder("tutorial_voice_001h", "tutorial_orc_mage001.html"));
         STARTING_VOICE_HTML.put(53, new QuestSoundHtmlHolder("tutorial_voice_001i", "tutorial_dwarven_fighter001.html"));
     }
 
-    private static final IntMap<Location> HELPER_LOCATION = new HashIntMap<>();
-    {
-        HELPER_LOCATION.put(44, new Location(-56736, -113680, -672));
-        HELPER_LOCATION.put(49, new Location(-56736, -113680, -672));
+    private static final IntMap<Location> HELPER_LOCATION = new HashIntMap<>();{
         HELPER_LOCATION.put(53, new Location(108567, -173994, -406));
     }
 
     private static final IntMap<Location> COMPLETE_LOCATION = new HashIntMap<>();
     {
-        COMPLETE_LOCATION.put(38, new Location(12161, 16674, -4584, 60030));
-        COMPLETE_LOCATION.put(44, new Location(-45113, -113598, -192, 45809));
-        COMPLETE_LOCATION.put(49, new Location(-45113, -113598, -192, 45809));
         COMPLETE_LOCATION.put(53, new Location(115575, -178014, -904, 9808));
     }
 
