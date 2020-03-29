@@ -1,80 +1,24 @@
 package quests.tutorial.Q10960_Tutorial;
 
-import io.github.joealisson.primitive.IntMap;
-import io.github.joealisson.primitive.HashIntMap;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.enums.HtmlActionScope;
-import org.l2j.gameserver.enums.Race;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.quest.State;
-import org.l2j.gameserver.network.serverpackets.html.TutorialShowHtml;
-import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
-import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.quest.Quest;
-import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.html.TutorialWindowType;
 import quests.tutorial.Tutorial;
 
-import java.util.*;
-
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
-
 /**
- * Tutorial Quest
- * @author Mobius
  * @author joeAlisson
- *
  */
 public class Q10960_Tutorial extends Tutorial {
 
     private static final QuestSoundHtmlHolder STARTING_HTML_VOICE = new QuestSoundHtmlHolder("tutorial_voice_001j", "main.html");
     private static final int NEWBIE_HELPER = 34108;
+    private static final int SUPERVISOR = 34109;
     private static final Location HELPER_LOC = new Location(-124731, 38070, 1208);
     private static final Location VILLAGE_LOCATION = new Location(-118073, 45131, 368, 43039);
 
-    // NPCs
-    private static final int[] NEWBIE_HELPERS = {
-            30530, // dwarf
-    };
-
-    private static final int[] SUPERVISORS = {
-            30528, // dwarf
-            34109, // jin kamael
-    };
-
-    // Others
-    private static final IntMap<QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashIntMap<>();{
-        STARTING_VOICE_HTML.put(53, new QuestSoundHtmlHolder("tutorial_voice_001i", "tutorial_dwarven_fighter001.html"));
-    }
-
-    private static final IntMap<Location> HELPER_LOCATION = new HashIntMap<>();{
-        HELPER_LOCATION.put(53, new Location(108567, -173994, -406));
-    }
-
-    private static final IntMap<Location> COMPLETE_LOCATION = new HashIntMap<>();
-    {
-        COMPLETE_LOCATION.put(53, new Location(115575, -178014, -904, 9808));
-    }
-
     public Q10960_Tutorial() {
         super(10960, ClassId.JIN_KAMAEL_SOLDIER);
-        addTalkId(NEWBIE_HELPERS);
-        addTalkId(SUPERVISORS);
-        addFirstTalkId(NEWBIE_HELPERS);
-        addFirstTalkId(SUPERVISORS);
+        addFirstTalkId(SUPERVISOR);
     }
 
     @Override
