@@ -64,7 +64,6 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.itemcontainer.*;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.WeaponType;
@@ -130,8 +129,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.doIfNonNull;
-import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.items.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
@@ -147,6 +145,7 @@ public final class Player extends Playable {
 
     private final PlayerData model;
     private final PlayerAppearance appearance;
+    private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
 
     private byte vipTier;
     private ElementalSpirit[] spirits;
@@ -425,6 +424,107 @@ public final class Player extends Playable {
         getDAO(PlayerDAO.class).save(statsData);
     }
 
+    public void enableAutoSoulShot(ShotType type, int itemId) {
+        activeSoulShots.put(type, itemId);
+        sendPacket(new ExAutoSoulShot(itemId, true, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
+        rechargeShot(type);
+    }
+
+    public boolean rechargeShot(ShotType type) {
+        var itemId = activeSoulShots.get(type);
+        if(nonNull(itemId)) {
+            var item = inventory.getItemByItemId(itemId);
+            if(isNull(item)) {
+                disableAutoShot(type);
+                return false;
+            }
+            return falseIfNullOrElse(ItemHandler.getInstance().getHandler(item.getEtcItem()), handler -> handler.useItem(this, item, false));
+        }
+        return false;
+    }
+
+    public void disableSummonAutoShot() {
+        disableAutoShot(ShotType.BEAST_SOULSHOTS);
+        disableAutoShot(ShotType.BEAST_SPIRITSHOTS);
+    }
+
+    public boolean isAutoShotEnabled(ShotType type) {
+        return activeSoulShots.containsKey(type);
+    }
+
+    public void disableAutoShot(ShotType type) {
+        doIfNonNull(activeSoulShots.remove(type), itemId -> sendDisableShotPackets(type, itemId));
+        switch (type) {
+            case SOULSHOTS, SPIRITSHOTS -> unchargeShot(type);
+            case BEAST_SOULSHOTS, BEAST_SPIRITSHOTS -> {
+                var shotType = type == ShotType.BEAST_SOULSHOTS ? ShotType.SOULSHOTS : ShotType.SPIRITSHOTS;
+                doIfNonNull(getPet(), pet -> pet.unchargeShot(shotType));
+                getServitors().values().forEach(s -> s.unchargeShot(shotType));
+            }
+        }
+    }
+
+    public void disableAutoShots() {
+        activeSoulShots.forEach(this::sendDisableShotPackets);
+        activeSoulShots.clear();
+        unchargeAllShots();
+        doIfNonNull(getPet(), Creature::unchargeAllShots);
+        getServitors().values().forEach(Creature::unchargeAllShots);
+    }
+
+    private void sendDisableShotPackets(ShotType type, int itemId) {
+        sendPacket(new ExAutoSoulShot(itemId, false, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(itemId));
+    }
+
+    @Override
+    public void consumeAndRechargeShots(ShotType type, int targets) {
+        if(!activeSoulShots.containsKey(type) || isNull(getActiveWeaponInstance())) {
+            return;
+        }
+
+        var shotsCount = getActiveWeaponItem().getConsumeShotsCount();
+        if(targets >= 4 && targets <= 8) {
+            shotsCount <<=  1;
+        } else if(targets >= 9 && targets <= 14) {
+            shotsCount *= 3;
+        } else if(targets >= 15) {
+            shotsCount <<= 2;
+        }
+        if(!consumeAndRechargeShotCount(type, shotsCount)) {
+            unchargeShot(type);
+        }
+    }
+
+    public boolean consumeAndRechargeShotCount(ShotType type, int count) {
+        if(count < 1) {
+            return rechargeShot(type);
+        }
+
+        var itemId = activeSoulShots.get(type);
+        Item item;
+        if(nonNull(itemId) && nonNull(item = inventory.getItemByItemId(itemId))) {
+            var consume = Math.min(count, item.getCount());
+            destroyItemWithoutTrace("Consume", item.getObjectId(), consume, this, false);
+            if (consume < count) {
+                disableAutoShot(type);
+                sendNotEnoughShotMessage(type);
+                return false;
+            }
+            return rechargeShot(type);
+        }
+        return false;
+    }
+
+    private void sendNotEnoughShotMessage(ShotType type) {
+        var message = switch (type) {
+            case SPIRITSHOTS -> SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOT_FOR_THAT;
+            case SOULSHOTS -> SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT;
+            case BEAST_SOULSHOTS -> SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR;
+            case BEAST_SPIRITSHOTS -> SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR;
+        };
+        sendPacket(message);
+    }
+
     public static Player create(PlayerData playerData, PlayerTemplate template) {
         final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
@@ -577,10 +677,6 @@ public final class Player extends Playable {
      **/
     protected boolean _recoTwoHoursGiven = false;
     protected boolean _inventoryDisable = false;
-    /**
-     * Active shots.
-     */
-    protected Set<Integer> _activeSoulShots = ConcurrentHashMap.newKeySet();
 
     private GameClient _client;
     private String _ip = "N/A";
@@ -967,7 +1063,7 @@ public final class Player extends Playable {
             player.getAppearance().setTitleColor(character.getTitleColr());
         }
 
-        player.setFistsWeaponItem(player.findFistsWeaponItem(character.getClassId()));
+        player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
         player.setClassIndex(0);
 
@@ -2035,7 +2131,8 @@ public final class Player extends Playable {
                 sendPacket(sm);
 
                 if ((item.getBodyPart().isAnyOf(RIGHT_HAND, TWO_HAND))) {
-                    rechargeShots(true, true, false);
+                    rechargeShot(ShotType.SOULSHOTS);
+                    rechargeShot(ShotType.SPIRITSHOTS);
                 }
             } else {
                 sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
@@ -2229,51 +2326,18 @@ public final class Player extends Playable {
         _fistsWeaponItem = weaponItem;
     }
 
-    /**
-     * @param classId
-     * @return the fists weapon of the Player Class (used when no weapon is equipped).
-     */
-    public Weapon findFistsWeaponItem(int classId) {
-        Weapon weaponItem = null;
-        if ((classId >= 0x00) && (classId <= 0x09)) {
-            // human fighter fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(246);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x0a) && (classId <= 0x11)) {
-            // human mage fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(251);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x12) && (classId <= 0x18)) {
-            // elven fighter fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(244);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x19) && (classId <= 0x1e)) {
-            // elven mage fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(249);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x1f) && (classId <= 0x25)) {
-            // dark elven fighter fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(245);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x26) && (classId <= 0x2b)) {
-            // dark elven mage fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(250);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x2c) && (classId <= 0x30)) {
-            // orc fighter fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(248);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x31) && (classId <= 0x34)) {
-            // orc mage fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(252);
-            weaponItem = (Weapon) temp;
-        } else if ((classId >= 0x35) && (classId <= 0x39)) {
-            // dwarven fists
-            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(247);
-            weaponItem = (Weapon) temp;
-        }
+    public Weapon findFistsWeaponItem() {
+        var classId = getClassId();
+        var fistWeaponId = switch (classId.getRace()) {
+            case HUMAN -> classId.isMage() ? 251 : 246;
+            case ELF ->  classId.isMage() ? 249 : 244;
+            case DARK_ELF -> classId.isMage() ? 250 : 245;
+            case ORC -> classId.isMage() ? 252 : 248;
+            case DWARF -> 247;
+            default -> 246; // human fight
+        };
+        return (Weapon) ItemEngine.getInstance().getTemplate(fistWeaponId);
 
-        return weaponItem;
     }
 
     /**
@@ -7059,84 +7123,6 @@ public final class Player extends Playable {
      */
     public void setLastFolkNPC(Npc folkNpc) {
         _lastFolkNpc = folkNpc;
-    }
-
-    public void addAutoSoulShot(int itemId) {
-        _activeSoulShots.add(itemId);
-    }
-
-    public boolean removeAutoSoulShot(int itemId) {
-        return _activeSoulShots.remove(itemId);
-    }
-
-    public Set<Integer> getAutoSoulShot() {
-        return _activeSoulShots;
-    }
-
-    @Override
-    public void rechargeShots(boolean physical, boolean magic, boolean fish) {
-        for (int itemId : _activeSoulShots) {
-            final Item item = inventory.getItemByItemId(itemId);
-            if (item == null) {
-                removeAutoSoulShot(itemId);
-                continue;
-            }
-
-            final IItemHandler handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
-            if (handler == null) {
-                continue;
-            }
-
-            final ActionType defaultAction = item.getTemplate().getDefaultAction();
-            if ((magic && (defaultAction == ActionType.SPIRITSHOT)) || (physical && (defaultAction == ActionType.SOULSHOT)) || (fish && (defaultAction == ActionType.FISHINGSHOT))) {
-                handler.useItem(this, item, false);
-            }
-        }
-    }
-
-    /**
-     * Cancel autoshot for all shots matching crystaltype {@link ItemTemplate#getCrystalType()}.
-     *
-     * @param crystalType int type to disable
-     */
-    public void disableAutoShotByCrystalType(int crystalType) {
-        for (int itemId : _activeSoulShots) {
-            if (ItemEngine.getInstance().getTemplate(itemId).getCrystalType().getId() == crystalType) {
-                disableAutoShot(itemId);
-            }
-        }
-    }
-
-    /**
-     * Cancel autoshot use for shot itemId
-     *
-     * @param itemId int id to disable
-     * @return true if canceled.
-     */
-    public boolean disableAutoShot(int itemId) {
-        if (_activeSoulShots.contains(itemId)) {
-            removeAutoSoulShot(itemId);
-            sendPacket(new ExAutoSoulShot(itemId, false, 0));
-
-            final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
-            sm.addItemName(itemId);
-            sendPacket(sm);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Cancel all autoshots for player
-     */
-    public void disableAutoShotsAll() {
-        for (int itemId : _activeSoulShots) {
-            sendPacket(new ExAutoSoulShot(itemId, false, 0));
-            final SystemMessage sm = getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
-            sm.addItemName(itemId);
-            sendPacket(sm);
-        }
-        _activeSoulShots.clear();
     }
 
     public EnumIntBitmask<ClanPrivilege> getClanPrivileges() {

@@ -239,7 +239,7 @@
 	<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor’s info window. (Used from the master’s inventory.)  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes price="100" commission-type="PET_SUPPLIES" for-npc="true" immediate-effect="true" action="SUMMON_SPIRITSHOT"/>
-		<skill-reducer type="BeastSpiritShot">
+		<skill-reducer type="BlessedBeastSpiritShot">
 			<skill id="2009" value="-1"/>  <!-- Item - Blessed Beast Spirit Shot -->
 		</skill-reducer>
 	</item>

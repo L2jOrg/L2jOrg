@@ -1,8 +1,9 @@
 package handlers.itemhandlers;
 
 import org.l2j.gameserver.enums.ShotType;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -11,9 +12,18 @@ import org.l2j.gameserver.network.SystemMessageId;
 public class BeastSpiritShot extends AbstractBeastShot {
 
 	@Override
-	protected ShotType getShotType(Item item) {
-		var isBlessed = (item.getId() == 6647 || item.getId() == 20334); // TODO: Unhardcode
-		return isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS;
+	protected ShotType getShotType() {
+		return ShotType.SPIRITSHOTS;
+	}
+
+	@Override
+	protected boolean isBlessed() {
+		return false;
+	}
+
+	@Override
+	protected double getBonus(Summon summon) {
+		return summon.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS, 1) * 2;
 	}
 
 	@Override
@@ -21,8 +31,4 @@ public class BeastSpiritShot extends AbstractBeastShot {
 		player.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 	}
 
-	@Override
-	protected SystemMessageId getNotEnoughMessage() {
-		return SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR;
-	}
 }

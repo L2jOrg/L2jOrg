@@ -92,8 +92,7 @@ public final class RequestStartPledgeWar extends ClientPacket {
         }
 
         final ClanWar newClanWar = new ClanWar(clanDeclaringWar, clanDeclaredWar);
-
-        ClanTable.getInstance().storeClanWars(newClanWar);
+        newClanWar.save();
 
         clanDeclaringWar.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
 

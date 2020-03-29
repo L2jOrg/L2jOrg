@@ -434,7 +434,6 @@ public final class Config {
     public static int ALT_MANOR_APPROVE_TIME;
     public static int ALT_MANOR_APPROVE_MIN;
     public static int ALT_MANOR_MAINTENANCE_MIN;
-    public static boolean ALT_MANOR_SAVE_ALL_ACTIONS;
     public static int ALT_MANOR_SAVE_PERIOD_RATE;
     public static boolean ALT_ITEM_AUCTION_ENABLED;
     public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
@@ -1305,7 +1304,6 @@ public final class Config {
         ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);
         ALT_MANOR_APPROVE_MIN = General.getInt("AltManorApproveMin", 30);
         ALT_MANOR_MAINTENANCE_MIN = General.getInt("AltManorMaintenanceMin", 6);
-        ALT_MANOR_SAVE_ALL_ACTIONS = General.getBoolean("AltManorSaveAllActions", false);
         ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
         ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
         ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);

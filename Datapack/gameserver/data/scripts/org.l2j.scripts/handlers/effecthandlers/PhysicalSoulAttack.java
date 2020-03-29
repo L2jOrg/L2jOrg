@@ -107,15 +107,8 @@ public final class PhysicalSoulAttack extends AbstractEffect {
             final double power = this.power + effector.getStats().getValue(Stat.SKILL_POWER_ADD, 0);
             final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
             final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
-            double ssmod = 1;
+            double ssmod = skill.useSoulShot() ?  effector.chargedShotBonus(ShotType.SOULSHOTS) : 1;
 
-            if (skill.useSoulShot()) {
-                if (effector.isChargedShot(ShotType.SOULSHOTS)) {
-                    ssmod = 2 * effector.getStats().getValue(Stat.SOUL_SHOTS_BONUS); // 2.04 for dual weapon?
-                } else if (effector.isChargedShot(ShotType.BLESSED_SOULSHOTS)) {
-                    ssmod = 4 * effector.getStats().getValue(Stat.SOUL_SHOTS_BONUS);
-                }
-            }
             final double soulsMod = 1 + (souls * 0.04); // Souls Formula (each soul increase +4%)
 
             // ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________

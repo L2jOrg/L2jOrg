@@ -24,15 +24,17 @@ public final class TriggerSkillByChargeShot extends AbstractEffect {
     private final SkillHolder skill;
     private final ShotType type;
     private final boolean forBeast;
+    private final boolean blessed;
 
     private TriggerSkillByChargeShot(StatsSet data) {
         skill = new SkillHolder(data.getInt("skill"), data.getInt("power", 1));
         type = data.getEnum("type", ShotType.class);
         forBeast = data.getBoolean("for-beast");
+        blessed = data.getBoolean("blessed");
     }
 
     private void onChargeShotEvent(OnPlayeableChargeShots event) {
-        if(event.getShotType() != type || forBeast != isSummon(event.getPlayable())) {
+        if(event.getShotType() != type || forBeast != isSummon(event.getPlayable()) || blessed != event.isBlessed()) {
             return;
         }
         var triggerSkill = skill.getSkill();

@@ -31,8 +31,17 @@ public class IndexedValuesStrategy implements MapParameterStrategy {
                 var type = parameterInfo.getValue().getValue();
                 var argumentIndex = parameterInfo.getValue().getKey();
                 var handler = TypeHandler.MAP.getOrDefault(type.getName(), TypeHandler.MAP.get(Object.class.getName()));
-                handler.setParameter(statement, parameterIndex, args[argumentIndex]);
+                if(argumentIndex < args.length) {
+                    handler.setParameter(statement, parameterIndex, args[argumentIndex]);
+                } else {
+                    statement.setString(parameterIndex, "NULL");
+                }
             }
         }
+    }
+
+    @Override
+    public void setParameters(PreparedStatement statement, Object obj) throws SQLException {
+        setParameters(statement, new Object[] { obj });
     }
 }

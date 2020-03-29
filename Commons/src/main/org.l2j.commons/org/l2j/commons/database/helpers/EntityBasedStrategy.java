@@ -21,16 +21,18 @@ public class EntityBasedStrategy implements MapParameterStrategy {
         this.parametersInfo = parametersInfo;
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void setParameters(PreparedStatement statement, Object[] args) throws SQLException {
         if(isNull(args) || args.length < 1 || isNull(args[0])) {
             return;
         }
+        setParameters(statement, args[0]);
+    }
 
-        var entity = args[0];
+    @SuppressWarnings("unchecked")
+    @Override
+    public void setParameters(PreparedStatement statement, Object entity) throws SQLException {
         var clazz = entity.getClass();
-
         try {
             for (var parameterInfo : parametersInfo.entrySet()) {
                 var field = clazz.getDeclaredField(parameterInfo.getKey());
@@ -51,5 +53,6 @@ public class EntityBasedStrategy implements MapParameterStrategy {
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new SQLException(e);
         }
+
     }
 }

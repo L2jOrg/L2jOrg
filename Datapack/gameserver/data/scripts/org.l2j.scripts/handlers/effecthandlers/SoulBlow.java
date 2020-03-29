@@ -62,10 +62,8 @@ public final class SoulBlow extends AbstractEffect {
 		if (overHit && isAttackable(effected)) {
 			((Attackable) effected).overhitEnabled(true);
 		}
-		
-		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
-		final byte shld = Formulas.calcShldUse(effector, effected);
-		double damage = Formulas.calcBlowDamage(effector, effected, skill, false, power, shld, ss);
+
+		double damage = Formulas.calcBlowDamage(effector, effected, skill, power);
 		if (skill.getMaxSoulConsumeCount() > 0 && isPlayer(effector)) {
 			// Souls Formula (each soul increase +4%)
 			final int chargedSouls = Math.min(effector.getActingPlayer().getChargedSouls(), skill.getMaxSoulConsumeCount());

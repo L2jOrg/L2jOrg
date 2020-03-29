@@ -1070,26 +1070,33 @@ public class Npc extends Creature {
         broadcastInfo();
     }
 
-
     @Override
-    public void rechargeShots(boolean physical, boolean magic, boolean fish) {
-        if (physical && (_soulshotamount > 0)) {
-            if (Rnd.get(100) > getTemplate().getSoulShotChance()) {
-                return;
-            }
-            _soulshotamount--;
-            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
-            chargeShot(ShotType.SOULSHOTS);
+    public void consumeAndRechargeShots(ShotType shotType, int targets) {
+        if (shotType == ShotType.SOULSHOTS) {
+            consumeAndRechargeSoulShots();
+        } else if (shotType == ShotType.SPIRITSHOTS) {
+            consumeAndRechargeSpiritShots();
         }
-        if (magic && (_spiritshotamount > 0)) {
-            if (Rnd.get(100) > getTemplate().getSpiritShotChance()) {
-                return;
-            }
+    }
+
+    private void consumeAndRechargeSpiritShots() {
+        if(_spiritshotamount > 0 && Rnd.chance(getTemplate().getSpiritShotChance())) {
             _spiritshotamount--;
             Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
-            chargeShot(ShotType.SPIRITSHOTS);
+            chargeShot(ShotType.SPIRITSHOTS, 4);
+        } else {
+            unchargeShot(ShotType.SPIRITSHOTS);
         }
+    }
 
+    private void consumeAndRechargeSoulShots() {
+        if(_soulshotamount > 0 && Rnd.chance(getTemplate().getSoulShotChance())) {
+            _soulshotamount--;
+            Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+            chargeShot(ShotType.SOULSHOTS, 4);
+        } else {
+            unchargeShot(ShotType.SOULSHOTS);
+        }
     }
 
     /**

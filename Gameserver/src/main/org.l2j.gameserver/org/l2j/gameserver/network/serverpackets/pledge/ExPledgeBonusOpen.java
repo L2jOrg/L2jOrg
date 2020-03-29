@@ -1,4 +1,4 @@
-package org.l2j.gameserver.network.serverpackets.pledgebonus;
+package org.l2j.gameserver.network.serverpackets.pledge;
 
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ClanRewardType;
@@ -28,7 +28,7 @@ public class ExPledgeBonusOpen extends ServerPacket {
     public void writeImpl(GameClient client) throws InvalidDataPacketException {
         final Clan clan = _player.getClan();
         if (clan == null) {
-            LOGGER.warn("Player: " + _player + " attempting to write to a null clan!");
+            LOGGER.warn("Player: {} attempting to write to a null clan!", _player);
             throw new InvalidDataPacketException();
         }
 

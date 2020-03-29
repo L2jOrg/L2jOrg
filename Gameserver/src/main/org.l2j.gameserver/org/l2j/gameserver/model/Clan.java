@@ -38,7 +38,9 @@ import org.l2j.gameserver.model.variables.ClanVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
-import org.l2j.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusMarkReset;
+import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeBonusMarkReset;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.EnumIntBitmask;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -469,6 +471,10 @@ public class Clan implements IIdentifiable, INamable {
         //@formatter:on
     }
 
+    public void forEachMember(Consumer<ClanMember> action, Predicate<ClanMember> filter) {
+        members.values().stream().filter(filter).forEach(action);
+    }
+
     public void forEachOnlineMember(Consumer<Player> action) {
         onlineMembersStream().forEach(action);
     }
@@ -515,6 +521,7 @@ public class Clan implements IIdentifiable, INamable {
      * @param level the clan level to be set.
      */
     public void setLevel(int level) {
+        data.setLevel(level);
         if ((level >= 2) && (_forum == null) && Config.ENABLE_COMMUNITY_BOARD) {
             final Forum forum = ForumsBBSManager.getInstance().getForumByName("ClanRoot");
             if (forum != null) {

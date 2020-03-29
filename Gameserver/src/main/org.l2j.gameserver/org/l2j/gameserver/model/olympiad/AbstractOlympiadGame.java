@@ -190,7 +190,7 @@ public abstract class AbstractOlympiadGame {
             player.checkItemRestriction();
 
             // Remove shot automation
-            player.disableAutoShotsAll();
+            player.disableAutoShots();
 
             // Discharge any active shots
             player.unchargeAllShots();

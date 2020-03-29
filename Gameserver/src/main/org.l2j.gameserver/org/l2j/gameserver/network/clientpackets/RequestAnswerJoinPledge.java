@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 
 /**
  * This class ...

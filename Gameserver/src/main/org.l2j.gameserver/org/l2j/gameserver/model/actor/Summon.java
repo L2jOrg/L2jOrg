@@ -8,14 +8,8 @@ import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.enums.NpcInfoType;
-import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.handler.ItemHandler;
+import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Party;
@@ -28,10 +22,8 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import org.l2j.gameserver.model.itemcontainer.PetInventory;
-import org.l2j.gameserver.model.items.EtcItem;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.ActionType;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -44,6 +36,7 @@ import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.world.zone.ZoneType;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.contains;
 
 public abstract class Summon extends Playable {
@@ -97,7 +90,8 @@ public abstract class Summon extends Playable {
         // if someone comes into range now, the animation shouldn't show any more
         _restoreSummon = false;
 
-        rechargeShots(true, true, false);
+        _owner.rechargeShot(ShotType.BEAST_SOULSHOTS);
+        _owner.rechargeShot(ShotType.BEAST_SPIRITSHOTS);
 
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonSpawn(this), this);
@@ -361,13 +355,8 @@ public abstract class Summon extends Playable {
             oldRegion.removeFromZones(this);
 
             setTarget(null);
-            if (owner != null) {
-                for (int itemId : owner.getAutoSoulShot()) {
-                    final String handler = ((EtcItem) ItemEngine.getInstance().getTemplate(itemId)).getHandlerName();
-                    if ((handler != null) && handler.contains("Beast")) {
-                        owner.disableAutoShot(itemId);
-                    }
-                }
+            if (nonNull(owner)) {
+                owner.disableSummonAutoShot();
             }
         }
     }
@@ -832,42 +821,6 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public void rechargeShots(boolean physical, boolean magic, boolean fish) {
-        Item item;
-        IItemHandler handler;
-
-        if ((_owner.getAutoSoulShot() == null) || _owner.getAutoSoulShot().isEmpty()) {
-            return;
-        }
-
-        for (int itemId : _owner.getAutoSoulShot()) {
-            item = _owner.getInventory().getItemByItemId(itemId);
-
-            if (item != null) {
-                if (magic) {
-                    if (item.getTemplate().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT) {
-                        handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
-                        if (handler != null) {
-                            handler.useItem(_owner, item, false);
-                        }
-                    }
-                }
-
-                if (physical) {
-                    if (item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT) {
-                        handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
-                        if (handler != null) {
-                            handler.useItem(_owner, item, false);
-                        }
-                    }
-                }
-            } else {
-                _owner.removeAutoSoulShot(itemId);
-            }
-        }
-    }
-
-    @Override
     public int getClanId() {
         return (_owner != null) ? _owner.getClanId() : 0;
     }
@@ -923,5 +876,16 @@ public abstract class Summon extends Playable {
     @Override
     public boolean isTargetable() {
         return super.isTargetable() && getTemplate().isTargetable();
+    }
+
+    @Override
+    public void consumeAndRechargeShots(ShotType shotType, int targets) {
+        if(nonNull(_owner)) {
+            final var isSoulshot = ShotType.SOULSHOTS == shotType;
+            final var count = targets * (isSoulshot ? getSoulShotsPerHit() : getSpiritShotsPerHit());
+            if(!_owner.consumeAndRechargeShotCount(isSoulshot ? ShotType.BEAST_SOULSHOTS : ShotType.BEAST_SPIRITSHOTS, count)) {
+                unchargeShot(shotType);
+            }
+        }
     }
 }

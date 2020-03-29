@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -23,13 +25,15 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
+
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.doIfNonNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * This class serves as a container for player parties.
@@ -37,50 +41,43 @@ import java.util.concurrent.Future;
  * @author nuocnam
  */
 public class Party extends AbstractPlayerGroup {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Party.class);
 
     // @formatter:off
-    private static final double[] BONUS_EXP_SP =
-            {
-                    1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 2.0
-            };
+    private static final double[] BONUS_EXP_SP = {
+        1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 2.0
+    };
     // @formatter:on
 
     private static final Duration PARTY_POSITION_BROADCAST_INTERVAL = Duration.ofSeconds(12);
     private static final Duration PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT = Duration.ofSeconds(15);
-    private static final int[] TACTICAL_SYS_STRINGS =
-            {
-                    0,
-                    2664,
-                    2665,
-                    2666,
-                    2667
-            };
-    private static Map<Integer, Creature> _tacticalSigns = null;
-    private final List<Player> _members =  Collections.synchronizedList(new ArrayList<>());
-    protected PartyMemberPosition _positionPacket;
+
+    private static final int[] TACTICAL_SYS_STRINGS = {
+        0,
+        2664,
+        2665,
+        2666,
+        2667
+    };
+
+    private final IntMap<Creature> tacticalSigns = new HashIntMap<>();
+
+    private final List<Player> members = Collections.synchronizedList(new ArrayList<>());
+    protected PartyMemberPosition positionPacket;
     private boolean _pendingInvitation = false;
     private long _pendingInviteTimeout;
-    private int _partyLvl = 0;
-    private volatile PartyDistributionType _distributionType;
-    private volatile PartyDistributionType _changeRequestDistributionType;
-    private volatile Future<?> _changeDistributionTypeRequestTask = null;
+    private int partyLvl;
+    private volatile PartyDistributionType distributionType;
+    private volatile PartyDistributionType changeRequestDistributionType;
+    private volatile Future<?> changeDistributionTypeRequestTask = null;
     private volatile Set<Integer> _changeDistributionTypeAnswers = null;
-    private int _itemLastLoot = 0;
-    private CommandChannel _commandChannel = null;
-    private Future<?> _positionBroadcastTask = null;
-    private boolean _disbanding = false;
+    private int itemLastLoot = 0;
+    private CommandChannel commandChannel = null;
+    private Future<?> positionBroadcastTask = null;
 
-    /**
-     * Construct a new Party object with a single member - the leader.
-     *
-     * @param leader                the leader of this party
-     * @param partyDistributionType the item distribution rule of this party
-     */
     public Party(Player leader, PartyDistributionType partyDistributionType) {
-        _members.add(leader);
-        _partyLvl = leader.getLevel();
-        _distributionType = partyDistributionType;
+        members.add(leader);
+        partyLvl = leader.getLevel();
+        distributionType = partyDistributionType;
         World.getInstance().incrementParty();
     }
 
@@ -122,74 +119,41 @@ public class Party extends AbstractPlayerGroup {
      * @return a random member from this party or {@code null} if none of the members have inventory space for the specified item
      */
     private Player getCheckedRandomMember(int itemId, Creature target) {
-        final List<Player> availableMembers = new ArrayList<>();
-        for (Player member : _members) {
-            if (member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
-                availableMembers.add(member);
-            }
-        }
-        return !availableMembers.isEmpty() ? availableMembers.get(Rnd.get(availableMembers.size())) : null;
+        return Rnd.get(members.stream()
+                .filter(member -> member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
+                .collect(Collectors.toList()));
     }
 
-    /**
-     * get next item looter
-     *
-     * @param ItemId
-     * @param target
-     * @return
-     */
     private Player getCheckedNextLooter(int ItemId, Creature target) {
-        for (int i = 0; i < getMemberCount(); i++) {
-            if (++_itemLastLoot >= getMemberCount()) {
-                _itemLastLoot = 0;
+        for (int i = 0; i < members.size(); i++) {
+            if (++itemLastLoot >= members.size()) {
+                itemLastLoot = 0;
             }
-            Player member;
-            try {
-                member = _members.get(_itemLastLoot);
-                if (member.getInventory().validateCapacityByItemId(ItemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
-                    return member;
-                }
-            } catch (Exception e) {
-                // continue, take another member if this just logged off
+
+            var member = members.get(itemLastLoot);
+            if (member.getInventory().validateCapacityByItemId(ItemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
+                return member;
             }
         }
-
         return null;
     }
 
-    /**
-     * get next item looter
-     *
-     * @param player
-     * @param ItemId
-     * @param spoil
-     * @param target
-     * @return
-     */
     private Player getActualLooter(Player player, int ItemId, boolean spoil, Creature target) {
         Player looter = null;
 
-        switch (_distributionType) {
-            case RANDOM: {
+        switch (distributionType) {
+            case RANDOM -> {
                 if (!spoil) {
                     looter = getCheckedRandomMember(ItemId, target);
                 }
-                break;
             }
-            case RANDOM_INCLUDING_SPOIL: {
-                looter = getCheckedRandomMember(ItemId, target);
-                break;
-            }
-            case BY_TURN: {
+            case RANDOM_INCLUDING_SPOIL -> looter = getCheckedRandomMember(ItemId, target);
+            case BY_TURN -> {
                 if (!spoil) {
                     looter = getCheckedNextLooter(ItemId, target);
                 }
-                break;
             }
-            case BY_TURN_INCLUDING_SPOIL: {
-                looter = getCheckedNextLooter(ItemId, target);
-                break;
-            }
+            case BY_TURN_INCLUDING_SPOIL -> looter = getCheckedNextLooter(ItemId, target);
         }
 
         return looter != null ? looter : player;
@@ -199,76 +163,41 @@ public class Party extends AbstractPlayerGroup {
      * Broadcasts UI update and User Info for new party leader.
      */
     public void broadcastToPartyMembersNewLeader() {
-        for (Player member : _members) {
-            if (member != null) {
-                member.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
-                member.sendPacket(new PartySmallWindowAll(member, this));
-                member.broadcastUserInfo();
-            }
-        }
+        members.forEach(member -> {
+            member.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET, new PartySmallWindowAll(member, this));
+            member.broadcastUserInfo();
+        });
     }
 
-    /**
-     * Send a Server->Client packet to all other Player of the Party.<BR>
-     * <BR>
-     *
-     * @param player
-     * @param msg
-     */
     public void broadcastToPartyMembers(Player player, ServerPacket msg) {
-        for (Player member : _members) {
-            if ((member != null) && (member.getObjectId() != player.getObjectId())) {
-                member.sendPacket(msg);
-            }
-        }
+        members.stream().filter(member -> member.getObjectId() != player.getObjectId()).forEach(msg::sendTo);
     }
 
-    /**
-     * adds new member to party
-     *
-     * @param player
-     */
     public void addPartyMember(Player player) {
-        if (_members.contains(player)) {
+        if (members.contains(player)) {
             return;
         }
 
-        if (_changeRequestDistributionType != null) {
+        if (nonNull(changeRequestDistributionType)) {
             finishLootRequest(false); // cancel on invite
         }
 
-        // add player to party
-        _members.add(player);
+        members.add(player);
 
         // sends new member party window for all members
         // we do all actions before adding member to a list, this speeds things up a little
         player.sendPacket(new PartySmallWindowAll(player, this));
 
         // sends pets/summons of party members
-        for (Player pMember : _members) {
-            if (pMember != null) {
-                final Summon pet = pMember.getPet();
-                if (pet != null) {
-                    player.sendPacket(new ExPartyPetWindowAdd(pet));
-                }
-                pMember.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowAdd(s)));
-            }
+        for (Player member : members) {
+            doIfNonNull(member.getPet(), pet ->  player.sendPacket(new ExPartyPetWindowAdd(pet)));
+            member.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowAdd(s)));
         }
 
-        SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
-        msg.addString(getLeader().getName());
-        player.sendPacket(msg);
+        player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY).addString(getLeader().getName()));
+        broadcastPacket(getSystemMessage(SystemMessageId.C1_HAS_JOINED_THE_PARTY).addString(player.getName()));
 
-        msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_JOINED_THE_PARTY);
-        msg.addString(player.getName());
-        broadcastPacket(msg);
-
-        _members.stream().filter(member -> member != player).forEach(member -> member.sendPacket(new PartySmallWindowAdd(player, this)));
-
-        // send the position of all party members to the new party member
-        // player.sendPacket(new PartyMemberPosition(this));
-        // send the position of the new party member to all party members (except the new one - he knows his own position)
-        // broadcastToPartyMembers(player, new PartyMemberPosition(this));
+        members.stream().filter(member -> member != player).forEach(member -> member.sendPacket(new PartySmallWindowAdd(player, this)));
 
         // if member has pet/summon add it to other as well
         final Summon pet = player.getPet();
@@ -279,28 +208,18 @@ public class Party extends AbstractPlayerGroup {
         player.getServitors().values().forEach(s -> broadcastPacket(new ExPartyPetWindowAdd(s)));
 
         // adjust party level
-        if (player.getLevel() > _partyLvl) {
-            _partyLvl = player.getLevel();
+        if (player.getLevel() > partyLvl) {
+            partyLvl = player.getLevel();
         }
 
-        final StatusUpdate su = new StatusUpdate(player);
-        su.addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp());
-        su.addUpdate(StatusUpdateType.CUR_HP, (int) player.getCurrentHp());
+        var su = new StatusUpdate(player).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()).addUpdate(StatusUpdateType.CUR_HP, (int) player.getCurrentHp());
 
-        // update partySpelled
-        Summon summon;
-        for (Player member : _members) {
-            if (member != null) {
-                member.updateEffectIcons(true); // update party icons only
-                summon = member.getPet();
-                member.broadcastUserInfo();
-                if (summon != null) {
-                    summon.updateEffectIcons();
-                }
-                member.getServitors().values().forEach(Summon::updateEffectIcons);
-
-                member.sendPacket(su);
-            }
+        for (Player member : members) {
+            member.updateEffectIcons(true); // update party icons only
+            member.broadcastUserInfo();
+            doIfNonNull(member.getPet(), Creature::updateEffectIcons);
+            member.getServitors().values().forEach(Summon::updateEffectIcons);
+            member.sendPacket(su);
         }
 
         // open the CCInformationwindow
@@ -308,38 +227,26 @@ public class Party extends AbstractPlayerGroup {
             player.sendPacket(ExOpenMPCC.STATIC_PACKET);
         }
 
-        if (_positionBroadcastTask == null) {
-            _positionBroadcastTask = ThreadPool.scheduleAtFixedRate(() ->
-            {
-                if (_positionPacket == null) {
-                    _positionPacket = new PartyMemberPosition(this);
+        if (positionBroadcastTask == null) {
+            positionBroadcastTask = ThreadPool.scheduleAtFixedRate(() -> {
+                if (positionPacket == null) {
+                    positionPacket = new PartyMemberPosition(this);
                 } else {
-                    _positionPacket.reuse(this);
+                    positionPacket.reuse(this);
                 }
-                broadcastPacket(_positionPacket);
+                broadcastPacket(positionPacket);
             }, PARTY_POSITION_BROADCAST_INTERVAL.toMillis() / 2, PARTY_POSITION_BROADCAST_INTERVAL.toMillis());
         }
         applyTacticalSigns(player, false);
         World.getInstance().incrementPartyMember();
     }
 
-    private Map<Integer, Creature> getTacticalSigns() {
-        if (_tacticalSigns == null) {
-            synchronized (this) {
-                if (_tacticalSigns == null) {
-                    _tacticalSigns = new ConcurrentHashMap<>(1);
-                }
-            }
-        }
-        return _tacticalSigns;
+    private IntMap<Creature> getTacticalSigns() {
+        return tacticalSigns;
     }
 
     public void applyTacticalSigns(Player player, boolean remove) {
-        if (_tacticalSigns == null) {
-            return;
-        }
-
-        _tacticalSigns.forEach((key, value) -> player.sendPacket(new ExTacticalSign(value, remove ? 0 : key)));
+        tacticalSigns.forEach((key, value) -> player.sendPacket(new ExTacticalSign(value, remove ? 0 : key)));
     }
 
     public void addTacticalSign(Player activeChar, int tacticalSignId, Creature target) {
@@ -347,50 +254,34 @@ public class Party extends AbstractPlayerGroup {
 
         if (tacticalTarget == null) {
             // if the new sign is applied to an existing target, remove the old sign from map
-            _tacticalSigns.values().remove(target);
+            tacticalSigns.values().remove(target);
 
             // Add the new sign
-            _tacticalSigns.put(tacticalSignId, target);
+            tacticalSigns.put(tacticalSignId, target);
 
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
             sm.addPcName(activeChar);
             sm.addString(target.getName());
             sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 
-            _members.forEach(m ->
-            {
-                m.sendPacket(new ExTacticalSign(target, tacticalSignId));
-                m.sendPacket(sm);
-            });
+            members.forEach(m -> m.sendPacket(new ExTacticalSign(target, tacticalSignId), sm));
         } else if (tacticalTarget == target) {
             // Sign already assigned
             // If the sign is applied on the same target, remove it
-            _tacticalSigns.remove(tacticalSignId);
-            _members.forEach(m -> m.sendPacket(new ExTacticalSign(tacticalTarget, 0)));
+            tacticalSigns.remove(tacticalSignId);
+            members.forEach(m -> m.sendPacket(new ExTacticalSign(tacticalTarget, 0)));
         } else {
             // Otherwise, delete the old sign, and apply it to the new target
-            _tacticalSigns.replace(tacticalSignId, target);
+            tacticalSigns.replace(tacticalSignId, target);
 
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
-            sm.addPcName(activeChar);
-            sm.addString(target.getName());
-            sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
+            final SystemMessage sm = getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2).addPcName(activeChar).addString(target.getName()).addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 
-            _members.forEach(m ->
-            {
-                m.sendPacket(new ExTacticalSign(tacticalTarget, 0));
-                m.sendPacket(new ExTacticalSign(target, tacticalSignId));
-                m.sendPacket(sm);
-            });
+            members.forEach(m -> m.sendPacket(new ExTacticalSign(tacticalTarget, 0), new ExTacticalSign(target, tacticalSignId), sm));
         }
     }
 
     public void setTargetBasedOnTacticalSignId(Player player, int tacticalSignId) {
-        if (_tacticalSigns == null) {
-            return;
-        }
-
-        final Creature tacticalTarget = _tacticalSigns.get(tacticalSignId);
+        final Creature tacticalTarget = tacticalSigns.get(tacticalSignId);
         if ((tacticalTarget != null) && !tacticalTarget.isInvisible() && tacticalTarget.isTargetable() && !player.isTargetingDisabled()) {
             player.setTarget(tacticalTarget);
         }
@@ -413,109 +304,91 @@ public class Party extends AbstractPlayerGroup {
      * @param type   the message type {@link MessageType}.
      */
     public void removePartyMember(Player player, MessageType type) {
-        if (_members.contains(player)) {
-            final boolean isLeader = isLeader(player);
-            if (!_disbanding) {
-                if ((_members.size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != MessageType.DISCONNECTED))) {
-                    disbandParty();
-                    return;
-                }
+        if (members.contains(player)) {
+            var isLeader = isLeader(player);
+
+            if (members.size() == 2 || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && type != MessageType.DISCONNECTED)) {
+                disbandParty();
+                return;
             }
 
-            _members.remove(player);
+            members.remove(player);
             recalculatePartyLevel();
 
-            if (player.isInDuel()) {
-                DuelManager.getInstance().onRemoveFromParty(player);
-            }
+            onPlayerLeave(player, type);
 
-            try {
-                // Channeling a player!
-                if (player.isChanneling() && (player.getSkillChannelizer().hasChannelized())) {
-                    player.abortCast();
-                } else if (player.isChannelized()) {
-                    player.getSkillChannelized().abortChannelization();
-                }
-            } catch (Exception e) {
-                LOGGER.warn("", e);
-            }
-
-            SystemMessage msg;
-            if (type == MessageType.EXPELLED) {
-                player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
-                msg = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY);
-                msg.addString(player.getName());
-                broadcastPacket(msg);
-            } else if ((type == MessageType.LEFT) || (type == MessageType.DISCONNECTED)) {
-                player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
-                msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY);
-                msg.addString(player.getName());
-                broadcastPacket(msg);
-            }
-
-            World.getInstance().decrementPartyMember();
-
-            // UI update.
-            player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
-            player.setParty(null);
-            broadcastPacket(new PartySmallWindowDelete(player));
-            final Summon pet = player.getPet();
-            if (pet != null) {
-                broadcastPacket(new ExPartyPetWindowDelete(pet));
-            }
-            player.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowDelete(s)));
-
-            // Close the CCInfoWindow
-            if (isInCommandChannel()) {
-                player.sendPacket(ExCloseMPCC.STATIC_PACKET);
-            }
-            if (isLeader && (_members.size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == MessageType.DISCONNECTED))) {
-                msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
-                msg.addString(getLeader().getName());
-                broadcastPacket(msg);
+            if (isLeader) {
+                broadcastPacket(getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER).addString(getLeader().getName()));
                 broadcastToPartyMembersNewLeader();
-            } else if (_members.size() == 1) {
-                if (isInCommandChannel()) {
-                    // delete the whole command channel when the party who opened the channel is disbanded
-                    if (_commandChannel.getLeader().getObjectId() == getLeader().getObjectId()) {
-                        _commandChannel.disbandChannel();
-                    } else {
-                        _commandChannel.removeParty(this);
-                    }
-                }
-
-                if (getLeader() != null) {
-                    getLeader().setParty(null);
-                    if (getLeader().isInDuel()) {
-                        DuelManager.getInstance().onRemoveFromParty(getLeader());
-                    }
-                }
-                if (_changeDistributionTypeRequestTask != null) {
-                    _changeDistributionTypeRequestTask.cancel(true);
-                    _changeDistributionTypeRequestTask = null;
-                }
-                if (_positionBroadcastTask != null) {
-                    _positionBroadcastTask.cancel(false);
-                    _positionBroadcastTask = null;
-                }
-                _members.clear();
             }
-            applyTacticalSigns(player, true);
         }
+    }
+
+    private void onPlayerLeave(Player player, MessageType type) {
+        if (player.isInDuel()) {
+            DuelManager.getInstance().onRemoveFromParty(player);
+        }
+
+        // Channeling a player!
+        if (player.isChanneling() && player.getSkillChannelizer().hasChannelized()) {
+            player.abortCast();
+        } else if (player.isChannelized()) {
+            player.getSkillChannelized().abortChannelization();
+        }
+
+        if (type == MessageType.EXPELLED) {
+            player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
+            broadcastPacket(getSystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY).addString(player.getName()));
+        } else if ((type == MessageType.LEFT) || (type == MessageType.DISCONNECTED)) {
+            player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
+            broadcastPacket(getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY).addString(player.getName()));
+        }
+
+        // UI update.
+        player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
+        player.setParty(null);
+        broadcastPacket(new PartySmallWindowDelete(player));
+        doIfNonNull(player.getPet(), pet -> broadcastPacket(new ExPartyPetWindowDelete(pet)));
+        player.getServitors().values().forEach(s -> player.sendPacket(new ExPartyPetWindowDelete(s)));
+
+        // Close the CCInfoWindow
+        if (isInCommandChannel()) {
+            player.sendPacket(ExCloseMPCC.STATIC_PACKET);
+        }
+
+        applyTacticalSigns(player, true);
+        World.getInstance().decrementPartyMember();
     }
 
     /**
      * Disperse a party and send a message to all its members.
      */
     public void disbandParty() {
-        _disbanding = true;
-        broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
-        for (Player member : _members) {
-            if (member != null) {
-                removePartyMember(member, MessageType.NONE);
+        broadcastPacket(getSystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
+        members.forEach(member -> onPlayerLeave(member, MessageType.NONE));
+        if (isInCommandChannel()) {
+            // delete the whole command channel when the party who opened the channel is disbanded
+            if (commandChannel.getLeader().getObjectId() == getLeader().getObjectId()) {
+                commandChannel.disbandChannel();
+            } else {
+                commandChannel.removeParty(this);
             }
         }
+        members.clear();
+        cancelTasks();
         World.getInstance().decrementParty();
+    }
+
+    private void cancelTasks() {
+        if (nonNull(changeDistributionTypeRequestTask)) {
+            changeDistributionTypeRequestTask.cancel(true);
+            changeDistributionTypeRequestTask = null;
+        }
+
+        if (nonNull(positionBroadcastTask)) {
+            positionBroadcastTask.cancel(false);
+            positionBroadcastTask = null;
+        }
     }
 
     /**
@@ -527,14 +400,8 @@ public class Party extends AbstractPlayerGroup {
         setLeader(getPlayerByName(name));
     }
 
-    /**
-     * finds a player in the party by name
-     *
-     * @param name
-     * @return
-     */
     private Player getPlayerByName(String name) {
-        for (Player member : _members) {
+        for (Player member : members) {
             if (member.getName().equalsIgnoreCase(name)) {
                 return member;
             }
@@ -542,12 +409,6 @@ public class Party extends AbstractPlayerGroup {
         return null;
     }
 
-    /**
-     * distribute item(s) to party members
-     *
-     * @param player
-     * @param item
-     */
     public void distributeItem(Player player, Item item) {
         if (item.getId() == CommonItem.ADENA) {
             distributeAdena(player, item.getCount(), player);
@@ -560,13 +421,13 @@ public class Party extends AbstractPlayerGroup {
 
         // Send messages to other party members about reward
         if (item.getCount() > 1) {
-            final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+            final SystemMessage msg = getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
             msg.addString(target.getName());
             msg.addItemName(item);
             msg.addLong(item.getCount());
             broadcastToPartyMembers(target, msg);
         } else {
-            final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+            final SystemMessage msg = getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
             msg.addString(target.getName());
             msg.addItemName(item);
             broadcastToPartyMembers(target, msg);
@@ -594,13 +455,13 @@ public class Party extends AbstractPlayerGroup {
 
         // Send messages to other party members about reward
         if (itemCount > 1) {
-            final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+            final SystemMessage msg = spoil ? getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
             msg.addString(looter.getName());
             msg.addItemName(itemId);
             msg.addLong(itemCount);
             broadcastToPartyMembers(looter, msg);
         } else {
-            final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+            final SystemMessage msg = spoil ? getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
             msg.addString(looter.getName());
             msg.addItemName(itemId);
             broadcastToPartyMembers(looter, msg);
@@ -619,18 +480,11 @@ public class Party extends AbstractPlayerGroup {
         distributeItem(player, item.getId(), item.getCount(), spoil, target);
     }
 
-    /**
-     * distribute adena to party members
-     *
-     * @param player
-     * @param adena
-     * @param target
-     */
     public void distributeAdena(Player player, long adena, Creature target) {
         // Check the number of party members that must be rewarded
         // (The party member must be in range to receive its reward)
         final List<Player> toReward = new LinkedList<>();
-        for (Player member : _members) {
+        for (Player member : members) {
             if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
                 toReward.add(member);
             }
@@ -739,9 +593,9 @@ public class Party extends AbstractPlayerGroup {
      */
     public void recalculatePartyLevel() {
         int newLevel = 0;
-        for (Player member : _members) {
+        for (Player member : members) {
             if (member == null) {
-                _members.remove(member);
+                members.remove(member);
                 continue;
             }
 
@@ -749,7 +603,7 @@ public class Party extends AbstractPlayerGroup {
                 newLevel = member.getLevel();
             }
         }
-        _partyLvl = newLevel;
+        partyLvl = newLevel;
     }
 
     private List<Player> getValidMembers(List<Player> members, int topLvl) {
@@ -832,23 +686,23 @@ public class Party extends AbstractPlayerGroup {
 
     @Override
     public int getLevel() {
-        return _partyLvl;
+        return partyLvl;
     }
 
     public PartyDistributionType getDistributionType() {
-        return _distributionType;
+        return distributionType;
     }
 
     public boolean isInCommandChannel() {
-        return _commandChannel != null;
+        return commandChannel != null;
     }
 
     public CommandChannel getCommandChannel() {
-        return _commandChannel;
+        return commandChannel;
     }
 
     public void setCommandChannel(CommandChannel channel) {
-        _commandChannel = channel;
+        commandChannel = channel;
     }
 
     /**
@@ -856,31 +710,31 @@ public class Party extends AbstractPlayerGroup {
      */
     @Override
     public Player getLeader() {
-        return _members.get(0);
+        return members.get(0);
     }
 
     @Override
     public void setLeader(Player player) {
         if ((player != null) && !player.isInDuel()) {
-            if (_members.contains(player)) {
+            if (members.contains(player)) {
                 if (isLeader(player)) {
                     player.sendPacket(SystemMessageId.SLOW_DOWN_YOU_ARE_ALREADY_THE_PARTY_LEADER);
                 } else {
                     // Swap party members
                     final Player temp = getLeader();
-                    final int p1 = _members.indexOf(player);
-                    _members.set(0, player);
-                    _members.set(p1, temp);
+                    final int p1 = members.indexOf(player);
+                    members.set(0, player);
+                    members.set(p1, temp);
 
-                    SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
+                    SystemMessage msg = getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
                     msg.addString(getLeader().getName());
                     broadcastPacket(msg);
                     broadcastToPartyMembersNewLeader();
-                    if (isInCommandChannel() && _commandChannel.isLeader(temp)) {
-                        _commandChannel.setLeader(getLeader());
-                        msg = SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_C1);
-                        msg.addString(_commandChannel.getLeader().getName());
-                        _commandChannel.broadcastPacket(msg);
+                    if (isInCommandChannel() && commandChannel.isLeader(temp)) {
+                        commandChannel.setLeader(getLeader());
+                        msg = getSystemMessage(SystemMessageId.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_C1);
+                        msg.addString(commandChannel.getLeader().getName());
+                        commandChannel.broadcastPacket(msg);
                     }
                 }
             } else {
@@ -890,22 +744,22 @@ public class Party extends AbstractPlayerGroup {
     }
 
     public synchronized void requestLootChange(PartyDistributionType partyDistributionType) {
-        if (_changeRequestDistributionType != null) {
+        if (changeRequestDistributionType != null) {
             return;
         }
-        _changeRequestDistributionType = partyDistributionType;
+        changeRequestDistributionType = partyDistributionType;
         _changeDistributionTypeAnswers = new HashSet<>();
-        _changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
+        changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
 
         broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);
+        final SystemMessage sm = getSystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);
         sm.addSystemString(partyDistributionType.getSysStringId());
         getLeader().sendPacket(sm);
     }
 
     public synchronized void answerLootChangeRequest(Player member, boolean answer) {
-        if (_changeRequestDistributionType == null) {
+        if (changeRequestDistributionType == null) {
             return;
         }
 
@@ -925,24 +779,24 @@ public class Party extends AbstractPlayerGroup {
     }
 
     protected synchronized void finishLootRequest(boolean success) {
-        if (_changeRequestDistributionType == null) {
+        if (changeRequestDistributionType == null) {
             return;
         }
-        if (_changeDistributionTypeRequestTask != null) {
-            _changeDistributionTypeRequestTask.cancel(false);
-            _changeDistributionTypeRequestTask = null;
+        if (changeDistributionTypeRequestTask != null) {
+            changeDistributionTypeRequestTask.cancel(false);
+            changeDistributionTypeRequestTask = null;
         }
         if (success) {
-            broadcastPacket(new ExSetPartyLooting(1, _changeRequestDistributionType));
-            _distributionType = _changeRequestDistributionType;
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
-            sm.addSystemString(_changeRequestDistributionType.getSysStringId());
+            broadcastPacket(new ExSetPartyLooting(1, changeRequestDistributionType));
+            distributionType = changeRequestDistributionType;
+            final SystemMessage sm = getSystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
+            sm.addSystemString(changeRequestDistributionType.getSysStringId());
             broadcastPacket(sm);
         } else {
-            broadcastPacket(new ExSetPartyLooting(0, _distributionType));
-            broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_CHANGE_WAS_CANCELLED));
+            broadcastPacket(new ExSetPartyLooting(0, distributionType));
+            broadcastPacket(getSystemMessage(SystemMessageId.PARTY_LOOT_CHANGE_WAS_CANCELLED));
         }
-        _changeRequestDistributionType = null;
+        changeRequestDistributionType = null;
         _changeDistributionTypeAnswers = null;
     }
 
@@ -951,7 +805,7 @@ public class Party extends AbstractPlayerGroup {
      */
     @Override
     public List<Player> getMembers() {
-        return _members;
+        return members;
     }
 
     /**

@@ -167,7 +167,7 @@ public class Util {
             fields.addAll(Stream.of(searchClass.getDeclaredFields()).collect(Collectors.toList()));
             searchClass = searchClass.getSuperclass();
         }
-        return Collections.unmodifiableList(fields);
+        return fields;
     }
 
     public static Field findField(final Class<?> classToSearch, String fieldName) {

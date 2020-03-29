@@ -11,6 +11,7 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.NextActionType;
+import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
@@ -554,7 +555,7 @@ public class SkillCaster implements Runnable {
         if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && (caster.getInventory() != null)) {
             // Get the Item consumed by the spell.
             final Item requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
-            if (_skill.isBad() || (requiredItem.getTemplate().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
+            if (_skill.isBad() || (requiredItem.getAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
             {
                 caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
             }
@@ -659,7 +660,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Consume skill reduced item on success.
-        if ((_item != null) && (_item.getTemplate().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0)) {
+        if ((_item != null) && (_item.getAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0)) {
             if (!caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true)) {
                 return false;
             }
@@ -682,8 +683,12 @@ public class SkillCaster implements Runnable {
         caster.notifyQuestEventSkillFinished(_skill, target);
 
         // On each repeat recharge shots before cast.
-        caster.rechargeShots(_skill.useSoulShot(), _skill.useSpiritShot(), false);
-
+        if(_skill.useSoulShot()) {
+            caster.consumeAndRechargeShots(ShotType.SOULSHOTS, _targets.size());
+        }
+        if(_skill.useSpiritShot()) {
+            caster.consumeAndRechargeShots(ShotType.SPIRITSHOTS, _targets.size());
+        }
         return true;
     }
 

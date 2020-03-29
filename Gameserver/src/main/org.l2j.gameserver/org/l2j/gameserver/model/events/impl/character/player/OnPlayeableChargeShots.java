@@ -15,10 +15,12 @@ public class OnPlayeableChargeShots implements IBaseEvent {
 
     private final Playable playable;
     private final ShotType shotType;
+    private final boolean blessed;
 
-    public OnPlayeableChargeShots(Playable playable, ShotType shotType) {
+    public OnPlayeableChargeShots(Playable playable, ShotType shotType, boolean blessed) {
         this.playable = playable;
         this.shotType = shotType;
+        this.blessed = blessed;
     }
 
     public Playable getPlayable() {
@@ -27,6 +29,10 @@ public class OnPlayeableChargeShots implements IBaseEvent {
 
     public ShotType getShotType() {
         return shotType;
+    }
+
+    public boolean isBlessed() {
+        return blessed;
     }
 
     @Override

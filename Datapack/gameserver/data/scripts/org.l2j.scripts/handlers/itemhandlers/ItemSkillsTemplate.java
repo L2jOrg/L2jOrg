@@ -44,7 +44,7 @@ public class ItemSkillsTemplate implements IItemHandler {
             return false;
         }
 
-        final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
+        final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
         if(isNullOrEmpty(skills)) {
             LOGGER.info("Item {} does not have registered any skill for handler.", item);
             return false;
@@ -140,8 +140,7 @@ public class ItemSkillsTemplate implements IItemHandler {
      */
     private boolean checkConsume(Item item, boolean hasConsumeSkill)
     {
-        switch (item.getTemplate().getDefaultAction())
-        {
+        switch (item.getAction()) {
             case CAPSULE:
             case SKILL_REDUCE:
             {

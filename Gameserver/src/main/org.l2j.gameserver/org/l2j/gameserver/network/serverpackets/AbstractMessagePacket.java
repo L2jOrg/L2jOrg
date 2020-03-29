@@ -162,21 +162,20 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
     }
 
     public T addItemName(Item item) {
-        return addItemName(item.getId());
+        return addItemName(item.getTemplate());
     }
 
     public T addItemName(ItemTemplate item) {
-        return addItemName(item.getId());
-    }
-
-    public final T addItemName(int id) {
-        final ItemTemplate item = ItemEngine.getInstance().getTemplate(id);
-        if (item.getDisplayId() != id) {
+        if (item.getDisplayId() != item.getId()) {
             return addString(item.getName());
         }
 
-        append(new SMParam(TYPE_ITEM_NAME, id));
+        append(new SMParam(TYPE_ITEM_NAME, item.getId()));
         return (T) this;
+    }
+
+    public final T addItemName(int id) {
+        return addItemName(ItemEngine.getInstance().getTemplate(id));
     }
 
     public final T addZoneName(int x, int y, int z) {

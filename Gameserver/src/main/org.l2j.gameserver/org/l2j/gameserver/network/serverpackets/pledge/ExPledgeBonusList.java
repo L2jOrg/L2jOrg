@@ -1,4 +1,4 @@
-package org.l2j.gameserver.network.serverpackets.pledgebonus;
+package org.l2j.gameserver.network.serverpackets.pledge;
 
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ClanRewardType;

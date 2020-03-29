@@ -15,6 +15,7 @@ public class Attack extends ServerPacket {
     private final Location _attackerLoc;
     private final Location _targetLoc;
     private final List<Hit> _hits = new ArrayList<>();
+    private int hitsWithShots = 0;
 
     public Attack(Creature attacker, Creature target) {
         _attackerObjId = attacker.getObjectId();
@@ -29,6 +30,9 @@ public class Attack extends ServerPacket {
      */
     public void addHit(Hit hit) {
         _hits.add(hit);
+        if(hit.isShotUsed()) {
+            hitsWithShots++;
+        }
     }
 
     public List<Hit> getHits() {
@@ -46,16 +50,8 @@ public class Attack extends ServerPacket {
         return _hits.stream().anyMatch(Hit::isShotUsed);
     }
 
-    /**
-     * Writes current hit
-     *
-     * @param hit
-     */
-    private void writeHit(Hit hit) {
-        writeInt(hit.getTargetId());
-        writeInt(hit.getDamage());
-        writeInt(hit.getFlags());
-        writeInt(hit.getGrade()); // GOD
+    public int getHitsWithSoulshotCount() {
+        return hitsWithShots;
     }
 
     @Override
@@ -67,10 +63,10 @@ public class Attack extends ServerPacket {
 
         writeInt(_attackerObjId);
         writeInt(firstHit.getTargetId());
-        writeInt(0x00); // Ertheia Unknown
+        writeInt(0x00); // Soulshot substitute
         writeInt(firstHit.getDamage());
         writeInt(firstHit.getFlags());
-        writeInt(firstHit.getGrade()); // GOD
+        writeInt(firstHit.getGrade());
         writeInt(_attackerLoc.getX());
         writeInt(_attackerLoc.getY());
         writeInt(_attackerLoc.getZ());
@@ -85,4 +81,10 @@ public class Attack extends ServerPacket {
         writeInt(_targetLoc.getZ());
     }
 
+    private void writeHit(Hit hit) {
+        writeInt(hit.getTargetId());
+        writeInt(hit.getDamage());
+        writeInt(hit.getFlags());
+        writeInt(hit.getGrade()); // GOD
+    }
 }

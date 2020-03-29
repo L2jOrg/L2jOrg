@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.model.CropProcure;
+import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
@@ -17,7 +17,7 @@ public class SellListProcure extends ServerPacket {
     public SellListProcure(Player player, int castleId) {
         _money = player.getAdena();
         for (CropProcure c : CastleManorManager.getInstance().getCropProcure(castleId, false)) {
-            final Item item = player.getInventory().getItemByItemId(c.getId());
+            final Item item = player.getInventory().getItemByItemId(c.getSeedId());
             if ((item != null) && (c.getAmount() > 0)) {
                 _sellList.put(item, c.getAmount());
             }

@@ -99,6 +99,10 @@ public class ClanData {
         return level;
     }
 
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
     public int getReputation() {
         return reputation;
     }
@@ -133,6 +137,10 @@ public class ClanData {
 
     public int getLeaderId() {
         return leaderId;
+    }
+
+    public void setLeader(int leaderId) {
+        this.leaderId = leaderId;
     }
 
     public int getCrest() {
@@ -201,9 +209,5 @@ public class ClanData {
 
     public String toString() {
         return name + " [" + id + "]";
-    }
-
-    public void setLeader(int leaderId) {
-        this.leaderId = leaderId;
     }
 }

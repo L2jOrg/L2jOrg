@@ -54,10 +54,7 @@ public final class MagicalAttackRange extends AbstractEffect {
         final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
 
         if (mDef != -1) {
-            final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-            final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-
-            damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, mDef, sps, bss, mcrit);
+            damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), power, mDef, mcrit);
         }
 
         effector.doAttack(damage, effected, skill, false, false, mcrit, false);

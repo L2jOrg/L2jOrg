@@ -78,6 +78,7 @@ import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
@@ -201,10 +202,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     private volatile Map<BasicProperty, BasicPropertyResist> _basicPropertyResists;
     private ScheduledFuture<?> _hitTask = null;
-    /**
-     * A set containing the shot types currently charged.
-     */
-    private Set<ShotType> _chargedShots = EnumSet.noneOf(ShotType.class);
+
+    private Map<ShotType, Double> chargedShots = new EnumMap<>(ShotType.class);
     private boolean _AIdisabled = false;
 
     /**
@@ -746,7 +745,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
         try {
-            if ((target == null) || (isAttackingDisabled() && !GameUtils.isSummon(this)) || !target.isTargetable()) {
+            if (isNull(target) || (isAttackingDisabled() && !GameUtils.isSummon(this)) || !target.isTargetable()) {
                 return;
             }
 
@@ -769,22 +768,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 }
             }
 
-            // Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
-            final Weapon weaponItem = getActiveWeaponItem();
-            final WeaponType weaponType = getAttackType();
-
-            if (getActingPlayer() != null) {
-                if (getActingPlayer().inObserverMode()) {
+            var player = getActingPlayer();
+            if (nonNull(player)) {
+                if (player.inObserverMode()) {
                     sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
-                } else if (getActingPlayer().isSiegeFriend(target)) {
+                } else if (player.isSiegeFriend(target)) {
                     sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
                 }
                 // Checking if target has moved to peace zone
-                else if (target.isInsidePeaceZone(getActingPlayer())) {
+                else if (target.isInsidePeaceZone(player)) {
                     getAI().setIntention(AI_INTENTION_ACTIVE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -799,14 +795,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             // GeoData Los Check here (or dz > 1000)
             if (!GeoEngine.getInstance().canSeeTarget(this, target)) {
-                sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
                 getAI().setIntention(AI_INTENTION_ACTIVE);
+                sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
 
             // BOW and CROSSBOW checks
-            if (weaponItem != null) {
+            final Weapon weaponItem = getActiveWeaponItem();
+            if (nonNull(weaponItem)) {
                 if (!weaponItem.isAttackWeapon()) {
                     if (weaponItem.getItemType() == WeaponType.FISHING_ROD) {
                         sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
@@ -829,7 +826,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     }
 
                     // Check for arrows and MP
-                    if (isPlayer(this)) {
+                    if (isPlayer(this)) { // TODO move to Player
                         // Check if there are arrows to use or else cancel the attack.
                         if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW)) {
                             // Cancel the action because the Player have no arrow
@@ -875,26 +872,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 stopMove(getLocation());
             }
 
-            final WeaponType attackType = getAttackType();
+            final WeaponType weaponType = getAttackType();
             final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
             final int timeAtk = Formulas.calculateTimeBetweenAttacks(stats.getPAtkSpd());
             final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
             _attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
 
-            // Make sure that char is facing selected target
-            // also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
             setHeading(calculateHeadingFrom(this, target));
 
-            // Always try to charge soulshots.
-            if (!isChargedShot(ShotType.SOULSHOTS))
-            {
-                rechargeShots(true, false, false);
-            }
-
             // Get the Attack Reuse Delay of the Weapon
-            final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
+            final Attack attack = generateAttackTargetData(target, weaponItem, weaponType);
             boolean crossbow = false;
-            switch (attackType) {
+            switch (weaponType) {
                 case CROSSBOW:
                 case TWO_HAND_CROSSBOW: {
                     crossbow = true;
@@ -909,7 +898,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     }
 
                     // Check if the Creature is a Player
-                    if (isPlayer(this)) {
+                    if (isPlayer(this)) { // TODO move to Player
                         if (crossbow) {
                             sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
                         }
@@ -942,7 +931,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             // Flag the attacker if it's a Player outside a PvP area
-            final Player player = getActingPlayer();
             if (player != null) {
                 AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
                 player.updatePvPStatus(target);
@@ -966,7 +954,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (isDual) {
             hit = generateHit(target, weapon, shotConsumed, isDual);
             attack.addHit(hit);
-            shotConsumed = hit.isShotUsed();
         }
 
         // H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
@@ -980,6 +967,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     creature -> attack.addHit(generateHit(creature, weapon, attack.isShotUsed(), false)));
         }
 
+
         return attack;
     }
 
@@ -992,11 +980,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         byte shld = 0;
         boolean crit = false;
         boolean miss = Formulas.calcHitMiss(this, target);
-        if (!shotConsumed) {
-            shotConsumed = !miss && unchargeShot(isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS);
-        }
 
-        int ssGrade = (shotConsumed && (weapon != null)) ? weapon.getItemGrade().ordinal() : 0;
+        if (!shotConsumed) {
+            shotConsumed = !miss && isChargedShot(ShotType.SOULSHOTS);
+        }
 
         // Check if hit isn't missed
         if (!miss) {
@@ -1008,7 +995,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        return new Hit(target, damage, miss, crit, shld, shotConsumed, ssGrade);
+        return new Hit(target, damage, miss, crit, shld, shotConsumed);
     }
 
     public void doCast(Skill skill) {
@@ -1632,11 +1619,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return null;
     }
 
-    /**
-     * @return {@code true} if the character has a summon, {@code false} otherwise
-     */
     public final boolean hasSummon() {
-        return (getPet() != null) || !getServitors().isEmpty();
+        return hasPet() || !getServitors().isEmpty();
     }
 
     /**
@@ -3118,9 +3102,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private void onAttackFinish(Attack attack) {
         // Recharge any active auto-soulshot tasks for current creature after the attack has successfully hit.
         if (attack.getHits().stream().anyMatch(h -> !h.isMiss())) {
-            rechargeShots(true, false, false);
+            consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
         }
-
         // Notify that this character is ready to act for the next attack
         getAI().notifyEvent(CtrlEvent.EVT_READY_TO_ACT);
     }
@@ -4437,31 +4420,27 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public boolean isChargedShot(ShotType type) {
-        return _chargedShots.contains(type);
+        return chargedShots.containsKey(type);
     }
 
-    /**
-     * @param type of the shot to charge
-     * @return {@code true} if there was no shot of this type charged before, {@code false} otherwise.
-     */
-    public boolean chargeShot(ShotType type) {
-        return _chargedShots.add(type);
+    public void chargeShot(ShotType type, double bonus) {
+        chargedShots.put(type, bonus);
     }
 
-    /**
-     * @param type of the shot to uncharge
-     * @return {@code true} if there was a charged shot of this type, {@code false} otherwise.
-     */
-    public boolean unchargeShot(ShotType type) {
-        return _chargedShots.remove(type);
+    public double chargedShotBonus(ShotType type) {
+        return chargedShots.getOrDefault(type, 1d);
+    }
+
+    public void unchargeShot(ShotType type) {
+        chargedShots.remove(type);
     }
 
     public void unchargeAllShots() {
-        _chargedShots = EnumSet.noneOf(ShotType.class);
+        chargedShots.clear();
     }
 
-    public void rechargeShots(boolean physical, boolean magic, boolean fish) {
-        // Dummy method to be overriden.
+    public void consumeAndRechargeShots(ShotType shotType, int targets) {
+
     }
 
     public void setCursorKeyMovement(boolean value) {

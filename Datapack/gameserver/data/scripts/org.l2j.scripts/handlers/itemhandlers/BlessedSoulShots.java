@@ -1,6 +1,6 @@
 package handlers.itemhandlers;
 
-import org.l2j.gameserver.enums.ShotType;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * @author JoeAlisson
@@ -8,7 +8,12 @@ import org.l2j.gameserver.enums.ShotType;
 public class BlessedSoulShots extends SoulShots {
 
 	@Override
-	protected ShotType getShotType() {
-		return ShotType.BLESSED_SOULSHOTS;
+	protected double getBonus(Player player) {
+		return super.getBonus(player) * 2;
+	}
+
+	@Override
+	protected boolean isBlessed() {
+		return true;
 	}
 }

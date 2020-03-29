@@ -36,6 +36,7 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;

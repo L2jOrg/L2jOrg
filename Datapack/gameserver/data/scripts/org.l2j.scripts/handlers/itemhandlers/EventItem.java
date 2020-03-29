@@ -78,7 +78,7 @@ public class EventItem implements IItemHandler
 			return false;
 		}
 		
-		final Skill sk = item.getEtcItem().getSkills(ItemSkillType.NORMAL).get(0).getSkill();
+		final Skill sk = item.getSkills(ItemSkillType.NORMAL).get(0).getSkill();
 		if (sk == null)
 		{
 			return false;

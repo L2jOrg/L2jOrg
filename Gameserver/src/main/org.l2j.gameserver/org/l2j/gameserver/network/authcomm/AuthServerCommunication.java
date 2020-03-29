@@ -13,13 +13,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -32,27 +29,33 @@ import static org.l2j.gameserver.network.authcomm.gs2as.ServerStatus.SERVER_LIST
  */
 public class AuthServerCommunication implements Runnable, PacketExecutor<AuthServerClient> {
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthServerCommunication.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthServerCommunication.class);
 
     private final Map<String, GameClient> waitingClients = new ConcurrentHashMap<>();
     private final Map<String, GameClient> authedClients = new ConcurrentHashMap<>();
 
     private AuthServerClient client;
     private final Connector<AuthServerClient> connector;
-    private final InetSocketAddress address;
     private volatile boolean shutdown = false;
 
     private AuthServerCommunication() {
-        var serverSettings = getSettings(ServerSettings.class);
-        address = isNullOrEmpty(serverSettings.authServerAddress()) ? new InetSocketAddress(serverSettings.port()) : new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
         connector = Connector.create(AuthServerClient::new, new PacketHandler(), this);
     }
 
     public void connect() throws IOException, ExecutionException, InterruptedException {
+        var serverSettings = getSettings(ServerSettings.class);
+        InetSocketAddress address;
+        if(isNullOrEmpty(serverSettings.authServerAddress())) {
+            LOGGER.warn("Auth server address not configured trying to connect to localhost");
+            address = new InetSocketAddress("127.0.0.1", serverSettings.authServerPort());
+        } else {
+            address =  new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
+        }
         if(nonNull(client)) {
+            client.close();
             client = null;
         }
-        logger.info("Connecting to authserver on {}:{}", address.getAddress(), address.getPort());
+        LOGGER.info("Connecting to auth server on {}", address);
         client = connector.connect(address);
 
     }
@@ -64,6 +67,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
                 connect();
             }
         } catch (IOException | ExecutionException | InterruptedException e) {
+            LOGGER.debug(e.getMessage(), e);
             restart();
         }
     }
@@ -86,20 +90,6 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
     public GameClient getAuthedClient(String login) {
         return authedClients.get(login);
-    }
-
-    public List<GameClient> getAuthedClientsByIP(String ip) {
-        if(isNullOrEmpty(ip)) {
-            return Collections.emptyList();
-        }
-        return authedClients.values().stream().filter(c -> c.getHostAddress().equalsIgnoreCase(ip)).collect(Collectors.toList());
-    }
-
-    public List<GameClient> getAuthedClientsByHWID(String hwid) {
-        if(isNullOrEmpty(hwid)) {
-            return Collections.emptyList();
-        }
-        return authedClients.values().stream().filter(c -> hwid.equalsIgnoreCase(c.getHardwareInfo().getMacAddress())).collect(Collectors.toList());
     }
 
     public String[] getAccounts() {

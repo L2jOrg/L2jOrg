@@ -8,11 +8,6 @@ public class ExAutoSoulShot extends ServerPacket {
     private final boolean _enable;
     private final int _type;
 
-    /**
-     * @param itemId
-     * @param enable
-     * @param type
-     */
     public ExAutoSoulShot(int itemId, boolean enable, int type) {
         _itemId = itemId;
         _enable = enable;
@@ -24,7 +19,7 @@ public class ExAutoSoulShot extends ServerPacket {
         writeId(ServerPacketId.EX_AUTO_SOUL_SHOT);
 
         writeInt(_itemId);
-        writeInt(_enable ? 0x01 : 0x00);
+        writeInt(_enable);
         writeInt(_type);
     }
 

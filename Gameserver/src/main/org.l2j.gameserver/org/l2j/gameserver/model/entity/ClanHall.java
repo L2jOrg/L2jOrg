@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.PledgeShowInfoUpdate;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.type.ClanHallZone;
 import org.slf4j.Logger;

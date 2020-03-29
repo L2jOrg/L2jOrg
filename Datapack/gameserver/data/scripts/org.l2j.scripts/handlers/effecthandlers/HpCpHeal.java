@@ -1,5 +1,6 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
@@ -8,7 +9,6 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -21,6 +21,8 @@ import static org.l2j.gameserver.util.GameUtils.*;
  * HpCpHeal effect implementation.
  * @author Sdw
  * @author JoeAlisson
+ *
+ * TODO Extract super class with Heal
  */
 public final class HpCpHeal extends AbstractEffect {
     private final double power;
@@ -86,22 +88,19 @@ public final class HpCpHeal extends AbstractEffect {
 
     private double calcHealAmount(Creature effector, Creature effected, Skill skill) {
         double amount = power;
-        double staticShotBonus = 0;
-        double mAtkMul = 1;
-        final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-        final boolean bss = skill.isMagic() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-        final double shotsBonus = effector.getStats().getValue(Stat.SPIRIT_SHOTS_BONUS);
 
-        if (((sps || bss) && (isPlayer(effector) && effector.getActingPlayer().isMageClass())) || isSummon(effector)) {
-            staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
-            mAtkMul = bss ? 4 * shotsBonus : 2 * shotsBonus;
-            staticShotBonus *= bss ? 2.4 : 1.0;
-        } else if ((sps || bss) && isNpc(effector)) {
+        double staticShotBonus = 0;
+        double mAtkMul = skill.isMagic() ? effector.chargedShotBonus(ShotType.SPIRITSHOTS) : 1;
+
+        if (mAtkMul > 1 && (isPlayer(effector) && effector.getActingPlayer().isMageClass() || isSummon(effector))) {
+            staticShotBonus = skill.getMpConsume();
+            staticShotBonus *= mAtkMul >= 4 ? 2.4 : 1.0; // 2.4 if is blessed spiritshots TODO improve
+        } else if (mAtkMul > 1  && isNpc(effector)) {
             staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
-            mAtkMul = 4 * shotsBonus;
-        } else {
+        }
+        else {
             // shot dynamic bonus
-            mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;
+            mAtkMul = mAtkMul >= 4 ? mAtkMul * 4 : mAtkMul + 1;
         }
 
         if (!skill.isStatic()) {

@@ -33,7 +33,7 @@ public class PetFood implements IItemHandler
 			return false;
 		}
 		
-		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
 		if (skills != null)
 		{
 			skills.forEach(holder -> useFood(playable, holder.getSkillId(), holder.getLevel(), item));

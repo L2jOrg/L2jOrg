@@ -70,12 +70,9 @@ public final class MagicalAttackMp extends AbstractEffect {
 		if (effector.isAlikeDead()) {
 			return;
 		}
-		
-		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final byte shld = Formulas.calcShldUse(effector, effected);
+
 		final boolean mcrit = critical && Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
-		final double damage = Formulas.calcManaDam(effector, effected, skill, power, shld, sps, bss, mcrit, criticalLimit);
+		final double damage = Formulas.calcManaDam(effector, effected, skill, power, mcrit, criticalLimit);
 		final double mp = Math.min(effected.getCurrentMp(), damage);
 		
 		if (damage > 0) {

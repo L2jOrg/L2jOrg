@@ -149,6 +149,7 @@
                 <xs:attribute name="skill" type="xs:int"/>
                 <xs:attribute name="type" type="ShotType" default="SOULSHOTS"/>
                 <xs:attribute name="for-beast" type="xs:boolean" default="false"/>
+                <xs:attribute name="blessed" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCastleState;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
-import org.l2j.gameserver.network.serverpackets.PledgeShowInfoUpdate;
+import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.zone.ZoneManager;
