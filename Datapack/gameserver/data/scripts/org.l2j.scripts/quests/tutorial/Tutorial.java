@@ -139,6 +139,10 @@ public abstract class Tutorial extends Quest {
         }
 
         if(npc.getId() == newbieHelperId()) {
+            if(questState.isCompleted()) {
+                return npc.getId() + "-5.html";
+            }
+
             if (questState.getMemoState() < 3 && questState.getCond() == 3) {
                 questState.setMemoState(3);
             }
@@ -188,6 +192,9 @@ public abstract class Tutorial extends Quest {
                 }
             }
         } else {
+            if(questState.isCompleted()) {
+                return npc.getId() + "-4.html";
+            }
             switch (questState.getMemoState()) {
                 case 0, 1, 2, 3 -> {
                     return npc.getId() + "-1.html";

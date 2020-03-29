@@ -47,7 +47,6 @@ public class Q10960_Tutorial extends Tutorial {
 
     // NPCs
     private static final int[] NEWBIE_HELPERS = {
-            30019, // human mystic
             30131, // dark elf
             30400, // elf
             30530, // dwarf
@@ -55,8 +54,6 @@ public class Q10960_Tutorial extends Tutorial {
     };
 
     private static final int[] SUPERVISORS = {
-            // human fighter
-            30017, // human mystic
             30129, // dark elf
             30370, // elf
             30528, // dwarf
@@ -69,7 +66,6 @@ public class Q10960_Tutorial extends Tutorial {
 
     {
 
-        STARTING_VOICE_HTML.put(10, new QuestSoundHtmlHolder("tutorial_voice_001b", "tutorial_human_mage001.html"));
         STARTING_VOICE_HTML.put(18, new QuestSoundHtmlHolder("tutorial_voice_001c", "tutorial_elven_fighter001.html"));
         STARTING_VOICE_HTML.put(25, new QuestSoundHtmlHolder("tutorial_voice_001d", "tutorial_elven_mage001.html"));
         STARTING_VOICE_HTML.put(31, new QuestSoundHtmlHolder("tutorial_voice_001e", "tutorial_delf_fighter001.html"));
@@ -82,7 +78,6 @@ public class Q10960_Tutorial extends Tutorial {
     private static final IntMap<Location> HELPER_LOCATION = new HashIntMap<>();
     {
 
-        HELPER_LOCATION.put(10, new Location(-91036, 248044, -3568));
         HELPER_LOCATION.put(18, new Location(46112, 41200, -3504));
         HELPER_LOCATION.put(25, new Location(46112, 41200, -3504));
         HELPER_LOCATION.put(31, new Location(28384, 11056, -4233));
@@ -94,7 +89,6 @@ public class Q10960_Tutorial extends Tutorial {
 
     private static final IntMap<Location> COMPLETE_LOCATION = new HashIntMap<>();
     {
-        COMPLETE_LOCATION.put(10, new Location(-84046, 243283, -3728, 18316));
         COMPLETE_LOCATION.put(18, new Location(45479, 48318, -3056, 55707));
         COMPLETE_LOCATION.put(25, new Location(45479, 48318, -3056, 55707));
         COMPLETE_LOCATION.put(31, new Location(12161, 16674, -4584, 60030));
