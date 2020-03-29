@@ -51,9 +51,9 @@ public abstract class Tutorial extends Quest {
 
     private final String TUTORIAL_BYPASS = String.format("Quest %s ",  getClass().getSimpleName());
 
-    public Tutorial(int questId, ClassId classId) {
+    public Tutorial(int questId, ClassId... classIds) {
         super(questId);
-        addCondClassId(classId);
+        addCondClassIds(classIds);
         addFirstTalkId(newbieHelperId());
         addKillId(GREMLINS);
         registerQuestItems(BLUE_GEM);
@@ -108,7 +108,6 @@ public abstract class Tutorial extends Quest {
                         playTutorialVoice(player, "tutorial_voice_026");
                     }
                     htmltext = "go_village.html";
-                    qs.setState(State.COMPLETED);
                     player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_3, 0));
                 }
             }
@@ -126,7 +125,10 @@ public abstract class Tutorial extends Quest {
                     showTutorialHtml(player, "tutorial_init_point_view.html");
                 }
             }
-            case "go_to_newbie_helper" -> player.teleToLocation(villageLocation());
+            case "go_to_newbie_helper" -> {
+                player.teleToLocation(villageLocation());
+                qs.setState(State.COMPLETED);
+            }
         }
         return htmltext;
     }
@@ -304,6 +306,7 @@ public abstract class Tutorial extends Quest {
                 if (qs.getCond() == 3) {
                     addRadar(event.getPlayer(), villageLocation());
                     playSound(event.getPlayer(), "ItemSound.quest_tutorial");
+                    qs.setState(State.COMPLETED);
                 }
             }
         }

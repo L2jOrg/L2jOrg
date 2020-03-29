@@ -3,6 +3,7 @@ package org.l2j.gameserver.model.quest;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -2806,15 +2807,8 @@ public class Quest extends AbstractScript implements IIdentifiable {
         addCondStart(p -> p.getClassId() == classId, html);
     }
 
-    /**
-     * Adds a class ID start condition to the quest.
-     *
-     * @param classId the class ID
-     * @param pairs   the HTML to display if the condition is not met per each npc
-     */
-    @SafeVarargs
-    public final void addCondClassId(ClassId classId, KeyValuePair<Integer, String>... pairs) {
-        addCondStart(p -> p.getClassId() == classId, pairs);
+    public final void addCondClassIds(ClassId... classIds) {
+        addCondStart(p -> Util.contains(classIds, p.getClassId()), "");
     }
 
     /**

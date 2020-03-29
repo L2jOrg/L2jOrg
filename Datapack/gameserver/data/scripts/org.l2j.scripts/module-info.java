@@ -14,6 +14,7 @@ import handlers.skillconditionhandlers.*;
 import quests.tutorial.Q10960_Tutorial.Q10960_Tutorial;
 import quests.tutorial.Q201_Tutorial.Q201_Tutorial;
 import quests.tutorial.Q202_Tutorial.Q202_Tutorial;
+import quests.tutorial.Q203_Tutorial.Q203_Tutorial;
 
 open module org.l2j.scripts {
 
@@ -702,6 +703,7 @@ open module org.l2j.scripts {
                 Q10960_Tutorial,
                 Q201_Tutorial,
                 Q202_Tutorial,
+                Q203_Tutorial,
              quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman,
              quests.Q00326_VanquishRemnants.Q00326_VanquishRemnants,
              quests.Q00327_RecoverTheFarmland.Q00327_RecoverTheFarmland,
