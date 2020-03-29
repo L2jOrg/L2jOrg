@@ -650,7 +650,7 @@ public final class ClassMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final Player player = event.getActiveChar();
+		final Player player = event.getPlayer();
 		
 		if (!_showPopupWindow || (event.getMarkId() != 2)) // mark id was 1001 - used 2 for quest text
 		{
@@ -677,7 +677,7 @@ public final class ClassMaster extends AbstractNpcAI
 		
 		if (html != null)
 		{
-			showResult(event.getActiveChar(), html);
+			showResult(event.getPlayer(), html);
 			// player.sendPacket(new TutorialShowHtml(html));
 		}
 	}

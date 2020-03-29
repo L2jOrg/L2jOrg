@@ -401,7 +401,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         if ((qs != null) || !initIfNone) {
             return qs;
         }
-        return newQuestState(player);
+        return canStartQuest(player) ? newQuestState(player) : null;
     }
 
     /**

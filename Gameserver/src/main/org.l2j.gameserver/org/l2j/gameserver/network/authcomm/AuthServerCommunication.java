@@ -47,7 +47,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         InetSocketAddress address;
         if(isNullOrEmpty(serverSettings.authServerAddress())) {
             LOGGER.warn("Auth server address not configured trying to connect to localhost");
-            address = new InetSocketAddress("127.0.0.1", serverSettings.authServerPort());
+            address = new InetSocketAddress(serverSettings.authServerPort());
         } else {
             address =  new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
         }
