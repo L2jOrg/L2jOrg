@@ -2195,6 +2195,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK">
+				<power initial="20"/>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_DAMAGE_SKILL" stat-add="CRITICAL_DAMAGE_SKILL_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_SKILL_POWER" mode="PER" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45192" name="INT enhancement bonus" max-level="3" >
 	<!-- 
@@ -2207,6 +2218,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK">
+				<power initial="20"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_SKILL_POWER" mode="PER" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45193" name="DEX enhancement bonus" max-level="3" >
 	<!-- 
@@ -2219,6 +2241,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="CRITICAL_RATE">
+				<power initial="50"/>
+			</stat-modify>
+			<reuse skill-type="PHYSIC" start-level="2">
+				<power initial="-10"/>
+			</reuse>
+			<stat-modify stat="EVASION_RATE" mode="PER" start-level="3">
+				<power initial="20"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45194" name="WIT enhancement bonus" max-level="3" >
 	<!-- 
@@ -2231,6 +2264,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="50"/>
+			</stat-modify>
+			<reuse skill-type="MAGIC" start-level="2">
+				<power initial="-10"/>
+			</reuse>
+			<stat-modify stat="MAGIC_EVASION_RATE" mode="PER" start-level="3">
+				<power initial="20"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45195" name="CON enhancement bonus" max-level="3" >
 	<!-- 
@@ -2243,6 +2287,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="MAX_HP" start-level="2">
+				<power initial="1000"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45196" name="MEN enhancement bonus" max-level="3" >
 	<!-- 
@@ -2255,6 +2310,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="MAX_MP" start-level="2">
+				<power initial="1000"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45197" name="Grand Master’s Transcendence Blessing">
 	<!-- Breaks the limit of the class with the help of the Grand Master and skills are AoE. -->
