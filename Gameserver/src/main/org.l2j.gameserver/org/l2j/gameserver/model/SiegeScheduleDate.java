@@ -1,30 +1,37 @@
 package org.l2j.gameserver.model;
 
-import java.util.Calendar;
+import java.time.DayOfWeek;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class SiegeScheduleDate {
-    private final int _day;
-    private final int _hour;
-    private final int _maxConcurrent;
+    private final DayOfWeek day;
+    private final int hour;
+    private final int maxConcurrent;
 
-    public SiegeScheduleDate(StatsSet set) {
-        _day = set.getInt("day", Calendar.SUNDAY);
-        _hour = set.getInt("hour", 16);
-        _maxConcurrent = set.getInt("maxConcurrent", 5);
+    public SiegeScheduleDate(DayOfWeek day, int hour, int maxConcurrent) {
+        this.day = day;
+        this.hour = hour;
+        this.maxConcurrent = maxConcurrent;
     }
 
-    public int getDay() {
-        return _day;
+    public SiegeScheduleDate() {
+        this.day = DayOfWeek.SUNDAY;
+        this.hour = 20;
+        this.maxConcurrent = 5;
+    }
+
+    public DayOfWeek getDay() {
+        return day;
     }
 
     public int getHour() {
-        return _hour;
+        return hour;
     }
 
     public int getMaxConcurrent() {
-        return _maxConcurrent;
+        return maxConcurrent;
     }
 }

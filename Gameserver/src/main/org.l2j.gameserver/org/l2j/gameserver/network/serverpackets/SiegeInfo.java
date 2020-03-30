@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import java.time.ZoneId;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -35,24 +36,24 @@ public class SiegeInfo extends ServerPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SiegeInfo.class);
 
-    private final Castle _castle;
-    private final Player _player;
+    private final Castle castle;
+    private final Player player;
 
     public SiegeInfo(Castle castle, Player player) {
-        _castle = castle;
-        _player = player;
+        this.castle = castle;
+        this.player = player;
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.CASTLE_SIEGE_INFO);
 
-        if (_castle != null) {
-            writeInt(_castle.getId());
+        if (nonNull(castle)) {
+            writeInt(castle.getId());
 
-            final int ownerId = _castle.getOwnerId();
+            final int ownerId = castle.getOwnerId();
 
-            writeInt(((ownerId == _player.getClanId()) && (_player.isClanLeader())) ? 0x01 : 0x00);
+            writeInt(((ownerId == player.getClanId()) && (player.isClanLeader())) ? 0x01 : 0x00);
             writeInt(ownerId);
             if (ownerId > 0) {
                 final Clan owner = ClanTable.getInstance().getClan(ownerId);
@@ -62,7 +63,7 @@ public class SiegeInfo extends ServerPacket {
                     writeInt(owner.getAllyId()); // Ally ID
                     writeString(owner.getAllyName()); // Ally Name
                 } else {
-                    LOGGER.warn("Null owner for castle: " + _castle.getName());
+                    LOGGER.warn("Null owner for castle: {}", castle.getName());
                 }
             } else {
                 writeString(""); // Clan Name
@@ -73,20 +74,9 @@ public class SiegeInfo extends ServerPacket {
 
             writeInt((int) (System.currentTimeMillis() / 1000));
 
-            var siegeDate = _castle.getSiegeDate().atZone(ZoneId.systemDefault());
-            if (_castle.isSiegeTimeRegistrationSeason() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId())) {
-
-                var hours = getSettings(FeatureSettings.class).siegeHours();
-
-                writeInt(0x00);
-                writeInt(hours.length);
-                for (int hour : hours) {
-                    writeInt((int) siegeDate.withHour(hour).toEpochSecond());
-                }
-            } else {
-                writeInt((int) siegeDate.toEpochSecond());
-                writeInt(0x00);
-            }
+            var siegeDate = castle.getSiegeDate().atZone(ZoneId.systemDefault());
+            writeInt((int) siegeDate.toEpochSecond());
+            writeInt(0x00);
         }
     }
 

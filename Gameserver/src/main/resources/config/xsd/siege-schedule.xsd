@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="schedule" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="day" type="DAY"/>
+						<xs:attribute name="hour" type="Hour"/>
+						<xs:attribute name="max-concurrent" type="xs:byte"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="DAY">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="MONDAY"/>
+			<xs:enumeration value="TUESDAY"/>
+			<xs:enumeration value="WEDNESDAY"/>
+			<xs:enumeration value="THURSDAY"/>
+			<xs:enumeration value="FRIDAY"/>
+			<xs:enumeration value="SATURDAY"/>
+			<xs:enumeration value="SUNDAY"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Hour">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="23"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

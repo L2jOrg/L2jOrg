@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
 /**
@@ -45,7 +46,7 @@ public final class Action extends ClientPacket {
         }
 
         final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-        if (info != null) {
+        if (nonNull(info)) {
             for (AbstractEffect effect : info.getEffects()) {
                 if (!effect.checkCondition(-4)) {
                     player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);

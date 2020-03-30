@@ -44,6 +44,7 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -512,7 +513,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public boolean isSiegeTimeRegistrationSeason() {
-        return data.getSiegeTimeRegistrationEnd().isAfter(LocalDateTime.now());
+        return Duration.between(LocalDateTime.now(), data.getSiegeDate()).toDays() > 0;
     }
 
     public LocalDateTime getSiegeTimeRegistrationEnd() {
