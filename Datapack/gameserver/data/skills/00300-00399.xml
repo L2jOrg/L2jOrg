@@ -2631,6 +2631,11 @@
 			<hp initial="30"/>
 		</consume>
 		<target />
+		<effects>
+			<obtain-soul>
+				<power initial="2"/>
+			</obtain-soul>
+		</effects>
 	</skill>
 	<skill id="394" name="Shadow Soul Finding" action="A1">
 	<!-- Obtain 2 Shadow Souls. -->
@@ -2647,6 +2652,11 @@
 			<hp initial="30"/>
 		</consume>
 		<target />
+		<effects>
+			<obtain-soul is-shine="false">
+				<power initial="2"/>
+			</obtain-soul>
+		</effects>
 	</skill>
 	<skill id="395" name="Heroic Miracle" action="A2">
 	<!-- For 30 sec., increases P. Def. by 5400, M. Def. by 4050, Buff-canceling Attack Resistance by 80, and Speed by 5. Consumes 40 Soulstone. -->
@@ -2739,11 +2749,12 @@
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
 				<power initial="-25.0"/>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power initial="-8.0"/>
+			<stat-hp-based stat="EVASION_RATE" hp-percent="0">
+				<power initial="-8.0"/>
 			</stat-hp-based>
 		</effects>
 	</skill>
-	<skill id="397" name="Shine Side" max-level="2" >
+	<skill id="397" name="Shine Side" max-level="2" action="A2">
 	<!-- 
 		level 1: Enough Shine Souls have been gathered to be in the Shine Side state. \n\n<Acceleration Stage 1>\nP. Atk. +130, Atk. Spd. +30, Casting Spd. +40, Speed +10.\n\nP./M. Def. +5%%.\n\nHas a chance to recover MP when attacking.
 		level 2: Enough Shine Souls have been gathered to be in the Shine Side state. \n\n<Acceleration Stage 2>\nP. Atk. +280, Atk. Spd. +80, Casting Spd. +120, Speed +15, P. Skill Critical Damage +200, M. Skill Critical Damage +200.\n\nP./M. Def. +10%%.\n\nHas a chance to recover MP when attacking.\n\nHP and MP are recovered continuously.
@@ -2756,8 +2767,60 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<abnormal type="KAMAEL_SPECIAL" visual="WHITE_STANCE_AVE KAMAEL_WHITE_TRANSFORM LONG_RAPIER_WHITE_AVE">
+			<time initial="30"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK">
+				<power initial="130">
+					<value level="2">280</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+				<power initial="30">
+					<value level="2">80</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
+				<power initial="40">
+					<value level="2">120</value>
+				</power>
+			</stat-modify>
+			<speed>
+				<power initial="10">
+					<value level="2">15</value>
+				</power>
+			</speed>
+			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
+				<power initial="5">
+					<value level="2">10</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
+				<power initial="5">
+					<value level="2">10</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
+				<power initial="40">
+					<value level="2">60</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_DAMAGE_SKILL" stat-add="CRITICAL_DAMAGE_SKILL_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER" start-level="2">
+				<power initial="10"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" mode="PER" start-level="2">
+				<power initial="10"/>
+			</stat-modify>
+ 		</effects>
 	</skill>
-	<skill id="398" name="Shadow Side" max-level="2" >
+	<skill id="398" name="Shadow Side" max-level="2" action="A2">
 	<!-- 
 		level 1: Enough Shadow Souls have been gathered to be in the Shadow Side state. \n\n<Acceleration Stage 2>\nP. Atk. +280, Atk. Spd. +80, Casting Spd. +120, Speed +15.\n\nHas a chance to activate powerful attack skills.
 		level 2: Enough Shadow Souls have been gathered to be in the Shadow Side state. \n\n<Acceleration Stage 3>\nP. Atk. +500, Atk. Spd. +200, Casting Spd. +250, Speed +20, P. Skill Critical Damage +200, M. Skill Critical Damage +200.\n\nHas a chance to activate powerful attack skills.\n\nCan use Jin skills.
@@ -2770,6 +2833,37 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<abnormal type="KAMAEL_SPECIAL" visual="BLACK_STANCE_AVE KAMAEL_BLACK_TRANSFORM LONG_RAPIER_BLACK_AVE">
+			<time initial="30"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK">
+				<power initial="280">
+					<value level="2">500</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+				<power initial="80">
+					<value level="2">200</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
+				<power initial="120">
+					<value level="2">250</value>
+				</power>
+			</stat-modify>
+			<speed>
+				<power initial="15">
+					<value level="2">20</value>
+				</power>
+			</speed>
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_DAMAGE_SKILL" stat-add="CRITICAL_DAMAGE_SKILL_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="399" name="Heavy Armor Mastery" max-level="10" >
 	<!-- 

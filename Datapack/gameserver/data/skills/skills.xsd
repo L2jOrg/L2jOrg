@@ -131,10 +131,14 @@
 			<xs:element name="chance" type="MappedLevelInt" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="type" type="AbnormalType" default="NONE"/>
-		<xs:attribute name="visual" type="AbnormalVisualEffect" default="NONE"/>
+		<xs:attribute name="visual" type="AbnormalVisualList"/>
 		<xs:attribute name="subordination" type="AbnormalType" default="NONE"/>
 		<xs:attribute name="instant" type="xs:boolean" default="false"/>
 	</xs:complexType>
+
+	<xs:simpleType name="AbnormalVisualList">
+		<xs:list itemType="AbnormalVisualEffect"/>
+	</xs:simpleType>
 
 	<xs:simpleType name="AffectScope">
 		<xs:restriction base="xs:token">

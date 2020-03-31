@@ -61,7 +61,7 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     private AbnormalType abnormalType = AbnormalType.NONE;
     private AbnormalType subordinationAbnormalType = AbnormalType.NONE;
-    private AbnormalVisualEffect  abnormalVisualEffect;
+    private EnumSet<AbnormalVisualEffect>  abnormalVisualEffect;
     private boolean isAbnormalInstant;
     private int abnormalLvl;
     private int abnormalTime;
@@ -551,16 +551,17 @@ public final class Skill implements IIdentifiable, Cloneable {
         return abnormalTime;
     }
 
-    void setAbnormalVisualEffect(AbnormalVisualEffect visual) {
+    void setAbnormalVisualEffect(EnumSet<AbnormalVisualEffect> visual) {
+        visual.remove(AbnormalVisualEffect.NONE);
         abnormalVisualEffect = visual;
     }
 
-    public AbnormalVisualEffect getAbnormalVisualEffect() {
+    public EnumSet<AbnormalVisualEffect> getAbnormalVisualEffect() {
         return abnormalVisualEffect;
     }
 
     public boolean hasAbnormalVisualEffect() {
-        return falseIfNullOrElse(abnormalVisualEffect, visual -> visual != AbnormalVisualEffect.NONE);
+        return falseIfNullOrElse(abnormalVisualEffect, Predicate.not(AbstractCollection::isEmpty));
     }
 
     public int getMagicLevel() {

@@ -78,14 +78,25 @@
     <xs:element name="teleport" type="TeleportEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="transformation" type="TransformationEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-attack" type="TriggerSkillByAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-attacking" type="TriggerSkillByAttackingEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-avoid" type="TriggerSkillByAvoidEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-charge-shot" type="TriggerSkillByChargeShotEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-damage" type="TriggerSkillByDamageEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="trigger-skill-by-change-exp" type="TriggerSkillByChangeExpEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-magic" type="TriggerSkillByMagicEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-skill" type="TriggerSkillBySkillEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="two-hand-blunt-bonus" type="TwoHandBluntBonusEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="two-hand-sword-bonus" type="TwoHandSwordBonusEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="vampiric-attack" type="VampiricAttackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="obtain-soul" type="ObtainSoulEffect" substitutionGroup="abstractEffect"/>
+
+    <xs:complexType name="ObtainSoulEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="is-shine" type="xs:boolean" default="true"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="VampiricAttackEffect">
         <xs:complexContent>
@@ -189,6 +200,25 @@
                 <xs:attribute name="skill" type="xs:int" use="required"/>
                 <xs:attribute name="target" type="TargetType" default="SELF"/>
                 <xs:attribute name="critical" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TriggerSkillByAttackingEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="skill" type="xs:int" use="required"/>
+                <xs:attribute name="chance" type="xs:float" default="100"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TriggerSkillByChangeExpEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="skill" type="xs:int" use="required"/>
+                <xs:attribute name="chance" type="xs:float" default="100"/>
+                <xs:attribute name="gain" type="xs:boolean" default="true"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -922,5 +952,4 @@
             <xs:enumeration value="END"/>
         </xs:restriction>
     </xs:simpleType>
-
 </xs:schema>

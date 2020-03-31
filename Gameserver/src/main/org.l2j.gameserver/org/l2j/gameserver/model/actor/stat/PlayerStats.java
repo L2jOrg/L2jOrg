@@ -67,7 +67,7 @@ public class PlayerStats extends PlayableStats {
         }
 
         // EXP status update currently not used in retail
-        activeChar.sendPacket(new UserInfo(activeChar));
+        activeChar.sendPacket(new UserInfo(activeChar, UserInfoType.CURRENT_HPMPCP_EXP_SP));
         return true;
     }
 

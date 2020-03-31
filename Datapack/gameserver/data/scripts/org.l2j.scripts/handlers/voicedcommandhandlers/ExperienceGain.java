@@ -44,7 +44,7 @@ public final class ExperienceGain implements IVoicedCommandHandler
 		{
 			if (!activeChar.getVariables().getBoolean("EXPOFF", false))
 			{
-				activeChar.addListener(new FunctionEventListener(activeChar, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), event.getNewExp() - event.getOldExp()), this));
+				activeChar.addListener(new FunctionEventListener(activeChar, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getPlayable(), event.getNewExp() - event.getOldExp()), this));
 				activeChar.getVariables().set("EXPOFF", true);
 				activeChar.sendMessage("Experience gain is disabled.");
 			}

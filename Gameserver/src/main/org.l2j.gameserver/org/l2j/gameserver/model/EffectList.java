@@ -1006,8 +1006,8 @@ public final class EffectList {
                 // Add AbnormalVisualEffect flag.
                 if (skill.hasAbnormalVisualEffect()) {
                     var visual = skill.getAbnormalVisualEffect();
-                    abnormalVisualEffectFlags.add(visual); // TODO review : why two lists ?
-                    abnormalVisualEffects.add(visual);
+                    abnormalVisualEffectFlags.addAll(visual); // TODO review : why two lists ?
+                    abnormalVisualEffects.addAll(visual);
                     if (broadcast) {
                         owner.updateAbnormalVisualEffects();
                     }

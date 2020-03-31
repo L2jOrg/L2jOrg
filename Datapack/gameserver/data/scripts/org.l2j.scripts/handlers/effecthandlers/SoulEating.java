@@ -36,7 +36,7 @@ public final class SoulEating extends AbstractEffect {
     @Override
     public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
         if (isPlayer(effected)) {
-            effected.addListener(new ConsumerEventListener(effected, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), (event.getNewExp() - event.getOldExp())), this));
+            effected.addListener(new ConsumerEventListener(effected, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getPlayable(), (event.getNewExp() - event.getOldExp())), this));
         }
     }
 

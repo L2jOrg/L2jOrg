@@ -70,7 +70,7 @@ public final class Action extends ClientPacket {
             return;
         }
 
-        if ((!obj.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
+        if ( (!obj.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

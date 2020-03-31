@@ -19,7 +19,7 @@ public class OnPlayableExpChanged implements IBaseEvent {
         _newExp = newExp;
     }
 
-    public Playable getActiveChar() {
+    public Playable getPlayable() {
         return _activeChar;
     }
 

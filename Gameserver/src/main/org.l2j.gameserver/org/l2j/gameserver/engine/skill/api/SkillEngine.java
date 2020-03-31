@@ -302,7 +302,7 @@ public class SkillEngine extends EffectParser {
         var attr = node.getAttributes();
 
         skill.setAbnormalType(parseEnum(attr, AbnormalType.class, "type"));
-        skill.setAbnormalVisualEffect(parseEnum(attr, AbnormalVisualEffect.class, "visual"));
+        doIfNonNull(attr.getNamedItem("visual"),  v -> skill.setAbnormalVisualEffect(parseEnumSet(attr, AbnormalVisualEffect.class, "visual")));
         skill.setAbnormalSubordination(parseEnum(attr, AbnormalType.class, "subordination"));
         skill.setAbnormalInstant(parseBoolean(attr, "instant"));
     }

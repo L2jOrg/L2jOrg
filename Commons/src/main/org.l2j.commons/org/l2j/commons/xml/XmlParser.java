@@ -8,11 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**
@@ -498,6 +497,21 @@ public class XmlParser {
     protected <T extends Enum<T>> T parseEnum(NamedNodeMap attrs, Class<T> clazz, String name, T defaultValue)
     {
         return parseEnum(attrs.getNamedItem(name), clazz, defaultValue);
+    }
+
+    protected <T extends Enum<T>> EnumSet<T> parseEnumSet(NamedNodeMap attrs, Class<T> enumClass, String name) {
+        var items = attrs.getNamedItem(name);
+
+
+        if(nonNull(items) && Util.isNotEmpty(items.getNodeValue())) {
+            try {
+                return StreamUtil.collectToEnumSet(enumClass, Arrays.stream(items.getNodeValue().split(" ")).map(e -> Enum.valueOf(enumClass, e)));
+            } catch (Exception e) {
+                LOGGER.warn(e.getMessage(), e);
+            }
+        }
+        return EnumSet.noneOf(enumClass);
+
     }
 
     /**
