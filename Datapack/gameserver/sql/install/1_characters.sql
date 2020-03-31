@@ -128,8 +128,7 @@ SELECT c.charId as id,
 from characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
 where c.level >= 76
   AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
-    WINDOW w as (ORDER BY c.exp desc )
-LIMIT 150;
+    WINDOW w as (ORDER BY c.exp desc );
 
 CREATE TABLE  IF NOT EXISTS `rankers_history`
 (
