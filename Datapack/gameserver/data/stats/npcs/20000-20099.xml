@@ -4248,8 +4248,8 @@
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="DeBuff" id="4035" level="2"/>
+            <param name="LongRangeGuardRate" value="10"/>
+            <skill name="DeBuff" id="4037" level="1"/>
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
@@ -4267,7 +4267,7 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4035" level="2"/> <!-- Poison -->
+            <skill id="4037" level="1"/> <!-- Weakness -->
             <skill id="4416" level="12"/> <!-- Bug -->
             <skill id="4408" level="5"/> <!-- HP High -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
@@ -4278,11 +4278,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="12"/>
             <height normal="8"/>
@@ -4540,11 +4536,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="26"/>
             <height normal="15"/>
@@ -4604,10 +4596,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
+        <ai aggroRange="450" clanHelpRange="300"/>
         </ai>
         <collision>
             <radius normal="26"/>
@@ -4840,7 +4829,7 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-            <skill name="PhysicalSpecial" id="4067" level="3"/>
+            <!-- not used <skill name="PhysicalSpecial" id="4067" level="3"/> -->
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
@@ -4858,7 +4847,7 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4067" level="3"/> <!-- NPC Mortal Blow -->
+            <!-- <skill id="4067" level="3"/> <!-- NPC Mortal Blow -->
             <skill id="4416" level="12"/> <!-- Bug -->
             <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
             <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
@@ -4869,11 +4858,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="35" grown="42"/>
             <height normal="17" grown="21"/>
@@ -4980,7 +4965,6 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Fury" id="4317" level="1"/>
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
@@ -4998,7 +4982,6 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4317" level="1"/> <!-- Increase Rage Might -->
             <skill id="4416" level="12"/> <!-- Bug -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
             <skill id="4279" level="1"/> <!-- Fire Vulnerability -->
@@ -5006,11 +4989,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>            
         <collision>
             <radius normal="35" grown="42"/>
             <height normal="17" grown="21"/>
@@ -5042,8 +5021,7 @@
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="DeBuff" id="4035" level="3"/>
+            <param name="LongRangeGuardRate" value="10"/>
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
@@ -5061,7 +5039,6 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4035" level="3"/> <!-- Poison -->
             <skill id="4416" level="12"/> <!-- Bug -->
             <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
             <skill id="4279" level="1"/> <!-- Fire Vulnerability -->
@@ -5070,11 +5047,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai aggroRange="450" clanHelpRange="300"/>
         <collision>
             <radius normal="35" grown="42"/>
             <height normal="17" grown="21"/>
@@ -5143,11 +5116,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai aggroRange="450" clanHelpRange="300"/>
         <collision>
             <radius normal="35" grown="42"/>
             <height normal="17" grown="21"/>
@@ -5205,11 +5174,7 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="20" grown="24"/>
             <height normal="48" grown="57"/>
@@ -5291,11 +5256,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>ANT</clan>
-            </clanList>
-        </ai>
+        <ai aggroRange="450" clanHelpRange="300"/>
         <collision>
             <radius normal="20" grown="24"/>
             <height normal="48" grown="57"/>

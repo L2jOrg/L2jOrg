@@ -795,8 +795,8 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-            <skill name="SummonMagic" id="4161" level="1"/>
-            <skill name="PhysicalSpecial" id="4073" level="4"/>
+            <!-- not used <skill name="SummonMagic" id="4161" level="1"/> -->
+            <!-- not used <skill name="PhysicalSpecial" id="4073" level="4"/> -->
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
@@ -814,8 +814,8 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4073" level="4"/> <!-- Stun -->
-            <skill id="4161" level="1"/> <!-- Summon -->
+            <!-- <skill id="4073" level="4"/> Stun -->
+            <!-- <skill id="4161" level="1"/> Summon -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
@@ -827,7 +827,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>3</sNpcPropHpRate>
-        <ai clanHelpRange="400" aggroRange="450">
+        <ai clanHelpRange="300" aggroRange="450">
             <clanList>
                 <clan>PORTA</clan>
             </clanList>
@@ -850,8 +850,8 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill01_ID" id="4087" level="4"/>
-            <skill name="Skill03_ID" id="4046" level="4"/>
+            <!-- not used <skill name="Skill01_ID" id="4087" level="4"/> -->
+            <!-- not used <skill name="Skill03_ID" id="4046" level="4"/> -->
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
@@ -869,8 +869,8 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4046" level="4"/> <!-- Sleep -->
-            <skill id="4087" level="4"/> <!-- NPC Blaze -->
+            <!-- <skill id="4046" level="4"/> Sleep -->
+            <!-- <skill id="4087" level="4"/> NPC Blaze -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
@@ -882,11 +882,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="400" aggroRange="450">
-            <clanList>
-                <clan>PORTA</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="11"/>
             <height normal="20"/>
@@ -960,11 +956,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="400" isAggressive="true">
-            <clanList>
-                <clan>PORTA</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="14"/>
             <height normal="14.5"/>
@@ -983,10 +975,8 @@
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill01_ID" id="4157" level="4"/>
-            <skill name="Skill02_ID" id="4160" level="4"/>
-            <skill name="Skill03_ID" id="4076" level="3"/>
+            <param name="LongRangeGuardRate" value="5"/>            
+            <skill name="Skill03_ID" id="4047" level="4"/>
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
@@ -1004,9 +994,7 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4076" level="3"/> <!-- Decrease Speed -->
-            <skill id="4157" level="4"/> <!-- NPC Blaze - Magic -->
-            <skill id="4160" level="4"/> <!-- NPC Aura Burn - Magic -->
+            <skill id="4047" level="4"/> <!-- Hold -->           
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
@@ -1016,11 +1004,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="400" aggroRange="450">
-            <clanList>
-                <clan>PORTA</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="21"/>
             <height normal="43"/>
@@ -1058,7 +1042,6 @@
             <param name="MoveAroundSocial" value="116"/>
             <param name="MoveAroundSocial1" value="116"/>
             <param name="MoveAroundSocial2" value="116"/>
-            <param name="IsAggressive" value="1"/>
             <param name="AttackRange" value="2"/>
             <param name="Skill02_Check_Dist" value="1"/>
             <param name="Skill02_Dist_Min" value="700"/>
@@ -1099,7 +1082,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="400" isAggressive="true">
+        <ai clanHelpRange="300" aggroRange="450">
             <clanList>
                 <clan>PORTA</clan>
             </clanList>
