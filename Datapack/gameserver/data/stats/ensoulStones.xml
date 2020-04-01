@@ -41,7 +41,8 @@
         <remove itemId="2133" count="5"/>    <!-- Gemstone (A-grade) -->
         <remove itemId="57" count="3500000"/>    <!-- Adena -->
     </fee>
-
+	
+	<!-- Installing Rune in weapons (245p - all) -->
     <stone id="29818" slotType="1">
         <option id="1"/>
         <option id="21"/>
@@ -1322,6 +1323,96 @@
         <option id="699"/>
         <option id="719"/>
     </stone>
+    <stone id="91163" slotType="2">
+        <option id="1001"/>
+    </stone>
+    <stone id="91164" slotType="2">
+        <option id="1002"/>
+    </stone>
+    <stone id="91165" slotType="2">
+        <option id="1003"/>
+    </stone>
+    <stone id="91166" slotType="2">
+        <option id="1004"/>
+    </stone>
+    <stone id="91167" slotType="2">
+        <option id="1005"/>
+    </stone>
+    <stone id="91168" slotType="2">
+        <option id="1006"/>
+    </stone>
+    <stone id="91169" slotType="2">
+        <option id="1007"/>
+    </stone>
+    <stone id="91170" slotType="2">
+        <option id="1008"/>
+    </stone>
+    <stone id="91171" slotType="2">
+        <option id="1009"/>
+    </stone>
+    <stone id="91172" slotType="2">
+        <option id="1010"/>
+    </stone>
+    <stone id="91173" slotType="2">
+        <option id="1011"/>
+    </stone>
+    <stone id="91174" slotType="2">
+        <option id="1012"/>
+    </stone>
+    <stone id="91175" slotType="2">
+        <option id="1013"/>
+    </stone>
+    <stone id="91176" slotType="2">
+        <option id="1014"/>
+    </stone>
+    <stone id="91177" slotType="2">
+        <option id="1015"/>
+    </stone>
+    <stone id="91178" slotType="2">
+        <option id="1016"/>
+    </stone>
+    <stone id="91179" slotType="2">
+        <option id="1017"/>
+    </stone>
+    <stone id="91180" slotType="2">
+        <option id="1018"/>
+    </stone>
+    <stone id="91181" slotType="2">
+        <option id="1019"/>
+    </stone>
+    <stone id="91182" slotType="2">
+        <option id="1020"/>
+    </stone>
+    <stone id="92925" slotType="2">
+        <option id="1021"/>
+    </stone>
+    <stone id="92926" slotType="2">
+        <option id="1022"/>
+    </stone>
+    <stone id="92927" slotType="2">
+        <option id="1023"/>
+    </stone>
+    <stone id="92928" slotType="2">
+        <option id="1024"/>
+    </stone>
+    <stone id="92929" slotType="2">
+        <option id="1025"/>
+    </stone>
+    <stone id="92920" slotType="2">
+        <option id="1026"/>
+    </stone>
+    <stone id="92921" slotType="2">
+        <option id="1027"/>
+    </stone>
+    <stone id="92922" slotType="2">
+        <option id="1028"/>
+    </stone>
+    <stone id="92923" slotType="2">
+        <option id="1029"/>
+    </stone>
+    <stone id="92924" slotType="2">
+        <option id="1030"/>
+    </stone>
 
     <!-- Sigel -->
     <option id="1" name="Sigel's Protection" desc="P. Def. +20.2" skillId="55253" skillLevel="1"/> <!-- Stone Id : 29818 -->
@@ -1979,4 +2070,24 @@
     <option id="717" name="Aeore's Heal" desc="Received healing +126" skillId="45016" skillLevel="18"/> <!-- Stone Id : 90691 -->
     <option id="718" name="Aeore's Heal" desc="Received healing +126" skillId="45016" skillLevel="19"/> <!-- Stone Id : 90692 -->
     <option id="719" name="Aeore's Heal" desc="Received healing +126" skillId="45016" skillLevel="20"/> <!-- Stone Id : 90693 -->
+    <option id="1001" name="Anakim Power" desc="Recharge MP Recovery Bonus +5, Magic Power +1%" skillId="54034" skillLevel="1"/> <!-- Stone Id :91163 --> 
+    <option id="1002" name="Anakim Power" desc="Recharge MP Recovery Bonus +10, Magic Power +1%" skillId="54034" skillLevel="2"/> <!-- Stone Id :91164 --> 
+    <option id="1003" name="Anakim Power" desc="Recharge MP Recovery Bonus +15, Magic Power +1%" skillId="54034" skillLevel="3"/> <!-- Stone Id :91165 --> 
+    <option id="1004" name="Anakim Power" desc="Recharge MP Recovery Bonus +20, Magic Power +2%" skillId="54034" skillLevel="4"/> <!-- Stone Id :91166 --> 
+    <option id="1005" name="Anakim Power" desc="Recharge MP Recovery Bonus +25, Magic Power +2%" skillId="54034" skillLevel="5"/> <!-- Stone Id :91167 --> 
+    <option id="1006" name="Anakim Power" desc="Recharge MP Recovery Bonus +35, Magic Power +2%, Hit or Skill Activates MP Recovery Effect 75" skillId="54034" skillLevel="6"/> <!-- Stone Id :91168 -->
+    <option id="1007" name="Anakim Power" desc="Recharge MP Recovery Bonus +45, Magic Power +5%, Hit or Skill Activates MP Recovery Effect 150" skillId="54034" skillLevel="7"/> <!-- Stone Id :91169 -->
+    <option id="1008" name="Anakim Power" desc="Recharge MP Recovery Bonus +55, Magic Power +8%, Hit or Skill Activates MP Recovery Effect 225" skillId="54034" skillLevel="8"/> <!-- Stone Id :91170 -->
+    <option id="1009" name="Anakim Power" desc="Recharge MP Recovery Bonus +70, Magic Power +11%, Hit or Skill Activates MP Recovery Effect 300" skillId="54034" skillLevel="9"/> <!-- Stone Id :91171 -->
+    <option id="1010" name="Anakim Power" desc="Recharge MP Recovery Bonus +90, Magic Power +15%, Hit or Skill Activates MP Recovery Effect 600" skillId="54034" skillLevel="10"/> <!-- Stone Id :91172 -->
+    <option id="1011" name="Lilith Power" desc="Increases HP Recovery +1%, Attack +1%" skillId="54035" skillLevel="1"/> <!-- Stone Id :91173 -->
+    <option id="1012" name="Lilith Power" desc="Increases HP Recovery +2%, Attack +1%" skillId="54035" skillLevel="2"/> <!-- Stone Id :91174 -->
+    <option id="1013" name="Lilith Power" desc="Increases HP Recovery +3%, Attack +1%" skillId="54035" skillLevel="3"/> <!-- Stone Id :91175 -->
+    <option id="1014" name="Lilith Power" desc="Increases HP Recovery +4%, Attack +2%" skillId="54035" skillLevel="4"/> <!-- Stone Id :91176 -->
+    <option id="1015" name="Lilith Power" desc="Increases HP Recovery +5%, Attack +2%" skillId="54035" skillLevel="5"/> <!-- Stone Id :91177 -->
+    <option id="1016" name="Lilith Power" desc="HP Recovery +5%, Attack +2%, Hit activates HP Recovery 100" skillId="54035" skillLevel="6"/> <!-- Stone Id :91178 -->
+    <option id="1017" name="Lilith Power" desc="HP Recovery +7%, Attack +5%, Hit activates HP Recovery 200" skillId="54035" skillLevel="7"/> <!-- Stone Id :91179 -->
+    <option id="1018" name="Lilith Power" desc="HP Recovery +9%, Attack +8%, Hit activates HP Recovery 300" skillId="54035" skillLevel="8"/> <!-- Stone Id :91180 -->
+    <option id="1019" name="Lilith Power" desc="HP Recovery +12%, Attack +11%, Hit activates HP Recovery 400" skillId="54035" skillLevel="9"/> <!-- Stone Id :91181 -->
+    <option id="1020" name="Lilith Power" desc="HP Recovery +15%, Attack +15%, Hit activates HP Recovery 900" skillId="54035" skillLevel="10"/> <!-- Stone Id :91182 -->
 </list>
