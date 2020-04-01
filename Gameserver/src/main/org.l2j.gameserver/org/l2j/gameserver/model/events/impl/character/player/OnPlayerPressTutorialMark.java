@@ -32,7 +32,7 @@ public final class OnPlayerPressTutorialMark implements IBaseEvent {
         _markId = markId;
     }
 
-    public Player getActiveChar() {
+    public Player getPlayer() {
         return _activeChar;
     }
 

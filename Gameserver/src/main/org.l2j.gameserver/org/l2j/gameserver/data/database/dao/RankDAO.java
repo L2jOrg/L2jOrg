@@ -16,7 +16,7 @@ public interface RankDAO extends DAO<RankData> {
     @Query("TRUNCATE rankers_snapshot")
     void clearSnapshot();
 
-    @Query("INSERT INTO rankers_snapshot SELECT id, exp, `rank`, rank_race FROM rankers")
+    @Query("INSERT INTO rankers_snapshot SELECT id, exp, `rank`, rank_race FROM rankers LIMIT 150")
     void updateSnapshot();
 
     @Query("SELECT * FROM rankers")

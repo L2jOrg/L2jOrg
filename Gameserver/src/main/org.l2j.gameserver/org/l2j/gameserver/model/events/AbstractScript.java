@@ -4,6 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.InventorySlot;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -1159,12 +1160,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
     }
 
-    /**
-     * @param player
-     * @param x
-     * @param y
-     * @param z
-     */
+    public static void addRadar(Player player, ILocational loc) {
+        addRadar(player, loc.getX(), loc.getY(), loc.getZ());
+    }
+
     public static void addRadar(Player player, int x, int y, int z) {
         if (player.isSimulatingTalking()) {
             return;

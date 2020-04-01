@@ -40,7 +40,7 @@ public class PeaceZone extends Zone {
         if (Config.PEACE_ZONE_MODE != 2) {
             creature.setInsideZone(ZoneType.PEACE, true);
             if(isPlayer(creature)) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPeaceZoneEnter(creature.getActingPlayer()), creature);
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPeaceZoneEnter(creature.getActingPlayer(), this), creature);
             }
         }
 

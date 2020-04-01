@@ -34,8 +34,8 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -108,7 +108,7 @@ public class Siege implements Siegable {
         var castleManager = CastleManager.getInstance();
 
         for (SiegeScheduleDate holder : SiegeScheduleData.getInstance().getScheduleDates()) {
-            siegeDate = siegeDate.with(ChronoField.DAY_OF_WEEK, holder.getDay()).withHour(holder.getHour());
+            siegeDate = siegeDate.with(TemporalAdjusters.next(holder.getDay())).withHour(holder.getHour());
 
             if (castleManager.getSiegesOnDate(siegeDate) < holder.getMaxConcurrent()) {
                 castleManager.registerSiegeDate(castle, siegeDate);

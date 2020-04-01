@@ -1,27 +1,22 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerTutorialEvent;
 
+/**
+ * @author JoeAlisson
+ */
 public class RequestTutorialClientEvent extends ClientPacket {
-    int _eventId = 0;
+    private int event;
 
     @Override
     public void readImpl() {
-        _eventId = readInt();
+        event = readInt();
     }
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
-
-        // TODO: UNHARDCODE ME!
-        final QuestState qs = player.getQuestState("Q10960_Tutorial");
-        if (qs != null) {
-            qs.getQuest().notifyEvent(String.valueOf(_eventId), null, player);
-        }
+        final var player = client.getPlayer();
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTutorialEvent(player, event), player);
     }
 }

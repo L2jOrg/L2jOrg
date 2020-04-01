@@ -13,7 +13,7 @@ public class StreamUtil {
         return stream.collect(HashIntSet::new, IntSet::add, IntSet::addAll);
     }
 
-    public static <E extends Enum<E>> EnumSet<E>  collectToEnumSet(Class<E> enumClass, Stream<E> stream) {
+    public static <E extends Enum<E>> EnumSet<E> collectToEnumSet(Class<E> enumClass, Stream<E> stream) {
         return stream.collect(() -> EnumSet.noneOf(enumClass), EnumSet::add, EnumSet::addAll);
     }
 }

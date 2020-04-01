@@ -8,16 +8,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
 import java.util.NoSuchElementException;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * @author DS, Sdw, UnAfraid
+ * @author JoeAlisson
  */
 public enum BaseStats {
     STR(Stat.STAT_STR),
@@ -28,6 +30,76 @@ public enum BaseStats {
     MEN(Stat.STAT_MEN);
 
     public static final int MAX_STAT_VALUE = 201;
+    private static final BaseStats[] CACHE = BaseStats.values();
+
+    private final double[] bonus = new double[MAX_STAT_VALUE];
+    private final Stat stat;
+    private int enhancementSkillId;
+    private int enhancementFirstLevel;
+    private int enhancementSecondLevel;
+    private int enhancementThirdLevel;
+
+    BaseStats(Stat stat) {
+        this.stat = stat;
+    }
+
+    public static BaseStats valueOf(Stat stat) {
+        for (BaseStats baseStat : CACHE) {
+            if (baseStat.getStat() == stat) {
+                return baseStat;
+            }
+        }
+        throw new NoSuchElementException("Unknown base stat '" + stat + "' for enum BaseStats");
+    }
+
+    public Stat getStat() {
+        return stat;
+    }
+
+    public int calcValue(Creature creature) {
+        if (nonNull(creature)) {
+            return (int) creature.getStats().getValue(stat);
+        }
+        return 0;
+    }
+
+    public double calcBonus(Creature creature) {
+        if (nonNull(creature)) {
+            final int value = calcValue(creature);
+            if (value < 1) {
+                return 1;
+            }
+            return bonus[value];
+        }
+        return 1;
+    }
+
+    void setValue(int index, double value) {
+        bonus[index] = value;
+    }
+
+    public double getValue(int index) {
+        return bonus[index];
+    }
+
+    public int getEnhancementSkillId() {
+        return enhancementSkillId;
+    }
+
+    public int getEnhancementSkillLevel(double value) {
+        if(value >= enhancementThirdLevel) {
+            return 3;
+        }
+
+        if(value >= enhancementSecondLevel) {
+            return 2;
+        }
+
+        if(value >= enhancementFirstLevel) {
+            return 1;
+        }
+        return 0;
+    }
 
     static {
         new GameXmlReader() {
@@ -45,73 +117,32 @@ public enum BaseStats {
 
             @Override
             public void parseDocument(Document doc, File f) {
-                forEach(doc, "list", listNode -> forEach(listNode, XmlReader::isNode, statNode ->
-                {
-                    final BaseStats baseStat;
-                    try {
-                        baseStat = valueOf(statNode.getNodeName());
-                    } catch (Exception e) {
-                        LOGGER.error("Invalid base stats type: " + statNode.getNodeValue() + ", skipping");
-                        return;
+                forEach(doc, "list", listNode -> forEach(listNode, "stat", statNode -> {
+                    final var baseStat = parseEnum(statNode.getAttributes(), BaseStats.class, "type");
+                    for(var node = statNode.getFirstChild(); nonNull(node); node = node.getNextSibling()){
+                        switch (node.getNodeName()) {
+                            case "enhancement" -> parseStatEnhancement(baseStat, node);
+                            case "bonus" -> parseStatBonus(baseStat, node);
+                        }
                     }
-
-                    forEach(statNode, "stat", statValue ->
-                    {
-                        final NamedNodeMap attrs = statValue.getAttributes();
-                        final int val = parseInteger(attrs, "value");
-                        final double bonus = parseDouble(attrs, "bonus");
-                        baseStat.setValue(val, bonus);
-                    });
                 }));
             }
+
+            private void parseStatBonus(BaseStats baseStat, Node bonusNode) {
+                forEach(bonusNode, "value", statValue -> {
+                    final int index = parseInt(statValue.getAttributes(), "level");
+                    final double bonus = Double.parseDouble(statValue.getTextContent());
+                    baseStat.setValue(index, bonus);
+                });
+            }
+
+            private void parseStatEnhancement(BaseStats baseStat, Node node) {
+                final var attr = node.getAttributes();
+                baseStat.enhancementSkillId = parseInt(attr, "skill-id");
+                baseStat.enhancementFirstLevel = parseInt(attr, "first-level");
+                baseStat.enhancementSecondLevel = parseInt(attr, "second-level");
+                baseStat.enhancementThirdLevel = parseInt(attr, "third-level");
+            }
         }.load();
-    }
-
-    private final double[] _bonus = new double[MAX_STAT_VALUE];
-    private final Stat _stat;
-
-    BaseStats(Stat stat) {
-        _stat = stat;
-    }
-
-    public static BaseStats valueOf(Stat stat) {
-        for (BaseStats baseStat : values()) {
-            if (baseStat.getStat() == stat) {
-                return baseStat;
-            }
-        }
-        throw new NoSuchElementException("Unknown base stat '" + stat + "' for enum BaseStats");
-    }
-
-    public Stat getStat() {
-        return _stat;
-    }
-
-    public int calcValue(Creature creature) {
-        if ((creature != null) && (_stat != null)) {
-            // return (int) Math.min(_stat.finalize(creature, Optional.empty()), MAX_STAT_VALUE - 1);
-            return (int) creature.getStats().getValue(_stat);
-        }
-        return 0;
-    }
-
-    public double calcBonus(Creature creature) {
-        if (creature != null) {
-            final int value = calcValue(creature);
-            if (value < 1) {
-                return 1;
-            }
-            return _bonus[value];
-        }
-
-        return 1;
-    }
-
-    void setValue(int index, double value) {
-        _bonus[index] = value;
-    }
-
-    public double getValue(int index) {
-        return _bonus[index];
     }
 }

@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -28,12 +29,11 @@ public class BaseStatsFinalizer implements IStatsFunction {
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 
         // Should not apply armor set and henna bonus to summons.
-        if (isPlayer(creature))
-        {
+        var baseStat = BaseStats.valueOf(stat);
+
+        if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
             final Set<ArmorSet> appliedSets = new HashSet<>(2);
-
-            var baseStat = BaseStats.valueOf(stat);
 
             // Armor sets calculation
             for (Item item : player.getInventory().getPaperdollItems()) {
@@ -49,6 +49,26 @@ public class BaseStatsFinalizer implements IStatsFunction {
             baseValue += player.getStatsData().getValue(baseStat);
         }
 
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, BaseStats.MAX_STAT_VALUE - 1);
+        var value = validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, BaseStats.MAX_STAT_VALUE - 1);
+        if(isPlayer(creature)) {
+            checkEnhancementStatBonus(creature, baseStat, value);
+        }
+        return value;
+    }
+
+    private void checkEnhancementStatBonus(Creature creature, BaseStats baseStat, double value) {
+        var skillId = baseStat.getEnhancementSkillId();
+        var skillLevel = baseStat.getEnhancementSkillLevel(value);
+
+        if(skillLevel > 0) {
+            var existentLevel = creature.getSkillLevel(skillId);
+            if(existentLevel != skillLevel) {
+                final var skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
+                creature.addSkill(skill);
+            }
+        } else {
+            creature.removeSkill(skillId);
+        }
+
     }
 }

@@ -24,17 +24,17 @@ public final class RequestJoinSiege extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
-        if (!activeChar.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE)) {
+        if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE)) {
             client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
             return;
         }
 
-        final Clan clan = activeChar.getClan();
+        final Clan clan = player.getClan();
         if (clan == null) {
             return;
         }
@@ -47,14 +47,14 @@ public final class RequestJoinSiege extends ClientPacket {
                     return;
                 }
                 if (_isAttacker == 1) {
-                    castle.getSiege().registerAttacker(activeChar);
+                    castle.getSiege().registerAttacker(player);
                 } else {
-                    castle.getSiege().registerDefender(activeChar);
+                    castle.getSiege().registerDefender(player);
                 }
             } else {
-                castle.getSiege().removeSiegeClan(activeChar);
+                castle.getSiege().removeSiegeClan(player);
             }
-            castle.getSiege().listRegisterClan(activeChar);
+            castle.getSiege().listRegisterClan(player);
         }
     }
 }

@@ -1,1221 +1,1239 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/statBonus.xsd">
-    <STR>
-        <stat value="0" bonus="0.29"/> <!-- Not Needed -->
-        <stat value="1" bonus="0.3"/>
-        <stat value="2" bonus="0.31"/>
-        <stat value="3" bonus="0.32"/>
-        <stat value="4" bonus="0.34"/>
-        <stat value="5" bonus="0.35"/>
-        <stat value="6" bonus="0.36"/>
-        <stat value="7" bonus="0.37"/>
-        <stat value="8" bonus="0.39"/>
-        <stat value="9" bonus="0.4"/>
-        <stat value="10" bonus="0.42"/>
-        <stat value="11" bonus="0.43"/>
-        <stat value="12" bonus="0.45"/>
-        <stat value="13" bonus="0.46"/>
-        <stat value="14" bonus="0.48"/>
-        <stat value="15" bonus="0.5"/>
-        <stat value="16" bonus="0.51"/>
-        <stat value="17" bonus="0.53"/>
-        <stat value="18" bonus="0.55"/>
-        <stat value="19" bonus="0.57"/>
-        <stat value="20" bonus="0.59"/>
-        <stat value="21" bonus="0.61"/>
-        <stat value="22" bonus="0.63"/>
-        <stat value="23" bonus="0.66"/>
-        <stat value="24" bonus="0.68"/>
-        <stat value="25" bonus="0.71"/>
-        <stat value="26" bonus="0.73"/>
-        <stat value="27" bonus="0.76"/>
-        <stat value="28" bonus="0.78"/>
-        <stat value="29" bonus="0.81"/>
-        <stat value="30" bonus="0.84"/>
-        <stat value="31" bonus="0.87"/>
-        <stat value="32" bonus="0.9"/>
-        <stat value="33" bonus="0.94"/>
-        <stat value="34" bonus="0.97"/>
-        <stat value="35" bonus="1.01"/>
-        <stat value="36" bonus="1.04"/>
-        <stat value="37" bonus="1.08"/>
-        <stat value="38" bonus="1.12"/>
-        <stat value="39" bonus="1.16"/>
-        <stat value="40" bonus="1.2"/>
-        <stat value="41" bonus="1.24"/>
-        <stat value="42" bonus="1.29"/>
-        <stat value="43" bonus="1.33"/>
-        <stat value="44" bonus="1.38"/>
-        <stat value="45" bonus="1.43"/>
-        <stat value="46" bonus="1.48"/>
-        <stat value="47" bonus="1.54"/>
-        <stat value="48" bonus="1.59"/>
-        <stat value="49" bonus="1.65"/>
-        <stat value="50" bonus="1.71"/>
-        <stat value="51" bonus="1.77"/>
-        <stat value="52" bonus="1.83"/>
-        <stat value="53" bonus="1.9"/>
-        <stat value="54" bonus="1.97"/>
-        <stat value="55" bonus="2.04"/>
-        <stat value="56" bonus="2.11"/>
-        <stat value="57" bonus="2.19"/>
-        <stat value="58" bonus="2.27"/>
-        <stat value="59" bonus="2.35"/>
-        <stat value="60" bonus="2.43"/>
-        <stat value="61" bonus="2.52"/>
-        <stat value="62" bonus="2.61"/>
-        <stat value="63" bonus="2.71"/>
-        <stat value="64" bonus="2.8"/>
-        <stat value="65" bonus="2.91"/>
-        <stat value="66" bonus="3.01"/>
-        <stat value="67" bonus="3.12"/>
-        <stat value="68" bonus="3.23"/>
-        <stat value="69" bonus="3.35"/>
-        <stat value="70" bonus="3.47"/>
-        <stat value="71" bonus="3.59"/>
-        <stat value="72" bonus="3.72"/>
-        <stat value="73" bonus="3.86"/>
-        <stat value="74" bonus="3.99"/>
-        <stat value="75" bonus="4.14"/>
-        <stat value="76" bonus="4.29"/>
-        <stat value="77" bonus="4.44"/>
-        <stat value="78" bonus="4.6"/>
-        <stat value="79" bonus="4.77"/>
-        <stat value="80" bonus="4.94"/>
-        <stat value="81" bonus="5.12"/>
-        <stat value="82" bonus="5.3"/>
-        <stat value="83" bonus="5.49"/>
-        <stat value="84" bonus="5.69"/>
-        <stat value="85" bonus="5.89"/>
-        <stat value="86" bonus="6.11"/>
-        <stat value="87" bonus="6.33"/>
-        <stat value="88" bonus="6.55"/>
-        <stat value="89" bonus="6.79"/>
-        <stat value="90" bonus="7.03"/>
-        <stat value="91" bonus="7.29"/>
-        <stat value="92" bonus="7.55"/>
-        <stat value="93" bonus="7.82"/>
-        <stat value="94" bonus="8.1"/>
-        <stat value="95" bonus="8.39"/>
-        <stat value="96" bonus="8.7"/>
-        <stat value="97" bonus="9.01"/>
-        <stat value="98" bonus="9.33"/>
-        <stat value="99" bonus="9.67"/>
-        <stat value="100" bonus="1.559"/>
-        <stat value="101" bonus="1.576"/>
-        <stat value="102" bonus="1.594"/>
-        <stat value="103" bonus="1.611"/>
-        <stat value="104" bonus="1.629"/>
-        <stat value="105" bonus="1.647"/>
-        <stat value="106" bonus="1.664"/>
-        <stat value="107" bonus="1.682"/>
-        <stat value="108" bonus="1.699"/>
-        <stat value="109" bonus="1.716"/>
-        <stat value="110" bonus="1.734"/>
-        <stat value="111" bonus="1.751"/>
-        <stat value="112" bonus="1.768"/>
-        <stat value="113" bonus="1.785"/>
-        <stat value="114" bonus="1.802"/>
-        <stat value="115" bonus="1.819"/>
-        <stat value="116" bonus="1.836"/>
-        <stat value="117" bonus="1.852"/>
-        <stat value="118" bonus="1.869"/>
-        <stat value="119" bonus="1.885"/>
-        <stat value="120" bonus="1.901"/>
-        <stat value="121" bonus="1.917"/>
-        <stat value="122" bonus="1.933"/>
-        <stat value="123" bonus="1.949"/>
-        <stat value="124" bonus="1.965"/>
-        <stat value="125" bonus="1.98"/>
-        <stat value="126" bonus="1.995"/>
-        <stat value="127" bonus="2.01"/>
-        <stat value="128" bonus="2.025"/>
-        <stat value="129" bonus="2.04"/>
-        <stat value="130" bonus="2.055"/>
-        <stat value="131" bonus="2.069"/>
-        <stat value="132" bonus="2.083"/>
-        <stat value="133" bonus="2.097"/>
-        <stat value="134" bonus="2.111"/>
-        <stat value="135" bonus="2.125"/>
-        <stat value="136" bonus="2.138"/>
-        <stat value="137" bonus="2.152"/>
-        <stat value="138" bonus="2.165"/>
-        <stat value="139" bonus="2.178"/>
-        <stat value="140" bonus="2.19"/>
-        <stat value="141" bonus="2.203"/>
-        <stat value="142" bonus="2.215"/>
-        <stat value="143" bonus="2.227"/>
-        <stat value="144" bonus="2.239"/>
-        <stat value="145" bonus="2.25"/>
-        <stat value="146" bonus="2.262"/>
-        <stat value="147" bonus="2.273"/>
-        <stat value="148" bonus="2.284"/>
-        <stat value="149" bonus="2.295"/>
-        <stat value="150" bonus="2.306"/>
-        <stat value="151" bonus="2.316"/>
-        <stat value="152" bonus="2.326"/>
-        <stat value="153" bonus="2.336"/>
-        <stat value="154" bonus="2.346"/>
-        <stat value="155" bonus="2.356"/>
-        <stat value="156" bonus="2.365"/>
-        <stat value="157" bonus="2.374"/>
-        <stat value="158" bonus="2.383"/>
-        <stat value="159" bonus="2.392"/>
-        <stat value="160" bonus="2.401"/>
-        <stat value="161" bonus="2.41"/>
-        <stat value="162" bonus="2.418"/>
-        <stat value="163" bonus="2.426"/>
-        <stat value="164" bonus="2.434"/>
-        <stat value="165" bonus="2.442"/>
-        <stat value="166" bonus="2.449"/>
-        <stat value="167" bonus="2.457"/>
-        <stat value="168" bonus="2.464"/>
-        <stat value="169" bonus="2.471"/>
-        <stat value="170" bonus="2.478"/>
-        <stat value="171" bonus="2.485"/>
-        <stat value="172" bonus="2.491"/>
-        <stat value="173" bonus="2.498"/>
-        <stat value="174" bonus="2.504"/>
-        <stat value="175" bonus="2.51"/>
-        <stat value="176" bonus="2.516"/>
-        <stat value="177" bonus="2.522"/>
-        <stat value="178" bonus="2.528"/>
-        <stat value="179" bonus="2.534"/>
-        <stat value="180" bonus="2.539"/>
-        <stat value="181" bonus="2.544"/>
-        <stat value="182" bonus="2.55"/>
-        <stat value="183" bonus="2.555"/>
-        <stat value="184" bonus="2.559"/>
-        <stat value="185" bonus="2.564"/>
-        <stat value="186" bonus="2.569"/>
-        <stat value="187" bonus="2.574"/>
-        <stat value="188" bonus="2.578"/>
-        <stat value="189" bonus="2.582"/>
-        <stat value="190" bonus="2.587"/>
-        <stat value="191" bonus="2.591"/>
-        <stat value="192" bonus="2.595"/>
-        <stat value="193" bonus="2.599"/>
-        <stat value="194" bonus="2.602"/>
-        <stat value="195" bonus="2.606"/>
-        <stat value="196" bonus="2.61"/>
-        <stat value="197" bonus="2.613"/>
-        <stat value="198" bonus="2.617"/>
-        <stat value="199" bonus="2.62"/>
-        <stat value="200" bonus="2.623"/>
-    </STR>
-    <INT>
-        <stat value="0" bonus="0.54"/> <!-- Not Needed -->
-        <stat value="1" bonus="0.55"/>
-        <stat value="2" bonus="0.56"/>
-        <stat value="3" bonus="0.57"/>
-        <stat value="4" bonus="0.58"/>
-        <stat value="5" bonus="0.59"/>
-        <stat value="6" bonus="0.61"/>
-        <stat value="7" bonus="0.62"/>
-        <stat value="8" bonus="0.63"/>
-        <stat value="9" bonus="0.64"/>
-        <stat value="10" bonus="0.65"/>
-        <stat value="11" bonus="0.67"/>
-        <stat value="12" bonus="0.68"/>
-        <stat value="13" bonus="0.69"/>
-        <stat value="14" bonus="0.71"/>
-        <stat value="15" bonus="0.72"/>
-        <stat value="16" bonus="0.74"/>
-        <stat value="17" bonus="0.75"/>
-        <stat value="18" bonus="0.77"/>
-        <stat value="19" bonus="0.78"/>
-        <stat value="20" bonus="0.8"/>
-        <stat value="21" bonus="0.81"/>
-        <stat value="22" bonus="0.83"/>
-        <stat value="23" bonus="0.85"/>
-        <stat value="24" bonus="0.86"/>
-        <stat value="25" bonus="0.88"/>
-        <stat value="26" bonus="0.9"/>
-        <stat value="27" bonus="0.92"/>
-        <stat value="28" bonus="0.94"/>
-        <stat value="29" bonus="0.95"/>
-        <stat value="30" bonus="0.97"/>
-        <stat value="31" bonus="0.99"/>
-        <stat value="32" bonus="1.01"/>
-        <stat value="33" bonus="1.03"/>
-        <stat value="34" bonus="1.05"/>
-        <stat value="35" bonus="1.07"/>
-        <stat value="36" bonus="1.1"/>
-        <stat value="37" bonus="1.12"/>
-        <stat value="38" bonus="1.14"/>
-        <stat value="39" bonus="1.16"/>
-        <stat value="40" bonus="1.19"/>
-        <stat value="41" bonus="1.21"/>
-        <stat value="42" bonus="1.23"/>
-        <stat value="43" bonus="1.26"/>
-        <stat value="44" bonus="1.28"/>
-        <stat value="45" bonus="1.31"/>
-        <stat value="46" bonus="1.34"/>
-        <stat value="47" bonus="1.36"/>
-        <stat value="48" bonus="1.39"/>
-        <stat value="49" bonus="1.42"/>
-        <stat value="50" bonus="1.45"/>
-        <stat value="51" bonus="1.47"/>
-        <stat value="52" bonus="1.5"/>
-        <stat value="53" bonus="1.53"/>
-        <stat value="54" bonus="1.57"/>
-        <stat value="55" bonus="1.6"/>
-        <stat value="56" bonus="1.63"/>
-        <stat value="57" bonus="1.66"/>
-        <stat value="58" bonus="1.69"/>
-        <stat value="59" bonus="1.73"/>
-        <stat value="60" bonus="1.76"/>
-        <stat value="61" bonus="1.8"/>
-        <stat value="62" bonus="1.83"/>
-        <stat value="63" bonus="1.87"/>
-        <stat value="64" bonus="1.91"/>
-        <stat value="65" bonus="1.95"/>
-        <stat value="66" bonus="1.99"/>
-        <stat value="67" bonus="2.02"/>
-        <stat value="68" bonus="2.07"/>
-        <stat value="69" bonus="2.11"/>
-        <stat value="70" bonus="2.15"/>
-        <stat value="71" bonus="2.19"/>
-        <stat value="72" bonus="2.24"/>
-        <stat value="73" bonus="2.28"/>
-        <stat value="74" bonus="2.33"/>
-        <stat value="75" bonus="2.37"/>
-        <stat value="76" bonus="2.42"/>
-        <stat value="77" bonus="2.47"/>
-        <stat value="78" bonus="2.52"/>
-        <stat value="79" bonus="2.57"/>
-        <stat value="80" bonus="2.62"/>
-        <stat value="81" bonus="2.67"/>
-        <stat value="82" bonus="2.73"/>
-        <stat value="83" bonus="2.78"/>
-        <stat value="84" bonus="2.84"/>
-        <stat value="85" bonus="2.89"/>
-        <stat value="86" bonus="2.95"/>
-        <stat value="87" bonus="3.01"/>
-        <stat value="88" bonus="3.07"/>
-        <stat value="89" bonus="3.13"/>
-        <stat value="90" bonus="3.19"/>
-        <stat value="91" bonus="3.26"/>
-        <stat value="92" bonus="3.32"/>
-        <stat value="93" bonus="3.39"/>
-        <stat value="94" bonus="3.46"/>
-        <stat value="95" bonus="3.53"/>
-        <stat value="96" bonus="3.6"/>
-        <stat value="97" bonus="3.67"/>
-        <stat value="98" bonus="3.74"/>
-        <stat value="99" bonus="3.82"/>
-        <stat value="100" bonus="1.568"/>
-        <stat value="101" bonus="1.582"/>
-        <stat value="102" bonus="1.597"/>
-        <stat value="103" bonus="1.612"/>
-        <stat value="104" bonus="1.626"/>
-        <stat value="105" bonus="1.641"/>
-        <stat value="106" bonus="1.656"/>
-        <stat value="107" bonus="1.67"/>
-        <stat value="108" bonus="1.685"/>
-        <stat value="109" bonus="1.699"/>
-        <stat value="110" bonus="1.714"/>
-        <stat value="111" bonus="1.728"/>
-        <stat value="112" bonus="1.742"/>
-        <stat value="113" bonus="1.757"/>
-        <stat value="114" bonus="1.771"/>
-        <stat value="115" bonus="1.785"/>
-        <stat value="116" bonus="1.799"/>
-        <stat value="117" bonus="1.813"/>
-        <stat value="118" bonus="1.826"/>
-        <stat value="119" bonus="1.84"/>
-        <stat value="120" bonus="1.854"/>
-        <stat value="121" bonus="1.867"/>
-        <stat value="122" bonus="1.88"/>
-        <stat value="123" bonus="1.894"/>
-        <stat value="124" bonus="1.907"/>
-        <stat value="125" bonus="1.92"/>
-        <stat value="126" bonus="1.932"/>
-        <stat value="127" bonus="1.945"/>
-        <stat value="128" bonus="1.957"/>
-        <stat value="129" bonus="1.97"/>
-        <stat value="130" bonus="1.982"/>
-        <stat value="131" bonus="1.994"/>
-        <stat value="132" bonus="2.006"/>
-        <stat value="133" bonus="2.018"/>
-        <stat value="134" bonus="2.029"/>
-        <stat value="135" bonus="2.041"/>
-        <stat value="136" bonus="2.052"/>
-        <stat value="137" bonus="2.063"/>
-        <stat value="138" bonus="2.074"/>
-        <stat value="139" bonus="2.084"/>
-        <stat value="140" bonus="2.095"/>
-        <stat value="141" bonus="2.105"/>
-        <stat value="142" bonus="2.116"/>
-        <stat value="143" bonus="2.126"/>
-        <stat value="144" bonus="2.136"/>
-        <stat value="145" bonus="2.145"/>
-        <stat value="146" bonus="2.155"/>
-        <stat value="147" bonus="2.164"/>
-        <stat value="148" bonus="2.173"/>
-        <stat value="149" bonus="2.182"/>
-        <stat value="150" bonus="2.191"/>
-        <stat value="151" bonus="2.2"/>
-        <stat value="152" bonus="2.209"/>
-        <stat value="153" bonus="2.217"/>
-        <stat value="154" bonus="2.225"/>
-        <stat value="155" bonus="2.233"/>
-        <stat value="156" bonus="2.241"/>
-        <stat value="157" bonus="2.249"/>
-        <stat value="158" bonus="2.256"/>
-        <stat value="159" bonus="2.264"/>
-        <stat value="160" bonus="2.271"/>
-        <stat value="161" bonus="2.278"/>
-        <stat value="162" bonus="2.285"/>
-        <stat value="163" bonus="2.292"/>
-        <stat value="164" bonus="2.299"/>
-        <stat value="165" bonus="2.305"/>
-        <stat value="166" bonus="2.311"/>
-        <stat value="167" bonus="2.318"/>
-        <stat value="168" bonus="2.324"/>
-        <stat value="169" bonus="2.33"/>
-        <stat value="170" bonus="2.335"/>
-        <stat value="171" bonus="2.341"/>
-        <stat value="172" bonus="2.347"/>
-        <stat value="173" bonus="2.352"/>
-        <stat value="174" bonus="2.357"/>
-        <stat value="175" bonus="2.362"/>
-        <stat value="176" bonus="2.367"/>
-        <stat value="177" bonus="2.372"/>
-        <stat value="178" bonus="2.377"/>
-        <stat value="179" bonus="2.382"/>
-        <stat value="180" bonus="2.386"/>
-        <stat value="181" bonus="2.391"/>
-        <stat value="182" bonus="2.395"/>
-        <stat value="183" bonus="2.399"/>
-        <stat value="184" bonus="2.403"/>
-        <stat value="185" bonus="2.407"/>
-        <stat value="186" bonus="2.411"/>
-        <stat value="187" bonus="2.415"/>
-        <stat value="188" bonus="2.419"/>
-        <stat value="189" bonus="2.422"/>
-        <stat value="190" bonus="2.426"/>
-        <stat value="191" bonus="2.429"/>
-        <stat value="192" bonus="2.433"/>
-        <stat value="193" bonus="2.436"/>
-        <stat value="194" bonus="2.439"/>
-        <stat value="195" bonus="2.442"/>
-        <stat value="196" bonus="2.445"/>
-        <stat value="197" bonus="2.448"/>
-        <stat value="198" bonus="2.451"/>
-        <stat value="199" bonus="2.454"/>
-        <stat value="200" bonus="2.456"/>
-    </INT>
-    <CON>
-        <stat value="0" bonus="0.45"/> <!-- Not Needed -->
-        <stat value="1" bonus="0.46"/>
-        <stat value="2" bonus="0.47"/>
-        <stat value="3" bonus="0.48"/>
-        <stat value="4" bonus="0.5"/>
-        <stat value="5" bonus="0.51"/>
-        <stat value="6" bonus="0.53"/>
-        <stat value="7" bonus="0.54"/>
-        <stat value="8" bonus="0.56"/>
-        <stat value="9" bonus="0.58"/>
-        <stat value="10" bonus="0.59"/>
-        <stat value="11" bonus="0.61"/>
-        <stat value="12" bonus="0.63"/>
-        <stat value="13" bonus="0.65"/>
-        <stat value="14" bonus="0.67"/>
-        <stat value="15" bonus="0.69"/>
-        <stat value="16" bonus="0.71"/>
-        <stat value="17" bonus="0.73"/>
-        <stat value="18" bonus="0.75"/>
-        <stat value="19" bonus="0.77"/>
-        <stat value="20" bonus="0.8"/>
-        <stat value="21" bonus="0.82"/>
-        <stat value="22" bonus="0.85"/>
-        <stat value="23" bonus="0.87"/>
-        <stat value="24" bonus="0.9"/>
-        <stat value="25" bonus="0.93"/>
-        <stat value="26" bonus="0.95"/>
-        <stat value="27" bonus="0.98"/>
-        <stat value="28" bonus="1.01"/>
-        <stat value="29" bonus="1.04"/>
-        <stat value="30" bonus="1.07"/>
-        <stat value="31" bonus="1.1"/>
-        <stat value="32" bonus="1.14"/>
-        <stat value="33" bonus="1.17"/>
-        <stat value="34" bonus="1.21"/>
-        <stat value="35" bonus="1.24"/>
-        <stat value="36" bonus="1.28"/>
-        <stat value="37" bonus="1.32"/>
-        <stat value="38" bonus="1.36"/>
-        <stat value="39" bonus="1.4"/>
-        <stat value="40" bonus="1.44"/>
-        <stat value="41" bonus="1.48"/>
-        <stat value="42" bonus="1.53"/>
-        <stat value="43" bonus="1.58"/>
-        <stat value="44" bonus="1.62"/>
-        <stat value="45" bonus="1.67"/>
-        <stat value="46" bonus="1.72"/>
-        <stat value="47" bonus="1.77"/>
-        <stat value="48" bonus="1.83"/>
-        <stat value="49" bonus="1.88"/>
-        <stat value="50" bonus="1.94"/>
-        <stat value="51" bonus="2"/>
-        <stat value="52" bonus="2.06"/>
-        <stat value="53" bonus="2.12"/>
-        <stat value="54" bonus="2.18"/>
-        <stat value="55" bonus="2.25"/>
-        <stat value="56" bonus="2.31"/>
-        <stat value="57" bonus="2.38"/>
-        <stat value="58" bonus="2.45"/>
-        <stat value="59" bonus="2.53"/>
-        <stat value="60" bonus="2.6"/>
-        <stat value="61" bonus="2.68"/>
-        <stat value="62" bonus="2.76"/>
-        <stat value="63" bonus="2.84"/>
-        <stat value="64" bonus="2.93"/>
-        <stat value="65" bonus="3.02"/>
-        <stat value="66" bonus="3.11"/>
-        <stat value="67" bonus="3.2"/>
-        <stat value="68" bonus="3.3"/>
-        <stat value="69" bonus="3.4"/>
-        <stat value="70" bonus="3.5"/>
-        <stat value="71" bonus="3.6"/>
-        <stat value="72" bonus="3.71"/>
-        <stat value="73" bonus="3.82"/>
-        <stat value="74" bonus="3.94"/>
-        <stat value="75" bonus="4.06"/>
-        <stat value="76" bonus="4.18"/>
-        <stat value="77" bonus="4.3"/>
-        <stat value="78" bonus="4.43"/>
-        <stat value="79" bonus="4.56"/>
-        <stat value="80" bonus="4.7"/>
-        <stat value="81" bonus="4.84"/>
-        <stat value="82" bonus="4.99"/>
-        <stat value="83" bonus="5.14"/>
-        <stat value="84" bonus="5.29"/>
-        <stat value="85" bonus="5.45"/>
-        <stat value="86" bonus="5.61"/>
-        <stat value="87" bonus="5.78"/>
-        <stat value="88" bonus="5.96"/>
-        <stat value="89" bonus="6.13"/>
-        <stat value="90" bonus="6.32"/>
-        <stat value="91" bonus="6.51"/>
-        <stat value="92" bonus="6.7"/>
-        <stat value="93" bonus="6.9"/>
-        <stat value="94" bonus="7.11"/>
-        <stat value="95" bonus="7.33"/>
-        <stat value="96" bonus="7.54"/>
-        <stat value="97" bonus="7.77"/>
-        <stat value="98" bonus="8"/>
-        <stat value="99" bonus="8.24"/>
-        <stat value="100" bonus="2.132"/>
-        <stat value="101" bonus="2.155"/>
-        <stat value="102" bonus="2.178"/>
-        <stat value="103" bonus="2.201"/>
-        <stat value="104" bonus="2.223"/>
-        <stat value="105" bonus="2.246"/>
-        <stat value="106" bonus="2.269"/>
-        <stat value="107" bonus="2.292"/>
-        <stat value="108" bonus="2.314"/>
-        <stat value="109" bonus="2.337"/>
-        <stat value="110" bonus="2.359"/>
-        <stat value="111" bonus="2.381"/>
-        <stat value="112" bonus="2.404"/>
-        <stat value="113" bonus="2.426"/>
-        <stat value="114" bonus="2.448"/>
-        <stat value="115" bonus="2.47"/>
-        <stat value="116" bonus="2.491"/>
-        <stat value="117" bonus="2.513"/>
-        <stat value="118" bonus="2.534"/>
-        <stat value="119" bonus="2.555"/>
-        <stat value="120" bonus="2.576"/>
-        <stat value="121" bonus="2.597"/>
-        <stat value="122" bonus="2.618"/>
-        <stat value="123" bonus="2.638"/>
-        <stat value="124" bonus="2.659"/>
-        <stat value="125" bonus="2.679"/>
-        <stat value="126" bonus="2.699"/>
-        <stat value="127" bonus="2.718"/>
-        <stat value="128" bonus="2.738"/>
-        <stat value="129" bonus="2.757"/>
-        <stat value="130" bonus="2.776"/>
-        <stat value="131" bonus="2.794"/>
-        <stat value="132" bonus="2.813"/>
-        <stat value="133" bonus="2.831"/>
-        <stat value="134" bonus="2.849"/>
-        <stat value="135" bonus="2.867"/>
-        <stat value="136" bonus="2.884"/>
-        <stat value="137" bonus="2.901"/>
-        <stat value="138" bonus="2.918"/>
-        <stat value="139" bonus="2.935"/>
-        <stat value="140" bonus="2.951"/>
-        <stat value="141" bonus="2.967"/>
-        <stat value="142" bonus="2.983"/>
-        <stat value="143" bonus="2.999"/>
-        <stat value="144" bonus="3.014"/>
-        <stat value="145" bonus="3.029"/>
-        <stat value="146" bonus="3.044"/>
-        <stat value="147" bonus="3.059"/>
-        <stat value="148" bonus="3.073"/>
-        <stat value="149" bonus="3.087"/>
-        <stat value="150" bonus="3.101"/>
-        <stat value="151" bonus="3.114"/>
-        <stat value="152" bonus="3.128"/>
-        <stat value="153" bonus="3.141"/>
-        <stat value="154" bonus="3.153"/>
-        <stat value="155" bonus="3.166"/>
-        <stat value="156" bonus="3.178"/>
-        <stat value="157" bonus="3.19"/>
-        <stat value="158" bonus="3.202"/>
-        <stat value="159" bonus="3.213"/>
-        <stat value="160" bonus="3.225"/>
-        <stat value="161" bonus="3.236"/>
-        <stat value="162" bonus="3.246"/>
-        <stat value="163" bonus="3.257"/>
-        <stat value="164" bonus="3.267"/>
-        <stat value="165" bonus="3.277"/>
-        <stat value="166" bonus="3.287"/>
-        <stat value="167" bonus="3.297"/>
-        <stat value="168" bonus="3.306"/>
-        <stat value="169" bonus="3.315"/>
-        <stat value="170" bonus="3.324"/>
-        <stat value="171" bonus="3.333"/>
-        <stat value="172" bonus="3.342"/>
-        <stat value="173" bonus="3.35"/>
-        <stat value="174" bonus="3.358"/>
-        <stat value="175" bonus="3.366"/>
-        <stat value="176" bonus="3.374"/>
-        <stat value="177" bonus="3.382"/>
-        <stat value="178" bonus="3.389"/>
-        <stat value="179" bonus="3.396"/>
-        <stat value="180" bonus="3.404"/>
-        <stat value="181" bonus="3.41"/>
-        <stat value="182" bonus="3.417"/>
-        <stat value="183" bonus="3.424"/>
-        <stat value="184" bonus="3.43"/>
-        <stat value="185" bonus="3.436"/>
-        <stat value="186" bonus="3.442"/>
-        <stat value="187" bonus="3.448"/>
-        <stat value="188" bonus="3.454"/>
-        <stat value="189" bonus="3.46"/>
-        <stat value="190" bonus="3.465"/>
-        <stat value="191" bonus="3.47"/>
-        <stat value="192" bonus="3.476"/>
-        <stat value="193" bonus="3.481"/>
-        <stat value="194" bonus="3.486"/>
-        <stat value="195" bonus="3.49"/>
-        <stat value="196" bonus="3.495"/>
-        <stat value="197" bonus="3.5"/>
-        <stat value="198" bonus="3.504"/>
-        <stat value="199" bonus="3.508"/>
-        <stat value="200" bonus="3.512"/>
-    </CON>
-    <MEN>
-        <stat value="0" bonus="1"/> <!-- Not Needed -->
-        <stat value="1" bonus="1.01"/>
-        <stat value="2" bonus="1.02"/>
-        <stat value="3" bonus="1.03"/>
-        <stat value="4" bonus="1.04"/>
-        <stat value="5" bonus="1.05"/>
-        <stat value="6" bonus="1.06"/>
-        <stat value="7" bonus="1.07"/>
-        <stat value="8" bonus="1.08"/>
-        <stat value="9" bonus="1.09"/>
-        <stat value="10" bonus="1.11"/>
-        <stat value="11" bonus="1.12"/>
-        <stat value="12" bonus="1.13"/>
-        <stat value="13" bonus="1.14"/>
-        <stat value="14" bonus="1.15"/>
-        <stat value="15" bonus="1.16"/>
-        <stat value="16" bonus="1.17"/>
-        <stat value="17" bonus="1.19"/>
-        <stat value="18" bonus="1.2"/>
-        <stat value="19" bonus="1.21"/>
-        <stat value="20" bonus="1.22"/>
-        <stat value="21" bonus="1.23"/>
-        <stat value="22" bonus="1.25"/>
-        <stat value="23" bonus="1.26"/>
-        <stat value="24" bonus="1.27"/>
-        <stat value="25" bonus="1.28"/>
-        <stat value="26" bonus="1.3"/>
-        <stat value="27" bonus="1.31"/>
-        <stat value="28" bonus="1.32"/>
-        <stat value="29" bonus="1.34"/>
-        <stat value="30" bonus="1.35"/>
-        <stat value="31" bonus="1.36"/>
-        <stat value="32" bonus="1.38"/>
-        <stat value="33" bonus="1.39"/>
-        <stat value="34" bonus="1.4"/>
-        <stat value="35" bonus="1.42"/>
-        <stat value="36" bonus="1.43"/>
-        <stat value="37" bonus="1.45"/>
-        <stat value="38" bonus="1.46"/>
-        <stat value="39" bonus="1.48"/>
-        <stat value="40" bonus="1.49"/>
-        <stat value="41" bonus="1.5"/>
-        <stat value="42" bonus="1.52"/>
-        <stat value="43" bonus="1.53"/>
-        <stat value="44" bonus="1.55"/>
-        <stat value="45" bonus="1.57"/>
-        <stat value="46" bonus="1.58"/>
-        <stat value="47" bonus="1.6"/>
-        <stat value="48" bonus="1.61"/>
-        <stat value="49" bonus="1.63"/>
-        <stat value="50" bonus="1.65"/>
-        <stat value="51" bonus="1.66"/>
-        <stat value="52" bonus="1.68"/>
-        <stat value="53" bonus="1.7"/>
-        <stat value="54" bonus="1.71"/>
-        <stat value="55" bonus="1.73"/>
-        <stat value="56" bonus="1.75"/>
-        <stat value="57" bonus="1.76"/>
-        <stat value="58" bonus="1.78"/>
-        <stat value="59" bonus="1.8"/>
-        <stat value="60" bonus="1.82"/>
-        <stat value="61" bonus="1.84"/>
-        <stat value="62" bonus="1.85"/>
-        <stat value="63" bonus="1.87"/>
-        <stat value="64" bonus="1.89"/>
-        <stat value="65" bonus="1.91"/>
-        <stat value="66" bonus="1.93"/>
-        <stat value="67" bonus="1.95"/>
-        <stat value="68" bonus="1.97"/>
-        <stat value="69" bonus="1.99"/>
-        <stat value="70" bonus="2.01"/>
-        <stat value="71" bonus="2.03"/>
-        <stat value="72" bonus="2.05"/>
-        <stat value="73" bonus="2.07"/>
-        <stat value="74" bonus="2.09"/>
-        <stat value="75" bonus="2.11"/>
-        <stat value="76" bonus="2.13"/>
-        <stat value="77" bonus="2.15"/>
-        <stat value="78" bonus="2.17"/>
-        <stat value="79" bonus="2.2"/>
-        <stat value="80" bonus="2.22"/>
-        <stat value="81" bonus="2.24"/>
-        <stat value="82" bonus="2.26"/>
-        <stat value="83" bonus="2.29"/>
-        <stat value="84" bonus="2.31"/>
-        <stat value="85" bonus="2.33"/>
-        <stat value="86" bonus="2.35"/>
-        <stat value="87" bonus="2.38"/>
-        <stat value="88" bonus="2.4"/>
-        <stat value="89" bonus="2.43"/>
-        <stat value="90" bonus="2.45"/>
-        <stat value="91" bonus="2.47"/>
-        <stat value="92" bonus="2.5"/>
-        <stat value="93" bonus="2.52"/>
-        <stat value="94" bonus="2.55"/>
-        <stat value="95" bonus="2.58"/>
-        <stat value="96" bonus="2.6"/>
-        <stat value="97" bonus="2.63"/>
-        <stat value="98" bonus="2.65"/>
-        <stat value="99" bonus="2.68"/>
-        <stat value="100" bonus="1.679"/>
-        <stat value="101" bonus="1.687"/>
-        <stat value="102" bonus="1.694"/>
-        <stat value="103" bonus="1.702"/>
-        <stat value="104" bonus="1.71"/>
-        <stat value="105" bonus="1.718"/>
-        <stat value="106" bonus="1.725"/>
-        <stat value="107" bonus="1.733"/>
-        <stat value="108" bonus="1.741"/>
-        <stat value="109" bonus="1.748"/>
-        <stat value="110" bonus="1.756"/>
-        <stat value="111" bonus="1.763"/>
-        <stat value="112" bonus="1.771"/>
-        <stat value="113" bonus="1.778"/>
-        <stat value="114" bonus="1.786"/>
-        <stat value="115" bonus="1.793"/>
-        <stat value="116" bonus="1.8"/>
-        <stat value="117" bonus="1.808"/>
-        <stat value="118" bonus="1.815"/>
-        <stat value="119" bonus="1.822"/>
-        <stat value="120" bonus="1.829"/>
-        <stat value="121" bonus="1.836"/>
-        <stat value="122" bonus="1.843"/>
-        <stat value="123" bonus="1.85"/>
-        <stat value="124" bonus="1.857"/>
-        <stat value="125" bonus="1.864"/>
-        <stat value="126" bonus="1.87"/>
-        <stat value="127" bonus="1.877"/>
-        <stat value="128" bonus="1.883"/>
-        <stat value="129" bonus="1.89"/>
-        <stat value="130" bonus="1.896"/>
-        <stat value="131" bonus="1.903"/>
-        <stat value="132" bonus="1.909"/>
-        <stat value="133" bonus="1.915"/>
-        <stat value="134" bonus="1.921"/>
-        <stat value="135" bonus="1.927"/>
-        <stat value="136" bonus="1.933"/>
-        <stat value="137" bonus="1.939"/>
-        <stat value="138" bonus="1.944"/>
-        <stat value="139" bonus="1.95"/>
-        <stat value="140" bonus="1.956"/>
-        <stat value="141" bonus="1.961"/>
-        <stat value="142" bonus="1.966"/>
-        <stat value="143" bonus="1.972"/>
-        <stat value="144" bonus="1.977"/>
-        <stat value="145" bonus="1.982"/>
-        <stat value="146" bonus="1.987"/>
-        <stat value="147" bonus="1.992"/>
-        <stat value="148" bonus="1.997"/>
-        <stat value="149" bonus="2.002"/>
-        <stat value="150" bonus="2.006"/>
-        <stat value="151" bonus="2.011"/>
-        <stat value="152" bonus="2.015"/>
-        <stat value="153" bonus="2.02"/>
-        <stat value="154" bonus="2.024"/>
-        <stat value="155" bonus="2.028"/>
-        <stat value="156" bonus="2.032"/>
-        <stat value="157" bonus="2.036"/>
-        <stat value="158" bonus="2.04"/>
-        <stat value="159" bonus="2.044"/>
-        <stat value="160" bonus="2.048"/>
-        <stat value="161" bonus="2.052"/>
-        <stat value="162" bonus="2.055"/>
-        <stat value="163" bonus="2.059"/>
-        <stat value="164" bonus="2.062"/>
-        <stat value="165" bonus="2.066"/>
-        <stat value="166" bonus="2.069"/>
-        <stat value="167" bonus="2.072"/>
-        <stat value="168" bonus="2.076"/>
-        <stat value="169" bonus="2.079"/>
-        <stat value="170" bonus="2.082"/>
-        <stat value="171" bonus="2.085"/>
-        <stat value="172" bonus="2.088"/>
-        <stat value="173" bonus="2.09"/>
-        <stat value="174" bonus="2.093"/>
-        <stat value="175" bonus="2.096"/>
-        <stat value="176" bonus="2.098"/>
-        <stat value="177" bonus="2.101"/>
-        <stat value="178" bonus="2.104"/>
-        <stat value="179" bonus="2.106"/>
-        <stat value="180" bonus="2.108"/>
-        <stat value="181" bonus="2.111"/>
-        <stat value="182" bonus="2.113"/>
-        <stat value="183" bonus="2.115"/>
-        <stat value="184" bonus="2.117"/>
-        <stat value="185" bonus="2.119"/>
-        <stat value="186" bonus="2.122"/>
-        <stat value="187" bonus="2.124"/>
-        <stat value="188" bonus="2.125"/>
-        <stat value="189" bonus="2.127"/>
-        <stat value="190" bonus="2.129"/>
-        <stat value="191" bonus="2.131"/>
-        <stat value="192" bonus="2.133"/>
-        <stat value="193" bonus="2.134"/>
-        <stat value="194" bonus="2.136"/>
-        <stat value="195" bonus="2.138"/>
-        <stat value="196" bonus="2.139"/>
-        <stat value="197" bonus="2.141"/>
-        <stat value="198" bonus="2.142"/>
-        <stat value="199" bonus="2.144"/>
-        <stat value="200" bonus="2.145"/>
-    </MEN>
-    <DEX>
-        <stat value="0" bonus="0.84"/> <!-- Not Needed -->
-        <stat value="1" bonus="0.85"/>
-        <stat value="2" bonus="0.86"/>
-        <stat value="3" bonus="0.86"/>
-        <stat value="4" bonus="0.87"/>
-        <stat value="5" bonus="0.88"/>
-        <stat value="6" bonus="0.89"/>
-        <stat value="7" bonus="0.9"/>
-        <stat value="8" bonus="0.9"/>
-        <stat value="9" bonus="0.91"/>
-        <stat value="10" bonus="0.92"/>
-        <stat value="11" bonus="0.93"/>
-        <stat value="12" bonus="0.94"/>
-        <stat value="13" bonus="0.94"/>
-        <stat value="14" bonus="0.95"/>
-        <stat value="15" bonus="0.96"/>
-        <stat value="16" bonus="0.97"/>
-        <stat value="17" bonus="0.98"/>
-        <stat value="18" bonus="0.99"/>
-        <stat value="19" bonus="1"/>
-        <stat value="20" bonus="1.01"/>
-        <stat value="21" bonus="1.01"/>
-        <stat value="22" bonus="1.02"/>
-        <stat value="23" bonus="1.03"/>
-        <stat value="24" bonus="1.04"/>
-        <stat value="25" bonus="1.05"/>
-        <stat value="26" bonus="1.06"/>
-        <stat value="27" bonus="1.07"/>
-        <stat value="28" bonus="1.08"/>
-        <stat value="29" bonus="1.09"/>
-        <stat value="30" bonus="1.1"/>
-        <stat value="31" bonus="1.11"/>
-        <stat value="32" bonus="1.12"/>
-        <stat value="33" bonus="1.13"/>
-        <stat value="34" bonus="1.14"/>
-        <stat value="35" bonus="1.15"/>
-        <stat value="36" bonus="1.16"/>
-        <stat value="37" bonus="1.17"/>
-        <stat value="38" bonus="1.18"/>
-        <stat value="39" bonus="1.19"/>
-        <stat value="40" bonus="1.2"/>
-        <stat value="41" bonus="1.21"/>
-        <stat value="42" bonus="1.22"/>
-        <stat value="43" bonus="1.24"/>
-        <stat value="44" bonus="1.25"/>
-        <stat value="45" bonus="1.26"/>
-        <stat value="46" bonus="1.27"/>
-        <stat value="47" bonus="1.28"/>
-        <stat value="48" bonus="1.29"/>
-        <stat value="49" bonus="1.3"/>
-        <stat value="50" bonus="1.32"/>
-        <stat value="51" bonus="1.33"/>
-        <stat value="52" bonus="1.34"/>
-        <stat value="53" bonus="1.35"/>
-        <stat value="54" bonus="1.36"/>
-        <stat value="55" bonus="1.38"/>
-        <stat value="56" bonus="1.39"/>
-        <stat value="57" bonus="1.4"/>
-        <stat value="58" bonus="1.41"/>
-        <stat value="59" bonus="1.43"/>
-        <stat value="60" bonus="1.44"/>
-        <stat value="61" bonus="1.45"/>
-        <stat value="62" bonus="1.47"/>
-        <stat value="63" bonus="1.48"/>
-        <stat value="64" bonus="1.49"/>
-        <stat value="65" bonus="1.51"/>
-        <stat value="66" bonus="1.52"/>
-        <stat value="67" bonus="1.53"/>
-        <stat value="68" bonus="1.55"/>
-        <stat value="69" bonus="1.56"/>
-        <stat value="70" bonus="1.57"/>
-        <stat value="71" bonus="1.59"/>
-        <stat value="72" bonus="1.6"/>
-        <stat value="73" bonus="1.62"/>
-        <stat value="74" bonus="1.63"/>
-        <stat value="75" bonus="1.65"/>
-        <stat value="76" bonus="1.66"/>
-        <stat value="77" bonus="1.68"/>
-        <stat value="78" bonus="1.69"/>
-        <stat value="79" bonus="1.71"/>
-        <stat value="80" bonus="1.72"/>
-        <stat value="81" bonus="1.74"/>
-        <stat value="82" bonus="1.75"/>
-        <stat value="83" bonus="1.77"/>
-        <stat value="84" bonus="1.78"/>
-        <stat value="85" bonus="1.8"/>
-        <stat value="86" bonus="1.82"/>
-        <stat value="87" bonus="1.83"/>
-        <stat value="88" bonus="1.85"/>
-        <stat value="89" bonus="1.87"/>
-        <stat value="90" bonus="1.88"/>
-        <stat value="91" bonus="1.9"/>
-        <stat value="92" bonus="1.92"/>
-        <stat value="93" bonus="1.93"/>
-        <stat value="94" bonus="1.95"/>
-        <stat value="95" bonus="1.97"/>
-        <stat value="96" bonus="1.99"/>
-        <stat value="97" bonus="2"/>
-        <stat value="98" bonus="2.02"/>
-        <stat value="99" bonus="2.04"/>
-        <stat value="100" bonus="1.606"/>
-        <stat value="101" bonus="1.617"/>
-        <stat value="102" bonus="1.628"/>
-        <stat value="103" bonus="1.638"/>
-        <stat value="104" bonus="1.649"/>
-        <stat value="105" bonus="1.66"/>
-        <stat value="106" bonus="1.67"/>
-        <stat value="107" bonus="1.681"/>
-        <stat value="108" bonus="1.692"/>
-        <stat value="109" bonus="1.702"/>
-        <stat value="110" bonus="1.713"/>
-        <stat value="111" bonus="1.723"/>
-        <stat value="112" bonus="1.734"/>
-        <stat value="113" bonus="1.744"/>
-        <stat value="114" bonus="1.754"/>
-        <stat value="115" bonus="1.765"/>
-        <stat value="116" bonus="1.775"/>
-        <stat value="117" bonus="1.785"/>
-        <stat value="118" bonus="1.795"/>
-        <stat value="119" bonus="1.805"/>
-        <stat value="120" bonus="1.815"/>
-        <stat value="121" bonus="1.825"/>
-        <stat value="122" bonus="1.834"/>
-        <stat value="123" bonus="1.844"/>
-        <stat value="124" bonus="1.854"/>
-        <stat value="125" bonus="1.863"/>
-        <stat value="126" bonus="1.872"/>
-        <stat value="127" bonus="1.882"/>
-        <stat value="128" bonus="1.891"/>
-        <stat value="129" bonus="1.9"/>
-        <stat value="130" bonus="1.909"/>
-        <stat value="131" bonus="1.917"/>
-        <stat value="132" bonus="1.926"/>
-        <stat value="133" bonus="1.935"/>
-        <stat value="134" bonus="1.943"/>
-        <stat value="135" bonus="1.951"/>
-        <stat value="136" bonus="1.96"/>
-        <stat value="137" bonus="1.968"/>
-        <stat value="138" bonus="1.976"/>
-        <stat value="139" bonus="1.983"/>
-        <stat value="140" bonus="1.991"/>
-        <stat value="141" bonus="1.999"/>
-        <stat value="142" bonus="2.006"/>
-        <stat value="143" bonus="2.014"/>
-        <stat value="144" bonus="2.021"/>
-        <stat value="145" bonus="2.028"/>
-        <stat value="146" bonus="2.035"/>
-        <stat value="147" bonus="2.042"/>
-        <stat value="148" bonus="2.048"/>
-        <stat value="149" bonus="2.055"/>
-        <stat value="150" bonus="2.062"/>
-        <stat value="151" bonus="2.068"/>
-        <stat value="152" bonus="2.074"/>
-        <stat value="153" bonus="2.08"/>
-        <stat value="154" bonus="2.086"/>
-        <stat value="155" bonus="2.092"/>
-        <stat value="156" bonus="2.098"/>
-        <stat value="157" bonus="2.103"/>
-        <stat value="158" bonus="2.109"/>
-        <stat value="159" bonus="2.114"/>
-        <stat value="160" bonus="2.12"/>
-        <stat value="161" bonus="2.125"/>
-        <stat value="162" bonus="2.13"/>
-        <stat value="163" bonus="2.135"/>
-        <stat value="164" bonus="2.14"/>
-        <stat value="165" bonus="2.144"/>
-        <stat value="166" bonus="2.149"/>
-        <stat value="167" bonus="2.154"/>
-        <stat value="168" bonus="2.158"/>
-        <stat value="169" bonus="2.162"/>
-        <stat value="170" bonus="2.167"/>
-        <stat value="171" bonus="2.171"/>
-        <stat value="172" bonus="2.175"/>
-        <stat value="173" bonus="2.179"/>
-        <stat value="174" bonus="2.183"/>
-        <stat value="175" bonus="2.186"/>
-        <stat value="176" bonus="2.19"/>
-        <stat value="177" bonus="2.194"/>
-        <stat value="178" bonus="2.197"/>
-        <stat value="179" bonus="2.201"/>
-        <stat value="180" bonus="2.204"/>
-        <stat value="181" bonus="2.207"/>
-        <stat value="182" bonus="2.21"/>
-        <stat value="183" bonus="2.213"/>
-        <stat value="184" bonus="2.216"/>
-        <stat value="185" bonus="2.219"/>
-        <stat value="186" bonus="2.222"/>
-        <stat value="187" bonus="2.225"/>
-        <stat value="188" bonus="2.228"/>
-        <stat value="189" bonus="2.23"/>
-        <stat value="190" bonus="2.233"/>
-        <stat value="191" bonus="2.235"/>
-        <stat value="192" bonus="2.238"/>
-        <stat value="193" bonus="2.24"/>
-        <stat value="194" bonus="2.242"/>
-        <stat value="195" bonus="2.245"/>
-        <stat value="196" bonus="2.247"/>
-        <stat value="197" bonus="2.249"/>
-        <stat value="198" bonus="2.251"/>
-        <stat value="199" bonus="2.253"/>
-        <stat value="200" bonus="2.255"/>
-    </DEX>
-    <WIT>
-        <stat value="0" bonus="0.39"/> <!-- Not Needed -->
-        <stat value="1" bonus="0.4"/>
-        <stat value="2" bonus="0.42"/>
-        <stat value="3" bonus="0.44"/>
-        <stat value="4" bonus="0.46"/>
-        <stat value="5" bonus="0.48"/>
-        <stat value="6" bonus="0.51"/>
-        <stat value="7" bonus="0.53"/>
-        <stat value="8" bonus="0.56"/>
-        <stat value="9" bonus="0.58"/>
-        <stat value="10" bonus="0.61"/>
-        <stat value="11" bonus="0.64"/>
-        <stat value="12" bonus="0.68"/>
-        <stat value="13" bonus="0.71"/>
-        <stat value="14" bonus="0.75"/>
-        <stat value="15" bonus="0.78"/>
-        <stat value="16" bonus="0.82"/>
-        <stat value="17" bonus="0.86"/>
-        <stat value="18" bonus="0.91"/>
-        <stat value="19" bonus="0.95"/>
-        <stat value="20" bonus="1"/>
-        <stat value="21" bonus="1.05"/>
-        <stat value="22" bonus="1.1"/>
-        <stat value="23" bonus="1.16"/>
-        <stat value="24" bonus="1.22"/>
-        <stat value="25" bonus="1.28"/>
-        <stat value="26" bonus="1.34"/>
-        <stat value="27" bonus="1.41"/>
-        <stat value="28" bonus="1.48"/>
-        <stat value="29" bonus="1.55"/>
-        <stat value="30" bonus="1.63"/>
-        <stat value="31" bonus="1.71"/>
-        <stat value="32" bonus="1.8"/>
-        <stat value="33" bonus="1.89"/>
-        <stat value="34" bonus="1.98"/>
-        <stat value="35" bonus="2.08"/>
-        <stat value="36" bonus="2.18"/>
-        <stat value="37" bonus="2.29"/>
-        <stat value="38" bonus="2.41"/>
-        <stat value="39" bonus="2.53"/>
-        <stat value="40" bonus="2.65"/>
-        <stat value="41" bonus="2.79"/>
-        <stat value="42" bonus="2.93"/>
-        <stat value="43" bonus="3.07"/>
-        <stat value="44" bonus="3.23"/>
-        <stat value="45" bonus="3.39"/>
-        <stat value="46" bonus="3.56"/>
-        <stat value="47" bonus="3.73"/>
-        <stat value="48" bonus="3.92"/>
-        <stat value="49" bonus="4.12"/>
-        <stat value="50" bonus="4.32"/>
-        <stat value="51" bonus="4.54"/>
-        <stat value="52" bonus="4.76"/>
-        <stat value="53" bonus="5"/>
-        <stat value="54" bonus="5.25"/>
-        <stat value="55" bonus="5.52"/>
-        <stat value="56" bonus="5.79"/>
-        <stat value="57" bonus="6.08"/>
-        <stat value="58" bonus="6.39"/>
-        <stat value="59" bonus="6.7"/>
-        <stat value="60" bonus="7.04"/>
-        <stat value="61" bonus="7.39"/>
-        <stat value="62" bonus="7.76"/>
-        <stat value="63" bonus="8.15"/>
-        <stat value="64" bonus="8.56"/>
-        <stat value="65" bonus="8.99"/>
-        <stat value="66" bonus="9.43"/>
-        <stat value="67" bonus="9.91"/>
-        <stat value="68" bonus="10.4"/>
-        <stat value="69" bonus="10.92"/>
-        <stat value="70" bonus="11.47"/>
-        <stat value="71" bonus="12.04"/>
-        <stat value="72" bonus="12.64"/>
-        <stat value="73" bonus="13.27"/>
-        <stat value="74" bonus="13.94"/>
-        <stat value="75" bonus="14.64"/>
-        <stat value="76" bonus="15.37"/>
-        <stat value="77" bonus="16.14"/>
-        <stat value="78" bonus="16.94"/>
-        <stat value="79" bonus="17.79"/>
-        <stat value="80" bonus="18.68"/>
-        <stat value="81" bonus="19.61"/>
-        <stat value="82" bonus="20.59"/>
-        <stat value="83" bonus="21.62"/>
-        <stat value="84" bonus="22.7"/>
-        <stat value="85" bonus="23.84"/>
-        <stat value="86" bonus="25.03"/>
-        <stat value="87" bonus="26.28"/>
-        <stat value="88" bonus="27.6"/>
-        <stat value="89" bonus="28.98"/>
-        <stat value="90" bonus="30.43"/>
-        <stat value="91" bonus="31.95"/>
-        <stat value="92" bonus="33.55"/>
-        <stat value="93" bonus="35.22"/>
-        <stat value="94" bonus="36.98"/>
-        <stat value="95" bonus="38.83"/>
-        <stat value="96" bonus="40.77"/>
-        <stat value="97" bonus="42.81"/>
-        <stat value="98" bonus="44.95"/>
-        <stat value="99" bonus="47.2"/>
-        <stat value="100" bonus="1.598"/>
-        <stat value="101" bonus="1.617"/>
-        <stat value="102" bonus="1.636"/>
-        <stat value="103" bonus="1.655"/>
-        <stat value="104" bonus="1.673"/>
-        <stat value="105" bonus="1.692"/>
-        <stat value="106" bonus="1.711"/>
-        <stat value="107" bonus="1.73"/>
-        <stat value="108" bonus="1.748"/>
-        <stat value="109" bonus="1.767"/>
-        <stat value="110" bonus="1.786"/>
-        <stat value="111" bonus="1.804"/>
-        <stat value="112" bonus="1.822"/>
-        <stat value="113" bonus="1.841"/>
-        <stat value="114" bonus="1.859"/>
-        <stat value="115" bonus="1.877"/>
-        <stat value="116" bonus="1.895"/>
-        <stat value="117" bonus="1.912"/>
-        <stat value="118" bonus="1.93"/>
-        <stat value="119" bonus="1.948"/>
-        <stat value="120" bonus="1.965"/>
-        <stat value="121" bonus="1.982"/>
-        <stat value="122" bonus="1.999"/>
-        <stat value="123" bonus="2.016"/>
-        <stat value="124" bonus="2.033"/>
-        <stat value="125" bonus="2.049"/>
-        <stat value="126" bonus="2.066"/>
-        <stat value="127" bonus="2.082"/>
-        <stat value="128" bonus="2.098"/>
-        <stat value="129" bonus="2.114"/>
-        <stat value="130" bonus="2.129"/>
-        <stat value="131" bonus="2.145"/>
-        <stat value="132" bonus="2.16"/>
-        <stat value="133" bonus="2.175"/>
-        <stat value="134" bonus="2.19"/>
-        <stat value="135" bonus="2.204"/>
-        <stat value="136" bonus="2.219"/>
-        <stat value="137" bonus="2.233"/>
-        <stat value="138" bonus="2.247"/>
-        <stat value="139" bonus="2.261"/>
-        <stat value="140" bonus="2.274"/>
-        <stat value="141" bonus="2.288"/>
-        <stat value="142" bonus="2.301"/>
-        <stat value="143" bonus="2.314"/>
-        <stat value="144" bonus="2.326"/>
-        <stat value="145" bonus="2.339"/>
-        <stat value="146" bonus="2.351"/>
-        <stat value="147" bonus="2.363"/>
-        <stat value="148" bonus="2.375"/>
-        <stat value="149" bonus="2.386"/>
-        <stat value="150" bonus="2.398"/>
-        <stat value="151" bonus="2.409"/>
-        <stat value="152" bonus="2.42"/>
-        <stat value="153" bonus="2.431"/>
-        <stat value="154" bonus="2.441"/>
-        <stat value="155" bonus="2.452"/>
-        <stat value="156" bonus="2.462"/>
-        <stat value="157" bonus="2.472"/>
-        <stat value="158" bonus="2.481"/>
-        <stat value="159" bonus="2.491"/>
-        <stat value="160" bonus="2.5"/>
-        <stat value="161" bonus="2.509"/>
-        <stat value="162" bonus="2.518"/>
-        <stat value="163" bonus="2.527"/>
-        <stat value="164" bonus="2.535"/>
-        <stat value="165" bonus="2.544"/>
-        <stat value="166" bonus="2.552"/>
-        <stat value="167" bonus="2.56"/>
-        <stat value="168" bonus="2.567"/>
-        <stat value="169" bonus="2.575"/>
-        <stat value="170" bonus="2.582"/>
-        <stat value="171" bonus="2.59"/>
-        <stat value="172" bonus="2.597"/>
-        <stat value="173" bonus="2.604"/>
-        <stat value="174" bonus="2.61"/>
-        <stat value="175" bonus="2.617"/>
-        <stat value="176" bonus="2.624"/>
-        <stat value="177" bonus="2.63"/>
-        <stat value="178" bonus="2.636"/>
-        <stat value="179" bonus="2.642"/>
-        <stat value="180" bonus="2.648"/>
-        <stat value="181" bonus="2.653"/>
-        <stat value="182" bonus="2.659"/>
-        <stat value="183" bonus="2.664"/>
-        <stat value="184" bonus="2.67"/>
-        <stat value="185" bonus="2.675"/>
-        <stat value="186" bonus="2.68"/>
-        <stat value="187" bonus="2.685"/>
-        <stat value="188" bonus="2.689"/>
-        <stat value="189" bonus="2.694"/>
-        <stat value="190" bonus="2.699"/>
-        <stat value="191" bonus="2.703"/>
-        <stat value="192" bonus="2.707"/>
-        <stat value="193" bonus="2.711"/>
-        <stat value="194" bonus="2.715"/>
-        <stat value="195" bonus="2.719"/>
-        <stat value="196" bonus="2.723"/>
-        <stat value="197" bonus="2.727"/>
-        <stat value="198" bonus="2.731"/>
-        <stat value="199" bonus="2.734"/>
-        <stat value="200" bonus="2.738"/>
-    </WIT>
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../xsd/statBonus.xsd" >
+    <stat type="STR">
+        <enhancement skill-id="45191" first-level="60" second-level="70" third-level="90"/>
+        <bonus>
+            <value level="1">0.29</value>
+            <value level="1">0.3</value>
+            <value level="2">0.31</value>
+            <value level="3">0.32</value>
+            <value level="4">0.34</value>
+            <value level="5">0.35</value>
+            <value level="6">0.36</value>
+            <value level="7">0.37</value>
+            <value level="8">0.39</value>
+            <value level="9">0.4</value>
+            <value level="10">0.42</value>
+            <value level="11">0.43</value>
+            <value level="12">0.45</value>
+            <value level="13">0.46</value>
+            <value level="14">0.48</value>
+            <value level="15">0.5</value>
+            <value level="16">0.51</value>
+            <value level="17">0.53</value>
+            <value level="18">0.55</value>
+            <value level="19">0.57</value>
+            <value level="20">0.59</value>
+            <value level="21">0.61</value>
+            <value level="22">0.63</value>
+            <value level="23">0.66</value>
+            <value level="24">0.68</value>
+            <value level="25">0.71</value>
+            <value level="26">0.73</value>
+            <value level="27">0.76</value>
+            <value level="28">0.78</value>
+            <value level="29">0.81</value>
+            <value level="30">0.84</value>
+            <value level="31">0.87</value>
+            <value level="32">0.9</value>
+            <value level="33">0.94</value>
+            <value level="34">0.97</value>
+            <value level="35">1.01</value>
+            <value level="36">1.04</value>
+            <value level="37">1.08</value>
+            <value level="38">1.12</value>
+            <value level="39">1.16</value>
+            <value level="40">1.2</value>
+            <value level="41">1.24</value>
+            <value level="42">1.29</value>
+            <value level="43">1.33</value>
+            <value level="44">1.38</value>
+            <value level="45">1.43</value>
+            <value level="46">1.48</value>
+            <value level="47">1.54</value>
+            <value level="48">1.59</value>
+            <value level="49">1.65</value>
+            <value level="50">1.71</value>
+            <value level="51">1.77</value>
+            <value level="52">1.83</value>
+            <value level="53">1.9</value>
+            <value level="54">1.97</value>
+            <value level="55">2.04</value>
+            <value level="56">2.11</value>
+            <value level="57">2.19</value>
+            <value level="58">2.27</value>
+            <value level="59">2.35</value>
+            <value level="60">2.43</value>
+            <value level="61">2.52</value>
+            <value level="62">2.61</value>
+            <value level="63">2.71</value>
+            <value level="64">2.8</value>
+            <value level="65">2.91</value>
+            <value level="66">3.01</value>
+            <value level="67">3.12</value>
+            <value level="68">3.23</value>
+            <value level="69">3.35</value>
+            <value level="70">3.47</value>
+            <value level="71">3.59</value>
+            <value level="72">3.72</value>
+            <value level="73">3.86</value>
+            <value level="74">3.99</value>
+            <value level="75">4.14</value>
+            <value level="76">4.29</value>
+            <value level="77">4.44</value>
+            <value level="78">4.6</value>
+            <value level="79">4.77</value>
+            <value level="80">4.94</value>
+            <value level="81">5.12</value>
+            <value level="82">5.3</value>
+            <value level="83">5.49</value>
+            <value level="84">5.69</value>
+            <value level="85">5.89</value>
+            <value level="86">6.11</value>
+            <value level="87">6.33</value>
+            <value level="88">6.55</value>
+            <value level="89">6.79</value>
+            <value level="90">7.03</value>
+            <value level="91">7.29</value>
+            <value level="92">7.55</value>
+            <value level="93">7.82</value>
+            <value level="94">8.1</value>
+            <value level="95">8.39</value>
+            <value level="96">8.7</value>
+            <value level="97">9.01</value>
+            <value level="98">9.33</value>
+            <value level="99">9.67</value>
+            <value level="100">1.559</value>
+            <value level="101">1.576</value>
+            <value level="102">1.594</value>
+            <value level="103">1.611</value>
+            <value level="104">1.629</value>
+            <value level="105">1.647</value>
+            <value level="106">1.664</value>
+            <value level="107">1.682</value>
+            <value level="108">1.699</value>
+            <value level="109">1.716</value>
+            <value level="110">1.734</value>
+            <value level="111">1.751</value>
+            <value level="112">1.768</value>
+            <value level="113">1.785</value>
+            <value level="114">1.802</value>
+            <value level="115">1.819</value>
+            <value level="116">1.836</value>
+            <value level="117">1.852</value>
+            <value level="118">1.869</value>
+            <value level="119">1.885</value>
+            <value level="120">1.901</value>
+            <value level="121">1.917</value>
+            <value level="122">1.933</value>
+            <value level="123">1.949</value>
+            <value level="124">1.965</value>
+            <value level="125">1.98</value>
+            <value level="126">1.995</value>
+            <value level="127">2.01</value>
+            <value level="128">2.025</value>
+            <value level="129">2.04</value>
+            <value level="130">2.055</value>
+            <value level="131">2.069</value>
+            <value level="132">2.083</value>
+            <value level="133">2.097</value>
+            <value level="134">2.111</value>
+            <value level="135">2.125</value>
+            <value level="136">2.138</value>
+            <value level="137">2.152</value>
+            <value level="138">2.165</value>
+            <value level="139">2.178</value>
+            <value level="140">2.19</value>
+            <value level="141">2.203</value>
+            <value level="142">2.215</value>
+            <value level="143">2.227</value>
+            <value level="144">2.239</value>
+            <value level="145">2.25</value>
+            <value level="146">2.262</value>
+            <value level="147">2.273</value>
+            <value level="148">2.284</value>
+            <value level="149">2.295</value>
+            <value level="150">2.306</value>
+            <value level="151">2.316</value>
+            <value level="152">2.326</value>
+            <value level="153">2.336</value>
+            <value level="154">2.346</value>
+            <value level="155">2.356</value>
+            <value level="156">2.365</value>
+            <value level="157">2.374</value>
+            <value level="158">2.383</value>
+            <value level="159">2.392</value>
+            <value level="160">2.401</value>
+            <value level="161">2.41</value>
+            <value level="162">2.418</value>
+            <value level="163">2.426</value>
+            <value level="164">2.434</value>
+            <value level="165">2.442</value>
+            <value level="166">2.449</value>
+            <value level="167">2.457</value>
+            <value level="168">2.464</value>
+            <value level="169">2.471</value>
+            <value level="170">2.478</value>
+            <value level="171">2.485</value>
+            <value level="172">2.491</value>
+            <value level="173">2.498</value>
+            <value level="174">2.504</value>
+            <value level="175">2.51</value>
+            <value level="176">2.516</value>
+            <value level="177">2.522</value>
+            <value level="178">2.528</value>
+            <value level="179">2.534</value>
+            <value level="180">2.539</value>
+            <value level="181">2.544</value>
+            <value level="182">2.55</value>
+            <value level="183">2.555</value>
+            <value level="184">2.559</value>
+            <value level="185">2.564</value>
+            <value level="186">2.569</value>
+            <value level="187">2.574</value>
+            <value level="188">2.578</value>
+            <value level="189">2.582</value>
+            <value level="190">2.587</value>
+            <value level="191">2.591</value>
+            <value level="192">2.595</value>
+            <value level="193">2.599</value>
+            <value level="194">2.602</value>
+            <value level="195">2.606</value>
+            <value level="196">2.61</value>
+            <value level="197">2.613</value>
+            <value level="198">2.617</value>
+            <value level="199">2.62</value>
+            <value level="200">2.623</value>
+        </bonus>
+    </stat>
+    <stat type="INT">
+        <enhancement skill-id="45192" first-level="60" second-level="70" third-level="90"/>
+        <bonus>
+            <value level="0">0.54</value>
+            <value level="1">0.55</value>
+            <value level="2">0.56</value>
+            <value level="3">0.57</value>
+            <value level="4">0.58</value>
+            <value level="5">0.59</value>
+            <value level="6">0.61</value>
+            <value level="7">0.62</value>
+            <value level="8">0.63</value>
+            <value level="9">0.64</value>
+            <value level="10">0.65</value>
+            <value level="11">0.67</value>
+            <value level="12">0.68</value>
+            <value level="13">0.69</value>
+            <value level="14">0.71</value>
+            <value level="15">0.72</value>
+            <value level="16">0.74</value>
+            <value level="17">0.75</value>
+            <value level="18">0.77</value>
+            <value level="19">0.78</value>
+            <value level="20">0.8</value>
+            <value level="21">0.81</value>
+            <value level="22">0.83</value>
+            <value level="23">0.85</value>
+            <value level="24">0.86</value>
+            <value level="25">0.88</value>
+            <value level="26">0.9</value>
+            <value level="27">0.92</value>
+            <value level="28">0.94</value>
+            <value level="29">0.95</value>
+            <value level="30">0.97</value>
+            <value level="31">0.99</value>
+            <value level="32">1.01</value>
+            <value level="33">1.03</value>
+            <value level="34">1.05</value>
+            <value level="35">1.07</value>
+            <value level="36">1.1</value>
+            <value level="37">1.12</value>
+            <value level="38">1.14</value>
+            <value level="39">1.16</value>
+            <value level="40">1.19</value>
+            <value level="41">1.21</value>
+            <value level="42">1.23</value>
+            <value level="43">1.26</value>
+            <value level="44">1.28</value>
+            <value level="45">1.31</value>
+            <value level="46">1.34</value>
+            <value level="47">1.36</value>
+            <value level="48">1.39</value>
+            <value level="49">1.42</value>
+            <value level="50">1.45</value>
+            <value level="51">1.47</value>
+            <value level="52">1.5</value>
+            <value level="53">1.53</value>
+            <value level="54">1.57</value>
+            <value level="55">1.6</value>
+            <value level="56">1.63</value>
+            <value level="57">1.66</value>
+            <value level="58">1.69</value>
+            <value level="59">1.73</value>
+            <value level="60">1.76</value>
+            <value level="61">1.8</value>
+            <value level="62">1.83</value>
+            <value level="63">1.87</value>
+            <value level="64">1.91</value>
+            <value level="65">1.95</value>
+            <value level="66">1.99</value>
+            <value level="67">2.02</value>
+            <value level="68">2.07</value>
+            <value level="69">2.11</value>
+            <value level="70">2.15</value>
+            <value level="71">2.19</value>
+            <value level="72">2.24</value>
+            <value level="73">2.28</value>
+            <value level="74">2.33</value>
+            <value level="75">2.37</value>
+            <value level="76">2.42</value>
+            <value level="77">2.47</value>
+            <value level="78">2.52</value>
+            <value level="79">2.57</value>
+            <value level="80">2.62</value>
+            <value level="81">2.67</value>
+            <value level="82">2.73</value>
+            <value level="83">2.78</value>
+            <value level="84">2.84</value>
+            <value level="85">2.89</value>
+            <value level="86">2.95</value>
+            <value level="87">3.01</value>
+            <value level="88">3.07</value>
+            <value level="89">3.13</value>
+            <value level="90">3.19</value>
+            <value level="91">3.26</value>
+            <value level="92">3.32</value>
+            <value level="93">3.39</value>
+            <value level="94">3.46</value>
+            <value level="95">3.53</value>
+            <value level="96">3.6</value>
+            <value level="97">3.67</value>
+            <value level="98">3.74</value>
+            <value level="99">3.82</value>
+            <value level="100">1.568</value>
+            <value level="101">1.582</value>
+            <value level="102">1.597</value>
+            <value level="103">1.612</value>
+            <value level="104">1.626</value>
+            <value level="105">1.641</value>
+            <value level="106">1.656</value>
+            <value level="107">1.67</value>
+            <value level="108">1.685</value>
+            <value level="109">1.699</value>
+            <value level="110">1.714</value>
+            <value level="111">1.728</value>
+            <value level="112">1.742</value>
+            <value level="113">1.757</value>
+            <value level="114">1.771</value>
+            <value level="115">1.785</value>
+            <value level="116">1.799</value>
+            <value level="117">1.813</value>
+            <value level="118">1.826</value>
+            <value level="119">1.84</value>
+            <value level="120">1.854</value>
+            <value level="121">1.867</value>
+            <value level="122">1.88</value>
+            <value level="123">1.894</value>
+            <value level="124">1.907</value>
+            <value level="125">1.92</value>
+            <value level="126">1.932</value>
+            <value level="127">1.945</value>
+            <value level="128">1.957</value>
+            <value level="129">1.97</value>
+            <value level="130">1.982</value>
+            <value level="131">1.994</value>
+            <value level="132">2.006</value>
+            <value level="133">2.018</value>
+            <value level="134">2.029</value>
+            <value level="135">2.041</value>
+            <value level="136">2.052</value>
+            <value level="137">2.063</value>
+            <value level="138">2.074</value>
+            <value level="139">2.084</value>
+            <value level="140">2.095</value>
+            <value level="141">2.105</value>
+            <value level="142">2.116</value>
+            <value level="143">2.126</value>
+            <value level="144">2.136</value>
+            <value level="145">2.145</value>
+            <value level="146">2.155</value>
+            <value level="147">2.164</value>
+            <value level="148">2.173</value>
+            <value level="149">2.182</value>
+            <value level="150">2.191</value>
+            <value level="151">2.2</value>
+            <value level="152">2.209</value>
+            <value level="153">2.217</value>
+            <value level="154">2.225</value>
+            <value level="155">2.233</value>
+            <value level="156">2.241</value>
+            <value level="157">2.249</value>
+            <value level="158">2.256</value>
+            <value level="159">2.264</value>
+            <value level="160">2.271</value>
+            <value level="161">2.278</value>
+            <value level="162">2.285</value>
+            <value level="163">2.292</value>
+            <value level="164">2.299</value>
+            <value level="165">2.305</value>
+            <value level="166">2.311</value>
+            <value level="167">2.318</value>
+            <value level="168">2.324</value>
+            <value level="169">2.33</value>
+            <value level="170">2.335</value>
+            <value level="171">2.341</value>
+            <value level="172">2.347</value>
+            <value level="173">2.352</value>
+            <value level="174">2.357</value>
+            <value level="175">2.362</value>
+            <value level="176">2.367</value>
+            <value level="177">2.372</value>
+            <value level="178">2.377</value>
+            <value level="179">2.382</value>
+            <value level="180">2.386</value>
+            <value level="181">2.391</value>
+            <value level="182">2.395</value>
+            <value level="183">2.399</value>
+            <value level="184">2.403</value>
+            <value level="185">2.407</value>
+            <value level="186">2.411</value>
+            <value level="187">2.415</value>
+            <value level="188">2.419</value>
+            <value level="189">2.422</value>
+            <value level="190">2.426</value>
+            <value level="191">2.429</value>
+            <value level="192">2.433</value>
+            <value level="193">2.436</value>
+            <value level="194">2.439</value>
+            <value level="195">2.442</value>
+            <value level="196">2.445</value>
+            <value level="197">2.448</value>
+            <value level="198">2.451</value>
+            <value level="199">2.454</value>
+            <value level="200">2.456</value>
+        </bonus>
+    </stat>
+    <stat type="CON">
+        <enhancement skill-id="45195" first-level="50" second-level="65" third-level="90"/>
+        <bonus>
+        <value level="0">0.45</value> <!-- Not Needed -->
+        <value level="1">0.46</value>
+        <value level="2">0.47</value>
+        <value level="3">0.48</value>
+        <value level="4">0.5</value>
+        <value level="5">0.51</value>
+        <value level="6">0.53</value>
+        <value level="7">0.54</value>
+        <value level="8">0.56</value>
+        <value level="9">0.58</value>
+        <value level="10">0.59</value>
+        <value level="11">0.61</value>
+        <value level="12">0.63</value>
+        <value level="13">0.65</value>
+        <value level="14">0.67</value>
+        <value level="15">0.69</value>
+        <value level="16">0.71</value>
+        <value level="17">0.73</value>
+        <value level="18">0.75</value>
+        <value level="19">0.77</value>
+        <value level="20">0.8</value>
+        <value level="21">0.82</value>
+        <value level="22">0.85</value>
+        <value level="23">0.87</value>
+        <value level="24">0.9</value>
+        <value level="25">0.93</value>
+        <value level="26">0.95</value>
+        <value level="27">0.98</value>
+        <value level="28">1.01</value>
+        <value level="29">1.04</value>
+        <value level="30">1.07</value>
+        <value level="31">1.1</value>
+        <value level="32">1.14</value>
+        <value level="33">1.17</value>
+        <value level="34">1.21</value>
+        <value level="35">1.24</value>
+        <value level="36">1.28</value>
+        <value level="37">1.32</value>
+        <value level="38">1.36</value>
+        <value level="39">1.4</value>
+        <value level="40">1.44</value>
+        <value level="41">1.48</value>
+        <value level="42">1.53</value>
+        <value level="43">1.58</value>
+        <value level="44">1.62</value>
+        <value level="45">1.67</value>
+        <value level="46">1.72</value>
+        <value level="47">1.77</value>
+        <value level="48">1.83</value>
+        <value level="49">1.88</value>
+        <value level="50">1.94</value>
+        <value level="51">2</value>
+        <value level="52">2.06</value>
+        <value level="53">2.12</value>
+        <value level="54">2.18</value>
+        <value level="55">2.25</value>
+        <value level="56">2.31</value>
+        <value level="57">2.38</value>
+        <value level="58">2.45</value>
+        <value level="59">2.53</value>
+        <value level="60">2.6</value>
+        <value level="61">2.68</value>
+        <value level="62">2.76</value>
+        <value level="63">2.84</value>
+        <value level="64">2.93</value>
+        <value level="65">3.02</value>
+        <value level="66">3.11</value>
+        <value level="67">3.2</value>
+        <value level="68">3.3</value>
+        <value level="69">3.4</value>
+        <value level="70">3.5</value>
+        <value level="71">3.6</value>
+        <value level="72">3.71</value>
+        <value level="73">3.82</value>
+        <value level="74">3.94</value>
+        <value level="75">4.06</value>
+        <value level="76">4.18</value>
+        <value level="77">4.3</value>
+        <value level="78">4.43</value>
+        <value level="79">4.56</value>
+        <value level="80">4.7</value>
+        <value level="81">4.84</value>
+        <value level="82">4.99</value>
+        <value level="83">5.14</value>
+        <value level="84">5.29</value>
+        <value level="85">5.45</value>
+        <value level="86">5.61</value>
+        <value level="87">5.78</value>
+        <value level="88">5.96</value>
+        <value level="89">6.13</value>
+        <value level="90">6.32</value>
+        <value level="91">6.51</value>
+        <value level="92">6.7</value>
+        <value level="93">6.9</value>
+        <value level="94">7.11</value>
+        <value level="95">7.33</value>
+        <value level="96">7.54</value>
+        <value level="97">7.77</value>
+        <value level="98">8</value>
+        <value level="99">8.24</value>
+        <value level="100">2.132</value>
+        <value level="101">2.155</value>
+        <value level="102">2.178</value>
+        <value level="103">2.201</value>
+        <value level="104">2.223</value>
+        <value level="105">2.246</value>
+        <value level="106">2.269</value>
+        <value level="107">2.292</value>
+        <value level="108">2.314</value>
+        <value level="109">2.337</value>
+        <value level="110">2.359</value>
+        <value level="111">2.381</value>
+        <value level="112">2.404</value>
+        <value level="113">2.426</value>
+        <value level="114">2.448</value>
+        <value level="115">2.47</value>
+        <value level="116">2.491</value>
+        <value level="117">2.513</value>
+        <value level="118">2.534</value>
+        <value level="119">2.555</value>
+        <value level="120">2.576</value>
+        <value level="121">2.597</value>
+        <value level="122">2.618</value>
+        <value level="123">2.638</value>
+        <value level="124">2.659</value>
+        <value level="125">2.679</value>
+        <value level="126">2.699</value>
+        <value level="127">2.718</value>
+        <value level="128">2.738</value>
+        <value level="129">2.757</value>
+        <value level="130">2.776</value>
+        <value level="131">2.794</value>
+        <value level="132">2.813</value>
+        <value level="133">2.831</value>
+        <value level="134">2.849</value>
+        <value level="135">2.867</value>
+        <value level="136">2.884</value>
+        <value level="137">2.901</value>
+        <value level="138">2.918</value>
+        <value level="139">2.935</value>
+        <value level="140">2.951</value>
+        <value level="141">2.967</value>
+        <value level="142">2.983</value>
+        <value level="143">2.999</value>
+        <value level="144">3.014</value>
+        <value level="145">3.029</value>
+        <value level="146">3.044</value>
+        <value level="147">3.059</value>
+        <value level="148">3.073</value>
+        <value level="149">3.087</value>
+        <value level="150">3.101</value>
+        <value level="151">3.114</value>
+        <value level="152">3.128</value>
+        <value level="153">3.141</value>
+        <value level="154">3.153</value>
+        <value level="155">3.166</value>
+        <value level="156">3.178</value>
+        <value level="157">3.19</value>
+        <value level="158">3.202</value>
+        <value level="159">3.213</value>
+        <value level="160">3.225</value>
+        <value level="161">3.236</value>
+        <value level="162">3.246</value>
+        <value level="163">3.257</value>
+        <value level="164">3.267</value>
+        <value level="165">3.277</value>
+        <value level="166">3.287</value>
+        <value level="167">3.297</value>
+        <value level="168">3.306</value>
+        <value level="169">3.315</value>
+        <value level="170">3.324</value>
+        <value level="171">3.333</value>
+        <value level="172">3.342</value>
+        <value level="173">3.35</value>
+        <value level="174">3.358</value>
+        <value level="175">3.366</value>
+        <value level="176">3.374</value>
+        <value level="177">3.382</value>
+        <value level="178">3.389</value>
+        <value level="179">3.396</value>
+        <value level="180">3.404</value>
+        <value level="181">3.41</value>
+        <value level="182">3.417</value>
+        <value level="183">3.424</value>
+        <value level="184">3.43</value>
+        <value level="185">3.436</value>
+        <value level="186">3.442</value>
+        <value level="187">3.448</value>
+        <value level="188">3.454</value>
+        <value level="189">3.46</value>
+        <value level="190">3.465</value>
+        <value level="191">3.47</value>
+        <value level="192">3.476</value>
+        <value level="193">3.481</value>
+        <value level="194">3.486</value>
+        <value level="195">3.49</value>
+        <value level="196">3.495</value>
+        <value level="197">3.5</value>
+        <value level="198">3.504</value>
+        <value level="199">3.508</value>
+        <value level="200">3.512</value>
+        </bonus>
+    </stat>
+    <stat type="MEN">
+        <enhancement skill-id="45196" first-level="45" second-level="60" third-level="85"/>
+        <bonus>
+        <value level="0">1</value> <!-- Not Needed -->
+        <value level="1">1.01</value>
+        <value level="2">1.02</value>
+        <value level="3">1.03</value>
+        <value level="4">1.04</value>
+        <value level="5">1.05</value>
+        <value level="6">1.06</value>
+        <value level="7">1.07</value>
+        <value level="8">1.08</value>
+        <value level="9">1.09</value>
+        <value level="10">1.11</value>
+        <value level="11">1.12</value>
+        <value level="12">1.13</value>
+        <value level="13">1.14</value>
+        <value level="14">1.15</value>
+        <value level="15">1.16</value>
+        <value level="16">1.17</value>
+        <value level="17">1.19</value>
+        <value level="18">1.2</value>
+        <value level="19">1.21</value>
+        <value level="20">1.22</value>
+        <value level="21">1.23</value>
+        <value level="22">1.25</value>
+        <value level="23">1.26</value>
+        <value level="24">1.27</value>
+        <value level="25">1.28</value>
+        <value level="26">1.3</value>
+        <value level="27">1.31</value>
+        <value level="28">1.32</value>
+        <value level="29">1.34</value>
+        <value level="30">1.35</value>
+        <value level="31">1.36</value>
+        <value level="32">1.38</value>
+        <value level="33">1.39</value>
+        <value level="34">1.4</value>
+        <value level="35">1.42</value>
+        <value level="36">1.43</value>
+        <value level="37">1.45</value>
+        <value level="38">1.46</value>
+        <value level="39">1.48</value>
+        <value level="40">1.49</value>
+        <value level="41">1.5</value>
+        <value level="42">1.52</value>
+        <value level="43">1.53</value>
+        <value level="44">1.55</value>
+        <value level="45">1.57</value>
+        <value level="46">1.58</value>
+        <value level="47">1.6</value>
+        <value level="48">1.61</value>
+        <value level="49">1.63</value>
+        <value level="50">1.65</value>
+        <value level="51">1.66</value>
+        <value level="52">1.68</value>
+        <value level="53">1.7</value>
+        <value level="54">1.71</value>
+        <value level="55">1.73</value>
+        <value level="56">1.75</value>
+        <value level="57">1.76</value>
+        <value level="58">1.78</value>
+        <value level="59">1.8</value>
+        <value level="60">1.82</value>
+        <value level="61">1.84</value>
+        <value level="62">1.85</value>
+        <value level="63">1.87</value>
+        <value level="64">1.89</value>
+        <value level="65">1.91</value>
+        <value level="66">1.93</value>
+        <value level="67">1.95</value>
+        <value level="68">1.97</value>
+        <value level="69">1.99</value>
+        <value level="70">2.01</value>
+        <value level="71">2.03</value>
+        <value level="72">2.05</value>
+        <value level="73">2.07</value>
+        <value level="74">2.09</value>
+        <value level="75">2.11</value>
+        <value level="76">2.13</value>
+        <value level="77">2.15</value>
+        <value level="78">2.17</value>
+        <value level="79">2.2</value>
+        <value level="80">2.22</value>
+        <value level="81">2.24</value>
+        <value level="82">2.26</value>
+        <value level="83">2.29</value>
+        <value level="84">2.31</value>
+        <value level="85">2.33</value>
+        <value level="86">2.35</value>
+        <value level="87">2.38</value>
+        <value level="88">2.4</value>
+        <value level="89">2.43</value>
+        <value level="90">2.45</value>
+        <value level="91">2.47</value>
+        <value level="92">2.5</value>
+        <value level="93">2.52</value>
+        <value level="94">2.55</value>
+        <value level="95">2.58</value>
+        <value level="96">2.6</value>
+        <value level="97">2.63</value>
+        <value level="98">2.65</value>
+        <value level="99">2.68</value>
+        <value level="100">1.679</value>
+        <value level="101">1.687</value>
+        <value level="102">1.694</value>
+        <value level="103">1.702</value>
+        <value level="104">1.71</value>
+        <value level="105">1.718</value>
+        <value level="106">1.725</value>
+        <value level="107">1.733</value>
+        <value level="108">1.741</value>
+        <value level="109">1.748</value>
+        <value level="110">1.756</value>
+        <value level="111">1.763</value>
+        <value level="112">1.771</value>
+        <value level="113">1.778</value>
+        <value level="114">1.786</value>
+        <value level="115">1.793</value>
+        <value level="116">1.8</value>
+        <value level="117">1.808</value>
+        <value level="118">1.815</value>
+        <value level="119">1.822</value>
+        <value level="120">1.829</value>
+        <value level="121">1.836</value>
+        <value level="122">1.843</value>
+        <value level="123">1.85</value>
+        <value level="124">1.857</value>
+        <value level="125">1.864</value>
+        <value level="126">1.87</value>
+        <value level="127">1.877</value>
+        <value level="128">1.883</value>
+        <value level="129">1.89</value>
+        <value level="130">1.896</value>
+        <value level="131">1.903</value>
+        <value level="132">1.909</value>
+        <value level="133">1.915</value>
+        <value level="134">1.921</value>
+        <value level="135">1.927</value>
+        <value level="136">1.933</value>
+        <value level="137">1.939</value>
+        <value level="138">1.944</value>
+        <value level="139">1.95</value>
+        <value level="140">1.956</value>
+        <value level="141">1.961</value>
+        <value level="142">1.966</value>
+        <value level="143">1.972</value>
+        <value level="144">1.977</value>
+        <value level="145">1.982</value>
+        <value level="146">1.987</value>
+        <value level="147">1.992</value>
+        <value level="148">1.997</value>
+        <value level="149">2.002</value>
+        <value level="150">2.006</value>
+        <value level="151">2.011</value>
+        <value level="152">2.015</value>
+        <value level="153">2.02</value>
+        <value level="154">2.024</value>
+        <value level="155">2.028</value>
+        <value level="156">2.032</value>
+        <value level="157">2.036</value>
+        <value level="158">2.04</value>
+        <value level="159">2.044</value>
+        <value level="160">2.048</value>
+        <value level="161">2.052</value>
+        <value level="162">2.055</value>
+        <value level="163">2.059</value>
+        <value level="164">2.062</value>
+        <value level="165">2.066</value>
+        <value level="166">2.069</value>
+        <value level="167">2.072</value>
+        <value level="168">2.076</value>
+        <value level="169">2.079</value>
+        <value level="170">2.082</value>
+        <value level="171">2.085</value>
+        <value level="172">2.088</value>
+        <value level="173">2.09</value>
+        <value level="174">2.093</value>
+        <value level="175">2.096</value>
+        <value level="176">2.098</value>
+        <value level="177">2.101</value>
+        <value level="178">2.104</value>
+        <value level="179">2.106</value>
+        <value level="180">2.108</value>
+        <value level="181">2.111</value>
+        <value level="182">2.113</value>
+        <value level="183">2.115</value>
+        <value level="184">2.117</value>
+        <value level="185">2.119</value>
+        <value level="186">2.122</value>
+        <value level="187">2.124</value>
+        <value level="188">2.125</value>
+        <value level="189">2.127</value>
+        <value level="190">2.129</value>
+        <value level="191">2.131</value>
+        <value level="192">2.133</value>
+        <value level="193">2.134</value>
+        <value level="194">2.136</value>
+        <value level="195">2.138</value>
+        <value level="196">2.139</value>
+        <value level="197">2.141</value>
+        <value level="198">2.142</value>
+        <value level="199">2.144</value>
+        <value level="200">2.145</value>
+        </bonus>
+    </stat>
+    <stat type="DEX">
+        <enhancement skill-id="45193" first-level="50" second-level="60" third-level="80"/>
+        <bonus>
+        <value level="0">0.84</value> <!-- Not Needed -->
+        <value level="1">0.85</value>
+        <value level="2">0.86</value>
+        <value level="3">0.86</value>
+        <value level="4">0.87</value>
+        <value level="5">0.88</value>
+        <value level="6">0.89</value>
+        <value level="7">0.9</value>
+        <value level="8">0.9</value>
+        <value level="9">0.91</value>
+        <value level="10">0.92</value>
+        <value level="11">0.93</value>
+        <value level="12">0.94</value>
+        <value level="13">0.94</value>
+        <value level="14">0.95</value>
+        <value level="15">0.96</value>
+        <value level="16">0.97</value>
+        <value level="17">0.98</value>
+        <value level="18">0.99</value>
+        <value level="19">1</value>
+        <value level="20">1.01</value>
+        <value level="21">1.01</value>
+        <value level="22">1.02</value>
+        <value level="23">1.03</value>
+        <value level="24">1.04</value>
+        <value level="25">1.05</value>
+        <value level="26">1.06</value>
+        <value level="27">1.07</value>
+        <value level="28">1.08</value>
+        <value level="29">1.09</value>
+        <value level="30">1.1</value>
+        <value level="31">1.11</value>
+        <value level="32">1.12</value>
+        <value level="33">1.13</value>
+        <value level="34">1.14</value>
+        <value level="35">1.15</value>
+        <value level="36">1.16</value>
+        <value level="37">1.17</value>
+        <value level="38">1.18</value>
+        <value level="39">1.19</value>
+        <value level="40">1.2</value>
+        <value level="41">1.21</value>
+        <value level="42">1.22</value>
+        <value level="43">1.24</value>
+        <value level="44">1.25</value>
+        <value level="45">1.26</value>
+        <value level="46">1.27</value>
+        <value level="47">1.28</value>
+        <value level="48">1.29</value>
+        <value level="49">1.3</value>
+        <value level="50">1.32</value>
+        <value level="51">1.33</value>
+        <value level="52">1.34</value>
+        <value level="53">1.35</value>
+        <value level="54">1.36</value>
+        <value level="55">1.38</value>
+        <value level="56">1.39</value>
+        <value level="57">1.4</value>
+        <value level="58">1.41</value>
+        <value level="59">1.43</value>
+        <value level="60">1.44</value>
+        <value level="61">1.45</value>
+        <value level="62">1.47</value>
+        <value level="63">1.48</value>
+        <value level="64">1.49</value>
+        <value level="65">1.51</value>
+        <value level="66">1.52</value>
+        <value level="67">1.53</value>
+        <value level="68">1.55</value>
+        <value level="69">1.56</value>
+        <value level="70">1.57</value>
+        <value level="71">1.59</value>
+        <value level="72">1.6</value>
+        <value level="73">1.62</value>
+        <value level="74">1.63</value>
+        <value level="75">1.65</value>
+        <value level="76">1.66</value>
+        <value level="77">1.68</value>
+        <value level="78">1.69</value>
+        <value level="79">1.71</value>
+        <value level="80">1.72</value>
+        <value level="81">1.74</value>
+        <value level="82">1.75</value>
+        <value level="83">1.77</value>
+        <value level="84">1.78</value>
+        <value level="85">1.8</value>
+        <value level="86">1.82</value>
+        <value level="87">1.83</value>
+        <value level="88">1.85</value>
+        <value level="89">1.87</value>
+        <value level="90">1.88</value>
+        <value level="91">1.9</value>
+        <value level="92">1.92</value>
+        <value level="93">1.93</value>
+        <value level="94">1.95</value>
+        <value level="95">1.97</value>
+        <value level="96">1.99</value>
+        <value level="97">2</value>
+        <value level="98">2.02</value>
+        <value level="99">2.04</value>
+        <value level="100">1.606</value>
+        <value level="101">1.617</value>
+        <value level="102">1.628</value>
+        <value level="103">1.638</value>
+        <value level="104">1.649</value>
+        <value level="105">1.66</value>
+        <value level="106">1.67</value>
+        <value level="107">1.681</value>
+        <value level="108">1.692</value>
+        <value level="109">1.702</value>
+        <value level="110">1.713</value>
+        <value level="111">1.723</value>
+        <value level="112">1.734</value>
+        <value level="113">1.744</value>
+        <value level="114">1.754</value>
+        <value level="115">1.765</value>
+        <value level="116">1.775</value>
+        <value level="117">1.785</value>
+        <value level="118">1.795</value>
+        <value level="119">1.805</value>
+        <value level="120">1.815</value>
+        <value level="121">1.825</value>
+        <value level="122">1.834</value>
+        <value level="123">1.844</value>
+        <value level="124">1.854</value>
+        <value level="125">1.863</value>
+        <value level="126">1.872</value>
+        <value level="127">1.882</value>
+        <value level="128">1.891</value>
+        <value level="129">1.9</value>
+        <value level="130">1.909</value>
+        <value level="131">1.917</value>
+        <value level="132">1.926</value>
+        <value level="133">1.935</value>
+        <value level="134">1.943</value>
+        <value level="135">1.951</value>
+        <value level="136">1.96</value>
+        <value level="137">1.968</value>
+        <value level="138">1.976</value>
+        <value level="139">1.983</value>
+        <value level="140">1.991</value>
+        <value level="141">1.999</value>
+        <value level="142">2.006</value>
+        <value level="143">2.014</value>
+        <value level="144">2.021</value>
+        <value level="145">2.028</value>
+        <value level="146">2.035</value>
+        <value level="147">2.042</value>
+        <value level="148">2.048</value>
+        <value level="149">2.055</value>
+        <value level="150">2.062</value>
+        <value level="151">2.068</value>
+        <value level="152">2.074</value>
+        <value level="153">2.08</value>
+        <value level="154">2.086</value>
+        <value level="155">2.092</value>
+        <value level="156">2.098</value>
+        <value level="157">2.103</value>
+        <value level="158">2.109</value>
+        <value level="159">2.114</value>
+        <value level="160">2.12</value>
+        <value level="161">2.125</value>
+        <value level="162">2.13</value>
+        <value level="163">2.135</value>
+        <value level="164">2.14</value>
+        <value level="165">2.144</value>
+        <value level="166">2.149</value>
+        <value level="167">2.154</value>
+        <value level="168">2.158</value>
+        <value level="169">2.162</value>
+        <value level="170">2.167</value>
+        <value level="171">2.171</value>
+        <value level="172">2.175</value>
+        <value level="173">2.179</value>
+        <value level="174">2.183</value>
+        <value level="175">2.186</value>
+        <value level="176">2.19</value>
+        <value level="177">2.194</value>
+        <value level="178">2.197</value>
+        <value level="179">2.201</value>
+        <value level="180">2.204</value>
+        <value level="181">2.207</value>
+        <value level="182">2.21</value>
+        <value level="183">2.213</value>
+        <value level="184">2.216</value>
+        <value level="185">2.219</value>
+        <value level="186">2.222</value>
+        <value level="187">2.225</value>
+        <value level="188">2.228</value>
+        <value level="189">2.23</value>
+        <value level="190">2.233</value>
+        <value level="191">2.235</value>
+        <value level="192">2.238</value>
+        <value level="193">2.24</value>
+        <value level="194">2.242</value>
+        <value level="195">2.245</value>
+        <value level="196">2.247</value>
+        <value level="197">2.249</value>
+        <value level="198">2.251</value>
+        <value level="199">2.253</value>
+        <value level="200">2.255</value>
+        </bonus>
+    </stat>
+    <stat type="WIT">
+        <enhancement skill-id="45194" first-level="40" second-level="50" third-level="70"/>
+        <bonus>
+        <value level="0">0.39</value> <!-- Not Needed -->
+        <value level="1">0.4</value>
+        <value level="2">0.42</value>
+        <value level="3">0.44</value>
+        <value level="4">0.46</value>
+        <value level="5">0.48</value>
+        <value level="6">0.51</value>
+        <value level="7">0.53</value>
+        <value level="8">0.56</value>
+        <value level="9">0.58</value>
+        <value level="10">0.61</value>
+        <value level="11">0.64</value>
+        <value level="12">0.68</value>
+        <value level="13">0.71</value>
+        <value level="14">0.75</value>
+        <value level="15">0.78</value>
+        <value level="16">0.82</value>
+        <value level="17">0.86</value>
+        <value level="18">0.91</value>
+        <value level="19">0.95</value>
+        <value level="20">1</value>
+        <value level="21">1.05</value>
+        <value level="22">1.1</value>
+        <value level="23">1.16</value>
+        <value level="24">1.22</value>
+        <value level="25">1.28</value>
+        <value level="26">1.34</value>
+        <value level="27">1.41</value>
+        <value level="28">1.48</value>
+        <value level="29">1.55</value>
+        <value level="30">1.63</value>
+        <value level="31">1.71</value>
+        <value level="32">1.8</value>
+        <value level="33">1.89</value>
+        <value level="34">1.98</value>
+        <value level="35">2.08</value>
+        <value level="36">2.18</value>
+        <value level="37">2.29</value>
+        <value level="38">2.41</value>
+        <value level="39">2.53</value>
+        <value level="40">2.65</value>
+        <value level="41">2.79</value>
+        <value level="42">2.93</value>
+        <value level="43">3.07</value>
+        <value level="44">3.23</value>
+        <value level="45">3.39</value>
+        <value level="46">3.56</value>
+        <value level="47">3.73</value>
+        <value level="48">3.92</value>
+        <value level="49">4.12</value>
+        <value level="50">4.32</value>
+        <value level="51">4.54</value>
+        <value level="52">4.76</value>
+        <value level="53">5</value>
+        <value level="54">5.25</value>
+        <value level="55">5.52</value>
+        <value level="56">5.79</value>
+        <value level="57">6.08</value>
+        <value level="58">6.39</value>
+        <value level="59">6.7</value>
+        <value level="60">7.04</value>
+        <value level="61">7.39</value>
+        <value level="62">7.76</value>
+        <value level="63">8.15</value>
+        <value level="64">8.56</value>
+        <value level="65">8.99</value>
+        <value level="66">9.43</value>
+        <value level="67">9.91</value>
+        <value level="68">10.4</value>
+        <value level="69">10.92</value>
+        <value level="70">11.47</value>
+        <value level="71">12.04</value>
+        <value level="72">12.64</value>
+        <value level="73">13.27</value>
+        <value level="74">13.94</value>
+        <value level="75">14.64</value>
+        <value level="76">15.37</value>
+        <value level="77">16.14</value>
+        <value level="78">16.94</value>
+        <value level="79">17.79</value>
+        <value level="80">18.68</value>
+        <value level="81">19.61</value>
+        <value level="82">20.59</value>
+        <value level="83">21.62</value>
+        <value level="84">22.7</value>
+        <value level="85">23.84</value>
+        <value level="86">25.03</value>
+        <value level="87">26.28</value>
+        <value level="88">27.6</value>
+        <value level="89">28.98</value>
+        <value level="90">30.43</value>
+        <value level="91">31.95</value>
+        <value level="92">33.55</value>
+        <value level="93">35.22</value>
+        <value level="94">36.98</value>
+        <value level="95">38.83</value>
+        <value level="96">40.77</value>
+        <value level="97">42.81</value>
+        <value level="98">44.95</value>
+        <value level="99">47.2</value>
+        <value level="100">1.598</value>
+        <value level="101">1.617</value>
+        <value level="102">1.636</value>
+        <value level="103">1.655</value>
+        <value level="104">1.673</value>
+        <value level="105">1.692</value>
+        <value level="106">1.711</value>
+        <value level="107">1.73</value>
+        <value level="108">1.748</value>
+        <value level="109">1.767</value>
+        <value level="110">1.786</value>
+        <value level="111">1.804</value>
+        <value level="112">1.822</value>
+        <value level="113">1.841</value>
+        <value level="114">1.859</value>
+        <value level="115">1.877</value>
+        <value level="116">1.895</value>
+        <value level="117">1.912</value>
+        <value level="118">1.93</value>
+        <value level="119">1.948</value>
+        <value level="120">1.965</value>
+        <value level="121">1.982</value>
+        <value level="122">1.999</value>
+        <value level="123">2.016</value>
+        <value level="124">2.033</value>
+        <value level="125">2.049</value>
+        <value level="126">2.066</value>
+        <value level="127">2.082</value>
+        <value level="128">2.098</value>
+        <value level="129">2.114</value>
+        <value level="130">2.129</value>
+        <value level="131">2.145</value>
+        <value level="132">2.16</value>
+        <value level="133">2.175</value>
+        <value level="134">2.19</value>
+        <value level="135">2.204</value>
+        <value level="136">2.219</value>
+        <value level="137">2.233</value>
+        <value level="138">2.247</value>
+        <value level="139">2.261</value>
+        <value level="140">2.274</value>
+        <value level="141">2.288</value>
+        <value level="142">2.301</value>
+        <value level="143">2.314</value>
+        <value level="144">2.326</value>
+        <value level="145">2.339</value>
+        <value level="146">2.351</value>
+        <value level="147">2.363</value>
+        <value level="148">2.375</value>
+        <value level="149">2.386</value>
+        <value level="150">2.398</value>
+        <value level="151">2.409</value>
+        <value level="152">2.42</value>
+        <value level="153">2.431</value>
+        <value level="154">2.441</value>
+        <value level="155">2.452</value>
+        <value level="156">2.462</value>
+        <value level="157">2.472</value>
+        <value level="158">2.481</value>
+        <value level="159">2.491</value>
+        <value level="160">2.5</value>
+        <value level="161">2.509</value>
+        <value level="162">2.518</value>
+        <value level="163">2.527</value>
+        <value level="164">2.535</value>
+        <value level="165">2.544</value>
+        <value level="166">2.552</value>
+        <value level="167">2.56</value>
+        <value level="168">2.567</value>
+        <value level="169">2.575</value>
+        <value level="170">2.582</value>
+        <value level="171">2.59</value>
+        <value level="172">2.597</value>
+        <value level="173">2.604</value>
+        <value level="174">2.61</value>
+        <value level="175">2.617</value>
+        <value level="176">2.624</value>
+        <value level="177">2.63</value>
+        <value level="178">2.636</value>
+        <value level="179">2.642</value>
+        <value level="180">2.648</value>
+        <value level="181">2.653</value>
+        <value level="182">2.659</value>
+        <value level="183">2.664</value>
+        <value level="184">2.67</value>
+        <value level="185">2.675</value>
+        <value level="186">2.68</value>
+        <value level="187">2.685</value>
+        <value level="188">2.689</value>
+        <value level="189">2.694</value>
+        <value level="190">2.699</value>
+        <value level="191">2.703</value>
+        <value level="192">2.707</value>
+        <value level="193">2.711</value>
+        <value level="194">2.715</value>
+        <value level="195">2.719</value>
+        <value level="196">2.723</value>
+        <value level="197">2.727</value>
+        <value level="198">2.731</value>
+        <value level="199">2.734</value>
+        <value level="200">2.738</value>
+        </bonus>
+    </stat>
 </list>

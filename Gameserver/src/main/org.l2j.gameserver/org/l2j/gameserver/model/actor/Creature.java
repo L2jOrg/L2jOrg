@@ -3,6 +3,7 @@ package org.l2j.gameserver.model.actor;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -81,6 +82,7 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
@@ -3337,8 +3339,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     @Override
     public int getSkillLevel(int skillId) {
-        final Skill skill = getKnownSkill(skillId);
-        return (skill == null) ? 0 : skill.getLevel();
+        return zeroIfNullOrElse(getKnownSkill(skillId), Skill::getLevel);
     }
 
     /**

@@ -155,6 +155,8 @@ public final class Player extends Playable {
     private int rankRace;
     private PlayerVariableData variables;
     private PlayerStatsData statsData;
+    private byte shineSouls;
+    private byte shadowSouls;
 
     private Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -525,6 +527,22 @@ public final class Player extends Playable {
         sendPacket(message);
     }
 
+    public void setShineSouls(byte souls) {
+        shineSouls = souls;
+    }
+
+    public byte getShineSouls() {
+        return shineSouls;
+    }
+
+    public void setShadowSouls(byte shadowSouls) {
+        this.shadowSouls = shadowSouls;
+    }
+
+    public byte getShadowSouls() {
+        return shadowSouls;
+    }
+
     public static Player create(PlayerData playerData, PlayerTemplate template) {
         final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
@@ -830,7 +848,7 @@ public final class Player extends Playable {
     // apparently, a Player CAN have both a summon AND a tamed beast at the same time!!
     // after Freya players can control more than one tamed beast
     private volatile Set<TamedBeast> _tamedBeast = null;
-    private boolean _minimapAllowed = false;
+
     private MatchingRoom _matchingRoom;
     /**
      * The Clan Identifier of the Player

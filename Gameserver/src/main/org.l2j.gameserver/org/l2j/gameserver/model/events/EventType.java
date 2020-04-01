@@ -140,6 +140,7 @@ public enum EventType {
     ON_PLAYER_LOGOUT(OnPlayerLogout.class, void.class),
     ON_PLAYER_PK_CHANGED(OnPlayerPKChanged.class, void.class),
     ON_PLAYER_PRESS_TUTORIAL_MARK(OnPlayerPressTutorialMark.class, void.class),
+    ON_PLAYER_TUTORIAL_EVENT(OnPlayerTutorialEvent.class, void.class),
     ON_PLAYER_MOVE_REQUEST(OnPlayerMoveRequest.class, void.class, TerminateReturn.class),
     ON_PLAYER_PROFESSION_CHANGE(OnPlayerProfessionChange.class, void.class),
     ON_PLAYER_PROFESSION_CANCEL(OnPlayerProfessionCancel.class, void.class),

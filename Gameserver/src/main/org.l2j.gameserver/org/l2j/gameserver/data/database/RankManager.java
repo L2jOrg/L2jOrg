@@ -56,7 +56,7 @@ public class RankManager {
 
     private void scheduleBow(OnPlayerPeaceZoneEnter event) {
         var player = event.getPlayer();
-        if(player.getRank() == 1 && ( isNull(bowTask) || bowTask.isCancelled())) {
+        if(player.getRank() == 1 && event.getZone().getPlayersInsideCount() > 1 &&  (isNull(bowTask) || bowTask.isCancelled())) {
             bowTask = ThreadPool.scheduleAtFixedDelay(() -> Broadcast.toSelfAndKnownPlayersInRadius(player, new ExBowAction(player), 1000, p -> p.isInsideZone(ZoneType.PEACE)), 20, 180, TimeUnit.SECONDS);
         }
     }

@@ -747,8 +747,17 @@
 		</attributes>
 		<consume>
 			<mana initial="50"/>
+			<item initial="3031"/>
+			<item-count initial="30"/>
 		</consume>
 		<target />
+		<effects>
+			<obtain-soul>
+				<power initial="70">
+					<value level="2">100</value>
+				</power>
+			</obtain-soul>
+		</effects>
 	</skill>
 	<skill id="45152" name="Shadow Soul Gathering" max-level="2" action="A1">
 	<!-- 
@@ -765,8 +774,17 @@
 		</attributes>
 		<consume>
 			<mana initial="50"/>
+			<item initial="3031"/>
+			<item-count initial="30"/>
 		</consume>
 		<target />
+		<effects>
+			<obtain-soul is-shine="false">
+				<power initial="70">
+					<value level="2">100</value>
+				</power>
+			</obtain-soul>
+		</effects>
 	</skill>
 	<skill id="45153" name="Shadow Impact" action="A1">
 	<!-- Inflicts double the damage of P. Atk. -->
@@ -2004,6 +2022,23 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<effects> <!-- TODO review chances -->
+			<trigger-skill-by-attacking skill="45180" chance="20">
+				<power initial="1"/>
+			</trigger-skill-by-attacking>
+			<trigger-skill-by-magic skill="45180" chance="35">
+				<power initial="2"/>
+				<types>PHYSIC MAGIC</types>
+			</trigger-skill-by-magic>
+			<trigger-skill-by-attack skill="45180">
+				<power initial="3"/>
+				<chance initial="40"/>
+				<min-damage initial="10"/>
+			</trigger-skill-by-attack>
+			<trigger-skill-by-change-exp skill="45180" chance="60">
+				<power initial="4"/>
+			</trigger-skill-by-change-exp>
+		</effects>
 	</skill>
 	<skill id="45179" name="Shadow Mastery" max-level="2" >
 	<!-- 
@@ -2017,6 +2052,23 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<effects> <!-- TODO review chances -->
+			<trigger-skill-by-attacking skill="45181" chance="20">
+				<power initial="1"/>
+			</trigger-skill-by-attacking>
+			<trigger-skill-by-magic skill="45181" chance="35">
+				<power initial="2"/>
+				<types>PHYSIC MAGIC</types>
+			</trigger-skill-by-magic>
+			<trigger-skill-by-attack skill="45181">
+				<power initial="3"/>
+				<chance initial="40"/>
+				<min-damage initial="10"/>
+			</trigger-skill-by-attack>
+			<trigger-skill-by-avoid skill="45181" chance="60">
+				<power initial="4"/>
+			</trigger-skill-by-avoid>
+		</effects>
 	</skill>
 	<skill id="45180" name="Trigger Shine Soul Absorption" max-level="4" action="A1">
 	<!-- 
@@ -2032,6 +2084,11 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<obtain-soul>
+				<power initial="1"/>
+			</obtain-soul>
+		</effects>
 	</skill>
 	<skill id="45181" name="Trigger Shadow Soul Absorption" max-level="4" action="A1">
 	<!-- 
@@ -2047,6 +2104,11 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<obtain-soul is-shine="false">
+				<power initial="1"/>
+			</obtain-soul>
+		</effects>
 	</skill>
 	<skill id="45182" name="Soul Thrust" max-level="8" debuff="true" action="A1" type="MAGIC">
 	<!-- M. Def. -10%. -->
@@ -2195,6 +2257,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_ATTACK">
+				<power initial="20"/>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_DAMAGE_SKILL" stat-add="CRITICAL_DAMAGE_SKILL_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_SKILL_POWER" mode="PER" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45192" name="INT enhancement bonus" max-level="3" >
 	<!-- 
@@ -2207,6 +2280,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="MAGIC_ATTACK">
+				<power initial="20"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" start-level="2">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_SKILL_POWER" mode="PER" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45193" name="DEX enhancement bonus" max-level="3" >
 	<!-- 
@@ -2219,6 +2303,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="CRITICAL_RATE">
+				<power initial="50"/>
+			</stat-modify>
+			<reuse skill-type="PHYSIC" start-level="2">
+				<power initial="-10"/>
+			</reuse>
+			<stat-modify stat="EVASION_RATE" mode="PER" start-level="3">
+				<power initial="20"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45194" name="WIT enhancement bonus" max-level="3" >
 	<!-- 
@@ -2231,6 +2326,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="50"/>
+			</stat-modify>
+			<reuse skill-type="MAGIC" start-level="2">
+				<power initial="-10"/>
+			</reuse>
+			<stat-modify stat="MAGIC_EVASION_RATE" mode="PER" start-level="3">
+				<power initial="20"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45195" name="CON enhancement bonus" max-level="3" >
 	<!-- 
@@ -2243,6 +2349,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="MAX_HP" start-level="2">
+				<power initial="1000"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE" mode="PER" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45196" name="MEN enhancement bonus" max-level="3" >
 	<!-- 
@@ -2255,6 +2372,17 @@
 			<cast-range initial="-1"/>
 		</attributes>
 		<target />
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power initial="200"/>
+			</stat-modify>
+			<stat-modify stat="MAX_MP" start-level="2">
+				<power initial="1000"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE" start-level="3">
+				<power initial="10"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45197" name="Grand Master’s Transcendence Blessing">
 	<!-- Breaks the limit of the class with the help of the Grand Master and skills are AoE. -->
