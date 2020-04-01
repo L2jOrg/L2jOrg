@@ -54,7 +54,7 @@ public class CombinationItemsManager extends GameXmlReader {
 
                 item.addReward(new CombinationItemReward(id, count, type));
                 if (ItemEngine.getInstance().getTemplate(id) == null) {
-                    LOGGER.info("Could not find item with id {}", id);
+                    LOGGER.warn("Could not find item with id {}", id);
                 }
             });
             items.add(item);

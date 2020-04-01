@@ -541,7 +541,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20809" level="54" type="Monster" name="Ghost of the Tower">
+    <npc id="20809" level="54" type="Monster" name="Ghost of the Tower" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -556,7 +556,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="47780" sp="1433"/>
+        <acquire exp="51088" sp="1533" attribute_exp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="665.44751666667" hpRegen="6.5" mp="938.985" mpRegen="2.4"/>
             <attack physical="481.34551" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -582,6 +582,7 @@
             <skill id="4278" level="1"/> <!-- Dark Attack -->
             <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/>  <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -596,7 +597,7 @@
             <height normal="22"/>
         </collision>
     </npc>
-    <npc id="20810" level="55" type="Monster" name="Hallate's Watchman">
+    <npc id="20810" level="55" type="Monster" name="Hallate's Watchman" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="40"/>
             <param name="MoveAroundSocial1" value="40"/>
@@ -615,7 +616,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="25219" sp="756"/>
+        <acquire exp="26935" sp="809"  attribute_exp="11"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="686.46597" hpRegen="6.5" mp="969.075" mpRegen="2.4"/>
             <attack physical="529.480061" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -633,15 +634,17 @@
             <skill id="4088" level="6"/> <!-- Bleed -->
             <skill id="4094" level="6"/> <!-- NPC Cancel Magic -->
             <skill id="4098" level="6"/> <!-- Silence -->
-            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4416" level="1"/> <!-- Undead -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4275" level="2"/>  <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/>  <!-- Dark attack -->
+            <skill id="4438" level="2"/>  <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- WIND monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -675,7 +678,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20811" level="56" type="Monster" name="Ghastly Warrior">
+    <npc id="20811" level="56" type="Monster" name="Ghastly Warrior" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="100"/>
@@ -691,7 +694,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="50950" sp="1528"/>
+        <acquire exp="54507" sp="1636"  attribute_exp="12"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="707.89494" hpRegen="6.5" mp="1000.935" mpRegen="2.4"/>
             <attack physical="398.5869045" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
@@ -709,12 +712,14 @@
             <skill id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
             <skill id="4416" level="1"/> <!-- Undead -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
             <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistence -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -729,7 +734,7 @@
             <height normal="26"/>
         </collision>
     </npc>
-    <npc id="20812" level="57" type="Monster" name="Archer of Despair">
+    <npc id="20812" level="57" type="Monster" name="Archer of Despair" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="157"/>
             <param name="MoveAroundSocial1" value="157"/>
@@ -744,7 +749,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="284"/> <!-- rhand: Dark Elven Long Bow -->
-        <acquire exp="52959" sp="1588"/>
+        <acquire exp="56644" sp="1700"  attribute_exp="13"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="729.32391" hpRegen="6.5" mp="1033.68" mpRegen="2.4"/>
             <attack physical="1224.741398" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -760,14 +765,15 @@
             <skill id="4040" level="6"/> <!-- NPC Bow Attack -->
             <skill id="4416" level="1"/> <!-- Undead -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4413" level="13"/> <!-- Extremaly weak M. def -->
             <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
             <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -782,7 +788,7 @@
             <height normal="27"/>
         </collision>
     </npc>
-    <npc id="20813" level="58" type="Monster" name="Crendion">
+    <npc id="20813" level="58" type="Monster" name="Crendion" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="57"/>
             <param name="MoveAroundSocial1" value="57"/>
@@ -796,7 +802,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="54527" sp="1635"/>
+        <acquire exp="58343" sp="1751"  attribute_exp="13"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="750.34236333333" hpRegen="6.5" mp="1065.54" mpRegen="2.4"/>
             <attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -811,12 +817,16 @@
         <skillList>
             <skill id="4157" level="6"/> <!-- NPC Blaze - Magic -->
             <skill id="4160" level="6"/> <!-- NPC Aura Burn - Magic -->
-            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4416" level="1"/> <!-- Undead -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
+            <skill id="4410" level="13"/> <!-- Average P. Atk. -->
             <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="4413" level="13"/> <!-- Average M. Def. -->
+            <skill id="4275" level="2"/>  <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -831,7 +841,7 @@
             <height normal="28"/>
         </collision>
     </npc>
-    <npc id="20814" level="59" type="Monster" name="Blader of Despair">
+    <npc id="20814" level="59" type="Monster" name="Blader of Despair" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="110"/>
             <param name="MoveAroundSocial1" value="110"/>
@@ -848,7 +858,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="79"/> <!-- rhand: Sword of Damascus -->
-        <acquire exp="57130" sp="1713"/>
+        <acquire exp="61079" sp="1833"  attribute_exp="14"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="772.09974666667" hpRegen="6.5" mp="1098.285" mpRegen="2.4"/>
             <attack physical="668.9667633" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120"/>
@@ -866,12 +876,15 @@
             <skill id="4091" level="1"/> <!-- NPC Ogre Spirit Totem -->
             <skill id="4416" level="1"/> <!-- Undead -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Average M. Def. -->
             <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -886,7 +899,7 @@
             <height normal="27" grown="34"/>
         </collision>
     </npc>
-    <npc id="20815" level="60" type="Monster" name="Hallate's Hound Dog">
+    <npc id="20815" level="60" type="Monster" name="Hallate's Hound Dog" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -903,7 +916,7 @@
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
-        <acquire exp="38233" sp="1147"/>
+        <acquire exp="40890" sp="1227"  attribute_exp="16"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="793.487665" hpRegen="6.5" mp="1130.145" mpRegen="2.4"/>
             <attack physical="492.2252182" magical="369.73862" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -917,13 +930,16 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4072" level="6"/> <!-- Stun -->
-            <skill id="4416" level="4"/> <!-- Animals -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
             <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
             <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/>  <!-- Dark Attack -->
+            <skill id="4438" level="2"/>  <!-- Greater Resist Sleep -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -955,7 +971,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20816" level="61" type="Monster" name="Hallate's Royal Guard">
+    <npc id="20816" level="61" type="Monster" name="Hallate's Royal Guard" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -972,7 +988,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="946" lhand="945"/> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
-        <acquire exp="40377" sp="1211"/>
+        <acquire exp="43143" sp="1295"  attribute_exp="17"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="814.916635" hpRegen="7.5" mp="1162.89" mpRegen="2.7"/>
             <attack physical="430.6970659" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
@@ -989,16 +1005,16 @@
             <skill id="4067" level="6"/> <!-- NPC Mortal Blow -->
             <skill id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
             <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
             <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
             <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1031,7 +1047,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20817" level="62" type="Monster" name="Corrupt Sage">
+    <npc id="20817" level="62" type="Monster" name="Corrupt Sage" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="114"/>
             <param name="MoveAroundSocial1" value="114"/>
@@ -1048,7 +1064,7 @@
         <race>DEMONIC</race>
         <sex>MALE</sex>
         <equipment rhand="210"/> <!-- rhand: Staff of Evil Spirits -->
-        <acquire exp="82292" sp="2468"/>
+        <acquire exp="88040" sp="2642"  attribute_exp="17"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="836.345605" hpRegen="7.5" mp="1196.52" mpRegen="2.7"/>
             <attack physical="618.225025" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1064,15 +1080,16 @@
             <skill id="4118" level="6"/> <!-- Paralysis -->
             <skill id="4155" level="6"/> <!-- NPC Twister - Magic -->
             <skill id="4160" level="6"/> <!-- NPC Aura Burn - Magic -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
             <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4414" level="3"/> <!-- Light Armor Type -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1087,7 +1104,7 @@
             <height normal="40"/>
         </collision>
     </npc>
-    <npc id="20818" level="63" type="Monster" name="Hallate's Warrior">
+    <npc id="20818" level="63" type="Monster" name="Hallate's Warrior" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="215"/>
             <param name="MoveAroundSocial1" value="215"/>
@@ -1102,7 +1119,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="78"/> <!-- rhand: Great Sword -->
-        <acquire exp="43850" sp="1315"/>
+        <acquire exp="46842" sp="1406"  attribute_exp="19"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="857.7129975" hpRegen="7.5" mp="1229.265" mpRegen="2.7"/>
             <attack physical="618.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1117,16 +1134,16 @@
         <skillList>
             <skill id="4032" level="6"/> <!-- NPC Strike -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
             <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4439" level="2"/> <!-- Greater Hold Resistance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1155,7 +1172,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20819" level="64" type="Monster" name="Archer of Abyss">
+    <npc id="20819" level="64" type="Monster" name="Archer of Abyss" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="108"/>
             <param name="MoveAroundSocial1" value="108"/>
@@ -1168,7 +1185,7 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
-        <acquire exp="89045" sp="2671"/>
+        <acquire exp="95257" sp="2858"  attribute_exp="20"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="879.1419675" hpRegen="7.5" mp="1262.895" mpRegen="2.7"/>
             <attack physical="1424.522753" magical="397.98887" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -1182,15 +1199,17 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4141" level="6"/> <!-- NPC Wind Fist -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4275" level="2"/> <!-- Sacred Attack Weak Point -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4071" level="5"/> <!-- Bow Resistance -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1205,7 +1224,7 @@
             <height normal="55"/>
         </collision>
     </npc>
-    <npc id="20820" level="65" type="Monster" name="Hallate's Knight">
+    <npc id="20820" level="65" type="Monster" name="Hallate's Knight" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="74"/>
             <param name="MoveAroundSocial1" value="74"/>
@@ -1224,7 +1243,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="84"/> <!-- rhand: Tallum Blade -->
-        <acquire exp="47257" sp="1417"/>
+        <acquire exp="50487" sp="1515"  attribute_exp="22"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="900.139895" hpRegen="7.5" mp="1295.64" mpRegen="2.7"/>
             <attack physical="529.8341727" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1241,17 +1260,16 @@
             <skill id="4072" level="6"/> <!-- Stun -->
             <skill id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
             <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1280,7 +1298,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20821" level="66" type="Monster" name="Erin Ediunce">
+    <npc id="20821" level="66" type="Monster" name="Erin Ediunce" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -1298,7 +1316,7 @@
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
         <equipment rhand="3939"/> <!-- rhand: Lady's Fan -->
-        <acquire exp="116644" sp="3499"/>
+        <acquire exp="124849" sp="3746"  attribute_exp="23"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1151.4376725" hpRegen="7.5" mp="1329.27" mpRegen="2.7"/>
             <attack physical="548.9082091" magical="412.31647" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1314,15 +1332,17 @@
             <skill id="4047" level="6"/> <!-- Hold -->
             <skill id="4100" level="6"/> <!-- NPC Prominence -->
             <skill id="4119" level="3"/> <!-- Decrease Accuracy -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (5x) -->
+            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1337,7 +1357,7 @@
             <height normal="23"/>
         </collision>
     </npc>
-    <npc id="20822" level="65" type="Monster" name="Hallate's Maid">
+    <npc id="20822" level="65" type="Monster" name="Hallate's Maid" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -1354,7 +1374,7 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
-        <acquire exp="46878" sp="1406"/>
+        <acquire exp="50107" sp="1504"  attribute_exp="22"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="900.139895" hpRegen="7.5" mp="1295.64" mpRegen="2.7"/>
             <attack physical="480.294683" magical="412.31647" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
@@ -1370,18 +1390,17 @@
             <skill id="4039" level="6"/> <!-- NPC MP Drain -->
             <skill id="4046" level="6"/> <!-- Sleep -->
             <skill id="4094" level="6"/> <!-- NPC Cancel Magic -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4275" level="2"/> <!-- Sacred Attack Weak Point -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4071" level="5"/> <!-- Bow Resistance -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1410,7 +1429,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20823" level="68" type="Monster" name="Platinum Tribe Soldier">
+    <npc id="20823" level="68" type="Monster" name="Platinum Tribe Soldier" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="74"/>
@@ -1425,7 +1444,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="242"/> <!-- rhand: Soulfire Dirk -->
-        <acquire exp="64568" sp="1937"/>
+        <acquire exp="68983" sp="2070"  attribute_exp="26"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1203.5322375" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
             <attack physical="601.4970404" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
@@ -1439,13 +1458,17 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4073" level="6"/> <!-- Stun -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (5x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1475,7 +1498,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20824" level="69" type="Monster" name="Hallate's Commander">
+    <npc id="20824" level="69" type="Monster" name="Hallate's Commander" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -1490,7 +1513,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="1472"/> <!-- rhand: Dreadbane -->
-        <acquire exp="67015" sp="2010"/>
+        <acquire exp="71592" sp="2148"  attribute_exp="28"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1228.7790125" hpRegen="7.5" mp="1432.815" mpRegen="2.7"/>
             <attack physical="687.425189" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1505,16 +1528,16 @@
         <skillList>
             <skill id="4073" level="6"/> <!-- Stun -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
+            <skill id="4408" level="11"/> <!-- HP Increase (5x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Weak M. Def. -->
             <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4439" level="2"/> <!-- Greater Hold Resistance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1553,7 +1576,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20825" level="68" type="Monster" name="Hallate's Inspector">
+    <npc id="20825" level="68" type="Monster" name="Hallate's Inspector" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="140"/>
             <param name="MoveAroundSocial1" value="140"/>
@@ -1569,7 +1592,7 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
-        <acquire exp="64527" sp="1935"/>
+        <acquire exp="68942" sp="2069"  attribute_exp="26"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1203.5322375" hpRegen="7.5" mp="1398.3" mpRegen="2.7"/>
             <attack physical="710.797648" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1585,17 +1608,18 @@
             <skill id="4069" level="6"/> <!-- NPC Curve Beam Cannon -->
             <skill id="4078" level="6"/> <!-- NPC Flamestrike -->
             <skill id="4118" level="6"/> <!-- Paralysis -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="9"/> <!-- Slightly Weak M. Def. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (5x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Weak M. Def. -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
             <skill id="4071" level="5"/> <!-- Bow Resistance -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1639,7 +1663,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20826" level="69" type="Monster" name="Platinum Tribe Archer">
+    <npc id="20826" level="69" type="Monster" name="Platinum Tribe Archer" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="74"/>
@@ -1656,7 +1680,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="284"/> <!-- rhand: Carnage Bow -->
-        <acquire exp="109508" sp="3285"/>
+        <acquire exp="116979" sp="3510"  attribute_exp="28"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="983.02321" hpRegen="7.5" mp="1432.815" mpRegen="2.7"/>
             <attack physical="1579.392374" magical="441.25696" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
@@ -1670,17 +1694,17 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4040" level="6"/> <!-- NPC Bow Attack -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4414" level="3"/> <!-- Light Armor Type -->
-            <skill id="4095" level="1"/> <!-- Damage Shield -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1695,7 +1719,7 @@
             <height normal="27"/>
         </collision>
     </npc>
-    <npc id="20827" level="70" type="Monster" name="Platinum Tribe Warrior">
+    <npc id="20827" level="70" type="Monster" name="Platinum Tribe Warrior" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="110"/>
             <param name="MoveAroundSocial1" value="74"/>
@@ -1712,7 +1736,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="148"/> <!-- rhand: Sword of Valhalla -->
-        <acquire exp="69567" sp="2087"/>
+        <acquire exp="74309" sp="2230"  attribute_exp="30"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1254.087365" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
             <attack physical="606.8214636" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1728,18 +1752,17 @@
             <skill id="4032" level="6"/> <!-- NPC Strike -->
             <skill id="4072" level="6"/> <!-- Stun -->
             <skill id="4091" level="1"/> <!-- NPC Ogre Spirit Totem -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4071" level="5"/> <!-- Bow Resistance -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4439" level="2"/> <!-- Greater Hold Resistance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (5x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1769,7 +1792,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20828" level="71" type="Monster" name="Platinum Tribe Shaman">
+    <npc id="20828" level="71" type="Monster" name="Platinum Tribe Shaman" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="74"/>
@@ -1789,7 +1812,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="202"/> <!-- rhand: Mace of Underworld -->
-        <acquire exp="73675" sp="2210"/>
+        <acquire exp="78586" sp="2358"  attribute_exp="31"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1278.9030975" hpRegen="8.5" mp="1501.845" mpRegen="3"/>
             <attack physical="757.750103" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -1806,15 +1829,17 @@
             <skill id="4066" level="7"/> <!-- NPC Twister -->
             <skill id="4073" level="7"/> <!-- Stun -->
             <skill id="4094" level="7"/> <!-- NPC Cancel Magic -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="16"/> <!-- Very Strong P. Atk. -->
-            <skill id="4411" level="16"/> <!-- Very Strong M. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (5x) -->
+            <skill id="4410" level="13"/> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Very Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4275" level="2"/> <!-- Sacred Attack Weak Point -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
             <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1845,7 +1870,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20829" level="73" type="Monster" name="Platinum Tribe Prefect">
+    <npc id="20829" level="73" type="Monster" name="Platinum Tribe Prefect" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="74"/>
@@ -1864,7 +1889,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="79"/> <!-- rhand: Tear of Darkness -->
-        <acquire exp="160458" sp="4813"/>
+        <acquire exp="171417" sp="5143"  attribute_exp="36"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1273.964582" hpRegen="8.5" mp="1572.645" mpRegen="3"/>
             <attack physical="645.6531818" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1880,16 +1905,17 @@
             <skill id="4033" level="7"/> <!-- NPC Burn -->
             <skill id="4073" level="7"/> <!-- Stun -->
             <skill id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="17"/> <!-- Very Strong P. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (6x) -->
+            <skill id="4410" level="13"/> <!-- Very Strong P. Atk. -->
             <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="15"/> <!-- Strong P. Def. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1904,7 +1930,7 @@
             <height normal="32"/>
         </collision>
     </npc>
-    <npc id="20830" level="75" type="Monster" name="Guardian Angel">
+    <npc id="20830" level="75" type="Monster" name="Guardian Angel"  element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="50"/>
             <param name="MoveAroundSocial1" value="50"/>
@@ -1924,6 +1950,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="148"/> <!-- rhand: Sword of Valhalla -->
+        <acquire exp="91172" sp="2736"  attribute_exp="41"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1318.349644" hpRegen="8.5" mp="1643.445" mpRegen="3"/>
             <attack physical="885.1453226" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1939,17 +1966,17 @@
             <skill id="4033" level="7"/> <!-- NPC Burn -->
             <skill id="4073" level="7"/> <!-- Stun -->
             <skill id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="16"/> <!-- Very Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="12"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (6x) -->
+            <skill id="4410" level="13"/> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Weak M. Def. -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1964,7 +1991,7 @@
             <height normal="36.5" grown="42.5"/>
         </collision>
     </npc>
-    <npc id="20831" level="76" type="Monster" name="Seal Angel">
+    <npc id="20831" level="76" type="Monster" name="Seal Angel" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="50"/>
             <param name="MoveAroundSocial1" value="50"/>
@@ -1983,6 +2010,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="148"/> <!-- rhand: Sword of Valhalla -->
+        <acquire exp="96053" sp="2882"  attribute_exp="684"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1339.827876" hpRegen="8.5" mp="1679.73" mpRegen="3"/>
             <attack physical="910.8145288" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -1998,17 +2026,17 @@
             <skill id="4072" level="7"/> <!-- Stun -->
             <skill id="4090" level="1"/> <!-- NPC Wolf Spirit Totem -->
             <skill id="4232" level="7"/> <!-- NPC AE Strike -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="17"/> <!-- Very Strong P. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (6x) -->
+            <skill id="4410" level="13"/> <!-- Very Strong P. Atk. -->
             <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="12"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Weak M. Def. -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -3942,7 +3970,7 @@
             <height normal="36.5" grown="42.5"/>
         </collision>
     </npc>
-    <npc id="20859" level="75" type="Monster" name="Guardian Angel">
+    <npc id="20859" level="75" type="Monster" name="Guardian Angel" element="WIND">
         <!-- L2wiki: https://l2wiki.com/classic/Guardian_Angel -->
         <parameters>
             <param name="MoveAroundSocial" value="50"/>
@@ -3961,6 +3989,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="148"/> <!-- rhand: Sword of Valhalla -->
+        <acquire exp="180601" sp="5419"  attribute_exp="41"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1318.349644" hpRegen="8.5" mp="1643.445" mpRegen="3"/>
             <attack physical="804.677566" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -3976,17 +4005,17 @@
             <skill id="4046" level="7"/> <!-- Sleep -->
             <skill id="4087" level="7"/> <!-- NPC Blaze -->
             <skill id="4094" level="7"/> <!-- NPC Cancel Magic -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (6x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
             <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -4018,7 +4047,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20860" level="76" type="Monster" name="Seal Angel">
+    <npc id="20860" level="76" type="Monster" name="Seal Angel" element="WIND">
         <parameters>
             <param name="MoveAroundSocial" value="50"/>
             <param name="MoveAroundSocial1" value="50"/>
@@ -4035,6 +4064,7 @@
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="148"/> <!-- rhand: Sword of Valhalla -->
+        <acquire exp="187862" sp="5636"  attribute_exp="684"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1339.827876" hpRegen="8.5" mp="1679.73" mpRegen="3"/>
             <attack physical="684.3084364" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -4050,17 +4080,17 @@
             <skill id="4066" level="7"/> <!-- NPC Twister -->
             <skill id="4087" level="7"/> <!-- NPC Blaze -->
             <skill id="4118" level="7"/> <!-- Paralysis -->
-            <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="16"/> <!-- Very Strong M. Atk. -->
-            <skill id="4412" level="15"/> <!-- Strong P. Def. -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="11"/> <!-- HP Increase (6x) -->
+            <skill id="4410" level="13"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Very Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
-            <skill id="4085" level="1"/> <!-- Critical Damage -->
-            <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4461" level="2"/> <!-- Dagger Vulnerability -->
+            <skill id="4275" level="2"/> <!-- Sacred Attack Weak Point -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
             <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+            <skill id="48046" level="1"/> <!-- Wind Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
