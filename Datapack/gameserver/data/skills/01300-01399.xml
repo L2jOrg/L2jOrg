@@ -2492,7 +2492,7 @@
 			</item-count>
 		</consume>
 		<target type="TARGET" />
-		<abnormal type="PA_PD_UP">
+		<abnormal type="PA_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
@@ -2592,7 +2592,7 @@
 			</item-count>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="PA_PD_UP">
+		<abnormal type="PA_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
