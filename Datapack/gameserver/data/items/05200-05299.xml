@@ -168,7 +168,6 @@
 		<attributes weight="2080" price="14098000" commission-type="DUALSWORD"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="44" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="259.0"/>
 			<stat type="MAGIC_ATTACK" value="107.0"/>
@@ -550,7 +549,6 @@
 		<attributes weight="1530" price="244000" commission-type="TWO_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="38.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -566,7 +564,6 @@
 		<attributes weight="1520" price="409000" commission-type="TWO_HAND_SWORD" change-weapon="9210"/>
 		<crystal type="D" count="743"/>
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="49.0"/>
 			<stat type="MAGIC_ATTACK" value="26.0"/>
@@ -582,7 +579,6 @@
 		<attributes weight="1380" price="6130000" commission-type="TWO_HAND_SWORD" change-weapon="9296"/>
 		<crystal type="C" count="2452"/>
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="190.0"/>
 			<stat type="MAGIC_ATTACK" value="83.0"/>

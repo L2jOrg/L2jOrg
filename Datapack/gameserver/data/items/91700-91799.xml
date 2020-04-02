@@ -235,7 +235,7 @@
 	<armor id="91737" name="Brooch Lv. 1" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i00">
 	<!-- Brooch Lv. 1, 15-day. When equipped, it opens up 2 Gem slots. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" duration="21600"/>
+		<attributes weight="10" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
 			<skill id="13656"/> <!-- Brooch Lv. 1 -->
@@ -393,7 +393,7 @@
 	<armor id="91760" name="Brooch Lv. 5" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i06">
 	<!-- 30-day. When equipped, it opens up 6 Gem slots and adds 15 slots to the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" duration="43200"/>
+		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
 			<skill id="13660"/> <!-- Brooch Lv. 5 -->
@@ -476,7 +476,7 @@
 	</item>
 
 	<item id="91772" name="Scroll: PK" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
-	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. -->
+	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Karma is 0. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE"/>
 	</item>

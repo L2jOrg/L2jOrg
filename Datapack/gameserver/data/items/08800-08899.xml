@@ -6,7 +6,6 @@
 		<attributes weight="930" price="26968400" commission-type="DAGGER"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="220.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -24,7 +23,6 @@
 		<attributes weight="930" price="26968400" commission-type="DAGGER"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="220.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -42,7 +40,6 @@
 		<attributes weight="930" price="26968400" commission-type="DAGGER"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="220.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -60,7 +57,6 @@
 		<attributes weight="1820" price="26968400" commission-type="SPEAR"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="66" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -81,7 +77,6 @@
 		<attributes weight="1820" price="26968400" commission-type="SPEAR"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="80" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -100,7 +95,6 @@
 		<attributes weight="1820" price="26968400" commission-type="SPEAR"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="66" angle="180"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -112,13 +106,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="8806" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01">
+	<weapon id="8806" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Crit. Rate by 40. -->
 		<restriction freightable="false"/>
 		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="820" change-weapon="9361"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="10" angle="360"/>
-		<consume  soulshots="3" spiritshots="2" mana="5"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="570.0"/>
 			<stat type="MAGIC_ATTACK" value="133.0"/>
@@ -130,13 +123,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="8807" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01">
+	<weapon id="8807" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by about 7%. -->
 		<restriction freightable="false"/>
 		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="820" change-weapon="9362"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="10" angle="360"/>
-		<consume  soulshots="3" spiritshots="2" mana="5"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="570.0"/>
 			<stat type="MAGIC_ATTACK" value="133.0"/>
@@ -148,13 +140,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="8808" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01">
+	<weapon id="8808" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. +198 during a Critical Attack. -->
 		<restriction freightable="false"/>
 		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="639" change-weapon="9363"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="10" angle="360"/>
-		<consume  soulshots="3" spiritshots="2" mana="5"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="570.0"/>
 			<stat type="MAGIC_ATTACK" value="133.0"/>
@@ -172,7 +163,6 @@
 		<attributes weight="1330" price="26968400" commission-type="FIST_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="32" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -193,7 +183,6 @@
 		<attributes weight="1330" price="26968400" commission-type="FIST_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="32" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -214,7 +203,6 @@
 		<attributes weight="1330" price="26968400" commission-type="FIST_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="32" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -235,7 +223,6 @@
 		<attributes weight="820" price="26968400" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -255,7 +242,6 @@
 		<attributes weight="820" price="26968400" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -275,7 +261,6 @@
 		<attributes weight="820" price="26968400" commission-type="ONE_HAND_MAGIC_SWORD"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -295,7 +280,6 @@
 		<attributes weight="1510" price="26968400" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -316,7 +300,6 @@
 		<attributes weight="1510" price="26968400" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -337,7 +320,6 @@
 		<attributes weight="1510" price="26968400" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -358,7 +340,6 @@
 		<attributes weight="880" price="26968400" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="245.0"/>
 			<stat type="MAGIC_ATTACK" value="177.0"/>
@@ -379,7 +360,6 @@
 		<attributes weight="880" price="26968400" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="245.0"/>
 			<stat type="MAGIC_ATTACK" value="177.0"/>
@@ -400,7 +380,6 @@
 		<attributes weight="880" price="26968400" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="245.0"/>
 			<stat type="MAGIC_ATTACK" value="177.0"/>

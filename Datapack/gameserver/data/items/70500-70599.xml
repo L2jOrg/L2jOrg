@@ -504,7 +504,6 @@
 		<attributes weight="1350" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="194.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -520,7 +519,6 @@
 		<attributes weight="1920" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="194.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -540,7 +538,6 @@
 		<attributes weight="1600" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="194.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -557,7 +554,6 @@
 		<attributes weight="1570" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="194.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -574,7 +570,6 @@
 		<attributes weight="930" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="189.0"/>
 			<stat type="MAGIC_ATTACK" value="145.0"/>
@@ -591,7 +586,6 @@
 		<attributes weight="970" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="170.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -608,7 +602,6 @@
 		<attributes weight="1390" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="236.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -620,12 +613,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="70584" name="Bow of Peril" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hazard_bow_i00">
+	<weapon id="70584" name="Bow of Peril" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hazard_bow_i00" mana-consume="4">
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1700" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="3" mana="4"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="400.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -643,7 +635,6 @@
 		<attributes weight="2080" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="236.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -659,7 +650,6 @@
 		<attributes weight="1930" commission-type="OTHER_ITEM" duration="21600"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="236.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>

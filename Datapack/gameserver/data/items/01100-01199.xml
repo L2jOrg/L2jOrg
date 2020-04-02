@@ -294,7 +294,6 @@
 		<attributes weight="1400" price="116000" commission-type="ONE_HAND_MAGIC_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="18.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -545,13 +544,12 @@
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
-	<weapon id="1181" name="Neti's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
+	<weapon id="1181" name="Neti's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00" mana-consume="1">
 	<!-- Favorite bow used by Neti, who was once a Treasure Hunter. Use it when hunting the skeletons and Spartoi of the Ruins of Agony to gather bone pieces.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1850" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="10" angle="360"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="45.0"/>
 			<stat type="MAGIC_ATTACK" value="16.0"/>
@@ -569,7 +567,6 @@
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="19.0"/>
 			<stat type="MAGIC_ATTACK" value="16.0"/>

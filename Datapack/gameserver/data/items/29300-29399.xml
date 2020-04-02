@@ -5,7 +5,6 @@
 		<attributes weight="1010" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="90.0"/>
 			<stat type="MAGIC_ATTACK" value="79.0"/>
@@ -22,7 +21,6 @@
 		<attributes weight="2100" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="96.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -39,7 +37,6 @@
 		<attributes weight="2140" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="24.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -59,7 +56,6 @@
 		<attributes weight="2120" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -79,7 +75,6 @@
 		<attributes weight="2060" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="79.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -99,7 +94,6 @@
 		<attributes weight="2100" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="40.0"/>
 			<stat type="MAGIC_ATTACK" value="26.0"/>
@@ -119,7 +113,6 @@
 		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="51.0"/>
 			<stat type="MAGIC_ATTACK" value="32.0"/>
@@ -139,7 +132,6 @@
 		<attributes weight="2080" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="64.0"/>
 			<stat type="MAGIC_ATTACK" value="39.0"/>
@@ -159,7 +151,6 @@
 		<attributes weight="2050" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="79.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -179,7 +170,6 @@
 		<attributes weight="2090" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="51.0"/>
 			<stat type="MAGIC_ATTACK" value="32.0"/>
@@ -199,7 +189,6 @@
 		<attributes weight="2070" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="64.0"/>
 			<stat type="MAGIC_ATTACK" value="39.0"/>
@@ -219,7 +208,6 @@
 		<attributes weight="2050" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="92.0"/>
 			<stat type="MAGIC_ATTACK" value="54.0"/>
@@ -234,12 +222,11 @@
 		</skills>
 	</weapon>
 
-	<weapon id="29312" name="Short Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
+	<weapon id="29312" name="Short Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00" mana-consume="1">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1950" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="16.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -251,12 +238,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29313" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
+	<weapon id="29313" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00" mana-consume="1">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1930" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="23.0"/>
 			<stat type="MAGIC_ATTACK" value="9.0"/>
@@ -268,12 +254,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29314" name="Hunting Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hunting_bow_i00">
+	<weapon id="29314" name="Hunting Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hunting_bow_i00" mana-consume="1">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1910" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="34.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>
@@ -285,12 +270,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29315" name="Forest Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
+	<weapon id="29315" name="Forest Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00" mana-consume="1">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1900" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="49.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -302,12 +286,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29316" name="Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00">
+	<weapon id="29316" name="Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00" mana-consume="1">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1880" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="64.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -319,12 +302,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29317" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i00">
+	<weapon id="29317" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="82.0"/>
 			<stat type="MAGIC_ATTACK" value="26.0"/>
@@ -336,12 +318,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29318" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i00">
+	<weapon id="29318" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="114.0"/>
 			<stat type="MAGIC_ATTACK" value="35.0"/>
@@ -353,12 +334,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29319" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i00">
+	<weapon id="29319" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="105.0"/>
 			<stat type="MAGIC_ATTACK" value="32.0"/>
@@ -370,12 +350,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29320" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i00">
+	<weapon id="29320" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="105.0"/>
 			<stat type="MAGIC_ATTACK" value="32.0"/>
@@ -387,12 +366,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29321" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i00">
+	<weapon id="29321" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="132.0"/>
 			<stat type="MAGIC_ATTACK" value="39.0"/>
@@ -404,12 +382,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29322" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00">
+	<weapon id="29322" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="179.0"/>
 			<stat type="MAGIC_ATTACK" value="51.0"/>
@@ -421,12 +398,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="29323" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i00">
+	<weapon id="29323" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="191.0"/>
 			<stat type="MAGIC_ATTACK" value="54.0"/>
@@ -443,7 +419,6 @@
 		<attributes weight="1590" price="768" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="10.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -460,7 +435,6 @@
 		<attributes weight="1580" price="12500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="13.0"/>
 			<stat type="MAGIC_ATTACK" value="9.0"/>
@@ -477,7 +451,6 @@
 		<attributes weight="1560" price="54100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="21.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>
@@ -494,7 +467,6 @@
 		<attributes weight="1570" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="29.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -511,7 +483,6 @@
 		<attributes weight="1560" price="244000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="38.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -528,7 +499,6 @@
 		<attributes weight="1400" price="25500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="16.0"/>
 			<stat type="MAGIC_ATTACK" value="10.0"/>
@@ -545,7 +515,6 @@
 		<attributes weight="1540" price="409000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="49.0"/>
 			<stat type="MAGIC_ATTACK" value="26.0"/>
@@ -562,7 +531,6 @@
 		<attributes weight="1550" price="644000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="62.0"/>
 			<stat type="MAGIC_ATTACK" value="32.0"/>
@@ -579,7 +547,6 @@
 		<attributes weight="1540" price="967000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="78.0"/>
 			<stat type="MAGIC_ATTACK" value="39.0"/>
@@ -596,7 +563,6 @@
 		<attributes weight="1510" price="1400000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="96.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -613,7 +579,6 @@
 		<attributes weight="1520" price="1800000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="112.0"/>
 			<stat type="MAGIC_ATTACK" value="54.0"/>

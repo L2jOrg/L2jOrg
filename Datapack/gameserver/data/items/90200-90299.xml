@@ -165,7 +165,7 @@
 	<armor id="90226" name="Lv. 1 Brooch" type="NONE" body-part="BROOCH" icon="icon.etc_bm_brooch_lavianrose_i00">
 	<!-- Lv. 1 Brooch. 30-day. Activates 2 jewel slots when equipped.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" duration="43200"/>
+		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
 			<skill id="55468"/> <!-- Lv. 1 Brooch -->

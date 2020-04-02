@@ -373,7 +373,6 @@
 		<attributes weight="1380" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="156.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -390,7 +389,6 @@
 		<attributes weight="1090" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="111.0"/>
 			<stat type="MAGIC_ATTACK" value="111.0"/>
@@ -408,7 +406,6 @@
 		<attributes weight="990" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="152.0"/>
 			<stat type="MAGIC_ATTACK" value="134.0"/>
@@ -426,7 +423,6 @@
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="136.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -438,13 +434,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="71759" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00">
+	<weapon id="71759" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 	<!-- A special weapon to support the new beginning in the Aden Server. Cannot be enchanted or bestowed special abilities. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1720" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="3"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="323.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -462,7 +457,6 @@
 		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="156.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -480,7 +474,6 @@
 		<attributes weight="2270" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="190.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -497,7 +490,6 @@
 		<attributes weight="1640" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="156.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -517,7 +509,6 @@
 		<attributes weight="1380" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="190.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -534,7 +525,6 @@
 		<attributes weight="1460" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="190.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -552,7 +542,6 @@
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="149.0"/>
 			<stat type="MAGIC_ATTACK" value="110.0"/>
@@ -569,7 +558,6 @@
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="172.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -587,7 +575,6 @@
 		<attributes weight="2340" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="155.0"/>
 			<stat type="MAGIC_ATTACK" value="70.0"/>

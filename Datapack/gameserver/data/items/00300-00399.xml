@@ -5,7 +5,6 @@
 		<attributes weight="1940" price="8680000" commission-type="SPEAR"/>
 		<crystal type="B" count="1157"/>
 		<damage radius="66" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="175.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -25,7 +24,6 @@
 		<attributes weight="1990" price="4780000" commission-type="SPEAR"/>
 		<crystal type="C" count="1912"/>
 		<damage radius="66" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="144.0"/>
 			<stat type="MAGIC_ATTACK" value="78.0"/>
@@ -45,7 +43,6 @@
 		<attributes weight="2030" price="2290000" commission-type="SPEAR"/>
 		<crystal type="C" count="916"/>
 		<damage radius="66" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="107.0"/>
 			<stat type="MAGIC_ATTACK" value="61.0"/>
@@ -65,7 +62,6 @@
 		<attributes weight="1980" price="4780000" commission-type="SPEAR"/>
 		<crystal type="C" count="1912"/>
 		<damage radius="66" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="144.0"/>
 			<stat type="MAGIC_ATTACK" value="78.0"/>
@@ -85,7 +81,6 @@
 		<attributes weight="1840" price="20741000" commission-type="SPEAR"/>
 		<crystal type="A" count="1659"/>
 		<damage radius="66" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="232.0"/>
 			<stat type="MAGIC_ATTACK" value="114.0"/>
@@ -105,7 +100,6 @@
 		<attributes weight="660" price="768" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="6.0"/>
 			<stat type="MAGIC_ATTACK" value="8.0"/>
@@ -121,7 +115,6 @@
 		<attributes weight="630" price="136000" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="19.0"/>
 			<stat type="MAGIC_ATTACK" value="22.0"/>
@@ -137,7 +130,6 @@
 		<attributes weight="610" price="136000" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="19.0"/>
 			<stat type="MAGIC_ATTACK" value="22.0"/>
@@ -153,7 +145,6 @@
 		<attributes weight="620" price="244000" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="25.0"/>
 			<stat type="MAGIC_ATTACK" value="28.0"/>
@@ -169,7 +160,6 @@
 		<attributes weight="620" price="409000"/>
 		<crystal type="D" count="743"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="32.0"/>
 			<stat type="MAGIC_ATTACK" value="35.0"/>
@@ -185,7 +175,6 @@
 		<attributes weight="610" price="409000"/>
 		<crystal type="D" count="743"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="32.0"/>
 			<stat type="MAGIC_ATTACK" value="35.0"/>
@@ -201,7 +190,6 @@
 		<attributes weight="600" price="409000"/>
 		<crystal type="D" count="743"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="32.0"/>
 			<stat type="MAGIC_ATTACK" value="35.0"/>
@@ -217,7 +205,6 @@
 		<attributes weight="570" price="644000"/>
 		<crystal type="D" count="1170"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="41.0"/>
 			<stat type="MAGIC_ATTACK" value="43.0"/>
@@ -233,7 +220,6 @@
 		<attributes weight="580" price="967000"/>
 		<crystal type="D" count="1758"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="51.0"/>
 			<stat type="MAGIC_ATTACK" value="52.0"/>
@@ -249,7 +235,6 @@
 		<attributes weight="570" price="967000"/>
 		<crystal type="D" count="1758"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="51.0"/>
 			<stat type="MAGIC_ATTACK" value="52.0"/>
@@ -265,7 +250,6 @@
 		<attributes weight="540" price="1400000"/>
 		<crystal type="D" count="2545"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="63.0"/>
 			<stat type="MAGIC_ATTACK" value="63.0"/>
@@ -281,7 +265,6 @@
 		<attributes weight="1600" price="1400000"/>
 		<crystal type="D" count="2545"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="63.0"/>
 			<stat type="MAGIC_ATTACK" value="63.0"/>
@@ -297,7 +280,6 @@
 		<attributes weight="1600" price="1520000"/>
 		<crystal type="D" count="2763"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="67.0"/>
 			<stat type="MAGIC_ATTACK" value="66.0"/>
@@ -313,7 +295,6 @@
 		<attributes weight="1600" price="1520000"/>
 		<crystal type="D" count="2763"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="67.0"/>
 			<stat type="MAGIC_ATTACK" value="66.0"/>
@@ -329,7 +310,6 @@
 		<attributes weight="1600" price="1800000"/>
 		<crystal type="D" count="3272"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="74.0"/>
 			<stat type="MAGIC_ATTACK" value="72.0"/>
@@ -345,7 +325,6 @@
 		<attributes weight="1600" price="1800000"/>
 		<crystal type="D" count="3272"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="74.0"/>
 			<stat type="MAGIC_ATTACK" value="72.0"/>
@@ -361,7 +340,6 @@
 		<attributes weight="540" price="2870000"/>
 		<crystal type="C" count="1148"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="98.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>

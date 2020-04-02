@@ -188,7 +188,6 @@
 		<attributes weight="800" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="24.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -209,7 +208,6 @@
 		<attributes weight="2100" price="136000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="29.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -220,13 +218,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="3028" name="Crescent Moon Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00">
+	<weapon id="3028" name="Crescent Moon Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_short_bow_i00" mana-consume="1">
 	<!-- Use this bow to deliver the final blow to Commander Kadesh.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="600" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="10" angle="360"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="34.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>
@@ -244,7 +241,6 @@
 		<attributes weight="1200" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="17.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>

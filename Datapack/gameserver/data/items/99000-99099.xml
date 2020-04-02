@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<item id="99022" name="Orfen Doll Lv. 3" type="RUNE" icon="icon.bm_orfen_doll_30d">
+	<!-- <Orfen Doll's Spell Lv. 3>\nM. Atk. +20%\nM. Critical Damage +15%\nMAX MP +15%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
+		<restriction dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99023" name="Queen Ant Doll Lv. 3" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
+	<!-- <Queen Ant Doll's Spell Lv. 3>\nP. Atk. +15%\nP. Critical Damage +13%\nMAX HP +20%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
+		<restriction dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99024" name="Baium Doll Lv. 3" type="RUNE" icon="icon.bm_baium_doll_30d">
+	<!-- <Baium Doll's Spell Lv. 3>\nSkill Cooldown -5%\nP. Def. +20%\nM. Def. +20%\nMental Attack Resistance +50%\nParalysis Resistance +30%\nKnock Down Resistance +30%\nPull Resistance +30%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory. -->
+		<restriction dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99025" name="Frintezza Doll Lv. 3" type="RUNE" icon="icon.bm_doll_frintessa_30d">
+	<!-- <Frintezza Doll's Spell Lv. 3>\nSTR, INT +2\nDEX, WIT +2\nCON, MEN +2\nMovement Speed +7\nStun Attack +30%\nParalysis Attack +30%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.  -->
+		<restriction dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+</list>

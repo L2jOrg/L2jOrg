@@ -267,4 +267,64 @@
 		<attributes/>
 	</item>
 
+	<item id="71943" name="Ancient Relic Box" type="NONE" icon="icon.bm_gold_relic_box">
+	<!-- Double-click to obtain one of various treasures. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71944" name="Dragon's Coin" type="NONE" icon="icon.bm_goblin_coin">
+	<!-- Special coins that contain a dragon's power. Can be used through a Dimensional Merchant.  -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71945" name="Dragon's Coin Pouch" type="SCROLL" icon="icon.bm_dragon_present_poket">
+	<!-- Contains Dragon's Coins. Has a chance to obtain 1-15000 Dragon's Coins at random. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71946" name="Dragon's Treasure Chest" type="SCROLL" icon="icon.bm_dragon_present_4">
+	<!-- Use it to obtain Dragon' Special Elixir Lv. 2 x1, Golden Fruit Buff Lv. 2 x1, and 1 additional item. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71947" name="Heartthrob Box" type="SCROLL" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
+	<!-- Double-click to obtain one random item. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71948" name="XP Boost Energy" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
+	<!-- For 20 min., XP/SP Gain +30%. The buff does not disappear at death. Cooldown 1 min. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="71949" name="Dragon's Treasure Chest" type="NONE" icon="icon.bm_dragon_present">
+	<!-- Obtain the following items:\n\n<Guaranteed>\n- Dragon's Coin x3\n\n<Random>\n- Spellbook - Jin Death Knight Transformation x1\n- Talisman of Baium x1\n- Baium's Ring Lv. 1 x1\n- Zaken's Earring Lv. 1 x1\n- Baium’s Thunder Breaker x1\n- Zaken’s Blood Sword x1\n- Core’s Plasma Bow x1\n- Queen Ant’s Stone Crasher x1\n- Orfen’s Poisonous Sword x1\nand other items -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71950" name="Dragon's Coin" type="NONE" icon="icon.etc_11th_token">
+	<!-- Exchange them for items through the Store\n<Exchange at the Store>\n- Anakim Soul Crystal Lv. 1\n- Lilith Soul Crystal Lv. 1\n- Ignis Agathion Pack\n- Nebula Agathion Pack\n- Procella Agathion Pack\n- Petram Agathion Pack\n- Shiny Agathion Pack\n- Majestic Majestic Sigil (Seal)\nand other items -->
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71966" name="XP Boosting Rune" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_exp_i00">
+	<!-- Increases XP and SP acquired in hunt by 100%. -->
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71967" name="XP Boosting Rune (7-day) Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
+	<!-- Double-click to obtain a XP Boosting Rune (7-day). -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
 </list>

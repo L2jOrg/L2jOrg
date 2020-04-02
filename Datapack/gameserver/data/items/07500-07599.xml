@@ -204,12 +204,11 @@
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
-	<weapon id="7575" name="Draconic Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_draconic_bow_i00">
+	<weapon id="7575" name="Draconic Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_draconic_bow_i00" mana-consume="6">
 		<restriction freightable="false"/>
 		<attributes weight="1650" price="42759400" commission-type="OTHER_ITEM"/>
 		<crystal type="S"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="5" spiritshots="4" mana="6"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="581.0"/>
 			<stat type="MAGIC_ATTACK" value="132.0"/>

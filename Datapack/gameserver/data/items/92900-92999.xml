@@ -184,119 +184,102 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1330" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92931" name="Dragon Slayer" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_dragon_slayer_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1840" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92932" name="Halberd" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_halbard_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1900" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92933" name="Elemental Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_elemental_sword_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="830" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92934" name="Sword of Miracles" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_miracle_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="840" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92935" name="Elysian" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_elysian_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1580" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92936" name="Dasparion's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_dasparions_staff_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="920" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92937" name="Branch of the Mother Tree" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_worldtrees_branch_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="900" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92938" name="Bloody Orchid" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_bloody_orchid_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="960" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92939" name="Soul Separator" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_soul_separator_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="950" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92940" name="Blood Tornado" type="FIST" body-part="TWO_HAND" icon="icon.weapon_blood_tornado_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1370" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92941" name="Dragon Grinder" type="FIST" body-part="TWO_HAND" icon="icon.weapon_dragon_grinder_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1350" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
-	<weapon id="92942" name="Carnage Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_carnium_bow_i00">
+	<weapon id="92942" name="Carnage Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_carnium_bow_i00" mana-consume="5">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1670" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="3" spiritshots="2" mana="5"/>
 	</weapon>
 
-	<weapon id="92943" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i00">
+	<weapon id="92943" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i00" mana-consume="5">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1660" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="3" spiritshots="2" mana="5"/>
 	</weapon>
 
 	<weapon id="92944" name="Tallum Glaive" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_tallum_glaive_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1840" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92945" name="Dark Legion's Edge" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_dark_legions_edge_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1320" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92946" name="Meteor Shower" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_meteor_shower_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1600" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92947" name="Keshanberk*Keshanberk" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -304,7 +287,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2080" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92948" name="Keshanberk*Damascus" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -312,7 +294,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2080" price="18567400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92949" name="Damascus*Damascus" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -320,119 +301,104 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2080" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92950" name="Infernal Master" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_inferno_master_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1900" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92951" name="Spiritual Eye" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eye_of_soul_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1550" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92952" name="Flaming Dragon Skull" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_dragon_flame_head_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92953" name="Destroyer Hammer" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_hammer_of_destroyer_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1910" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92954" name="Doom Crusher" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_doom_crusher_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1900" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92955" name="Sirra's Blade" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sirr_blade_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92956" name="Sword of Ipos" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_sword_of_ipos_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1820" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92957" name="Barakiel's Axe" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_barakiel_axe_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1550" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92958" name="Behemoth' Tuning Fork" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_tuning_fork_of_behemoth_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1890" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92959" name="Naga Storm" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_naga_storm_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="930" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92960" name="Tiphon's Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_tiphon_spear_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1820" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
-	<weapon id="92961" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i00">
+	<weapon id="92961" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i00" mana-consume="5">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="3" spiritshots="2" mana="5"/>
 	</weapon>
 
 	<weapon id="92962" name="Sobekk's Hurricane" type="FIST" body-part="TWO_HAND" icon="icon.weapon_sobekk_hurricane_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1330" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92963" name="Themis' Tongue" type="MAGIC_SWORD" body-part="RIGHT_HAND" icon="icon.weapon_tongue_of_themis_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="820" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92964" name="Cabrio's Hand" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_hand_of_cabrio_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1510" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
+
 	</weapon>
 
 	<weapon id="92965" name="Daimon Crystal" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_crystal_of_deamon_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="880" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
+
 	</weapon>
 
 	<weapon id="92966" name="Tallum Blade*Damascus" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -440,49 +406,45 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1890" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
+
 	</weapon>
 
 	<weapon id="92967" name="Durendal" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_death_bringer_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
+
 	</weapon>
 
 	<weapon id="92968" name="Undertaker" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_death_bringer_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
+
 	</weapon>
 
 	<weapon id="92969" name="Divine Pain" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_pain_of_godness_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92970" name="Éclair Bijou" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_greed_stinger_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" price="26968400"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92971" name="Lacerator" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_greed_stinger_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" price="20741000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<weapon id="92972" name="White Lightning" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_lightning_blaze_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" price="14098000"/>
 		<crystal type="A"/>
-		<consume  soulshots="2" spiritshots="2"/>
 	</weapon>
 
 	<item id="92973" name="Scroll of Escape Box: Tower of Insolence" type="NONE" icon="icon.etc_exchange_box_i00">

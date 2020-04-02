@@ -6,7 +6,6 @@
 		<attributes weight="1300" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="301.0"/>
 			<stat type="MAGIC_ATTACK" value="166.0"/>
@@ -27,7 +26,6 @@
 		<attributes weight="1300" commission-type="TWO_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="368.0"/>
 			<stat type="MAGIC_ATTACK" value="166.0"/>
@@ -48,7 +46,6 @@
 		<attributes weight="1300" commission-type="BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="301.0"/>
 			<stat type="MAGIC_ATTACK" value="166.0"/>
@@ -70,7 +67,6 @@
 		<attributes weight="1300" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="255.0"/>
 			<stat type="MAGIC_ATTACK" value="204.0"/>
@@ -92,7 +88,6 @@
 		<attributes weight="1300" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="295.0"/>
 			<stat type="MAGIC_ATTACK" value="219.0"/>
@@ -114,7 +109,6 @@
 		<attributes weight="1300" commission-type="DAGGER" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="272.0"/>
 			<stat type="MAGIC_ATTACK" value="166.0"/>
@@ -136,7 +130,6 @@
 		<attributes weight="1300" commission-type="FIST_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="32" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="368.0"/>
 			<stat type="MAGIC_ATTACK" value="166.0"/>
@@ -152,13 +145,12 @@
 		</skills>
 	</weapon>
 
-	<weapon id="6619" name="Infinity Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_the_bow_of_hero_i00">
+	<weapon id="6619" name="Infinity Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_the_bow_of_hero_i00" mana-consume="6">
 	<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server.\n\nSpecial Ability: Infinity Bow. Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%, when equipped.\nInfinity Power - Archery: for 5 min. increases Speed and the bow's range. -->
 		<restriction freightable="false" olympiad-restricted="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" commission-type="BOW" reuse-delay="1398" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="10" angle="360"/>
-		<consume  soulshots="2" mana="6"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="665.0"/>
 			<stat type="MAGIC_ATTACK" value="177.0"/>
@@ -180,7 +172,6 @@
 		<attributes weight="1300" commission-type="DUALSWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="361.0"/>
 			<stat type="MAGIC_ATTACK" value="164.0"/>
@@ -201,7 +192,6 @@
 		<attributes weight="1300" commission-type="SPEAR" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="301.0"/>
 			<stat type="MAGIC_ATTACK" value="166.0"/>
