@@ -799,7 +799,7 @@
 		</attributes>
 		<target />
 	</skill>
-	<skill id="45154" name="Death Mark - Stage 1" max-level="5" debuff="true" action="A1" type="MAGIC">
+	<skill id="45154" name="Death Mark - Stage 1" max-level="5" debuff="true" action="A2" type="MAGIC">
 	<!-- 
 		level 1: Bearing the Death Mark so P. Critical Damage Received and M. Critical Damage is increased by 10%.
 		level 2: Bearing the Death Mark so P. Critical Damage Received and M. Critical Damage is increased by 12%.
@@ -816,7 +816,49 @@
 			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
-		<target />
+		<consume>
+			<mana-init initial="3">
+				<value level="3">4</value>
+				<value level="4">5</value>
+			</mana-init>
+		</consume>
+		<target type="ENEMY" />
+		<abnormal type="DEATH_MARK" visual="DEATH_MARK" >
+			<level initial="1">
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+			</level>
+			<time initial="10"/>
+			<chance initial="70"/>
+		</abnormal>
+		<effects>
+			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" mode="PER">
+				<power initial="-10">
+					<value level="2">-12</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="3">-25</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE_SKILL" mode="PER">
+				<power initial="-10">
+					<value level="2">-12</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="3">-25</value>
+				</power>
+			</stat-modify>
+			<stat-modify stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" mode="PER">
+				<power initial="-10">
+					<value level="2">-12</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="3">-25</value>
+				</power>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="45155" name="Soul Impact" max-level="8" action="A1">
 	<!-- 
@@ -1173,6 +1215,11 @@
 			</mana>
 		</consume>
 		<target />
+		<conditions>
+			<weapon>
+				<type>RAPIER</type>
+			</weapon>
+		</conditions>
 	</skill>
 	<skill id="45164" name="Jin Soul Spark" max-level="8" action="A1" type="MAGIC">
 	<!-- 
@@ -1246,7 +1293,27 @@
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
-		<target />
+		<target type="ENEMY"/>
+		<conditions>
+			<weapon>
+				<type>RAPIER</type>
+			</weapon>
+		</conditions>
+		<effects>
+			<magical-attack >
+				<power initial="55">
+					<value level="2">60</value>
+					<value level="3">65</value>
+					<value level="4">70</value>
+					<value level="5">75</value>
+					<value level="6">80</value>
+					<value level="7">85</value>
+					<value level="8">90</value>
+					<value level="9">95</value>
+					<value level="10">100</value>
+				</power>
+			</magical-attack>
+		</effects>
 	</skill>
 	<skill id="45166" name="Soul Strike" max-level="10" action="A1" type="MAGIC">
 	<!-- 
@@ -1279,7 +1346,27 @@
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
-		<target />
+		<target type="ENEMY"/>
+		<conditions>
+			<weapon>
+				<type>RAPIER</type>
+			</weapon>
+		</conditions>
+		<effects>
+			<magical-attack >
+				<power initial="65">
+					<value level="2">70</value>
+					<value level="3">75</value>
+					<value level="4">80</value>
+					<value level="5">85</value>
+					<value level="6">90</value>
+					<value level="7">95</value>
+					<value level="8">100</value>
+					<value level="9">105</value>
+					<value level="10">110</value>
+				</power>
+			</magical-attack>
+		</effects>
 	</skill>
 	<skill id="45167" name="Soul Strike" max-level="10" action="A1" type="MAGIC">
 	<!-- 
@@ -1312,7 +1399,27 @@
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
 		</attributes>
-		<target />
+		<target type="ENEMY"/>
+		<conditions>
+			<weapon>
+				<type>RAPIER</type>
+			</weapon>
+		</conditions>
+		<effects>
+			<magical-attack >
+				<power initial="70">
+					<value level="2">80</value>
+					<value level="3">90</value>
+					<value level="4">100</value>
+					<value level="5">110</value>
+					<value level="6">120</value>
+					<value level="7">130</value>
+					<value level="8">140</value>
+					<value level="9">150</value>
+					<value level="10">160</value>
+				</power>
+			</magical-attack>
+		</effects>
 	</skill>
 	<skill id="45168" name="Twin Shot" max-level="10" action="A1">
 	<!-- 
@@ -2023,19 +2130,19 @@
 		</attributes>
 		<target />
 		<effects> <!-- TODO review chances -->
-			<trigger-skill-by-attacking skill="45180" chance="20">
+			<trigger-skill-by-attacking skill="45180" chance="30">
 				<power initial="1"/>
 			</trigger-skill-by-attacking>
-			<trigger-skill-by-magic skill="45180" chance="35">
+			<trigger-skill-by-magic skill="45180" chance="30" target="ENEMY_ONLY">
 				<power initial="2"/>
-				<types>PHYSIC MAGIC</types>
+				<types>PHYSIC MAGIC STATIC</types>
 			</trigger-skill-by-magic>
 			<trigger-skill-by-attack skill="45180">
 				<power initial="3"/>
-				<chance initial="40"/>
+				<chance initial="30"/>
 				<min-damage initial="10"/>
 			</trigger-skill-by-attack>
-			<trigger-skill-by-change-exp skill="45180" chance="60">
+			<trigger-skill-by-change-exp skill="45180">
 				<power initial="4"/>
 			</trigger-skill-by-change-exp>
 		</effects>
@@ -2053,19 +2160,19 @@
 		</attributes>
 		<target />
 		<effects> <!-- TODO review chances -->
-			<trigger-skill-by-attacking skill="45181" chance="20">
+			<trigger-skill-by-attacking skill="45181" chance="30">
 				<power initial="1"/>
 			</trigger-skill-by-attacking>
-			<trigger-skill-by-magic skill="45181" chance="35">
+			<trigger-skill-by-magic skill="45181" chance="30" target="ENEMY_ONLY">
 				<power initial="2"/>
-				<types>PHYSIC MAGIC</types>
+				<types>PHYSIC MAGIC STATIC</types>
 			</trigger-skill-by-magic>
 			<trigger-skill-by-attack skill="45181">
 				<power initial="3"/>
-				<chance initial="40"/>
+				<chance initial="30"/>
 				<min-damage initial="10"/>
 			</trigger-skill-by-attack>
-			<trigger-skill-by-avoid skill="45181" chance="60">
+			<trigger-skill-by-avoid skill="45181" chance="30">
 				<power initial="4"/>
 			</trigger-skill-by-avoid>
 		</effects>
@@ -2086,7 +2193,9 @@
 		<target />
 		<effects>
 			<obtain-soul>
-				<power initial="1"/>
+				<power initial="1">
+					<value level="2">2</value>
+				</power>
 			</obtain-soul>
 		</effects>
 	</skill>
@@ -2106,7 +2215,9 @@
 		<target />
 		<effects>
 			<obtain-soul is-shine="false">
-				<power initial="1"/>
+				<power initial="1">
+					<value level="2">2</value>
+				</power>
 			</obtain-soul>
 		</effects>
 	</skill>

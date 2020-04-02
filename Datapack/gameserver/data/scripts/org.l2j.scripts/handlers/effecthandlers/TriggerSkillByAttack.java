@@ -88,7 +88,7 @@ public final class TriggerSkillByAttack extends AbstractEffect {
             return;
         }
 
-        if ((event.getDamage() < minDamage) || (Rnd.get(100) > chance) || !event.getAttacker().getInstanceType().isType(instanceType)) {
+        if (event.getDamage() < minDamage || !Rnd.chance(chance) || !event.getAttacker().getInstanceType().isType(instanceType)) {
             return;
         }
 

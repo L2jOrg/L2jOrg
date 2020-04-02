@@ -11,6 +11,8 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
+import org.l2j.gameserver.network.serverpackets.ExSpawnEmitter;
+import org.l2j.gameserver.network.serverpackets.ExSpawnEmitter.SpawnEmitterType;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -56,6 +58,7 @@ public class ObtainSoul extends AbstractEffect {
                 player.setShadowSouls((byte) (souls + power));
             }
         }
+        player.sendPacket(new ExSpawnEmitter(player, isShine ? SpawnEmitterType.WHITE_SOUL : SpawnEmitterType.BLACK_SOUL));
         player.sendPacket(new EtcStatusUpdate(player));
     }
 

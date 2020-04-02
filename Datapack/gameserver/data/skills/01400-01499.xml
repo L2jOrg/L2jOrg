@@ -735,7 +735,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="1435" name="Death Mark" max-level="5" action="A2">
+	<skill id="1435" name="Death Mark" max-level="5">
 	<!-- 
 		level 1: Has a chance to mark the enemy with a Death Mark for 10 seconds. Enemies marked with the Death Mark will receive more damage from Physical Critical Damage and Magic Critical Damage. \n\nDeath Mark Stage 1 activated
 		level 2: Has a chance to mark the enemy with a Death Mark for 10 seconds. Enemies marked with the Death Mark will receive more damage from Physical Critical Damage and Magic Critical Damage. \n\nDeath Mark Stage 2 activated
@@ -744,51 +744,28 @@
 		level 5: Has a chance to mark the enemy with a Death Mark for 10 seconds. Enemies marked with the Death Mark will receive more damage from Physical Critical Damage and Magic Critical Damage. \n\nDeath Mark Stage 5 activated
 	 -->
 		<icon initial="icon.skill1435"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0" level-bonus-rate="20">
-			<magic-level initial="24">
-				<value level="2">32</value>
-				<value level="3">40</value>
-				<value level="4">46</value>
-				<value level="5">52</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="1100"/>
-		</attributes>
-		<consume>
-			<mana-init initial="3">
-				<value level="3">4</value>
-				<value level="4">5</value>
-			</mana-init>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="DEATH_MARK" visual="DEATH_MARK" >
-			<level initial="1">
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="70"/>
-		</abnormal>
+		<attributes property="MAGIC"/>
+		<target />
 		<effects>
-			<damage-over-time ticks="5">
-				<power initial="24.0">
-					<value level="2">32.0</value>
-					<value level="3">41.0</value>
-					<value level="5">50.0</value>
+			<trigger-skill-by-attack skill="45154" target="ENEMY">
+				<power initial="1">
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
 				</power>
-			</damage-over-time>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="-20.0">
-					<value level="3">-23.0</value>
+				<chance initial="22"/>
+				<min-damage initial="10"/>
+			</trigger-skill-by-attack>
+			<trigger-skill-by-magic skill="45154" chance="30" target="ENEMY">
+				<power initial="1">
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
 				</power>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="-20.0">
-					<value level="3">-23.0</value>
-				</power>
-			</stat-modify>
+				<types>MAGIC PHYSIC STATIC</types>
+			</trigger-skill-by-magic>
 		</effects>
 	</skill>
 	<skill id="1440" name="Steal Divinity" max-level="3" action="A1" type="MAGIC">
