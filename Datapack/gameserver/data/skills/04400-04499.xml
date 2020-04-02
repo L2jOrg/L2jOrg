@@ -2233,7 +2233,7 @@
 			</mana>
 		</consume>
 		<target />
-		<abnormal type="PA_PD_UP">
+		<abnormal type="GREATER_PA_PD_UP">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
