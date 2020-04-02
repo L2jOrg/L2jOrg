@@ -3,397 +3,2418 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org xsd/combination-items.xsd" >
-
-	<!-- Sigel Rune Stone -->
-	<item one="29818" two="29818" chance="69"> <!-- Sigel' Rune (Lv. 1) / Sigel' Rune (Lv. 1) -->
-		<reward id="29819" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 2) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29819" two="29818" chance="70"> <!-- Sigel' Rune (Lv. 2) / Sigel' Rune (Lv. 1) -->
-		<reward id="29820" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 3) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29820" two="29818" chance="72"> <!-- Sigel' Rune (Lv. 3) / Sigel' Rune (Lv. 1) -->
-		<reward id="29821" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 4) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29821" two="29818" chance="73"> <!-- Sigel' Rune (Lv. 4) / Sigel' Rune (Lv. 1) -->
-		<reward id="29822" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 5) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29822" two="29818" chance="64"> <!-- Sigel' Rune (Lv. 5) / Sigel' Rune (Lv. 1) -->
-		<reward id="29823" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 6) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29823" two="29818" chance="41"> <!-- Sigel' Rune (Lv. 6) / Sigel' Rune (Lv. 1) -->
-		<reward id="29824" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 7) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29824" two="29818" chance="42"> <!-- Sigel' Rune (Lv. 7) / Sigel' Rune (Lv. 1) -->
-		<reward id="29825" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 8) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29825" two="29818" chance="40"> <!-- Sigel' Rune (Lv. 8) / Sigel' Rune (Lv. 1) -->
-		<reward id="29826" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 9) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29826" two="29818" chance="42"> <!-- Sigel' Rune (Lv. 9) / Sigel' Rune (Lv. 1) -->
-		<reward id="29827" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 10) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29827" two="29818" chance="43"> <!-- Sigel' Rune (Lv. 10) / Sigel' Rune (Lv. 1) -->
-		<reward id="29828" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 11) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29828" two="29818" chance="42"> <!-- Sigel' Rune (Lv. 11) / Sigel' Rune (Lv. 1) -->
-		<reward id="29829" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 12) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<item one="29829" two="29818" chance="42"> <!-- Sigel' Rune (Lv. 12) / Sigel' Rune (Lv. 1) -->
-		<reward id="29830" type="ON_SUCCESS" /> <!-- Sigel' Rune (Lv. 13) -->
-		<reward id="29818" type="ON_FAILURE" /> <!-- Sigel' Rune (Lv. 1) -->
-	</item>
-	<!-- Tyrr Rune Stone -->
-	<item one="29838" two="29838" chance="69"> <!-- Tyrr' Rune (Lv. 1) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29839" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 2) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29839" two="29838" chance="70"> <!-- Tyrr' Rune (Lv. 2) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29840" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 3) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29840" two="29838" chance="72"> <!-- Tyrr' Rune (Lv. 3) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29841" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 4) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29841" two="29838" chance="73"> <!-- Tyrr' Rune (Lv. 4) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29842" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 5) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29842" two="29838" chance="64"> <!-- Tyrr' Rune (Lv. 5) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29843" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 6) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29843" two="29838" chance="41"> <!-- Tyrr' Rune (Lv. 6) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29844" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 7) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29844" two="29838" chance="42"> <!-- Tyrr' Rune (Lv. 7) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29845" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 8) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29845" two="29838" chance="40"> <!-- Tyrr' Rune (Lv. 8) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29846" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 9) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29846" two="29838" chance="42"> <!-- Tyrr' Rune (Lv. 9) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29847" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 10) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29847" two="29838" chance="43"> <!-- Tyrr' Rune (Lv. 10) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29848" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 11) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29848" two="29838" chance="42"> <!-- Tyrr' Rune (Lv. 11) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29849" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 12) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<item one="29849" two="29838" chance="42"> <!-- Tyrr' Rune (Lv. 12) / Tyrr' Rune (Lv. 1) -->
-		<reward id="29850" type="ON_SUCCESS" /> <!-- Tyrr' Rune (Lv. 13) -->
-		<reward id="29838" type="ON_FAILURE" /> <!-- Tyrr' Rune (Lv. 1) -->
-	</item>
-	<!-- Othell Rune Stone -->
-	<item one="29858" two="29858" chance="69"> <!-- Othell' Rune (Lv. 1) / Othell' Rune (Lv. 1) -->
-		<reward id="29859" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 2) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29859" two="29858" chance="70"> <!-- Othell' Rune (Lv. 2) / Othell' Rune (Lv. 1) -->
-		<reward id="29860" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 3) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29860" two="29858" chance="72"> <!-- Othell' Rune (Lv. 3) / Othell' Rune (Lv. 1) -->
-		<reward id="29861" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 4) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29861" two="29858" chance="73"> <!-- Othell' Rune (Lv. 4) / Othell' Rune (Lv. 1) -->
-		<reward id="29862" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 5) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29862" two="29858" chance="64"> <!-- Othell' Rune (Lv. 5) / Othell' Rune (Lv. 1) -->
-		<reward id="29863" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 6) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29863" two="29858" chance="41"> <!-- Othell' Rune (Lv. 6) / Othell' Rune (Lv. 1) -->
-		<reward id="29864" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 7) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29864" two="29858" chance="42"> <!-- Othell' Rune (Lv. 7) / Othell' Rune (Lv. 1) -->
-		<reward id="29865" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 8) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29865" two="29858" chance="40"> <!-- Othell' Rune (Lv. 8) / Othell' Rune (Lv. 1) -->
-		<reward id="29866" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 9) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29866" two="29858" chance="42"> <!-- Othell' Rune (Lv. 9) / Othell' Rune (Lv. 1) -->
-		<reward id="29867" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 10) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29867" two="29858" chance="43"> <!-- Othell' Rune (Lv. 10) / Othell' Rune (Lv. 1) -->
-		<reward id="29868" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 11) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29868" two="29858" chance="42"> <!-- Othell' Rune (Lv. 11) / Othell' Rune (Lv. 1) -->
-		<reward id="29869" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 12) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<item one="29869" two="29858" chance="42"> <!-- Othell' Rune (Lv. 12) / Othell' Rune (Lv. 1) -->
-		<reward id="29870" type="ON_SUCCESS" /> <!-- Othell' Rune (Lv. 13) -->
-		<reward id="29858" type="ON_FAILURE" /> <!-- Othell' Rune (Lv. 1) -->
-	</item>
-	<!-- Yul Rune Stone -->
-	<item one="29878" two="29878" chance="69"> <!-- Yul' Rune (Lv. 1) / Yul' Rune (Lv. 1) -->
-		<reward id="29879" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 2) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29879" two="29878" chance="70"> <!-- Yul' Rune (Lv. 2) / Yul' Rune (Lv. 1) -->
-		<reward id="29880" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 3) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29880" two="29878" chance="72"> <!-- Yul' Rune (Lv. 3) / Yul' Rune (Lv. 1) -->
-		<reward id="29881" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 4) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29881" two="29878" chance="73"> <!-- Yul' Rune (Lv. 4) / Yul' Rune (Lv. 1) -->
-		<reward id="29882" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 5) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29882" two="29878" chance="64"> <!-- Yul' Rune (Lv. 5) / Yul' Rune (Lv. 1) -->
-		<reward id="29883" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 6) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29883" two="29878" chance="41"> <!-- Yul' Rune (Lv. 6) / Yul' Rune (Lv. 1) -->
-		<reward id="29884" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 7) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29884" two="29878" chance="42"> <!-- Yul' Rune (Lv. 7) / Yul' Rune (Lv. 1) -->
-		<reward id="29885" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 8) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29885" two="29878" chance="40"> <!-- Yul' Rune (Lv. 8) / Yul' Rune (Lv. 1) -->
-		<reward id="29886" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 9) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29886" two="29878" chance="42"> <!-- Yul' Rune (Lv. 9) / Yul' Rune (Lv. 1) -->
-		<reward id="29887" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 10) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29887" two="29878" chance="43"> <!-- Yul' Rune (Lv. 10) / Yul' Rune (Lv. 1) -->
-		<reward id="29888" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 11) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29888" two="29878" chance="42"> <!-- Yul' Rune (Lv. 11) / Yul' Rune (Lv. 1) -->
-		<reward id="29889" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 12) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<item one="29889" two="29878" chance="42"> <!-- Yul' Rune (Lv. 12) / Yul' Rune (Lv. 1) -->
-		<reward id="29890" type="ON_SUCCESS" /> <!-- Yul' Rune (Lv. 13) -->
-		<reward id="29878" type="ON_FAILURE" /> <!-- Yul' Rune (Lv. 1) -->
-	</item>
-	<!-- Feoh Rune Stone -->
-	<item one="29898" two="29898" chance="69"> <!-- Feoh' Rune (Lv. 1) / Feoh' Rune (Lv. 1) -->
-		<reward id="29899" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 2) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29899" two="29898" chance="70"> <!-- Feoh' Rune (Lv. 2) / Feoh' Rune (Lv. 1) -->
-		<reward id="29900" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 3) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29900" two="29898" chance="72"> <!-- Feoh' Rune (Lv. 3) / Feoh' Rune (Lv. 1) -->
-		<reward id="29901" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 4) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29901" two="29898" chance="73"> <!-- Feoh' Rune (Lv. 4) / Feoh' Rune (Lv. 1) -->
-		<reward id="29902" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 5) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29902" two="29898" chance="64"> <!-- Feoh' Rune (Lv. 5) / Feoh' Rune (Lv. 1) -->
-		<reward id="29903" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 6) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29903" two="29898" chance="41"> <!-- Feoh' Rune (Lv. 6) / Feoh' Rune (Lv. 1) -->
-		<reward id="29904" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 7) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29904" two="29898" chance="42"> <!-- Feoh' Rune (Lv. 7) / Feoh' Rune (Lv. 1) -->
-		<reward id="29905" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 8) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29905" two="29898" chance="40"> <!-- Feoh' Rune (Lv. 8) / Feoh' Rune (Lv. 1) -->
-		<reward id="29906" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 9) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29906" two="29898" chance="42"> <!-- Feoh' Rune (Lv. 9) / Feoh' Rune (Lv. 1) -->
-		<reward id="29907" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 10) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29907" two="29898" chance="43"> <!-- Feoh' Rune (Lv. 10) / Feoh' Rune (Lv. 1) -->
-		<reward id="29908" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 11) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29908" two="29898" chance="42"> <!-- Feoh' Rune (Lv. 11) / Feoh' Rune (Lv. 1) -->
-		<reward id="29909" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 12) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<item one="29909" two="29898" chance="42"> <!-- Feoh' Rune (Lv. 12) / Feoh' Rune (Lv. 1) -->
-		<reward id="29910" type="ON_SUCCESS" /> <!-- Feoh' Rune (Lv. 13) -->
-		<reward id="29898" type="ON_FAILURE" /> <!-- Feoh' Rune (Lv. 1) -->
-	</item>
-	<!-- Iss Rune Stone -->
-	<item one="29918" two="29918" chance="69"> <!-- Iss' Rune (Lv. 1) / Iss' Rune (Lv. 1) -->
-		<reward id="29919" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 2) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29919" two="29918" chance="70"> <!-- Iss' Rune (Lv. 2) / Iss' Rune (Lv. 1) -->
-		<reward id="29920" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 3) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29920" two="29918" chance="72"> <!-- Iss' Rune (Lv. 3) / Iss' Rune (Lv. 1) -->
-		<reward id="29921" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 4) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29921" two="29918" chance="73"> <!-- Iss' Rune (Lv. 4) / Iss' Rune (Lv. 1) -->
-		<reward id="29922" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 5) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29922" two="29918" chance="64"> <!-- Iss' Rune (Lv. 5) / Iss' Rune (Lv. 1) -->
-		<reward id="29923" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 6) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29923" two="29918" chance="41"> <!-- Iss' Rune (Lv. 6) / Iss' Rune (Lv. 1) -->
-		<reward id="29924" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 7) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29924" two="29918" chance="42"> <!-- Iss' Rune (Lv. 7) / Iss' Rune (Lv. 1) -->
-		<reward id="29925" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 8) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29925" two="29918" chance="40"> <!-- Iss' Rune (Lv. 8) / Iss' Rune (Lv. 1) -->
-		<reward id="29926" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 9) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29926" two="29918" chance="42"> <!-- Iss' Rune (Lv. 9) / Iss' Rune (Lv. 1) -->
-		<reward id="29927" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 10) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29927" two="29918" chance="43"> <!-- Iss' Rune (Lv. 10) / Iss' Rune (Lv. 1) -->
-		<reward id="29928" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 11) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29928" two="29918" chance="42"> <!-- Iss' Rune (Lv. 11) / Iss' Rune (Lv. 1) -->
-		<reward id="29929" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 12) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<item one="29929" two="29918" chance="42"> <!-- Iss' Rune (Lv. 12) / Iss' Rune (Lv. 1) -->
-		<reward id="29930" type="ON_SUCCESS" /> <!-- Iss' Rune (Lv. 13) -->
-		<reward id="29918" type="ON_FAILURE" /> <!-- Iss' Rune (Lv. 1) -->
-	</item>
-	<!-- Wynn Rune Stone -->
-	<item one="29938" two="29938" chance="69"> <!-- Wynn' Rune (Lv. 1) / Wynn' Rune (Lv. 1) -->
-		<reward id="29939" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 2) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29939" two="29938" chance="70"> <!-- Wynn' Rune (Lv. 2) / Wynn' Rune (Lv. 1) -->
-		<reward id="29940" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 3) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29940" two="29938" chance="72"> <!-- Wynn' Rune (Lv. 3) / Wynn' Rune (Lv. 1) -->
-		<reward id="29941" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 4) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29941" two="29938" chance="73"> <!-- Wynn' Rune (Lv. 4) / Wynn' Rune (Lv. 1) -->
-		<reward id="29942" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 5) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29942" two="29938" chance="64"> <!-- Wynn' Rune (Lv. 5) / Wynn' Rune (Lv. 1) -->
-		<reward id="29943" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 6) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29943" two="29938" chance="41"> <!-- Wynn' Rune (Lv. 6) / Wynn' Rune (Lv. 1) -->
-		<reward id="29944" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 7) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29944" two="29938" chance="42"> <!-- Wynn' Rune (Lv. 7) / Wynn' Rune (Lv. 1) -->
-		<reward id="29945" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 8) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29945" two="29938" chance="40"> <!-- Wynn' Rune (Lv. 8) / Wynn' Rune (Lv. 1) -->
-		<reward id="29946" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 9) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29946" two="29938" chance="42"> <!-- Wynn' Rune (Lv. 9) / Wynn' Rune (Lv. 1) -->
-		<reward id="29947" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 10) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29947" two="29938" chance="43"> <!-- Wynn' Rune (Lv. 10) / Wynn' Rune (Lv. 1) -->
-		<reward id="29948" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 11) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29948" two="29938" chance="42"> <!-- Wynn' Rune (Lv. 11) / Wynn' Rune (Lv. 1) -->
-		<reward id="29949" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 12) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<item one="29949" two="29938" chance="42"> <!-- Wynn' Rune (Lv. 12) / Wynn' Rune (Lv. 1) -->
-		<reward id="29950" type="ON_SUCCESS" /> <!-- Wynn' Rune (Lv. 13) -->
-		<reward id="29938" type="ON_FAILURE" /> <!-- Wynn' Rune (Lv. 1) -->
-	</item>
-	<!-- Aeore Rune Stone -->
-	<item one="29958" two="29958" chance="69"> <!-- Aeore' Rune (Lv. 1) / Aeore' Rune (Lv. 1) -->
-		<reward id="29959" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 2) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29959" two="29958" chance="70"> <!-- Aeore' Rune (Lv. 2) / Aeore' Rune (Lv. 1) -->
-		<reward id="29960" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 3) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29960" two="29958" chance="72"> <!-- Aeore' Rune (Lv. 3) / Aeore' Rune (Lv. 1) -->
-		<reward id="29961" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 4) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29961" two="29958" chance="73"> <!-- Aeore' Rune (Lv. 4) / Aeore' Rune (Lv. 1) -->
-		<reward id="29962" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 5) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29962" two="29958" chance="64"> <!-- Aeore' Rune (Lv. 5) / Aeore' Rune (Lv. 1) -->
-		<reward id="29963" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 6) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29963" two="29958" chance="41"> <!-- Aeore' Rune (Lv. 6) / Aeore' Rune (Lv. 1) -->
-		<reward id="29964" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 7) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29964" two="29958" chance="42"> <!-- Aeore' Rune (Lv. 7) / Aeore' Rune (Lv. 1) -->
-		<reward id="29965" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 8) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29965" two="29958" chance="40"> <!-- Aeore' Rune (Lv. 8) / Aeore' Rune (Lv. 1) -->
-		<reward id="29966" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 9) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29966" two="29958" chance="42"> <!-- Aeore' Rune (Lv. 9) / Aeore' Rune (Lv. 1) -->
-		<reward id="29967" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 10) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29967" two="29958" chance="43"> <!-- Aeore' Rune (Lv. 10) / Aeore' Rune (Lv. 1) -->
-		<reward id="29968" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 11) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29968" two="29958" chance="42"> <!-- Aeore' Rune (Lv. 11) / Aeore' Rune (Lv. 1) -->
-		<reward id="29969" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 12) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
-	</item>
-	<item one="29969" two="29958" chance="42"> <!-- Aeore' Rune (Lv. 12) / Aeore' Rune (Lv. 1) -->
-		<reward id="29970" type="ON_SUCCESS" /> <!-- Aeore' Rune (Lv. 13) -->
-		<reward id="29958" type="ON_FAILURE" /> <!-- Aeore' Rune (Lv. 1) -->
+	  
+	<!-- Brooch Lv. 2 -->
+	<item one="90311" two="90311" chance="25">
+		<reward id="90312" type="ON_SUCCESS" /> <!-- Brooch Lv. 2 -->
+		<reward id="90311" type="ON_FAILURE" /> <!-- Brooch Lv. 1 -->
+	</item>
+	<!-- Topaz -->
+	<item one="90313" two="90313" chance="65">
+		<reward id="90314" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90313" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90314" two="90314" chance="40">
+		<reward id="90315" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90314" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90315" two="90315" chance="20">
+		<reward id="90316" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90315" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90316" two="90316" chance="10">
+		<reward id="90317" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90316" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Garnet -->
+	<item one="90318" two="90318" chance="65">
+		<reward id="90319" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90318" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90319" two="90319" chance="40">
+		<reward id="90320" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90319" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90320" two="90320" chance="20">
+		<reward id="90321" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90320" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90321" two="90321" chance="10">
+		<reward id="90322" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90321" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Jade -->
+	<item one="90323" two="90323" chance="65">
+		<reward id="90324" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90323" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90324" two="90324" chance="40">
+		<reward id="90325" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90324" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90325" two="90325" chance="20">
+		<reward id="90326" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90325" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90326" two="90326" chance="10">
+		<reward id="90327" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90326" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Ruby -->
+	<item one="90328" two="90328" chance="65">
+		<reward id="90329" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90328" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90329" two="90329" chance="40">
+		<reward id="90330" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90329" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90330" two="90330" chance="20">
+		<reward id="90331" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90330" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90331" two="90331" chance="10">
+		<reward id="90332" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90331" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Sapphire -->
+	<item one="90333" two="90333" chance="65">
+		<reward id="90334" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90333" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90334" two="90334" chance="40">
+		<reward id="90335" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90334" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90335" two="90335" chance="20">
+		<reward id="90336" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90335" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90336" two="90336" chance="10">
+		<reward id="90337" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90336" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Diamond -->
+	<item one="90338" two="90338" chance="65">
+		<reward id="90339" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90338" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90339" two="90339" chance="40">
+		<reward id="90340" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90339" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90340" two="90340" chance="20">
+		<reward id="90341" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90340" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90341" two="90341" chance="10">
+		<reward id="90342" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90341" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Pearl -->
+	<item one="90343" two="90343" chance="65">
+		<reward id="90344" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90343" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90344" two="90344" chance="40">
+		<reward id="90345" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90344" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90345" two="90345" chance="20">
+		<reward id="90346" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90345" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90346" two="90346" chance="10">
+		<reward id="90347" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90346" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Vital Stone -->
+	<item one="90353" two="90353" chance="65">
+		<reward id="90354" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90353" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90354" two="90354" chance="40">
+		<reward id="90355" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90354" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90355" two="90355" chance="20">
+		<reward id="90356" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90355" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="90356" two="90356" chance="10">
+		<reward id="90357" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90356" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	
+	<!-- Sigel's Rune -->
+	<item one="90534" two="90534" chance="70">
+		<reward id="90535" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90535" two="90534" chance="70">
+		<reward id="90536" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90536" two="90534" chance="70">
+		<reward id="90537" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90537" two="90534" chance="70">
+		<reward id="90538" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90538" two="90534" chance="70">
+		<reward id="90539" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90537" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90539" two="90534" chance="70">
+		<reward id="90540" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90537" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90540" two="90534" chance="70">
+		<reward id="90541" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90537" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90541" two="90534" chance="70">
+		<reward id="90542" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90537" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90542" two="90534" chance="70">
+		<reward id="90543" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90537" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90543" two="90534" chance="70">
+		<reward id="90544" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90542" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90544" two="90534" chance="70">
+		<reward id="90545" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90542" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90545" two="90534" chance="70">
+		<reward id="90546" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90542" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90546" two="90534" chance="70">
+		<reward id="90547" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90542" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90547" two="90534" chance="70">
+		<reward id="90548" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90542" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90548" two="90534" chance="70">
+		<reward id="90549" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90549" two="90534" chance="70">
+		<reward id="90550" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90550" two="90534" chance="70">
+		<reward id="90551" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90551" two="90534" chance="70">
+		<reward id="90552" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90552" two="90534" chance="70">
+		<reward id="90553" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90534" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90554" two="90554" chance="70">
+		<reward id="90555" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90555" two="90554" chance="70">
+		<reward id="90556" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90556" two="90554" chance="70">
+		<reward id="90557" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90557" two="90554" chance="70">
+		<reward id="90558" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90558" two="90554" chance="70">
+		<reward id="90559" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90557" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90559" two="90554" chance="70">
+		<reward id="90560" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90557" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90560" two="90554" chance="70">
+		<reward id="90561" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90557" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90561" two="90554" chance="70">
+		<reward id="90562" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90557" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90562" two="90554" chance="70">
+		<reward id="90563" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90557" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90563" two="90554" chance="70">
+		<reward id="90564" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90562" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90564" two="90554" chance="70">
+		<reward id="90565" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90562" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90565" two="90554" chance="70">
+		<reward id="90566" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90562" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90566" two="90554" chance="70">
+		<reward id="90567" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90562" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90567" two="90554" chance="70">
+		<reward id="90568" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90562" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90568" two="90554" chance="70">
+		<reward id="90569" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90569" two="90554" chance="70">
+		<reward id="90570" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90570" two="90554" chance="70">
+		<reward id="90571" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90571" two="90554" chance="70">
+		<reward id="90572" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90572" two="90554" chance="70">
+		<reward id="90573" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90554" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90574" two="90574" chance="70">
+		<reward id="90575" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90575" two="90574" chance="70">
+		<reward id="90576" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90576" two="90574" chance="70">
+		<reward id="90577" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90577" two="90574" chance="70">
+		<reward id="90578" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90578" two="90574" chance="70">
+		<reward id="90579" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90577" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90579" two="90574" chance="70">
+		<reward id="90580" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90577" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90580" two="90574" chance="70">
+		<reward id="90581" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90577" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90581" two="90574" chance="70">
+		<reward id="90582" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90577" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90582" two="90574" chance="70">
+		<reward id="90583" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90577" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90583" two="90574" chance="70">
+		<reward id="90584" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90582" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90584" two="90574" chance="70">
+		<reward id="90585" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90582" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90585" two="90574" chance="70">
+		<reward id="90586" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90582" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90586" two="90574" chance="70">
+		<reward id="90587" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90582" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90587" two="90574" chance="70">
+		<reward id="90588" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90582" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90588" two="90574" chance="70">
+		<reward id="90589" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90589" two="90574" chance="70">
+		<reward id="90590" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90590" two="90574" chance="70">
+		<reward id="90591" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90591" two="90574" chance="70">
+		<reward id="90592" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90592" two="90574" chance="70">
+		<reward id="90593" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90574" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90594" two="90594" chance="70">
+		<reward id="90595" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90595" two="90594" chance="70">
+		<reward id="90596" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90596" two="90594" chance="70">
+		<reward id="90597" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90597" two="90594" chance="70">
+		<reward id="90598" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90598" two="90594" chance="70">
+		<reward id="90599" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90597" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90599" two="90594" chance="70">
+		<reward id="90600" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90597" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90600" two="90594" chance="70">
+		<reward id="90601" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90597" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90601" two="90594" chance="70">
+		<reward id="90602" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90597" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90602" two="90594" chance="70">
+		<reward id="90603" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90597" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90603" two="90594" chance="70">
+		<reward id="90604" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90602" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90604" two="90594" chance="70">
+		<reward id="90605" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90602" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90605" two="90594" chance="70">
+		<reward id="90606" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90602" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90606" two="90594" chance="70">
+		<reward id="90607" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90602" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90607" two="90594" chance="70">
+		<reward id="90608" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90602" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90608" two="90594" chance="70">
+		<reward id="90609" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90609" two="90594" chance="70">
+		<reward id="90610" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90610" two="90594" chance="70">
+		<reward id="90611" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90611" two="90594" chance="70">
+		<reward id="90612" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90612" two="90594" chance="70">
+		<reward id="90613" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90594" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90614" two="90614" chance="70">
+		<reward id="90615" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90615" two="90614" chance="70">
+		<reward id="90616" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90616" two="90614" chance="70">
+		<reward id="90617" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90617" two="90614" chance="70">
+		<reward id="90618" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90618" two="90614" chance="70">
+		<reward id="90619" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90617" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90619" two="90614" chance="70">
+		<reward id="90620" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90617" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90620" two="90614" chance="70">
+		<reward id="90621" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90617" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90621" two="90614" chance="70">
+		<reward id="90622" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90617" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90622" two="90614" chance="70">
+		<reward id="90623" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90617" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90623" two="90614" chance="70">
+		<reward id="90624" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90622" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90624" two="90614" chance="70">
+		<reward id="90625" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90622" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90625" two="90614" chance="70">
+		<reward id="90626" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90622" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90626" two="90614" chance="70">
+		<reward id="90627" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90622" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90627" two="90614" chance="70">
+		<reward id="90628" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90622" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90628" two="90614" chance="70">
+		<reward id="90629" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90629" two="90614" chance="70">
+		<reward id="90630" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90630" two="90614" chance="70">
+		<reward id="90631" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90631" two="90614" chance="70">
+		<reward id="90632" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90632" two="90614" chance="70">
+		<reward id="90633" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90614" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90634" two="90634" chance="70">
+		<reward id="90635" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90635" two="90634" chance="70">
+		<reward id="90636" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90636" two="90634" chance="70">
+		<reward id="90637" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90637" two="90634" chance="70">
+		<reward id="90638" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90638" two="90634" chance="70">
+		<reward id="90639" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90637" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90639" two="90634" chance="70">
+		<reward id="90640" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90637" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90640" two="90634" chance="70">
+		<reward id="90641" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90637" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90641" two="90634" chance="70">
+		<reward id="90642" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90637" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90642" two="90634" chance="70">
+		<reward id="90643" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90637" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90643" two="90634" chance="70">
+		<reward id="90644" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90642" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90644" two="90634" chance="70">
+		<reward id="90645" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90642" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90645" two="90634" chance="70">
+		<reward id="90646" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90642" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90646" two="90634" chance="70">
+		<reward id="90647" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90642" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90647" two="90634" chance="70">
+		<reward id="90648" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90642" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90648" two="90634" chance="70">
+		<reward id="90649" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90649" two="90634" chance="70">
+		<reward id="90650" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90650" two="90634" chance="70">
+		<reward id="90651" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90651" two="90634" chance="70">
+		<reward id="90652" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90652" two="90634" chance="70">
+		<reward id="90653" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90634" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90654" two="90654" chance="70">
+		<reward id="90655" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90655" two="90654" chance="70">
+		<reward id="90656" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90656" two="90654" chance="70">
+		<reward id="90657" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90657" two="90654" chance="70">
+		<reward id="90658" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90658" two="90654" chance="70">
+		<reward id="90659" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90657" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90659" two="90654" chance="70">
+		<reward id="90660" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90657" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90660" two="90654" chance="70">
+		<reward id="90661" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90657" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90661" two="90654" chance="70">
+		<reward id="90662" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90657" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90662" two="90654" chance="70">
+		<reward id="90663" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90657" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90663" two="90654" chance="70">
+		<reward id="90664" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90662" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90664" two="90654" chance="70">
+		<reward id="90665" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90662" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90665" two="90654" chance="70">
+		<reward id="90666" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90662" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90666" two="90654" chance="70">
+		<reward id="90667" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90662" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90667" two="90654" chance="70">
+		<reward id="90668" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90662" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90668" two="90654" chance="70">
+		<reward id="90669" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90669" two="90654" chance="70">
+		<reward id="90670" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90670" two="90654" chance="70">
+		<reward id="90671" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90671" two="90654" chance="70">
+		<reward id="90672" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90672" two="90654" chance="70">
+		<reward id="90673" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90654" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90674" two="90674" chance="70">
+		<reward id="90675" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90675" two="90674" chance="70">
+		<reward id="90676" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90676" two="90674" chance="70">
+		<reward id="90677" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90677" two="90674" chance="70">
+		<reward id="90678" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90678" two="90674" chance="70">
+		<reward id="90679" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90677" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90679" two="90674" chance="70">
+		<reward id="90680" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90677" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90680" two="90674" chance="70">
+		<reward id="90681" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90677" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90681" two="90674" chance="70">
+		<reward id="90682" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90677" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90682" two="90674" chance="70">
+		<reward id="90683" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90677" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90683" two="90674" chance="70">
+		<reward id="90684" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90682" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90684" two="90674" chance="70">
+		<reward id="90685" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90682" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90685" two="90674" chance="70">
+		<reward id="90686" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90682" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90686" two="90674" chance="70">
+		<reward id="90687" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90682" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90687" two="90674" chance="70">
+		<reward id="90688" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90682" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90688" two="90674" chance="70">
+		<reward id="90689" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90689" two="90674" chance="70">
+		<reward id="90690" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90690" two="90674" chance="70">
+		<reward id="90691" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90691" two="90674" chance="70">
+		<reward id="90692" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90692" two="90674" chance="70">
+		<reward id="90693" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90674" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Brooch Lv. 3 -->
+	<item one="90312" two="90312" chance="25">
+		<reward id="90934" type="ON_SUCCESS" /> <!-- Brooch Lv. 3 -->
+		<reward id="90312" type="ON_FAILURE" /> <!-- Brooch Lv. 2 -->
+	</item>
+	<item one="90924" two="90924" chance="70">
+		<reward id="90925" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90924" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90925" two="90925" chance="70">
+		<reward id="90926" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90925" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90926" two="90926" chance="70">
+		<reward id="90927" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90926" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90927" two="90927" chance="70">
+		<reward id="90928" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90927" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90929" two="90929" chance="70">
+		<reward id="90930" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90929" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90930" two="90930" chance="70">
+		<reward id="90931" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90930" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90931" two="90931" chance="70">
+		<reward id="90932" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90931" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90932" two="90932" chance="70">
+		<reward id="90933" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90932" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91061" two="91059" chance="70">
+		<reward id="91062" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91061" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91062" two="91059" chance="70">
+		<reward id="91063" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91061" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91063" two="91059" chance="70">
+		<reward id="91064" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91061" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91064" two="91059" chance="70">
+		<reward id="91065" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91061" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91066" two="91059" chance="70">
+		<reward id="91067" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91066" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91067" two="91059" chance="70">
+		<reward id="91068" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91066" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91068" two="91059" chance="70">
+		<reward id="91069" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91066" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91069" two="91059" chance="70">
+		<reward id="91070" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91066" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91071" two="91059" chance="70">
+		<reward id="91072" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91071" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91072" two="91059" chance="70">
+		<reward id="91073" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91071" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91073" two="91059" chance="70">
+		<reward id="91074" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91071" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91074" two="91059" chance="70">
+		<reward id="91075" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91071" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91077" two="91076" chance="70">
+		<reward id="91078" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91077" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91078" two="91076" chance="70">
+		<reward id="91079" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91077" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91079" two="91076" chance="70">
+		<reward id="91080" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91077" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91080" two="91076" chance="70">
+		<reward id="91081" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91077" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91081" two="91076" chance="70">
+		<reward id="91082" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91077" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91082" two="91076" chance="70">
+		<reward id="91083" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91082" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91083" two="91076" chance="70">
+		<reward id="91084" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91082" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91084" two="91076" chance="70">
+		<reward id="91085" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91082" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91085" two="91076" chance="70">
+		<reward id="91086" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91082" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91086" two="91076" chance="70">
+		<reward id="91087" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91082" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91087" two="91076" chance="70">
+		<reward id="91088" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91082" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91088" two="91076" chance="70">
+		<reward id="91089" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91088" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91089" two="91076" chance="70">
+		<reward id="91090" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91088" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91090" two="91076" chance="70">
+		<reward id="91091" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91088" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91091" two="91076" chance="70">
+		<reward id="91092" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91088" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91092" two="91076" chance="70">
+		<reward id="91093" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91088" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91093" two="91076" chance="70">
+		<reward id="91094" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91088" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91094" two="91076" chance="70">
+		<reward id="91140" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91094" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91140" two="91076" chance="70">
+		<reward id="91141" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91094" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91141" two="91076" chance="70">
+		<reward id="91142" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91094" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91142" two="91076" chance="70">
+		<reward id="91143" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91094" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91143" two="91076" chance="70">
+		<reward id="91144" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91094" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91144" two="91076" chance="70">
+		<reward id="91145" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91094" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	
+	<!-- Anakim's Rune -->
+	<item one="91163" two="91163" chance="95">
+		<reward id="91164" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91163" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91164" two="91164" chance="95">
+		<reward id="91165" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91164" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91165" two="91165" chance="95">
+		<reward id="91166" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91165" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91166" two="91166" chance="95">
+		<reward id="91167" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91166" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91167" two="91167" chance="50">
+		<reward id="91168" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91167" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91168" two="91168" chance="50">
+		<reward id="91169" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91168" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91169" two="91169" chance="50">
+		<reward id="91170" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91169" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91170" two="91170" chance="30">
+		<reward id="91171" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91170" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91171" two="91171" chance="30">
+		<reward id="91172" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91171" type="ON_FAILURE" /> <!-- info -->
+	</item>	
+	<!-- Lilith's Rune -->
+	<item one="91173" two="91173" chance="95">
+		<reward id="91174" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91173" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91174" two="91174" chance="95">
+		<reward id="91175" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91174" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91175" two="91175" chance="95">
+		<reward id="91176" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91175" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91176" two="91176" chance="95">
+		<reward id="91177" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91176" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91177" two="91177" chance="50">
+		<reward id="91178" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91177" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91178" two="91178" chance="50">
+		<reward id="91179" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91178" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91179" two="91179" chance="50">
+		<reward id="91180" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91179" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91180" two="91180" chance="30">
+		<reward id="91181" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91180" type="ON_FAILURE" /> <!-- info -->
+	</item>                                
+	<item one="91181" two="91181" chance="30">
+		<reward id="91182" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91181" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Emerald -->
+	<item one="91357" two="91357" chance="65">
+		<reward id="91358" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91357" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91358" two="91358" chance="40">
+		<reward id="91359" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91358" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91359" two="91359" chance="20">
+		<reward id="91360" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91359" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91360" two="91360" chance="10">
+		<reward id="91361" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91360" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Emerald -->
+	<item one="91361" two="91356" chance="50">
+		<reward id="91362" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91361" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91362" two="91356" chance="70">
+		<reward id="91363" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91362" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91363" two="91356" chance="70">
+		<reward id="91364" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91362" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91364" two="91356" chance="70">
+		<reward id="91365" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91362" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91365" two="91356" chance="70">
+		<reward id="91366" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91362" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90317" two="91356" chance="70">
+		<reward id="91305" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90317" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91305" two="91356" chance="70">
+		<reward id="91306" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91305" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91306" two="91356" chance="70">
+		<reward id="91307" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91305" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91307" two="91356" chance="70">
+		<reward id="91308" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91305" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91308" two="91356" chance="70">
+		<reward id="91309" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91305" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90322" two="91356" chance="70">
+		<reward id="91310" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90322" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91310" two="91356" chance="70">
+		<reward id="91311" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91310" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91311" two="91356" chance="70">
+		<reward id="91312" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91310" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91312" two="91356" chance="70">
+		<reward id="91313" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91310" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91313" two="91356" chance="70">
+		<reward id="91314" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91310" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90327" two="91356" chance="70">
+		<reward id="91315" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90327" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91315" two="91356" chance="70">
+		<reward id="91316" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91315" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91316" two="91356" chance="70">
+		<reward id="91317" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91315" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91317" two="91356" chance="70">
+		<reward id="91318" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91315" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91318" two="91356" chance="70">
+		<reward id="91319" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91315" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90332" two="91356" chance="70">
+		<reward id="91320" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90332" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91320" two="91356" chance="70">
+		<reward id="91321" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91320" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91321" two="91356" chance="70">
+		<reward id="91322" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91320" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91322" two="91356" chance="70">
+		<reward id="91323" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91320" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91323" two="91356" chance="70">
+		<reward id="91324" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91320" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90337" two="91356" chance="70">
+		<reward id="91325" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90337" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91325" two="91356" chance="70">
+		<reward id="91326" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91325" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91326" two="91356" chance="70">
+		<reward id="91327" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91325" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91327" two="91356" chance="70">
+		<reward id="91328" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91325" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91328" two="91356" chance="70">
+		<reward id="91329" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91325" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90342" two="91356" chance="70">
+		<reward id="91330" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90342" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91330" two="91356" chance="70">
+		<reward id="91331" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91330" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91331" two="91356" chance="70">
+		<reward id="91332" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91330" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91332" two="91356" chance="70">
+		<reward id="91333" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91330" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91333" two="91356" chance="70">
+		<reward id="91334" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91330" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90347" two="91356" chance="70">
+		<reward id="91335" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90347" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91335" two="91356" chance="70">
+		<reward id="91336" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91335" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91336" two="91356" chance="70">
+		<reward id="91337" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91335" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91337" two="91356" chance="70">
+		<reward id="91338" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91335" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91338" two="91356" chance="70">
+		<reward id="91339" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91335" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90357" two="91356" chance="70">
+		<reward id="91340" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90357" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91340" two="91356" chance="70">
+		<reward id="91341" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91340" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91341" two="91356" chance="70">
+		<reward id="91342" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91340" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91342" two="91356" chance="70">
+		<reward id="91343" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91340" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91343" two="91356" chance="70">
+		<reward id="91344" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91340" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90928" two="91356" chance="70">
+		<reward id="91345" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90928" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91345" two="91356" chance="70">
+		<reward id="91346" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91345" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91346" two="91356" chance="70">
+		<reward id="91347" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91345" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91347" two="91356" chance="70">
+		<reward id="91348" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91345" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91348" two="91356" chance="70">
+		<reward id="91349" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91345" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="90933" two="91356" chance="70">
+		<reward id="91350" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90933" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91350" two="91356" chance="70">
+		<reward id="91351" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91350" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91351" two="91356" chance="70">
+		<reward id="91352" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91350" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91352" two="91356" chance="70">
+		<reward id="91353" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91350" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91353" two="91356" chance="70">
+		<reward id="91354" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91350" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Brooch Lv. 4 -->
+	<item one="90934" two="90934" chance="25">
+		<reward id="91303" type="ON_SUCCESS" /> <!-- Brooch Lv. 3 -->
+		<reward id="90934" type="ON_FAILURE" /> <!-- Brooch Lv. 2 -->
+	</item>
+	<!-- Brooch Lv. 5 -->
+	<item one="91303" two="91303" chance="25">
+		<reward id="91304" type="ON_SUCCESS" /> <!-- Brooch Lv. 5 -->
+		<reward id="91303" type="ON_FAILURE" /> <!-- Brooch Lv. 4 -->
+	</item>
+	<item one="91398" two="90045" chance="70">
+		<reward id="91394" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91399" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91145" two="91145" chance="70">
+		<reward id="91791" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91791" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91791" two="91791" chance="70">
+		<reward id="91792" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91792" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Talisman Bracelet Lv. 2 -->
+	<item one="9589" two="9589" chance="25">
+		<reward id="9590" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="9589" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Talisman Bracelet Lv. 3 -->
+	<item one="9590" two="9590" chance="25">
+		<reward id="9591" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="9590" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Talisman Bracelet Lv. 4 -->
+	<item one="9591" two="9591" chance="25">
+		<reward id="49703" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="9591" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Talisman Bracelet Lv. 5 -->
+	<item one="49703" two="49703" chance="25">
+		<reward id="92031" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="49703" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Talisman Bracelet Lv. 6 -->
+	<item one="92031" two="92031" chance="25">
+		<reward id="92032" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="92031" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Lilith's Rune Lv. 10 -->
+	<item one="91182" two="91173" chance="70">
+		<reward id="92920" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91181" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Lilith' Soul Crystal Lv. 12 -->
+	<item one="92920" two="91173" chance="70">
+		<reward id="92921" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91181" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Lilith' Soul Crystal Lv. 13 -->
+	<item one="92921" two="91173" chance="70">
+		<reward id="92922" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91181" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Lilith' Soul Crystal Lv. 14 -->
+	<item one="92922" two="91173" chance="70">
+		<reward id="92923" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91181" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Lilith' Soul Crystal Lv. 15 -->
+	<item one="92923" two="91173" chance="70">
+		<reward id="92924" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91181" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Anakim's Rune Lv. 10 -->
+	<item one="91172" two="91163" chance="70">
+		<reward id="92925" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91171" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Anakim's Soul Crystal Lv. 11 -->
+	<item one="92925" two="91163" chance="70">
+		<reward id="92926" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91171" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Anakim's Soul Crystal Lv. 12 -->
+	<item one="92926" two="91163" chance="70">
+		<reward id="92927" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91171" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Anakim's Soul Crystal Lv. 13 -->
+	<item one="92927" two="91163" chance="70">
+		<reward id="92928" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91171" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Anakim's Soul Crystal Lv. 14 -->
+	<item one="92928" two="91163" chance="70">
+		<reward id="92929" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91171" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Jewel of Adventurer Fragment - Q 25+ all player -->
+	<item one="91936" two="91936" chance="70">
+		<reward id="93065" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="93065" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Agathion Bracelet Lv. 5 -->
+	<item one="90891" two="90891" chance="70">
+		<reward id="91161" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="90891" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Baium's Doll -->
+	<item one="91256" two="91256" chance="7">
+		<reward id="91423" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91256" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91423" two="91423" chance="70">
+		<reward id="99024" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91423" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Queen Ant's Doll -->
+	<item one="91257" two="91257" chance="7">
+		<reward id="91422" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91257" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91422" two="91422" chance="70">
+		<reward id="99023" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91422" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Orfen's Doll -->
+	<item one="91258" two="91258" chance="7">
+		<reward id="91424" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91258" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91424" two="91424" chance="70">
+		<reward id="99022" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91424" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Frintezza's Doll -->
+	<item one="91604" two="91604" chance="7">
+		<reward id="91605" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91604" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="91605" two="91605" chance="70">
+		<reward id="99025" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="91605" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	
+	<!-- Sigel's Rune -->
+	<item one="29818" two="29818" chance="70">
+		<reward id="29819" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29819" two="29818" chance="70">
+		<reward id="29820" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29820" two="29818" chance="70">
+		<reward id="29821" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29821" two="29818" chance="70">
+		<reward id="29822" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29822" two="29818" chance="70">
+		<reward id="29823" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29823" two="29818" chance="40">
+		<reward id="29824" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29824" two="29818" chance="40">
+		<reward id="29825" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29825" two="29818" chance="40">
+		<reward id="29826" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29826" two="29818" chance="40">
+		<reward id="29827" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29827" two="29818" chance="40">
+		<reward id="29828" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29828" two="29818" chance="40">
+		<reward id="29829" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="29829" two="29818" chance="40">
+		<reward id="29830" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29818" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Tyrr's Rune -->
+	<item one="29838" two="29838" chance="70">
+		<reward id="29839" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29839" two="29838" chance="70">
+		<reward id="29840" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29840" two="29838" chance="70">
+		<reward id="29841" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29841" two="29838" chance="70">
+		<reward id="29842" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29842" two="29838" chance="70">
+		<reward id="29843" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29843" two="29838" chance="40">
+		<reward id="29844" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29844" two="29838" chance="40">
+		<reward id="29845" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29845" two="29838" chance="40">
+		<reward id="29846" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29846" two="29838" chance="40">
+		<reward id="29847" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29847" two="29838" chance="40">
+		<reward id="29848" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29848" two="29838" chance="40">
+		<reward id="29849" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29849" two="29838" chance="40">
+		<reward id="29850" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29838" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<!-- Othell's Rune -->
+	<item one="29858" two="29858" chance="70">
+		<reward id="29859" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29859" two="29858" chance="70">
+		<reward id="29860" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29860" two="29858" chance="70">
+		<reward id="29861" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29861" two="29858" chance="70">
+		<reward id="29862" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29862" two="29858" chance="70">
+		<reward id="29863" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29863" two="29858" chance="40">
+		<reward id="29864" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29864" two="29858" chance="40">
+		<reward id="29865" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29865" two="29858" chance="40">
+		<reward id="29866" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29866" two="29858" chance="40">
+		<reward id="29867" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29867" two="29858" chance="40">
+		<reward id="29868" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29868" two="29858" chance="40">
+		<reward id="29869" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29869" two="29858" chance="40">
+		<reward id="29870" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29858" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Yul's Rune -->
+	<item one="29878" two="29878" chance="70">
+		<reward id="29879" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29879" two="29878" chance="70">
+		<reward id="29880" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29880" two="29878" chance="70">
+		<reward id="29881" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29881" two="29878" chance="70">
+		<reward id="29882" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29882" two="29878" chance="70">
+		<reward id="29883" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29883" two="29878" chance="40">
+		<reward id="29884" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29884" two="29878" chance="40">
+		<reward id="29885" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29885" two="29878" chance="40">
+		<reward id="29886" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29886" two="29878" chance="40">
+		<reward id="29887" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29887" two="29878" chance="40">
+		<reward id="29888" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29888" two="29878" chance="40">
+		<reward id="29889" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29889" two="29878" chance="40">
+		<reward id="29890" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29878" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Feoh's Rune -->
+	<item one="29898" two="29898" chance="70">
+		<reward id="29899" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29899" two="29898" chance="70">
+		<reward id="29900" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29900" two="29898" chance="70">
+		<reward id="29901" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29901" two="29898" chance="70">
+		<reward id="29902" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29902" two="29898" chance="70">
+		<reward id="29903" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29903" two="29898" chance="40">
+		<reward id="29904" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29904" two="29898" chance="40">
+		<reward id="29905" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29905" two="29898" chance="40">
+		<reward id="29906" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29906" two="29898" chance="40">
+		<reward id="29907" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29907" two="29898" chance="40">
+		<reward id="29908" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29908" two="29898" chance="40">
+		<reward id="29909" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29909" two="29898" chance="40">
+		<reward id="29910" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29898" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Iss' Rune -->
+	<item one="29918" two="29918" chance="70">
+		<reward id="29919" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29919" two="29918" chance="70">
+		<reward id="29920" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29920" two="29918" chance="70">
+		<reward id="29921" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29921" two="29918" chance="70">
+		<reward id="29922" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29922" two="29918" chance="70">
+		<reward id="29923" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29923" two="29918" chance="40">
+		<reward id="29924" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29924" two="29918" chance="40">
+		<reward id="29925" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29925" two="29918" chance="40">
+		<reward id="29926" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29926" two="29918" chance="40">
+		<reward id="29927" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29927" two="29918" chance="40">
+		<reward id="29928" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29928" two="29918" chance="40">
+		<reward id="29929" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29929" two="29918" chance="40">
+		<reward id="29930" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29918" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Wynn's Rune -->
+	<item one="29938" two="29938" chance="70">
+		<reward id="29939" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29939" two="29938" chance="70">
+		<reward id="29940" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29940" two="29938" chance="70">
+		<reward id="29941" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29941" two="29938" chance="70">
+		<reward id="29942" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29942" two="29938" chance="70">
+		<reward id="29943" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29943" two="29938" chance="40">
+		<reward id="29944" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29944" two="29938" chance="40">
+		<reward id="29945" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29945" two="29938" chance="40">
+		<reward id="29946" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29946" two="29938" chance="40">
+		<reward id="29947" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29947" two="29938" chance="40">
+		<reward id="29948" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29948" two="29938" chance="40">
+		<reward id="29949" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29949" two="29938" chance="40">
+		<reward id="29950" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29938" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Aeore's Rune -->
+	<item one="29958" two="29958" chance="70">
+		<reward id="29959" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29959" two="29958" chance="70">
+		<reward id="29960" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29960" two="29958" chance="70">
+		<reward id="29961" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29961" two="29958" chance="70">
+		<reward id="29962" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29962" two="29958" chance="70">
+		<reward id="29963" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29963" two="29958" chance="40">
+		<reward id="29964" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29964" two="29958" chance="40">
+		<reward id="29965" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29965" two="29958" chance="40">
+		<reward id="29966" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29966" two="29958" chance="40">
+		<reward id="29967" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29967" two="29958" chance="40">
+		<reward id="29968" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29968" two="29958" chance="40">
+		<reward id="29969" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="29969" two="29958" chance="40">
+		<reward id="29970" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="29958" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Brooch -->
+	<item one="70434" two="70434" chance="25">
+		<reward id="70435" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70434" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Topaz -->
+	<item one="70436" two="70436" chance="65">
+		<reward id="70437" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70436" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70437" two="70437" chance="40">
+		<reward id="70438" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70437" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70438" two="70438" chance="20">
+		<reward id="70439" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70438" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70439" two="70439" chance="10">
+		<reward id="70440" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70439" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Garnet -->
+	<item one="70441" two="70441" chance="65">
+		<reward id="70442" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70441" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70442" two="70442" chance="40">
+		<reward id="70443" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70442" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70443" two="70443" chance="20">
+		<reward id="70444" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70443" type="ON_FAILURE" /> <!-- info -->
+	</item>	
+	<item one="70444" two="70444" chance="10">
+		<reward id="70445" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70444" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	
+	<item one="70446" two="70446" chance="65">
+		<reward id="70447" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70446" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70447" two="70447" chance="40">
+		<reward id="70448" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70447" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70448" two="70448" chance="20">
+		<reward id="70449" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70448" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70449" two="70449" chance="10">
+		<reward id="70450" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70449" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Ruby -->
+	<item one="70451" two="70451" chance="65">
+		<reward id="70452" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70451" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70452" two="70452" chance="40">
+		<reward id="70453" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70452" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70453" two="70453" chance="20">
+		<reward id="70454" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70453" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70454" two="70454" chance="10">
+		<reward id="70455" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70454" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Sapphire -->
+	<item one="70456" two="70456" chance="65">
+		<reward id="70457" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70456" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70457" two="70457" chance="40">
+		<reward id="70458" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70457" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70458" two="70458" chance="20">
+		<reward id="70459" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70458" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70459" two="70459" chance="10">
+		<reward id="70460" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70459" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Diamond -->
+	<item one="70461" two="70461" chance="65">
+		<reward id="70462" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70461" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70462" two="70462" chance="40">
+		<reward id="70463" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70462" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70463" two="70463" chance="20">
+		<reward id="70464" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70463" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70464" two="70464" chance="10">
+		<reward id="70465" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70464" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Pearl -->
+	<item one="70466" two="70466" chance="65">
+		<reward id="70467" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70466" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70467" two="70467" chance="40">
+		<reward id="70468" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70467" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70468" two="70468" chance="20">
+		<reward id="70469" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70468" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70469" two="70469" chance="10">
+		<reward id="70470" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70469" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Vital Stone -->
+	<item one="70471" two="70471" chance="65">
+		<reward id="70472" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70471" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70472" two="70472" chance="40">
+		<reward id="70473" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70472" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70473" two="70473" chance="20">
+		<reward id="70474" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70473" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70474" two="70474" chance="10">
+		<reward id="70475" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70474" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Aquamarine -->
+	<item one="70520" two="70520" chance="65">
+		<reward id="70521" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70520" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70521" two="70521" chance="40">
+		<reward id="70522" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70521" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70522" two="70522" chance="20">
+		<reward id="70523" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70522" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70523" two="70523" chance="10">
+		<reward id="70524" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70523" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Red Cat's Eye -->
+	<item one="70811" two="70811" chance="65">
+		<reward id="70812" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70811" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70812" two="70812" chance="40">
+		<reward id="70813" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70812" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70813" two="70813" chance="20">
+		<reward id="70814" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70813" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70814" two="70814" chance="10">
+		<reward id="70815" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70814" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Blue Cat's Eye -->
+	<item one="70816" two="70816" chance="65">
+		<reward id="70817" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70816" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70817" two="70817" chance="40">
+		<reward id="70818" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70817" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70818" two="70818" chance="20">
+		<reward id="70819" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70818" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="70819" two="70819" chance="10">
+		<reward id="70820" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="70819" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	
+	<!-- Matchstick -->
+	<item one="71026" two="71027" chance="70">
+		<reward id="71028" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71029" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Match Head -->
+	<item one="71027" two="71026" chance="70">
+		<reward id="71028" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71029" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	
+	<!-- Talisman of Authority -->
+	<item one="71080" two="71078" chance="70">
+		<reward id="71081" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71080" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71081" two="71078" chance="60">
+		<reward id="71082" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71080" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71082" two="71078" chance="50">
+		<reward id="71083" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71080" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71083" two="71078" chance="40">
+		<reward id="71084" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71080" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Noble Talisman of Authority -->
+	<item one="71085" two="71078" chance="45">
+		<reward id="71086" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71085" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71086" two="71078" chance="35">
+		<reward id="71087" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71085" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71087" two="71078" chance="25">
+		<reward id="71088" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71085" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71088" two="71078" chance="20">
+		<reward id="71089" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71085" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Radiant Talisman of Authority -->
+	<item one="71090" two="71078" chance="30">
+		<reward id="71091" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71090" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71091" two="71078" chance="25">
+		<reward id="71092" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71090" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71092" two="71078" chance="20">
+		<reward id="71093" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71090" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71093" two="71078" chance="10">
+		<reward id="71094" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71090" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Stable Talisman of Power Fragment -->
+	<item one="71085" two="71095" chance="45">
+		<reward id="71086" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71085" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71086" two="71095" chance="35">
+		<reward id="71087" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71086" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71087" two="71095" chance="25">
+		<reward id="71088" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71087" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71088" two="71095" chance="20">
+		<reward id="71089" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71088" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Venir's Talisman -->
+	<item one="71271" two="71270" chance="50">
+		<reward id="71272" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71271" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71272" two="71270" chance="45">
+		<reward id="71273" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71271" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71273" two="71270" chance="40">
+		<reward id="71274" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71271" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71274" two="71270" chance="35">
+		<reward id="71275" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71271" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71275" two="71270" chance="50">
+		<reward id="71276" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71271" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71276" two="71270" chance="45">
+		<reward id="71277" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71276" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71277" two="71270" chance="40">
+		<reward id="71278" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71276" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71278" two="71270" chance="35">
+		<reward id="71279" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71276" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71279" two="71270" chance="30">
+		<reward id="71280" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71276" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71280" two="71270" chance="25">
+		<reward id="71281" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71276" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71281" two="71270" chance="50">
+		<reward id="71282" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71276" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71282" two="71270" chance="35">
+		<reward id="71283" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71282" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71283" two="71270" chance="30">
+		<reward id="71284" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71282" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71284" two="71270" chance="25">
+		<reward id="71285" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71282" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- No combitation Venir's Talisman -->
+	<!-- <item one="71285" two="71270" chance="70"> -->
+		<!-- <reward id="71286" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71282" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71286" two="71270" chance="70"> -->
+		<!-- <reward id="71287" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71282" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71287" two="71270" chance="70"> -->
+		<!-- <reward id="71288" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71282" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71288" two="71270" chance="70"> -->
+		<!-- <reward id="71289" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71288" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71289" two="71270" chance="70"> -->
+		<!-- <reward id="71290" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71288" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71290" two="71270" chance="70"> -->
+		<!-- <reward id="71291" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71288" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71291" two="71270" chance="70"> -->
+		<!-- <reward id="71292" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71288" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71292" two="71270" chance="70"> -->
+		<!-- <reward id="71293" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71288" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- <item one="71293" two="71270" chance="70"> -->
+		<!-- <reward id="71294" type="ON_SUCCESS" /> -->
+		<!-- <reward id="71288" type="ON_FAILURE" /> -->
+	<!-- </item> -->
+	<!-- Emerald EU klient -->
+	<item one="71348" two="71348" chance="70">
+		<reward id="71349" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71348" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71349" two="71349" chance="70">
+		<reward id="71350" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71349" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71350" two="71350" chance="70">
+		<reward id="71351" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71350" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71351" two="71351" chance="70">
+		<reward id="71352" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71351" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	
+	<item one="70440" two="70440" chance="100">
+		<reward id="71353" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71353" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70445" two="70445" chance="100">
+		<reward id="71358" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71358" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70450" two="70450" chance="100">
+		<reward id="71363" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71363" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70455" two="70455" chance="100">
+		<reward id="71368" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71368" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70460" two="70460" chance="100">
+		<reward id="71373" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71373" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70465" two="70465" chance="100">
+		<reward id="71378" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71378" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70470" two="70470" chance="100">
+		<reward id="71383" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71383" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70475" two="70475" chance="100">
+		<reward id="71388" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71388" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70524" two="70524" chance="100">
+		<reward id="71393" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71393" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70815" two="70815" chance="100">
+		<reward id="71398" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71398" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="70820" two="70820" chance="100">
+		<reward id="71403" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71403" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71352" two="71352" chance="100">
+		<reward id="71408" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71408" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Topaz -->
+	<item one="71353" two="71414" chance="35">
+		<reward id="71354" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71353" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71354" two="71414" chance="25">
+		<reward id="71355" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71353" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71355" two="71414" chance="15">
+		<reward id="71356" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71353" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<item one="71356" two="71414" chance="10">
+		<reward id="71357" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71353" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Garnet -->
+	<item one="71358" two="71414" chance="35">
+		<reward id="71359" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71358" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71359" two="71414" chance="25">
+		<reward id="71360" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71358" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71360" two="71414" chance="15">
+		<reward id="71361" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71358" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71361" two="71414" chance="10">
+		<reward id="71362" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71358" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Jade -->
+	<item one="71363" two="71414" chance="35">
+		<reward id="71364" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71363" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71364" two="71414" chance="25">
+		<reward id="71365" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71363" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71365" two="71414" chance="15">
+		<reward id="71366" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71363" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71366" two="71414" chance="10">
+		<reward id="71367" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71363" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Ruby -->
+	<item one="71368" two="71414" chance="35">
+		<reward id="71369" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71368" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71369" two="71414" chance="25">
+		<reward id="71370" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71368" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71370" two="71414" chance="15">
+		<reward id="71371" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71368" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71371" two="71414" chance="10">
+		<reward id="71372" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71368" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Sapphire -->
+	<item one="71373" two="71414" chance="35">
+		<reward id="71374" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71373" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71374" two="71414" chance="25">
+		<reward id="71375" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71373" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71375" two="71414" chance="15">
+		<reward id="71376" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71373" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71376" two="71414" chance="10">
+		<reward id="71377" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71373" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Diamond -->
+	<item one="71378" two="71414" chance="35">
+		<reward id="71379" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71378" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71379" two="71414" chance="25">
+		<reward id="71380" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71378" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71380" two="71414" chance="15">
+		<reward id="71381" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71378" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71381" two="71414" chance="10">
+		<reward id="71382" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71378" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Pearl -->
+	<item one="71383" two="71414" chance="35">
+		<reward id="71384" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71383" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71384" two="71414" chance="25">
+		<reward id="71385" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71383" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71385" two="71414" chance="15">
+		<reward id="71386" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71383" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71386" two="71414" chance="10">
+		<reward id="71387" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71383" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Vital Stone -->
+	<item one="71388" two="71414" chance="35">
+		<reward id="71389" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71388" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71389" two="71414" chance="25">
+		<reward id="71390" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71388" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71390" two="71414" chance="15">
+		<reward id="71391" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71388" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71391" two="71414" chance="10">
+		<reward id="71392" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71388" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Aquamarine -->
+	<item one="71393" two="71414" chance="35">
+		<reward id="71394" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71393" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71394" two="71414" chance="25">
+		<reward id="71395" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71393" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71395" two="71414" chance="15">
+		<reward id="71396" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71393" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71396" two="71414" chance="10">
+		<reward id="71397" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71393" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Red Cat's Eye -->
+	<item one="71398" two="71414" chance="35">
+		<reward id="71399" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71398" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71399" two="71414" chance="25">
+		<reward id="71400" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71398" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71400" two="71414" chance="15">
+		<reward id="71401" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71398" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71401" two="71414" chance="10">
+		<reward id="71402" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71398" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Blue Cat's Eye -->
+	<item one="71403" two="71414" chance="35">
+		<reward id="71404" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71403" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71404" two="71414" chance="25">
+		<reward id="71405" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71403" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71405" two="71414" chance="15">
+		<reward id="71406" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71403" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71406" two="71414" chance="10">
+		<reward id="71407" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71403" type="ON_FAILURE" /> <!-- info -->
+	</item>
+	<!-- Greater Emerald -->
+	<item one="71408" two="71414" chance="35">
+		<reward id="71409" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71408" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71409" two="71414" chance="25">
+		<reward id="71410" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71408" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71410" two="71414" chance="15">
+		<reward id="71411" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71408" type="ON_FAILURE" /> <!-- info -->
+	</item>                               
+	<item one="71411" two="71414" chance="10">
+		<reward id="71412" type="ON_SUCCESS" /> <!-- info -->
+		<reward id="71408" type="ON_FAILURE" /> <!-- info -->
 	</item>
 </list>

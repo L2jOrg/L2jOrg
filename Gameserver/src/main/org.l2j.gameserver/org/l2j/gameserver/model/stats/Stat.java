@@ -255,8 +255,7 @@ public enum Stat {
     ELEMENTAL_SPIRIT_EARTH_ATTACK,
     ELEMENTAL_SPIRIT_EARTH_DEFENSE,
     ELEMENTAL_SPIRIT_CRITICAL_RATE,
-    ELEMENTAL_SPIRIT_CRITICAL_DAMAGE
-    ;
+    ELEMENTAL_SPIRIT_CRITICAL_DAMAGE;
 
     private final IStatsFunction _valueFinalizer;
     private final BiFunction<Double, Double, Double> _addFunction;
