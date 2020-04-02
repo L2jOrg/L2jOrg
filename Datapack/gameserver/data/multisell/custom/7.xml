@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc> <!-- CB -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="19200" id="57" />
+		<!-- Proof of Blood -->
+		<production count="1" id="907" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10200" id="57" />
+		<!-- Proof of Alliance -->
+		<production count="1" id="878" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="14200" id="57" />
+		<!-- Proof of Aspiration -->
+		<production count="1" id="114" />
+	</item>
+</list>
