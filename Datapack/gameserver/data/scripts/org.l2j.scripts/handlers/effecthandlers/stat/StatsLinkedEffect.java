@@ -48,7 +48,7 @@ public class StatsLinkedEffect extends AbstractEffect {
 
         @Override
         public String effectName() {
-            return "stat-hp-based";
+            return "stats-linked";
         }
     }
 }
