@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc> <!-- CB -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="200" id="29745" />
+		<!-- Proof of Blood -->
+		<production count="1" id="29708" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="200" id="29745" />
+		<!-- Proof of Blood -->
+		<production count="1" id="29713" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="200" id="29745" />
+		<!-- Proof of Alliance -->
+		<production count="1" id="29718" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="200" id="29745" />
+		<!-- Proof of Aspiration -->
+		<production count="1" id="29723" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="800" id="29745" />
+		<!-- Blood-stained Cloth -->
+		<production count="1" id="29708" enchantmentLevel="10" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="800" id="29745" />
+		<!-- Portal Stone -->
+		<production count="1" id="29713" enchantmentLevel="10" />
+	</item>
+		<item>
+		<!-- Adena -->
+		<ingredient count="800" id="29745" />
+		<!-- Proof of Blood -->
+		<production count="1" id="29718" enchantmentLevel="10" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="800" id="29745" />
+		<!-- Proof of Alliance -->
+		<production count="1" id="29723" enchantmentLevel="10" />
+	</item>
+</list>

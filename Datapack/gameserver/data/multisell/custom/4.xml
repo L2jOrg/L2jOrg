@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc> <!-- CB -->
+	</npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="15960" id="57" />
+		<!-- Zubei's Breastplate -->
+		<production count="1" id="23" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="10960" id="57" />
+		<!-- Zubei's Gaiters -->
+		<production count="1" id="2386" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="13000" id="57" />
+		<!-- Zubei's Helmet -->
+		<production count="1" id="43" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="17960" id="57" />
+		<!-- Sealed Zubei's Boots -->
+		<production count="1" id="1101" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="14960" id="57" />
+		<!-- Sealed Avadon Boots -->
+		<production count="1" id="1104" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="27960" id="57" />
+		<!-- Sealed Zubei's Gauntlets -->
+		<production count="1" id="44" />
+	</item>
+</list>
