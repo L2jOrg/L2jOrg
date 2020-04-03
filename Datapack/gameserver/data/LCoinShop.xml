@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/LCoinShop.xsd" >
+    <product id="10014" category="Equip">
+        <ingredient id="71713"/>
+        <production id="91728"/>
+    </product>
+    <product id="10015" category="Equip">
+        <ingredient id="71713"/>
+        <production id="91729"/>
+    </product>
+    <product id="10016" category="Equip">
+        <ingredient id="71713"/>
+        <production id="91730"/>
+    </product>
+    
+    <product id="10033" category="Special">
+        <ingredient id="91663" count="340"/>
+        <ingredient id="57" count="520000"/>
+        <production id="92034"/>
+    </product>
+</list>

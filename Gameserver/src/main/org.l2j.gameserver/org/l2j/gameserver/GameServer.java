@@ -89,7 +89,7 @@ public class GameServer {
 
         printSection("Skills");
         SkillEngine.init();
-
+        LCoinShopData.getInstance();
         printSection("Items");
         ItemEngine.init();
         EnchantItemHPBonusData.getInstance();
