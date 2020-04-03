@@ -6,10 +6,7 @@ import handlers.conditions.CategoryTypeCondition;
 import handlers.conditions.NpcLevelCondition;
 import handlers.conditions.PlayerLevelCondition;
 import handlers.effecthandlers.*;
-import handlers.effecthandlers.stat.Speed;
-import handlers.effecthandlers.stat.StatHpBased;
-import handlers.effecthandlers.stat.TransferDamageToPlayer;
-import handlers.effecthandlers.stat.VitalStatModify;
+import handlers.effecthandlers.stat.*;
 import handlers.skillconditionhandlers.*;
 import quests.tutorial.Q10960_Tutorial.Q10960_Tutorial;
 import quests.tutorial.Q201_Tutorial.Q201_Tutorial;
@@ -204,6 +201,7 @@ open module org.l2j.scripts {
                 Spoil.Factory,
                 StatByMoveType.Factory,
                 StatUp.Factory,
+                StatsLinkedEffect.Factory,
                 StealAbnormal.Factory,
                 Summon.Factory,
                 SummonAgathion.Factory,
