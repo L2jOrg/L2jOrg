@@ -762,7 +762,7 @@
 					<value level="5">5</value>
 				</power>
 				<chance initial="30"/>
-				<min-damage initial="10"/>
+				<min-damage initial="1.0"/>
 			</trigger-skill-by-attack>
 			<trigger-skill-by-magic skill="45154" chance="30" target="ENEMY">
 				<power initial="1">

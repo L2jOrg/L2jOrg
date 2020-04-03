@@ -1371,7 +1371,7 @@
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="50.0"/>
+				<power initial="30.0"/>
 			</stat-modify>
 		</effects>
 	</skill>

@@ -382,7 +382,7 @@
 	 -->
 		<icon initial="icon.skill0622"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-			<magic-level initial="36">
+			<magic-level initial="28">
 				<value level="2">52</value>
 			</magic-level>
 			<cast-range initial="-1"/>
@@ -401,25 +401,35 @@
 		<target />
 		<abnormal type="AVOID_UP_SPECIAL">
 			<level initial="1"/>
-			<time initial="20"/>
+			<time initial="30"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<skill-evasion type="PHYSIC">
-				<power>
-					<value level="2">25.0</value>
-				</power>
-			</skill-evasion>
-			<speed>
-				<power initial="33.0">
-					<value level="2">66.0</value>
-				</power>
-			</speed>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+			<stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
 				<power initial="20.0">
 					<value level="2">35.0</value>
 				</power>
-			</stat-hp-based>
+			</stat-modify>
+			<stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
+				<power initial="20.0">
+					<value level="2">35.0</value>
+				</power>
+			</stat-modify>
+			<skill-evasion type="PHYSIC">
+				<power initial="20.0">
+					<value level="2">20.0</value>
+				</power>
+			</skill-evasion>
+			<skill-evasion type="MAGIC">
+				<power initial="20.0">
+					<value level="2">20.0</value>
+				</power>
+			</skill-evasion>
+			<speed>
+				<power initial="30.0">
+					<value level="2">40.0</value>
+				</power>
+			</speed>			
 		</effects>
 	</skill>
 	<skill id="626" name="Critical Sense" max-level="5" >

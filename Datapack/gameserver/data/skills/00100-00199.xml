@@ -1780,14 +1780,19 @@
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="-10.0"/>
+			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
+				<power initial="2.0">
+					<value level="2">3.0</value>
+					<value level="3">4.0</value>
+				</power>
+				<weapon-type>BOW </weapon-type>
 			</stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="6.0">
                     <value level="2">8.0</value>
                     <value level="3">10.0</value>
                 </power>
+				<weapon-type>BOW </weapon-type>
             </stat-modify>
 		</effects>
 	</skill>

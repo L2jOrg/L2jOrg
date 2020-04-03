@@ -816,12 +816,6 @@
 			<hit-time initial="1200"/>
 			<activate-rate initial="-1"/>
 		</attributes>
-		<consume>
-			<mana-init initial="3">
-				<value level="3">4</value>
-				<value level="4">5</value>
-			</mana-init>
-		</consume>
 		<target type="ENEMY" />
 		<abnormal type="DEATH_MARK" visual="DEATH_MARK" >
 			<level initial="1">
@@ -831,7 +825,7 @@
 				<value level="5">5</value>
 			</level>
 			<time initial="10"/>
-			<chance initial="70"/>
+			<chance initial="80"/>
 		</abnormal>
 		<effects>
 			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" mode="PER">
@@ -1626,6 +1620,16 @@
 	 -->
 		<icon initial="icon.skill10763"/>
 		<attributes property="PHYSIC" auto-use="BUFF">
+			<magic-level initial="60">
+				<value level="2">62</value>
+				<value level="3">64</value>
+				<value level="4">66</value>
+				<value level="5">68</value>
+				<value level="6">70</value>
+				<value level="7">72</value>
+				<value level="8">74</value>
+				<value level="9">80</value>
+			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="10000"/>
 			<effect-point initial="50"/>
@@ -1645,11 +1649,94 @@
 			</mana>
 		</consume>
 		<target />
+		<abnormal type="SNIPE">
+			<level initial="1">
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
+				<value level="7">7</value>
+				<value level="8">8</value>
+				<value level="9">9</value>
+			</level>
+			<time initial="120"/>
+			<chance initial="-1"/>
+		</abnormal>
 		<conditions>
 			<weapon>
 				<type>BOW</type>
 			</weapon>
 		</conditions>
+		<effects>
+			<stat-modify stat="ACCURACY">
+                <power initial="3.0">
+					<value level="2">4.0</value>
+					<value level="3">5.0</value>
+					<value level="4">6.0</value>
+					<value level="5">7.0</value>
+					<value level="6">7.0</value>
+					<value level="7">8.0</value>
+					<value level="8">8.0</value>
+					<value level="9">10.0</value>
+				</power>
+				<weapon-type>BOW </weapon-type>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+				<power initial="120.0">
+					<value level="2">130.0</value>
+					<value level="3">140.0</value>
+					<value level="4">150.0</value>
+					<value level="5">160.0</value>
+					<value level="6">180.0</value>
+					<value level="7">200.0</value>
+					<value level="8">220.0</value>
+					<value level="9">250.0</value>
+				</power>
+				<weapon-type>BOW </weapon-type>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+				<power initial="30.0">
+					<value level="2">30.0</value>
+					<value level="3">30.0</value>
+					<value level="4">30.0</value>
+					<value level="5">30.0</value>
+					<value level="6">40.0</value>
+					<value level="7">40.0</value>
+					<value level="8">40.0</value>
+					<value level="9">50.0</value>
+				</power>
+				<weapon-type>BOW </weapon-type>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
+				<power initial="5.0">
+					<value level="2">5.0</value>
+					<value level="3">5.0</value>
+					<value level="4">5.0</value>
+					<value level="5">5.0</value>
+					<value level="6">10.0</value>
+					<value level="7">10.0</value>
+					<value level="8">10.0</value>
+					<value level="9">15.0</value>
+				</power>
+				<weapon-type>BOW </weapon-type>
+			</stat-modify>
+			<trigger-skill-by-attack skill="45173" target="ENEMY">
+				<power initial="1">
+					<value level="3">2</value>
+					<value level="6">3</value>
+				</power>
+				<chance initial="30"/>
+				<min-damage initial="1.0"/>
+			</trigger-skill-by-attack>
+			<trigger-skill-by-magic skill="45173" chance="30" target="ENEMY">
+				<power initial="1">
+					<value level="3">2</value>
+					<value level="6">3</value>
+				</power>
+				<types>MAGIC PHYSIC STATIC</types>
+			</trigger-skill-by-magic>
+		</effects>
 	</skill>
 	<skill id="45173" name="Aiming Target" max-level="3" debuff="true" action="A1">
 	<!-- 
@@ -1669,7 +1756,26 @@
 			<hit-time initial="1000"/>
 			<activate-rate initial="-1"/>
 		</attributes>
-		<target />
+		<target type="ENEMY" />
+		<abnormal type="REAL_TARGET" visual="REAL_TARGET" >
+			<level initial="1">
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<value level="4">4</value>
+			</level>
+			<time initial="10"/>
+			<chance initial="-1"/>
+		</abnormal>
+		<effects>
+			<defence-trait>
+				<trait type="BOW">
+					<power initial="-10">
+					<value level="2">-20</value>
+					<value level="3">-30</value>
+				</power>
+				</trait>
+			</defence-trait>
+		</effects>
 	</skill>
 	<skill id="45174" name="Shine Soul" max-level="100" >
 	<!-- 
