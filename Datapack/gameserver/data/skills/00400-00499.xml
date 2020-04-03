@@ -1688,14 +1688,14 @@
 					<value level="5">200.0</value>
 				</power>
 			</stat-modify>
-			<physical-attack critical-chance="0.0">
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
 				<power initial="20.0">
 					<value level="2">30.0</value>
 					<value level="3">40.0</value>
 					<value level="4">80.0</value>
 					<value level="5">100.0</value>
 				</power>
-			</physical-attack>
+			</stat-modify>
 		</effects>
 	</skill>
 	<skill id="464" name="Armor Mastery" max-level="5" >
@@ -1721,19 +1721,20 @@
 		<target />
 		<effects>
 			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="9.0">
-					<value level="2">11.0</value>
-					<value level="3">12.0</value>
-					<value level="4">13.0</value>
-					<value level="5">14.0</value>
+				<power initial="20.0">
+					<value level="2">40.0</value>
+					<value level="3">60.0</value>
+					<value level="4">120.0</value>
+					<value level="5">200.0</value>
 				</power>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" hp-percent="0">				<power>
-					<value level="4">3.0</value>
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+				<power initial="10.0">
+					<value level="2">20.0</value>
+					<value level="3">40.0</value>
+					<value level="4">60.0</value>
+					<value level="5">100.0</value>
 				</power>
-			</stat-hp-based>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
-				<power initial="10.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1752,16 +1753,16 @@
 	 -->
 		<icon initial="icon.skill0465"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="18">
-				<value level="2">20</value>
-				<value level="3">22</value>
-				<value level="4">24</value>
-				<value level="5">26</value>
-				<value level="6">27</value>
-				<value level="7">28</value>
-				<value level="8">30</value>
-				<value level="9">31</value>
-				<value level="10">32</value>
+			<magic-level initial="20">
+				<value level="2">30</value>
+				<value level="3">40</value>
+				<value level="4">50</value>
+				<value level="5">60</value>
+				<value level="6">70</value>
+				<value level="7">75</value>
+				<value level="8">80</value>
+				<value level="9">85</value>
+				<value level="10">90</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1770,32 +1771,59 @@
 		<target />
 		<effects>
 			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="0.9">
-					<value level="2">2.2</value>
-					<value level="3">3.2</value>
-					<value level="4">4.2</value>
-					<value level="5">5.3</value>
-					<value level="6">6.0</value>
-					<value level="7">6.8</value>
-					<value level="8">8.4</value>
-					<value level="9">9.2</value>
-					<value level="10">10.1</value>
+				<power initial="10.0">
+					<value level="2">15.0</value>
+					<value level="3">25.0</value>
+					<value level="4">40.0</value>
+					<value level="5">55.0</value>
+					<value level="6">70.0</value>
+					<value level="7">85.0</value>
+					<value level="8">100.0</value>
+					<value level="9">120.0</value>
+					<value level="10">150.0</value>
 				</power>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
+			<stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
 				<power initial="3.0">
-					<value level="3">5.0</value>
-					<value level="5">6.0</value>
+					<value level="2">3.0</value>
+					<value level="3">3.0</value>
+					<value level="4">3.0</value>
+					<value level="5">3.0</value>
+					<value level="6">3.0</value>
+					<value level="7">3.0</value>
+					<value level="8">3.0</value>
+					<value level="9">4.0</value>
+					<value level="10">5.0</value>
 				</power>
 				<armor-type>LIGHT </armor-type>
-			</stat-hp-based>
+			</stat-modify>
 			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="-5.0"/>
+				<power initial="-5.0">
+					<value level="2">-5.0</value>
+					<value level="3">-10.0</value>
+					<value level="4">-10.0</value>
+					<value level="5">-10.0</value>
+					<value level="6">-15.0</value>
+					<value level="7">-15.0</value>
+					<value level="8">-15.0</value>
+					<value level="9">-20.0</value>
+					<value level="10">-25.0</value>
+				</power>					
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
 			<stat-modify stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD" mode="PER">
-				<power initial="-5.0"/>
+				<power initial="-5.0">
+					<value level="2">-5.0</value>
+					<value level="3">-10.0</value>
+					<value level="4">-10.0</value>
+					<value level="5">-10.0</value>
+					<value level="6">-15.0</value>
+					<value level="7">-15.0</value>
+					<value level="8">-15.0</value>
+					<value level="9">-20.0</value>
+					<value level="10">-25.0</value>
+				</power>
 				<armor-type>LIGHT </armor-type>
 			</stat-modify>
 		</effects>
@@ -1808,9 +1836,9 @@
 	 -->
 		<icon initial="icon.skill0466"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="5">
-				<value level="2">8</value>
-				<value level="3">10</value>
+			<magic-level initial="25">
+				<value level="2">40</value>
+				<value level="3">55</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1819,13 +1847,10 @@
 		<target />
 		<effects>
 			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="11.0">
-					<value level="2">12.0</value>
-					<value level="3">13.0</value>
+				<power initial="120.0">
+					<value level="2">200.0</value>
+					<value level="3">300.0</value>
 				</power>
-			</stat-modify>
-			<stat-modify stat="MAGIC_SUCCESS_RES" mode="PER">
-				<power/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -1845,15 +1870,15 @@
 		<icon initial="icon.skill0472"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20">
-				<value level="2">24</value>
-				<value level="3">26</value>
-				<value level="4">28</value>
-				<value level="5">30</value>
-				<value level="6">32</value>
-				<value level="7">34</value>
-				<value level="8">36</value>
-				<value level="9">38</value>
-				<value level="10">39</value>
+				<value level="2">30</value>
+				<value level="3">40</value>
+				<value level="4">50</value>
+				<value level="5">60</value>
+				<value level="6">70</value>
+				<value level="7">75</value>
+				<value level="8">80</value>
+				<value level="9">85</value>
+				<value level="10">90</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1862,16 +1887,16 @@
 		<target />
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-				<power initial="5.2">
-					<value level="2">8.1</value>
-					<value level="3">9.9</value>
-					<value level="4">11.9</value>
-					<value level="5">14.1</value>
-					<value level="6">16.6</value>
-					<value level="7">19.4</value>
-					<value level="8">22.5</value>
-					<value level="9">25.9</value>
-					<value level="10">27.7</value>
+				<power initial="20.0">
+					<value level="2">40.0</value>
+					<value level="3">60.0</value>
+					<value level="4">80.0</value>
+					<value level="5">100.0</value>
+					<value level="6">120.0</value>
+					<value level="7">150.0</value>
+					<value level="8">180.0</value>
+					<value level="9">215.0</value>
+					<value level="10">250.0</value>
 				</power>
 				<weapon-type>ANCIENT_SWORD </weapon-type>
 			</stat-modify>
@@ -1893,15 +1918,15 @@
 		<icon initial="icon.skill0474"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="20">
-				<value level="2">24</value>
-				<value level="3">26</value>
-				<value level="4">28</value>
-				<value level="5">30</value>
-				<value level="6">32</value>
-				<value level="7">34</value>
-				<value level="8">36</value>
-				<value level="9">38</value>
-				<value level="10">39</value>
+				<value level="2">30</value>
+				<value level="3">40</value>
+				<value level="4">50</value>
+				<value level="5">60</value>
+				<value level="6">70</value>
+				<value level="7">75</value>
+				<value level="8">80</value>
+				<value level="9">85</value>
+				<value level="10">90</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1910,22 +1935,16 @@
 		<target />
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-				<power initial="3.2">
-					<value level="2">5.28</value>
-					<value level="3">6.48</value>
-					<value level="4">7.84</value>
-					<value level="5">9.36</value>
-					<value level="6">11.12</value>
-					<value level="7">13.04</value>
-					<value level="8">15.2</value>
-					<value level="9">17.52</value>
-					<value level="10">18.8</value>
-				</power>
-				<weapon-type>RAPIER </weapon-type>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power>
-					<value level="9">15.0</value>
+				<power initial="15.0">
+					<value level="2">30.0</value>
+					<value level="3">50.0</value>
+					<value level="4">70.0</value>
+					<value level="5">90.0</value>
+					<value level="6">110.0</value>
+					<value level="7">130.0</value>
+					<value level="8">160.0</value>
+					<value level="9">190.0</value>
+					<value level="10">220.0</value>
 				</power>
 				<weapon-type>RAPIER </weapon-type>
 			</stat-modify>

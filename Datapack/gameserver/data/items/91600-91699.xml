@@ -487,7 +487,6 @@
 		<attributes weight="2120" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -505,7 +504,6 @@
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -522,7 +520,6 @@
 		<attributes weight="1850" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -542,7 +539,6 @@
 		<attributes weight="630" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="25.0"/>
 			<stat type="MAGIC_ATTACK" value="28.0"/>
@@ -558,7 +554,6 @@
 		<attributes weight="1800" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -578,7 +573,6 @@
 		<attributes weight="1110" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="27.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -596,7 +590,6 @@
 		<attributes weight="1560" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="38.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -608,13 +601,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="91680" name="Enchanted Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00">
+	<weapon id="91680" name="Enchanted Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00" mana-consume="1">
 	<!-- Enchanted Compound Bow. Cannot be enchanted, augmented, or equipped with a rune. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1880" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="64.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>

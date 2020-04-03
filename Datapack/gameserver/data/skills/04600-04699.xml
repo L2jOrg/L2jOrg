@@ -4691,19 +4691,12 @@
 	 -->
 		<icon initial="icon.skill1331"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>				
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
@@ -4714,14 +4707,7 @@
 				<value level="3">659</value>
 				<value level="4">666</value>
 				<value level="5">669</value>
-				<value level="6">673</value>
-				<value level="7">676</value>
-				<value level="8">679</value>
-				<value level="9">681</value>
-				<value level="10">684</value>
-				<value level="11">687</value>
-				<value level="12">689</value>
-				<value level="13">692</value>
+				<value level="6">673</value>				
 			</effect-point>
 			<effect-range initial="-1"/>
 			<hit-time initial="2000">
@@ -4735,12 +4721,6 @@
 				<value level="4">41</value>
 				<value level="5">42</value>
 				<value level="6">43</value>
-				<value level="8">44</value>
-				<value level="9">45</value>
-				<value level="10">46</value>
-				<value level="11">47</value>
-				<value level="12">48</value>
-				<value level="13">49</value>
 			</mana-init>
 			<mana initial="202">
 				<value level="2">205</value>
@@ -4748,48 +4728,33 @@
 				<value level="4">211</value>
 				<value level="5">214</value>
 				<value level="6">212</value>
-				<value level="7">215</value>
-				<value level="8">220</value>
-				<value level="9">224</value>
-				<value level="10">229</value>
-				<value level="11">233</value>
-				<value level="12">237</value>
-				<value level="13">242</value>
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="BUFF_QUEEN_OF_CAT">
+		<abnormal type="QUEEN_OF_CAT_BLESS">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
 			</level>
 			<time initial="120">
-				<value level="4">150</value>
-				<value level="5">165</value>
-				<value level="6">180</value>
-				<value level="7">195</value>
-				<value level="8">210</value>
-				<value level="9">225</value>
-				<value level="10">240</value>
-				<value level="11">255</value>
-				<value level="12">270</value>
-				<value level="13">285</value>
+				<value level="2">240</value>
+				<value level="3">360</value>
+				<value level="4">480</value>
+				<value level="5">600</value>
+				<value level="6">600</value>
 			</time>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="20.0">
-					<value level="2">22.0</value>
-					<value level="3">25.0</value>
-				</power>
+			<stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+				<power initial="25.0"/>				
 			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
-				<power initial="25.0">
-					<value level="2">27.0</value>
-					<value level="3">30.0</value>
-				</power>
-			</stat-hp-based>
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="20.0"/>
+			</stat-modify>			
 		</effects>
 	</skill>
 </list>

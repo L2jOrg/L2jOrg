@@ -6,7 +6,6 @@
 		<attributes weight="80" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="41" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -24,7 +23,6 @@
 		<attributes weight="300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -42,7 +40,6 @@
 		<attributes weight="750" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="210"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -63,7 +60,6 @@
 		<attributes weight="750" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="210"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="30000.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -84,7 +80,6 @@
 		<attributes weight="150" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="46" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="15.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -102,7 +97,6 @@
 		<attributes weight="120" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="26" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="30000.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -120,7 +114,6 @@
 		<attributes weight="100" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="26" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -132,13 +125,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="1307" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
+	<weapon id="1307" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00" mana-consume="1">
 	<!-- Temporary item for Kamex -->
 		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="OTHER_ITEM" reuse-delay="10" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="5000" angle="360"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="120.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -420,7 +412,6 @@
 		<attributes weight="2250" price="54100" commission-type="TWO_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="21.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>
@@ -700,7 +691,6 @@
 		<attributes weight="300" commission-type="SPEAR"/>
 		<crystal type="D" count="101"/>
 		<damage radius="66" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="50.0"/>
 			<stat type="MAGIC_ATTACK" value="26.0"/>

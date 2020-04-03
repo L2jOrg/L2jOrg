@@ -227,7 +227,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92331" name="Ecliptic Axe" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eclipse_axe_i00" magic="true">
@@ -235,15 +234,13 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
-	<weapon id="92332" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00">
+	<weapon id="92332" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 	<!-- Eminence Bow imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1720"/>
 		<crystal type="C"/>
-		<consume  soulshots="2" mana="3"/>
 	</weapon>
 
 	<item id="92333" name="Infinite Steel Quiver" type="ARROW" icon="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00">
@@ -258,7 +255,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2270"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92335" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i00">
@@ -266,7 +262,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92336" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
@@ -274,7 +269,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92337" name="Demon's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_demons_staff_i00" magic="true">
@@ -282,7 +276,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="990"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92338" name="Crystal Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_crystal_dagger_i00">
@@ -290,7 +283,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92339" name="Orcish Poleaxe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_orcish_poleaxe_i00">
@@ -298,7 +290,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1950"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92340" name="Yaksa Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_yaksa_mace_i00">
@@ -306,7 +297,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92341" name="Great Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_great_pata_i00">
@@ -314,7 +304,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1460"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="92342" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
@@ -322,7 +311,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<item id="92343" name="+16 Samurai Long Sword Pack" type="NONE" icon="icon.weapon_samurai_old_longsword_i00">

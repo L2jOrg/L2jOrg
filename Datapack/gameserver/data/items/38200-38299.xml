@@ -5,7 +5,6 @@
 		<attributes weight="1450" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="79.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -21,7 +20,6 @@
 		<attributes weight="1070" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="62.0"/>
 			<stat type="MAGIC_ATTACK" value="42.0"/>
@@ -38,7 +36,6 @@
 		<attributes weight="2020" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="96.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -54,7 +51,6 @@
 		<attributes weight="2060" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="66" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="79.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -73,7 +69,6 @@
 		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="77.0"/>
 			<stat type="MAGIC_ATTACK" value="69.0"/>
@@ -90,7 +85,6 @@
 		<attributes weight="1510" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="96.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -102,12 +96,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="38217" name="Giant Crab: Bow" type="BOW" body-part="TWO_HAND" icon="icon.wp_fishing7">
+	<weapon id="38217" name="Giant Crab: Bow" type="BOW" body-part="TWO_HAND" icon="icon.wp_fishing7" mana-consume="2">
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="1820" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="179.0"/>
 			<stat type="MAGIC_ATTACK" value="51.0"/>
@@ -135,7 +128,6 @@
 		<attributes weight="2530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="96.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>

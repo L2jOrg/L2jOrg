@@ -12,4 +12,16 @@
 		<attributes price="2000000"/>
 	</item>
 
+	<item id="93737" name="Top-grade Stable Scroll: Enchant Weapon (S-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_s">
+	<!-- Upon enchantment, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. From +4, P. Atk./M. Atk. bonus effect quadruples. Starting from +17, P. Atk. +43 for one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +77 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +126 for bow weapons. M. Atk. +43 for all weapons. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. It can be used only on +16 to +19 enchanted items. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93738" name="Top-grade Stable Scroll: Enchant Armor (S-grade) - Exchangeable" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_s">
+	<!-- Upon enchantment, P. Def. +2 for S-grade armor or M. Def. +2 for accessory. From +4, P. Def. +8, and from +11, P. Def. +26, M. Def. +20. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. From +4, the enchanted armor's HP also increases according to the enchant level. It can be used only on +10 to +13 enchanted items. -->
+		<restriction stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
 </list>

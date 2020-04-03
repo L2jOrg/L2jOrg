@@ -6,7 +6,6 @@
 		<attributes weight="1300" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -23,7 +22,6 @@
 		<attributes weight="1820" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -40,7 +38,6 @@
 		<attributes weight="1890" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -58,7 +55,6 @@
 		<attributes weight="930" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="220.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -76,7 +72,6 @@
 		<attributes weight="1820" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="251.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -91,13 +86,12 @@
 		</skills>
 	</weapon>
 
-	<weapon id="14333" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i00">
+	<weapon id="14333" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i00" mana-consume="5">
 	<!-- For NPC -->
 		<restriction freightable="false"/>
 		<attributes weight="1640" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="3" spiritshots="2" mana="5"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="570.0"/>
 			<stat type="MAGIC_ATTACK" value="133.0"/>
@@ -115,7 +109,6 @@
 		<attributes weight="1330" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -133,7 +126,6 @@
 		<attributes weight="820" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -150,7 +142,6 @@
 		<attributes weight="1510" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="202.0"/>
 			<stat type="MAGIC_ATTACK" value="161.0"/>
@@ -168,7 +159,6 @@
 		<attributes weight="1890" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="305.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -185,7 +175,6 @@
 		<attributes weight="1300" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="228.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>
@@ -203,7 +192,6 @@
 		<attributes weight="1640" price="26968400" commission-type="OTHER_ITEM"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="3" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="318.0"/>
 			<stat type="MAGIC_ATTACK" value="121.0"/>

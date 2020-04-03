@@ -78,13 +78,12 @@
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
-	<weapon id="1213" name="Guard's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00">
+	<weapon id="1213" name="Guard's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00" mana-consume="1">
 	<!-- Bow given by Guard Moretti. May be efficiently used for some purpose.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1800" price="136000" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="10" angle="360"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="49.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -588,7 +587,6 @@
 		<attributes weight="200" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -605,7 +603,6 @@
 		<attributes weight="300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -622,7 +619,6 @@
 		<attributes weight="400" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="42" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -639,7 +635,6 @@
 		<attributes weight="500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="22.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -656,7 +651,6 @@
 		<attributes weight="500" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="200.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>

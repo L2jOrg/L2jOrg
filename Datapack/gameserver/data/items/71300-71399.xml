@@ -26,7 +26,7 @@
 	</armor>
 
 	<armor id="71304" name="Agathion - Capricorn" type="NONE" body-part="AGATHION" icon="icon.agathion_capr_star_1">
-	<!-- An item which can be used to obtain the power of the Caprocorn Agathion.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nM. Critical Rate increased.\nStarting from +6, cooldown of M. Skills and songs/dances decreased.\n -->
+	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nM. Critical Rate increased.\nStarting from +6, cooldown of M. Skills and songs/dances decreased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -61,14 +61,14 @@
 	</armor>
 
 	<armor id="71309" name="Agathion - Scorpio" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
-	<!-- An item which can be used to obtain the power of the Libra Scorpio.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nP. Critical Rate increased.\nStarting from +6, cooldown of P. Skills and songs/dances decreased.\n -->
+	<!-- An item which can be used to obtain the power of the Scorpio Scorpio.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nP. Critical Rate increased.\nStarting from +6, cooldown of P. Skills and songs/dances decreased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="71310" name="Agathion - Aquarius" type="NONE" body-part="AGATHION" icon="icon.agathion_aqu_star_1">
-	<!-- An item which can be used to obtain the power of the Auarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nP. Def. increased.\nStarting from +6, bonus to hold/sleep.\n -->
+	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nP. Def. increased.\nStarting from +6, bonus to hold/sleep.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -136,7 +136,6 @@
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="12.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>

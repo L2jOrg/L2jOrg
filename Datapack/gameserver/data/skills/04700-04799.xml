@@ -10,19 +10,12 @@
 	 -->
 		<icon initial="icon.skill1331"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
@@ -34,13 +27,6 @@
 				<value level="4">666</value>
 				<value level="5">669</value>
 				<value level="6">673</value>
-				<value level="7">676</value>
-				<value level="8">679</value>
-				<value level="9">681</value>
-				<value level="10">684</value>
-				<value level="11">687</value>
-				<value level="12">689</value>
-				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
 			<hit-time initial="2000">
@@ -54,46 +40,32 @@
 				<value level="4">211</value>
 				<value level="5">214</value>
 				<value level="6">212</value>
-				<value level="7">215</value>
-				<value level="8">220</value>
-				<value level="9">224</value>
-				<value level="10">229</value>
-				<value level="11">233</value>
-				<value level="12">237</value>
-				<value level="13">242</value>
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="BUFF_QUEEN_OF_CAT">
+		<abnormal type="QUEEN_OF_CAT_GIFT">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
 			</level>
 			<time initial="120">
-				<value level="4">150</value>
-				<value level="5">165</value>
-				<value level="6">180</value>
-				<value level="7">195</value>
-				<value level="8">210</value>
-				<value level="9">225</value>
-				<value level="10">240</value>
-				<value level="11">255</value>
-				<value level="12">270</value>
-				<value level="13">285</value>
+				<value level="2">240</value>
+				<value level="3">360</value>
+				<value level="4">480</value>
+				<value level="5">600</value>
+				<value level="6">600</value>
 			</time>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="6.0">
-					<value level="2">8.0</value>
-					<value level="3">10.0</value>
-				</power>
+				<power initial="10.0"/>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
-				<power initial="2.0">
-					<value level="3">3.0</value>
-				</power>
+				<power initial="3.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -109,23 +81,15 @@
 	 -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>				
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
-				<value level="7">8000</value>
 			</reuse>
 			<effect-point initial="541">
 				<value level="2">611</value>
@@ -133,13 +97,6 @@
 				<value level="4">666</value>
 				<value level="5">669</value>
 				<value level="6">673</value>
-				<value level="7">676</value>
-				<value level="8">679</value>
-				<value level="9">681</value>
-				<value level="10">684</value>
-				<value level="11">687</value>
-				<value level="12">689</value>
-				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000">
@@ -154,30 +111,17 @@
 				<value level="4">115</value>
 				<value level="5">120</value>
 				<value level="6">125</value>
-				<value level="7">108</value>
-				<value level="8">110</value>
-				<value level="9">113</value>
-				<value level="10">115</value>
-				<value level="11">117</value>
-				<value level="12">119</value>
-				<value level="13">122</value>
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
 		<effects>
-			<dispel-probability abnormals="ATTACK_TIME_UP PA_DOWN HIT_DOWN">				<power initial="40.0">
-					<value level="2">45.0</value>
-					<value level="3">50.0</value>
-					<value level="4">55.0</value>
-					<value level="5">60.0</value>
-					<value level="6">65.0</value>
-					<value level="7">70.0</value>
-					<value level="8">75.0</value>
-					<value level="9">80.0</value>
-					<value level="10">85.0</value>
-					<value level="11">90.0</value>
-					<value level="12">95.0</value>
-					<value level="13">100.0</value>
+			<dispel-probability abnormals="HIT_DOWN PA_DOWN MA_DOWN ATTACK_TIME_UP">				
+				<power initial="40.0">
+					<value level="2">50.0</value>
+					<value level="3">60.0</value>
+					<value level="4">70.0</value>
+					<value level="5">80.0</value>
+					<value level="6">90.0</value>
 				</power>
 			</dispel-probability>
 		</effects>
@@ -192,19 +136,12 @@
 	 -->
 		<icon initial="icon.skill1332"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>				
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
@@ -216,13 +153,6 @@
 				<value level="4">666</value>
 				<value level="5">669</value>
 				<value level="6">673</value>
-				<value level="7">676</value>
-				<value level="8">679</value>
-				<value level="9">681</value>
-				<value level="10">684</value>
-				<value level="11">687</value>
-				<value level="12">689</value>
-				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
 			<hit-time initial="2000">
@@ -236,41 +166,32 @@
 				<value level="4">211</value>
 				<value level="5">214</value>
 				<value level="6">212</value>
-				<value level="7">215</value>
-				<value level="8">220</value>
-				<value level="9">224</value>
-				<value level="10">229</value>
-				<value level="11">233</value>
-				<value level="12">237</value>
-				<value level="13">242</value>
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="BUFF_UNICORN_SERAPHIM">
+		<abnormal type="UNICORN_SERAPHIM_BLESS">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
 			</level>
 			<time initial="120">
-				<value level="4">150</value>
-				<value level="5">165</value>
-				<value level="6">180</value>
-				<value level="7">195</value>
-				<value level="8">210</value>
-				<value level="9">225</value>
-				<value level="10">240</value>
-				<value level="11">255</value>
-				<value level="12">270</value>
-				<value level="13">285</value>
+				<value level="2">240</value>
+				<value level="3">360</value>
+				<value level="4">480</value>
+				<value level="5">600</value>
+				<value level="6">600</value>
 			</time>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE" mode="PER">
-				<power initial="30.0">
-					<value level="2">32.0</value>
-					<value level="3">35.0</value>
-				</power>
+				<power initial="30.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">
+				<power initial="25.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -284,19 +205,12 @@
 	 -->
 		<icon initial="icon.skill1332"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>				
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
@@ -308,13 +222,6 @@
 				<value level="4">666</value>
 				<value level="5">669</value>
 				<value level="6">673</value>
-				<value level="7">676</value>
-				<value level="8">679</value>
-				<value level="9">681</value>
-				<value level="10">684</value>
-				<value level="11">687</value>
-				<value level="12">689</value>
-				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
 			<hit-time initial="2000">
@@ -328,42 +235,33 @@
 				<value level="4">211</value>
 				<value level="5">214</value>
 				<value level="6">212</value>
-				<value level="7">215</value>
-				<value level="8">220</value>
-				<value level="9">224</value>
-				<value level="10">229</value>
-				<value level="11">233</value>
-				<value level="12">237</value>
-				<value level="13">242</value>
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="BUFF_UNICORN_SERAPHIM">
+		<abnormal type="UNICORN_SERAPHIM_GIFT">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
+				<value level="4">4</value>
+				<value level="5">5</value>
+				<value level="6">6</value>
 			</level>
 			<time initial="120">
-				<value level="4">150</value>
-				<value level="5">165</value>
-				<value level="6">180</value>
-				<value level="7">195</value>
-				<value level="8">210</value>
-				<value level="9">225</value>
-				<value level="10">240</value>
-				<value level="11">255</value>
-				<value level="12">270</value>
-				<value level="13">285</value>
+				<value level="2">240</value>
+				<value level="3">360</value>
+				<value level="4">480</value>
+				<value level="5">600</value>
+				<value level="6">600</value>
 			</time>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
 			<reuse skill-type="MAGIC">
-				<power initial="-30.0">
-					<value level="2">-32.0</value>
-					<value level="3">-35.0</value>
-				</power>
+				<power initial="-10.0"/>
 			</reuse>
+			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
+				<power initial="30.0"/>
+			</stat-modify>
 		</effects>
 	</skill>
 	<skill id="4704" name="Cure of Seraphim" max-level="13" action="A1" type="MAGIC">
@@ -378,19 +276,12 @@
 	 -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>				
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
@@ -402,13 +293,6 @@
 				<value level="4">666</value>
 				<value level="5">669</value>
 				<value level="6">673</value>
-				<value level="7">676</value>
-				<value level="8">679</value>
-				<value level="9">681</value>
-				<value level="10">684</value>
-				<value level="11">687</value>
-				<value level="12">689</value>
-				<value level="13">692</value>
 			</effect-point>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000">
@@ -423,30 +307,17 @@
 				<value level="4">115</value>
 				<value level="5">120</value>
 				<value level="6">125</value>
-				<value level="7">108</value>
-				<value level="8">110</value>
-				<value level="9">113</value>
-				<value level="10">115</value>
-				<value level="11">117</value>
-				<value level="12">119</value>
-				<value level="13">122</value>
 			</mana>
 		</consume>
 		<target scope="PARTY" object="FRIEND" range="1000" />
 		<effects>
-			<dispel-probability abnormals="PARALYZE SLEEP STUN ROOT_MAGICALLY SILENCE">				<power initial="40.0">
-					<value level="2">45.0</value>
-					<value level="3">50.0</value>
-					<value level="4">55.0</value>
-					<value level="5">60.0</value>
-					<value level="6">65.0</value>
-					<value level="7">70.0</value>
-					<value level="8">75.0</value>
-					<value level="9">80.0</value>
-					<value level="10">85.0</value>
-					<value level="11">90.0</value>
-					<value level="12">95.0</value>
-					<value level="13">100.0</value>
+			<dispel-probability abnormals="SLEEP ROOT_MAGICALLY ROOT_PHYSICALLY STUN PARALYZE DERANGEMENT">
+				<power initial="40.0">
+					<value level="2">50.0</value>
+					<value level="3">60.0</value>
+					<value level="4">70.0</value>
+					<value level="5">80.0</value>
+					<value level="6">90.0</value>
 				</power>
 			</dispel-probability>
 		</effects>
@@ -462,19 +333,12 @@
 	 -->
 		<icon initial="icon.skill1333"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>				
 			</magic-level>
 			<cast-range initial="900">
 				<value level="6">400</value>
@@ -488,20 +352,11 @@
 				<value level="4">-1997</value>
 				<value level="5">-2007</value>
 				<value level="6">-2017</value>
-				<value level="7">-2026</value>
-				<value level="8">-2035</value>
-				<value level="9">-2043</value>
-				<value level="10">-2051</value>
-				<value level="11">-2059</value>
-				<value level="12">-2066</value>
-				<value level="13">-2074</value>
 			</effect-point>
 			<effect-range initial="900"/>
 			<hit-time initial="1000">
 				<value level="6">2000</value>
 			</hit-time>
-
-			<element type="DARK" value="20"/>
 		</attributes>
 		<consume>
 			<mana-init initial="11">
@@ -515,8 +370,6 @@
 				<value level="4">79</value>
 				<value level="5">82</value>
 				<value level="6">73</value>
-				<value level="9">74</value>
-				<value level="11">75</value>
 			</mana>
 		</consume>
 		<target type="ENEMY_ONLY" />
@@ -526,17 +379,12 @@
 				<value level="3">3</value>
 			</level>
 			<time initial="30"/>
-			<chance initial="40">
-				<value level="4">41</value>
-				<value level="5">42</value>
-				<value level="6">43</value>
-				<value level="7">44</value>
-				<value level="8">45</value>
-				<value level="9">46</value>
-				<value level="10">47</value>
-				<value level="11">48</value>
-				<value level="12">49</value>
-				<value level="13">50</value>
+			<chance initial="55">
+				<value level="2">60</value>
+				<value level="3">65</value>
+				<value level="4">70</value>
+				<value level="5">75</value>
+				<value level="6">80</value>
 			</chance>
 		</abnormal>
 		<effects>
@@ -544,15 +392,21 @@
 				<power initial="80.0"/>
 			</effect>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="-6.0">
-					<value level="2">-8.0</value>
-					<value level="3">-10.0</value>
+				<power initial="-4.0">
+					<value level="2">-5.0</value>
+					<value level="3">-6.0</value>
+					<value level="4">-8.0</value>
+					<value level="5">-10.0</value>
+					<value level="6">-10.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="-6.0">
-					<value level="2">-8.0</value>
-					<value level="3">-10.0</value>
+				<power initial="-4.0">
+					<value level="2">-5.0</value>
+					<value level="3">-6.0</value>
+					<value level="4">-8.0</value>
+					<value level="5">-10.0</value>
+					<value level="6">-10.0</value>
 				</power>
 			</stat-modify>
 		</effects>
@@ -573,13 +427,6 @@
 				<value level="4">77</value>
 				<value level="5">78</value>
 				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="5000">
@@ -591,20 +438,11 @@
 				<value level="4">-1997</value>
 				<value level="5">-2007</value>
 				<value level="6">-2017</value>
-				<value level="7">-2026</value>
-				<value level="8">-2035</value>
-				<value level="9">-2043</value>
-				<value level="10">-2051</value>
-				<value level="11">-2059</value>
-				<value level="12">-2066</value>
-				<value level="13">-2074</value>
 			</effect-point>
 			<effect-range initial="-1"/>
 			<hit-time initial="1000">
 				<value level="6">2000</value>
 			</hit-time>
-
-			<element type="DARK" value="20"/>
 		</attributes>
 		<consume>
 			<mana-init initial="16">
@@ -619,46 +457,43 @@
 				<value level="4">90</value>
 				<value level="5">95</value>
 				<value level="6">108</value>
-				<value level="7">109</value>
-				<value level="9">110</value>
-				<value level="10">112</value>
-				<value level="12">113</value>
 			</mana>
 		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
+		<target scope="POINT_BLANK" object="NOT_FRIEND" range="250" affect-min="6" affect-random="15" />
 		<abnormal type="DEBUFF_NIGHTSHADE">
 			<level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
 			</level>
 			<time initial="30"/>
-			<chance initial="40">
-				<value level="4">41</value>
-				<value level="5">42</value>
-				<value level="6">43</value>
-				<value level="7">44</value>
-				<value level="8">45</value>
-				<value level="9">46</value>
-				<value level="10">47</value>
-				<value level="11">48</value>
-				<value level="12">49</value>
-				<value level="13">50</value>
+			<chance initial="45">
+				<value level="2">50</value>
+				<value level="3">55</value>
+				<value level="4">60</value>
+				<value level="5">70</value>
+				<value level="6">75</value>
 			</chance>
 		</abnormal>
 		<effects>
 			<effect name="TargetMeProbability">
-				<power initial="40.0"/>
+				<power initial="70.0"/>
 			</effect>
 			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="-6.0">
-					<value level="2">-8.0</value>
-					<value level="3">-10.0</value>
+				<power initial="-4.0">
+					<value level="2">-5.0</value>
+					<value level="3">-6.0</value>
+					<value level="4">-8.0</value>
+					<value level="5">-10.0</value>
+					<value level="6">-10.0</value>
 				</power>
 			</stat-modify>
 			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="-6.0">
-					<value level="2">-8.0</value>
-					<value level="3">-10.0</value>
+				<power initial="-4.0">
+					<value level="2">-5.0</value>
+					<value level="3">-6.0</value>
+					<value level="4">-8.0</value>
+					<value level="5">-10.0</value>
+					<value level="6">-10.0</value>
 				</power>
 			</stat-modify>
 		</effects>
@@ -681,19 +516,12 @@
 	 -->
 		<icon initial="icon.skill0000"/>
 		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="57">
-				<value level="2">66</value>
-				<value level="3">75</value>
-				<value level="4">77</value>
-				<value level="5">78</value>
-				<value level="6">79</value>
-				<value level="7">80</value>
-				<value level="8">81</value>
-				<value level="9">82</value>
-				<value level="10">83</value>
-				<value level="11">84</value>
-				<value level="12">85</value>
-				<value level="13">86</value>
+			<magic-level initial="77">
+				<value level="2">79</value>
+				<value level="3">81</value>
+				<value level="4">83</value>
+				<value level="5">84</value>
+				<value level="6">85</value>				
 			</magic-level>
 			<cast-range initial="-1">
 				<value level="7">600</value>
@@ -705,13 +533,6 @@
 				<value level="4">280</value>
 				<value level="5">290</value>
 				<value level="6">300</value>
-				<value level="7">826</value>
-				<value level="8">835</value>
-				<value level="9">844</value>
-				<value level="10">852</value>
-				<value level="11">860</value>
-				<value level="12">867</value>
-				<value level="13">874</value>
 			</effect-point>
 			<effect-range initial="1100"/>
 			<hit-time initial="1000">
@@ -720,37 +541,24 @@
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
-			<hp initial="930">
-				<value level="2">960</value>
-				<value level="3">990</value>
-				<value level="4">1020</value>
-				<value level="5">1050</value>
-				<value level="6">1080</value>
-				<value level="7">991</value>
-				<value level="8">1002</value>
-				<value level="9">1013</value>
-				<value level="10">1023</value>
-				<value level="11">1032</value>
-				<value level="12">1041</value>
-				<value level="13">1049</value>
+		<!-- Need to parse from SkillGrp_Classic.dat -->
+			<hp initial="706">
+				<value level="2">840</value>
+				<value level="3">946</value>
+				<value level="4">964</value>
+				<value level="5">972</value>
+				<value level="6">979</value>
 			</hp>
 		</consume>
-		<target type="TARGET" />
+		<target scope="PARTY" object="FRIEND" range="1000" />
 		<effects>
 			<effect name="Heal">
-				<power initial="541.0">
-					<value level="2">611.0</value>
-					<value level="3">659.0</value>
-					<value level="4">666.0</value>
-					<value level="5">669.0</value>
-					<value level="6">673.0</value>
-					<value level="7">676.0</value>
-					<value level="8">679.0</value>
-					<value level="9">681.0</value>
-					<value level="10">684.0</value>
-					<value level="11">687.0</value>
-					<value level="12">689.0</value>
-					<value level="13">692.0</value>
+				<power initial="755.0">
+					<value level="2">800.0</value>
+					<value level="3">825.0</value>
+					<value level="4">850.0</value>
+					<value level="5">875.0</value>
+					<value level="6">900.0</value>
 				</power>
 			</effect>
 		</effects>

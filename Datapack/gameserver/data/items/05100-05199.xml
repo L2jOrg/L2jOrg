@@ -11,7 +11,6 @@
 		<attributes weight="300" commission-type="DAGGER" for-npc="true"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="5.0"/>
 			<stat type="MAGIC_ATTACK" value="5.0"/>
@@ -28,7 +27,6 @@
 		<attributes weight="300" commission-type="DAGGER" for-npc="true"/>
 		<crystal type="D" count="101"/>
 		<damage radius="300" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="5.0"/>
 			<stat type="MAGIC_ATTACK" value="5.0"/>
@@ -45,7 +43,6 @@
 		<attributes weight="300" commission-type="DUALSWORD" for-npc="true"/>
 		<crystal type="D"/>
 		<damage radius="44" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="200.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -61,7 +58,6 @@
 		<attributes weight="300" commission-type="DAGGER" for-npc="true"/>
 		<crystal type="D" count="101"/>
 		<damage radius="300" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="5.0"/>
 			<stat type="MAGIC_ATTACK" value="5.0"/>
@@ -78,7 +74,6 @@
 		<attributes weight="300" commission-type="DAGGER" for-npc="true"/>
 		<crystal type="D" count="101"/>
 		<damage radius="300" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="5.0"/>
 			<stat type="MAGIC_ATTACK" value="5.0"/>
@@ -95,7 +90,6 @@
 		<attributes weight="300" commission-type="DAGGER" for-npc="true"/>
 		<crystal type="D" count="101"/>
 		<damage radius="300" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="5.0"/>
 			<stat type="MAGIC_ATTACK" value="5.0"/>
@@ -113,7 +107,6 @@
 		<attributes commission-type="FIST_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="1.0"/>
 			<stat type="MAGIC_ATTACK" value="1.0"/>

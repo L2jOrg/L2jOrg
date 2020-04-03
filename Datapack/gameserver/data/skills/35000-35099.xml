@@ -473,13 +473,13 @@
 	<!-- Imbues with Talisman of Insolence VI power. -->
 		<icon initial="icon.oman_tallisman_new_i01"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" >
-			<magic-level initial="40"/>
+			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 		</attributes>
 		<target />
 		<abnormal type="SEED_TALISMAN1" visual="SEED_TALISMAN5" >
-			<level initial="6"/>
+			<level initial="5"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
 		</abnormal>
@@ -488,7 +488,7 @@
 	<!-- The effect of Talisman of Insolence VI weakens. -->
 		<icon initial="icon.oman_tallisman_new_i01"/>
 		<attributes magic-critical-rate="5.0" trait="HOLD">
-			<magic-level initial="40"/>
+			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
@@ -507,12 +507,12 @@
 	<!-- Imbues with Talisman of Baium power. -->
 		<icon initial="icon.baium_talisman_new"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" >
-			<magic-level initial="40"/>
+			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 		</attributes>
 		<target />
-		<abnormal type="SEED_TALISMAN1" visual="SEED_TALISMAN4" >
+		<abnormal type="SEED_TALISMAN1" visual="TALISMAN_BAIUM" >
 			<level initial="6"/>
 			<time initial="-1"/>
 			<chance initial="-1"/>
@@ -522,7 +522,7 @@
 	<!-- The effect of Talisman of Baium weakens. -->
 		<icon initial="icon.baium_talisman_new"/>
 		<attributes magic-critical-rate="5.0" trait="HOLD">
-			<magic-level initial="40"/>
+			<magic-level initial="60"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>

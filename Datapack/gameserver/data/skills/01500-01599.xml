@@ -146,7 +146,12 @@
 	<!-- Spreads lightning's defensive barrier for 30 seconds. Has a chance to Paralyze the target that attacked you for 3 seconds. -->
 		<icon initial="icon.skill32617"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-			<magic-level initial="80"/>
+			<magic-level initial="76">
+				<value level="2">78</value>
+				<value level="3">80</value>
+				<value level="4">82</value>
+				<value level="5">84</value>
+			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-range initial="-1"/>
@@ -164,33 +169,65 @@
 		<target />
 		<abnormal type="ELEMENTAL_ARMOR">
 			<level initial="1"/>
-			<time initial="1200"/>
+			<time initial="30"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<trigger-skill-by-damage skill="5592" target="TARGET" min-damage="100">
+			<trigger-skill-by-damage skill="5592" target="TARGET" min-damage="50">
 				<power initial="1.0"/>
-				<chance initial="20.0"/>
+				<chance initial="40.0"/>
 			</trigger-skill-by-damage>
 		</effects>
 	</skill>
-	<skill id="1516" name="Soul Strike" max-level="10" action="A1">
+	<skill id="1516" name="Soul Strike" max-level="10">
 	<!-- When equipping a Rapier, has a chance to inflict additional M. Atk. when attacking the enemy. The type of M. Atk. that occurs for Soul Strike depends on the attack style. \n\n<Physical Attack>Sword Energy\n<Magci Attack>Lightning -->
 		<icon initial="icon.skill1528"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="76"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="1250"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume soul="5">
-			<mana-init initial="7"/>
-		</consume>
-		<target type="ENEMY" />
+		<attributes property="MAGIC"/>
+		<target />
 		<effects>
-			<effect name="MagicalSoulAttack">
-				<power initial="166.0"/>
-			</effect>
+			<trigger-skill-by-attack skill="45165">
+				<power initial="1">
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</power>
+				<chance initial="40"/>
+				<min-damage initial="10"/>
+			</trigger-skill-by-attack>
+			<trigger-skill-by-magic skill="45166" chance="40" target="ENEMY">
+				<power initial="1">
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</power>
+				<types>PHYSIC</types>
+			</trigger-skill-by-magic>
+			<trigger-skill-by-magic skill="45167" chance="40" target="ENEMY">
+				<power initial="1">
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</power>
+				<types>MAGIC</types>
+			</trigger-skill-by-magic>
 		</effects>
 	</skill>
 	<skill id="1527" name="Expert Casting" max-level="3" >
@@ -200,15 +237,7 @@
 		level 3: Casting Spd. +220 and Magic Cooldown -20%.
 	 -->
 		<icon initial="icon.skill11841"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="40">
-				<value level="2">49</value>
-				<value level="3">55</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
+		<attributes property="MAGIC" />
 		<target />
 		<effects>
 			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
@@ -608,9 +637,9 @@
 				<chance initial="30.0"/>
 				<min-damage initial="1.0"/>
 			</trigger-skill-by-attack>
-			<trigger-skill-by-skill skill="6060" skill-trigger="927" chance="30" target="MY_PARTY">
-				<power initial="1.0"/>
-			</trigger-skill-by-skill>
+			<!-- <trigger-skill-by-skill skill="6060" skill-trigger="927" chance="30" target="MY_PARTY"> -->
+				<!-- <power initial="1.0"/> -->
+			<!-- </trigger-skill-by-skill> -->
 		</effects>
 	</skill>
 	<skill id="1547" name="Spirit Sharing" max-level="5" action="A2" type="MAGIC">
@@ -983,10 +1012,10 @@
 		<icon initial="icon.skill19168"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
-				<value level="2">49</value>
-				<value level="3">58</value>
-				<value level="4">64</value>
-				<value level="5">68</value>
+				<value level="2">50</value>
+				<value level="3">60</value>
+				<value level="4">70</value>
+				<value level="5">75</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -997,9 +1026,9 @@
 			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="70.0">
 					<value level="2">100.0</value>
-					<value level="3">140.0</value>
-					<value level="4">150.0</value>
-					<value level="5">180.0</value>
+					<value level="3">130.0</value>
+					<value level="4">160.0</value>
+					<value level="5">200.0</value>
 				</power>
 			</vital-stat-modify>
 		</effects>

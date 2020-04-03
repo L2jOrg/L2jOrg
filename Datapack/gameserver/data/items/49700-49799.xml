@@ -31,8 +31,8 @@
 		<attributes/>
 	</item>
 
-	<item id="49705" name="Forbidden Limit Chest" type="NONE" icon="icon.bm_special_pendant_abradant_box">
-	<!-- A chest containing the power of Forbidden Limit. Double-click to receive Talisman of Fate’s Fragment and, at a low probability, Talisman of Darkness Box.  -->
+	<item id="49705" name="Talisman of Fate Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- A chest containing the Talisman of Fate. Double-click to receive Talisman of Fate’s Fragment and, at a low probability, Talisman of Darkness Box.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -824,7 +824,6 @@
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="12.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>

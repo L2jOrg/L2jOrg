@@ -139,7 +139,6 @@
 		<attributes weight="2330" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="200.0"/>
 			<stat type="MAGIC_ATTACK" value="93.0"/>
@@ -156,7 +155,6 @@
 		<attributes weight="1000" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="160.0"/>
 			<stat type="MAGIC_ATTACK" value="126.0"/>
@@ -168,13 +166,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="90421" name="Hero's Shining Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_akat_long_bow_i01">
+	<weapon id="90421" name="Hero's Shining Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_akat_long_bow_i01" mana-consume="3">
 	<!-- 30-day item. P. Critical +52.  Enchantment, soul storing and augmenting are impossible. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1740" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="3"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="348.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -192,7 +189,6 @@
 		<attributes weight="1020" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="142.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>
@@ -210,7 +206,6 @@
 		<attributes weight="2010" commission-type="OTHER_ITEM"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="159.0"/>
 			<stat type="MAGIC_ATTACK" value="91.0"/>

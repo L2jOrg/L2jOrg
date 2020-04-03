@@ -326,7 +326,6 @@
 		<attributes weight="2340" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="162.0"/>
 			<stat type="MAGIC_ATTACK" value="73.0"/>
@@ -343,7 +342,6 @@
 		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="135.0"/>
 			<stat type="MAGIC_ATTACK" value="111.0"/>
@@ -355,13 +353,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="90152" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00">
+	<weapon id="90152" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00" mana-consume="3">
 	<!-- A 30-day item.\n<Soul Crystal Enhancement>\nP. Crit. Rate. +52.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1740" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="3"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="316.0"/>
 			<stat type="MAGIC_ATTACK" value="84.0"/>
@@ -379,7 +376,6 @@
 		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="122.0"/>
 			<stat type="MAGIC_ATTACK" value="76.0"/>
@@ -397,7 +393,6 @@
 		<attributes weight="2010" commission-type="OTHER_ITEM" duration="43200"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="139.0"/>
 			<stat type="MAGIC_ATTACK" value="76.0"/>

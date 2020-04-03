@@ -223,7 +223,6 @@
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="76.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -240,7 +239,6 @@
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="116.0"/>
 			<stat type="MAGIC_ATTACK" value="90.0"/>
@@ -256,7 +254,6 @@
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="185.0"/>
 			<stat type="MAGIC_ATTACK" value="135.0"/>
@@ -273,7 +270,6 @@
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="87.0"/>
 			<stat type="MAGIC_ATTACK" value="47.0"/>
@@ -291,7 +287,6 @@
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="135.0"/>
 			<stat type="MAGIC_ATTACK" value="67.0"/>
@@ -308,7 +303,6 @@
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="214.0"/>
 			<stat type="MAGIC_ATTACK" value="111.0"/>
@@ -337,7 +331,7 @@
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
-		<consume />
+
 	</weapon>
 
 	<item id="71845" name="Ancient Imperial Treasure Chest" type="NONE" icon="icon.bm_elmoaden_box">

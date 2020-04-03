@@ -4,14 +4,12 @@
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1530"/>
 		<crystal />
-		<consume />
 	</weapon>
 
 	<weapon id="93001" name="Activation Type: One-handed Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_buzdygan_i00">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="1800"/>
 		<crystal />
-		<consume />
 	</weapon>
 
 	<item id="93002" name="Sayha's Blessing Pouch" type="NONE" icon="icon.pouch_i01">
@@ -165,70 +163,60 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1450"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93029" name="Moonshadow Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_maingauche_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1070"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
-	<weapon id="93030" name="Moonshadow Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00">
+	<weapon id="93030" name="Moonshadow Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1820"/>
 		<crystal type="D"/>
-		<consume  soulshots="2" mana="2"/>
 	</weapon>
 
 	<weapon id="93031" name="Moonshadow Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tarbar_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1730"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93032" name="Moonshadow Two-handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_giants_sword_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2020"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93033" name="Moonshadow Two-Handed Blunt Weapon" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_goathead_staff_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93034" name="Moonshadow Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2060"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93035" name="Moonshadow Fist" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1510"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93036" name="Moonshadow Rapier" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93037" name="Moonshadow Ancient Sword" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530"/>
 		<crystal type="D"/>
-		<consume />
 	</weapon>
 
 	<item id="93038" name="Enchant Scroll: Moonshadow Weapon" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
@@ -292,42 +280,36 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93048" name="Demon's Staff" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_demons_staff_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="990" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93049" name="Ecliptic Axe" type="ROD" body-part="RIGHT_HAND" icon="icon.weapon_eclipse_axe_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93050" name="Crystal Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_crystal_dagger_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
-	<weapon id="93051" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00">
+	<weapon id="93051" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1720" price="6130000"/>
 		<crystal type="C"/>
-		<consume  soulshots="2" mana="3"/>
 	</weapon>
 
 	<weapon id="93052" name="Orcish Poleaxe" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_orcish_poleaxe_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1950" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93053" name="Katana*Katana" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -335,42 +317,36 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2270" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93054" name="Yaksa Mace" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_yaksa_mace_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1640" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93055" name="Berserker Blade" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_berserker_blade_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1380" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93056" name="Great Pata" type="FIST" body-part="TWO_HAND" icon="icon.weapon_great_pata_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1460" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93057" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_blink_slasher_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<weapon id="93058" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_invincible_blade_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530" price="6130000"/>
 		<crystal type="C"/>
-		<consume />
 	</weapon>
 
 	<item id="93059" name="Spellbook: Summon Winner’s Glory" type="NONE" icon="icon.etc_spellbook_red_i00">

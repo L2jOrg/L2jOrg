@@ -4597,7 +4597,6 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <ai aggroRange="450" clanHelpRange="300"/>
-        </ai>
         <collision>
             <radius normal="26"/>
             <height normal="15"/>
@@ -4847,7 +4846,6 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <!-- <skill id="4067" level="3"/> <!-- NPC Mortal Blow -->
             <skill id="4416" level="12"/> <!-- Bug -->
             <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
             <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->

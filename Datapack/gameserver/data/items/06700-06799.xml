@@ -90,12 +90,11 @@
 		<attributes weight="60" price="12329"/>
 	</item>
 
-	<weapon id="6715" name="Monster Only (Silenos Archer)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+	<weapon id="6715" name="Monster Only (Silenos Archer)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00" mana-consume="1">
 		<restriction freightable="false"/>
 		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="16.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -112,7 +111,6 @@
 		<attributes weight="1080" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="11.0"/>
 			<stat type="MAGIC_ATTACK" value="12.0"/>
@@ -129,7 +127,6 @@
 		<attributes weight="1560" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="24.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -145,7 +142,6 @@
 		<attributes weight="1560" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="24.0"/>
 			<stat type="MAGIC_ATTACK" value="17.0"/>
@@ -165,7 +161,6 @@
 		<attributes weight="990" commission-type="TWO_HAND_BLUNT_WEAPON" for-npc="true" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="46" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="141.0"/>
 			<stat type="MAGIC_ATTACK" value="104.0"/>
@@ -177,12 +172,11 @@
 		</stats>
 	</weapon>
 
-	<weapon id="6720" name="Monster Only (Halisha's Shadow)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00">
+	<weapon id="6720" name="Monster Only (Halisha's Shadow)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_monster_i00" mana-consume="1">
 		<restriction freightable="false"/>
 		<attributes weight="1950" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" mana="1"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="16.0"/>
 			<stat type="MAGIC_ATTACK" value="6.0"/>
@@ -210,7 +204,6 @@
 		<attributes weight="2080" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
-		<consume  soulshots="2" spiritshots="2"/>
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="236.0"/>
 			<stat type="MAGIC_ATTACK" value="99.0"/>
@@ -226,7 +219,6 @@
 		<attributes weight="2090" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="112.0"/>
 			<stat type="MAGIC_ATTACK" value="54.0"/>

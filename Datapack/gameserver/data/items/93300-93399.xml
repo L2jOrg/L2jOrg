@@ -197,7 +197,6 @@
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500"/>
 		<crystal />
-		<consume />
 	</weapon>
 
 	<weapon id="93332" name="Combat Flag - Monster" type="SHIELD" body-part="TWO_HAND" icon="icon.weapon_fort_flag_i00">
@@ -205,7 +204,6 @@
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500"/>
 		<crystal />
-		<consume />
 	</weapon>
 
 	<item id="93333" name="+3 Talisman of Power" type="NONE" icon="icon.sayhas_talisman_new">

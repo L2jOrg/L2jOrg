@@ -21,13 +21,13 @@
                     <xs:element name="attributes" type="WeaponAttributes"/>
                     <xs:element name="crystal" type="ItemCrystal"/>
                     <xs:element name="damage" type="WeaponDamage" minOccurs="0"/>
-                    <xs:element name="consume" type="WeaponConsume"/>
                     <xs:element name="stats" minOccurs="0" type="ItemStats"/>
                     <xs:element name="skills" minOccurs="0" type="ItemSkillsType"/>
                 </xs:sequence>
                 <xs:attribute name="type" type="WeaponType" use="required"/>
                 <xs:attribute name="body-part" type="WeaponBodyPart"/>
                 <xs:attribute name="magic" type="xs:boolean" default="false"/>
+                <xs:attribute name="mana-consume" type="xs:int" default="0"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -47,12 +47,6 @@
     <xs:complexType name="WeaponDamage">
         <xs:attribute name="radius" type="xs:int"/>
         <xs:attribute name="angle" type="xs:int"/>
-    </xs:complexType>
-
-    <xs:complexType name="WeaponConsume">
-        <xs:attribute name="soulshots" type="xs:int" default="1"/>
-        <xs:attribute name="spiritshots" type="xs:int" default="1"/>
-        <xs:attribute name="mana" type="xs:int" default="0"/>
     </xs:complexType>
 
     <xs:complexType name="Armor">

@@ -15,6 +15,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExSpawnEmitter;
+import org.l2j.gameserver.network.serverpackets.ExSpawnEmitter.SpawnEmitterType;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -68,7 +69,7 @@ public final class SoulEating extends AbstractEffect {
 
             if (isNpc(player.getTarget())) {
                 final Npc npc = (Npc) playable.getTarget();
-                player.broadcastPacket(new ExSpawnEmitter(player, npc), 500);
+                player.broadcastPacket(new ExSpawnEmitter(player, npc, SpawnEmitterType.BLUE_SOUL_EATEN), 500);
             }
         }
     }

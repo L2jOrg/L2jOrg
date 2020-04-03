@@ -18,7 +18,6 @@
 		<attributes commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="1.0"/>
 			<stat type="MAGIC_ATTACK" value="1.0"/>
@@ -133,7 +132,6 @@
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -149,7 +147,6 @@
 		<attributes weight="1110" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="27.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -166,7 +163,6 @@
 		<attributes weight="1850" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -284,7 +280,6 @@
 		<attributes weight="1490" price="2870000" commission-type="FIST_WEAPON"/>
 		<crystal type="C" count="1148"/>
 		<damage radius="32" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="148.0"/>
 			<stat type="MAGIC_ATTACK" value="68.0"/>

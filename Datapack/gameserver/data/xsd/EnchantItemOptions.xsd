@@ -19,13 +19,13 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="option1" type="xs:unsignedShort" use="required"/>
-									<xs:attribute name="option2" type="xs:unsignedShort" default="0"/>
-									<xs:attribute name="option3" type="xs:unsignedShort" default="0"/>
+									<xs:attribute name="option1" type="xs:unsignedInt" use="required"/>
+									<xs:attribute name="option2" type="xs:unsignedInt" default="0"/>
+									<xs:attribute name="option3" type="xs:unsignedInt" default="0"/>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="id" type="xs:unsignedShort" use="required"/>
+						<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

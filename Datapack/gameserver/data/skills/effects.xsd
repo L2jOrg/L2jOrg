@@ -89,6 +89,17 @@
     <xs:element name="two-hand-sword-bonus" type="TwoHandSwordBonusEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="vampiric-attack" type="VampiricAttackEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="obtain-soul" type="ObtainSoulEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stats-linked" type="StatsLinkedEffect" substitutionGroup="abstractEffect"/>
+
+    <xs:complexType name="StatsLinkedEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="stat" type="Stat" use="required"/>
+                <xs:attribute name="base-stat" type="Stat" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+
+    </xs:complexType>
 
     <xs:complexType name="ObtainSoulEffect">
         <xs:complexContent>
@@ -952,4 +963,5 @@
             <xs:enumeration value="END"/>
         </xs:restriction>
     </xs:simpleType>
+
 </xs:schema>

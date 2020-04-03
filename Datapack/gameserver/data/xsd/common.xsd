@@ -1344,7 +1344,14 @@
             <xs:enumeration value="EARTHWORM_DEBUFF"/>
             <xs:enumeration value="AGATHION_SONG_DANCE"/>
             <xs:enumeration value="INSIDE_POSITION"/>
-            <xs:enumeration value="STEEL_MIND"/>
+            <xs:enumeration value="STEEL_MIND"/>			
+            <xs:enumeration value="GREATER_PA_UP"/>
+            <xs:enumeration value="GREATER_PD_UP"/>
+            <xs:enumeration value="GREATER_PA_PD_UP"/>
+            <xs:enumeration value="QUEEN_OF_CAT_BLESS"/>
+            <xs:enumeration value="QUEEN_OF_CAT_GIFT"/>
+            <xs:enumeration value="UNICORN_SERAPHIM_BLESS"/>
+            <xs:enumeration value="UNICORN_SERAPHIM_GIFT"/>
             <xs:enumeration value="STRAWBERRY_FRUIT"/>
             <xs:enumeration value="MONGO_FRUIT"/>
             <xs:enumeration value="CHERRY_FRUIT"/>

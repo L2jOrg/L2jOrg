@@ -219,7 +219,7 @@
 	<item id="734" name="Wind Walk Potion" type="POTION" icon="icon.etc_potion_green_i00">
 	<!-- Magical potion that increases movement Speed. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="2011" value="-1"/>  <!-- Wind Walk Potion -->
 		</skill-reducer>
@@ -258,7 +258,6 @@
 		<attributes weight="1300" price="18500" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="12.0"/>
 			<stat type="MAGIC_ATTACK" value="9.0"/>
@@ -299,7 +298,6 @@
 		<attributes weight="1300" price="33600" commission-type="ONE_HAND_SWORD" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="14.0"/>
 			<stat type="MAGIC_ATTACK" value="11.0"/>
@@ -316,7 +314,6 @@
 		<attributes weight="1800" price="33600" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="46" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="13.0"/>
 			<stat type="MAGIC_ATTACK" value="15.0"/>
@@ -345,7 +342,6 @@
 		<attributes weight="1300" price="25500" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="11.0"/>
 			<stat type="MAGIC_ATTACK" value="13.0"/>
@@ -363,7 +359,6 @@
 		<attributes weight="1350" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="46" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="10.0"/>
 			<stat type="MAGIC_ATTACK" value="11.0"/>
@@ -402,7 +397,6 @@
 		<attributes weight="1700" price="25500" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="46" angle="240"/>
-		<consume />
 		<stats>
 			<stat type="PHYSICAL_ATTACK" value="13.0"/>
 			<stat type="MAGIC_ATTACK" value="14.0"/>
