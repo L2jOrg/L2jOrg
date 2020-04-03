@@ -744,8 +744,15 @@
 		level 5: Has a chance to mark the enemy with a Death Mark for 10 seconds. Enemies marked with the Death Mark will receive more damage from Physical Critical Damage and Magic Critical Damage. \n\nDeath Mark Stage 5 activated
 	 -->
 		<icon initial="icon.skill1435"/>
-		<attributes property="MAGIC"/>
-		<target />
+		<attributes property="MAGIC">
+			<magic-level initial="15">
+				<value level="2">32</value>
+				<value level="3">56</value>
+				<value level="4">78</value>
+				<value level="5">85</value>
+			</magic-level>
+		</attributes>	
+			<target />
 		<effects>
 			<trigger-skill-by-attack skill="45154" target="ENEMY">
 				<power initial="1">
@@ -754,7 +761,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</power>
-				<chance initial="22"/>
+				<chance initial="30"/>
 				<min-damage initial="10"/>
 			</trigger-skill-by-attack>
 			<trigger-skill-by-magic skill="45154" chance="30" target="ENEMY">
@@ -771,10 +778,10 @@
 	<skill id="1440" name="Steal Divinity" max-level="3" action="A1" type="MAGIC">
 	<!-- Steals up to 3 of the enemy's abnormal statuses. Cannot steal buffs from monsters. -->
 		<icon initial="icon.skill1440"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
+		<attributes next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
 			<magic-level initial="55">
-				<value level="2">60</value>
-				<value level="3">64</value>
+				<value level="2">70</value>
+				<value level="3">80</value>
 			</magic-level>
 			<cast-range initial="600"/>
 			<reuse initial="15000"/>
@@ -784,7 +791,7 @@
 				<value level="3">-700</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="1200"/>
+			<hit-time initial="1400"/>
 			<activate-rate initial="-1"/>
 		</attributes>
 		<consume>
@@ -799,11 +806,8 @@
 		</consume>
 		<target type="ENEMY_ONLY" />
 		<effects>
-			<steal-abnormal category="BUFF" rate="25">
-				<power initial="3.0">
-					<value level="2">4.0</value>
-					<value level="3">5.0</value>
-				</power>
+			<steal-abnormal category="BUFF" rate="40">
+				<power initial="3.0"/>
 			</steal-abnormal>
 		</effects>
 	</skill>
@@ -847,6 +851,12 @@
 	 -->
 		<icon initial="Icon.ev_invasion_gun_shoot"/>
 		<attributes property="MAGIC">
+			<magic-level initial="40">
+				<value level="2">50</value>
+				<value level="3">60</value>
+				<value level="4">70</value>
+				<value level="5">75</value>
+			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -868,11 +878,11 @@
 	<!-- Catches the enemy's shadow and inflicts hold for 5 seconds. -->
 		<icon initial="icon.skill1446"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30" auto-use="ACTIVE">
-			<magic-level initial="52">
-				<value level="2">55</value>
-				<value level="3">58</value>
-				<value level="4">60</value>
-				<value level="5">62</value>
+			<magic-level initial="76">
+				<value level="2">78</value>
+				<value level="3">80</value>
+				<value level="4">82</value>
+				<value level="5">84</value>
 			</magic-level>
 			<cast-range initial="600"/>
 			<reuse initial="10000"/>
@@ -897,7 +907,7 @@
 		<target type="ENEMY_ONLY" />
 		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
 			<level initial="1"/>
-			<time initial="15"/>
+			<time initial="5"/>
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
@@ -913,11 +923,11 @@
 	<!-- Seals the enemy's voice, blocking their ability to cast magic for 3 seconds. -->
 		<icon initial="icon.skill1447"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
-			<magic-level initial="58">
-				<value level="2">60</value>
-				<value level="3">62</value>
-				<value level="4">64</value>
-				<value level="5">66</value>
+			<magic-level initial="76">
+				<value level="2">78</value>
+				<value level="3">80</value>
+				<value level="4">82</value>
+				<value level="5">84</value>
 			</magic-level>
 			<cast-range initial="600"/>
 			<reuse initial="20000"/>
@@ -942,7 +952,7 @@
 		<target type="ENEMY_ONLY" />
 		<abnormal type="SILENCE" visual="SILENCE" >
 			<level initial="1"/>
-			<time initial="20"/>
+			<time initial="3"/>
 			<chance initial="80"/>
 		</abnormal>
 		<effects>
@@ -1268,7 +1278,10 @@
 	 -->
 		<icon initial="icon.skill1474"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="43"/>
+			<magic-level initial="45">
+				<value level="2">60</value>
+				<value level="3">80</value>
+			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -1276,8 +1289,9 @@
 		<target />
 		<effects>
 			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
-				<power initial="200.0">
-					<value level="2">0.0</value>
+				<power initial="80.0">
+					<value level="2">120.0</value>
+					<value level="3">200.0</value>
 				</power>
 			</stat-modify>
 		</effects>

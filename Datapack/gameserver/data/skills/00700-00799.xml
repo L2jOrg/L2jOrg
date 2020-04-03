@@ -2312,11 +2312,11 @@
 	<!-- Electrocutes the enemy, paralyzing them for 3 seconds. -->
 		<icon initial="icon.skill0791"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="20" auto-use="ACTIVE">
-			<magic-level initial="81">
-				<value level="2">85</value>
-				<value level="3">90</value>
-				<value level="4">95</value>
-				<value level="5">99</value>
+			<magic-level initial="76">
+				<value level="2">78</value>
+				<value level="3">80</value>
+				<value level="4">82</value>
+				<value level="5">84</value>
 			</magic-level>
 			<cast-range initial="600"/>
 			<reuse initial="20000"/>
@@ -2328,9 +2328,9 @@
 				<value level="5">-500</value>
 			</effect-point>
 			<effect-range initial="-1"/>
-			<hit-time initial="1080"/>
+			<hit-time initial="1800"/>
 		</attributes>
-		<consume soul="5">
+		<consume>
 			<mana initial="30">
 				<value level="2">35</value>
 				<value level="3">40</value>
@@ -2338,33 +2338,14 @@
 				<value level="5">50</value>
 			</mana>
 		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12" />
+		<target type="ENEMY" />
 		<abnormal type="PARALYZE" visual="PARALYZE" >
 			<level initial="1"/>
 			<time initial="3"/>
-			<chance initial="50"/>
+			<chance initial="80"/>
 		</abnormal>
-		<effects>
-			<magical-attack>
-				<power initial="149.0">
-					<value level="2">158.0</value>
-					<value level="3">169.0</value>
-					<value level="4">179.0</value>
-					<value level="5">188.0</value>
-				</power>
-			</magical-attack>
+		<effects>			
 			<block-all-actions/>
-			<stat-modify stat="HEAL_RECEIVE">
-				<power initial="-10.0">
-					<value level="2">-20.0</value>
-					<value level="3">-30.0</value>
-					<value level="4">-40.0</value>
-					<value level="5">-50.0</value>
-				</power>
-			</stat-modify>
-			<call-skill skill="6092" scope="END">
-				<power initial="1.0"/>
-			</call-skill>
 		</effects>
 	</skill>
 	<skill id="792" name="Soul Stigma" max-level="5" debuff="true" action="A2">

@@ -693,7 +693,7 @@
 	<!-- With the original power of Kamael, Speed +20, Atk. Spd. +20, Casting Spd. +20. -->
 		<icon initial="icon.skill1923"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="76"/>
+			<magic-level initial="10"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -715,7 +715,7 @@
 	<!-- With the original power of Kamael, Poison/Bleed/Hold/Sleep/Stun/Mental Attack Resistance +20. -->
 		<icon initial="icon.skill1925"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="76"/>
+			<magic-level initial="10"/>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>
@@ -2880,7 +2880,17 @@
 	 -->
 		<icon initial="icon.m_class_heavy"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
+			<magic-level initial="20">
+				<value level="2">30</value>
+				<value level="3">40</value>
+				<value level="4">50</value>
+				<value level="5">60</value>
+				<value level="6">70</value>
+				<value level="7">75</value>
+				<value level="8">80</value>
+				<value level="9">85</value>
+				<value level="10">90</value>
+			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
 			<activate-rate initial="-1"/>

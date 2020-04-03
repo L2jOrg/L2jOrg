@@ -146,7 +146,12 @@
 	<!-- Spreads lightning's defensive barrier for 30 seconds. Has a chance to Paralyze the target that attacked you for 3 seconds. -->
 		<icon initial="icon.skill32617"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-			<magic-level initial="80"/>
+			<magic-level initial="76">
+				<value level="2">78</value>
+				<value level="3">80</value>
+				<value level="4">82</value>
+				<value level="5">84</value>
+			</magic-level>
 			<cast-range initial="-1"/>
 			<reuse initial="300000"/>
 			<effect-range initial="-1"/>
@@ -164,20 +169,35 @@
 		<target />
 		<abnormal type="ELEMENTAL_ARMOR">
 			<level initial="1"/>
-			<time initial="1200"/>
+			<time initial="30"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
-			<trigger-skill-by-damage skill="5592" target="TARGET" min-damage="100">
+			<trigger-skill-by-damage skill="5592" target="TARGET" min-damage="50">
 				<power initial="1.0"/>
-				<chance initial="20.0"/>
+				<chance initial="40.0"/>
 			</trigger-skill-by-damage>
 		</effects>
 	</skill>
 	<skill id="1516" name="Soul Strike" max-level="10">
 	<!-- When equipping a Rapier, has a chance to inflict additional M. Atk. when attacking the enemy. The type of M. Atk. that occurs for Soul Strike depends on the attack style. \n\n<Physical Attack>Sword Energy\n<Magci Attack>Lightning -->
 		<icon initial="icon.skill1528"/>
-		<attributes property="MAGIC" />
+		<attributes property="MAGIC" magic-critical-rate="5.0">
+			<magic-level initial="20">
+				<value level="2">30</value>
+				<value level="3">40</value>
+				<value level="4">50</value>
+				<value level="5">60</value>
+				<value level="6">70</value>
+				<value level="7">75</value>
+				<value level="8">80</value>
+				<value level="9">85</value>
+				<value level="10">90</value>
+			</magic-level>
+			<cast-range initial="-1"/>
+			<effect-range initial="-1"/>
+			<activate-rate initial="-1"/>
+		</attributes>
 		<target />
 		<effects>
 			<trigger-skill-by-attack skill="45165">
@@ -1015,10 +1035,10 @@
 		<icon initial="icon.skill19168"/>
 		<attributes property="MAGIC" magic-critical-rate="5.0">
 			<magic-level initial="40">
-				<value level="2">49</value>
-				<value level="3">58</value>
-				<value level="4">64</value>
-				<value level="5">68</value>
+				<value level="2">50</value>
+				<value level="3">60</value>
+				<value level="4">70</value>
+				<value level="5">75</value>
 			</magic-level>
 			<cast-range initial="-1"/>
 			<effect-range initial="-1"/>
@@ -1029,9 +1049,9 @@
 			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
 				<power initial="70.0">
 					<value level="2">100.0</value>
-					<value level="3">140.0</value>
-					<value level="4">150.0</value>
-					<value level="5">180.0</value>
+					<value level="3">130.0</value>
+					<value level="4">160.0</value>
+					<value level="5">200.0</value>
 				</power>
 			</vital-stat-modify>
 		</effects>

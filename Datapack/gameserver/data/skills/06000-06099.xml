@@ -1739,16 +1739,15 @@
 	<!-- The target is paralyzed. -->
 		<icon initial="icon.skill0791"/>
 		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true">
-			<magic-level initial="81"/>
+			<magic-level initial="76"/>
 			<cast-range initial="-1"/>
 			<effect-point initial="1"/>
 			<effect-range initial="-1"/>
 		</attributes>
-		<consume soul="5"/>
 		<target />
 		<abnormal type="PARALYZE" visual="PARALYZE" >
 			<level initial="1"/>
-			<time initial="5"/>
+			<time initial="3"/>
 			<chance initial="-1"/>
 		</abnormal>
 		<effects>
