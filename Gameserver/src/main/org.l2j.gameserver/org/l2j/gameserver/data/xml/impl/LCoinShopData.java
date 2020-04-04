@@ -3,6 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.xml.model.LCoinShopProductInfo;
+import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -95,8 +96,8 @@ public class LCoinShopData extends GameXmlReader {
         var itemId = parseInteger(attributes, "id");
         var count = parseInteger(attributes, "count");
 
-        //final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
-        if (isNull(itemId)) {
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
+        if (isNull(item)) {
             LOGGER.error("Item template does not exists for itemId: {} in product id {}", itemId, itemInfoNode.getAttributes().getNamedItem("id"));
             return null;
         }
