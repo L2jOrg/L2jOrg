@@ -18,6 +18,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
@@ -115,6 +116,19 @@ public final class HomeBoard implements IParseBoardHandler {
 				returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
 				returnHtml = returnHtml.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
 				returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
+			}
+			if (Config.CUSTOM_CB_ENABLED)
+			{
+				returnHtml = returnHtml.replaceAll("%name%", activeChar.getName());
+				returnHtml = returnHtml.replaceAll("%premium%", "Could not find acount setup");
+				returnHtml = returnHtml.replaceAll("%clan%", (activeChar.getClan() != null) ? activeChar.getClan().getName() : "No clan");
+				returnHtml = returnHtml.replaceAll("%alliance%", "Could not find it");
+				returnHtml = returnHtml.replaceAll("%country%", "Could not found it");
+				returnHtml = returnHtml.replaceAll("%class%", activeChar.getBaseTemplate().getClassId().name().replace("_", " "));
+				returnHtml = returnHtml.replaceAll("%exp%", String.valueOf(activeChar.getExp()).toString());
+				returnHtml = returnHtml.replaceAll("%adena%", String.valueOf(activeChar.getAdena()).toString());
+				returnHtml = returnHtml.replaceAll("%online%", String.valueOf(activeChar.getUptime()).toString());
+				returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
 			}
 		}
 		else if (command.startsWith("_bbstop;"))

@@ -413,7 +413,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME), // 152
     EX_TRY_ENCHANT_ARTIFACT(0x160, null, ConnectionState.IN_GAME), // 152
     EX_XIGN_CODE(0x161, null, ConnectionState.IN_GAME), // 152
-    EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(0x163, ExOpenHtml::new, ConnectionState.IN_GAME), //UNetworkHandler::RequestExPurchaseLimitShopItemBuy
+    EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(0x206, RequestPurchaseLimitShopItemBuy::new, ConnectionState.IN_GAME), //UNetworkHandler::RequestExPurchaseLimitShopItemBuy
     EX_OPEN_HTML(0x164, ExOpenHtml::new, ConnectionState.IN_GAME),
     EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME), // 228
     EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
