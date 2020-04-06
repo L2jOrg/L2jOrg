@@ -89,7 +89,7 @@ public class GameServer {
 
         printSection("Skills");
         SkillEngine.init();
-        LCoinShopData.getInstance();
+
         printSection("Items");
         ItemEngine.init();
         EnchantItemHPBonusData.getInstance();
@@ -101,6 +101,7 @@ public class GameServer {
         FishingData.getInstance();
         HennaData.getInstance();
         PrimeShopData.getInstance();
+        LCoinShopData.getInstance();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();
