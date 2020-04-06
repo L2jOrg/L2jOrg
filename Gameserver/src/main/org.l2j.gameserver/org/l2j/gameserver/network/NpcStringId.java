@@ -24558,6 +24558,12 @@ public final class NpcStringId {
     @ClientString(id = 1811308, message = "Speak with me about traveling around Aden.")
     public static NpcStringId SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN;
 
+    @ClientString(id = 596110, message = "Defeat the monsters on the Hill of Hope")
+    public static NpcStringId DEFEAT_THE_MONSTERS_ON_THE_HILL_OF_HOPE;
+
+    @ClientString(id = 596101, message = "|Lv. 2~20| Effective Training")
+    public static NpcStringId LV_2_20_EFFECTIVE_TRAINING;
+
     private static IntMap<NpcStringId> VALUES = new HashIntMap<>();
 
     static {

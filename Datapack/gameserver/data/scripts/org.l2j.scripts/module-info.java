@@ -732,5 +732,19 @@ open module org.l2j.scripts {
              quests.Q00662_AGameOfCards.Q00662_AGameOfCards,
              quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss,
              quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss,
-             quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
+             quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle,
+             quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining;
+          /*  quests.Q10962_NewHorizons.Q10962_NewHorizons,
+            quests.Q10966_ATripBegins.Q10966_ATripBegins,
+            quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling,
+            quests.Q10982_SpiderHunt.Q10982_SpiderHunt,
+            quests.Q10983_TroubledForest.Q10983_TroubledForest,
+            quests.Q10984_CollectSpiderweb.Q10984_CollectSpiderweb,
+            quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround,
+            quests.Q10986_SwampMonster.Q10986_SwampMonster,
+            quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves,
+            quests.Q10988_Conspiracy.Q10988_Conspiracy,
+            quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
+            quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;*/
+
 }
