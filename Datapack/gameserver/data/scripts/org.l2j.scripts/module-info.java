@@ -292,7 +292,9 @@ open module org.l2j.scripts {
             instances.ResidenceOfQueenNebula.ResidenceOfQueenNebula,
             instances.ResidenceOfKingProcella.ResidenceOfKingProcella,
             instances.ResidenceOfKingPetram.ResidenceOfKingPetram,
-            instances.ResidenceOfKingIgnis.ResidenceOfKingIgnis;
+            instances.ResidenceOfKingIgnis.ResidenceOfKingIgnis,
+            instances.SevenSignsRBs.SevenSignsRBs;
+
 
 
     provides events.ScriptEvent

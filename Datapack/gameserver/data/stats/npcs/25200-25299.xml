@@ -4024,9 +4024,9 @@
         <sex>FEMALE</sex>
         <acquire exp="1008600000" sp="30258000" raidPoints="300"/>
         <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-            <vitals hp="20782406.25" hpRegen="319.2293199" mp="30569.67" mpRegen="3"/>
-            <attack physical="72659" magical="64745" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="3864" magical="3774" evasion="-18"/>
+            <vitals hp="53409375" hpRegen="319.2293199" mp="31191.426" mpRegen="3" />
+            <attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="3335.250614" magical="1627.090034" />
             <speed>
                 <walk ground="45"/>
                 <run ground="200"/>
@@ -4237,11 +4237,11 @@
         </parameters>
         <race>DIVINE</race>
         <sex>FEMALE</sex>
-        <acquire exp="9911897" sp="1421059" raidPoints="300"/>
+        <acquire exp="1008600000" sp="30258000" raidPoints="300" />
         <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-            <vitals hp="688717" hpRegen="212" mp="30569.67" mpRegen="3"/>
-            <attack physical="3893" magical="1063" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="1024" magical="500" evasion="-18"/>
+            <vitals hp="53409375" hpRegen="319.2293199" mp="31191.426" mpRegen="3" />
+            <attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="3335.250614" magical="1627.090034" />
             <speed>
                 <walk ground="45"/>
                 <run ground="200"/>
