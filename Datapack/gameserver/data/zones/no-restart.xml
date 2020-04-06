@@ -416,4 +416,25 @@
         </cube>
         <property name="restartTime" value="0"/>
     </zone>
+    <!-- Classic: The Kamael zone -->
+    <zone name="anakim" id="70052" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5000" max-z="-5600">
+            <point x="-5760" y="19420"/>
+            <point x="-7590" y="19420"/>
+            <point x="-7590" y="17586"/>
+            <point x="-5760" y="17586"/>
+        </polygon>
+        <property name="restartTime" value="1800"/>
+        <property name="restartAllowedTime" value="600"/>
+    </zone>
+    <zone name="lilith" id="70053" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5400" max-z="-5600">
+            <point x="185996" y="-10519"/>
+            <point x="185969" y="-8693" />
+            <point x="184148" y="-8703" />
+            <point x="184149" y="-10523"/>
+        </polygon>
+        <property name="restartTime" value="1800"/>
+        <property name="restartAllowedTime" value="600"/>
+    </zone>
 </list>
