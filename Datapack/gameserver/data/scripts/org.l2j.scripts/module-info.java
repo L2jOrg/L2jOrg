@@ -294,6 +294,7 @@ open module org.l2j.scripts {
             instances.ResidenceOfKingPetram.ResidenceOfKingPetram,
             instances.ResidenceOfKingIgnis.ResidenceOfKingIgnis,
             instances.GolbergRoom.GolbergRoom,
+            instances.LastImperialTomb.LastImperialTomb,
             instances.SevenSignsRBs.SevenSignsRBs;
 
 
