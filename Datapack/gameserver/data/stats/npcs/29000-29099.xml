@@ -1800,156 +1800,509 @@
             <height normal="23"/>
         </collision>
     </npc>
-    <npc id="29045" level="85" type="Folk" name="Frintezza">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+    <npc id="29045" level="85" type="Npc" name="Frintezza">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+            <vitals hp="643059.482835" hpRegen="319.2293199" mp="38410.582" mpRegen="3"/>
+            <attack physical="2641.63342970569" magical="971.856593649426" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="4218.55484265502" magical="3093.6078479881"/>
+            <attribute>
+                <attack type="WIND" value="350"/>
+                <defence fire="300" water="300" wind="370" earth="250" holy="300" dark="300" default="300"/>
+            </attribute>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="30"/>
+                <run ground="31"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>430</hitTime>
+            <abnormalResist physical="230" magical="230"/>
         </stats>
-        <status attackable="false" />
+        <skillList>
+            <skill id="4416" level="6"/><!--  Humanoids  -->
+            <skill id="5464" level="1"/><!--  Wind Attack  -->
+        </skillList>
+        <corpseTime>15</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED">
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="45"/>
+            <height normal="42.7"/>
         </collision>
     </npc>
-    <npc id="29046" level="85" type="Folk" name="Scarlet van Halisha">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+    <npc id="29046" level="85" type="Monster" name="Scarlet van Halisha">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <equipment rhand="8204"/><!--  Monster Only (Follower of Frintezza Calibur)  -->
+        <acquire exp="130849003" sp="31403"/>
+        <stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+            <vitals hp="19146585" hpRegen="248.43" mp="17588" mpRegen="109"/>
+            <attack physical="3135.90530099925" magical="1442.51644402476" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="1342.97453242915" magical="2089.07149518896"/>
+            <attribute>
+                <attack type="DARK" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="300"/>
+            </attribute>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="240"/>
+                <run ground="111"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>430</hitTime>
+            <abnormalResist physical="230" magical="230"/>
         </stats>
-        <status attackable="false" />
+        <skillList>
+            <skill id="4045" level="1"/><!--  Resist Full Magic Attack  -->
+            <skill id="4071" level="4"/><!--  Resist Bow/Crossbow Weapons  -->
+            <skill id="4408" level="1"/><!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/><!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/><!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/><!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/><!--  Average P. Def.  -->
+            <skill id="4413" level="11"/><!--  Average M. Def.  -->
+            <skill id="4414" level="2"/><!--  Standard Type  -->
+            <skill id="4415" level="1"/><!--  Bare Hands  -->
+            <skill id="4416" level="9"/><!--  Demons  -->
+            <skill id="5078" level="1"/><!--  Frintezza Critical Power  -->
+            <skill id="4494" level="1"/><!--  Raid Boss  -->
+            <skill id="14768" level="1"/><!--  Raid Boss (Lv. 85)  -->
+            <skill id="5467" level="1"/><!--  Dark Attacks  -->
+            <skill id="5017" level="1"/><!--  Demon  -->
+            <skill id="14765" level="4"/><!--  Blood Siphon Resistance  -->
+        </skillList>
+        <corpseTime>18</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="3000" clanHelpRange="2000" isAggressive="true">
+            <skill primaryId="5014"/>
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="45" grown="54"/>
+            <height normal="90.7" grown="109.4"/>
         </collision>
     </npc>
-    <npc id="29048" level="85" type="Folk" name="Evil Spirit">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
+    <npc id="29047" level="85" type="RaidBoss" name="Scarlet van Halisha">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <equipment rhand="8222" />
+        <acquire exp="0" sp="0" raidPoints="0" />
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="56970000" hpRegen="319.2293199" mp="3510317.685" mpRegen="3" />
+            <attack physical="8184.13934" magical="2579.001338" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="3584.547554" magical="1748.708651" />
+            <speed>
+                <walk ground="250" />
+                <run ground="155" />
+            </speed>
+        </stats>
+        <status attackable="true" />
+        <collision>
+            <radius normal="92" />
+            <height normal="112.8" />
+        </collision>
+        <skillList>
+            <skill id="4494" level="1" /> <!-- Raid Boss -->
+            <skill id="4416" level="9" /> <!-- Demons -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="91550" min="1" max="1" chance="4.947" /> <!-- Frintezza's Necklace -->
+                <item id="5293" min="1" max="1" chance="1.138" /> <!-- Sealed Tallum Plate Armor -->
+                <item id="5313" min="1" max="1" chance="1.099" /> <!-- Sealed Gauntlets of Nightmare -->
+                <item id="5296" min="1" max="1" chance="1.09" /> <!-- Sealed Tallum Boots -->
+                <item id="5297" min="1" max="1" chance="1.087" /> <!-- Sealed Dark Crystal Leather Armor -->
+                <item id="5312" min="1" max="1" chance="1.086" /> <!-- Sealed Helm of Nightmare -->
+                <item id="5304" min="1" max="1" chance="1.08" /> <!-- Sealed Tallum Tunic -->
+                <item id="5308" min="1" max="1" chance="1.075" /> <!-- Sealed Dark Crystal Robe -->
+                <item id="5311" min="1" max="1" chance="1.068" /> <!-- Sealed Armor of Nightmare -->
+                <item id="5316" min="1" max="1" chance="1.056" /> <!-- Sealed Majestic Plate Armor -->
+                <item id="5298" min="1" max="1" chance="1.051" /> <!-- Sealed Dark Crystal Leggings -->
+                <item id="5329" min="1" max="1" chance="1.049" /> <!-- Sealed Majestic Robe -->
+                <item id="5288" min="1" max="1" chance="1.04" /> <!-- Sealed Dark Crystal Gaiters -->
+                <item id="5305" min="1" max="1" chance="1.037" /> <!-- Sealed Tallum Stockings -->
+                <item id="5314" min="1" max="1" chance="1.033" /> <!-- Sealed Boots of Nightmare -->
+                <item id="5315" min="1" max="1" chance="1.033" /> <!-- Sealed Shield of Nightmare -->
+                <item id="5319" min="1" max="1" chance="1.023" /> <!-- Sealed Majestic Boots -->
+                <item id="5301" min="1" max="1" chance="1.021" /> <!-- Sealed Tallum Leather Armor -->
+                <item id="5291" min="1" max="1" chance="1.019" /> <!-- Sealed Dark Crystal Boots -->
+                <item id="5290" min="1" max="1" chance="1.018" /> <!-- Sealed Dark Crystal Gloves -->
+                <item id="5294" min="1" max="1" chance="1.012" /> <!-- Sealed Tallum Helmet -->
+                <item id="5320" min="1" max="1" chance="1.007" /> <!-- Sealed Leather Armor of Nightmare -->
+                <item id="5287" min="1" max="1" chance="1.004" /> <!-- Sealed Dark Crystal Breastplate -->
+                <item id="5317" min="1" max="1" chance="0.997" /> <!-- Sealed Majestic Circlet -->
+                <item id="5295" min="1" max="1" chance="0.995" /> <!-- Sealed Tallum Gloves -->
+                <item id="5318" min="1" max="1" chance="0.992" /> <!-- Sealed Majestic Gauntlets -->
+                <item id="5323" min="1" max="1" chance="0.991" /> <!-- Sealed Majestic Leather Armor -->
+                <item id="5292" min="1" max="1" chance="0.987" /> <!-- Sealed Dark Crystal Shield -->
+                <item id="5326" min="1" max="1" chance="0.984" /> <!-- Sealed Robe of Nightmare -->
+                <item id="5289" min="1" max="1" chance="0.978" /> <!-- Sealed Dark Crystal Helmet -->
+                <item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+                <item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+                <item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+                <item id="7902" min="1" max="1" chance="0.75" /> <!-- Doom Crusher -->
+                <item id="7895" min="1" max="1" chance="0.75" /> <!-- Flaming Dragon Skull -->
+                <item id="213" min="1" max="1" chance="0.75" /> <!-- Branch of the Mother Tree -->
+                <item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+                <item id="81" min="1" max="1" chance="0.75" /> <!-- Dragon Slayer -->
+                <item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+                <item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+                <item id="151" min="1" max="1" chance="0.75" /> <!-- Sword of Miracles -->
+                <item id="164" min="1" max="1" chance="0.75" /> <!-- Elysian -->
+                <item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+                <item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+                <item id="236" min="1" max="1" chance="0.75" /> <!-- Soul Separator -->
+                <item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+                <item id="2500" min="1" max="1" chance="0.75" /> <!-- Dark Legion's Edge -->
+                <item id="305" min="1" max="1" chance="0.75" /> <!-- Tallum Glaive -->
+                <item id="289" min="1" max="1" chance="0.75" /> <!-- Soul Bow -->
+                <item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+                <item id="270" min="1" max="1" chance="0.75" /> <!-- Dragon Grinder -->
+                <item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+                <item id="8688" min="1" max="1" chance="0.3" /> <!-- Daimon Crystal -->
+                <item id="8687" min="1" max="1" chance="0.3" /> <!-- Cabrio's Hand -->
+                <item id="8686" min="1" max="1" chance="0.3" /> <!-- Themis' Tongue -->
+                <item id="8685" min="1" max="1" chance="0.3" /> <!-- Sobekk's Hurricane -->
+                <item id="8684" min="1" max="1" chance="0.3" /> <!-- Shyeed's Bow -->
+                <item id="8683" min="1" max="1" chance="0.3" /> <!-- Tiphon's Spear -->
+                <item id="8681" min="1" max="1" chance="0.3" /> <!-- Behemoth' Tuning Fork -->
+                <item id="8680" min="1" max="1" chance="0.3" /> <!-- Barakiel's Axe -->
+                <item id="8679" min="1" max="1" chance="0.3" /> <!-- Sword of Ipos -->
+                <item id="8678" min="1" max="1" chance="0.3" /> <!-- Sirra's Blade -->
+                <item id="8682" min="1" max="1" chance="0.3" /> <!-- Naga Storm -->
+                <item id="8619" min="1" max="1" chance="100" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+                <item id="70000" min="20" max="60" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+                <item id="33815" min="1" max="1" chance="50.22" /> <!-- Improved Scroll: Enchant Armor (A-grade) -->
+                <item id="8620" min="1" max="1" chance="49.14" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+                <item id="33809" min="1" max="1" chance="48.78" /> <!-- Improved Scroll: Enchant Weapon (A-grade) -->
+                <item id="49756" min="1" max="1" chance="9.943" /> <!-- Cloth Piece -->
+                <item id="91548" min="1" max="1" chance="9.939" /> <!-- Special Armor Varnish (A-grade) -->
+                <item id="91549" min="1" max="1" chance="9.939" /> <!-- Special Accessory Varnish (A-grade) -->
+                <item id="91500" min="1" max="1" chance="0.75" /> <!-- Basalt Battlehammer Crafting Pack -->
+                <item id="91515" min="1" max="1" chance="0.75" /> <!-- Sealed Draconic Leather Armor Crafting Pack -->
+                <item id="91516" min="1" max="1" chance="0.75" /> <!-- Sealed Draconic Leather Gloves Crafting Pack -->
+                <item id="91517" min="1" max="1" chance="0.75" /> <!-- Sealed Draconic Leather Boots Crafting Pack -->
+                <item id="91518" min="1" max="1" chance="0.75" /> <!-- Sealed Draconic Leather Helmet Crafting Pack -->
+                <item id="91519" min="1" max="1" chance="0.75" /> <!-- Sealed Major Arcana Robe Crafting Pack -->
+                <item id="91520" min="1" max="1" chance="0.75" /> <!-- Sealed Major Arcana Gloves Crafting Pack -->
+                <item id="91521" min="1" max="1" chance="0.75" /> <!-- Sealed Major Arcana Boots Crafting Pack -->
+                <item id="91522" min="1" max="1" chance="0.75" /> <!-- Sealed Major Arcana Circlet Crafting Pack -->
+                <item id="91523" min="1" max="1" chance="0.75" /> <!-- Sealed Tateossian Earring Crafting Pack -->
+                <item id="91524" min="1" max="1" chance="0.75" /> <!-- Sealed Tateossian Ring Crafting Pack -->
+                <item id="91525" min="1" max="1" chance="0.75" /> <!-- Sealed Tateossian Necklace Crafting Pack -->
+                <item id="90898" min="1" max="1" chance="0.75" /> <!-- Agathion's Soul -->
+                <item id="91514" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Helmet Crafting Pack -->
+                <item id="91513" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Shield Crafting Pack -->
+                <item id="91501" min="1" max="1" chance="0.75" /> <!-- Imperial Staff Crafting Pack -->
+                <item id="91502" min="1" max="1" chance="0.75" /> <!-- Angel Slayer Crafting Pack -->
+                <item id="91503" min="1" max="1" chance="0.75" /> <!-- Dragon Hunter Axe Crafting Pack -->
+                <item id="91504" min="1" max="1" chance="0.75" /> <!-- Saint Spear Crafting Pack -->
+                <item id="91505" min="1" max="1" chance="0.75" /> <!-- Demon Splinter Crafting Pack -->
+                <item id="91506" min="1" max="1" chance="0.75" /> <!-- Heaven's Divider Crafting Pack -->
+                <item id="91507" min="1" max="1" chance="0.75" /> <!-- Arcana Mace Crafting Pack -->
+                <item id="91508" min="1" max="1" chance="0.75" /> <!-- Draconic Bow Crafting Pack -->
+                <item id="91509" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Crafting Pack -->
+                <item id="91499" min="1" max="1" chance="0.75" /> <!-- Forgotten Blade Crafting Pack -->
+                <item id="91511" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Gauntlets Crafting Pack -->
+                <item id="91512" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Boots Crafting Pack -->
+                <item id="91510" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Gaiters Crafting Pack -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29048" level="85" type="Monster" name="Evil Spirit">
+        <race>CONSTRUCT</race>
         <sex>FEMALE</sex>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="82844" hpRegen="1.03" mp="2177" mpRegen="1.03"/>
+            <attack physical="1637.21079615435" magical="1151.5428303933" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="1637.38608949103" magical="1091.59072648368" evasion="3"/>
+            <attribute>
+                <attack type="WIND" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" default="220"/>
+            </attribute>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="10"/>
+                <run ground="1"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/><!--  Resist Full Magic Attack  -->
+            <skill id="4408" level="1"/><!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/><!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/><!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/><!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/><!--  Average P. Def.  -->
+            <skill id="4413" level="11"/><!--  Average M. Def.  -->
+            <skill id="4414" level="2"/><!--  Standard Type  -->
+            <skill id="4415" level="1"/><!--  Bare Hands  -->
+            <skill id="4416" level="2"/><!--  Magic Creatures  -->
+            <skill id="5464" level="1"/><!--  Wind Attacks  -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="CORPSE" clanHelpRange="1000" isAggressive="true" aggroRange="6000">
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="40"/>
+            <height normal="100"/>
         </collision>
     </npc>
-    <npc id="29049" level="85" type="Folk" name="Evil Spirit">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
+    <npc id="29049" level="85" type="Monster" name="Evil Spirit">
+        <race>CONSTRUCT</race>
         <sex>FEMALE</sex>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="82844" hpRegen="1.03" mp="2177" mpRegen="1.03"/>
+            <attack physical="1637.21079615435" magical="1151.5428303933" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="1637.38608949103" magical="1091.59072648368" evasion="3"/>
+            <attribute>
+                <attack type="WIND" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" default="220"/>
+            </attribute>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="10"/>
+                <run ground="1"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/><!--  Resist Full Magic Attack  -->
+            <skill id="4408" level="1"/><!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/><!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/><!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/><!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/><!--  Average P. Def.  -->
+            <skill id="4413" level="11"/><!--  Average M. Def.  -->
+            <skill id="4414" level="2"/><!--  Standard Type  -->
+            <skill id="4415" level="1"/><!--  Bare Hands  -->
+            <skill id="4416" level="2"/><!--  Magic Creatures  -->
+            <skill id="5464" level="1"/><!--  Wind Attacks  -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="CORPSE" clanHelpRange="1000" isAggressive="true" aggroRange="6000">
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="40"/>
+            <height normal="100"/>
         </collision>
     </npc>
-    <npc id="29050" level="85" type="Folk" name="Halisha's Breath">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
+    <npc id="29050" level="85" type="Monster" name="Halisha's Breath">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="12996" hpRegen="1.01" mp="20560" mpRegen="3.03"/>
+            <attack physical="1556.78628597682" magical="1073.71405840992" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="642.236873936287" magical="428.157916018841" evasion="1"/>
+            <attribute>
+                <attack type="DARK" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="220"/>
+            </attribute>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="30"/>
+                <run ground="200"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/><!--  Resist Full Magic Attack  -->
+            <skill id="4408" level="1"/><!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/><!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/><!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/><!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/><!--  Average P. Def.  -->
+            <skill id="4413" level="11"/><!--  Average M. Def.  -->
+            <skill id="4414" level="3"/><!--  Light Armor Type  -->
+            <skill id="4415" level="1"/><!--  Bare Hands  -->
+            <skill id="4416" level="9"/><!--  Demons  -->
+            <skill id="5467" level="1"/><!--  Dark Attacks  -->
+            <skill id="5009" level="1"/><!--  Frintezza Ghost Fighter  -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="2000" isAggressive="true">
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="23" grown="32"/>
+            <height normal="40" grown="50"/>
         </collision>
     </npc>
-    <npc id="29051" level="85" type="Folk" name="Halisha's Breath">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
+    <npc id="29051" level="85" type="Monster" name="Halisha's Breath">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="12996" hpRegen="1.01" mp="20560" mpRegen="3.03"/>
+            <attack physical="1556.78628597682" magical="1073.71405840992" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="642.236873936287" magical="428.157916018841" evasion="1"/>
+            <attribute>
+                <attack type="DARK" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" default="220"/>
+            </attribute>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="30"/>
+                <run ground="200"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/><!--  Resist Full Magic Attack  -->
+            <skill id="4408" level="1"/><!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/><!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/><!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/><!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/><!--  Average P. Def.  -->
+            <skill id="4413" level="11"/><!--  Average M. Def.  -->
+            <skill id="4414" level="3"/><!--  Light Armor Type  -->
+            <skill id="4415" level="1"/><!--  Bare Hands  -->
+            <skill id="4416" level="9"/><!--  Demons  -->
+            <skill id="5467" level="1"/><!--  Dark Attacks  -->
+            <skill id="5010" level="1"/><!--  Frintezza Ghost Mage  -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="2000" isAggressive="true">
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="23"/>
+            <height normal="40"/>
         </collision>
     </npc>
-    <npc id="29052" level="85" type="Folk" name="">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
+    <npc id="29052" level="85" type="Monster" name="">
+        <race>CONSTRUCT</race>
         <sex>FEMALE</sex>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="3960" hpRegen="8.585" mp="2056" mpRegen="3.03"/>
+            <attack physical="1216.23928591939" magical="838.839108132747" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="3864.96881246637" magical="2826.6352584085" evasion="1"/>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="10"/>
+                <run ground="1"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4408" level="1"/><!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/><!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/><!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/><!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/><!--  Average P. Def.  -->
+            <skill id="4413" level="11"/><!--  Average M. Def.  -->
+            <skill id="4414" level="2"/><!--  Standard Type  -->
+            <skill id="4415" level="1"/><!--  Bare Hands  -->
+            <skill id="4416" level="2"/><!--  Magic Creatures  -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED">
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="1"/>
+            <height normal="35"/>
         </collision>
     </npc>
-    <npc id="29053" level="85" type="Folk" name="">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
+    <npc id="29053" level="84" type="Monster" name="">
+        <race>CONSTRUCT</race>
         <sex>FEMALE</sex>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="5448" hpRegen="8.5" mp="2036" mpRegen="3"/>
+            <attack physical="1456.32495032888" magical="994.481156766258" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="383.421920892449" magical="280.571522036227"/>
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="10"/>
+                <run ground="1"/>
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4408" level="1"/><!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/><!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/><!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/><!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/><!--  Average P. Def.  -->
+            <skill id="4413" level="11"/><!--  Average M. Def.  -->
+            <skill id="4414" level="2"/><!--  Standard Type  -->
+            <skill id="4415" level="1"/><!--  Bare Hands  -->
+            <skill id="4416" level="2"/><!--  Magic Creatures  -->
+            <skill id="5004" level="1"/><!--  Dimensional Stun  -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED">
+            <clanList>
+                <clan>FRINTESSA</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="1"/>
+            <height normal="58"/>
+        </collision>
+    </npc>
+    <npc id="29061" displayId="31842" level="70" type="Teleporter" name="Teleportation Cubic">
+        <race>ETC</race>
+        <sex>ETC</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/>
+            <!--  Resist Full Magic Attack  -->
+            <skill id="4408" level="1"/>
+            <!--  HP Increase (1x)  -->
+            <skill id="4409" level="1"/>
+            <!--  MP Increase (1x)  -->
+            <skill id="4410" level="11"/>
+            <!--  Average P. Atk.  -->
+            <skill id="4411" level="11"/>
+            <!--  Average M. Atk.  -->
+            <skill id="4412" level="11"/>
+            <!--  Average P. Def.  -->
+            <skill id="4413" level="11"/>
+            <!--  Average M. Def.  -->
+            <skill id="4414" level="2"/>
+            <!--  Standard Type  -->
+            <skill id="4415" level="3"/>
+            <!--  One-handed Sword  -->
+            <skill id="4416" level="19"/>
+            <!--  Others  -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="300" isAggressive="true" aggroRange="500"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="80"/>
         </collision>
     </npc>
     <npc id="29047" level="85" type="RaidBoss" name="Scarlet van Halisha">

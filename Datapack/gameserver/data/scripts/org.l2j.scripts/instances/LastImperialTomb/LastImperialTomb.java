@@ -650,6 +650,11 @@ public class LastImperialTomb extends AbstractInstance
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
+		if (player.isGM())
+		{
+			enterInstance(player, npc, TEMPLATE_ID);
+			player.sendMessage("SYS: You have entered as GM/Admin to Frintezza Instance");
+		}
 		if (npc.getId() == GUIDE)
 		{
 			enterInstance(player, npc, TEMPLATE_ID);

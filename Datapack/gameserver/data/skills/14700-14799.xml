@@ -29,4 +29,12 @@
 			</physical-attack>
 		</effects>
 	</skill>
+	<skill id="14768" name="Raid Boss (Lv. 85)" action="A1">
+		<!-- After being killed by Frintezza, who lost his soul to the devil, it was reborn as a monster called Scarlet van Halisha. It has lost sense of self, and it only makes sacrifices for the demon Halisha. -->
+		<icon initial="icon.skillraid" />
+		<attributes property="PHYSIC" magic-critical-rate="-5">
+			<magic-level initial="1"/>
+		</attributes>
+		<target  />
+	</skill>
 </list>

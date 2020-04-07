@@ -1,300 +1,788 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-    <npc id="18328" level="85" type="Folk" name="Hall Alarm">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+    <npc id="18328" level="85" type="Monster" name="Hall Alarm">
+        <parameters>
+            <param name="TDoorName1" value="grave_pathway_1" />
+            <param name="TDoorName2" value="grave_pathway_2" />
+            <param name="WallDoorName1" value="wall_door_a_center_1" />
+            <param name="WallDoorName2" value="wall_door_a_center_2" />
+            <param name="WallDoorName3" value="wall_door_a_center_3" />
+            <param name="WallDoorName4" value="wall_door_a_center_4" />
+            <param name="WallDoorName5" value="wall_door_a_center_5" />
+            <param name="WallDoorName6" value="wall_door_a_center_6" />
+            <param name="WallDoorName7" value="wall_door_a_center_7" />
+            <param name="WallDoorName8" value="wall_door_a_center_8" />
+            <param name="dmgzone" value="25_15_frintessaE_01" />
+        </parameters>
+        <race>CONSTRUCT</race>
+        <sex>MALE</sex>
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="100000" hpRegen="8.8" mp="1846" mpRegen="3.1" />
+            <attack physical="1034.34087" magical="760.9193205984" random="10" critical="4" accuracy="11.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="378.92625" magical="277.281785" evasion="7" />
+            <speed>
+                <walk ground="50" />
+                <run ground="1" />
+            </speed>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11" /> <!-- Average P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="11" /> <!-- Average P. Def. -->
+            <skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="3" /> <!-- One-handed Sword -->
+            <skill id="4416" level="2" /> <!-- Magic Creatures -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>8</sNpcPropHpRate>
+        <ai type="CORPSE" isAggressive="true" aggroRange="500" />
+        <collision>
+            <radius normal="8" />
+            <height normal="21" />
+        </collision>
+    </npc>
+    <npc id="18329" level="83" type="Monster" name="Hall Keeper Captain">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="0" />
+            <param name="MoveAroundSocial1" value="0" />
+            <param name="MoveAroundSocial2" value="0" />
+            <skill name="PhysicalSpecial" id="4032" level="9" />
+            <skill name="SelfBuff" id="4028" level="3" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="78" /> <!-- Great Sword -->
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="100" />
+            </attribute>
+            <speed>
+                <walk ground="40" />
+                <run ground="160" />
+            </speed>
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4028" level="3" /> <!-- NPC Might -->
+            <skill id="4032" level="9" /> <!-- NPC Strike -->
+            <skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3" /> <!-- One-handed Sword -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="35" /> <!-- Undead -->
+            <skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>5</sNpcPropHpRate>
+        <ai aggroRange="250" clanHelpRange="4000" isAggressive="true">
+            <clanList>
+                <clan>HALLGUARD</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="21" grown="25" />
+            <height normal="40" grown="48" />
+        </collision>
+    </npc>
+    <npc id="18330" level="83" type="Monster" name="Hall Keeper Wizard">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="114" />
+            <param name="MoveAroundSocial1" value="114" />
+            <param name="MoveAroundSocial2" value="114" />
+            <skill name="W_LongRangeDDMagic" id="4137" level="9" />
+            <skill name="W_ShortRangeDDMagic" id="4560" level="9" />
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <equipment rhand="326" /> <!-- Heathen's Book -->
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="100" />
+            </attribute>
+            <speed>
+                <walk ground="70" />
+                <run ground="175" />
+            </speed>
+            <hitTime>740</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4137" level="9" /> <!-- Hydro Screw -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11" /> <!-- Average P. Atk. -->
+            <skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+            <skill id="4412" level="11" /> <!-- Average P. Def. -->
+            <skill id="4413" level="15" /> <!-- Strong M. Def. -->
+            <skill id="4415" level="1" /> <!-- Bare Hands -->
+            <skill id="4416" level="9" /> <!-- Demons -->
+            <skill id="4417" level="34" /> <!-- Undead -->
+            <skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+            <skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai type="MAGE" aggroRange="250" clanHelpRange="4000" isAggressive="true">
+            <clanList>
+                <clan>HALLGUARD</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="12" />
+            <height normal="40" />
+        </collision>
+    </npc>
+    <npc id="18331" level="83" type="Monster" name="Hall Keeper Guard">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="74" />
+            <param name="MoveAroundSocial1" value="74" />
+            <param name="MoveAroundSocial2" value="74" />
+            <skill name="PhysicalSpecial" id="4032" level="9" />
+            <skill name="SelfBuff" id="4028" level="3" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="142" /> <!-- Keshanberk -->
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="100" />
+            </attribute>
+            <speed>
+                <walk ground="27" />
+                <run ground="110" />
+            </speed>
+            <hitTime>710</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4028" level="3" /> <!-- NPC Might -->
+            <skill id="4032" level="9" /> <!-- NPC Strike -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="3" /> <!-- One-handed Sword -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="36" /> <!-- Undead -->
+            <skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai aggroRange="250" clanHelpRange="4000" isAggressive="true">
+            <clanList>
+                <clan>HALLGUARD</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="12" grown="14.5" />
+            <height normal="31" grown="36" />
+        </collision>
+    </npc>
+    <npc id="18332" level="83" type="Monster" name="Hall Keeper Patrol">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="110" />
+            <param name="MoveAroundSocial1" value="110" />
+            <param name="MoveAroundSocial2" value="110" />
+            <skill name="PhysicalSpecial" id="4101" level="9" />
+            <skill name="SelfBuff" id="4028" level="3" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="124" /> <!-- Two-handed Sword -->
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="100" />
+            </attribute>
+            <speed>
+                <walk ground="70" />
+                <run ground="170" />
+            </speed>
+            <hitTime>520</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4028" level="3" /> <!-- NPC Might -->
+            <skill id="4101" level="9" /> <!-- NPC Spinning Slash -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="3" /> <!-- One-handed Sword -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="36" /> <!-- Undead -->
+            <skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai aggroRange="250" clanHelpRange="4000" isAggressive="true">
+            <clanList>
+                <clan>HALLGUARD</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="21" grown="24" />
+            <height normal="31" grown="38" />
+        </collision>
+    </npc>
+    <npc id="18333" level="83" type="Monster" name="Hall Keeper Suicidal Soldier">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="80" />
+            <param name="MoveAroundSocial1" value="80" />
+            <param name="MoveAroundSocial2" value="111" />
+            <skill name="SelfRangeDDMagic" id="4614" level="9" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="150" />
+            </attribute>
+            <speed>
+                <walk ground="30" />
+                <run ground="150" />
+            </speed>
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4256" level="1" /> <!-- 100% stun resistance. -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="1" /> <!-- Bare Hands -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="13" /> <!-- Demons -->
+            <skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+            <skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai aggroRange="250" clanHelpRange="4000" isAggressive="true">
+            <clanList>
+                <clan>HALLGUARD</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="9" />
+            <height normal="25.8" />
+        </collision>
+    </npc>
+    <npc id="18334" level="83" type="Monster" name="Dark Choir Captain">
+        <!-- Confirmed CT2.5 -->
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
+            <speed>
+                <walk ground="31" />
+                <run ground="150" />
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4246" level="1" /> <!-- Strong in "nan" activity magic DOT -->
+            <skill id="4256" level="1" /> <!-- 100% stun resistance. -->
+            <skill id="4286" level="1" /> <!-- Greater Resist Sleep -->
+            <skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="6" /> <!-- Blunt Weapons -->
+            <skill id="4416" level="9" /> <!-- Demons -->
+            <skill id="4417" level="14" /> <!-- Demons -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>5</sNpcPropHpRate>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="1500" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="21" grown="24" />
+            <height normal="50" grown="60" />
+        </collision>
+    </npc>
+    <npc id="18335" level="83" type="Monster" name="Dark Choir Prima Donna">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="0" />
+            <param name="MoveAroundSocial1" value="0" />
+            <param name="MoveAroundSocial2" value="0" />
+            <skill name="PhysicalSpecial" id="4032" level="9" />
+            <skill name="SelfBuff" id="4028" level="3" />
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
+            <speed>
+                <walk ground="30" />
+                <run ground="200" />
+            </speed>
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4028" level="3" /> <!-- NPC Might -->
+            <skill id="4032" level="9" /> <!-- NPC Strike -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="3" /> <!-- Light Armor Type -->
+            <skill id="4415" level="1" /> <!-- Bare Hands -->
+            <skill id="4416" level="9" /> <!-- Demons -->
+            <skill id="4417" level="14" /> <!-- Demons -->
+            <skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="1500" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="23" grown="32" />
+            <height normal="40" grown="50" />
+        </collision>
+    </npc>
+    <npc id="18336" level="83" type="Monster" name="Dark Choir Lancer">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="80" />
+            <param name="MoveAroundSocial1" value="80" />
+            <param name="MoveAroundSocial2" value="80" />
+            <skill name="PhysicalSpecial" id="4032" level="9" />
+            <skill name="SelfBuff" id="4028" level="3" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="1472" /> <!-- Dreadbane -->
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
+            <speed>
+                <walk ground="100" />
+                <run ground="180" />
+            </speed>
+            <hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4028" level="3" /> <!-- NPC Might -->
+            <skill id="4032" level="9" /> <!-- NPC Strike -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="3" /> <!-- Light Armor Type -->
+            <skill id="4415" level="1" /> <!-- Bare Hands -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="14" /> <!-- Demons -->
+            <skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai aggroRange="450" clanHelpRange="1500" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="15" grown="25" />
+            <height normal="45" grown="52" />
+        </collision>
+    </npc>
+    <npc id="18337" level="83" type="Monster" name="Dark Choir Archer">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="157" />
+            <param name="MoveAroundSocial1" value="157" />
+            <param name="MoveAroundSocial2" value="157" />
+            <skill name="PhysicalSpecial" id="4040" level="9" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="279" /> <!-- Reinforced Longbow -->
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
+            <speed>
+                <walk ground="40" />
+                <run ground="140" />
+            </speed>
+            <hitTime>800</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4040" level="9" /> <!-- NPC Bow Attack -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="3" /> <!-- Light Armor Type -->
+            <skill id="4415" level="5" /> <!-- Blunt Weapons -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="36" /> <!-- Undead -->
+            <skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="13" />
+            <height normal="32.5" />
+        </collision>
+    </npc>
+    <npc id="18338" level="83" type="Monster" name="Dark Choir Shaman">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="0" />
+            <param name="MoveAroundSocial1" value="0" />
+            <param name="MoveAroundSocial2" value="0" />
+            <skill name="W_LongRangeDDMagic" id="4137" level="9" />
+            <skill name="W_ShortRangeDDMagic" id="4560" level="9" />
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
+            <speed>
+                <walk ground="30" />
+                <run ground="190" />
+            </speed>
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4137" level="9" /> <!-- Hydro Screw -->
+            <skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11" /> <!-- Average P. Atk. -->
+            <skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+            <skill id="4412" level="11" /> <!-- Average P. Def. -->
+            <skill id="4413" level="15" /> <!-- Strong M. Def. -->
+            <skill id="4414" level="3" /> <!-- Light Armor Type -->
+            <skill id="4415" level="1" /> <!-- Bare Hands -->
+            <skill id="4416" level="9" /> <!-- Demons -->
+            <skill id="4417" level="14" /> <!-- Demons -->
+            <skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+            <skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>3</sNpcPropHpRate>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="23" />
+            <height normal="40" />
+        </collision>
+    </npc>
+    <npc id="18339" level="83" type="Monster" name="Dark Choir Player">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <param name="MoveAroundSocial" value="167" />
+            <param name="MoveAroundSocial1" value="167" />
+            <param name="MoveAroundSocial2" value="167" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
             <speed>
                 <walk ground="60" />
-                <run ground="120" />
+                <run ground="140" />
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <hitTime>300</hitTime>
+            <abnormalResist physical="10" magical="10" />
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="3" /> <!-- One-handed Sword -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="36" /> <!-- Undead -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="1500" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="11" grown="13" />
+            <height normal="25" grown="31" />
+        </collision>
+    </npc>
+    <npc id="18340" level="83" type="Monster" name="Hall Keeper Suicidal Soldier">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <skill name="SelfRangeDDMagic" id="5042" level="9" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
+            <speed>
+                <walk ground="30" />
+                <run ground="100" />
+            </speed>
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4256" level="1" /> <!-- 100% stun resistance. -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11" /> <!-- Average P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="11" /> <!-- Average P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="1" /> <!-- Bare Hands -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="13" /> <!-- Demons -->
+            <skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+            <skill id="5042" level="9" /> <!-- NPC Dispel Bomb -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="9" />
+            <height normal="25.8" />
+        </collision>
+    </npc>
+    <npc id="18341" level="83" type="Monster" name="Hall Keeper Suicidal Soldier">
+        <!-- Confirmed CT2.5 -->
+        <parameters>
+            <skill name="SelfRangeDDMagic" id="5042" level="9" />
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+            <vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+            <attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
+            <attribute>
+                <attack type="DARK" value="100" />
+                <defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="120" />
+            </attribute>
+            <speed>
+                <walk ground="30" />
+                <run ground="150" />
+            </speed>
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10" />
+        </stats>
+        <status undying="false" canBeSown="true" />
+        <skillList>
+            <skill id="4256" level="1" /> <!-- 100% stun resistance. -->
+            <skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+            <skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="11" /> <!-- Average M. Atk. -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11" /> <!-- Average M. Def. -->
+            <skill id="4414" level="2" /> <!-- Standard Type -->
+            <skill id="4415" level="1" /> <!-- Bare Hands -->
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4417" level="13" /> <!-- Demons -->
+            <skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+            <skill id="5042" level="9" /> <!-- NPC Dispel Bomb -->
+            <skill id="5467" level="1" /> <!-- Dark Attacks -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>4</sNpcPropHpRate>
+        <ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
+            <clanList>
+                <clan>DARKBAND</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="9" />
+            <height normal="25.8" />
         </collision>
     </npc>
     <npc id="18342" level="1" type="Monster" name="Gremlin">
         <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
+            <param name="MoveAroundSocial" value="0" />
+            <param name="MoveAroundSocial1" value="0" />
+            <param name="MoveAroundSocial2" value="0" />
         </parameters>
         <race>FAIRY</race>
         <sex>MALE</sex>
-        <acquire exp="44" sp="0"/>
+        <acquire exp="44" sp="0" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="15.27122" hpRegen="2" mp="43.365" mpRegen="0.9"/>
-            <attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="44.44444" magical="32.52252"/>
+            <vitals hp="15.27122" hpRegen="2" mp="43.365" mpRegen="0.9" />
+            <attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="44.44444" magical="32.52252" />
             <speed>
-                <walk ground="20"/>
-                <run ground="50"/>
+                <walk ground="20" />
+                <run ground="50" />
             </speed>
             <hitTime>370</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <abnormalResist physical="10" magical="10" />
         </stats>
-        <status undying="false"/>
+        <status undying="false" />
         <skillList>
-            <skill id="4416" level="13"/> <!-- Fairies -->
+            <skill id="4416" level="13" /> <!-- Fairies -->
         </skillList>
         <exCrtEffect>true</exCrtEffect>
-        <ai clanHelpRange="300" aggroRange="450"/>
+        <ai clanHelpRange="300" aggroRange="450" />
         <collision>
-            <radius normal="10"/>
-            <height normal="15"/>
-        </collision>
-    </npc>
-    <npc id="18329" level="85" type="Folk" name="Hall Keeper Captain">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18330" level="85" type="Folk" name="Hall Keeper Wizard">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18331" level="85" type="Folk" name="Hall Keeper Guard">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18332" level="85" type="Folk" name="Hall Keeper Patrol">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18333" level="85" type="Folk" name="Hall Keeper Suicidal Soldier">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18334" level="85" type="Folk" name="Dark Choir Captain">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18335" level="85" type="Folk" name="Dark Choir Prima Donna">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18336" level="85" type="Folk" name="Dark Choir Lancer">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18337" level="85" type="Folk" name="Dark Choir Archer">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18338" level="85" type="Folk" name="Dark Choir Shaman">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18339" level="85" type="Folk" name="Dark Choir Player">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18340" level="85" type="Folk" name="Hall Keeper Suicidal Soldier">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
-        </collision>
-    </npc>
-    <npc id="18341" level="85" type="Folk" name="Hall Keeper Suicidal Soldier">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-            <speed>
-                <walk ground="60" />
-                <run ground="120" />
-            </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
-        </stats>
-        <status attackable="false" />
-        <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="10" />
+            <height normal="15" />
         </collision>
     </npc>
     <npc id="18343" level="85" type="Folk" name="">

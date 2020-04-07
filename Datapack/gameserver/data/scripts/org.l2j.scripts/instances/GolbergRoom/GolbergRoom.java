@@ -62,7 +62,7 @@ public class GolbergRoom extends AbstractInstance
                 if (player.isGM())
                 {
                     enterInstance(player, npc, TEMPLATE_ID);
-                    player.sendMessage("SYS: You have entered as GM/Admin to Anakim Instance");
+                    player.sendMessage("SYS: You have entered as GM/Admin to Goldberg instance");
                 }
                 else if (!player.isGM()) {
                 final Party party = player.getParty();
