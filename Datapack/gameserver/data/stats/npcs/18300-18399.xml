@@ -563,24 +563,28 @@
             <height normal="12" />
         </collision>
     </npc>
-    <npc id="18357" level="85" type="Folk" name="Goldberg's Treasure Chest">
+    <npc id="18357" level="80" type="Folk" name="Goldberg's Treasure Chest">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+        <acquire exp="0" sp="0" />
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="6076.8" hpRegen="8.5" mp="2794.785" mpRegen="3" />
+            <attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="341.375" magical="249.80341" />
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="80" />
+                <run ground="150" />
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
         </stats>
-        <status attackable="false" />
+        <status attackable="true" />
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="8.5" />
+            <height normal="8.5" />
         </collision>
+        <skillList>
+            <skill id="4416" level="2" /> <!-- Magical Creatures -->
+        </skillList>
     </npc>
     <npc id="18358" level="85" type="Folk" name="Goldberg's Steward">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -601,24 +605,35 @@
             <height normal="12" />
         </collision>
     </npc>
-    <npc id="18359" level="85" type="Folk" name="Goldberg" title="Ancient Pirate Captain">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+    <npc id="18359" level="83" type="Monster" name="Goldberg" title="Ancient Pirate Captain">
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <acquire exp="3556791" sp="96034" />
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="19837.487603306" hpRegen="8.5" mp="3554.208" mpRegen="3" />
+            <attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+            <defence physical="353.86144" magical="258.94045" />
             <speed>
-                <walk ground="60" />
-                <run ground="120" />
+                <walk ground="40" />
+                <run ground="175" />
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
         </stats>
-        <status attackable="false" />
+        <status attackable="true" />
         <collision>
-            <radius normal="5" />
-            <height normal="12" />
+            <radius normal="50" />
+            <height normal="87" />
         </collision>
+        <skillList>
+            <skill id="4416" level="1" /> <!-- Undead -->
+            <skill id="4408" level="20" /> <!-- HP Increase (12x) -->
+            <skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="15" /> <!-- Strong M. Def. -->
+            <skill id="4085" level="1" /> <!-- Critical Damage -->
+            <skill id="4086" level="1" /> <!-- Critical Chance -->
+            <skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+        </skillList>
     </npc>
     <npc id="18360" level="85" type="Folk" name="Sayha's Dor">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->

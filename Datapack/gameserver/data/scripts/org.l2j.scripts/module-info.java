@@ -293,6 +293,7 @@ open module org.l2j.scripts {
             instances.ResidenceOfKingProcella.ResidenceOfKingProcella,
             instances.ResidenceOfKingPetram.ResidenceOfKingPetram,
             instances.ResidenceOfKingIgnis.ResidenceOfKingIgnis,
+            instances.GolbergRoom.GolbergRoom,
             instances.SevenSignsRBs.SevenSignsRBs;
 
 

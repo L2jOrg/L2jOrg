@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="207" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+    <time duration="20" empty="0" />
+    <locations>
+        <enter type="FIXED">
+            <location x="11712" y="-84973" z="-10965" />
+        </enter>
+        <exit type="ORIGIN" />
+    </locations>
+    <conditions>
+        <condition type="Party" />
+        <condition type="PartyLeader" />
+        <condition type="GroupMin">
+            <param name="limit" value="18" /> <!-- The Kamael update -->
+        </condition>
+        <condition type="GroupMax">
+            <param name="limit" value="100" />
+        </condition>
+        <condition type="Level">
+            <param name="min" value="78" />
+            <param name="max" value="85" />
+        </condition>
+        <condition type="Distance" />
+    </conditions>
+    <spawnlist>
+        <group>
+            <npc id="18359" x="11700" y="-87948" z="-10948" heading="16383" /> <!-- Golberg -->
+        </group>
+    </spawnlist>
+</instance>
