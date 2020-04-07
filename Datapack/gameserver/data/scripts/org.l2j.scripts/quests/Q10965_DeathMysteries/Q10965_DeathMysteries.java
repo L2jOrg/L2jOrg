@@ -46,7 +46,7 @@ public class Q10965_DeathMysteries extends Quest
 	private static final int ROAD_SCAVENGER = 20551;
 	private static final int FETTERED_SOUL = 20552;
 	private static final int WINDUS = 20553;
-	private static final int GRANDIS = 50554;
+	private static final int GRANDIS = 20554;
 	// Items
 	private static final ItemHolder ADVENTURERS_AGATHION_BRACELET = new ItemHolder(91933, 1);
 	private static final ItemHolder ADVENTURERS_AGATHION_GRIFIN = new ItemHolder(91935, 1);
