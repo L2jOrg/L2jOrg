@@ -24684,6 +24684,25 @@ public final class NpcStringId {
     @ClientString(id = 104001, message = "|Lv. 15~20| Poison Extraction")
     public static NpcStringId LV_15_20_POISON_EXTRACTION;
 
+    @ClientString(id = 1000526, message = "Mournful Chorale Prelude")
+    public static NpcStringId MOURNFUL_CHORALE_PRELUDE;
+
+    @ClientString(id = 1000522, message = "Requiem of Hatred")
+    public static NpcStringId REQUIEM_OF_HATRED;
+
+    @ClientString(id = 1000523, message = "Fugue of Jubilation")
+    public static NpcStringId FUGUE_OF_JUBILATION;
+
+    @ClientString(id = 1000524, message = "Frenetic Toccata")
+    public static NpcStringId FRENETIC_TOCCATA;
+
+    @ClientString(id = 1000525, message = "Hypnotic Mazurka")
+    public static NpcStringId HYPNOTIC_MAZURKA;
+
+    @ClientString(id = 1000527, message = "Rondo of Solitude")
+    public static NpcStringId RONDO_OF_SOLITUDE;
+
+
     private static IntMap<NpcStringId> VALUES = new HashIntMap<>();
 
     static {

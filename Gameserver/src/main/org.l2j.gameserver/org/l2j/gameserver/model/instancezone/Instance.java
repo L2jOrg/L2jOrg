@@ -822,4 +822,7 @@ public final class Instance implements IIdentifiable, INamable {
     public String toString() {
         return _template.getName() + "(" + _id + ")";
     }
+
+    public void openCloseDoor(int doorId, boolean b) {
+    }
 }
