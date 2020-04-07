@@ -1273,12 +1273,6 @@
             <point x="44608" y="170624"/>
         </cube>
     </zone>
-    <zone name="21_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
-        <cube min-z="-4779" max-z="-3779">
-            <point x="32768" y="196608"/>
-            <point x="65536" y="229376"/>
-        </cube>
-    </zone>
     <zone name="21_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
         <cube min-z="-4780" max-z="-3780">
             <point x="32768" y="229379"/>
