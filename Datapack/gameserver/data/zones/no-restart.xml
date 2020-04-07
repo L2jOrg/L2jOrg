@@ -196,7 +196,7 @@
         </polygon>
         <property name="restartTime" value="0"/>
     </zone>
-    <zone name="25_15_frintessa_Restart01" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+    <zone name="25_15_frintessa_Restart01" id="70054" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
         <polygon min-z="-5200" max-z="-4680">
             <point x="172031" y="-90127"/>
             <point x="176428" y="-90089"/>
