@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+    <npcs>
+        <npc>34053</npc> <!-- Svein -->
+    </npcs>
+    <item>
+        <ingredient id="91039" count="500" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91043" count="1" chance="35"/> <!-- Nebula 1 -->
+        <production id="91043" count="1" chance="35"/> <!-- Nebula 1 High -->
+    </item>
+    <item>
+        <ingredient id="91043" count="1" /> <!-- Nebula 1 -->
+        <ingredient id="91039" count="600" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91044" count="1" chance="20"/> <!-- Nebula 2 list -->
+        <production id="91044" count="1" chance="15"/> <!-- Nebula 2 avarage -->
+        <production id="91043" count="1" chance="65"/> <!-- Nebula 1 standar -->
+    </item>
+    <item>
+        <ingredient id="91044" count="1" /> <!-- Nebula 2 -->
+        <ingredient id="91039" count="800" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91045" count="1" chance="15"/> <!-- Nebula 3 list -->
+        <production id="91045" count="1" chance="10"/> <!-- Nebula 3 avarage -->
+        <production id="91044" count="1" chance="75"/> <!-- Nebula 2 standar -->
+    </item>
+    <item>
+        <ingredient id="91045" count="1" /> <!-- Nebula 3 -->
+        <ingredient id="91039" count="900" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91116" count="1" chance="10"/> <!-- Nebula 4 list -->
+        <production id="91116" count="1" chance="5"/> <!-- Nebula 4 avarage -->
+        <production id="91045" count="1" chance="85"/> <!-- Nebula 3 standar -->
+    </item>
+    <item>
+        <ingredient id="91116" count="1" /> <!-- Nebula 4 -->
+        <ingredient id="91039" count="1200" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="500000" /> <!-- Adena -->
+        <production id="91117" count="1" chance="2"/> <!-- Nebula 5 list -->
+        <production id="91117" count="1" chance="3"/> <!-- Nebula 5 avarage -->
+        <production id="91116" count="1" chance="95"/> <!-- Nebula 4 standar -->
+    </item>
+
+    <item>
+        <ingredient id="91040" count="500" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91046" count="1" chance="35"/> <!-- Ignis 1 -->
+        <production id="91046" count="1" chance="35"/> <!-- Ignis 1 High -->
+    </item>
+    <item>
+        <ingredient id="91046" count="1" /> <!-- Ignis 1 -->
+        <ingredient id="91040" count="600" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91047" count="1" chance="20"/> <!-- Ignis 2 list -->
+        <production id="91047" count="1" chance="15"/> <!-- Ignis 2 avarage -->
+        <production id="91046" count="1" chance="65"/> <!-- Ignis 1 standar -->
+    </item>
+    <item>
+        <ingredient id="91047" count="1" /> <!-- Ignis 2 -->
+        <ingredient id="91040" count="800" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91048" count="1" chance="15"/> <!-- Ignis 3 list -->
+        <production id="91048" count="1" chance="10"/> <!-- Ignis 3 avarage -->
+        <production id="91047" count="1" chance="75"/> <!-- Ignis 2 standar -->
+    </item>
+    <item>
+        <ingredient id="91048" count="1" /> <!-- Ignis 3 -->
+        <ingredient id="91040" count="900" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91118" count="1" chance="10"/> <!-- Ignis 4 list -->
+        <production id="91118" count="1" chance="5"/> <!-- Ignis 4 avarage -->
+        <production id="91048" count="1" chance="85"/> <!-- Ignis 3 standar -->
+    </item>
+    <item>
+        <ingredient id="91118" count="1" /> <!-- Ignis 4 -->
+        <ingredient id="91040" count="1200" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="500000" /> <!-- Adena -->
+        <production id="91119" count="1" chance="2"/> <!-- Ignis 5 list -->
+        <production id="91119" count="1" chance="3"/> <!-- Ignis 5 avarage -->
+        <production id="91118" count="1" chance="95"/> <!-- Ignis 4 standar -->
+    </item>
+
+    <item>
+        <ingredient id="91041" count="500" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91049" count="1" chance="35"/> <!-- Procella 1 -->
+        <production id="91049" count="1" chance="35"/> <!-- Procella 1 High -->
+    </item>
+    <item>
+        <ingredient id="91049" count="1" /> <!-- Procella 1 -->
+        <ingredient id="91041" count="600" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91050" count="1" chance="20"/> <!-- Procella 2 list -->
+        <production id="91050" count="1" chance="15"/> <!-- Procella 2 avarage -->
+        <production id="91049" count="1" chance="65"/> <!-- Procella 1 standar -->
+    </item>
+    <item>
+        <ingredient id="91050" count="1" /> <!-- Procella 2 -->
+        <ingredient id="91041" count="800" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91051" count="1" chance="15"/> <!-- Procella 3 list -->
+        <production id="91051" count="1" chance="10"/> <!-- Procella 3 avarage -->
+        <production id="91050" count="1" chance="75"/> <!-- Procella 2 standar -->
+    </item>
+    <item>
+        <ingredient id="91051" count="1" /> <!-- Procella 3 -->
+        <ingredient id="91041" count="900" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91120" count="1" chance="10"/> <!-- Procella 4 list -->
+        <production id="91120" count="1" chance="5"/> <!-- Procella 4 avarage -->
+        <production id="91051" count="1" chance="85"/> <!-- Procella 3 standar -->
+    </item>
+    <item>
+        <ingredient id="91120" count="1" /> <!-- Procella 4 -->
+        <ingredient id="91041" count="1200" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="500000" /> <!-- Adena -->
+        <production id="91121" count="1" chance="2"/> <!-- Procella 5 list -->
+        <production id="91121" count="1" chance="3"/> <!-- Procella 5 avarage -->
+        <production id="91120" count="1" chance="95"/> <!-- Procella 4 standar -->
+    </item>
+
+    <item>
+        <ingredient id="91042" count="500" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91052" count="1" chance="35"/> <!-- Petram 1 -->
+        <production id="91052" count="1" chance="35"/> <!-- Petram 1 High -->
+    </item>
+    <item>
+        <ingredient id="91052" count="1" /> <!-- Petram 1 -->
+        <ingredient id="91042" count="600" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91053" count="1" chance="20"/> <!-- Petram 2 list -->
+        <production id="91053" count="1" chance="15"/> <!-- Petram 2 avarage -->
+        <production id="91052" count="1" chance="65"/> <!-- Petram 1 standar -->
+    </item>
+    <item>
+        <ingredient id="91053" count="1" /> <!-- Petram 2 -->
+        <ingredient id="91042" count="800" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91054" count="1" chance="15"/> <!-- Petram 3 list -->
+        <production id="91054" count="1" chance="10"/> <!-- Petram 3 avarage -->
+        <production id="91053" count="1" chance="75"/> <!-- Petram 2 standar -->
+    </item>
+    <item>
+        <ingredient id="91054" count="1" /> <!-- Petram 3 -->
+        <ingredient id="91042" count="900" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91122" count="1" chance="10"/> <!-- Petram 4 list -->
+        <production id="91122" count="1" chance="5"/> <!-- Petram 4 avarage -->
+        <production id="91054" count="1" chance="85"/> <!-- Petram 3 standar -->
+    </item>
+    <item>
+        <ingredient id="91122" count="1" /> <!-- Petram 4 -->
+        <ingredient id="91042" count="1200" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="500000" /> <!-- Adena -->
+        <production id="91123" count="1" chance="2"/> <!-- Petram 5 list -->
+        <production id="91123" count="1" chance="3"/> <!-- Petram 5 avarage -->
+        <production id="91122" count="1" chance="95"/> <!-- Petram 4 standar -->
+    </item>
+</list>
