@@ -1,40 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<instance id="200" name="Anakim" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+<instance id="200" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
     <time duration="120" empty="0" />
+    <removeBuffs type="ALL" />
     <locations>
         <enter type="FIXED">
             <location x="-6704" y="19121" z="-5493" />
         </enter>
-		<!-- <exit type="ORIGIN" /> -->
-        <exit type="FIXED">
-		    <location x="-22120" y="13608" z="-3208" />
-        </exit>
+        <exit type="ORIGIN" />
     </locations>
     <conditions>
         <condition type="Party" />
         <condition type="CommandChannel" />
         <condition type="CommandChannelLeader" />
         <condition type="GroupMin">
-            <param name="limit" value="10" />
-        </condition>
-        <condition type="GroupMax">
-            <param name="limit" value="100" />
+            <param name="limit" value="90" />
         </condition>
         <condition type="Level">
             <param name="min" value="76" />
-            <param name="max" value="90" />
         </condition>
         <condition type="Distance" />
         <condition type="Reenter" />
     </conditions>
     <reenter apply="ON_ENTER">
-        <reset day="MONDAY" hour="6" minute="30" />
-        <reset day="THURSDAY" hour="6" minute="30" />
+        <reset day="TUESDAY" hour="9" minute="30" />
+        <reset day="FRIDAY" hour="9" minute="30" />
     </reenter>
     <spawnlist>
         <group>
-            <npc id="25286" x="-6675" y="18505" z="-5495" heading="0" /> <!-- Anakim -->
+            <npc id="25286" x="-6664" y="18505" z="-5493" heading="48103" /> <!-- Anakim -->
         </group>
     </spawnlist>
-	<!-- https://l2central.info/classic/%D0%A0%D0%B5%D0%B9%D0%B4%D0%BE%D0%B2%D0%B0%D1%8F_%D0%97%D0%BE%D0%BD%D0%B0:_%D0%90%D0%BD%D0%B0%D0%BA%D0%B8%D0%BC -->
 </instance>
