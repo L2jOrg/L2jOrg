@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="23087" name="Uthanka Agathion Cute Trick" action="A1">
-	<!-- See the summoned spirit perform cute tricks. -->
-		<icon initial="icon.skill_agathion_cute"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<conditions>
-			<condition name="OpNeedAgathion"/>
-		</conditions>
-	</skill>
-	<skill id="23088" name="Synge the Cat's Consideration" action="A2">
-	<!-- For 2 hrs., XP/SP Gain +40%%. -->
-		<icon initial="icon.skill_sing"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true" >
-			<magic-level initial="-1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="MULTI_BUFF">
-			<level initial="26"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0" mode="PER">
-				<power initial="20.0"/>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="23089" name="Synge the Cat's Blessing" action="A1">
-	<!-- For 2 hrs., XP/SP Gain +20%%. -->
-		<icon initial="icon.skill_sing"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="23087" name="Uthanka Agathion Cute Trick" action="A1">
+        <!-- See the summoned spirit perform cute tricks. -->
+        <icon initial="icon.skill_agathion_cute"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <conditions>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+    </skill>
+    <skill id="23088" name="Synge the Cat's Consideration" action="A2">
+        <!-- For 2 hrs., XP/SP Gain +40%%. -->
+        <icon initial="icon.skill_sing"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="MULTI_BUFF">
+            <level initial="26"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+                <power initial="20.0"/>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="23089" name="Synge the Cat's Blessing" action="A1">
+        <!-- For 2 hrs., XP/SP Gain +20%%. -->
+        <icon initial="icon.skill_sing"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

@@ -1,1064 +1,995 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="40000" name="Moody's Might" action="A2" type="MAGIC">
-	<!-- For 20 minutes, P. Atk. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40001" name="Moody's Shield" action="A2" type="MAGIC">
-	<!-- For 20 minutes, P. Def. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40002" name="Moody's Focus" action="A2" type="MAGIC">
-	<!-- For 20 minutes, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40003" name="Moody's Haste" action="A2" type="MAGIC">
-	<!-- For 20 minutes, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40004" name="Moody's Acumen" action="A2" type="MAGIC">
-	<!-- For 20 minutes, Casting Spd. +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40005" name="Moody's Empower" action="A2" type="MAGIC">
-	<!-- For 20 minutes, M. Atk. +75% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40006" name="Moody's Wind Walk" action="A2" type="MAGIC">
-	<!-- For 20 minutes, Speed +33 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40007" name="Moody's Death Whisper" action="A2" type="MAGIC">
-	<!-- For 20 minutes, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40008" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
-	<!-- For 20 minutes, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40009" name="Moody's Wild Magic" action="A2" type="MAGIC">
-	<!-- For 20 minutes, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40010" name="Moody's Guidance" action="A2" type="MAGIC">
-	<!-- For 20 minutes, P. Accuracy +4 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40011" name="Moody's Clarity" action="A2" type="MAGIC">
-	<!-- For 20 minutes, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
-		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40012" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
-	<!-- For 20 minutes with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40013" name="Moody's Concentration" action="A2" type="MAGIC">
-	<!-- For 20 minutes, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1078"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40014" name="Moody's Might" action="A2" type="MAGIC">
-	<!-- For 1 hour, P. Atk. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40015" name="Moody's Shield" action="A2" type="MAGIC">
-	<!-- For 1 hour, P. Def. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40016" name="Moody's Focus" action="A2" type="MAGIC">
-	<!-- For 1 hour, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40017" name="Moody's Haste" action="A2" type="MAGIC">
-	<!-- For 1 hour, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40018" name="Moody's Acumen" action="A2" type="MAGIC">
-	<!-- For 1 hour, Casting Spd. +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40019" name="Moody's Empower" action="A2" type="MAGIC">
-	<!-- For 1 hour, M. Atk. +75% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40020" name="Moody's Wind Walk" action="A2" type="MAGIC">
-	<!-- For 1 hour, Speed +33 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40021" name="Moody's Death Whisper" action="A2" type="MAGIC">
-	<!-- For 1 hour, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40022" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
-	<!-- For 1 hour, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40023" name="Moody's Wild Magic" action="A2" type="MAGIC">
-	<!-- For 1 hour, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40024" name="Moody's Guidance" action="A2" type="MAGIC">
-	<!-- For 1 hour, P. Accuracy +4 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40025" name="Moody's Clarity" action="A2" type="MAGIC">
-	<!-- For 1 hour, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
-		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40026" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
-	<!-- For 1 hour with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40027" name="Moody's Concentration" action="A2" type="MAGIC">
-	<!-- For 1 hour, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1078"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40028" name="Moody's Might" action="A2" type="MAGIC">
-	<!-- For 4 hours, P. Atk. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40029" name="Moody's Shield" action="A2" type="MAGIC">
-	<!-- For 4 hours, P. Def. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40030" name="Moody's Focus" action="A2" type="MAGIC">
-	<!-- For 4 hours, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40031" name="Moody's Haste" action="A2" type="MAGIC">
-	<!-- For 4 hours, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40032" name="Moody's Acumen" action="A2" type="MAGIC">
-	<!-- For 4 hours, Casting Spd. +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40033" name="Moody's Empower" action="A2" type="MAGIC">
-	<!-- For 4 hours, M. Atk. +75% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40034" name="Moody's Wind Walk" action="A2" type="MAGIC">
-	<!-- For 4 hours, Speed +33 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40035" name="Moody's Death Whisper" action="A2" type="MAGIC">
-	<!-- For 4 hours, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40036" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
-	<!-- For 4 hours, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40037" name="Moody's Wild Magic" action="A2" type="MAGIC">
-	<!-- For 4 hours, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40038" name="Moody's Guidance" action="A2" type="MAGIC">
-	<!-- For 4 hours, P. Accuracy +4 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40039" name="Moody's Clarity" action="A2" type="MAGIC">
-	<!-- For 4 hours, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
-		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40040" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
-	<!-- For 4 hours with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40041" name="Moody's Concentration" action="A2" type="MAGIC">
-	<!-- For 4 hours, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1078"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40042" name="Moody's Might" action="A2" type="MAGIC">
-	<!-- For 8 hours, P. Atk. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40043" name="Moody's Shield" action="A2" type="MAGIC">
-	<!-- For 8 hours, P. Def. +15% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40044" name="Moody's Focus" action="A2" type="MAGIC">
-	<!-- For 8 hours, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40045" name="Moody's Haste" action="A2" type="MAGIC">
-	<!-- For 8 hours, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40046" name="Moody's Acumen" action="A2" type="MAGIC">
-	<!-- For 8 hours, Casting Spd. +30% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40047" name="Moody's Empower" action="A2" type="MAGIC">
-	<!-- For 8 hours, M. Atk. +75% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40048" name="Moody's Wind Walk" action="A2" type="MAGIC">
-	<!-- For 8 hours, Speed +33 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40049" name="Moody's Death Whisper" action="A2" type="MAGIC">
-	<!-- For 8 hours, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40050" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
-	<!-- For 8 hours, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40051" name="Moody's Wild Magic" action="A2" type="MAGIC">
-	<!-- For 8 hours, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40052" name="Moody's Guidance" action="A2" type="MAGIC">
-	<!-- For 8 hours, P. Accuracy +4 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40053" name="Moody's Clarity" action="A2" type="MAGIC">
-	<!-- For 8 hours, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
-		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40054" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
-	<!-- For 8 hours with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40055" name="Moody's Concentration" action="A2" type="MAGIC">
-	<!-- For 8 hours, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
-		<icon initial="icon.skill1078"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40056" name="Enchant Scroll: Eva's Talisman" action="A1">
-	<!-- none -->
-		<icon initial="icon.bm_eva_talisman_scroll"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40057" name="Magic Flame - Event" action="A1">
-	<!-- Magic Lamp recharge speed +100%% -->
-		<icon initial="icon.bm_soul_of_shilen"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40058" name="Seal of Giran" action="A1">
-	<!-- For 20 minutes, Acquired XP and SP +20%. Cooldown is 1 min. The Seal of Giran effect remains even after death.\n\nNote: It cannot be stacked with Einhasad's Protection. -->
-		<icon initial="icon.etc_royal_seal_of_lord_i04"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40059" name="Sayha's Benefaction">
-	<!-- For 20 minutes, Sayha's Grace Consumption -10%. -->
-		<icon initial="icon.high_stone_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40060" name="Primeval Garden Time Recharge Stone">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<hit-time initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40061" name="Primeval Garden Time Recharge Stone">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<hit-time initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40062" name="Enchant Scroll: Talisman - Speed">
-	<!-- none -->
-		<icon initial="icon.tallisman_rapid_scrl"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40063" name="Tower of Insolence Stone of Memory: 1st Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40064" name="Tower of Insolence Stone of Memory: 2nd Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40065" name="Tower of Insolence Stone of Memory: 3rd Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40066" name="Tower of Insolence Stone of Memory: 4th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40067" name="Tower of Insolence Stone of Memory: 5th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40068" name="Tower of Insolence Stone of Memory: 6th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40069" name="Tower of Insolence Stone of Memory: 7th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40070" name="Tower of Insolence Stone of Memory: 8th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40071" name="Tower of Insolence Stone of Memory: 9th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40072" name="Tower of Insolence Stone of Memory: 10th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40073" name="Tower of Insolence Stone of Memory: 11th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40074" name="Tower of Insolence Stone of Memory: 12th Floor">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40075" name="Recharge item gauge by 100 Points">
-	<!-- Recharge item gauge by 100 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40076" name="Recharge item gauge by 500 Points">
-	<!-- Recharge item gauge by 500 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40077" name="Recharge item gauge by 1,000 Points">
-	<!-- Recharge item gauge by 1,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40078" name="Recharge item gauge by 3,000 Points">
-	<!-- Recharge item gauge by 3,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40079" name="Recharge item gauge by 5,000 Points">
-	<!-- Recharge item gauge by 5,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40080" name="Recharge item gauge by 10,000 Points">
-	<!-- Recharge item gauge by 10,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40081" name="Recharge item gauge by 30,000 Points">
-	<!-- Recharge item gauge by 30,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40082" name="Recharge item gauge by 50,000 Points">
-	<!-- Recharge item gauge by 50,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40083" name="Recharge item gauge by 100,000 Points">
-	<!-- Recharge item gauge by 100,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40084" name="Recharge item gauge by 300,000 Points">
-	<!-- Recharge item gauge by 300,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40085" name="Recharge item gauge by 500,000 Points">
-	<!-- Recharge item gauge by 500,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40086" name="Recharge item gauge by 1,000,000 Points">
-	<!-- Recharge item gauge by 1,000,000 Points -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40087" name="Scroll: Einhasad's Blessing">
-	<!-- XP/SP Gain +50%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
-		<icon initial="icon.exp_bottle_scroll"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40088" name="Enchant Scroll: Moonshadow Weapon">
-	<!-- Enchant Moonshadow weapon. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40089" name="Adventurer’s Griffin Agathion Enchant Scroll">
-	<!-- Enchants an Adventurer’s Griffin Agathion. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40090" name="Enchant Scroll: Adventurer’s Cloak">
-	<!-- Enchants an Adventurer’s Cloak. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40091" name="Enchant Scroll: Adventurer’s Hair Accessory">
-	<!-- Enchants an Adventurer’s Hair Accessory. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40092" name="Enchant Scroll: Adventurer’s Belt">
-	<!-- Enchants an Adventurer’s Belt. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40093" name="Inventory Expansion Ticket of Glory">
-	<!-- Double-click to learn Glory Expand Inventory. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40094" name="Weight Limit Expansion Ticket of Glory">
-	<!-- Double-click to learn Glory Expand Limit Weight. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40095" name="Spellbook: Summon Winner’s Glory">
-	<!-- Double-click to learn Summon Winner’s Glory. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40096" name="Spellbook: Summon White Wings">
-	<!-- Double-click to learn Summon White Wings. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40097" name="Spellbook: Summon Silver Saint">
-	<!-- Double-click to learn Summon Silver Saint. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40098" name="Sayha's Benefaction">
-	<!-- For 20 minutes, Sayha's Grace Consumption -10%. -->
-		<icon initial="icon.high_stone_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40099" name="Red Arc - 1st Place">
-	<!-- For $s1, Sayha's Grace Consumption -$s2. -->
-		<icon initial="icon.etc_holy_grail_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="40000" name="Moody's Might" action="A2" type="MAGIC">
+        <!-- For 20 minutes, P. Atk. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40001" name="Moody's Shield" action="A2" type="MAGIC">
+        <!-- For 20 minutes, P. Def. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1040"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40002" name="Moody's Focus" action="A2" type="MAGIC">
+        <!-- For 20 minutes, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40003" name="Moody's Haste" action="A2" type="MAGIC">
+        <!-- For 20 minutes, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40004" name="Moody's Acumen" action="A2" type="MAGIC">
+        <!-- For 20 minutes, Casting Spd. +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1085"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40005" name="Moody's Empower" action="A2" type="MAGIC">
+        <!-- For 20 minutes, M. Atk. +75% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40006" name="Moody's Wind Walk" action="A2" type="MAGIC">
+        <!-- For 20 minutes, Speed +33 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1204"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40007" name="Moody's Death Whisper" action="A2" type="MAGIC">
+        <!-- For 20 minutes, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1242"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40008" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
+        <!-- For 20 minutes, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1268"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40009" name="Moody's Wild Magic" action="A2" type="MAGIC">
+        <!-- For 20 minutes, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1303"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40010" name="Moody's Guidance" action="A2" type="MAGIC">
+        <!-- For 20 minutes, P. Accuracy +4 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40011" name="Moody's Clarity" action="A2" type="MAGIC">
+        <!-- For 20 minutes, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
+        <icon initial="icon.skill1397"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40012" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
+        <!-- For 20 minutes with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40013" name="Moody's Concentration" action="A2" type="MAGIC">
+        <!-- For 20 minutes, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1078"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40014" name="Moody's Might" action="A2" type="MAGIC">
+        <!-- For 1 hour, P. Atk. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40015" name="Moody's Shield" action="A2" type="MAGIC">
+        <!-- For 1 hour, P. Def. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1040"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40016" name="Moody's Focus" action="A2" type="MAGIC">
+        <!-- For 1 hour, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40017" name="Moody's Haste" action="A2" type="MAGIC">
+        <!-- For 1 hour, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40018" name="Moody's Acumen" action="A2" type="MAGIC">
+        <!-- For 1 hour, Casting Spd. +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1085"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40019" name="Moody's Empower" action="A2" type="MAGIC">
+        <!-- For 1 hour, M. Atk. +75% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40020" name="Moody's Wind Walk" action="A2" type="MAGIC">
+        <!-- For 1 hour, Speed +33 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1204"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40021" name="Moody's Death Whisper" action="A2" type="MAGIC">
+        <!-- For 1 hour, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1242"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40022" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
+        <!-- For 1 hour, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1268"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40023" name="Moody's Wild Magic" action="A2" type="MAGIC">
+        <!-- For 1 hour, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1303"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40024" name="Moody's Guidance" action="A2" type="MAGIC">
+        <!-- For 1 hour, P. Accuracy +4 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40025" name="Moody's Clarity" action="A2" type="MAGIC">
+        <!-- For 1 hour, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
+        <icon initial="icon.skill1397"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40026" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
+        <!-- For 1 hour with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40027" name="Moody's Concentration" action="A2" type="MAGIC">
+        <!-- For 1 hour, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1078"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40028" name="Moody's Might" action="A2" type="MAGIC">
+        <!-- For 4 hours, P. Atk. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40029" name="Moody's Shield" action="A2" type="MAGIC">
+        <!-- For 4 hours, P. Def. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1040"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40030" name="Moody's Focus" action="A2" type="MAGIC">
+        <!-- For 4 hours, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40031" name="Moody's Haste" action="A2" type="MAGIC">
+        <!-- For 4 hours, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40032" name="Moody's Acumen" action="A2" type="MAGIC">
+        <!-- For 4 hours, Casting Spd. +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1085"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40033" name="Moody's Empower" action="A2" type="MAGIC">
+        <!-- For 4 hours, M. Atk. +75% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40034" name="Moody's Wind Walk" action="A2" type="MAGIC">
+        <!-- For 4 hours, Speed +33 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1204"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40035" name="Moody's Death Whisper" action="A2" type="MAGIC">
+        <!-- For 4 hours, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1242"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40036" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
+        <!-- For 4 hours, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1268"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40037" name="Moody's Wild Magic" action="A2" type="MAGIC">
+        <!-- For 4 hours, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1303"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40038" name="Moody's Guidance" action="A2" type="MAGIC">
+        <!-- For 4 hours, P. Accuracy +4 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40039" name="Moody's Clarity" action="A2" type="MAGIC">
+        <!-- For 4 hours, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
+        <icon initial="icon.skill1397"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40040" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
+        <!-- For 4 hours with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40041" name="Moody's Concentration" action="A2" type="MAGIC">
+        <!-- For 4 hours, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1078"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40042" name="Moody's Might" action="A2" type="MAGIC">
+        <!-- For 8 hours, P. Atk. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40043" name="Moody's Shield" action="A2" type="MAGIC">
+        <!-- For 8 hours, P. Def. +15% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1040"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40044" name="Moody's Focus" action="A2" type="MAGIC">
+        <!-- For 8 hours, P. Critical Rate +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40045" name="Moody's Haste" action="A2" type="MAGIC">
+        <!-- For 8 hours, Atk. Spd. +33% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40046" name="Moody's Acumen" action="A2" type="MAGIC">
+        <!-- For 8 hours, Casting Spd. +30% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1085"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40047" name="Moody's Empower" action="A2" type="MAGIC">
+        <!-- For 8 hours, M. Atk. +75% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40048" name="Moody's Wind Walk" action="A2" type="MAGIC">
+        <!-- For 8 hours, Speed +33 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1204"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40049" name="Moody's Death Whisper" action="A2" type="MAGIC">
+        <!-- For 8 hours, P. Critical Damage +35% with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1242"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40050" name="Moody's Vampiric Rage" action="A2" type="MAGIC">
+        <!-- For 8 hours, has a chance of absorbing 9% of damage inflicted upon the enemy as HP during an attack with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1268"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40051" name="Moody's Wild Magic" action="A2" type="MAGIC">
+        <!-- For 8 hours, M. Critical Rate +20 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1303"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40052" name="Moody's Guidance" action="A2" type="MAGIC">
+        <!-- For 8 hours, P. Accuracy +4 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40053" name="Moody's Clarity" action="A2" type="MAGIC">
+        <!-- For 8 hours, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Song/Dance Skill MP Consumption -20% with Moody's power. Effect remains even after death. -->
+        <icon initial="icon.skill1397"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40054" name="Moody's Berserker Spirit" action="A2" type="MAGIC">
+        <!-- For 8 hours with Moody’s Power, P. Def -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. + 8%%, Casting Spd. + 8%%, Movement Speed +8. Effect remains after death. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40055" name="Moody's Concentration" action="A2" type="MAGIC">
+        <!-- For 8 hours, decreases magic cancel damage by 53 with Moody's power. Effect remains after death. -->
+        <icon initial="icon.skill1078"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40056" name="Enchant Scroll: Eva's Talisman" action="A1">
+        <!-- none -->
+        <icon initial="icon.bm_eva_talisman_scroll"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40057" name="Magic Flame - Event" action="A1">
+        <!-- Magic Lamp recharge speed +100%% -->
+        <icon initial="icon.bm_soul_of_shilen"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40058" name="Seal of Giran" action="A1">
+        <!-- For 20 minutes, Acquired XP and SP +20%. Cooldown is 1 min. The Seal of Giran effect remains even after death.\n\nNote: It cannot be stacked with Einhasad's Protection. -->
+        <icon initial="icon.etc_royal_seal_of_lord_i04"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40059" name="Sayha's Benefaction">
+        <!-- For 20 minutes, Sayha's Grace Consumption -10%. -->
+        <icon initial="icon.high_stone_i01"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40060" name="Primeval Garden Time Recharge Stone">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40061" name="Primeval Garden Time Recharge Stone">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40062" name="Enchant Scroll: Talisman - Speed">
+        <!-- none -->
+        <icon initial="icon.tallisman_rapid_scrl"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40063" name="Tower of Insolence Stone of Memory: 1st Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40064" name="Tower of Insolence Stone of Memory: 2nd Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40065" name="Tower of Insolence Stone of Memory: 3rd Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40066" name="Tower of Insolence Stone of Memory: 4th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40067" name="Tower of Insolence Stone of Memory: 5th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40068" name="Tower of Insolence Stone of Memory: 6th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40069" name="Tower of Insolence Stone of Memory: 7th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40070" name="Tower of Insolence Stone of Memory: 8th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40071" name="Tower of Insolence Stone of Memory: 9th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40072" name="Tower of Insolence Stone of Memory: 10th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40073" name="Tower of Insolence Stone of Memory: 11th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40074" name="Tower of Insolence Stone of Memory: 12th Floor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40075" name="Recharge item gauge by 100 Points">
+        <!-- Recharge item gauge by 100 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40076" name="Recharge item gauge by 500 Points">
+        <!-- Recharge item gauge by 500 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40077" name="Recharge item gauge by 1,000 Points">
+        <!-- Recharge item gauge by 1,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40078" name="Recharge item gauge by 3,000 Points">
+        <!-- Recharge item gauge by 3,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40079" name="Recharge item gauge by 5,000 Points">
+        <!-- Recharge item gauge by 5,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40080" name="Recharge item gauge by 10,000 Points">
+        <!-- Recharge item gauge by 10,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40081" name="Recharge item gauge by 30,000 Points">
+        <!-- Recharge item gauge by 30,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40082" name="Recharge item gauge by 50,000 Points">
+        <!-- Recharge item gauge by 50,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40083" name="Recharge item gauge by 100,000 Points">
+        <!-- Recharge item gauge by 100,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40084" name="Recharge item gauge by 300,000 Points">
+        <!-- Recharge item gauge by 300,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40085" name="Recharge item gauge by 500,000 Points">
+        <!-- Recharge item gauge by 500,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40086" name="Recharge item gauge by 1,000,000 Points">
+        <!-- Recharge item gauge by 1,000,000 Points -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40087" name="Scroll: Einhasad's Blessing">
+        <!-- XP/SP Gain +50%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
+        <icon initial="icon.exp_bottle_scroll"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40088" name="Enchant Scroll: Moonshadow Weapon">
+        <!-- Enchant Moonshadow weapon. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40089" name="Adventurer’s Griffin Agathion Enchant Scroll">
+        <!-- Enchants an Adventurer’s Griffin Agathion. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40090" name="Enchant Scroll: Adventurer’s Cloak">
+        <!-- Enchants an Adventurer’s Cloak. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40091" name="Enchant Scroll: Adventurer’s Hair Accessory">
+        <!-- Enchants an Adventurer’s Hair Accessory. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40092" name="Enchant Scroll: Adventurer’s Belt">
+        <!-- Enchants an Adventurer’s Belt. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40093" name="Inventory Expansion Ticket of Glory">
+        <!-- Double-click to learn Glory Expand Inventory. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40094" name="Weight Limit Expansion Ticket of Glory">
+        <!-- Double-click to learn Glory Expand Limit Weight. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40095" name="Spellbook: Summon Winner’s Glory">
+        <!-- Double-click to learn Summon Winner’s Glory. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40096" name="Spellbook: Summon White Wings">
+        <!-- Double-click to learn Summon White Wings. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40097" name="Spellbook: Summon Silver Saint">
+        <!-- Double-click to learn Summon Silver Saint. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40098" name="Sayha's Benefaction">
+        <!-- For 20 minutes, Sayha's Grace Consumption -10%. -->
+        <icon initial="icon.high_stone_i01"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40099" name="Red Arc - 1st Place">
+        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
+        <icon initial="icon.etc_holy_grail_i00"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
 </list>

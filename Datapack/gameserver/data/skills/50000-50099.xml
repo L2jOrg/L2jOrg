@@ -1,1728 +1,1676 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="50000" name="Haste" action="A1" type="MAGIC">
-	<!-- Increases Atk. Spd. +50%%. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50001" name="Transform: Pirate Costume" action="A1">
-	<!-- Transformation ability, granted to the player by an NPC. Transforms you into an Undead Pirate to make an ambush as a part of a quest. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="400"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50002" name="Curse Zaken" debuff="true" action="A1">
-	<!-- Cursed by Zaken. Movement Speed decreased by 30%% and HP momentarily decreased. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50003" name="Crescent Slash" max-level="2" debuff="true" action="A1">
-	<!-- Deals a horizontal slashing blow with a sword. Inflicts bleeding. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="40"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50004" name="Phantom Archer" max-level="2" action="A1">
-	<!-- Releases Skeletal Ghost from the sword. The Ghost breaks free and deals damage to the target. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="30000">
-				<value level="2">0</value>
-			</reuse>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50005" name="Multiple Slash" max-level="2" debuff="true" action="A1">
-	<!-- Swings dual swords. Deals huge damage and inflicts bleeding. -->
-		<icon initial="icon.skill1630"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="40"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50006" name="Blood To Flesh" max-level="2" action="A1" type="MAGIC">
-	<!-- Decreases HP/ MP of the target and restores player's HP. -->
-		<icon initial="icon.skill0289"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50007" name="Typhoon Slash" max-level="2" debuff="true" action="A1">
-	<!-- Deals ranged damage to all targets around you. Inflicts bleeding. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="10000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50008" name="Rage of Pirate King" max-level="2" debuff="true" action="A1">
-	<!-- Attacks and knocks down a target. Attack energy dissolves among multiple targets. -->
-		<icon initial="icon.skill0003"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-52"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50009" name="Lv. 55 Raid Boss" max-level="43" >
-	<!-- 
-		level 1: A rift that had appeared after an earthquake and weakened the Maphr's Seal, now shifted to the material world and brought chaos and pain with it.
-		level 36: Death Knight, awoken by the earthquake, is now about to devour the power of life of unworldly creatures and Aden's heroes.
-		level 42: Enchanted by Shilen, enshrouded in darkness, reborn with a greater power.
-	 -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50010" name="Greater Hold Resistance" max-level="5" >
-	<!-- Very strong Hold attack resistance. -->
-		<icon initial="icon.skill4288"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50011" name="Greater Paralysis Resistance" max-level="5" >
-	<!-- Very strong Paralysis attack resistance. -->
-		<icon initial="icon.skill4440"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50012" name="Paralysis" max-level="12" debuff="true" action="A1" type="MAGIC">
-	<!-- Paralyzed and unable to move momentarily. -->
-		<icon initial="icon.skill1170"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="300"/>
-			<reuse initial="8000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="6000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="18">
-				<value level="2">29</value>
-				<value level="3">40</value>
-				<value level="4">53</value>
-				<value level="5">68</value>
-				<value level="6">83</value>
-				<value level="7">98</value>
-				<value level="8">104</value>
-				<value level="9">109</value>
-				<value level="10">113</value>
-				<value level="11">115</value>
-				<value level="12">117</value>
-			</mana>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50013" name="Hold" debuff="true" action="A1">
-	<!-- Inflicted with Hold and unable to move. -->
-		<icon initial="icon.skill4047"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="40"/>
-			<reuse initial="6000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1800"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="136"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50014" name="Christmas Blessing" action="A1">
-	<!-- For 1 hour activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
-		<icon initial="icon.etc_x_mas_tree_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50015" name="Mega Strike" max-level="20" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="15000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50016" name="Mega Smash" max-level="20" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="15000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50017" name="Power Bomber" max-level="9" debuff="true" action="A1">
-	<!-- Deals P. Damage and knocks down. -->
-		<icon initial="icon.skill10262"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="40"/>
-			<reuse initial="15000"/>
-			<cool-time initial="1000"/>
-			<effect-point initial="-200"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50018" name="Mega Bomber" max-level="9" debuff="true" action="A1">
-	<!-- Deals damage to the enemies in front and knocks them down. -->
-		<icon initial="icon.skill10262"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="40"/>
-			<reuse initial="15000"/>
-			<cool-time initial="1000"/>
-			<effect-point initial="-200"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50019" name="Giant Bombardier" max-level="9" debuff="true" action="A1">
-	<!-- Deals damage to the enemies around and knocks them down. -->
-		<icon initial="icon.skill10262"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="30000"/>
-			<cool-time initial="1000"/>
-			<effect-point initial="-200"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50020" name="Berserk" action="A1">
-	<!-- Increases Atk. Spd. And P. Atk. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50021" name="Body Enlargement" max-level="3" action="A1">
-	<!-- Increases the size of the body. -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50022" name="Head Enlargement" action="A1">
-	<!-- Increases the size of the head. -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50023" name="Deadshot" max-level="20" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="700"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50024" name="Multi-arrow Shot" max-level="20" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="700"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50025" name="Aggression" debuff="true" action="A1">
-	<!-- Provokes target into attacking you by forcefully changing their target. -->
-		<icon initial="icon.skill10027"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50026" name="Magic Strike" max-level="20" action="A1" type="MAGIC">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="600"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="15"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50027" name="Heal" max-level="2" action="A1">
-	<!-- 
-		level 1: Restores 30000 HP of the target.
-		level 2: Restores 50000 HP of the target.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="400">
-				<value level="2">-1</value>
-			</cast-range>
-			<reuse initial="15000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50028" name="62 Lv. Raid Boss" max-level="25" >
-	<!-- Raid Boss invited to the arena. Despite its mighty power, it doesn't show up in Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50029" name="Dancing Bard" debuff="true" action="A1" type="MAGIC">
-	<!-- Performs a dance. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50030" name="Dandy's Precise Swing" action="A1">
-	<!-- Throws the target back and inflicts heavy physical damage. -->
-		<icon initial="icon.skill0003"/>
-		<attributes>
-			<cast-range initial="300"/>
-			<effect-point initial="-250"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50031" name="Orc Thunder" debuff="true" action="A1">
-	<!-- Pulls the target into your reach. -->
-		<icon initial="icon.skill10015"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-150"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50032" name="Blizzard" debuff="true" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill6274"/>
-		<attributes>
-			<cast-range initial="600"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-1000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="7000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50033" name="Frozen Crystal" debuff="true" action="A1">
-	<!-- Actions prohibited for 5 seconds, -50 HP per second. -->
-		<icon initial="icon.skill6274"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50034" name="Aqua Blow" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers Damage to surrounding enemies with extra M. Atk. +85.
-		level 2: Inflicts damage with 500 M. Atk. Power to surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50035" name="Aqua Arrow" action="A1">
-	<!-- Delivers damage to enemy with extra M. Atk. +260 and inflicts frostbite for 30 sec. -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50036" name="Aqua Rage" max-level="5" debuff="true" action="A2">
-	<!-- 
-		level 1: Decreases Speed -20, increases damage taken +10%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
-		level 2: Decreases Speed -40, increases damage taken +20%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
-		level 3: Decreases Speed -60, increases damage taken +40%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
-		level 4: Decreases Speed -80, increases damage taken +70%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
-		level 5: With Icy Air disables all attack. Increases Rec Damage +100%%.
-	 -->
-		<icon initial="icon.skill50036_1">
-			<value level="2">icon.skill50036_2</value>
-			<value level="3">icon.skill50036_3</value>
-			<value level="4">icon.skill50036_4</value>
-			<value level="5">icon.skill50036_5</value>
-		</icon>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1000"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target type="ENEMY" />
-		<abnormal type="FREEZING">
-			<level initial="1">
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
-			</level>
-			<time initial="-1"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PVE_MAGICAL_SKILL_DEFENCE" mode="PER">
-				<power initial="-10.0">
-					<value level="2">-20.0</value>
-					<value level="3">-40.0</value>
-					<value level="4">-70.0</value>
-					<value level="5">0.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVE_PHYSICAL_ATTACK_DEFENCE" mode="PER">
-				<power initial="-10.0">
-					<value level="2">-20.0</value>
-					<value level="3">-40.0</value>
-					<value level="4">-70.0</value>
-					<value level="5">0.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVE_PHYSICAL_SKILL_DEFENCE" mode="PER">
-				<power initial="-10.0">
-					<value level="2">-20.0</value>
-					<value level="3">-40.0</value>
-					<value level="4">-70.0</value>
-					<value level="5">0.0</value>
-				</power>
-			</stat-modify>
-			<speed>
-				<power initial="-20.0">
-					<value level="2">-40.0</value>
-					<value level="3">-60.0</value>
-					<value level="4">-80.0</value>
-					<value level="5">0.0</value>
-				</power>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="50037" name="Aqua Summon" action="A1">
-	<!-- Summons water drops. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50038" name="Aqua Wave" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers Damage to surrounding enemies with extra M. Atk. +138.
-		level 2: Inflicts damage with 800 M. Atk. Power to surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50039" name="Aqua Destruction" action="A2">
-	<!-- Clears Aqua Rage state at 50%% Chance. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<target type="ENEMY" />
-		<abnormal type="FREEZING">
-			<level initial="5"/>
-			<time initial="1"/>
-			<chance initial="500"/>
-		</abnormal>
-		<effects>
-			<dispel-probability abnormals="FREEZING">				<power initial="100.0"/>
-			</dispel-probability>
-		</effects>
-	</skill>
-	<skill id="50040" name="Aqua Suicide" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers Damage to surrounding enemies with extra M. Atk. +170.
-		level 2: Inflicts damage with bonus 1700 M. Atk. Power to surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50041" name="Hurricane Cutter" max-level="2" debuff="true" action="A1">
-	<!-- 
-		level 1: Invokes Biting Wind blade, delivering Damage to surrounding enemies with extra P. Atk. +10,000. Inflicts wounds and gradually decreases HP.
-		level 2: Invokes Biting Wind blade that inflicts bonus 100000 Power to surrounding enemies, and deals an injury that gradually decreases HP.
-	 -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50042" name="Summon Hurricane" action="A1">
-	<!-- Summon Cyclone Skill -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50043" name="Hurricane Bolt" max-level="2" debuff="true" action="A2">
-	<!-- 
-		level 1: Attacks nearby enemy target with extra M. Atk. +138 with a powerful lighting strike and inflicts momentarily Paralysis for 5 sec.
-		level 2: Shoots down a powerful Lightning that attacks a target near the enemy with bonus 276 M. Atk. Power, and deals Paralysis for 5 seconds.
-	 -->
-		<icon initial="icon.skill1170"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="1">
-			<magic-level initial="85"/>
-			<cast-range initial="600"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1400"/>
-			<hit-time initial="2500"/>
+    <skill id="50000" name="Haste" action="A1" type="MAGIC">
+        <!-- Increases Atk. Spd. +50%%. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50001" name="Transform: Pirate Costume" action="A1">
+        <!-- Transformation ability, granted to the player by an NPC. Transforms you into an Undead Pirate to make an ambush as a part of a quest. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="400"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50002" name="Curse Zaken" debuff="true" action="A1">
+        <!-- Cursed by Zaken. Movement Speed decreased by 30%% and HP momentarily decreased. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50003" name="Crescent Slash" max-level="2" debuff="true" action="A1">
+        <!-- Deals a horizontal slashing blow with a sword. Inflicts bleeding. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="40"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50004" name="Phantom Archer" max-level="2" action="A1">
+        <!-- Releases Skeletal Ghost from the sword. The Ghost breaks free and deals damage to the target. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="30000">
+                <value level="2">0</value>
+            </reuse>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50005" name="Multiple Slash" max-level="2" debuff="true" action="A1">
+        <!-- Swings dual swords. Deals huge damage and inflicts bleeding. -->
+        <icon initial="icon.skill1630"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="40"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50006" name="Blood To Flesh" max-level="2" action="A1" type="MAGIC">
+        <!-- Decreases HP/ MP of the target and restores player's HP. -->
+        <icon initial="icon.skill0289"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="20000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50007" name="Typhoon Slash" max-level="2" debuff="true" action="A1">
+        <!-- Deals ranged damage to all targets around you. Inflicts bleeding. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="10000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50008" name="Rage of Pirate King" max-level="2" debuff="true" action="A1">
+        <!-- Attacks and knocks down a target. Attack energy dissolves among multiple targets. -->
+        <icon initial="icon.skill0003"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-52"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50009" name="Lv. 55 Raid Boss" max-level="43">
+        <!--
+            level 1: A rift that had appeared after an earthquake and weakened the Maphr's Seal, now shifted to the material world and brought chaos and pain with it.
+            level 36: Death Knight, awoken by the earthquake, is now about to devour the power of life of unworldly creatures and Aden's heroes.
+            level 42: Enchanted by Shilen, enshrouded in darkness, reborn with a greater power.
+         -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50010" name="Greater Hold Resistance" max-level="5">
+        <!-- Very strong Hold attack resistance. -->
+        <icon initial="icon.skill4288"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50011" name="Greater Paralysis Resistance" max-level="5">
+        <!-- Very strong Paralysis attack resistance. -->
+        <icon initial="icon.skill4440"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50012" name="Paralysis" max-level="12" debuff="true" action="A1" type="MAGIC">
+        <!-- Paralyzed and unable to move momentarily. -->
+        <icon initial="icon.skill1170"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="300"/>
+            <reuse initial="8000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="6000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="18">
+                <value level="2">29</value>
+                <value level="3">40</value>
+                <value level="4">53</value>
+                <value level="5">68</value>
+                <value level="6">83</value>
+                <value level="7">98</value>
+                <value level="8">104</value>
+                <value level="9">109</value>
+                <value level="10">113</value>
+                <value level="11">115</value>
+                <value level="12">117</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50013" name="Hold" debuff="true" action="A1">
+        <!-- Inflicted with Hold and unable to move. -->
+        <icon initial="icon.skill4047"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="40"/>
+            <reuse initial="6000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1800"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="136"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50014" name="Christmas Blessing" action="A1">
+        <!-- For 1 hour activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
+        <icon initial="icon.etc_x_mas_tree_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50015" name="Mega Strike" max-level="20" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="15000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50016" name="Mega Smash" max-level="20" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="15000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50017" name="Power Bomber" max-level="9" debuff="true" action="A1">
+        <!-- Deals P. Damage and knocks down. -->
+        <icon initial="icon.skill10262"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="40"/>
+            <reuse initial="15000"/>
+            <cool-time initial="1000"/>
+            <effect-point initial="-200"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50018" name="Mega Bomber" max-level="9" debuff="true" action="A1">
+        <!-- Deals damage to the enemies in front and knocks them down. -->
+        <icon initial="icon.skill10262"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="40"/>
+            <reuse initial="15000"/>
+            <cool-time initial="1000"/>
+            <effect-point initial="-200"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50019" name="Giant Bombardier" max-level="9" debuff="true" action="A1">
+        <!-- Deals damage to the enemies around and knocks them down. -->
+        <icon initial="icon.skill10262"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="30000"/>
+            <cool-time initial="1000"/>
+            <effect-point initial="-200"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50020" name="Berserk" action="A1">
+        <!-- Increases Atk. Spd. And P. Atk. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50021" name="Body Enlargement" max-level="3" action="A1">
+        <!-- Increases the size of the body. -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50022" name="Head Enlargement" action="A1">
+        <!-- Increases the size of the head. -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50023" name="Deadshot" max-level="20" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="700"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50024" name="Multi-arrow Shot" max-level="20" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="700"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50025" name="Aggression" debuff="true" action="A1">
+        <!-- Provokes target into attacking you by forcefully changing their target. -->
+        <icon initial="icon.skill10027"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50026" name="Magic Strike" max-level="20" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="600"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="15"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50027" name="Heal" max-level="2" action="A1">
+        <!--
+            level 1: Restores 30000 HP of the target.
+            level 2: Restores 50000 HP of the target.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="400">
+                <value level="2">-1</value>
+            </cast-range>
+            <reuse initial="15000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50028" name="62 Lv. Raid Boss" max-level="25">
+        <!-- Raid Boss invited to the arena. Despite its mighty power, it doesn't show up in Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50029" name="Dancing Bard" debuff="true" action="A1" type="MAGIC">
+        <!-- Performs a dance. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50030" name="Dandy's Precise Swing" action="A1">
+        <!-- Throws the target back and inflicts heavy physical damage. -->
+        <icon initial="icon.skill0003"/>
+        <attributes>
+            <cast-range initial="300"/>
+            <effect-point initial="-250"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50031" name="Orc Thunder" debuff="true" action="A1">
+        <!-- Pulls the target into your reach. -->
+        <icon initial="icon.skill10015"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-150"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50032" name="Blizzard" debuff="true" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill6274"/>
+        <attributes>
+            <cast-range initial="600"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-1000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="7000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50033" name="Frozen Crystal" debuff="true" action="A1">
+        <!-- Actions prohibited for 5 seconds, -50 HP per second. -->
+        <icon initial="icon.skill6274"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50034" name="Aqua Blow" max-level="2" action="A1">
+        <!--
+            level 1: Delivers Damage to surrounding enemies with extra M. Atk. +85.
+            level 2: Inflicts damage with 500 M. Atk. Power to surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50035" name="Aqua Arrow" action="A1">
+        <!-- Delivers damage to enemy with extra M. Atk. +260 and inflicts frostbite for 30 sec. -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50036" name="Aqua Rage" max-level="5" debuff="true" action="A2">
+        <!--
+            level 1: Decreases Speed -20, increases damage taken +10%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
+            level 2: Decreases Speed -40, increases damage taken +20%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
+            level 3: Decreases Speed -60, increases damage taken +40%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
+            level 4: Decreases Speed -80, increases damage taken +70%%. Effect increases as it accumulates. If Water Slime is attacked, clears at 50%% Chance.
+            level 5: With Icy Air disables all attack. Increases Rec Damage +100%%.
+         -->
+        <icon initial="icon.skill50036_1">
+            <value level="2">icon.skill50036_2</value>
+            <value level="3">icon.skill50036_3</value>
+            <value level="4">icon.skill50036_4</value>
+            <value level="5">icon.skill50036_5</value>
+        </icon>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1000"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <abnormal type="FREEZING">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+            </level>
+            <time initial="-1"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="-10.0">
+                    <value level="2">-20.0</value>
+                    <value level="3">-40.0</value>
+                    <value level="4">-70.0</value>
+                    <value level="5">0.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="-10.0">
+                    <value level="2">-20.0</value>
+                    <value level="3">-40.0</value>
+                    <value level="4">-70.0</value>
+                    <value level="5">0.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power initial="-10.0">
+                    <value level="2">-20.0</value>
+                    <value level="3">-40.0</value>
+                    <value level="4">-70.0</value>
+                    <value level="5">0.0</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="-20.0">
+                    <value level="2">-40.0</value>
+                    <value level="3">-60.0</value>
+                    <value level="4">-80.0</value>
+                    <value level="5">0.0</value>
+                </power>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="50037" name="Aqua Summon" action="A1">
+        <!-- Summons water drops. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50038" name="Aqua Wave" max-level="2" action="A1">
+        <!--
+            level 1: Delivers Damage to surrounding enemies with extra M. Atk. +138.
+            level 2: Inflicts damage with 800 M. Atk. Power to surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50039" name="Aqua Destruction" action="A2">
+        <!-- Clears Aqua Rage state at 50%% Chance. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <abnormal type="FREEZING">
+            <level initial="5"/>
+            <time initial="1"/>
+            <chance initial="500"/>
+        </abnormal>
+        <effects>
+            <dispel-probability abnormals="FREEZING">
+                <power initial="100.0"/>
+            </dispel-probability>
+        </effects>
+    </skill>
+    <skill id="50040" name="Aqua Suicide" max-level="2" action="A1">
+        <!--
+            level 1: Delivers Damage to surrounding enemies with extra M. Atk. +170.
+            level 2: Inflicts damage with bonus 1700 M. Atk. Power to surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50041" name="Hurricane Cutter" max-level="2" debuff="true" action="A1">
+        <!--
+            level 1: Invokes Biting Wind blade, delivering Damage to surrounding enemies with extra P. Atk. +10,000. Inflicts wounds and gradually decreases HP.
+            level 2: Invokes Biting Wind blade that inflicts bonus 100000 Power to surrounding enemies, and deals an injury that gradually decreases HP.
+         -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50042" name="Summon Hurricane" action="A1">
+        <!-- Summon Cyclone Skill -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50043" name="Hurricane Bolt" max-level="2" debuff="true" action="A2">
+        <!--
+            level 1: Attacks nearby enemy target with extra M. Atk. +138 with a powerful lighting strike and inflicts momentarily Paralysis for 5 sec.
+            level 2: Shoots down a powerful Lightning that attacks a target near the enemy with bonus 276 M. Atk. Power, and deals Paralysis for 5 seconds.
+         -->
+        <icon initial="icon.skill1170"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="1">
+            <magic-level initial="85"/>
+            <cast-range initial="600"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1400"/>
+            <hit-time initial="2500"/>
 
-			<element type="DARK" value="120"/>
-		</attributes>
-		<target type="ENEMY" />
-		<abnormal type="PARALYZE" visual="PARALYZE" >
-			<level initial="1"/>
-			<time initial="5"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<block-all-actions/>
-			<magical-attack>
-				<power initial="138.0"/>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="50044" name="Hurricane Destruction" max-level="2" debuff="true" action="A1">
-	<!-- 
-		level 1: Causes powerful Cyclone and delivers Damage to nearby enemies with extra M. Atk. +170, knocking them down.
-		level 2: Creates powerful Cyclone that inflicts damage with 1700 M. Atk. Power to surrounding enemies, knocking them down.
-	 -->
-		<icon initial="icon.skill10262"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50045" name="Hurricane" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers Damage to surrounding enemies with extra M. Atk. +138.
-		level 2: Inflicts damage with bonus 800 M. Atk. Power to surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50046" name="Wind Ability - Lv. 1 Physical" max-level="4" >
-	<!-- 
-		level 1: By Incarnation Attack Type, raises P. Atk. 20%%.
-		level 2: By Incarnation Attack Type, raises P. Atk. 50%%.
-		level 3: By Incarnation Attack Type, raises P. Atk. 100%%.
-		level 4: By Incarnation Attack Type, raises P. Atk. 200%%.
-	 -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="50047" name="Wind Ability - Lv. 1 Defense" max-level="4" >
-	<!-- 
-		level 1: By Incarnation Defense Type, raises P. Def./M. Def. 50%%.
-		level 2: By Incarnation Defense Type, raises P. Def./M. Def. 100%%.
-		level 3: By Incarnation Defense Type, raises P. Def./M. Def. 150%%.
-		level 4: By Incarnation Defense Type, raises P. Def./M. Def. 200%%.
-	 -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="50.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="50048" name="Wind Ability - Lv. 1 Magic" max-level="4" >
-	<!-- 
-		level 1: By Incarnation of Magic Type, raises M. Atk. 20%%.
-		level 2: By Incarnation of Magic Type, raises M. Atk. 50%%.
-		level 3: By Incarnation of Magic Type, raises M. Atk. 100%%.
-		level 4: By Incarnation of Magic Type, raises M. Atk. 200%%.
-	 -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<magical-attack>
-				<power/>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="50049" name="Fire Breath" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers Damage to frontline enemies with extra M. Atk. +220.
-		level 2: Inflicts damage with bonus 440 M. Atk. Power to enemies in front.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50050" name="Fire Rage" max-level="10" debuff="true" action="A2">
-	<!-- 
-		level 1: King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya.
-		level 10: King Ignis' Flame in its most powerful state. If not cleared by speaking to Freya, HP becomes 1 and Heal received falls -100%%.
-	 -->
-		<icon initial="icon.skill50050_1">
-			<value level="2">icon.skill50050_2</value>
-			<value level="3">icon.skill50050_3</value>
-			<value level="4">icon.skill50050_4</value>
-			<value level="5">icon.skill50050_5</value>
-			<value level="6">icon.skill50050_6</value>
-			<value level="7">icon.skill50050_7</value>
-			<value level="8">icon.skill50050_8</value>
-			<value level="9">icon.skill50050_9</value>
-			<value level="10">icon.skill50050_10</value>
-		</icon>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
-			<magic-level initial="82"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1000"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="1">
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
-				<value level="6">6</value>
-				<value level="7">7</value>
-				<value level="8">8</value>
-				<value level="9">9</value>
-				<value level="10">10</value>
-			</level>
-			<time initial="-1"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5">
-				<power initial="25.0">
-					<value level="2">34.0</value>
-					<value level="3">44.0</value>
-					<value level="4">54.0</value>
-					<value level="5">62.0</value>
-					<value level="6">67.0</value>
-					<value level="7">72.0</value>
-					<value level="8">77.0</value>
-					<value level="9">83.0</value>
-					<value level="10">90.0</value>
-				</power>
-			</damage-over-time>
-			<speed mode="PER">
-				<power initial="-20.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="50051" name="Tears of Fire" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers Damage to surrounding enemies with extra M. Atk. +138.
-		level 2: Inflicts damage with bonus 800 M. Atk. Power to surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50052" name="Freya's Safety Zone" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50053" name="Fire Curse" debuff="true" action="A1">
-	<!-- Cursed by King Ignis' Flame, decreases Heal received by 100%%. -->
-		<icon initial="icon.skill11365"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50054" name="Stone Crusher" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers P. Atk. +30000 Damage to surrounding enemies.
-		level 2: Delivers P. Atk. +100000 Damage to surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1800"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="30000.0">
-					<value level="2">100000.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="50055" name="Stone Conversion - Long Distance" action="A1">
-	<!-- Increases Long Distance Attack Resistance +100%%, drastically raises M. Def -->
-		<icon initial="icon.skill30515"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50056" name="Stone Conversion - Short Distance" action="A1">
-	<!-- Increases Short Distance Attack Resistance +100%%. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50057" name="Stone Earthquake" max-level="2" debuff="true" action="A1">
-	<!-- 
-		level 1: King Petram's powerful rotating attack inflicts damage with bonus 10000 Power to surrounding enemies, and momentarily stuns them.
-		level 2: King Petram's powerful rotating attack inflicts damage with bonus 100000 Power to surrounding enemies, and momentarily stuns them.
-	 -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50058" name="Stone Slide" max-level="2" debuff="true" action="A1">
-	<!-- 
-		level 1: Causes a rockslide and that inflicts damage with bonus 10000 Power to surrounding enemies, and momentarily stuns them.
-		level 2: Causes a rockslide and that inflicts damage with bonus 100000 Power to surrounding enemies, and momentarily stuns them.
-	 -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="10000.0">
-					<value level="2">100000.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="50059" name="Earth's Fury" max-level="2" action="A1">
-	<!-- 
-		level 1: Delivers Damage to surrounding enemies with extra P. Atk. +10000.
-		level 2: Delivers Damage to surrounding enemies with extra P. Atk. +150000.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="10000.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="50060" name="Stone Annihilation" debuff="true" action="A1">
-	<!-- Fall into Paralyzed state for 1 minute, P./M. Def. -50%%. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50061" name="Life of Earth" max-level="2" action="A1">
-	<!-- State connected to Earth's power. Continuous HP Recovery. -->
-		<icon initial="icon.skill1610"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50062" name="Power Combustion" max-level="2" debuff="true" action="A1">
-	<!-- 
-		level 1: Singled out by King Ignis' Flaming power. If not cleared by speaking to Freya, HP becomes 1 and Heal received falls -100%%.
-		level 2: King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya.
-	 -->
-		<icon initial="icon.skill11365"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50063" name="Energy of Fire" action="A1" type="MAGIC">
-	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
-		<icon initial="icon.skill1083"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50064" name="Energy of Water" action="A1" type="MAGIC">
-	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
-		<icon initial="icon.skill1071"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50065" name="Energy of Wind" action="A1" type="MAGIC">
-	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
-		<icon initial="icon.skill1074"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50066" name="Earth Energy" action="A1" type="MAGIC">
-	<!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
-		<icon initial="icon.skill1223"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50067" name="Stone Earthquake" debuff="true" action="A1" type="MAGIC">
-	<!-- Stunned from a powerful strike. -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50068" name="Stone Crusher" action="A1" type="MAGIC">
-	<!-- Deals damage to the targets around the boss. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50069" name="Fire Breath" action="A1" type="MAGIC">
-	<!-- Deals fire damage to the targets around the boss. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="99"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1100"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="120"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <abnormal type="PARALYZE" visual="PARALYZE">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+            <magical-attack>
+                <power initial="138.0"/>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="50044" name="Hurricane Destruction" max-level="2" debuff="true" action="A1">
+        <!--
+            level 1: Causes powerful Cyclone and delivers Damage to nearby enemies with extra M. Atk. +170, knocking them down.
+            level 2: Creates powerful Cyclone that inflicts damage with 1700 M. Atk. Power to surrounding enemies, knocking them down.
+         -->
+        <icon initial="icon.skill10262"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50045" name="Hurricane" max-level="2" action="A1">
+        <!--
+            level 1: Delivers Damage to surrounding enemies with extra M. Atk. +138.
+            level 2: Inflicts damage with bonus 800 M. Atk. Power to surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50046" name="Wind Ability - Lv. 1 Physical" max-level="4">
+        <!--
+            level 1: By Incarnation Attack Type, raises P. Atk. 20%%.
+            level 2: By Incarnation Attack Type, raises P. Atk. 50%%.
+            level 3: By Incarnation Attack Type, raises P. Atk. 100%%.
+            level 4: By Incarnation Attack Type, raises P. Atk. 200%%.
+         -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="50047" name="Wind Ability - Lv. 1 Defense" max-level="4">
+        <!--
+            level 1: By Incarnation Defense Type, raises P. Def./M. Def. 50%%.
+            level 2: By Incarnation Defense Type, raises P. Def./M. Def. 100%%.
+            level 3: By Incarnation Defense Type, raises P. Def./M. Def. 150%%.
+            level 4: By Incarnation Defense Type, raises P. Def./M. Def. 200%%.
+         -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="50048" name="Wind Ability - Lv. 1 Magic" max-level="4">
+        <!--
+            level 1: By Incarnation of Magic Type, raises M. Atk. 20%%.
+            level 2: By Incarnation of Magic Type, raises M. Atk. 50%%.
+            level 3: By Incarnation of Magic Type, raises M. Atk. 100%%.
+            level 4: By Incarnation of Magic Type, raises M. Atk. 200%%.
+         -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+        <effects>
+            <magical-attack>
+                <power/>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="50049" name="Fire Breath" max-level="2" action="A1">
+        <!--
+            level 1: Delivers Damage to frontline enemies with extra M. Atk. +220.
+            level 2: Inflicts damage with bonus 440 M. Atk. Power to enemies in front.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50050" name="Fire Rage" max-level="10" debuff="true" action="A2">
+        <!--
+            level 1: King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya.
+            level 10: King Ignis' Flame in its most powerful state. If not cleared by speaking to Freya, HP becomes 1 and Heal received falls -100%%.
+         -->
+        <icon initial="icon.skill50050_1">
+            <value level="2">icon.skill50050_2</value>
+            <value level="3">icon.skill50050_3</value>
+            <value level="4">icon.skill50050_4</value>
+            <value level="5">icon.skill50050_5</value>
+            <value level="6">icon.skill50050_6</value>
+            <value level="7">icon.skill50050_7</value>
+            <value level="8">icon.skill50050_8</value>
+            <value level="9">icon.skill50050_9</value>
+            <value level="10">icon.skill50050_10</value>
+        </icon>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
+            <magic-level initial="82"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1000"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+                <value level="6">6</value>
+                <value level="7">7</value>
+                <value level="8">8</value>
+                <value level="9">9</value>
+                <value level="10">10</value>
+            </level>
+            <time initial="-1"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="5">
+                <power initial="25.0">
+                    <value level="2">34.0</value>
+                    <value level="3">44.0</value>
+                    <value level="4">54.0</value>
+                    <value level="5">62.0</value>
+                    <value level="6">67.0</value>
+                    <value level="7">72.0</value>
+                    <value level="8">77.0</value>
+                    <value level="9">83.0</value>
+                    <value level="10">90.0</value>
+                </power>
+            </damage-over-time>
+            <speed mode="PER">
+                <power initial="-20.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="50051" name="Tears of Fire" max-level="2" action="A1">
+        <!--
+            level 1: Delivers Damage to surrounding enemies with extra M. Atk. +138.
+            level 2: Inflicts damage with bonus 800 M. Atk. Power to surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50052" name="Freya's Safety Zone" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50053" name="Fire Curse" debuff="true" action="A1">
+        <!-- Cursed by King Ignis' Flame, decreases Heal received by 100%%. -->
+        <icon initial="icon.skill11365"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50054" name="Stone Crusher" max-level="2" action="A1">
+        <!--
+            level 1: Delivers P. Atk. +30000 Damage to surrounding enemies.
+            level 2: Delivers P. Atk. +100000 Damage to surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1800"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="30000.0">
+                    <value level="2">100000.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="50055" name="Stone Conversion - Long Distance" action="A1">
+        <!-- Increases Long Distance Attack Resistance +100%%, drastically raises M. Def -->
+        <icon initial="icon.skill30515"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50056" name="Stone Conversion - Short Distance" action="A1">
+        <!-- Increases Short Distance Attack Resistance +100%%. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50057" name="Stone Earthquake" max-level="2" debuff="true" action="A1">
+        <!--
+            level 1: King Petram's powerful rotating attack inflicts damage with bonus 10000 Power to surrounding enemies, and momentarily stuns them.
+            level 2: King Petram's powerful rotating attack inflicts damage with bonus 100000 Power to surrounding enemies, and momentarily stuns them.
+         -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50058" name="Stone Slide" max-level="2" debuff="true" action="A1">
+        <!--
+            level 1: Causes a rockslide and that inflicts damage with bonus 10000 Power to surrounding enemies, and momentarily stuns them.
+            level 2: Causes a rockslide and that inflicts damage with bonus 100000 Power to surrounding enemies, and momentarily stuns them.
+         -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="10000.0">
+                    <value level="2">100000.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="50059" name="Earth's Fury" max-level="2" action="A1">
+        <!--
+            level 1: Delivers Damage to surrounding enemies with extra P. Atk. +10000.
+            level 2: Delivers Damage to surrounding enemies with extra P. Atk. +150000.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="10000.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="50060" name="Stone Annihilation" debuff="true" action="A1">
+        <!-- Fall into Paralyzed state for 1 minute, P./M. Def. -50%%. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50061" name="Life of Earth" max-level="2" action="A1">
+        <!-- State connected to Earth's power. Continuous HP Recovery. -->
+        <icon initial="icon.skill1610"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50062" name="Power Combustion" max-level="2" debuff="true" action="A1">
+        <!--
+            level 1: Singled out by King Ignis' Flaming power. If not cleared by speaking to Freya, HP becomes 1 and Heal received falls -100%%.
+            level 2: King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya.
+         -->
+        <icon initial="icon.skill11365"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50063" name="Energy of Fire" action="A1" type="MAGIC">
+        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
+        <icon initial="icon.skill1083"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50064" name="Energy of Water" action="A1" type="MAGIC">
+        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
+        <icon initial="icon.skill1071"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50065" name="Energy of Wind" action="A1" type="MAGIC">
+        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
+        <icon initial="icon.skill1074"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50066" name="Earth Energy" action="A1" type="MAGIC">
+        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
+        <icon initial="icon.skill1223"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50067" name="Stone Earthquake" debuff="true" action="A1" type="MAGIC">
+        <!-- Stunned from a powerful strike. -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50068" name="Stone Crusher" action="A1" type="MAGIC">
+        <!-- Deals damage to the targets around the boss. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50069" name="Fire Breath" action="A1" type="MAGIC">
+        <!-- Deals fire damage to the targets around the boss. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="99"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1100"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="180"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
-		<resist-abnormals>PUBLIC_SLOT DERANGEMENT ROOT_PHYSICALLY PARALYZE TURN_STONE OBLIVION DISARM ABSORB MIRAGE SLEEP CHANGEBODY ROOT_MAGICALLY AIRBIND SILENCE_PHYSICAL TURN_FLEE SILENCE_ALL KNOCKDOWN MIRAGE_TRAP DEPORT STUN SILENCE</resist-abnormals>
-		<effects>
-			<magical-attack>
-				<power initial="250.0"/>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="50070" name="Tears of Fire" action="A1" type="MAGIC">
-	<!-- Affects the area. Deals a lot of damage. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="82"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
+            <element type="FIRE" value="180"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150"/>
+        <resist-abnormals>SILENCE_ALL PARALYZE SILENCE DERANGEMENT SLEEP TURN_STONE STUN SILENCE_PHYSICAL OBLIVION MIRAGE_TRAP MIRAGE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY TURN_FLEE DISARM CHANGEBODY AIRBIND ABSORB DEPORT KNOCKDOWN
+        </resist-abnormals>
+        <effects>
+            <magical-attack>
+                <power initial="250.0"/>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="50070" name="Tears of Fire" action="A1" type="MAGIC">
+        <!-- Affects the area. Deals a lot of damage. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="82"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="150"/>
-		</attributes>
-		<consume>
-			<mana-init initial="21"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
-		<effects>
-			<magical-attack>
-				<power initial="138.0"/>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="50071" name="Aqua Arrow" action="A1" type="MAGIC">
-	<!-- Deals M. Damage to a random target. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50072" name="Aqua Wave" action="A1" type="MAGIC">
-	<!-- Affects the area. Deals a lot of damage. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50073" name="Hurricane Bolt" action="A1" type="MAGIC">
-	<!-- Deals damage with a powerful lightning and paralizes for 5 seconds. -->
-		<icon initial="icon.skill0791"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50074" name="Hurricane" action="A1" type="MAGIC">
-	<!-- Affects the area. Deals a lot of damage. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50075" name="Physical Hot Spring" action="A1">
-	<!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Atk. +5%% and P. Atk. Spd. +5%%. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="1000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50076" name="Fatal Hot Spring" action="A1">
-	<!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Critical Rate +30 and P. Accuracy +6. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="1000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50077" name="Magical Hot Spring" action="A1">
-	<!-- Warmed by energy of Hot Springs Water. For 5 minutes M. Atk. +5%% and M. Atk. Spd. +5%%. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="1000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50078" name="Magic Weakness" debuff="true" action="A1" type="MAGIC">
-	<!-- Inflicts damage with bonus 85 M. Atk. Power to surrounding enemies, and M. Atk. -20%%. -->
-		<icon initial="icon.skill1333"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="8000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50079" name="Lv. 82 Raid Boss">
-	<!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50080" name="Lv. 82 Raid Boss">
-	<!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50081" name="Lv. 82 Raid Boss">
-	<!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50082" name="Lv. 82 Raid Boss">
-	<!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50083" name="Lv. 84 Raid Boss">
-	<!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50084" name="Lv. 84 Raid Boss">
-	<!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50085" name="Lv. 84 Raid Boss">
-	<!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50086" name="Lv. 84 Raid Boss">
-	<!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
-		<icon initial="icon.skillraid"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50087" name="Fire Rage" max-level="10" debuff="true" action="A1">
-	<!-- 
-		level 1: King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya.
-		level 10: King Ignis' Flame in its most powerful state. If not cleared by speaking to Freya, HP becomes 1 and Heal received falls -100%%.
-	 -->
-		<icon initial="icon.skill50050_1">
-			<value level="2">icon.skill50050_2</value>
-			<value level="3">icon.skill50050_3</value>
-			<value level="4">icon.skill50050_4</value>
-			<value level="5">icon.skill50050_5</value>
-			<value level="6">icon.skill50050_6</value>
-			<value level="7">icon.skill50050_7</value>
-			<value level="8">icon.skill50050_8</value>
-			<value level="9">icon.skill50050_9</value>
-			<value level="10">icon.skill50050_10</value>
-		</icon>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50088" name="Power Strike" max-level="2" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<cool-time initial="660"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="830"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="42">
-				<value level="2">53</value>
-			</mana>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50089" name="Hurricane Attack" max-level="2" action="A1">
-	<!-- 
-		level 1: Inflicts damage with bonus 102 M. Atk. Power to surrounding enemies.
-		level 2: Inflicts damage with bonus 122 M. Atk. Power o surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50090" name="Slow" max-level="2" debuff="true" action="A1">
-	<!-- Movement Speed has momentarily decreased by 30%%. -->
-		<icon initial="icon.skill1160"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="700"/>
-			<reuse initial="17000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="206"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="50091" name="Fire Attack" max-level="2" action="A1">
-	<!-- 
-		level 1: Inflicts damage with bonus 88 M. Atk. Power to enemies in front.
-		level 2: Inflicts damage with bonus 98 M. Atk. Power to enemies in front.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<magical-attack>
-				<power initial="88.0">
-					<value level="2">98.0</value>
-				</power>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="50092" name="Aqua Attack" max-level="2" action="A1">
-	<!-- 
-		level 1: Inflicts damage with bonus 55 M. Atk. Power to surrounding enemies.
-		level 2: Inflicts damage with bonus 61 M. Atk. Power to surrounding enemies.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<magical-attack>
-				<power initial="55.0">
-					<value level="2">61.0</value>
-				</power>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="50093" name="Stone Attack" max-level="2" action="A1">
-	<!-- 
-		level 1: Inflicts damage with bonus 542 Power to surrounding enemies and is stunned for 5 seconds.
-		level 2: Inflicts damage with bonus 774 Power to surrounding enemies and is stunned for 5 seconds.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1800"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<magical-attack>
-				<power initial="542.0">
-					<value level="2">774.0</value>
-				</power>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="50094" name="Despair of Shade" max-level="6" debuff="true" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 10.
-		level 2: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 12.
-		level 3: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 14.
-		level 4: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 16.
-		level 5: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 18.
-		level 6: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 20.
-	 -->
-		<icon initial="icon.skill50094"/>
-		<attributes property="PHYSIC">
-			<magic-level initial="77">
-				<value level="2">79</value>
-				<value level="3">81</value>
-				<value level="4">83</value>
-				<value level="5">84</value>
-				<value level="6">85</value>				
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-1621">
-				<value level="2">-1831</value>
-				<value level="3">-1975</value>
-				<value level="4">-1997</value>
-				<value level="5">-2007</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="75">
-				<value level="2">80</value>
-				<value level="3">85</value>
-				<value level="4">90</value>
-				<value level="5">95</value>
-			</mana>
-		</consume>
-		<target />
-		<effects>
-			<defence-trait>
-				<trait type="SLEEP">
-				<power initial="-10">
-					<value level="2">-12</value>
-					<value level="3">-14</value>
-					<value level="4">-16</value>
-					<value level="5">-18</value>
-					<value level="6">-20</value>
-				</power>
-				</trait>
-				<trait type="HOLD">
-				<power initial="-10">
-					<value level="2">-12</value>
-					<value level="3">-14</value>
-					<value level="4">-16</value>
-					<value level="5">-18</value>
-					<value level="6">-20</value>
-				</power>
-				</trait>								
-				<trait type="SHOCK">
-				<power initial="-10">
-					<value level="2">-12</value>
-					<value level="3">-14</value>
-					<value level="4">-16</value>
-					<value level="5">-18</value>
-					<value level="6">-20</value>
-				</power>
-				</trait>								
-				<trait type="DERANGEMENT">
-				<power initial="-10">
-					<value level="2">-12</value>
-					<value level="3">-14</value>
-					<value level="4">-16</value>
-					<value level="5">-18</value>
-					<value level="6">-20</value>
-				</power>
-				</trait>
-				<trait type="PULL">
-				<power initial="-10">
-					<value level="2">-12</value>
-					<value level="3">-14</value>
-					<value level="4">-16</value>
-					<value level="5">-18</value>
-					<value level="6">-20</value>
-				</power>
-				</trait>
-				<trait type="KNOCKDOWN">
-				<power initial="-10">
-					<value level="2">-12</value>
-					<value level="3">-14</value>
-					<value level="4">-16</value>
-					<value level="5">-18</value>
-					<value level="6">-20</value>
-				</power>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="50095" name="Frintezza Heal Music" max-level="5" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Healing Performance
-		level 2: A Consecutive Dash + Portrait Replay Performance
-		level 3: Presentation - Attack/Speed Performance
-		level 4: Momentarily Heal Received greatly decreased.
-		level 5: Instantly immobilizes the target by making it dance involuntarily.
-	 -->
-		<icon initial="icon.skill0000">
-			<value level="4">icon.skill5008_plague</value>
-			<value level="5">icon.skill5008_psycho</value>
-		</icon>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="100">
-				<value level="4">-100</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50096" name="Frintezza Demon Field" max-level="4" action="A1">
-	<!-- 
-		level 1: Unleashes a powerful attack on the surroundings.
-		level 2: Unleashes a powerful attack on the surroundings. Deals damage over time during casting.
-		level 3: Unleashes a powerful attack over a donut-shaped area between 600 grids and 1200 grids from you.
-		level 4: Unleashes a powerful attack over a donut-shaped area between 500 grids and 1200 grids from you. Deals damage over time during casting.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="5000">
-				<value level="2">6600</value>
-				<value level="3">5000</value>
-				<value level="4">6600</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50097" name="Gaze of Halisha" max-level="5" debuff="true" action="A1">
-	<!-- 
-		level 1: Gaze of Halisha Stage 1. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 2: Gaze of Halisha Stage 2. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 3: Gaze of Halisha Stage 3. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 4: Gaze of Halisha Stage 4. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 5: Gaze of Halisha Stage 5. Received enough damage to die instantly.
-	 -->
-		<icon initial="icon.karma"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50098" name="Frintezza Demon Field" max-level="4" action="A1">
-	<!-- 
-		level 1: Unleashes a powerful attack on the surroundings.
-		level 2: Unleashes a powerful attack on the surroundings. Deals damage over time during casting.
-		level 3: Unleashes a powerful attack over a donut-shaped area between 600 grids and 1200 grids from you.
-		level 4: Unleashes a powerful attack over a donut-shaped area between 500 grids and 1200 grids from you. Deals damage over time during casting.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="5000">
-				<value level="2">6600</value>
-				<value level="3">5000</value>
-				<value level="4">6600</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50099" name="Gaze of Halisha" max-level="5" debuff="true" action="A1">
-	<!-- 
-		level 1: Gaze of Halisha Stage 1. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 2: Gaze of Halisha Stage 2. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 3: Gaze of Halisha Stage 3. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 4: Gaze of Halisha Stage 4. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
-		level 5: Gaze of Halisha Stage 5. Received enough damage to die instantly.
-	 -->
-		<icon initial="icon.karma"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+            <element type="FIRE" value="150"/>
+        </attributes>
+        <consume>
+            <mana-init initial="21"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <effects>
+            <magical-attack>
+                <power initial="138.0"/>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="50071" name="Aqua Arrow" action="A1" type="MAGIC">
+        <!-- Deals M. Damage to a random target. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50072" name="Aqua Wave" action="A1" type="MAGIC">
+        <!-- Affects the area. Deals a lot of damage. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50073" name="Hurricane Bolt" action="A1" type="MAGIC">
+        <!-- Deals damage with a powerful lightning and paralizes for 5 seconds. -->
+        <icon initial="icon.skill0791"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50074" name="Hurricane" action="A1" type="MAGIC">
+        <!-- Affects the area. Deals a lot of damage. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50075" name="Physical Hot Spring" action="A1">
+        <!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Atk. +5%% and P. Atk. Spd. +5%%. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="1000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50076" name="Fatal Hot Spring" action="A1">
+        <!-- Warmed by energy of Hot Springs Water. For 5 minutes P. Critical Rate +30 and P. Accuracy +6. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="1000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50077" name="Magical Hot Spring" action="A1">
+        <!-- Warmed by energy of Hot Springs Water. For 5 minutes M. Atk. +5%% and M. Atk. Spd. +5%%. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="1000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50078" name="Magic Weakness" debuff="true" action="A1" type="MAGIC">
+        <!-- Inflicts damage with bonus 85 M. Atk. Power to surrounding enemies, and M. Atk. -20%%. -->
+        <icon initial="icon.skill1333"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="8000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50079" name="Lv. 82 Raid Boss">
+        <!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50080" name="Lv. 82 Raid Boss">
+        <!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50081" name="Lv. 82 Raid Boss">
+        <!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50082" name="Lv. 82 Raid Boss">
+        <!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50083" name="Lv. 84 Raid Boss">
+        <!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50084" name="Lv. 84 Raid Boss">
+        <!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50085" name="Lv. 84 Raid Boss">
+        <!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50086" name="Lv. 84 Raid Boss">
+        <!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
+        <icon initial="icon.skillraid"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50087" name="Fire Rage" max-level="10" debuff="true" action="A1">
+        <!--
+            level 1: King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya.
+            level 10: King Ignis' Flame in its most powerful state. If not cleared by speaking to Freya, HP becomes 1 and Heal received falls -100%%.
+         -->
+        <icon initial="icon.skill50050_1">
+            <value level="2">icon.skill50050_2</value>
+            <value level="3">icon.skill50050_3</value>
+            <value level="4">icon.skill50050_4</value>
+            <value level="5">icon.skill50050_5</value>
+            <value level="6">icon.skill50050_6</value>
+            <value level="7">icon.skill50050_7</value>
+            <value level="8">icon.skill50050_8</value>
+            <value level="9">icon.skill50050_9</value>
+            <value level="10">icon.skill50050_10</value>
+        </icon>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50088" name="Power Strike" max-level="2" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <cool-time initial="660"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="830"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="42">
+                <value level="2">53</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50089" name="Hurricane Attack" max-level="2" action="A1">
+        <!--
+            level 1: Inflicts damage with bonus 102 M. Atk. Power to surrounding enemies.
+            level 2: Inflicts damage with bonus 122 M. Atk. Power o surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50090" name="Slow" max-level="2" debuff="true" action="A1">
+        <!-- Movement Speed has momentarily decreased by 30%%. -->
+        <icon initial="icon.skill1160"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="700"/>
+            <reuse initial="17000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="206"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="50091" name="Fire Attack" max-level="2" action="A1">
+        <!--
+            level 1: Inflicts damage with bonus 88 M. Atk. Power to enemies in front.
+            level 2: Inflicts damage with bonus 98 M. Atk. Power to enemies in front.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <magical-attack>
+                <power initial="88.0">
+                    <value level="2">98.0</value>
+                </power>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="50092" name="Aqua Attack" max-level="2" action="A1">
+        <!--
+            level 1: Inflicts damage with bonus 55 M. Atk. Power to surrounding enemies.
+            level 2: Inflicts damage with bonus 61 M. Atk. Power to surrounding enemies.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <magical-attack>
+                <power initial="55.0">
+                    <value level="2">61.0</value>
+                </power>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="50093" name="Stone Attack" max-level="2" action="A1">
+        <!--
+            level 1: Inflicts damage with bonus 542 Power to surrounding enemies and is stunned for 5 seconds.
+            level 2: Inflicts damage with bonus 774 Power to surrounding enemies and is stunned for 5 seconds.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1800"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <magical-attack>
+                <power initial="542.0">
+                    <value level="2">774.0</value>
+                </power>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="50094" name="Despair of Shade" max-level="6" debuff="true" action="A1" type="MAGIC">
+        <!--
+            level 1: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 10.
+            level 2: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 12.
+            level 3: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 14.
+            level 4: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 16.
+            level 5: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 18.
+            level 6: Nightshade's debuff magic. Decreases nearby enemies' resistance to Sleep/Hold/Stun/Paralysis/MEN/Pull/Knock Down attacks by 20.
+         -->
+        <icon initial="icon.skill50094"/>
+        <attributes property="PHYSIC">
+            <magic-level initial="77">
+                <value level="2">79</value>
+                <value level="3">81</value>
+                <value level="4">83</value>
+                <value level="5">84</value>
+                <value level="6">85</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-1621">
+                <value level="2">-1831</value>
+                <value level="3">-1975</value>
+                <value level="4">-1997</value>
+                <value level="5">-2007</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="75">
+                <value level="2">80</value>
+                <value level="3">85</value>
+                <value level="4">90</value>
+                <value level="5">95</value>
+            </mana>
+        </consume>
+        <target/>
+        <effects>
+            <defence-trait>
+                <trait type="SLEEP">
+                    <power initial="-10">
+                        <value level="2">-12</value>
+                        <value level="3">-14</value>
+                        <value level="4">-16</value>
+                        <value level="5">-18</value>
+                        <value level="6">-20</value>
+                    </power>
+                </trait>
+                <trait type="HOLD">
+                    <power initial="-10">
+                        <value level="2">-12</value>
+                        <value level="3">-14</value>
+                        <value level="4">-16</value>
+                        <value level="5">-18</value>
+                        <value level="6">-20</value>
+                    </power>
+                </trait>
+                <trait type="SHOCK">
+                    <power initial="-10">
+                        <value level="2">-12</value>
+                        <value level="3">-14</value>
+                        <value level="4">-16</value>
+                        <value level="5">-18</value>
+                        <value level="6">-20</value>
+                    </power>
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="-10">
+                        <value level="2">-12</value>
+                        <value level="3">-14</value>
+                        <value level="4">-16</value>
+                        <value level="5">-18</value>
+                        <value level="6">-20</value>
+                    </power>
+                </trait>
+                <trait type="PULL">
+                    <power initial="-10">
+                        <value level="2">-12</value>
+                        <value level="3">-14</value>
+                        <value level="4">-16</value>
+                        <value level="5">-18</value>
+                        <value level="6">-20</value>
+                    </power>
+                </trait>
+                <trait type="KNOCKDOWN">
+                    <power initial="-10">
+                        <value level="2">-12</value>
+                        <value level="3">-14</value>
+                        <value level="4">-16</value>
+                        <value level="5">-18</value>
+                        <value level="6">-20</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="50095" name="Frintezza Heal Music" max-level="5" action="A1" type="MAGIC">
+        <!--
+            level 1: Healing Performance
+            level 2: A Consecutive Dash + Portrait Replay Performance
+            level 3: Presentation - Attack/Speed Performance
+            level 4: Momentarily Heal Received greatly decreased.
+            level 5: Instantly immobilizes the target by making it dance involuntarily.
+         -->
+        <icon initial="icon.skill0000">
+            <value level="4">icon.skill5008_plague</value>
+            <value level="5">icon.skill5008_psycho</value>
+        </icon>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="100">
+                <value level="4">-100</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50096" name="Frintezza Demon Field" max-level="4" action="A1">
+        <!--
+            level 1: Unleashes a powerful attack on the surroundings.
+            level 2: Unleashes a powerful attack on the surroundings. Deals damage over time during casting.
+            level 3: Unleashes a powerful attack over a donut-shaped area between 600 grids and 1200 grids from you.
+            level 4: Unleashes a powerful attack over a donut-shaped area between 500 grids and 1200 grids from you. Deals damage over time during casting.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="5000">
+                <value level="2">6600</value>
+                <value level="3">5000</value>
+                <value level="4">6600</value>
+            </hit-time>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50097" name="Gaze of Halisha" max-level="5" debuff="true" action="A1">
+        <!--
+            level 1: Gaze of Halisha Stage 1. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 2: Gaze of Halisha Stage 2. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 3: Gaze of Halisha Stage 3. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 4: Gaze of Halisha Stage 4. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 5: Gaze of Halisha Stage 5. Received enough damage to die instantly.
+         -->
+        <icon initial="icon.karma"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50098" name="Frintezza Demon Field" max-level="4" action="A1">
+        <!--
+            level 1: Unleashes a powerful attack on the surroundings.
+            level 2: Unleashes a powerful attack on the surroundings. Deals damage over time during casting.
+            level 3: Unleashes a powerful attack over a donut-shaped area between 600 grids and 1200 grids from you.
+            level 4: Unleashes a powerful attack over a donut-shaped area between 500 grids and 1200 grids from you. Deals damage over time during casting.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="5000">
+                <value level="2">6600</value>
+                <value level="3">5000</value>
+                <value level="4">6600</value>
+            </hit-time>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50099" name="Gaze of Halisha" max-level="5" debuff="true" action="A1">
+        <!--
+            level 1: Gaze of Halisha Stage 1. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 2: Gaze of Halisha Stage 2. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 3: Gaze of Halisha Stage 3. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 4: Gaze of Halisha Stage 4. Targets failing to leave the demon field suffer increasingly more damage as the gaze stage increases.
+            level 5: Gaze of Halisha Stage 5. Received enough damage to die instantly.
+         -->
+        <icon initial="icon.karma"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

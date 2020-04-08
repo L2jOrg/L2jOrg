@@ -1,1288 +1,1273 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="51200" name="High Priest's Energy" action="A1">
-	<!-- Transforms into High Priest through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 1000 and MP by 200. -->
-		<icon initial="icon.bm2018_healer_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51201" name="Blood Noblesse's Energy" action="A1">
-	<!-- Transforms into Blood Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blood Noblesse there's a chance to inflict an additional 145 magic attack. -->
-		<icon initial="icon.bm2018_rednoblesse_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51202" name="White Noblesse's Energy" action="A1">
-	<!-- Transforms into White Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as White Noblesse there's a chance to reduce the enemy's M. Def. by 23%%. -->
-		<icon initial="icon.bm2018_whitenoblesse_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51203" name="Berserker Soul" action="A1">
-	<!-- Has gone berserk through the power of the armor. While in berserker mode, the equipper's P. Atk. +50%%, M. Atk. + 50%%, Atk. Spd. +50%%, Casting Spd. +50%%, and reflects 15%% of damage received to the enemy. -->
-		<icon initial="icon.bm2018_dragon_i02"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="290000"/>
-			<effect-point initial="20"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51204" name="Ninja Assassin - Cancel Target" action="A1">
-	<!-- Cancels enemy's target. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="900"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51205" name="Blue Musketeer - Stun" debuff="true" action="A1">
-	<!-- A temporary Stun that prevents movement. -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900"/>
-			<reuse initial="180000"/>
-			<effect-point initial="-5"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51206" name="Valkyrie - Paralyze" debuff="true" action="A1">
-	<!-- Paralyzed and unable to move temporarily. -->
-		<icon initial="icon.skill1170"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900"/>
-			<reuse initial="180000"/>
-			<effect-point initial="-5"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51207" name="Wild Wolf - Hex" debuff="true" action="A1">
-	<!-- P. Def. -23%%. -->
-		<icon initial="icon.skill0122"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900"/>
-			<reuse initial="180000"/>
-			<effect-point initial="-5"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51208" name="Caravan's Blessing" action="A1">
-	<!-- Party members' P./M. Atk. +10%%. -->
-		<icon initial="icon.bm2018_pirate_i02"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-point initial="20"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51209" name="Purple Cowboy - P. Atk." action="A1">
-	<!-- Deals a powerful physical attack to the target. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="900"/>
-			<reuse initial="180000"/>
-			<effect-point initial="-5"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51210" name="High Priest - Blessing of Eva" action="A1">
-	<!-- Recovers party mebmers' HP by 1000 and MP by 200 with sacred power. -->
-		<icon initial="icon.skill1506"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-point initial="20"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51211" name="Blood Noblesse - M. Atk." action="A1">
-	<!-- Deals a powerful magic attack to the target. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="900"/>
-			<reuse initial="180000"/>
-			<effect-point initial="-5"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51212" name="White Noblesse - Curse Gloom" debuff="true" action="A1">
-	<!-- M. Def. -23%%. -->
-		<icon initial="icon.skill1263"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900"/>
-			<reuse initial="180000"/>
-			<effect-point initial="-5"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51213" name="Mysterious Transformation Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51214" name="Transformation Sealbook: Dragon Berserker" action="A1">
-	<!-- Sealbook to learn Dragon Berserker transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51215" name="Transformation Sealbook: Ninja Assassin" action="A1">
-	<!-- Sealbook to learn Ninja Assassin transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51216" name="Transformation Sealbook: Blue Musketeer" action="A1">
-	<!-- Sealbook to learn Blue Musketeer transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51217" name="Transformation Sealbook: Valkyrie" action="A1">
-	<!-- Sealbook to learn Valkyrie transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51218" name="Transformation Sealbook: Wild Wolf" action="A1">
-	<!-- Sealbook to learn Wild Wolf transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51219" name="Transformation Sealbook: Caravan" action="A1">
-	<!-- Sealbook to learn Caravan transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51220" name="Transformation Sealbook: Purple Cowboy" action="A1">
-	<!-- Sealbook to learn Purple Cowboy transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51221" name="Transformation Sealbook: High Priest" action="A1">
-	<!-- Sealbook to learn High Priest transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51222" name="Transformation Sealbook: Blood Noblesse" action="A1">
-	<!-- Sealbook to learn Blood Noblesse transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51223" name="Transformation Sealbook: White Noblesse" action="A1">
-	<!-- Sealbook to learn White Noblesse transformation skill. Disappears when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51224" name="Fish Stew - Clarity" max-level="2" action="A1">
-	<!-- 
-		level 1: For 20 minutes, decreases physical skill MP Consumption by 10%, magic skill MP Consumption by 4%, and song/dance skill MP Consumption by 10%.
-		level 2: For 20 minutes, decreases physical skill MP Consumption by 15%, magic skill MP Consumption by 7%, and song/dance skill MP Consumption by 15%.
-	 -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51225" name="Fish Stew - Agility" max-level="3" action="A1">
-	<!-- 
-		level 1: For 20 minutes, P. Evasion +2.
-		level 2: For 20 minutes, P. Evasion +3.
-		level 3: For 20 minutes, P. Evasion +4.
-	 -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51226" name="Mysterious Transformation Sealbook Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51227" name="Spring Energy" max-level="3" action="A1">
-	<!-- 
-		level 1: For 20 minutes, Max HP/Max MP +3%%, P. Atk. +3%%, M. Atk. +5%%, Atk. Spd/Casting Spd. +3%%, P. Def./M. Def. +3%%, XP/SP Gain +3%% and Sayha's Grace Consumption -3%%.
-		level 2: For 20 minutes, Max HP/Max MP +5%%, P. Atk. +5%%, M. Atk. +8%%, Atk. Spd/Casting Spd. +5%%, P. Def./M. Def. +5%%, XP/SP Gain +5%% and Sayha's Grace Consumption -5%%.
-		level 3: For 20 minutes, Max HP/Max MP +15%%, P. Atk. +15%%, M. Atk. +23%%, Atk. Spd/Casting Spd. +15%%, P. Def./M. Def. +15%%, XP/SP Gain +15%% and Sayha's Grace Consumption -15%%.
-	 -->
-		<icon initial="icon.etc_leaf_green_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51228" name="Sayha's Spring Breeze" action="A1">
-	<!-- Momentum consumption speed while hunting +100%%, XP/SP gain +150%% for 10 minutes Buff does not disappear after death. Cooldown: 20 minutes -->
-		<icon initial="icon.ev_magic_flame_game_wind1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="1200000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51229" name="Spring's Blessing Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51230" name="Grace Recovery" max-level="2" action="A1">
-	<!-- 
-		level 1: Restores Sayha's grace.
-		level 2: Recovers Sayha's Grace.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51231" name="Gem - Greater Ruby" max-level="2" action="A1">
-	<!-- 
-		level 1: Soulshot damage +20%.
-		level 2: Blessed Soulshot damage +20%.
-	 -->
-		<icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51232" name="Gem - Greater Ruby" action="A1">
-	<!-- Beast Soulshot damage +20% -->
-		<icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51233" name="Gem - Greater Ruby" max-level="5" >
-	<!-- 
-		level 1: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +17%, P. Atk. +1%.
-		level 2: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +18%, P. Atk. +2%.
-		level 3: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +19%, P. Atk. +3%.
-		level 4: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +20%, P. Atk. +5%.
-		level 5: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +20%, P. Atk. +7% and P. Critical Rate +5%.
-	 -->
-		<icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51234" name="Gem - Greater Sapphire" max-level="2" action="A1">
-	<!-- Spiritshot damage +20%. -->
-		<icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51235" name="Gem - Greater Sapphire" action="A1">
-	<!-- Increases Beast Spiritshot Damage +20%. -->
-		<icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51236" name="Gem - Greater Sapphire" max-level="5" >
-	<!-- 
-		level 1: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +17%, M. Atk. +2%.
-		level 2: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +18%, M. Atk. +4%.
-		level 3: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +19%, M. Atk. +6%.
-		level 4: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +20%, M. Atk. +10%.
-		level 5: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +20%, M. Atk. +14% and M. Critical Rate +10%.
-	 -->
-		<icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51237" name="Gem - Emerald" max-level="10" >
-	<!-- 
-		level 1: CON +1.
-		level 2: CON +1, MEN +1.
-		level 3: CON +1, MEN +1, DEX +1.
-		level 4: CON +1, MEN +1, DEX +1, WIT +1.
-		level 5: CON +1, MEN +1, DEX +1, WIT +1, STR +1, INT +1.
-		level 6: CON +2, MEN +1, DEX +1, WIT +1, STR +1, INT +1 and Damage Reflect Resistance +2%.
-		level 7: CON +2, MEN +2, DEX +1, WIT +1, STR +1, INT +1 and Damage Reflect Resistance +4%.
-		level 8: CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 and Damage Reflect Resistance +6%.
-		level 9: CON +2, MEN +2, DEX +2, WIT +2, STR +1, INT +1 and Damage Reflect Resistance +10%.
-		level 10: CON +2, MEN +2, DEX +2, WIT +2, STR +2, INT +2 and Damage Reflect Resistance +20%.
-	 -->
-		<icon initial="icon.etc_bm_jewel_emerald_i00">
-			<value level="6">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51238" name="Brilliant Jewelry Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.bm_special_jewelbox_lv5"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51239" name="Angler's Rune - Veteran" max-level="3" >
-	<!-- 
-		level 1: While having it in the inventory, XP/SP Gain from fishing +300%%. Only for characters with level 76 or lower.
-		level 2: While having it in the inventory, XP/SP Gain from fishing +300%%. Only for characters from level 77 to 80.
-		level 3: While having it in the inventory, XP/SP Gain from fishing +300%%. Only for characters with level 81 or above.
-	 -->
-		<icon initial="icon.fishing_zone_ticket_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51240" name="Night Goblin Liquor" action="A1">
-	<!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
-		<icon initial="icon.bm_goblin_buff_herong"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51241" name="Codex - Disarm" action="A1">
-	<!-- A book that teaches Disarm. Removed after use. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51242" name="Codex - Armor Breaker" action="A1">
-	<!-- A book that teaches Armor Breaker. Removed after use. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51243" name="Codex - Spell Break" action="A1">
-	<!-- A book that teaches Spell Breaker. Removed after use. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51244" name="Codex - Warp" action="A1">
-	<!-- A book that teaches Warp. Removed after use. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51245" name="Codex - Flash" action="A1">
-	<!-- A book that teaches Flash. Removed after use. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51246" name="Codex - Berserker Mode" action="A1">
-	<!-- A book that teaches Berserker. Removed after use. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51247" name="Disarm" debuff="true" action="A1">
-	<!-- Removes weapons of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
-		<icon initial="icon.skill0485"/>
-		<attributes property="PHYSIC" auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-341"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="205"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="51248" name="Armor Breaker" debuff="true" action="A1">
-	<!-- Removes armor of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
-		<icon initial="icon.skill10703"/>
-		<attributes property="PHYSIC" auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-341"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="205"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="51249" name="Spell Break" debuff="true" action="A1">
-	<!-- Has a chance to cancel skills of the target and nearby enemies for 10 seconds. -->
-		<icon initial="icon.skill1412"/>
-		<attributes property="PHYSIC" auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-341"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="205"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="51250" name="Warp" action="A1">
-	<!-- Gives Cancel Target to nearby enemies and Teleports them to the front. -->
-		<icon initial="icon.skill11057"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="77"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="51251" name="Flash" action="A1" type="MAGIC">
-	<!-- Cancels targeting of nearby enemies, and makes them unable to target for 5 seconds. -->
-		<icon initial="icon.skill1417"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="120000"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="800"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="77"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="51252" name="Berserker Mode" action="A1">
-	<!-- Increases P. Atk./M. Atk./Atk. Spd./Casting Spd. +50%% for 20 seconds and reflects damaged received by 15%%. The effect does not stack with Berserker Soul which is the transformed state of Dragon Berserker. -->
-		<icon initial="icon.skill10274"/>
-		<attributes property="PHYSIC" auto-use="BUFF">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-point initial="20"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="200"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="51253" name="Elmoreden Scroll of Experience" action="A1">
-	<!-- 500,000 XP. -->
-		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51254" name="High-grade Elmoreden Scroll of Experience" action="A1">
-	<!-- 20,000,000 XP. -->
-		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51255" name="Elmoreden Treasure Chest" action="A1">
-	<!-- none -->
-		<icon initial="[icon.bm_elmoaden_box]"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51256" name="Elmoreden Relic Pouch" action="A1">
-	<!-- none -->
-		<icon initial="[icon.bm_elmoaden_pocket]"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51257" name="Elmoreden Golden Box" action="A1">
-	<!-- none -->
-		<icon initial="[icon.bm_elmoaden_gold_box]"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51258" name="Elmoreden Silver Box" action="A1">
-	<!-- none -->
-		<icon initial="[icon.bm_elmoaden_silver_box]"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51259" name="+10 Sayha's Cloak Box - White" action="A1">
-	<!-- none -->
-		<icon initial="[icon.etc_treasure_box_i00]"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51260" name="+10 Sayha's Cloak Box - Black" action="A1">
-	<!-- none -->
-		<icon initial="[icon.etc_treasure_box_i00]"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51261" name="+10 Sayha's Cloak Box - Red" action="A1">
-	<!-- none -->
-		<icon initial="[icon.etc_treasure_box_i00]"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51262" name="Soccer Ball Herb of Victory" action="A1">
-	<!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
-		<icon initial="BranchSys2.icon.br_soccer_ball_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51263" name="Greater Solid Scroll: Enchant Weapon (D-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.giant_scrl_of_ench_wp_d"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51264" name="Greater Solid Scroll: Enchant Armor (D-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.giant_scrl_of_ench_am_d"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51265" name="Greater Solid Scroll: Enchant Weapon (C-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.giant_scrl_of_ench_wp_c"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51266" name="Greater Solid Scroll: Enchant Armor (C-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.giant_scrl_of_ench_am_c"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51267" name="Greater Solid Scroll: Enchant Weapon (B-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.giant_scrl_of_ench_wp_b"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51268" name="Greater Solid Scroll: Enchant Armor (B-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.giant_scrl_of_ench_am_b"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51269" name="Greater Solid Scroll: Enchant Weapon (A-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51270" name="Greater Solid Scroll: Enchant Armor (A-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51271" name="War Paint" max-level="5" action="A1">
-	<!-- 
-		level 1: Increases PvP Damage +3%.
-		level 2: Increases PvP Damage +6%.
-		level 3: Increases PvP Damage +10%.
-		level 4: Increases PvP Damage +15%.
-		level 5: Increases PvP Damage +25%.
-	 -->
-		<icon initial="icon.skill50008"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51272" name="Didactics" max-level="5" action="A1">
-	<!-- 
-		level 1: XP/SP Gain from hunting +5%
-		level 2: XP/SP Gain from hunting +7%
-		level 3: XP/SP Gain from hunting +12%
-		level 4: XP/SP Gain from hunting +20%
-		level 5: XP/SP Gain from hunting +30%
-	 -->
-		<icon initial="icon.skill51272"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51273" name="Courage Mastery" max-level="5" action="A1">
-	<!-- Increases Max. CP. -->
-		<icon initial="icon.skill11755"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51274" name="Honor Recover" max-level="5" action="A1">
-	<!-- 
-		level 1: Decreases XP Reduction by 5% upon death.
-		level 2: Decreases XP Reduction by 10% upon death.
-		level 3: Decreases XP Reduction by 15% upon death.
-		level 4: Decreases XP Reduction by 20% upon death.
-		level 5: Decreases XP Reduction by 25% upon death.
-	 -->
-		<icon initial="icon.skill19308"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51275" name="Sword Resist" max-level="5" action="A1">
-	<!-- 
-		level 1: Sword Weapon Attack Resistance +1.
-		level 2: Sword Weapon Attack Resistance +3.
-		level 3: Sword Weapon Attack Resistance +5.
-		level 4: Sword Weapon Attack Resistance +7.
-		level 5: Sword Weapon Attack Resistance +10.
-	 -->
-		<icon initial="icon.skill4447"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51276" name="Blunt Resistance" max-level="5" action="A1">
-	<!-- 
-		level 1: Blunt Weapon Attack Resistance +1.
-		level 2: Blunt Weapon Attack Resistance +3.
-		level 3: Blunt Weapon Attack Resistance +5.
-		level 4: Blunt Weapon Attack Resistance +7.
-		level 5: Blunt Weapon Attack Resistance +10.
-	 -->
-		<icon initial="icon.skill4443"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51277" name="Polearm Resist" max-level="5" action="A1">
-	<!-- 
-		level 1: Spear Weapon Attack Resistance +1.
-		level 2: Spear Weapon Attack Resistance +3.
-		level 3: Spear Weapon Attack Resistance +5.
-		level 4: Spear Weapon Attack Resistance +7.
-		level 5: Spear Weapon Attack Resistance +10.
-	 -->
-		<icon initial="icon.skill4445"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51278" name="Fist Resist" max-level="5" action="A1">
-	<!-- 
-		level 1: Fist Weapon Attack Resistance +1.
-		level 2: Fist Weapon Attack Resistance +3.
-		level 3: Fist Weapon Attack Resistance +5.
-		level 4: Fist Weapon Attack Resistance +7.
-		level 5: Fist Weapon Attack Resistance +10.
-	 -->
-		<icon initial="icon.skill4442"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51279" name="Dagger Resist" max-level="5" action="A1">
-	<!-- 
-		level 1: Dagger Weapon Attack Resistance +1.
-		level 2: Dagger Weapon Attack Resistance +3.
-		level 3: Dagger Weapon Attack Resistance +5.
-		level 4: Dagger Weapon Attack Resistance +7.
-		level 5: Dagger Weapon Attack Resistance +10.
-	 -->
-		<icon initial="icon.skill4448"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51280" name="Bow Resist" max-level="5" action="A1">
-	<!-- 
-		level 1: Bow Weapon Attack Resistance +1.
-		level 2: Bow Weapon Attack Resistance +3.
-		level 3: Bow Weapon Attack Resistance +5.
-		level 4: Bow Weapon Attack Resistance +7.
-		level 5: Bow Weapon Attack Resistance +10.
-	 -->
-		<icon initial="icon.skill4444"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51281" name="Dual Weapon Resist" max-level="5" action="A1">
-	<!-- 
-		level 1: Dualsword Weapon Attack Resistance +1.
-		level 2: Dualsword Weapon Attack Resistance +3.
-		level 3: Dualsword Weapon Attack Resistance +5.
-		level 4: Dualsword Weapon Attack Resistance +7.
-		level 5: Dualsword Weapon Attack Resistance +10.
-	 -->
-		<icon initial="icon.skill4446"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51282" name="+5 Sealed Agathion - Virgo" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51283" name="+5 Sealed Agathion - Capricorn" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51284" name="+5 Sealed Agathion - Libra" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51285" name="+5 Sealed Agathion - Taurus" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51286" name="+5 Sealed Agathion - Leo" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51287" name="+5 Sealed Agathion - Gemini" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51288" name="+5 Sealed Agathion - Scorpio" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51289" name="+5 Sealed Agathion - Aquarius" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51290" name="+5 Sealed Agathion - Sagittarius" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51291" name="Blessed Scroll: Enchant Weapon (S-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ITEM" />
-	</skill>
-	<skill id="51292" name="Blessed Scroll: Enchant Armor (S-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ITEM" />
-	</skill>
-	<skill id="51293" name="Stable Scroll: Enchant Weapon (S-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51294" name="Stable Scroll: Enchant Armor (S-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51295" name="Greater Scroll: Enchant Weapon (S-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51296" name="Greater Scroll: Enchant Armor (S-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51297" name="Frintezza Doll's Spell" max-level="2" >
-	<!-- 
-		level 1: CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis attack rates +10%%.
-		level 2: CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis attack rates +20%% and Movement Speed +5.
-	 -->
-		<icon initial="icon.bm_doll_frintessa_30d"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="51298" name="Dimensional Barrier" action="A1">
-	<!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->
-		<icon initial="icon.skill11621"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="200"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="51299" name="Dimension Guard" max-level="10" action="A1">
-	<!-- 
-		level 1: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 2% for 15 seconds.
-		level 2: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 3% for 15 seconds.
-		level 3: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 5% for 15 seconds.
-		level 4: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 7% for 15 seconds.
-		level 5: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 10% and P. Critical Damage/M. Critical Damage by 5% for 15 seconds.
-		level 6: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 13% and P. Critical Damage/M. Critical Damage by 7% for 15 seconds.
-		level 7: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 17% and P. Critical Damage/M. Critical Damage by 9% for 15 seconds.
-		level 8: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -20% and P. Critical Damage/M. Critical Damage -11% and increases Magic Attack Resistance +2% for 15 seconds.
-		level 9: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -25% and P. Critical Damage/M. Critical Damage -13% and increases Magic Attack Resistance +3% for 15 seconds.
-		level 10: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -30% and P. Critical Damage/M. Critical Damage -15% and increases Magic Attack Resistance +5% for 15 seconds.
-	 -->
-		<icon initial="icon.skill11876"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="180000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="100"/>
-		</consume>
-		<target />
-	</skill>
+    <skill id="51200" name="High Priest's Energy" action="A1">
+        <!-- Transforms into High Priest through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 1000 and MP by 200. -->
+        <icon initial="icon.bm2018_healer_i01"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51201" name="Blood Noblesse's Energy" action="A1">
+        <!-- Transforms into Blood Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blood Noblesse there's a chance to inflict an additional 145 magic attack. -->
+        <icon initial="icon.bm2018_rednoblesse_i01"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51202" name="White Noblesse's Energy" action="A1">
+        <!-- Transforms into White Noblesse through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as White Noblesse there's a chance to reduce the enemy's M. Def. by 23%%. -->
+        <icon initial="icon.bm2018_whitenoblesse_i01"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51203" name="Berserker Soul" action="A1">
+        <!-- Has gone berserk through the power of the armor. While in berserker mode, the equipper's P. Atk. +50%%, M. Atk. + 50%%, Atk. Spd. +50%%, Casting Spd. +50%%, and reflects 15%% of damage received to the enemy. -->
+        <icon initial="icon.bm2018_dragon_i02"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="290000"/>
+            <effect-point initial="20"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51204" name="Ninja Assassin - Cancel Target" action="A1">
+        <!-- Cancels enemy's target. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="900"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51205" name="Blue Musketeer - Stun" debuff="true" action="A1">
+        <!-- A temporary Stun that prevents movement. -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900"/>
+            <reuse initial="180000"/>
+            <effect-point initial="-5"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51206" name="Valkyrie - Paralyze" debuff="true" action="A1">
+        <!-- Paralyzed and unable to move temporarily. -->
+        <icon initial="icon.skill1170"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900"/>
+            <reuse initial="180000"/>
+            <effect-point initial="-5"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51207" name="Wild Wolf - Hex" debuff="true" action="A1">
+        <!-- P. Def. -23%%. -->
+        <icon initial="icon.skill0122"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900"/>
+            <reuse initial="180000"/>
+            <effect-point initial="-5"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51208" name="Caravan's Blessing" action="A1">
+        <!-- Party members' P./M. Atk. +10%%. -->
+        <icon initial="icon.bm2018_pirate_i02"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-point initial="20"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51209" name="Purple Cowboy - P. Atk." action="A1">
+        <!-- Deals a powerful physical attack to the target. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="900"/>
+            <reuse initial="180000"/>
+            <effect-point initial="-5"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51210" name="High Priest - Blessing of Eva" action="A1">
+        <!-- Recovers party mebmers' HP by 1000 and MP by 200 with sacred power. -->
+        <icon initial="icon.skill1506"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-point initial="20"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51211" name="Blood Noblesse - M. Atk." action="A1">
+        <!-- Deals a powerful magic attack to the target. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="900"/>
+            <reuse initial="180000"/>
+            <effect-point initial="-5"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51212" name="White Noblesse - Curse Gloom" debuff="true" action="A1">
+        <!-- M. Def. -23%%. -->
+        <icon initial="icon.skill1263"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900"/>
+            <reuse initial="180000"/>
+            <effect-point initial="-5"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51213" name="Mysterious Transformation Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51214" name="Transformation Sealbook: Dragon Berserker" action="A1">
+        <!-- Sealbook to learn Dragon Berserker transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51215" name="Transformation Sealbook: Ninja Assassin" action="A1">
+        <!-- Sealbook to learn Ninja Assassin transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51216" name="Transformation Sealbook: Blue Musketeer" action="A1">
+        <!-- Sealbook to learn Blue Musketeer transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51217" name="Transformation Sealbook: Valkyrie" action="A1">
+        <!-- Sealbook to learn Valkyrie transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51218" name="Transformation Sealbook: Wild Wolf" action="A1">
+        <!-- Sealbook to learn Wild Wolf transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51219" name="Transformation Sealbook: Caravan" action="A1">
+        <!-- Sealbook to learn Caravan transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51220" name="Transformation Sealbook: Purple Cowboy" action="A1">
+        <!-- Sealbook to learn Purple Cowboy transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51221" name="Transformation Sealbook: High Priest" action="A1">
+        <!-- Sealbook to learn High Priest transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51222" name="Transformation Sealbook: Blood Noblesse" action="A1">
+        <!-- Sealbook to learn Blood Noblesse transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51223" name="Transformation Sealbook: White Noblesse" action="A1">
+        <!-- Sealbook to learn White Noblesse transformation skill. Disappears when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51224" name="Fish Stew - Clarity" max-level="2" action="A1">
+        <!--
+            level 1: For 20 minutes, decreases physical skill MP Consumption by 10%, magic skill MP Consumption by 4%, and song/dance skill MP Consumption by 10%.
+            level 2: For 20 minutes, decreases physical skill MP Consumption by 15%, magic skill MP Consumption by 7%, and song/dance skill MP Consumption by 15%.
+         -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51225" name="Fish Stew - Agility" max-level="3" action="A1">
+        <!--
+            level 1: For 20 minutes, P. Evasion +2.
+            level 2: For 20 minutes, P. Evasion +3.
+            level 3: For 20 minutes, P. Evasion +4.
+         -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51226" name="Mysterious Transformation Sealbook Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51227" name="Spring Energy" max-level="3" action="A1">
+        <!--
+            level 1: For 20 minutes, Max HP/Max MP +3%%, P. Atk. +3%%, M. Atk. +5%%, Atk. Spd/Casting Spd. +3%%, P. Def./M. Def. +3%%, XP/SP Gain +3%% and Sayha's Grace Consumption -3%%.
+            level 2: For 20 minutes, Max HP/Max MP +5%%, P. Atk. +5%%, M. Atk. +8%%, Atk. Spd/Casting Spd. +5%%, P. Def./M. Def. +5%%, XP/SP Gain +5%% and Sayha's Grace Consumption -5%%.
+            level 3: For 20 minutes, Max HP/Max MP +15%%, P. Atk. +15%%, M. Atk. +23%%, Atk. Spd/Casting Spd. +15%%, P. Def./M. Def. +15%%, XP/SP Gain +15%% and Sayha's Grace Consumption -15%%.
+         -->
+        <icon initial="icon.etc_leaf_green_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51228" name="Sayha's Spring Breeze" action="A1">
+        <!-- Momentum consumption speed while hunting +100%%, XP/SP gain +150%% for 10 minutes Buff does not disappear after death. Cooldown: 20 minutes -->
+        <icon initial="icon.ev_magic_flame_game_wind1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="1200000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51229" name="Spring's Blessing Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51230" name="Grace Recovery" max-level="2" action="A1">
+        <!--
+            level 1: Restores Sayha's grace.
+            level 2: Recovers Sayha's Grace.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51231" name="Gem - Greater Ruby" max-level="2" action="A1">
+        <!--
+            level 1: Soulshot damage +20%.
+            level 2: Blessed Soulshot damage +20%.
+         -->
+        <icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51232" name="Gem - Greater Ruby" action="A1">
+        <!-- Beast Soulshot damage +20% -->
+        <icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51233" name="Gem - Greater Ruby" max-level="5">
+        <!--
+            level 1: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +17%, P. Atk. +1%.
+            level 2: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +18%, P. Atk. +2%.
+            level 3: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +19%, P. Atk. +3%.
+            level 4: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +20%, P. Atk. +5%.
+            level 5: Soulshot, Blessed Soulshot, and Beast Soulshot Damage +20%, P. Atk. +7% and P. Critical Rate +5%.
+         -->
+        <icon initial="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51234" name="Gem - Greater Sapphire" max-level="2" action="A1">
+        <!-- Spiritshot damage +20%. -->
+        <icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51235" name="Gem - Greater Sapphire" action="A1">
+        <!-- Increases Beast Spiritshot Damage +20%. -->
+        <icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51236" name="Gem - Greater Sapphire" max-level="5">
+        <!--
+            level 1: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +17%, M. Atk. +2%.
+            level 2: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +18%, M. Atk. +4%.
+            level 3: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +19%, M. Atk. +6%.
+            level 4: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +20%, M. Atk. +10%.
+            level 5: Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +20%, M. Atk. +14% and M. Critical Rate +10%.
+         -->
+        <icon initial="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51237" name="Gem - Emerald" max-level="10">
+        <!--
+            level 1: CON +1.
+            level 2: CON +1, MEN +1.
+            level 3: CON +1, MEN +1, DEX +1.
+            level 4: CON +1, MEN +1, DEX +1, WIT +1.
+            level 5: CON +1, MEN +1, DEX +1, WIT +1, STR +1, INT +1.
+            level 6: CON +2, MEN +1, DEX +1, WIT +1, STR +1, INT +1 and Damage Reflect Resistance +2%.
+            level 7: CON +2, MEN +2, DEX +1, WIT +1, STR +1, INT +1 and Damage Reflect Resistance +4%.
+            level 8: CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 and Damage Reflect Resistance +6%.
+            level 9: CON +2, MEN +2, DEX +2, WIT +2, STR +1, INT +1 and Damage Reflect Resistance +10%.
+            level 10: CON +2, MEN +2, DEX +2, WIT +2, STR +2, INT +2 and Damage Reflect Resistance +20%.
+         -->
+        <icon initial="icon.etc_bm_jewel_emerald_i00">
+            <value level="6">icon.bm_jewel_allstat_high_lv1_lavianrose</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51238" name="Brilliant Jewelry Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.bm_special_jewelbox_lv5"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51239" name="Angler's Rune - Veteran" max-level="3">
+        <!--
+            level 1: While having it in the inventory, XP/SP Gain from fishing +300%%. Only for characters with level 76 or lower.
+            level 2: While having it in the inventory, XP/SP Gain from fishing +300%%. Only for characters from level 77 to 80.
+            level 3: While having it in the inventory, XP/SP Gain from fishing +300%%. Only for characters with level 81 or above.
+         -->
+        <icon initial="icon.fishing_zone_ticket_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51240" name="Night Goblin Liquor" action="A1">
+        <!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
+        <icon initial="icon.bm_goblin_buff_herong"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51241" name="Codex - Disarm" action="A1">
+        <!-- A book that teaches Disarm. Removed after use. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51242" name="Codex - Armor Breaker" action="A1">
+        <!-- A book that teaches Armor Breaker. Removed after use. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51243" name="Codex - Spell Break" action="A1">
+        <!-- A book that teaches Spell Breaker. Removed after use. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51244" name="Codex - Warp" action="A1">
+        <!-- A book that teaches Warp. Removed after use. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51245" name="Codex - Flash" action="A1">
+        <!-- A book that teaches Flash. Removed after use. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51246" name="Codex - Berserker Mode" action="A1">
+        <!-- A book that teaches Berserker. Removed after use. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51247" name="Disarm" debuff="true" action="A1">
+        <!-- Removes weapons of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
+        <icon initial="icon.skill0485"/>
+        <attributes property="PHYSIC" auto-use="ACTIVE">
+            <cast-range initial="900"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-341"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="205"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="51248" name="Armor Breaker" debuff="true" action="A1">
+        <!-- Removes armor of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
+        <icon initial="icon.skill10703"/>
+        <attributes property="PHYSIC" auto-use="ACTIVE">
+            <cast-range initial="900"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-341"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="205"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="51249" name="Spell Break" debuff="true" action="A1">
+        <!-- Has a chance to cancel skills of the target and nearby enemies for 10 seconds. -->
+        <icon initial="icon.skill1412"/>
+        <attributes property="PHYSIC" auto-use="ACTIVE">
+            <cast-range initial="900"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-341"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="205"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="51250" name="Warp" action="A1">
+        <!-- Gives Cancel Target to nearby enemies and Teleports them to the front. -->
+        <icon initial="icon.skill11057"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="77"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="51251" name="Flash" action="A1" type="MAGIC">
+        <!-- Cancels targeting of nearby enemies, and makes them unable to target for 5 seconds. -->
+        <icon initial="icon.skill1417"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="120000"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="800"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="77"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="51252" name="Berserker Mode" action="A1">
+        <!-- Increases P. Atk./M. Atk./Atk. Spd./Casting Spd. +50%% for 20 seconds and reflects damaged received by 15%%. The effect does not stack with Berserker Soul which is the transformed state of Dragon Berserker. -->
+        <icon initial="icon.skill10274"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-point initial="20"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="200"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="51253" name="Elmoreden Scroll of Experience" action="A1">
+        <!-- 500,000 XP. -->
+        <icon initial="icon.bm_elmoaden_exp_scrl"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51254" name="High-grade Elmoreden Scroll of Experience" action="A1">
+        <!-- 20,000,000 XP. -->
+        <icon initial="icon.bm_elmoaden_exp_scrl"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51255" name="Elmoreden Treasure Chest" action="A1">
+        <!-- none -->
+        <icon initial="[icon.bm_elmoaden_box]"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51256" name="Elmoreden Relic Pouch" action="A1">
+        <!-- none -->
+        <icon initial="[icon.bm_elmoaden_pocket]"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51257" name="Elmoreden Golden Box" action="A1">
+        <!-- none -->
+        <icon initial="[icon.bm_elmoaden_gold_box]"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51258" name="Elmoreden Silver Box" action="A1">
+        <!-- none -->
+        <icon initial="[icon.bm_elmoaden_silver_box]"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51259" name="+10 Sayha's Cloak Box - White" action="A1">
+        <!-- none -->
+        <icon initial="[icon.etc_treasure_box_i00]"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51260" name="+10 Sayha's Cloak Box - Black" action="A1">
+        <!-- none -->
+        <icon initial="[icon.etc_treasure_box_i00]"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51261" name="+10 Sayha's Cloak Box - Red" action="A1">
+        <!-- none -->
+        <icon initial="[icon.etc_treasure_box_i00]"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51262" name="Soccer Ball Herb of Victory" action="A1">
+        <!-- For 5 minutes, P. Atk. +15%, M. Atk. +23%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, and HP Recovery Bonus/MP Recovery Bonus +30%. -->
+        <icon initial="BranchSys2.icon.br_soccer_ball_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51263" name="Greater Solid Scroll: Enchant Weapon (D-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.giant_scrl_of_ench_wp_d"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51264" name="Greater Solid Scroll: Enchant Armor (D-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.giant_scrl_of_ench_am_d"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51265" name="Greater Solid Scroll: Enchant Weapon (C-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.giant_scrl_of_ench_wp_c"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51266" name="Greater Solid Scroll: Enchant Armor (C-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.giant_scrl_of_ench_am_c"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51267" name="Greater Solid Scroll: Enchant Weapon (B-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.giant_scrl_of_ench_wp_b"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51268" name="Greater Solid Scroll: Enchant Armor (B-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.giant_scrl_of_ench_am_b"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51269" name="Greater Solid Scroll: Enchant Weapon (A-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51270" name="Greater Solid Scroll: Enchant Armor (A-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51271" name="War Paint" max-level="5" action="A1">
+        <!--
+            level 1: Increases PvP Damage +3%.
+            level 2: Increases PvP Damage +6%.
+            level 3: Increases PvP Damage +10%.
+            level 4: Increases PvP Damage +15%.
+            level 5: Increases PvP Damage +25%.
+         -->
+        <icon initial="icon.skill50008"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51272" name="Didactics" max-level="5" action="A1">
+        <!--
+            level 1: XP/SP Gain from hunting +5%
+            level 2: XP/SP Gain from hunting +7%
+            level 3: XP/SP Gain from hunting +12%
+            level 4: XP/SP Gain from hunting +20%
+            level 5: XP/SP Gain from hunting +30%
+         -->
+        <icon initial="icon.skill51272"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51273" name="Courage Mastery" max-level="5" action="A1">
+        <!-- Increases Max. CP. -->
+        <icon initial="icon.skill11755"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51274" name="Honor Recover" max-level="5" action="A1">
+        <!--
+            level 1: Decreases XP Reduction by 5% upon death.
+            level 2: Decreases XP Reduction by 10% upon death.
+            level 3: Decreases XP Reduction by 15% upon death.
+            level 4: Decreases XP Reduction by 20% upon death.
+            level 5: Decreases XP Reduction by 25% upon death.
+         -->
+        <icon initial="icon.skill19308"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51275" name="Sword Resist" max-level="5" action="A1">
+        <!--
+            level 1: Sword Weapon Attack Resistance +1.
+            level 2: Sword Weapon Attack Resistance +3.
+            level 3: Sword Weapon Attack Resistance +5.
+            level 4: Sword Weapon Attack Resistance +7.
+            level 5: Sword Weapon Attack Resistance +10.
+         -->
+        <icon initial="icon.skill4447"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51276" name="Blunt Resistance" max-level="5" action="A1">
+        <!--
+            level 1: Blunt Weapon Attack Resistance +1.
+            level 2: Blunt Weapon Attack Resistance +3.
+            level 3: Blunt Weapon Attack Resistance +5.
+            level 4: Blunt Weapon Attack Resistance +7.
+            level 5: Blunt Weapon Attack Resistance +10.
+         -->
+        <icon initial="icon.skill4443"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51277" name="Polearm Resist" max-level="5" action="A1">
+        <!--
+            level 1: Spear Weapon Attack Resistance +1.
+            level 2: Spear Weapon Attack Resistance +3.
+            level 3: Spear Weapon Attack Resistance +5.
+            level 4: Spear Weapon Attack Resistance +7.
+            level 5: Spear Weapon Attack Resistance +10.
+         -->
+        <icon initial="icon.skill4445"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51278" name="Fist Resist" max-level="5" action="A1">
+        <!--
+            level 1: Fist Weapon Attack Resistance +1.
+            level 2: Fist Weapon Attack Resistance +3.
+            level 3: Fist Weapon Attack Resistance +5.
+            level 4: Fist Weapon Attack Resistance +7.
+            level 5: Fist Weapon Attack Resistance +10.
+         -->
+        <icon initial="icon.skill4442"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51279" name="Dagger Resist" max-level="5" action="A1">
+        <!--
+            level 1: Dagger Weapon Attack Resistance +1.
+            level 2: Dagger Weapon Attack Resistance +3.
+            level 3: Dagger Weapon Attack Resistance +5.
+            level 4: Dagger Weapon Attack Resistance +7.
+            level 5: Dagger Weapon Attack Resistance +10.
+         -->
+        <icon initial="icon.skill4448"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51280" name="Bow Resist" max-level="5" action="A1">
+        <!--
+            level 1: Bow Weapon Attack Resistance +1.
+            level 2: Bow Weapon Attack Resistance +3.
+            level 3: Bow Weapon Attack Resistance +5.
+            level 4: Bow Weapon Attack Resistance +7.
+            level 5: Bow Weapon Attack Resistance +10.
+         -->
+        <icon initial="icon.skill4444"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51281" name="Dual Weapon Resist" max-level="5" action="A1">
+        <!--
+            level 1: Dualsword Weapon Attack Resistance +1.
+            level 2: Dualsword Weapon Attack Resistance +3.
+            level 3: Dualsword Weapon Attack Resistance +5.
+            level 4: Dualsword Weapon Attack Resistance +7.
+            level 5: Dualsword Weapon Attack Resistance +10.
+         -->
+        <icon initial="icon.skill4446"/>
+        <attributes property="MAGIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51282" name="+5 Sealed Agathion - Virgo" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51283" name="+5 Sealed Agathion - Capricorn" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51284" name="+5 Sealed Agathion - Libra" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51285" name="+5 Sealed Agathion - Taurus" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51286" name="+5 Sealed Agathion - Leo" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51287" name="+5 Sealed Agathion - Gemini" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51288" name="+5 Sealed Agathion - Scorpio" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51289" name="+5 Sealed Agathion - Aquarius" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51290" name="+5 Sealed Agathion - Sagittarius" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51291" name="Blessed Scroll: Enchant Weapon (S-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ITEM"/>
+    </skill>
+    <skill id="51292" name="Blessed Scroll: Enchant Armor (S-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ITEM"/>
+    </skill>
+    <skill id="51293" name="Stable Scroll: Enchant Weapon (S-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51294" name="Stable Scroll: Enchant Armor (S-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51295" name="Greater Scroll: Enchant Weapon (S-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51296" name="Greater Scroll: Enchant Armor (S-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51297" name="Frintezza Doll's Spell" max-level="2">
+        <!--
+            level 1: CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis attack rates +10%%.
+            level 2: CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis attack rates +20%% and Movement Speed +5.
+         -->
+        <icon initial="icon.bm_doll_frintessa_30d"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51298" name="Dimensional Barrier" action="A1">
+        <!-- Opens the dimensional curtain to block enemy attack 10 times for 15 seconds. -->
+        <icon initial="icon.skill11621"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="200"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="51299" name="Dimension Guard" max-level="10" action="A1">
+        <!--
+            level 1: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 2% for 15 seconds.
+            level 2: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 3% for 15 seconds.
+            level 3: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 5% for 15 seconds.
+            level 4: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 7% for 15 seconds.
+            level 5: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 10% and P. Critical Damage/M. Critical Damage by 5% for 15 seconds.
+            level 6: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 13% and P. Critical Damage/M. Critical Damage by 7% for 15 seconds.
+            level 7: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab by 17% and P. Critical Damage/M. Critical Damage by 9% for 15 seconds.
+            level 8: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -20% and P. Critical Damage/M. Critical Damage -11% and increases Magic Attack Resistance +2% for 15 seconds.
+            level 9: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -25% and P. Critical Damage/M. Critical Damage -13% and increases Magic Attack Resistance +3% for 15 seconds.
+            level 10: Wards off danger with the power of dimension. Decreases the chance of being hit with Deadly Stab -30% and P. Critical Damage/M. Critical Damage -15% and increases Magic Attack Resistance +5% for 15 seconds.
+         -->
+        <icon initial="icon.skill11876"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="180000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="100"/>
+        </consume>
+        <target/>
+    </skill>
 </list>

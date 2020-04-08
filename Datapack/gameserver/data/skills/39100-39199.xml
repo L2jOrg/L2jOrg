@@ -1,1818 +1,1821 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="39100" name="Agathion Teleport: Hunter's Village" action="A1">
-	<!-- Teleport to the Hunter's Village. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
-			<magic-level initial="-1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<conditions>
-			<condition name="OpCanEscape"/>
-		</conditions>
-		<effects>
-			<teleport>
-				<location x="117088" y="76931" z="-2696"/>
-			</teleport>
-		</effects>
-	</skill>
-	<skill id="39101" name="Chase Down" action="A2">
-	<!-- Movement Speed +66 for 15 seconds. -->
-		<icon initial="icon.skill0998"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="30000"/>
-			<effect-point initial="438"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal>
-			<time initial="15"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<speed>
-				<power initial="66.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="39102" name="Sneak" action="T">
-	<!-- Protected from preemptive attacks from monsters. -->
-		<icon initial="icon.skill10518"/>
-		<attributes magic-critical-rate="5.0">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="1"/>
-		</consume>
-		<target />
-		<effects>
-			<effect name="ChameleonRest" ticks="5">
-				<power initial="2.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39103" name="Hero HP Potion" action="A1">
-	<!-- Protected from preemptive attacks from monsters. -->
-		<icon initial="icon.etc_reagent_white_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39104" name="Warrior's Cube (7-day)" action="A1">
-	<!-- none -->
-		<icon initial="icon.sa_cube"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39105" name="Scroll of Escape: Dragon Valley Bridge" action="A1">
-	<!-- Return to Dragon Valley Bridge. Cooldown 60 minutes. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39106" name="Scroll of Escape: Inside Antharas' Lair" action="A1">
-	<!-- Return to Inside Antharas' Lair. Cooldown 60 minutes. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39107" name="Scroll of Escape: Cruma Tower Entrance" action="A1">
-	<!-- Return to Cruma Tower Entrance. Cooldown 60 minutes. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39108" name="Scroll of Escape: Orc Barracks Entrance" action="A1">
-	<!-- Return to Orc Barracks Entrance. Cooldown 60 minutes. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39109" name="Greater Scroll of Resurrection" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_scroll_of_resurrection_i01"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="400"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<effect-range initial="600"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49542"/>
-			<item-count initial="1"/>
-		</consume>
-		<target type="PC_BODY" />
-		<conditions>
-			<condition name="OpResurrection"/>
-		</conditions>
-		<effects>
-			<effect name="Resurrection">
-				<power initial="50.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39110" name="Scroll of Escape: Enchanted Valley Entrance" action="A1">
-	<!-- Return to Enchanted Valley Entrance. Cooldown 60 minutes. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39111" name="Assistant Roa's Gift" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39112" name="Golden Boots" action="A1">
-	<!-- none -->
-		<icon initial="icon.card_event_blue_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39113" name="Golden Mermaid's Tear" action="A2">
-	<!-- Hunting XP/SP Gain +50%% for 1 hour. Buff remains after death. -->
-		<icon initial="icon.general_fuel_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49585"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<abnormal type="VOTE">
-			<level initial="1"/>
-			<time initial="3600"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<conditions>
-			<level max-level="85" scope="PASSIVE"/>
-		</conditions>
-		<effects>
-			<stat-modify stat="BONUS_EXP">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify stat="BONUS_SP">
-				<power initial="50.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="39114" name="Refined Queen Ant's Ring" max-level="3" >
-	<!-- 
-		level 1: Poison Resistance +20%%, Poison Atk. Rate +20%%, P. Accuracy/M. Accuracy +3, P. Atk./M. Atk. +7%%, P. Critical Damage +10%%, and M. Critical Damage +5%%.
-		level 3: Poison Resistance +20%%, Poison Atk. Rate +20%%, P. Accuracy/M. Accuracy +3, P. Critical Damage +10%%, and M. Critical Damage +5%%.
-	 -->
-		<icon initial="icon.accessory_ring_of_queen_ant_i03"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39115" name="Refined Orfen's Earring" max-level="3" >
-	<!-- 
-		level 1: Hold Resistance +20%%, MEN Attack Resistance +15%%, Hold Atk. Rate +20%%, MEN Atk. Rate +15%%, Heal Received +6%%, Skill MP Consumption -5%%. Procs to recover HP by some of damage dealt.
-		level 3: Hold Resistance +20%%, MEN Resistance +15%%, Hold Atk. Rate +20%%, MEN Atk. Rate +15%%, Heal Received +6%%, and Skill MP Consumption -5%%. Has a chance to absorb part of the damage dealt to enemies as MP.
-	 -->
-		<icon initial="icon.accessory_earring_of_orfen_i03"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39116" name="Refined Rings of Core" max-level="3" >
-	<!-- 
-		level 1: MEN Attack Resistance +20%%, MEN Atk. Rate + 20%%, P. Evasion/M. Evasion +3, Damage Received -6%%.
-		level 3: MEN Resistance +20%%, MEN Atk. Rate +20%%, P. Evasion/M. Evasion +3, and Damage Received -6%%.
-	 -->
-		<icon initial="icon.accessory_ring_of_core_i03"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39117" name="Whale" action="A1">
-	<!-- none -->
-		<icon initial="icon.fish_huge_i15"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39118" name="2,000 SP Scroll" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_sp_scroll1_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39119" name="10,000 SP Scroll" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_sp_scroll2_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39120" name="Teleport: Giral Harbor" action="A1">
-	<!-- Teleport to Giran Harbor. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39121" name="Teleport: Gludin Harbor" action="A1">
-	<!-- Teleport to Gludin Harbor. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39122" name="Golden Boots_Tester" action="A1">
-	<!-- none -->
-		<icon initial="icon.card_event_blue_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39123" name="Special HP Potion" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_bm_hero_red_potion"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39124" name="Weapon Supply Box (C-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49667"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="242" chance="8.300000190734863"/>
-<item id="7887" chance="8.300000190734863"/>
-<item id="72" chance="8.300000190734863"/>
-<item id="71" chance="8.300000190734863"/>
-<item id="281" chance="8.300000190734863"/>
-<item id="193" chance="8.300000190734863"/>
-<item id="160" chance="8.300000190734863"/>
-<item id="161" chance="8.300000190734863"/>
-<item id="192" chance="8.300000190734863"/>
-<item id="194" chance="8.300000190734863"/>
-<item id="302" chance="8.300000190734863"/>
-<item id="263" chance="8.300000190734863"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39125" name="Weapon Supply Box (B-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i03"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49664"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="175" chance="4.0"/>
-<item id="267" chance="4.0"/>
-<item id="268" chance="4.0"/>
-<item id="287" chance="4.0"/>
-<item id="79" chance="4.0"/>
-<item id="284" chance="4.0"/>
-<item id="171" chance="4.0"/>
-<item id="234" chance="4.0"/>
-<item id="300" chance="4.0"/>
-<item id="78" chance="4.0"/>
-<item id="7883" chance="4.0"/>
-<item id="91" chance="4.0"/>
-<item id="7900" chance="4.0"/>
-<item id="7893" chance="4.0"/>
-<item id="142" chance="4.0"/>
-<item id="229" chance="4.0"/>
-<item id="97" chance="4.0"/>
-<item id="264" chance="4.0"/>
-<item id="7892" chance="4.0"/>
-<item id="92" chance="4.0"/>
-<item id="210" chance="4.0"/>
-<item id="7901" chance="4.0"/>
-<item id="148" chance="4.0"/>
-<item id="243" chance="4.0"/>
-<item id="7889" chance="4.0"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39126" name="C-grade Armor Supply Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i06"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49668"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="2463" chance="10.0"/>
-<item id="473" chance="10.0"/>
-<item id="442" chance="10.0"/>
-<item id="401" chance="10.0"/>
-<item id="2437" chance="10.0"/>
-<item id="2461" chance="10.0"/>
-<item id="356" chance="10.0"/>
-<item id="2438" chance="10.0"/>
-<item id="2462" chance="10.0"/>
-<item id="2414" chance="10.0"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39127" name="B-grade Armor Supply Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49665"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="600" chance="8.300000190734863"/>
-<item id="2415" chance="8.300000190734863"/>
-<item id="2464" chance="8.300000190734863"/>
-<item id="2439" chance="8.300000190734863"/>
-<item id="2487" chance="8.300000190734863"/>
-<item id="2416" chance="8.300000190734863"/>
-<item id="601" chance="8.300000190734863"/>
-<item id="2475" chance="8.300000190734863"/>
-<item id="2417" chance="8.300000190734863"/>
-<item id="554" chance="8.300000190734863"/>
-<item id="612" chance="8.300000190734863"/>
-<item id="503" chance="8.300000190734863"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39128" name="Ornament Supply Box (C-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i02"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49669"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="854" chance="16.600000381469727"/>
-<item id="855" chance="16.600000381469727"/>
-<item id="917" chance="16.600000381469727"/>
-<item id="119" chance="16.600000381469727"/>
-<item id="885" chance="16.600000381469727"/>
-<item id="886" chance="16.600000381469727"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39129" name="Ornament Supply Box - B-grade" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i08"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49666"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="900" chance="6.599999904632568"/>
-<item id="869" chance="6.599999904632568"/>
-<item id="931" chance="6.599999904632568"/>
-<item id="887" chance="6.599999904632568"/>
-<item id="856" chance="6.599999904632568"/>
-<item id="918" chance="6.599999904632568"/>
-<item id="891" chance="6.599999904632568"/>
-<item id="860" chance="6.599999904632568"/>
-<item id="922" chance="6.599999904632568"/>
-<item id="895" chance="6.599999904632568"/>
-<item id="864" chance="6.599999904632568"/>
-<item id="926" chance="6.599999904632568"/>
-<item id="905" chance="6.599999904632568"/>
-<item id="874" chance="6.599999904632568"/>
-<item id="936" chance="6.599999904632568"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39130" name="Weapons Ingredient Box (C-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39131" name="Weapon Ingredient Box (B-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39132" name="Armor/Ornament Ingredient Box - C-grade" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39133" name="Armor/Ornament Ingredient Box - B-grade" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39134" name="XP Boost Scroll" action="A1">
-	<!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
-		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39135" name="Chic Silver Chapeau - 30-day">
-	<!-- STR +1 and INT +1 -->
-		<icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39136" name="Chic Silver Chapeau Teleport - 30-day" action="A1">
-	<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="7200000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39137" name="Chapeau Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.card_event_black_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39138" name="Blue Dynasty Transformation" action="A1">
-	<!-- Armor Appearance changes to "Blue Dynasty" for 1 h. -->
-		<icon initial="icon.general_stone_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39139" name="Transformation into Red Zubei" action="A1">
-	<!-- Armor Appearance changes to "Red Zubei" for 1 h. -->
-		<icon initial="icon.general_stone_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39140" name="Magical Potion of Leaping - Lv. 1" action="A1">
-	<!-- Can obtain 1,200,000 XP/40,000 SP. Available for characters Lv. 20 and above. -->
-		<icon initial="icon.etc_holy_potion_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39141" name="Magical Potion of Leaping - Lv. 2" action="A1">
-	<!-- Can obtain 7,800,000 XP/240,000 SP. Available for characters Lv. 30 and above. -->
-		<icon initial="icon.etc_wind_potion_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39142" name="Magical Potion of Leaping - Lv. 3" action="A1">
-	<!-- Can obtain 34,200,000 XP/1,040,000 SP. Available for characters Lv. 40 and above. -->
-		<icon initial="icon.etc_water_potion_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39143" name="Gift from a Returned Friend" action="A1">
-	<!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
-		<icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39144" name="Special Fruit Buff" action="A2">
-	<!-- For 20 minutes bonus XP/SP gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of physical damage dealt to enemies as HP. Effect remains even after death. -->
-		<icon initial="icon.etc_codran_i09"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49518"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<abnormal type="VOTE">
-			<level initial="1"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="7.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="7.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<hp-drain percentage="3">
-				<power initial="49.0"/>
-			</hp-drain>
-			<stat-modify stat="BONUS_EXP">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="BONUS_SP">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="39145" name="Tower of Insolence Enchant Scroll Pack" action="A1">
-	<!-- none -->
-		<icon initial="icon.npoint_valakas_30day_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39146" name="Sealed Fate Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.bm_special_pendant_abradant_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39147" name="Talisman of Darkness Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.bm_pirate_king_box"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49706"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="49707" chance="10.0"/>
-<item id="49708" chance="10.0"/>
-<item id="49709" chance="10.0"/>
-<item id="49710" chance="10.0"/>
-<item id="49711" chance="10.0"/>
-<item id="49712" chance="10.0"/>
-<item id="49713" chance="10.0"/>
-<item id="49714" chance="10.0"/>
-<item id="49715" chance="10.0"/>
-<item id="49716" chance="10.0"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39148" name="Sealed Blessed Talisman of Fate" action="A1">
-	<!-- none -->
-		<icon initial="icon.bm_blessed_magic_square_talisman"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49738"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="49737" chance="100.0"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39149" name="Talisman of Baium Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.npoint_tauti_30day_box"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49755"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="49683" chance="9.999999747378752E-5"/>
-<item id="49682" chance="0.009999999776482582"/>
-<item id="49676" chance="70.0"/>
-<item id="49677" chance="20.0"/>
-<item id="49685" chance="5.0"/>
-<item id="49684" chance="3.0"/>
-<item id="49543" chance="1.98989999294281"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39150" name="Sayha's Holy Water" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39151" name="A-grade Armor Supply Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39152" name="Ornament Supply Box (A-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i02"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49761"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="6327" chance="16.600000381469727"/>
-<item id="6326" chance="16.600000381469727"/>
-<item id="6328" chance="16.600000381469727"/>
-<item id="6324" chance="16.600000381469727"/>
-<item id="6323" chance="16.600000381469727"/>
-<item id="6325" chance="16.600000381469727"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39153" name="Armor Ingredient Box - A-grade" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39154" name="Ornament Ingredient Box - A-grade" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i05"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39155" name="Life Control Tower's Scroll of Blessing" action="A1">
-	<!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
-		<icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39156" name="Scroll of Heavenly Protection" action="A1">
-	<!-- For 20 minutes, Paralysis Resistance +15 and MEN Resistance +10. -->
-		<icon initial="icon.scroll_of_verification_i08"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39157" name="Unidentified Rock" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_magical_stone_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39158" name="Secret Scroll Box: Emperor Baium's Enchant" action="A1">
-	<!-- none -->
-		<icon initial="icon.npoint_valakas_30day_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39159" name="Sayha's Energy" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39160" name="Emperor Baium's Secret Treasures" action="A1">
-	<!-- none -->
-		<icon initial="icon.npoint_valakas_30day_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39161" name="Express Bus Pass Card" action="A1">
-	<!-- Can obtain 5,000,000 XP/160,000 SP. Available for characters Lv. 20 and above. -->
-		<icon initial="icon.etc_holy_potion_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39162" name="Special Fruit Buff - Attack" action="A2">
-	<!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of physical damage dealt to enemies as HP. PvP Damage +5%%. Cooldown is 1 minute Effect remains even after death. -->
-		<icon initial="icon.etc_codran_i09"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49773"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<abnormal type="VOTE">
-			<level initial="1"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="7.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="7.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<hp-drain percentage="3">
-				<power initial="49.0"/>
-			</hp-drain>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="39163" name="Special Fruit Buff - Defense" action="A2">
-	<!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of physical damage dealt to enemies as HP. PvP Damage Received -5%%. Cooldown is 1 min. Effect remains even after death. -->
-		<icon initial="icon.etc_codran_i09"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49774"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<abnormal type="VOTE">
-			<level initial="1"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="7.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="7.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" mode="PER">
-				<power initial="15.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<hp-drain percentage="3">
-				<power initial="49.0"/>
-			</hp-drain>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DEFENCE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DEFENCE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DEFENCE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="39164" name="Mood Melody" action="A1">
-	<!-- For 20 minutes activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, Vampiric Rage. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Scroll of Mood Melody will not be removed after death, and the Scroll of Mood Melody cannot be used while the buff remains. -->
-		<icon initial="icon.bm_magmeld"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39165" name="Transformation into a Prophet" action="A1">
-	<!-- Transformed into a Prophet. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39166" name="Transformation into a Shillien Elder" action="A1">
-	<!-- Transformed into a Shillien Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39167" name="Transformation into an Elven Elder" action="A1">
-	<!-- Transformed into an Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39168" name="Gift of a Sated Cadmus" action="A1">
-	<!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
-		<icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39169" name="Firecracker" action="A1">
-	<!-- Scatters in a shower of multicolored sparks when exploded. -->
-		<icon initial="BranchSys.icon.br_firecracker_gold_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39170" name="Oriana's Lucky Draw Supply" action="A1">
-	<!-- none -->
-		<icon initial="icon.special_cube_i00"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="49784" count="3" chance="100.0"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39171" name="Oriana's Disguise" action="A2">
-	<!-- For 1 hour, Hunting XP/SP Gain +30%. You’ll have a chance to obtain special supplies. Effect remains even after death. -->
-		<icon initial="icon.ev_balthus_token"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
-			<magic-level initial="56"/>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-		</attributes>
-		<consume>
-			<item initial="49784"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<abnormal type="CHANGEBODY" visual="CHANGESHAPE_TRANSFORM" >
-			<level initial="1"/>
-			<time initial="3600"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<conditions>
-			<level min-level="20" max-level="85" scope="PASSIVE"/>
-		</conditions>
-		<effects>
-			<stat-modify stat="BONUS_EXP">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="BONUS_SP">
-				<power initial="10.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="39172" name="Weapon Supply Box (A-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49785"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="98" chance="4.539999961853027"/>
-<item id="213" chance="4.539999961853027"/>
-<item id="7894" chance="4.539999961853027"/>
-<item id="236" chance="4.539999961853027"/>
-<item id="80" chance="4.539999961853027"/>
-<item id="235" chance="4.539999961853027"/>
-<item id="288" chance="4.539999961853027"/>
-<item id="269" chance="4.539999961853027"/>
-<item id="7902" chance="4.539999961853027"/>
-<item id="151" chance="4.539999961853027"/>
-<item id="7884" chance="4.539999961853027"/>
-<item id="2504" chance="4.539999961853027"/>
-<item id="150" chance="4.539999961853027"/>
-<item id="7899" chance="4.539999961853027"/>
-<item id="270" chance="4.539999961853027"/>
-<item id="212" chance="4.539999961853027"/>
-<item id="289" chance="4.539999961853027"/>
-<item id="7895" chance="4.539999961853027"/>
-<item id="2500" chance="4.539999961853027"/>
-<item id="81" chance="4.539999961853027"/>
-<item id="305" chance="4.539999961853027"/>
-<item id="164" chance="4.539999961853027"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39173" name="A-grade Armor Supply Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49786"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="5287" chance="3.440000057220459"/>
-<item id="5288" chance="3.440000057220459"/>
-<item id="5289" chance="3.440000057220459"/>
-<item id="5290" chance="3.440000057220459"/>
-<item id="5291" chance="3.440000057220459"/>
-<item id="5293" chance="3.440000057220459"/>
-<item id="5294" chance="3.440000057220459"/>
-<item id="5295" chance="3.440000057220459"/>
-<item id="5296" chance="3.440000057220459"/>
-<item id="5297" chance="3.440000057220459"/>
-<item id="5298" chance="3.440000057220459"/>
-<item id="5301" chance="3.440000057220459"/>
-<item id="5304" chance="3.440000057220459"/>
-<item id="5305" chance="3.440000057220459"/>
-<item id="5308" chance="3.440000057220459"/>
-<item id="5311" chance="3.440000057220459"/>
-<item id="5312" chance="3.440000057220459"/>
-<item id="5313" chance="3.440000057220459"/>
-<item id="5314" chance="3.440000057220459"/>
-<item id="5316" chance="3.440000057220459"/>
-<item id="5317" chance="3.440000057220459"/>
-<item id="5318" chance="3.440000057220459"/>
-<item id="5319" chance="3.440000057220459"/>
-<item id="5320" chance="3.440000057220459"/>
-<item id="5323" chance="3.440000057220459"/>
-<item id="5326" chance="3.440000057220459"/>
-<item id="5329" chance="3.440000057220459"/>
-<item id="5292" chance="3.440000057220459"/>
-<item id="5315" chance="3.440000057220459"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39174" name="+8 Enchanted Weapon Supply Box (B-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49789"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="175" chance="4.0"/>
-<item id="267" chance="4.0"/>
-<item id="268" chance="4.0"/>
-<item id="287" chance="4.0"/>
-<item id="79" chance="4.0"/>
-<item id="284" chance="4.0"/>
-<item id="171" chance="4.0"/>
-<item id="234" chance="4.0"/>
-<item id="300" chance="4.0"/>
-<item id="78" chance="4.0"/>
-<item id="7883" chance="4.0"/>
-<item id="91" chance="4.0"/>
-<item id="7900" chance="4.0"/>
-<item id="7893" chance="4.0"/>
-<item id="142" chance="4.0"/>
-<item id="229" chance="4.0"/>
-<item id="97" chance="4.0"/>
-<item id="264" chance="4.0"/>
-<item id="7892" chance="4.0"/>
-<item id="92" chance="4.0"/>
-<item id="210" chance="4.0"/>
-<item id="7901" chance="4.0"/>
-<item id="148" chance="4.0"/>
-<item id="243" chance="4.0"/>
-<item id="7889" chance="4.0"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39175" name="+16 Enchanted Weapon Supply Box (C-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i07"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49790"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="242" chance="8.300000190734863"/>
-<item id="7887" chance="8.300000190734863"/>
-<item id="72" chance="8.300000190734863"/>
-<item id="71" chance="8.300000190734863"/>
-<item id="281" chance="8.300000190734863"/>
-<item id="193" chance="8.300000190734863"/>
-<item id="160" chance="8.300000190734863"/>
-<item id="161" chance="8.300000190734863"/>
-<item id="192" chance="8.300000190734863"/>
-<item id="194" chance="8.300000190734863"/>
-<item id="302" chance="8.300000190734863"/>
-<item id="263" chance="8.300000190734863"/>
-			</random-restoration>
-		</effects>
-	</skill>
-	<skill id="39176" name="Red Libra Supplies Lv. 1" action="A1">
-	<!-- none -->
-		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39177" name="Red Libra Supplies Lv. 2" action="A1">
-	<!-- none -->
-		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39178" name="Red Libra Supplies Lv. 3" action="A1">
-	<!-- none -->
-		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39179" name="Red Libra Supplies Lv. 4" action="A1">
-	<!-- none -->
-		<icon initial="icon.event_mahum_coinbox"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39180" name="Low-grade Scroll: XP" action="A1">
-	<!-- 1000 XP. -->
-		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49777"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<effects>
-			<effect name="GiveXp">
-				<power initial="1000.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39181" name="Mid-grade Scroll: XP" action="A1">
-	<!-- 10,000 XP. -->
-		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49778"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<effects>
-			<effect name="GiveXp">
-				<power initial="10000.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39182" name="High-grade Scroll: XP" action="A1">
-	<!-- 100,000 XP. -->
-		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49779"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<effects>
-			<effect name="GiveXp">
-				<power initial="100000.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39183" name="Top-grade Scroll: XP" action="A1">
-	<!-- 500,000 XP. -->
-		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49780"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<effects>
-			<effect name="GiveXp">
-				<power initial="500000.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39184" name="Highest-grade Scroll: XP" action="A1">
-	<!-- 1,000,000 XP. -->
-		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="49781"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<effects>
-			<effect name="GiveXp">
-				<power initial="1000000.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39185" name="Support Blow" action="A1">
-	<!-- Deals a fixed amount of damage with 12 Power to the target. Can only be used against a PC. -->
-		<icon initial="icon.ev_12th_weapon"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="2000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39186" name="Sayha's Blessing Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39187" name="Ornament Supply Box (A-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39188" name="Sayha's Golden Gift" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39189" name="Sayha's Silver Gift" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39190" name="Sayha's Gift" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39191" name="Sayha's Blessing" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39192" name="Sayha's Silver Light Blessing" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39193" name="Sayha's Golden Light Blessing" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39194" name="Sayha's Gust Lv. 1" action="A1">
-	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +100%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
-		<icon initial="icon.bm_sayha_storm"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39195" name="Wind Token" action="A1">
-	<!-- none -->
-		<icon initial="icon.bm_special_pendant_abradant_box"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39196" name="Fire Dragon Pendant Chest +10" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39197" name="Earth Dragon Pendant Chest +10" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="39198" name="Maliss's MP Potion" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_bm_hero_red_potion"/>
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<effect name="ManaHealPercent">
-				<power initial="100.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="39199" name="Hero's Wondrous Cubic - 7 days" action="A1">
-	<!-- none -->
-		<icon initial="icon.sa_cube"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="39100" name="Agathion Teleport: Hunter's Village" action="A1">
+        <!-- Teleport to the Hunter's Village. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+            <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="117088" y="76931" z="-2696"/>
+            </teleport>
+        </effects>
+    </skill>
+    <skill id="39101" name="Chase Down" action="A2">
+        <!-- Movement Speed +66 for 15 seconds. -->
+        <icon initial="icon.skill0998"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="30000"/>
+            <effect-point initial="438"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="15"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="66.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="39102" name="Sneak" action="T">
+        <!-- Protected from preemptive attacks from monsters. -->
+        <icon initial="icon.skill10518"/>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="1"/>
+        </consume>
+        <target/>
+        <effects>
+            <effect name="ChameleonRest" ticks="5">
+                <power initial="2.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39103" name="Hero HP Potion" action="A1">
+        <!-- Protected from preemptive attacks from monsters. -->
+        <icon initial="icon.etc_reagent_white_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39104" name="Warrior's Cube (7-day)" action="A1">
+        <!-- none -->
+        <icon initial="icon.sa_cube"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39105" name="Scroll of Escape: Dragon Valley Bridge" action="A1">
+        <!-- Return to Dragon Valley Bridge. Cooldown 60 minutes. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="20000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39106" name="Scroll of Escape: Inside Antharas' Lair" action="A1">
+        <!-- Return to Inside Antharas' Lair. Cooldown 60 minutes. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="20000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39107" name="Scroll of Escape: Cruma Tower Entrance" action="A1">
+        <!-- Return to Cruma Tower Entrance. Cooldown 60 minutes. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="20000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39108" name="Scroll of Escape: Orc Barracks Entrance" action="A1">
+        <!-- Return to Orc Barracks Entrance. Cooldown 60 minutes. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="20000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39109" name="Greater Scroll of Resurrection" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_scroll_of_resurrection_i01"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="400"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <effect-range initial="600"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49542"/>
+            <item-count initial="1"/>
+        </consume>
+        <target type="PC_BODY"/>
+        <conditions>
+            <condition name="OpResurrection"/>
+        </conditions>
+        <effects>
+            <effect name="Resurrection">
+                <power initial="50.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39110" name="Scroll of Escape: Enchanted Valley Entrance" action="A1">
+        <!-- Return to Enchanted Valley Entrance. Cooldown 60 minutes. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="20000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39111" name="Assistant Roa's Gift" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39112" name="Golden Boots" action="A1">
+        <!-- none -->
+        <icon initial="icon.card_event_blue_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39113" name="Golden Mermaid's Tear" action="A2">
+        <!-- Hunting XP/SP Gain +50%% for 1 hour. Buff remains after death. -->
+        <icon initial="icon.general_fuel_i00"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49585"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="VOTE">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <conditions>
+            <level max-level="85" scope="PASSIVE"/>
+        </conditions>
+        <effects>
+            <stat-modify stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="39114" name="Refined Queen Ant's Ring" max-level="3">
+        <!--
+            level 1: Poison Resistance +20%%, Poison Atk. Rate +20%%, P. Accuracy/M. Accuracy +3, P. Atk./M. Atk. +7%%, P. Critical Damage +10%%, and M. Critical Damage +5%%.
+            level 3: Poison Resistance +20%%, Poison Atk. Rate +20%%, P. Accuracy/M. Accuracy +3, P. Critical Damage +10%%, and M. Critical Damage +5%%.
+         -->
+        <icon initial="icon.accessory_ring_of_queen_ant_i03"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39115" name="Refined Orfen's Earring" max-level="3">
+        <!--
+            level 1: Hold Resistance +20%%, MEN Attack Resistance +15%%, Hold Atk. Rate +20%%, MEN Atk. Rate +15%%, Heal Received +6%%, Skill MP Consumption -5%%. Procs to recover HP by some of damage dealt.
+            level 3: Hold Resistance +20%%, MEN Resistance +15%%, Hold Atk. Rate +20%%, MEN Atk. Rate +15%%, Heal Received +6%%, and Skill MP Consumption -5%%. Has a chance to absorb part of the damage dealt to enemies as MP.
+         -->
+        <icon initial="icon.accessory_earring_of_orfen_i03"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39116" name="Refined Rings of Core" max-level="3">
+        <!--
+            level 1: MEN Attack Resistance +20%%, MEN Atk. Rate + 20%%, P. Evasion/M. Evasion +3, Damage Received -6%%.
+            level 3: MEN Resistance +20%%, MEN Atk. Rate +20%%, P. Evasion/M. Evasion +3, and Damage Received -6%%.
+         -->
+        <icon initial="icon.accessory_ring_of_core_i03"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39117" name="Whale" action="A1">
+        <!-- none -->
+        <icon initial="icon.fish_huge_i15"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39118" name="2,000 SP Scroll" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_sp_scroll1_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39119" name="10,000 SP Scroll" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_sp_scroll2_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39120" name="Teleport: Giral Harbor" action="A1">
+        <!-- Teleport to Giran Harbor. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39121" name="Teleport: Gludin Harbor" action="A1">
+        <!-- Teleport to Gludin Harbor. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39122" name="Golden Boots_Tester" action="A1">
+        <!-- none -->
+        <icon initial="icon.card_event_blue_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39123" name="Special HP Potion" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_bm_hero_red_potion"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39124" name="Weapon Supply Box (C-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49667"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="8.300000190734863" id="242"/>
+                <item chance="8.300000190734863" id="7887"/>
+                <item chance="8.300000190734863" id="72"/>
+                <item chance="8.300000190734863" id="71"/>
+                <item chance="8.300000190734863" id="281"/>
+                <item chance="8.300000190734863" id="193"/>
+                <item chance="8.300000190734863" id="160"/>
+                <item chance="8.300000190734863" id="161"/>
+                <item chance="8.300000190734863" id="192"/>
+                <item chance="8.300000190734863" id="194"/>
+                <item chance="8.300000190734863" id="302"/>
+                <item chance="8.300000190734863" id="263"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39125" name="Weapon Supply Box (B-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i03"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49664"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="4.0" id="175"/>
+                <item chance="4.0" id="267"/>
+                <item chance="4.0" id="268"/>
+                <item chance="4.0" id="287"/>
+                <item chance="4.0" id="79"/>
+                <item chance="4.0" id="284"/>
+                <item chance="4.0" id="171"/>
+                <item chance="4.0" id="234"/>
+                <item chance="4.0" id="300"/>
+                <item chance="4.0" id="78"/>
+                <item chance="4.0" id="7883"/>
+                <item chance="4.0" id="91"/>
+                <item chance="4.0" id="7900"/>
+                <item chance="4.0" id="7893"/>
+                <item chance="4.0" id="142"/>
+                <item chance="4.0" id="229"/>
+                <item chance="4.0" id="97"/>
+                <item chance="4.0" id="264"/>
+                <item chance="4.0" id="7892"/>
+                <item chance="4.0" id="92"/>
+                <item chance="4.0" id="210"/>
+                <item chance="4.0" id="7901"/>
+                <item chance="4.0" id="148"/>
+                <item chance="4.0" id="243"/>
+                <item chance="4.0" id="7889"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39126" name="C-grade Armor Supply Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i06"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49668"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="10.0" id="2463"/>
+                <item chance="10.0" id="473"/>
+                <item chance="10.0" id="442"/>
+                <item chance="10.0" id="401"/>
+                <item chance="10.0" id="2437"/>
+                <item chance="10.0" id="2461"/>
+                <item chance="10.0" id="356"/>
+                <item chance="10.0" id="2438"/>
+                <item chance="10.0" id="2462"/>
+                <item chance="10.0" id="2414"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39127" name="B-grade Armor Supply Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i07"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49665"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="8.300000190734863" id="600"/>
+                <item chance="8.300000190734863" id="2415"/>
+                <item chance="8.300000190734863" id="2464"/>
+                <item chance="8.300000190734863" id="2439"/>
+                <item chance="8.300000190734863" id="2487"/>
+                <item chance="8.300000190734863" id="2416"/>
+                <item chance="8.300000190734863" id="601"/>
+                <item chance="8.300000190734863" id="2475"/>
+                <item chance="8.300000190734863" id="2417"/>
+                <item chance="8.300000190734863" id="554"/>
+                <item chance="8.300000190734863" id="612"/>
+                <item chance="8.300000190734863" id="503"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39128" name="Ornament Supply Box (C-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i02"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49669"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="16.600000381469727" id="854"/>
+                <item chance="16.600000381469727" id="855"/>
+                <item chance="16.600000381469727" id="917"/>
+                <item chance="16.600000381469727" id="119"/>
+                <item chance="16.600000381469727" id="885"/>
+                <item chance="16.600000381469727" id="886"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39129" name="Ornament Supply Box - B-grade" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i08"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49666"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="6.599999904632568" id="900"/>
+                <item chance="6.599999904632568" id="869"/>
+                <item chance="6.599999904632568" id="931"/>
+                <item chance="6.599999904632568" id="887"/>
+                <item chance="6.599999904632568" id="856"/>
+                <item chance="6.599999904632568" id="918"/>
+                <item chance="6.599999904632568" id="891"/>
+                <item chance="6.599999904632568" id="860"/>
+                <item chance="6.599999904632568" id="922"/>
+                <item chance="6.599999904632568" id="895"/>
+                <item chance="6.599999904632568" id="864"/>
+                <item chance="6.599999904632568" id="926"/>
+                <item chance="6.599999904632568" id="905"/>
+                <item chance="6.599999904632568" id="874"/>
+                <item chance="6.599999904632568" id="936"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39130" name="Weapons Ingredient Box (C-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i05"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39131" name="Weapon Ingredient Box (B-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i05"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39132" name="Armor/Ornament Ingredient Box - C-grade" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i05"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39133" name="Armor/Ornament Ingredient Box - B-grade" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i05"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39134" name="XP Boost Scroll" action="A1">
+        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
+        <icon initial="icon.etc_recall_exp_scroll"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39135" name="Chic Silver Chapeau - 30-day">
+        <!-- STR +1 and INT +1 -->
+        <icon initial="BranchSys2.icon2.pi_silverchaperon"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39136" name="Chic Silver Chapeau Teleport - 30-day" action="A1">
+        <!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="7200000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39137" name="Chapeau Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.card_event_black_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39138" name="Blue Dynasty Transformation" action="A1">
+        <!-- Armor Appearance changes to "Blue Dynasty" for 1 h. -->
+        <icon initial="icon.general_stone_i01"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39139" name="Transformation into Red Zubei" action="A1">
+        <!-- Armor Appearance changes to "Red Zubei" for 1 h. -->
+        <icon initial="icon.general_stone_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39140" name="Magical Potion of Leaping - Lv. 1" action="A1">
+        <!-- Can obtain 1,200,000 XP/40,000 SP. Available for characters Lv. 20 and above. -->
+        <icon initial="icon.etc_holy_potion_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39141" name="Magical Potion of Leaping - Lv. 2" action="A1">
+        <!-- Can obtain 7,800,000 XP/240,000 SP. Available for characters Lv. 30 and above. -->
+        <icon initial="icon.etc_wind_potion_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39142" name="Magical Potion of Leaping - Lv. 3" action="A1">
+        <!-- Can obtain 34,200,000 XP/1,040,000 SP. Available for characters Lv. 40 and above. -->
+        <icon initial="icon.etc_water_potion_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39143" name="Gift from a Returned Friend" action="A1">
+        <!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
+        <icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39144" name="Special Fruit Buff" action="A2">
+        <!-- For 20 minutes bonus XP/SP gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of physical damage dealt to enemies as HP. Effect remains even after death. -->
+        <icon initial="icon.etc_codran_i09"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49518"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="VOTE">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <hp-drain percentage="3">
+                <power initial="49.0"/>
+            </hp-drain>
+            <stat-modify stat="BONUS_EXP">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="39145" name="Tower of Insolence Enchant Scroll Pack" action="A1">
+        <!-- none -->
+        <icon initial="icon.npoint_valakas_30day_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39146" name="Sealed Fate Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.bm_special_pendant_abradant_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39147" name="Talisman of Darkness Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.bm_pirate_king_box"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49706"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="10.0" id="49707"/>
+                <item chance="10.0" id="49708"/>
+                <item chance="10.0" id="49709"/>
+                <item chance="10.0" id="49710"/>
+                <item chance="10.0" id="49711"/>
+                <item chance="10.0" id="49712"/>
+                <item chance="10.0" id="49713"/>
+                <item chance="10.0" id="49714"/>
+                <item chance="10.0" id="49715"/>
+                <item chance="10.0" id="49716"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39148" name="Sealed Blessed Talisman of Fate" action="A1">
+        <!-- none -->
+        <icon initial="icon.bm_blessed_magic_square_talisman"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49738"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="100.0" id="49737"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39149" name="Talisman of Baium Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.npoint_tauti_30day_box"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49755"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="9.999999747378752E-5" id="49683"/>
+                <item chance="0.009999999776482582" id="49682"/>
+                <item chance="70.0" id="49676"/>
+                <item chance="20.0" id="49677"/>
+                <item chance="5.0" id="49685"/>
+                <item chance="3.0" id="49684"/>
+                <item chance="1.98989999294281" id="49543"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39150" name="Sayha's Holy Water" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39151" name="A-grade Armor Supply Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i07"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39152" name="Ornament Supply Box (A-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i02"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49761"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="16.600000381469727" id="6327"/>
+                <item chance="16.600000381469727" id="6326"/>
+                <item chance="16.600000381469727" id="6328"/>
+                <item chance="16.600000381469727" id="6324"/>
+                <item chance="16.600000381469727" id="6323"/>
+                <item chance="16.600000381469727" id="6325"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39153" name="Armor Ingredient Box - A-grade" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i05"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39154" name="Ornament Ingredient Box - A-grade" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i05"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39155" name="Life Control Tower's Scroll of Blessing" action="A1">
+        <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
+        <icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39156" name="Scroll of Heavenly Protection" action="A1">
+        <!-- For 20 minutes, Paralysis Resistance +15 and MEN Resistance +10. -->
+        <icon initial="icon.scroll_of_verification_i08"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39157" name="Unidentified Rock" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_magical_stone_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39158" name="Secret Scroll Box: Emperor Baium's Enchant" action="A1">
+        <!-- none -->
+        <icon initial="icon.npoint_valakas_30day_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39159" name="Sayha's Energy" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39160" name="Emperor Baium's Secret Treasures" action="A1">
+        <!-- none -->
+        <icon initial="icon.npoint_valakas_30day_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39161" name="Express Bus Pass Card" action="A1">
+        <!-- Can obtain 5,000,000 XP/160,000 SP. Available for characters Lv. 20 and above. -->
+        <icon initial="icon.etc_holy_potion_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39162" name="Special Fruit Buff - Attack" action="A2">
+        <!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of physical damage dealt to enemies as HP. PvP Damage +5%%. Cooldown is 1 minute Effect remains even after death. -->
+        <icon initial="icon.etc_codran_i09"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49773"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="VOTE">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <hp-drain percentage="3">
+                <power initial="49.0"/>
+            </hp-drain>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="39163" name="Special Fruit Buff - Defense" action="A2">
+        <!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of physical damage dealt to enemies as HP. PvP Damage Received -5%%. Cooldown is 1 min. Effect remains even after death. -->
+        <icon initial="icon.etc_codran_i09"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49774"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="VOTE">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="15.0"/>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <hp-drain percentage="3">
+                <power initial="49.0"/>
+            </hp-drain>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="39164" name="Mood Melody" action="A1">
+        <!-- For 20 minutes activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, Vampiric Rage. Cooldown 1 minute. This effect will not be removed after death.\n\n<Warning>\nThe buff from the Scroll of Mood Melody will not be removed after death, and the Scroll of Mood Melody cannot be used while the buff remains. -->
+        <icon initial="icon.bm_magmeld"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39165" name="Transformation into a Prophet" action="A1">
+        <!-- Transformed into a Prophet. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39166" name="Transformation into a Shillien Elder" action="A1">
+        <!-- Transformed into a Shillien Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39167" name="Transformation into an Elven Elder" action="A1">
+        <!-- Transformed into an Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39168" name="Gift of a Sated Cadmus" action="A1">
+        <!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
+        <icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39169" name="Firecracker" action="A1">
+        <!-- Scatters in a shower of multicolored sparks when exploded. -->
+        <icon initial="BranchSys.icon.br_firecracker_gold_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39170" name="Oriana's Lucky Draw Supply" action="A1">
+        <!-- none -->
+        <icon initial="icon.special_cube_i00"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="100.0" count="3" id="49784"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39171" name="Oriana's Disguise" action="A2">
+        <!-- For 1 hour, Hunting XP/SP Gain +30%. You’ll have a chance to obtain special supplies. Effect remains even after death. -->
+        <icon initial="icon.ev_balthus_token"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+            <magic-level initial="56"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+        </attributes>
+        <consume>
+            <item initial="49784"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="CHANGESHAPE_TRANSFORM">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <conditions>
+            <level max-level="85" min-level="20" scope="PASSIVE"/>
+        </conditions>
+        <effects>
+            <stat-modify stat="BONUS_EXP">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="39172" name="Weapon Supply Box (A-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i07"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49785"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="4.539999961853027" id="98"/>
+                <item chance="4.539999961853027" id="213"/>
+                <item chance="4.539999961853027" id="7894"/>
+                <item chance="4.539999961853027" id="236"/>
+                <item chance="4.539999961853027" id="80"/>
+                <item chance="4.539999961853027" id="235"/>
+                <item chance="4.539999961853027" id="288"/>
+                <item chance="4.539999961853027" id="269"/>
+                <item chance="4.539999961853027" id="7902"/>
+                <item chance="4.539999961853027" id="151"/>
+                <item chance="4.539999961853027" id="7884"/>
+                <item chance="4.539999961853027" id="2504"/>
+                <item chance="4.539999961853027" id="150"/>
+                <item chance="4.539999961853027" id="7899"/>
+                <item chance="4.539999961853027" id="270"/>
+                <item chance="4.539999961853027" id="212"/>
+                <item chance="4.539999961853027" id="289"/>
+                <item chance="4.539999961853027" id="7895"/>
+                <item chance="4.539999961853027" id="2500"/>
+                <item chance="4.539999961853027" id="81"/>
+                <item chance="4.539999961853027" id="305"/>
+                <item chance="4.539999961853027" id="164"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39173" name="A-grade Armor Supply Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i07"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49786"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="3.440000057220459" id="5287"/>
+                <item chance="3.440000057220459" id="5288"/>
+                <item chance="3.440000057220459" id="5289"/>
+                <item chance="3.440000057220459" id="5290"/>
+                <item chance="3.440000057220459" id="5291"/>
+                <item chance="3.440000057220459" id="5293"/>
+                <item chance="3.440000057220459" id="5294"/>
+                <item chance="3.440000057220459" id="5295"/>
+                <item chance="3.440000057220459" id="5296"/>
+                <item chance="3.440000057220459" id="5297"/>
+                <item chance="3.440000057220459" id="5298"/>
+                <item chance="3.440000057220459" id="5301"/>
+                <item chance="3.440000057220459" id="5304"/>
+                <item chance="3.440000057220459" id="5305"/>
+                <item chance="3.440000057220459" id="5308"/>
+                <item chance="3.440000057220459" id="5311"/>
+                <item chance="3.440000057220459" id="5312"/>
+                <item chance="3.440000057220459" id="5313"/>
+                <item chance="3.440000057220459" id="5314"/>
+                <item chance="3.440000057220459" id="5316"/>
+                <item chance="3.440000057220459" id="5317"/>
+                <item chance="3.440000057220459" id="5318"/>
+                <item chance="3.440000057220459" id="5319"/>
+                <item chance="3.440000057220459" id="5320"/>
+                <item chance="3.440000057220459" id="5323"/>
+                <item chance="3.440000057220459" id="5326"/>
+                <item chance="3.440000057220459" id="5329"/>
+                <item chance="3.440000057220459" id="5292"/>
+                <item chance="3.440000057220459" id="5315"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39174" name="+8 Enchanted Weapon Supply Box (B-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i07"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49789"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="4.0" id="175"/>
+                <item chance="4.0" id="267"/>
+                <item chance="4.0" id="268"/>
+                <item chance="4.0" id="287"/>
+                <item chance="4.0" id="79"/>
+                <item chance="4.0" id="284"/>
+                <item chance="4.0" id="171"/>
+                <item chance="4.0" id="234"/>
+                <item chance="4.0" id="300"/>
+                <item chance="4.0" id="78"/>
+                <item chance="4.0" id="7883"/>
+                <item chance="4.0" id="91"/>
+                <item chance="4.0" id="7900"/>
+                <item chance="4.0" id="7893"/>
+                <item chance="4.0" id="142"/>
+                <item chance="4.0" id="229"/>
+                <item chance="4.0" id="97"/>
+                <item chance="4.0" id="264"/>
+                <item chance="4.0" id="7892"/>
+                <item chance="4.0" id="92"/>
+                <item chance="4.0" id="210"/>
+                <item chance="4.0" id="7901"/>
+                <item chance="4.0" id="148"/>
+                <item chance="4.0" id="243"/>
+                <item chance="4.0" id="7889"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39175" name="+16 Enchanted Weapon Supply Box (C-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i07"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49790"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="8.300000190734863" id="242"/>
+                <item chance="8.300000190734863" id="7887"/>
+                <item chance="8.300000190734863" id="72"/>
+                <item chance="8.300000190734863" id="71"/>
+                <item chance="8.300000190734863" id="281"/>
+                <item chance="8.300000190734863" id="193"/>
+                <item chance="8.300000190734863" id="160"/>
+                <item chance="8.300000190734863" id="161"/>
+                <item chance="8.300000190734863" id="192"/>
+                <item chance="8.300000190734863" id="194"/>
+                <item chance="8.300000190734863" id="302"/>
+                <item chance="8.300000190734863" id="263"/>
+            </random-restoration>
+        </effects>
+    </skill>
+    <skill id="39176" name="Red Libra Supplies Lv. 1" action="A1">
+        <!-- none -->
+        <icon initial="icon.event_mahum_coinbox"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39177" name="Red Libra Supplies Lv. 2" action="A1">
+        <!-- none -->
+        <icon initial="icon.event_mahum_coinbox"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39178" name="Red Libra Supplies Lv. 3" action="A1">
+        <!-- none -->
+        <icon initial="icon.event_mahum_coinbox"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39179" name="Red Libra Supplies Lv. 4" action="A1">
+        <!-- none -->
+        <icon initial="icon.event_mahum_coinbox"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39180" name="Low-grade Scroll: XP" action="A1">
+        <!-- 1000 XP. -->
+        <icon initial="icon.etc_recall_exp_scroll"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49777"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="1000.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39181" name="Mid-grade Scroll: XP" action="A1">
+        <!-- 10,000 XP. -->
+        <icon initial="icon.etc_recall_exp_scroll"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49778"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="10000.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39182" name="High-grade Scroll: XP" action="A1">
+        <!-- 100,000 XP. -->
+        <icon initial="icon.etc_recall_exp_scroll"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49779"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="100000.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39183" name="Top-grade Scroll: XP" action="A1">
+        <!-- 500,000 XP. -->
+        <icon initial="icon.etc_recall_exp_scroll"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49780"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="500000.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39184" name="Highest-grade Scroll: XP" action="A1">
+        <!-- 1,000,000 XP. -->
+        <icon initial="icon.etc_recall_exp_scroll"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="49781"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="1000000.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39185" name="Support Blow" action="A1">
+        <!-- Deals a fixed amount of damage with 12 Power to the target. Can only be used against a PC. -->
+        <icon initial="icon.ev_12th_weapon"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="2000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39186" name="Sayha's Blessing Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39187" name="Ornament Supply Box (A-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39188" name="Sayha's Golden Gift" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39189" name="Sayha's Silver Gift" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39190" name="Sayha's Gift" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39191" name="Sayha's Blessing" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39192" name="Sayha's Silver Light Blessing" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39193" name="Sayha's Golden Light Blessing" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39194" name="Sayha's Gust Lv. 1" action="A1">
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +100%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
+        <icon initial="icon.bm_sayha_storm"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39195" name="Wind Token" action="A1">
+        <!-- none -->
+        <icon initial="icon.bm_special_pendant_abradant_box"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39196" name="Fire Dragon Pendant Chest +10" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39197" name="Earth Dragon Pendant Chest +10" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="39198" name="Maliss's MP Potion" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_bm_hero_red_potion"/>
+        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="ManaHealPercent">
+                <power initial="100.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="39199" name="Hero's Wondrous Cubic - 7 days" action="A1">
+        <!-- none -->
+        <icon initial="icon.sa_cube"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

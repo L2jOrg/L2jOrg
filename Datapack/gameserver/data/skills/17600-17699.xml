@@ -1,132 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="17608" name="Fantastical Energy" action="A2">
-	<!-- Fantastical energy of the fishing dock. -->
-		<icon initial="icon.etc_dragons_blood_i03"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17613" name="Release Agathion Seal- Aries" action="A1">
-	<!-- Releases the seal on the Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<summon-agathion id="13411"/>
-		</effects>
-	</skill>
-	<skill id="17619" name="Release Agathion's Seal - Pisces" action="A1">
-	<!-- Release Agathion's Seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<summon-agathion id="13407"/>
-		</effects>
-	</skill>
-	<skill id="17621" name="Release Agathion's Seal - Cancer" action="A1">
-	<!-- Release Agathion's Seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<summon-agathion id="13409"/>
-		</effects>
-	</skill>
-	<skill id="17625" name="Agathion Trick- Aries" action="A1">
-	<!-- Watch the Agathion's Trick. -->
-		<icon initial="icon.skill_agathion_cute"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17685" name="Uldie's Gift" action="A1">
-	<!-- Watch the Agathion's Trick. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17686" name="Uldie's Energy" max-level="2" action="A2">
-	<!-- 
-		level 1: Buff from Team Leader Lara Cat. For 2 hours, XP/SP gain +10%, P. Atk./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Lara Cat is thrilled. You have a chance to receive Team Leader Lara's Luxury Gift when the buff disappears. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory.
-		level 2: Buff from Uldie.
-	 -->
-		<icon initial="BranchSys.icon.br_sevenlove_girlpresent_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900">
-				<value level="2">-1</value>
-			</cast-range>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17689" name="Uldie's Valuable Gift" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17695" name="Summon Squash" action="A1">
-	<!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
-		<icon initial="icon.skill17695"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17696" name="Summon Large Squash" action="A1">
-	<!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
-		<icon initial="icon.skill17696"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="17608" name="Fantastical Energy" action="A2">
+        <!-- Fantastical energy of the fishing dock. -->
+        <icon initial="icon.etc_dragons_blood_i03"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17613" name="Release Agathion Seal- Aries" action="A1">
+        <!-- Releases the seal on the Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <summon-agathion id="13411"/>
+        </effects>
+    </skill>
+    <skill id="17619" name="Release Agathion's Seal - Pisces" action="A1">
+        <!-- Release Agathion's Seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <summon-agathion id="13407"/>
+        </effects>
+    </skill>
+    <skill id="17621" name="Release Agathion's Seal - Cancer" action="A1">
+        <!-- Release Agathion's Seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <summon-agathion id="13409"/>
+        </effects>
+    </skill>
+    <skill id="17625" name="Agathion Trick- Aries" action="A1">
+        <!-- Watch the Agathion's Trick. -->
+        <icon initial="icon.skill_agathion_cute"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17685" name="Uldie's Gift" action="A1">
+        <!-- Watch the Agathion's Trick. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17686" name="Uldie's Energy" max-level="2" action="A2">
+        <!--
+            level 1: Buff from Team Leader Lara Cat. For 2 hours, XP/SP gain +10%, P. Atk./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Lara Cat is thrilled. You have a chance to receive Team Leader Lara's Luxury Gift when the buff disappears. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory.
+            level 2: Buff from Uldie.
+         -->
+        <icon initial="BranchSys.icon.br_sevenlove_girlpresent_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900">
+                <value level="2">-1</value>
+            </cast-range>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17689" name="Uldie's Valuable Gift" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17695" name="Summon Squash" action="A1">
+        <!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
+        <icon initial="icon.skill17695"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17696" name="Summon Large Squash" action="A1">
+        <!-- A skill to summon a transparent NPC for the 10the anniversary event Summon Squash. -->
+        <icon initial="icon.skill17696"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

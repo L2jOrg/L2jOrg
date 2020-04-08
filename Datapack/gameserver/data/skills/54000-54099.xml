@@ -1,1762 +1,1658 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="54000" name="Agathion - Taurus" max-level="22" >
-	<!-- 
-		level 1: P. Def. +1%. P. Def. increases when Agathion is upgraded.
-		level 2: P. Def. +1.5%.
-		level 3: P. Def. +2%.
-		level 4: P. Def. +2.5%.
-		level 5: P. Def. +3%.
-		level 6: P. Def. +4%.
-		level 7: P. Def. +5% and Stun Attack Rate +5%. P. Def. and Stun Attack Rate increase when Agathion is upgraded.
-		level 8: P. Def. +6% and Stun Attack Rate +8%.
-		level 9: P. Def. +7% and Stun Attack Rate +14%.
-		level 10: P. Def. +8% and Stun Attack Rate +22%.
-		level 11: P. Def. +12% and Stun Attack Rate +30%.
-		level 12: P. Def. +13% and Stun Attack Rate +32%.
-		level 13: P. Def. +14% and Stun Attack Rate +34%.
-		level 14: P. Def. +15% and Stun Attack Rate +36%.
-		level 15: P. Def. +16% and Stun Attack Rate +39%.
-		level 16: P. Def. +17% and Stun Attack Rate +42%.
-		level 17: P. Def. +18% and Stun Attack Rate +45%.
-		level 18: P. Def. +18% and Stun Attack Rate +48%.
-		level 19: P. Def. +19% and Stun Attack Rate +51%.
-		level 20: P. Def. +20% and Stun Attack Rate +55%.
-		level 21: P. Def. +22% and Stun Attack Rate +60%.
-		level 22: P. Def. +25% and Stun Attack Rate +65%.
-	 -->
-		<icon initial="icon.agathion_tau_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54001" name="Leo Agathion" max-level="22" >
-	<!-- 
-		level 1: P. Atk. +1%. P. Atk. increases when Agathion is upgraded.
-		level 2: P. Atk. +1.5%.
-		level 3: P. Atk. +2%.
-		level 4: P. Atk. +2.5%.
-		level 5: P. Atk. +3%.
-		level 6: P. Atk. +4%.
-		level 7: P. Atk.. +4% and Paralysis Attack Rate +5%. P. Atk.. and Paralysis Attack Rate increase when Agathion is upgraded.
-		level 8: P. Atk.. +5% and Paralysis Attack Rate +8%.
-		level 9: P. Atk.. +6% and Paralysis Attack Rate +14%.
-		level 10: P. Atk.. +7% and Paralysis Attack Rate +22%.
-		level 11: P. Atk.. +10% and Paralysis Attack Rate +30%.
-		level 12: P. Atk.. +10% and Paralysis Attack Rate +32%.
-		level 13: P. Atk.. +10% and Paralysis Attack Rate +34%.
-		level 14: P. Atk.. +10% and Paralysis Attack Rate +36%.
-		level 15: P. Atk.. +11% and Paralysis Attack Rate +38%.
-		level 16: P. Atk.. +11% and Paralysis Attack Rate +40%.
-		level 17: P. Atk.. +11% and Paralysis Attack Rate +42%.
-		level 18: P. Atk.. +11% and Paralysis Attack Rate +44%.
-		level 19: P. Atk.. +12% and Paralysis Attack Rate +46%.
-		level 20: P. Atk.. +12% and Paralysis Attack Rate +49%.
-		level 21: P. Atk.. +13% and Paralysis Attack Rate +52%.
-		level 22: P. Atk.. +15% and Paralysis Attack Rate +55%.
-	 -->
-		<icon initial="icon.agathion_leo_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54002" name="Scorpio Agathion" max-level="22" >
-	<!-- 
-		level 1: P. Critical Rate +1%. P. Critical Rate increases when Agathion is upgraded.
-		level 2: P. Critical Rate +2%.
-		level 3: P. Critical Rate +3%.
-		level 4: P. Critical Rate +4%.
-		level 5: P. Critical Rate +5%.
-		level 6: P. Critical Rate +7%.
-		level 7: Cooldown of P. Skills and songs/dances -1%, P. Critical Rate +7%. P. Critical Rate increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
-		level 8: Cooldown of P. Skills and songs/dances -3%, P. Critical Rate +7%.
-		level 9: Cooldown of P. Skills and songs/dances -5%, P. Critical Rate +8%.
-		level 10: Cooldown of P. Skills and songs/dances -7%, P. Critical Rate +12%.
-		level 11: Cooldown of P. Skills and songs/dances -10%, P. Critical Rate +18%.
-		level 13: Cooldown of P. Skills and songs/dances -11%, P. Critical Rate +18%.
-		level 14: Cooldown of P. Skills and songs/dances -11%, P. Critical Rate +19%.
-		level 15: Cooldown of P. Skills and songs/dances -12%, P. Critical Rate +19%.
-		level 16: Cooldown of P. Skills and songs/dances -12%, P. Critical Rate +20%.
-		level 17: Cooldown of P. Skills and songs/dances -13%, P. Critical Rate +20%.
-		level 18: Cooldown of P. Skills and songs/dances -14%, P. Critical Rate +20%.
-		level 19: Cooldown of P. Skills and songs/dances -15%, P. Critical Rate +21%.
-		level 20: Cooldown of P. Skills and songs/dances -16%, P. Critical Rate +21%.
-		level 21: Cooldown of P. Skills and songs/dances -17%, P. Critical Rate +22%.
-		level 22: Cooldown of P. Skills and songs/dances -20%, P. Critical Rate +25%.
-	 -->
-		<icon initial="icon.agathion_sco_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54003" name="Sagittarius Agathion" max-level="22" >
-	<!-- 
-		level 1: Atk. Spd. +2. Atk. Spd. increases when Agathion is upgraded.
-		level 2: Atk. Spd. +3.
-		level 3: Atk. Spd. +4.
-		level 4: Atk. Spd. +5.
-		level 5: Atk. Spd. +10.
-		level 6: Atk. Spd. +15.
-		level 7: Cooldown of P. Skills and songs/dances -1%, Atk. Spd. +15. Atk. Spd. increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
-		level 8: Cooldown of P. Skills and songs/dances -3%, Atk. Spd. +30.
-		level 9: Cooldown of P. Skills and songs/dances -5%, Atk. Spd. +40.
-		level 10: Cooldown of P. Skills and songs/dances -7%, Atk. Spd. +50.
-		level 11: Cooldown of P. Skills and songs/dances -10%, Atk. Spd. +70.
-		level 12: Cooldown of P. Skills and songs/dances -12%, Atk. Spd. +75.
-		level 13: Cooldown of P. Skills and songs/dances -13%, Atk. Spd. +80.
-		level 14: Cooldown of P. Skills and songs/dances -13%, Atk. Spd. +85.
-		level 15: Cooldown of P. Skills and songs/dances -14%, Atk. Spd. +90.
-		level 16: Cooldown of P. Skills and songs/dances -14%, Atk. Spd. +95.
-		level 17: Cooldown of P. Skills and songs/dances -15%, Atk. Spd. +100.
-		level 19: Cooldown of P. Skills and songs/dances -16%, Atk. Spd. +105.
-		level 20: Cooldown of P. Skills and songs/dances -16%, Atk. Spd. +110.
-		level 21: Cooldown of P. Skills and songs/dances -18%, Atk. Spd. +115.
-		level 22: Cooldown of P. Skills and songs/dances -20%, Atk. Spd. +120.
-	 -->
-		<icon initial="icon.agathion_sag_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54004" name="Virgo Agathion" max-level="22" >
-	<!-- 
-		level 1: M. Def. +1%. M. Def. increases when Agathion is upgraded.
-		level 2: M. Def. +1.5%.
-		level 3: M. Def. +2%.
-		level 4: M. Def. +2.5%.
-		level 5: M. Def. +3%.
-		level 6: M. Def. +4%.
-		level 7: M. Def. +5% and MEN Attack Rate +5%. MEN Attack Rate increases when Agathion is upgraded.
-		level 8: M. Def. +6% and MEN Attack Rate +8%.
-		level 9: M. Def. +7% and MEN Attack Rate +14%.
-		level 10: M. Def. +8% and MEN Attack Rate +22%.
-		level 11: M. Def. +12% and MEN Attack Rate +30%.
-		level 12: M. Def. +13% and MEN Attack Rate +32%.
-		level 13: M. Def. +14% and MEN Attack Rate +34%.
-		level 14: M. Def. +15% and MEN Attack Rate +36%.
-		level 15: M. Def. +16% and MEN Attack Rate +39%.
-		level 16: M. Def. +17% and MEN Attack Rate +42%.
-		level 17: M. Def. +18% and MEN Attack Rate +45%.
-		level 18: M. Def. +18% and MEN Attack Rate +48%.
-		level 19: M. Def. +20% and MEN Attack Rate +51%.
-		level 20: M. Def. +22% and MEN Attack Rate +55%.
-		level 21: M. Def. +25% and MEN Attack Rate +60%.
-		level 22: M. Def. +30% and MEN Attack Rate +65%.
-	 -->
-		<icon initial="icon.agathion_virgo_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54005" name="Aquarius Agathion" max-level="22" >
-	<!-- 
-		level 1: M. Atk. +1%. M. Atk. increases when Agathion is upgraded.
-		level 2: M. Atk. +1.5%.
-		level 3: M. Atk. +2%.
-		level 4: M. Atk. +2.5%.
-		level 5: M. Atk. +3%.
-		level 6: M. Atk. +4%.
-		level 7: M. Atk.. +4% and Hold/Sleep Attack Rate +5%. M. Atk. and Hold/Sleep Attack Rate increase when Agathion is upgraded.
-		level 8: M. Atk.. +5% and Hold/Sleep Attack Rate +8%.
-		level 9: M. Atk.. +6% and Hold/Sleep Attack Rate +14%.
-		level 10: M. Atk.. +7% and Hold/Sleep Attack Rate +22%.
-		level 11: M. Atk.. +10% and Hold/Sleep Attack Rate +30%.
-		level 12: M. Atk.. +10% and Hold/Sleep Attack Rate +32%.
-		level 13: M. Atk.. +12% and Hold/Sleep Attack Rate +34%.
-		level 14: M. Atk.. +14% and Hold/Sleep Attack Rate +36%.
-		level 15: M. Atk.. +16% and Hold/Sleep Attack Rate +38%.
-		level 16: M. Atk.. +18% and Hold/Sleep Attack Rate +40%.
-		level 17: M. Atk.. +20% and Hold/Sleep Attack Rate +42%.
-		level 18: M. Atk.. +20% and Hold/Sleep Attack Rate +45%.
-		level 19: M. Atk.. +22% and Hold/Sleep Attack Rate +48%.
-		level 20: M. Atk.. +24% and Hold/Sleep Attack Rate +51%.
-		level 21: M. Atk.. +28% and Hold/Sleep Attack Rate +55%.
-		level 22: M. Atk.. +35% and Hold/Sleep Attack Rate +60%.
-	 -->
-		<icon initial="icon.agathion_aqu_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54006" name="Capricorn Agathion" max-level="22" >
-	<!-- 
-		level 1: M. Critical Rate +1%. M. Critical Rate increases when Agathion is upgraded.
-		level 2: M. Critical Rate +2%.
-		level 3: M. Critical Rate +3%.
-		level 4: M. Critical Rate +4%.
-		level 5: M. Critical Rate +5%.
-		level 6: M. Critical Rate +7%.
-		level 7: Cooldown of P. Skills and songs/dances -1%, M. Critical Rate +7%. M. Critical Rate increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
-		level 8: Cooldown of P. Skills and songs/dances -3%, M. Critical Rate +7%.
-		level 9: Cooldown of P. Skills and songs/dances -5%, M. Critical Rate +8%.
-		level 10: Cooldown of P. Skills and songs/dances -7%, M. Critical Rate +12%.
-		level 11: Cooldown of P. Skills and songs/dances -10%, M. Critical Rate +18%.
-		level 12: Cooldown of P. Skills and songs/dances -10%, M. Critical Rate +19%.
-		level 13: Cooldown of P. Skills and songs/dances -11%, M. Critical Rate +19%.
-		level 14: Cooldown of P. Skills and songs/dances -11%, M. Critical Rate +20%.
-		level 15: Cooldown of P. Skills and songs/dances -12%, M. Critical Rate +20%.
-		level 16: Cooldown of P. Skills and songs/dances -12%, M. Critical Rate +21%.
-		level 17: Cooldown of P. Skills and songs/dances -13%, M. Critical Rate +21%.
-		level 18: Cooldown of P. Skills and songs/dances -14%, M. Critical Rate +22%.
-		level 19: Cooldown of P. Skills and songs/dances -15%, M. Critical Rate +24%.
-		level 20: Cooldown of P. Skills and songs/dances -16%, M. Critical Rate +26%.
-		level 21: Cooldown of P. Skills and songs/dances -17%, M. Critical Rate +30%.
-		level 22: Cooldown of P. Skills and songs/dances -20%, M. Critical Rate +35%.
-	 -->
-		<icon initial="icon.agathion_capr_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54007" name="Libra Agathion" max-level="22" >
-	<!-- 
-		level 1: Casting Spd. +2. Casting Spd. increases when Agathion is upgraded.
-		level 2: Casting Spd. +3
-		level 3: Casting Spd. +4
-		level 4: Casting Spd. +5
-		level 5: Casting Spd. +10
-		level 6: Casting Spd. +15
-		level 7: Cooldown of P. Skills and songs/dances -2%, Casting Spd. +15. Casting Spd. increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
-		level 8: Cooldown of P. Skills and songs/dances -4%, Casting Spd. +25.
-		level 9: Cooldown of P. Skills and songs/dances -6%, Casting Spd. +35.
-		level 10: Cooldown of P. Skills and songs/dances -8%, Casting Spd. +45.
-		level 11: Cooldown of P. Skills and songs/dances -12%, Casting Spd. +60.
-		level 12: Cooldown of P. Skills and songs/dances -12%, Casting Spd. +65.
-		level 13: Cooldown of P. Skills and songs/dances -12%, Casting Spd. +70.
-		level 14: Cooldown of P. Skills and songs/dances -13%, Casting Spd. +75.
-		level 15: Cooldown of P. Skills and songs/dances -13%, Casting Spd. +80.
-		level 16: Cooldown of P. Skills and songs/dances -14%, Casting Spd. +85.
-		level 17: Cooldown of P. Skills and songs/dances -14%, Casting Spd. +90.
-		level 18: Cooldown of P. Skills and songs/dances -15%, Casting Spd. +90.
-		level 19: Cooldown of P. Skills and songs/dances -15%, Casting Spd. +100.
-		level 20: Cooldown of P. Skills and songs/dances -16%, Casting Spd. +110.
-		level 21: Cooldown of P. Skills and songs/dances -18%, Casting Spd. +130.
-		level 22: Cooldown of P. Skills and songs/dances -20%, Casting Spd. +160.
-	 -->
-		<icon initial="icon.agathion_lib_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54008" name="Agathion - Gemini" max-level="22" >
-	<!-- 
-		level 1: XP/SP gain +1% while hunting during Sayha's Grace effect. Effect of Sayha's Grace increases when Agathion is upgraded.
-		level 2: XP/SP gain from Sayha's Grace +2% while hunting during Sayha's Grace effect.
-		level 3: XP/SP gain from Sayha's Grace +3% while hunting during Sayha's Grace effect.
-		level 4: XP/SP gain from Sayha's Grace +4% while hunting during Sayha's Grace effect.
-		level 5: XP/SP gain from Sayha's Grace +6% while hunting during Sayha's Grace effect.
-		level 6: XP/SP gain from Sayha's Grace +9% while hunting during Sayha's Grace effect.
-		level 7: Max HP/MP +2%, XP/SP gain +9% while hunting during Sayha's Grace effect. Max HP/MP and bonus to Sayha's Grace increase when Agathion is upgraded.
-		level 8: Max HP/MP +4%, XP/SP gain +12% while hunting during Sayha's Grace effect.
-		level 9: Max HP/MP +5%, XP/SP gain +16% while hunting during Sayha's Grace effect.
-		level 10: Max HP/MP +7%, XP/SP gain +20% while hunting during Sayha's Grace effect.
-		level 11: Max HP/MP +10%, XP/SP gain +30% while hunting during Sayha's Grace effect.
-		level 12: Max HP/MP +11%, XP/SP gain +31% while hunting during Sayha's Grace effect.
-		level 13: Max HP/MP +12%, XP/SP gain +31% while hunting during Sayha's Grace effect.
-		level 14: Max HP/MP +13%, XP/SP gain +32% while hunting during Sayha's Grace effect.
-		level 15: Max HP/MP +14%, XP/SP gain +32% while hunting during Sayha's Grace effect.
-		level 16: Max HP/MP +15%, XP/SP gain +33% while hunting during Sayha's Grace effect.
-		level 17: Max HP/MP +16%, XP/SP gain +33% while hunting during Sayha's Grace effect.
-		level 18: Max HP/Max MP +17%, Max CP +2%, XP/SP Gain from Sayha's Grace +34% during hunting
-		level 19: Max HP/Max MP +18%, Max CP +5%, XP/SP Gain from Sayha's Grace +35% during hunting
-		level 20: Max HP/Max MP +20%, Max CP +7%, XP/SP Gain from Sayha's Grace +36% during hunting
-		level 21: Max HP +22%, Max MP +25%, Max CP +10%, XP/SP Gain from Sayha's Grace +37% during hunting
-		level 22: Max HP +25%, Max MP +30%, Max CP +15%, XP/SP Gain from Sayha's Grace +40% during hunting
-	 -->
-		<icon initial="icon.agathion_gem_star_1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54009" name="Agathion - Taurus" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54010" name="Agathion - Leo" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54011" name="Agathion - Scorpio" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54012" name="Agathion - Sagittarius" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54013" name="Agathion - Virgo" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54014" name="Agathion - Aquarius" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54015" name="Agathion - Capricorn" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54016" name="Agathion - Libra" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54017" name="Agathion - Gemini" action="A1">
-	<!-- Releases the Agathion's seal. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54018" name="Seal Agathion" action="A1">
-	<!-- Dismiss a summoned Agathion. -->
-		<icon initial="icon.etc_unsummon_aga_agit_i01"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54019" name="Savior's Earring" max-level="2" >
-	<!-- 
-		level 1: XP and SP gain +2%%, Max MP +20.
-		level 2: XP and SP gain +2%%, Max MP +30, Max HP +50, Stun/MEN Attacks Resistance +4%%. With a certain probability recovers 3%% of the physical damage inflicted on the enemy as HP.
-	 -->
-		<icon initial="icon.r2_earring_i00">
-			<value level="2">icon.r2_earring_i01</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54020" name="Bracelet of Power">
-	<!-- HP Recovery Bonus/MP Recovery Bonus +15%%, P. Accuracy +2, M. Accuracy +2 and Weight Limit +10,000. -->
-		<icon initial="icon.ertheia_bracelet_i01"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54021" name="Talisman of Power" max-level="15" >
-	<!-- 
-		level 1: By its power of authority P. Def./M. Def. +13, Max HP +6%%, Max MP +2%% and P. Atk./M. Atk. +2%%.
-		level 2: By its power of authority P. Def./M. Def. +15, Max HP +8%%, Max MP +4%% and P. Atk./M. Atk. +2%%.
-		level 3: By its power of authority P. Def./M. Def. +18, Max HP +10%%, Max MP +6%% and P. Atk./M. Atk. +3%%.
-		level 4: By its power of authority P. Def./M. Def. +20, Max HP +12%%, Max MP +8%% and P. Atk./M. Atk. +3%%.
-		level 5: By its power of authority P. Def./M. Def. +24, Max HP +12%%, Max MP +8%% and P. Atk./M. Atk. +5%%.
-		level 6: By its noble power of authority P. Def./M. Def. +26, Max HP +12%%, Max MP +8%%, P. Atk./M. Atk. +5%%, Atk. Spd. +3%% and Casting Spd. +2%%.
-		level 7: By its noble power of authority P. Def./M. Def. +31, Max HP +14%%, Max MP +10%%, P. Atk./M. Atk. +6%%, Atk. Spd. +3%% and Casting Spd. +2%%.
-		level 8: By its noble power of authority P. Def./M. Def. +36, Max HP +16%%, Max MP +12%%, P. Atk./M. Atk. +7%%, Atk. Spd. +4%% and Casting Spd. +3%%.
-		level 9: By its noble power of authority P. Def./M. Def. +41, Max HP +18%%, Max MP +14%%, P. Atk./M. Atk. +8%%, Atk. Spd. +4%% and Casting Spd. +3%%.
-		level 10: By its noble power of authority P. Def./M. Def. +46, Max HP +18%%, Max MP +14%%, P. Atk./M. Atk. +10%%, Atk. Spd. +5%% and Casting Spd. +3%%.
-		level 11: By its Radiant Power of Authority P. Def/M. Def. +51, Max HP +18%%, Max MP +14%%, P. Atk./M. Atk. +10%%., P. Atk. Spd. +6%%, Casting Spd. +4%%, P. Skill Power +5%%, M. Atk. Power +10%%, P. Critical Rate +10 and M. Critical Rate +20.
-		level 12: By its Radiant Power of Authority P. Def/M. Def. +55, Max HP +20%%, Max MP +16%%, P. Atk./M. Atk. +11%%., P. Atk. Spd. +7%%, Casting Spd. +5%%, P. Skill Power +6%%, M. Skill Power +11%%, P. Critical Rate +10 and M. Critical Rate +20.
-		level 13: By its Radiant Power of Authority P. Def/M. Def. +59, Max HP +22%%, Max MP +18%%, P. Atk./M. Atk. +12%%., P. Atk. Spd. +8%%, Casting Spd. +6%%, P. Skill Power +7%%, M. Skill. Power +12%%, P. Critical Rate +20 and M. Critical Rate +30.
-		level 14: By its Radiant Power of Authority P. Def/M. Def. +63, Max HP +24%%, Max MP +20%%, P. Atk./M. Atk. +13%%., P. Atk. Spd. +10%%, Casting Spd. +7%%, P. Skill Power +8%%, M. Skill Power +13%%, P. Critical Rate +20 and M. Critical Rate +30.
-		level 15: By its Radiant Power of Authority P. Def/M. Def. +70, Max HP +30%%, Max MP +25%%, P. Atk./M. Atk. +15%%., P. Atk. Spd. +15%%, Casting Spd. +10%%, P. Skill Power +15%%, M. Skill Power +22%%, P. Critical Rate +30 and M. Critical Rate +40.
-	 -->
-		<icon initial="icon.sayhas_talisman_g_Lv1">
-			<value level="2">icon.sayhas_talisman_g_Lv2</value>
-			<value level="3">icon.sayhas_talisman_g_Lv3</value>
-			<value level="4">icon.sayhas_talisman_g_Lv4</value>
-			<value level="5">icon.sayhas_talisman_g_lv5</value>
-			<value level="6">icon.sayhas_talisman_pve_Lv1</value>
-			<value level="7">icon.sayhas_talisman_pve_Lv2</value>
-			<value level="8">icon.sayhas_talisman_pve_Lv3</value>
-			<value level="9">icon.sayhas_talisman_pve_Lv4</value>
-			<value level="10">icon.sayhas_talisman_pve_lv5</value>
-			<value level="11">icon.sayhas_talisman_pvp_Lv1</value>
-			<value level="12">icon.sayhas_talisman_pvp_Lv2</value>
-			<value level="13">icon.sayhas_talisman_pvp_Lv3</value>
-			<value level="14">icon.sayhas_talisman_pvp_Lv4</value>
-			<value level="15">icon.sayhas_talisman_pvp_lv5</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54022" name="Shunaiman's Power" max-level="2" action="A1">
-	<!-- 
-		level 1: By Shunaiman's Power Stun/MEN Attack Rate +5%% and Damage Reflective Res +10%%.
-		level 2: By Shunaiman's Power Stun/MEN Attack Rate +15%% and Damage Reflective Res +30%%.
-	 -->
-		<icon initial="icon.sayhas_talisman_pvp_Lv1">
-			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
-		</icon>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54023" name="Water Defense" max-level="5" >
-	<!-- 
-		level 1: Water Attribute Def. +20.
-		level 2: Water Attribute Def. +40.
-		level 3: Water Attribute Def. +60.
-		level 4: Water Attribute Def. +80.
-		level 5: Water Attribute Def. +100.
-	 -->
-		<icon initial="icon.elemental_necklace_water_i00"/>
-		<attributes property="MAGIC">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WATER_DEFENSE" stat-add="ELEMENTAL_SPIRIT_WATER_DEFENSE">
-				<power initial="20.0">
-					<value level="2">40.0</value>
-					<value level="3">60.0</value>
-					<value level="4">80.0</value>
-					<value level="5">100.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54024" name="Fire Defense" max-level="5" >
-	<!-- 
-		level 1: Fire Attribute Def. +20.
-		level 2: Fire Attribute Def. +40.
-		level 3: Fire Attribute Def. +60.
-		level 4: Fire Attribute Def. +80.
-		level 5: Fire Attribute Def. +100.
-	 -->
-		<icon initial="icon.elemental_necklace_fire_i00"/>
-		<attributes property="MAGIC">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_FIRE_DEFENSE" stat-add="ELEMENTAL_SPIRIT_FIRE_DEFENSE">
-				<power initial="20.0">
-					<value level="2">40.0</value>
-					<value level="3">60.0</value>
-					<value level="4">80.0</value>
-					<value level="5">100.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54025" name="Wind Defense" max-level="5" >
-	<!-- 
-		level 1: Wind Attribute Def. +20.
-		level 2: Wind Attribute Def. +40.
-		level 3: Wind Attribute Def. +60.
-		level 4: Wind Attribute Def. +80.
-		level 5: Wind Attribute Def. +100.
-	 -->
-		<icon initial="icon.elemental_necklace_wind_i00"/>
-		<attributes property="MAGIC">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WIND_DEFENSE" stat-add="ELEMENTAL_SPIRIT_WIND_DEFENSE">
-				<power initial="20.0">
-					<value level="2">40.0</value>
-					<value level="3">60.0</value>
-					<value level="4">80.0</value>
-					<value level="5">100.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54026" name="Earth Defense" max-level="5" >
-	<!-- 
-		level 1: Increases Earth Defense +20.
-		level 2: Increases Earth Defense +40.
-		level 3: Increases Earth Defense +60.
-		level 4: Increases Earth Defense +80.
-		level 5: Increases Earth Defense +100.
-	 -->
-		<icon initial="icon.elemental_necklace_earth_i00"/>
-		<attributes property="MAGIC">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_EARTH_DEFENSE" stat-add="ELEMENTAL_SPIRIT_EARTH_DEFENSE">
-				<power initial="20.0">
-					<value level="2">40.0</value>
-					<value level="3">60.0</value>
-					<value level="4">80.0</value>
-					<value level="5">100.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54027" name="Increases Skill XP" max-level="5" >
-	<!-- 
-		level 1: Attribute XP Gain +3%%.
-		level 2: Attribute XP Gain +6%%.
-		level 3: Attribute XP Gain +10%%.
-		level 4: Attribute XP Gain +15%%.
-		level 5: Attribute XP Gain +30%%.
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes property="MAGIC">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_BONUS_XP" stat-add="ELEMENTAL_SPIRIT_BONUS_XP" mode="PER">
-				<power initial="3.0">
-					<value level="2">6.0</value>
-					<value level="3">10.0</value>
-					<value level="4">15.0</value>
-					<value level="5">30.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54028" name="Spirit's Blessing" action="A2">
-	<!-- For 20 minutes obtain extra Hunting XP +20%%. -->
-		<icon initial="icon.elemental_bless_scrl_i00"/>
-		<attributes property="PHYSIC" stay-after-death="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal>
-			<level initial="1"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_BONUS_XP" stat-add="ELEMENTAL_SPIRIT_BONUS_XP" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54029" name="Venir's Blessing" max-level="4" >
-	<!-- 
-		level 1: CON, MEN, DEX, WIT, STR, INT +1 when equipped.
-		level 2: When equipped, CON, MEN, DEX, WIT, STR, INT +2. Has a chance to absorb 4% of damage dealt to enemies as HP, and 2% as MP.
-		level 3: When equipped, CON, MEN, DEX, WIT, STR, INT +3. P. Skill/M. Skill Cooldown -7%. Has a chance to absorb 8% of damage dealt to enemies as HP, and 4% as MP.
-		level 4: When equipped, CON, MEN, DEX, WIT, STR, INT +4. P. Skill/M. Skill Cooldown -7%. Has a chance to absorb 16% of damage dealt to enemies as HP, and 8% as MP.
-	 -->
-		<icon initial="icon.etc_all_stat_talisman_i00">
-			<value level="2">icon.etc_all_stat_talisman_i01</value>
-			<value level="3">icon.etc_all_stat_talisman_i02</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54030" name="Ignis Necklace" max-level="11" >
-	<!-- 
-		level 1: Max HP +50.
-		level 2: Increases Max HP +50 and P. Atk. +1%%.
-		level 3: Increases Max HP +100, P. Atk +1%%.
-		level 4: Increases Max HP +100, P. Atk +2%%.
-		level 5: Max HP +150 and P. Atk. +2%%.
-		level 6: Max HP +150 and P. Atk. +3%%.
-		level 7: Increases Max HP +200, P. Atk. +3%%.
-		level 8: Increases Max HP +200, P. Atk. +5%%.
-		level 9: Increases Max HP +300 and P. Atk. +7%%.
-		level 10: Increases Max HP +300 and P. Atk. +10%%.
-		level 11: Increases Max HP +500 and P. Atk. +15%%.
-	 -->
-		<icon initial="icon.elemental_necklace_fire_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="50.0">
-					<value level="3">100.0</value>
-					<value level="5">150.0</value>
-					<value level="7">200.0</value>
-					<value level="9">300.0</value>
-					<value level="11">500.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power>
-					<value level="2">1.0</value>
-					<value level="4">2.0</value>
-					<value level="6">3.0</value>
-					<value level="8">5.0</value>
-					<value level="9">7.0</value>
-					<value level="10">10.0</value>
-					<value level="11">15.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54031" name="Nebula Necklace" max-level="11" >
-	<!-- 
-		level 1: Max HP +50.
-		level 2: Increases Max HP +50 and M. Atk. +1%%.
-		level 3: Increases Max HP +100, M. Atk +1%%.
-		level 4: Increases Max HP +100, M. Atk +2%%.
-		level 5: Max HP +150 and M. Atk. +2%%.
-		level 6: Max HP +150 and M. Atk. +3%%.
-		level 7: Increases Max HP +200, M. Atk. +3%%.
-		level 8: Increases Max HP +200, M. Atk. +5%%.
-		level 9: Increases Max HP +300 and M. Atk. +7%%.
-		level 10: Increases Max HP +300 and M. Atk. +10%%.
-		level 11: Increases Max HP +500 and M. Atk. +15%%.
-	 -->
-		<icon initial="icon.elemental_necklace_water_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="50.0">
-					<value level="3">100.0</value>
-					<value level="5">150.0</value>
-					<value level="7">200.0</value>
-					<value level="9">300.0</value>
-					<value level="11">500.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power>
-					<value level="2">1.0</value>
-					<value level="4">2.0</value>
-					<value level="6">3.0</value>
-					<value level="8">5.0</value>
-					<value level="9">7.0</value>
-					<value level="10">10.0</value>
-					<value level="11">15.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54032" name="Procella Necklace" max-level="11" >
-	<!-- 
-		level 1: Max HP +50.
-		level 2: Increases Max HP +50 and M. Def +1%%.
-		level 3: Max HP +100 and M. Def. +1%%.
-		level 4: Max HP +100 and M. Def. +2%%.
-		level 5: Max HP +150 and M. Def. +2%%.
-		level 6: Max HP +150 and M. Def. +3%%.
-		level 7: Increases Max HP +200, M. Def +3%%.
-		level 8: Increases Max HP +200, M. Def +5%%.
-		level 9: Increases Max HP +300 and M. Def +7%%.
-		level 10: Increases Max HP +300 and M. Def +10%%.
-		level 11: Increases Max HP +500 and M. Def +15%%.
-	 -->
-		<icon initial="icon.elemental_necklace_wind_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="50.0">
-					<value level="3">100.0</value>
-					<value level="5">150.0</value>
-					<value level="7">200.0</value>
-					<value level="9">300.0</value>
-					<value level="11">500.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power>
-					<value level="2">1.0</value>
-					<value level="4">2.0</value>
-					<value level="6">3.0</value>
-					<value level="8">5.0</value>
-					<value level="9">7.0</value>
-					<value level="10">10.0</value>
-					<value level="11">15.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54033" name="Petram Necklace" max-level="11" >
-	<!-- 
-		level 1: Max HP +50.
-		level 2: Increases Max HP +50 and P. Def +1%%.
-		level 3: Max HP +100 and P. Def. +1%%.
-		level 4: Max HP +100 and P. Def. +2%%.
-		level 5: Max HP +150 and P. Def +2%%.
-		level 6: Max HP +150 and P. Def +3%%.
-		level 7: Increases Max HP +200, M. Def. +3%%.
-		level 8: Increases Max HP +200, M. Def. +5%%.
-		level 9: Increases Max HP +300 and P. Def +7%%.
-		level 10: Increases Max HP +300 and P. Def +10%%.
-		level 11: Increases Max HP +500 and P. Def +15%%.
-	 -->
-		<icon initial="icon.elemental_necklace_earth_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="50.0">
-					<value level="3">100.0</value>
-					<value level="5">150.0</value>
-					<value level="7">200.0</value>
-					<value level="9">300.0</value>
-					<value level="11">500.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power>
-					<value level="2">1.0</value>
-					<value level="4">2.0</value>
-					<value level="6">3.0</value>
-					<value level="8">5.0</value>
-					<value level="9">7.0</value>
-					<value level="10">10.0</value>
-					<value level="11">15.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54034" name="Anakim Power" max-level="10" >
-	<!-- 
-		level 1: MP Recovery Bonus +5 and M. Atk. Power +1%%.
-		level 2: MP Recovery Bonus +10 and M. Atk. +1%% when receiving MP recovery from Recharge.
-		level 3: MP Recovery Bonus +15 and M. Atk. +1%% when receiving MP recovery from Recharge.
-		level 4: MP Recovery Bonus +20 and M. Atk. +2%% when receiving MP recovery from Recharge.
-		level 5: MP Recovery Bonus +25 and M. Atk. +2%% when receiving MP recovery from Recharge.
-		level 6: MP Recovery Bonus +35 and M. Atk. Power +2%% and 75 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
-		level 7: MP Recovery Bonus +45 and M. Atk. Power +5%% and 150 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
-		level 8: MP Recovery Bonus +55 and M. Atk. Power +8%% and 225 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
-		level 9: MP Recovery Bonus +70 and M. Atk. Power +11%% and 300 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
-		level 10: MP Recovery Bonus +90 and M. Atk. Power +15%% and 600 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
-	 -->
-		<icon initial="icon.etc_water_rune_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54035" name="Lilith Power" max-level="10" >
-	<!-- 
-		level 1: The amount of Heal received +1%%, , P. Atk. +1%%.
-		level 2: The amount of Heal received +2%%, , P. Atk. +1%%.
-		level 3: The amount of Heal received +3%%, , P. Atk. +1%%.
-		level 4: The amount of Heal received +4%%, , P. Atk. +2%%.
-		level 5: The amount of Heal received +5%%, P. Atk. +2%%.
-		level 6: The amount of Heal received +5%%, P. Atk. +2%%, and 100 HP Recovery when being hit.
-		level 7: The amount of Heal received +7%%, P. Atk. +5%%, and 200 HP Recovery when being hit.
-		level 8: The amount of Heal received +9%%, P. Atk. +8%%, and 300 HP Recovery when being hit.
-		level 9: The amount of Heal received +12%%, P. Atk. +11%%, and 400 HP Recovery when being hit.
-		level 10: HP Recovery +15%%, Attack +15%%, Hit activates HP Recovery 900
-	 -->
-		<icon initial="icon.etc_fire_rune_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54036" name="Anakim's Recovery" max-level="5" action="A1">
-	<!-- 
-		level 1: Hit or skill Activates 75 MP Recovery
-		level 2: Hit or skill Activates 150 MP Recovery
-		level 3: Hit or skill Activates 225 MP Recovery
-		level 4: Hit or skill Activates 300 MP Recovery
-		level 5: Hit or skill Activates 600 MP Recovery
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54037" name="Lilith's Recovery" max-level="5" action="A1">
-	<!-- 
-		level 1: Hit activates 100 HP Recovery
-		level 2: Hit activates 200 HP Recovery
-		level 3: Hit activates 300 HP Recovery
-		level 4: Hit activates 400 HP Recovery
-		level 5: Hit activates 900 HP Recovery
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54038" name="Sayha's Cloak">
-	<!-- Increases Max HP/MP +3%. -->
-		<icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54039" name="Sayha's Cloak +1" max-level="10" >
-	<!-- 
-		level 1: Increases Max HP/MP +4%.
-		level 2: Max HP/Max MP +5%, XP/SP Gain +3%.
-		level 3: Max HP/Max MP +6%, XP/SP Gain +5%.
-		level 4: Max HP/Max MP +7%, XP/SP Gain +7%, P. Def. +2%.
-		level 5: Max HP/Max MP +8%, XP/SP Gain +10%, P. Def. +4%.
-		level 6: Max HP/Max MP +9%, XP/SP Gain +15%, P. Def. +6%.
-		level 7: Max HP/Max MP +10%, XP/SP Gain +20%, P. Def. +8% and P. Critical Damage/M. Critical Damage +5%.
-		level 8: Max HP/Max MP +11%, XP/SP Gain +25%, P. Def. +10%, M. Def. +2%, and P. Critical Damage/M. Critical Damage +7% .
-		level 9: Max HP/Max MP +12%, XP/SP Gain +30%, P. Def. +10%, M. Def. +4%, P. Critical Damage/M. Critical Damage +10%,  and P. Critical Damage Received -5%.
-		level 10: Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +10%, M. Def. +6%, P. Critical Damage/M. Critical Damage +15%,  and P. Critical Damage Received -10%.
-	 -->
-		<icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54040" name="Sayha's Blink" max-level="2" debuff="true" action="A1">
-	<!-- 
-		level 1: Cancel Target, Teleport back to previous location.
-		level 2: Triggers the Cancel Target effect and teleports to the rear.
-	 -->
-		<icon initial="icon.sayha2017_blink"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="120000">
-				<value level="2">60000</value>
-			</reuse>
-			<cool-time initial="200"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54041" name="Frintezza's Necklace" max-level="4" >
-	<!-- 
-		level 1: Increases Sleep Resistance +10%%, Paralysis Attack Resistance +5%%, Sleep Atk. Rate +10%%, Paralysis Atk. Rate +5%% and Damage Reflect Resistance +2%%, P./M. Skill Power +5%%, and decreases Skill Cooldown -2%%.
-		level 2: Increases Sleep Resistance +15%%, Paralysis Attack Resistance +10%%, Sleep Atk. Rate +15%%, Paralysis Atk. Rate +10%% and Damage Reflect Resistance +3%%, P./M. Skill Power +10%%, and decreases Skill Cooldown -3%%.
-		level 3: Increases Sleep Resistance +20%%, Paralysis Attack Resistance +15%%, Sleep Atk. Rate +20%%, Paralysis Atk. Rate +15%%, Damage Reflect Resistance +4%%, P./M. Skill Power +15%%, Skill Cooldown -5%%, P. Critical Attack Hit Rate -5%%, M. Critical Attack Hit Rate -2%%.
-		level 4: Increases Sleep Resistance +30%%, Paralysis Attack Resistance +20%%, Sleep Atk. Rate +30%%, Paralysis Atk. Rate +20%%, Damage Reflect Resistance +10%%, P./M. Skill Power +20%%, Skill Cooldown -10%%, P. Critical Attack Hit Rate -10%%, M. Critical Attack Hit Rate -5%%.
-	 -->
-		<icon initial="icon.accessory_necklace_of_frintessa_i00">
-			<value level="2">icon.accessory_necklace_of_frintessa_i03</value>
-			<value level="3">icon.accessory_necklace_of_frintessa_i04</value>
-			<value level="4">icon.accessory_necklace_of_frintessa_i05</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54042" name="Frintezza's Necklace - Special Ability" debuff="true" action="A1">
-	<!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +100%. -->
-		<icon initial="icon.accessory_necklace_of_frintessa_i05"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="120000"/>
-			<effect-point initial="-666"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54043" name="Rapid Wind" action="A1">
-	<!-- For 5 seconds, P. Def. +1000, M. Def. +1000, Movement Speed +50. -->
-		<icon initial="icon.skill30008"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="800"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54044" name="Sayha's Supreme Cloak">
-	<!-- Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +11%, M. Def. +6%, P. Critical Damage/M. Critical Damage +15%, Critical Damage Taken -10%. -->
-		<icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54045" name="Sayha's Supreme Cloak +1" max-level="10" >
-	<!-- 
-		level 1: Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +12%, M. Def. +8%, P. Critical Damage +15%, M. Critical Damage +16%, Critical Damage Taken -10%.
-		level 2: Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +13%, M. Def. +10%, P. Critical Damage +15%, M. Critical Damage +16%, Critical Damage Taken -10%.
-		level 3: Max HP/Max MP +17%, XP/SP Gain +30%, P. Def. +14%, M. Def. +12%, P. Critical Damage +15%, M. Critical Damage +17%, Critical Damage Taken -10%.
-		level 4: Max HP/Max MP +17%, XP/SP Gain +30%, P. Def. +15%, M. Def. +14%, P. Critical Damage +16%, M. Critical Damage +18%, Critical Damage Taken -10%.
-		level 5: Max HP/Max MP +17%, XP/SP Gain +30%, P. Def. +16%, M. Def. +16%, P. Critical Damage +16%, M. Critical Damage +18%, Critical Damage Taken -11%.
-		level 6: Max HP/Max MP +20%, XP/SP Gain +30%, P. Def. +17%, M. Def. +17%, P. Critical Damage +16%, M. Critical Damage +18%, PVE Damage +2%, PVP Damage +1%, Critical Damage Taken -11%.
-		level 7: Max HP/Max MP +20%, XP/SP Gain +30%, P. Def. +18%, M. Def. +18%, P. Critical Damage +17%, M. Critical Damage +19%, PVE Damage +3%, PVP Damage +2%, Critical Damage Taken -11%.
-		level 8: Max HP/Max MP +21%, XP/SP Gain +30%, P. Def. +19%, M. Def. +19%, P. Critical Damage +17%, M. Critical Damage +20%, PVE Damage +5%, PVP Damage +3%, Critical Damage Taken -12%.
-		level 9: Max HP/Max MP +22%, XP/SP Gain +30%, P. Def. +20%, M. Def. +20%, P. Critical Damage +18%, M. Critical Damage +21%, PVE Damage +7%, PVP Damage +4%, Critical Damage Taken -13%.
-		level 10: Max HP/Max MP +25%, XP/SP Gain +30%, P. Def. +25%, M. Def. +25%, P. Critical Damage +20%, M. Critical Damage +25%, PVE Damage +10%, PVP Damage +5%, Critical Damage Taken -15%.
-	 -->
-		<icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54046" name="Aden Talisman">
-	<!-- Talisman for Aden Warriors -->
-		<icon initial="icon.bm_aden_talisman"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54047" name="Aden Talisman" max-level="10" >
-	<!-- 
-		level 1: A talisman for Aden warriors. P. Def. +5, M. Def. +5, Atk. Spd. +10, Casting Spd. +10, Max HP +100, Max MP +30
-		level 2: A talisman for Aden warriors. P. Def. +10, M. Def. +10, Atk. Spd. +12, Casting Spd. +12, Max HP +120, Max MP +50
-		level 3: A talisman for Aden warriors. P. Def. +15, M. Def. +20, Atk. Spd. +15, Casting Spd. +15, Max HP +150, Max MP +70
-		level 4: A talisman for Aden warriors. P. Def. +20, M. Def. +30, Atk. Spd. +20, Casting Spd. +20, Max HP +180, Max MP +100, XP/SP Gain +10%
-		level 5: A talisman for Aden warriors. P. Atk. +50, M. Atk. +100, P. Def. +30, M. Def. +40, Atk. Spd. +25, Casting Spd. +25, Max HP +220, Max MP +130, XP/SP Gain +15%
-		level 6: A talisman for Aden warriors. P. Atk. +80, M. Atk. +150, P. Def. +40, M. Def. +60, Atk. Spd. +40, Casting Spd. +45, Max HP +260, Max MP +160, XP/SP Gain +20%
-		level 7: A talisman for Aden warriors. P. Atk. +135, M. Atk. +250, P. Def. +60, M. Def. +80, Atk. Spd. +70, Casting Spd. +75, Max HP +520, Max MP +320, XP/SP Gain +50%
-		level 8: A talisman for Aden warriors. P. Atk. +180, M. Atk. +360, P. Def. +80, M. Def. +120, Atk. Spd. +80, Casting Spd. +95, Max HP +640, Max MP +360, XP/SP Gain +50%
-		level 9: A talisman for Aden warriors. P. Atk. +225, M. Atk. +420, P. Def. +120, M. Def. +160, Atk. Spd. +90, Casting Spd. +110, Max HP +910, Max MP +430, XP/SP Gain +50%
-		level 10: A talisman for Aden warriors. P. Atk. +270, M. Atk. +490, P. Def. +160, M. Def. +200, Atk. Spd. +100, Casting Spd. +125, Max HP +1120, Max MP +530, XP/SP Gain +50%
-	 -->
-		<icon initial="icon.bm_aden_talisman"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54048" name="Blessing of Aden" max-level="10" action="A1">
-	<!-- Aden blesses you to fully restore Sayha's Grace. -->
-		<icon initial="icon.skill19222"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="86400000">
-				<value level="2">82800000</value>
-				<value level="3">79200000</value>
-				<value level="4">75600000</value>
-				<value level="5">72000000</value>
-				<value level="6">64800000</value>
-				<value level="7">43200000</value>
-				<value level="8">21600000</value>
-				<value level="9">10800000</value>
-				<value level="10">3600000</value>
-			</reuse>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54049" name="Wish of Aden" action="A1">
-	<!-- none -->
-		<icon initial="icon.talisman_of_aden_fire"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54050" name="Scroll of Escape: High Priest Orven" action="A1">
-	<!-- A magic scroll that teleports you to High Priest Orven in the Town of Aden. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54051" name="Magic Lamp Acceleration Potion - 1-hour" action="A1">
-	<!-- Magic Lamp recharge speed +20%% -->
-		<icon initial="icon.etc_recall_potion2"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54052" name="Scroll: PK - Event" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="200"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54053" name="Player Commendation Treasure Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54054" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54055" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54056" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54057" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54058" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54059" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54060" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54061" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54062" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54063" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54064" name="Player Commendation Points" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54065" name="Sayha's Grace Kit" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54066" name="Red-Nosed Rudolph's Blessing" action="A1">
-	<!-- For 5 minutes, P. Atk./M. Atk. +150, P. Def./M. Def./Atk. Spd./Casting Spd. +100, Movement Speed +10, HP Recovery Bonus/MP Recovery Bonus +30%%. Changes appearance to Rudolph Outfit. The effect doesn't disappear upon death or restart. -->
-		<icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54067" name="Sayha's Storm Lv. 3 - 1-hour" action="A1">
-	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 1 hour. Cooldown 1 minute. -->
-		<icon initial="icon.bm_sayha_storm"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54068" name="Sayha's Gust - Event" action="A1">
-	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +300%% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
-		<icon initial="icon.ev_magic_flame_game_wind2"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54069" name="Magic Flame - Event" action="A1">
-	<!-- Magic Lamp recharge speed +100%% -->
-		<icon initial="icon.bm_soul_of_shilen"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54070" name="Sayha's Buff Scroll - Event" action="A2">
-	<!-- A mysterious scroll that triggers various buffs -->
-		<icon initial="icon.etc_ssq_i00"/>
-		<attributes magic-critical-rate="5.0" stay-after-death="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="91781"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<abnormal type="MULTI_BUFF">
-			<level initial="1"/>
-			<time initial="-1"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<call-skill skill="54100" scope="SELF"> <!-- Sayha's Shield -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54101"  scope="SELF"> <!-- Sayha's Magic Barrier -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54103"  scope="SELF"> <!-- Sayha's Decrease Weight -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54112"  scope="SELF"> <!-- Sayha's Clarity -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54104"  scope="SELF"> <!-- Sayha's Berserker Spirit -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54105"  scope="SELF"> <!-- Sayha's Wind Walk -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54106"  scope="SELF"> <!-- Sayha's Might -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54108"  scope="SELF"> <!-- Sayha's Focus -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54109"  scope="SELF"> <!-- Sayha's Haste -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54110"  scope="SELF"> <!-- Sayha's Death Whisper -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54111"  scope="SELF"> <!-- Sayha's Empower -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54113"  scope="SELF"> <!-- Sayha's Wild Magic -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54114"  scope="SELF"> <!-- Sayha's Acumen -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54115"  scope="SELF"> <!-- Sayha's Concentration -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54116"  scope="SELF"> <!-- Sayha's Victory -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54117"  scope="SELF"> <!-- Sayha's Recover Hp -->
-				<power initial="1.0"/>
-			</call-skill>
-			<call-skill  skill="54118"  scope="SELF"> <!-- Sayha's Recover Mp -->
-				<power initial="1.0"/>
-			</call-skill>
-		</effects>
-	</skill>
-	<skill id="54071" name="Battle Scroll" action="A2">
-	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. -->
-		<icon initial="icon.ev_charge_scroll"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="91780"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<abnormal type="MULTI_BUFF">
-			<level initial="1"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-				<power initial="200.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-				<power initial="350.0"/>
-			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
-				<power initial="30.0"/>
-			</stat-hp-based>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="30.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE">
-				<power initial="200.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE">
-				<power initial="200.0"/>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP">
-				<power initial="500.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP">
-				<power initial="500.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP">
-				<power initial="500.0"/>
-			</vital-stat-modify>
-		</effects>
-	</skill>
-	<skill id="54072" name="Treasure Chest of Aden" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54073" name="Nuia's Gift" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54074" name="Einhasad's Spellbook Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54075" name="Eva's Spellbook Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54076" name="Shilen's Spellbook Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54077" name="Pa'agrio's Spellbook Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54078" name="Maphr's Spellbook Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54079" name="Dragon's Belt Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54080" name="Dragon's Belt Ornament" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54081" name="Dragon's Belt">
-	<!-- Dragon's Belt. Weight Limit +1000, DEX +1, WIT +1. -->
-		<icon initial="icon.r2_belt_i01"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54082" name="Dragon's Belt" max-level="10" >
-	<!-- 
-		level 1: Dragon's Belt. Weight Limit +2000, Inventory Slots +2, DEX +1, WIT +1, CON +1, MEN +1.
-		level 2: Dragon's Belt. Weight Limit +3000, Inventory Slots +4, DEX +1, WIT +1, CON +1, MEN +1, STR +1, INT +1.
-		level 3: Dragon's Belt. Weight Limit +4000, Inventory Slots +6, DEX +2, WIT +2, CON +2, MEN +2, STR +2, INT +2.
-		level 4: Dragon's Belt. Weight Limit +5000, Inventory Slots +6, Max HP +100, Max MP +50, Max CP +100, DEX +3, WIT +3, CON +3, MEN +3, STR +50000, INT +50001.
-		level 5: Dragon's Belt. Weight Limit +6000, Inventory Slots +6, Max HP +150, Max MP +100, Max CP +200, HP Potion Bonus Recovery +80, MP Potion Bonus Recovery +10, P. Def. +30, M. Def. +20, DEX +60000, WIT +60001, CON +60002, MEN +60003, STR +60004, INT +60005.
-		level 6: Dragon's Belt. Weight Limit +7000, Inventory Slots +6, Max HP +200, Max MP +150, Max CP +300, HP Potion Bonus Recovery +100, MP Potion Bonus Recovery +20, P. Def. +40, M. Def. +30, DEX +70000, WIT +70001, CON +70002, MEN +70003, STR +70004, INT +70005.
-		level 7: Dragon's Belt. Weight Limit +8000, Inventory Slots +8, Max HP +300, Max MP +200, Max CP +500, HP Potion Bonus Recovery +120, MP Potion Bonus Recovery +30, P. Def. +50, M. Def. +40, Atk. Spd. +80000, P. Critical Rate 80001, M. Critical Rate +80002, DEX +80003, WIT +80004, CON +80005, MEN +80006, STR +80007, INT +80008.
-		level 8: Dragon's Belt. Weight Limit +9000, Inventory Slots +8, Max HP +400, Max MP +250, Max CP +700, HP Potion Bonus Recovery +150, MP Potion Bonus Recovery +50, P. Def. +80, M. Def. +50, Atk. Spd. +90000, P. Critical Rate 90001, M. Critical Rate +90002, Heal Received +90003, Received Damage -90004, DEX +90005, WIT +90006, CON +90007, MEN +90008, STR +90009, INT +80.
-		level 9: Dragon's Belt. Weight Limit +10000, Inventory Slots +10, Max HP +600, Max MP +300, Max CP +1000, HP Potion Bonus Recovery +200, MP Potion Bonus Recovery +80, P. Def. +100, M. Def. +80, Atk. Spd. +100000, P. Critical Rate 100001, M. Critical Rate +100002, Heal Received +100003, Received Damage -100004, DEX +100005, WIT +100006, CON +100007, MEN +100008, STR +100009, INT +100.
-		level 10: Dragon's Belt. Weight Limit +12000, Inventory Slots +12, Max HP +1000, Max MP +500, Max CP +1500, HP Potion Bonus Recovery +300, MP Potion Bonus Recovery +100, P. Def. +150, M. Def. +120, Atk. Spd. +120000, P. Critical Rate 120001, M. Critical Rate +120002, Heal Received +120003, Received Damage -120004, DEX +120005, WIT +120006, CON +120007, MEN +120008, STR +120009, INT +120.
-	 -->
-		<icon initial="icon.r2_belt_i01"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54083" name="Lucky Pouch" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54084" name="Lucky Pouch" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54085" name="Golden Lucky Pouch" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54086" name="Golden Lucky Pouch" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54087" name="Immortal Rare Accessory Box (15-day)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54088" name="Lucky Pig Happiness Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.special_cube_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54089" name="Lucky Pig Honey Buff" action="A1">
-	<!-- For 1 hour, Atk. Spd +100, Casting Spd. +100, Speed +20, XP/SP Gain +10%%. Does not disappear at death or when restarting. -->
-		<icon initial="icon.accessory_pig_cap_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54090" name="Lucky Pig Blessing Star Candy" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54091" name="Lucky Pig's Energy" max-level="5" action="A1">
-	<!-- 
-		level 1: Lucky Pig's Energy. Receive Lucky Pig's gift after the buff disappears. STR 1, INT 1, CON 1, MEN 1, DEX 1, WIT 1. <Caution> If you are dead at the time the item is sent, or if you don't have enough space in the inventory, you cannot receive the gift. You also can't receive the next stage of the buff if you are dead.
-		level 4: Lucky Pig's Energy. Receive Lucky Pig's gift after the buff disappears. STR 1, INT 1, CON 1, MEN 1, DEX 1, WIT 1. <Caution> If you are dead at the time the item is sent, or if you don't have enough space in the inventory, you cannot receive the gift.
-		level 5: Lucky Pig's Energy reward is heading to your inventory.
-	 -->
-		<icon initial="icon.skill11540"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54092" name="Lucky Pig's Regular Reward" action="A1">
-	<!-- none -->
-		<icon initial="icon.special_cube_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="54093" name="Lucky Pig's Golden Reward" action="A1">
-	<!-- none -->
-		<icon initial="icon.special_cube_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="-1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="54000" name="Agathion - Taurus" max-level="22">
+        <!--
+            level 1: P. Def. +1%. P. Def. increases when Agathion is upgraded.
+            level 2: P. Def. +1.5%.
+            level 3: P. Def. +2%.
+            level 4: P. Def. +2.5%.
+            level 5: P. Def. +3%.
+            level 6: P. Def. +4%.
+            level 7: P. Def. +5% and Stun Attack Rate +5%. P. Def. and Stun Attack Rate increase when Agathion is upgraded.
+            level 8: P. Def. +6% and Stun Attack Rate +8%.
+            level 9: P. Def. +7% and Stun Attack Rate +14%.
+            level 10: P. Def. +8% and Stun Attack Rate +22%.
+            level 11: P. Def. +12% and Stun Attack Rate +30%.
+            level 12: P. Def. +13% and Stun Attack Rate +32%.
+            level 13: P. Def. +14% and Stun Attack Rate +34%.
+            level 14: P. Def. +15% and Stun Attack Rate +36%.
+            level 15: P. Def. +16% and Stun Attack Rate +39%.
+            level 16: P. Def. +17% and Stun Attack Rate +42%.
+            level 17: P. Def. +18% and Stun Attack Rate +45%.
+            level 18: P. Def. +18% and Stun Attack Rate +48%.
+            level 19: P. Def. +19% and Stun Attack Rate +51%.
+            level 20: P. Def. +20% and Stun Attack Rate +55%.
+            level 21: P. Def. +22% and Stun Attack Rate +60%.
+            level 22: P. Def. +25% and Stun Attack Rate +65%.
+         -->
+        <icon initial="icon.agathion_tau_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54001" name="Leo Agathion" max-level="22">
+        <!--
+            level 1: P. Atk. +1%. P. Atk. increases when Agathion is upgraded.
+            level 2: P. Atk. +1.5%.
+            level 3: P. Atk. +2%.
+            level 4: P. Atk. +2.5%.
+            level 5: P. Atk. +3%.
+            level 6: P. Atk. +4%.
+            level 7: P. Atk.. +4% and Paralysis Attack Rate +5%. P. Atk.. and Paralysis Attack Rate increase when Agathion is upgraded.
+            level 8: P. Atk.. +5% and Paralysis Attack Rate +8%.
+            level 9: P. Atk.. +6% and Paralysis Attack Rate +14%.
+            level 10: P. Atk.. +7% and Paralysis Attack Rate +22%.
+            level 11: P. Atk.. +10% and Paralysis Attack Rate +30%.
+            level 12: P. Atk.. +10% and Paralysis Attack Rate +32%.
+            level 13: P. Atk.. +10% and Paralysis Attack Rate +34%.
+            level 14: P. Atk.. +10% and Paralysis Attack Rate +36%.
+            level 15: P. Atk.. +11% and Paralysis Attack Rate +38%.
+            level 16: P. Atk.. +11% and Paralysis Attack Rate +40%.
+            level 17: P. Atk.. +11% and Paralysis Attack Rate +42%.
+            level 18: P. Atk.. +11% and Paralysis Attack Rate +44%.
+            level 19: P. Atk.. +12% and Paralysis Attack Rate +46%.
+            level 20: P. Atk.. +12% and Paralysis Attack Rate +49%.
+            level 21: P. Atk.. +13% and Paralysis Attack Rate +52%.
+            level 22: P. Atk.. +15% and Paralysis Attack Rate +55%.
+         -->
+        <icon initial="icon.agathion_leo_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54002" name="Scorpio Agathion" max-level="22">
+        <!--
+            level 1: P. Critical Rate +1%. P. Critical Rate increases when Agathion is upgraded.
+            level 2: P. Critical Rate +2%.
+            level 3: P. Critical Rate +3%.
+            level 4: P. Critical Rate +4%.
+            level 5: P. Critical Rate +5%.
+            level 6: P. Critical Rate +7%.
+            level 7: Cooldown of P. Skills and songs/dances -1%, P. Critical Rate +7%. P. Critical Rate increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
+            level 8: Cooldown of P. Skills and songs/dances -3%, P. Critical Rate +7%.
+            level 9: Cooldown of P. Skills and songs/dances -5%, P. Critical Rate +8%.
+            level 10: Cooldown of P. Skills and songs/dances -7%, P. Critical Rate +12%.
+            level 11: Cooldown of P. Skills and songs/dances -10%, P. Critical Rate +18%.
+            level 13: Cooldown of P. Skills and songs/dances -11%, P. Critical Rate +18%.
+            level 14: Cooldown of P. Skills and songs/dances -11%, P. Critical Rate +19%.
+            level 15: Cooldown of P. Skills and songs/dances -12%, P. Critical Rate +19%.
+            level 16: Cooldown of P. Skills and songs/dances -12%, P. Critical Rate +20%.
+            level 17: Cooldown of P. Skills and songs/dances -13%, P. Critical Rate +20%.
+            level 18: Cooldown of P. Skills and songs/dances -14%, P. Critical Rate +20%.
+            level 19: Cooldown of P. Skills and songs/dances -15%, P. Critical Rate +21%.
+            level 20: Cooldown of P. Skills and songs/dances -16%, P. Critical Rate +21%.
+            level 21: Cooldown of P. Skills and songs/dances -17%, P. Critical Rate +22%.
+            level 22: Cooldown of P. Skills and songs/dances -20%, P. Critical Rate +25%.
+         -->
+        <icon initial="icon.agathion_sco_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54003" name="Sagittarius Agathion" max-level="22">
+        <!--
+            level 1: Atk. Spd. +2. Atk. Spd. increases when Agathion is upgraded.
+            level 2: Atk. Spd. +3.
+            level 3: Atk. Spd. +4.
+            level 4: Atk. Spd. +5.
+            level 5: Atk. Spd. +10.
+            level 6: Atk. Spd. +15.
+            level 7: Cooldown of P. Skills and songs/dances -1%, Atk. Spd. +15. Atk. Spd. increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
+            level 8: Cooldown of P. Skills and songs/dances -3%, Atk. Spd. +30.
+            level 9: Cooldown of P. Skills and songs/dances -5%, Atk. Spd. +40.
+            level 10: Cooldown of P. Skills and songs/dances -7%, Atk. Spd. +50.
+            level 11: Cooldown of P. Skills and songs/dances -10%, Atk. Spd. +70.
+            level 12: Cooldown of P. Skills and songs/dances -12%, Atk. Spd. +75.
+            level 13: Cooldown of P. Skills and songs/dances -13%, Atk. Spd. +80.
+            level 14: Cooldown of P. Skills and songs/dances -13%, Atk. Spd. +85.
+            level 15: Cooldown of P. Skills and songs/dances -14%, Atk. Spd. +90.
+            level 16: Cooldown of P. Skills and songs/dances -14%, Atk. Spd. +95.
+            level 17: Cooldown of P. Skills and songs/dances -15%, Atk. Spd. +100.
+            level 19: Cooldown of P. Skills and songs/dances -16%, Atk. Spd. +105.
+            level 20: Cooldown of P. Skills and songs/dances -16%, Atk. Spd. +110.
+            level 21: Cooldown of P. Skills and songs/dances -18%, Atk. Spd. +115.
+            level 22: Cooldown of P. Skills and songs/dances -20%, Atk. Spd. +120.
+         -->
+        <icon initial="icon.agathion_sag_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54004" name="Virgo Agathion" max-level="22">
+        <!--
+            level 1: M. Def. +1%. M. Def. increases when Agathion is upgraded.
+            level 2: M. Def. +1.5%.
+            level 3: M. Def. +2%.
+            level 4: M. Def. +2.5%.
+            level 5: M. Def. +3%.
+            level 6: M. Def. +4%.
+            level 7: M. Def. +5% and MEN Attack Rate +5%. MEN Attack Rate increases when Agathion is upgraded.
+            level 8: M. Def. +6% and MEN Attack Rate +8%.
+            level 9: M. Def. +7% and MEN Attack Rate +14%.
+            level 10: M. Def. +8% and MEN Attack Rate +22%.
+            level 11: M. Def. +12% and MEN Attack Rate +30%.
+            level 12: M. Def. +13% and MEN Attack Rate +32%.
+            level 13: M. Def. +14% and MEN Attack Rate +34%.
+            level 14: M. Def. +15% and MEN Attack Rate +36%.
+            level 15: M. Def. +16% and MEN Attack Rate +39%.
+            level 16: M. Def. +17% and MEN Attack Rate +42%.
+            level 17: M. Def. +18% and MEN Attack Rate +45%.
+            level 18: M. Def. +18% and MEN Attack Rate +48%.
+            level 19: M. Def. +20% and MEN Attack Rate +51%.
+            level 20: M. Def. +22% and MEN Attack Rate +55%.
+            level 21: M. Def. +25% and MEN Attack Rate +60%.
+            level 22: M. Def. +30% and MEN Attack Rate +65%.
+         -->
+        <icon initial="icon.agathion_virgo_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54005" name="Aquarius Agathion" max-level="22">
+        <!--
+            level 1: M. Atk. +1%. M. Atk. increases when Agathion is upgraded.
+            level 2: M. Atk. +1.5%.
+            level 3: M. Atk. +2%.
+            level 4: M. Atk. +2.5%.
+            level 5: M. Atk. +3%.
+            level 6: M. Atk. +4%.
+            level 7: M. Atk.. +4% and Hold/Sleep Attack Rate +5%. M. Atk. and Hold/Sleep Attack Rate increase when Agathion is upgraded.
+            level 8: M. Atk.. +5% and Hold/Sleep Attack Rate +8%.
+            level 9: M. Atk.. +6% and Hold/Sleep Attack Rate +14%.
+            level 10: M. Atk.. +7% and Hold/Sleep Attack Rate +22%.
+            level 11: M. Atk.. +10% and Hold/Sleep Attack Rate +30%.
+            level 12: M. Atk.. +10% and Hold/Sleep Attack Rate +32%.
+            level 13: M. Atk.. +12% and Hold/Sleep Attack Rate +34%.
+            level 14: M. Atk.. +14% and Hold/Sleep Attack Rate +36%.
+            level 15: M. Atk.. +16% and Hold/Sleep Attack Rate +38%.
+            level 16: M. Atk.. +18% and Hold/Sleep Attack Rate +40%.
+            level 17: M. Atk.. +20% and Hold/Sleep Attack Rate +42%.
+            level 18: M. Atk.. +20% and Hold/Sleep Attack Rate +45%.
+            level 19: M. Atk.. +22% and Hold/Sleep Attack Rate +48%.
+            level 20: M. Atk.. +24% and Hold/Sleep Attack Rate +51%.
+            level 21: M. Atk.. +28% and Hold/Sleep Attack Rate +55%.
+            level 22: M. Atk.. +35% and Hold/Sleep Attack Rate +60%.
+         -->
+        <icon initial="icon.agathion_aqu_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54006" name="Capricorn Agathion" max-level="22">
+        <!--
+            level 1: M. Critical Rate +1%. M. Critical Rate increases when Agathion is upgraded.
+            level 2: M. Critical Rate +2%.
+            level 3: M. Critical Rate +3%.
+            level 4: M. Critical Rate +4%.
+            level 5: M. Critical Rate +5%.
+            level 6: M. Critical Rate +7%.
+            level 7: Cooldown of P. Skills and songs/dances -1%, M. Critical Rate +7%. M. Critical Rate increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
+            level 8: Cooldown of P. Skills and songs/dances -3%, M. Critical Rate +7%.
+            level 9: Cooldown of P. Skills and songs/dances -5%, M. Critical Rate +8%.
+            level 10: Cooldown of P. Skills and songs/dances -7%, M. Critical Rate +12%.
+            level 11: Cooldown of P. Skills and songs/dances -10%, M. Critical Rate +18%.
+            level 12: Cooldown of P. Skills and songs/dances -10%, M. Critical Rate +19%.
+            level 13: Cooldown of P. Skills and songs/dances -11%, M. Critical Rate +19%.
+            level 14: Cooldown of P. Skills and songs/dances -11%, M. Critical Rate +20%.
+            level 15: Cooldown of P. Skills and songs/dances -12%, M. Critical Rate +20%.
+            level 16: Cooldown of P. Skills and songs/dances -12%, M. Critical Rate +21%.
+            level 17: Cooldown of P. Skills and songs/dances -13%, M. Critical Rate +21%.
+            level 18: Cooldown of P. Skills and songs/dances -14%, M. Critical Rate +22%.
+            level 19: Cooldown of P. Skills and songs/dances -15%, M. Critical Rate +24%.
+            level 20: Cooldown of P. Skills and songs/dances -16%, M. Critical Rate +26%.
+            level 21: Cooldown of P. Skills and songs/dances -17%, M. Critical Rate +30%.
+            level 22: Cooldown of P. Skills and songs/dances -20%, M. Critical Rate +35%.
+         -->
+        <icon initial="icon.agathion_capr_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54007" name="Libra Agathion" max-level="22">
+        <!--
+            level 1: Casting Spd. +2. Casting Spd. increases when Agathion is upgraded.
+            level 2: Casting Spd. +3
+            level 3: Casting Spd. +4
+            level 4: Casting Spd. +5
+            level 5: Casting Spd. +10
+            level 6: Casting Spd. +15
+            level 7: Cooldown of P. Skills and songs/dances -2%, Casting Spd. +15. Casting Spd. increases, cooldown of P. Skills and songs/dances decreases when Agathion is upgraded.
+            level 8: Cooldown of P. Skills and songs/dances -4%, Casting Spd. +25.
+            level 9: Cooldown of P. Skills and songs/dances -6%, Casting Spd. +35.
+            level 10: Cooldown of P. Skills and songs/dances -8%, Casting Spd. +45.
+            level 11: Cooldown of P. Skills and songs/dances -12%, Casting Spd. +60.
+            level 12: Cooldown of P. Skills and songs/dances -12%, Casting Spd. +65.
+            level 13: Cooldown of P. Skills and songs/dances -12%, Casting Spd. +70.
+            level 14: Cooldown of P. Skills and songs/dances -13%, Casting Spd. +75.
+            level 15: Cooldown of P. Skills and songs/dances -13%, Casting Spd. +80.
+            level 16: Cooldown of P. Skills and songs/dances -14%, Casting Spd. +85.
+            level 17: Cooldown of P. Skills and songs/dances -14%, Casting Spd. +90.
+            level 18: Cooldown of P. Skills and songs/dances -15%, Casting Spd. +90.
+            level 19: Cooldown of P. Skills and songs/dances -15%, Casting Spd. +100.
+            level 20: Cooldown of P. Skills and songs/dances -16%, Casting Spd. +110.
+            level 21: Cooldown of P. Skills and songs/dances -18%, Casting Spd. +130.
+            level 22: Cooldown of P. Skills and songs/dances -20%, Casting Spd. +160.
+         -->
+        <icon initial="icon.agathion_lib_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54008" name="Agathion - Gemini" max-level="22">
+        <!--
+            level 1: XP/SP gain +1% while hunting during Sayha's Grace effect. Effect of Sayha's Grace increases when Agathion is upgraded.
+            level 2: XP/SP gain from Sayha's Grace +2% while hunting during Sayha's Grace effect.
+            level 3: XP/SP gain from Sayha's Grace +3% while hunting during Sayha's Grace effect.
+            level 4: XP/SP gain from Sayha's Grace +4% while hunting during Sayha's Grace effect.
+            level 5: XP/SP gain from Sayha's Grace +6% while hunting during Sayha's Grace effect.
+            level 6: XP/SP gain from Sayha's Grace +9% while hunting during Sayha's Grace effect.
+            level 7: Max HP/MP +2%, XP/SP gain +9% while hunting during Sayha's Grace effect. Max HP/MP and bonus to Sayha's Grace increase when Agathion is upgraded.
+            level 8: Max HP/MP +4%, XP/SP gain +12% while hunting during Sayha's Grace effect.
+            level 9: Max HP/MP +5%, XP/SP gain +16% while hunting during Sayha's Grace effect.
+            level 10: Max HP/MP +7%, XP/SP gain +20% while hunting during Sayha's Grace effect.
+            level 11: Max HP/MP +10%, XP/SP gain +30% while hunting during Sayha's Grace effect.
+            level 12: Max HP/MP +11%, XP/SP gain +31% while hunting during Sayha's Grace effect.
+            level 13: Max HP/MP +12%, XP/SP gain +31% while hunting during Sayha's Grace effect.
+            level 14: Max HP/MP +13%, XP/SP gain +32% while hunting during Sayha's Grace effect.
+            level 15: Max HP/MP +14%, XP/SP gain +32% while hunting during Sayha's Grace effect.
+            level 16: Max HP/MP +15%, XP/SP gain +33% while hunting during Sayha's Grace effect.
+            level 17: Max HP/MP +16%, XP/SP gain +33% while hunting during Sayha's Grace effect.
+            level 18: Max HP/Max MP +17%, Max CP +2%, XP/SP Gain from Sayha's Grace +34% during hunting
+            level 19: Max HP/Max MP +18%, Max CP +5%, XP/SP Gain from Sayha's Grace +35% during hunting
+            level 20: Max HP/Max MP +20%, Max CP +7%, XP/SP Gain from Sayha's Grace +36% during hunting
+            level 21: Max HP +22%, Max MP +25%, Max CP +10%, XP/SP Gain from Sayha's Grace +37% during hunting
+            level 22: Max HP +25%, Max MP +30%, Max CP +15%, XP/SP Gain from Sayha's Grace +40% during hunting
+         -->
+        <icon initial="icon.agathion_gem_star_1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54009" name="Agathion - Taurus" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54010" name="Agathion - Leo" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54011" name="Agathion - Scorpio" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54012" name="Agathion - Sagittarius" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54013" name="Agathion - Virgo" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54014" name="Agathion - Aquarius" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54015" name="Agathion - Capricorn" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54016" name="Agathion - Libra" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54017" name="Agathion - Gemini" action="A1">
+        <!-- Releases the Agathion's seal. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54018" name="Seal Agathion" action="A1">
+        <!-- Dismiss a summoned Agathion. -->
+        <icon initial="icon.etc_unsummon_aga_agit_i01"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54019" name="Savior's Earring" max-level="2">
+        <!--
+            level 1: XP and SP gain +2%%, Max MP +20.
+            level 2: XP and SP gain +2%%, Max MP +30, Max HP +50, Stun/MEN Attacks Resistance +4%%. With a certain probability recovers 3%% of the physical damage inflicted on the enemy as HP.
+         -->
+        <icon initial="icon.r2_earring_i00">
+            <value level="2">icon.r2_earring_i01</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54020" name="Bracelet of Power">
+        <!-- HP Recovery Bonus/MP Recovery Bonus +15%%, P. Accuracy +2, M. Accuracy +2 and Weight Limit +10,000. -->
+        <icon initial="icon.ertheia_bracelet_i01"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54021" name="Talisman of Power" max-level="15">
+        <!--
+            level 1: By its power of authority P. Def./M. Def. +13, Max HP +6%%, Max MP +2%% and P. Atk./M. Atk. +2%%.
+            level 2: By its power of authority P. Def./M. Def. +15, Max HP +8%%, Max MP +4%% and P. Atk./M. Atk. +2%%.
+            level 3: By its power of authority P. Def./M. Def. +18, Max HP +10%%, Max MP +6%% and P. Atk./M. Atk. +3%%.
+            level 4: By its power of authority P. Def./M. Def. +20, Max HP +12%%, Max MP +8%% and P. Atk./M. Atk. +3%%.
+            level 5: By its power of authority P. Def./M. Def. +24, Max HP +12%%, Max MP +8%% and P. Atk./M. Atk. +5%%.
+            level 6: By its noble power of authority P. Def./M. Def. +26, Max HP +12%%, Max MP +8%%, P. Atk./M. Atk. +5%%, Atk. Spd. +3%% and Casting Spd. +2%%.
+            level 7: By its noble power of authority P. Def./M. Def. +31, Max HP +14%%, Max MP +10%%, P. Atk./M. Atk. +6%%, Atk. Spd. +3%% and Casting Spd. +2%%.
+            level 8: By its noble power of authority P. Def./M. Def. +36, Max HP +16%%, Max MP +12%%, P. Atk./M. Atk. +7%%, Atk. Spd. +4%% and Casting Spd. +3%%.
+            level 9: By its noble power of authority P. Def./M. Def. +41, Max HP +18%%, Max MP +14%%, P. Atk./M. Atk. +8%%, Atk. Spd. +4%% and Casting Spd. +3%%.
+            level 10: By its noble power of authority P. Def./M. Def. +46, Max HP +18%%, Max MP +14%%, P. Atk./M. Atk. +10%%, Atk. Spd. +5%% and Casting Spd. +3%%.
+            level 11: By its Radiant Power of Authority P. Def/M. Def. +51, Max HP +18%%, Max MP +14%%, P. Atk./M. Atk. +10%%., P. Atk. Spd. +6%%, Casting Spd. +4%%, P. Skill Power +5%%, M. Atk. Power +10%%, P. Critical Rate +10 and M. Critical Rate +20.
+            level 12: By its Radiant Power of Authority P. Def/M. Def. +55, Max HP +20%%, Max MP +16%%, P. Atk./M. Atk. +11%%., P. Atk. Spd. +7%%, Casting Spd. +5%%, P. Skill Power +6%%, M. Skill Power +11%%, P. Critical Rate +10 and M. Critical Rate +20.
+            level 13: By its Radiant Power of Authority P. Def/M. Def. +59, Max HP +22%%, Max MP +18%%, P. Atk./M. Atk. +12%%., P. Atk. Spd. +8%%, Casting Spd. +6%%, P. Skill Power +7%%, M. Skill. Power +12%%, P. Critical Rate +20 and M. Critical Rate +30.
+            level 14: By its Radiant Power of Authority P. Def/M. Def. +63, Max HP +24%%, Max MP +20%%, P. Atk./M. Atk. +13%%., P. Atk. Spd. +10%%, Casting Spd. +7%%, P. Skill Power +8%%, M. Skill Power +13%%, P. Critical Rate +20 and M. Critical Rate +30.
+            level 15: By its Radiant Power of Authority P. Def/M. Def. +70, Max HP +30%%, Max MP +25%%, P. Atk./M. Atk. +15%%., P. Atk. Spd. +15%%, Casting Spd. +10%%, P. Skill Power +15%%, M. Skill Power +22%%, P. Critical Rate +30 and M. Critical Rate +40.
+         -->
+        <icon initial="icon.sayhas_talisman_g_Lv1">
+            <value level="2">icon.sayhas_talisman_g_Lv2</value>
+            <value level="3">icon.sayhas_talisman_g_Lv3</value>
+            <value level="4">icon.sayhas_talisman_g_Lv4</value>
+            <value level="5">icon.sayhas_talisman_g_lv5</value>
+            <value level="6">icon.sayhas_talisman_pve_Lv1</value>
+            <value level="7">icon.sayhas_talisman_pve_Lv2</value>
+            <value level="8">icon.sayhas_talisman_pve_Lv3</value>
+            <value level="9">icon.sayhas_talisman_pve_Lv4</value>
+            <value level="10">icon.sayhas_talisman_pve_lv5</value>
+            <value level="11">icon.sayhas_talisman_pvp_Lv1</value>
+            <value level="12">icon.sayhas_talisman_pvp_Lv2</value>
+            <value level="13">icon.sayhas_talisman_pvp_Lv3</value>
+            <value level="14">icon.sayhas_talisman_pvp_Lv4</value>
+            <value level="15">icon.sayhas_talisman_pvp_lv5</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54022" name="Shunaiman's Power" max-level="2" action="A1">
+        <!--
+            level 1: By Shunaiman's Power Stun/MEN Attack Rate +5%% and Damage Reflective Res +10%%.
+            level 2: By Shunaiman's Power Stun/MEN Attack Rate +15%% and Damage Reflective Res +30%%.
+         -->
+        <icon initial="icon.sayhas_talisman_pvp_Lv1">
+            <value level="2">icon.sayhas_talisman_pvp_Lv2</value>
+        </icon>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54023" name="Water Defense" max-level="5">
+        <!--
+            level 1: Water Attribute Def. +20.
+            level 2: Water Attribute Def. +40.
+            level 3: Water Attribute Def. +60.
+            level 4: Water Attribute Def. +80.
+            level 5: Water Attribute Def. +100.
+         -->
+        <icon initial="icon.elemental_necklace_water_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="ELEMENTAL_SPIRIT_WATER_DEFENSE" stat-add="ELEMENTAL_SPIRIT_WATER_DEFENSE">
+                <power initial="20.0">
+                    <value level="2">40.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">80.0</value>
+                    <value level="5">100.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54024" name="Fire Defense" max-level="5">
+        <!--
+            level 1: Fire Attribute Def. +20.
+            level 2: Fire Attribute Def. +40.
+            level 3: Fire Attribute Def. +60.
+            level 4: Fire Attribute Def. +80.
+            level 5: Fire Attribute Def. +100.
+         -->
+        <icon initial="icon.elemental_necklace_fire_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="ELEMENTAL_SPIRIT_FIRE_DEFENSE" stat-add="ELEMENTAL_SPIRIT_FIRE_DEFENSE">
+                <power initial="20.0">
+                    <value level="2">40.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">80.0</value>
+                    <value level="5">100.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54025" name="Wind Defense" max-level="5">
+        <!--
+            level 1: Wind Attribute Def. +20.
+            level 2: Wind Attribute Def. +40.
+            level 3: Wind Attribute Def. +60.
+            level 4: Wind Attribute Def. +80.
+            level 5: Wind Attribute Def. +100.
+         -->
+        <icon initial="icon.elemental_necklace_wind_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="ELEMENTAL_SPIRIT_WIND_DEFENSE" stat-add="ELEMENTAL_SPIRIT_WIND_DEFENSE">
+                <power initial="20.0">
+                    <value level="2">40.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">80.0</value>
+                    <value level="5">100.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54026" name="Earth Defense" max-level="5">
+        <!--
+            level 1: Increases Earth Defense +20.
+            level 2: Increases Earth Defense +40.
+            level 3: Increases Earth Defense +60.
+            level 4: Increases Earth Defense +80.
+            level 5: Increases Earth Defense +100.
+         -->
+        <icon initial="icon.elemental_necklace_earth_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="ELEMENTAL_SPIRIT_EARTH_DEFENSE" stat-add="ELEMENTAL_SPIRIT_EARTH_DEFENSE">
+                <power initial="20.0">
+                    <value level="2">40.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">80.0</value>
+                    <value level="5">100.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54027" name="Increases Skill XP" max-level="5">
+        <!--
+            level 1: Attribute XP Gain +3%%.
+            level 2: Attribute XP Gain +6%%.
+            level 3: Attribute XP Gain +10%%.
+            level 4: Attribute XP Gain +15%%.
+            level 5: Attribute XP Gain +30%%.
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP" stat-add="ELEMENTAL_SPIRIT_BONUS_XP">
+                <power initial="3.0">
+                    <value level="2">6.0</value>
+                    <value level="3">10.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">30.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54028" name="Spirit's Blessing" action="A2">
+        <!-- For 20 minutes obtain extra Hunting XP +20%%. -->
+        <icon initial="icon.elemental_bless_scrl_i00"/>
+        <attributes property="PHYSIC" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP" stat-add="ELEMENTAL_SPIRIT_BONUS_XP">
+                <power initial="20.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54029" name="Venir's Blessing" max-level="4">
+        <!--
+            level 1: CON, MEN, DEX, WIT, STR, INT +1 when equipped.
+            level 2: When equipped, CON, MEN, DEX, WIT, STR, INT +2. Has a chance to absorb 4% of damage dealt to enemies as HP, and 2% as MP.
+            level 3: When equipped, CON, MEN, DEX, WIT, STR, INT +3. P. Skill/M. Skill Cooldown -7%. Has a chance to absorb 8% of damage dealt to enemies as HP, and 4% as MP.
+            level 4: When equipped, CON, MEN, DEX, WIT, STR, INT +4. P. Skill/M. Skill Cooldown -7%. Has a chance to absorb 16% of damage dealt to enemies as HP, and 8% as MP.
+         -->
+        <icon initial="icon.etc_all_stat_talisman_i00">
+            <value level="2">icon.etc_all_stat_talisman_i01</value>
+            <value level="3">icon.etc_all_stat_talisman_i02</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54030" name="Ignis Necklace" max-level="11">
+        <!--
+            level 1: Max HP +50.
+            level 2: Increases Max HP +50 and P. Atk. +1%%.
+            level 3: Increases Max HP +100, P. Atk +1%%.
+            level 4: Increases Max HP +100, P. Atk +2%%.
+            level 5: Max HP +150 and P. Atk. +2%%.
+            level 6: Max HP +150 and P. Atk. +3%%.
+            level 7: Increases Max HP +200, P. Atk. +3%%.
+            level 8: Increases Max HP +200, P. Atk. +5%%.
+            level 9: Increases Max HP +300 and P. Atk. +7%%.
+            level 10: Increases Max HP +300 and P. Atk. +10%%.
+            level 11: Increases Max HP +500 and P. Atk. +15%%.
+         -->
+        <icon initial="icon.elemental_necklace_fire_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0">
+                    <value level="3">100.0</value>
+                    <value level="5">150.0</value>
+                    <value level="7">200.0</value>
+                    <value level="9">300.0</value>
+                    <value level="11">500.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power>
+                    <value level="2">1.0</value>
+                    <value level="4">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">7.0</value>
+                    <value level="10">10.0</value>
+                    <value level="11">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54031" name="Nebula Necklace" max-level="11">
+        <!--
+            level 1: Max HP +50.
+            level 2: Increases Max HP +50 and M. Atk. +1%%.
+            level 3: Increases Max HP +100, M. Atk +1%%.
+            level 4: Increases Max HP +100, M. Atk +2%%.
+            level 5: Max HP +150 and M. Atk. +2%%.
+            level 6: Max HP +150 and M. Atk. +3%%.
+            level 7: Increases Max HP +200, M. Atk. +3%%.
+            level 8: Increases Max HP +200, M. Atk. +5%%.
+            level 9: Increases Max HP +300 and M. Atk. +7%%.
+            level 10: Increases Max HP +300 and M. Atk. +10%%.
+            level 11: Increases Max HP +500 and M. Atk. +15%%.
+         -->
+        <icon initial="icon.elemental_necklace_water_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0">
+                    <value level="3">100.0</value>
+                    <value level="5">150.0</value>
+                    <value level="7">200.0</value>
+                    <value level="9">300.0</value>
+                    <value level="11">500.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power>
+                    <value level="2">1.0</value>
+                    <value level="4">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">7.0</value>
+                    <value level="10">10.0</value>
+                    <value level="11">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54032" name="Procella Necklace" max-level="11">
+        <!--
+            level 1: Max HP +50.
+            level 2: Increases Max HP +50 and M. Def +1%%.
+            level 3: Max HP +100 and M. Def. +1%%.
+            level 4: Max HP +100 and M. Def. +2%%.
+            level 5: Max HP +150 and M. Def. +2%%.
+            level 6: Max HP +150 and M. Def. +3%%.
+            level 7: Increases Max HP +200, M. Def +3%%.
+            level 8: Increases Max HP +200, M. Def +5%%.
+            level 9: Increases Max HP +300 and M. Def +7%%.
+            level 10: Increases Max HP +300 and M. Def +10%%.
+            level 11: Increases Max HP +500 and M. Def +15%%.
+         -->
+        <icon initial="icon.elemental_necklace_wind_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0">
+                    <value level="3">100.0</value>
+                    <value level="5">150.0</value>
+                    <value level="7">200.0</value>
+                    <value level="9">300.0</value>
+                    <value level="11">500.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power>
+                    <value level="2">1.0</value>
+                    <value level="4">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">7.0</value>
+                    <value level="10">10.0</value>
+                    <value level="11">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54033" name="Petram Necklace" max-level="11">
+        <!--
+            level 1: Max HP +50.
+            level 2: Increases Max HP +50 and P. Def +1%%.
+            level 3: Max HP +100 and P. Def. +1%%.
+            level 4: Max HP +100 and P. Def. +2%%.
+            level 5: Max HP +150 and P. Def +2%%.
+            level 6: Max HP +150 and P. Def +3%%.
+            level 7: Increases Max HP +200, M. Def. +3%%.
+            level 8: Increases Max HP +200, M. Def. +5%%.
+            level 9: Increases Max HP +300 and P. Def +7%%.
+            level 10: Increases Max HP +300 and P. Def +10%%.
+            level 11: Increases Max HP +500 and P. Def +15%%.
+         -->
+        <icon initial="icon.elemental_necklace_earth_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="50.0">
+                    <value level="3">100.0</value>
+                    <value level="5">150.0</value>
+                    <value level="7">200.0</value>
+                    <value level="9">300.0</value>
+                    <value level="11">500.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power>
+                    <value level="2">1.0</value>
+                    <value level="4">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="8">5.0</value>
+                    <value level="9">7.0</value>
+                    <value level="10">10.0</value>
+                    <value level="11">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54034" name="Anakim Power" max-level="10">
+        <!--
+            level 1: MP Recovery Bonus +5 and M. Atk. Power +1%%.
+            level 2: MP Recovery Bonus +10 and M. Atk. +1%% when receiving MP recovery from Recharge.
+            level 3: MP Recovery Bonus +15 and M. Atk. +1%% when receiving MP recovery from Recharge.
+            level 4: MP Recovery Bonus +20 and M. Atk. +2%% when receiving MP recovery from Recharge.
+            level 5: MP Recovery Bonus +25 and M. Atk. +2%% when receiving MP recovery from Recharge.
+            level 6: MP Recovery Bonus +35 and M. Atk. Power +2%% and 75 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
+            level 7: MP Recovery Bonus +45 and M. Atk. Power +5%% and 150 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
+            level 8: MP Recovery Bonus +55 and M. Atk. Power +8%% and 225 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
+            level 9: MP Recovery Bonus +70 and M. Atk. Power +11%% and 300 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
+            level 10: MP Recovery Bonus +90 and M. Atk. Power +15%% and 600 MP Recovery upon using a skill or hitting when receiving MP recovery from Recharge.
+         -->
+        <icon initial="icon.etc_water_rune_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54035" name="Lilith Power" max-level="10">
+        <!--
+            level 1: The amount of Heal received +1%%, , P. Atk. +1%%.
+            level 2: The amount of Heal received +2%%, , P. Atk. +1%%.
+            level 3: The amount of Heal received +3%%, , P. Atk. +1%%.
+            level 4: The amount of Heal received +4%%, , P. Atk. +2%%.
+            level 5: The amount of Heal received +5%%, P. Atk. +2%%.
+            level 6: The amount of Heal received +5%%, P. Atk. +2%%, and 100 HP Recovery when being hit.
+            level 7: The amount of Heal received +7%%, P. Atk. +5%%, and 200 HP Recovery when being hit.
+            level 8: The amount of Heal received +9%%, P. Atk. +8%%, and 300 HP Recovery when being hit.
+            level 9: The amount of Heal received +12%%, P. Atk. +11%%, and 400 HP Recovery when being hit.
+            level 10: HP Recovery +15%%, Attack +15%%, Hit activates HP Recovery 900
+         -->
+        <icon initial="icon.etc_fire_rune_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54036" name="Anakim's Recovery" max-level="5" action="A1">
+        <!--
+            level 1: Hit or skill Activates 75 MP Recovery
+            level 2: Hit or skill Activates 150 MP Recovery
+            level 3: Hit or skill Activates 225 MP Recovery
+            level 4: Hit or skill Activates 300 MP Recovery
+            level 5: Hit or skill Activates 600 MP Recovery
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54037" name="Lilith's Recovery" max-level="5" action="A1">
+        <!--
+            level 1: Hit activates 100 HP Recovery
+            level 2: Hit activates 200 HP Recovery
+            level 3: Hit activates 300 HP Recovery
+            level 4: Hit activates 400 HP Recovery
+            level 5: Hit activates 900 HP Recovery
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54038" name="Sayha's Cloak">
+        <!-- Increases Max HP/MP +3%. -->
+        <icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54039" name="Sayha's Cloak +1" max-level="10">
+        <!--
+            level 1: Increases Max HP/MP +4%.
+            level 2: Max HP/Max MP +5%, XP/SP Gain +3%.
+            level 3: Max HP/Max MP +6%, XP/SP Gain +5%.
+            level 4: Max HP/Max MP +7%, XP/SP Gain +7%, P. Def. +2%.
+            level 5: Max HP/Max MP +8%, XP/SP Gain +10%, P. Def. +4%.
+            level 6: Max HP/Max MP +9%, XP/SP Gain +15%, P. Def. +6%.
+            level 7: Max HP/Max MP +10%, XP/SP Gain +20%, P. Def. +8% and P. Critical Damage/M. Critical Damage +5%.
+            level 8: Max HP/Max MP +11%, XP/SP Gain +25%, P. Def. +10%, M. Def. +2%, and P. Critical Damage/M. Critical Damage +7% .
+            level 9: Max HP/Max MP +12%, XP/SP Gain +30%, P. Def. +10%, M. Def. +4%, P. Critical Damage/M. Critical Damage +10%,  and P. Critical Damage Received -5%.
+            level 10: Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +10%, M. Def. +6%, P. Critical Damage/M. Critical Damage +15%,  and P. Critical Damage Received -10%.
+         -->
+        <icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54040" name="Sayha's Blink" max-level="2" debuff="true" action="A1">
+        <!--
+            level 1: Cancel Target, Teleport back to previous location.
+            level 2: Triggers the Cancel Target effect and teleports to the rear.
+         -->
+        <icon initial="icon.sayha2017_blink"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="120000">
+                <value level="2">60000</value>
+            </reuse>
+            <cool-time initial="200"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54041" name="Frintezza's Necklace" max-level="4">
+        <!--
+            level 1: Increases Sleep Resistance +10%%, Paralysis Attack Resistance +5%%, Sleep Atk. Rate +10%%, Paralysis Atk. Rate +5%% and Damage Reflect Resistance +2%%, P./M. Skill Power +5%%, and decreases Skill Cooldown -2%%.
+            level 2: Increases Sleep Resistance +15%%, Paralysis Attack Resistance +10%%, Sleep Atk. Rate +15%%, Paralysis Atk. Rate +10%% and Damage Reflect Resistance +3%%, P./M. Skill Power +10%%, and decreases Skill Cooldown -3%%.
+            level 3: Increases Sleep Resistance +20%%, Paralysis Attack Resistance +15%%, Sleep Atk. Rate +20%%, Paralysis Atk. Rate +15%%, Damage Reflect Resistance +4%%, P./M. Skill Power +15%%, Skill Cooldown -5%%, P. Critical Attack Hit Rate -5%%, M. Critical Attack Hit Rate -2%%.
+            level 4: Increases Sleep Resistance +30%%, Paralysis Attack Resistance +20%%, Sleep Atk. Rate +30%%, Paralysis Atk. Rate +20%%, Damage Reflect Resistance +10%%, P./M. Skill Power +20%%, Skill Cooldown -10%%, P. Critical Attack Hit Rate -10%%, M. Critical Attack Hit Rate -5%%.
+         -->
+        <icon initial="icon.accessory_necklace_of_frintessa_i00">
+            <value level="2">icon.accessory_necklace_of_frintessa_i03</value>
+            <value level="3">icon.accessory_necklace_of_frintessa_i04</value>
+            <value level="4">icon.accessory_necklace_of_frintessa_i05</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54042" name="Frintezza's Necklace - Special Ability" debuff="true" action="A1">
+        <!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +100%. -->
+        <icon initial="icon.accessory_necklace_of_frintessa_i05"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="120000"/>
+            <effect-point initial="-666"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54043" name="Rapid Wind" action="A1">
+        <!-- For 5 seconds, P. Def. +1000, M. Def. +1000, Movement Speed +50. -->
+        <icon initial="icon.skill30008"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="800"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54044" name="Sayha's Supreme Cloak">
+        <!-- Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +11%, M. Def. +6%, P. Critical Damage/M. Critical Damage +15%, Critical Damage Taken -10%. -->
+        <icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54045" name="Sayha's Supreme Cloak +1" max-level="10">
+        <!--
+            level 1: Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +12%, M. Def. +8%, P. Critical Damage +15%, M. Critical Damage +16%, Critical Damage Taken -10%.
+            level 2: Max HP/Max MP +15%, XP/SP Gain +30%, P. Def. +13%, M. Def. +10%, P. Critical Damage +15%, M. Critical Damage +16%, Critical Damage Taken -10%.
+            level 3: Max HP/Max MP +17%, XP/SP Gain +30%, P. Def. +14%, M. Def. +12%, P. Critical Damage +15%, M. Critical Damage +17%, Critical Damage Taken -10%.
+            level 4: Max HP/Max MP +17%, XP/SP Gain +30%, P. Def. +15%, M. Def. +14%, P. Critical Damage +16%, M. Critical Damage +18%, Critical Damage Taken -10%.
+            level 5: Max HP/Max MP +17%, XP/SP Gain +30%, P. Def. +16%, M. Def. +16%, P. Critical Damage +16%, M. Critical Damage +18%, Critical Damage Taken -11%.
+            level 6: Max HP/Max MP +20%, XP/SP Gain +30%, P. Def. +17%, M. Def. +17%, P. Critical Damage +16%, M. Critical Damage +18%, PVE Damage +2%, PVP Damage +1%, Critical Damage Taken -11%.
+            level 7: Max HP/Max MP +20%, XP/SP Gain +30%, P. Def. +18%, M. Def. +18%, P. Critical Damage +17%, M. Critical Damage +19%, PVE Damage +3%, PVP Damage +2%, Critical Damage Taken -11%.
+            level 8: Max HP/Max MP +21%, XP/SP Gain +30%, P. Def. +19%, M. Def. +19%, P. Critical Damage +17%, M. Critical Damage +20%, PVE Damage +5%, PVP Damage +3%, Critical Damage Taken -12%.
+            level 9: Max HP/Max MP +22%, XP/SP Gain +30%, P. Def. +20%, M. Def. +20%, P. Critical Damage +18%, M. Critical Damage +21%, PVE Damage +7%, PVP Damage +4%, Critical Damage Taken -13%.
+            level 10: Max HP/Max MP +25%, XP/SP Gain +30%, P. Def. +25%, M. Def. +25%, P. Critical Damage +20%, M. Critical Damage +25%, PVE Damage +10%, PVP Damage +5%, Critical Damage Taken -15%.
+         -->
+        <icon initial="BranchSys2.br_wing_of_sylphide_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54046" name="Aden Talisman">
+        <!-- Talisman for Aden Warriors -->
+        <icon initial="icon.bm_aden_talisman"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54047" name="Aden Talisman" max-level="10">
+        <!--
+            level 1: A talisman for Aden warriors. P. Def. +5, M. Def. +5, Atk. Spd. +10, Casting Spd. +10, Max HP +100, Max MP +30
+            level 2: A talisman for Aden warriors. P. Def. +10, M. Def. +10, Atk. Spd. +12, Casting Spd. +12, Max HP +120, Max MP +50
+            level 3: A talisman for Aden warriors. P. Def. +15, M. Def. +20, Atk. Spd. +15, Casting Spd. +15, Max HP +150, Max MP +70
+            level 4: A talisman for Aden warriors. P. Def. +20, M. Def. +30, Atk. Spd. +20, Casting Spd. +20, Max HP +180, Max MP +100, XP/SP Gain +10%
+            level 5: A talisman for Aden warriors. P. Atk. +50, M. Atk. +100, P. Def. +30, M. Def. +40, Atk. Spd. +25, Casting Spd. +25, Max HP +220, Max MP +130, XP/SP Gain +15%
+            level 6: A talisman for Aden warriors. P. Atk. +80, M. Atk. +150, P. Def. +40, M. Def. +60, Atk. Spd. +40, Casting Spd. +45, Max HP +260, Max MP +160, XP/SP Gain +20%
+            level 7: A talisman for Aden warriors. P. Atk. +135, M. Atk. +250, P. Def. +60, M. Def. +80, Atk. Spd. +70, Casting Spd. +75, Max HP +520, Max MP +320, XP/SP Gain +50%
+            level 8: A talisman for Aden warriors. P. Atk. +180, M. Atk. +360, P. Def. +80, M. Def. +120, Atk. Spd. +80, Casting Spd. +95, Max HP +640, Max MP +360, XP/SP Gain +50%
+            level 9: A talisman for Aden warriors. P. Atk. +225, M. Atk. +420, P. Def. +120, M. Def. +160, Atk. Spd. +90, Casting Spd. +110, Max HP +910, Max MP +430, XP/SP Gain +50%
+            level 10: A talisman for Aden warriors. P. Atk. +270, M. Atk. +490, P. Def. +160, M. Def. +200, Atk. Spd. +100, Casting Spd. +125, Max HP +1120, Max MP +530, XP/SP Gain +50%
+         -->
+        <icon initial="icon.bm_aden_talisman"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54048" name="Blessing of Aden" max-level="10" action="A1">
+        <!-- Aden blesses you to fully restore Sayha's Grace. -->
+        <icon initial="icon.skill19222"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="86400000">
+                <value level="2">82800000</value>
+                <value level="3">79200000</value>
+                <value level="4">75600000</value>
+                <value level="5">72000000</value>
+                <value level="6">64800000</value>
+                <value level="7">43200000</value>
+                <value level="8">21600000</value>
+                <value level="9">10800000</value>
+                <value level="10">3600000</value>
+            </reuse>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54049" name="Wish of Aden" action="A1">
+        <!-- none -->
+        <icon initial="icon.talisman_of_aden_fire"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54050" name="Scroll of Escape: High Priest Orven" action="A1">
+        <!-- A magic scroll that teleports you to High Priest Orven in the Town of Aden. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54051" name="Magic Lamp Acceleration Potion - 1-hour" action="A1">
+        <!-- Magic Lamp recharge speed +20%% -->
+        <icon initial="icon.etc_recall_potion2"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54052" name="Scroll: PK - Event" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="200"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54053" name="Player Commendation Treasure Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54054" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54055" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54056" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54057" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54058" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54059" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54060" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54061" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54062" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54063" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54064" name="Player Commendation Points" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54065" name="Sayha's Grace Kit" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54066" name="Red-Nosed Rudolph's Blessing" action="A1">
+        <!-- For 5 minutes, P. Atk./M. Atk. +150, P. Def./M. Def./Atk. Spd./Casting Spd. +100, Movement Speed +10, HP Recovery Bonus/MP Recovery Bonus +30%%. Changes appearance to Rudolph Outfit. The effect doesn't disappear upon death or restart. -->
+        <icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54067" name="Sayha's Storm Lv. 3 - 1-hour" action="A1">
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 1 hour. Cooldown 1 minute. -->
+        <icon initial="icon.bm_sayha_storm"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54068" name="Sayha's Gust - Event" action="A1">
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +300%% while hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
+        <icon initial="icon.ev_magic_flame_game_wind2"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54069" name="Magic Flame - Event" action="A1">
+        <!-- Magic Lamp recharge speed +100%% -->
+        <icon initial="icon.bm_soul_of_shilen"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54070" name="Sayha's Buff Scroll - Event" action="A2">
+        <!-- A mysterious scroll that triggers various buffs -->
+        <icon initial="icon.etc_ssq_i00"/>
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="91781"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="MULTI_BUFF">
+            <level initial="1"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <call-skill scope="SELF" skill="54100">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54101">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54103">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54112">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54104">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54105">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54106">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54108">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54109">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54110">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54111">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54113">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54114">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54115">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54116">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54117">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="54118">
+                <power initial="1.0"/>
+            </call-skill>
+        </effects>
+    </skill>
+    <skill id="54071" name="Battle Scroll" action="A2">
+        <!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. -->
+        <icon initial="icon.ev_charge_scroll"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="91780"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="MULTI_BUFF">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="350.0"/>
+            </stat-modify>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-hp-based>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="200.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="500.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="500.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_CP">
+                <power initial="500.0"/>
+            </vital-stat-modify>
+        </effects>
+    </skill>
+    <skill id="54072" name="Treasure Chest of Aden" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54073" name="Nuia's Gift" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54074" name="Einhasad's Spellbook Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54075" name="Eva's Spellbook Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54076" name="Shilen's Spellbook Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54077" name="Pa'agrio's Spellbook Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54078" name="Maphr's Spellbook Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54079" name="Dragon's Belt Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54080" name="Dragon's Belt Ornament" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54081" name="Dragon's Belt">
+        <!-- Dragon's Belt. Weight Limit +1000, DEX +1, WIT +1. -->
+        <icon initial="icon.r2_belt_i01"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54082" name="Dragon's Belt" max-level="10">
+        <!--
+            level 1: Dragon's Belt. Weight Limit +2000, Inventory Slots +2, DEX +1, WIT +1, CON +1, MEN +1.
+            level 2: Dragon's Belt. Weight Limit +3000, Inventory Slots +4, DEX +1, WIT +1, CON +1, MEN +1, STR +1, INT +1.
+            level 3: Dragon's Belt. Weight Limit +4000, Inventory Slots +6, DEX +2, WIT +2, CON +2, MEN +2, STR +2, INT +2.
+            level 4: Dragon's Belt. Weight Limit +5000, Inventory Slots +6, Max HP +100, Max MP +50, Max CP +100, DEX +3, WIT +3, CON +3, MEN +3, STR +50000, INT +50001.
+            level 5: Dragon's Belt. Weight Limit +6000, Inventory Slots +6, Max HP +150, Max MP +100, Max CP +200, HP Potion Bonus Recovery +80, MP Potion Bonus Recovery +10, P. Def. +30, M. Def. +20, DEX +60000, WIT +60001, CON +60002, MEN +60003, STR +60004, INT +60005.
+            level 6: Dragon's Belt. Weight Limit +7000, Inventory Slots +6, Max HP +200, Max MP +150, Max CP +300, HP Potion Bonus Recovery +100, MP Potion Bonus Recovery +20, P. Def. +40, M. Def. +30, DEX +70000, WIT +70001, CON +70002, MEN +70003, STR +70004, INT +70005.
+            level 7: Dragon's Belt. Weight Limit +8000, Inventory Slots +8, Max HP +300, Max MP +200, Max CP +500, HP Potion Bonus Recovery +120, MP Potion Bonus Recovery +30, P. Def. +50, M. Def. +40, Atk. Spd. +80000, P. Critical Rate 80001, M. Critical Rate +80002, DEX +80003, WIT +80004, CON +80005, MEN +80006, STR +80007, INT +80008.
+            level 8: Dragon's Belt. Weight Limit +9000, Inventory Slots +8, Max HP +400, Max MP +250, Max CP +700, HP Potion Bonus Recovery +150, MP Potion Bonus Recovery +50, P. Def. +80, M. Def. +50, Atk. Spd. +90000, P. Critical Rate 90001, M. Critical Rate +90002, Heal Received +90003, Received Damage -90004, DEX +90005, WIT +90006, CON +90007, MEN +90008, STR +90009, INT +80.
+            level 9: Dragon's Belt. Weight Limit +10000, Inventory Slots +10, Max HP +600, Max MP +300, Max CP +1000, HP Potion Bonus Recovery +200, MP Potion Bonus Recovery +80, P. Def. +100, M. Def. +80, Atk. Spd. +100000, P. Critical Rate 100001, M. Critical Rate +100002, Heal Received +100003, Received Damage -100004, DEX +100005, WIT +100006, CON +100007, MEN +100008, STR +100009, INT +100.
+            level 10: Dragon's Belt. Weight Limit +12000, Inventory Slots +12, Max HP +1000, Max MP +500, Max CP +1500, HP Potion Bonus Recovery +300, MP Potion Bonus Recovery +100, P. Def. +150, M. Def. +120, Atk. Spd. +120000, P. Critical Rate 120001, M. Critical Rate +120002, Heal Received +120003, Received Damage -120004, DEX +120005, WIT +120006, CON +120007, MEN +120008, STR +120009, INT +120.
+         -->
+        <icon initial="icon.r2_belt_i01"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54083" name="Lucky Pouch" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54084" name="Lucky Pouch" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54085" name="Golden Lucky Pouch" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54086" name="Golden Lucky Pouch" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54087" name="Immortal Rare Accessory Box (15-day)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54088" name="Lucky Pig Happiness Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.special_cube_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54089" name="Lucky Pig Honey Buff" action="A1">
+        <!-- For 1 hour, Atk. Spd +100, Casting Spd. +100, Speed +20, XP/SP Gain +10%%. Does not disappear at death or when restarting. -->
+        <icon initial="icon.accessory_pig_cap_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54090" name="Lucky Pig Blessing Star Candy" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54091" name="Lucky Pig's Energy" max-level="5" action="A1">
+        <!--
+            level 1: Lucky Pig's Energy. Receive Lucky Pig's gift after the buff disappears. STR 1, INT 1, CON 1, MEN 1, DEX 1, WIT 1. <Caution> If you are dead at the time the item is sent, or if you don't have enough space in the inventory, you cannot receive the gift. You also can't receive the next stage of the buff if you are dead.
+            level 4: Lucky Pig's Energy. Receive Lucky Pig's gift after the buff disappears. STR 1, INT 1, CON 1, MEN 1, DEX 1, WIT 1. <Caution> If you are dead at the time the item is sent, or if you don't have enough space in the inventory, you cannot receive the gift.
+            level 5: Lucky Pig's Energy reward is heading to your inventory.
+         -->
+        <icon initial="icon.skill11540"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54092" name="Lucky Pig's Regular Reward" action="A1">
+        <!-- none -->
+        <icon initial="icon.special_cube_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54093" name="Lucky Pig's Golden Reward" action="A1">
+        <!-- none -->
+        <icon initial="icon.special_cube_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="-1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

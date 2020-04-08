@@ -1,1933 +1,1556 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="3001" name="int_1">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="3002" name="int_2">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="3003" name="str_2">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="3004" name="maxmp_5">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="3005" name="Bleed" debuff="true" action="A2">
-		<!-- HP continuously decreases. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="40"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="5"/>
-			<time initial="20"/>
-			<chance initial="50"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="44.0"/>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3006" name="Equip Set Items">
-		<!-- Equipping set items additionally increases stats. -->
-		<icon initial="icon.skill0042"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="3007" name="Special Ability: Guidance" max-level="6" >
-		<!-- Increases P. Accuracy. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
-				<power initial="6.88">
-					<value level="2">6.07</value>
-					<value level="3">5.72</value>
-					<value level="4">5.37</value>
-					<value level="5">5.02</value>
-					<value level="6">4.68</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3008" name="Special Ability: Guidance" max-level="6" >
-		<!-- Increases P. Accuracy. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
-				<power initial="5.42">
-					<value level="2">5.12</value>
-					<value level="3">4.82</value>
-					<value level="4">4.53</value>
-					<value level="5">4.24</value>
-					<value level="6">3.95</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3009" name="Special Ability: Evasion" max-level="8" >
-		<!-- Increases P. Evasion. -->
-		<icon initial="icon.skill0198"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">80</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
-				<power initial="2.95">
-					<value level="2">2.82</value>
-					<value level="3">2.68</value>
-					<value level="4">2.55</value>
-					<value level="5">2.41</value>
-					<value level="6">2.28</value>
-					<value level="7">7.5</value>
-					<value level="8">5.31</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3010" name="Special Ability: Focus" max-level="9" >
-		<!-- Increases P. Critical Rate. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
-				<power initial="86.7">
-					<value level="2">82.2</value>
-					<value level="3">77.8</value>
-					<value level="4">73.3</value>
-					<value level="5">68.9</value>
-					<value level="6">64.5</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3011" name="Special Ability: Focus" max-level="7" >
-		<!-- Increases P. Critical Rate. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
-				<power initial="90.5">
-					<value level="2">85.9</value>
-					<value level="3">81.2</value>
-					<value level="4">76.6</value>
-					<value level="5">71.9</value>
-					<value level="6">67.3</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3012" name="Special Ability: Anger" max-level="6" >
-		<!-- Decreases Max HP and increases P. Atk. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="-15.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-				<power initial="20.44">
-					<value level="2">22.64</value>
-					<value level="3">24.77</value>
-					<value level="4">26.78</value>
-					<value level="5">28.59</value>
-					<value level="6">30.12</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3013" name="Special Ability: Health" max-level="2" >
-		<!--
+    <skill id="3001" name="int_1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="3002" name="int_2">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="3003" name="str_2">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="3004" name="maxmp_5">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="3005" name="Bleed" debuff="true" action="A2">
+        <!-- HP continuously decreases. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="40"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="5"/>
+            <time initial="20"/>
+            <chance initial="50"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="44.0"/>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3006" name="Equip Set Items">
+        <!-- Equipping set items additionally increases stats. -->
+        <icon initial="icon.skill0042"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="3007" name="Special Ability: Guidance" max-level="6">
+        <!-- Increases P. Accuracy. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="ACCURACY" stat-add="ACCURACY">
+                <power initial="6.88">
+                    <value level="2">6.07</value>
+                    <value level="3">5.72</value>
+                    <value level="4">5.37</value>
+                    <value level="5">5.02</value>
+                    <value level="6">4.68</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3008" name="Special Ability: Guidance" max-level="6">
+        <!-- Increases P. Accuracy. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="ACCURACY" stat-add="ACCURACY">
+                <power initial="5.42">
+                    <value level="2">5.12</value>
+                    <value level="3">4.82</value>
+                    <value level="4">4.53</value>
+                    <value level="5">4.24</value>
+                    <value level="6">3.95</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3009" name="Special Ability: Evasion" max-level="8">
+        <!-- Increases P. Evasion. -->
+        <icon initial="icon.skill0198"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="2.95">
+                    <value level="2">2.82</value>
+                    <value level="3">2.68</value>
+                    <value level="4">2.55</value>
+                    <value level="5">2.41</value>
+                    <value level="6">2.28</value>
+                    <value level="7">7.5</value>
+                    <value level="8">5.31</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3010" name="Special Ability: Focus" max-level="9">
+        <!-- Increases P. Critical Rate. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="86.7">
+                    <value level="2">82.2</value>
+                    <value level="3">77.8</value>
+                    <value level="4">73.3</value>
+                    <value level="5">68.9</value>
+                    <value level="6">64.5</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3011" name="Special Ability: Focus" max-level="7">
+        <!-- Increases P. Critical Rate. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="90.5">
+                    <value level="2">85.9</value>
+                    <value level="3">81.2</value>
+                    <value level="4">76.6</value>
+                    <value level="5">71.9</value>
+                    <value level="6">67.3</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3012" name="Special Ability: Anger" max-level="6">
+        <!-- Decreases Max HP and increases P. Atk. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="-15.0"/>
+            </vital-stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="20.44">
+                    <value level="2">22.64</value>
+                    <value level="3">24.77</value>
+                    <value level="4">26.78</value>
+                    <value level="5">28.59</value>
+                    <value level="6">30.12</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3013" name="Special Ability: Health" max-level="2">
+        <!--
             level 1: Increases Max HP.
             level 2: Increases Max HP. Enables the character to attack multiple opponents.
          -->
-		<icon initial="icon.skill0211"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="25.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
-				<power>
-					<value level="2">4.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3014" name="Special Ability: Mana Up">
-		<!-- Increases Max MP. -->
-		<icon initial="icon.skill0213"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
-				<power initial="30.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3016" name="Special Ability: Critical Stun" max-level="7" debuff="true" action="A2">
-		<!-- Stunned and temporarily rendered immobile. -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-point initial="-92"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="ENEMY_ONLY" object="NOT_FRIEND" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="9"/>
-			<chance initial="34">
-				<value level="2">32</value>
-				<value level="3">31</value>
-				<value level="4">29</value>
-				<value level="5">27</value>
-				<value level="6">25</value>
-			</chance>
-		</abnormal>
-		<effects>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="3017" name="Special Ability: Magic Regeneration" max-level="4" action="A1">
-		<!--
+        <icon initial="icon.skill0211"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="25.0"/>
+            </vital-stat-modify>
+            <stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
+                <power>
+                    <value level="2">4.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3014" name="Special Ability: Mana Up">
+        <!-- Increases Max MP. -->
+        <icon initial="icon.skill0213"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="30.0"/>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3016" name="Special Ability: Critical Stun" max-level="7" debuff="true" action="A2">
+        <!-- Stunned and temporarily rendered immobile. -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-point initial="-92"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="ENEMY_ONLY" object="NOT_FRIEND"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="9"/>
+            <chance initial="34">
+                <value level="2">32</value>
+                <value level="3">31</value>
+                <value level="4">29</value>
+                <value level="5">27</value>
+                <value level="6">25</value>
+            </chance>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="3017" name="Special Ability: Magic Regeneration" max-level="4" action="A1">
+        <!--
             level 1: Increases MP Recovery Bonus by 12% for 10 minutes.
             level 2: Increases MP Recovery Bonus by 14% for 10 minutes.
             level 3: Increases MP Recovery Bonus by 16% for 10 minutes.
             level 4: Increases MP Recovery Bonus by 20% for 10 minutes.
          -->
-		<icon initial="icon.skill1044"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="379">
-				<value level="3">457</value>
-				<value level="4">566</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="3018" name="Special Ability: Back Blow" max-level="6" >
-		<!-- Increases P. Critical Rate when attacking from behind. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-position-based stat="CRITICAL_RATE" position="BACK">				<power initial="71.0">
-				<value level="2">67.0</value>
-				<value level="3">63.0</value>
-				<value level="4">60.0</value>
-				<value level="5">56.0</value>
-				<value level="6">53.0</value>
-			</power>
-			</stat-position-based>
-		</effects>
-	</skill>
-	<skill id="3019" name="Special Ability: Back Blow" max-level="6" >
-		<!-- Increases P. Critical Rate when attacking from behind. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-position-based stat="CRITICAL_RATE" position="BACK">				<power initial="50.0">
-				<value level="2">47.0</value>
-				<value level="3">45.0</value>
-				<value level="4">42.0</value>
-				<value level="5">40.0</value>
-				<value level="6">37.0</value>
-			</power>
-			</stat-position-based>
-		</effects>
-	</skill>
-	<skill id="3020" name="Special Ability: Critical Bleed" max-level="6" debuff="true" action="A2">
-		<!-- HP has been momentarily decreased due to Bleed. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="NONE" scope="NONE" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="5">
-				<value level="3">6</value>
-				<value level="6">7</value>
-			</level>
-			<time initial="20"/>
-			<chance initial="17">
-				<value level="3">14</value>
-				<value level="6">12</value>
-			</chance>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="128.0">
-					<value level="3">190.0</value>
-					<value level="6">256.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3021" name="Special Ability: Critical Bleed" max-level="6" debuff="true" action="A2">
-		<!-- HP has been momentarily decreased due to Bleed. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="NONE" scope="NONE" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="5"/>
-			<time initial="20"/>
-			<chance initial="51">
-				<value level="3">42</value>
-				<value level="5">41</value>
-				<value level="6">35</value>
-			</chance>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="43.0">
-					<value level="3">64.0</value>
-					<value level="5">65.0</value>
-					<value level="6">88.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3022" name="Special Ability: Critical Drain" max-level="6" action="A1" type="MAGIC">
-		<!-- none -->
-		<icon initial="icon.skill0070"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<reuse initial="15000"/>
-			<effect-point initial="-209">
-				<value level="2">-214</value>
-				<value level="3">-219</value>
-				<value level="4">-224</value>
-				<value level="5">-229</value>
-				<value level="6">-234</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY" />
-		<effects>
-			<hp-drain percentage="21">
-				<power initial="9.26">
-					<value level="2">9.33</value>
-					<value level="3">9.31</value>
-					<value level="4">9.19</value>
-					<value level="5">8.97</value>
-					<value level="6">8.65</value>
-				</power>
-			</hp-drain>
-		</effects>
-	</skill>
-	<skill id="3023" name="Special Ability: Critical Damage" max-level="9" >
-		<!-- Increases P. Critical Damage. -->
-		<icon initial="icon.skill1242"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="174.78">
-					<value level="2">194.1</value>
-					<value level="3">213.12</value>
-					<value level="4">231.29</value>
-					<value level="5">247.98</value>
-					<value level="6">262.57</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3024" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-		<!-- HP has been momentarily decreased due to Poison. -->
-		<icon initial="icon.skill1168"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<reuse initial="12000"/>
-			<effect-point initial="-121">
-				<value level="2">-203</value>
-				<value level="3">-285</value>
-				<value level="4">-418</value>
-				<value level="5">-495</value>
-				<value level="6">-582</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="5">
-				<value level="3">6</value>
-				<value level="6">7</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="15">
-				<value level="3">12</value>
-				<value level="6">10</value>
-			</chance>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="191.0">
-					<value level="3">291.0</value>
-					<value level="6">403.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3025" name="Special Ability: Critical Anger" max-level="6" action="A1">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="NONE" scope="NONE" />
-	</skill>
-	<skill id="3026" name="Special Ability: Critical Anger" max-level="6" >
-		<!-- Deals additional damage by spending your HP upon P. Critical. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="248.56">
-					<value level="2">298.04</value>
-					<value level="3">352.73</value>
-					<value level="4">411.98</value>
-					<value level="5">474.82</value>
-					<value level="6">539.9</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3027" name="Special Ability: Risk Focus" max-level="7" >
-		<!-- Increases P. Critical Rate when in danger. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">80</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="60">
-				<power initial="138.7">
-					<value level="2">130.9</value>
-					<value level="3">123.1</value>
-					<value level="4">115.4</value>
-					<value level="5">107.7</value>
-					<value level="6">99.9</value>
-					<value level="7">164.0</value>
-				</power>
-			</stat-hp-based>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power>
-					<value level="7">5.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power>
-					<value level="7">5.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power>
-					<value level="7">5.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3028" name="Special Ability: Risk Evasion" max-level="6" >
-		<!-- Increases P. Evasion when in danger. -->
-		<icon initial="icon.skill0198"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="60">
-				<power initial="7.63">
-					<value level="2">7.29</value>
-					<value level="3">6.95</value>
-					<value level="4">6.6</value>
-					<value level="5">6.24</value>
-					<value level="6">5.87</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3029" name="Special Ability: Risk Evasion" max-level="6" >
-		<!-- Increases P. Evasion when in danger. -->
-		<icon initial="icon.skill0198"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="60">
-				<power initial="4.44">
-					<value level="2">4.24</value>
-					<value level="3">4.04</value>
-					<value level="4">3.84</value>
-					<value level="5">3.63</value>
-					<value level="6">3.41</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3030" name="Special Ability: Risk Evasion" max-level="6" >
-		<!-- Increases P. Evasion when in danger. -->
-		<icon initial="icon.skill0198"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="60">
-				<power initial="7.63">
-					<value level="2">7.29</value>
-					<value level="3">6.95</value>
-					<value level="4">6.6</value>
-					<value level="5">6.24</value>
-					<value level="6">5.87</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3031" name="Special Ability: Risk Evasion" max-level="6" >
-		<!-- Increases P. Evasion when in danger. -->
-		<icon initial="icon.skill0198"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="60">
-				<power initial="7.63">
-					<value level="2">7.29</value>
-					<value level="3">6.95</value>
-					<value level="4">6.6</value>
-					<value level="5">6.24</value>
-					<value level="6">5.87</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3032" name="Special Ability: Risk Haste" max-level="6" >
-		<!-- Increases Atk. Spd. when in danger. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="13.0">
-					<value level="2">12.0</value>
-					<value level="4">11.0</value>
-					<value level="5">10.0</value>
-					<value level="6">9.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3033" name="Special Ability: Risk Haste" max-level="6" >
-		<!-- Increases Atk. Spd. when in danger. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="13.0">
-					<value level="2">12.0</value>
-					<value level="4">11.0</value>
-					<value level="5">10.0</value>
-					<value level="6">9.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3034" name="Special Ability: Risk Haste" max-level="6" >
-		<!-- Increases Atk. Spd. when in danger. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="13.0">
-					<value level="2">12.0</value>
-					<value level="4">11.0</value>
-					<value level="5">10.0</value>
-					<value level="6">9.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3035" name="Special Ability: Mortal Strike" max-level="6" >
-		<!-- Increases Deadly Stab rate. -->
-		<icon initial="icon.skill0410">
-			<value level="3">icon.skill0016</value>
-		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="BLOW_RATE" stat-add="BLOW_RATE" mode="PER">
-				<power initial="50.0">
-					<value level="2">48.0</value>
-					<value level="3">46.0</value>
-					<value level="4">44.0</value>
-					<value level="5">42.0</value>
-					<value level="6">40.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3036" name="Special Ability: Haste" max-level="6" >
-		<!-- Increases Atk. Spd. -->
-		<icon initial="icon.skill1241">
-			<value level="3">icon.skill1086</value>
-		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="8.0">
-					<value level="2">7.0</value>
-					<value level="5">6.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3037" name="Special Ability: Haste" max-level="6" >
-		<!-- Increases Atk. Spd. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="8.0">
-					<value level="2">7.0</value>
-					<value level="5">6.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3038" name="Special Ability: Haste" max-level="6" >
-		<!-- Increases Atk. Spd. -->
-		<icon initial="icon.skill1241">
-			<value level="2">icon.skill1086</value>
-		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="8.0">
-					<value level="2">7.0</value>
-					<value level="5">6.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3039" name="Special Ability: Critical Drain" max-level="7" action="A1" type="MAGIC">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">70</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-point initial="-239">
-				<value level="2">-243</value>
-				<value level="3">-248</value>
-				<value level="4">-253</value>
-				<value level="5">-257</value>
-				<value level="6">-262</value>
-				<value level="7">-266</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana>
-				<value level="4">12</value>
-				<value level="5">0</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<hp-drain percentage="33">
-				<power initial="6.85">
-					<value level="2">7.96</value>
-					<value level="3">9.26</value>
-					<value level="4">10.8</value>
-					<value level="5">12.62</value>
-					<value level="6">14.82</value>
-				</power>
-			</hp-drain>
-		</effects>
-	</skill>
-	<skill id="3040" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-		<!-- HP has been momentarily decreased due to Poison. -->
-		<icon initial="icon.skill1168"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-point initial="-121">
-				<value level="2">-203</value>
-				<value level="3">-285</value>
-				<value level="4">-418</value>
-				<value level="5">-495</value>
-				<value level="6">-582</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="5">
-				<value level="3">6</value>
-				<value level="6">7</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="17">
-				<value level="3">14</value>
-				<value level="6">12</value>
-			</chance>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="168.0">
-					<value level="3">249.0</value>
-					<value level="6">336.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3041" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-		<!-- HP has been momentarily decreased due to Poison. -->
-		<icon initial="icon.skill1168"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-point initial="-121">
-				<value level="2">-203</value>
-				<value level="3">-285</value>
-				<value level="4">-418</value>
-				<value level="5">-495</value>
-				<value level="6">-582</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="5">
-				<value level="3">6</value>
-				<value level="6">7</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="9">
-				<value level="3">7</value>
-				<value level="6">6</value>
-			</chance>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="317.0">
-					<value level="3">498.0</value>
-					<value level="6">671.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3042" name="Special Ability: Critical Damage" max-level="16" >
-		<!-- Increases P. Critical Damage. -->
-		<icon initial="icon.skill0193">
-			<value level="4">icon.skill1242</value>
-			<value level="14">icon.skill0193</value>
-		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="48">
-				<value level="2">49</value>
-				<value level="3">50</value>
-				<value level="4">51</value>
-				<value level="5">52</value>
-				<value level="6">53</value>
-				<value level="7">54</value>
-				<value level="8">55</value>
-				<value level="9">56</value>
-				<value level="10">57</value>
-				<value level="11">58</value>
-				<value level="12">59</value>
-				<value level="13">60</value>
-				<value level="14">61</value>
-				<value level="15">62</value>
-				<value level="16">63</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="81.6">
-					<value level="2">61.4</value>
-					<value level="3">84.14</value>
-					<value level="4">75.49</value>
-					<value level="5">66.77</value>
-					<value level="6">58.01</value>
-					<value level="7">49.42</value>
-					<value level="8">84.11</value>
-					<value level="9">166.26</value>
-					<value level="10">146.88</value>
-					<value level="11">127.0</value>
-					<value level="12">107.01</value>
-					<value level="13">133.97</value>
-					<value level="14">124.79</value>
-					<value level="15">275.26</value>
-					<value level="16">267.13</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3043" name="Special Ability: Critical Damage" max-level="8" >
-		<!-- Increases P. Critical Damage. -->
-		<icon initial="icon.skill0193"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="106.45">
-					<value level="2">118.22</value>
-					<value level="3">129.81</value>
-					<value level="4">140.87</value>
-					<value level="5">151.04</value>
-					<value level="6">159.93</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3044" name="Special Ability: Focus" max-level="16" >
-		<!-- Increases P. Critical Rate. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="48">
-				<value level="2">49</value>
-				<value level="3">50</value>
-				<value level="4">51</value>
-				<value level="5">52</value>
-				<value level="6">53</value>
-				<value level="7">54</value>
-				<value level="8">55</value>
-				<value level="9">56</value>
-				<value level="10">57</value>
-				<value level="11">58</value>
-				<value level="12">59</value>
-				<value level="13">60</value>
-				<value level="14">61</value>
-				<value level="15">62</value>
-				<value level="16">63</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" stat-add="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" hp-percent="0">
-				<power initial="53.6">
-					<value level="2">38.5</value>
-					<value level="3">50.4</value>
-					<value level="4">43.2</value>
-					<value level="5">36.5</value>
-					<value level="6">30.4</value>
-					<value level="7">24.8</value>
-					<value level="8">40.4</value>
-					<value level="9">76.6</value>
-					<value level="10">65.0</value>
-					<value level="11">54.0</value>
-					<value level="12">43.7</value>
-					<value level="13">52.6</value>
-					<value level="14">47.2</value>
-					<value level="15">98.7</value>
-					<value level="16">92.4</value>
-				</power>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3045" name="Special Ability: Haste" max-level="16" >
-		<!-- Increases Atk. Spd. -->
-		<icon initial="icon.skill1086">
-			<value level="4">icon.skill1241</value>
-			<value level="5">icon.skill1086</value>
-			<value level="10">icon.skill1241</value>
-			<value level="11">icon.skill1086</value>
-		</icon>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="48">
-				<value level="2">49</value>
-				<value level="3">50</value>
-				<value level="4">51</value>
-				<value level="5">52</value>
-				<value level="6">53</value>
-				<value level="7">54</value>
-				<value level="8">55</value>
-				<value level="9">56</value>
-				<value level="10">57</value>
-				<value level="11">58</value>
-				<value level="12">59</value>
-				<value level="13">60</value>
-				<value level="14">61</value>
-				<value level="15">62</value>
-				<value level="16">63</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="2">4.0</value>
-					<value level="3">5.0</value>
-					<value level="4">4.0</value>
-					<value level="5">3.0</value>
-					<value level="7">2.0</value>
-					<value level="8">4.0</value>
-					<value level="9">7.0</value>
-					<value level="10">6.0</value>
-					<value level="11">5.0</value>
-					<value level="12">4.0</value>
-					<value level="13">5.0</value>
-					<value level="14">4.0</value>
-					<value level="15">9.0</value>
-					<value level="16">8.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3046" name="Special Ability: Guidance" max-level="16" >
-		<!-- Increases P. Accuracy. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="48">
-				<value level="2">49</value>
-				<value level="3">50</value>
-				<value level="4">51</value>
-				<value level="5">52</value>
-				<value level="6">53</value>
-				<value level="7">54</value>
-				<value level="8">55</value>
-				<value level="9">56</value>
-				<value level="10">57</value>
-				<value level="11">58</value>
-				<value level="12">59</value>
-				<value level="13">60</value>
-				<value level="14">61</value>
-				<value level="15">62</value>
-				<value level="16">63</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
-				<power initial="3.9">
-					<value level="2">2.8</value>
-					<value level="3">3.7</value>
-					<value level="4">3.1</value>
-					<value level="5">2.6</value>
-					<value level="6">2.2</value>
-					<value level="7">1.8</value>
-					<value level="8">2.9</value>
-					<value level="9">5.7</value>
-					<value level="10">4.8</value>
-					<value level="11">3.9</value>
-					<value level="12">3.2</value>
-					<value level="13">3.8</value>
-					<value level="14">3.4</value>
-					<value level="15">6.5</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3047" name="Special Ability: Acumen" max-level="2" >
-		<!-- Increases Casting Spd. -->
-		<icon initial="icon.skill1085"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="64"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power>
-					<value level="2">5.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power>
-					<value level="2">5.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power>
-					<value level="2">5.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3048" name="Special Ability: Conversion">
-		<!-- Decreases Max HP and increases Max MP. -->
-		<icon initial="icon.skill1048"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="64"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
-				<power initial="-40.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
-				<power initial="60.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3049" name="Special Ability: Magic Damage" max-level="2" action="A1" type="MAGIC">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY" />
-		<effects>
-			<magical-attack>
-				<power initial="8.39"/>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="3052" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-		<!-- HP has been momentarily decreased due to Bleed. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="NONE" scope="NONE" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="7"/>
-			<time initial="20"/>
-			<chance initial="42"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="74.0"/>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3053" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-		<!-- HP has been momentarily decreased due to Bleed. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="NONE" scope="NONE" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="7"/>
-			<time initial="20"/>
-			<chance initial="35"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="88.0"/>
-			</damage-over-time>
-			<speed mode="PER">
-				<power initial="-20.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="3054" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-		<!-- HP has been momentarily decreased due to Bleed. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="NONE" scope="NONE" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="7"/>
-			<time initial="20"/>
-			<chance initial="12"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="256.0"/>
-			</damage-over-time>
-			<speed mode="PER">
-				<power initial="-20.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="3055" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
-		<!-- HP has been momentarily decreased due to Bleed. -->
-		<icon initial="icon.skill0223"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="NONE" scope="NONE" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="7"/>
-			<time initial="20"/>
-			<chance initial="24"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="128.0"/>
-			</damage-over-time>
-			<speed mode="PER">
-				<power initial="-20.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="3056" name="Special Ability: Risk Haste">
-		<!-- Increases Atk. Spd. when in danger. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="64"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="11.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3059" name="Special Ability: Critical Drain" max-level="2" action="A1" type="MAGIC">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-range initial="1100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY" />
-		<effects>
-			<hp-drain percentage="65">
-				<power initial="18.0">
-					<value level="2">19.0</value>
-				</power>
-			</hp-drain>
-		</effects>
-	</skill>
-	<skill id="3060" name="Special Ability: Critical Drain" max-level="2" action="A1" type="MAGIC">
-		<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-range initial="1100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY" />
-		<effects>
-			<hp-drain percentage="35">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-				</power>
-			</hp-drain>
-		</effects>
-	</skill>
-	<skill id="3061" name="Special Ability: Critical Poison" max-level="3" debuff="true" action="A2" type="MAGIC">
-		<!-- HP has been momentarily decreased due to Poison. -->
-		<icon initial="icon.skill1168"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="64">
-				<value level="2">67</value>
-				<value level="3">70</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-range initial="1100"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="7"/>
-			<time initial="30"/>
-			<chance initial="10"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="403.0">
-					<value level="3">439.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3062" name="Special Ability: Critical Poison" max-level="2" debuff="true" action="A2" type="MAGIC">
-		<!-- HP has been momentarily decreased due to Poison. -->
-		<icon initial="icon.skill1168"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-range initial="1100"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="7"/>
-			<time initial="30"/>
-			<chance initial="18"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="3">
-				<power initial="224.0"/>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3068" name="Special Ability: Haste">
-		<!-- Increases Atk. Spd. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="64"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="6.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3069" name="Special Ability: Risk Evasion">
-		<!-- Increases P. Evasion when in danger. -->
-		<icon initial="icon.skill0198"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="60">
-				<power initial="6.8"/>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="3070" name="Special Ability: Critical Stun" max-level="4" debuff="true" action="A2">
-		<!-- Stunned and temporarily rendered immobile. -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
-			<magic-level initial="64">
-				<value level="2">67</value>
-				<value level="3">70</value>
-				<value level="4">82</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="ENEMY_ONLY" object="NOT_FRIEND" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="9"/>
-			<chance initial="25">
-				<value level="4">48</value>
-			</chance>
-		</abnormal>
-		<effects>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="3071" name="Special Ability: Risk Focus">
-		<!-- Increases P. Critical Rate when in danger. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="64"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="60">
-				<power initial="130.0"/>
-			</stat-hp-based>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER">
-				<power/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3074" name="Special Ability: Magic Silence" max-level="2" debuff="true" action="A2" type="MAGIC">
-		<!-- Temporarily blocks the ability to use magic skills. -->
-		<icon initial="icon.skill1064"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="SILENCE" visual="SILENCE" >
-			<level initial="1"/>
-			<time initial="120"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<effect name="Mute"/>
-		</effects>
-	</skill>
-	<skill id="3075" name="Special Ability: Magic Paralyze" max-level="2" debuff="true" action="A2" type="MAGIC">
-		<!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
-		<icon initial="icon.skill1170"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
-			<magic-level initial="64">
-				<value level="2">67</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="PARALYZE">
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="20"/>
-		</abnormal>
-		<effects>
-			<speed mode="PER">
-				<power initial="-50.0"/>
-			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-50.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="-50.0"/>
-			</stat-modify>
-			<call-skill skill="6126" scope="END">
-				<power initial="1.0"/>
-			</call-skill>
-		</effects>
-	</skill>
-	<skill id="3076" name="Special Ability: Empower" max-level="9" >
-		<!-- Increases M. Atk. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">28</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
-				<power initial="20.36">
-					<value level="2">22.51</value>
-					<value level="3">24.59</value>
-					<value level="4">26.53</value>
-					<value level="5">28.27</value>
-					<value level="6">29.7</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3077" name="Special Ability: Magic Power" max-level="6" >
-		<!-- Increases MP Consumption and M. Atk. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
-				<power initial="75.86">
-					<value level="2">87.22</value>
-					<value level="3">99.39</value>
-					<value level="4">112.26</value>
-					<value level="5">125.66</value>
-					<value level="6">139.41</value>
-				</power>
-			</stat-modify>
-			<magic-cost type="MAGIC">
-				<power initial="15.0"/>
-			</magic-cost>
-		</effects>
-	</skill>
-	<skill id="3078" name="Special Ability: Magic Silence" max-level="6" debuff="true" action="A2" type="MAGIC">
-		<!-- Temporarily blocks the ability to use magic skills. -->
-		<icon initial="icon.skill1064"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">28</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="SILENCE" visual="SILENCE" >
-			<level initial="1"/>
-			<time initial="120"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<effect name="Mute"/>
-		</effects>
-	</skill>
-	<skill id="3079" name="Special Ability: Magic Paralyze" max-level="6" debuff="true" action="A2" type="MAGIC">
-		<!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
-		<icon initial="icon.skill1170"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">28</value>
-				<value level="6">61</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="PARALYZE">
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="20"/>
-		</abnormal>
-		<effects>
-			<speed mode="PER">
-				<power initial="-50.0"/>
-			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-50.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="-50.0"/>
-			</stat-modify>
-			<call-skill skill="6126" scope="END">
-				<power initial="1.0"/>
-			</call-skill>
-		</effects>
-	</skill>
-	<skill id="3080" name="Item Skill: Aggression" max-level="15" action="A1">
-		<!--
+        <icon initial="icon.skill1044"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="379">
+                <value level="3">457</value>
+                <value level="4">566</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="3018" name="Special Ability: Back Blow" max-level="6">
+        <!-- Increases P. Critical Rate when attacking from behind. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-position-based position="BACK" stat="CRITICAL_RATE">
+                <power initial="71.0">
+                    <value level="2">67.0</value>
+                    <value level="3">63.0</value>
+                    <value level="4">60.0</value>
+                    <value level="5">56.0</value>
+                    <value level="6">53.0</value>
+                </power>
+            </stat-position-based>
+        </effects>
+    </skill>
+    <skill id="3019" name="Special Ability: Back Blow" max-level="6">
+        <!-- Increases P. Critical Rate when attacking from behind. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-position-based position="BACK" stat="CRITICAL_RATE">
+                <power initial="50.0">
+                    <value level="2">47.0</value>
+                    <value level="3">45.0</value>
+                    <value level="4">42.0</value>
+                    <value level="5">40.0</value>
+                    <value level="6">37.0</value>
+                </power>
+            </stat-position-based>
+        </effects>
+    </skill>
+    <skill id="3020" name="Special Ability: Critical Bleed" max-level="6" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="NONE" scope="NONE"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="5">
+                <value level="3">6</value>
+                <value level="6">7</value>
+            </level>
+            <time initial="20"/>
+            <chance initial="17">
+                <value level="3">14</value>
+                <value level="6">12</value>
+            </chance>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="128.0">
+                    <value level="3">190.0</value>
+                    <value level="6">256.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3021" name="Special Ability: Critical Bleed" max-level="6" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="NONE" scope="NONE"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="5"/>
+            <time initial="20"/>
+            <chance initial="51">
+                <value level="3">42</value>
+                <value level="5">41</value>
+                <value level="6">35</value>
+            </chance>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="43.0">
+                    <value level="3">64.0</value>
+                    <value level="5">65.0</value>
+                    <value level="6">88.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3022" name="Special Ability: Critical Drain" max-level="6" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0070"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <reuse initial="15000"/>
+            <effect-point initial="-209">
+                <value level="2">-214</value>
+                <value level="3">-219</value>
+                <value level="4">-224</value>
+                <value level="5">-229</value>
+                <value level="6">-234</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <effects>
+            <hp-drain percentage="21">
+                <power initial="9.26">
+                    <value level="2">9.33</value>
+                    <value level="3">9.31</value>
+                    <value level="4">9.19</value>
+                    <value level="5">8.97</value>
+                    <value level="6">8.65</value>
+                </power>
+            </hp-drain>
+        </effects>
+    </skill>
+    <skill id="3023" name="Special Ability: Critical Damage" max-level="9">
+        <!-- Increases P. Critical Damage. -->
+        <icon initial="icon.skill1242"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="174.78">
+                    <value level="2">194.1</value>
+                    <value level="3">213.12</value>
+                    <value level="4">231.29</value>
+                    <value level="5">247.98</value>
+                    <value level="6">262.57</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3024" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
+        <!-- HP has been momentarily decreased due to Poison. -->
+        <icon initial="icon.skill1168"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <reuse initial="12000"/>
+            <effect-point initial="-121">
+                <value level="2">-203</value>
+                <value level="3">-285</value>
+                <value level="4">-418</value>
+                <value level="5">-495</value>
+                <value level="6">-582</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="5">
+                <value level="3">6</value>
+                <value level="6">7</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="15">
+                <value level="3">12</value>
+                <value level="6">10</value>
+            </chance>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="191.0">
+                    <value level="3">291.0</value>
+                    <value level="6">403.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3025" name="Special Ability: Critical Anger" max-level="6" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="NONE" scope="NONE"/>
+    </skill>
+    <skill id="3026" name="Special Ability: Critical Anger" max-level="6">
+        <!-- Deals additional damage by spending your HP upon P. Critical. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="248.56">
+                    <value level="2">298.04</value>
+                    <value level="3">352.73</value>
+                    <value level="4">411.98</value>
+                    <value level="5">474.82</value>
+                    <value level="6">539.9</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3027" name="Special Ability: Risk Focus" max-level="7">
+        <!-- Increases P. Critical Rate when in danger. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="60" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="138.7">
+                    <value level="2">130.9</value>
+                    <value level="3">123.1</value>
+                    <value level="4">115.4</value>
+                    <value level="5">107.7</value>
+                    <value level="6">99.9</value>
+                    <value level="7">164.0</value>
+                </power>
+            </stat-hp-based>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power>
+                    <value level="7">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power>
+                    <value level="7">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power>
+                    <value level="7">5.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3028" name="Special Ability: Risk Evasion" max-level="6">
+        <!-- Increases P. Evasion when in danger. -->
+        <icon initial="icon.skill0198"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="60" stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="7.63">
+                    <value level="2">7.29</value>
+                    <value level="3">6.95</value>
+                    <value level="4">6.6</value>
+                    <value level="5">6.24</value>
+                    <value level="6">5.87</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3029" name="Special Ability: Risk Evasion" max-level="6">
+        <!-- Increases P. Evasion when in danger. -->
+        <icon initial="icon.skill0198"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="60" stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="4.44">
+                    <value level="2">4.24</value>
+                    <value level="3">4.04</value>
+                    <value level="4">3.84</value>
+                    <value level="5">3.63</value>
+                    <value level="6">3.41</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3030" name="Special Ability: Risk Evasion" max-level="6">
+        <!-- Increases P. Evasion when in danger. -->
+        <icon initial="icon.skill0198"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="60" stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="7.63">
+                    <value level="2">7.29</value>
+                    <value level="3">6.95</value>
+                    <value level="4">6.6</value>
+                    <value level="5">6.24</value>
+                    <value level="6">5.87</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3031" name="Special Ability: Risk Evasion" max-level="6">
+        <!-- Increases P. Evasion when in danger. -->
+        <icon initial="icon.skill0198"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="60" stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="7.63">
+                    <value level="2">7.29</value>
+                    <value level="3">6.95</value>
+                    <value level="4">6.6</value>
+                    <value level="5">6.24</value>
+                    <value level="6">5.87</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3032" name="Special Ability: Risk Haste" max-level="6">
+        <!-- Increases Atk. Spd. when in danger. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="13.0">
+                    <value level="2">12.0</value>
+                    <value level="4">11.0</value>
+                    <value level="5">10.0</value>
+                    <value level="6">9.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3033" name="Special Ability: Risk Haste" max-level="6">
+        <!-- Increases Atk. Spd. when in danger. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="13.0">
+                    <value level="2">12.0</value>
+                    <value level="4">11.0</value>
+                    <value level="5">10.0</value>
+                    <value level="6">9.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3034" name="Special Ability: Risk Haste" max-level="6">
+        <!-- Increases Atk. Spd. when in danger. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="13.0">
+                    <value level="2">12.0</value>
+                    <value level="4">11.0</value>
+                    <value level="5">10.0</value>
+                    <value level="6">9.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3035" name="Special Ability: Mortal Strike" max-level="6">
+        <!-- Increases Deadly Stab rate. -->
+        <icon initial="icon.skill0410">
+            <value level="3">icon.skill0016</value>
+        </icon>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
+                <power initial="50.0">
+                    <value level="2">48.0</value>
+                    <value level="3">46.0</value>
+                    <value level="4">44.0</value>
+                    <value level="5">42.0</value>
+                    <value level="6">40.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3036" name="Special Ability: Haste" max-level="6">
+        <!-- Increases Atk. Spd. -->
+        <icon initial="icon.skill1241">
+            <value level="3">icon.skill1086</value>
+        </icon>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="8.0">
+                    <value level="2">7.0</value>
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3037" name="Special Ability: Haste" max-level="6">
+        <!-- Increases Atk. Spd. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="8.0">
+                    <value level="2">7.0</value>
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3038" name="Special Ability: Haste" max-level="6">
+        <!-- Increases Atk. Spd. -->
+        <icon initial="icon.skill1241">
+            <value level="2">icon.skill1086</value>
+        </icon>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="8.0">
+                    <value level="2">7.0</value>
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3039" name="Special Ability: Critical Drain" max-level="7" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">70</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-point initial="-239">
+                <value level="2">-243</value>
+                <value level="3">-248</value>
+                <value level="4">-253</value>
+                <value level="5">-257</value>
+                <value level="6">-262</value>
+                <value level="7">-266</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana>
+                <value level="4">12</value>
+                <value level="5">0</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <hp-drain percentage="33">
+                <power initial="6.85">
+                    <value level="2">7.96</value>
+                    <value level="3">9.26</value>
+                    <value level="4">10.8</value>
+                    <value level="5">12.62</value>
+                    <value level="6">14.82</value>
+                </power>
+            </hp-drain>
+        </effects>
+    </skill>
+    <skill id="3040" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
+        <!-- HP has been momentarily decreased due to Poison. -->
+        <icon initial="icon.skill1168"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-point initial="-121">
+                <value level="2">-203</value>
+                <value level="3">-285</value>
+                <value level="4">-418</value>
+                <value level="5">-495</value>
+                <value level="6">-582</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="5">
+                <value level="3">6</value>
+                <value level="6">7</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="17">
+                <value level="3">14</value>
+                <value level="6">12</value>
+            </chance>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="168.0">
+                    <value level="3">249.0</value>
+                    <value level="6">336.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3041" name="Special Ability: Critical Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
+        <!-- HP has been momentarily decreased due to Poison. -->
+        <icon initial="icon.skill1168"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-point initial="-121">
+                <value level="2">-203</value>
+                <value level="3">-285</value>
+                <value level="4">-418</value>
+                <value level="5">-495</value>
+                <value level="6">-582</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="5">
+                <value level="3">6</value>
+                <value level="6">7</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="9">
+                <value level="3">7</value>
+                <value level="6">6</value>
+            </chance>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="317.0">
+                    <value level="3">498.0</value>
+                    <value level="6">671.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3042" name="Special Ability: Critical Damage" max-level="16">
+        <!-- Increases P. Critical Damage. -->
+        <icon initial="icon.skill0193">
+            <value level="4">icon.skill1242</value>
+            <value level="14">icon.skill0193</value>
+        </icon>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="81.6">
+                    <value level="2">61.4</value>
+                    <value level="3">84.14</value>
+                    <value level="4">75.49</value>
+                    <value level="5">66.77</value>
+                    <value level="6">58.01</value>
+                    <value level="7">49.42</value>
+                    <value level="8">84.11</value>
+                    <value level="9">166.26</value>
+                    <value level="10">146.88</value>
+                    <value level="11">127.0</value>
+                    <value level="12">107.01</value>
+                    <value level="13">133.97</value>
+                    <value level="14">124.79</value>
+                    <value level="15">275.26</value>
+                    <value level="16">267.13</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3043" name="Special Ability: Critical Damage" max-level="8">
+        <!-- Increases P. Critical Damage. -->
+        <icon initial="icon.skill0193"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="106.45">
+                    <value level="2">118.22</value>
+                    <value level="3">129.81</value>
+                    <value level="4">140.87</value>
+                    <value level="5">151.04</value>
+                    <value level="6">159.93</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3044" name="Special Ability: Focus" max-level="16">
+        <!-- Increases P. Critical Rate. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE" stat-add="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+                <power initial="53.6">
+                    <value level="2">38.5</value>
+                    <value level="3">50.4</value>
+                    <value level="4">43.2</value>
+                    <value level="5">36.5</value>
+                    <value level="6">30.4</value>
+                    <value level="7">24.8</value>
+                    <value level="8">40.4</value>
+                    <value level="9">76.6</value>
+                    <value level="10">65.0</value>
+                    <value level="11">54.0</value>
+                    <value level="12">43.7</value>
+                    <value level="13">52.6</value>
+                    <value level="14">47.2</value>
+                    <value level="15">98.7</value>
+                    <value level="16">92.4</value>
+                </power>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3045" name="Special Ability: Haste" max-level="16">
+        <!-- Increases Atk. Spd. -->
+        <icon initial="icon.skill1086">
+            <value level="4">icon.skill1241</value>
+            <value level="5">icon.skill1086</value>
+            <value level="10">icon.skill1241</value>
+            <value level="11">icon.skill1086</value>
+        </icon>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="2">4.0</value>
+                    <value level="3">5.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">3.0</value>
+                    <value level="7">2.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">7.0</value>
+                    <value level="10">6.0</value>
+                    <value level="11">5.0</value>
+                    <value level="12">4.0</value>
+                    <value level="13">5.0</value>
+                    <value level="14">4.0</value>
+                    <value level="15">9.0</value>
+                    <value level="16">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3046" name="Special Ability: Guidance" max-level="16">
+        <!-- Increases P. Accuracy. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="ACCURACY" stat-add="ACCURACY">
+                <power initial="3.9">
+                    <value level="2">2.8</value>
+                    <value level="3">3.7</value>
+                    <value level="4">3.1</value>
+                    <value level="5">2.6</value>
+                    <value level="6">2.2</value>
+                    <value level="7">1.8</value>
+                    <value level="8">2.9</value>
+                    <value level="9">5.7</value>
+                    <value level="10">4.8</value>
+                    <value level="11">3.9</value>
+                    <value level="12">3.2</value>
+                    <value level="13">3.8</value>
+                    <value level="14">3.4</value>
+                    <value level="15">6.5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3047" name="Special Ability: Acumen" max-level="2">
+        <!-- Increases Casting Spd. -->
+        <icon initial="icon.skill1085"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power>
+                    <value level="2">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power>
+                    <value level="2">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power>
+                    <value level="2">5.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3048" name="Special Ability: Conversion">
+        <!-- Decreases Max HP and increases Max MP. -->
+        <icon initial="icon.skill1048"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="-40.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="60.0"/>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3049" name="Special Ability: Magic Damage" max-level="2" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <effects>
+            <magical-attack>
+                <power initial="8.39"/>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="3052" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="NONE" scope="NONE"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="7"/>
+            <time initial="20"/>
+            <chance initial="42"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="74.0"/>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3053" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="NONE" scope="NONE"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="7"/>
+            <time initial="20"/>
+            <chance initial="35"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="88.0"/>
+            </damage-over-time>
+            <speed mode="PER">
+                <power initial="-20.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="3054" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="NONE" scope="NONE"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="7"/>
+            <time initial="20"/>
+            <chance initial="12"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="256.0"/>
+            </damage-over-time>
+            <speed mode="PER">
+                <power initial="-20.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="3055" name="Special Ability: Critical Bleed" max-level="2" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
+        <icon initial="icon.skill0223"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="NONE" scope="NONE"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="7"/>
+            <time initial="20"/>
+            <chance initial="24"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="128.0"/>
+            </damage-over-time>
+            <speed mode="PER">
+                <power initial="-20.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="3056" name="Special Ability: Risk Haste">
+        <!-- Increases Atk. Spd. when in danger. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="11.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3059" name="Special Ability: Critical Drain" max-level="2" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-range initial="1100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <effects>
+            <hp-drain percentage="65">
+                <power initial="18.0">
+                    <value level="2">19.0</value>
+                </power>
+            </hp-drain>
+        </effects>
+    </skill>
+    <skill id="3060" name="Special Ability: Critical Drain" max-level="2" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-range initial="1100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <effects>
+            <hp-drain percentage="35">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                </power>
+            </hp-drain>
+        </effects>
+    </skill>
+    <skill id="3061" name="Special Ability: Critical Poison" max-level="3" debuff="true" action="A2" type="MAGIC">
+        <!-- HP has been momentarily decreased due to Poison. -->
+        <icon initial="icon.skill1168"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="64">
+                <value level="2">67</value>
+                <value level="3">70</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-range initial="1100"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="7"/>
+            <time initial="30"/>
+            <chance initial="10"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="403.0">
+                    <value level="3">439.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3062" name="Special Ability: Critical Poison" max-level="2" debuff="true" action="A2" type="MAGIC">
+        <!-- HP has been momentarily decreased due to Poison. -->
+        <icon initial="icon.skill1168"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-range initial="1100"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="7"/>
+            <time initial="30"/>
+            <chance initial="18"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="3">
+                <power initial="224.0"/>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3068" name="Special Ability: Haste">
+        <!-- Increases Atk. Spd. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="6.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3069" name="Special Ability: Risk Evasion">
+        <!-- Increases P. Evasion when in danger. -->
+        <icon initial="icon.skill0198"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="60" stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="6.8"/>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="3070" name="Special Ability: Critical Stun" max-level="4" debuff="true" action="A2">
+        <!-- Stunned and temporarily rendered immobile. -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
+            <magic-level initial="64">
+                <value level="2">67</value>
+                <value level="3">70</value>
+                <value level="4">82</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="ENEMY_ONLY" object="NOT_FRIEND"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="9"/>
+            <chance initial="25">
+                <value level="4">48</value>
+            </chance>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="3071" name="Special Ability: Risk Focus">
+        <!-- Increases P. Critical Rate when in danger. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="60" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="130.0"/>
+            </stat-hp-based>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3074" name="Special Ability: Magic Silence" max-level="2" debuff="true" action="A2" type="MAGIC">
+        <!-- Temporarily blocks the ability to use magic skills. -->
+        <icon initial="icon.skill1064"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SILENCE" visual="SILENCE">
+            <level initial="1"/>
+            <time initial="120"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+        </effects>
+    </skill>
+    <skill id="3075" name="Special Ability: Magic Paralyze" max-level="2" debuff="true" action="A2" type="MAGIC">
+        <!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
+        <icon initial="icon.skill1170"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
+            <magic-level initial="64">
+                <value level="2">67</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="PARALYZE">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="20"/>
+        </abnormal>
+        <effects>
+            <speed mode="PER">
+                <power initial="-50.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="-50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="-50.0"/>
+            </stat-modify>
+            <call-skill scope="END" skill="6126">
+                <power initial="1.0"/>
+            </call-skill>
+        </effects>
+    </skill>
+    <skill id="3076" name="Special Ability: Empower" max-level="9">
+        <!-- Increases M. Atk. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="20.36">
+                    <value level="2">22.51</value>
+                    <value level="3">24.59</value>
+                    <value level="4">26.53</value>
+                    <value level="5">28.27</value>
+                    <value level="6">29.7</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3077" name="Special Ability: Magic Power" max-level="6">
+        <!-- Increases MP Consumption and M. Atk. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="75.86">
+                    <value level="2">87.22</value>
+                    <value level="3">99.39</value>
+                    <value level="4">112.26</value>
+                    <value level="5">125.66</value>
+                    <value level="6">139.41</value>
+                </power>
+            </stat-modify>
+            <magic-cost type="MAGIC">
+                <power initial="15.0"/>
+            </magic-cost>
+        </effects>
+    </skill>
+    <skill id="3078" name="Special Ability: Magic Silence" max-level="6" debuff="true" action="A2" type="MAGIC">
+        <!-- Temporarily blocks the ability to use magic skills. -->
+        <icon initial="icon.skill1064"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">28</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SILENCE" visual="SILENCE">
+            <level initial="1"/>
+            <time initial="120"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+        </effects>
+    </skill>
+    <skill id="3079" name="Special Ability: Magic Paralyze" max-level="6" debuff="true" action="A2" type="MAGIC">
+        <!-- Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
+        <icon initial="icon.skill1170"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">28</value>
+                <value level="6">61</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="PARALYZE">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="20"/>
+        </abnormal>
+        <effects>
+            <speed mode="PER">
+                <power initial="-50.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="-50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="-50.0"/>
+            </stat-modify>
+            <call-skill scope="END" skill="6126">
+                <power initial="1.0"/>
+            </call-skill>
+        </effects>
+    </skill>
+    <skill id="3080" name="Item Skill: Aggression" max-level="15" action="A1">
+        <!--
             level 1: Effect: Provokes a target to attack during a normal physical attack. Power: 438..
             level 2: Effect: Provokes a target to attack during a normal physical attack. Power: 467..
             level 3: Effect: Provokes a target to attack during a normal physical attack. Power: 495..
@@ -1939,49 +1562,49 @@
             level 9: Effect: Provokes a target to attack during a normal physical attack. Power: 635..
             level 10: Effect: Provokes a target to attack during a normal physical attack. Power: 659..
          -->
-		<icon initial="icon.skill3080"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-point initial="-438">
-				<value level="2">-467</value>
-				<value level="3">-495</value>
-				<value level="4">-523</value>
-				<value level="5">-549</value>
-				<value level="6">-574</value>
-				<value level="7">-597</value>
-				<value level="8">-617</value>
-				<value level="9">-635</value>
-				<value level="10">-659</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<effect name="TargetMeProbability">
-				<power initial="40.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3081" name="Item Skill: Charm (Physical)" max-level="15" action="A1">
-		<!--
+        <icon initial="icon.skill3080"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-point initial="-438">
+                <value level="2">-467</value>
+                <value level="3">-495</value>
+                <value level="4">-523</value>
+                <value level="5">-549</value>
+                <value level="6">-574</value>
+                <value level="7">-597</value>
+                <value level="8">-617</value>
+                <value level="9">-635</value>
+                <value level="10">-659</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <effect name="TargetMeProbability">
+                <power initial="40.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="3081" name="Item Skill: Charm (Physical)" max-level="15" action="A1">
+        <!--
             level 1: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 219..
             level 2: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 234..
             level 3: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 248..
@@ -1998,53 +1621,53 @@
             level 14: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 378..
             level 15: Effect: Decreases the target's urge to attack during a normal physical attack. Power: 390..
          -->
-		<icon initial="icon.skill3080"/>
-		<attributes magic-critical-rate="5.0" trait="DERANGEMENT">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<effect name="AddHate">
-				<power initial="-219.0">
-					<value level="2">-234.0</value>
-					<value level="3">-248.0</value>
-					<value level="4">-262.0</value>
-					<value level="5">-275.0</value>
-					<value level="6">-287.0</value>
-					<value level="7">-299.0</value>
-					<value level="8">-309.0</value>
-					<value level="9">-318.0</value>
-					<value level="10">-330.0</value>
-					<value level="11">-342.0</value>
-					<value level="12">-354.0</value>
-					<value level="13">-366.0</value>
-					<value level="14">-378.0</value>
-					<value level="15">-390.0</value>
-				</power>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3082" name="Item Skill: Mana Burn" max-level="10" action="A1">
-		<!--
+        <icon initial="icon.skill3080"/>
+        <attributes magic-critical-rate="5.0" trait="DERANGEMENT">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <effect name="AddHate">
+                <power initial="-219.0">
+                    <value level="2">-234.0</value>
+                    <value level="3">-248.0</value>
+                    <value level="4">-262.0</value>
+                    <value level="5">-275.0</value>
+                    <value level="6">-287.0</value>
+                    <value level="7">-299.0</value>
+                    <value level="8">-309.0</value>
+                    <value level="9">-318.0</value>
+                    <value level="10">-330.0</value>
+                    <value level="11">-342.0</value>
+                    <value level="12">-354.0</value>
+                    <value level="13">-366.0</value>
+                    <value level="14">-378.0</value>
+                    <value level="15">-390.0</value>
+                </power>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="3082" name="Item Skill: Mana Burn" max-level="10" action="A1">
+        <!--
             level 1: Effect: Burns the target's MP during a normal physical attack. Power: 49..
             level 2: Effect: Burns the target's MP during a normal physical attack. Power: 53..
             level 3: Effect: Burns the target's MP during a normal physical attack. Power: 57..
@@ -2056,465 +1679,465 @@
             level 9: Effect: Burns the target's MP during a normal physical attack. Power: 82..
             level 10: Effect: Burns the target's MP during a normal physical attack. Power: 88..
          -->
-		<icon initial="icon.skill3080"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<magical-attack-mp critical="true" critical-limit="1450">
-				<power initial="49.0">
-					<value level="2">53.0</value>
-					<value level="3">57.0</value>
-					<value level="4">61.0</value>
-					<value level="5">66.0</value>
-					<value level="6">70.0</value>
-					<value level="7">74.0</value>
-					<value level="8">78.0</value>
-					<value level="9">82.0</value>
-					<value level="10">88.0</value>
-				</power>
-			</magical-attack-mp>
-		</effects>
-	</skill>
-	<skill id="3083" name="Item Skill: Slow (Physical)" max-level="15" debuff="true" action="A2">
-		<!-- Effect: Target's Movement Speed -30%% during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="SPEED_DOWN">
-			<level initial="3"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<speed mode="PER">
-				<power initial="-30.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="3084" name="Item Skill: Winter (Physical)" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Target's Atk. Spd. -23%% during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="ATTACK_TIME_UP">
-			<level initial="3"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-23.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3085" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Stuns the target during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="3086" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
-		<!-- Effect: Momentarily inflicts Hold on the target during a normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<effect name="Root"/>
-			<defence-trait>
-				<trait type="HOLD">
-					<power initial="1.0"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="3087" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Momentarily inflicts Sleep on the target during a normal physical attack. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="SLEEP" visual="SLEEP" >
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<block-all-actions/>
-			<defence-trait>
-				<trait type="SLEEP">
-					<power initial="1.0"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="3088" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2">
-		<!-- Skill Effect: Petrifies an enemy for 15 seconds upon a normal physical attack. When fully petrified, becomes paralyzed for 10 seconds. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="PARALYZE">
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<speed mode="PER">
-				<power initial="-50.0"/>
-			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-50.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="-50.0"/>
-			</stat-modify>
-			<call-skill skill="6126" scope="END">
-				<power initial="1.0"/>
-			</call-skill>
-		</effects>
-	</skill>
-	<skill id="3089" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Momentarily petrifies the target during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
+        <icon initial="icon.skill3080"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <magical-attack-mp critical="true" critical-limit="1450">
+                <power initial="49.0">
+                    <value level="2">53.0</value>
+                    <value level="3">57.0</value>
+                    <value level="4">61.0</value>
+                    <value level="5">66.0</value>
+                    <value level="6">70.0</value>
+                    <value level="7">74.0</value>
+                    <value level="8">78.0</value>
+                    <value level="9">82.0</value>
+                    <value level="10">88.0</value>
+                </power>
+            </magical-attack-mp>
+        </effects>
+    </skill>
+    <skill id="3083" name="Item Skill: Slow (Physical)" max-level="15" debuff="true" action="A2">
+        <!-- Effect: Target's Movement Speed -30%% during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SPEED_DOWN">
+            <level initial="3"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <speed mode="PER">
+                <power initial="-30.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="3084" name="Item Skill: Winter (Physical)" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Target's Atk. Spd. -23%% during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="ATTACK_TIME_UP">
+            <level initial="3"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="-23.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3085" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Stuns the target during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="3086" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
+        <!-- Effect: Momentarily inflicts Hold on the target during a normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <effect name="Root"/>
+            <defence-trait>
+                <trait type="HOLD">
+                    <power initial="1.0"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="3087" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Momentarily inflicts Sleep on the target during a normal physical attack. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SLEEP" visual="SLEEP">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+            <defence-trait>
+                <trait type="SLEEP">
+                    <power initial="1.0"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="3088" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2">
+        <!-- Skill Effect: Petrifies an enemy for 15 seconds upon a normal physical attack. When fully petrified, becomes paralyzed for 10 seconds. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="PARALYZE">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <speed mode="PER">
+                <power initial="-50.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="-50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="-50.0"/>
+            </stat-modify>
+            <call-skill scope="END" skill="6126">
+                <power initial="1.0"/>
+            </call-skill>
+        </effects>
+    </skill>
+    <skill id="3089" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Momentarily petrifies the target during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
 
-			<element type="EARTH" value="20"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="TURN_STONE" visual="FLESH_STONE" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="3090" name="Item Skill: Fear" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Momentarily inflicts Fear on the target and causes them to flee during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="TURN_FLEE" visual="TURN_FLEE" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<effect name="BlockControl"/>
-			<effect name="Fear"/>
-		</effects>
-	</skill>
-	<skill id="3091" name="Item Skill: Poison (Physical)" max-level="15" debuff="true" action="A2">
-		<!-- Effect: Momentarily inflicts Poison on the target during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="5">
-				<value level="3">6</value>
-				<value level="6">7</value>
-				<value level="9">8</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5">
-				<power initial="41.0">
-					<value level="3">50.0</value>
-					<value level="6">58.0</value>
-					<value level="9">63.0</value>
-					<value level="11">67.0</value>
-					<value level="12">87.0</value>
-					<value level="15">98.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3092" name="Item Skill: Bleed (Physical)" max-level="15" debuff="true" action="A2">
-		<!-- Effect: Momentarily inflicts Bleed on the target during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="5">
-				<value level="3">6</value>
-				<value level="6">7</value>
-				<value level="9">8</value>
-			</level>
-			<time initial="20"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5">
-				<power initial="44.0">
-					<value level="3">54.0</value>
-					<value level="6">62.0</value>
-					<value level="9">67.0</value>
-					<value level="12">87.0</value>
-					<value level="15">98.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="3093" name="Item Skill: Silence" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Momentarily blocks the target's M. Skill during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="SILENCE" visual="SILENCE" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<effect name="Mute"/>
-		</effects>
-	</skill>
-	<skill id="3094" name="Item Skill: Doom" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Momentarily blocks all of the target's P. Skills/M. Skills during a normal physical attack. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="30000"/>
-			<effect-range initial="400"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="SILENCE_ALL" visual="SILENCE" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<effect name="Mute"/>
-			<effect name="PhysicalMute"/>
-		</effects>
-	</skill>
-	<skill id="3095" name="Item Skill: Mana Burn" max-level="10" action="A1">
-		<!--
+            <element type="EARTH" value="20"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="TURN_STONE" visual="FLESH_STONE">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="3090" name="Item Skill: Fear" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Momentarily inflicts Fear on the target and causes them to flee during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <effect name="BlockControl"/>
+            <effect name="Fear"/>
+        </effects>
+    </skill>
+    <skill id="3091" name="Item Skill: Poison (Physical)" max-level="15" debuff="true" action="A2">
+        <!-- Effect: Momentarily inflicts Poison on the target during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="5">
+                <value level="3">6</value>
+                <value level="6">7</value>
+                <value level="9">8</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="5">
+                <power initial="41.0">
+                    <value level="3">50.0</value>
+                    <value level="6">58.0</value>
+                    <value level="9">63.0</value>
+                    <value level="11">67.0</value>
+                    <value level="12">87.0</value>
+                    <value level="15">98.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3092" name="Item Skill: Bleed (Physical)" max-level="15" debuff="true" action="A2">
+        <!-- Effect: Momentarily inflicts Bleed on the target during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="5">
+                <value level="3">6</value>
+                <value level="6">7</value>
+                <value level="9">8</value>
+            </level>
+            <time initial="20"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="5">
+                <power initial="44.0">
+                    <value level="3">54.0</value>
+                    <value level="6">62.0</value>
+                    <value level="9">67.0</value>
+                    <value level="12">87.0</value>
+                    <value level="15">98.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="3093" name="Item Skill: Silence" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Momentarily blocks the target's M. Skill during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SILENCE" visual="SILENCE">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+        </effects>
+    </skill>
+    <skill id="3094" name="Item Skill: Doom" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Momentarily blocks all of the target's P. Skills/M. Skills during a normal physical attack. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="30000"/>
+            <effect-range initial="400"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SILENCE_ALL" visual="SILENCE">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+            <effect name="PhysicalMute"/>
+        </effects>
+    </skill>
+    <skill id="3095" name="Item Skill: Mana Burn" max-level="10" action="A1">
+        <!--
             level 1: Chance: Burns up the target's MP during magic use. Power 49.
             level 2: Chance: Burns up the target's MP during magic use. Power 53.
             level 3: Chance: Burns up the target's MP during magic use. Power 57.
@@ -2526,179 +2149,179 @@
             level 9: Chance: Burns up the target's MP during magic use. Power 82.
             level 10: Chance: Burns up the target's MP during magic use. Power 88.
          -->
-		<icon initial="icon.skill3080"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<reuse initial="30000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<magical-attack-mp critical="true" critical-limit="1450">
-				<power initial="49.0">
-					<value level="2">53.0</value>
-					<value level="3">57.0</value>
-					<value level="4">61.0</value>
-					<value level="5">66.0</value>
-					<value level="6">70.0</value>
-					<value level="7">74.0</value>
-					<value level="8">78.0</value>
-					<value level="9">82.0</value>
-					<value level="10">88.0</value>
-				</power>
-			</magical-attack-mp>
-		</effects>
-	</skill>
-	<skill id="3096" name="Item Skill: Slow (Magic)" max-level="15" debuff="true" action="A2">
-		<!-- Effect: Upon using magic, target's Movement Speed -30%%. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<reuse initial="30000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="SPEED_DOWN">
-			<level initial="3"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<speed mode="PER">
-				<power initial="-30.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="3097" name="Item Skill: Winter (Magic)" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Upon using magic, target's Atk. Spd.-23%%. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<reuse initial="30000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="ATTACK_TIME_UP">
-			<level initial="3"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-23.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="3098" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
-		<!-- Effect: Upon using magic, momentarily inflicts Stun on the target. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<reuse initial="30000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="3099" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
-		<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
-		<icon initial="icon.skill3080"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
-			<magic-level initial="46">
-				<value level="2">49</value>
-				<value level="3">52</value>
-				<value level="4">55</value>
-				<value level="5">58</value>
-				<value level="6">61</value>
-				<value level="7">64</value>
-				<value level="8">67</value>
-				<value level="9">70</value>
-				<value level="10">75</value>
-				<value level="11">80</value>
-				<value level="12">85</value>
-				<value level="13">90</value>
-				<value level="14">95</value>
-				<value level="15">99</value>
-			</magic-level>
-			<cast-range initial="1000"/>
-			<reuse initial="30000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1500"/>
-		</attributes>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<effect name="Root"/>
-			<defence-trait>
-				<trait type="HOLD">
-					<power initial="1.0"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
+        <icon initial="icon.skill3080"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <reuse initial="30000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <magical-attack-mp critical="true" critical-limit="1450">
+                <power initial="49.0">
+                    <value level="2">53.0</value>
+                    <value level="3">57.0</value>
+                    <value level="4">61.0</value>
+                    <value level="5">66.0</value>
+                    <value level="6">70.0</value>
+                    <value level="7">74.0</value>
+                    <value level="8">78.0</value>
+                    <value level="9">82.0</value>
+                    <value level="10">88.0</value>
+                </power>
+            </magical-attack-mp>
+        </effects>
+    </skill>
+    <skill id="3096" name="Item Skill: Slow (Magic)" max-level="15" debuff="true" action="A2">
+        <!-- Effect: Upon using magic, target's Movement Speed -30%%. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <reuse initial="30000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SPEED_DOWN">
+            <level initial="3"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <speed mode="PER">
+                <power initial="-30.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="3097" name="Item Skill: Winter (Magic)" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Upon using magic, target's Atk. Spd.-23%%. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <reuse initial="30000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="ATTACK_TIME_UP">
+            <level initial="3"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="-23.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="3098" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
+        <!-- Effect: Upon using magic, momentarily inflicts Stun on the target. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <reuse initial="30000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="3099" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
+        <!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+        <icon initial="icon.skill3080"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
+            <magic-level initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
+                <value level="10">75</value>
+                <value level="11">80</value>
+                <value level="12">85</value>
+                <value level="13">90</value>
+                <value level="14">95</value>
+                <value level="15">99</value>
+            </magic-level>
+            <cast-range initial="1000"/>
+            <reuse initial="30000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1500"/>
+        </attributes>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <effect name="Root"/>
+            <defence-trait>
+                <trait type="HOLD">
+                    <power initial="1.0"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
 </list>

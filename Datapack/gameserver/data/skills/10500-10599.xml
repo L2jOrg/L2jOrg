@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="10539" name="Throwing Dagger" debuff="true" action="A2">
-	<!-- Attacks the enemy by throwing a dagger with bonus 396 Power. For 30 seconds, Movement Speed -60. Requires a dagger. Over-hit. -->
-		<icon initial="icon.skill10539"/>
-		<attributes property="PHYSIC" static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
-			<magic-level initial="76"/>
-			<cast-range initial="800"/>
-			<reuse initial="30000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-707"/>
-			<effect-range initial="900"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<consume>
-			<mana initial="60"/>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="SPEED_DOWN">
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="80"/>
-		</abnormal>
-		<conditions>
-			<weapon>
-				<type>DAGGER</type>
-			</weapon>
-		</conditions>
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="396.0"/>
-			</physical-attack>
-			<speed>
-				<power initial="-60.0"/>
-			</speed>
-		</effects>
-	</skill>
+    <skill id="10539" name="Throwing Dagger" debuff="true" action="A2">
+        <!-- Attacks the enemy by throwing a dagger with bonus 396 Power. For 30 seconds, Movement Speed -60. Requires a dagger. Over-hit. -->
+        <icon initial="icon.skill10539"/>
+        <attributes property="PHYSIC" static-reuse="true" next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
+            <magic-level initial="76"/>
+            <cast-range initial="800"/>
+            <reuse initial="30000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-707"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <consume>
+            <mana initial="60"/>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="SPEED_DOWN">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="80"/>
+        </abnormal>
+        <conditions>
+            <weapon>
+                <type>DAGGER</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="396.0"/>
+            </physical-attack>
+            <speed>
+                <power initial="-60.0"/>
+            </speed>
+        </effects>
+    </skill>
 </list>

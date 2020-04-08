@@ -1,281 +1,281 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		   targetNamespace="http://l2j.org"
-		   xmlns="http://l2j.org"
-		   elementFormDefault="qualified">
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
 
-	<xs:include schemaLocation="../xsd/common.xsd"/>
-	<xs:include schemaLocation="conditions.xsd"/>
-	<xs:include schemaLocation="effects.xsd"/>
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+    <xs:include schemaLocation="conditions.xsd"/>
+    <xs:include schemaLocation="effects.xsd"/>
 
-	<xs:element name="list">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element maxOccurs="unbounded"  minOccurs="0" name="skill" type="Skill"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="skill" type="Skill"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-	<xs:complexType name="Skill">
-		<xs:sequence>
-			<xs:element name="icon" type="MappedLevelToken"/>
-			<xs:element name="attributes" type="SkillAttributes"/>
-			<xs:element name="consume" type="Consume" minOccurs="0"/>
-			<xs:element name="target" type="SkillTarget"/>
-			<xs:element name="abnormal" type="Abnormal" minOccurs="0"/>
-			<xs:element name="resist-abnormals" type="AbnormalTypeList" minOccurs="0"/>
-			<xs:element name="channeling" type="Channeling" minOccurs="0"/>
-			<xs:element name="conditions" type="Conditions" minOccurs="0"/>
-			<xs:element name="effects" type="Effects" minOccurs="0"/>
-		</xs:sequence>
-		<xs:attribute name="id" type="xs:positiveInteger" use="required"/>
-		<xs:attribute name="max-level" type="xs:positiveInteger" default="1"/>
-		<xs:attribute name="name" type="xs:string" use="required"/>
-		<xs:attribute name="debuff" type="xs:boolean" default="false"/>
-		<xs:attribute name="action" type="OperateType" default="P"/>
-		<xs:attribute name="type" type="SkillType" default="PHYSIC"/>
-	</xs:complexType>
+    <xs:complexType name="Skill">
+        <xs:sequence>
+            <xs:element name="icon" type="MappedLevelToken"/>
+            <xs:element name="attributes" type="SkillAttributes"/>
+            <xs:element name="consume" type="Consume" minOccurs="0"/>
+            <xs:element name="target" type="SkillTarget"/>
+            <xs:element name="abnormal" type="Abnormal" minOccurs="0"/>
+            <xs:element name="resist-abnormals" type="AbnormalTypeList" minOccurs="0"/>
+            <xs:element name="channeling" type="Channeling" minOccurs="0"/>
+            <xs:element name="conditions" type="Conditions" minOccurs="0"/>
+            <xs:element name="effects" type="Effects" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="max-level" type="xs:positiveInteger" default="1"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="debuff" type="xs:boolean" default="false"/>
+        <xs:attribute name="action" type="OperateType" default="P"/>
+        <xs:attribute name="type" type="SkillType" default="PHYSIC"/>
+    </xs:complexType>
 
-	<xs:complexType name="Consume">
-		<xs:sequence>
-			<xs:element name="mana-init" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="mana" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="hp" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="item" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="item-count" type="MappedLevelInt" minOccurs="0"/>
-		</xs:sequence>
-		<xs:attribute name="soul" type="xs:int" default="0"/>
-		<xs:attribute name="charge" type="xs:int" default="0"/>
-	</xs:complexType>
+    <xs:complexType name="Consume">
+        <xs:sequence>
+            <xs:element name="mana-init" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="mana" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="hp" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="item" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="item-count" type="MappedLevelInt" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="soul" type="xs:int" default="0"/>
+        <xs:attribute name="charge" type="xs:int" default="0"/>
+    </xs:complexType>
 
-	<xs:complexType name="Channeling">
-		<xs:attribute name="skill" type="xs:int" use="required"/>
-		<xs:attribute name="mp-consume" type="xs:int" default="0"/>
-		<xs:attribute name="initial-delay" type="xs:int" default="0"/>
-		<xs:attribute name="interval" type="xs:int" default="2000"/>
-	</xs:complexType>
+    <xs:complexType name="Channeling">
+        <xs:attribute name="skill" type="xs:int" use="required"/>
+        <xs:attribute name="mp-consume" type="xs:int" default="0"/>
+        <xs:attribute name="initial-delay" type="xs:int" default="0"/>
+        <xs:attribute name="interval" type="xs:int" default="2000"/>
+    </xs:complexType>
 
-	<xs:complexType name="SkillTarget">
-		<xs:sequence>
-			<xs:element name="fan-range" type="FanRange" minOccurs="0"/>
-		</xs:sequence>
-		<xs:attribute name="type" type="TargetType" default="SELF"/>
-		<xs:attribute name="scope" type="AffectScope" default="SINGLE"/>
-		<xs:attribute name="object" type="AffectObject" default="ALL"/>
-		<xs:attribute name="range" type="xs:int" default="0"/>
-		<xs:attribute name="affect-min" type="xs:int" default="-1"/>
-		<xs:attribute name="affect-random" type="xs:int" default="0"/>
-	</xs:complexType>
+    <xs:complexType name="SkillTarget">
+        <xs:sequence>
+            <xs:element name="fan-range" type="FanRange" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="TargetType" default="SELF"/>
+        <xs:attribute name="scope" type="AffectScope" default="SINGLE"/>
+        <xs:attribute name="object" type="AffectObject" default="ALL"/>
+        <xs:attribute name="range" type="xs:int" default="0"/>
+        <xs:attribute name="affect-min" type="xs:int" default="-1"/>
+        <xs:attribute name="affect-random" type="xs:int" default="0"/>
+    </xs:complexType>
 
-	<xs:complexType name="FanRange">
-		<xs:attribute name="start-angle" type="xs:int" use="required"/>
-		<xs:attribute name="radius" type="xs:int" use="required"/>
-		<xs:attribute name="angle" type="xs:int" use="required"/>
-	</xs:complexType>
+    <xs:complexType name="FanRange">
+        <xs:attribute name="start-angle" type="xs:int" use="required"/>
+        <xs:attribute name="radius" type="xs:int" use="required"/>
+        <xs:attribute name="angle" type="xs:int" use="required"/>
+    </xs:complexType>
 
-	<xs:complexType name="SkillAttributes">
-		<xs:sequence>
-			<xs:element name="magic-level" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="cast-range" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="reuse" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="cool-time" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="effect-point" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="effect-range" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="hit-time" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="activate-rate" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="element" type="ElementType" minOccurs="0"/>
-		</xs:sequence>
-		<xs:attribute name="trait" type="TraitType" default="NONE"/>
-		<xs:attribute name="next-action" type="ActionType" default="NONE"/>
-		<xs:attribute name="property" type="SkillProperty" default="NONE"/>
-		<xs:attribute name="static-reuse" type="xs:boolean" default="false"/>
-		<xs:attribute name="magic-critical-rate" type="xs:float" default="0"/>
-		<xs:attribute name="stay-after-death" type="xs:boolean" default="false"/>
-		<xs:attribute name="display-id" type="xs:int"/>
-		<xs:attribute name="hit-cancel-time" type="xs:float" default="0"/>
-		<xs:attribute name="level-bonus-rate" type="xs:int" default="0"/>
-		<xs:attribute name="remove-on-action" type="xs:boolean" default="false"/>
-		<xs:attribute name="remove-on-damage" type="xs:boolean" default="false"/>
-		<xs:attribute name="blocked-on-olympiad" type="xs:boolean" default="false"/>
-		<xs:attribute name="suicide" type="xs:boolean" default="false"/>
-		<xs:attribute name="triggered" type="xs:boolean" default="false"/>
-		<xs:attribute name="dispellable" type="xs:boolean" default="true"/>
-		<xs:attribute name="check" type="xs:boolean" default="true"/>
-		<xs:attribute name="without-action" type="xs:boolean" default="false"/>
-		<xs:attribute name="cast-disabled" type="xs:boolean" default="false"/>
-		<xs:attribute name="no-summon-shared" type="xs:boolean" default="false"/>
-		<xs:attribute name="remove-abnormal-on-leave" type="xs:boolean" default="false"/>
-		<xs:attribute name="irreplacable" type="xs:boolean" default="false"/>
-		<xs:attribute name="block-action-skill" type="xs:boolean" default="false"/>
-		<xs:attribute name="auto-use" type="SkillAutoUseType" default="NONE"/>
-	</xs:complexType>
+    <xs:complexType name="SkillAttributes">
+        <xs:sequence>
+            <xs:element name="magic-level" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="cast-range" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="reuse" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="cool-time" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="effect-point" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="effect-range" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="hit-time" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="activate-rate" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="element" type="ElementType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="trait" type="TraitType" default="NONE"/>
+        <xs:attribute name="next-action" type="ActionType" default="NONE"/>
+        <xs:attribute name="property" type="SkillProperty" default="NONE"/>
+        <xs:attribute name="static-reuse" type="xs:boolean" default="false"/>
+        <xs:attribute name="magic-critical-rate" type="xs:float" default="0"/>
+        <xs:attribute name="stay-after-death" type="xs:boolean" default="false"/>
+        <xs:attribute name="display-id" type="xs:int"/>
+        <xs:attribute name="hit-cancel-time" type="xs:float" default="0"/>
+        <xs:attribute name="level-bonus-rate" type="xs:int" default="0"/>
+        <xs:attribute name="remove-on-action" type="xs:boolean" default="false"/>
+        <xs:attribute name="remove-on-damage" type="xs:boolean" default="false"/>
+        <xs:attribute name="blocked-on-olympiad" type="xs:boolean" default="false"/>
+        <xs:attribute name="suicide" type="xs:boolean" default="false"/>
+        <xs:attribute name="triggered" type="xs:boolean" default="false"/>
+        <xs:attribute name="dispellable" type="xs:boolean" default="true"/>
+        <xs:attribute name="check" type="xs:boolean" default="true"/>
+        <xs:attribute name="without-action" type="xs:boolean" default="false"/>
+        <xs:attribute name="cast-disabled" type="xs:boolean" default="false"/>
+        <xs:attribute name="no-summon-shared" type="xs:boolean" default="false"/>
+        <xs:attribute name="remove-abnormal-on-leave" type="xs:boolean" default="false"/>
+        <xs:attribute name="irreplacable" type="xs:boolean" default="false"/>
+        <xs:attribute name="block-action-skill" type="xs:boolean" default="false"/>
+        <xs:attribute name="auto-use" type="SkillAutoUseType" default="NONE"/>
+    </xs:complexType>
 
-	<xs:simpleType name="SkillAutoUseType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="NONE"/>
-			<xs:enumeration value="BUFF"/>
-			<xs:enumeration value="ACTIVE"/>
-			<xs:enumeration value="TRANSFORM"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="SkillAutoUseType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="BUFF"/>
+            <xs:enumeration value="ACTIVE"/>
+            <xs:enumeration value="TRANSFORM"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:complexType name="ElementType">
-		<xs:attribute name="type"  type="Element" default="NONE"/>
-		<xs:attribute name="value" type="xs:int"  default="0"/>
-	</xs:complexType>
+    <xs:complexType name="ElementType">
+        <xs:attribute name="type" type="Element" default="NONE"/>
+        <xs:attribute name="value" type="xs:int" default="0"/>
+    </xs:complexType>
 
-	<xs:complexType name="Abnormal">
-		<xs:sequence>
-			<xs:element name="level" type="MappedLevelInt" minOccurs="0"/>
-			<xs:element name="time" type="MappedLevelInt"/>
-			<xs:element name="chance" type="MappedLevelInt" minOccurs="0"/>
-		</xs:sequence>
-		<xs:attribute name="type" type="AbnormalType" default="NONE"/>
-		<xs:attribute name="visual" type="AbnormalVisualList"/>
-		<xs:attribute name="subordination" type="AbnormalType" default="NONE"/>
-		<xs:attribute name="instant" type="xs:boolean" default="false"/>
-	</xs:complexType>
+    <xs:complexType name="Abnormal">
+        <xs:sequence>
+            <xs:element name="level" type="MappedLevelInt" minOccurs="0"/>
+            <xs:element name="time" type="MappedLevelInt"/>
+            <xs:element name="chance" type="MappedLevelInt" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="AbnormalType" default="NONE"/>
+        <xs:attribute name="visual" type="AbnormalVisualList"/>
+        <xs:attribute name="subordination" type="AbnormalType" default="NONE"/>
+        <xs:attribute name="instant" type="xs:boolean" default="false"/>
+    </xs:complexType>
 
-	<xs:simpleType name="AbnormalVisualList">
-		<xs:list itemType="AbnormalVisualEffect"/>
-	</xs:simpleType>
+    <xs:simpleType name="AbnormalVisualList">
+        <xs:list itemType="AbnormalVisualEffect"/>
+    </xs:simpleType>
 
-	<xs:simpleType name="AffectScope">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="VALAKAS_SCOPE"/>
-			<xs:enumeration value="DEAD_PLEDGE"/>
-			<xs:enumeration value="DEAD_UNION"/>
-			<xs:enumeration value="FAN"/>
-			<xs:enumeration value="FAN_PB"/>
-			<xs:enumeration value="NONE"/>
-			<xs:enumeration value="PARTY"/>
-			<xs:enumeration value="DEAD_PARTY"/>
-			<xs:enumeration value="PARTY_PLEDGE"/>
-			<xs:enumeration value="DEAD_PARTY_PLEDGE"/>
-			<xs:enumeration value="PLEDGE"/>
-			<xs:enumeration value="POINT_BLANK"/>
-			<xs:enumeration value="RANGE"/>
-			<xs:enumeration value="RANGE_SORT_BY_HP"/>
-			<xs:enumeration value="RING_RANGE"/>
-			<xs:enumeration value="SINGLE"/>
-			<xs:enumeration value="SQUARE"/>
-			<xs:enumeration value="SQUARE_PB"/>
-			<xs:enumeration value="STATIC_OBJECT_SCOPE"/>
-			<xs:enumeration value="SUMMON_EXCEPT_MASTER"/>
-			<xs:enumeration value="WYVERN_SCOPE"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="AffectScope">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="VALAKAS_SCOPE"/>
+            <xs:enumeration value="DEAD_PLEDGE"/>
+            <xs:enumeration value="DEAD_UNION"/>
+            <xs:enumeration value="FAN"/>
+            <xs:enumeration value="FAN_PB"/>
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="PARTY"/>
+            <xs:enumeration value="DEAD_PARTY"/>
+            <xs:enumeration value="PARTY_PLEDGE"/>
+            <xs:enumeration value="DEAD_PARTY_PLEDGE"/>
+            <xs:enumeration value="PLEDGE"/>
+            <xs:enumeration value="POINT_BLANK"/>
+            <xs:enumeration value="RANGE"/>
+            <xs:enumeration value="RANGE_SORT_BY_HP"/>
+            <xs:enumeration value="RING_RANGE"/>
+            <xs:enumeration value="SINGLE"/>
+            <xs:enumeration value="SQUARE"/>
+            <xs:enumeration value="SQUARE_PB"/>
+            <xs:enumeration value="STATIC_OBJECT_SCOPE"/>
+            <xs:enumeration value="SUMMON_EXCEPT_MASTER"/>
+            <xs:enumeration value="WYVERN_SCOPE"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:simpleType name="OperateType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="A1"/>
-			<xs:enumeration value="A2"/>
-			<xs:enumeration value="A3"/>
-			<xs:enumeration value="A4"/>
-			<xs:enumeration value="A5"/>
-			<xs:enumeration value="A6"/>
-			<xs:enumeration value="CA1"/>
-			<xs:enumeration value="CA2"/>
-			<xs:enumeration value="CA5"/>
-			<xs:enumeration value="DA1"/>
-			<xs:enumeration value="DA2"/>
-			<xs:enumeration value="DA3"/>
-			<xs:enumeration value="DA4"/>
-			<xs:enumeration value="DA5"/>
-			<xs:enumeration value="P"/>
-			<xs:enumeration value="T"/>
-			<xs:enumeration value="TG"/>
-			<xs:enumeration value="AU"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="OperateType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="A1"/>
+            <xs:enumeration value="A2"/>
+            <xs:enumeration value="A3"/>
+            <xs:enumeration value="A4"/>
+            <xs:enumeration value="A5"/>
+            <xs:enumeration value="A6"/>
+            <xs:enumeration value="CA1"/>
+            <xs:enumeration value="CA2"/>
+            <xs:enumeration value="CA5"/>
+            <xs:enumeration value="DA1"/>
+            <xs:enumeration value="DA2"/>
+            <xs:enumeration value="DA3"/>
+            <xs:enumeration value="DA4"/>
+            <xs:enumeration value="DA5"/>
+            <xs:enumeration value="P"/>
+            <xs:enumeration value="T"/>
+            <xs:enumeration value="TG"/>
+            <xs:enumeration value="AU"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:simpleType name="ActionType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="NONE"/>
-			<xs:enumeration value="ATTACK"/>
-			<xs:enumeration value="CAST"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="ActionType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="ATTACK"/>
+            <xs:enumeration value="CAST"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:simpleType name="SkillProperty">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="NONE"/>
-			<xs:enumeration value="MAGIC"/>
-			<xs:enumeration value="PHYSIC"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="SkillProperty">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="MAGIC"/>
+            <xs:enumeration value="PHYSIC"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:simpleType name="TraitType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="NONE"/>
-			<xs:enumeration value="SWORD"/>
-			<xs:enumeration value="BLUNT"/>
-			<xs:enumeration value="DAGGER"/>
-			<xs:enumeration value="SPEAR"/>
-			<xs:enumeration value="FIST"/>
-			<xs:enumeration value="BOW"/>
-			<xs:enumeration value="HAMMER"/>
-			<xs:enumeration value="ETC"/>
-			<xs:enumeration value="UNK_8"/>
-			<xs:enumeration value="POISON"/>
-			<xs:enumeration value="HOLD"/>
-			<xs:enumeration value="BLEED"/>
-			<xs:enumeration value="SLEEP"/>
-			<xs:enumeration value="SHOCK"/>
-			<xs:enumeration value="DERANGEMENT"/>
-			<xs:enumeration value="BUG_WEAKNESS"/>
-			<xs:enumeration value="ANIMAL_WEAKNESS"/>
-			<xs:enumeration value="PLANT_WEAKNESS"/>
-			<xs:enumeration value="BEAST_WEAKNESS"/>
-			<xs:enumeration value="DRAGON_WEAKNESS"/>
-			<xs:enumeration value="PARALYZE"/>
-			<xs:enumeration value="DUAL"/>
-			<xs:enumeration value="TWO_HAND_SWORD"/>
-			<xs:enumeration value="MAGIC_SWORD"/>
-			<xs:enumeration value="DUALFIST"/>
-			<xs:enumeration value="BOSS"/>
-			<xs:enumeration value="GIANT_WEAKNESS"/>
-			<xs:enumeration value="CONSTRUCT_WEAKNESS"/>
-			<xs:enumeration value="DEATH"/>
-			<xs:enumeration value="VALAKAS"/>
-			<xs:enumeration value="ANESTHESIA"/>
-			<xs:enumeration value="CRITICAL_POISON"/>
-			<xs:enumeration value="ROOT_PHYSICALLY"/>
-			<xs:enumeration value="ROOT_MAGICALLY"/>
-			<xs:enumeration value="RAPIER"/>
-			<xs:enumeration value="CROSSBOW"/>
-			<xs:enumeration value="ANCIENT_SWORD"/>
-			<xs:enumeration value="TURN_STONE"/>
-			<xs:enumeration value="GUST"/>
-			<xs:enumeration value="PHYSICAL_BLOCKADE"/>
-			<xs:enumeration value="TARGET"/>
-			<xs:enumeration value="PHYSICAL_WEAKNESS"/>
-			<xs:enumeration value="MAGICAL_WEAKNESS"/>
-			<xs:enumeration value="DUAL_DAGGER"/>
-			<xs:enumeration value="DEMONIC_WEAKNESS"/>
-			<xs:enumeration value="DIVINE_WEAKNESS"/>
-			<xs:enumeration value="ELEMENTAL_WEAKNESS"/>
-			<xs:enumeration value="FAIRY_WEAKNESS"/>
-			<xs:enumeration value="HUMAN_WEAKNESS"/>
-			<xs:enumeration value="HUMANOID_WEAKNESS"/>
-			<xs:enumeration value="UNDEAD_WEAKNESS"/>
-			<xs:enumeration value="DUAL_BLUNT"/>
-			<xs:enumeration value="KNOCKBACK"/>
-			<xs:enumeration value="KNOCKDOWN"/>
-			<xs:enumeration value="PULL"/>
-			<xs:enumeration value="HATE"/>
-			<xs:enumeration value="AGGRESSION"/>
-			<xs:enumeration value="AIRBIND"/>
-			<xs:enumeration value="DISARM"/>
-			<xs:enumeration value="DEPORT"/>
-			<xs:enumeration value="CHANGEBODY"/>
-			<xs:enumeration value="TWO_HAND_CROSSBOW"/>
-			<xs:enumeration value="ZONE"/>
-			<xs:enumeration value="PSYCHIC"/>
-			<xs:enumeration value="EMBRYO_WEAKNESS"/>
-			<xs:enumeration value="SPIRIT_WEAKNESS"/>
-			<xs:enumeration value="ROD"/>
-			<xs:enumeration value="STAFF"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="TraitType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="SWORD"/>
+            <xs:enumeration value="BLUNT"/>
+            <xs:enumeration value="DAGGER"/>
+            <xs:enumeration value="SPEAR"/>
+            <xs:enumeration value="FIST"/>
+            <xs:enumeration value="BOW"/>
+            <xs:enumeration value="HAMMER"/>
+            <xs:enumeration value="ETC"/>
+            <xs:enumeration value="UNK_8"/>
+            <xs:enumeration value="POISON"/>
+            <xs:enumeration value="HOLD"/>
+            <xs:enumeration value="BLEED"/>
+            <xs:enumeration value="SLEEP"/>
+            <xs:enumeration value="SHOCK"/>
+            <xs:enumeration value="DERANGEMENT"/>
+            <xs:enumeration value="BUG_WEAKNESS"/>
+            <xs:enumeration value="ANIMAL_WEAKNESS"/>
+            <xs:enumeration value="PLANT_WEAKNESS"/>
+            <xs:enumeration value="BEAST_WEAKNESS"/>
+            <xs:enumeration value="DRAGON_WEAKNESS"/>
+            <xs:enumeration value="PARALYZE"/>
+            <xs:enumeration value="DUAL"/>
+            <xs:enumeration value="TWO_HAND_SWORD"/>
+            <xs:enumeration value="MAGIC_SWORD"/>
+            <xs:enumeration value="DUALFIST"/>
+            <xs:enumeration value="BOSS"/>
+            <xs:enumeration value="GIANT_WEAKNESS"/>
+            <xs:enumeration value="CONSTRUCT_WEAKNESS"/>
+            <xs:enumeration value="DEATH"/>
+            <xs:enumeration value="VALAKAS"/>
+            <xs:enumeration value="ANESTHESIA"/>
+            <xs:enumeration value="CRITICAL_POISON"/>
+            <xs:enumeration value="ROOT_PHYSICALLY"/>
+            <xs:enumeration value="ROOT_MAGICALLY"/>
+            <xs:enumeration value="RAPIER"/>
+            <xs:enumeration value="CROSSBOW"/>
+            <xs:enumeration value="ANCIENT_SWORD"/>
+            <xs:enumeration value="TURN_STONE"/>
+            <xs:enumeration value="GUST"/>
+            <xs:enumeration value="PHYSICAL_BLOCKADE"/>
+            <xs:enumeration value="TARGET"/>
+            <xs:enumeration value="PHYSICAL_WEAKNESS"/>
+            <xs:enumeration value="MAGICAL_WEAKNESS"/>
+            <xs:enumeration value="DUAL_DAGGER"/>
+            <xs:enumeration value="DEMONIC_WEAKNESS"/>
+            <xs:enumeration value="DIVINE_WEAKNESS"/>
+            <xs:enumeration value="ELEMENTAL_WEAKNESS"/>
+            <xs:enumeration value="FAIRY_WEAKNESS"/>
+            <xs:enumeration value="HUMAN_WEAKNESS"/>
+            <xs:enumeration value="HUMANOID_WEAKNESS"/>
+            <xs:enumeration value="UNDEAD_WEAKNESS"/>
+            <xs:enumeration value="DUAL_BLUNT"/>
+            <xs:enumeration value="KNOCKBACK"/>
+            <xs:enumeration value="KNOCKDOWN"/>
+            <xs:enumeration value="PULL"/>
+            <xs:enumeration value="HATE"/>
+            <xs:enumeration value="AGGRESSION"/>
+            <xs:enumeration value="AIRBIND"/>
+            <xs:enumeration value="DISARM"/>
+            <xs:enumeration value="DEPORT"/>
+            <xs:enumeration value="CHANGEBODY"/>
+            <xs:enumeration value="TWO_HAND_CROSSBOW"/>
+            <xs:enumeration value="ZONE"/>
+            <xs:enumeration value="PSYCHIC"/>
+            <xs:enumeration value="EMBRYO_WEAKNESS"/>
+            <xs:enumeration value="SPIRIT_WEAKNESS"/>
+            <xs:enumeration value="ROD"/>
+            <xs:enumeration value="STAFF"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

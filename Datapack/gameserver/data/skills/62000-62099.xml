@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="62001" name="White Assassin Transformation" action="A2">
-	<!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
-		<icon initial="icon.scroll_of_verification_i06"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="62002" name="Mount Griffin" action="A2">
-	<!-- Mounts a Griffin. -->
-		<icon initial="icon.griffin_vehicle"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="62001" name="White Assassin Transformation" action="A2">
+        <!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
+        <icon initial="icon.scroll_of_verification_i06"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="62002" name="Mount Griffin" action="A2">
+        <!-- Mounts a Griffin. -->
+        <icon initial="icon.griffin_vehicle"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

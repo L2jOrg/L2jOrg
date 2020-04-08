@@ -1,1481 +1,1275 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="55800" name="Empire Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: EXP when hunting +4%
-		level 2: EXP when hunting +4.5%
-		level 3: EXP when hunting +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55801" name="Empire Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: SP when hunting +4%
-		level 2: SP when hunting +4.5%
-		level 3: SP when hunting +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55802" name="Empire Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Has a chance to recover 4% of damage as HP.
-		level 2: Has a chance to recover 4.5% of damage as HP.
-		level 3: Has a chance to recover 5% of damage as HP.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55803" name="Empire Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: P. Skill MP Consumption -3%
-		level 2: P. Skill MP Consumption -4%
-		level 3: P. Skill MP Consumption -5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55804" name="Empire Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: M. Skill MP Consumption -3%
-		level 2: M. Skill MP Consumption -4%
-		level 3: M. Skill MP Consumption -5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55805" name="Empire Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Reflect 7% of received damage
-		level 2: Reflect 8% of received damage
-		level 3: Reflect 10% of received damage
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55806" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: P. Atk. +3
-		level 2: P. Atk. +4
-		level 3: P. Atk. +5
-		level 4: P. Atk. +6
-		level 5: P. Atk. +7
-		level 6: P. Atk. +9
-		level 7: P. Atk. +11
-		level 8: P. Atk. +12
-		level 9: P. Atk. +15
-		level 10: P. Atk. +31
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55807" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: M. Atk. +3
-		level 2: M. Atk. +4
-		level 3: M. Atk. +5
-		level 4: M. Atk. +7
-		level 5: M. Atk. +8
-		level 6: M. Atk. +10
-		level 7: M. Atk. +11
-		level 8: M. Atk. +13
-		level 9: M. Atk. +16
-		level 10: M. Atk. +33
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55808" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: Atk. Spd.+5
-		level 2: Atk. Spd.+6
-		level 3: Atk. Spd.+7
-		level 4: Atk. Spd.+9
-		level 5: Atk. Spd.+11
-		level 6: Atk. Spd.+13
-		level 7: Atk. Spd.+16
-		level 8: Atk. Spd.+18
-		level 9: Atk. Spd.+22
-		level 10: Atk. Spd.+45
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55809" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: Casting Spd.+5
-		level 2: Casting Spd.+6
-		level 3: Casting Spd.+7
-		level 4: Casting Spd.+9
-		level 5: Casting Spd.+11
-		level 6: Casting Spd.+13
-		level 7: Casting Spd.+16
-		level 8: Casting Spd.+18
-		level 9: Casting Spd.+22
-		level 10: Casting Spd.+45
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55810" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: P. Accuracy +1
-		level 2: P. Accuracy +2
-		level 3: P. Accuracy +3
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55811" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: M. Accuracy +1
-		level 2: M. Accuracy +2
-		level 3: M. Accuracy +3
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55812" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: Max HP +49
-		level 2: Max HP +58
-		level 3: Max HP +76
-		level 4: Max HP +94
-		level 5: Max HP +112
-		level 6: Max HP +135
-		level 7: Max HP +157
-		level 8: Max HP +180
-		level 9: Max HP +225
-		level 10: Max HP +450
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55813" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: Max MP +49
-		level 2: Max MP +58
-		level 3: Max MP +76
-		level 4: Max MP +94
-		level 5: Max MP +112
-		level 6: Max MP +135
-		level 7: Max MP +157
-		level 8: Max MP +180
-		level 9: Max MP +225
-		level 10: Max MP +450
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55814" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: Max CP +49
-		level 2: Max CP +58
-		level 3: Max CP +76
-		level 4: Max CP +94
-		level 5: Max CP +112
-		level 6: Max CP +135
-		level 7: Max CP +157
-		level 8: Max CP +180
-		level 9: Max CP +225
-		level 10: Max CP +450
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55815" name="Empire Legendary Cloak Augmentation" max-level="2" >
-	<!-- STR +1 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55816" name="Empire Legendary Cloak Augmentation" max-level="2" >
-	<!-- CON +1 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55817" name="Empire Legendary Cloak Augmentation" max-level="2" >
-	<!-- MEN +1 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55818" name="Empire Legendary Cloak Augmentation" max-level="2" >
-	<!-- DEX +1 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55819" name="Empire Legendary Cloak Augmentation" max-level="2" >
-	<!-- WIT +1 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55820" name="Empire Legendary Cloak Augmentation" max-level="2" >
-	<!-- INT +1 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55821" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: P. Critical Rate +0.8%
-		level 2: P. Critical Rate +1%
-		level 3: P. Critical Rate +1.3%
-		level 4: P. Critical Rate +1.6%
-		level 5: P. Critical Rate +1.9%
-		level 6: P. Critical Rate +2.2%
-		level 7: P. Critical Rate +2.6%
-		level 8: P. Critical Rate +3%
-		level 9: P. Critical Rate +3.7%
-		level 10: P. Critical Rate +7.5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55822" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: P. Skill Critical Rate +0.9%
-		level 2: P. Skill Critical Rate +1%
-		level 3: P. Skill Critical Rate +1.3%
-		level 4: P. Skill Critical Rate +1.6%
-		level 5: P. Skill Critical Rate +1.9%
-		level 6: P. Skill Critical Rate +2.3%
-		level 7: P. Skill Critical Rate +2.7%
-		level 8: P. Skill Critical Rate +3%
-		level 9: P. Skill Critical Rate +3.8%
-		level 10: P. Skill Critical Rate +7.5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55823" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: M. Skill Critical Rate +1%
-		level 2: M. Skill Critical Rate +2%
-		level 3: M. Skill Critical Rate +3%
-		level 4: M. Skill Critical Rate +4%
-		level 5: M. Skill Critical Rate +5%
-		level 6: M. Skill Critical Rate +6%
-		level 7: M. Skill Critical Rate +7%
-		level 8: M. Skill Critical Rate +8%
-		level 9: M. Skill Critical Rate +9%
-		level 10: M. Skill Critical Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55824" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: P. Critical Damage Boost +0.9%
-		level 2: P. Critical Damage Boost +1%
-		level 3: P. Critical Damage Boost +1.3%
-		level 4: P. Critical Damage Boost +1.6%
-		level 5: P. Critical Damage Boost +1.9%
-		level 6: P. Critical Damage Boost +2.3%
-		level 7: P. Critical Damage Boost +2.7%
-		level 8: P. Critical Damage Boost +3%
-		level 9: P. Critical Damage Boost +3.8%
-		level 10: P. Critical Damage Boost +7.5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55825" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: P. Skill Critical Damage Boost +0.9%
-		level 2: P. Skill Critical Damage Boost +1%
-		level 3: P. Skill Critical Damage Boost +1.3%
-		level 4: P. Skill Critical Damage Boost +1.6%
-		level 5: P. Skill Critical Damage Boost +1.9%
-		level 6: P. Skill Critical Damage Boost +2.3%
-		level 7: P. Skill Critical Damage Boost +2.7%
-		level 8: P. Skill Critical Damage Boost +3%
-		level 9: P. Skill Critical Damage Boost +3.8%
-		level 10: P. Skill Critical Damage Boost +7.5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55826" name="Empire Legendary Cloak Augmentation" max-level="10" >
-	<!-- 
-		level 1: M. Critical Damage Boost +1%
-		level 3: M. Critical Damage Boost +2%
-		level 5: M. Critical Damage Boost +3%
-		level 7: M. Critical Damage Boost +4%
-		level 8: M. Critical Damage Boost +5%
-		level 9: M. Critical Damage Boost +6%
-		level 10: M. Critical Damage Boost +7%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55827" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Stun Attack Success Rate +1.5%
-		level 2: Stun Attack Success Rate +2.5%
-		level 3: Stun Attack Success Rate +3%
-		level 4: Stun Attack Success Rate +3.5%
-		level 5: Stun Attack Success Rate +4.5%
-		level 6: Stun Attack Success Rate +5%
-		level 7: Stun Attack Success Rate +6%
-		level 8: Stun Attack Success Rate +7.5%
-		level 9: Stun Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55828" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Hold Attack Success Rate +1.5%
-		level 2: Hold Attack Success Rate +2.5%
-		level 3: Hold Attack Success Rate +3%
-		level 4: Hold Attack Success Rate +3.5%
-		level 5: Hold Attack Success Rate +4.5%
-		level 6: Hold Attack Success Rate +5%
-		level 7: Hold Attack Success Rate +6%
-		level 8: Hold Attack Success Rate +7.5%
-		level 9: Hold Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55829" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Bleeding Attack Success Rate +1.5%
-		level 2: Bleeding Attack Success Rate +2.5%
-		level 3: Bleeding Attack Success Rate +3%
-		level 4: Bleeding Attack Success Rate +3.5%
-		level 5: Bleeding Attack Success Rate +4.5%
-		level 6: Bleeding Attack Success Rate +5%
-		level 7: Bleeding Attack Success Rate +6%
-		level 8: Bleeding Attack Success Rate +7.5%
-		level 9: Bleeding Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55830" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Paralysis Attack Success Rate +1.5%
-		level 2: Paralysis Attack Success Rate +2.5%
-		level 3: Paralysis Attack Success Rate +3%
-		level 4: Paralysis Attack Success Rate +3.5%
-		level 5: Paralysis Attack Success Rate +4.5%
-		level 6: Paralysis Attack Success Rate +5%
-		level 7: Paralysis Attack Success Rate +6%
-		level 8: Paralysis Attack Success Rate +7.5%
-		level 9: Paralysis Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55831" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Mind Attack Success Rate +1.5%
-		level 2: Mind Attack Success Rate +2.5%
-		level 3: Mind Attack Success Rate +3%
-		level 4: Mind Attack Success Rate +3.5%
-		level 5: Mind Attack Success Rate +4.5%
-		level 6: Mind Attack Success Rate +5%
-		level 7: Mind Attack Success Rate +6%
-		level 8: Mind Attack Success Rate +7.5%
-		level 9: Mind Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55832" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Sleep Attack Success Rate +1.5%
-		level 2: Sleep Attack Success Rate +2.5%
-		level 3: Sleep Attack Success Rate +3%
-		level 4: Sleep Attack Success Rate +3.5%
-		level 5: Sleep Attack Success Rate +4.5%
-		level 6: Sleep Attack Success Rate +5%
-		level 7: Sleep Attack Success Rate +6%
-		level 8: Sleep Attack Success Rate +7.5%
-		level 9: Sleep Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55833" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Poison Attack Success Rate +1.5%
-		level 2: Poison Attack Success Rate +2.5%
-		level 3: Poison Attack Success Rate +3%
-		level 4: Poison Attack Success Rate +3.5%
-		level 5: Poison Attack Success Rate +4.5%
-		level 6: Poison Attack Success Rate +5%
-		level 7: Poison Attack Success Rate +6%
-		level 8: Poison Attack Success Rate +7.5%
-		level 9: Poison Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55835" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Pull Attack Success Rate +1.5%
-		level 2: Pull Attack Success Rate +2.5%
-		level 3: Pull Attack Success Rate +3%
-		level 4: Pull Attack Success Rate +3.5%
-		level 5: Pull Attack Success Rate +4.5%
-		level 6: Pull Attack Success Rate +5%
-		level 7: Pull Attack Success Rate +6%
-		level 8: Pull Attack Success Rate +7.5%
-		level 9: Pull Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55836" name="Empire Legendary Cloak Augmentation" max-level="9" >
-	<!-- 
-		level 1: Petrification Attack Success Rate +1.5%
-		level 2: Petrification Attack Success Rate +2.5%
-		level 3: Petrification Attack Success Rate +3%
-		level 4: Petrification Attack Success Rate +3.5%
-		level 5: Petrification Attack Success Rate +4.5%
-		level 6: Petrification Attack Success Rate +5%
-		level 7: Petrification Attack Success Rate +6%
-		level 8: Petrification Attack Success Rate +7.5%
-		level 9: Petrification Attack Success Rate +15%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55837" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Max HP +4%
-		level 2: Max HP +4.5%
-		level 3: Max HP +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55838" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Max MP +4%
-		level 2: Max MP +4.5%
-		level 3: Max MP +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55839" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Max CP +4%
-		level 2: Max CP +4.5%
-		level 3: Max CP +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55840" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: P. Atk. +4%
-		level 2: P. Atk. +4.5%
-		level 3: P. Atk. +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55841" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: P. Def. +4%
-		level 2: P. Def. +4.5%
-		level 3: P. Def. +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55842" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Atk. Spd.+4%
-		level 2: Atk. Spd.+4.5%
-		level 3: Atk. Spd.+5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55843" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Speed +10
-		level 2: Speed +13
-		level 3: Speed +15
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55844" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: M. Atk. +4%
-		level 2: M. Atk. +4.5%
-		level 3: M. Atk. +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55845" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: M. Def. +4%
-		level 2: M. Def. +4.5%
-		level 3: M. Def. +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55846" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Casting Spd.+4%
-		level 2: Casting Spd.+4.5%
-		level 3: Casting Spd.+5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55847" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: PvP Damage +4%
-		level 2: PvP Damage +4.5%
-		level 3: PvP Damage +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55848" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Received PvP Damage +4%
-		level 2: Received PvP Damage +4.5%
-		level 3: Received PvP Damage +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55849" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: PvE Damage +4%
-		level 2: PvE Damage +4.5%
-		level 3: PvE Damage +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55850" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Received PvE Damage +4%
-		level 2: Received PvE Damage +4.5%
-		level 3: Received PvE Damage +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55851" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: EXP when hunting +4%
-		level 2: EXP when hunting +4.5%
-		level 3: EXP when hunting +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55852" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: SP when hunting +4%
-		level 2: SP when hunting +4.5%
-		level 3: SP when hunting +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55853" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Has a chance to recover 4% of damage as HP.
-		level 2: Has a chance to recover 4.5% of damage as HP.
-		level 3: Has a chance to recover 5% of damage as HP.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55854" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: P. Skill MP Consumption -3%
-		level 2: P. Skill MP Consumption -4%
-		level 3: P. Skill MP Consumption -5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55855" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: M. Skill MP Consumption -3%
-		level 2: M. Skill MP Consumption -4%
-		level 3: M. Skill MP Consumption -5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55856" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Fixed damage resistance +5
-		level 2: Fixed damage resistance +7
-		level 3: Fixed damage resistance +10
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55857" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Has a 1% chance to return all status effects to the enemy.
-		level 2: Has a 2% chance to return all status effects to the enemy.
-		level 3: Has a 5% chance to return all status effects to the enemy.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55858" name="Empire Legendary Cloak Augmentation">
-	<!-- When using a single attack skill, there's a chance for Silence to be activated. -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55859" name="Legendary Cloak - Silence" action="A1">
-	<!-- Skills are sealed momentarily because of Silence. Ignores debuff immunity. -->
-		<icon initial="icon.skill1064"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="1000"/>
-			<reuse initial="300000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55860" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: Activates a shield that has a chance to absorb 1000 damage when hit.
-		level 2: Activates a shield that has a chance to absorb 1500 damage when hit.
-		level 3: Activates a shield that has a chance to absorb 2500 damage when hit.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55861" name="Legendary Cloak - Barrier" max-level="3" action="A1">
-	<!-- 
-		level 1: Activates a shield that has a chance to absorb 1000 damage when hit for 10 sec.
-		level 2: Activates a shield that has a chance to absorb 1500 damage when hit for 10 sec.
-		level 3: Activates a shield that has a chance to absorb 2500 damage when hit for 10 sec.
-	 -->
-		<icon initial="icon.skill1514">
-			<value level="2">icon.skill1515</value>
-			<value level="3">icon.skill1516</value>
-		</icon>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="867"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55862" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: P./ M. Skill Power +1%
-		level 2: P./ M. Skill Power +2%
-		level 3: P./ M. Skill Power +5%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55863" name="Empire Legendary Cloak Augmentation" action="A1" type="MAGIC">
-	<!-- Resurrects from death with full recovery. Buffs/ debuffs stay when dying. However, the Noblesse Blessing and Lucky Charms disappear. -->
-		<icon initial="icon.skill11826"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="3600000"/>
-			<effect-point initial="867"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55864" name="Empire Legendary Cloak Augmentation">
-	<!-- Invincibility activated for 5 seconds if damage received when HP is below 30%%. This effect is only activated once every 5 minutes. -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55865" name="Legendary Cloak - Invincibility" action="A1">
-	<!-- Become invincible. -->
-		<icon initial="icon.skill1917"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55866" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: P. Critical Damage +50
-		level 2: P. Critical Damage +125
-		level 3: P. Critical Damage +200
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55867" name="Empire Legendary Cloak Augmentation" max-level="3" >
-	<!-- 
-		level 1: M. Critical Damage +1%
-		level 2: M. Critical Damage +3%
-		level 3: M. Critical Damage +10%
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55868" name="Scroll: Enchant Cloak" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55869" name="Scroll: Enchant Cloak - Legendary" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55870" name="Scroll: Ancient Cloak" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55871" name="Life Stone Pack - Legendary" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55872" name="Iron Gate Guild Treasure Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55873" name="Stable Scroll: Enchant Cloak - Legendary" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55874" name="Ancient Cloak (Legendary) Scroll Pack" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55875" name="+10 Elmoreden Cloak - Legendary Box" action="A1">
-	<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55876" name="+10 Aden Cloak - Legendary Box" action="A1">
-	<!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55877" name="+10 Elmore Cloak - Legendary Box" action="A1">
-	<!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55878" name="+10 Ferios Cloak - Legendary Box" action="A1">
-	<!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55879" name="Battle Box Lv. 1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55880" name="Battle Box Lv. 2" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55881" name="Battle Box Lv. 3" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55882" name="Battle Box Lv. 4" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55883" name="Valor Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55884" name="Bracelet of Duty - Lv. 6">
-	<!-- Up to 4 Talismans can be equipped. Additionally STR/ INT/ DEX/ WIT/ CON/ MEN +1. -->
-		<icon initial="BranchIcon.Icon.g_pledge_bracelet_05"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="20"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<effect name="TalismanSlot">
-				<power initial="4.0"/>
-			</effect>
-			<stat type="CON">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="55885" name="Agathion Bracelet Stats Increase" max-level="2" >
-	<!-- 
-		level 1: STR/ INT/ CON/ MEN +1.
-		level 2: STR/INT/CON/MEN/DEX/WIT raised +1.
-	 -->
-		<icon initial="icon.skill6343_2"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="CON">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="55886" name="Agathion Bracelet Resistance Increase" max-level="2" >
-	<!-- 
-		level 1: MEN/Stun/Sleep/Paralysis Resistance +5%.
-		level 2: MEN/Stun/Sleep/Paralysis Resistance +8%.
-	 -->
-		<icon initial="icon.skill6366_2"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<defence-trait>
-				<trait type="SHOCK">
-					<power initial="5">
-					<value level="2">7</value>
-				</power>
-				</trait>
-				<trait type="SLEEP">
-					<power initial="5">
-					<value level="2">7</value>
-				</power>
-				</trait>
-				<trait type="DERANGEMENT">
-					<power initial="5">
-					<value level="2">7</value>
-				</power>
-				</trait>
-				<trait type="PARALYZE">
-					<power initial="5">
-					<value level="2">7</value>
-				</power>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="55887" name="Clan Exuberance" max-level="5" >
-	<!-- 
-		level 1: Clan members' HP/ MP/ CP Recovery Bonus +4%, received PVE damage -3%, EXP and SP +5%.
-		level 2: Clan members' HP/ MP/ CP Recovery Bonus +8%, received PVE damage -5%, EXP and SP +8%.
-		level 3: Clan members' HP/ MP/ CP Recovery Bonus +12%, received PVE damage -7%, EXP and SP +11%.
-		level 4: HP / MP / CP Recovery + 20%, Damage Received in PvE - 10%, XP / SP /Attribute XP + 15%.
-		level 5: HP / MP / CP Recovery + 30%, Damage Received in PvE - 10%, XP / SP /Attribute XP + 20%, Stun / Mental / Paralysis Attack Success Rate + 5% for all clan members.
-	 -->
-		<icon initial="icon.skill19014"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55888" name="Halloween Blessing" max-level="4" action="A1">
-	<!-- 
-		level 1: Rico's Halloween buff.  Acquired XP/ SP +10%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
-		level 2: Rico's Halloween buff.  Acquired XP/ SP +20%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
-		level 3: Rico's Halloween buff.  Acquired XP/ SP +30%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
-		level 4: Rico's Halloween buff.
-	 -->
-		<icon initial="icon.event_halloween_pumpkin_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900">
-				<value level="2">-1</value>
-			</cast-range>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55889" name="Halloween Blessing" action="A1">
-	<!-- Rico's Halloween buff. -->
-		<icon initial="icon.event_halloween_pumpkin_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55890" name="Halloween Gift" action="A1">
-	<!-- Rico's Halloween buff. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55891" name="Treasure Chest of Forgotten Island" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55892" name="Dragon's Miracle Potion" action="A1">
-	<!-- For 20 min. XP and SP gain +50%%, P./ M. Atk. +18%%, P./ M. Def. +22%%, Atk. Spd./ Casting Spd. +5%%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%%, HP/ MP/ CP +25%%, HP/ MP Recovery +30%%. At a certain chance absorbs 5%% of the damage inflicted on target as HP. Buff remains after death. -->
-		<icon initial="icon.bm_dragon_posion_brave"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55893" name="Balthus Knights Trophy Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55894" name="Transformation Into Teddy Bear" action="A1">
-	<!-- Transforms into teddy bear. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
-		<icon initial="icon.gomdori_chest_change"/>
-		<attributes property="PHYSIC" auto-use="BUFF">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55895" name="Transformation Into Panda" action="A1">
-	<!-- Transforms into panda. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
-		<icon initial="icon.sayha2017_panda"/>
-		<attributes property="PHYSIC" auto-use="BUFF">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55896" name="Transformation Into Cat" action="A1">
-	<!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
-		<icon initial="icon.sayha2017_cat"/>
-		<attributes property="PHYSIC" auto-use="BUFF">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55897" name="Bonfire" action="A1">
-	<!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="30000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55898" name="Regular Dish" action="A1">
-	<!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
-		<icon initial="icon.etc_food_dish_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55899" name="Match Girls' Gift" action="A1">
-	<!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="55800" name="Empire Cloak Augmentation" max-level="3">
+        <!--
+            level 1: EXP when hunting +4%
+            level 2: EXP when hunting +4.5%
+            level 3: EXP when hunting +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55801" name="Empire Cloak Augmentation" max-level="3">
+        <!--
+            level 1: SP when hunting +4%
+            level 2: SP when hunting +4.5%
+            level 3: SP when hunting +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55802" name="Empire Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Has a chance to recover 4% of damage as HP.
+            level 2: Has a chance to recover 4.5% of damage as HP.
+            level 3: Has a chance to recover 5% of damage as HP.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55803" name="Empire Cloak Augmentation" max-level="3">
+        <!--
+            level 1: P. Skill MP Consumption -3%
+            level 2: P. Skill MP Consumption -4%
+            level 3: P. Skill MP Consumption -5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55804" name="Empire Cloak Augmentation" max-level="3">
+        <!--
+            level 1: M. Skill MP Consumption -3%
+            level 2: M. Skill MP Consumption -4%
+            level 3: M. Skill MP Consumption -5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55805" name="Empire Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Reflect 7% of received damage
+            level 2: Reflect 8% of received damage
+            level 3: Reflect 10% of received damage
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55806" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: P. Atk. +3
+            level 2: P. Atk. +4
+            level 3: P. Atk. +5
+            level 4: P. Atk. +6
+            level 5: P. Atk. +7
+            level 6: P. Atk. +9
+            level 7: P. Atk. +11
+            level 8: P. Atk. +12
+            level 9: P. Atk. +15
+            level 10: P. Atk. +31
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55807" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: M. Atk. +3
+            level 2: M. Atk. +4
+            level 3: M. Atk. +5
+            level 4: M. Atk. +7
+            level 5: M. Atk. +8
+            level 6: M. Atk. +10
+            level 7: M. Atk. +11
+            level 8: M. Atk. +13
+            level 9: M. Atk. +16
+            level 10: M. Atk. +33
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55808" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: Atk. Spd.+5
+            level 2: Atk. Spd.+6
+            level 3: Atk. Spd.+7
+            level 4: Atk. Spd.+9
+            level 5: Atk. Spd.+11
+            level 6: Atk. Spd.+13
+            level 7: Atk. Spd.+16
+            level 8: Atk. Spd.+18
+            level 9: Atk. Spd.+22
+            level 10: Atk. Spd.+45
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55809" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: Casting Spd.+5
+            level 2: Casting Spd.+6
+            level 3: Casting Spd.+7
+            level 4: Casting Spd.+9
+            level 5: Casting Spd.+11
+            level 6: Casting Spd.+13
+            level 7: Casting Spd.+16
+            level 8: Casting Spd.+18
+            level 9: Casting Spd.+22
+            level 10: Casting Spd.+45
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55810" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: P. Accuracy +1
+            level 2: P. Accuracy +2
+            level 3: P. Accuracy +3
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55811" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: M. Accuracy +1
+            level 2: M. Accuracy +2
+            level 3: M. Accuracy +3
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55812" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: Max HP +49
+            level 2: Max HP +58
+            level 3: Max HP +76
+            level 4: Max HP +94
+            level 5: Max HP +112
+            level 6: Max HP +135
+            level 7: Max HP +157
+            level 8: Max HP +180
+            level 9: Max HP +225
+            level 10: Max HP +450
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55813" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: Max MP +49
+            level 2: Max MP +58
+            level 3: Max MP +76
+            level 4: Max MP +94
+            level 5: Max MP +112
+            level 6: Max MP +135
+            level 7: Max MP +157
+            level 8: Max MP +180
+            level 9: Max MP +225
+            level 10: Max MP +450
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55814" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: Max CP +49
+            level 2: Max CP +58
+            level 3: Max CP +76
+            level 4: Max CP +94
+            level 5: Max CP +112
+            level 6: Max CP +135
+            level 7: Max CP +157
+            level 8: Max CP +180
+            level 9: Max CP +225
+            level 10: Max CP +450
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55815" name="Empire Legendary Cloak Augmentation" max-level="2">
+        <!-- STR +1 -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55816" name="Empire Legendary Cloak Augmentation" max-level="2">
+        <!-- CON +1 -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55817" name="Empire Legendary Cloak Augmentation" max-level="2">
+        <!-- MEN +1 -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55818" name="Empire Legendary Cloak Augmentation" max-level="2">
+        <!-- DEX +1 -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55819" name="Empire Legendary Cloak Augmentation" max-level="2">
+        <!-- WIT +1 -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55820" name="Empire Legendary Cloak Augmentation" max-level="2">
+        <!-- INT +1 -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55821" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: P. Critical Rate +0.8%
+            level 2: P. Critical Rate +1%
+            level 3: P. Critical Rate +1.3%
+            level 4: P. Critical Rate +1.6%
+            level 5: P. Critical Rate +1.9%
+            level 6: P. Critical Rate +2.2%
+            level 7: P. Critical Rate +2.6%
+            level 8: P. Critical Rate +3%
+            level 9: P. Critical Rate +3.7%
+            level 10: P. Critical Rate +7.5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55822" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: P. Skill Critical Rate +0.9%
+            level 2: P. Skill Critical Rate +1%
+            level 3: P. Skill Critical Rate +1.3%
+            level 4: P. Skill Critical Rate +1.6%
+            level 5: P. Skill Critical Rate +1.9%
+            level 6: P. Skill Critical Rate +2.3%
+            level 7: P. Skill Critical Rate +2.7%
+            level 8: P. Skill Critical Rate +3%
+            level 9: P. Skill Critical Rate +3.8%
+            level 10: P. Skill Critical Rate +7.5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55823" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: M. Skill Critical Rate +1%
+            level 2: M. Skill Critical Rate +2%
+            level 3: M. Skill Critical Rate +3%
+            level 4: M. Skill Critical Rate +4%
+            level 5: M. Skill Critical Rate +5%
+            level 6: M. Skill Critical Rate +6%
+            level 7: M. Skill Critical Rate +7%
+            level 8: M. Skill Critical Rate +8%
+            level 9: M. Skill Critical Rate +9%
+            level 10: M. Skill Critical Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55824" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: P. Critical Damage Boost +0.9%
+            level 2: P. Critical Damage Boost +1%
+            level 3: P. Critical Damage Boost +1.3%
+            level 4: P. Critical Damage Boost +1.6%
+            level 5: P. Critical Damage Boost +1.9%
+            level 6: P. Critical Damage Boost +2.3%
+            level 7: P. Critical Damage Boost +2.7%
+            level 8: P. Critical Damage Boost +3%
+            level 9: P. Critical Damage Boost +3.8%
+            level 10: P. Critical Damage Boost +7.5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55825" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: P. Skill Critical Damage Boost +0.9%
+            level 2: P. Skill Critical Damage Boost +1%
+            level 3: P. Skill Critical Damage Boost +1.3%
+            level 4: P. Skill Critical Damage Boost +1.6%
+            level 5: P. Skill Critical Damage Boost +1.9%
+            level 6: P. Skill Critical Damage Boost +2.3%
+            level 7: P. Skill Critical Damage Boost +2.7%
+            level 8: P. Skill Critical Damage Boost +3%
+            level 9: P. Skill Critical Damage Boost +3.8%
+            level 10: P. Skill Critical Damage Boost +7.5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55826" name="Empire Legendary Cloak Augmentation" max-level="10">
+        <!--
+            level 1: M. Critical Damage Boost +1%
+            level 3: M. Critical Damage Boost +2%
+            level 5: M. Critical Damage Boost +3%
+            level 7: M. Critical Damage Boost +4%
+            level 8: M. Critical Damage Boost +5%
+            level 9: M. Critical Damage Boost +6%
+            level 10: M. Critical Damage Boost +7%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55827" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Stun Attack Success Rate +1.5%
+            level 2: Stun Attack Success Rate +2.5%
+            level 3: Stun Attack Success Rate +3%
+            level 4: Stun Attack Success Rate +3.5%
+            level 5: Stun Attack Success Rate +4.5%
+            level 6: Stun Attack Success Rate +5%
+            level 7: Stun Attack Success Rate +6%
+            level 8: Stun Attack Success Rate +7.5%
+            level 9: Stun Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55828" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Hold Attack Success Rate +1.5%
+            level 2: Hold Attack Success Rate +2.5%
+            level 3: Hold Attack Success Rate +3%
+            level 4: Hold Attack Success Rate +3.5%
+            level 5: Hold Attack Success Rate +4.5%
+            level 6: Hold Attack Success Rate +5%
+            level 7: Hold Attack Success Rate +6%
+            level 8: Hold Attack Success Rate +7.5%
+            level 9: Hold Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55829" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Bleeding Attack Success Rate +1.5%
+            level 2: Bleeding Attack Success Rate +2.5%
+            level 3: Bleeding Attack Success Rate +3%
+            level 4: Bleeding Attack Success Rate +3.5%
+            level 5: Bleeding Attack Success Rate +4.5%
+            level 6: Bleeding Attack Success Rate +5%
+            level 7: Bleeding Attack Success Rate +6%
+            level 8: Bleeding Attack Success Rate +7.5%
+            level 9: Bleeding Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55830" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Paralysis Attack Success Rate +1.5%
+            level 2: Paralysis Attack Success Rate +2.5%
+            level 3: Paralysis Attack Success Rate +3%
+            level 4: Paralysis Attack Success Rate +3.5%
+            level 5: Paralysis Attack Success Rate +4.5%
+            level 6: Paralysis Attack Success Rate +5%
+            level 7: Paralysis Attack Success Rate +6%
+            level 8: Paralysis Attack Success Rate +7.5%
+            level 9: Paralysis Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55831" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Mind Attack Success Rate +1.5%
+            level 2: Mind Attack Success Rate +2.5%
+            level 3: Mind Attack Success Rate +3%
+            level 4: Mind Attack Success Rate +3.5%
+            level 5: Mind Attack Success Rate +4.5%
+            level 6: Mind Attack Success Rate +5%
+            level 7: Mind Attack Success Rate +6%
+            level 8: Mind Attack Success Rate +7.5%
+            level 9: Mind Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55832" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Sleep Attack Success Rate +1.5%
+            level 2: Sleep Attack Success Rate +2.5%
+            level 3: Sleep Attack Success Rate +3%
+            level 4: Sleep Attack Success Rate +3.5%
+            level 5: Sleep Attack Success Rate +4.5%
+            level 6: Sleep Attack Success Rate +5%
+            level 7: Sleep Attack Success Rate +6%
+            level 8: Sleep Attack Success Rate +7.5%
+            level 9: Sleep Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55833" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Poison Attack Success Rate +1.5%
+            level 2: Poison Attack Success Rate +2.5%
+            level 3: Poison Attack Success Rate +3%
+            level 4: Poison Attack Success Rate +3.5%
+            level 5: Poison Attack Success Rate +4.5%
+            level 6: Poison Attack Success Rate +5%
+            level 7: Poison Attack Success Rate +6%
+            level 8: Poison Attack Success Rate +7.5%
+            level 9: Poison Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55835" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Pull Attack Success Rate +1.5%
+            level 2: Pull Attack Success Rate +2.5%
+            level 3: Pull Attack Success Rate +3%
+            level 4: Pull Attack Success Rate +3.5%
+            level 5: Pull Attack Success Rate +4.5%
+            level 6: Pull Attack Success Rate +5%
+            level 7: Pull Attack Success Rate +6%
+            level 8: Pull Attack Success Rate +7.5%
+            level 9: Pull Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55836" name="Empire Legendary Cloak Augmentation" max-level="9">
+        <!--
+            level 1: Petrification Attack Success Rate +1.5%
+            level 2: Petrification Attack Success Rate +2.5%
+            level 3: Petrification Attack Success Rate +3%
+            level 4: Petrification Attack Success Rate +3.5%
+            level 5: Petrification Attack Success Rate +4.5%
+            level 6: Petrification Attack Success Rate +5%
+            level 7: Petrification Attack Success Rate +6%
+            level 8: Petrification Attack Success Rate +7.5%
+            level 9: Petrification Attack Success Rate +15%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55837" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Max HP +4%
+            level 2: Max HP +4.5%
+            level 3: Max HP +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55838" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Max MP +4%
+            level 2: Max MP +4.5%
+            level 3: Max MP +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55839" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Max CP +4%
+            level 2: Max CP +4.5%
+            level 3: Max CP +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55840" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: P. Atk. +4%
+            level 2: P. Atk. +4.5%
+            level 3: P. Atk. +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55841" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: P. Def. +4%
+            level 2: P. Def. +4.5%
+            level 3: P. Def. +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55842" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Atk. Spd.+4%
+            level 2: Atk. Spd.+4.5%
+            level 3: Atk. Spd.+5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55843" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Speed +10
+            level 2: Speed +13
+            level 3: Speed +15
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55844" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: M. Atk. +4%
+            level 2: M. Atk. +4.5%
+            level 3: M. Atk. +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55845" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: M. Def. +4%
+            level 2: M. Def. +4.5%
+            level 3: M. Def. +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55846" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Casting Spd.+4%
+            level 2: Casting Spd.+4.5%
+            level 3: Casting Spd.+5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55847" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: PvP Damage +4%
+            level 2: PvP Damage +4.5%
+            level 3: PvP Damage +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55848" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Received PvP Damage +4%
+            level 2: Received PvP Damage +4.5%
+            level 3: Received PvP Damage +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55849" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: PvE Damage +4%
+            level 2: PvE Damage +4.5%
+            level 3: PvE Damage +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55850" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Received PvE Damage +4%
+            level 2: Received PvE Damage +4.5%
+            level 3: Received PvE Damage +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55851" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: EXP when hunting +4%
+            level 2: EXP when hunting +4.5%
+            level 3: EXP when hunting +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55852" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: SP when hunting +4%
+            level 2: SP when hunting +4.5%
+            level 3: SP when hunting +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55853" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Has a chance to recover 4% of damage as HP.
+            level 2: Has a chance to recover 4.5% of damage as HP.
+            level 3: Has a chance to recover 5% of damage as HP.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55854" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: P. Skill MP Consumption -3%
+            level 2: P. Skill MP Consumption -4%
+            level 3: P. Skill MP Consumption -5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55855" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: M. Skill MP Consumption -3%
+            level 2: M. Skill MP Consumption -4%
+            level 3: M. Skill MP Consumption -5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55856" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Fixed damage resistance +5
+            level 2: Fixed damage resistance +7
+            level 3: Fixed damage resistance +10
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55857" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Has a 1% chance to return all status effects to the enemy.
+            level 2: Has a 2% chance to return all status effects to the enemy.
+            level 3: Has a 5% chance to return all status effects to the enemy.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55858" name="Empire Legendary Cloak Augmentation">
+        <!-- When using a single attack skill, there's a chance for Silence to be activated. -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55859" name="Legendary Cloak - Silence" action="A1">
+        <!-- Skills are sealed momentarily because of Silence. Ignores debuff immunity. -->
+        <icon initial="icon.skill1064"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="1000"/>
+            <reuse initial="300000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55860" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: Activates a shield that has a chance to absorb 1000 damage when hit.
+            level 2: Activates a shield that has a chance to absorb 1500 damage when hit.
+            level 3: Activates a shield that has a chance to absorb 2500 damage when hit.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55861" name="Legendary Cloak - Barrier" max-level="3" action="A1">
+        <!--
+            level 1: Activates a shield that has a chance to absorb 1000 damage when hit for 10 sec.
+            level 2: Activates a shield that has a chance to absorb 1500 damage when hit for 10 sec.
+            level 3: Activates a shield that has a chance to absorb 2500 damage when hit for 10 sec.
+         -->
+        <icon initial="icon.skill1514">
+            <value level="2">icon.skill1515</value>
+            <value level="3">icon.skill1516</value>
+        </icon>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="867"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55862" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: P./ M. Skill Power +1%
+            level 2: P./ M. Skill Power +2%
+            level 3: P./ M. Skill Power +5%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55863" name="Empire Legendary Cloak Augmentation" action="A1" type="MAGIC">
+        <!-- Resurrects from death with full recovery. Buffs/ debuffs stay when dying. However, the Noblesse Blessing and Lucky Charms disappear. -->
+        <icon initial="icon.skill11826"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="3600000"/>
+            <effect-point initial="867"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55864" name="Empire Legendary Cloak Augmentation">
+        <!-- Invincibility activated for 5 seconds if damage received when HP is below 30%%. This effect is only activated once every 5 minutes. -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55865" name="Legendary Cloak - Invincibility" action="A1">
+        <!-- Become invincible. -->
+        <icon initial="icon.skill1917"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55866" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: P. Critical Damage +50
+            level 2: P. Critical Damage +125
+            level 3: P. Critical Damage +200
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55867" name="Empire Legendary Cloak Augmentation" max-level="3">
+        <!--
+            level 1: M. Critical Damage +1%
+            level 2: M. Critical Damage +3%
+            level 3: M. Critical Damage +10%
+         -->
+        <icon initial="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55868" name="Scroll: Enchant Cloak" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55869" name="Scroll: Enchant Cloak - Legendary" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55870" name="Scroll: Ancient Cloak" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55871" name="Life Stone Pack - Legendary" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55872" name="Iron Gate Guild Treasure Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55873" name="Stable Scroll: Enchant Cloak - Legendary" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55874" name="Ancient Cloak (Legendary) Scroll Pack" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55875" name="+10 Elmoreden Cloak - Legendary Box" action="A1">
+        <!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55876" name="+10 Aden Cloak - Legendary Box" action="A1">
+        <!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55877" name="+10 Elmore Cloak - Legendary Box" action="A1">
+        <!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55878" name="+10 Ferios Cloak - Legendary Box" action="A1">
+        <!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55879" name="Battle Box Lv. 1" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55880" name="Battle Box Lv. 2" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55881" name="Battle Box Lv. 3" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55882" name="Battle Box Lv. 4" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55883" name="Valor Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55884" name="Bracelet of Duty - Lv. 6">
+        <!-- Up to 4 Talismans can be equipped. Additionally STR/ INT/ DEX/ WIT/ CON/ MEN +1. -->
+        <icon initial="BranchIcon.Icon.g_pledge_bracelet_05"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="TalismanSlot">
+                <power initial="4.0"/>
+            </effect>
+            <stat type="CON">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="55885" name="Agathion Bracelet Stats Increase" max-level="2">
+        <!--
+            level 1: STR/ INT/ CON/ MEN +1.
+            level 2: STR/INT/CON/MEN/DEX/WIT raised +1.
+         -->
+        <icon initial="icon.skill6343_2"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="CON">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="55886" name="Agathion Bracelet Resistance Increase" max-level="2">
+        <!--
+            level 1: MEN/Stun/Sleep/Paralysis Resistance +5%.
+            level 2: MEN/Stun/Sleep/Paralysis Resistance +8%.
+         -->
+        <icon initial="icon.skill6366_2"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="5">
+                        <value level="2">7</value>
+                    </power>
+                </trait>
+                <trait type="SLEEP">
+                    <power initial="5">
+                        <value level="2">7</value>
+                    </power>
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="5">
+                        <value level="2">7</value>
+                    </power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="5">
+                        <value level="2">7</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="55887" name="Clan Exuberance" max-level="5">
+        <!--
+            level 1: Clan members' HP/ MP/ CP Recovery Bonus +4%, received PVE damage -3%, EXP and SP +5%.
+            level 2: Clan members' HP/ MP/ CP Recovery Bonus +8%, received PVE damage -5%, EXP and SP +8%.
+            level 3: Clan members' HP/ MP/ CP Recovery Bonus +12%, received PVE damage -7%, EXP and SP +11%.
+            level 4: HP / MP / CP Recovery + 20%, Damage Received in PvE - 10%, XP / SP /Attribute XP + 15%.
+            level 5: HP / MP / CP Recovery + 30%, Damage Received in PvE - 10%, XP / SP /Attribute XP + 20%, Stun / Mental / Paralysis Attack Success Rate + 5% for all clan members.
+         -->
+        <icon initial="icon.skill19014"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55888" name="Halloween Blessing" max-level="4" action="A1">
+        <!--
+            level 1: Rico's Halloween buff.  Acquired XP/ SP +10%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
+            level 2: Rico's Halloween buff.  Acquired XP/ SP +20%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
+            level 3: Rico's Halloween buff.  Acquired XP/ SP +30%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
+            level 4: Rico's Halloween buff.
+         -->
+        <icon initial="icon.event_halloween_pumpkin_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900">
+                <value level="2">-1</value>
+            </cast-range>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55889" name="Halloween Blessing" action="A1">
+        <!-- Rico's Halloween buff. -->
+        <icon initial="icon.event_halloween_pumpkin_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55890" name="Halloween Gift" action="A1">
+        <!-- Rico's Halloween buff. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55891" name="Treasure Chest of Forgotten Island" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55892" name="Dragon's Miracle Potion" action="A1">
+        <!-- For 20 min. XP and SP gain +50%%, P./ M. Atk. +18%%, P./ M. Def. +22%%, Atk. Spd./ Casting Spd. +5%%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%%, HP/ MP/ CP +25%%, HP/ MP Recovery +30%%. At a certain chance absorbs 5%% of the damage inflicted on target as HP. Buff remains after death. -->
+        <icon initial="icon.bm_dragon_posion_brave"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55893" name="Balthus Knights Trophy Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55894" name="Transformation Into Teddy Bear" action="A1">
+        <!-- Transforms into teddy bear. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
+        <icon initial="icon.gomdori_chest_change"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55895" name="Transformation Into Panda" action="A1">
+        <!-- Transforms into panda. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
+        <icon initial="icon.sayha2017_panda"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55896" name="Transformation Into Cat" action="A1">
+        <!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
+        <icon initial="icon.sayha2017_cat"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55897" name="Bonfire" action="A1">
+        <!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="30000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55898" name="Regular Dish" action="A1">
+        <!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
+        <icon initial="icon.etc_food_dish_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55899" name="Match Girls' Gift" action="A1">
+        <!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

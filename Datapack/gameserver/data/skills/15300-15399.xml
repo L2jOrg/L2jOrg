@@ -1,1339 +1,1337 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="15300" name="Tempest" action="A1" type="MAGIC">
-	<!-- Attacks the target's area with ranged magic. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="560"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
+    <skill id="15300" name="Tempest" action="A1" type="MAGIC">
+        <!-- Attacks the target's area with ranged magic. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="560"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="100" />
-	</skill>
-	<skill id="15302" name="Mass Blood Siphon" action="A1" type="MAGIC">
-	<!-- Drains the HP of targets in a wide area around you. -->
-		<icon initial="icon.skill1090"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-121"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="100"/>
+    </skill>
+    <skill id="15302" name="Mass Blood Siphon" action="A1" type="MAGIC">
+        <!-- Drains the HP of targets in a wide area around you. -->
+        <icon initial="icon.skill1090"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-121"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
-	</skill>
-	<skill id="15303" name="Blood Siphon" action="A1" type="MAGIC">
-	<!-- Steals the target's HP. -->
-		<icon initial="icon.skill1090"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="150"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-121"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+    </skill>
+    <skill id="15303" name="Blood Siphon" action="A1" type="MAGIC">
+        <!-- Steals the target's HP. -->
+        <icon initial="icon.skill1090"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="150"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-121"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY" />
-	</skill>
-	<skill id="15304" name="Power of Blood" action="A2" type="MAGIC">
-	<!-- For 30 sec., Atk. Spd. / Spd. + 30%%. -->
-		<icon initial="icon.skill0077"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="138"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-		<abnormal type="PA_UP">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15305" name="Hurricane" action="A1" type="MAGIC">
-	<!-- Attacks the target with magic. -->
-		<icon initial="icon.skill1239"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="200"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-360"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY"/>
+    </skill>
+    <skill id="15304" name="Power of Blood" action="A2" type="MAGIC">
+        <!-- For 30 sec., Atk. Spd. / Spd. + 30%%. -->
+        <icon initial="icon.skill0077"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="138"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+        <abnormal type="PA_UP">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15305" name="Hurricane" action="A1" type="MAGIC">
+        <!-- Attacks the target with magic. -->
+        <icon initial="icon.skill1239"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="200"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-360"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="WIND" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY" />
-	</skill>
-	<skill id="15306" name="Blazing Circle" action="A1" type="MAGIC">
-	<!-- Attacks nearby enemies with ranged magic. -->
-		<icon initial="icon.skill1239"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-360"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
+            <element type="WIND" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY"/>
+    </skill>
+    <skill id="15306" name="Blazing Circle" action="A1" type="MAGIC">
+        <!-- Attacks nearby enemies with ranged magic. -->
+        <icon initial="icon.skill1239"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-360"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" />
-	</skill>
-	<skill id="15307" name="Chilling Power of Blood" action="A2" type="MAGIC">
-	<!-- Greatly increases your P. Atk. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="121"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-		<abnormal type="PA_UP">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15308" name="Half-Chop" debuff="true" action="A2">
-	<!-- Inflicts a powerful P. Atk. on the target and Stuns them. -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
-			<magic-level initial="95"/>
-			<cast-range initial="100"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-10000"/>
-			<effect-range initial="400"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="4"/>
-			<chance initial="120"/>
-		</abnormal>
-	</skill>
-	<skill id="15309" name="Model Blood Siphon" action="A2" type="MAGIC">
-	<!-- Instantly kills an ally and increases your P. Atk./ Atk. Spd./ Max HP/ HP Recovery Rate by 200%% for 1 min. -->
-		<icon initial="icon.skill11544"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="687"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-		<abnormal type="MULTI_BUFF">
-			<level initial="5"/>
-			<time initial="60"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15310" name="Feast of Blood" debuff="true" action="A2" type="MAGIC">
-	<!-- Attacks with Bleed Attack within a fan-shaped range around you. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
+            <element type="FIRE" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
+    </skill>
+    <skill id="15307" name="Chilling Power of Blood" action="A2" type="MAGIC">
+        <!-- Greatly increases your P. Atk. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="121"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+        <abnormal type="PA_UP">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15308" name="Half-Chop" debuff="true" action="A2">
+        <!-- Inflicts a powerful P. Atk. on the target and Stuns them. -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
+            <magic-level initial="95"/>
+            <cast-range initial="100"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-10000"/>
+            <effect-range initial="400"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="4"/>
+            <chance initial="120"/>
+        </abnormal>
+    </skill>
+    <skill id="15309" name="Model Blood Siphon" action="A2" type="MAGIC">
+        <!-- Instantly kills an ally and increases your P. Atk./ Atk. Spd./ Max HP/ HP Recovery Rate by 200%% for 1 min. -->
+        <icon initial="icon.skill11544"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="687"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+        <abnormal type="MULTI_BUFF">
+            <level initial="5"/>
+            <time initial="60"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15310" name="Feast of Blood" debuff="true" action="A2" type="MAGIC">
+        <!-- Attacks with Bleed Attack within a fan-shaped range around you. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target scope="FAN_PB" object="NOT_FRIEND" >
-			<fan-range start-angle="0" radius="150" angle="120"/>
-		</target>
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" >
-			<level initial="2"/>
-			<time initial="10"/>
-			<chance initial="120"/>
-		</abnormal>
-	</skill>
-	<skill id="15311" name="Irresistible Temptation" action="A2" type="MAGIC">
-	<!-- Immobilizes nearby enemies for 10 seconds. -->
-		<icon initial="icon.skill11538"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-700"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="2000" />
-		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
-			<level initial="5"/>
-			<time initial="10"/>
-			<chance initial="200"/>
-		</abnormal>
-	</skill>
-	<skill id="15312" name="Dreamy Steps" debuff="true" action="A2" type="MAGIC">
-	<!-- Decreases nearby enemies' Spd. -->
-		<icon initial="icon.skill0102"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="30">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-341"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="2000" />
-		<abnormal type="SPEED_DOWN">
-			<level initial="2"/>
-			<time initial="30"/>
-			<chance initial="200"/>
-		</abnormal>
-	</skill>
-	<skill id="15313" name="Sophie's Misunderstanding" action="A2" type="MAGIC">
-	<!-- Increases nearby enemies' Spd. -->
-		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="90"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="204"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="500" />
-		<abnormal type="SPEED_UP">
-			<level initial="1"/>
-			<time initial="30"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15315" name="Alfred's Nemesis" action="A2" type="MAGIC">
-	<!-- Able to inflict a powerful attack on Alfred. -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="90"/>
-			<cast-range initial="1000"/>
-			<reuse initial="5000"/>
-			<effect-range initial="1800"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="PA_UP">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15316" name="Delayed Healing" debuff="true" action="A2" type="MAGIC">
-	<!-- Attacks the target's area with magic and decreases Heal Received by 50%%. -->
-		<icon initial="icon.skill11510"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<cool-time initial="300"/>
-			<effect-point initial="-687"/>
-			<effect-range initial="460"/>
-			<hit-time initial="2500"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target scope="FAN_PB" object="NOT_FRIEND">
+            <fan-range start-angle="0" radius="150" angle="120"/>
+        </target>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING">
+            <level initial="2"/>
+            <time initial="10"/>
+            <chance initial="120"/>
+        </abnormal>
+    </skill>
+    <skill id="15311" name="Irresistible Temptation" action="A2" type="MAGIC">
+        <!-- Immobilizes nearby enemies for 10 seconds. -->
+        <icon initial="icon.skill11538"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-700"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="2000"/>
+        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+            <level initial="5"/>
+            <time initial="10"/>
+            <chance initial="200"/>
+        </abnormal>
+    </skill>
+    <skill id="15312" name="Dreamy Steps" debuff="true" action="A2" type="MAGIC">
+        <!-- Decreases nearby enemies' Spd. -->
+        <icon initial="icon.skill0102"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="30">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-341"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="2000"/>
+        <abnormal type="SPEED_DOWN">
+            <level initial="2"/>
+            <time initial="30"/>
+            <chance initial="200"/>
+        </abnormal>
+    </skill>
+    <skill id="15313" name="Sophie's Misunderstanding" action="A2" type="MAGIC">
+        <!-- Increases nearby enemies' Spd. -->
+        <icon initial="icon.skill1204"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="90"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="204"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="500"/>
+        <abnormal type="SPEED_UP">
+            <level initial="1"/>
+            <time initial="30"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15315" name="Alfred's Nemesis" action="A2" type="MAGIC">
+        <!-- Able to inflict a powerful attack on Alfred. -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="90"/>
+            <cast-range initial="1000"/>
+            <reuse initial="5000"/>
+            <effect-range initial="1800"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="PA_UP">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15316" name="Delayed Healing" debuff="true" action="A2" type="MAGIC">
+        <!-- Attacks the target's area with magic and decreases Heal Received by 50%%. -->
+        <icon initial="icon.skill11510"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <cool-time initial="300"/>
+            <effect-point initial="-687"/>
+            <effect-range initial="460"/>
+            <hit-time initial="2500"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
-		<abnormal type="CRITICAL_PROB_DOWN">
-			<level initial="5"/>
-			<time initial="30"/>
-			<chance initial="200"/>
-		</abnormal>
-	</skill>
-	<skill id="15317" name="Sabotage" debuff="true" action="A1" type="MAGIC">
-	<!-- Attacks the target's area with magic and eliminates 1 helpful buff. -->
-		<icon initial="icon.skill11536"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<cool-time initial="300"/>
-			<effect-point initial="-704"/>
-			<effect-range initial="460"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150"/>
+        <abnormal type="CRITICAL_PROB_DOWN">
+            <level initial="5"/>
+            <time initial="30"/>
+            <chance initial="200"/>
+        </abnormal>
+    </skill>
+    <skill id="15317" name="Sabotage" debuff="true" action="A1" type="MAGIC">
+        <!-- Attacks the target's area with magic and eliminates 1 helpful buff. -->
+        <icon initial="icon.skill11536"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <cool-time initial="300"/>
+            <effect-point initial="-704"/>
+            <effect-range initial="460"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="150" />
-	</skill>
-	<skill id="15318" name="Memory Deterioration" debuff="true" action="A2" type="MAGIC">
-	<!-- Attacks the target's area with magic and increases skill Cooldown +100%%. -->
-		<icon initial="icon.skill1248"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="20">
-			<magic-level initial="95"/>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-457"/>
-			<effect-range initial="460"/>
-			<hit-time initial="2500"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="150"/>
+    </skill>
+    <skill id="15318" name="Memory Deterioration" debuff="true" action="A2" type="MAGIC">
+        <!-- Attacks the target's area with magic and increases skill Cooldown +100%%. -->
+        <icon initial="icon.skill1248"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="20">
+            <magic-level initial="95"/>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-457"/>
+            <effect-range initial="460"/>
+            <hit-time initial="2500"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" />
-		<abnormal type="REUSE_DELAY_UP">
-			<level initial="1"/>
-			<time initial="30"/>
-			<chance initial="200"/>
-		</abnormal>
-	</skill>
-	<skill id="15319" name="Hell Allegiance" action="A2" type="MAGIC">
-	<!-- Increases your Atk. Spd. -->
-		<icon initial="icon.skill0168"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150"/>
+        <abnormal type="REUSE_DELAY_UP">
+            <level initial="1"/>
+            <time initial="30"/>
+            <chance initial="200"/>
+        </abnormal>
+    </skill>
+    <skill id="15319" name="Hell Allegiance" action="A2" type="MAGIC">
+        <!-- Increases your Atk. Spd. -->
+        <icon initial="icon.skill0168"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target />
-		<abnormal type="SPEED_UP">
-			<level initial="1"/>
-			<time initial="20"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15320" name="Hell Strike" action="A1">
-	<!-- Inflicts P. Atk. on the target. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="100"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target/>
+        <abnormal type="SPEED_UP">
+            <level initial="1"/>
+            <time initial="20"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15320" name="Hell Strike" action="A1">
+        <!-- Inflicts P. Atk. on the target. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="100"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="TARGET" />
-	</skill>
-	<skill id="15321" name="Hell Arrow" debuff="true" action="A2">
-	<!-- Inflicts P. Atk. on the target and leaves DOT Damage. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
-			<magic-level initial="94"/>
-			<cast-range initial="400"/>
-			<reuse initial="5000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="720"/>
-			<hit-time initial="2500"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="15321" name="Hell Arrow" debuff="true" action="A2">
+        <!-- Inflicts P. Atk. on the target and leaves DOT Damage. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
+            <magic-level initial="94"/>
+            <cast-range initial="400"/>
+            <reuse initial="5000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="720"/>
+            <hit-time initial="2500"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" >
-			<level initial="2"/>
-			<time initial="10"/>
-			<chance initial="130"/>
-		</abnormal>
-	</skill>
-	<skill id="15323" name="Hell Defense" action="A2">
-	<!-- Stunned. -->
-		<icon initial="icon.skill11057"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-687"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING">
+            <level initial="2"/>
+            <time initial="10"/>
+            <chance initial="130"/>
+        </abnormal>
+    </skill>
+    <skill id="15323" name="Hell Defense" action="A2">
+        <!-- Stunned. -->
+        <icon initial="icon.skill11057"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-687"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="100" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="1"/>
-			<chance initial="130"/>
-		</abnormal>
-	</skill>
-	<skill id="15324" name="Hell Fang" action="A1">
-	<!-- Inflicts a ranged physical attack in a fan-shaped range around you. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="100"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="1"/>
+            <chance initial="130"/>
+        </abnormal>
+    </skill>
+    <skill id="15324" name="Hell Fang" action="A1">
+        <!-- Inflicts a ranged physical attack in a fan-shaped range around you. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="DARK" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target scope="FAN" object="NOT_FRIEND" >
-			<fan-range start-angle="0" radius="100" angle="120"/>
-		</target>
-	</skill>
-	<skill id="15325" name="Hour of Penitence" action="A2">
-	<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
-		<icon initial="icon.etc_leash_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="EXP_BOTTLE">
-			<level initial="1"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15326" name="Hour of Penitence" action="A2">
-	<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
-		<icon initial="icon.etc_leash_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="EXP_BOTTLE">
-			<level initial="1"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15327" name="Hour of Penitence" action="A2">
-	<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
-		<icon initial="icon.etc_leash_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="EXP_BOTTLE">
-			<level initial="1"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15328" name="Hour of Penitence" action="A2">
-	<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
-		<icon initial="icon.etc_leash_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="EXP_BOTTLE">
-			<level initial="1"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15329" name="Hour of Penitence" action="A2">
-	<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
-		<icon initial="icon.etc_leash_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="EXP_BOTTLE">
-			<level initial="1"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15330" name="Reputation Penalty" max-level="7" >
-	<!-- 
-		level 1: You're being penalized for your reputation. Your XP does not refill even after resurrection.
-		level 2: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 10%.
-		level 3: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 25%.
-		level 4: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 40%.
-		level 5: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 55%.
-		level 6: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 75%.
-		level 7: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 95%.
-	 -->
-		<icon initial="icon.skill5076_c"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="15331" name="Headquarters' Effect" action="A2" type="MAGIC">
-	<!-- Increases P. Atk./M. Atk. +200%% and decreases Skill Cooldown -50%%. -->
-		<icon initial="icon.skill11544"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="687"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="RHAPSODY">
-			<level initial="5"/>
-			<time initial="30"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15332" name="Power Smash" action="A1">
-	<!-- Powerful attack on one target. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="93"/>
-			<cast-range initial="200"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+            <element type="DARK" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target scope="FAN" object="NOT_FRIEND">
+            <fan-range start-angle="0" radius="100" angle="120"/>
+        </target>
+    </skill>
+    <skill id="15325" name="Hour of Penitence" action="A2">
+        <!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
+        <icon initial="icon.etc_leash_i00"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="EXP_BOTTLE">
+            <level initial="1"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15326" name="Hour of Penitence" action="A2">
+        <!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
+        <icon initial="icon.etc_leash_i00"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="EXP_BOTTLE">
+            <level initial="1"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15327" name="Hour of Penitence" action="A2">
+        <!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
+        <icon initial="icon.etc_leash_i00"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="EXP_BOTTLE">
+            <level initial="1"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15328" name="Hour of Penitence" action="A2">
+        <!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
+        <icon initial="icon.etc_leash_i00"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="EXP_BOTTLE">
+            <level initial="1"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15329" name="Hour of Penitence" action="A2">
+        <!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
+        <icon initial="icon.etc_leash_i00"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="EXP_BOTTLE">
+            <level initial="1"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15330" name="Reputation Penalty" max-level="7">
+        <!--
+            level 1: You're being penalized for your reputation. Your XP does not refill even after resurrection.
+            level 2: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 10%.
+            level 3: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 25%.
+            level 4: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 40%.
+            level 5: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 55%.
+            level 6: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 75%.
+            level 7: You're being penalized for your reputation. Your XP does not refill even after resurrection. P. Def. and M. Def. is decreased by 95%.
+         -->
+        <icon initial="icon.skill5076_c"/>
+        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="15331" name="Headquarters' Effect" action="A2" type="MAGIC">
+        <!-- Increases P. Atk./M. Atk. +200%% and decreases Skill Cooldown -50%%. -->
+        <icon initial="icon.skill11544"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="600000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="687"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="RHAPSODY">
+            <level initial="5"/>
+            <time initial="30"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15332" name="Power Smash" action="A1">
+        <!-- Powerful attack on one target. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="93"/>
+            <cast-range initial="200"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" range="300" />
-	</skill>
-	<skill id="15334" name="Rush" action="DA1">
-	<!-- Rush toward target. -->
-		<icon initial="icon.skill0493"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="93"/>
-			<cast-range initial="200"/>
-			<reuse initial="3000"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="460"/>
-			<hit-time initial="800"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET" range="300"/>
+    </skill>
+    <skill id="15334" name="Rush" action="DA1">
+        <!-- Rush toward target. -->
+        <icon initial="icon.skill0493"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="93"/>
+            <cast-range initial="200"/>
+            <reuse initial="3000"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="460"/>
+            <hit-time initial="800"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" range="300" />
-	</skill>
-	<skill id="15335" name="Electric Stun" debuff="true" action="A2">
-	<!-- Stunned for 3 seconds. -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
-			<magic-level initial="93"/>
-			<cast-range initial="150"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" range="300"/>
+    </skill>
+    <skill id="15335" name="Electric Stun" debuff="true" action="A2">
+        <!-- Stunned for 3 seconds. -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+            <magic-level initial="93"/>
+            <cast-range initial="150"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" range="300" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="5"/>
-			<chance initial="100"/>
-		</abnormal>
-	</skill>
-	<skill id="15336" name="Trouble Benefit" action="A2" type="MAGIC">
-	<!-- P. Atk./ M. Atk. + 10%%. -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true" >
-			<magic-level initial="93"/>
-			<cast-range initial="400"/>
-			<reuse initial="5000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="730"/>
-			<hit-time initial="1000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" range="300"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="100"/>
+        </abnormal>
+    </skill>
+    <skill id="15336" name="Trouble Benefit" action="A2" type="MAGIC">
+        <!-- P. Atk./ M. Atk. + 10%%. -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+            <magic-level initial="93"/>
+            <cast-range initial="400"/>
+            <reuse initial="5000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="730"/>
+            <hit-time initial="1000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" range="300" />
-		<abnormal type="PA_UP_SPECIAL">
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15339" name="Half-kill" action="A1">
-	<!-- Cute target's HP in half. -->
-		<icon initial="icon.skill11755"/>
-		<attributes magic-critical-rate="-5.0" hit-cancel-time="3.0">
-			<magic-level initial="94"/>
-			<cast-range initial="-1"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET" range="300"/>
+        <abnormal type="PA_UP_SPECIAL">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15339" name="Half-kill" action="A1">
+        <!-- Cute target's HP in half. -->
+        <icon initial="icon.skill11755"/>
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="3.0">
+            <magic-level initial="94"/>
+            <cast-range initial="-1"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="15340" name="Trouble Heal" action="A1">
-	<!-- Restores the target's HP. -->
-		<icon initial="icon.skill1258"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="15340" name="Trouble Heal" action="A1">
+        <!-- Restores the target's HP. -->
+        <icon initial="icon.skill1258"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="15341" name="Crane Strike" action="A1">
-	<!-- Inflicts a powerful attack on the target. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="93"/>
-			<cast-range initial="200"/>
-			<reuse initial="1500"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="15341" name="Crane Strike" action="A1">
+        <!-- Inflicts a powerful attack on the target. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="93"/>
+            <cast-range initial="200"/>
+            <reuse initial="1500"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" range="300" />
-	</skill>
-	<skill id="15343" name="Trouble Ability" action="A2" type="MAGIC">
-	<!-- P. Atk./ M. Atk. + 30%%. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="500"/>
-			<reuse initial="5000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="900"/>
-			<hit-time initial="1500"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET" range="300"/>
+    </skill>
+    <skill id="15343" name="Trouble Ability" action="A2" type="MAGIC">
+        <!-- P. Atk./ M. Atk. + 30%%. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="500"/>
+            <reuse initial="5000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1500"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" scope="RANGE" object="FRIEND" range="700" />
-		<abnormal type="PA_UP_SPECIAL">
-			<level initial="2"/>
-			<time initial="10"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15344" name="Rake Attack" action="DA1" type="MAGIC">
-	<!-- Charges at the target to inflict damage. -->
-		<icon initial="icon.skill6041"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="93"/>
-			<cast-range initial="300"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-679"/>
-			<effect-range initial="540"/>
-			<hit-time initial="800"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET" scope="RANGE" object="FRIEND" range="700"/>
+        <abnormal type="PA_UP_SPECIAL">
+            <level initial="2"/>
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15344" name="Rake Attack" action="DA1" type="MAGIC">
+        <!-- Charges at the target to inflict damage. -->
+        <icon initial="icon.skill6041"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="93"/>
+            <cast-range initial="300"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-679"/>
+            <effect-range initial="540"/>
+            <hit-time initial="800"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="450" />
-	</skill>
-	<skill id="15345" name="Spanner Attack" action="A1">
-	<!-- Inflicts a powerful attack on the target. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="540"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="450"/>
+    </skill>
+    <skill id="15345" name="Spanner Attack" action="A1">
+        <!-- Inflicts a powerful attack on the target. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="540"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="15347" name="Spread Notice" action="A2" type="MAGIC">
-	<!-- Increases P. Atk. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="121"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="15347" name="Spread Notice" action="A2" type="MAGIC">
+        <!-- Increases P. Atk. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="121"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target />
-		<abnormal type="PA_UP">
-			<level initial="1"/>
-			<time initial="5"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15348" name="Ally Spread" action="A1" type="MAGIC">
-	<!-- Presentation Skill (range). -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="1260"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target/>
+        <abnormal type="PA_UP">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15348" name="Ally Spread" action="A1" type="MAGIC">
+        <!-- Presentation Skill (range). -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="1260"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="15349" name="Mental Collapse" action="A1" type="MAGIC">
-	<!-- Presentation Skill (range). -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="1000"/>
-			<effect-range initial="1800"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="15349" name="Mental Collapse" action="A1" type="MAGIC">
+        <!-- Presentation Skill (range). -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="1000"/>
+            <effect-range initial="1800"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="15350" name="Arrow Fringe" action="A1">
-	<!-- Inflicts ranged damage by shooting a rain of arrows. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="300"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="540"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="15350" name="Arrow Fringe" action="A1">
+        <!-- Inflicts ranged damage by shooting a rain of arrows. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="300"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="540"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="400" />
-	</skill>
-	<skill id="15351" name="Life Extension" action="A1">
-	<!-- Damages the target and restores your HP by 50%%. -->
-		<icon initial="icon.skill1147"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="200"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-143"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="400"/>
+    </skill>
+    <skill id="15351" name="Life Extension" action="A1">
+        <!-- Damages the target and restores your HP by 50%%. -->
+        <icon initial="icon.skill1147"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="200"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-143"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" />
-	</skill>
-	<skill id="15352" name="Strife" action="A1">
-	<!-- Inflicts powerful damage on targets within a fan-shaped range. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="200"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY"/>
+    </skill>
+    <skill id="15352" name="Strife" action="A1">
+        <!-- Inflicts powerful damage on targets within a fan-shaped range. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="200"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" >
-			<fan-range start-angle="0" radius="100" angle="120"/>
-		</target>
-	</skill>
-	<skill id="15353" name="Bleeding Range" debuff="true" action="A2">
-	<!-- Inflicts Bleed 10%% to nearby targets. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
-			<magic-level initial="94"/>
-			<cast-range initial="300"/>
-			<reuse initial="7000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="540"/>
-			<hit-time initial="3000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND">
+            <fan-range start-angle="0" radius="100" angle="120"/>
+        </target>
+    </skill>
+    <skill id="15353" name="Bleeding Range" debuff="true" action="A2">
+        <!-- Inflicts Bleed 10%% to nearby targets. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
+            <magic-level initial="94"/>
+            <cast-range initial="300"/>
+            <reuse initial="7000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="540"/>
+            <hit-time initial="3000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="400" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" >
-			<level initial="2"/>
-			<time initial="10"/>
-			<chance initial="200"/>
-		</abnormal>
-	</skill>
-	<skill id="15354" name="Stark Attack" action="A1">
-	<!-- Inflicts a blow on the target. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="93"/>
-			<cast-range initial="300"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="540"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="400"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING">
+            <level initial="2"/>
+            <time initial="10"/>
+            <chance initial="200"/>
+        </abnormal>
+    </skill>
+    <skill id="15354" name="Stark Attack" action="A1">
+        <!-- Inflicts a blow on the target. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="93"/>
+            <cast-range initial="300"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="540"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" />
-	</skill>
-	<skill id="15355" name="Shackles" action="A2" type="MAGIC">
-	<!-- Damages a target with Yoke. -->
-		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND">
-			<magic-level initial="93"/>
-			<cast-range initial="300"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-707"/>
-			<effect-range initial="540"/>
-			<hit-time initial="5000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY"/>
+    </skill>
+    <skill id="15355" name="Shackles" action="A2" type="MAGIC">
+        <!-- Damages a target with Yoke. -->
+        <icon initial="icon.skill1042"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND">
+            <magic-level initial="93"/>
+            <cast-range initial="300"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-707"/>
+            <effect-range initial="540"/>
+            <hit-time initial="5000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="AIRBIND" visual="AIRBIND" >
-			<level initial="1"/>
-			<time initial="2"/>
-			<chance initial="80"/>
-		</abnormal>
-	</skill>
-	<skill id="15356" name="Slash Blast" action="A1">
-	<!-- Inflicts a powerful damage on nearby targets. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="93"/>
-			<cast-range initial="200"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="AIRBIND" visual="AIRBIND">
+            <level initial="1"/>
+            <time initial="2"/>
+            <chance initial="80"/>
+        </abnormal>
+    </skill>
+    <skill id="15356" name="Slash Blast" action="A1">
+        <!-- Inflicts a powerful damage on nearby targets. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="93"/>
+            <cast-range initial="200"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" />
-	</skill>
-	<skill id="15357" name="Heavy Attack" action="A1">
-	<!-- Inflicts a powerful damage on a target. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="93"/>
-			<cast-range initial="200"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300"/>
+    </skill>
+    <skill id="15357" name="Heavy Attack" action="A1">
+        <!-- Inflicts a powerful damage on a target. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="93"/>
+            <cast-range initial="200"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" />
-	</skill>
-	<skill id="15359" name="Cornering Attack" action="A2" type="MAGIC">
-	<!-- Yokes a target. -->
-		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND">
-			<magic-level initial="94"/>
-			<cast-range initial="200"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-692"/>
-			<effect-range initial="400"/>
-			<hit-time initial="3000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY"/>
+    </skill>
+    <skill id="15359" name="Cornering Attack" action="A2" type="MAGIC">
+        <!-- Yokes a target. -->
+        <icon initial="icon.skill1042"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND">
+            <magic-level initial="94"/>
+            <cast-range initial="200"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-692"/>
+            <effect-range initial="400"/>
+            <hit-time initial="3000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="AIRBIND" visual="AIRBIND" >
-			<level initial="1"/>
-			<time initial="3"/>
-			<chance initial="80"/>
-		</abnormal>
-	</skill>
-	<skill id="15360" name="Tetanus" debuff="true" action="A2" type="MAGIC">
-	<!-- Poisons the target. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
-			<magic-level initial="93"/>
-			<cast-range initial="150"/>
-			<reuse initial="5000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="2000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="AIRBIND" visual="AIRBIND">
+            <level initial="1"/>
+            <time initial="3"/>
+            <chance initial="80"/>
+        </abnormal>
+    </skill>
+    <skill id="15360" name="Tetanus" debuff="true" action="A2" type="MAGIC">
+        <!-- Poisons the target. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
+            <magic-level initial="93"/>
+            <cast-range initial="150"/>
+            <reuse initial="5000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="2000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" >
-			<level initial="1"/>
-			<time initial="5"/>
-			<chance initial="100"/>
-		</abnormal>
-	</skill>
-	<skill id="15362" name="Instant Recovery" action="A1" type="MAGIC">
-	<!-- Restores 2000 HP of all party members. -->
-		<icon initial="icon.skill1402"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="400" />
-		<effects>
-			<hp>
-				<power initial="2000.0"/>
-			</hp>
-		</effects>
-	</skill>
-	<skill id="15364" name="Paralysis" debuff="true" action="A2">
-	<!-- Paralyzed. -->
-		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="20">
-			<magic-level initial="92"/>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-457"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="100"/>
+        </abnormal>
+    </skill>
+    <skill id="15362" name="Instant Recovery" action="A1" type="MAGIC">
+        <!-- Restores 2000 HP of all party members. -->
+        <icon initial="icon.skill1402"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="400"/>
+        <effects>
+            <hp>
+                <power initial="2000.0"/>
+            </hp>
+        </effects>
+    </skill>
+    <skill id="15364" name="Paralysis" debuff="true" action="A2">
+        <!-- Paralyzed. -->
+        <icon initial="icon.skill1042"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="20">
+            <magic-level initial="92"/>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-457"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" />
-		<abnormal type="PARALYZE" visual="PARALYZE" >
-			<level initial="1"/>
-			<time initial="5"/>
-			<chance initial="100"/>
-		</abnormal>
-	</skill>
-	<skill id="15365" name="Shoot Cannon" action="A1" type="MAGIC">
-	<!-- Presentation Skill. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="1500"/>
-			<effect-range initial="2700"/>
-			<hit-time initial="5000"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <abnormal type="PARALYZE" visual="PARALYZE">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="100"/>
+        </abnormal>
+    </skill>
+    <skill id="15365" name="Shoot Cannon" action="A1" type="MAGIC">
+        <!-- Presentation Skill. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="1500"/>
+            <effect-range initial="2700"/>
+            <hit-time initial="5000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="1500" />
-	</skill>
-	<skill id="15366" name="Cannon Fire" debuff="true" action="A2" type="MAGIC">
-	<!-- Bleeding. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
-			<magic-level initial="94"/>
-			<cast-range initial="1200"/>
-			<reuse initial="1000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="2200"/>
-			<hit-time initial="3000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="1500"/>
+    </skill>
+    <skill id="15366" name="Cannon Fire" debuff="true" action="A2" type="MAGIC">
+        <!-- Bleeding. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
+            <magic-level initial="94"/>
+            <cast-range initial="1200"/>
+            <reuse initial="1000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="2200"/>
+            <hit-time initial="3000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target scope="FAN_PB" object="NOT_FRIEND" >
-			<fan-range start-angle="0" radius="1800" angle="120"/>
-		</target>
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" >
-			<level initial="1"/>
-			<time initial="7"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15368" name="Massive Blow" action="A1">
-	<!-- Presentation Skill (range). -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="1500"/>
-			<reuse initial="10000"/>
-			<effect-range initial="2700"/>
-			<hit-time initial="5000"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target scope="FAN_PB" object="NOT_FRIEND">
+            <fan-range start-angle="0" radius="1800" angle="120"/>
+        </target>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING">
+            <level initial="1"/>
+            <time initial="7"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15368" name="Massive Blow" action="A1">
+        <!-- Presentation Skill (range). -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="1500"/>
+            <reuse initial="10000"/>
+            <effect-range initial="2700"/>
+            <hit-time initial="5000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target scope="POINT_BLANK" range="2000" />
-	</skill>
-	<skill id="15369" name="Massive Blow" debuff="true" action="A2">
-	<!-- Inflicts a powerful attack and Bleed on nearby targets. -->
-		<icon initial="icon.skill0096"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
-			<magic-level initial="97"/>
-			<cast-range initial="1500"/>
-			<reuse initial="10000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="2700"/>
-			<hit-time initial="5000"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target scope="POINT_BLANK" range="2000"/>
+    </skill>
+    <skill id="15369" name="Massive Blow" debuff="true" action="A2">
+        <!-- Inflicts a powerful attack and Bleed on nearby targets. -->
+        <icon initial="icon.skill0096"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
+            <magic-level initial="97"/>
+            <cast-range initial="1500"/>
+            <reuse initial="10000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="2700"/>
+            <hit-time initial="5000"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="2000" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" >
-			<level initial="2"/>
-			<time initial="20"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15370" name="Body Slash" action="A1">
-	<!-- Inflicts a powerful blow on the target. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="540"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="2000"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING">
+            <level initial="2"/>
+            <time initial="20"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15370" name="Body Slash" action="A1">
+        <!-- Inflicts a powerful blow on the target. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="540"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" />
-	</skill>
-	<skill id="15371" name="Stun Rush" action="DA2">
-	<!-- Charges at the target to inflict damage. -->
-		<icon initial="icon.skill11508"/>
-		<attributes magic-critical-rate="-5.0" trait="SHOCK">
-			<magic-level initial="95"/>
-			<cast-range initial="300"/>
-			<reuse initial="5000"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-687"/>
-			<effect-range initial="540"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY"/>
+    </skill>
+    <skill id="15371" name="Stun Rush" action="DA2">
+        <!-- Charges at the target to inflict damage. -->
+        <icon initial="icon.skill11508"/>
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
+            <magic-level initial="95"/>
+            <cast-range initial="300"/>
+            <reuse initial="5000"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-687"/>
+            <effect-range initial="540"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" />
-		<abnormal type="STUN">
-			<level initial="1"/>
-			<time initial="1"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15372" name="Zero Absorption" action="CA1" type="MAGIC">
-	<!-- Absorbs Zero's body. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95"/>
-			<cast-range initial="1200"/>
-			<effect-point initial="100"/>
-			<effect-range initial="2160"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<channeling skill="0" initial-delay="1000" interval="0"/>
-	</skill>
-	<skill id="15373" name="Spell of Protection" action="A2" type="MAGIC">
-	<!-- Protected from preemptive monster attacks for 2 minutes The status is cancelled if you take preemptive action. -->
-		<icon initial="icon.skill11562"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="80"/>
-			<cast-range initial="300"/>
-			<effect-point initial="666"/>
-			<effect-range initial="540"/>
-			<hit-time initial="800"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" object="FRIEND" />
-	</skill>
-	<skill id="15389" name="Focus Shot" action="A1">
-	<!-- Inflicts a powerful attack on the target. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="200"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <abnormal type="STUN">
+            <level initial="1"/>
+            <time initial="1"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15372" name="Zero Absorption" action="CA1" type="MAGIC">
+        <!-- Absorbs Zero's body. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95"/>
+            <cast-range initial="1200"/>
+            <effect-point initial="100"/>
+            <effect-range initial="2160"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <channeling skill="0" initial-delay="1000" interval="0"/>
+    </skill>
+    <skill id="15373" name="Spell of Protection" action="A2" type="MAGIC">
+        <!-- Protected from preemptive monster attacks for 2 minutes The status is cancelled if you take preemptive action. -->
+        <icon initial="icon.skill11562"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="80"/>
+            <cast-range initial="300"/>
+            <effect-point initial="666"/>
+            <effect-range initial="540"/>
+            <hit-time initial="800"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET" object="FRIEND"/>
+    </skill>
+    <skill id="15389" name="Focus Shot" action="A1">
+        <!-- Inflicts a powerful attack on the target. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="200"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" />
-	</skill>
-	<skill id="15390" name="Multiple Focus Shot" action="A1">
-	<!-- Inflicts a series of powerful attacks on targets within a 120 degree radius. -->
-		<icon initial="icon.skill0987"/>
-		<attributes static-reuse="true" magic-critical-rate="-5.0">
-			<magic-level initial="94"/>
-			<cast-range initial="250"/>
-			<reuse initial="3000"/>
-			<cool-time initial="1000"/>
-			<effect-point initial="-686"/>
-			<effect-range initial="450"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY"/>
+    </skill>
+    <skill id="15390" name="Multiple Focus Shot" action="A1">
+        <!-- Inflicts a series of powerful attacks on targets within a 120 degree radius. -->
+        <icon initial="icon.skill0987"/>
+        <attributes static-reuse="true" magic-critical-rate="-5.0">
+            <magic-level initial="94"/>
+            <cast-range initial="250"/>
+            <reuse initial="3000"/>
+            <cool-time initial="1000"/>
+            <effect-point initial="-686"/>
+            <effect-range initial="450"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="50"/>
-		</attributes>
-		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" >
-			<fan-range start-angle="0" radius="250" angle="120"/>
-		</target>
-	</skill>
-	<skill id="15391" name="Check Increase in Handicrafting" action="A1">
-	<!-- Presentation Skill for increasing handicrafting. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="99"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="15392" name="Check Increase in Alterations" action="A1">
-	<!-- Presentation Skill for increasing alterations. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="99"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="15393" name="Check Increase in Production" action="A1">
-	<!-- Presentation Skill for increasing production. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="99"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="15394" name="Invincibility" action="A2">
-	<!-- Becomes invincible. -->
-		<icon initial="icon.skill1427"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<target />
-		<abnormal type="PD_UP_SPECIAL" visual="INVINCIBILITY" >
-			<level initial="1"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="15395" name="Repair Broken Toad Cannon" action="A1">
-	<!-- Presentation Skill used when the Repair Robot repairs the Toad Cannon. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="99"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="15396" name="Skill Usage Restriction Area" debuff="true" action="A2">
-	<!-- Cannot use all skills due to clan request progress, but Spd. and Atk. Spd. are increased. -->
-		<icon initial="icon.skill1064"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="MULTI_DEBUFF">
-			<level initial="1"/>
-			<time initial="20"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<block-skill>
-				<magic-types>PHYSIC MAGIC STATIC DANCE</magic-types>
-			</block-skill>
-		</effects>
-	</skill>
-	<skill id="15397" name="Detonate" action="A1">
-	<!-- Skill used to attack the Guardian Robot whose Repair Robot is broken. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="99"/>
-			<cast-range initial="40"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="50"/>
+        </attributes>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND">
+            <fan-range start-angle="0" radius="250" angle="120"/>
+        </target>
+    </skill>
+    <skill id="15391" name="Check Increase in Handicrafting" action="A1">
+        <!-- Presentation Skill for increasing handicrafting. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="99"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="15392" name="Check Increase in Alterations" action="A1">
+        <!-- Presentation Skill for increasing alterations. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="99"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="15393" name="Check Increase in Production" action="A1">
+        <!-- Presentation Skill for increasing production. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="99"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="15394" name="Invincibility" action="A2">
+        <!-- Becomes invincible. -->
+        <icon initial="icon.skill1427"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <target/>
+        <abnormal type="PD_UP_SPECIAL" visual="INVINCIBILITY">
+            <level initial="1"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="15395" name="Repair Broken Toad Cannon" action="A1">
+        <!-- Presentation Skill used when the Repair Robot repairs the Toad Cannon. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="99"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="15396" name="Skill Usage Restriction Area" debuff="true" action="A2">
+        <!-- Cannot use all skills due to clan request progress, but Spd. and Atk. Spd. are increased. -->
+        <icon initial="icon.skill1064"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="MULTI_DEBUFF">
+            <level initial="1"/>
+            <time initial="20"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <block-skill>
+                <magic-types>PHYSIC MAGIC STATIC DANCE</magic-types>
+            </block-skill>
+        </effects>
+    </skill>
+    <skill id="15397" name="Detonate" action="A1">
+        <!-- Skill used to attack the Guardian Robot whose Repair Robot is broken. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="99"/>
+            <cast-range initial="40"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="TARGET" />
-		<conditions>
-			<target>				<npc>
-					<ids>19386</ids>
-				</npc>
-			</target>
-		</conditions>
-	</skill>
-	<skill id="15398" name="Flame Throw" action="A1">
-	<!-- Skill used when the Destroyer Robot is attacking the Broken Toad Cannon. -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="99"/>
-			<cast-range initial="40"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="FIRE" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="TARGET"/>
+        <conditions>
+            <target>
+                <npc>
+                    <ids>19386</ids>
+                </npc>
+            </target>
+        </conditions>
+    </skill>
+    <skill id="15398" name="Flame Throw" action="A1">
+        <!-- Skill used when the Destroyer Robot is attacking the Broken Toad Cannon. -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="99"/>
+            <cast-range initial="40"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="50"/>
-		</attributes>
-		<consume>
-			<mana initial="10"/>
-		</consume>
-		<target type="TARGET" />
-		<conditions>
-			<target>				<npc>
-					<ids>19373</ids>
-				</npc>
-			</target>
-		</conditions>
-	</skill>
-	<skill id="15399" name="Cursed Blow" action="A1">
-	<!-- Presentation Skill for destroying the cocoon. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="100"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
+            <element type="FIRE" value="50"/>
+        </attributes>
+        <consume>
+            <mana initial="10"/>
+        </consume>
+        <target type="TARGET"/>
+        <conditions>
+            <target>
+                <npc>
+                    <ids>19373</ids>
+                </npc>
+            </target>
+        </conditions>
+    </skill>
+    <skill id="15399" name="Cursed Blow" action="A1">
+        <!-- Presentation Skill for destroying the cocoon. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="100"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
 </list>

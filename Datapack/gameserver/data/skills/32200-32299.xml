@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="32203" name="Limit Barrier" action="A2">
-	<!-- Barrier broken after 500 hits. If 500 hits are not made within 15 seconds, all of Raid Boss's HP recovers. -->
-		<icon initial="icon.skill11621"/>
-		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0">
-			<magic-level initial="40"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target object="FRIEND" />
-		<abnormal type="INVINCIBILITY_SPECIAL" visual="INFINITE_SHIELD4_AVE_2" >
-			<level initial="1"/>
-			<time initial="-1"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
+    <skill id="32203" name="Limit Barrier" action="A2">
+        <!-- Barrier broken after 500 hits. If 500 hits are not made within 15 seconds, all of Raid Boss's HP recovers. -->
+        <icon initial="icon.skill11621"/>
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0">
+            <magic-level initial="40"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target object="FRIEND"/>
+        <abnormal type="INVINCIBILITY_SPECIAL" visual="INFINITE_SHIELD4_AVE_2">
+            <level initial="1"/>
+            <time initial="-1"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
 </list>

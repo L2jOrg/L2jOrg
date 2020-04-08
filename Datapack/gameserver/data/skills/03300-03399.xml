@@ -1,54 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="3322" name="Iron Bracelet">
-	<!-- Opens up 1 Talisman slot. -->
-		<icon initial="icon.etc_rbracelet_c_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="20"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<effect name="TalismanSlot">
-				<power initial="1.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3323" name="Bronze Bracelet">
-	<!-- Opens up 2 Talisman slots. -->
-		<icon initial="icon.etc_rbracelet_b_i01"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="40"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<effect name="TalismanSlot">
-				<power initial="2.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3324" name="Steel Bracelet">
-	<!-- Opens up 3 Talisman slots. -->
-		<icon initial="icon.etc_rbracelet_a_i02"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="52"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<effect name="TalismanSlot">
-				<power initial="3.0"/>
-			</effect>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
-				<power initial="60.0"/>
-			</vital-stat-modify>
-		</effects>
-	</skill>
+    <skill id="3322" name="Iron Bracelet">
+        <!-- Opens up 1 Talisman slot. -->
+        <icon initial="icon.etc_rbracelet_c_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="TalismanSlot">
+                <power initial="1.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="3323" name="Bronze Bracelet">
+        <!-- Opens up 2 Talisman slots. -->
+        <icon initial="icon.etc_rbracelet_b_i01"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="TalismanSlot">
+                <power initial="2.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="3324" name="Steel Bracelet">
+        <!-- Opens up 3 Talisman slots. -->
+        <icon initial="icon.etc_rbracelet_a_i02"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="TalismanSlot">
+                <power initial="3.0"/>
+            </effect>
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="60.0"/>
+            </vital-stat-modify>
+        </effects>
+    </skill>
 </list>

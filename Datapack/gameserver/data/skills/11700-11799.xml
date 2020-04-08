@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="11786" name="Debuff Immunity" action="A2" type="MAGIC">
-	<!-- Becomes invincible to debuffs for 5 seconds. -->
-		<icon initial="icon.skill1411"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="97"/>
-			<cast-range initial="-1"/>
-			<reuse initial="30000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="ABNORMAL_INVINCIBILITY">
-			<level initial="3"/>
-			<time initial="5"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<effect name="DebuffBlock"/>
-		</effects>
-	</skill>
+    <skill id="11786" name="Debuff Immunity" action="A2" type="MAGIC">
+        <!-- Becomes invincible to debuffs for 5 seconds. -->
+        <icon initial="icon.skill1411"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="97"/>
+            <cast-range initial="-1"/>
+            <reuse initial="30000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="ABNORMAL_INVINCIBILITY">
+            <level initial="3"/>
+            <time initial="5"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="DebuffBlock"/>
+        </effects>
+    </skill>
 </list>

@@ -1,384 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="16400" name="Ferin's Recharge" action="A2" type="MAGIC">
-	<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. -->
-		<icon initial="icon.skill11760"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="2000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="867"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16401" name="Dimensional Death Skin" action="A2" type="MAGIC">
-	<!-- For 10 sec., received damage - 50%%. -->
-		<icon initial="icon.skill0340"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2400"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16402" name="Dimensional Horror" action="A2" type="MAGIC">
-	<!-- Inflicts Fear on nearby enemies for 5 sec. -->
-		<icon initial="icon.skill1169"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2400"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16403" name="Dimensional Judgment" action="A1">
-	<!-- Sentence target to death. 150,000 damage. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16404" name="Dimensional Wide Judgment" action="A1">
-	<!-- Sentence enemies to the front to death. 150,000 damage. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16405" name="Dimensional Mass Judgment" action="A1">
-	<!-- Sentence all nearby enemies to death. 150,000 damage. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16406" name="Dimensional Fear" action="A2">
-	<!-- Inflicts Fear on target for 5 seconds. -->
-		<icon initial="icon.skill1169"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2400"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16407" name="Dimensional Resurrection Block" debuff="true" action="A2" type="MAGIC">
-	<!-- Stops target from resurrecting for 60 sec. -->
-		<icon initial="icon.skill_resurrection"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16408" name="Trap Fear" max-level="3" action="A2">
-	<!-- Moving against your will due to Fear. -->
-		<icon initial="icon.skill1381"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16409" name="Trap Hold" max-level="3" action="A2">
-	<!-- 
-		level 1: Immobilized.
-		level 2: Unable to move momentarily.
-	 -->
-		<icon initial="icon.skill4047"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16410" name="Trap Aerial Yoke" max-level="3" action="A2">
-	<!-- Immobilized. -->
-		<icon initial="icon.skill11050"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16411" name="Trap Stun" max-level="3" action="A2">
-	<!-- Immobilized. -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16412" name="Trap Petrify" max-level="3" action="A2">
-	<!-- Immobilized. -->
-		<icon initial="icon.skill4111"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16413" name="Trap Poison" max-level="3" debuff="true" action="A2">
-	<!-- Poisoned and losing 1000 HP/second. -->
-		<icon initial="icon.skill4035"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16414" name="Peace Zone Cure" action="A1">
-	<!-- Recover 10%% of Max HP and 30%% of Max MP of self and everyone within 200 grids. Cooldown is 10 seconds. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16415" name="Dimensional Dark Forces" max-level="4" debuff="true" action="A2">
-	<!-- 
-		level 1: P. Atk. - 10%, M. Atk. - 10%, P. Critical Rate - 30, M. Critical Rate - 30
-		level 2: P. Atk. - 15%, M. Atk. - 15%, P. Critical Rate - 40, M. Critical Rate - 40
-		level 3: P. Atk. - 20%, M. Atk. - 20%, P. Critical Rate - 50, M. Critical Rate - 50
-		level 4: P. Atk. - 25%, M. Atk. - 25%, P. Critical Rate - 60, M. Critical Rate - 60
-	 -->
-		<icon initial="icon.skill1298"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16416" name="Bluff Resistance" max-level="10" >
-	<!-- 
-		level 1: Resistance to Bluff.
-		level 3: Strong Bluff attack resistance.
-		level 5: Very strong Resistance to Bluff.
-		level 7: Extremely strong Resistance to Bluff.
-		level 10: Ultimate Resistance to Bluff.
-	 -->
-		<icon initial="icon.skill0358"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16417" name="Wind Stun Resistance" max-level="10" >
-	<!-- 
-		level 1: Slightly strong Wind Stun attack resistance.
-		level 3: Strong Wind Stun attack resistance.
-		level 5: Very strong Wind Stun attack resistance.
-		level 7: Extremely strong Wind Stun attack resistance.
-		level 10: Ultimately strong Wind Stun attack resistance.
-	 -->
-		<icon initial="icon.skill4011"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16418" name="Seduction Resistance" max-level="10" >
-	<!-- 
-		level 1: Slightly strong Seduction attack resistance.
-		level 3: Strong Seduction attack resistance.
-		level 5: Very strong Seduction attack resistance.
-		level 7: Extremely strong Seduction attack resistance.
-		level 10: Ultimately strong Seduction attack resistance.
-	 -->
-		<icon initial="icon.skill5934"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16425" name="Appearance Stone: Santa Suit" action="A2">
-	<!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
-		<icon initial="BranchSys.icon.br_xmas_present_fun_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16426" name="Greater Abelius Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16427" name="Greater Sapyros Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16428" name="Greater Ashagen Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16429" name="Greater Cranigg Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16430" name="Greater Soltkreig Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16431" name="Greater Naviarope Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16432" name="Greater Leister Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16433" name="Greater Lakcis Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16434" name="Greater Sayha Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16435" name="Greater Sayha Cloak (20-day)">
-	<!-- STR +1, CON +1, INT +1, MEN +1 -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="16437" name="Master's Blessing - GM's Cheers" max-level="3" action="A1">
-	<!-- 
-		level 1: The GM is always with you. XP and SP gain +100%% for 1 hour. Cannot be stacked with Dandy's Home Run Ball.
-		level 2: The GM is always with you. XP and SP gain +100%% for 4 hours. Cannot be stacked with Dandy's Home Run Ball.
-		level 3: The GM is always with you. XP and SP gain +100%% for 8 hours. Cannot be stacked with Dandy's Home Run Ball.
-	 -->
-		<icon initial="icon.skill0919"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="1200"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="16400" name="Ferin's Recharge" action="A2" type="MAGIC">
+        <!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. -->
+        <icon initial="icon.skill11760"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="2000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="867"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16401" name="Dimensional Death Skin" action="A2" type="MAGIC">
+        <!-- For 10 sec., received damage - 50%%. -->
+        <icon initial="icon.skill0340"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2400"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16402" name="Dimensional Horror" action="A2" type="MAGIC">
+        <!-- Inflicts Fear on nearby enemies for 5 sec. -->
+        <icon initial="icon.skill1169"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2400"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16403" name="Dimensional Judgment" action="A1">
+        <!-- Sentence target to death. 150,000 damage. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16404" name="Dimensional Wide Judgment" action="A1">
+        <!-- Sentence enemies to the front to death. 150,000 damage. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16405" name="Dimensional Mass Judgment" action="A1">
+        <!-- Sentence all nearby enemies to death. 150,000 damage. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16406" name="Dimensional Fear" action="A2">
+        <!-- Inflicts Fear on target for 5 seconds. -->
+        <icon initial="icon.skill1169"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2400"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16407" name="Dimensional Resurrection Block" debuff="true" action="A2" type="MAGIC">
+        <!-- Stops target from resurrecting for 60 sec. -->
+        <icon initial="icon.skill_resurrection"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16408" name="Trap Fear" max-level="3" action="A2">
+        <!-- Moving against your will due to Fear. -->
+        <icon initial="icon.skill1381"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16409" name="Trap Hold" max-level="3" action="A2">
+        <!--
+            level 1: Immobilized.
+            level 2: Unable to move momentarily.
+         -->
+        <icon initial="icon.skill4047"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16410" name="Trap Aerial Yoke" max-level="3" action="A2">
+        <!-- Immobilized. -->
+        <icon initial="icon.skill11050"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16411" name="Trap Stun" max-level="3" action="A2">
+        <!-- Immobilized. -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16412" name="Trap Petrify" max-level="3" action="A2">
+        <!-- Immobilized. -->
+        <icon initial="icon.skill4111"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16413" name="Trap Poison" max-level="3" debuff="true" action="A2">
+        <!-- Poisoned and losing 1000 HP/second. -->
+        <icon initial="icon.skill4035"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16414" name="Peace Zone Cure" action="A1">
+        <!-- Recover 10%% of Max HP and 30%% of Max MP of self and everyone within 200 grids. Cooldown is 10 seconds. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16415" name="Dimensional Dark Forces" max-level="4" debuff="true" action="A2">
+        <!--
+            level 1: P. Atk. - 10%, M. Atk. - 10%, P. Critical Rate - 30, M. Critical Rate - 30
+            level 2: P. Atk. - 15%, M. Atk. - 15%, P. Critical Rate - 40, M. Critical Rate - 40
+            level 3: P. Atk. - 20%, M. Atk. - 20%, P. Critical Rate - 50, M. Critical Rate - 50
+            level 4: P. Atk. - 25%, M. Atk. - 25%, P. Critical Rate - 60, M. Critical Rate - 60
+         -->
+        <icon initial="icon.skill1298"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16416" name="Bluff Resistance" max-level="10">
+        <!--
+            level 1: Resistance to Bluff.
+            level 3: Strong Bluff attack resistance.
+            level 5: Very strong Resistance to Bluff.
+            level 7: Extremely strong Resistance to Bluff.
+            level 10: Ultimate Resistance to Bluff.
+         -->
+        <icon initial="icon.skill0358"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16417" name="Wind Stun Resistance" max-level="10">
+        <!--
+            level 1: Slightly strong Wind Stun attack resistance.
+            level 3: Strong Wind Stun attack resistance.
+            level 5: Very strong Wind Stun attack resistance.
+            level 7: Extremely strong Wind Stun attack resistance.
+            level 10: Ultimately strong Wind Stun attack resistance.
+         -->
+        <icon initial="icon.skill4011"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16418" name="Seduction Resistance" max-level="10">
+        <!--
+            level 1: Slightly strong Seduction attack resistance.
+            level 3: Strong Seduction attack resistance.
+            level 5: Very strong Seduction attack resistance.
+            level 7: Extremely strong Seduction attack resistance.
+            level 10: Ultimately strong Seduction attack resistance.
+         -->
+        <icon initial="icon.skill5934"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16425" name="Appearance Stone: Santa Suit" action="A2">
+        <!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
+        <icon initial="BranchSys.icon.br_xmas_present_fun_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16426" name="Greater Abelius Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16427" name="Greater Sapyros Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16428" name="Greater Ashagen Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16429" name="Greater Cranigg Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16430" name="Greater Soltkreig Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16431" name="Greater Naviarope Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16432" name="Greater Leister Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16433" name="Greater Lakcis Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16434" name="Greater Sayha Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16435" name="Greater Sayha Cloak (20-day)">
+        <!-- STR +1, CON +1, INT +1, MEN +1 -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="16437" name="Master's Blessing - GM's Cheers" max-level="3" action="A1">
+        <!--
+            level 1: The GM is always with you. XP and SP gain +100%% for 1 hour. Cannot be stacked with Dandy's Home Run Ball.
+            level 2: The GM is always with you. XP and SP gain +100%% for 4 hours. Cannot be stacked with Dandy's Home Run Ball.
+            level 3: The GM is always with you. XP and SP gain +100%% for 8 hours. Cannot be stacked with Dandy's Home Run Ball.
+         -->
+        <icon initial="icon.skill0919"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="1200"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

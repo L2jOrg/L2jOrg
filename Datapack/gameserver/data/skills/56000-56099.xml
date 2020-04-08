@@ -1,1354 +1,1225 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="56000" name="Stable Scroll: Enchant Cloak" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56001" name="High-grade Life Stone Pack - Legendary" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56002" name="High-grade Life Stone Pack - Cloak" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56003" name="XP/SP Rune - 50%">
-	<!-- XP/SP +50%%, while hunting. -->
-		<icon initial="icon.skill19226"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56004" name="Summon Agathion - Mermaid" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56005" name="Mermaid Agathion Enchant Scroll" action="A1">
-	<!-- none -->
-		<icon initial="icon.star_scrl_of_ench_ag"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56006" name="Master's Fishing Potion" action="A1">
-	<!-- Increases XP/SP for successful fishing by 50% for 1 hour. Does not disappear upon death and cannot be forcefully removed. -->
-		<icon initial="BranchIcon.etc_sign_agathion_feed_blue_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56007" name="Shining Fishing Box" action="A1">
-	<!-- Double-click to get a random item. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56008" name="Scroll: Fishing XP" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56009" name="Mermaid Agathion's Unique Ability" max-level="11" >
-	<!-- 
-		level 1: Increases Fishing XP/SP when the Agathion is upgraded.
-		level 2: Fishing XP/SP +1%.
-		level 3: Fishing XP/SP +2%.
-		level 4: Fishing XP/SP +4%.
-		level 5: Fishing XP/SP +6%.
-		level 6: Fishing XP/SP +8%.
-		level 7: Fishing XP/SP +10%.
-		level 8: Fishing XP/SP +12%.
-		level 9: Fishing XP/SP +15%.
-		level 10: Fishing XP/SP +17%.
-		level 11: Fishing XP/SP +20%.
-	 -->
-		<icon initial="icon.agathion_base"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56010" name="Mermaid's Blessing" max-level="4" action="A1">
-	<!-- 
-		level 1: Increases Fishing XP/SP by 5% for 60 minutes.
-		level 2: Increases Fishing XP/SP by 10% for 60 minutes.
-		level 3: Increases Fishing XP/SP by 20% for 60 minutes.
-		level 4: Increases Fishing XP/SP by 50% for 2 hours.
-	 -->
-		<icon initial="icon.skill_agathion_special"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="3600000"/>
-			<effect-point initial="379"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56011" name="Full Load Support Pack" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56012" name="Cloak of the Chosen">
-	<!-- Max HP/MP/CP +5%%, P. Atk. +3%%, Magic Resistance +5%%, and Speed +10. -->
-		<icon initial="icon.vesper_cloack_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56013" name="Greater Blessing of Castle Scroll - Party" action="A1">
-	<!-- Gives the Blessing of Castle effect to all party members. Buffs and debuffs do not disappear upon death, but Noblesse Blessing and Lucky Charm disappear. -->
-		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="700"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56014" name="Castle Enchant Buff Scroll - Party" action="A1">
-	<!-- Bestows all party members with the effects of Might Lv. 2, Empower Lv. 2, Acumen Lv. 1, and Haste Lv. 1. -->
-		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="700"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56015" name="Castle Wind Walk Scroll - Party" action="A1">
-	<!-- Increases Speed of all party members by 33. -->
-		<icon initial="icon.etc_scroll_white_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56016" name="Enchanted Castle Ring">
-	<!-- Increases P./M. Atk. and Max HP. -->
-		<icon initial="icon.ev_11th_rare_acc_ring"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56017" name="Enchanted Castle Earring">
-	<!-- Increases MP Recovery, Healing Effect and Max MP. Decreases Skill MP Cost. -->
-		<icon initial="icon.ev_11th_rare_acc_earing"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56018" name="Enchanted Castle Necklace">
-	<!-- Increases P./M. Def., MEN Attack and Resistance, and Max MP. Decreases Skill MP Cost. -->
-		<icon initial="icon.ev_11th_rare_acc_necklace"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56019" name="+7 Elmoreden Cloak Box" action="A1">
-	<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56020" name="+7 Aden Cloak Box" action="A1">
-	<!-- Double-click to obtain a +7 Aden Cloak. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56021" name="+7 Elmore Cloak Box" action="A1">
-	<!-- Double-click to obtain a +7 Elmore Cloak. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56022" name="+7 Ferios Cloak Box" action="A1">
-	<!-- Double-click to obtain a +7 Ferios Cloak. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56023" name="Summon  Gnosian Agathion" action="A1">
-	<!-- Summons  Agathion - Gnosian. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56024" name="Summon  Orodriel Agathion" action="A1">
-	<!-- Summons  Agathion - Orodriel. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56025" name="Summon Penalty Kick Agathion" action="A1">
-	<!-- Summons Agathion - Penalty Kick. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56026" name="Seven Signs Miracle Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56027" name="VIP Level 1">
-	<!-- Receives the VIP 1 Daily Gift once a day. XP/SP +5%%, Item Drop Rate +15%%, and World Chat +1. -->
-		<icon initial="BranchIcon.Icon.g_skill_vip1"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56028" name="VIP Level 2">
-	<!-- Receives the VIP 2 Daily Gift once a day. XP/SP +10%%, Item Drop Rate +25%%, and World Chat +2. -->
-		<icon initial="BranchIcon.Icon.g_skill_vip2"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56029" name="VIP Level 3">
-	<!-- Receives the VIP 3 Daily Gift once a day. XP/SP +15%%, Item Drop Rate +35%%, World Chat +2, XP/SP when fishing +5%%, PvE Damage +3%%, XP Reduction at Death -5%%. Can obtain Silver Coins when hunting. -->
-		<icon initial="BranchIcon.Icon.g_skill_vip3"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56030" name="VIP Level 4">
-	<!-- Receives the VIP 4 Daily Gift once a day. XP/SP +20%%, Item Drop Rate +55%%, World Chat +3, XP/SP when fishing +20%%, PvE Damage +10%%, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
-		<icon initial="BranchIcon.Icon.g_skill_vip4"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56031" name="VIP Level 5">
-	<!-- Receives the VIP 5 Daily Gift once a day. XP/SP +30%%, Item Drop Rate +70%%, World Chat +4, XP/SP when fishing +20%%, PvE Damage +12%%, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
-		<icon initial="BranchIcon.Icon.g_skill_vip5"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56032" name="VIP Level 6">
-	<!-- Receives the VIP 6 Daily Gift once a day. XP/SP +35%%, Item Drop Rate +100%%, World Chat +10, XP/SP when fishing +20%%, PvE Damage +15%%, STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
-		<icon initial="BranchIcon.Icon.g_skill_vip6"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56033" name="VIP Level 7">
-	<!-- Receives the VIP 7 Daily Gift once a day. XP/SP +35%%, Item Drop Rate +200%%, World Chat +20, XP/SP when fishing +20%%, PvE Damage +15%%, STR +2, INT +2, DEX +2, WIT +2, CON +2, MEN +2, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
-		<icon initial="BranchIcon.Icon.g_skill_vip7"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56034" name="Agathion Summon - Meliodas" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56035" name="Agathion Summon - Elizabeth" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56036" name="Agathion Summon - Hawk" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56037" name="Agathion Summon - Ban" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56038" name="Agathion Summon - Diane" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56039" name="Agathion Summon - King" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56040" name="Agathion Summon - Merlin" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56041" name="Agathion Summon - Gowther" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56042" name="Agathion Summon - Escanor" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56043" name="Seven Great Sins - Meliodas" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and STR / INT are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, STR / INT +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56044" name="Seven Great Sins - Elizabeth" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and CON / MEN are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, CON / MEN +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56045" name="Seven Great Sins - Hawk" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and CON are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, CON +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56046" name="Seven Great Sins - Ban" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and DEX are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, DEX +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56047" name="Seven Great Sins - Diane" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and STR are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, STR +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56048" name="Seven Great Sins - King" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and WIT are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, WIT +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56049" name="Seven Great Sins - Meriln" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and INT are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, INT +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56050" name="Seven Great Sins - Gowther" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and MEN are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, MEN +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56051" name="Seven Great Sins - Escanor" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Max HP / MP / CP, and CON are increased.
-		level 2: Max HP / MP / CP +1%.
-		level 3: Max HP / MP / CP +2%.
-		level 4: Max HP / MP / CP +3%.
-		level 5: Max HP / MP / CP +4%.
-		level 6: Max HP / MP / CP +5%.
-		level 7: Max HP / MP / CP +6%.
-		level 8: Max HP / MP / CP +7%.
-		level 9: Max HP / MP / CP +10%, CON +1.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56052" name="Sin of Wrath" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, PvE Damage to normal monsters is increased.
-		level 2: PvE Damage to normal monsters +1%.
-		level 3: PvE Damage to normal monsters +2%.
-		level 4: PvE Damage to normal monsters +3%.
-		level 5: PvE Damage to normal monsters +4%.
-		level 6: PvE Damage to normal monsters +5%.
-		level 7: PvE Damage to normal monsters +6%.
-		level 8: PvE Damage to normal monsters +7%.
-		level 9: PvE Damage to normal monsters +15%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56053" name="Power of Goddess Clan" max-level="9" >
-	<!-- 
-		level 1: When the Agathion grows, Received PvE Damage is reduced.
-		level 2: Received PvE Damage -1%.
-		level 3: Received PvE Damage -2%.
-		level 4: Received PvE Damage -3%.
-		level 5: Received PvE Damage -4%.
-		level 6: Received PvE Damage -5%.
-		level 7: Received PvE Damage -6%.
-		level 8: Received PvE Damage -7%.
-		level 9: Received PvE Damage -15%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56054" name="Boar Hat Bar's Main Pig" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, Bonus Acquired XP /SP Gain from fishing is increased.
-		level 2: Bonus XP /SP Gain from fishing +1%.
-		level 3: Bonus XP /SP Gain from fishing +2%.
-		level 4: Bonus XP /SP Gain from fishing +3%.
-		level 5: Bonus XP /SP Gain from fishing +4%.
-		level 6: Bonus XP /SP Gain from fishing +5%.
-		level 7: Bonus XP /SP Gain from fishing +7%.
-		level 8: Bonus XP /SP Gain from fishing +10%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56055" name="Sin of Greed" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, P. Skill Critical Rate is increased.
-		level 2: P. Skill Critical Rate +1%.
-		level 3: P. Skill Critical Rate +2%.
-		level 4: P. Skill Critical Rate +3%.
-		level 5: P. Skill Critical Rate +4%.
-		level 6: P. Skill Critical Rate +5%.
-		level 7: P. Skill Critical Rate +6%.
-		level 8: P. Skill Critical Rate +7%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56056" name="Sin of Envy" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, P. Atk.is increased.
-		level 2: P. Atk. +1%.
-		level 3: P. Atk. +2%.
-		level 4: P. Atk. +3%.
-		level 5: P. Atk. +4%.
-		level 6: P. Atk. +6%.
-		level 7: P. Atk. +8%.
-		level 8: P. Atk. +10%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56057" name="Sin of Sloth" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, Skill MP Consumption is reduced.
-		level 2: Skill MP Consumption -1%.
-		level 3: Skill MP Consumption -2%.
-		level 4: Skill MP Consumption -3%.
-		level 5: Skill MP Consumption -4%.
-		level 6: Skill MP Consumption -5%.
-		level 7: Skill MP Consumption -6%.
-		level 8: Skill MP Consumption -7%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56058" name="Sin of Gluttony" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, M. Def. is increased.
-		level 2: M. Def. +1%.
-		level 3: M. Def. +2%.
-		level 4: M. Def. +3%.
-		level 5: M. Def. +4%.
-		level 6: M. Def. +6%.
-		level 7: M. Def. +8%.
-		level 8: M. Def. +10%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56059" name="Sin of Lust" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, Debuff Resistance is increased.
-		level 2: Debuff Resistance +1%.
-		level 3: Debuff Resistance +2%.
-		level 4: Debuff Resistance +3%.
-		level 5: Debuff Resistance +4%.
-		level 6: Debuff Resistance +5%.
-		level 7: Debuff Resistance +6%.
-		level 8: Debuff Resistance +7%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56060" name="Sin of Pride" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, P. Def. is increased.
-		level 2: P. Def. +1%.
-		level 3: P. Def. +2%.
-		level 4: P. Def. +3%.
-		level 5: P. Def. +4%.
-		level 6: P. Def. +6%.
-		level 7: P. Def. +8%.
-		level 8: P. Def. +10%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56061" name="Power of Demon Sword Lostvayne" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, PvP Damage is increased.
-		level 2: PvP Damage +1%.
-		level 3: PvP Damage +2%.
-		level 4: PvP Damage +3%.
-		level 5: PvP Damage +4%.
-		level 6: PvP Damage +5%.
-		level 7: PvP Damage +6%.
-		level 8: PvP Damage +15%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56062" name="Consolidation Super Magic" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, Received PvP Damage is decreased.
-		level 2: Received PvP Damage -1%.
-		level 3: Received PvP Damage -2%.
-		level 4: Received PvP Damage -3%.
-		level 5: Received PvP Damage -4%.
-		level 6: Received PvP Damage -5%.
-		level 7: Received PvP Damage -6%.
-		level 8: Received PvP Damage -15%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56063" name="Leftovers Knights Mobilize!" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, XP /SP Gain when hunting is increased.
-		level 2: XP /SP Gain when hunting +1%.
-		level 3: XP /SP Gain when hunting +2%.
-		level 4: XP /SP Gain when hunting +3%.
-		level 5: XP /SP Gain when hunting +4%.
-		level 6: XP /SP Gain when hunting +5%.
-		level 7: XP /SP Gain when hunting +7%.
-		level 8: XP /SP Gain when hunting +10%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56064" name="Power of Holy Staff Courechouse" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, Skill Cooldown is reduced.
-		level 2: Skill Cooldown -1%.
-		level 3: Skill Cooldown -2%.
-		level 4: Skill Cooldown -3%.
-		level 5: Skill Cooldown -4%.
-		level 6: Skill Cooldown -5%.
-		level 7: Skill Cooldown -6%.
-		level 8: Skill Cooldown -7%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56065" name="Power of War Hammer Gideon" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, P. Critical Damage is increased.
-		level 2: P. Critical Damage +1%.
-		level 3: P. Critical Damage +2%.
-		level 4: P. Critical Damage +3%.
-		level 5: P. Critical Damage +4%.
-		level 6: P. Critical Damage +5%.
-		level 7: P. Critical Damage +6%.
-		level 8: P. Critical Damage +7%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56066" name="Power of Spirit Spear Chastiefol" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, M. Atk. is increased.
-		level 2: M. Atk. +1%.
-		level 3: M. Atk. +3%.
-		level 4: M. Atk. +5%.
-		level 5: M. Atk. +7%.
-		level 6: M. Atk. +10%.
-		level 7: M. Atk. +13%.
-		level 8: M. Atk. +17%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56067" name="Power of Morning Star Aldan" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, M. Critical Damage  is increased.
-		level 2: M. Critical Damage +1%.
-		level 3: M. Critical Damage +2%.
-		level 4: M. Critical Damage +3%.
-		level 5: M. Critical Damage +4%.
-		level 6: M. Critical Damage +5%.
-		level 7: M. Critical Damage +6%.
-		level 8: M. Critical Damage +7%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56068" name="Power of Twin Bow Herritt" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, Damage to paralyzed targets is increased.
-		level 2: When the Agathion grows, Received P. Critical Damage is reduced.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56069" name="Power of Twin Bow Herritt" max-level="8" >
-	<!-- 
-		level 1: When the Agathion grows, Received P. Critical Damage is reduced.
-		level 2: Received P. Critical Damage -1%.
-		level 3: Received P. Critical Damage -2%.
-		level 4: Received P. Critical Damage -3%.
-		level 5: Received P. Critical Damage -4%.
-		level 6: Received P. Critical Damage -6%.
-		level 7: Received P. Critical Damage -8%.
-		level 8: Received P. Critical Damage -10%.
-	 -->
-		<icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56070" name="Power of Twin Bow Herritt" action="A1">
-	<!-- Received P. Critical Damage -$s1. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56071" name="Meriln's Magic Bracelet">
-	<!-- Activates 1 main Agathion slot and 2 side slots. -->
-		<icon initial="BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56072" name="Seven Deadly Sins: Might" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For. For 20 min, P. Atk. +15%. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="379"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56073" name="Seven Deadly Sins: Haste" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Atk. Spd. +33%. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56074" name="Seven Deadly Sins: Empower" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Atk. +75%. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56075" name="Seven Deadly Sins: Acument" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Casting Spd. +30%. -->
-		<icon initial="icon.skill1085"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56076" name="Seven Deadly Sins: Wind Walk" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Speed +33. -->
-		<icon initial="icon.skill1204"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56077" name="Seven Deadly Sins: Vampiric Rage" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, recovers 9% P. Damage dealt to enemy as HP at a certain rate. -->
-		<icon initial="icon.skill1268"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56078" name="Seven Deadly Sins: Berserler Spirit" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Party members' Defense +8%, M. Def. +16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Speed +8%, Casting Spd. +8%, Speed +8. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56079" name="Seven Deadly Sins: Shield" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Def. +15%. -->
-		<icon initial="icon.skill1040"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56080" name="Seven Deadly Sins: Focus" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Rate +30%. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56081" name="Seven Deadly Sins: Death Whisper" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Power +35%. -->
-		<icon initial="icon.skill1242"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56082" name="Seven Deadly Sins: Guidance" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Accuracy +4. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56083" name="Seven Deadly Sins: Clarity" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, MP Consumption of Song / Dance Skills -20%. Uses 3 Spiritshots. -->
-		<icon initial="icon.skill1397"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56084" name="Seven Deadly Sins: Wild Magic" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, increases critical rate of magic damage by 20. -->
-		<icon initial="icon.skill1303"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56085" name="Seven Deadly Sins: Concentration" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, damage with cancelled magic -53. -->
-		<icon initial="icon.skill1078"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56086" name="Seven Deadly Sins: Blessed Body" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max HP +35%. -->
-		<icon initial="icon.skill1045"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56087" name="Seven Deadly Sins: Blessed Soul" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max MP +35%. -->
-		<icon initial="icon.skill1048"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56088" name="Seven Deadly Sins: Magic Barrier" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Def. +30%. -->
-		<icon initial="icon.skill1036"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56089" name="Seven Deadly Sins Special Beer - Victory" action="A1" type="MAGIC">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, HP / MP Recovery Bonus + 20%, Accuracy / Evasion +4, P./M. Atk. +15%, P./M. Atk. Spd. +10%, P./M. Critical Rate +15%, P./M. Critical Damage +15%. -->
-		<icon initial="BranchSys3.icon1.g_beerfestival_octoberfest_beer"/>
-		<attributes property="PHYSIC" auto-use="BUFF">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56090" name="Snake's Blessing" action="A1">
-	<!-- Buff celebrating the collaboration with Seven Deadly Sins. For $s1, HP / MP Recovery Bonus + $s2, Accuracy / Evasion +$s3, P./M. Atk. +$s4, P./M. Atk. Spd. +$s5, P./M. Critical Rate +$s6, P./M. Critical Damage +$s7. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56091" name="Snake's Blessing Stage 1" max-level="24" action="A1">
-	<!-- Obtain 1 Seven Deadly Sins card. Can obtain a card after 1 hour. Can obtain Stage 23 and 23 cards. Once the buff disappears, you can get it again from Snake. <Warning> If you are dead when the items are given, you cannot receive Snake's Blessing and the card. If you don't have enough space in the inventory, you cannot receive the card. -->
-		<icon initial="icon.card_event_everyday_gift"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900">
-				<value level="2">-1</value>
-			</cast-range>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56092" name="Seven Deadly Sins Card Pouch" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56093" name="Agathion Cute Trick" action="A1">
-	<!-- See Agathion's cute trick. -->
-		<icon initial="icon.skill_agathion_cute"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56094" name="Legendary Knights Card: Seven Deadly Sins">
-	<!-- For 2 hours, Bonus XP /SP +10%, P. Atk. /M. Atk. /P. Def. /M. Def. +3%. -->
-		<icon initial="BranchIcon.icon.icon_card_sin_meli_legend"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56095" name="+5 Hawk Agathion - Stage 3 (7-day) Box" action="A1">
-	<!-- For $s1, Bonus XP /SP +$s2, P. Atk. /M. Atk. /P. Def. /M. Def. +$s3. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56096" name="VIP Scroll" action="A1">
-	<!-- none -->
-		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56097" name="Greater VIP Scroll" action="A1">
-	<!-- none -->
-		<icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="56098" name="Venir's Talisman" max-level="24" >
-	<!-- 
-		level 1: When equipped, CON +1.
-		level 2: When equipped, CON, MEN +1.
-		level 3: When equipped, CON, MEN, DEX +1.
-		level 4: When equipped, CON, MEN, DEX, WIT +1.
-		level 5: When equipped, CON, MEN, DEX, WIT, STR +1.
-		level 6: When equipped, CON, MEN, DEX, WIT, STR, INT +1.
-		level 7: When equipped, CON +2, MEN, DEX, WIT, STR, INT +1.
-		level 8: When equipped, CON, MEN +2, DEX, WIT, STR, INT +1.
-		level 9: When equipped, CON, MEN, DEX +2, WIT, STR, INT +1.
-		level 10: When equipped, CON, MEN, DEX, WIT +2, STR, INT +1.
-		level 11: When equipped, CON, MEN, DEX, WIT, STR +2,INT +1.
-		level 12: When equipped, CON, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
-		level 13: When equipped, CON +3, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
-		level 14: When equipped, CON, MEN +3, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
-		level 15: When equipped, CON, MEN, DEX +3, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
-		level 16: When equipped, CON, MEN, DEX, WIT +3, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
-		level 17: When equipped, CON, MEN, DEX, WIT, STR +3, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
-		level 18: When equipped, CON, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
-		level 19: When equipped, CON +4, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
-		level 20: When equipped, CON, MEN +4, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
-		level 21: When equipped, CON, MEN, DEX +4, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
-		level 22: When equipped, CON, MEN, DEX, WIT +4, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
-		level 23: When equipped, CON, MEN, DEX, WIT, STR +4, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
-		level 24: When equipped, CON, MEN, DEX, WIT, STR, INT +4. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 16% of damage dealt to enemy as HP and 8% as MP at a certain rate.
-	 -->
-		<icon initial="icon.etc_all_stat_talisman_i00">
-			<value level="7">icon.etc_all_stat_talisman_i01</value>
-			<value level="13">icon.etc_all_stat_talisman_i02</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="56000" name="Stable Scroll: Enchant Cloak" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56001" name="High-grade Life Stone Pack - Legendary" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56002" name="High-grade Life Stone Pack - Cloak" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56003" name="XP/SP Rune - 50%">
+        <!-- XP/SP +50%%, while hunting. -->
+        <icon initial="icon.skill19226"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56004" name="Summon Agathion - Mermaid" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56005" name="Mermaid Agathion Enchant Scroll" action="A1">
+        <!-- none -->
+        <icon initial="icon.star_scrl_of_ench_ag"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56006" name="Master's Fishing Potion" action="A1">
+        <!-- Increases XP/SP for successful fishing by 50% for 1 hour. Does not disappear upon death and cannot be forcefully removed. -->
+        <icon initial="BranchIcon.etc_sign_agathion_feed_blue_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56007" name="Shining Fishing Box" action="A1">
+        <!-- Double-click to get a random item. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56008" name="Scroll: Fishing XP" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56009" name="Mermaid Agathion's Unique Ability" max-level="11">
+        <!--
+            level 1: Increases Fishing XP/SP when the Agathion is upgraded.
+            level 2: Fishing XP/SP +1%.
+            level 3: Fishing XP/SP +2%.
+            level 4: Fishing XP/SP +4%.
+            level 5: Fishing XP/SP +6%.
+            level 6: Fishing XP/SP +8%.
+            level 7: Fishing XP/SP +10%.
+            level 8: Fishing XP/SP +12%.
+            level 9: Fishing XP/SP +15%.
+            level 10: Fishing XP/SP +17%.
+            level 11: Fishing XP/SP +20%.
+         -->
+        <icon initial="icon.agathion_base"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56010" name="Mermaid's Blessing" max-level="4" action="A1">
+        <!--
+            level 1: Increases Fishing XP/SP by 5% for 60 minutes.
+            level 2: Increases Fishing XP/SP by 10% for 60 minutes.
+            level 3: Increases Fishing XP/SP by 20% for 60 minutes.
+            level 4: Increases Fishing XP/SP by 50% for 2 hours.
+         -->
+        <icon initial="icon.skill_agathion_special"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="3600000"/>
+            <effect-point initial="379"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56011" name="Full Load Support Pack" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56012" name="Cloak of the Chosen">
+        <!-- Max HP/MP/CP +5%%, P. Atk. +3%%, Magic Resistance +5%%, and Speed +10. -->
+        <icon initial="icon.vesper_cloack_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56013" name="Greater Blessing of Castle Scroll - Party" action="A1">
+        <!-- Gives the Blessing of Castle effect to all party members. Buffs and debuffs do not disappear upon death, but Noblesse Blessing and Lucky Charm disappear. -->
+        <icon initial="icon.etc_scroll_white_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="700"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56014" name="Castle Enchant Buff Scroll - Party" action="A1">
+        <!-- Bestows all party members with the effects of Might Lv. 2, Empower Lv. 2, Acumen Lv. 1, and Haste Lv. 1. -->
+        <icon initial="icon.etc_scroll_white_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="700"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56015" name="Castle Wind Walk Scroll - Party" action="A1">
+        <!-- Increases Speed of all party members by 33. -->
+        <icon initial="icon.etc_scroll_white_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56016" name="Enchanted Castle Ring">
+        <!-- Increases P./M. Atk. and Max HP. -->
+        <icon initial="icon.ev_11th_rare_acc_ring"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56017" name="Enchanted Castle Earring">
+        <!-- Increases MP Recovery, Healing Effect and Max MP. Decreases Skill MP Cost. -->
+        <icon initial="icon.ev_11th_rare_acc_earing"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56018" name="Enchanted Castle Necklace">
+        <!-- Increases P./M. Def., MEN Attack and Resistance, and Max MP. Decreases Skill MP Cost. -->
+        <icon initial="icon.ev_11th_rare_acc_necklace"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56019" name="+7 Elmoreden Cloak Box" action="A1">
+        <!-- Double-click to obtain a +7 Elmoreden Cloak. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56020" name="+7 Aden Cloak Box" action="A1">
+        <!-- Double-click to obtain a +7 Aden Cloak. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56021" name="+7 Elmore Cloak Box" action="A1">
+        <!-- Double-click to obtain a +7 Elmore Cloak. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56022" name="+7 Ferios Cloak Box" action="A1">
+        <!-- Double-click to obtain a +7 Ferios Cloak. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56023" name="Summon  Gnosian Agathion" action="A1">
+        <!-- Summons  Agathion - Gnosian. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56024" name="Summon  Orodriel Agathion" action="A1">
+        <!-- Summons  Agathion - Orodriel. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56025" name="Summon Penalty Kick Agathion" action="A1">
+        <!-- Summons Agathion - Penalty Kick. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56026" name="Seven Signs Miracle Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56027" name="VIP Level 1">
+        <!-- Receives the VIP 1 Daily Gift once a day. XP/SP +5%%, Item Drop Rate +15%%, and World Chat +1. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip1"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56028" name="VIP Level 2">
+        <!-- Receives the VIP 2 Daily Gift once a day. XP/SP +10%%, Item Drop Rate +25%%, and World Chat +2. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip2"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56029" name="VIP Level 3">
+        <!-- Receives the VIP 3 Daily Gift once a day. XP/SP +15%%, Item Drop Rate +35%%, World Chat +2, XP/SP when fishing +5%%, PvE Damage +3%%, XP Reduction at Death -5%%. Can obtain Silver Coins when hunting. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip3"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56030" name="VIP Level 4">
+        <!-- Receives the VIP 4 Daily Gift once a day. XP/SP +20%%, Item Drop Rate +55%%, World Chat +3, XP/SP when fishing +20%%, PvE Damage +10%%, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip4"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56031" name="VIP Level 5">
+        <!-- Receives the VIP 5 Daily Gift once a day. XP/SP +30%%, Item Drop Rate +70%%, World Chat +4, XP/SP when fishing +20%%, PvE Damage +12%%, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip5"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56032" name="VIP Level 6">
+        <!-- Receives the VIP 6 Daily Gift once a day. XP/SP +35%%, Item Drop Rate +100%%, World Chat +10, XP/SP when fishing +20%%, PvE Damage +15%%, STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip6"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56033" name="VIP Level 7">
+        <!-- Receives the VIP 7 Daily Gift once a day. XP/SP +35%%, Item Drop Rate +200%%, World Chat +20, XP/SP when fishing +20%%, PvE Damage +15%%, STR +2, INT +2, DEX +2, WIT +2, CON +2, MEN +2, XP Reduction at Death -20%%. Can obtain Silver Coins when hunting. -->
+        <icon initial="BranchIcon.Icon.g_skill_vip7"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56034" name="Agathion Summon - Meliodas" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56035" name="Agathion Summon - Elizabeth" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56036" name="Agathion Summon - Hawk" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56037" name="Agathion Summon - Ban" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56038" name="Agathion Summon - Diane" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56039" name="Agathion Summon - King" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56040" name="Agathion Summon - Merlin" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56041" name="Agathion Summon - Gowther" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56042" name="Agathion Summon - Escanor" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56043" name="Seven Great Sins - Meliodas" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and STR / INT are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, STR / INT +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56044" name="Seven Great Sins - Elizabeth" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and CON / MEN are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, CON / MEN +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56045" name="Seven Great Sins - Hawk" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and CON are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, CON +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56046" name="Seven Great Sins - Ban" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and DEX are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, DEX +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56047" name="Seven Great Sins - Diane" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and STR are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, STR +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56048" name="Seven Great Sins - King" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and WIT are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, WIT +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56049" name="Seven Great Sins - Meriln" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and INT are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, INT +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56050" name="Seven Great Sins - Gowther" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and MEN are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, MEN +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56051" name="Seven Great Sins - Escanor" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Max HP / MP / CP, and CON are increased.
+            level 2: Max HP / MP / CP +1%.
+            level 3: Max HP / MP / CP +2%.
+            level 4: Max HP / MP / CP +3%.
+            level 5: Max HP / MP / CP +4%.
+            level 6: Max HP / MP / CP +5%.
+            level 7: Max HP / MP / CP +6%.
+            level 8: Max HP / MP / CP +7%.
+            level 9: Max HP / MP / CP +10%, CON +1.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56052" name="Sin of Wrath" max-level="9">
+        <!--
+            level 1: When the Agathion grows, PvE Damage to normal monsters is increased.
+            level 2: PvE Damage to normal monsters +1%.
+            level 3: PvE Damage to normal monsters +2%.
+            level 4: PvE Damage to normal monsters +3%.
+            level 5: PvE Damage to normal monsters +4%.
+            level 6: PvE Damage to normal monsters +5%.
+            level 7: PvE Damage to normal monsters +6%.
+            level 8: PvE Damage to normal monsters +7%.
+            level 9: PvE Damage to normal monsters +15%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56053" name="Power of Goddess Clan" max-level="9">
+        <!--
+            level 1: When the Agathion grows, Received PvE Damage is reduced.
+            level 2: Received PvE Damage -1%.
+            level 3: Received PvE Damage -2%.
+            level 4: Received PvE Damage -3%.
+            level 5: Received PvE Damage -4%.
+            level 6: Received PvE Damage -5%.
+            level 7: Received PvE Damage -6%.
+            level 8: Received PvE Damage -7%.
+            level 9: Received PvE Damage -15%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56054" name="Boar Hat Bar's Main Pig" max-level="8">
+        <!--
+            level 1: When the Agathion grows, Bonus Acquired XP /SP Gain from fishing is increased.
+            level 2: Bonus XP /SP Gain from fishing +1%.
+            level 3: Bonus XP /SP Gain from fishing +2%.
+            level 4: Bonus XP /SP Gain from fishing +3%.
+            level 5: Bonus XP /SP Gain from fishing +4%.
+            level 6: Bonus XP /SP Gain from fishing +5%.
+            level 7: Bonus XP /SP Gain from fishing +7%.
+            level 8: Bonus XP /SP Gain from fishing +10%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56055" name="Sin of Greed" max-level="8">
+        <!--
+            level 1: When the Agathion grows, P. Skill Critical Rate is increased.
+            level 2: P. Skill Critical Rate +1%.
+            level 3: P. Skill Critical Rate +2%.
+            level 4: P. Skill Critical Rate +3%.
+            level 5: P. Skill Critical Rate +4%.
+            level 6: P. Skill Critical Rate +5%.
+            level 7: P. Skill Critical Rate +6%.
+            level 8: P. Skill Critical Rate +7%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56056" name="Sin of Envy" max-level="8">
+        <!--
+            level 1: When the Agathion grows, P. Atk.is increased.
+            level 2: P. Atk. +1%.
+            level 3: P. Atk. +2%.
+            level 4: P. Atk. +3%.
+            level 5: P. Atk. +4%.
+            level 6: P. Atk. +6%.
+            level 7: P. Atk. +8%.
+            level 8: P. Atk. +10%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56057" name="Sin of Sloth" max-level="8">
+        <!--
+            level 1: When the Agathion grows, Skill MP Consumption is reduced.
+            level 2: Skill MP Consumption -1%.
+            level 3: Skill MP Consumption -2%.
+            level 4: Skill MP Consumption -3%.
+            level 5: Skill MP Consumption -4%.
+            level 6: Skill MP Consumption -5%.
+            level 7: Skill MP Consumption -6%.
+            level 8: Skill MP Consumption -7%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56058" name="Sin of Gluttony" max-level="8">
+        <!--
+            level 1: When the Agathion grows, M. Def. is increased.
+            level 2: M. Def. +1%.
+            level 3: M. Def. +2%.
+            level 4: M. Def. +3%.
+            level 5: M. Def. +4%.
+            level 6: M. Def. +6%.
+            level 7: M. Def. +8%.
+            level 8: M. Def. +10%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56059" name="Sin of Lust" max-level="8">
+        <!--
+            level 1: When the Agathion grows, Debuff Resistance is increased.
+            level 2: Debuff Resistance +1%.
+            level 3: Debuff Resistance +2%.
+            level 4: Debuff Resistance +3%.
+            level 5: Debuff Resistance +4%.
+            level 6: Debuff Resistance +5%.
+            level 7: Debuff Resistance +6%.
+            level 8: Debuff Resistance +7%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56060" name="Sin of Pride" max-level="8">
+        <!--
+            level 1: When the Agathion grows, P. Def. is increased.
+            level 2: P. Def. +1%.
+            level 3: P. Def. +2%.
+            level 4: P. Def. +3%.
+            level 5: P. Def. +4%.
+            level 6: P. Def. +6%.
+            level 7: P. Def. +8%.
+            level 8: P. Def. +10%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56061" name="Power of Demon Sword Lostvayne" max-level="8">
+        <!--
+            level 1: When the Agathion grows, PvP Damage is increased.
+            level 2: PvP Damage +1%.
+            level 3: PvP Damage +2%.
+            level 4: PvP Damage +3%.
+            level 5: PvP Damage +4%.
+            level 6: PvP Damage +5%.
+            level 7: PvP Damage +6%.
+            level 8: PvP Damage +15%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56062" name="Consolidation Super Magic" max-level="8">
+        <!--
+            level 1: When the Agathion grows, Received PvP Damage is decreased.
+            level 2: Received PvP Damage -1%.
+            level 3: Received PvP Damage -2%.
+            level 4: Received PvP Damage -3%.
+            level 5: Received PvP Damage -4%.
+            level 6: Received PvP Damage -5%.
+            level 7: Received PvP Damage -6%.
+            level 8: Received PvP Damage -15%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56063" name="Leftovers Knights Mobilize!" max-level="8">
+        <!--
+            level 1: When the Agathion grows, XP /SP Gain when hunting is increased.
+            level 2: XP /SP Gain when hunting +1%.
+            level 3: XP /SP Gain when hunting +2%.
+            level 4: XP /SP Gain when hunting +3%.
+            level 5: XP /SP Gain when hunting +4%.
+            level 6: XP /SP Gain when hunting +5%.
+            level 7: XP /SP Gain when hunting +7%.
+            level 8: XP /SP Gain when hunting +10%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56064" name="Power of Holy Staff Courechouse" max-level="8">
+        <!--
+            level 1: When the Agathion grows, Skill Cooldown is reduced.
+            level 2: Skill Cooldown -1%.
+            level 3: Skill Cooldown -2%.
+            level 4: Skill Cooldown -3%.
+            level 5: Skill Cooldown -4%.
+            level 6: Skill Cooldown -5%.
+            level 7: Skill Cooldown -6%.
+            level 8: Skill Cooldown -7%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56065" name="Power of War Hammer Gideon" max-level="8">
+        <!--
+            level 1: When the Agathion grows, P. Critical Damage is increased.
+            level 2: P. Critical Damage +1%.
+            level 3: P. Critical Damage +2%.
+            level 4: P. Critical Damage +3%.
+            level 5: P. Critical Damage +4%.
+            level 6: P. Critical Damage +5%.
+            level 7: P. Critical Damage +6%.
+            level 8: P. Critical Damage +7%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56066" name="Power of Spirit Spear Chastiefol" max-level="8">
+        <!--
+            level 1: When the Agathion grows, M. Atk. is increased.
+            level 2: M. Atk. +1%.
+            level 3: M. Atk. +3%.
+            level 4: M. Atk. +5%.
+            level 5: M. Atk. +7%.
+            level 6: M. Atk. +10%.
+            level 7: M. Atk. +13%.
+            level 8: M. Atk. +17%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56067" name="Power of Morning Star Aldan" max-level="8">
+        <!--
+            level 1: When the Agathion grows, M. Critical Damage  is increased.
+            level 2: M. Critical Damage +1%.
+            level 3: M. Critical Damage +2%.
+            level 4: M. Critical Damage +3%.
+            level 5: M. Critical Damage +4%.
+            level 6: M. Critical Damage +5%.
+            level 7: M. Critical Damage +6%.
+            level 8: M. Critical Damage +7%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56068" name="Power of Twin Bow Herritt" max-level="8">
+        <!--
+            level 1: When the Agathion grows, Damage to paralyzed targets is increased.
+            level 2: When the Agathion grows, Received P. Critical Damage is reduced.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56069" name="Power of Twin Bow Herritt" max-level="8">
+        <!--
+            level 1: When the Agathion grows, Received P. Critical Damage is reduced.
+            level 2: Received P. Critical Damage -1%.
+            level 3: Received P. Critical Damage -2%.
+            level 4: Received P. Critical Damage -3%.
+            level 5: Received P. Critical Damage -4%.
+            level 6: Received P. Critical Damage -6%.
+            level 7: Received P. Critical Damage -8%.
+            level 8: Received P. Critical Damage -10%.
+         -->
+        <icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56070" name="Power of Twin Bow Herritt" action="A1">
+        <!-- Received P. Critical Damage -$s1. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56071" name="Meriln's Magic Bracelet">
+        <!-- Activates 1 main Agathion slot and 2 side slots. -->
+        <icon initial="BranchIcon.icon.g_bm_7th_sins_lbracelet_30d_jp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56072" name="Seven Deadly Sins: Might" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For. For 20 min, P. Atk. +15%. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="379"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56073" name="Seven Deadly Sins: Haste" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Atk. Spd. +33%. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56074" name="Seven Deadly Sins: Empower" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Atk. +75%. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56075" name="Seven Deadly Sins: Acument" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Casting Spd. +30%. -->
+        <icon initial="icon.skill1085"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56076" name="Seven Deadly Sins: Wind Walk" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Speed +33. -->
+        <icon initial="icon.skill1204"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56077" name="Seven Deadly Sins: Vampiric Rage" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, recovers 9% P. Damage dealt to enemy as HP at a certain rate. -->
+        <icon initial="icon.skill1268"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56078" name="Seven Deadly Sins: Berserler Spirit" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Party members' Defense +8%, M. Def. +16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Speed +8%, Casting Spd. +8%, Speed +8. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56079" name="Seven Deadly Sins: Shield" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Def. +15%. -->
+        <icon initial="icon.skill1040"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56080" name="Seven Deadly Sins: Focus" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Rate +30%. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56081" name="Seven Deadly Sins: Death Whisper" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Critical Atk. Power +35%. -->
+        <icon initial="icon.skill1242"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56082" name="Seven Deadly Sins: Guidance" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Accuracy +4. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56083" name="Seven Deadly Sins: Clarity" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, MP Consumption of Song / Dance Skills -20%. Uses 3 Spiritshots. -->
+        <icon initial="icon.skill1397"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56084" name="Seven Deadly Sins: Wild Magic" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, increases critical rate of magic damage by 20. -->
+        <icon initial="icon.skill1303"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56085" name="Seven Deadly Sins: Concentration" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, damage with cancelled magic -53. -->
+        <icon initial="icon.skill1078"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56086" name="Seven Deadly Sins: Blessed Body" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max HP +35%. -->
+        <icon initial="icon.skill1045"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56087" name="Seven Deadly Sins: Blessed Soul" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, Max MP +35%. -->
+        <icon initial="icon.skill1048"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56088" name="Seven Deadly Sins: Magic Barrier" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, M. Def. +30%. -->
+        <icon initial="icon.skill1036"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56089" name="Seven Deadly Sins Special Beer - Victory" action="A1" type="MAGIC">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For 20 min, HP / MP Recovery Bonus + 20%, Accuracy / Evasion +4, P./M. Atk. +15%, P./M. Atk. Spd. +10%, P./M. Critical Rate +15%, P./M. Critical Damage +15%. -->
+        <icon initial="BranchSys3.icon1.g_beerfestival_octoberfest_beer"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56090" name="Snake's Blessing" action="A1">
+        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For $s1, HP / MP Recovery Bonus + $s2, Accuracy / Evasion +$s3, P./M. Atk. +$s4, P./M. Atk. Spd. +$s5, P./M. Critical Rate +$s6, P./M. Critical Damage +$s7. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56091" name="Snake's Blessing Stage 1" max-level="24" action="A1">
+        <!-- Obtain 1 Seven Deadly Sins card. Can obtain a card after 1 hour. Can obtain Stage 23 and 23 cards. Once the buff disappears, you can get it again from Snake. <Warning> If you are dead when the items are given, you cannot receive Snake's Blessing and the card. If you don't have enough space in the inventory, you cannot receive the card. -->
+        <icon initial="icon.card_event_everyday_gift"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900">
+                <value level="2">-1</value>
+            </cast-range>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56092" name="Seven Deadly Sins Card Pouch" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56093" name="Agathion Cute Trick" action="A1">
+        <!-- See Agathion's cute trick. -->
+        <icon initial="icon.skill_agathion_cute"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56094" name="Legendary Knights Card: Seven Deadly Sins">
+        <!-- For 2 hours, Bonus XP /SP +10%, P. Atk. /M. Atk. /P. Def. /M. Def. +3%. -->
+        <icon initial="BranchIcon.icon.icon_card_sin_meli_legend"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56095" name="+5 Hawk Agathion - Stage 3 (7-day) Box" action="A1">
+        <!-- For $s1, Bonus XP /SP +$s2, P. Atk. /M. Atk. /P. Def. /M. Def. +$s3. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56096" name="VIP Scroll" action="A1">
+        <!-- none -->
+        <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56097" name="Greater VIP Scroll" action="A1">
+        <!-- none -->
+        <icon initial="BranchIcon.Icon.g_bm_vip_potion_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="56098" name="Venir's Talisman" max-level="24">
+        <!--
+            level 1: When equipped, CON +1.
+            level 2: When equipped, CON, MEN +1.
+            level 3: When equipped, CON, MEN, DEX +1.
+            level 4: When equipped, CON, MEN, DEX, WIT +1.
+            level 5: When equipped, CON, MEN, DEX, WIT, STR +1.
+            level 6: When equipped, CON, MEN, DEX, WIT, STR, INT +1.
+            level 7: When equipped, CON +2, MEN, DEX, WIT, STR, INT +1.
+            level 8: When equipped, CON, MEN +2, DEX, WIT, STR, INT +1.
+            level 9: When equipped, CON, MEN, DEX +2, WIT, STR, INT +1.
+            level 10: When equipped, CON, MEN, DEX, WIT +2, STR, INT +1.
+            level 11: When equipped, CON, MEN, DEX, WIT, STR +2,INT +1.
+            level 12: When equipped, CON, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
+            level 13: When equipped, CON +3, MEN, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
+            level 14: When equipped, CON, MEN +3, DEX, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
+            level 15: When equipped, CON, MEN, DEX +3, WIT, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
+            level 16: When equipped, CON, MEN, DEX, WIT +3, STR, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
+            level 17: When equipped, CON, MEN, DEX, WIT, STR +3, INT +2. Additionally, can absorb 4% of damage dealt to enemy as HP and 2% as MP at a certain rate.
+            level 18: When equipped, CON, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
+            level 19: When equipped, CON +4, MEN, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
+            level 20: When equipped, CON, MEN +4, DEX, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
+            level 21: When equipped, CON, MEN, DEX +4, WIT, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
+            level 22: When equipped, CON, MEN, DEX, WIT +4, STR, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
+            level 23: When equipped, CON, MEN, DEX, WIT, STR +4, INT +3. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 8% of damage dealt to enemy as HP and 4% as MP at a certain rate.
+            level 24: When equipped, CON, MEN, DEX, WIT, STR, INT +4. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 16% of damage dealt to enemy as HP and 8% as MP at a certain rate.
+         -->
+        <icon initial="icon.etc_all_stat_talisman_i00">
+            <value level="7">icon.etc_all_stat_talisman_i01</value>
+            <value level="13">icon.etc_all_stat_talisman_i02</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
 </list>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="32663" name="Test Barrier - 5 HP and 1 Limit" action="A1">
-	<!-- Barrier HP 5 -->
-		<icon initial="icon.skill11621"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="32663" name="Test Barrier - 5 HP and 1 Limit" action="A1">
+        <!-- Barrier HP 5 -->
+        <icon initial="icon.skill11621"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

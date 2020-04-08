@@ -1,203 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="13339" name="Enchantment Effect: Heavy Armor Set +6" max-level="5" >
-	<!-- 
-		level 1: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4 through item set enchantment.
-		level 2: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, and M. Def +28 through item set enchantment.
-		level 3: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def +28, Vampiric Rage +2%%, and P. Skill Cooldown -4%% through item set enchantment.
-		level 4: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Vampiric Rage +2%%, Stun Resistance +10%%, P. Skills Cooldown -4%% through item set enchantment.
-		level 5: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Vampiric Rage +2%%, Stun Resistance +10%%, Bow Attack Resistance +10%%, P. Def. +6%%, and P. Skills Cooldown -4%% through item set enchantment.
-	 -->
-		<icon initial="icon.skill0231"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="360.0"/>
-			</vital-stat-modify>
-			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
-				<power initial="10.0">
-					<value level="2">4.0</value>
-				</power>
-			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power>
-					<value level="5">6.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE">
-				<power>
-					<value level="2">28.0</value>
-				</power>
-			</stat-modify>
-			<vampiric-attack chance="0">
-				<power>
-					<value level="3">2.0</value>
-				</power>
-			</vampiric-attack>
-			<reuse skill-type="PHYSIC">
-				<power>
-					<value level="3">4.0</value>
-				</power>
-			</reuse>
-			<defence-trait start-level="4">
-				<trait type="SHOCK">
-					<power initial="10"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="13340" name="Enchantment Effect: Light Armor Set +6" max-level="5" >
-	<!-- 
-		level 1: Max HP +200, Max MP +80, Sit/Stand HP Recovery Bonus +10, and MP Recovery Bonus +4 through item set enchantment.
-		level 2: Max HP +80, Max MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, and M. Def. +28 through item set enchantment.
-		level 3: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, and P. Skill Power/M. Skill Power +7%% through item set enchantment.
-		level 4: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, P. Skill Power/M. Skill Power +7%%, and MEN/Paralysis/Stun Resistance +5%% through item set enchantment.
-		level 5: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, P. Skill Power/M. Skill Power +7%%, MEN/Paralysis/Stun Resistance +5%%, Magic Attack Resistance +15%%, and M. Def. +7%% through item set enchantment.
-	 -->
-		<icon initial="icon.skill0233"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="200.0">
-					<value level="2">80.0</value>
-					<value level="3">200.0</value>
-					<value level="3">80.0</value>
-					<value level="4">200.0</value>
-					<value level="4">80.0</value>
-					<value level="5">200.0</value>
-					<value level="5">80.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
-				<power initial="10.0">
-					<value level="2">4.0</value>
-				</power>
-			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power>
-					<value level="2">47.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE">
-				<power>
-					<value level="2">28.0</value>
-					<value level="2">0.0</value>
-					<value level="3">28.0</value>
-					<value level="3">0.0</value>
-					<value level="4">28.0</value>
-					<value level="4">0.0</value>
-					<value level="5">28.0</value>
-					<value level="5">7.0</value>
-				</power>
-			</stat-modify>
-			<speed>
-				<power>
-					<value level="3">4.0</value>
-				</power>
-			</speed>
-			<stat-modify stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
-				<power>
-					<value level="3">7.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD" mode="PER">
-				<power>
-					<value level="3">7.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGIC_SUCCESS_RES" mode="PER">
-				<power>
-					<value level="5">15.0</value>
-				</power>
-			</stat-modify>
-			<defence-trait start-level="4">
-				<trait type="SHOCK">
-					<power initial="5"/>
-				</trait>
-				<trait type="DERANGEMENT">
-					<power initial="5"/>
-				</trait>
-				<trait type="PARALYZE">
-					<power initial="5"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="13341" name="Enchantment Effect: Robe Set +6" max-level="5" >
-	<!-- 
-		level 1: Max MP +140, Sit/Stand HP Recovery Bonus +4, and MP Recovery Bonus +6 through item set enchantment.
-		level 2: Max MP +140, Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, and M. Def. +28 through item set enchantment.
-		level 3: Max MP +140, Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, M. Def. +28, Heal Given +52, and M. Skill MP Consumption -4%% through item set enchantment.
-		level 4: Max MP +140. Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, M. Def. +28, Heal Given +52, Paralysis Resistance +10%%, Stun Resistance +5%%, and M. Skill MP Consumption -4%% through item set enchantment.
-		level 5: Max MP +140. Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, M. Def. +28, Heal Given +52, Paralysis Resistance +10%%, Stun Resistance +5%%, Debuff Resistance +7%%, M. Skill MP Consumption -4%%, and P. Critical Damage Receival Rate -20%% through item set enchantment.
-	 -->
-		<icon initial="icon.skill0234"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
-				<power initial="140.0"/>
-			</vital-stat-modify>
-			<stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
-				<power initial="4.0">
-					<value level="2">6.0</value>
-				</power>
-			</stat-by-move-type>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power>
-					<value level="2">47.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE">
-				<power>
-					<value level="2">28.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="HEAL_POWER">
-				<power>
-					<value level="3">52.0</value>
-				</power>
-			</stat-modify>
-			<magic-cost type="MAGIC">
-				<power>
-					<value level="3">-4.0</value>
-				</power>
-			</magic-cost>
-			<resist-abnormal-by-category category="DEBUFF">
-				<power>
-					<value level="5">7.0</value>
-				</power>
-			</resist-abnormal-by-category>
-			<stat-modify stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD" mode="PER">
-				<power>
-					<value level="5">20.0</value>
-				</power>
-			</stat-modify>
-			<defence-trait start-level="4">
-				<trait type="SHOCK">
-					<power initial="5"/>
-				</trait>
-				<trait type="PARALYZE">
-					<power initial="10"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
+    <skill id="13339" name="Enchantment Effect: Heavy Armor Set +6" max-level="5">
+        <!--
+            level 1: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4 through item set enchantment.
+            level 2: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, and M. Def +28 through item set enchantment.
+            level 3: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def +28, Vampiric Rage +2%%, and P. Skill Cooldown -4%% through item set enchantment.
+            level 4: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Vampiric Rage +2%%, Stun Resistance +10%%, P. Skills Cooldown -4%% through item set enchantment.
+            level 5: Max HP +360, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Vampiric Rage +2%%, Stun Resistance +10%%, Bow Attack Resistance +10%%, P. Def. +6%%, and P. Skills Cooldown -4%% through item set enchantment.
+         -->
+        <icon initial="icon.skill0231"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="360.0"/>
+            </vital-stat-modify>
+            <stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
+                <power initial="10.0">
+                    <value level="2">4.0</value>
+                </power>
+            </stat-by-move-type>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power>
+                    <value level="5">6.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power>
+                    <value level="2">28.0</value>
+                </power>
+            </stat-modify>
+            <vampiric-attack chance="0">
+                <power>
+                    <value level="3">2.0</value>
+                </power>
+            </vampiric-attack>
+            <reuse skill-type="PHYSIC">
+                <power>
+                    <value level="3">4.0</value>
+                </power>
+            </reuse>
+            <defence-trait start-level="4">
+                <trait type="SHOCK">
+                    <power initial="10"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="13340" name="Enchantment Effect: Light Armor Set +6" max-level="5">
+        <!--
+            level 1: Max HP +200, Max MP +80, Sit/Stand HP Recovery Bonus +10, and MP Recovery Bonus +4 through item set enchantment.
+            level 2: Max HP +80, Max MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, and M. Def. +28 through item set enchantment.
+            level 3: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, and P. Skill Power/M. Skill Power +7%% through item set enchantment.
+            level 4: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, P. Skill Power/M. Skill Power +7%%, and MEN/Paralysis/Stun Resistance +5%% through item set enchantment.
+            level 5: Max HP +200/MP +80, Sit/Stand HP Recovery Bonus +10, MP Recovery Bonus +4, P. Def. +47, M. Def. +28, Movement Speed +4, P. Skill Power/M. Skill Power +7%%, MEN/Paralysis/Stun Resistance +5%%, Magic Attack Resistance +15%%, and M. Def. +7%% through item set enchantment.
+         -->
+        <icon initial="icon.skill0233"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="200.0">
+                    <value level="2">80.0</value>
+                    <value level="3">200.0</value>
+                    <value level="3">80.0</value>
+                    <value level="4">200.0</value>
+                    <value level="4">80.0</value>
+                    <value level="5">200.0</value>
+                    <value level="5">80.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
+                <power initial="10.0">
+                    <value level="2">4.0</value>
+                </power>
+            </stat-by-move-type>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power>
+                    <value level="2">47.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power>
+                    <value level="2">28.0</value>
+                    <value level="2">0.0</value>
+                    <value level="3">28.0</value>
+                    <value level="3">0.0</value>
+                    <value level="4">28.0</value>
+                    <value level="4">0.0</value>
+                    <value level="5">28.0</value>
+                    <value level="5">7.0</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power>
+                    <value level="3">4.0</value>
+                </power>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+                <power>
+                    <value level="3">7.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+                <power>
+                    <value level="3">7.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_SUCCESS_RES">
+                <power>
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+            <defence-trait start-level="4">
+                <trait type="SHOCK">
+                    <power initial="5"/>
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="5"/>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="5"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="13341" name="Enchantment Effect: Robe Set +6" max-level="5">
+        <!--
+            level 1: Max MP +140, Sit/Stand HP Recovery Bonus +4, and MP Recovery Bonus +6 through item set enchantment.
+            level 2: Max MP +140, Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, and M. Def. +28 through item set enchantment.
+            level 3: Max MP +140, Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, M. Def. +28, Heal Given +52, and M. Skill MP Consumption -4%% through item set enchantment.
+            level 4: Max MP +140. Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, M. Def. +28, Heal Given +52, Paralysis Resistance +10%%, Stun Resistance +5%%, and M. Skill MP Consumption -4%% through item set enchantment.
+            level 5: Max MP +140. Sit/Stand HP Recovery Bonus +4, MP Recovery Bonus +6, P. Def. +47, M. Def. +28, Heal Given +52, Paralysis Resistance +10%%, Stun Resistance +5%%, Debuff Resistance +7%%, M. Skill MP Consumption -4%%, and P. Critical Damage Receival Rate -20%% through item set enchantment.
+         -->
+        <icon initial="icon.skill0234"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="140.0"/>
+            </vital-stat-modify>
+            <stat-by-move-type stat="REGENERATE_HP_RATE" type="STANDING">
+                <power initial="4.0">
+                    <value level="2">6.0</value>
+                </power>
+            </stat-by-move-type>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power>
+                    <value level="2">47.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power>
+                    <value level="2">28.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="HEAL_POWER">
+                <power>
+                    <value level="3">52.0</value>
+                </power>
+            </stat-modify>
+            <magic-cost type="MAGIC">
+                <power>
+                    <value level="3">-4.0</value>
+                </power>
+            </magic-cost>
+            <resist-abnormal-by-category category="DEBUFF">
+                <power>
+                    <value level="5">7.0</value>
+                </power>
+            </resist-abnormal-by-category>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
+                <power>
+                    <value level="5">20.0</value>
+                </power>
+            </stat-modify>
+            <defence-trait start-level="4">
+                <trait type="SHOCK">
+                    <power initial="5"/>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="10"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
 </list>

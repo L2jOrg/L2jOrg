@@ -1,2150 +1,2150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="6416" name="Reptilikon Poison Breath" debuff="true" action="A2" type="MAGIC">
-	<!-- Decreases 4 MP per second for 20 seconds. -->
-		<icon initial="icon.skill1102"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
-			<magic-level initial="85"/>
-			<cast-range initial="600"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="900"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="22"/>
-			<mana initial="110"/>
-		</consume>
-		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200" >
-			<fan-range start-angle="0" radius="200" angle="90"/>
-		</target>
-		<abnormal type="DOT_MP" visual="DOT_POISON" >
-			<level initial="8"/>
-			<time initial="20"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<effect name="ManaDamOverTime" ticks="5">
-				<power initial="4.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="6417" name="Reptilikon Poison Shot" debuff="true" action="A2" type="MAGIC">
-	<!-- Decreases 4 MP per second for 20 seconds. -->
-		<icon initial="icon.skill1102"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
-			<magic-level initial="85"/>
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1200"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="22"/>
-			<mana initial="110"/>
-		</consume>
-		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="DOT_MP" visual="DOT_POISON" >
-			<level initial="8"/>
-			<time initial="20"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<effect name="ManaDamOverTime" ticks="5">
-				<power initial="4.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="6418" name="Reptilikon Fury Poison Bomb" debuff="true" action="A2" type="MAGIC">
-	<!-- Decreases 69 HP and 4 MP per second for 20 seconds. -->
-		<icon initial="icon.skill1102"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
-			<magic-level initial="85"/>
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1200"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="22"/>
-			<mana initial="110"/>
-		</consume>
-		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<abnormal type="DOT_MP" visual="DOT_POISON" >
-			<level initial="8"/>
-			<time initial="20"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5">
-				<power initial="69.0"/>
-			</damage-over-time>
-			<effect name="ManaDamOverTime" ticks="5">
-				<power initial="4.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="6419" name="Light of Scout" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="82"/>
-			<cast-range initial="40"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="121"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="6844.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="6420" name="Lizard Blow" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="83"/>
-			<cast-range initial="40"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="121"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="6844.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="6421" name="Warrior's Rage" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="40"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="121"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="6844.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="6422" name="Resistance Explosion" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="121"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="6844.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="6423" name="Stun" debuff="true" action="A2">
-	<!-- Momentarily stunned and rendered immobile for 3 seconds. -->
-		<icon initial="icon.skill0100"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="900"/>
-			<cool-time initial="1000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1400"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="121"/>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="3"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="2738.0"/>
-			</physical-attack>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="6424" name="Double Shot" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="900"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1400"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="121"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="6844.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="6425" name="Demotivation Hex" action="A2">
-	<!-- P. Def. decreases by 90%% for 10 seconds. -->
-		<icon initial="icon.skill0122"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="PD_DOWN">
-			<level initial="3"/>
-			<time initial="10"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="-90.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6426" name="Priest's Ire" action="A1" type="MAGIC">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="800"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="1200"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
+    <skill id="6416" name="Reptilikon Poison Breath" debuff="true" action="A2" type="MAGIC">
+        <!-- Decreases 4 MP per second for 20 seconds. -->
+        <icon initial="icon.skill1102"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+            <magic-level initial="85"/>
+            <cast-range initial="600"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="900"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="22"/>
+            <mana initial="110"/>
+        </consume>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200">
+            <fan-range start-angle="0" radius="200" angle="90"/>
+        </target>
+        <abnormal type="DOT_MP" visual="DOT_POISON">
+            <level initial="8"/>
+            <time initial="20"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <effect name="ManaDamOverTime" ticks="5">
+                <power initial="4.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="6417" name="Reptilikon Poison Shot" debuff="true" action="A2" type="MAGIC">
+        <!-- Decreases 4 MP per second for 20 seconds. -->
+        <icon initial="icon.skill1102"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+            <magic-level initial="85"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1200"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="22"/>
+            <mana initial="110"/>
+        </consume>
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <abnormal type="DOT_MP" visual="DOT_POISON">
+            <level initial="8"/>
+            <time initial="20"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <effect name="ManaDamOverTime" ticks="5">
+                <power initial="4.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="6418" name="Reptilikon Fury Poison Bomb" debuff="true" action="A2" type="MAGIC">
+        <!-- Decreases 69 HP and 4 MP per second for 20 seconds. -->
+        <icon initial="icon.skill1102"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+            <magic-level initial="85"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1200"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="22"/>
+            <mana initial="110"/>
+        </consume>
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <abnormal type="DOT_MP" visual="DOT_POISON">
+            <level initial="8"/>
+            <time initial="20"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="5">
+                <power initial="69.0"/>
+            </damage-over-time>
+            <effect name="ManaDamOverTime" ticks="5">
+                <power initial="4.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="6419" name="Light of Scout" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="82"/>
+            <cast-range initial="40"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="121"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="6844.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="6420" name="Lizard Blow" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="83"/>
+            <cast-range initial="40"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="121"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="6844.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="6421" name="Warrior's Rage" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="40"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="121"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="6844.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="6422" name="Resistance Explosion" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="121"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="6844.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="6423" name="Stun" debuff="true" action="A2">
+        <!-- Momentarily stunned and rendered immobile for 3 seconds. -->
+        <icon initial="icon.skill0100"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="900"/>
+            <cool-time initial="1000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1400"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="121"/>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="3"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="2738.0"/>
+            </physical-attack>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="6424" name="Double Shot" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="900"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1400"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="121"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="6844.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="6425" name="Demotivation Hex" action="A2">
+        <!-- P. Def. decreases by 90%% for 10 seconds. -->
+        <icon initial="icon.skill0122"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="PD_DOWN">
+            <level initial="3"/>
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="-90.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6426" name="Priest's Ire" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="800"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="1200"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="EARTH" value="20"/>
-		</attributes>
-		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" />
-		<effects>
-			<magical-attack>
-				<power initial="120.0"/>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="6427" name="Medicinal Mushroom 1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0100"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="1000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target scope="POINT_BLANK" object="FRIEND" range="300" />
-	</skill>
-	<skill id="6428" name="Restore HP" debuff="true" action="A2">
-	<!-- Recovers HP by 90%%. -->
-		<icon initial="icon.skill1201"/>
-		<attributes magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2">
-			<magic-level initial="84"/>
-			<cast-range initial="2000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="2000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="22"/>
-			<mana initial="110"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
-			<level initial="1"/>
-			<time initial="5"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<effect name="Root"/>
-			<defence-trait>
-				<trait type="HOLD">
-					<power initial="100.0"/>
-				</trait>
-			</defence-trait>
-			<hp mode="PER">
-				<power initial="90.0"/>
-			</hp>
-		</effects>
-	</skill>
-	<skill id="6429" name="Cozy Mucus" action="A2" type="MAGIC">
-	<!-- Bow P. Atk. increase by 15%% and HP recovers. -->
-		<icon initial="icon.skill6429"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="2000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="110"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="SIGNAL_A">
-			<level initial="1"/>
-			<time initial="600"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="15.0"/>
-				<weapon-type>BOW CROSSBOW </weapon-type>
-			</stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
-				<power initial="400.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6430" name="Roar Hip Heal" action="A1" type="MAGIC">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="2000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="110"/>
-		</consume>
-		<target type="TARGET" />
-		<effects>
-			<effect name="HealPercent">
-				<power initial="30.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="6431" name="Feral Might" action="A2" type="MAGIC">
-	<!-- P. Atk. increases by 19%% for 5 minutes. -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="400"/>
-			<reuse initial="90000"/>
-			<effect-point initial="379"/>
-			<effect-range initial="1400"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="110"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="PA_UP">
-			<level initial="5"/>
-			<time initial="315"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="19.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6432" name="Feral Focus" action="A2" type="MAGIC">
-	<!-- Increases P. Critical Rate +35%% for 5 minutes. -->
-		<icon initial="icon.skill1077"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="400"/>
-			<reuse initial="90000"/>
-			<effect-point initial="495"/>
-			<effect-range initial="1400"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="110"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="CRITICAL_PROB_UP">
-			<level initial="5"/>
-			<time initial="315"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
-				<power initial="35.0"/>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="6433" name="Feral Guidance" action="A2" type="MAGIC">
-	<!-- Increases P. Accuracy +7 for 5 minutes. -->
-		<icon initial="icon.skill1240"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="400"/>
-			<reuse initial="90000"/>
-			<effect-point initial="532"/>
-			<effect-range initial="1400"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="110"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="HIT_UP">
-			<level initial="5"/>
-			<time initial="315"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
-				<power initial="7.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6434" name="Feral Haste" action="A2" type="MAGIC">
-	<!-- Atk. Spd. increases by 38%% for 5 minutes. -->
-		<icon initial="icon.skill1086"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="84"/>
-			<cast-range initial="400"/>
-			<reuse initial="90000"/>
-			<effect-point initial="495"/>
-			<effect-range initial="1400"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="110"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="ATTACK_TIME_DOWN">
-			<level initial="4"/>
-			<time initial="315"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="38.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6435" name="Curse of the Plains" max-level="3" debuff="true" action="A2">
-	<!-- 
-		level 1: Bow P. Critical Rate +20% and P. Critical Damage +20%.
-		level 2: Bow P. Critical Rate +50% and P. Critical Damage +30%.
-		level 3: Bow P. Critical Rate +75% and P. Critical Damage +40%.
-	 -->
-		<icon initial="icon.skill6435"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="MULTI_DEBUFF">
-			<level initial="7">
-				<value level="2">8</value>
-				<value level="3">9</value>
-			</level>
-			<time initial="5"/>
-			<chance initial="80"/>
-		</abnormal>
-		<conditions>
-			<class affect="TARGET" scope="TARGET">
-				<list>SAGITTARIUS GHOST_SENTINEL MOONLIGHT_SENTINEL</list>
-			</class>
-		</conditions>
-		<effects>
-			<damage-over-time ticks="5" mode="PER">
-				<power initial="0.005">
-					<value level="2">0.01</value>
-					<value level="3">0.02</value>
-				</power>
-			</damage-over-time>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="20.0">
-					<value level="2">30.0</value>
-					<value level="3">40.0</value>
-				</power>
-				<weapon-type>BOW CROSSBOW </weapon-type>
-			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
-				<power initial="20.0">
-					<value level="2">50.0</value>
-					<value level="3">75.0</value>
-				</power>
-				<weapon-type>BOW CROSSBOW </weapon-type>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="6436" name="Curse of the Dark Abyss" debuff="true" action="A2">
-	<!-- Decreases Max HP -5%% per second, and increases Bow P. Critical Rate +90%% and Bow P. Critical Damage +50%%. -->
-		<icon initial="icon.skill6435"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="MULTI_DEBUFF">
-			<level initial="10"/>
-			<time initial="15"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5" mode="PER">
-				<power initial="0.05"/>
-			</damage-over-time>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="50.0"/>
-				<weapon-type>BOW CROSSBOW </weapon-type>
-			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0" mode="PER">
-				<power initial="90.0"/>
-				<weapon-type>BOW CROSSBOW </weapon-type>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="6437" name="Freezing Core Area" max-level="7" debuff="true" action="A2">
-	<!-- 
-		level 1: Decreases 30 HP by cold.
-		level 2: Decreases 60 HP by cold.
-		level 3: Decreases 90 HP by cold.
-		level 4: Decreases 150 HP by cold.
-		level 5: Decreases 250 HP by cold.
-		level 6: Decreases 350 HP by cold.
-		level 7: Decreases 500 HP by cold.
-	 -->
-		<icon initial="icon.skill1183"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
+            <element type="EARTH" value="20"/>
+        </attributes>
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <effects>
+            <magical-attack>
+                <power initial="120.0"/>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="6427" name="Medicinal Mushroom 1" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0100"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="1000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target scope="POINT_BLANK" object="FRIEND" range="300"/>
+    </skill>
+    <skill id="6428" name="Restore HP" debuff="true" action="A2">
+        <!-- Recovers HP by 90%%. -->
+        <icon initial="icon.skill1201"/>
+        <attributes magic-critical-rate="-5.0" trait="HOLD" level-bonus-rate="2">
+            <magic-level initial="84"/>
+            <cast-range initial="2000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="2000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="22"/>
+            <mana initial="110"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <effect name="Root"/>
+            <defence-trait>
+                <trait type="HOLD">
+                    <power initial="100.0"/>
+                </trait>
+            </defence-trait>
+            <hp mode="PER">
+                <power initial="90.0"/>
+            </hp>
+        </effects>
+    </skill>
+    <skill id="6429" name="Cozy Mucus" action="A2" type="MAGIC">
+        <!-- Bow P. Atk. increase by 15%% and HP recovers. -->
+        <icon initial="icon.skill6429"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="2000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="110"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="SIGNAL_A">
+            <level initial="1"/>
+            <time initial="600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="15.0"/>
+                <weapon-type>BOW CROSSBOW</weapon-type>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="400.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6430" name="Roar Hip Heal" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="2000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="110"/>
+        </consume>
+        <target type="TARGET"/>
+        <effects>
+            <effect name="HealPercent">
+                <power initial="30.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="6431" name="Feral Might" action="A2" type="MAGIC">
+        <!-- P. Atk. increases by 19%% for 5 minutes. -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="400"/>
+            <reuse initial="90000"/>
+            <effect-point initial="379"/>
+            <effect-range initial="1400"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="110"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="PA_UP">
+            <level initial="5"/>
+            <time initial="315"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="19.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6432" name="Feral Focus" action="A2" type="MAGIC">
+        <!-- Increases P. Critical Rate +35%% for 5 minutes. -->
+        <icon initial="icon.skill1077"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="400"/>
+            <reuse initial="90000"/>
+            <effect-point initial="495"/>
+            <effect-range initial="1400"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="110"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="CRITICAL_PROB_UP">
+            <level initial="5"/>
+            <time initial="315"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="35.0"/>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="6433" name="Feral Guidance" action="A2" type="MAGIC">
+        <!-- Increases P. Accuracy +7 for 5 minutes. -->
+        <icon initial="icon.skill1240"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="400"/>
+            <reuse initial="90000"/>
+            <effect-point initial="532"/>
+            <effect-range initial="1400"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="110"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="HIT_UP">
+            <level initial="5"/>
+            <time initial="315"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="ACCURACY" stat-add="ACCURACY">
+                <power initial="7.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6434" name="Feral Haste" action="A2" type="MAGIC">
+        <!-- Atk. Spd. increases by 38%% for 5 minutes. -->
+        <icon initial="icon.skill1086"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="84"/>
+            <cast-range initial="400"/>
+            <reuse initial="90000"/>
+            <effect-point initial="495"/>
+            <effect-range initial="1400"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="110"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="ATTACK_TIME_DOWN">
+            <level initial="4"/>
+            <time initial="315"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="38.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6435" name="Curse of the Plains" max-level="3" debuff="true" action="A2">
+        <!--
+            level 1: Bow P. Critical Rate +20% and P. Critical Damage +20%.
+            level 2: Bow P. Critical Rate +50% and P. Critical Damage +30%.
+            level 3: Bow P. Critical Rate +75% and P. Critical Damage +40%.
+         -->
+        <icon initial="icon.skill6435"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="MULTI_DEBUFF">
+            <level initial="7">
+                <value level="2">8</value>
+                <value level="3">9</value>
+            </level>
+            <time initial="5"/>
+            <chance initial="80"/>
+        </abnormal>
+        <conditions>
+            <class affect="TARGET" scope="TARGET">
+                <list>SAGITTARIUS GHOST_SENTINEL MOONLIGHT_SENTINEL</list>
+            </class>
+        </conditions>
+        <effects>
+            <damage-over-time mode="PER" ticks="5">
+                <power initial="0.005">
+                    <value level="2">0.01</value>
+                    <value level="3">0.02</value>
+                </power>
+            </damage-over-time>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="20.0">
+                    <value level="2">30.0</value>
+                    <value level="3">40.0</value>
+                </power>
+                <weapon-type>BOW CROSSBOW</weapon-type>
+            </stat-modify>
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="20.0">
+                    <value level="2">50.0</value>
+                    <value level="3">75.0</value>
+                </power>
+                <weapon-type>BOW CROSSBOW</weapon-type>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="6436" name="Curse of the Dark Abyss" debuff="true" action="A2">
+        <!-- Decreases Max HP -5%% per second, and increases Bow P. Critical Rate +90%% and Bow P. Critical Damage +50%%. -->
+        <icon initial="icon.skill6435"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="MULTI_DEBUFF">
+            <level initial="10"/>
+            <time initial="15"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <damage-over-time mode="PER" ticks="5">
+                <power initial="0.05"/>
+            </damage-over-time>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="50.0"/>
+                <weapon-type>BOW CROSSBOW</weapon-type>
+            </stat-modify>
+            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="90.0"/>
+                <weapon-type>BOW CROSSBOW</weapon-type>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="6437" name="Freezing Core Area" max-level="7" debuff="true" action="A2">
+        <!--
+            level 1: Decreases 30 HP by cold.
+            level 2: Decreases 60 HP by cold.
+            level 3: Decreases 90 HP by cold.
+            level 4: Decreases 150 HP by cold.
+            level 5: Decreases 250 HP by cold.
+            level 6: Decreases 350 HP by cold.
+            level 7: Decreases 500 HP by cold.
+         -->
+        <icon initial="icon.skill1183"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
 
-			<element type="WATER" value="20"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="10"/>
-			<time initial="15"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5">
-				<power initial="30.0">
-					<value level="2">60.0</value>
-					<value level="3">90.0</value>
-					<value level="4">150.0</value>
-					<value level="5">250.0</value>
-					<value level="6">350.0</value>
-					<value level="7">500.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="6438" name="Penalty Area" debuff="true" action="A2">
-	<!-- Decreases 1000 HP. -->
-		<icon initial="icon.skill4036"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="10"/>
-			<time initial="15"/>
-			<chance initial="80"/>
-		</abnormal>
-	</skill>
-	<skill id="6439" name="Energy of Wisdom" debuff="true" action="A2">
-	<!-- none -->
-		<icon initial="icon.skill6439"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="SIGNAL_E">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<defence-trait>
-				<trait type="BOW">
-					<power initial="99"/>
-				</trait>
-				<trait type="DUAL">
-					<power initial="50"/>
-				</trait>
-				<trait type="RAPIER">
-					<power initial="95"/>
-				</trait>
-				<trait type="SWORD">
-					<power initial="50"/>
-				</trait>
-				<trait type="DAGGER">
-					<power initial="95"/>
-				</trait>
-				<trait type="DUALFIST">
-					<power initial="95"/>
-				</trait>
-				<trait type="BLUNT">
-					<power initial="95"/>
-				</trait>
-				<trait type="DUAL_DAGGER">
-					<power initial="95"/>
-				</trait>
-				<trait type="SPEAR">
-					<power initial="95"/>
-				</trait>
-				<trait type="CROSSBOW">
-					<power initial="99"/>
-				</trait>
-				<trait type="ANCIENT_SWORD">
-					<power initial="95"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="6440" name="Energy of Strength" debuff="true" action="A2">
-	<!-- none -->
-		<icon initial="icon.skill6440"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="SIGNAL_E">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<defence-trait>
-				<trait type="BOW">
-					<power initial="99"/>
-				</trait>
-				<trait type="DUAL">
-					<power initial="-5"/>
-				</trait>
-				<trait type="RAPIER">
-					<power initial="-5"/>
-				</trait>
-				<trait type="SWORD">
-					<power initial="-5"/>
-				</trait>
-				<trait type="DAGGER">
-					<power initial="-5"/>
-				</trait>
-				<trait type="DUALFIST">
-					<power initial="-5"/>
-				</trait>
-				<trait type="BLUNT">
-					<power initial="-5"/>
-				</trait>
-				<trait type="DUAL_DAGGER">
-					<power initial="-5"/>
-				</trait>
-				<trait type="SPEAR">
-					<power initial="-5"/>
-				</trait>
-				<trait type="CROSSBOW">
-					<power initial="99"/>
-				</trait>
-				<trait type="ANCIENT_SWORD">
-					<power initial="-5"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="6441" name="Energy of Agility" debuff="true" action="A2">
-	<!-- none -->
-		<icon initial="icon.skill6441"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="84"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="SIGNAL_E">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<defence-trait>
-				<trait type="BOW">
-					<power initial="-100"/>
-				</trait>
-				<trait type="DUAL">
-					<power initial="50"/>
-				</trait>
-				<trait type="RAPIER">
-					<power initial="95"/>
-				</trait>
-				<trait type="SWORD">
-					<power initial="50"/>
-				</trait>
-				<trait type="DAGGER">
-					<power initial="95"/>
-				</trait>
-				<trait type="DUALFIST">
-					<power initial="95"/>
-				</trait>
-				<trait type="BLUNT">
-					<power initial="95"/>
-				</trait>
-				<trait type="DUAL_DAGGER">
-					<power initial="95"/>
-				</trait>
-				<trait type="SPEAR">
-					<power initial="95"/>
-				</trait>
-				<trait type="CROSSBOW">
-					<power initial="-100"/>
-				</trait>
-				<trait type="ANCIENT_SWORD">
-					<power initial="95"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="6442" name="Energy of Wisdom" action="A2">
-	<!-- A special location buff that allows the user to inflict magic damage on monsters in the Seed of Annihilation. -->
-		<icon initial="icon.skill6439"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="-1"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="SIGNAL_E">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PVE_MAGICAL_SKILL_DAMAGE" stat-add="PVE_MAGICAL_SKILL_DAMAGE" mode="PER">
-				<power initial="100.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6443" name="Energy of Strength" action="A2">
-	<!-- A special location buff that allows the user to inflict melee damage on monsters in the Seed of Annihilation. -->
-		<icon initial="icon.skill6440"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="-1"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="SIGNAL_E">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PVE_PHYSICAL_ATTACK_DAMAGE" stat-add="PVE_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="100.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6444" name="Energy of Agility" action="A2">
-	<!-- A special location buff that allows the user to inflict ranged physical damage on monsters in the Seed of Annihilation. -->
-		<icon initial="icon.skill6441"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
-			<magic-level initial="-1"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-		<abnormal type="SIGNAL_E">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PVE_PHYSICAL_ATTACK_DAMAGE" stat-add="PVE_PHYSICAL_ATTACK_DAMAGE" mode="PER">
-				<power initial="100.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="6445" name="Presentation - Freya's Message 1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="10000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6446" name="Presentation - Freya's Message 2" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="8000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6447" name="Presentation - Freya's Message 3" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="5000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6448" name="Presentation - Freya's Message 4" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6449" name="Presentation - Freya's Message 5" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="7000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6450" name="Presentation - Freya Nova" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="5000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6451" name="Presentation - Freya Move" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="12000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6452" name="Presentation - Freya Space Change" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="5000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6453" name="Presentation - Freya Death" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="15000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6454" name="Presentation - Freya Frustration" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="6000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6455" name="Presentation - Freya Destroy" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="6000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6456" name="Presentation - Freya Eternal Blizzard" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6457" name="Presentation - Absorption of Sirr" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="8000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6458" name="Presentation - Transform of Sirr" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="6000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6459" name="Presentation - Kegor Super Buff" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="10000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6460" name="Presentation - Jinia Super Buff" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="10000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6461" name="Presentation - Kegor's Message 1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="6000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6462" name="Presentation - Kegor's Message 1" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="6000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6463" name="Presentation - Transfer Achievement" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="85"/>
-			<cast-range initial="600"/>
-			<effect-point initial="100"/>
-			<effect-range initial="1100"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6464" name="Three Siblings' Trickery" action="A2">
-	<!-- By the three sibling's trickery, Max HP/Max MP/Max CP are increased by 40%% for 10 seconds. -->
-		<icon initial="icon.ev_rotten_jack_ghost_i00"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC">
-			<magic-level initial="-1"/>
-			<cast-range initial="600"/>
-			<effect-range initial="600"/>
-			<hit-time initial="500"/>
-		</attributes>
-		<target />
-		<abnormal type="BIG_HEAD" visual="BIG_HEAD" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="-1"/>
-		</abnormal>
-	</skill>
-	<skill id="6465" name="Jack O'Lantern Card" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6466" name="Rotten Jack O'Lantern Card" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="6467" name="Jack O'Lantern Card - Confirm Skill" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="500"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6468" name="Rotten Jack O'Lantern Card - Confirm Skill" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="500"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6469" name="Halloween Defeat" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6470" name="First Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6471" name="2nd Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6472" name="3rd Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6473" name="4th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6474" name="5th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6475" name="6th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6476" name="7th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6477" name="8th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6478" name="9th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6479" name="10th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6480" name="11th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6481" name="12th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6482" name="13th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6483" name="14th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6484" name="15th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6485" name="16th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6486" name="17th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6487" name="18th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6488" name="19th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6489" name="20th Consecutive Win" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6490" name="Jack's game - Gauge" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="500"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6491" name="Jack's game - Target" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
-			<magic-level initial="1"/>
-			<cast-range initial="900"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="TARGET" />
-	</skill>
-	<skill id="6492" name="Holy Attack" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="WATER" value="20"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="10"/>
+            <time initial="15"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="5">
+                <power initial="30.0">
+                    <value level="2">60.0</value>
+                    <value level="3">90.0</value>
+                    <value level="4">150.0</value>
+                    <value level="5">250.0</value>
+                    <value level="6">350.0</value>
+                    <value level="7">500.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="6438" name="Penalty Area" debuff="true" action="A2">
+        <!-- Decreases 1000 HP. -->
+        <icon initial="icon.skill4036"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="10"/>
+            <time initial="15"/>
+            <chance initial="80"/>
+        </abnormal>
+    </skill>
+    <skill id="6439" name="Energy of Wisdom" debuff="true" action="A2">
+        <!-- none -->
+        <icon initial="icon.skill6439"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="SIGNAL_E">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <defence-trait>
+                <trait type="BOW">
+                    <power initial="99"/>
+                </trait>
+                <trait type="DUAL">
+                    <power initial="50"/>
+                </trait>
+                <trait type="RAPIER">
+                    <power initial="95"/>
+                </trait>
+                <trait type="SWORD">
+                    <power initial="50"/>
+                </trait>
+                <trait type="DAGGER">
+                    <power initial="95"/>
+                </trait>
+                <trait type="DUALFIST">
+                    <power initial="95"/>
+                </trait>
+                <trait type="BLUNT">
+                    <power initial="95"/>
+                </trait>
+                <trait type="DUAL_DAGGER">
+                    <power initial="95"/>
+                </trait>
+                <trait type="SPEAR">
+                    <power initial="95"/>
+                </trait>
+                <trait type="CROSSBOW">
+                    <power initial="99"/>
+                </trait>
+                <trait type="ANCIENT_SWORD">
+                    <power initial="95"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="6440" name="Energy of Strength" debuff="true" action="A2">
+        <!-- none -->
+        <icon initial="icon.skill6440"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="SIGNAL_E">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <defence-trait>
+                <trait type="BOW">
+                    <power initial="99"/>
+                </trait>
+                <trait type="DUAL">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="RAPIER">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="SWORD">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="DAGGER">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="DUALFIST">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="BLUNT">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="DUAL_DAGGER">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="SPEAR">
+                    <power initial="-5"/>
+                </trait>
+                <trait type="CROSSBOW">
+                    <power initial="99"/>
+                </trait>
+                <trait type="ANCIENT_SWORD">
+                    <power initial="-5"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="6441" name="Energy of Agility" debuff="true" action="A2">
+        <!-- none -->
+        <icon initial="icon.skill6441"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="84"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="SIGNAL_E">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <defence-trait>
+                <trait type="BOW">
+                    <power initial="-100"/>
+                </trait>
+                <trait type="DUAL">
+                    <power initial="50"/>
+                </trait>
+                <trait type="RAPIER">
+                    <power initial="95"/>
+                </trait>
+                <trait type="SWORD">
+                    <power initial="50"/>
+                </trait>
+                <trait type="DAGGER">
+                    <power initial="95"/>
+                </trait>
+                <trait type="DUALFIST">
+                    <power initial="95"/>
+                </trait>
+                <trait type="BLUNT">
+                    <power initial="95"/>
+                </trait>
+                <trait type="DUAL_DAGGER">
+                    <power initial="95"/>
+                </trait>
+                <trait type="SPEAR">
+                    <power initial="95"/>
+                </trait>
+                <trait type="CROSSBOW">
+                    <power initial="-100"/>
+                </trait>
+                <trait type="ANCIENT_SWORD">
+                    <power initial="95"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="6442" name="Energy of Wisdom" action="A2">
+        <!-- A special location buff that allows the user to inflict magic damage on monsters in the Seed of Annihilation. -->
+        <icon initial="icon.skill6439"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="SIGNAL_E">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE" stat-add="PVE_MAGICAL_SKILL_DAMAGE">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6443" name="Energy of Strength" action="A2">
+        <!-- A special location buff that allows the user to inflict melee damage on monsters in the Seed of Annihilation. -->
+        <icon initial="icon.skill6440"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="SIGNAL_E">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE" stat-add="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6444" name="Energy of Agility" action="A2">
+        <!-- A special location buff that allows the user to inflict ranged physical damage on monsters in the Seed of Annihilation. -->
+        <icon initial="icon.skill6441"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+            <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+        <abnormal type="SIGNAL_E">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE" stat-add="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="6445" name="Presentation - Freya's Message 1" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="10000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6446" name="Presentation - Freya's Message 2" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="8000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6447" name="Presentation - Freya's Message 3" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="5000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6448" name="Presentation - Freya's Message 4" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6449" name="Presentation - Freya's Message 5" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="7000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6450" name="Presentation - Freya Nova" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="5000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6451" name="Presentation - Freya Move" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="12000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6452" name="Presentation - Freya Space Change" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="5000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6453" name="Presentation - Freya Death" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="15000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6454" name="Presentation - Freya Frustration" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="6000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6455" name="Presentation - Freya Destroy" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="6000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6456" name="Presentation - Freya Eternal Blizzard" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6457" name="Presentation - Absorption of Sirr" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="8000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6458" name="Presentation - Transform of Sirr" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="6000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6459" name="Presentation - Kegor Super Buff" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="10000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6460" name="Presentation - Jinia Super Buff" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="10000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6461" name="Presentation - Kegor's Message 1" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="6000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6462" name="Presentation - Kegor's Message 1" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="6000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6463" name="Presentation - Transfer Achievement" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="85"/>
+            <cast-range initial="600"/>
+            <effect-point initial="100"/>
+            <effect-range initial="1100"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6464" name="Three Siblings' Trickery" action="A2">
+        <!-- By the three sibling's trickery, Max HP/Max MP/Max CP are increased by 40%% for 10 seconds. -->
+        <icon initial="icon.ev_rotten_jack_ghost_i00"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC">
+            <magic-level initial="-1"/>
+            <cast-range initial="600"/>
+            <effect-range initial="600"/>
+            <hit-time initial="500"/>
+        </attributes>
+        <target/>
+        <abnormal type="BIG_HEAD" visual="BIG_HEAD">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>
+    </skill>
+    <skill id="6465" name="Jack O'Lantern Card" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6466" name="Rotten Jack O'Lantern Card" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="6467" name="Jack O'Lantern Card - Confirm Skill" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="500"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6468" name="Rotten Jack O'Lantern Card - Confirm Skill" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="500"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6469" name="Halloween Defeat" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6470" name="First Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6471" name="2nd Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6472" name="3rd Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6473" name="4th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6474" name="5th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6475" name="6th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6476" name="7th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6477" name="8th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6478" name="9th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6479" name="10th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6480" name="11th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6481" name="12th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6482" name="13th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6483" name="14th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6484" name="15th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6485" name="16th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6486" name="17th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6487" name="18th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6488" name="19th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6489" name="20th Consecutive Win" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6490" name="Jack's game - Gauge" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="500"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6491" name="Jack's game - Target" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="TARGET"/>
+    </skill>
+    <skill id="6492" name="Holy Attack" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="20"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target type="ENEMY_ONLY" />
-	</skill>
-	<skill id="6493" name="Holy Attack" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="HOLY" value="20"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+    </skill>
+    <skill id="6493" name="Holy Attack" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="100"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target type="ENEMY_ONLY" />
-	</skill>
-	<skill id="6494" name="Holy Attack" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="HOLY" value="100"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+    </skill>
+    <skill id="6494" name="Holy Attack" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="180"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target type="ENEMY_ONLY" />
-	</skill>
-	<skill id="6495" name="Holy Attack" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="HOLY" value="180"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+    </skill>
+    <skill id="6495" name="Holy Attack" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="20"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
-	</skill>
-	<skill id="6496" name="Holy Attack" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="HOLY" value="20"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+    </skill>
+    <skill id="6496" name="Holy Attack" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="100"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
-	</skill>
-	<skill id="6497" name="Holy Attack" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
+            <element type="HOLY" value="100"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+    </skill>
+    <skill id="6497" name="Holy Attack" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="180"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
-	</skill>
-	<skill id="6498" name="Holy Shot" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="700"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="1200"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
+            <element type="HOLY" value="180"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+    </skill>
+    <skill id="6498" name="Holy Shot" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="700"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="1200"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="20"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target type="ENEMY_ONLY" />
-	</skill>
-	<skill id="6499" name="Holy Shot" max-level="28" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="10">
-				<value level="2">20</value>
-				<value level="3">30</value>
-				<value level="4">40</value>
-				<value level="5">50</value>
-				<value level="6">60</value>
-				<value level="7">64</value>
-				<value level="8">68</value>
-				<value level="9">72</value>
-				<value level="10">74</value>
-				<value level="11">76</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="14">81</value>
-				<value level="15">82</value>
-				<value level="16">83</value>
-				<value level="17">84</value>
-				<value level="18">85</value>
-				<value level="19">86</value>
-				<value level="20">87</value>
-				<value level="21">88</value>
-				<value level="22">89</value>
-				<value level="23">90</value>
-				<value level="24">91</value>
-				<value level="25">92</value>
-				<value level="26">93</value>
-				<value level="27">94</value>
-				<value level="28">95</value>
-			</magic-level>
-			<cast-range initial="700"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-138">
-				<value level="2">-204</value>
-				<value level="3">-285</value>
-				<value level="4">-379</value>
-				<value level="5">-477</value>
-				<value level="6">-566</value>
-				<value level="7">-597</value>
-				<value level="8">-624</value>
-				<value level="9">-646</value>
-				<value level="10">-655</value>
-				<value level="11">-662</value>
-				<value level="12">-669</value>
-				<value level="13">-676</value>
-				<value level="14">-679</value>
-				<value level="15">-681</value>
-				<value level="16">-684</value>
-				<value level="17">-687</value>
-				<value level="18">-689</value>
-				<value level="19">-692</value>
-				<value level="20">-694</value>
-				<value level="21">-696</value>
-				<value level="22">-698</value>
-				<value level="23">-700</value>
-				<value level="24">-702</value>
-				<value level="25">-704</value>
-				<value level="26">-706</value>
-				<value level="27">-707</value>
-				<value level="28">-709</value>
-			</effect-point>
-			<effect-range initial="1200"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
+            <element type="HOLY" value="20"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+    </skill>
+    <skill id="6499" name="Holy Shot" max-level="28" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="10">
+                <value level="2">20</value>
+                <value level="3">30</value>
+                <value level="4">40</value>
+                <value level="5">50</value>
+                <value level="6">60</value>
+                <value level="7">64</value>
+                <value level="8">68</value>
+                <value level="9">72</value>
+                <value level="10">74</value>
+                <value level="11">76</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="14">81</value>
+                <value level="15">82</value>
+                <value level="16">83</value>
+                <value level="17">84</value>
+                <value level="18">85</value>
+                <value level="19">86</value>
+                <value level="20">87</value>
+                <value level="21">88</value>
+                <value level="22">89</value>
+                <value level="23">90</value>
+                <value level="24">91</value>
+                <value level="25">92</value>
+                <value level="26">93</value>
+                <value level="27">94</value>
+                <value level="28">95</value>
+            </magic-level>
+            <cast-range initial="700"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-138">
+                <value level="2">-204</value>
+                <value level="3">-285</value>
+                <value level="4">-379</value>
+                <value level="5">-477</value>
+                <value level="6">-566</value>
+                <value level="7">-597</value>
+                <value level="8">-624</value>
+                <value level="9">-646</value>
+                <value level="10">-655</value>
+                <value level="11">-662</value>
+                <value level="12">-669</value>
+                <value level="13">-676</value>
+                <value level="14">-679</value>
+                <value level="15">-681</value>
+                <value level="16">-684</value>
+                <value level="17">-687</value>
+                <value level="18">-689</value>
+                <value level="19">-692</value>
+                <value level="20">-694</value>
+                <value level="21">-696</value>
+                <value level="22">-698</value>
+                <value level="23">-700</value>
+                <value level="24">-702</value>
+                <value level="25">-704</value>
+                <value level="26">-706</value>
+                <value level="27">-707</value>
+                <value level="28">-709</value>
+            </effect-point>
+            <effect-range initial="1200"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="HOLY" value="100"/>
-		</attributes>
-		<consume>
-			<mana initial="13">
-				<value level="2">20</value>
-				<value level="3">28</value>
-				<value level="4">38</value>
-				<value level="5">50</value>
-				<value level="6">61</value>
-				<value level="7">65</value>
-				<value level="8">69</value>
-				<value level="9">73</value>
-				<value level="10">75</value>
-				<value level="11">77</value>
-				<value level="12">78</value>
-				<value level="13">80</value>
-				<value level="15">81</value>
-				<value level="16">82</value>
-				<value level="18">83</value>
-				<value level="20">84</value>
-				<value level="24">85</value>
-			</mana>
-		</consume>
-		<target type="ENEMY_ONLY" />
-	</skill>
+            <element type="HOLY" value="100"/>
+        </attributes>
+        <consume>
+            <mana initial="13">
+                <value level="2">20</value>
+                <value level="3">28</value>
+                <value level="4">38</value>
+                <value level="5">50</value>
+                <value level="6">61</value>
+                <value level="7">65</value>
+                <value level="8">69</value>
+                <value level="9">73</value>
+                <value level="10">75</value>
+                <value level="11">77</value>
+                <value level="12">78</value>
+                <value level="13">80</value>
+                <value level="15">81</value>
+                <value level="16">82</value>
+                <value level="18">83</value>
+                <value level="20">84</value>
+                <value level="24">85</value>
+            </mana>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+    </skill>
 </list>

@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="18448" name="Aquamarine - Mana Drain" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="46219"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<effects>
-			<summon-npc despawn-delay="180000">
-				<npc initial="34084.0"/>
-			</summon-npc>
-		</effects>
-	</skill>
-	<skill id="18449" name="Aquamarine - Mana Drain" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="1500"/>
-			<reuse initial="6000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="18450" name="Aquamarine - Mana Drain" max-level="6" action="A1" type="MAGIC">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="900"/>
-			<effect-point initial="204"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="75"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="18451" name="1st Anniversary Buff" max-level="2" action="A2">
-	<!-- 
-		level 1: XP/SP gain +50% when hunting. You can receive the 5th Anniversary Coin when the buff ends. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory.
-		level 2: When the buff effect is over you can get 11 Anniversary Coin.
-	 -->
-		<icon initial="icon.ev_buff_11th"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900">
-				<value level="2">-1</value>
-			</cast-range>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal>
-			<time initial="3600">
-				<value level="2">7200</value>
-			</time>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
-				<power initial="11.0">
-					<value level="2">30.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="18472" name="Giveaway Number 1" max-level="6" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="18475" name="11th Anniversary Coin" action="A2">
-	<!-- none -->
-		<icon initial="icon.ev_buff_11th"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="18448" name="Aquamarine - Mana Drain" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="46219"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <effects>
+            <summon-npc despawn-delay="180000">
+                <npc initial="34084.0"/>
+            </summon-npc>
+        </effects>
+    </skill>
+    <skill id="18449" name="Aquamarine - Mana Drain" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="1500"/>
+            <reuse initial="6000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="18450" name="Aquamarine - Mana Drain" max-level="6" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="900"/>
+            <effect-point initial="204"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="75"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="18451" name="1st Anniversary Buff" max-level="2" action="A2">
+        <!--
+            level 1: XP/SP gain +50% when hunting. You can receive the 5th Anniversary Coin when the buff ends. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory.
+            level 2: When the buff effect is over you can get 11 Anniversary Coin.
+         -->
+        <icon initial="icon.ev_buff_11th"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900">
+                <value level="2">-1</value>
+            </cast-range>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="3600">
+                <value level="2">7200</value>
+            </time>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
+                <power initial="11.0">
+                    <value level="2">30.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="18472" name="Giveaway Number 1" max-level="6" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="18475" name="11th Anniversary Coin" action="A2">
+        <!-- none -->
+        <icon initial="icon.ev_buff_11th"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

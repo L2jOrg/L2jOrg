@@ -1,65 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="9618" name="Yum Yum Candy">
-	<!-- XP/ SP gain +15%%. Works in a pair with Nom Nom Candy. Only one Nom Nom Candy can work at a moment. -->
-		<icon initial="etc_whiteday_candy_i05"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="BONUS_EXP">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify stat="BONUS_SP">
-				<power initial="15.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="9619" name="Nom Nom Candy">
-	<!-- XP/ SP gain +15%%. Works in a pair with Yum Yum Candy. Only one Yum Yum Candy can work at a moment. -->
-		<icon initial="etc_whiteday_candy_i06"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="BONUS_EXP">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify stat="BONUS_SP">
-				<power initial="15.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="9620" name="Yummy Gift Box" action="A1">
-	<!-- XP/ SP gain +15%%. Works in a pair with Yum Yum Candy. Only one Yum Yum Candy can work at a moment. -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="36081"/>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<encumbered slots="10" weight="20"/>
-		</conditions>
-		<effects>
-			<random-restoration><item id="36079" count="2" chance="50.0"/>
-<item id="36080" count="2" chance="50.0"/>
-			</random-restoration>
-		</effects>
-	</skill>
+    <skill id="9618" name="Yum Yum Candy">
+        <!-- XP/ SP gain +15%%. Works in a pair with Nom Nom Candy. Only one Nom Nom Candy can work at a moment. -->
+        <icon initial="etc_whiteday_candy_i05"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="BONUS_EXP">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="9619" name="Nom Nom Candy">
+        <!-- XP/ SP gain +15%%. Works in a pair with Yum Yum Candy. Only one Yum Yum Candy can work at a moment. -->
+        <icon initial="etc_whiteday_candy_i06"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="BONUS_EXP">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="9620" name="Yummy Gift Box" action="A1">
+        <!-- XP/ SP gain +15%%. Works in a pair with Yum Yum Candy. Only one Yum Yum Candy can work at a moment. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="36081"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="50.0" count="2" id="36079"/>
+                <item chance="50.0" count="2" id="36080"/>
+            </random-restoration>
+        </effects>
+    </skill>
 </list>

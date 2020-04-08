@@ -1,624 +1,597 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="55900" name="Match Girls' Gratitude" action="A1">
-	<!-- For 20 min., P./ M. Atk. +12%%, P./ M. Def +15%%, Max HP/ MP/ CP +25%%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%%, HP/ MP Recovery Bonus +30%%. At a certain chance absorbs 5%% of the melee damage inflicted on target as HP. -->
-		<icon initial="icon.etc_candle_white_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55901" name="Cooking Ingredient" max-level="2" action="A1">
-	<!-- For 20 min., P./ M. Atk. +12%%, P./ M. Def +15%%, Max HP/ MP/ CP +25%%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%%, HP/ MP Recovery Bonus +30%%. At a certain chance absorbs 5%% of the melee damage inflicted on target as HP. -->
-		<icon initial="icon.skill11775">
-			<value level="2">icon.skill0000</value>
-		</icon>
-		<attributes>
-			<cast-range initial="100"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500">
-				<value level="2">1000</value>
-			</hit-time>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55902" name="Match Girls' Blessing" action="A1">
-	<!-- Blessing from helping the Match Girls. For 2 hr., acquired XP/SP +70%% and XP/SP from fishing +20%%.Cannot be stacked with Dandy's Home Run Ball and Fish Stew - Guild's Gratitude. Remains when moving to the Olympiad. -->
-		<icon initial="BranchSys.icon.br_xmas_miracle_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="1200"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55903" name="Christmas Talisman: P. Skill Critical Damage">
-	<!-- P. Skill Critical Damage +2%%. -->
-		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55904" name="Christmas Talisman: M. Skill Critical Damage">
-	<!-- M. Skill Critical Damage +2%%. -->
-		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55905" name="Christmas Talisman: Ultimate Defense" action="A1">
-	<!-- For 15 sec., P. Def. +1800 and M. Def. +1620. -->
-		<icon initial="icon.etc_talisman_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="600000"/>
-			<effect-point initial="532"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="50"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="55906" name="Christmas Talisman: Debuff Resistance" action="A1">
-	<!-- For 15 sec., defends against debuffs 5 times. -->
-		<icon initial="icon.etc_talisman_i01"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="600000"/>
-			<effect-point initial="532"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="50"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="55907" name="Christmas Talisman: P. Atk.">
-	<!-- P. Atk. +5%%. -->
-		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55908" name="Christmas Talisman: M. Atk.">
-	<!-- M. Atk. +5%%. -->
-		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55909" name="Christmas Talisman: P. Def.">
-	<!-- P. Def. +6%%. -->
-		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55910" name="Christmas Talisman: M. Def.">
-	<!-- M. Def. +6%%. -->
-		<icon initial="icon.etc_talisman_i02"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55911" name="Sealbook: One-eyed ParaPara Cat" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55912" name="Sealbook: Smiling ParaPara Cat" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55913" name="Sealbook: Charming ParaPara Cat" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55914" name="Sealbook: Ferocious ParaPara Cat" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55915" name="Sealbook: Merchant ParaPara Cat" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55916" name="Transform: One-eyed ParaPara Cat" action="A1">
-	<!-- For 1 hr., transforms into One-eyed ParaPara Cat. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55917" name="Transform: Smiling ParaPara Cat" action="A1">
-	<!-- For 1 hr., transforms into Smiling ParaPara Cat. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55918" name="Transform: Charming ParaPara Cat" action="A1">
-	<!-- For 1 hr., transforms into Charming ParaPara Cat. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55919" name="Transform: Ferocious ParaPara Cat" action="A1">
-	<!-- For 1 hr., transforms into Ferocious ParaPara Cat. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55920" name="Transform: Merchant ParaPara Cat" action="A1">
-	<!-- For 1 hr., transforms into Merchant ParaPara Cat. -->
-		<icon initial="icon.skilltransform1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55921" name="Fishermen's Guild Support Certificate" max-level="3" action="A1">
-	<!-- 
-		level 1: For 1 hour, acquired XP/ SP during fishing +20% when used. Effect remains after death.
-		level 2: For 3 hour, acquired XP/ SP during fishing +30% when used. Effect remains after death.
-		level 3: For 6 hour, acquired XP/ SP during fishing +50% when used. Effect remains after death.
-	 -->
-		<icon initial="icon.event_orc_memo"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55922" name="Christmas Surprise Sox" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55923" name="Rudolph's Blessed Resurrection" action="A1">
-	<!-- Resurrects a dead character and fully restores its XP. Consumes 1 Spirit Ore. -->
-		<icon initial="icon.skill5662"/>
-		<attributes>
-			<cast-range initial="400"/>
-			<reuse initial="3600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55924" name="Rudolph's Blessing" action="A1">
-	<!-- For 20 minutes, acquired XP/SP +5%%. -->
-		<icon initial="icon.skill19226"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="400"/>
-			<reuse initial="3600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55925" name="Rudolph's Power" action="A1">
-	<!-- Buff/ debuff effects remain after death, but Power of Rudolph is consumed. -->
-		<icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="400"/>
-			<reuse initial="14400000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55926" name="Summon Agathion - Rudolph" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55927" name="Blessing of Protection">
-	<!-- Has a high chance of resisting debuffs and keeps you safe from damage by chaotic characters who are more than 10 levels apart from you. In addition, has a high chance of resisting debuffs from normal characters who are more than 10 levels apart from you. -->
-		<icon initial="icon.skill0194"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="700"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55928" name="Glittering Enchant Scroll of Fate" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55929" name="Highest Grade Talisman of Fate Sealed Case" action="A1">
-	<!-- Double click to obtain +10 Talisman of Fate - Lv. 5. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55930" name="Talisman of Fate Lucky Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55931" name="Fire Dragon Pendant Lucky Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55932" name="Water Dragon Pendant Lucky Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55933" name="Wind Dragon Pendant Lucky Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55934" name="Earth Dragon Pendant Lucky Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55935" name="Highest Grade Fire Dragon Pendant Sealed Case" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55936" name="Highest Grade Water Dragon Pendant Sealed Case" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55937" name="Highest Grade Wind Dragon Pendant Sealed Case" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55938" name="Highest Grade Earth Dragon Pendant Sealed Case" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55989" name="Uldie's Full Buff" max-level="2" action="A1">
-	<!-- 
-		level 1: Ultimate buff from Uldie. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%.
-		level 2: Ultimate buff from Uldie. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +7%. PvE damage +5%. A chance to receive an Elite Gift from the Captain of Lara's Team when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory.
-	 -->
-		<icon initial="BranchSys.icon.br_sevenlove_girlpresent_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900">
-				<value level="2">-1</value>
-			</cast-range>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55990" name="Bracelet of Power">
-	<!-- HP/ MP Recovery +15%%, Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
-		<icon initial="icon.ertheia_bracelet_i01"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55991" name="Talisman of Power" max-level="15" >
-	<!-- 
-		level 1: By the energy of Power P./ M. Def. +13, Max HP +6%%, Max MP +2%%, P./ M. Atk. +2%%.
-		level 2: By the energy of Power P./ M. Def. +15, Max HP +8%%, Max MP +4%%, P./ M. Atk. +2%%.
-		level 3: By the energy of Power P./ M. Def. +18, Max HP +10%%, Max MP +6%%, P./ M. Atk. +3%%.
-		level 4: By the energy of Power P./ M. Def. +20, Max HP +12%%, Max MP +8%%, P./ M. Atk. +3%%.
-		level 5: By the energy of Power P./ M. Def. +24 Max HP +12%%, Max MP +8%%, P./ M. Atk. +5%%.
-		level 6: By the energy of Noble Power P./ M. Def. +26, Max HP +12%%, Max MP +8%%, P./ M. Atk. +5%%, Atk. Spd. +3%%, Casting Spd. +2%%.
-		level 7: By the energy of Noble Power P./ M. Def. +31, Max HP +14%%, Max MP +10%%, P./ M. Atk. +6%%, Atk. Spd. +3%%, Casting Spd. +2%%.
-		level 8: By the energy of Noble Power P./ M. Def. +36, Max HP +16%%, Max MP +12%%, P./ M. Atk. +7%%, Atk. Spd. +4%%, Casting Spd. +3%%.
-		level 9: By the energy of Noble Power P./ M. Def. +41, Max HP +18%%, Max MP +14%%, P./ M. Atk. +8%%, Atk. Spd. +4%%, Casting Spd. +3%%.
-		level 10: By the energy of Noble Power P./ M. Def. +46, Max HP +18%%, Max MP +14%%, P./ M. Atk. +10%%, Atk. Spd. +5%%, Casting Spd. +3%%.
-		level 11: By the energy of Bright Power P./ M. Def. +51, Max HP +18%%, Max MP +14%%, P./ M. Atk. +10%%, Atk. Spd. +6%%, Casting Spd. +4%%, P. Skill Power +5%%, M. Skill Power +10%%, P. Critical Rate +10, M. Critical Rate +20.
-		level 12: By the energy of Bright Power P./ M. Def. +55, Max HP +20%%, Max MP +16%%, P./ M. Atk. +11%%, Atk. Spd. +7%%, Casting Spd. +5%%, P. Skill Power +6%%, M. Skill Power +11%%, P. Critical Rate +10, M. Critical Rate +20.
-		level 13: By the energy of Bright Power P./ M. Def. +59, Max HP +22%%, Max MP +18%%, P./ M. Atk. +12%%, Atk. Spd. +8%%, Casting Spd. +6%%, P. Skill Power +7%%, M. Skill Power +12%%, P. Critical Rate +20, M. Critical Rate +30.
-		level 14: By the energy of Bright Power P./ M. Def. +63, Max HP +24%%, Max MP +20%%, P./ M. Atk. +13%%, Atk. Spd. +10%%, Casting Spd. +7%%, P. Skill Power +8%%, M. Skill Power +13%%, P. Critical Rate +20, M. Critical Rate +30.
-		level 15: By the energy of Bright Power P./ M. Def. +70, Max HP +30%%, Max MP +25%%, P./ M. Atk. +15%%, Atk. Spd. +15%%, Casting Spd. +10%%, P. Skill Power +15%%, M. Skill Power +22%%, P. Critical Rate +30, M. Critical Rate +40.
-	 -->
-		<icon initial="icon.sayhas_talisman_g_Lv1">
-			<value level="2">icon.sayhas_talisman_g_Lv2</value>
-			<value level="3">icon.sayhas_talisman_g_Lv3</value>
-			<value level="4">icon.sayhas_talisman_g_Lv4</value>
-			<value level="5">icon.sayhas_talisman_g_lv5</value>
-			<value level="6">icon.sayhas_talisman_pve_Lv1</value>
-			<value level="7">icon.sayhas_talisman_pve_Lv2</value>
-			<value level="8">icon.sayhas_talisman_pve_Lv3</value>
-			<value level="9">icon.sayhas_talisman_pve_Lv4</value>
-			<value level="10">icon.sayhas_talisman_pve_lv5</value>
-			<value level="11">icon.sayhas_talisman_pvp_Lv1</value>
-			<value level="12">icon.sayhas_talisman_pvp_Lv2</value>
-			<value level="13">icon.sayhas_talisman_pvp_Lv3</value>
-			<value level="14">icon.sayhas_talisman_pvp_Lv4</value>
-			<value level="15">icon.sayhas_talisman_pvp_lv5</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55992" name="Power of Shunaiman" max-level="2" action="A1">
-	<!-- 
-		level 1: By the power of Shunaiman Stun/ Mental attack +5%%, damage reflection resistance +10%%.
-		level 2: By the power of Shunaiman Stun/ Mental attack +15%%, damage reflection resistance +30%%.
-	 -->
-		<icon initial="icon.sayhas_talisman_pvp_Lv1">
-			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
-		</icon>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55993" name="Summon Big Wedding Cake" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55994" name="Summon Your Spouse" action="A1">
-	<!-- Summons your spouse. Target of summoning must be in your party and have same ring equipped. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-2"/>
-			<reuse initial="86400000"/>
-			<effect-point initial="1000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="10000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55995" name="Agathion Cute Trick" action="A1">
-	<!-- See Agathion's cute trick. -->
-		<icon initial="icon.skill_agathion_cute"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55996" name="Summon Agathion - Bugbear" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55997" name="Summon Agathion - Dryad" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55998" name="Summon Agathion - Griffin" action="A1">
-	<!-- Summons Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="55999" name="XP/SP Hourglass - 1 Hour" action="A1">
-	<!-- XP/SP gain +50%% for the duration of the effect -->
-		<icon initial="icon.etc_dragons_blood_i03"/>
-		<attributes property="PHYSIC" auto-use="BUFF">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="55900" name="Match Girls' Gratitude" action="A1">
+        <!-- For 20 min., P./ M. Atk. +12%%, P./ M. Def +15%%, Max HP/ MP/ CP +25%%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%%, HP/ MP Recovery Bonus +30%%. At a certain chance absorbs 5%% of the melee damage inflicted on target as HP. -->
+        <icon initial="icon.etc_candle_white_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55901" name="Cooking Ingredient" max-level="2" action="A1">
+        <!-- For 20 min., P./ M. Atk. +12%%, P./ M. Def +15%%, Max HP/ MP/ CP +25%%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%%, HP/ MP Recovery Bonus +30%%. At a certain chance absorbs 5%% of the melee damage inflicted on target as HP. -->
+        <icon initial="icon.skill11775">
+            <value level="2">icon.skill0000</value>
+        </icon>
+        <attributes>
+            <cast-range initial="100"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500">
+                <value level="2">1000</value>
+            </hit-time>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55902" name="Match Girls' Blessing" action="A1">
+        <!-- Blessing from helping the Match Girls. For 2 hr., acquired XP/SP +70%% and XP/SP from fishing +20%%.Cannot be stacked with Dandy's Home Run Ball and Fish Stew - Guild's Gratitude. Remains when moving to the Olympiad. -->
+        <icon initial="BranchSys.icon.br_xmas_miracle_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="1200"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55903" name="Christmas Talisman: P. Skill Critical Damage">
+        <!-- P. Skill Critical Damage +2%%. -->
+        <icon initial="icon.etc_talisman_i02"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55904" name="Christmas Talisman: M. Skill Critical Damage">
+        <!-- M. Skill Critical Damage +2%%. -->
+        <icon initial="icon.etc_talisman_i02"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55905" name="Christmas Talisman: Ultimate Defense" action="A1">
+        <!-- For 15 sec., P. Def. +1800 and M. Def. +1620. -->
+        <icon initial="icon.etc_talisman_i01"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="600000"/>
+            <effect-point initial="532"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="50"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="55906" name="Christmas Talisman: Debuff Resistance" action="A1">
+        <!-- For 15 sec., defends against debuffs 5 times. -->
+        <icon initial="icon.etc_talisman_i01"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="600000"/>
+            <effect-point initial="532"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="50"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="55907" name="Christmas Talisman: P. Atk.">
+        <!-- P. Atk. +5%%. -->
+        <icon initial="icon.etc_talisman_i02"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55908" name="Christmas Talisman: M. Atk.">
+        <!-- M. Atk. +5%%. -->
+        <icon initial="icon.etc_talisman_i02"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55909" name="Christmas Talisman: P. Def.">
+        <!-- P. Def. +6%%. -->
+        <icon initial="icon.etc_talisman_i02"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55910" name="Christmas Talisman: M. Def.">
+        <!-- M. Def. +6%%. -->
+        <icon initial="icon.etc_talisman_i02"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55911" name="Sealbook: One-eyed ParaPara Cat" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55912" name="Sealbook: Smiling ParaPara Cat" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55913" name="Sealbook: Charming ParaPara Cat" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55914" name="Sealbook: Ferocious ParaPara Cat" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55915" name="Sealbook: Merchant ParaPara Cat" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55916" name="Transform: One-eyed ParaPara Cat" action="A1">
+        <!-- For 1 hr., transforms into One-eyed ParaPara Cat. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55917" name="Transform: Smiling ParaPara Cat" action="A1">
+        <!-- For 1 hr., transforms into Smiling ParaPara Cat. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55918" name="Transform: Charming ParaPara Cat" action="A1">
+        <!-- For 1 hr., transforms into Charming ParaPara Cat. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55919" name="Transform: Ferocious ParaPara Cat" action="A1">
+        <!-- For 1 hr., transforms into Ferocious ParaPara Cat. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55920" name="Transform: Merchant ParaPara Cat" action="A1">
+        <!-- For 1 hr., transforms into Merchant ParaPara Cat. -->
+        <icon initial="icon.skilltransform1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55921" name="Fishermen's Guild Support Certificate" max-level="3" action="A1">
+        <!--
+            level 1: For 1 hour, acquired XP/ SP during fishing +20% when used. Effect remains after death.
+            level 2: For 3 hour, acquired XP/ SP during fishing +30% when used. Effect remains after death.
+            level 3: For 6 hour, acquired XP/ SP during fishing +50% when used. Effect remains after death.
+         -->
+        <icon initial="icon.event_orc_memo"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55922" name="Christmas Surprise Sox" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55923" name="Rudolph's Blessed Resurrection" action="A1">
+        <!-- Resurrects a dead character and fully restores its XP. Consumes 1 Spirit Ore. -->
+        <icon initial="icon.skill5662"/>
+        <attributes>
+            <cast-range initial="400"/>
+            <reuse initial="3600000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55924" name="Rudolph's Blessing" action="A1">
+        <!-- For 20 minutes, acquired XP/SP +5%%. -->
+        <icon initial="icon.skill19226"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="400"/>
+            <reuse initial="3600000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55925" name="Rudolph's Power" action="A1">
+        <!-- Buff/ debuff effects remain after death, but Power of Rudolph is consumed. -->
+        <icon initial="BranchSys2.icon.event_lbracelet_rudolph"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="400"/>
+            <reuse initial="14400000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55926" name="Summon Agathion - Rudolph" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55927" name="Blessing of Protection">
+        <!-- Has a high chance of resisting debuffs and keeps you safe from damage by chaotic characters who are more than 10 levels apart from you. In addition, has a high chance of resisting debuffs from normal characters who are more than 10 levels apart from you. -->
+        <icon initial="icon.skill0194"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55928" name="Glittering Enchant Scroll of Fate" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55929" name="Highest Grade Talisman of Fate Sealed Case" action="A1">
+        <!-- Double click to obtain +10 Talisman of Fate - Lv. 5. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55930" name="Talisman of Fate Lucky Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55931" name="Fire Dragon Pendant Lucky Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55932" name="Water Dragon Pendant Lucky Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55933" name="Wind Dragon Pendant Lucky Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55934" name="Earth Dragon Pendant Lucky Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55935" name="Highest Grade Fire Dragon Pendant Sealed Case" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55936" name="Highest Grade Water Dragon Pendant Sealed Case" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55937" name="Highest Grade Wind Dragon Pendant Sealed Case" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55938" name="Highest Grade Earth Dragon Pendant Sealed Case" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55989" name="Uldie's Full Buff" max-level="2" action="A1">
+        <!--
+            level 1: Ultimate buff from Uldie. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%.
+            level 2: Ultimate buff from Uldie. For 2 hours XP/ SP gain +10%, P. Atk./ M. Atk. +5%, Atk. Spd./ Casting Spd. +7%. PvE damage +5%. A chance to receive an Elite Gift from the Captain of Lara's Team when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory.
+         -->
+        <icon initial="BranchSys.icon.br_sevenlove_girlpresent_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900">
+                <value level="2">-1</value>
+            </cast-range>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55990" name="Bracelet of Power">
+        <!-- HP/ MP Recovery +15%%, Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
+        <icon initial="icon.ertheia_bracelet_i01"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55991" name="Talisman of Power" max-level="15">
+        <!--
+            level 1: By the energy of Power P./ M. Def. +13, Max HP +6%%, Max MP +2%%, P./ M. Atk. +2%%.
+            level 2: By the energy of Power P./ M. Def. +15, Max HP +8%%, Max MP +4%%, P./ M. Atk. +2%%.
+            level 3: By the energy of Power P./ M. Def. +18, Max HP +10%%, Max MP +6%%, P./ M. Atk. +3%%.
+            level 4: By the energy of Power P./ M. Def. +20, Max HP +12%%, Max MP +8%%, P./ M. Atk. +3%%.
+            level 5: By the energy of Power P./ M. Def. +24 Max HP +12%%, Max MP +8%%, P./ M. Atk. +5%%.
+            level 6: By the energy of Noble Power P./ M. Def. +26, Max HP +12%%, Max MP +8%%, P./ M. Atk. +5%%, Atk. Spd. +3%%, Casting Spd. +2%%.
+            level 7: By the energy of Noble Power P./ M. Def. +31, Max HP +14%%, Max MP +10%%, P./ M. Atk. +6%%, Atk. Spd. +3%%, Casting Spd. +2%%.
+            level 8: By the energy of Noble Power P./ M. Def. +36, Max HP +16%%, Max MP +12%%, P./ M. Atk. +7%%, Atk. Spd. +4%%, Casting Spd. +3%%.
+            level 9: By the energy of Noble Power P./ M. Def. +41, Max HP +18%%, Max MP +14%%, P./ M. Atk. +8%%, Atk. Spd. +4%%, Casting Spd. +3%%.
+            level 10: By the energy of Noble Power P./ M. Def. +46, Max HP +18%%, Max MP +14%%, P./ M. Atk. +10%%, Atk. Spd. +5%%, Casting Spd. +3%%.
+            level 11: By the energy of Bright Power P./ M. Def. +51, Max HP +18%%, Max MP +14%%, P./ M. Atk. +10%%, Atk. Spd. +6%%, Casting Spd. +4%%, P. Skill Power +5%%, M. Skill Power +10%%, P. Critical Rate +10, M. Critical Rate +20.
+            level 12: By the energy of Bright Power P./ M. Def. +55, Max HP +20%%, Max MP +16%%, P./ M. Atk. +11%%, Atk. Spd. +7%%, Casting Spd. +5%%, P. Skill Power +6%%, M. Skill Power +11%%, P. Critical Rate +10, M. Critical Rate +20.
+            level 13: By the energy of Bright Power P./ M. Def. +59, Max HP +22%%, Max MP +18%%, P./ M. Atk. +12%%, Atk. Spd. +8%%, Casting Spd. +6%%, P. Skill Power +7%%, M. Skill Power +12%%, P. Critical Rate +20, M. Critical Rate +30.
+            level 14: By the energy of Bright Power P./ M. Def. +63, Max HP +24%%, Max MP +20%%, P./ M. Atk. +13%%, Atk. Spd. +10%%, Casting Spd. +7%%, P. Skill Power +8%%, M. Skill Power +13%%, P. Critical Rate +20, M. Critical Rate +30.
+            level 15: By the energy of Bright Power P./ M. Def. +70, Max HP +30%%, Max MP +25%%, P./ M. Atk. +15%%, Atk. Spd. +15%%, Casting Spd. +10%%, P. Skill Power +15%%, M. Skill Power +22%%, P. Critical Rate +30, M. Critical Rate +40.
+         -->
+        <icon initial="icon.sayhas_talisman_g_Lv1">
+            <value level="2">icon.sayhas_talisman_g_Lv2</value>
+            <value level="3">icon.sayhas_talisman_g_Lv3</value>
+            <value level="4">icon.sayhas_talisman_g_Lv4</value>
+            <value level="5">icon.sayhas_talisman_g_lv5</value>
+            <value level="6">icon.sayhas_talisman_pve_Lv1</value>
+            <value level="7">icon.sayhas_talisman_pve_Lv2</value>
+            <value level="8">icon.sayhas_talisman_pve_Lv3</value>
+            <value level="9">icon.sayhas_talisman_pve_Lv4</value>
+            <value level="10">icon.sayhas_talisman_pve_lv5</value>
+            <value level="11">icon.sayhas_talisman_pvp_Lv1</value>
+            <value level="12">icon.sayhas_talisman_pvp_Lv2</value>
+            <value level="13">icon.sayhas_talisman_pvp_Lv3</value>
+            <value level="14">icon.sayhas_talisman_pvp_Lv4</value>
+            <value level="15">icon.sayhas_talisman_pvp_lv5</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55992" name="Power of Shunaiman" max-level="2" action="A1">
+        <!--
+            level 1: By the power of Shunaiman Stun/ Mental attack +5%%, damage reflection resistance +10%%.
+            level 2: By the power of Shunaiman Stun/ Mental attack +15%%, damage reflection resistance +30%%.
+         -->
+        <icon initial="icon.sayhas_talisman_pvp_Lv1">
+            <value level="2">icon.sayhas_talisman_pvp_Lv2</value>
+        </icon>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55993" name="Summon Big Wedding Cake" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55994" name="Summon Your Spouse" action="A1">
+        <!-- Summons your spouse. Target of summoning must be in your party and have same ring equipped. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-2"/>
+            <reuse initial="86400000"/>
+            <effect-point initial="1000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="10000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55995" name="Agathion Cute Trick" action="A1">
+        <!-- See Agathion's cute trick. -->
+        <icon initial="icon.skill_agathion_cute"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55996" name="Summon Agathion - Bugbear" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55997" name="Summon Agathion - Dryad" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55998" name="Summon Agathion - Griffin" action="A1">
+        <!-- Summons Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="55999" name="XP/SP Hourglass - 1 Hour" action="A1">
+        <!-- XP/SP gain +50%% for the duration of the effect -->
+        <icon initial="icon.etc_dragons_blood_i03"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

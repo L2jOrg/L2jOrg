@@ -1,1320 +1,1278 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="50100" name="Halisha's Conversion - Long Distance" action="A1">
-	<!-- Increases Long Distance Attack Resistance +100%%, drastically raises M. Def -->
-		<icon initial="icon.skill30515"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50101" name="Halisha's Conversion - Short Distance" action="A1">
-	<!-- Increases Short Distance Attack Resistance +100%%. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50102" name="Halisha's Conversion - Dash" action="A1">
-	<!-- Increases Movement Speed +100%%. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50103" name="Breath of Scarlet" max-level="2" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Cast HP Drain on a nearby enemy.
-		level 2: Burns MP of enemies within an area between 400 grids and 1200 grids from you.
-	 -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="5000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50104" name="Life Force Transfer" action="A1">
-	<!-- Connects to Spirit King. Instant HP Recovery. -->
-		<icon initial="icon.skill1042"/>
-		<attributes>
-			<cast-range initial="900"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="600000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50105" name="Life of Earth" action="A1">
-	<!-- State connected to Earth's power. Continuous HP Recovery. -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="900"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50106" name="Pirate's Strike" action="A1">
-	<!-- Attacks the enemy with 1876 Power. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="2500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50107" name="Pirate's Slash" action="A1">
-	<!-- Attacks the enemy with 2112 Power. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<reuse initial="2500"/>
-			<effect-point initial="-354"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50108" name="Pirate's Drain Energy" action="A1" type="MAGIC">
-	<!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="600"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50109" name="Pirate's Curse" debuff="true" action="A1" type="MAGIC">
-	<!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
-		<icon initial="icon.skill0046"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="400"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50110" name="Pirate's Splash" action="A1">
-	<!-- Attacks nearby enemies with 1876 Power. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50111" name="Pirate's Explosion" action="A1" type="MAGIC">
-	<!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
-		<icon initial="icon.skill0003"/>
-		<attributes>
-			<cast-range initial="200"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50112" name="Pirate's Gun Slash" debuff="true" action="A1">
-	<!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
-		<icon initial="icon.skill0096"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50113" name="Pirate's Storm Assault" debuff="true" action="A1">
-	<!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
-		<icon initial="icon.skill0096"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50114" name="Pirate's Shield Strike" debuff="true" action="A1">
-	<!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
-		<icon initial="icon.skill0096"/>
-		<attributes>
-			<cast-range initial="40"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50115" name="Pirate's Rage" action="A1">
-	<!-- For 30 seconds, P. Atk./M. Atk. +50%, P. Def./M. Def. +50% -->
-		<icon initial="icon.skill11832"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50116" name="Blessing of Holy Water" action="A2">
-	<!-- Holy Water of the High Priest in the Town of Aden helps you tolerate evil energy of the Tomb of Ancient Pirates. You can receive it from Captain Anthony. -->
-		<icon initial="icon.skill16871"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50117" name="Sayha's Benefaction">
-	<!-- Receives fixed damage thanks to Sayha's Benefaction. -->
-		<icon initial="icon.skill11621"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50118" name="Gremlin">
-	<!-- A monster that has the Blue Gemstone -->
-		<icon initial="icon.skill0000"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50119" name="Maphrian's Blessing" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="900"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50120" name="Death Curse" max-level="3" debuff="true" action="A1" type="MAGIC">
-	<!-- 
-		level 1: M. Atk. -15%.
-		level 2: M. Atk. -23%.
-		level 3: M. Atk. -30%.
-	 -->
-		<icon initial="icon.skill0046"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="400"/>
-			<reuse initial="10000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50121" name="Blue Eagle's Protection" action="A2">
-	<!-- Certificate for explorers with permission to explore Primeval Isle. You can get it from Eagle Eye Explorer Kairen in the Town of Aden. -->
-		<icon initial="icon.campaign_high_rank_reward"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50122" name="Lord Ishka's Raid Shield" action="A1" type="MAGIC">
-	<!-- P. Def. and M. Def. are increased for 5 minutes. -->
-		<icon initial="icon.skill0110"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50123" name="Blue Eagle's Grace" action="A2">
-	<!-- Sayha's Grace Consumption Speed -50%%. -->
-		<icon initial="icon.ev_10th_present1"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50124" name="Defeater of Lord Ishka" action="A2">
-	<!-- Buff given to those who defeat Lord Ishka. Increases battle ability. -->
-		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50125" name="Pig Coin Bank" max-level="2" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50126" name="Pig Coin Bank" max-level="2" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50127" name="Little Pig Blessing Star Candy" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50128" name="Ancient Imperial Treasure Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50129" name="Ancient Imperial Gold Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50130" name="Ancient Imperial Silver Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50131" name="Dragon's Special Elixir" max-level="2" action="A1">
-	<!-- 
-		level 1: For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death.
-		level 2: For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death.
-	 -->
-		<icon initial="icon.bm_dragon_posion"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50132" name="Intermediate HP Potion" action="A1">
-	<!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50133" name="Advanced Scroll of Escape" action="A1">
-	<!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50134" name="XP Boost Scroll - Event" action="A1">
-	<!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
-		<icon initial="icon.etc_recall_exp_scroll"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50135" name="Einhasad's Protection" action="A1">
-	<!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
-		<icon initial="icon.etc_dragons_blood_i03"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50136" name="Warrior's HP Potion" action="A1">
-	<!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
-		<icon initial="icon.etc_reagent_white_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50137" name="Warrior's MP Potion" action="A1">
-	<!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
-		<icon initial="icon.etc_reagent_white_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50138" name="Dragon's Belt Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50139" name="Dragon's Belt Ornament" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50140" name="Red Arc - 1st Place" action="A1">
-	<!-- Magic Lamp 1st Place Reward - Recharges 100,000,000 XP and 2,700,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<icon initial="icon.etc_holy_grail_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50141" name="Purple Arc - 2nd Place" action="A1">
-	<!-- Magic Lamp 2nd Place Reward - Recharges 30,000,000 XP and 810,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<icon initial="icon.etc_holy_grail_i01"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50142" name="Blue Arc - 3rd Place" action="A1">
-	<!-- Magic Lamp 3rd Place Reward - Recharges 10,000,000 XP and 270,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<icon initial="icon.etc_holy_grail_i02"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50143" name="Green Arc - 4th Place" action="A1">
-	<!-- Magic Lamp 4th Place Reward - Recharges 5,000,000 XP and 135,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-		<icon initial="icon.etc_holy_grail_i03"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50144" name="PC Cafe Event Pa'agrio's Summoning Stick" max-level="3" action="A1" type="MAGIC">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50145" name="PC Cafe Event Weapon Support Box" max-level="5" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50146" name="PC Cafe Event Special Enchant Scroll" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50147" name="Rune of Vitality">
-	<!-- Maintains Sayha's Grace when you have it in the inventory. -->
-		<icon initial="icon.bm_freya_rune"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50148" name="Wind Treasure Chest" action="A1">
-	<!-- none -->
-		<icon initial="icon.etc_treasure_box_i04"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50149" name="Sayha's Blessing - Event" max-level="3" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50150" name="Sayha's Buff Scroll - Event" action="A1">
-	<!-- A mysterious scroll that triggers various buffs -->
-		<icon initial="icon.etc_ssq_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50151" name="HP Potion" action="A1">
-	<!-- A mysterious scroll that triggers various buffs -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<effect name="HpCpHeal">
-				<power initial="50.0"/>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="50152" name="Escape: Adaptation Training" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50153" name="Escape - Captain Bathis" action="A1">
-	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50154" name="Escape - Captain Bathis" action="A1">
-	<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50155" name="+3 Dragon's Belt Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50156" name="Inventory Test" max-level="60" >
-	<!-- 
-		level 1: Increases the number of items an individual can possess by 5.
-		level 2: Increases the number of items an individual can possess by 10.
-		level 3: Increases the number of items an individual can possess by 15.
-		level 4: Increases the number of items an individual can possess by 20.
-		level 5: Increases the number of items an individual can possess by 25.
-		level 6: Increases the number of items an individual can possess by 30.
-		level 7: Increases the number of items an individual can possess by 35.
-		level 8: Increases the number of items an individual can possess by 40.
-		level 9: Increases the number of items an individual can possess by 45.
-		level 10: Increases the number of items an individual can possess by 50.
-		level 11: Increases the number of items an individual can possess by 55.
-		level 12: Increases the number of items an individual can possess by 60.
-		level 13: Increases the number of items an individual can possess by 65.
-		level 14: Increases the number of items an individual can possess by 70.
-		level 15: Increases the number of items an individual can possess by 75.
-		level 16: Increases the number of items an individual can possess by 80.
-		level 17: Increases the number of items an individual can possess by 85.
-		level 18: Increases the number of items an individual can possess by 90.
-		level 19: Increases the number of items an individual can possess by 95.
-		level 20: Increases the number of items an individual can possess by 100.
-		level 21: Increases the number of items an individual can possess by 105.
-		level 22: Increases the number of items an individual can possess by 110.
-		level 23: Increases the number of items an individual can possess by 115.
-		level 24: Increases the number of items an individual can possess by 120.
-		level 25: Increases the number of items an individual can possess by 125.
-		level 26: Increases the number of items an individual can possess by 130.
-		level 27: Increases the number of items an individual can possess by 135.
-		level 28: Increases the number of items an individual can possess by 140.
-		level 29: Increases the number of items an individual can possess by 145.
-		level 30: Increases the number of items an individual can possess by 150.
-		level 31: Increases the number of items an individual can possess by 155.
-		level 32: Increases the number of items an individual can possess by 160.
-		level 33: Increases the number of items an individual can possess by 165.
-		level 34: Increases the number of items an individual can possess by 170.
-		level 35: Increases the number of items an individual can possess by 175.
-		level 36: Increases the number of items an individual can possess by 180.
-		level 37: Increases the number of items an individual can possess by 185.
-		level 38: Increases the number of items an individual can possess by 190.
-		level 39: Increases the number of items an individual can possess by 195.
-		level 40: Increases the number of items an individual can possess by 200.
-		level 41: Increases the number of items an individual can possess by 205.
-		level 42: Increases the number of items an individual can possess by 210.
-		level 43: Increases the number of items an individual can possess by 215.
-		level 44: Increases the number of items an individual can possess by 220.
-		level 45: Increases the number of items an individual can possess by 225.
-		level 46: Increases the number of items an individual can possess by 230.
-		level 47: Increases the number of items an individual can possess by 235.
-		level 48: Increases the number of items an individual can possess by 240.
-		level 49: Increases the number of items an individual can possess by 245.
-		level 50: Increases the number of items an individual can possess by 250.
-		level 51: Increases the number of items an individual can possess by 255.
-		level 52: Increases the number of items an individual can possess by 260.
-		level 53: Increases the number of items an individual can possess by 265.
-		level 54: Increases the number of items an individual can possess by 270.
-		level 55: Increases the number of items an individual can possess by 275.
-		level 56: Increases the number of items an individual can possess by 280.
-		level 57: Increases the number of items an individual can possess by 285.
-		level 58: Increases the number of items an individual can possess by 290.
-		level 59: Increases the number of items an individual can possess by 295.
-		level 60: Increases the number of items an individual can possess by 300.
-	 -->
-		<icon initial="icon.skill0332"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50157" name="Primeval Isle Time Recharge Stone" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50158" name="Tomb of Ancient Pirates Time Recharge Stone" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50159" name="Heavenly Rift Time Recharge Stone" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50160" name="+7 Admiral's Estoc Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50161" name="+7 Saber Tooth Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50162" name="+7 Ecliptic Axe" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50163" name="Blessing Star Candy" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50164" name="Enchanted Fighter's Rapier Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50165" name="Enchanted Fighter's Ancient Sword Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50166" name="Enchant Scroll: Talisman of Baium" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50167" name="Enchant Scroll: Ring of Insolence" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50168" name="Enchant Scroll: Earring of Dragon World" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50169" name="Scroll of Escape: Tower of Insolence 1st Floor" max-level="12" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50170" name="Dragon's Special Elixir" action="A1">
-	<!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
-		<icon initial="icon.bm_dragon_posion"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50171" name="Healing Potion" action="A1">
-	<!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50172" name="Battleground Scroll" action="A2" type="MAGIC">
-	<!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%% -->
-		<icon initial="icon.etc_ssq_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="2000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50173" name="Paralysis Resistance Scroll" action="A1">
-	<!-- Increases Paralysis Attack Resistance by 10% for 20 min. -->
-		<icon initial="icon.scroll_of_verification_i08"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50174" name="Mental Attack Resistance Scroll" action="A1">
-	<!-- Increases Mental Attack Resistance by 10% for 20 min. -->
-		<icon initial="icon.scroll_of_verification_i08"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="10000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50175" name="Box of Full Blessing" max-level="4" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50176" name="+10 Sayha's Supreme Cloak Box - White" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50177" name="Primeval Isle Time Recharge Stone" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50178" name="Tomb of Ancient Pirates Time Recharge Stone" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50179" name="Heavenly Rift Time Recharge Stone" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50180" name="+8 Blue Wolf Heavy Armor Set" max-level="8" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50181" name="Luxury A-grade Box" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50182" name="Scroll of Escape Box: Tower of Insolence" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50183" name="Adventurer's Brooch">
-	<!-- 1 Jewel can be equipped. -->
-		<icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="BROOCH_JEWELS">
-				<power initial="1"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="50184" name="Adventurer's Agathion Bracelet">
-	<!-- Opens Agathion main slot. -->
-		<icon initial="icon.agathion_magmeld_teleport"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50185" name="Release Agathion's Seal - Griffin" action="A1">
-	<!-- Unseals the Agathion. -->
-		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50186" name="Adventurer's Griffin Agathion">
-	<!-- P. Def. +5. -->
-		<icon initial="icon.griffin_vehicle"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="50187" name="Adventurer's Gem Fragment" max-level="2" >
-	<!-- 
-		level 1: Max HP +5.
-		level 2: Max HP +10.
-	 -->
-		<icon initial="icon.etc_crystal_piece_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-		</effects>
-	</skill>
-	<skill id="50188" name="Adventurer's Talisman">
-	<!-- M. Def. +5. -->
-		<icon initial="icon.etc_talisman_i07"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50189" name="Ring of Insolence" max-level="11" >
-	<!-- 
-		level 1: <Ring of Insolence>\n\nSleep Resistance +1%.
-		level 2: <Ring of Insolence>\n\nSleep Resistance +2%.
-		level 3: <Ring of Insolence>\n\nSleep Resistance +3%.
-		level 4: <Ring of Insolence>\n\nSleep Resistance +4%.
-		level 5: <Ring of Insolence>\n\nSleep Resistance +5%.
-		level 6: <Ring of Insolence>\n\nSleep Resistance +10%\nMax HP +100\nP. Atk. +10\nM. Atk. +10
-		level 7: <Ring of Insolence>\n\nSleep Resistance +12%\nMax HP +150\nP. Atk. +15\nM. Atk. +15
-		level 8: <Ring of Insolence>\n\nCON +1\nSleep Resistance +14%\nMax HP +200\nP. Atk. +20\nM. Atk. +20
-		level 9: <Ring of Insolence>\n\nCON +1\nSleep Resistance +18%\nMax HP +250\nP. Atk. +30\nM. Atk. +30
-		level 10: <Ring of Insolence>\n\nCON +2\nSleep Resistance +22%\nMax HP +250\nP. Atk. +50\nM. Atk. +50
-		level 11: <Ring of Insolence>\n\nCON +5\nSTR +1\nINT +1\nSleep Resistance +30%\nMax HP +1000\nP. Atk. +300\nM. Atk. +300
-	 -->
-		<icon initial="icon.ring_of_oman"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50190" name="Earring of Dragon World" max-level="11" >
-	<!-- 
-		level 1: <Earring of Dragon World>\n\nStun Resistance +1%.
-		level 2: <Earring of Dragon World>\n\nStun Resistance +2%.
-		level 3: <Earring of Dragon World>\n\nStun Resistance +3%.
-		level 4: <Earring of Dragon World>\n\nStun Resistance +4%.
-		level 5: <Earring of Dragon World>\n\nStun Resistance +5%.
-		level 6: <Earring of Dragon World>\n\nStun Attack Resistance +10%\nMax MP +100\nAtk. Spd. +5\nCasting Spd. +5
-		level 7: <Earring of Dragon World>\n\nStun Attack Resistance +12%\nMax MP +150\nAtk. Spd. +7\nCasting Spd. +7
-		level 8: <Earring of Dragon World>\n\nMEN +1\nStun Attack Resistance +14%\nMax MP +200\nAtk. Spd. +10\nCasting Spd. +10
-		level 9: <Earring of Dragon World>\n\nMEN +1\nStun Attack Resistance +18%\nMax MP +250\nAtk. Spd. +15\nCasting Spd. +15
-		level 10: <Earring of Dragon World>\n\nMEN +2\nStun Attack Resistance +22%\nMax MP +250\nAtk. Spd. +40\nCasting Spd. +40
-		level 11: <Earring of Dragon World>\n\nMEN +5\nDEX +1\nWIT +1\nStun Attack Resistance +30%\nMax MP +1000\nAtk. Spd. +150\nCasting Spd. +150
-	 -->
-		<icon initial="icon.accessary_catseye_earing_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<defence-trait>
-				<trait type="SHOCK">
-					<power initial="1">
-					<value level="2">2</value>
-					<value level="3">3</value>
-					<value level="4">4</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">12</value>
-					<value level="8">14</value>
-					<value level="9">18</value>
-					<value level="10">22</value>
-					<value level="11">30</value>
-				</power>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="50191" name="Talisman of Baium Enchant Effect" max-level="5" >
-	<!-- 
-		level 1: P. Atk. +16, M. Atk. +23, CON/MEN +1, Cooldown -1%%.
-		level 2: P. Atk. +50, M. Atk. +57, DEX/WIT/CON/MEN +1, Skill Power +1%%, Cooldown -2%%.
-		level 3: P. Atk. +92, M. Atk. +99, STR/INT/DEX/WIT/CON/MEN +1, Skill Power +1%%, P./M. Critical Rate +10, Cooldown -3%%.
-		level 4: P. Atk. +142, M. Atk. +149, STR/INT/DEX/WIT/CON/MEN +1, Damage Magic Resistance +2%%, Skill Power +2%%, P./M. Critical Rate +20, Skill Cooldown -4%%.
-		level 5: P. Atk. +201, M. Atk. +208, STR/INT/DEX/WIT/CON/MEN +1, Damage Magic Resistance +5%%, Skill Power +3%%, P./M. Critical Rate +30, Skill Cooldown -7%%.
-	 -->
-		<icon initial="icon.baium_talisman_new"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50195" name="Opal" max-level="10" >
-	<!-- 
-		level 1: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +3%.
-		level 2: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +5%.
-		level 3: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +8%.
-		level 4: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +11%.
-		level 5: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +20%.
-		level 6: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +22%.
-		level 7: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +24%.
-		level 8: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +26%.
-		level 9: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +28%.
-		level 10: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +30%.
-	 -->
-		<icon initial="icon.etc_bm_jewel_opal_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50196" name="Opal - Special Ability" max-level="10" action="A1">
-	<!-- 
-		level 1: Becomes invincible to debuff attacks for 1 second.
-		level 2: Becomes invincible to debuff attacks for 2 seconds.
-		level 3: Becomes invincible to debuff attacks for 3 seconds.
-		level 4: Becomes invincible to debuff attacks for 5 seconds.
-		level 5: Becomes invincible to debuff attacks for 15 seconds.
-		level 6: Becomes invincible to debuff attacks for 16 seconds.
-		level 7: Becomes invincible to debuff attacks for 17 seconds.
-		level 8: Becomes invincible to debuff attacks for 18 seconds.
-		level 9: Becomes invincible to debuff attacks for 20 seconds.
-		level 10: Becomes invincible to debuff attacks for 25 seconds.
-	 -->
-		<icon initial="icon.etc_bm_jewel_opal_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="300000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50197" name="Coral" max-level="10" >
-	<!-- 
-		level 1: Atk. Spd./Casting Spd. +1%.
-		level 2: Atk. Spd./Casting Spd. +2%.
-		level 3: Atk. Spd./Casting Spd. +4%.
-		level 4: Atk. Spd./Casting Spd. +7%.
-		level 5: Atk. Spd./Casting Spd. +14%.
-		level 6: Atk. Spd./Casting Spd. +15%, Movement Speed +1.
-		level 7: Atk. Spd./Casting Spd. +16%, Movement Speed +2.
-		level 8: Atk. Spd./Casting Spd. +17%, Movement Speed +3.
-		level 9: Atk. Spd./Casting Spd. +18%, Movement Speed +5.
-		level 10: Atk. Spd./Casting Spd. +20%, Movement Speed +7.
-	 -->
-		<icon initial="icon.etc_bm_jewel_coral_i00"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50198" name="Onyx" max-level="10" action="A1">
-	<!-- 
-		level 1: Soulshot damage +2%.
-		level 2: Soulshot damage +3%.
-		level 3: Soulshot damage +5%.
-		level 4: Soulshot damage +8%.
-		level 5: Soulshot damage +16%.
-		level 6: Soulshot damage +17%.
-		level 7: Soulshot damage +18%.
-		level 8: Soulshot damage +19%.
-		level 9: Soulshot damage +20%.
-		level 10: Soulshot damage +21%.
-	 -->
-		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="50199" name="Onyx" max-level="10" action="A1">
-	<!-- 
-		level 1: Blessed Soulshot damage +2%.
-		level 2: Blessed Soulshot damage +3%.
-		level 3: Blessed Soulshot damage +5%.
-		level 4: Blessed Soulshot damage +8%.
-		level 5: Blessed Soulshot damage +16%.
-		level 6: Blessed Soulshot damage +17%.
-		level 7: Blessed Soulshot damage +18%.
-		level 8: Blessed Soulshot damage +19%.
-		level 9: Blessed Soulshot damage +20%.
-		level 10: Blessed Soulshot damage +21%.
-	 -->
-		<icon initial="icon.etc_bm_jewel_onyx_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="50100" name="Halisha's Conversion - Long Distance" action="A1">
+        <!-- Increases Long Distance Attack Resistance +100%%, drastically raises M. Def -->
+        <icon initial="icon.skill30515"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50101" name="Halisha's Conversion - Short Distance" action="A1">
+        <!-- Increases Short Distance Attack Resistance +100%%. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50102" name="Halisha's Conversion - Dash" action="A1">
+        <!-- Increases Movement Speed +100%%. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50103" name="Breath of Scarlet" max-level="2" action="A1" type="MAGIC">
+        <!--
+            level 1: Cast HP Drain on a nearby enemy.
+            level 2: Burns MP of enemies within an area between 400 grids and 1200 grids from you.
+         -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="5000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50104" name="Life Force Transfer" action="A1">
+        <!-- Connects to Spirit King. Instant HP Recovery. -->
+        <icon initial="icon.skill1042"/>
+        <attributes>
+            <cast-range initial="900"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="600000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50105" name="Life of Earth" action="A1">
+        <!-- State connected to Earth's power. Continuous HP Recovery. -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="900"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50106" name="Pirate's Strike" action="A1">
+        <!-- Attacks the enemy with 1876 Power. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="2500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50107" name="Pirate's Slash" action="A1">
+        <!-- Attacks the enemy with 2112 Power. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <reuse initial="2500"/>
+            <effect-point initial="-354"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50108" name="Pirate's Drain Energy" action="A1" type="MAGIC">
+        <!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="600"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50109" name="Pirate's Curse" debuff="true" action="A1" type="MAGIC">
+        <!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
+        <icon initial="icon.skill0046"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="400"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50110" name="Pirate's Splash" action="A1">
+        <!-- Attacks nearby enemies with 1876 Power. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50111" name="Pirate's Explosion" action="A1" type="MAGIC">
+        <!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
+        <icon initial="icon.skill0003"/>
+        <attributes>
+            <cast-range initial="200"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50112" name="Pirate's Gun Slash" debuff="true" action="A1">
+        <!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
+        <icon initial="icon.skill0096"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50113" name="Pirate's Storm Assault" debuff="true" action="A1">
+        <!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
+        <icon initial="icon.skill0096"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50114" name="Pirate's Shield Strike" debuff="true" action="A1">
+        <!-- Attacks enemies within a fan-shaped range before you with 2112 Power. -->
+        <icon initial="icon.skill0096"/>
+        <attributes>
+            <cast-range initial="40"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50115" name="Pirate's Rage" action="A1">
+        <!-- For 30 seconds, P. Atk./M. Atk. +50%, P. Def./M. Def. +50% -->
+        <icon initial="icon.skill11832"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50116" name="Blessing of Holy Water" action="A2">
+        <!-- Holy Water of the High Priest in the Town of Aden helps you tolerate evil energy of the Tomb of Ancient Pirates. You can receive it from Captain Anthony. -->
+        <icon initial="icon.skill16871"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50117" name="Sayha's Benefaction">
+        <!-- Receives fixed damage thanks to Sayha's Benefaction. -->
+        <icon initial="icon.skill11621"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50118" name="Gremlin">
+        <!-- A monster that has the Blue Gemstone -->
+        <icon initial="icon.skill0000"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50119" name="Maphrian's Blessing" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="900"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50120" name="Death Curse" max-level="3" debuff="true" action="A1" type="MAGIC">
+        <!--
+            level 1: M. Atk. -15%.
+            level 2: M. Atk. -23%.
+            level 3: M. Atk. -30%.
+         -->
+        <icon initial="icon.skill0046"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="400"/>
+            <reuse initial="10000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50121" name="Blue Eagle's Protection" action="A2">
+        <!-- Certificate for explorers with permission to explore Primeval Isle. You can get it from Eagle Eye Explorer Kairen in the Town of Aden. -->
+        <icon initial="icon.campaign_high_rank_reward"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50122" name="Lord Ishka's Raid Shield" action="A1" type="MAGIC">
+        <!-- P. Def. and M. Def. are increased for 5 minutes. -->
+        <icon initial="icon.skill0110"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50123" name="Blue Eagle's Grace" action="A2">
+        <!-- Sayha's Grace Consumption Speed -50%%. -->
+        <icon initial="icon.ev_10th_present1"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50124" name="Defeater of Lord Ishka" action="A2">
+        <!-- Buff given to those who defeat Lord Ishka. Increases battle ability. -->
+        <icon initial="icon.skill1042"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50125" name="Pig Coin Bank" max-level="2" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50126" name="Pig Coin Bank" max-level="2" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50127" name="Little Pig Blessing Star Candy" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50128" name="Ancient Imperial Treasure Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50129" name="Ancient Imperial Gold Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50130" name="Ancient Imperial Silver Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50131" name="Dragon's Special Elixir" max-level="2" action="A1">
+        <!--
+            level 1: For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death.
+            level 2: For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death.
+         -->
+        <icon initial="icon.bm_dragon_posion"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50132" name="Intermediate HP Potion" action="A1">
+        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50133" name="Advanced Scroll of Escape" action="A1">
+        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50134" name="XP Boost Scroll - Event" action="A1">
+        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
+        <icon initial="icon.etc_recall_exp_scroll"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50135" name="Einhasad's Protection" action="A1">
+        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
+        <icon initial="icon.etc_dragons_blood_i03"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50136" name="Warrior's HP Potion" action="A1">
+        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
+        <icon initial="icon.etc_reagent_white_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50137" name="Warrior's MP Potion" action="A1">
+        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
+        <icon initial="icon.etc_reagent_white_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50138" name="Dragon's Belt Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50139" name="Dragon's Belt Ornament" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50140" name="Red Arc - 1st Place" action="A1">
+        <!-- Magic Lamp 1st Place Reward - Recharges 100,000,000 XP and 2,700,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+        <icon initial="icon.etc_holy_grail_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50141" name="Purple Arc - 2nd Place" action="A1">
+        <!-- Magic Lamp 2nd Place Reward - Recharges 30,000,000 XP and 810,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+        <icon initial="icon.etc_holy_grail_i01"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50142" name="Blue Arc - 3rd Place" action="A1">
+        <!-- Magic Lamp 3rd Place Reward - Recharges 10,000,000 XP and 270,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50143" name="Green Arc - 4th Place" action="A1">
+        <!-- Magic Lamp 4th Place Reward - Recharges 5,000,000 XP and 135,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+        <icon initial="icon.etc_holy_grail_i03"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50144" name="PC Cafe Event Pa'agrio's Summoning Stick" max-level="3" action="A1" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50145" name="PC Cafe Event Weapon Support Box" max-level="5" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50146" name="PC Cafe Event Special Enchant Scroll" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50147" name="Rune of Vitality">
+        <!-- Maintains Sayha's Grace when you have it in the inventory. -->
+        <icon initial="icon.bm_freya_rune"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50148" name="Wind Treasure Chest" action="A1">
+        <!-- none -->
+        <icon initial="icon.etc_treasure_box_i04"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50149" name="Sayha's Blessing - Event" max-level="3" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50150" name="Sayha's Buff Scroll - Event" action="A1">
+        <!-- A mysterious scroll that triggers various buffs -->
+        <icon initial="icon.etc_ssq_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50151" name="HP Potion" action="A1">
+        <!-- A mysterious scroll that triggers various buffs -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="HpCpHeal">
+                <power initial="50.0"/>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="50152" name="Escape: Adaptation Training" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50153" name="Escape - Captain Bathis" action="A1">
+        <!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50154" name="Escape - Captain Bathis" action="A1">
+        <!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50155" name="+3 Dragon's Belt Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50156" name="Inventory Test" max-level="60">
+        <!--
+            level 1: Increases the number of items an individual can possess by 5.
+            level 2: Increases the number of items an individual can possess by 10.
+            level 3: Increases the number of items an individual can possess by 15.
+            level 4: Increases the number of items an individual can possess by 20.
+            level 5: Increases the number of items an individual can possess by 25.
+            level 6: Increases the number of items an individual can possess by 30.
+            level 7: Increases the number of items an individual can possess by 35.
+            level 8: Increases the number of items an individual can possess by 40.
+            level 9: Increases the number of items an individual can possess by 45.
+            level 10: Increases the number of items an individual can possess by 50.
+            level 11: Increases the number of items an individual can possess by 55.
+            level 12: Increases the number of items an individual can possess by 60.
+            level 13: Increases the number of items an individual can possess by 65.
+            level 14: Increases the number of items an individual can possess by 70.
+            level 15: Increases the number of items an individual can possess by 75.
+            level 16: Increases the number of items an individual can possess by 80.
+            level 17: Increases the number of items an individual can possess by 85.
+            level 18: Increases the number of items an individual can possess by 90.
+            level 19: Increases the number of items an individual can possess by 95.
+            level 20: Increases the number of items an individual can possess by 100.
+            level 21: Increases the number of items an individual can possess by 105.
+            level 22: Increases the number of items an individual can possess by 110.
+            level 23: Increases the number of items an individual can possess by 115.
+            level 24: Increases the number of items an individual can possess by 120.
+            level 25: Increases the number of items an individual can possess by 125.
+            level 26: Increases the number of items an individual can possess by 130.
+            level 27: Increases the number of items an individual can possess by 135.
+            level 28: Increases the number of items an individual can possess by 140.
+            level 29: Increases the number of items an individual can possess by 145.
+            level 30: Increases the number of items an individual can possess by 150.
+            level 31: Increases the number of items an individual can possess by 155.
+            level 32: Increases the number of items an individual can possess by 160.
+            level 33: Increases the number of items an individual can possess by 165.
+            level 34: Increases the number of items an individual can possess by 170.
+            level 35: Increases the number of items an individual can possess by 175.
+            level 36: Increases the number of items an individual can possess by 180.
+            level 37: Increases the number of items an individual can possess by 185.
+            level 38: Increases the number of items an individual can possess by 190.
+            level 39: Increases the number of items an individual can possess by 195.
+            level 40: Increases the number of items an individual can possess by 200.
+            level 41: Increases the number of items an individual can possess by 205.
+            level 42: Increases the number of items an individual can possess by 210.
+            level 43: Increases the number of items an individual can possess by 215.
+            level 44: Increases the number of items an individual can possess by 220.
+            level 45: Increases the number of items an individual can possess by 225.
+            level 46: Increases the number of items an individual can possess by 230.
+            level 47: Increases the number of items an individual can possess by 235.
+            level 48: Increases the number of items an individual can possess by 240.
+            level 49: Increases the number of items an individual can possess by 245.
+            level 50: Increases the number of items an individual can possess by 250.
+            level 51: Increases the number of items an individual can possess by 255.
+            level 52: Increases the number of items an individual can possess by 260.
+            level 53: Increases the number of items an individual can possess by 265.
+            level 54: Increases the number of items an individual can possess by 270.
+            level 55: Increases the number of items an individual can possess by 275.
+            level 56: Increases the number of items an individual can possess by 280.
+            level 57: Increases the number of items an individual can possess by 285.
+            level 58: Increases the number of items an individual can possess by 290.
+            level 59: Increases the number of items an individual can possess by 295.
+            level 60: Increases the number of items an individual can possess by 300.
+         -->
+        <icon initial="icon.skill0332"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50157" name="Primeval Isle Time Recharge Stone" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50158" name="Tomb of Ancient Pirates Time Recharge Stone" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50159" name="Heavenly Rift Time Recharge Stone" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50160" name="+7 Admiral's Estoc Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50161" name="+7 Saber Tooth Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50162" name="+7 Ecliptic Axe" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50163" name="Blessing Star Candy" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50164" name="Enchanted Fighter's Rapier Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50165" name="Enchanted Fighter's Ancient Sword Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50166" name="Enchant Scroll: Talisman of Baium" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50167" name="Enchant Scroll: Ring of Insolence" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50168" name="Enchant Scroll: Earring of Dragon World" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50169" name="Scroll of Escape: Tower of Insolence 1st Floor" max-level="12" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50170" name="Dragon's Special Elixir" action="A1">
+        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
+        <icon initial="icon.bm_dragon_posion"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50171" name="Healing Potion" action="A1">
+        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50172" name="Battleground Scroll" action="A2" type="MAGIC">
+        <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%% -->
+        <icon initial="icon.etc_ssq_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="2000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50173" name="Paralysis Resistance Scroll" action="A1">
+        <!-- Increases Paralysis Attack Resistance by 10% for 20 min. -->
+        <icon initial="icon.scroll_of_verification_i08"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50174" name="Mental Attack Resistance Scroll" action="A1">
+        <!-- Increases Mental Attack Resistance by 10% for 20 min. -->
+        <icon initial="icon.scroll_of_verification_i08"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50175" name="Box of Full Blessing" max-level="4" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50176" name="+10 Sayha's Supreme Cloak Box - White" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50177" name="Primeval Isle Time Recharge Stone" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50178" name="Tomb of Ancient Pirates Time Recharge Stone" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50179" name="Heavenly Rift Time Recharge Stone" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50180" name="+8 Blue Wolf Heavy Armor Set" max-level="8" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50181" name="Luxury A-grade Box" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50182" name="Scroll of Escape Box: Tower of Insolence" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+            <cool-time initial="500"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50183" name="Adventurer's Brooch">
+        <!-- 1 Jewel can be equipped. -->
+        <icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="BROOCH_JEWELS">
+                <power initial="1"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="50184" name="Adventurer's Agathion Bracelet">
+        <!-- Opens Agathion main slot. -->
+        <icon initial="icon.agathion_magmeld_teleport"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50185" name="Release Agathion's Seal - Griffin" action="A1">
+        <!-- Unseals the Agathion. -->
+        <icon initial="icon.etc_summon_aga_agit_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50186" name="Adventurer's Griffin Agathion">
+        <!-- P. Def. +5. -->
+        <icon initial="icon.griffin_vehicle"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="50187" name="Adventurer's Gem Fragment" max-level="2">
+        <!--
+            level 1: Max HP +5.
+            level 2: Max HP +10.
+         -->
+        <icon initial="icon.etc_crystal_piece_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+        </effects>
+    </skill>
+    <skill id="50188" name="Adventurer's Talisman">
+        <!-- M. Def. +5. -->
+        <icon initial="icon.etc_talisman_i07"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50189" name="Ring of Insolence" max-level="11">
+        <!--
+            level 1: <Ring of Insolence>\n\nSleep Resistance +1%.
+            level 2: <Ring of Insolence>\n\nSleep Resistance +2%.
+            level 3: <Ring of Insolence>\n\nSleep Resistance +3%.
+            level 4: <Ring of Insolence>\n\nSleep Resistance +4%.
+            level 5: <Ring of Insolence>\n\nSleep Resistance +5%.
+            level 6: <Ring of Insolence>\n\nSleep Resistance +10%\nMax HP +100\nP. Atk. +10\nM. Atk. +10
+            level 7: <Ring of Insolence>\n\nSleep Resistance +12%\nMax HP +150\nP. Atk. +15\nM. Atk. +15
+            level 8: <Ring of Insolence>\n\nCON +1\nSleep Resistance +14%\nMax HP +200\nP. Atk. +20\nM. Atk. +20
+            level 9: <Ring of Insolence>\n\nCON +1\nSleep Resistance +18%\nMax HP +250\nP. Atk. +30\nM. Atk. +30
+            level 10: <Ring of Insolence>\n\nCON +2\nSleep Resistance +22%\nMax HP +250\nP. Atk. +50\nM. Atk. +50
+            level 11: <Ring of Insolence>\n\nCON +5\nSTR +1\nINT +1\nSleep Resistance +30%\nMax HP +1000\nP. Atk. +300\nM. Atk. +300
+         -->
+        <icon initial="icon.ring_of_oman"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50190" name="Earring of Dragon World" max-level="11">
+        <!--
+            level 1: <Earring of Dragon World>\n\nStun Resistance +1%.
+            level 2: <Earring of Dragon World>\n\nStun Resistance +2%.
+            level 3: <Earring of Dragon World>\n\nStun Resistance +3%.
+            level 4: <Earring of Dragon World>\n\nStun Resistance +4%.
+            level 5: <Earring of Dragon World>\n\nStun Resistance +5%.
+            level 6: <Earring of Dragon World>\n\nStun Attack Resistance +10%\nMax MP +100\nAtk. Spd. +5\nCasting Spd. +5
+            level 7: <Earring of Dragon World>\n\nStun Attack Resistance +12%\nMax MP +150\nAtk. Spd. +7\nCasting Spd. +7
+            level 8: <Earring of Dragon World>\n\nMEN +1\nStun Attack Resistance +14%\nMax MP +200\nAtk. Spd. +10\nCasting Spd. +10
+            level 9: <Earring of Dragon World>\n\nMEN +1\nStun Attack Resistance +18%\nMax MP +250\nAtk. Spd. +15\nCasting Spd. +15
+            level 10: <Earring of Dragon World>\n\nMEN +2\nStun Attack Resistance +22%\nMax MP +250\nAtk. Spd. +40\nCasting Spd. +40
+            level 11: <Earring of Dragon World>\n\nMEN +5\nDEX +1\nWIT +1\nStun Attack Resistance +30%\nMax MP +1000\nAtk. Spd. +150\nCasting Spd. +150
+         -->
+        <icon initial="icon.accessary_catseye_earing_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="1">
+                        <value level="2">2</value>
+                        <value level="3">3</value>
+                        <value level="4">4</value>
+                        <value level="5">5</value>
+                        <value level="6">10</value>
+                        <value level="7">12</value>
+                        <value level="8">14</value>
+                        <value level="9">18</value>
+                        <value level="10">22</value>
+                        <value level="11">30</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="50191" name="Talisman of Baium Enchant Effect" max-level="5">
+        <!--
+            level 1: P. Atk. +16, M. Atk. +23, CON/MEN +1, Cooldown -1%%.
+            level 2: P. Atk. +50, M. Atk. +57, DEX/WIT/CON/MEN +1, Skill Power +1%%, Cooldown -2%%.
+            level 3: P. Atk. +92, M. Atk. +99, STR/INT/DEX/WIT/CON/MEN +1, Skill Power +1%%, P./M. Critical Rate +10, Cooldown -3%%.
+            level 4: P. Atk. +142, M. Atk. +149, STR/INT/DEX/WIT/CON/MEN +1, Damage Magic Resistance +2%%, Skill Power +2%%, P./M. Critical Rate +20, Skill Cooldown -4%%.
+            level 5: P. Atk. +201, M. Atk. +208, STR/INT/DEX/WIT/CON/MEN +1, Damage Magic Resistance +5%%, Skill Power +3%%, P./M. Critical Rate +30, Skill Cooldown -7%%.
+         -->
+        <icon initial="icon.baium_talisman_new"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50195" name="Opal" max-level="10">
+        <!--
+            level 1: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +3%.
+            level 2: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +5%.
+            level 3: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +8%.
+            level 4: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +11%.
+            level 5: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +20%.
+            level 6: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +22%.
+            level 7: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +24%.
+            level 8: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +26%.
+            level 9: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +28%.
+            level 10: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +30%.
+         -->
+        <icon initial="icon.etc_bm_jewel_opal_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50196" name="Opal - Special Ability" max-level="10" action="A1">
+        <!--
+            level 1: Becomes invincible to debuff attacks for 1 second.
+            level 2: Becomes invincible to debuff attacks for 2 seconds.
+            level 3: Becomes invincible to debuff attacks for 3 seconds.
+            level 4: Becomes invincible to debuff attacks for 5 seconds.
+            level 5: Becomes invincible to debuff attacks for 15 seconds.
+            level 6: Becomes invincible to debuff attacks for 16 seconds.
+            level 7: Becomes invincible to debuff attacks for 17 seconds.
+            level 8: Becomes invincible to debuff attacks for 18 seconds.
+            level 9: Becomes invincible to debuff attacks for 20 seconds.
+            level 10: Becomes invincible to debuff attacks for 25 seconds.
+         -->
+        <icon initial="icon.etc_bm_jewel_opal_i00"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="300000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50197" name="Coral" max-level="10">
+        <!--
+            level 1: Atk. Spd./Casting Spd. +1%.
+            level 2: Atk. Spd./Casting Spd. +2%.
+            level 3: Atk. Spd./Casting Spd. +4%.
+            level 4: Atk. Spd./Casting Spd. +7%.
+            level 5: Atk. Spd./Casting Spd. +14%.
+            level 6: Atk. Spd./Casting Spd. +15%, Movement Speed +1.
+            level 7: Atk. Spd./Casting Spd. +16%, Movement Speed +2.
+            level 8: Atk. Spd./Casting Spd. +17%, Movement Speed +3.
+            level 9: Atk. Spd./Casting Spd. +18%, Movement Speed +5.
+            level 10: Atk. Spd./Casting Spd. +20%, Movement Speed +7.
+         -->
+        <icon initial="icon.etc_bm_jewel_coral_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50198" name="Onyx" max-level="10" action="A1">
+        <!--
+            level 1: Soulshot damage +2%.
+            level 2: Soulshot damage +3%.
+            level 3: Soulshot damage +5%.
+            level 4: Soulshot damage +8%.
+            level 5: Soulshot damage +16%.
+            level 6: Soulshot damage +17%.
+            level 7: Soulshot damage +18%.
+            level 8: Soulshot damage +19%.
+            level 9: Soulshot damage +20%.
+            level 10: Soulshot damage +21%.
+         -->
+        <icon initial="icon.etc_bm_jewel_onyx_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="50199" name="Onyx" max-level="10" action="A1">
+        <!--
+            level 1: Blessed Soulshot damage +2%.
+            level 2: Blessed Soulshot damage +3%.
+            level 3: Blessed Soulshot damage +5%.
+            level 4: Blessed Soulshot damage +8%.
+            level 5: Blessed Soulshot damage +16%.
+            level 6: Blessed Soulshot damage +17%.
+            level 7: Blessed Soulshot damage +18%.
+            level 8: Blessed Soulshot damage +19%.
+            level 9: Blessed Soulshot damage +20%.
+            level 10: Blessed Soulshot damage +21%.
+         -->
+        <icon initial="icon.etc_bm_jewel_onyx_i00"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

@@ -1,343 +1,270 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="40100" name="Purple Arc - 2nd Place">
-	<!-- For $s1, Sayha's Grace Consumption -$s2. -->
-		<icon initial="icon.etc_holy_grail_i01"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40101" name="Blue Arc - 3rd Place">
-	<!-- For $s1, Sayha's Grace Consumption -$s2. -->
-		<icon initial="icon.etc_holy_grail_i02"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40102" name="Green Arc - 4th Place">
-	<!-- For $s1, Sayha's Grace Consumption -$s2. -->
-		<icon initial="icon.etc_holy_grail_i03"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40103" name="Blessing Star Candy">
-	<!-- For $s1, Sayha's Grace Consumption -$s2. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<hit-time initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40104" name="Sayha's Storm Lv. 3 - Event">
-	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
-		<icon initial="icon.bm_sayha_storm"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40105" name="Blue Arc - 3rd Place">
-	<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
-		<icon initial="icon.etc_holy_grail_i02"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40106" name="Battle Scroll - Event">
-	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. -->
-		<icon initial="icon.ev_charge_scroll"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40113" name="Grace Cookie">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-			<cool-time initial="500"/>
-			<hit-time initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40121" name="High-grade Red Arc">
-	<!-- <Greater Magic Lamp 1st Place Reward>\nRecharges 1,200,000,000 XP and 32,400,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Red Cube. -->
-		<icon initial="icon.etc_holy_grail_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40122" name="High-grade Purple Arc">
-	<!-- <Greater Magic Lamp 2nd Place Reward>\nRecharges 360,000,000 XP and 9,720,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Purple Cube. -->
-		<icon initial="icon.etc_holy_grail_i01"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40123" name="High-grade Blue Arc">
-	<!-- <Greater Magic Lamp 3rd Place Reward>\nRecharges 120,000,000 XP and 3,240,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Blue Cube. -->
-		<icon initial="icon.etc_holy_grail_i02"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40124" name="High-grade Green Arc">
-	<!-- <Greater Magic Lamp 4th Place Reward>\nRecharges 60,000,000,000 XP and 1,620,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Green Cube. -->
-		<icon initial="icon.etc_holy_grail_i03"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40125" name="Activated High-grade Red Arc">
-	<!-- <Greater Magic Lamp 1st Place Reward>\nActivated Arc. Recharges 1,200,000,000 XP and 32,400,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<icon initial="icon.etc_holy_grail_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40126" name="Activated High-grade Purple Arc">
-	<!-- <Greater Magic Lamp 2nd Place Reward>\nActivated Arc. Recharges 360,000,000 XP and 9,720,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<icon initial="icon.etc_holy_grail_i01"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40127" name="Activated High-grade Blue Arc">
-	<!-- <Greater Magic Lamp 3rd Place Reward>\nActivated Arc. Recharges 120,000,000 XP and 3,240,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<icon initial="icon.etc_holy_grail_i02"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40128" name="Activated High-grade Green Arc">
-	<!-- <Greater Magic Lamp 4th Place Reward>\nActivated Arc. Recharges 60,000,000,000 XP and 1,620,000 SP.\nCan’t be shared with characters higher than your own level. -->
-		<icon initial="icon.etc_holy_grail_i03"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40141" name="Battleground Scroll" type="MAGIC">
-	<!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical/M. Critical Damage +10%% -->
-		<icon initial="icon.etc_ssq_i00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="2000"/>
-			<hit-time initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40142" name="Whale">
-	<!-- none -->
-		<icon initial="icon.fish_huge_i15"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40143" name="SP Scroll" max-level="3" >
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40144" name="SP Scroll: 2,000">
-	<!-- none -->
-		<icon initial="icon.etc_sp_scroll1_i00"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40145" name="Scroll of Escape: Gludin Harbor">
-	<!-- Teleports you to Gludin Harbor. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<hit-time initial="3000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40146" name="Fish Stew - Vampiric Rage" max-level="3" >
-	<!-- 
-		level 1: For 20 minutes, has a chance of absorbing 6% of damage inflicted upon the enemy as HP.
-		level 2: For 20 minutes, has a chance of absorbing 7% of damage inflicted upon the enemy as HP.
-		level 3: For 20 minutes, has a chance of absorbing 8% of damage inflicted upon the enemy as HP.
-	 -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40147" name="Fish Stew: Empower" max-level="3" >
-	<!-- 
-		level 1: Increases M. Atk. by 55% for 20 minutes.
-		level 2: Increases M. Atk. by 65% for 20 minutes.
-		level 3: Increases M. Atk. by 75% for 20 minutes.
-	 -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40148" name="Fish Stew - Greater Might">
-	<!-- Increases P. Atk. by 4% for 30 minutes. -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40149" name="Fish Stew - Greater Shield">
-	<!-- Increases P. Def. by 5% for 20 minutes. -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40150" name="Fish Stew - Wild Magic">
-	<!-- Increases M. Critical Rate by 10 for 20 minutes. -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40151" name="Fish Stew - Berserker Spirit" max-level="2" >
-	<!-- 
-		level 1: For 20 minutes, P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, and Movement Speed +5.
-		level 2: For 20 minutes, P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8.
-	 -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40152" name="Fish Stew - Decrease Weight" max-level="3" >
-	<!-- 
-		level 1: For 20 minutes, Weight Penalty Section +3000.
-		level 2: For 20 minutes, Weight Penalty Section +6000.
-		level 3: For 20 minutes, Weight Penalty Section +9000.
-	 -->
-		<icon initial="icon.fish_stew_buff"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40153" name="Fish Stew- Guildsman’s Gratitude" max-level="2" >
-	<!-- 
-		level 1: Hunting XP/SP Gain +10% for 20 minutes.
-		level 2: Hunting XP/SP Gain +30% for 20 minutes.
-	 -->
-		<icon initial="icon.ev_invasion_buff_box"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40154" name="Full Moon’s Blessing (Event)" max-level="25" >
-	<!-- 
-		level 1: For 1 hour, XP/SP Gain +10%.\nThe buff is refreshed automatically every hour, and you’ll obtain a Songpyeon ingredients box each time it is refreshed.\nAfter some time, the full moon will be up.\n<Note>\nCannot obtain the item if you are dead.
-		level 24: For 1 hour, XP/SP Gain +10%.\nThe buff is refreshed automatically every hour, and you’ll obtain a Songpyeon ingredients box each time it is refreshed.\nThe full moon is up.\n<Note>\nCannot obtain the item if you are dead.
-		level 25: none
-	 -->
-		<icon initial="BranchSys2.icon.g_illumination_yellow"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40155" name="Full Moon’s Blessing - Reward">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40156" name="Honey Rice Cakes - Event">
-	<!-- Recovers 200 HP instantly when used. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40157" name="Bean Songpyeon - Event">
-	<!-- Recharges 35,000 Sayha's Grace Points. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40158" name="Sesame Songpyeon - Event">
-	<!-- For 20 minutes, Hunting XP/SP Gain + 20%.\n\n<Note>\nWhen Scroll: Einhasad's Blessing, Einhasad's Protection, Dandy's Home Run Ball/Golden Ball is used while the Sesame Songpyeon effect is applied, only the higher effect will be applied. -->
-		<icon initial="icon.ev_sesame_songpyeon_00"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="40159" name="Thanksgiving Thank You Letter - Event">
-	<!-- Letter to friends for Thanksgiving. Fireworks will be displayed above the character when used, and the Thanksgiving text will be displayed. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<cast-range initial="-1"/>
-			<reuse initial="1500"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="40100" name="Purple Arc - 2nd Place">
+        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
+        <icon initial="icon.etc_holy_grail_i01"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40101" name="Blue Arc - 3rd Place">
+        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40102" name="Green Arc - 4th Place">
+        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
+        <icon initial="icon.etc_holy_grail_i03"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40103" name="Blessing Star Candy">
+        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40104" name="Sayha's Storm Lv. 3 - Event">
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
+        <icon initial="icon.bm_sayha_storm"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40105" name="Blue Arc - 3rd Place">
+        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40106" name="Battle Scroll - Event">
+        <!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. -->
+        <icon initial="icon.ev_charge_scroll"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40113" name="Grace Cookie">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40121" name="High-grade Red Arc">
+        <!-- <Greater Magic Lamp 1st Place Reward>\nRecharges 1,200,000,000 XP and 32,400,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Red Cube. -->
+        <icon initial="icon.etc_holy_grail_i00"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40122" name="High-grade Purple Arc">
+        <!-- <Greater Magic Lamp 2nd Place Reward>\nRecharges 360,000,000 XP and 9,720,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Purple Cube. -->
+        <icon initial="icon.etc_holy_grail_i01"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40123" name="High-grade Blue Arc">
+        <!-- <Greater Magic Lamp 3rd Place Reward>\nRecharges 120,000,000 XP and 3,240,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Blue Cube. -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40124" name="High-grade Green Arc">
+        <!-- <Greater Magic Lamp 4th Place Reward>\nRecharges 60,000,000,000 XP and 1,620,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Green Cube. -->
+        <icon initial="icon.etc_holy_grail_i03"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40125" name="Activated High-grade Red Arc">
+        <!-- <Greater Magic Lamp 1st Place Reward>\nActivated Arc. Recharges 1,200,000,000 XP and 32,400,000 SP.\nCan’t be shared with characters higher than your own level. -->
+        <icon initial="icon.etc_holy_grail_i00"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40126" name="Activated High-grade Purple Arc">
+        <!-- <Greater Magic Lamp 2nd Place Reward>\nActivated Arc. Recharges 360,000,000 XP and 9,720,000 SP.\nCan’t be shared with characters higher than your own level. -->
+        <icon initial="icon.etc_holy_grail_i01"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40127" name="Activated High-grade Blue Arc">
+        <!-- <Greater Magic Lamp 3rd Place Reward>\nActivated Arc. Recharges 120,000,000 XP and 3,240,000 SP.\nCan’t be shared with characters higher than your own level. -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40128" name="Activated High-grade Green Arc">
+        <!-- <Greater Magic Lamp 4th Place Reward>\nActivated Arc. Recharges 60,000,000,000 XP and 1,620,000 SP.\nCan’t be shared with characters higher than your own level. -->
+        <icon initial="icon.etc_holy_grail_i03"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40141" name="Battleground Scroll" type="MAGIC">
+        <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical/M. Critical Damage +10%% -->
+        <icon initial="icon.etc_ssq_i00"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40142" name="Whale">
+        <!-- none -->
+        <icon initial="icon.fish_huge_i15"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40143" name="SP Scroll" max-level="3">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40144" name="SP Scroll: 2,000">
+        <!-- none -->
+        <icon initial="icon.etc_sp_scroll1_i00"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40145" name="Scroll of Escape: Gludin Harbor">
+        <!-- Teleports you to Gludin Harbor. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40146" name="Fish Stew - Vampiric Rage" max-level="3">
+        <!--
+            level 1: For 20 minutes, has a chance of absorbing 6% of damage inflicted upon the enemy as HP.
+            level 2: For 20 minutes, has a chance of absorbing 7% of damage inflicted upon the enemy as HP.
+            level 3: For 20 minutes, has a chance of absorbing 8% of damage inflicted upon the enemy as HP.
+         -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40147" name="Fish Stew: Empower" max-level="3">
+        <!--
+            level 1: Increases M. Atk. by 55% for 20 minutes.
+            level 2: Increases M. Atk. by 65% for 20 minutes.
+            level 3: Increases M. Atk. by 75% for 20 minutes.
+         -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40148" name="Fish Stew - Greater Might">
+        <!-- Increases P. Atk. by 4% for 30 minutes. -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40149" name="Fish Stew - Greater Shield">
+        <!-- Increases P. Def. by 5% for 20 minutes. -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40150" name="Fish Stew - Wild Magic">
+        <!-- Increases M. Critical Rate by 10 for 20 minutes. -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40151" name="Fish Stew - Berserker Spirit" max-level="2">
+        <!--
+            level 1: For 20 minutes, P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, and Movement Speed +5.
+            level 2: For 20 minutes, P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8.
+         -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40152" name="Fish Stew - Decrease Weight" max-level="3">
+        <!--
+            level 1: For 20 minutes, Weight Penalty Section +3000.
+            level 2: For 20 minutes, Weight Penalty Section +6000.
+            level 3: For 20 minutes, Weight Penalty Section +9000.
+         -->
+        <icon initial="icon.fish_stew_buff"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40153" name="Fish Stew- Guildsman’s Gratitude" max-level="2">
+        <!--
+            level 1: Hunting XP/SP Gain +10% for 20 minutes.
+            level 2: Hunting XP/SP Gain +30% for 20 minutes.
+         -->
+        <icon initial="icon.ev_invasion_buff_box"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40154" name="Full Moon’s Blessing (Event)" max-level="25">
+        <!--
+            level 1: For 1 hour, XP/SP Gain +10%.\nThe buff is refreshed automatically every hour, and you’ll obtain a Songpyeon ingredients box each time it is refreshed.\nAfter some time, the full moon will be up.\n<Note>\nCannot obtain the item if you are dead.
+            level 24: For 1 hour, XP/SP Gain +10%.\nThe buff is refreshed automatically every hour, and you’ll obtain a Songpyeon ingredients box each time it is refreshed.\nThe full moon is up.\n<Note>\nCannot obtain the item if you are dead.
+            level 25: none
+         -->
+        <icon initial="BranchSys2.icon.g_illumination_yellow"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40155" name="Full Moon’s Blessing - Reward">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40156" name="Honey Rice Cakes - Event">
+        <!-- Recovers 200 HP instantly when used. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40157" name="Bean Songpyeon - Event">
+        <!-- Recharges 35,000 Sayha's Grace Points. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40158" name="Sesame Songpyeon - Event">
+        <!-- For 20 minutes, Hunting XP/SP Gain + 20%.\n\n<Note>\nWhen Scroll: Einhasad's Blessing, Einhasad's Protection, Dandy's Home Run Ball/Golden Ball is used while the Sesame Songpyeon effect is applied, only the higher effect will be applied. -->
+        <icon initial="icon.ev_sesame_songpyeon_00"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="40159" name="Thanksgiving Thank You Letter - Event">
+        <!-- Letter to friends for Thanksgiving. Fireworks will be displayed above the character when used, and the Thanksgiving text will be displayed. -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+        </attributes>
+        <target/>
+    </skill>
 </list>

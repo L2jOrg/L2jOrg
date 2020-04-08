@@ -1,1643 +1,1603 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="501" name="Magic Break" max-level="5" debuff="true" action="A2">
-	<!-- For 30 seconds, reduces enemy's M. Atk. by 23%. -->
-		<icon initial="icon.iconskill30517"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
-			<magic-level initial="49">
-				<value level="2">52</value>
-				<value level="3">55</value>
-				<value level="4">58</value>
-				<value level="5">60</value>
-			</magic-level>
-			<cast-range initial="150"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-460">
-				<value level="2">-470</value>
-				<value level="3">-480</value>
-				<value level="4">-490</value>
-				<value level="5">-500</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-			<hit-time initial="1800"/>
-		</attributes>
-		<consume>
-			<mana initial="40">
-				<value level="2">45</value>
-				<value level="3">50</value>
-				<value level="4">55</value>
-				<value level="5">60</value>
-			</mana>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="PD_DOWN">
-			<level initial="3"/>
-			<time initial="30"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<magical-attack>
-				<power/>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="503" name="Scorn" max-level="3" debuff="true" action="A1">
-	<!-- 
-		level 1: Provokes the enemies to the front with 11000 Power.
-		level 2: Provokes the enemies to the front with 13000 Power.
-		level 3: Provokes the enemies to the front with 15000 Power.
-	 -->
-		<icon initial="icon.skill0503"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="43">
-				<value level="2">55</value>
-				<value level="3">64</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="4000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-13000">
-				<value level="2">-15000</value>
-				<value level="3">-20000</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="50">
-				<value level="2">60</value>
-				<value level="3">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="80" affect-min="5" affect-random="12" >
-			<fan-range start-angle="0" radius="80" angle="300"/>
-		</target>
-	</skill>
-	<skill id="522" name="Real Target" max-level="4" debuff="true" action="A2">
-	<!-- 
-		level 1: For 30 seconds, Bow Resistance -12% and Stun Resistance -10%.
-		level 2: For 30 seconds, Bow Resistance -16% and Stun Resistance -15%.
-		level 3: For 30 seconds, Bow Resistance -18% and Stun Resistance -20%.
-		level 4: For 30 seconds, Bow Resistance -20% and Stun Resistance -25%.
-	 -->
-		<icon initial="icon.skill0522"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
-			<magic-level initial="78">
-				<value level="2">80</value>
-				<value level="3">82</value>
-				<value level="4">84</value>
-			</magic-level>
-			<cast-range initial="900"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-193">
-				<value level="2">-252</value>
-				<value level="3">-296</value>
-				<value level="4">-323</value>
-			</effect-point>
-			<effect-range initial="1200"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<consume>
-			<mana initial="55">
-				<value level="2">58</value>
-				<value level="3">61</value>
-				<value level="4">64</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="REAL_TARGET" visual="REAL_TARGET" >
-			<level initial="1">
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<defence-trait>
-				<trait type="SHOCK">
-					<power initial="-10">
-					<value level="2">-15</value>
-					<value level="3">-20</value>
-					<value level="4">-25</value>
-				</power>
-				</trait>
-				<trait type="BOW">
-					<power initial="-11">
-					<value level="2">-15</value>
-					<value level="3">-18</value>
-					<value level="4">-20</value>
-				</power>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
-	<skill id="528" name="Shield of Faith" action="A2">
-	<!-- For 15 seconds, party members' P. Def. + 3600 and M. Def. + 2700. For the duration, absorbs 90%% of any damage received by a party member. -->
-		<icon initial="icon.skill0528"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
-			<magic-level initial="79"/>
-			<cast-range initial="-1"/>
-			<reuse initial="900000"/>
-			<effect-point initial="673"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-		</attributes>
-		<consume>
-			<mana initial="43"/>
-		</consume>
-		<target scope="PARTY" object="FRIEND" range="1000" />
-		<abnormal type="TRANSFER_DAMAGE">
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<effect name="TransferDamageToPlayer">
-				<power initial="90.0"/>
-			</effect>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="2700.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE">
-				<power initial="3600.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="531" name="Critical Wound" max-level="2" debuff="true" action="A2">
-	<!-- 
-		level 1: P. Critical Damage +10%, and Deadly Attack Def. -10%. Requires a dagger.
-		level 2: P. Critical Damage +15%, and Deadly Attack Def. -20%. Requires a dagger.
-	 -->
-		<icon initial="icon.skill0531"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
-			<magic-level initial="77">
-				<value level="2">81</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="8000"/>
-			<effect-point initial="-671">
-				<value level="2">-691</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<consume>
-			<mana initial="47">
-				<value level="2">60</value>
-			</mana>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="T_CRT_RATE_UP">
-			<level initial="2"/>
-			<time initial="30"/>
-			<chance initial="80"/>
-		</abnormal>
-		<conditions>
-			<weapon>
-				<type>DAGGER</type>
-			</weapon>
-		</conditions>
-		<effects>
-			<stat-modify stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="BLOW_RATE" mode="PER">
-				<power initial="15.0">
-					<value level="2">20.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="536" name="Over the Body" action="A2">
-	<!-- Expends spirit points so that for 60 seconds, Increases Max HP by 35%%, HP Recovery Bonus by 15%%, P. Atk. by 10%%, P. Def. by 20%%, Atk. Spd. 15%%, and Speed by 20%%. Can be used when CP is more than 80%%. -->
-		<icon initial="icon.skill0536"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-			<magic-level initial="78"/>
-			<cast-range initial="-1"/>
-			<reuse initial="900000"/>
-			<effect-point initial="673"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="157"/>
-		</consume>
-		<target />
-		<abnormal type="MULTI_BUFF">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<conditions>
-			<remain-status stat="CP" amount="80" lower="false"/>
-		</conditions>
-		<effects>
-			<cp mode="PER">
-				<power initial="-95.0"/>
-			</cp>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="35.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE" mode="PER">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="15.0"/>
-			</stat-modify>
-			<speed mode="PER">
-				<power initial="20.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="559" name="Spear" max-level="4" debuff="true" action="A2">
-	<!-- A strong spear thrust that has a chance of causing the enemy to bleed. Over-hit -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-288">
-				<value level="2">-300</value>
-				<value level="3">-311</value>
-				<value level="4">-320</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING" >
-			<level initial="6">
-				<value level="3">7</value>
-			</level>
-			<time initial="10"/>
-			<chance initial="50"/>
-		</abnormal>
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="900.0">
-					<value level="2">1013.0</value>
-					<value level="3">1129.0</value>
-					<value level="4">1248.0</value>
-				</power>
-			</physical-attack>
-			<damage-over-time ticks="5">
-				<power initial="123.0"/>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="560" name="Power Slash" max-level="4" action="A1">
-	<!-- 
-		level 1: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1250..
-		level 2: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1406..
-		level 3: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1568..
-		level 4: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1733..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="15000"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200" >
-			<fan-range start-angle="0" radius="200" angle="180"/>
-		</target>
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="1250.0">
-					<value level="2">1406.0</value>
-					<value level="3">1588.0</value>
-					<value level="4">1733.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="561" name="Angel's Blessing" max-level="4" action="A2">
-	<!-- A divine blessing that increases P. Atk. of all party members. -->
-		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<effect-point initial="566">
-				<value level="2">590</value>
-				<value level="3">611</value>
-				<value level="4">630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target scope="PARTY" object="FRIEND" range="400" />
-		<abnormal type="DANCE_OF_WARRIOR">
-			<level initial="1"/>
-			<time initial="120"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="12.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="562" name="Wind of Angel" max-level="4" action="A2">
-	<!-- A divine Wind that increases P. Evasion of a party member. -->
-		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<effect-point initial="566">
-				<value level="2">590</value>
-				<value level="3">611</value>
-				<value level="4">630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target scope="PARTY" object="FRIEND" range="400" />
-		<abnormal type="SONG_OF_WATER">
-			<level initial="1"/>
-			<time initial="120"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-hp-based stat="EVASION_RATE" stat-add="EVASION_RATE" hp-percent="0">
-				<power initial="3.0"/>
-			</stat-hp-based>
-		</effects>
-	</skill>
-	<skill id="563" name="Horn of Doom" max-level="4" action="A1">
-	<!-- 
-		level 1: Powerfully rams into the enemy with a horn. Over-hit. Power: 1250..
-		level 2: Powerfully rams into the enemy with a horn. Over-hit. Power: 1406..
-		level 3: Powerfully rams into the enemy with a horn. Over-hit. Power: 1568..
-		level 4: Powerfully rams into the enemy with a horn. Over-hit. Power: 1733..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="1250.0">
-					<value level="2">1406.0</value>
-					<value level="3">1568.0</value>
-					<value level="4">1733.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="564" name="Gravity Control" max-level="4" debuff="true" action="A2">
-	<!-- Uses the horn to decrease speed and Atk. Spd. of nearby enemies. -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12" />
-		<abnormal type="SPEED_DOWN">
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="60"/>
-		</abnormal>
-		<effects>
-			<speed mode="PER">
-				<power initial="-20.0">
-					<value level="2">-30.0</value>
-					<value level="3">-35.0</value>
-					<value level="4">-40.0</value>
-				</power>
-			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-10.0">
-					<value level="2">-15.0</value>
-					<value level="3">-20.0</value>
-					<value level="4">-25.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="565" name="Horn Assault" max-level="4" action="A1">
-	<!-- 
-		level 1: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 938..
-		level 2: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 1055..
-		level 3: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 1176..
-		level 4: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 1300..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="900"/>
-			<reuse initial="8000"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="1400"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="50">
-				<value level="2">56</value>
-				<value level="3">62</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="938.0">
-					<value level="2">1055.0</value>
-					<value level="3">1176.0</value>
-					<value level="4">1300.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="567" name="Light Heal" max-level="4" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Draws from the force of light to bestow the ability of recovery. Power 690.
-		level 2: Draws from the force of light to bestow the ability of recovery. Power 731.
-		level 3: Draws from the force of light to bestow the ability of recovery. Power 770.
-		level 4: Draws from the force of light to bestow the ability of recovery. Power 806.
-	 -->
-		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<reuse initial="3000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="1100"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana-init initial="16">
-				<value level="2">18</value>
-				<value level="3">20</value>
-				<value level="4">23</value>
-			</mana-init>
-			<mana initial="80">
-				<value level="2">90</value>
-				<value level="3">100</value>
-				<value level="4">113</value>
-			</mana>
-		</consume>
-		<target type="TARGET" />
-		<effects>
-			<effect name="Heal">
-				<power initial="690.0">
-					<value level="2">731.0</value>
-					<value level="3">770.0</value>
-					<value level="4">806.0</value>
-				</power>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="568" name="Attack Buster" max-level="4" action="A1">
-	<!-- 
-		level 1: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1250.
-		level 2: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1406.
-		level 3: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1568.
-		level 4: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1733.
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<conditions>
-			<energy-saved charges="2"/>
-		</conditions>
-		<effects>
-			<energy-attack consume-charges="2" critical-chance="10" physical-defense-mod="1.0">
-				<power initial="1250.0">
-					<value level="2">1406.0</value>
-					<value level="3">1568.0</value>
-					<value level="4">1733.0</value>
-				</power>
-			</energy-attack>
-		</effects>
-	</skill>
-	<skill id="569" name="Attack Storm" max-level="4" action="A1">
-	<!-- 
-		level 1: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 625.
-		level 2: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 703.
-		level 3: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 784.
-		level 4: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 867.
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="500"/>
-			<reuse initial="15000"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="1000"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
-		<conditions>
-			<energy-saved charges="3"/>
-		</conditions>
-		<effects>
-			<energy-attack consume-charges="3" critical-chance="10" physical-defense-mod="1.0">
-				<power initial="625.0">
-					<value level="2">703.0</value>
-					<value level="3">784.0</value>
-					<value level="4">867.0</value>
-				</power>
-			</energy-attack>
-		</effects>
-	</skill>
-	<skill id="570" name="Attack Rage" max-level="4" action="A1">
-	<!-- 
-		level 1: Gathers Momentum while attacking the enemy. Can be charged up to Stage 1. Critical. Over-hit.
-		level 2: Gathers Momentum while attacking the enemy. Can be charged up to Stage 2. Critical. Over-hit.
-		level 3: Gathers Momentum while attacking the enemy. Can be charged up to Stage 3. Critical. Over-hit.
-		level 4: Gathers Momentum while attacking the enemy. Can be charged up to Stage 4. Critical. Over-hit.
-	 -->
-		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<effect-point initial="-288">
-				<value level="2">-300</value>
-				<value level="3">-311</value>
-				<value level="4">-320</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="5"/>
-			<hp initial="50"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="10.0" over-hit="true">
-				<power initial="1.0"/>
-			</physical-attack>
-			<effect  name="FocusMomentum" scope="SELF">
-				<power initial="1.0">
-					<value level="2">2.0</value>
-					<value level="3">3.0</value>
-					<value level="4">4.0</value>
-				</power>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="571" name="Poison Dust" max-level="4" debuff="true" action="A2" type="MAGIC">
-	<!-- Sprays a poisonous powder all over nearby enemies. -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="20">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="5">
-				<value level="2">6</value>
-				<value level="4">7</value>
-			</mana-init>
-			<mana initial="23">
-				<value level="2">27</value>
-				<value level="3">29</value>
-				<value level="4">33</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12" />
-		<abnormal type="POISON" visual="DOT_POISON" subordination="POISON" >
-			<level initial="6">
-				<value level="3">7</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="70"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5">
-				<power initial="58.0"/>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="572" name="Double Slasher" max-level="4" action="A1">
-	<!-- 
-		level 1: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 938..
-		level 2: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 1055..
-		level 3: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 1176..
-		level 4: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 1300..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-288">
-				<value level="2">-300</value>
-				<value level="3">-311</value>
-				<value level="4">-320</value>
-			</effect-point>
-			<effect-range initial="1100"/>
-			<hit-time initial="1900"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="938.0">
-					<value level="2">1055.0</value>
-					<value level="3">1176.0</value>
-					<value level="4">1300.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="573" name="Earthquake" max-level="4" debuff="true" action="A2">
-	<!-- 
-		level 1: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 625..
-		level 2: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 703..
-		level 3: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 784..
-		level 4: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 867..
-	 -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<effect-point initial="-566">
-				<value level="2">-590</value>
-				<value level="3">-611</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
+    <skill id="501" name="Magic Break" max-level="5" debuff="true" action="A2">
+        <!-- For 30 seconds, reduces enemy's M. Atk. by 23%. -->
+        <icon initial="icon.iconskill30517"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
+            <magic-level initial="49">
+                <value level="2">52</value>
+                <value level="3">55</value>
+                <value level="4">58</value>
+                <value level="5">60</value>
+            </magic-level>
+            <cast-range initial="150"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-460">
+                <value level="2">-470</value>
+                <value level="3">-480</value>
+                <value level="4">-490</value>
+                <value level="5">-500</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+            <hit-time initial="1800"/>
+        </attributes>
+        <consume>
+            <mana initial="40">
+                <value level="2">45</value>
+                <value level="3">50</value>
+                <value level="4">55</value>
+                <value level="5">60</value>
+            </mana>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="PD_DOWN">
+            <level initial="3"/>
+            <time initial="30"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <magical-attack>
+                <power/>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="503" name="Scorn" max-level="3" debuff="true" action="A1">
+        <!--
+            level 1: Provokes the enemies to the front with 11000 Power.
+            level 2: Provokes the enemies to the front with 13000 Power.
+            level 3: Provokes the enemies to the front with 15000 Power.
+         -->
+        <icon initial="icon.skill0503"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="43">
+                <value level="2">55</value>
+                <value level="3">64</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="4000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-13000">
+                <value level="2">-15000</value>
+                <value level="3">-20000</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="50">
+                <value level="2">60</value>
+                <value level="3">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="80" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="80" angle="300"/>
+        </target>
+    </skill>
+    <skill id="522" name="Real Target" max-level="4" debuff="true" action="A2">
+        <!--
+            level 1: For 30 seconds, Bow Resistance -12% and Stun Resistance -10%.
+            level 2: For 30 seconds, Bow Resistance -16% and Stun Resistance -15%.
+            level 3: For 30 seconds, Bow Resistance -18% and Stun Resistance -20%.
+            level 4: For 30 seconds, Bow Resistance -20% and Stun Resistance -25%.
+         -->
+        <icon initial="icon.skill0522"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
+            <magic-level initial="78">
+                <value level="2">80</value>
+                <value level="3">82</value>
+                <value level="4">84</value>
+            </magic-level>
+            <cast-range initial="900"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-193">
+                <value level="2">-252</value>
+                <value level="3">-296</value>
+                <value level="4">-323</value>
+            </effect-point>
+            <effect-range initial="1200"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <consume>
+            <mana initial="55">
+                <value level="2">58</value>
+                <value level="3">61</value>
+                <value level="4">64</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="REAL_TARGET" visual="REAL_TARGET">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="-10">
+                        <value level="2">-15</value>
+                        <value level="3">-20</value>
+                        <value level="4">-25</value>
+                    </power>
+                </trait>
+                <trait type="BOW">
+                    <power initial="-11">
+                        <value level="2">-15</value>
+                        <value level="3">-18</value>
+                        <value level="4">-20</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
+    <skill id="528" name="Shield of Faith" action="A2">
+        <!-- For 15 seconds, party members' P. Def. + 3600 and M. Def. + 2700. For the duration, absorbs 90%% of any damage received by a party member. -->
+        <icon initial="icon.skill0528"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
+            <magic-level initial="79"/>
+            <cast-range initial="-1"/>
+            <reuse initial="900000"/>
+            <effect-point initial="673"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+        </attributes>
+        <consume>
+            <mana initial="43"/>
+        </consume>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="TRANSFER_DAMAGE">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="TransferDamageToPlayer">
+                <power initial="90.0"/>
+            </effect>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="2700.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="3600.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="531" name="Critical Wound" max-level="2" debuff="true" action="A2">
+        <!--
+            level 1: P. Critical Damage +10%, and Deadly Attack Def. -10%. Requires a dagger.
+            level 2: P. Critical Damage +15%, and Deadly Attack Def. -20%. Requires a dagger.
+         -->
+        <icon initial="icon.skill0531"/>
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
+            <magic-level initial="77">
+                <value level="2">81</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="8000"/>
+            <effect-point initial="-671">
+                <value level="2">-691</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <consume>
+            <mana initial="47">
+                <value level="2">60</value>
+            </mana>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="T_CRT_RATE_UP">
+            <level initial="2"/>
+            <time initial="30"/>
+            <chance initial="80"/>
+        </abnormal>
+        <conditions>
+            <weapon>
+                <type>DAGGER</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BLOW_RATE">
+                <power initial="15.0">
+                    <value level="2">20.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="536" name="Over the Body" action="A2">
+        <!-- Expends spirit points so that for 60 seconds, Increases Max HP by 35%%, HP Recovery Bonus by 15%%, P. Atk. by 10%%, P. Def. by 20%%, Atk. Spd. 15%%, and Speed by 20%%. Can be used when CP is more than 80%%. -->
+        <icon initial="icon.skill0536"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+            <magic-level initial="78"/>
+            <cast-range initial="-1"/>
+            <reuse initial="900000"/>
+            <effect-point initial="673"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="157"/>
+        </consume>
+        <target/>
+        <abnormal type="MULTI_BUFF">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <conditions>
+            <remain-status amount="80" lower="false" stat="CP"/>
+        </conditions>
+        <effects>
+            <cp mode="PER">
+                <power initial="-95.0"/>
+            </cp>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="35.0"/>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="15.0"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="559" name="Spear" max-level="4" debuff="true" action="A2">
+        <!-- A strong spear thrust that has a chance of causing the enemy to bleed. Over-hit -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-288">
+                <value level="2">-300</value>
+                <value level="3">-311</value>
+                <value level="4">-320</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+            <level initial="6">
+                <value level="3">7</value>
+            </level>
+            <time initial="10"/>
+            <chance initial="50"/>
+        </abnormal>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="900.0">
+                    <value level="2">1013.0</value>
+                    <value level="3">1129.0</value>
+                    <value level="4">1248.0</value>
+                </power>
+            </physical-attack>
+            <damage-over-time ticks="5">
+                <power initial="123.0"/>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="560" name="Power Slash" max-level="4" action="A1">
+        <!--
+            level 1: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1250..
+            level 2: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1406..
+            level 3: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1568..
+            level 4: A powerful frontal attack that involves swinging a spear to assault enemies. Over-hit. Power: 1733..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="15000"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200">
+            <fan-range start-angle="0" radius="200" angle="180"/>
+        </target>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="1250.0">
+                    <value level="2">1406.0</value>
+                    <value level="3">1588.0</value>
+                    <value level="4">1733.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="561" name="Angel's Blessing" max-level="4" action="A2">
+        <!-- A divine blessing that increases P. Atk. of all party members. -->
+        <icon initial="icon.skill_transform_buff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <effect-point initial="566">
+                <value level="2">590</value>
+                <value level="3">611</value>
+                <value level="4">630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target scope="PARTY" object="FRIEND" range="400"/>
+        <abnormal type="DANCE_OF_WARRIOR">
+            <level initial="1"/>
+            <time initial="120"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="12.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="562" name="Wind of Angel" max-level="4" action="A2">
+        <!-- A divine Wind that increases P. Evasion of a party member. -->
+        <icon initial="icon.skill_transform_buff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <effect-point initial="566">
+                <value level="2">590</value>
+                <value level="3">611</value>
+                <value level="4">630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target scope="PARTY" object="FRIEND" range="400"/>
+        <abnormal type="SONG_OF_WATER">
+            <level initial="1"/>
+            <time initial="120"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="3.0"/>
+            </stat-hp-based>
+        </effects>
+    </skill>
+    <skill id="563" name="Horn of Doom" max-level="4" action="A1">
+        <!--
+            level 1: Powerfully rams into the enemy with a horn. Over-hit. Power: 1250..
+            level 2: Powerfully rams into the enemy with a horn. Over-hit. Power: 1406..
+            level 3: Powerfully rams into the enemy with a horn. Over-hit. Power: 1568..
+            level 4: Powerfully rams into the enemy with a horn. Over-hit. Power: 1733..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="1250.0">
+                    <value level="2">1406.0</value>
+                    <value level="3">1568.0</value>
+                    <value level="4">1733.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="564" name="Gravity Control" max-level="4" debuff="true" action="A2">
+        <!-- Uses the horn to decrease speed and Atk. Spd. of nearby enemies. -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12"/>
+        <abnormal type="SPEED_DOWN">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="60"/>
+        </abnormal>
+        <effects>
+            <speed mode="PER">
+                <power initial="-20.0">
+                    <value level="2">-30.0</value>
+                    <value level="3">-35.0</value>
+                    <value level="4">-40.0</value>
+                </power>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="-10.0">
+                    <value level="2">-15.0</value>
+                    <value level="3">-20.0</value>
+                    <value level="4">-25.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="565" name="Horn Assault" max-level="4" action="A1">
+        <!--
+            level 1: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 938..
+            level 2: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 1055..
+            level 3: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 1176..
+            level 4: Releases the horn's energy to attack a distant enemy. Over-hit. Power: 1300..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="900"/>
+            <reuse initial="8000"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="1400"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="50">
+                <value level="2">56</value>
+                <value level="3">62</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="938.0">
+                    <value level="2">1055.0</value>
+                    <value level="3">1176.0</value>
+                    <value level="4">1300.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="567" name="Light Heal" max-level="4" action="A1" type="MAGIC">
+        <!--
+            level 1: Draws from the force of light to bestow the ability of recovery. Power 690.
+            level 2: Draws from the force of light to bestow the ability of recovery. Power 731.
+            level 3: Draws from the force of light to bestow the ability of recovery. Power 770.
+            level 4: Draws from the force of light to bestow the ability of recovery. Power 806.
+         -->
+        <icon initial="icon.skill_transform_etc"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <reuse initial="3000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="1100"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana-init initial="16">
+                <value level="2">18</value>
+                <value level="3">20</value>
+                <value level="4">23</value>
+            </mana-init>
+            <mana initial="80">
+                <value level="2">90</value>
+                <value level="3">100</value>
+                <value level="4">113</value>
+            </mana>
+        </consume>
+        <target type="TARGET"/>
+        <effects>
+            <effect name="Heal">
+                <power initial="690.0">
+                    <value level="2">731.0</value>
+                    <value level="3">770.0</value>
+                    <value level="4">806.0</value>
+                </power>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="568" name="Attack Buster" max-level="4" action="A1">
+        <!--
+            level 1: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1250.
+            level 2: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1406.
+            level 3: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1568.
+            level 4: Detonates a Momentum charge to attack the enemy. Requires Level 2 Momentum charge. Power 1733.
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <conditions>
+            <energy-saved charges="2"/>
+        </conditions>
+        <effects>
+            <energy-attack consume-charges="2" critical-chance="10" physical-defense-mod="1.0">
+                <power initial="1250.0">
+                    <value level="2">1406.0</value>
+                    <value level="3">1568.0</value>
+                    <value level="4">1733.0</value>
+                </power>
+            </energy-attack>
+        </effects>
+    </skill>
+    <skill id="569" name="Attack Storm" max-level="4" action="A1">
+        <!--
+            level 1: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 625.
+            level 2: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 703.
+            level 3: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 784.
+            level 4: Unleash a magical attack on distant enemies. Requires Level 3 Momentum charge. Power 867.
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="500"/>
+            <reuse initial="15000"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="1000"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
+        <conditions>
+            <energy-saved charges="3"/>
+        </conditions>
+        <effects>
+            <energy-attack consume-charges="3" critical-chance="10" physical-defense-mod="1.0">
+                <power initial="625.0">
+                    <value level="2">703.0</value>
+                    <value level="3">784.0</value>
+                    <value level="4">867.0</value>
+                </power>
+            </energy-attack>
+        </effects>
+    </skill>
+    <skill id="570" name="Attack Rage" max-level="4" action="A1">
+        <!--
+            level 1: Gathers Momentum while attacking the enemy. Can be charged up to Stage 1. Critical. Over-hit.
+            level 2: Gathers Momentum while attacking the enemy. Can be charged up to Stage 2. Critical. Over-hit.
+            level 3: Gathers Momentum while attacking the enemy. Can be charged up to Stage 3. Critical. Over-hit.
+            level 4: Gathers Momentum while attacking the enemy. Can be charged up to Stage 4. Critical. Over-hit.
+         -->
+        <icon initial="icon.skill_transform_etc"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <effect-point initial="-288">
+                <value level="2">-300</value>
+                <value level="3">-311</value>
+                <value level="4">-320</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="5"/>
+            <hp initial="50"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="10.0" over-hit="true">
+                <power initial="1.0"/>
+            </physical-attack>
+            <effect name="FocusMomentum" scope="SELF">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                </power>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="571" name="Poison Dust" max-level="4" debuff="true" action="A2" type="MAGIC">
+        <!-- Sprays a poisonous powder all over nearby enemies. -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="20">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="5">
+                <value level="2">6</value>
+                <value level="4">7</value>
+            </mana-init>
+            <mana initial="23">
+                <value level="2">27</value>
+                <value level="3">29</value>
+                <value level="4">33</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+            <level initial="6">
+                <value level="3">7</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="70"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="5">
+                <power initial="58.0"/>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="572" name="Double Slasher" max-level="4" action="A1">
+        <!--
+            level 1: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 938..
+            level 2: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 1055..
+            level 3: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 1176..
+            level 4: Attacks an enemy at a distance by using Momentum. Over-hit. Power: 1300..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-288">
+                <value level="2">-300</value>
+                <value level="3">-311</value>
+                <value level="4">-320</value>
+            </effect-point>
+            <effect-range initial="1100"/>
+            <hit-time initial="1900"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="938.0">
+                    <value level="2">1055.0</value>
+                    <value level="3">1176.0</value>
+                    <value level="4">1300.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="573" name="Earthquake" max-level="4" debuff="true" action="A2">
+        <!--
+            level 1: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 625..
+            level 2: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 703..
+            level 3: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 784..
+            level 4: Causes a quake in the ground to stun nearby enemies. Over-hit. Power: 867..
+         -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <effect-point initial="-566">
+                <value level="2">-590</value>
+                <value level="3">-611</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
 
-			<element type="EARTH" value="20"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="9"/>
-			<chance initial="50"/>
-		</abnormal>
-		<effects>
-			<physical-attack critical-chance="15.0" over-hit="true">
-				<power initial="625.0">
-					<value level="2">703.0</value>
-					<value level="3">784.0</value>
-					<value level="4">867.0</value>
-				</power>
-			</physical-attack>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="575" name="Steel Cutter" max-level="4" action="A1">
-	<!-- 
-		level 1: Attacks with a sharp steel blade. Over-hit. Power: 1250..
-		level 2: Attacks with a sharp steel blade. Over-hit. Power: 1406..
-		level 3: Attacks with a sharp steel blade. Over-hit. Power: 1568..
-		level 4: Attacks with a sharp steel blade. Over-hit. Power: 1733..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-477">
-				<value level="2">-532</value>
-				<value level="3">-582</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="1250.0">
-					<value level="2">1406.0</value>
-					<value level="3">1568.0</value>
-					<value level="4">1733.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="576" name="Paw Strike" max-level="4" action="A1">
-	<!-- 
-		level 1: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1250..
-		level 2: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1406..
-		level 3: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1568..
-		level 4: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1733..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-477">
-				<value level="2">-532</value>
-				<value level="3">-582</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="1250.0">
-					<value level="2">1406.0</value>
-					<value level="3">1568.0</value>
-					<value level="4">1733.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="577" name="Fire Breath" max-level="4" action="A1">
-	<!-- 
-		level 1: Spews fire to attack enemies in front of you. Over-hit. Power: 875..
-		level 2: Spews fire to attack enemies in front of you. Over-hit. Power: 984..
-		level 3: Spews fire to attack enemies in front of you. Over-hit. Power: 1098..
-		level 4: Spews fire to attack enemies in front of you. Over-hit. Power: 1213..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="100"/>
-			<reuse initial="30000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-726">
-				<value level="2">-811</value>
-				<value level="3">-887</value>
-				<value level="4">-959</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
+            <element type="EARTH" value="20"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="9"/>
+            <chance initial="50"/>
+        </abnormal>
+        <effects>
+            <physical-attack critical-chance="15.0" over-hit="true">
+                <power initial="625.0">
+                    <value level="2">703.0</value>
+                    <value level="3">784.0</value>
+                    <value level="4">867.0</value>
+                </power>
+            </physical-attack>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="575" name="Steel Cutter" max-level="4" action="A1">
+        <!--
+            level 1: Attacks with a sharp steel blade. Over-hit. Power: 1250..
+            level 2: Attacks with a sharp steel blade. Over-hit. Power: 1406..
+            level 3: Attacks with a sharp steel blade. Over-hit. Power: 1568..
+            level 4: Attacks with a sharp steel blade. Over-hit. Power: 1733..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-477">
+                <value level="2">-532</value>
+                <value level="3">-582</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="1250.0">
+                    <value level="2">1406.0</value>
+                    <value level="3">1568.0</value>
+                    <value level="4">1733.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="576" name="Paw Strike" max-level="4" action="A1">
+        <!--
+            level 1: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1250..
+            level 2: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1406..
+            level 3: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1568..
+            level 4: Inflicts a powerful attack with your forefeet. Over-hit. Power: 1733..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-477">
+                <value level="2">-532</value>
+                <value level="3">-582</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="1250.0">
+                    <value level="2">1406.0</value>
+                    <value level="3">1568.0</value>
+                    <value level="4">1733.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="577" name="Fire Breath" max-level="4" action="A1">
+        <!--
+            level 1: Spews fire to attack enemies in front of you. Over-hit. Power: 875..
+            level 2: Spews fire to attack enemies in front of you. Over-hit. Power: 984..
+            level 3: Spews fire to attack enemies in front of you. Over-hit. Power: 1098..
+            level 4: Spews fire to attack enemies in front of you. Over-hit. Power: 1213..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="100"/>
+            <reuse initial="30000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-726">
+                <value level="2">-811</value>
+                <value level="3">-887</value>
+                <value level="4">-959</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="20"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" scope="SQUARE" object="NOT_FRIEND" range="250" affect-min="5" affect-random="12" >
-			<fan-range start-angle="0" radius="250" angle="60"/>
-		</target>
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="875.0">
-					<value level="2">984.0</value>
-					<value level="3">1098.0</value>
-					<value level="4">1213.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="578" name="Blaze Quake" max-level="4" debuff="true" action="A2">
-	<!-- Inflicts a burning fire attack on nearby enemies. Over-hit. -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-477">
-				<value level="2">-532</value>
-				<value level="3">-582</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="1080"/>
+            <element type="FIRE" value="20"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY" scope="SQUARE" object="NOT_FRIEND" range="250" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="250" angle="60"/>
+        </target>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="875.0">
+                    <value level="2">984.0</value>
+                    <value level="3">1098.0</value>
+                    <value level="4">1213.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="578" name="Blaze Quake" max-level="4" debuff="true" action="A2">
+        <!-- Inflicts a burning fire attack on nearby enemies. Over-hit. -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-477">
+                <value level="2">-532</value>
+                <value level="3">-582</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="1080"/>
 
-			<element type="FIRE" value="20"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
-		<abnormal type="DOT_ATTR">
-			<level initial="6">
-				<value level="3">7</value>
-			</level>
-			<time initial="10"/>
-			<chance initial="60"/>
-		</abnormal>
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="625.0">
-					<value level="2">703.0</value>
-					<value level="3">784.0</value>
-					<value level="4">867.0</value>
-				</power>
-			</physical-attack>
-			<damage-over-time ticks="5">
-				<power initial="27.0">
-					<value level="3">31.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="579" name="Fire Armor" max-level="4" action="A2">
-	<!-- An intense flame ignites and protects the body. Immobilized while in effect. -->
-		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="135000"/>
-			<effect-point initial="477">
-				<value level="2">532</value>
-				<value level="3">582</value>
-				<value level="4">630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
+            <element type="FIRE" value="20"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
+        <abnormal type="DOT_ATTR">
+            <level initial="6">
+                <value level="3">7</value>
+            </level>
+            <time initial="10"/>
+            <chance initial="60"/>
+        </abnormal>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="625.0">
+                    <value level="2">703.0</value>
+                    <value level="3">784.0</value>
+                    <value level="4">867.0</value>
+                </power>
+            </physical-attack>
+            <damage-over-time ticks="5">
+                <power initial="27.0">
+                    <value level="3">31.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="579" name="Fire Armor" max-level="4" action="A2">
+        <!-- An intense flame ignites and protects the body. Immobilized while in effect. -->
+        <icon initial="icon.skill_transform_buff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="135000"/>
+            <effect-point initial="477">
+                <value level="2">532</value>
+                <value level="3">582</value>
+                <value level="4">630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
 
-			<element type="FIRE" value="20"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target />
-		<abnormal type="PD_UP_SPECIAL">
-			<level initial="1">
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-			</level>
-			<time initial="30"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="800.0">
-					<value level="2">900.0</value>
-					<value level="3">1000.0</value>
-					<value level="4">1100.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE">
-				<power initial="1000.0">
-					<value level="2">1100.0</value>
-					<value level="3">1200.0</value>
-					<value level="4">1300.0</value>
-				</power>
-			</stat-modify>
-			<resist-dispel-by-category category="BUFF">
-				<power initial="-80.0"/>
-			</resist-dispel-by-category>
-		</effects>
-	</skill>
-	<skill id="580" name="Death Blow" max-level="4" action="A1">
-	<!-- Inflicts a deadly blow. Lethal Strike. Over-hit. -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-477">
-				<value level="2">-532</value>
-				<value level="3">-582</value>
-				<value level="4">-630</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<fatal-blow chance-boost="200.0" over-hit="true">
-				<power initial="3749.0">
-					<value level="2">4217.0</value>
-					<value level="3">4703.0</value>
-					<value level="4">5199.0</value>
-				</power>
-			</fatal-blow>
-			<lethal>
-				<power/>
-				<half-power initial="10.0"/>
-			</lethal>
-		</effects>
-	</skill>
-	<skill id="581" name="Sand Cloud" max-level="4" debuff="true" action="A2">
-	<!-- Uses blinding sand to decrease nearby enemies' P. Accuracy. -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="360"/>
-			<hit-time initial="3000"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
-		<abnormal type="HIT_DOWN">
-			<level initial="1"/>
-			<time initial="60"/>
-			<chance initial="60"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="ACCURACY" stat-add="ACCURACY">
-				<power initial="-6.0">
-					<value level="2">-7.0</value>
-					<value level="3">-8.0</value>
-					<value level="4">-9.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="582" name="Scope Bleed" max-level="4" debuff="true" action="A2">
-	<!-- Attacks frontal enemies with a lethal blow and causes them to bleed. Over-hit -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-242">
-				<value level="2">-271</value>
-				<value level="3">-296</value>
-				<value level="4">-320</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="240" affect-min="5" affect-random="12" >
-			<fan-range start-angle="0" radius="80" angle="150"/>
-		</target>
-		<abnormal type="BLEEDING" subordination="BLEEDING" >
-			<level initial="6">
-				<value level="3">7</value>
-			</level>
-			<time initial="10"/>
-			<chance initial="50"/>
-		</abnormal>
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="875.0">
-					<value level="2">984.0</value>
-					<value level="3">1098.0</value>
-					<value level="4">1213.0</value>
-				</power>
-			</physical-attack>
-			<damage-over-time ticks="5">
-				<power initial="123.0"/>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="583" name="Assimilation" max-level="4" action="A2">
-	<!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
-		<icon initial="icon.skill_transform_etc"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">63</value>
-				<value level="3">66</value>
-				<value level="4">69</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="4000"/>
-			<effect-point initial="566">
-				<value level="2">590</value>
-				<value level="3">611</value>
-				<value level="4">630</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="2000"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">63</value>
-				<value level="3">67</value>
-				<value level="4">70</value>
-			</mana>
-		</consume>
-		<target />
-		<abnormal type="STEALTH" visual="STEALTH" >
-			<level initial="1"/>
-			<time initial="120"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<effect name="SilentMove"/>
-			<trigger-skill-by-magic skill="7097" target="MY_PARTY" chance="100">
-				<power initial="1.0"/>
-				<types>PHYSIC MAGIC STATIC DANCE</types>
-			</trigger-skill-by-magic>
-			<trigger-skill-by-attack skill="7097" target="MY_PARTY">
-				<power initial="1.0"/>
-				<chance initial="100.0"/>
-				<min-damage initial="1.0"/>
-				<weapons>SWORD BLUNT</weapons>
-			</trigger-skill-by-attack>
-		</effects>
-	</skill>
-	<skill id="584" name="Power Claw" action="A1">
-	<!-- Attacks the enemy with powerful claws. Over-hit. Power: 1008. -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="55"/>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-475"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="55"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="1008.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="585" name="Fast Moving" action="A2">
-	<!-- Spontaenously increases Movement Speed significantly. -->
-		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="55"/>
-			<cast-range initial="-1"/>
-			<reuse initial="30000"/>
-			<effect-point initial="477"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="55"/>
-		</consume>
-		<target />
-		<abnormal type="SPEED_UP_SPECIAL">
-			<level initial="2"/>
-			<time initial="15"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<speed>
-				<power initial="66.0"/>
-			</speed>
-		</effects>
-	</skill>
-	<skill id="586" name="Rolling Attack" max-level="2" action="A1">
-	<!-- 
-		level 1: Quickly swings a spear around, attacking nearby enemies. Over-hit. Power: 840..
-		level 2: Quickly swings a spear around, attacking nearby enemies. Over-hit. Power: 984..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="59">
-				<value level="2">63</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="4000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="54">
-				<value level="2">58</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12" />
-		<effects>
-			<physical-attack ignore-shield="true" critical-chance="0.0" over-hit="true">
-				<power initial="840.0">
-					<value level="2">984.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="587" name="Earth Storm" max-level="2" action="A1">
-	<!-- 
-		level 1: Deals a powerful attack that penetrates the earth. Over-hit. Power: 1200..
-		level 2: Deals a powerful attack that penetrates the earth. Over-hit. Power: 1406..
-	 -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="59">
-				<value level="2">63</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-530">
-				<value level="2">-580</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="54">
-				<value level="2">58</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="1200.0">
-					<value level="2">1406.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="588" name="Curse of Darkness" max-level="2" debuff="true" action="A2">
-	<!-- Casts a powerful curse on your enemy. -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
-			<magic-level initial="59">
-				<value level="2">63</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="11000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1200"/>
-		</attributes>
-		<consume>
-			<mana initial="54">
-				<value level="2">58</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="SPEED_DOWN">
-			<level initial="1"/>
-			<time initial="15"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="5">
-				<power initial="88.0">
-					<value level="2">101.0</value>
-				</power>
-			</damage-over-time>
-		</effects>
-	</skill>
-	<skill id="589" name="Darkness Energy Drain" max-level="2" action="A1">
-	<!-- Absorbs energy from corpses to recover HP. -->
-		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="59">
-				<value level="2">63</value>
-			</magic-level>
-			<cast-range initial="20"/>
-			<reuse initial="8000"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="54">
-				<value level="2">58</value>
-			</mana>
-		</consume>
-		<target type="NPC_BODY" />
-		<conditions>
-			<condition name="ConsumeBody"/>
-		</conditions>
-		<effects>
-			<effect name="HpByLevel">
-				<power initial="540.0">
-					<value level="2">580.0</value>
-				</power>
-			</effect>
-			<effect name="ConsumeBody"/>
-		</effects>
-	</skill>
-	<skill id="590" name="Residence Body">
-	<!-- The Max HP of clan members in residence increases by 222. -->
-		<icon initial="icon.skill0370"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-				<power initial="222.0"/>
-			</vital-stat-modify>
-		</effects>
-	</skill>
-	<skill id="591" name="Residence Spirit">
-	<!-- Max CP of clan members in residence +444. -->
-		<icon initial="icon.skill0371"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
-				<power initial="444.0"/>
-			</vital-stat-modify>
-		</effects>
-	</skill>
-	<skill id="592" name="Residence Soul">
-	<!-- The Max MP of clan members in residence increases by 168. -->
-		<icon initial="icon.skill0372"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
-				<power initial="168.0"/>
-			</vital-stat-modify>
-		</effects>
-	</skill>
-	<skill id="593" name="Residence Health">
-	<!-- HP Recovery Bonus of clan members in residence +1.09. -->
-		<icon initial="icon.skill0373"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
-				<power initial="1.09"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="594" name="Residence Moral">
-	<!-- CP recovery bonus of clan members in residence +1.09. -->
-		<icon initial="icon.skill0374"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
-				<power initial="1.09"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="595" name="Residence Clarity">
-	<!-- MP Recovery Bonus of clan members in residence +0.47. -->
-		<icon initial="icon.skill0375"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
-				<power initial="0.47"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="596" name="Residence Might">
-	<!-- P. Atk. of clan members in residence increases by 34.6. -->
-		<icon initial="icon.skill0376"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-				<power initial="34.6"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="597" name="Residence Shield">
-	<!-- P. Def. of clan members in residence increases by 54.7. -->
-		<icon initial="icon.skill0377"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="54.7"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="598" name="Residence Empower">
-	<!-- M. Atk. of clan members in residence increases by 40.4. -->
-		<icon initial="icon.skill0378"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
-				<power initial="40.4"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="599" name="Residence Magic Barrier">
-	<!-- The M. Def. of clan members in residence increases by 44. -->
-		<icon initial="icon.skill0379"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="44.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
+            <element type="FIRE" value="20"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target/>
+        <abnormal type="PD_UP_SPECIAL">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="BlockMove"/>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="800.0">
+                    <value level="2">900.0</value>
+                    <value level="3">1000.0</value>
+                    <value level="4">1100.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="1000.0">
+                    <value level="2">1100.0</value>
+                    <value level="3">1200.0</value>
+                    <value level="4">1300.0</value>
+                </power>
+            </stat-modify>
+            <resist-dispel-by-category category="BUFF">
+                <power initial="-80.0"/>
+            </resist-dispel-by-category>
+        </effects>
+    </skill>
+    <skill id="580" name="Death Blow" max-level="4" action="A1">
+        <!-- Inflicts a deadly blow. Lethal Strike. Over-hit. -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-477">
+                <value level="2">-532</value>
+                <value level="3">-582</value>
+                <value level="4">-630</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <fatal-blow chance-boost="200.0" over-hit="true">
+                <power initial="3749.0">
+                    <value level="2">4217.0</value>
+                    <value level="3">4703.0</value>
+                    <value level="4">5199.0</value>
+                </power>
+            </fatal-blow>
+            <lethal>
+                <power/>
+                <half-power initial="10.0"/>
+            </lethal>
+        </effects>
+    </skill>
+    <skill id="581" name="Sand Cloud" max-level="4" debuff="true" action="A2">
+        <!-- Uses blinding sand to decrease nearby enemies' P. Accuracy. -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="360"/>
+            <hit-time initial="3000"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
+        <abnormal type="HIT_DOWN">
+            <level initial="1"/>
+            <time initial="60"/>
+            <chance initial="60"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="ACCURACY" stat-add="ACCURACY">
+                <power initial="-6.0">
+                    <value level="2">-7.0</value>
+                    <value level="3">-8.0</value>
+                    <value level="4">-9.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="582" name="Scope Bleed" max-level="4" debuff="true" action="A2">
+        <!-- Attacks frontal enemies with a lethal blow and causes them to bleed. Over-hit -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="20">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-242">
+                <value level="2">-271</value>
+                <value level="3">-296</value>
+                <value level="4">-320</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="240" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="80" angle="150"/>
+        </target>
+        <abnormal type="BLEEDING" subordination="BLEEDING">
+            <level initial="6">
+                <value level="3">7</value>
+            </level>
+            <time initial="10"/>
+            <chance initial="50"/>
+        </abnormal>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="875.0">
+                    <value level="2">984.0</value>
+                    <value level="3">1098.0</value>
+                    <value level="4">1213.0</value>
+                </power>
+            </physical-attack>
+            <damage-over-time ticks="5">
+                <power initial="123.0"/>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="583" name="Assimilation" max-level="4" action="A2">
+        <!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
+        <icon initial="icon.skill_transform_etc"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">63</value>
+                <value level="3">66</value>
+                <value level="4">69</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="4000"/>
+            <effect-point initial="566">
+                <value level="2">590</value>
+                <value level="3">611</value>
+                <value level="4">630</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="2000"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">63</value>
+                <value level="3">67</value>
+                <value level="4">70</value>
+            </mana>
+        </consume>
+        <target/>
+        <abnormal type="STEALTH" visual="STEALTH">
+            <level initial="1"/>
+            <time initial="120"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="SilentMove"/>
+            <trigger-skill-by-magic chance="100" skill="7097" target="MY_PARTY">
+                <power initial="1.0"/>
+                <types>PHYSIC MAGIC STATIC DANCE</types>
+            </trigger-skill-by-magic>
+            <trigger-skill-by-attack skill="7097" target="MY_PARTY">
+                <power initial="1.0"/>
+                <chance initial="100.0"/>
+                <min-damage initial="1.0"/>
+                <weapons>SWORD BLUNT</weapons>
+            </trigger-skill-by-attack>
+        </effects>
+    </skill>
+    <skill id="584" name="Power Claw" action="A1">
+        <!-- Attacks the enemy with powerful claws. Over-hit. Power: 1008. -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="55"/>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-475"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="55"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="1008.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="585" name="Fast Moving" action="A2">
+        <!-- Spontaenously increases Movement Speed significantly. -->
+        <icon initial="icon.skill_transform_buff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="55"/>
+            <cast-range initial="-1"/>
+            <reuse initial="30000"/>
+            <effect-point initial="477"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="55"/>
+        </consume>
+        <target/>
+        <abnormal type="SPEED_UP_SPECIAL">
+            <level initial="2"/>
+            <time initial="15"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="66.0"/>
+            </speed>
+        </effects>
+    </skill>
+    <skill id="586" name="Rolling Attack" max-level="2" action="A1">
+        <!--
+            level 1: Quickly swings a spear around, attacking nearby enemies. Over-hit. Power: 840..
+            level 2: Quickly swings a spear around, attacking nearby enemies. Over-hit. Power: 984..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="59">
+                <value level="2">63</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="4000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="54">
+                <value level="2">58</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
+        <effects>
+            <physical-attack critical-chance="0.0" ignore-shield="true" over-hit="true">
+                <power initial="840.0">
+                    <value level="2">984.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="587" name="Earth Storm" max-level="2" action="A1">
+        <!--
+            level 1: Deals a powerful attack that penetrates the earth. Over-hit. Power: 1200..
+            level 2: Deals a powerful attack that penetrates the earth. Over-hit. Power: 1406..
+         -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="59">
+                <value level="2">63</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-530">
+                <value level="2">-580</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="54">
+                <value level="2">58</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="1200.0">
+                    <value level="2">1406.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="588" name="Curse of Darkness" max-level="2" debuff="true" action="A2">
+        <!-- Casts a powerful curse on your enemy. -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
+            <magic-level initial="59">
+                <value level="2">63</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="11000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1200"/>
+        </attributes>
+        <consume>
+            <mana initial="54">
+                <value level="2">58</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="SPEED_DOWN">
+            <level initial="1"/>
+            <time initial="15"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="5">
+                <power initial="88.0">
+                    <value level="2">101.0</value>
+                </power>
+            </damage-over-time>
+        </effects>
+    </skill>
+    <skill id="589" name="Darkness Energy Drain" max-level="2" action="A1">
+        <!-- Absorbs energy from corpses to recover HP. -->
+        <icon initial="icon.skill_transform_etc"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="59">
+                <value level="2">63</value>
+            </magic-level>
+            <cast-range initial="20"/>
+            <reuse initial="8000"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="54">
+                <value level="2">58</value>
+            </mana>
+        </consume>
+        <target type="NPC_BODY"/>
+        <conditions>
+            <condition name="ConsumeBody"/>
+        </conditions>
+        <effects>
+            <effect name="HpByLevel">
+                <power initial="540.0">
+                    <value level="2">580.0</value>
+                </power>
+            </effect>
+            <effect name="ConsumeBody"/>
+        </effects>
+    </skill>
+    <skill id="590" name="Residence Body">
+        <!-- The Max HP of clan members in residence increases by 222. -->
+        <icon initial="icon.skill0370"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="222.0"/>
+            </vital-stat-modify>
+        </effects>
+    </skill>
+    <skill id="591" name="Residence Spirit">
+        <!-- Max CP of clan members in residence +444. -->
+        <icon initial="icon.skill0371"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="444.0"/>
+            </vital-stat-modify>
+        </effects>
+    </skill>
+    <skill id="592" name="Residence Soul">
+        <!-- The Max MP of clan members in residence increases by 168. -->
+        <icon initial="icon.skill0372"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="168.0"/>
+            </vital-stat-modify>
+        </effects>
+    </skill>
+    <skill id="593" name="Residence Health">
+        <!-- HP Recovery Bonus of clan members in residence +1.09. -->
+        <icon initial="icon.skill0373"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
+                <power initial="1.09"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="594" name="Residence Moral">
+        <!-- CP recovery bonus of clan members in residence +1.09. -->
+        <icon initial="icon.skill0374"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
+                <power initial="1.09"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="595" name="Residence Clarity">
+        <!-- MP Recovery Bonus of clan members in residence +0.47. -->
+        <icon initial="icon.skill0375"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
+                <power initial="0.47"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="596" name="Residence Might">
+        <!-- P. Atk. of clan members in residence increases by 34.6. -->
+        <icon initial="icon.skill0376"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="34.6"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="597" name="Residence Shield">
+        <!-- P. Def. of clan members in residence increases by 54.7. -->
+        <icon initial="icon.skill0377"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="54.7"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="598" name="Residence Empower">
+        <!-- M. Atk. of clan members in residence increases by 40.4. -->
+        <icon initial="icon.skill0378"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="40.4"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="599" name="Residence Magic Barrier">
+        <!-- The M. Def. of clan members in residence increases by 44. -->
+        <icon initial="icon.skill0379"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="44.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
 </list>

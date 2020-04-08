@@ -1,1797 +1,1695 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="13856" name="Lv. 2 Brooch - Additional Effect" max-level="15" >
-	<!-- 
-		level 1: P. Atk. +2%.
-		level 2: P. Atk. +3%.
-		level 3: P. Atk. +4% and PvP Damage +5%.
-		level 4: P. Atk. +5% and PvP Damage +5%.
-		level 5: P. Atk. +6% and PvP Damage +5%.
-		level 6: P. Atk. +7% and PvP Damage +5%.
-		level 7: P. Atk. +8% and PvP Damage +5%.
-		level 8: P. Atk. +9% and PvP Damage +5%.
-		level 9: P. Atk. +10% and PvP Damage +5%.
-		level 10: P. Atk. +11% and PvP Damage +5%.
-		level 11: P. Atk. +12% and PvP Damage +5%.
-		level 12: P. Atk. +13% and PvP Damage +5%.
-		level 13: P. Atk. +14% and PvP Damage +5%.
-		level 14: P. Atk. +15% and PvP Damage +5%.
-		level 15: P. Atk. +16% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="2.0">
-					<value level="2">3.0</value>
-					<value level="3">4.0</value>
-					<value level="4">5.0</value>
-					<value level="5">6.0</value>
-					<value level="6">7.0</value>
-					<value level="7">8.0</value>
-					<value level="8">9.0</value>
-					<value level="9">10.0</value>
-					<value level="10">11.0</value>
-					<value level="11">12.0</value>
-					<value level="12">13.0</value>
-					<value level="13">14.0</value>
-					<value level="14">15.0</value>
-					<value level="15">16.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13857" name="Wrath" max-level="15" >
-	<!-- 
-		level 1: Atk. Spd. +11%.
-		level 2: Atk. Spd. +12%.
-		level 3: Atk. Spd. +13% and PvP Damage +5%.
-		level 4: Atk. Spd. +14% and PvP Damage +5%.
-		level 5: Atk. Spd. +15% and PvP Damage +5%.
-		level 6: Atk. Spd. +16% and PvP Damage +5%.
-		level 7: Atk. Spd. +17% and PvP Damage +5%.
-		level 8: Atk. Spd. +18% and PvP Damage +5%.
-		level 9: Atk. Spd. +19% and PvP Damage +5%.
-		level 10: Atk. Spd. +20% and PvP Damage +5%.
-		level 11: Atk. Spd. +21% and PvP Damage +5%.
-		level 12: Atk. Spd. +22% and PvP Damage +5%.
-		level 13: Atk. Spd. +23% and PvP Damage +5%.
-		level 14: Atk. Spd. +24% and PvP Damage +5%.
-		level 15: Atk. Spd. +25% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="11.0">
-					<value level="2">12.0</value>
-					<value level="3">13.0</value>
-					<value level="4">14.0</value>
-					<value level="5">15.0</value>
-					<value level="6">16.0</value>
-					<value level="7">17.0</value>
-					<value level="8">18.0</value>
-					<value level="9">19.0</value>
-					<value level="10">20.0</value>
-					<value level="11">21.0</value>
-					<value level="12">22.0</value>
-					<value level="13">23.0</value>
-					<value level="14">24.0</value>
-					<value level="15">25.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13858" name="Focus" max-level="15" >
-	<!-- 
-		level 1: P. Critical Rate +58.
-		level 2: P. Critical Rate +64.
-		level 3: P. Critical Rate +70 and PvP Damage +5%.
-		level 4: P. Critical Rate +76 and PvP Damage +5%.
-		level 5: P. Critical Rate +82 and PvP Damage +5%.
-		level 6: P. Critical Rate +88 and PvP Damage +5%.
-		level 7: P. Critical Rate +94 and PvP Damage +5%.
-		level 8: P. Critical Rate +100 and PvP Damage +5%.
-		level 9: P. Critical Rate +106 and PvP Damage +5%.
-		level 10: P. Critical Rate +112 and PvP Damage +5%.
-		level 11: P. Critical Rate +118 and PvP Damage +5%.
-		level 12: P. Critical Rate +124 and PvP Damage +5%.
-		level 13: P. Critical Rate +130 and PvP Damage +5%.
-		level 14: P. Critical Rate +136 and PvP Damage +5%.
-		level 15: P. Critical Rate +142 and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
-				<power initial="58.0">
-					<value level="2">64.0</value>
-					<value level="3">70.0</value>
-					<value level="4">76.0</value>
-					<value level="5">82.0</value>
-					<value level="6">88.0</value>
-					<value level="7">94.0</value>
-					<value level="8">100.0</value>
-					<value level="9">106.0</value>
-					<value level="10">112.0</value>
-					<value level="11">118.0</value>
-					<value level="12">124.0</value>
-					<value level="13">130.0</value>
-					<value level="14">136.0</value>
-					<value level="15">142.0</value>
-				</power>
-			</stat-hp-based>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13859" name="Death" max-level="15" >
-	<!-- 
-		level 1: P. Critical Damage +3%.
-		level 2: P. Critical Damage +4%.
-		level 3: P. Critical Damage +5% and PvP Damage +5%.
-		level 4: P. Critical Damage +6% and PvP Damage +5%.
-		level 5: P. Critical Damage +7% and PvP Damage +5%.
-		level 6: P. Critical Damage +8% and PvP Damage +5%.
-		level 7: P. Critical Damage +9% and PvP Damage +5%.
-		level 8: P. Critical Damage +10% and PvP Damage +5%.
-		level 9: P. Critical Damage +11% and PvP Damage +5%.
-		level 10: P. Critical Damage +12% and PvP Damage +5%.
-		level 11: P. Critical Damage +13% and PvP Damage +5%.
-		level 12: P. Critical Damage +14% and PvP Damage +5%.
-		level 13: P. Critical Damage +15% and PvP Damage +5%.
-		level 14: P. Critical Damage +16% and PvP Damage +5%.
-		level 15: P. Critical Damage +17% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="3.0">
-					<value level="2">4.0</value>
-					<value level="3">5.0</value>
-					<value level="4">6.0</value>
-					<value level="5">7.0</value>
-					<value level="6">8.0</value>
-					<value level="7">9.0</value>
-					<value level="8">10.0</value>
-					<value level="9">11.0</value>
-					<value level="10">12.0</value>
-					<value level="11">13.0</value>
-					<value level="12">14.0</value>
-					<value level="13">15.0</value>
-					<value level="14">16.0</value>
-					<value level="15">17.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13860" name="Hunter" max-level="15" >
-	<!-- 
-		level 1: P. Skill Critical Rate +6%.
-		level 2: P. Skill Critical Rate +7%.
-		level 3: P. Skill Critical Rate +8% and PvP Damage +5%.
-		level 4: P. Skill Critical Rate +9% and PvP Damage +5%.
-		level 5: P. Skill Critical Rate +10% and PvP Damage +5%.
-		level 6: P. Skill Critical Rate +11% and PvP Damage +5%.
-		level 7: P. Skill Critical Rate +12% and PvP Damage +5%.
-		level 8: P. Skill Critical Rate +13% and PvP Damage +5%.
-		level 9: P. Skill Critical Rate +14% and PvP Damage +5%.
-		level 10: P. Skill Critical Rate +15% and PvP Damage +5%.
-		level 11: P. Skill Critical Rate +16% and PvP Damage +5%.
-		level 12: P. Skill Critical Rate +17% and PvP Damage +5%.
-		level 13: P. Skill Critical Rate +18% and PvP Damage +5%.
-		level 14: P. Skill Critical Rate +19% and PvP Damage +5%.
-		level 15: P. Skill Critical Rate +20% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="13861" name="Fire" max-level="15" >
-	<!-- 
-		level 1: P. Skill Critical Damage +6%.
-		level 2: P. Skill Critical Damage +7%.
-		level 3: P. Skill Critical Damage +8% and PvP Damage +5%.
-		level 4: P. Skill Critical Damage +9% and PvP Damage +5%.
-		level 5: P. Skill Critical Damage +10% and PvP Damage +5%.
-		level 6: P. Skill Critical Damage +11% and PvP Damage +5%.
-		level 7: P. Skill Critical Damage +12% and PvP Damage +5%.
-		level 8: P. Skill Critical Damage +13% and PvP Damage +5%.
-		level 9: P. Skill Critical Damage +14% and PvP Damage +5%.
-		level 10: P. Skill Critical Damage +15% and PvP Damage +5%.
-		level 11: P. Skill Critical Damage +16% and PvP Damage +5%.
-		level 12: P. Skill Critical Damage +17% and PvP Damage +5%.
-		level 13: P. Skill Critical Damage +18% and PvP Damage +5%.
-		level 14: P. Skill Critical Damage +19% and PvP Damage +5%.
-		level 15: P. Skill Critical Damage +20% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="13862" name="Body" max-level="15" >
-	<!-- 
-		level 1: Max HP +21%.
-		level 2: Max HP +22%.
-		level 3: Max HP +23% and PvP Damage +5%.
-		level 4: Max HP +24% and PvP Damage +5%.
-		level 5: Max HP +25% and PvP Damage +5%.
-		level 6: Max HP +26% and PvP Damage +5%.
-		level 7: Max HP +27% and PvP Damage +5%.
-		level 8: Max HP +28% and PvP Damage +5%.
-		level 9: Max HP +29% and PvP Damage +5%.
-		level 10: Max HP +30% and PvP Damage +5%.
-		level 11: Max HP +31% and PvP Damage +5%.
-		level 12: Max HP +32% and PvP Damage +5%.
-		level 13: Max HP +33% and PvP Damage +5%.
-		level 14: Max HP +34% and PvP Damage +5%.
-		level 15: Max HP +35% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_p"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="21.0">
-					<value level="2">22.0</value>
-					<value level="3">23.0</value>
-					<value level="4">24.0</value>
-					<value level="5">25.0</value>
-					<value level="6">26.0</value>
-					<value level="7">27.0</value>
-					<value level="8">28.0</value>
-					<value level="9">29.0</value>
-					<value level="10">30.0</value>
-					<value level="11">31.0</value>
-					<value level="12">32.0</value>
-					<value level="13">33.0</value>
-					<value level="14">34.0</value>
-					<value level="15">35.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13863" name="Empower" max-level="15" >
-	<!-- 
-		level 1: M. Atk. +2%.
-		level 2: M. Atk. +3%.
-		level 3: M. Atk. +4% and PvP Damage +5%.
-		level 4: M. Atk. +5% and PvP Damage +5%.
-		level 5: M. Atk. +6% and PvP Damage +5%.
-		level 6: M. Atk. +7% and PvP Damage +5%.
-		level 7: M. Atk. +8% and PvP Damage +5%.
-		level 8: M. Atk. +9% and PvP Damage +5%.
-		level 9: M. Atk. +10% and PvP Damage +5%.
-		level 10: M. Atk. +11% and PvP Damage +5%.
-		level 11: M. Atk. +12% and PvP Damage +5%.
-		level 12: M. Atk. +13% and PvP Damage +5%.
-		level 13: M. Atk. +14% and PvP Damage +5%.
-		level 14: M. Atk. +15% and PvP Damage +5%.
-		level 15: M. Atk. +16% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
-				<power initial="2.0">
-					<value level="2">3.0</value>
-					<value level="3">4.0</value>
-					<value level="4">5.0</value>
-					<value level="5">6.0</value>
-					<value level="6">7.0</value>
-					<value level="7">8.0</value>
-					<value level="8">9.0</value>
-					<value level="9">10.0</value>
-					<value level="10">11.0</value>
-					<value level="11">12.0</value>
-					<value level="12">13.0</value>
-					<value level="13">14.0</value>
-					<value level="14">15.0</value>
-					<value level="15">16.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13864" name="Acumen" max-level="15" action="A2">
-	<!-- 
-		level 1: Casting Spd. +11%
-		level 2: Casting Spd. +12%
-		level 3: Casting Spd. +13% and PvP Damage +5%.
-		level 4: Casting Spd. +14% and PvP Damage +5%.
-		level 5: Casting Spd. +15% and PvP Damage +5%.
-		level 6: Casting Spd. +16% and PvP Damage +5%.
-		level 7: Casting Spd. +17% and PvP Damage +5%.
-		level 8: Casting Spd. +18% and PvP Damage +5%.
-		level 9: Casting Spd. +19% and PvP Damage +5%.
-		level 10: Casting Spd. +20% and PvP Damage +5%.
-		level 11: Casting Spd. +21% and PvP Damage +5%.
-		level 12: Casting Spd. +22% and PvP Damage +5%.
-		level 13: Casting Spd. +23% and PvP Damage +5%.
-		level 14: Casting Spd. +24% and PvP Damage +5%.
-		level 15: Casting Spd. +25% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC" magic-critical-rate="-5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="900"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="11.0">
-					<value level="2">12.0</value>
-					<value level="3">13.0</value>
-					<value level="4">14.0</value>
-					<value level="5">15.0</value>
-					<value level="6">16.0</value>
-					<value level="7">17.0</value>
-					<value level="8">18.0</value>
-					<value level="9">19.0</value>
-					<value level="10">20.0</value>
-					<value level="11">21.0</value>
-					<value level="12">22.0</value>
-					<value level="13">23.0</value>
-					<value level="14">24.0</value>
-					<value level="15">25.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13865" name="Savagery" max-level="15" >
-	<!-- 
-		level 1: M. Critical Rate +21%.
-		level 2: M. Critical Rate +22%.
-		level 3: M. Critical Rate +23% and PvP Damage +5%.
-		level 4: M. Critical Rate +24% and PvP Damage +5%.
-		level 5: M. Critical Rate +25% and PvP Damage +5%.
-		level 6: M. Critical Rate +26% and PvP Damage +5%.
-		level 7: M. Critical Rate +27% and PvP Damage +5%.
-		level 8: M. Critical Rate +28% and PvP Damage +5%.
-		level 9: M. Critical Rate +29% and PvP Damage +5%.
-		level 10: M. Critical Rate +30% and PvP Damage +5%.
-		level 11: M. Critical Rate +31% and PvP Damage +5%.
-		level 12: M. Critical Rate +32% and PvP Damage +5%.
-		level 13: M. Critical Rate +33% and PvP Damage +5%.
-		level 14: M. Critical Rate +34% and PvP Damage +5%.
-		level 15: M. Critical Rate +35% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
-				<power initial="21.0">
-					<value level="2">22.0</value>
-					<value level="3">23.0</value>
-					<value level="4">24.0</value>
-					<value level="5">25.0</value>
-					<value level="6">26.0</value>
-					<value level="7">27.0</value>
-					<value level="8">28.0</value>
-					<value level="9">29.0</value>
-					<value level="10">30.0</value>
-					<value level="11">31.0</value>
-					<value level="12">32.0</value>
-					<value level="13">33.0</value>
-					<value level="14">34.0</value>
-					<value level="15">35.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13866" name="Mystic" max-level="15" >
-	<!-- 
-		level 1: M. Critical Damage +3%.
-		level 2: M. Critical Damage +4%.
-		level 3: M. Critical Damage +5% and PvP Damage +5%.
-		level 4: M. Critical Damage +6% and PvP Damage +5%.
-		level 5: M. Critical Damage +7% and PvP Damage +5%.
-		level 6: M. Critical Damage +8% and PvP Damage +5%.
-		level 7: M. Critical Damage +9% and PvP Damage +5%.
-		level 8: M. Critical Damage +10% and PvP Damage +5%.
-		level 9: M. Critical Damage +11% and PvP Damage +5%.
-		level 10: M. Critical Damage +12% and PvP Damage +5%.
-		level 11: M. Critical Damage +13% and PvP Damage +5%.
-		level 12: M. Critical Damage +14% and PvP Damage +5%.
-		level 13: M. Critical Damage +15% and PvP Damage +5%.
-		level 14: M. Critical Damage +16% and PvP Damage +5%.
-		level 15: M. Critical Damage +17% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="3.0">
-					<value level="2">4.0</value>
-					<value level="3">5.0</value>
-					<value level="4">6.0</value>
-					<value level="5">7.0</value>
-					<value level="6">8.0</value>
-					<value level="7">9.0</value>
-					<value level="8">10.0</value>
-					<value level="9">11.0</value>
-					<value level="10">12.0</value>
-					<value level="11">13.0</value>
-					<value level="12">14.0</value>
-					<value level="13">15.0</value>
-					<value level="14">16.0</value>
-					<value level="15">17.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13867" name="Soul" max-level="15" >
-	<!-- 
-		level 1: Max MP +26%.
-		level 2: Max MP +27%.
-		level 3: Max MP +28% and PvP Damage +5%.
-		level 4: Max MP +29% and PvP Damage +5%.
-		level 5: Max MP +30% and PvP Damage +5%.
-		level 6: Max MP +31% and PvP Damage +5%.
-		level 7: Max MP +32% and PvP Damage +5%.
-		level 8: Max MP +33% and PvP Damage +5%.
-		level 9: Max MP +34% and PvP Damage +5%.
-		level 10: Max MP +35% and PvP Damage +5%.
-		level 11: Max MP +36% and PvP Damage +5%.
-		level 12: Max MP +37% and PvP Damage +5%.
-		level 13: Max MP +38% and PvP Damage +5%.
-		level 14: Max MP +39% and PvP Damage +5%.
-		level 15: Max MP +40% and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_m"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
-				<power initial="26.0">
-					<value level="2">27.0</value>
-					<value level="3">28.0</value>
-					<value level="4">29.0</value>
-					<value level="5">30.0</value>
-					<value level="6">31.0</value>
-					<value level="7">32.0</value>
-					<value level="8">33.0</value>
-					<value level="9">34.0</value>
-					<value level="10">35.0</value>
-					<value level="11">36.0</value>
-					<value level="12">37.0</value>
-					<value level="13">38.0</value>
-					<value level="14">39.0</value>
-					<value level="15">40.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13868" name="Speed Focus" max-level="15" >
-	<!-- 
-		level 1: Atk. Spd. +5% and P. Critical Rate +26.
-		level 2: Atk. Spd. +5% and P. Critical Rate +29.
-		level 3: Atk. Spd. +6%, P. Critical Rate +32, and PvP Damage +5%.
-		level 4: Atk. Spd. +6%, P. Critical Rate +34, and PvP Damage +5%.
-		level 5: Atk. Spd. +7%, P. Critical Rate +37, and PvP Damage +5%.
-		level 6: Atk. Spd. +7%, P. Critical Rate +40, and PvP Damage +5%.
-		level 7: Atk. Spd. +8%, P. Critical Rate +42, and PvP Damage +5%.
-		level 8: Atk. Spd. +8%, P. Critical Rate +45, and PvP Damage +5%.
-		level 9: Atk. Spd. +9%, P. Critical Rate +48, and PvP Damage +5%.
-		level 10: Atk. Spd. +9%, P. Critical Rate +50, and PvP Damage +5%.
-		level 11: Atk. Spd. +10%, P. Critical Rate +53, and PvP Damage +5%.
-		level 12: Atk. Spd. +10%, P. Critical Rate +56, and PvP Damage +5%.
-		level 13: Atk. Spd. +11%, P. Critical Rate +59, and PvP Damage +5%.
-		level 14: Atk. Spd. +11%, P. Critical Rate +61, and PvP Damage +5%.
-		level 15: Atk. Spd. +12%, P. Critical Rate +64, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="3">6.0</value>
-					<value level="5">7.0</value>
-					<value level="7">8.0</value>
-					<value level="9">9.0</value>
-					<value level="11">10.0</value>
-					<value level="13">11.0</value>
-					<value level="15">12.0</value>
-				</power>
-			</stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
-				<power initial="26.0">
-					<value level="2">29.0</value>
-					<value level="3">32.0</value>
-					<value level="4">35.0</value>
-					<value level="5">38.0</value>
-					<value level="6">41.0</value>
-					<value level="7">44.0</value>
-					<value level="8">47.0</value>
-					<value level="9">50.0</value>
-					<value level="10">53.0</value>
-					<value level="11">56.0</value>
-					<value level="12">59.0</value>
-					<value level="13">62.0</value>
-					<value level="14">65.0</value>
-					<value level="15">68.0</value>
-				</power>
-			</stat-hp-based>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13869" name="Speed Death" max-level="15" >
-	<!-- 
-		level 1: Atk. Spd. +5% and P. Critical Damage +1%.
-		level 2: Atk. Spd. +5% and P. Critical Damage +2%.
-		level 3: Atk. Spd. +6%, P. Critical Damage +2%, and PvP Damage +5%.
-		level 4: Atk. Spd. +6%, P. Critical Damage +3%, and PvP Damage +5%.
-		level 5: Atk. Spd. +7%, P. Critical Damage +3%, and PvP Damage +5%.
-		level 6: Atk. Spd. +7%, P. Critical Damage +4%, and PvP Damage +5%.
-		level 7: Atk. Spd. +8%, P. Critical Damage +4%, and PvP Damage +5%.
-		level 8: Atk. Spd. +8%, P. Critical Damage +5%, and PvP Damage +5%.
-		level 9: Atk. Spd. +9%, P. Critical Damage +5%, and PvP Damage +5%.
-		level 10: Atk. Spd. +9%, P. Critical Damage +6%, and PvP Damage +5%.
-		level 11: Atk. Spd. +10%, P. Critical Damage +6%, and PvP Damage +5%.
-		level 12: Atk. Spd. +10%, P. Critical Damage +7%, and PvP Damage +5%.
-		level 13: Atk. Spd. +11%, P. Critical Damage +7%, and PvP Damage +5%.
-		level 14: Atk. Spd. +11%, P. Critical Damage +8%, and PvP Damage +5%.
-		level 15: Atk. Spd. +12%, P. Critical Damage +8%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="3">6.0</value>
-					<value level="5">7.0</value>
-					<value level="7">8.0</value>
-					<value level="9">9.0</value>
-					<value level="11">10.0</value>
-					<value level="13">11.0</value>
-					<value level="15">12.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="1.0">
-					<value level="2">2.0</value>
-					<value level="4">3.0</value>
-					<value level="6">4.0</value>
-					<value level="8">5.0</value>
-					<value level="10">6.0</value>
-					<value level="12">7.0</value>
-					<value level="14">8.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13870" name="Speed Hunter" max-level="15" >
-	<!-- 
-		level 1: Atk. Spd. +5% and P. Skill Critical Rate +3%.
-		level 2: Atk. Spd. +5% and P. Skill Critical Rate +4%.
-		level 3: Atk. Spd. +6%, P. Skill Critical Rate +4%, and PvP Damage +5%.
-		level 4: Atk. Spd. +6%, P. Skill Critical Rate +5%, and PvP Damage +5%.
-		level 5: Atk. Spd. +7%, P. Skill Critical Rate +5%, and PvP Damage +5%.
-		level 6: Atk. Spd. +7%, P. Skill Critical Rate +6%, and PvP Damage +5%.
-		level 7: Atk. Spd. +8%, P. Skill Critical Rate +6%, and PvP Damage +5%.
-		level 8: Atk. Spd. +8%, P. Skill Critical Rate +7%, and PvP Damage +5%.
-		level 9: Atk. Spd. +9%, P. Skill Critical Rate +7%, and PvP Damage +5%.
-		level 10: Atk. Spd. +9%, P. Skill Critical Rate +8%, and PvP Damage +5%.
-		level 11: Atk. Spd. +10%, P. Skill Critical Rate +8%, and PvP Damage +5%.
-		level 12: Atk. Spd. +10%, P. Skill Critical Rate +9%, and PvP Damage +5%.
-		level 13: Atk. Spd. +11%, P. Skill Critical Rate +9%, and PvP Damage +5%.
-		level 14: Atk. Spd. +11%, P. Skill Critical Rate +10%, and PvP Damage +5%.
-		level 15: Atk. Spd. +12%, P. Skill Critical Rate +10%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="13871" name="Speed Fire" max-level="15" >
-	<!-- 
-		level 1: Atk. Spd. +5% and P. Skill Critical Damage +3%.
-		level 2: Atk. Spd. +5% and P. Skill Critical Damage +4%.
-		level 3: Atk. Spd. +6%, P. Skill Critical Damage +4%, and PvP Damage +5%.
-		level 4: Atk. Spd. +6%, P. Skill Critical Damage +5%, and PvP Damage +5%.
-		level 5: Atk. Spd. +7%, P. Skill Critical Damage +5%, and PvP Damage +5%.
-		level 6: Atk. Spd. +7%, P. Skill Critical Damage +6%, and PvP Damage +5%.
-		level 7: Atk. Spd. +8%, P. Skill Critical Damage +6%, and PvP Damage +5%.
-		level 8: Atk. Spd. +8%, P. Skill Critical Damage +7%, and PvP Damage +5%.
-		level 9: Atk. Spd. +9%, P. Skill Critical Damage +7%, and PvP Damage +5%.
-		level 10: Atk. Spd. +9%, P. Skill Critical Damage +8%, and PvP Damage +5%.
-		level 11: Atk. Spd. +10%, P. Skill Critical Damage +8%, and PvP Damage +5%.
-		level 12: Atk. Spd. +10%, P. Skill Critical Damage +9%, and PvP Damage +5%.
-		level 13: Atk. Spd. +11%, P. Skill Critical Damage +9%, and PvP Damage +5%.
-		level 14: Atk. Spd. +11%, P. Skill Critical Damage +10%, and PvP Damage +5%.
-		level 15: Atk. Spd. +12%, P. Skill Critical Damage +10%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="13872" name="Speed Body" max-level="15" >
-	<!-- 
-		level 1: Atk. Spd. +5% and Max HP +10%.
-		level 2: Atk. Spd. +5% and Max HP +11%.
-		level 3: Atk. Spd. +6%, Max HP +11%, and PvP Damage +5%.
-		level 4: Atk. Spd. +6%, Max HP +12%, and PvP Damage +5%.
-		level 5: Atk. Spd. +7%, Max HP +12%, and PvP Damage +5%.
-		level 6: Atk. Spd. +7%, Max HP +13%, and PvP Damage +5%.
-		level 7: Atk. Spd. +8%, Max HP +13%, and PvP Damage +5%.
-		level 8: Atk. Spd. +8%, Max HP +14%, and PvP Damage +5%.
-		level 9: Atk. Spd. +9%, Max HP +14%, and PvP Damage +5%.
-		level 10: Atk. Spd. +9%, Max HP +15%, and PvP Damage +5%.
-		level 11: Atk. Spd. +10%, Max HP +15%, and PvP Damage +5%.
-		level 12: Atk. Spd. +10%, Max HP +16%, and PvP Damage +5%.
-		level 13: Atk. Spd. +11%, Max HP +16%, and PvP Damage +5%.
-		level 14: Atk. Spd. +11%, Max HP +17%, and PvP Damage +5%.
-		level 15: Atk. Spd. +12%, Max HP +17%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="3">6.0</value>
-					<value level="5">7.0</value>
-					<value level="7">8.0</value>
-					<value level="9">9.0</value>
-					<value level="11">10.0</value>
-					<value level="13">11.0</value>
-					<value level="15">12.0</value>
-				</power>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13873" name="Critical Death" max-level="15" >
-	<!-- 
-		level 1: P. Critical Rate +26 and P. Critical Damage +1%.
-		level 2: P. Critical Rate +29 and P. Critical Damage +2%.
-		level 3: P. Critical Rate +32, P. Critical Damage +2%, and PvP Damage +5%.
-		level 4: P. Critical Rate +34, P. Critical Damage +3%, and PvP Damage +5%.
-		level 5: P. Critical Rate +37, P. Critical Damage +3%, and PvP Damage +5%.
-		level 6: P. Critical Rate +40, P. Critical Damage +4%, and PvP Damage +5%.
-		level 7: P. Critical Rate +42, P. Critical Damage +4%, and PvP Damage +5%.
-		level 8: P. Critical Rate +45, P. Critical Damage +5%, and PvP Damage +5%.
-		level 9: P. Critical Rate +48, P. Critical Damage +5%, and PvP Damage +5%.
-		level 10: P. Critical Rate +50, P. Critical Damage +6%, and PvP Damage +5%.
-		level 11: P. Critical Rate +53, P. Critical Damage +6%, and PvP Damage +5%.
-		level 12: P. Critical Rate +56, P. Critical Damage +7%, and PvP Damage +5%.
-		level 13: P. Critical Rate +59, P. Critical Damage +7%, and PvP Damage +5%.
-		level 14: P. Critical Rate +61, P. Critical Damage +8%, and PvP Damage +5%.
-		level 15: P. Critical Rate +64, P. Critical Damage +8%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
-				<power initial="26.0">
-					<value level="2">29.0</value>
-					<value level="3">32.0</value>
-					<value level="4">35.0</value>
-					<value level="5">38.0</value>
-					<value level="6">41.0</value>
-					<value level="7">44.0</value>
-					<value level="8">47.0</value>
-					<value level="9">50.0</value>
-					<value level="10">53.0</value>
-					<value level="11">56.0</value>
-					<value level="12">59.0</value>
-					<value level="13">62.0</value>
-					<value level="14">65.0</value>
-					<value level="15">68.0</value>
-				</power>
-			</stat-hp-based>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="1.0">
-					<value level="2">2.0</value>
-					<value level="4">3.0</value>
-					<value level="6">4.0</value>
-					<value level="8">5.0</value>
-					<value level="10">6.0</value>
-					<value level="12">7.0</value>
-					<value level="14">8.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13874" name="Critical Hunter" max-level="15" >
-	<!-- 
-		level 1: P. Critical Rate +26, P. Skill Critical Rate +3%.
-		level 2: P. Critical Rate +29, P. Skill Critical Rate +4%.
-		level 3: P. Critical Rate +32, P. Skill Critical Rate +4%, and PvP Damage +5%.
-		level 4: P. Critical Rate +34, P. Skill Critical Rate +5%, and PvP Damage +5%.
-		level 5: P. Critical Rate +37, P. Skill Critical Rate +5%, and PvP Damage +5%.
-		level 6: P. Critical Rate +40, P. Skill Critical Rate +6%, and PvP Damage +5%.
-		level 7: P. Critical Rate +42, P. Skill Critical Rate +6%, and PvP Damage +5%.
-		level 8: P. Critical Rate +45, P. Skill Critical Rate +7%, and PvP Damage +5%.
-		level 9: P. Critical Rate +48, P. Skill Critical Rate +7%, and PvP Damage +5%.
-		level 10: P. Critical Rate +50, P. Skill Critical Rate +8%, and PvP Damage +5%.
-		level 11: P. Critical Rate +53, P. Skill Critical Rate +8%, and PvP Damage +5%.
-		level 12: P. Critical Rate +56, P. Skill Critical Rate +9%, and PvP Damage +5%.
-		level 13: P. Critical Rate +59, P. Skill Critical Rate +9%, and PvP Damage +5%.
-		level 14: P. Critical Rate +61, P. Skill Critical Rate +10%, and PvP Damage +5%.
-		level 15: P. Critical Rate +64, P. Skill Critical Rate +10%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="13875" name="Critical Fire" max-level="15" >
-	<!-- 
-		level 1: P. Critical Rate +26, P. Skill Critical Damage +3%.
-		level 2: P. Critical Rate +29, P. Skill Critical Damage +4%.
-		level 3: P. Critical Rate +32, P. Skill Critical Damage +4%, and PvP Damage +5%.
-		level 4: P. Critical Rate +34, P. Skill Critical Damage +5%, and PvP Damage +5%.
-		level 5: P. Critical Rate +37, P. Skill Critical Damage +5%, and PvP Damage +5%.
-		level 6: P. Critical Rate +40, P. Skill Critical Damage +6%, and PvP Damage +5%.
-		level 7: P. Critical Rate +42, P. Skill Critical Damage +6%, and PvP Damage +5%.
-		level 8: P. Critical Rate +45, P. Skill Critical Damage +7%, and PvP Damage +5%.
-		level 9: P. Critical Rate +48, P. Skill Critical Damage +7%, and PvP Damage +5%.
-		level 10: P. Critical Rate +50, P. Skill Critical Damage +8%, and PvP Damage +5%.
-		level 11: P. Critical Rate +53, P. Skill Critical Damage +8%, and PvP Damage +5%.
-		level 12: P. Critical Rate +56, P. Skill Critical Damage +9%, and PvP Damage +5%.
-		level 13: P. Critical Rate +59, P. Skill Critical Damage +9%, and PvP Damage +5%.
-		level 14: P. Critical Rate +61, P. Skill Critical Damage +10%, and PvP Damage +5%.
-		level 15: P. Critical Rate +64, P. Skill Critical Damage +10%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="13876" name="Critical Body" max-level="15" >
-	<!-- 
-		level 1: P. Critical Rate +26, Max HP +10%.
-		level 2: P. Critical Rate +29, Max HP +11%.
-		level 3: P. Critical Rate +32, Max HP +11%, and PvP Damage +5%.
-		level 4: P. Critical Rate +34, Max HP +12%, and PvP Damage +5%.
-		level 5: P. Critical Rate +37, Max HP +12%, and PvP Damage +5%.
-		level 6: P. Critical Rate +40, Max HP +13%, and PvP Damage +5%.
-		level 7: P. Critical Rate +42, Max HP +13%, and PvP Damage +5%.
-		level 8: P. Critical Rate +45, Max HP +14%, and PvP Damage +5%.
-		level 9: P. Critical Rate +48, Max HP +14%, and PvP Damage +5%.
-		level 10: P. Critical Rate +50, Max HP +15%, and PvP Damage +5%.
-		level 11: P. Critical Rate +53, Max HP +15%, and PvP Damage +5%.
-		level 12: P. Critical Rate +56, Max HP +16%, and PvP Damage +5%.
-		level 13: P. Critical Rate +59, Max HP +16%, and PvP Damage +5%.
-		level 14: P. Critical Rate +61, Max HP +17%, and PvP Damage +5%.
-		level 15: P. Critical Rate +64, Max HP +17%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pp"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
-				<power initial="26.0">
-					<value level="2">29.0</value>
-					<value level="3">32.0</value>
-					<value level="4">35.0</value>
-					<value level="5">38.0</value>
-					<value level="6">41.0</value>
-					<value level="7">44.0</value>
-					<value level="8">47.0</value>
-					<value level="9">50.0</value>
-					<value level="10">53.0</value>
-					<value level="11">56.0</value>
-					<value level="12">59.0</value>
-					<value level="13">62.0</value>
-					<value level="14">65.0</value>
-					<value level="15">68.0</value>
-				</power>
-			</stat-hp-based>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13877" name="Acumen Wild" max-level="15" >
-	<!-- 
-		level 1: Casting Spd. +5%, M. Critical Rate +10%.
-		level 2: Casting Spd. +5%, M. Critical Rate +11%.
-		level 3: Casting Spd. +6%, M. Critical Rate +11%, and PvP Damage +5%.
-		level 4: Casting Spd. +6%, M. Critical Rate +12%, and PvP Damage +5%.
-		level 5: Casting Spd. +7%, M. Critical Rate +12%, and PvP Damage +5%.
-		level 6: Casting Spd. +7%, M. Critical Rate +13%, and PvP Damage +5%.
-		level 7: Casting Spd. +8%, M. Critical Rate +13%, and PvP Damage +5%.
-		level 8: Casting Spd. +8%, M. Critical Rate +14%, and PvP Damage +5%.
-		level 9: Casting Spd. +9%, M. Critical Rate +14%, and PvP Damage +5%.
-		level 10: Casting Spd. +9%, M. Critical Rate +15%, and PvP Damage +5%.
-		level 11: Casting Spd. +10%, M. Critical Rate +15%, and PvP Damage +5%.
-		level 12: Casting Spd. +10%, M. Critical Rate +16%, and PvP Damage +5%.
-		level 13: Casting Spd. +11%, M. Critical Rate +16%, and PvP Damage +5%.
-		level 14: Casting Spd. +11%, M. Critical Rate +17%, and PvP Damage +5%.
-		level 15: Casting Spd. +12%, M. Critical Rate +17%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="3">6.0</value>
-					<value level="5">7.0</value>
-					<value level="7">8.0</value>
-					<value level="9">9.0</value>
-					<value level="11">10.0</value>
-					<value level="13">11.0</value>
-					<value level="15">12.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13878" name="Acumen Mystic" max-level="15" >
-	<!-- 
-		level 1: Casting Spd. +5%, M. Critical Damage +1%.
-		level 2: Casting Spd. +5%, M. Critical Damage +2%.
-		level 3: Casting Spd. +6%, M. Critical Damage +2%, and PvP Damage +5%.
-		level 4: Casting Spd. +6%, M. Critical Damage +3%, and PvP Damage +5%.
-		level 5: Casting Spd. +7%, M. Critical Damage +3%, and PvP Damage +5%.
-		level 6: Casting Spd. +7%, M. Critical Damage +4%, and PvP Damage +5%.
-		level 7: Casting Spd. +8%, M. Critical Damage +4%, and PvP Damage +5%.
-		level 8: Casting Spd. +8%, M. Critical Damage +5%, and PvP Damage +5%.
-		level 9: Casting Spd. +9%, M. Critical Damage +5%, and PvP Damage +5%.
-		level 10: Casting Spd. +9%, M. Critical Damage +6%, and PvP Damage +5%.
-		level 11: Casting Spd. +10%, M. Critical Damage +6%, and PvP Damage +5%.
-		level 12: Casting Spd. +10%, M. Critical Damage +7%, and PvP Damage +5%.
-		level 13: Casting Spd. +11%, M. Critical Damage +7%, and PvP Damage +5%.
-		level 14: Casting Spd. +11%, M. Critical Damage +8%, and PvP Damage +5%.
-		level 15: Casting Spd. +12%, M. Critical Damage +8%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="1.0">
-					<value level="2">2.0</value>
-					<value level="4">3.0</value>
-					<value level="6">4.0</value>
-					<value level="8">5.0</value>
-					<value level="10">6.0</value>
-					<value level="12">7.0</value>
-					<value level="14">8.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="3">6.0</value>
-					<value level="5">7.0</value>
-					<value level="7">8.0</value>
-					<value level="9">9.0</value>
-					<value level="11">10.0</value>
-					<value level="13">11.0</value>
-					<value level="15">12.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13879" name="Acumen Soul" max-level="15" >
-	<!-- 
-		level 1: Casting Spd. +5%, Max MP +13%.
-		level 2: Casting Spd. +5%, Max MP +14%.
-		level 3: Casting Spd. +6%, Max MP +14%, and PvP Damage +5%.
-		level 4: Casting Spd. +6%, Max MP +15%, and PvP Damage +5%.
-		level 5: Casting Spd. +7%, Max MP +15%, and PvP Damage +5%.
-		level 6: Casting Spd. +7%, Max MP +16%, and PvP Damage +5%.
-		level 7: Casting Spd. +8%, Max MP +16%, and PvP Damage +5%.
-		level 8: Casting Spd. +8%, Max MP +17%, and PvP Damage +5%.
-		level 9: Casting Spd. +9%, Max MP +17%, and PvP Damage +5%.
-		level 10: Casting Spd. +9%, Max MP +18%, and PvP Damage +5%.
-		level 11: Casting Spd. +10%, Max MP +18%, and PvP Damage +5%.
-		level 12: Casting Spd. +10%, Max MP +19%, and PvP Damage +5%.
-		level 13: Casting Spd. +11%, Max MP +19%, and PvP Damage +5%.
-		level 14: Casting Spd. +11%, Max MP +20%, and PvP Damage +5%.
-		level 15: Casting Spd. +12%, Max MP +20%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
-				<power initial="13.0">
-					<value level="2">14.0</value>
-					<value level="4">15.0</value>
-					<value level="6">16.0</value>
-					<value level="8">17.0</value>
-					<value level="10">18.0</value>
-					<value level="12">19.0</value>
-					<value level="14">20.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="3">6.0</value>
-					<value level="5">7.0</value>
-					<value level="7">8.0</value>
-					<value level="9">9.0</value>
-					<value level="11">10.0</value>
-					<value level="13">11.0</value>
-					<value level="15">12.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13880" name="Wild Mystic" max-level="15" >
-	<!-- 
-		level 1: M. Critical Rate +10%, M. Critical Damage +1%.
-		level 2: M. Critical Rate +10%, M. Critical Damage +2%.
-		level 3: M. Critical Rate +11%, M. Critical Damage +2%, and PvP Damage +5%.
-		level 4: M. Critical Rate +11%, M. Critical Damage +3%, and PvP Damage +5%.
-		level 5: M. Critical Rate +12%, M. Critical Damage +3%, and PvP Damage +5%.
-		level 6: M. Critical Rate +12%, M. Critical Damage +4%, and PvP Damage +5%.
-		level 7: M. Critical Rate +13%, M. Critical Damage +4%, and PvP Damage +5%.
-		level 8: M. Critical Rate +13%, M. Critical Damage +5%, and PvP Damage +5%.
-		level 9: M. Critical Rate +14%, M. Critical Damage +5%, and PvP Damage +5%.
-		level 10: M. Critical Rate +14%, M. Critical Damage +6%, and PvP Damage +5%.
-		level 11: M. Critical Rate +15%, M. Critical Damage +6%, and PvP Damage +5%.
-		level 12: M. Critical Rate +15%, M. Critical Damage +7%, and PvP Damage +5%.
-		level 13: M. Critical Rate +16%, M. Critical Damage +7%, and PvP Damage +5%.
-		level 14: M. Critical Rate +16%, M. Critical Damage +8%, and PvP Damage +5%.
-		level 15: M. Critical Rate +17%, M. Critical Damage +8%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="1.0">
-					<value level="2">2.0</value>
-					<value level="4">3.0</value>
-					<value level="6">4.0</value>
-					<value level="8">5.0</value>
-					<value level="10">6.0</value>
-					<value level="12">7.0</value>
-					<value level="14">8.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13881" name="Wild Soul" max-level="15" >
-	<!-- 
-		level 1: M. Critical Rate +10%, Max MP +13%.
-		level 2: M. Critical Rate +10%, Max MP +14%.
-		level 3: M. Critical Rate +11%, Max MP +14%, and PvP Damage +5%.
-		level 4: M. Critical Rate +11%, Max MP +15%, and PvP Damage +5%.
-		level 5: M. Critical Rate +12%, Max MP +15%, and PvP Damage +5%.
-		level 6: M. Critical Rate +12%, Max MP +16%, and PvP Damage +5%.
-		level 7: M. Critical Rate +13%, Max MP +16%, and PvP Damage +5%.
-		level 8: M. Critical Rate +13%, Max MP +17%, and PvP Damage +5%.
-		level 9: M. Critical Rate +14%, Max MP +17%, and PvP Damage +5%.
-		level 10: M. Critical Rate +14%, Max MP +18%, and PvP Damage +5%.
-		level 11: M. Critical Rate +15%, Max MP +18%, and PvP Damage +5%.
-		level 12: M. Critical Rate +15%, Max MP +19%, and PvP Damage +5%.
-		level 13: M. Critical Rate +16%, Max MP +19%, and PvP Damage +5%.
-		level 14: M. Critical Rate +16%, Max MP +20%, and PvP Damage +5%.
-		level 15: M. Critical Rate +17%, Max MP +20%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_mm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
-				<power initial="13.0">
-					<value level="2">14.0</value>
-					<value level="4">15.0</value>
-					<value level="6">16.0</value>
-					<value level="8">17.0</value>
-					<value level="10">18.0</value>
-					<value level="12">19.0</value>
-					<value level="14">20.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13882" name="HP Acumen" max-level="15" >
-	<!-- 
-		level 1: Max HP +10%, Casting Spd. +5%.
-		level 2: Max HP +11%, Casting Spd. +5%.
-		level 3: Max HP +11%, Casting Spd. +6%, and PvP Damage +5%.
-		level 4: Max HP +12%, Casting Spd. +6%, and PvP Damage +5%.
-		level 5: Max HP +12%, Casting Spd. +7%, and PvP Damage +5%.
-		level 6: Max HP +13%, Casting Spd. +7%, and PvP Damage +5%.
-		level 7: Max HP +13%, Casting Spd. +8%, and PvP Damage +5%.
-		level 8: Max HP +14%, Casting Spd. +8%, and PvP Damage +5%.
-		level 9: Max HP +14%, Casting Spd. +9%, and PvP Damage +5%.
-		level 10: Max HP +15%, Casting Spd. +9%, and PvP Damage +5%.
-		level 11: Max HP +15%, Casting Spd. +10%, and PvP Damage +5%.
-		level 12: Max HP +16%, Casting Spd. +10%, and PvP Damage +5%.
-		level 13: Max HP +16%, Casting Spd. +11%, and PvP Damage +5%.
-		level 14: Max HP +17%, Casting Spd. +11%, and PvP Damage +5%.
-		level 15: Max HP +17%, Casting Spd. +12%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="3">6.0</value>
-					<value level="5">7.0</value>
-					<value level="7">8.0</value>
-					<value level="9">9.0</value>
-					<value level="11">10.0</value>
-					<value level="13">11.0</value>
-					<value level="15">12.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13883" name="HP Savagery" max-level="15" >
-	<!-- 
-		level 1: Max HP +10%, M. Critical Rate +10%.
-		level 2: Max HP +11%, M. Critical Rate +10%.
-		level 3: Max HP +11%, M. Critical Rate +11%, and PvP Damage +5%.
-		level 4: Max HP +12%, M. Critical Rate +11%, and PvP Damage +5%.
-		level 5: Max HP +12%, M. Critical Rate +12%, and PvP Damage +5%.
-		level 6: Max HP +13%, M. Critical Rate +12%, and PvP Damage +5%.
-		level 7: Max HP +13%, M. Critical Rate +13%, and PvP Damage +5%.
-		level 8: Max HP +14%, M. Critical Rate +13%, and PvP Damage +5%.
-		level 9: Max HP +14%, M. Critical Rate +14%, and PvP Damage +5%.
-		level 10: Max HP +15%, M. Critical Rate +14%, and PvP Damage +5%.
-		level 11: Max HP +15%, M. Critical Rate +15%, and PvP Damage +5%.
-		level 12: Max HP +16%, M. Critical Rate +15%, and PvP Damage +5%.
-		level 13: Max HP +16%, M. Critical Rate +16%, and PvP Damage +5%.
-		level 14: Max HP +17%, M. Critical Rate +16%, and PvP Damage +5%.
-		level 15: Max HP +17%, M. Critical Rate +17%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13884" name="HP Mystic" max-level="15" >
-	<!-- 
-		level 1: Max HP +10%, M. Critical Damage +1%.
-		level 2: Max HP +11%, M. Critical Damage +2%.
-		level 3: Max HP +11%, M. Critical Damage +3%, and PvP Damage +5%.
-		level 4: Max HP +12%, M. Critical Damage +3%, and PvP Damage +5%.
-		level 5: Max HP +12%, M. Critical Damage +4%, and PvP Damage +5%.
-		level 6: Max HP +13%, M. Critical Damage +4%, and PvP Damage +5%.
-		level 7: Max HP +13%, M. Critical Damage +5%, and PvP Damage +5%.
-		level 8: Max HP +14%, M. Critical Damage +5%, and PvP Damage +5%.
-		level 9: Max HP +14%, M. Critical Damage +6%, and PvP Damage +5%.
-		level 10: Max HP +15%, M. Critical Damage +6%, and PvP Damage +5%.
-		level 11: Max HP +15%, M. Critical Damage +7%, and PvP Damage +5%.
-		level 12: Max HP +16%, M. Critical Damage +7%, and PvP Damage +5%.
-		level 13: Max HP +16%, M. Critical Damage +8%, and PvP Damage +5%.
-		level 14: Max HP +17%, M. Critical Damage +8%, and PvP Damage +5%.
-		level 15: Max HP +17%, M. Critical Damage +9%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD" mode="PER">
-				<power initial="1.0">
-					<value level="2">2.0</value>
-					<value level="4">3.0</value>
-					<value level="6">4.0</value>
-					<value level="8">5.0</value>
-					<value level="10">6.0</value>
-					<value level="12">7.0</value>
-					<value level="14">8.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13885" name="HP Soul" max-level="15" >
-	<!-- 
-		level 1: Max HP +10%, Max MP +13%.
-		level 2: Max HP +11%, Max MP +13%.
-		level 3: Max HP +11%, Max MP +14%, and PvP Damage +5%.
-		level 4: Max HP +12%, Max MP +14%, and PvP Damage +5%.
-		level 5: Max HP +12%, Max MP +15%, and PvP Damage +5%.
-		level 6: Max HP +13%, Max MP +15%, and PvP Damage +5%.
-		level 7: Max HP +13%, Max MP +16%, and PvP Damage +5%.
-		level 8: Max HP +14%, Max MP +16%, and PvP Damage +5%.
-		level 9: Max HP +14%, Max MP +17%, and PvP Damage +5%.
-		level 10: Max HP +15%, Max MP +17%, and PvP Damage +5%.
-		level 11: Max HP +15%, Max MP +18%, and PvP Damage +5%.
-		level 12: Max HP +16%, Max MP +18%, and PvP Damage +5%.
-		level 13: Max HP +16%, Max MP +19%, and PvP Damage +5%.
-		level 14: Max HP +17%, Max MP +19%, and PvP Damage +5%.
-		level 15: Max HP +17%, Max MP +20%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
-				<power initial="10.0">
-					<value level="2">11.0</value>
-					<value level="4">12.0</value>
-					<value level="6">13.0</value>
-					<value level="8">14.0</value>
-					<value level="10">15.0</value>
-					<value level="12">16.0</value>
-					<value level="14">17.0</value>
-				</power>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
-				<power initial="13.0">
-					<value level="2">14.0</value>
-					<value level="4">15.0</value>
-					<value level="6">16.0</value>
-					<value level="8">17.0</value>
-					<value level="10">18.0</value>
-					<value level="12">19.0</value>
-					<value level="14">20.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13886" name="MP Fury" max-level="15" >
-	<!-- 
-		level 1: Max MP +13%, Atk. Spd. +5%.
-		level 2: Max MP +13%, Atk. Spd. +6%.
-		level 3: Max MP +14%, Atk. Spd. +6%, and PvP Damage +5%.
-		level 4: Max MP +14%, Atk. Spd. +7%, and PvP Damage +5%.
-		level 5: Max MP +15%, Atk. Spd. +7%, and PvP Damage +5%.
-		level 6: Max MP +15%, Atk. Spd. +8%, and PvP Damage +5%.
-		level 7: Max MP +16%, Atk. Spd. +8%, and PvP Damage +5%.
-		level 8: Max MP +16%, Atk. Spd. +9%, and PvP Damage +5%.
-		level 9: Max MP +17%, Atk. Spd. +9%, and PvP Damage +5%.
-		level 10: Max MP +17%, Atk. Spd. +10%, and PvP Damage +5%.
-		level 11: Max MP +18%, Atk. Spd. +10%, and PvP Damage +5%.
-		level 12: Max MP +18%, Atk. Spd. +11%, and PvP Damage +5%.
-		level 13: Max MP +19%, Atk. Spd. +11%, and PvP Damage +5%.
-		level 14: Max MP +19%, Atk. Spd. +12%, and PvP Damage +5%.
-		level 15: Max MP +20%, Atk. Spd. +12%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
-				<power initial="13.0">
-					<value level="3">14.0</value>
-					<value level="5">15.0</value>
-					<value level="7">16.0</value>
-					<value level="9">17.0</value>
-					<value level="11">18.0</value>
-					<value level="13">19.0</value>
-					<value level="15">20.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="5.0">
-					<value level="2">6.0</value>
-					<value level="4">7.0</value>
-					<value level="6">8.0</value>
-					<value level="8">9.0</value>
-					<value level="10">10.0</value>
-					<value level="12">11.0</value>
-					<value level="14">12.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13887" name="MP Focus" max-level="15" >
-	<!-- 
-		level 1: Max MP +13%, P. Critical Rate +26.
-		level 2: Max MP +13%, P. Critical Rate +29.
-		level 3: Max MP +14%, P. Critical Rate +32, and PvP Damage +5%.
-		level 4: Max MP +14%, P. Critical Rate +34, and PvP Damage +5%.
-		level 5: Max MP +15%, P. Critical Rate +37, and PvP Damage +5%.
-		level 6: Max MP +15%, P. Critical Rate +40, and PvP Damage +5%.
-		level 7: Max MP +16%, P. Critical Rate +42, and PvP Damage +5%.
-		level 8: Max MP +16%, P. Critical Rate +45, and PvP Damage +5%.
-		level 9: Max MP +17%, P. Critical Rate +48, and PvP Damage +5%.
-		level 10: Max MP +17%, P. Critical Rate +50, and PvP Damage +5%.
-		level 11: Max MP +18%, P. Critical Rate +53, and PvP Damage +5%.
-		level 12: Max MP +18%, P. Critical Rate +56, and PvP Damage +5%.
-		level 13: Max MP +19%, P. Critical Rate +59, and PvP Damage +5%.
-		level 14: Max MP +19%, P. Critical Rate +61, and PvP Damage +5%.
-		level 15: Max MP +20%, P. Critical Rate +64, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP" mode="PER">
-				<power initial="13.0">
-					<value level="3">14.0</value>
-					<value level="5">15.0</value>
-					<value level="7">16.0</value>
-					<value level="9">17.0</value>
-					<value level="11">18.0</value>
-					<value level="13">19.0</value>
-					<value level="15">20.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-hp-based stat="CRITICAL_RATE" stat-add="CRITICAL_RATE" hp-percent="0">
-				<power initial="26.0">
-					<value level="2">29.0</value>
-					<value level="3">32.0</value>
-					<value level="4">34.0</value>
-					<value level="5">37.0</value>
-					<value level="6">40.0</value>
-					<value level="7">42.0</value>
-					<value level="8">45.0</value>
-					<value level="9">48.0</value>
-					<value level="10">50.0</value>
-					<value level="11">53.0</value>
-					<value level="12">56.0</value>
-					<value level="13">59.0</value>
-					<value level="14">61.0</value>
-					<value level="15">64.0</value>
-				</power>
-			</stat-hp-based>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13888" name="MP Death" max-level="15" >
-	<!-- 
-		level 1: Max MP +13%, P. Critical Damage +1%.
-		level 2: Max MP +13%, P. Critical Damage +2%.
-		level 3: Max MP +14%, P. Critical Damage +2%, and PvP Damage +5%.
-		level 4: Max MP +14%, P. Critical Damage +3%, and PvP Damage +5%.
-		level 5: Max MP +15%, P. Critical Damage +3%, and PvP Damage +5%.
-		level 6: Max MP +15%, P. Critical Damage +4%, and PvP Damage +5%.
-		level 7: Max MP +16%, P. Critical Damage +4%, and PvP Damage +5%.
-		level 8: Max MP +16%, P. Critical Damage +5%, and PvP Damage +5%.
-		level 9: Max MP +17%, P. Critical Damage +5%, and PvP Damage +5%.
-		level 10: Max MP +17%, P. Critical Damage +6%, and PvP Damage +5%.
-		level 11: Max MP +18%, P. Critical Damage +6%, and PvP Damage +5%.
-		level 12: Max MP +18%, P. Critical Damage +7%, and PvP Damage +5%.
-		level 13: Max MP +19%, P. Critical Damage +7%, and PvP Damage +5%.
-		level 14: Max MP +19%, P. Critical Damage +8%, and PvP Damage +5%.
-		level 15: Max MP +20%, P. Critical Damage +8%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="13.0">
-					<value level="3">14.0</value>
-					<value level="5">15.0</value>
-					<value level="7">16.0</value>
-					<value level="9">17.0</value>
-					<value level="11">18.0</value>
-					<value level="13">19.0</value>
-					<value level="15">20.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="1.0">
-					<value level="2">2.0</value>
-					<value level="4">3.0</value>
-					<value level="6">4.0</value>
-					<value level="8">5.0</value>
-					<value level="10">6.0</value>
-					<value level="12">7.0</value>
-					<value level="14">8.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_ATTACK_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_MAGICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="PVP_PHYSICAL_SKILL_DAMAGE" mode="PER" start-level="3">
-				<power initial="5.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="13889" name="MP Hunter" max-level="15" >
-	<!-- 
-		level 1: Max MP +13%, P. Skill Critical Rate +3%.
-		level 2: Max MP +13%, P. Skill Critical Rate +4%.
-		level 3: Max MP +14%, P. Skill Critical Rate +4%, and PvP Damage +5%.
-		level 4: Max MP +14%, P. Skill Critical Rate +5%, and PvP Damage +5%.
-		level 5: Max MP +15%, P. Skill Critical Rate +5%, and PvP Damage +5%.
-		level 6: Max MP +15%, P. Skill Critical Rate +6%, and PvP Damage +5%.
-		level 7: Max MP +16%, P. Skill Critical Rate +6%, and PvP Damage +5%.
-		level 8: Max MP +16%, P. Skill Critical Rate +7%, and PvP Damage +5%.
-		level 9: Max MP +17%, P. Skill Critical Rate +7%, and PvP Damage +5%.
-		level 10: Max MP +17%, P. Skill Critical Rate +8%, and PvP Damage +5%.
-		level 11: Max MP +18%, P. Skill Critical Rate +8%, and PvP Damage +5%.
-		level 12: Max MP +18%, P. Skill Critical Rate +9%, and PvP Damage +5%.
-		level 13: Max MP +19%, P. Skill Critical Rate +9%, and PvP Damage +5%.
-		level 14: Max MP +19%, P. Skill Critical Rate +10%, and PvP Damage +5%.
-		level 15: Max MP +20%, P. Skill Critical Rate +10%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="13890" name="MP Fire" max-level="15" >
-	<!-- 
-		level 1: Max MP +13%, P. Skill Critical Damage +3%.
-		level 2: Max MP +13%, P. Skill Critical Damage +4%.
-		level 3: Max MP +14%, P. Skill Critical Damage +4%, and PvP Damage +5%.
-		level 4: Max MP +14%, P. Skill Critical Damage +5%, and PvP Damage +5%.
-		level 5: Max MP +15%, P. Skill Critical Damage +5%, and PvP Damage +5%.
-		level 6: Max MP +15%, P. Skill Critical Damage +6%, and PvP Damage +5%.
-		level 7: Max MP +16%, P. Skill Critical Damage +6%, and PvP Damage +5%.
-		level 8: Max MP +16%, P. Skill Critical Damage +7%, and PvP Damage +5%.
-		level 9: Max MP +17%, P. Skill Critical Damage +7%, and PvP Damage +5%.
-		level 10: Max MP +17%, P. Skill Critical Damage +8%, and PvP Damage +5%.
-		level 11: Max MP +18%, P. Skill Critical Damage +8%, and PvP Damage +5%.
-		level 12: Max MP +18%, P. Skill Critical Damage +9%, and PvP Damage +5%.
-		level 13: Max MP +19%, P. Skill Critical Damage +9%, and PvP Damage +5%.
-		level 14: Max MP +19%, P. Skill Critical Damage +10%, and PvP Damage +5%.
-		level 15: Max MP +20%, P. Skill Critical Damage +10%, and PvP Damage +5%.
-	 -->
-		<icon initial="icon.ensoul_big_pm"/>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="13856" name="Lv. 2 Brooch - Additional Effect" max-level="15">
+        <!--
+            level 1: P. Atk. +2%.
+            level 2: P. Atk. +3%.
+            level 3: P. Atk. +4% and PvP Damage +5%.
+            level 4: P. Atk. +5% and PvP Damage +5%.
+            level 5: P. Atk. +6% and PvP Damage +5%.
+            level 6: P. Atk. +7% and PvP Damage +5%.
+            level 7: P. Atk. +8% and PvP Damage +5%.
+            level 8: P. Atk. +9% and PvP Damage +5%.
+            level 9: P. Atk. +10% and PvP Damage +5%.
+            level 10: P. Atk. +11% and PvP Damage +5%.
+            level 11: P. Atk. +12% and PvP Damage +5%.
+            level 12: P. Atk. +13% and PvP Damage +5%.
+            level 13: P. Atk. +14% and PvP Damage +5%.
+            level 14: P. Atk. +15% and PvP Damage +5%.
+            level 15: P. Atk. +16% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_p"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="2.0">
+                    <value level="2">3.0</value>
+                    <value level="3">4.0</value>
+                    <value level="4">5.0</value>
+                    <value level="5">6.0</value>
+                    <value level="6">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">9.0</value>
+                    <value level="9">10.0</value>
+                    <value level="10">11.0</value>
+                    <value level="11">12.0</value>
+                    <value level="12">13.0</value>
+                    <value level="13">14.0</value>
+                    <value level="14">15.0</value>
+                    <value level="15">16.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13857" name="Wrath" max-level="15">
+        <!--
+            level 1: Atk. Spd. +11%.
+            level 2: Atk. Spd. +12%.
+            level 3: Atk. Spd. +13% and PvP Damage +5%.
+            level 4: Atk. Spd. +14% and PvP Damage +5%.
+            level 5: Atk. Spd. +15% and PvP Damage +5%.
+            level 6: Atk. Spd. +16% and PvP Damage +5%.
+            level 7: Atk. Spd. +17% and PvP Damage +5%.
+            level 8: Atk. Spd. +18% and PvP Damage +5%.
+            level 9: Atk. Spd. +19% and PvP Damage +5%.
+            level 10: Atk. Spd. +20% and PvP Damage +5%.
+            level 11: Atk. Spd. +21% and PvP Damage +5%.
+            level 12: Atk. Spd. +22% and PvP Damage +5%.
+            level 13: Atk. Spd. +23% and PvP Damage +5%.
+            level 14: Atk. Spd. +24% and PvP Damage +5%.
+            level 15: Atk. Spd. +25% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_p"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="11.0">
+                    <value level="2">12.0</value>
+                    <value level="3">13.0</value>
+                    <value level="4">14.0</value>
+                    <value level="5">15.0</value>
+                    <value level="6">16.0</value>
+                    <value level="7">17.0</value>
+                    <value level="8">18.0</value>
+                    <value level="9">19.0</value>
+                    <value level="10">20.0</value>
+                    <value level="11">21.0</value>
+                    <value level="12">22.0</value>
+                    <value level="13">23.0</value>
+                    <value level="14">24.0</value>
+                    <value level="15">25.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13858" name="Focus" max-level="15">
+        <!--
+            level 1: P. Critical Rate +58.
+            level 2: P. Critical Rate +64.
+            level 3: P. Critical Rate +70 and PvP Damage +5%.
+            level 4: P. Critical Rate +76 and PvP Damage +5%.
+            level 5: P. Critical Rate +82 and PvP Damage +5%.
+            level 6: P. Critical Rate +88 and PvP Damage +5%.
+            level 7: P. Critical Rate +94 and PvP Damage +5%.
+            level 8: P. Critical Rate +100 and PvP Damage +5%.
+            level 9: P. Critical Rate +106 and PvP Damage +5%.
+            level 10: P. Critical Rate +112 and PvP Damage +5%.
+            level 11: P. Critical Rate +118 and PvP Damage +5%.
+            level 12: P. Critical Rate +124 and PvP Damage +5%.
+            level 13: P. Critical Rate +130 and PvP Damage +5%.
+            level 14: P. Critical Rate +136 and PvP Damage +5%.
+            level 15: P. Critical Rate +142 and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_p"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="58.0">
+                    <value level="2">64.0</value>
+                    <value level="3">70.0</value>
+                    <value level="4">76.0</value>
+                    <value level="5">82.0</value>
+                    <value level="6">88.0</value>
+                    <value level="7">94.0</value>
+                    <value level="8">100.0</value>
+                    <value level="9">106.0</value>
+                    <value level="10">112.0</value>
+                    <value level="11">118.0</value>
+                    <value level="12">124.0</value>
+                    <value level="13">130.0</value>
+                    <value level="14">136.0</value>
+                    <value level="15">142.0</value>
+                </power>
+            </stat-hp-based>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13859" name="Death" max-level="15">
+        <!--
+            level 1: P. Critical Damage +3%.
+            level 2: P. Critical Damage +4%.
+            level 3: P. Critical Damage +5% and PvP Damage +5%.
+            level 4: P. Critical Damage +6% and PvP Damage +5%.
+            level 5: P. Critical Damage +7% and PvP Damage +5%.
+            level 6: P. Critical Damage +8% and PvP Damage +5%.
+            level 7: P. Critical Damage +9% and PvP Damage +5%.
+            level 8: P. Critical Damage +10% and PvP Damage +5%.
+            level 9: P. Critical Damage +11% and PvP Damage +5%.
+            level 10: P. Critical Damage +12% and PvP Damage +5%.
+            level 11: P. Critical Damage +13% and PvP Damage +5%.
+            level 12: P. Critical Damage +14% and PvP Damage +5%.
+            level 13: P. Critical Damage +15% and PvP Damage +5%.
+            level 14: P. Critical Damage +16% and PvP Damage +5%.
+            level 15: P. Critical Damage +17% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_p"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="3.0">
+                    <value level="2">4.0</value>
+                    <value level="3">5.0</value>
+                    <value level="4">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="6">8.0</value>
+                    <value level="7">9.0</value>
+                    <value level="8">10.0</value>
+                    <value level="9">11.0</value>
+                    <value level="10">12.0</value>
+                    <value level="11">13.0</value>
+                    <value level="12">14.0</value>
+                    <value level="13">15.0</value>
+                    <value level="14">16.0</value>
+                    <value level="15">17.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13860" name="Hunter" max-level="15">
+        <!--
+            level 1: P. Skill Critical Rate +6%.
+            level 2: P. Skill Critical Rate +7%.
+            level 3: P. Skill Critical Rate +8% and PvP Damage +5%.
+            level 4: P. Skill Critical Rate +9% and PvP Damage +5%.
+            level 5: P. Skill Critical Rate +10% and PvP Damage +5%.
+            level 6: P. Skill Critical Rate +11% and PvP Damage +5%.
+            level 7: P. Skill Critical Rate +12% and PvP Damage +5%.
+            level 8: P. Skill Critical Rate +13% and PvP Damage +5%.
+            level 9: P. Skill Critical Rate +14% and PvP Damage +5%.
+            level 10: P. Skill Critical Rate +15% and PvP Damage +5%.
+            level 11: P. Skill Critical Rate +16% and PvP Damage +5%.
+            level 12: P. Skill Critical Rate +17% and PvP Damage +5%.
+            level 13: P. Skill Critical Rate +18% and PvP Damage +5%.
+            level 14: P. Skill Critical Rate +19% and PvP Damage +5%.
+            level 15: P. Skill Critical Rate +20% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_p"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="13861" name="Fire" max-level="15">
+        <!--
+            level 1: P. Skill Critical Damage +6%.
+            level 2: P. Skill Critical Damage +7%.
+            level 3: P. Skill Critical Damage +8% and PvP Damage +5%.
+            level 4: P. Skill Critical Damage +9% and PvP Damage +5%.
+            level 5: P. Skill Critical Damage +10% and PvP Damage +5%.
+            level 6: P. Skill Critical Damage +11% and PvP Damage +5%.
+            level 7: P. Skill Critical Damage +12% and PvP Damage +5%.
+            level 8: P. Skill Critical Damage +13% and PvP Damage +5%.
+            level 9: P. Skill Critical Damage +14% and PvP Damage +5%.
+            level 10: P. Skill Critical Damage +15% and PvP Damage +5%.
+            level 11: P. Skill Critical Damage +16% and PvP Damage +5%.
+            level 12: P. Skill Critical Damage +17% and PvP Damage +5%.
+            level 13: P. Skill Critical Damage +18% and PvP Damage +5%.
+            level 14: P. Skill Critical Damage +19% and PvP Damage +5%.
+            level 15: P. Skill Critical Damage +20% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_p"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="13862" name="Body" max-level="15">
+        <!--
+            level 1: Max HP +21%.
+            level 2: Max HP +22%.
+            level 3: Max HP +23% and PvP Damage +5%.
+            level 4: Max HP +24% and PvP Damage +5%.
+            level 5: Max HP +25% and PvP Damage +5%.
+            level 6: Max HP +26% and PvP Damage +5%.
+            level 7: Max HP +27% and PvP Damage +5%.
+            level 8: Max HP +28% and PvP Damage +5%.
+            level 9: Max HP +29% and PvP Damage +5%.
+            level 10: Max HP +30% and PvP Damage +5%.
+            level 11: Max HP +31% and PvP Damage +5%.
+            level 12: Max HP +32% and PvP Damage +5%.
+            level 13: Max HP +33% and PvP Damage +5%.
+            level 14: Max HP +34% and PvP Damage +5%.
+            level 15: Max HP +35% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_p"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="21.0">
+                    <value level="2">22.0</value>
+                    <value level="3">23.0</value>
+                    <value level="4">24.0</value>
+                    <value level="5">25.0</value>
+                    <value level="6">26.0</value>
+                    <value level="7">27.0</value>
+                    <value level="8">28.0</value>
+                    <value level="9">29.0</value>
+                    <value level="10">30.0</value>
+                    <value level="11">31.0</value>
+                    <value level="12">32.0</value>
+                    <value level="13">33.0</value>
+                    <value level="14">34.0</value>
+                    <value level="15">35.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13863" name="Empower" max-level="15">
+        <!--
+            level 1: M. Atk. +2%.
+            level 2: M. Atk. +3%.
+            level 3: M. Atk. +4% and PvP Damage +5%.
+            level 4: M. Atk. +5% and PvP Damage +5%.
+            level 5: M. Atk. +6% and PvP Damage +5%.
+            level 6: M. Atk. +7% and PvP Damage +5%.
+            level 7: M. Atk. +8% and PvP Damage +5%.
+            level 8: M. Atk. +9% and PvP Damage +5%.
+            level 9: M. Atk. +10% and PvP Damage +5%.
+            level 10: M. Atk. +11% and PvP Damage +5%.
+            level 11: M. Atk. +12% and PvP Damage +5%.
+            level 12: M. Atk. +13% and PvP Damage +5%.
+            level 13: M. Atk. +14% and PvP Damage +5%.
+            level 14: M. Atk. +15% and PvP Damage +5%.
+            level 15: M. Atk. +16% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_m"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="2.0">
+                    <value level="2">3.0</value>
+                    <value level="3">4.0</value>
+                    <value level="4">5.0</value>
+                    <value level="5">6.0</value>
+                    <value level="6">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">9.0</value>
+                    <value level="9">10.0</value>
+                    <value level="10">11.0</value>
+                    <value level="11">12.0</value>
+                    <value level="12">13.0</value>
+                    <value level="13">14.0</value>
+                    <value level="14">15.0</value>
+                    <value level="15">16.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13864" name="Acumen" max-level="15" action="A2">
+        <!--
+            level 1: Casting Spd. +11%
+            level 2: Casting Spd. +12%
+            level 3: Casting Spd. +13% and PvP Damage +5%.
+            level 4: Casting Spd. +14% and PvP Damage +5%.
+            level 5: Casting Spd. +15% and PvP Damage +5%.
+            level 6: Casting Spd. +16% and PvP Damage +5%.
+            level 7: Casting Spd. +17% and PvP Damage +5%.
+            level 8: Casting Spd. +18% and PvP Damage +5%.
+            level 9: Casting Spd. +19% and PvP Damage +5%.
+            level 10: Casting Spd. +20% and PvP Damage +5%.
+            level 11: Casting Spd. +21% and PvP Damage +5%.
+            level 12: Casting Spd. +22% and PvP Damage +5%.
+            level 13: Casting Spd. +23% and PvP Damage +5%.
+            level 14: Casting Spd. +24% and PvP Damage +5%.
+            level 15: Casting Spd. +25% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_m"/>
+        <attributes property="MAGIC" magic-critical-rate="-5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="900"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="11.0">
+                    <value level="2">12.0</value>
+                    <value level="3">13.0</value>
+                    <value level="4">14.0</value>
+                    <value level="5">15.0</value>
+                    <value level="6">16.0</value>
+                    <value level="7">17.0</value>
+                    <value level="8">18.0</value>
+                    <value level="9">19.0</value>
+                    <value level="10">20.0</value>
+                    <value level="11">21.0</value>
+                    <value level="12">22.0</value>
+                    <value level="13">23.0</value>
+                    <value level="14">24.0</value>
+                    <value level="15">25.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13865" name="Savagery" max-level="15">
+        <!--
+            level 1: M. Critical Rate +21%.
+            level 2: M. Critical Rate +22%.
+            level 3: M. Critical Rate +23% and PvP Damage +5%.
+            level 4: M. Critical Rate +24% and PvP Damage +5%.
+            level 5: M. Critical Rate +25% and PvP Damage +5%.
+            level 6: M. Critical Rate +26% and PvP Damage +5%.
+            level 7: M. Critical Rate +27% and PvP Damage +5%.
+            level 8: M. Critical Rate +28% and PvP Damage +5%.
+            level 9: M. Critical Rate +29% and PvP Damage +5%.
+            level 10: M. Critical Rate +30% and PvP Damage +5%.
+            level 11: M. Critical Rate +31% and PvP Damage +5%.
+            level 12: M. Critical Rate +32% and PvP Damage +5%.
+            level 13: M. Critical Rate +33% and PvP Damage +5%.
+            level 14: M. Critical Rate +34% and PvP Damage +5%.
+            level 15: M. Critical Rate +35% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_m"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="21.0">
+                    <value level="2">22.0</value>
+                    <value level="3">23.0</value>
+                    <value level="4">24.0</value>
+                    <value level="5">25.0</value>
+                    <value level="6">26.0</value>
+                    <value level="7">27.0</value>
+                    <value level="8">28.0</value>
+                    <value level="9">29.0</value>
+                    <value level="10">30.0</value>
+                    <value level="11">31.0</value>
+                    <value level="12">32.0</value>
+                    <value level="13">33.0</value>
+                    <value level="14">34.0</value>
+                    <value level="15">35.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13866" name="Mystic" max-level="15">
+        <!--
+            level 1: M. Critical Damage +3%.
+            level 2: M. Critical Damage +4%.
+            level 3: M. Critical Damage +5% and PvP Damage +5%.
+            level 4: M. Critical Damage +6% and PvP Damage +5%.
+            level 5: M. Critical Damage +7% and PvP Damage +5%.
+            level 6: M. Critical Damage +8% and PvP Damage +5%.
+            level 7: M. Critical Damage +9% and PvP Damage +5%.
+            level 8: M. Critical Damage +10% and PvP Damage +5%.
+            level 9: M. Critical Damage +11% and PvP Damage +5%.
+            level 10: M. Critical Damage +12% and PvP Damage +5%.
+            level 11: M. Critical Damage +13% and PvP Damage +5%.
+            level 12: M. Critical Damage +14% and PvP Damage +5%.
+            level 13: M. Critical Damage +15% and PvP Damage +5%.
+            level 14: M. Critical Damage +16% and PvP Damage +5%.
+            level 15: M. Critical Damage +17% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_m"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="3.0">
+                    <value level="2">4.0</value>
+                    <value level="3">5.0</value>
+                    <value level="4">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="6">8.0</value>
+                    <value level="7">9.0</value>
+                    <value level="8">10.0</value>
+                    <value level="9">11.0</value>
+                    <value level="10">12.0</value>
+                    <value level="11">13.0</value>
+                    <value level="12">14.0</value>
+                    <value level="13">15.0</value>
+                    <value level="14">16.0</value>
+                    <value level="15">17.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13867" name="Soul" max-level="15">
+        <!--
+            level 1: Max MP +26%.
+            level 2: Max MP +27%.
+            level 3: Max MP +28% and PvP Damage +5%.
+            level 4: Max MP +29% and PvP Damage +5%.
+            level 5: Max MP +30% and PvP Damage +5%.
+            level 6: Max MP +31% and PvP Damage +5%.
+            level 7: Max MP +32% and PvP Damage +5%.
+            level 8: Max MP +33% and PvP Damage +5%.
+            level 9: Max MP +34% and PvP Damage +5%.
+            level 10: Max MP +35% and PvP Damage +5%.
+            level 11: Max MP +36% and PvP Damage +5%.
+            level 12: Max MP +37% and PvP Damage +5%.
+            level 13: Max MP +38% and PvP Damage +5%.
+            level 14: Max MP +39% and PvP Damage +5%.
+            level 15: Max MP +40% and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_m"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="26.0">
+                    <value level="2">27.0</value>
+                    <value level="3">28.0</value>
+                    <value level="4">29.0</value>
+                    <value level="5">30.0</value>
+                    <value level="6">31.0</value>
+                    <value level="7">32.0</value>
+                    <value level="8">33.0</value>
+                    <value level="9">34.0</value>
+                    <value level="10">35.0</value>
+                    <value level="11">36.0</value>
+                    <value level="12">37.0</value>
+                    <value level="13">38.0</value>
+                    <value level="14">39.0</value>
+                    <value level="15">40.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13868" name="Speed Focus" max-level="15">
+        <!--
+            level 1: Atk. Spd. +5% and P. Critical Rate +26.
+            level 2: Atk. Spd. +5% and P. Critical Rate +29.
+            level 3: Atk. Spd. +6%, P. Critical Rate +32, and PvP Damage +5%.
+            level 4: Atk. Spd. +6%, P. Critical Rate +34, and PvP Damage +5%.
+            level 5: Atk. Spd. +7%, P. Critical Rate +37, and PvP Damage +5%.
+            level 6: Atk. Spd. +7%, P. Critical Rate +40, and PvP Damage +5%.
+            level 7: Atk. Spd. +8%, P. Critical Rate +42, and PvP Damage +5%.
+            level 8: Atk. Spd. +8%, P. Critical Rate +45, and PvP Damage +5%.
+            level 9: Atk. Spd. +9%, P. Critical Rate +48, and PvP Damage +5%.
+            level 10: Atk. Spd. +9%, P. Critical Rate +50, and PvP Damage +5%.
+            level 11: Atk. Spd. +10%, P. Critical Rate +53, and PvP Damage +5%.
+            level 12: Atk. Spd. +10%, P. Critical Rate +56, and PvP Damage +5%.
+            level 13: Atk. Spd. +11%, P. Critical Rate +59, and PvP Damage +5%.
+            level 14: Atk. Spd. +11%, P. Critical Rate +61, and PvP Damage +5%.
+            level 15: Atk. Spd. +12%, P. Critical Rate +64, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">11.0</value>
+                    <value level="15">12.0</value>
+                </power>
+            </stat-modify>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="26.0">
+                    <value level="2">29.0</value>
+                    <value level="3">32.0</value>
+                    <value level="4">35.0</value>
+                    <value level="5">38.0</value>
+                    <value level="6">41.0</value>
+                    <value level="7">44.0</value>
+                    <value level="8">47.0</value>
+                    <value level="9">50.0</value>
+                    <value level="10">53.0</value>
+                    <value level="11">56.0</value>
+                    <value level="12">59.0</value>
+                    <value level="13">62.0</value>
+                    <value level="14">65.0</value>
+                    <value level="15">68.0</value>
+                </power>
+            </stat-hp-based>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13869" name="Speed Death" max-level="15">
+        <!--
+            level 1: Atk. Spd. +5% and P. Critical Damage +1%.
+            level 2: Atk. Spd. +5% and P. Critical Damage +2%.
+            level 3: Atk. Spd. +6%, P. Critical Damage +2%, and PvP Damage +5%.
+            level 4: Atk. Spd. +6%, P. Critical Damage +3%, and PvP Damage +5%.
+            level 5: Atk. Spd. +7%, P. Critical Damage +3%, and PvP Damage +5%.
+            level 6: Atk. Spd. +7%, P. Critical Damage +4%, and PvP Damage +5%.
+            level 7: Atk. Spd. +8%, P. Critical Damage +4%, and PvP Damage +5%.
+            level 8: Atk. Spd. +8%, P. Critical Damage +5%, and PvP Damage +5%.
+            level 9: Atk. Spd. +9%, P. Critical Damage +5%, and PvP Damage +5%.
+            level 10: Atk. Spd. +9%, P. Critical Damage +6%, and PvP Damage +5%.
+            level 11: Atk. Spd. +10%, P. Critical Damage +6%, and PvP Damage +5%.
+            level 12: Atk. Spd. +10%, P. Critical Damage +7%, and PvP Damage +5%.
+            level 13: Atk. Spd. +11%, P. Critical Damage +7%, and PvP Damage +5%.
+            level 14: Atk. Spd. +11%, P. Critical Damage +8%, and PvP Damage +5%.
+            level 15: Atk. Spd. +12%, P. Critical Damage +8%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">11.0</value>
+                    <value level="15">12.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="10">6.0</value>
+                    <value level="12">7.0</value>
+                    <value level="14">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13870" name="Speed Hunter" max-level="15">
+        <!--
+            level 1: Atk. Spd. +5% and P. Skill Critical Rate +3%.
+            level 2: Atk. Spd. +5% and P. Skill Critical Rate +4%.
+            level 3: Atk. Spd. +6%, P. Skill Critical Rate +4%, and PvP Damage +5%.
+            level 4: Atk. Spd. +6%, P. Skill Critical Rate +5%, and PvP Damage +5%.
+            level 5: Atk. Spd. +7%, P. Skill Critical Rate +5%, and PvP Damage +5%.
+            level 6: Atk. Spd. +7%, P. Skill Critical Rate +6%, and PvP Damage +5%.
+            level 7: Atk. Spd. +8%, P. Skill Critical Rate +6%, and PvP Damage +5%.
+            level 8: Atk. Spd. +8%, P. Skill Critical Rate +7%, and PvP Damage +5%.
+            level 9: Atk. Spd. +9%, P. Skill Critical Rate +7%, and PvP Damage +5%.
+            level 10: Atk. Spd. +9%, P. Skill Critical Rate +8%, and PvP Damage +5%.
+            level 11: Atk. Spd. +10%, P. Skill Critical Rate +8%, and PvP Damage +5%.
+            level 12: Atk. Spd. +10%, P. Skill Critical Rate +9%, and PvP Damage +5%.
+            level 13: Atk. Spd. +11%, P. Skill Critical Rate +9%, and PvP Damage +5%.
+            level 14: Atk. Spd. +11%, P. Skill Critical Rate +10%, and PvP Damage +5%.
+            level 15: Atk. Spd. +12%, P. Skill Critical Rate +10%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="13871" name="Speed Fire" max-level="15">
+        <!--
+            level 1: Atk. Spd. +5% and P. Skill Critical Damage +3%.
+            level 2: Atk. Spd. +5% and P. Skill Critical Damage +4%.
+            level 3: Atk. Spd. +6%, P. Skill Critical Damage +4%, and PvP Damage +5%.
+            level 4: Atk. Spd. +6%, P. Skill Critical Damage +5%, and PvP Damage +5%.
+            level 5: Atk. Spd. +7%, P. Skill Critical Damage +5%, and PvP Damage +5%.
+            level 6: Atk. Spd. +7%, P. Skill Critical Damage +6%, and PvP Damage +5%.
+            level 7: Atk. Spd. +8%, P. Skill Critical Damage +6%, and PvP Damage +5%.
+            level 8: Atk. Spd. +8%, P. Skill Critical Damage +7%, and PvP Damage +5%.
+            level 9: Atk. Spd. +9%, P. Skill Critical Damage +7%, and PvP Damage +5%.
+            level 10: Atk. Spd. +9%, P. Skill Critical Damage +8%, and PvP Damage +5%.
+            level 11: Atk. Spd. +10%, P. Skill Critical Damage +8%, and PvP Damage +5%.
+            level 12: Atk. Spd. +10%, P. Skill Critical Damage +9%, and PvP Damage +5%.
+            level 13: Atk. Spd. +11%, P. Skill Critical Damage +9%, and PvP Damage +5%.
+            level 14: Atk. Spd. +11%, P. Skill Critical Damage +10%, and PvP Damage +5%.
+            level 15: Atk. Spd. +12%, P. Skill Critical Damage +10%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="13872" name="Speed Body" max-level="15">
+        <!--
+            level 1: Atk. Spd. +5% and Max HP +10%.
+            level 2: Atk. Spd. +5% and Max HP +11%.
+            level 3: Atk. Spd. +6%, Max HP +11%, and PvP Damage +5%.
+            level 4: Atk. Spd. +6%, Max HP +12%, and PvP Damage +5%.
+            level 5: Atk. Spd. +7%, Max HP +12%, and PvP Damage +5%.
+            level 6: Atk. Spd. +7%, Max HP +13%, and PvP Damage +5%.
+            level 7: Atk. Spd. +8%, Max HP +13%, and PvP Damage +5%.
+            level 8: Atk. Spd. +8%, Max HP +14%, and PvP Damage +5%.
+            level 9: Atk. Spd. +9%, Max HP +14%, and PvP Damage +5%.
+            level 10: Atk. Spd. +9%, Max HP +15%, and PvP Damage +5%.
+            level 11: Atk. Spd. +10%, Max HP +15%, and PvP Damage +5%.
+            level 12: Atk. Spd. +10%, Max HP +16%, and PvP Damage +5%.
+            level 13: Atk. Spd. +11%, Max HP +16%, and PvP Damage +5%.
+            level 14: Atk. Spd. +11%, Max HP +17%, and PvP Damage +5%.
+            level 15: Atk. Spd. +12%, Max HP +17%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">11.0</value>
+                    <value level="15">12.0</value>
+                </power>
+            </stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13873" name="Critical Death" max-level="15">
+        <!--
+            level 1: P. Critical Rate +26 and P. Critical Damage +1%.
+            level 2: P. Critical Rate +29 and P. Critical Damage +2%.
+            level 3: P. Critical Rate +32, P. Critical Damage +2%, and PvP Damage +5%.
+            level 4: P. Critical Rate +34, P. Critical Damage +3%, and PvP Damage +5%.
+            level 5: P. Critical Rate +37, P. Critical Damage +3%, and PvP Damage +5%.
+            level 6: P. Critical Rate +40, P. Critical Damage +4%, and PvP Damage +5%.
+            level 7: P. Critical Rate +42, P. Critical Damage +4%, and PvP Damage +5%.
+            level 8: P. Critical Rate +45, P. Critical Damage +5%, and PvP Damage +5%.
+            level 9: P. Critical Rate +48, P. Critical Damage +5%, and PvP Damage +5%.
+            level 10: P. Critical Rate +50, P. Critical Damage +6%, and PvP Damage +5%.
+            level 11: P. Critical Rate +53, P. Critical Damage +6%, and PvP Damage +5%.
+            level 12: P. Critical Rate +56, P. Critical Damage +7%, and PvP Damage +5%.
+            level 13: P. Critical Rate +59, P. Critical Damage +7%, and PvP Damage +5%.
+            level 14: P. Critical Rate +61, P. Critical Damage +8%, and PvP Damage +5%.
+            level 15: P. Critical Rate +64, P. Critical Damage +8%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="26.0">
+                    <value level="2">29.0</value>
+                    <value level="3">32.0</value>
+                    <value level="4">35.0</value>
+                    <value level="5">38.0</value>
+                    <value level="6">41.0</value>
+                    <value level="7">44.0</value>
+                    <value level="8">47.0</value>
+                    <value level="9">50.0</value>
+                    <value level="10">53.0</value>
+                    <value level="11">56.0</value>
+                    <value level="12">59.0</value>
+                    <value level="13">62.0</value>
+                    <value level="14">65.0</value>
+                    <value level="15">68.0</value>
+                </power>
+            </stat-hp-based>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="10">6.0</value>
+                    <value level="12">7.0</value>
+                    <value level="14">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13874" name="Critical Hunter" max-level="15">
+        <!--
+            level 1: P. Critical Rate +26, P. Skill Critical Rate +3%.
+            level 2: P. Critical Rate +29, P. Skill Critical Rate +4%.
+            level 3: P. Critical Rate +32, P. Skill Critical Rate +4%, and PvP Damage +5%.
+            level 4: P. Critical Rate +34, P. Skill Critical Rate +5%, and PvP Damage +5%.
+            level 5: P. Critical Rate +37, P. Skill Critical Rate +5%, and PvP Damage +5%.
+            level 6: P. Critical Rate +40, P. Skill Critical Rate +6%, and PvP Damage +5%.
+            level 7: P. Critical Rate +42, P. Skill Critical Rate +6%, and PvP Damage +5%.
+            level 8: P. Critical Rate +45, P. Skill Critical Rate +7%, and PvP Damage +5%.
+            level 9: P. Critical Rate +48, P. Skill Critical Rate +7%, and PvP Damage +5%.
+            level 10: P. Critical Rate +50, P. Skill Critical Rate +8%, and PvP Damage +5%.
+            level 11: P. Critical Rate +53, P. Skill Critical Rate +8%, and PvP Damage +5%.
+            level 12: P. Critical Rate +56, P. Skill Critical Rate +9%, and PvP Damage +5%.
+            level 13: P. Critical Rate +59, P. Skill Critical Rate +9%, and PvP Damage +5%.
+            level 14: P. Critical Rate +61, P. Skill Critical Rate +10%, and PvP Damage +5%.
+            level 15: P. Critical Rate +64, P. Skill Critical Rate +10%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="13875" name="Critical Fire" max-level="15">
+        <!--
+            level 1: P. Critical Rate +26, P. Skill Critical Damage +3%.
+            level 2: P. Critical Rate +29, P. Skill Critical Damage +4%.
+            level 3: P. Critical Rate +32, P. Skill Critical Damage +4%, and PvP Damage +5%.
+            level 4: P. Critical Rate +34, P. Skill Critical Damage +5%, and PvP Damage +5%.
+            level 5: P. Critical Rate +37, P. Skill Critical Damage +5%, and PvP Damage +5%.
+            level 6: P. Critical Rate +40, P. Skill Critical Damage +6%, and PvP Damage +5%.
+            level 7: P. Critical Rate +42, P. Skill Critical Damage +6%, and PvP Damage +5%.
+            level 8: P. Critical Rate +45, P. Skill Critical Damage +7%, and PvP Damage +5%.
+            level 9: P. Critical Rate +48, P. Skill Critical Damage +7%, and PvP Damage +5%.
+            level 10: P. Critical Rate +50, P. Skill Critical Damage +8%, and PvP Damage +5%.
+            level 11: P. Critical Rate +53, P. Skill Critical Damage +8%, and PvP Damage +5%.
+            level 12: P. Critical Rate +56, P. Skill Critical Damage +9%, and PvP Damage +5%.
+            level 13: P. Critical Rate +59, P. Skill Critical Damage +9%, and PvP Damage +5%.
+            level 14: P. Critical Rate +61, P. Skill Critical Damage +10%, and PvP Damage +5%.
+            level 15: P. Critical Rate +64, P. Skill Critical Damage +10%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="13876" name="Critical Body" max-level="15">
+        <!--
+            level 1: P. Critical Rate +26, Max HP +10%.
+            level 2: P. Critical Rate +29, Max HP +11%.
+            level 3: P. Critical Rate +32, Max HP +11%, and PvP Damage +5%.
+            level 4: P. Critical Rate +34, Max HP +12%, and PvP Damage +5%.
+            level 5: P. Critical Rate +37, Max HP +12%, and PvP Damage +5%.
+            level 6: P. Critical Rate +40, Max HP +13%, and PvP Damage +5%.
+            level 7: P. Critical Rate +42, Max HP +13%, and PvP Damage +5%.
+            level 8: P. Critical Rate +45, Max HP +14%, and PvP Damage +5%.
+            level 9: P. Critical Rate +48, Max HP +14%, and PvP Damage +5%.
+            level 10: P. Critical Rate +50, Max HP +15%, and PvP Damage +5%.
+            level 11: P. Critical Rate +53, Max HP +15%, and PvP Damage +5%.
+            level 12: P. Critical Rate +56, Max HP +16%, and PvP Damage +5%.
+            level 13: P. Critical Rate +59, Max HP +16%, and PvP Damage +5%.
+            level 14: P. Critical Rate +61, Max HP +17%, and PvP Damage +5%.
+            level 15: P. Critical Rate +64, Max HP +17%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pp"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="26.0">
+                    <value level="2">29.0</value>
+                    <value level="3">32.0</value>
+                    <value level="4">35.0</value>
+                    <value level="5">38.0</value>
+                    <value level="6">41.0</value>
+                    <value level="7">44.0</value>
+                    <value level="8">47.0</value>
+                    <value level="9">50.0</value>
+                    <value level="10">53.0</value>
+                    <value level="11">56.0</value>
+                    <value level="12">59.0</value>
+                    <value level="13">62.0</value>
+                    <value level="14">65.0</value>
+                    <value level="15">68.0</value>
+                </power>
+            </stat-hp-based>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13877" name="Acumen Wild" max-level="15">
+        <!--
+            level 1: Casting Spd. +5%, M. Critical Rate +10%.
+            level 2: Casting Spd. +5%, M. Critical Rate +11%.
+            level 3: Casting Spd. +6%, M. Critical Rate +11%, and PvP Damage +5%.
+            level 4: Casting Spd. +6%, M. Critical Rate +12%, and PvP Damage +5%.
+            level 5: Casting Spd. +7%, M. Critical Rate +12%, and PvP Damage +5%.
+            level 6: Casting Spd. +7%, M. Critical Rate +13%, and PvP Damage +5%.
+            level 7: Casting Spd. +8%, M. Critical Rate +13%, and PvP Damage +5%.
+            level 8: Casting Spd. +8%, M. Critical Rate +14%, and PvP Damage +5%.
+            level 9: Casting Spd. +9%, M. Critical Rate +14%, and PvP Damage +5%.
+            level 10: Casting Spd. +9%, M. Critical Rate +15%, and PvP Damage +5%.
+            level 11: Casting Spd. +10%, M. Critical Rate +15%, and PvP Damage +5%.
+            level 12: Casting Spd. +10%, M. Critical Rate +16%, and PvP Damage +5%.
+            level 13: Casting Spd. +11%, M. Critical Rate +16%, and PvP Damage +5%.
+            level 14: Casting Spd. +11%, M. Critical Rate +17%, and PvP Damage +5%.
+            level 15: Casting Spd. +12%, M. Critical Rate +17%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_mm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">11.0</value>
+                    <value level="15">12.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13878" name="Acumen Mystic" max-level="15">
+        <!--
+            level 1: Casting Spd. +5%, M. Critical Damage +1%.
+            level 2: Casting Spd. +5%, M. Critical Damage +2%.
+            level 3: Casting Spd. +6%, M. Critical Damage +2%, and PvP Damage +5%.
+            level 4: Casting Spd. +6%, M. Critical Damage +3%, and PvP Damage +5%.
+            level 5: Casting Spd. +7%, M. Critical Damage +3%, and PvP Damage +5%.
+            level 6: Casting Spd. +7%, M. Critical Damage +4%, and PvP Damage +5%.
+            level 7: Casting Spd. +8%, M. Critical Damage +4%, and PvP Damage +5%.
+            level 8: Casting Spd. +8%, M. Critical Damage +5%, and PvP Damage +5%.
+            level 9: Casting Spd. +9%, M. Critical Damage +5%, and PvP Damage +5%.
+            level 10: Casting Spd. +9%, M. Critical Damage +6%, and PvP Damage +5%.
+            level 11: Casting Spd. +10%, M. Critical Damage +6%, and PvP Damage +5%.
+            level 12: Casting Spd. +10%, M. Critical Damage +7%, and PvP Damage +5%.
+            level 13: Casting Spd. +11%, M. Critical Damage +7%, and PvP Damage +5%.
+            level 14: Casting Spd. +11%, M. Critical Damage +8%, and PvP Damage +5%.
+            level 15: Casting Spd. +12%, M. Critical Damage +8%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_mm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="10">6.0</value>
+                    <value level="12">7.0</value>
+                    <value level="14">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">11.0</value>
+                    <value level="15">12.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13879" name="Acumen Soul" max-level="15">
+        <!--
+            level 1: Casting Spd. +5%, Max MP +13%.
+            level 2: Casting Spd. +5%, Max MP +14%.
+            level 3: Casting Spd. +6%, Max MP +14%, and PvP Damage +5%.
+            level 4: Casting Spd. +6%, Max MP +15%, and PvP Damage +5%.
+            level 5: Casting Spd. +7%, Max MP +15%, and PvP Damage +5%.
+            level 6: Casting Spd. +7%, Max MP +16%, and PvP Damage +5%.
+            level 7: Casting Spd. +8%, Max MP +16%, and PvP Damage +5%.
+            level 8: Casting Spd. +8%, Max MP +17%, and PvP Damage +5%.
+            level 9: Casting Spd. +9%, Max MP +17%, and PvP Damage +5%.
+            level 10: Casting Spd. +9%, Max MP +18%, and PvP Damage +5%.
+            level 11: Casting Spd. +10%, Max MP +18%, and PvP Damage +5%.
+            level 12: Casting Spd. +10%, Max MP +19%, and PvP Damage +5%.
+            level 13: Casting Spd. +11%, Max MP +19%, and PvP Damage +5%.
+            level 14: Casting Spd. +11%, Max MP +20%, and PvP Damage +5%.
+            level 15: Casting Spd. +12%, Max MP +20%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_mm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="13.0">
+                    <value level="2">14.0</value>
+                    <value level="4">15.0</value>
+                    <value level="6">16.0</value>
+                    <value level="8">17.0</value>
+                    <value level="10">18.0</value>
+                    <value level="12">19.0</value>
+                    <value level="14">20.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">11.0</value>
+                    <value level="15">12.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13880" name="Wild Mystic" max-level="15">
+        <!--
+            level 1: M. Critical Rate +10%, M. Critical Damage +1%.
+            level 2: M. Critical Rate +10%, M. Critical Damage +2%.
+            level 3: M. Critical Rate +11%, M. Critical Damage +2%, and PvP Damage +5%.
+            level 4: M. Critical Rate +11%, M. Critical Damage +3%, and PvP Damage +5%.
+            level 5: M. Critical Rate +12%, M. Critical Damage +3%, and PvP Damage +5%.
+            level 6: M. Critical Rate +12%, M. Critical Damage +4%, and PvP Damage +5%.
+            level 7: M. Critical Rate +13%, M. Critical Damage +4%, and PvP Damage +5%.
+            level 8: M. Critical Rate +13%, M. Critical Damage +5%, and PvP Damage +5%.
+            level 9: M. Critical Rate +14%, M. Critical Damage +5%, and PvP Damage +5%.
+            level 10: M. Critical Rate +14%, M. Critical Damage +6%, and PvP Damage +5%.
+            level 11: M. Critical Rate +15%, M. Critical Damage +6%, and PvP Damage +5%.
+            level 12: M. Critical Rate +15%, M. Critical Damage +7%, and PvP Damage +5%.
+            level 13: M. Critical Rate +16%, M. Critical Damage +7%, and PvP Damage +5%.
+            level 14: M. Critical Rate +16%, M. Critical Damage +8%, and PvP Damage +5%.
+            level 15: M. Critical Rate +17%, M. Critical Damage +8%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_mm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="10">6.0</value>
+                    <value level="12">7.0</value>
+                    <value level="14">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13881" name="Wild Soul" max-level="15">
+        <!--
+            level 1: M. Critical Rate +10%, Max MP +13%.
+            level 2: M. Critical Rate +10%, Max MP +14%.
+            level 3: M. Critical Rate +11%, Max MP +14%, and PvP Damage +5%.
+            level 4: M. Critical Rate +11%, Max MP +15%, and PvP Damage +5%.
+            level 5: M. Critical Rate +12%, Max MP +15%, and PvP Damage +5%.
+            level 6: M. Critical Rate +12%, Max MP +16%, and PvP Damage +5%.
+            level 7: M. Critical Rate +13%, Max MP +16%, and PvP Damage +5%.
+            level 8: M. Critical Rate +13%, Max MP +17%, and PvP Damage +5%.
+            level 9: M. Critical Rate +14%, Max MP +17%, and PvP Damage +5%.
+            level 10: M. Critical Rate +14%, Max MP +18%, and PvP Damage +5%.
+            level 11: M. Critical Rate +15%, Max MP +18%, and PvP Damage +5%.
+            level 12: M. Critical Rate +15%, Max MP +19%, and PvP Damage +5%.
+            level 13: M. Critical Rate +16%, Max MP +19%, and PvP Damage +5%.
+            level 14: M. Critical Rate +16%, Max MP +20%, and PvP Damage +5%.
+            level 15: M. Critical Rate +17%, Max MP +20%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_mm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="13.0">
+                    <value level="2">14.0</value>
+                    <value level="4">15.0</value>
+                    <value level="6">16.0</value>
+                    <value level="8">17.0</value>
+                    <value level="10">18.0</value>
+                    <value level="12">19.0</value>
+                    <value level="14">20.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13882" name="HP Acumen" max-level="15">
+        <!--
+            level 1: Max HP +10%, Casting Spd. +5%.
+            level 2: Max HP +11%, Casting Spd. +5%.
+            level 3: Max HP +11%, Casting Spd. +6%, and PvP Damage +5%.
+            level 4: Max HP +12%, Casting Spd. +6%, and PvP Damage +5%.
+            level 5: Max HP +12%, Casting Spd. +7%, and PvP Damage +5%.
+            level 6: Max HP +13%, Casting Spd. +7%, and PvP Damage +5%.
+            level 7: Max HP +13%, Casting Spd. +8%, and PvP Damage +5%.
+            level 8: Max HP +14%, Casting Spd. +8%, and PvP Damage +5%.
+            level 9: Max HP +14%, Casting Spd. +9%, and PvP Damage +5%.
+            level 10: Max HP +15%, Casting Spd. +9%, and PvP Damage +5%.
+            level 11: Max HP +15%, Casting Spd. +10%, and PvP Damage +5%.
+            level 12: Max HP +16%, Casting Spd. +10%, and PvP Damage +5%.
+            level 13: Max HP +16%, Casting Spd. +11%, and PvP Damage +5%.
+            level 14: Max HP +17%, Casting Spd. +11%, and PvP Damage +5%.
+            level 15: Max HP +17%, Casting Spd. +12%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="3">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="11">10.0</value>
+                    <value level="13">11.0</value>
+                    <value level="15">12.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13883" name="HP Savagery" max-level="15">
+        <!--
+            level 1: Max HP +10%, M. Critical Rate +10%.
+            level 2: Max HP +11%, M. Critical Rate +10%.
+            level 3: Max HP +11%, M. Critical Rate +11%, and PvP Damage +5%.
+            level 4: Max HP +12%, M. Critical Rate +11%, and PvP Damage +5%.
+            level 5: Max HP +12%, M. Critical Rate +12%, and PvP Damage +5%.
+            level 6: Max HP +13%, M. Critical Rate +12%, and PvP Damage +5%.
+            level 7: Max HP +13%, M. Critical Rate +13%, and PvP Damage +5%.
+            level 8: Max HP +14%, M. Critical Rate +13%, and PvP Damage +5%.
+            level 9: Max HP +14%, M. Critical Rate +14%, and PvP Damage +5%.
+            level 10: Max HP +15%, M. Critical Rate +14%, and PvP Damage +5%.
+            level 11: Max HP +15%, M. Critical Rate +15%, and PvP Damage +5%.
+            level 12: Max HP +16%, M. Critical Rate +15%, and PvP Damage +5%.
+            level 13: Max HP +16%, M. Critical Rate +16%, and PvP Damage +5%.
+            level 14: Max HP +17%, M. Critical Rate +16%, and PvP Damage +5%.
+            level 15: Max HP +17%, M. Critical Rate +17%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13884" name="HP Mystic" max-level="15">
+        <!--
+            level 1: Max HP +10%, M. Critical Damage +1%.
+            level 2: Max HP +11%, M. Critical Damage +2%.
+            level 3: Max HP +11%, M. Critical Damage +3%, and PvP Damage +5%.
+            level 4: Max HP +12%, M. Critical Damage +3%, and PvP Damage +5%.
+            level 5: Max HP +12%, M. Critical Damage +4%, and PvP Damage +5%.
+            level 6: Max HP +13%, M. Critical Damage +4%, and PvP Damage +5%.
+            level 7: Max HP +13%, M. Critical Damage +5%, and PvP Damage +5%.
+            level 8: Max HP +14%, M. Critical Damage +5%, and PvP Damage +5%.
+            level 9: Max HP +14%, M. Critical Damage +6%, and PvP Damage +5%.
+            level 10: Max HP +15%, M. Critical Damage +6%, and PvP Damage +5%.
+            level 11: Max HP +15%, M. Critical Damage +7%, and PvP Damage +5%.
+            level 12: Max HP +16%, M. Critical Damage +7%, and PvP Damage +5%.
+            level 13: Max HP +16%, M. Critical Damage +8%, and PvP Damage +5%.
+            level 14: Max HP +17%, M. Critical Damage +8%, and PvP Damage +5%.
+            level 15: Max HP +17%, M. Critical Damage +9%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="10">6.0</value>
+                    <value level="12">7.0</value>
+                    <value level="14">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13885" name="HP Soul" max-level="15">
+        <!--
+            level 1: Max HP +10%, Max MP +13%.
+            level 2: Max HP +11%, Max MP +13%.
+            level 3: Max HP +11%, Max MP +14%, and PvP Damage +5%.
+            level 4: Max HP +12%, Max MP +14%, and PvP Damage +5%.
+            level 5: Max HP +12%, Max MP +15%, and PvP Damage +5%.
+            level 6: Max HP +13%, Max MP +15%, and PvP Damage +5%.
+            level 7: Max HP +13%, Max MP +16%, and PvP Damage +5%.
+            level 8: Max HP +14%, Max MP +16%, and PvP Damage +5%.
+            level 9: Max HP +14%, Max MP +17%, and PvP Damage +5%.
+            level 10: Max HP +15%, Max MP +17%, and PvP Damage +5%.
+            level 11: Max HP +15%, Max MP +18%, and PvP Damage +5%.
+            level 12: Max HP +16%, Max MP +18%, and PvP Damage +5%.
+            level 13: Max HP +16%, Max MP +19%, and PvP Damage +5%.
+            level 14: Max HP +17%, Max MP +19%, and PvP Damage +5%.
+            level 15: Max HP +17%, Max MP +20%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="10.0">
+                    <value level="2">11.0</value>
+                    <value level="4">12.0</value>
+                    <value level="6">13.0</value>
+                    <value level="8">14.0</value>
+                    <value level="10">15.0</value>
+                    <value level="12">16.0</value>
+                    <value level="14">17.0</value>
+                </power>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="13.0">
+                    <value level="2">14.0</value>
+                    <value level="4">15.0</value>
+                    <value level="6">16.0</value>
+                    <value level="8">17.0</value>
+                    <value level="10">18.0</value>
+                    <value level="12">19.0</value>
+                    <value level="14">20.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13886" name="MP Fury" max-level="15">
+        <!--
+            level 1: Max MP +13%, Atk. Spd. +5%.
+            level 2: Max MP +13%, Atk. Spd. +6%.
+            level 3: Max MP +14%, Atk. Spd. +6%, and PvP Damage +5%.
+            level 4: Max MP +14%, Atk. Spd. +7%, and PvP Damage +5%.
+            level 5: Max MP +15%, Atk. Spd. +7%, and PvP Damage +5%.
+            level 6: Max MP +15%, Atk. Spd. +8%, and PvP Damage +5%.
+            level 7: Max MP +16%, Atk. Spd. +8%, and PvP Damage +5%.
+            level 8: Max MP +16%, Atk. Spd. +9%, and PvP Damage +5%.
+            level 9: Max MP +17%, Atk. Spd. +9%, and PvP Damage +5%.
+            level 10: Max MP +17%, Atk. Spd. +10%, and PvP Damage +5%.
+            level 11: Max MP +18%, Atk. Spd. +10%, and PvP Damage +5%.
+            level 12: Max MP +18%, Atk. Spd. +11%, and PvP Damage +5%.
+            level 13: Max MP +19%, Atk. Spd. +11%, and PvP Damage +5%.
+            level 14: Max MP +19%, Atk. Spd. +12%, and PvP Damage +5%.
+            level 15: Max MP +20%, Atk. Spd. +12%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="13.0">
+                    <value level="3">14.0</value>
+                    <value level="5">15.0</value>
+                    <value level="7">16.0</value>
+                    <value level="9">17.0</value>
+                    <value level="11">18.0</value>
+                    <value level="13">19.0</value>
+                    <value level="15">20.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="2">6.0</value>
+                    <value level="4">7.0</value>
+                    <value level="6">8.0</value>
+                    <value level="8">9.0</value>
+                    <value level="10">10.0</value>
+                    <value level="12">11.0</value>
+                    <value level="14">12.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13887" name="MP Focus" max-level="15">
+        <!--
+            level 1: Max MP +13%, P. Critical Rate +26.
+            level 2: Max MP +13%, P. Critical Rate +29.
+            level 3: Max MP +14%, P. Critical Rate +32, and PvP Damage +5%.
+            level 4: Max MP +14%, P. Critical Rate +34, and PvP Damage +5%.
+            level 5: Max MP +15%, P. Critical Rate +37, and PvP Damage +5%.
+            level 6: Max MP +15%, P. Critical Rate +40, and PvP Damage +5%.
+            level 7: Max MP +16%, P. Critical Rate +42, and PvP Damage +5%.
+            level 8: Max MP +16%, P. Critical Rate +45, and PvP Damage +5%.
+            level 9: Max MP +17%, P. Critical Rate +48, and PvP Damage +5%.
+            level 10: Max MP +17%, P. Critical Rate +50, and PvP Damage +5%.
+            level 11: Max MP +18%, P. Critical Rate +53, and PvP Damage +5%.
+            level 12: Max MP +18%, P. Critical Rate +56, and PvP Damage +5%.
+            level 13: Max MP +19%, P. Critical Rate +59, and PvP Damage +5%.
+            level 14: Max MP +19%, P. Critical Rate +61, and PvP Damage +5%.
+            level 15: Max MP +20%, P. Critical Rate +64, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="13.0">
+                    <value level="3">14.0</value>
+                    <value level="5">15.0</value>
+                    <value level="7">16.0</value>
+                    <value level="9">17.0</value>
+                    <value level="11">18.0</value>
+                    <value level="13">19.0</value>
+                    <value level="15">20.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="26.0">
+                    <value level="2">29.0</value>
+                    <value level="3">32.0</value>
+                    <value level="4">34.0</value>
+                    <value level="5">37.0</value>
+                    <value level="6">40.0</value>
+                    <value level="7">42.0</value>
+                    <value level="8">45.0</value>
+                    <value level="9">48.0</value>
+                    <value level="10">50.0</value>
+                    <value level="11">53.0</value>
+                    <value level="12">56.0</value>
+                    <value level="13">59.0</value>
+                    <value level="14">61.0</value>
+                    <value level="15">64.0</value>
+                </power>
+            </stat-hp-based>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13888" name="MP Death" max-level="15">
+        <!--
+            level 1: Max MP +13%, P. Critical Damage +1%.
+            level 2: Max MP +13%, P. Critical Damage +2%.
+            level 3: Max MP +14%, P. Critical Damage +2%, and PvP Damage +5%.
+            level 4: Max MP +14%, P. Critical Damage +3%, and PvP Damage +5%.
+            level 5: Max MP +15%, P. Critical Damage +3%, and PvP Damage +5%.
+            level 6: Max MP +15%, P. Critical Damage +4%, and PvP Damage +5%.
+            level 7: Max MP +16%, P. Critical Damage +4%, and PvP Damage +5%.
+            level 8: Max MP +16%, P. Critical Damage +5%, and PvP Damage +5%.
+            level 9: Max MP +17%, P. Critical Damage +5%, and PvP Damage +5%.
+            level 10: Max MP +17%, P. Critical Damage +6%, and PvP Damage +5%.
+            level 11: Max MP +18%, P. Critical Damage +6%, and PvP Damage +5%.
+            level 12: Max MP +18%, P. Critical Damage +7%, and PvP Damage +5%.
+            level 13: Max MP +19%, P. Critical Damage +7%, and PvP Damage +5%.
+            level 14: Max MP +19%, P. Critical Damage +8%, and PvP Damage +5%.
+            level 15: Max MP +20%, P. Critical Damage +8%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="13.0">
+                    <value level="3">14.0</value>
+                    <value level="5">15.0</value>
+                    <value level="7">16.0</value>
+                    <value level="9">17.0</value>
+                    <value level="11">18.0</value>
+                    <value level="13">19.0</value>
+                    <value level="15">20.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="6">4.0</value>
+                    <value level="8">5.0</value>
+                    <value level="10">6.0</value>
+                    <value level="12">7.0</value>
+                    <value level="14">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" start-level="3" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="13889" name="MP Hunter" max-level="15">
+        <!--
+            level 1: Max MP +13%, P. Skill Critical Rate +3%.
+            level 2: Max MP +13%, P. Skill Critical Rate +4%.
+            level 3: Max MP +14%, P. Skill Critical Rate +4%, and PvP Damage +5%.
+            level 4: Max MP +14%, P. Skill Critical Rate +5%, and PvP Damage +5%.
+            level 5: Max MP +15%, P. Skill Critical Rate +5%, and PvP Damage +5%.
+            level 6: Max MP +15%, P. Skill Critical Rate +6%, and PvP Damage +5%.
+            level 7: Max MP +16%, P. Skill Critical Rate +6%, and PvP Damage +5%.
+            level 8: Max MP +16%, P. Skill Critical Rate +7%, and PvP Damage +5%.
+            level 9: Max MP +17%, P. Skill Critical Rate +7%, and PvP Damage +5%.
+            level 10: Max MP +17%, P. Skill Critical Rate +8%, and PvP Damage +5%.
+            level 11: Max MP +18%, P. Skill Critical Rate +8%, and PvP Damage +5%.
+            level 12: Max MP +18%, P. Skill Critical Rate +9%, and PvP Damage +5%.
+            level 13: Max MP +19%, P. Skill Critical Rate +9%, and PvP Damage +5%.
+            level 14: Max MP +19%, P. Skill Critical Rate +10%, and PvP Damage +5%.
+            level 15: Max MP +20%, P. Skill Critical Rate +10%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="13890" name="MP Fire" max-level="15">
+        <!--
+            level 1: Max MP +13%, P. Skill Critical Damage +3%.
+            level 2: Max MP +13%, P. Skill Critical Damage +4%.
+            level 3: Max MP +14%, P. Skill Critical Damage +4%, and PvP Damage +5%.
+            level 4: Max MP +14%, P. Skill Critical Damage +5%, and PvP Damage +5%.
+            level 5: Max MP +15%, P. Skill Critical Damage +5%, and PvP Damage +5%.
+            level 6: Max MP +15%, P. Skill Critical Damage +6%, and PvP Damage +5%.
+            level 7: Max MP +16%, P. Skill Critical Damage +6%, and PvP Damage +5%.
+            level 8: Max MP +16%, P. Skill Critical Damage +7%, and PvP Damage +5%.
+            level 9: Max MP +17%, P. Skill Critical Damage +7%, and PvP Damage +5%.
+            level 10: Max MP +17%, P. Skill Critical Damage +8%, and PvP Damage +5%.
+            level 11: Max MP +18%, P. Skill Critical Damage +8%, and PvP Damage +5%.
+            level 12: Max MP +18%, P. Skill Critical Damage +9%, and PvP Damage +5%.
+            level 13: Max MP +19%, P. Skill Critical Damage +9%, and PvP Damage +5%.
+            level 14: Max MP +19%, P. Skill Critical Damage +10%, and PvP Damage +5%.
+            level 15: Max MP +20%, P. Skill Critical Damage +10%, and PvP Damage +5%.
+         -->
+        <icon initial="icon.ensoul_big_pm"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
 </list>

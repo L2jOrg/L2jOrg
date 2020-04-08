@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="14509" name="Life Force Transfer" max-level="2" action="A1">
-	<!-- Connects to Spirit King. Instant HP Recovery. -->
-		<icon initial="icon.skill1042"/>
-		<attributes>
-			<cast-range initial="900"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="600000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="14559" name="Soul Drain Status" action="A2">
-	<!-- HP is being absorbed. -->
-		<icon initial="icon.skill1042"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0">
-			<magic-level initial="90"/>
-			<cast-range initial="500"/>
-			<effect-point initial="-2"/>
-			<effect-range initial="1000"/>
-		</attributes>
-		<target type="ENEMY" />
-		<abnormal type="PHYSICAL_STANCE" visual="DOT_POISON" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<damage-over-time ticks="1">
-				<power initial="1.0"/>
-			</damage-over-time>
-		</effects>
-	</skill>
+    <skill id="14509" name="Life Force Transfer" max-level="2" action="A1">
+        <!-- Connects to Spirit King. Instant HP Recovery. -->
+        <icon initial="icon.skill1042"/>
+        <attributes>
+            <cast-range initial="900"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="600000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="14559" name="Soul Drain Status" action="A2">
+        <!-- HP is being absorbed. -->
+        <icon initial="icon.skill1042"/>
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+            <magic-level initial="90"/>
+            <cast-range initial="500"/>
+            <effect-point initial="-2"/>
+            <effect-range initial="1000"/>
+        </attributes>
+        <target type="ENEMY"/>
+        <abnormal type="PHYSICAL_STANCE" visual="DOT_POISON">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <damage-over-time ticks="1">
+                <power initial="1.0"/>
+            </damage-over-time>
+        </effects>
+    </skill>
 </list>

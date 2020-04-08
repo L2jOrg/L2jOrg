@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="9487" name="Angel Cat's Blessing" action="A2">
-	<!-- For 60 minutes, Max HP/Max MP +5%% and Hunting XP/SP Gain +20%%. Effect remains even after death. -->
-		<icon initial="icon.skilltransform4"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" >
-			<magic-level initial="-3"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-		</attributes>
-		<target />
-		<abnormal type="BR_EVENT_BUF1">
-			<level initial="2"/>
-			<time initial="3600"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<conditions>
-			<level max-level="85" scope="PASSIVE"/>
-		</conditions>
-		<effects>
-			<vital-stat-modify stat="MAX_HP" mode="PER">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" mode="PER">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="BONUS_EXP">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="BONUS_SP">
-				<power initial="20.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
+    <skill id="9487" name="Angel Cat's Blessing" action="A2">
+        <!-- For 60 minutes, Max HP/Max MP +5%% and Hunting XP/SP Gain +20%%. Effect remains even after death. -->
+        <icon initial="icon.skilltransform4"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
+            <magic-level initial="-3"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
+        <target/>
+        <abnormal type="BR_EVENT_BUF1">
+            <level initial="2"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <conditions>
+            <level max-level="85" scope="PASSIVE"/>
+        </conditions>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <stat-modify stat="BONUS_EXP">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP">
+                <power initial="20.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
 </list>

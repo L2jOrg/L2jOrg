@@ -1,136 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="17701" name="Topaz" max-level="10" action="A1">
-	<!-- 
-		level 1: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 475.
-		level 2: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 633.
-		level 3: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 950.
-		level 4: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 1357.
-		level 5: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2375.
-		level 6: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2500.
-		level 7: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2800.
-		level 8: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 3400.
-		level 9: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 4300.
-		level 10: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 6000.
-	 -->
-		<icon initial="icon.etc_bm_jewel_topaz_i00">
-			<value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
-		</icon>
-		<attributes>
-			<cast-range initial="600"/>
-			<reuse initial="30000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-1000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17702" name="Greater Topaz - Special Ability" action="A1">
-	<!-- Removes up to 3 buffs on the enemy. -->
-		<icon initial="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
-		<attributes>
-			<cast-range initial="600"/>
-			<reuse initial="300000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-1000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17706" name="Vital Stone" max-level="10" >
-	<!-- 
-		level 1: XP/SP gain from Sayha's Grace +3% while hunting during Sayha's Grace effect.
-		level 2: XP/SP gain from Sayha's Grace +4% while hunting during Sayha's Grace effect.
-		level 3: XP/SP gain from Sayha's Grace +6% while hunting during Sayha's Grace effect.
-		level 4: XP/SP gain +8%, Sayha's Grace Consumption -10% while hunting during Sayha's Grace effect.
-		level 5: XP/SP gain +15%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
-		level 6: XP/SP gain +17%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
-		level 7: XP/SP gain +19%, Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect.
-		level 8: XP/SP gain +21%, Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect.
-		level 9: XP/SP gain +23%, Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect.
-		level 10: XP/SP gain +30%, Sayha's Grace Consumption -35% and Attribute XP Gain +50% while hunting during Sayha's Grace effect.
-	 -->
-		<icon initial="icon.etc_bm_jewel_vital">
-			<value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17707" name="Jade" max-level="10" >
-	<!-- 
-		level 1: Atk. Spd./Casting Spd. +1%.
-		level 2: Atk. Spd./Casting Spd. +2%.
-		level 3: Atk. Spd./Casting Spd. +4%.
-		level 4: Atk. Spd./Casting Spd. +7%.
-		level 5: Atk. Spd./Casting Spd. +14%.
-		level 6: Atk. Spd./Casting Spd. +15%, Movement Speed +1%.
-		level 7: Atk. Spd./Casting Spd. +16%, Movement Speed +2%.
-		level 8: Atk. Spd./Casting Spd. +17%, Movement Speed +3%.
-		level 9: Atk. Spd./Casting Spd. +18%, Movement Speed +5%.
-		level 10: Atk. Spd./Casting Spd. +20%, Movement Speed +7%, and Melee Weapon Resistance +10%.
-	 -->
-		<icon initial="icon.etc_bm_jewel_jade_i00">
-			<value level="6">icon.bm_jewel_speedup_lv1_high</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17708" name="Diamond" max-level="10" >
-	<!-- 
-		level 1: P. Def. +11.
-		level 2: P. Def. +25.
-		level 3: P. Def. +50.
-		level 4: P. Def. +81, Received P. Critical Damage -4%.
-		level 5: P. Def. +130, Received P. Critical Damage -10%.
-		level 6: P. Def. +150, Received P. Critical Damage -11%.
-		level 7: P. Def. +180, Received P. Critical Damage -12%.
-		level 8: P. Def. +220, Received P. Critical Damage -14%.
-		level 9: P. Def. +280, Received P. Critical Damage -16%.
-		level 10: P. Def. +400, P. Critical Attack Receival Rate -10%, and Received P. Critical Damage -20%.
-	 -->
-		<icon initial="icon.etc_bm_jewel_diamond_i00">
-			<value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="17709" name="Pearl" max-level="10" >
-	<!-- 
-		level 1: M. Def. +7.
-		level 2: M. Def. +14.
-		level 3: M. Def. +28.
-		level 4: M. Def. +46, Received M. Critical Damage -4%.
-		level 5: M. Def. +74, Received M. Critical Damage -10%.
-		level 6: M. Def. +85, Received M. Critical Damage -11%.
-		level 7: M. Def. +100, Received M. Critical Damage -12%.
-		level 8: M. Def. +125, Received M. Critical Damage -14%.
-		level 9: M. Def. +160, Received M. Critical Damage -16%.
-		level 10: M. Def. +250 P. Critical Attack Receival Rate -10%, and Received M. Critical Damage -20%.
-	 -->
-		<icon initial="icon.etc_bm_jewel_pearl_i00">
-			<value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
-		</icon>
-		<attributes property="MAGIC">
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="17701" name="Topaz" max-level="10" action="A1">
+        <!--
+            level 1: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 475.
+            level 2: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 633.
+            level 3: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 950.
+            level 4: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 1357.
+            level 5: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2375.
+            level 6: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2500.
+            level 7: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2800.
+            level 8: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 3400.
+            level 9: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 4300.
+            level 10: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 6000.
+         -->
+        <icon initial="icon.etc_bm_jewel_topaz_i00">
+            <value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+        </icon>
+        <attributes>
+            <cast-range initial="600"/>
+            <reuse initial="30000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-1000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17702" name="Greater Topaz - Special Ability" action="A1">
+        <!-- Removes up to 3 buffs on the enemy. -->
+        <icon initial="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
+        <attributes>
+            <cast-range initial="600"/>
+            <reuse initial="300000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-1000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17706" name="Vital Stone" max-level="10">
+        <!--
+            level 1: XP/SP gain from Sayha's Grace +3% while hunting during Sayha's Grace effect.
+            level 2: XP/SP gain from Sayha's Grace +4% while hunting during Sayha's Grace effect.
+            level 3: XP/SP gain from Sayha's Grace +6% while hunting during Sayha's Grace effect.
+            level 4: XP/SP gain +8%, Sayha's Grace Consumption -10% while hunting during Sayha's Grace effect.
+            level 5: XP/SP gain +15%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+            level 6: XP/SP gain +17%, Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect.
+            level 7: XP/SP gain +19%, Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect.
+            level 8: XP/SP gain +21%, Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect.
+            level 9: XP/SP gain +23%, Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect.
+            level 10: XP/SP gain +30%, Sayha's Grace Consumption -35% and Attribute XP Gain +50% while hunting during Sayha's Grace effect.
+         -->
+        <icon initial="icon.etc_bm_jewel_vital">
+            <value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17707" name="Jade" max-level="10">
+        <!--
+            level 1: Atk. Spd./Casting Spd. +1%.
+            level 2: Atk. Spd./Casting Spd. +2%.
+            level 3: Atk. Spd./Casting Spd. +4%.
+            level 4: Atk. Spd./Casting Spd. +7%.
+            level 5: Atk. Spd./Casting Spd. +14%.
+            level 6: Atk. Spd./Casting Spd. +15%, Movement Speed +1%.
+            level 7: Atk. Spd./Casting Spd. +16%, Movement Speed +2%.
+            level 8: Atk. Spd./Casting Spd. +17%, Movement Speed +3%.
+            level 9: Atk. Spd./Casting Spd. +18%, Movement Speed +5%.
+            level 10: Atk. Spd./Casting Spd. +20%, Movement Speed +7%, and Melee Weapon Resistance +10%.
+         -->
+        <icon initial="icon.etc_bm_jewel_jade_i00">
+            <value level="6">icon.bm_jewel_speedup_lv1_high</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17708" name="Diamond" max-level="10">
+        <!--
+            level 1: P. Def. +11.
+            level 2: P. Def. +25.
+            level 3: P. Def. +50.
+            level 4: P. Def. +81, Received P. Critical Damage -4%.
+            level 5: P. Def. +130, Received P. Critical Damage -10%.
+            level 6: P. Def. +150, Received P. Critical Damage -11%.
+            level 7: P. Def. +180, Received P. Critical Damage -12%.
+            level 8: P. Def. +220, Received P. Critical Damage -14%.
+            level 9: P. Def. +280, Received P. Critical Damage -16%.
+            level 10: P. Def. +400, P. Critical Attack Receival Rate -10%, and Received P. Critical Damage -20%.
+         -->
+        <icon initial="icon.etc_bm_jewel_diamond_i00">
+            <value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="17709" name="Pearl" max-level="10">
+        <!--
+            level 1: M. Def. +7.
+            level 2: M. Def. +14.
+            level 3: M. Def. +28.
+            level 4: M. Def. +46, Received M. Critical Damage -4%.
+            level 5: M. Def. +74, Received M. Critical Damage -10%.
+            level 6: M. Def. +85, Received M. Critical Damage -11%.
+            level 7: M. Def. +100, Received M. Critical Damage -12%.
+            level 8: M. Def. +125, Received M. Critical Damage -14%.
+            level 9: M. Def. +160, Received M. Critical Damage -16%.
+            level 10: M. Def. +250 P. Critical Attack Receival Rate -10%, and Received M. Critical Damage -20%.
+         -->
+        <icon initial="icon.etc_bm_jewel_pearl_i00">
+            <value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+        </icon>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+    </skill>
 </list>

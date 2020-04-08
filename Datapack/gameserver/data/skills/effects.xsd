@@ -151,7 +151,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="TriggerSkillByMagicEffect">
         <xs:complexContent>
             <xs:extension base="Effect">
@@ -529,7 +529,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="MagicCostEffect">
         <xs:complexContent>
             <xs:extension base="Effect">

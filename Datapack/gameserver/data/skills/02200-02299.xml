@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="2209" name="Blessed Scroll: Enchant Armor (A-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ITEM" />
-	</skill>
-	<skill id="2210" name="Blessed Scroll: Enchant Armor (B-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ITEM" />
-	</skill>
-	<skill id="2211" name="Blessed Scroll: Enchant Armor (C-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ITEM" />
-	</skill>
-	<skill id="2212" name="Blessed Scroll: Enchant Armor (D-grade)" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ITEM" />
-	</skill>
-	<skill id="2213" name="Scroll of Escape: Talking Island Village" max-level="15" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="20000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<item initial="7117">
-				<value level="2">7118</value>
-				<value level="3">7119</value>
-				<value level="4">7120</value>
-				<value level="5">7121</value>
-				<value level="6">7122</value>
-				<value level="7">7123</value>
-				<value level="8">7124</value>
-				<value level="9">7125</value>
-				<value level="10">7126</value>
-				<value level="11">7127</value>
-				<value level="12">70113</value>
-				<value level="13">7129</value>
-				<value level="14">7130</value>
-				<value level="15">7131</value>
-			</item>
-			<item-count initial="1"/>
-		</consume>
-		<target />
-		<conditions>
-			<condition name="NonChaotic"/>
-			<condition name="OpCanEscape"/>
-		</conditions>
-		<effects>
-			<teleport>
-				<location x="-84200" y="244566" z="-3728"/>
-				<location level="2" x="-84200" y="244566" z="-3728"/>
-				<location level="3" x="-84200" y="244566" z="-3728"/>
-				<location level="4" x="-84200" y="244566" z="-3728"/>
-				<location level="5" x="-84200" y="244566" z="-3728"/>
-				<location level="6" x="-84200" y="244566" z="-3728"/>
-				<location level="7" x="-84200" y="244566" z="-3728"/>
-				<location level="8" x="-84200" y="244566" z="-3728"/>
-				<location level="9" x="-84200" y="244566" z="-3728"/>
-				<location level="10" x="-84200" y="244566" z="-3728"/>
-				<location level="11" x="-84200" y="244566" z="-3728"/>
-				<location level="12" x="-84200" y="244566" z="-3728"/>
-				<location level="13" x="-84200" y="244566" z="-3728"/>
-				<location level="14" x="-84200" y="244566" z="-3728"/>
-				<location level="15" x="-84200" y="244566" z="-3728"/>
-			</teleport>
-		</effects>
-	</skill>
+    <skill id="2209" name="Blessed Scroll: Enchant Armor (A-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ITEM"/>
+    </skill>
+    <skill id="2210" name="Blessed Scroll: Enchant Armor (B-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ITEM"/>
+    </skill>
+    <skill id="2211" name="Blessed Scroll: Enchant Armor (C-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ITEM"/>
+    </skill>
+    <skill id="2212" name="Blessed Scroll: Enchant Armor (D-grade)" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ITEM"/>
+    </skill>
+    <skill id="2213" name="Scroll of Escape: Talking Island Village" max-level="15" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="20000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <item initial="7117">
+                <value level="2">7118</value>
+                <value level="3">7119</value>
+                <value level="4">7120</value>
+                <value level="5">7121</value>
+                <value level="6">7122</value>
+                <value level="7">7123</value>
+                <value level="8">7124</value>
+                <value level="9">7125</value>
+                <value level="10">7126</value>
+                <value level="11">7127</value>
+                <value level="12">70113</value>
+                <value level="13">7129</value>
+                <value level="14">7130</value>
+                <value level="15">7131</value>
+            </item>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="-84200" y="244566" z="-3728"/>
+                <location level="2" x="-84200" y="244566" z="-3728"/>
+                <location level="3" x="-84200" y="244566" z="-3728"/>
+                <location level="4" x="-84200" y="244566" z="-3728"/>
+                <location level="5" x="-84200" y="244566" z="-3728"/>
+                <location level="6" x="-84200" y="244566" z="-3728"/>
+                <location level="7" x="-84200" y="244566" z="-3728"/>
+                <location level="8" x="-84200" y="244566" z="-3728"/>
+                <location level="9" x="-84200" y="244566" z="-3728"/>
+                <location level="10" x="-84200" y="244566" z="-3728"/>
+                <location level="11" x="-84200" y="244566" z="-3728"/>
+                <location level="12" x="-84200" y="244566" z="-3728"/>
+                <location level="13" x="-84200" y="244566" z="-3728"/>
+                <location level="14" x="-84200" y="244566" z="-3728"/>
+                <location level="15" x="-84200" y="244566" z="-3728"/>
+            </teleport>
+        </effects>
+    </skill>
 </list>

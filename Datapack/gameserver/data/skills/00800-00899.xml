@@ -1,1323 +1,1285 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="806" name="Magic Obstacle" action="A1">
-	<!-- Blows away Enhanced Abnormal Conditions of the enemies around the golem. -->
-		<icon initial="icon.skill_transform_etc"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="83"/>
-			<cast-range initial="-1"/>
-			<reuse initial="75000"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="49"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
-		<effects>
-			<dispel-by-category category="BUFF" max="5">				<power initial="25.0"/>
-			</dispel-by-category>
-		</effects>
-	</skill>
-	<skill id="807" name="Over-hit" action="A2">
-	<!-- Increases the golem's power more by filling him up with special fuel. -->
-		<icon initial="icon.skill_transform_buff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="83"/>
-			<cast-range initial="-1"/>
-			<reuse initial="2000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<consume>
-			<mana initial="25"/>
-		</consume>
-		<target />
-		<abnormal type="PA_UP">
-			<level initial="99"/>
-			<time initial="300"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="40.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="808" name="Golem Punch" debuff="true" action="A2">
-	<!-- Throws a powerful punch with 11205 Power that both stuns and inflicts damage to the enemy. Over-hit. Power: 11205. -->
-		<icon initial="icon.skill_transform_debuff"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="30">
-			<magic-level initial="83"/>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="660"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="200"/>
-			<hit-time initial="830"/>
-		</attributes>
-		<consume>
-			<mana initial="53"/>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="1"/>
-			<time initial="9"/>
-			<chance initial="80"/>
-		</abnormal>
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="11205.0"/>
-			</physical-attack>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="809" name="Golem Tornado Swing" action="A1">
-	<!-- Spins and swings both arms to attack. Over-hit. Power: 6199. -->
-		<icon initial="icon.skill_transform_s_attack"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="83"/>
-			<cast-range initial="-1"/>
-			<reuse initial="8000"/>
-			<cool-time initial="660"/>
-			<effect-point initial="-100"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="830"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="53"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="6199.0"/>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="814" name="Full Swing" max-level="9" action="A1">
-	<!-- 
-		level 1: Widely swings a two-handed weapon to attack nearby enemies with bonus 2424 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 2: Widely swings a two-handed weapon to attack nearby enemies with bonus 2485 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 3: Widely swings a two-handed weapon to attack nearby enemies with bonus 2545 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 4: Widely swings a two-handed weapon to attack nearby enemies with bonus 2604 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 5: Widely swings a two-handed weapon to attack nearby enemies with bonus 2660 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 6: Widely swings a two-handed weapon to attack nearby enemies with bonus 2716 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 7: Widely swings a two-handed weapon to attack nearby enemies with bonus 2771 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 8: Widely swings a two-handed weapon to attack nearby enemies with bonus 2823 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-		level 9: Widely swings a two-handed weapon to attack nearby enemies with bonus 2874 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
-	 -->
-		<icon initial="icon.skill0814"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="76">
-				<value level="2">77</value>
-				<value level="3">78</value>
-				<value level="4">79</value>
-				<value level="5">80</value>
-				<value level="6">81</value>
-				<value level="7">82</value>
-				<value level="8">83</value>
-				<value level="9">84</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="15000"/>
-			<cool-time initial="733"/>
-			<effect-point initial="-169">
-				<value level="2">-172</value>
-				<value level="3">-175</value>
-				<value level="4">-178</value>
-				<value level="5">-181</value>
-				<value level="6">-184</value>
-				<value level="7">-187</value>
-				<value level="8">-190</value>
-				<value level="9">-193</value>
-			</effect-point>
-			<effect-range initial="-1"/>
-			<hit-time initial="1067"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="70">
-				<value level="2">78</value>
-				<value level="3">85</value>
-				<value level="4">92</value>
-				<value level="5">99</value>
-				<value level="6">106</value>
-				<value level="7">113</value>
-				<value level="8">120</value>
-				<value level="9">127</value>
-			</mana>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12" />
-		<conditions>
-			<weapon>
-				<type>TWO_HAND_SWORD DUAL_BLUNT</type>
-			</weapon>
-		</conditions>
-		<effects>
-			<physical-attack ignore-shield="true" critical-chance="15.0" over-hit="true">
-				<power initial="2424.0">
-					<value level="2">2485.0</value>
-					<value level="3">2545.0</value>
-					<value level="4">2604.0</value>
-					<value level="5">2660.0</value>
-					<value level="6">2716.0</value>
-					<value level="7">2771.0</value>
-					<value level="8">2823.0</value>
-					<value level="9">2874.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="821" name="Shadow Step" max-level="8" debuff="true" action="A2">
-	<!-- Moves behind the target to stun them. -->
-		<icon initial="icon.skill0821"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
-			<magic-level initial="50">
-				<value level="2">54</value>
-				<value level="3">58</value>
-				<value level="4">62</value>
-				<value level="5">66</value>
-				<value level="6">70</value>
-				<value level="7">74</value>
-				<value level="8">78</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<reuse initial="60000"/>
-			<cool-time initial="200"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1100"/>
-			<hit-time initial="100"/>
-		</attributes>
-		<consume>
-			<mana initial="50">
-				<value level="2">55</value>
-				<value level="3">60</value>
-				<value level="4">65</value>
-				<value level="5">70</value>
-				<value level="6">75</value>
-				<value level="7">80</value>
-				<value level="8">85</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<abnormal type="STUN" visual="STUN" >
-			<level initial="2"/>
-			<time initial="5"/>
-			<chance initial="70"/>
-		</abnormal>
-		<effects>
-			<effect name="TeleportToTarget"/>
-			<effect name="TargetCancel">
-				<power initial="100.0"/>
-			</effect>
-			<block-all-actions/>
-		</effects>
-	</skill>
-	<skill id="822" name="Repair Golem" max-level="3" action="A1">
-	<!-- 
-		level 1: Repairs the summoned golem to recover the golem's HP by 8%.
-		level 2: Repairs the summoned golem to recover the golem's HP by 12%.
-		level 3: Repairs the summoned golem to recover the golem's HP by 15%.
-	 -->
-		<icon initial="icon.skill0822"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="40">
-				<value level="2">49</value>
-				<value level="3">55</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="2000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="362">
-				<value level="2">481</value>
-				<value level="3">562</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="61">
-				<value level="2">78</value>
-				<value level="3">88</value>
-			</mana>
-		</consume>
-		<target type="SUMMON" />
-		<conditions>
-			<target scope="TARGET">
-				<race name="CONSTRUCT"/>
-			</target>
-		</conditions>
-		<effects>
-			<effect name="HealPercent">
-				<power initial="8.0">
-					<value level="2">12.0</value>
-					<value level="3">15.0</value>
-				</power>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="823" name="Strengthen Golem" max-level="3" action="A2">
-	<!-- 
-		level 1: Increases the summoned golem's P. Atk. by 8% and Atk. Spd. by 3% for 20 minutes.
-		level 2: Increases the summoned golem's P. Atk. by 12% and Atk. Spd. by 6% for 20 minutes.
-		level 3: Increases the summoned golem's P. Atk. by 15% and Atk. Spd. by 9% for 20 minutes.
-	 -->
-		<icon initial="icon.skill0823"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-			<magic-level initial="43">
-				<value level="2">52</value>
-				<value level="3">58</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="10000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="408">
-				<value level="2">495</value>
-				<value level="3">549</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana initial="24">
-				<value level="2">36</value>
-				<value level="3">42</value>
-			</mana>
-		</consume>
-		<target type="SUMMON" />
-		<abnormal type="PA_UP">
-			<level initial="4"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<conditions>
-			<target scope="TARGET">
-				<race name="CONSTRUCT"/>
-			</target>
-		</conditions>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="8.0">
-					<value level="2">12.0</value>
-					<value level="3">15.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="3.0">
-					<value level="2">6.0</value>
-					<value level="3">9.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="824" name="Golem Reinforcement" max-level="3" action="A2">
-	<!-- 
-		level 1: For 20 minutes, equips a summoned golem with an additional armor plate to increase P. Def. by 8% and Max HP by 5%.
-		level 2: For 20 minutes, equips a summoned golem with an additional armor plate to increase P. Def. by 12% and Max HP by 8%.
-		level 3: For 20 minutes, equips a summoned golem with an additional armor plate to increase P. Def. by 15% and Max HP by 10%.
-	 -->
-		<icon initial="icon.skill0824"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-			<magic-level initial="40">
-				<value level="2">49</value>
-				<value level="3">55</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="10000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="379">
-				<value level="2">467</value>
-				<value level="3">523</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana initial="35">
-				<value level="2">44</value>
-			</mana>
-		</consume>
-		<target type="SUMMON" />
-		<abnormal type="PD_UP">
-			<level initial="4"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<conditions>
-			<target scope="TARGET">
-				<race name="CONSTRUCT"/>
-			</target>
-		</conditions>
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP" mode="PER">
-				<power initial="5.0">
-					<value level="2">8.0</value>
-					<value level="3">10.0</value>
-				</power>
-			</vital-stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="8.0">
-					<value level="2">12.0</value>
-					<value level="3">15.0</value>
-				</power>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="826" name="Spike" action="A2">
-	<!-- Adds a spike to a blunt weapon. P. Atk. +10%% and Stun accretion +15%% for 20 minutes. -->
-		<icon initial="icon.skill0826"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="49"/>
-			<cast-range initial="400"/>
-			<reuse initial="2000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="467"/>
-			<effect-range initial="900"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana initial="44"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="DWARF_ATTACK_BUFF">
-			<level initial="1"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<attack-trait>
-				<trait type="SHOCK">
-					<power initial="15"/>
-				</trait>
-			</attack-trait>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="10.0"/>
-				<weapon-type>BLUNT </weapon-type>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="828" name="Encase Armor" action="A2">
-	<!-- Thickens the surface of heavy armor to increase P. Def. by 10%% for 20 minute(s). -->
-		<icon initial="icon.skill0828"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="46"/>
-			<cast-range initial="400"/>
-			<reuse initial="2000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="438"/>
-			<effect-range initial="900"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana initial="41"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="DWARF_DEFENCE_BUFF">
-			<level initial="1"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE" mode="PER">
-				<power initial="10.0"/>
-				<armor-type>HEAVY </armor-type>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="839" name="Dismount" action="A1">
-	<!-- Dismounts from a ridable mount. -->
-		<icon initial="icon.skilltransform2"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="56"/>
-			<cast-range initial="-1"/>
-			<effect-point initial="10"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="2500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<dispel>
-				<abnormal type="TRANSFORM">
-					<power initial="-1.0"/>
-				</abnormal>
-			</dispel>
-		</effects>
-	</skill>
-	<skill id="844" name="Outpost Construction" action="A1">
-	<!-- Constructs an outpost that assists clan member recovery and reinforcement during territory battles. Territory Ward Transport is possible. Consumes 120 B-grade Gemstones. -->
-		<icon initial="icon.skill0247"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
-			<magic-level initial="-1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="600000"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana-init initial="30"/>
-			<mana initial="30"/>
-			<item initial="2132"/>
-			<item-count initial="120"/>
-		</consume>
-		<target />
-		<conditions>
-			<condition name="BuildAdvanceBase"/>
-		</conditions>
-	</skill>
-	<skill id="845" name="Outpost Demolition" action="A1">
-	<!-- Demolishes an outpost. After demolition, a new outpost can be constructed. -->
-		<icon initial="icon.skill0247"/>
-		<attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
-			<magic-level initial="-1"/>
-			<cast-range initial="-1"/>
-			<reuse initial="600000"/>
-			<effect-range initial="600"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="30"/>
-		</consume>
-		<target />
-	</skill>
-	<skill id="846" name="Possess Ward">
-	<!-- Possesses the territory ward, decreasing various battle abilities. -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" mode="PER">
-				<power initial="-80.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" mode="PER">
-				<power initial="-80.0"/>
-			</stat-modify>
-			<speed mode="PER">
-				<power initial="-80.0"/>
-			</speed>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="-80.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
-				<power initial="-80.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="847" name="Ward Transport" action="CA1">
-	<!-- With an opposing ward in hand, go back to your outpost and use this skill to move the ward back to your castle. -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="80"/>
-			<cast-range initial="85"/>
-			<reuse initial="1000"/>
-			<effect-range initial="400"/>
-			<hit-time initial="180000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target type="ADVANCE_BASE" />
-		<channeling skill="0" initial-delay="1000000" interval="0"/>
-	</skill>
-	<skill id="848" name="Gludio Territory Benefaction">
-	<!-- STR +1/INT +1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="STR">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="849" name="Dion Territory Benefaction">
-	<!-- DEX +1/WIT+1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="DEX">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="850" name="Giran Territory Benefaction">
-	<!-- STR +1/MEN +1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="STR">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="851" name="Oren Territory Benefaction">
-	<!-- CON +1/MEN +1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="CON">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="852" name="Aden Territory Benefaction">
-	<!-- DEX +1/MEN +1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="DEX">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="853" name="Innadril Territory Benefaction">
-	<!-- CON +1/INT +1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="INT">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="854" name="Goddard Territory Benefaction">
-	<!-- DEX +1/INT +1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="INT">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="855" name="Rune Territory Benefaction">
-	<!-- STR +1/WIT+1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="STR">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="856" name="Schuttgart Territory Benefaction">
-	<!-- CON +1/WIT+1 -->
-		<icon initial="icon.weapon_fort_flag_i00"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat type="CON">
-				<power initial="1.0"/>
-			</stat>
-		</effects>
-	</skill>
-	<skill id="869" name="Mercenary Power Strike" max-level="9" action="A1">
-	<!-- 
-		level 1: Delivers a powerful blow that strikes the target with 2272 Power added to P. Atk.
-		level 2: Delivers a powerful blow that strikes the target with 3252 Power added to P. Atk.
-		level 3: Delivers a powerful blow that strikes the target with 4224 Power added to P. Atk.
-		level 4: Delivers a powerful blow that strikes the target with 4312 Power added to P. Atk.
-		level 5: Delivers a powerful blow that strikes the target with 4399 Power added to P. Atk.
-		level 6: Delivers a powerful blow that strikes the target with 4482 Power added to P. Atk.
-		level 7: Delivers a powerful blow that strikes the target with 4563 Power added to P. Atk.
-		level 8: Delivers a powerful blow that strikes the target with 4640 Power added to P. Atk.
-		level 9: Delivers a powerful blow that strikes the target with 4715 Power added to P. Atk.
-	 -->
-		<icon initial="icon.skill0003"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="60">
-				<value level="2">70</value>
-				<value level="3">80</value>
-				<value level="4">81</value>
-				<value level="5">82</value>
-				<value level="6">83</value>
-				<value level="7">84</value>
-				<value level="8">85</value>
-				<value level="9">86</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="8"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="2272.0">
-					<value level="2">3252.0</value>
-					<value level="3">4224.0</value>
-					<value level="4">4312.0</value>
-					<value level="5">4399.0</value>
-					<value level="6">4482.0</value>
-					<value level="7">4563.0</value>
-					<value level="8">4640.0</value>
-					<value level="9">4715.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="870" name="Royal Guard Captain Power Strike" max-level="8" action="A1">
-	<!-- 
-		level 1: Delivers a powerful blow that strikes the target with 3252 Power added to P. Atk.
-		level 2: Delivers a powerful blow that strikes the target with 4224 Power added to P. Atk.
-		level 3: Delivers a powerful blow that strikes the target with 4312 Power added to P. Atk.
-		level 4: Delivers a powerful blow that strikes the target with 4399 Power added to P. Atk.
-		level 5: Delivers a powerful blow that strikes the target with 4482 Power added to P. Atk.
-		level 6: Delivers a powerful blow that strikes the target with 4563 Power added to P. Atk.
-		level 7: Delivers a powerful blow that strikes the target with 4640 Power added to P. Atk.
-		level 8: Delivers a powerful blow that strikes the target with 4715 Power added to P. Atk.
-	 -->
-		<icon initial="icon.skill0003"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="70">
-				<value level="2">80</value>
-				<value level="3">81</value>
-				<value level="4">82</value>
-				<value level="5">83</value>
-				<value level="6">84</value>
-				<value level="7">85</value>
-				<value level="8">86</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-321">
-				<value level="2">-342</value>
-				<value level="3">-343</value>
-				<value level="4">-344</value>
-				<value level="5">-345</value>
-				<value level="6">-346</value>
-				<value level="7">-347</value>
-				<value level="8">-348</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="8"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="3252.0">
-					<value level="2">4224.0</value>
-					<value level="3">4312.0</value>
-					<value level="4">4399.0</value>
-					<value level="5">4482.0</value>
-					<value level="6">4563.0</value>
-					<value level="7">4640.0</value>
-					<value level="8">4715.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="871" name="Might" action="A2" type="MAGIC">
-	<!-- Increases P. Atk. by 15%% for 20 minutes -->
-		<icon initial="icon.skill1068"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="80"/>
-			<cast-range initial="400"/>
-			<reuse initial="2000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="900"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="7"/>
-			<mana initial="35"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="PA_UP">
-			<level initial="3"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="15.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="872" name="Archer Captain Power Shot" max-level="8" action="A1">
-	<!-- 
-		level 1: Uses a bow to attack an enemy at a distance with bonus 4336 Power. Over-hit.
-		level 2: Uses a bow to attack an enemy at a distance with bonus 5632 Power. Over-hit.
-		level 3: Uses a bow to attack an enemy at a distance with bonus 5750 Power. Over-hit.
-		level 4: Uses a bow to attack an enemy at a distance with bonus 5865 Power. Over-hit.
-		level 5: Uses a bow to attack an enemy at a distance with bonus 5976 Power. Over-hit.
-		level 6: Uses a bow to attack an enemy at a distance with bonus 6084 Power. Over-hit.
-		level 7: Uses a bow to attack an enemy at a distance with bonus 6187 Power. Over-hit.
-		level 8: Uses a bow to attack an enemy at a distance with bonus 6286 Power. Over-hit.
-	 -->
-		<icon initial="icon.skill0056"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="70">
-				<value level="2">80</value>
-				<value level="3">81</value>
-				<value level="4">82</value>
-				<value level="5">83</value>
-				<value level="6">84</value>
-				<value level="7">85</value>
-				<value level="8">86</value>
-			</magic-level>
-			<cast-range initial="700"/>
-			<reuse initial="6000"/>
-			<cool-time initial="800"/>
-			<effect-point initial="-646">
-				<value level="2">-684</value>
-				<value level="3">-686</value>
-				<value level="4">-688</value>
-				<value level="5">-690</value>
-				<value level="6">-692</value>
-				<value level="7">-694</value>
-				<value level="8">-696</value>
-			</effect-point>
-			<effect-range initial="1200"/>
-			<hit-time initial="3200"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="16"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0" over-hit="true">
-				<power initial="4336.0">
-					<value level="2">5632.0</value>
-					<value level="3">5750.0</value>
-					<value level="4">5865.0</value>
-					<value level="5">5976.0</value>
-					<value level="6">6084.0</value>
-					<value level="7">6187.0</value>
-					<value level="8">6286.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="873" name="Rapid Shot" action="A2">
-	<!-- Increases your own bow Atk. Spd by 12%% for 20 minutes. -->
-		<icon initial="icon.skill0099"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="70"/>
-			<cast-range initial="-1"/>
-			<reuse initial="3000"/>
-			<effect-point initial="549"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<consume>
-			<mana initial="25"/>
-		</consume>
-		<target />
-		<abnormal type="ATTACK_SPEED_UP_BOW">
-			<level initial="2"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-				<power initial="12.0"/>
-				<weapon-type>BOW </weapon-type>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="874" name="Wizard Captain Flame Strike" max-level="8" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Launches a fireball that causes a widespread fire with bonus 68 M. Atk. Power.
-		level 2: Launches a fireball that causes a widespread fire with bonus 78 M. Atk. Power.
-		level 4: Launches a fireball that causes a widespread fire with bonus 79 M. Atk. Power.
-		level 5: Launches a fireball that causes a widespread fire with bonus 80 M. Atk. Power.
-		level 6: Launches a fireball that causes a widespread fire with bonus 81 M. Atk. Power.
-		level 8: Launches a fireball that causes a widespread fire with bonus 82 M. Atk. Power.
-	 -->
-		<icon initial="icon.skill1181"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="70">
-				<value level="2">80</value>
-				<value level="3">81</value>
-				<value level="4">82</value>
-				<value level="5">83</value>
-				<value level="6">84</value>
-				<value level="7">85</value>
-				<value level="8">86</value>
-			</magic-level>
-			<cast-range initial="500"/>
-			<reuse initial="4000"/>
-			<effect-point initial="-676">
-				<value level="2">-679</value>
-				<value level="3">-681</value>
-				<value level="4">-684</value>
-				<value level="5">-687</value>
-				<value level="6">-689</value>
-				<value level="7">-692</value>
-				<value level="8">-694</value>
-			</effect-point>
-			<effect-range initial="1000"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
+    <skill id="806" name="Magic Obstacle" action="A1">
+        <!-- Blows away Enhanced Abnormal Conditions of the enemies around the golem. -->
+        <icon initial="icon.skill_transform_etc"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="83"/>
+            <cast-range initial="-1"/>
+            <reuse initial="75000"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="49"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <effects>
+            <dispel-by-category category="BUFF" max="5">
+                <power initial="25.0"/>
+            </dispel-by-category>
+        </effects>
+    </skill>
+    <skill id="807" name="Over-hit" action="A2">
+        <!-- Increases the golem's power more by filling him up with special fuel. -->
+        <icon initial="icon.skill_transform_buff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="83"/>
+            <cast-range initial="-1"/>
+            <reuse initial="2000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <consume>
+            <mana initial="25"/>
+        </consume>
+        <target/>
+        <abnormal type="PA_UP">
+            <level initial="99"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="40.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="808" name="Golem Punch" debuff="true" action="A2">
+        <!-- Throws a powerful punch with 11205 Power that both stuns and inflicts damage to the enemy. Over-hit. Power: 11205. -->
+        <icon initial="icon.skill_transform_debuff"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="30">
+            <magic-level initial="83"/>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="660"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="200"/>
+            <hit-time initial="830"/>
+        </attributes>
+        <consume>
+            <mana initial="53"/>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="9"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="11205.0"/>
+            </physical-attack>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="809" name="Golem Tornado Swing" action="A1">
+        <!-- Spins and swings both arms to attack. Over-hit. Power: 6199. -->
+        <icon initial="icon.skill_transform_s_attack"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="83"/>
+            <cast-range initial="-1"/>
+            <reuse initial="8000"/>
+            <cool-time initial="660"/>
+            <effect-point initial="-100"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="830"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="53"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="6199.0"/>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="814" name="Full Swing" max-level="9" action="A1">
+        <!--
+            level 1: Widely swings a two-handed weapon to attack nearby enemies with bonus 2424 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 2: Widely swings a two-handed weapon to attack nearby enemies with bonus 2485 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 3: Widely swings a two-handed weapon to attack nearby enemies with bonus 2545 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 4: Widely swings a two-handed weapon to attack nearby enemies with bonus 2604 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 5: Widely swings a two-handed weapon to attack nearby enemies with bonus 2660 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 6: Widely swings a two-handed weapon to attack nearby enemies with bonus 2716 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 7: Widely swings a two-handed weapon to attack nearby enemies with bonus 2771 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 8: Widely swings a two-handed weapon to attack nearby enemies with bonus 2823 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+            level 9: Widely swings a two-handed weapon to attack nearby enemies with bonus 2874 Power. Requires a two-handed sword or two-handed blunt. Ignores Shield Defense. Critical. Over-hit.
+         -->
+        <icon initial="icon.skill0814"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="76">
+                <value level="2">77</value>
+                <value level="3">78</value>
+                <value level="4">79</value>
+                <value level="5">80</value>
+                <value level="6">81</value>
+                <value level="7">82</value>
+                <value level="8">83</value>
+                <value level="9">84</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="15000"/>
+            <cool-time initial="733"/>
+            <effect-point initial="-169">
+                <value level="2">-172</value>
+                <value level="3">-175</value>
+                <value level="4">-178</value>
+                <value level="5">-181</value>
+                <value level="6">-184</value>
+                <value level="7">-187</value>
+                <value level="8">-190</value>
+                <value level="9">-193</value>
+            </effect-point>
+            <effect-range initial="-1"/>
+            <hit-time initial="1067"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="70">
+                <value level="2">78</value>
+                <value level="3">85</value>
+                <value level="4">92</value>
+                <value level="5">99</value>
+                <value level="6">106</value>
+                <value level="7">113</value>
+                <value level="8">120</value>
+                <value level="9">127</value>
+            </mana>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <conditions>
+            <weapon>
+                <type>TWO_HAND_SWORD DUAL_BLUNT</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+                <power initial="2424.0">
+                    <value level="2">2485.0</value>
+                    <value level="3">2545.0</value>
+                    <value level="4">2604.0</value>
+                    <value level="5">2660.0</value>
+                    <value level="6">2716.0</value>
+                    <value level="7">2771.0</value>
+                    <value level="8">2823.0</value>
+                    <value level="9">2874.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="821" name="Shadow Step" max-level="8" debuff="true" action="A2">
+        <!-- Moves behind the target to stun them. -->
+        <icon initial="icon.skill0821"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
+            <magic-level initial="50">
+                <value level="2">54</value>
+                <value level="3">58</value>
+                <value level="4">62</value>
+                <value level="5">66</value>
+                <value level="6">70</value>
+                <value level="7">74</value>
+                <value level="8">78</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <reuse initial="60000"/>
+            <cool-time initial="200"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1100"/>
+            <hit-time initial="100"/>
+        </attributes>
+        <consume>
+            <mana initial="50">
+                <value level="2">55</value>
+                <value level="3">60</value>
+                <value level="4">65</value>
+                <value level="5">70</value>
+                <value level="6">75</value>
+                <value level="7">80</value>
+                <value level="8">85</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="2"/>
+            <time initial="5"/>
+            <chance initial="70"/>
+        </abnormal>
+        <effects>
+            <effect name="TeleportToTarget"/>
+            <effect name="TargetCancel">
+                <power initial="100.0"/>
+            </effect>
+            <block-all-actions/>
+        </effects>
+    </skill>
+    <skill id="822" name="Repair Golem" max-level="3" action="A1">
+        <!--
+            level 1: Repairs the summoned golem to recover the golem's HP by 8%.
+            level 2: Repairs the summoned golem to recover the golem's HP by 12%.
+            level 3: Repairs the summoned golem to recover the golem's HP by 15%.
+         -->
+        <icon initial="icon.skill0822"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="40">
+                <value level="2">49</value>
+                <value level="3">55</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="2000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="362">
+                <value level="2">481</value>
+                <value level="3">562</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="61">
+                <value level="2">78</value>
+                <value level="3">88</value>
+            </mana>
+        </consume>
+        <target type="SUMMON"/>
+        <conditions>
+            <target scope="TARGET">
+                <race name="CONSTRUCT"/>
+            </target>
+        </conditions>
+        <effects>
+            <effect name="HealPercent">
+                <power initial="8.0">
+                    <value level="2">12.0</value>
+                    <value level="3">15.0</value>
+                </power>
+            </effect>
+        </effects>
+    </skill>
+    <skill id="823" name="Strengthen Golem" max-level="3" action="A2">
+        <!--
+            level 1: Increases the summoned golem's P. Atk. by 8% and Atk. Spd. by 3% for 20 minutes.
+            level 2: Increases the summoned golem's P. Atk. by 12% and Atk. Spd. by 6% for 20 minutes.
+            level 3: Increases the summoned golem's P. Atk. by 15% and Atk. Spd. by 9% for 20 minutes.
+         -->
+        <icon initial="icon.skill0823"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+            <magic-level initial="43">
+                <value level="2">52</value>
+                <value level="3">58</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="408">
+                <value level="2">495</value>
+                <value level="3">549</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana initial="24">
+                <value level="2">36</value>
+                <value level="3">42</value>
+            </mana>
+        </consume>
+        <target type="SUMMON"/>
+        <abnormal type="PA_UP">
+            <level initial="4"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <conditions>
+            <target scope="TARGET">
+                <race name="CONSTRUCT"/>
+            </target>
+        </conditions>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="8.0">
+                    <value level="2">12.0</value>
+                    <value level="3">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0">
+                    <value level="2">6.0</value>
+                    <value level="3">9.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="824" name="Golem Reinforcement" max-level="3" action="A2">
+        <!--
+            level 1: For 20 minutes, equips a summoned golem with an additional armor plate to increase P. Def. by 8% and Max HP by 5%.
+            level 2: For 20 minutes, equips a summoned golem with an additional armor plate to increase P. Def. by 12% and Max HP by 8%.
+            level 3: For 20 minutes, equips a summoned golem with an additional armor plate to increase P. Def. by 15% and Max HP by 10%.
+         -->
+        <icon initial="icon.skill0824"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+            <magic-level initial="40">
+                <value level="2">49</value>
+                <value level="3">55</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="379">
+                <value level="2">467</value>
+                <value level="3">523</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana initial="35">
+                <value level="2">44</value>
+            </mana>
+        </consume>
+        <target type="SUMMON"/>
+        <abnormal type="PD_UP">
+            <level initial="4"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <conditions>
+            <target scope="TARGET">
+                <race name="CONSTRUCT"/>
+            </target>
+        </conditions>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="5.0">
+                    <value level="2">8.0</value>
+                    <value level="3">10.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="8.0">
+                    <value level="2">12.0</value>
+                    <value level="3">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="826" name="Spike" action="A2">
+        <!-- Adds a spike to a blunt weapon. P. Atk. +10%% and Stun accretion +15%% for 20 minutes. -->
+        <icon initial="icon.skill0826"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="49"/>
+            <cast-range initial="400"/>
+            <reuse initial="2000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="467"/>
+            <effect-range initial="900"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana initial="44"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="DWARF_ATTACK_BUFF">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <attack-trait>
+                <trait type="SHOCK">
+                    <power initial="15"/>
+                </trait>
+            </attack-trait>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="10.0"/>
+                <weapon-type>BLUNT</weapon-type>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="828" name="Encase Armor" action="A2">
+        <!-- Thickens the surface of heavy armor to increase P. Def. by 10%% for 20 minute(s). -->
+        <icon initial="icon.skill0828"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="46"/>
+            <cast-range initial="400"/>
+            <reuse initial="2000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="438"/>
+            <effect-range initial="900"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana initial="41"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="DWARF_DEFENCE_BUFF">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="10.0"/>
+                <armor-type>HEAVY</armor-type>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="839" name="Dismount" action="A1">
+        <!-- Dismounts from a ridable mount. -->
+        <icon initial="icon.skilltransform2"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="56"/>
+            <cast-range initial="-1"/>
+            <effect-point initial="10"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="2500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <dispel>
+                <abnormal type="TRANSFORM">
+                    <power initial="-1.0"/>
+                </abnormal>
+            </dispel>
+        </effects>
+    </skill>
+    <skill id="844" name="Outpost Construction" action="A1">
+        <!-- Constructs an outpost that assists clan member recovery and reinforcement during territory battles. Territory Ward Transport is possible. Consumes 120 B-grade Gemstones. -->
+        <icon initial="icon.skill0247"/>
+        <attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
+            <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="600000"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana-init initial="30"/>
+            <mana initial="30"/>
+            <item initial="2132"/>
+            <item-count initial="120"/>
+        </consume>
+        <target/>
+        <conditions>
+            <condition name="BuildAdvanceBase"/>
+        </conditions>
+    </skill>
+    <skill id="845" name="Outpost Demolition" action="A1">
+        <!-- Demolishes an outpost. After demolition, a new outpost can be constructed. -->
+        <icon initial="icon.skill0247"/>
+        <attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
+            <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="600000"/>
+            <effect-range initial="600"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="30"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="846" name="Possess Ward">
+        <!-- Possesses the territory ward, decreasing various battle abilities. -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="-80.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="-80.0"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="-80.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="-80.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="-80.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="847" name="Ward Transport" action="CA1">
+        <!-- With an opposing ward in hand, go back to your outpost and use this skill to move the ward back to your castle. -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="80"/>
+            <cast-range initial="85"/>
+            <reuse initial="1000"/>
+            <effect-range initial="400"/>
+            <hit-time initial="180000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target type="ADVANCE_BASE"/>
+        <channeling skill="0" initial-delay="1000000000" interval="0"/>
+    </skill>
+    <skill id="848" name="Gludio Territory Benefaction">
+        <!-- STR +1/INT +1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="STR">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="849" name="Dion Territory Benefaction">
+        <!-- DEX +1/WIT+1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="DEX">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="850" name="Giran Territory Benefaction">
+        <!-- STR +1/MEN +1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="STR">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="851" name="Oren Territory Benefaction">
+        <!-- CON +1/MEN +1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="CON">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="852" name="Aden Territory Benefaction">
+        <!-- DEX +1/MEN +1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="DEX">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="853" name="Innadril Territory Benefaction">
+        <!-- CON +1/INT +1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="INT">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="854" name="Goddard Territory Benefaction">
+        <!-- DEX +1/INT +1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="INT">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="855" name="Rune Territory Benefaction">
+        <!-- STR +1/WIT+1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="STR">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="856" name="Schuttgart Territory Benefaction">
+        <!-- CON +1/WIT+1 -->
+        <icon initial="icon.weapon_fort_flag_i00"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat type="CON">
+                <power initial="1.0"/>
+            </stat>
+        </effects>
+    </skill>
+    <skill id="869" name="Mercenary Power Strike" max-level="9" action="A1">
+        <!--
+            level 1: Delivers a powerful blow that strikes the target with 2272 Power added to P. Atk.
+            level 2: Delivers a powerful blow that strikes the target with 3252 Power added to P. Atk.
+            level 3: Delivers a powerful blow that strikes the target with 4224 Power added to P. Atk.
+            level 4: Delivers a powerful blow that strikes the target with 4312 Power added to P. Atk.
+            level 5: Delivers a powerful blow that strikes the target with 4399 Power added to P. Atk.
+            level 6: Delivers a powerful blow that strikes the target with 4482 Power added to P. Atk.
+            level 7: Delivers a powerful blow that strikes the target with 4563 Power added to P. Atk.
+            level 8: Delivers a powerful blow that strikes the target with 4640 Power added to P. Atk.
+            level 9: Delivers a powerful blow that strikes the target with 4715 Power added to P. Atk.
+         -->
+        <icon initial="icon.skill0003"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="60">
+                <value level="2">70</value>
+                <value level="3">80</value>
+                <value level="4">81</value>
+                <value level="5">82</value>
+                <value level="6">83</value>
+                <value level="7">84</value>
+                <value level="8">85</value>
+                <value level="9">86</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="8"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="2272.0">
+                    <value level="2">3252.0</value>
+                    <value level="3">4224.0</value>
+                    <value level="4">4312.0</value>
+                    <value level="5">4399.0</value>
+                    <value level="6">4482.0</value>
+                    <value level="7">4563.0</value>
+                    <value level="8">4640.0</value>
+                    <value level="9">4715.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="870" name="Royal Guard Captain Power Strike" max-level="8" action="A1">
+        <!--
+            level 1: Delivers a powerful blow that strikes the target with 3252 Power added to P. Atk.
+            level 2: Delivers a powerful blow that strikes the target with 4224 Power added to P. Atk.
+            level 3: Delivers a powerful blow that strikes the target with 4312 Power added to P. Atk.
+            level 4: Delivers a powerful blow that strikes the target with 4399 Power added to P. Atk.
+            level 5: Delivers a powerful blow that strikes the target with 4482 Power added to P. Atk.
+            level 6: Delivers a powerful blow that strikes the target with 4563 Power added to P. Atk.
+            level 7: Delivers a powerful blow that strikes the target with 4640 Power added to P. Atk.
+            level 8: Delivers a powerful blow that strikes the target with 4715 Power added to P. Atk.
+         -->
+        <icon initial="icon.skill0003"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="70">
+                <value level="2">80</value>
+                <value level="3">81</value>
+                <value level="4">82</value>
+                <value level="5">83</value>
+                <value level="6">84</value>
+                <value level="7">85</value>
+                <value level="8">86</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-321">
+                <value level="2">-342</value>
+                <value level="3">-343</value>
+                <value level="4">-344</value>
+                <value level="5">-345</value>
+                <value level="6">-346</value>
+                <value level="7">-347</value>
+                <value level="8">-348</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="8"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="3252.0">
+                    <value level="2">4224.0</value>
+                    <value level="3">4312.0</value>
+                    <value level="4">4399.0</value>
+                    <value level="5">4482.0</value>
+                    <value level="6">4563.0</value>
+                    <value level="7">4640.0</value>
+                    <value level="8">4715.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="871" name="Might" action="A2" type="MAGIC">
+        <!-- Increases P. Atk. by 15%% for 20 minutes -->
+        <icon initial="icon.skill1068"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="80"/>
+            <cast-range initial="400"/>
+            <reuse initial="2000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="900"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="7"/>
+            <mana initial="35"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="PA_UP">
+            <level initial="3"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="872" name="Archer Captain Power Shot" max-level="8" action="A1">
+        <!--
+            level 1: Uses a bow to attack an enemy at a distance with bonus 4336 Power. Over-hit.
+            level 2: Uses a bow to attack an enemy at a distance with bonus 5632 Power. Over-hit.
+            level 3: Uses a bow to attack an enemy at a distance with bonus 5750 Power. Over-hit.
+            level 4: Uses a bow to attack an enemy at a distance with bonus 5865 Power. Over-hit.
+            level 5: Uses a bow to attack an enemy at a distance with bonus 5976 Power. Over-hit.
+            level 6: Uses a bow to attack an enemy at a distance with bonus 6084 Power. Over-hit.
+            level 7: Uses a bow to attack an enemy at a distance with bonus 6187 Power. Over-hit.
+            level 8: Uses a bow to attack an enemy at a distance with bonus 6286 Power. Over-hit.
+         -->
+        <icon initial="icon.skill0056"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="70">
+                <value level="2">80</value>
+                <value level="3">81</value>
+                <value level="4">82</value>
+                <value level="5">83</value>
+                <value level="6">84</value>
+                <value level="7">85</value>
+                <value level="8">86</value>
+            </magic-level>
+            <cast-range initial="700"/>
+            <reuse initial="6000"/>
+            <cool-time initial="800"/>
+            <effect-point initial="-646">
+                <value level="2">-684</value>
+                <value level="3">-686</value>
+                <value level="4">-688</value>
+                <value level="5">-690</value>
+                <value level="6">-692</value>
+                <value level="7">-694</value>
+                <value level="8">-696</value>
+            </effect-point>
+            <effect-range initial="1200"/>
+            <hit-time initial="3200"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="16"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0" over-hit="true">
+                <power initial="4336.0">
+                    <value level="2">5632.0</value>
+                    <value level="3">5750.0</value>
+                    <value level="4">5865.0</value>
+                    <value level="5">5976.0</value>
+                    <value level="6">6084.0</value>
+                    <value level="7">6187.0</value>
+                    <value level="8">6286.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="873" name="Rapid Shot" action="A2">
+        <!-- Increases your own bow Atk. Spd by 12%% for 20 minutes. -->
+        <icon initial="icon.skill0099"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="70"/>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <effect-point initial="549"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <consume>
+            <mana initial="25"/>
+        </consume>
+        <target/>
+        <abnormal type="ATTACK_SPEED_UP_BOW">
+            <level initial="2"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="12.0"/>
+                <weapon-type>BOW</weapon-type>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="874" name="Wizard Captain Flame Strike" max-level="8" action="A1" type="MAGIC">
+        <!--
+            level 1: Launches a fireball that causes a widespread fire with bonus 68 M. Atk. Power.
+            level 2: Launches a fireball that causes a widespread fire with bonus 78 M. Atk. Power.
+            level 4: Launches a fireball that causes a widespread fire with bonus 79 M. Atk. Power.
+            level 5: Launches a fireball that causes a widespread fire with bonus 80 M. Atk. Power.
+            level 6: Launches a fireball that causes a widespread fire with bonus 81 M. Atk. Power.
+            level 8: Launches a fireball that causes a widespread fire with bonus 82 M. Atk. Power.
+         -->
+        <icon initial="icon.skill1181"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="70">
+                <value level="2">80</value>
+                <value level="3">81</value>
+                <value level="4">82</value>
+                <value level="5">83</value>
+                <value level="6">84</value>
+                <value level="7">85</value>
+                <value level="8">86</value>
+            </magic-level>
+            <cast-range initial="500"/>
+            <reuse initial="4000"/>
+            <effect-point initial="-676">
+                <value level="2">-679</value>
+                <value level="3">-681</value>
+                <value level="4">-684</value>
+                <value level="5">-687</value>
+                <value level="6">-689</value>
+                <value level="7">-692</value>
+                <value level="8">-694</value>
+            </effect-point>
+            <effect-range initial="1000"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="20"/>
-		</attributes>
-		<consume>
-			<mana-init initial="8"/>
-			<mana initial="40"/>
-		</consume>
-		<target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12" />
-		<effects>
-			<magical-attack>
-				<power initial="68.0">
-					<value level="2">78.0</value>
-					<value level="4">79.0</value>
-					<value level="5">80.0</value>
-					<value level="6">81.0</value>
-					<value level="8">82.0</value>
-				</power>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="875" name="Empower" action="A2" type="MAGIC">
-	<!-- Increases M. Atk. power by 75%% for 20 minutes. -->
-		<icon initial="icon.skill1059"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="70"/>
-			<cast-range initial="400"/>
-			<reuse initial="2000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="900"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="14"/>
-			<mana initial="70"/>
-		</consume>
-		<target type="TARGET" />
-		<abnormal type="MA_UP">
-			<level initial="3"/>
-			<time initial="1200"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK" mode="PER">
-				<power initial="75.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="876" name="Centurion Enuma Elish" max-level="8" action="A1">
-	<!-- 
-		level 1: Attacks the enemy using the mighty Sword of Creation with 4878 Power added to P. Atk.
-		level 2: Attacks the enemy using the mighty Sword of Creation with 6335 Power added to P. Atk.
-		level 3: Attacks the enemy using the mighty Sword of Creation with 6468 Power added to P. Atk.
-		level 4: Attacks the enemy using the mighty Sword of Creation with 6598 Power added to P. Atk.
-		level 5: Attacks the enemy using the mighty Sword of Creation with 6723 Power added to P. Atk.
-		level 6: Attacks the enemy using the mighty Sword of Creation with 6844 Power added to P. Atk.
-		level 7: Attacks the enemy using the mighty Sword of Creation with 6960 Power added to P. Atk.
-		level 8: Attacks the enemy using the mighty Sword of Creation with 7072 Power added to P. Atk.
-	 -->
-		<icon initial="icon.skill0526"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="70">
-				<value level="2">80</value>
-				<value level="3">81</value>
-				<value level="4">82</value>
-				<value level="5">83</value>
-				<value level="6">84</value>
-				<value level="7">85</value>
-				<value level="8">86</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="75000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-646">
-				<value level="2">-684</value>
-				<value level="3">-686</value>
-				<value level="4">-688</value>
-				<value level="5">-690</value>
-				<value level="6">-692</value>
-				<value level="7">-694</value>
-				<value level="8">-696</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume soul="5">
-			<mana initial="25"/>
-		</consume>
-		<target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12" >
-			<fan-range start-angle="0" radius="400" angle="90"/>
-		</target>
-		<effects>
-			<physical-soul-attack>				<power initial="4878.0">
-					<value level="2">6335.0</value>
-					<value level="3">6468.0</value>
-					<value level="4">6598.0</value>
-					<value level="5">6723.0</value>
-					<value level="6">6844.0</value>
-					<value level="7">6960.0</value>
-					<value level="8">7072.0</value>
-				</power>
-			</physical-soul-attack>
-		</effects>
-	</skill>
-	<skill id="877" name="Centurion Disarm" max-level="8" debuff="true" action="A2">
-	<!-- Disarms the enemy and prevents them from equipping a weapon for 5 seconds. -->
-		<icon initial="icon.skill0485"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DISARM" level-bonus-rate="20">
-			<magic-level initial="70">
-				<value level="2">80</value>
-				<value level="3">81</value>
-				<value level="4">82</value>
-				<value level="5">83</value>
-				<value level="6">84</value>
-				<value level="7">85</value>
-				<value level="8">86</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="8000"/>
-			<effect-point initial="-646">
-				<value level="2">-684</value>
-				<value level="3">-686</value>
-				<value level="4">-688</value>
-				<value level="5">-690</value>
-				<value level="6">-692</value>
-				<value level="7">-694</value>
-				<value level="8">-696</value>
-			</effect-point>
-			<effect-range initial="200"/>
-			<hit-time initial="1500"/>
-		</attributes>
-		<consume soul="1">
-			<mana initial="25"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="DISARM" visual="DOT_BLEEDING" >
-			<level initial="1"/>
-			<time initial="5"/>
-			<chance initial="70"/>
-		</abnormal>
-		<effects>
-			<effect name="Disarm"/>
-			<stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK" mode="PER">
-				<power initial="-40.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="878" name="Knight Captain Power Strike" max-level="7" action="A1">
-	<!-- 
-		level 1: Inflicts a pounding attack on your enemy with 5068 Power added to P. Atk.
-		level 2: Inflicts a pounding attack on your enemy with 5175 Power added to P. Atk.
-		level 3: Inflicts a pounding attack on your enemy with 5278 Power added to P. Atk.
-		level 4: Inflicts a pounding attack on your enemy with 5379 Power added to P. Atk.
-		level 5: Inflicts a pounding attack on your enemy with 5475 Power added to P. Atk.
-		level 6: Inflicts a pounding attack on your enemy with 5568 Power added to P. Atk.
-		level 7: Inflicts a pounding attack on your enemy with 5658 Power added to P. Atk.
-	 -->
-		<icon initial="icon.skill0003"/>
-		<attributes next-action="ATTACK" magic-critical-rate="5.0">
-			<magic-level initial="80">
-				<value level="2">81</value>
-				<value level="3">82</value>
-				<value level="4">83</value>
-				<value level="5">84</value>
-				<value level="6">85</value>
-				<value level="7">86</value>
-			</magic-level>
-			<cast-range initial="40"/>
-			<reuse initial="3000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-323">
-				<value level="2">-342</value>
-				<value level="3">-343</value>
-				<value level="4">-344</value>
-				<value level="5">-345</value>
-				<value level="6">-346</value>
-				<value level="7">-347</value>
-			</effect-point>
-			<effect-range initial="400"/>
-			<hit-time initial="1080"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="1"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="5068.0">
-					<value level="2">5175.0</value>
-					<value level="3">5278.0</value>
-					<value level="4">5379.0</value>
-					<value level="5">5475.0</value>
-					<value level="6">5568.0</value>
-					<value level="7">5658.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="879" name="Knight Captain Curse Fear" max-level="7" debuff="true" action="A2" type="MAGIC">
-	<!-- Causes your enemy to flee in fear. -->
-		<icon initial="icon.skill1169"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
-			<magic-level initial="80">
-				<value level="2">81</value>
-				<value level="3">82</value>
-				<value level="4">83</value>
-				<value level="5">84</value>
-				<value level="6">85</value>
-				<value level="7">86</value>
-			</magic-level>
-			<cast-range initial="600"/>
-			<reuse initial="3000"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1100"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="14"/>
-			<mana initial="70"/>
-		</consume>
-		<target type="ENEMY_ONLY" />
-		<abnormal type="TURN_FLEE" visual="TURN_FLEE" >
-			<level initial="1"/>
-			<time initial="10"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<effect name="BlockControl"/>
-			<effect name="Fear"/>
-		</effects>
-	</skill>
-	<skill id="880" name="Knight Captain Ultimate Defense" action="A2">
-	<!-- For 30 sec., increases P. Def. by 3600, M. Def. by 2700 and Buff-canceling Attack Resistance by 80%%. The player cannot move while the effect lasts. -->
-		<icon initial="icon.skill0110"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="80"/>
-			<cast-range initial="-1"/>
-			<reuse initial="900000"/>
-			<effect-point initial="438"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<consume>
-			<mana initial="21"/>
-		</consume>
-		<target />
-		<abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE" >
-			<level initial="2"/>
-			<time initial="30"/>
-			<chance initial="-1"/>
-		</abnormal>
-		<effects>
-			<effect name="BlockMove"/>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="2700.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE">
-				<power initial="3600.0"/>
-			</stat-modify>
-			<resist-dispel-by-category category="BUFF">
-				<power initial="-80.0"/>
-			</resist-dispel-by-category>
-		</effects>
-	</skill>
-	<skill id="881" name="Commander Twister" max-level="7" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Creates a powerful cyclone that inflicts Wind damage on the enemy. 116. Power.
-		level 2: Creates a powerful cyclone that inflicts Wind damage on the enemy. 117. Power.
-		level 3: Creates a powerful cyclone that inflicts Wind damage on the enemy. 119. Power.
-		level 4: Creates a powerful cyclone that inflicts Wind damage on the enemy. 120. Power.
-		level 5: Creates a powerful cyclone that inflicts Wind damage on the enemy. 121. Power.
-		level 6: Creates a powerful cyclone that inflicts Wind damage on the enemy. 122. Power.
-		level 7: Creates a powerful cyclone that inflicts Wind damage on the enemy. 123. Power.
-	 -->
-		<icon initial="icon.skill1178"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="80">
-				<value level="2">81</value>
-				<value level="3">82</value>
-				<value level="4">83</value>
-				<value level="5">84</value>
-				<value level="6">85</value>
-				<value level="7">86</value>
-			</magic-level>
-			<cast-range initial="750"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1250"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
+            <element type="FIRE" value="20"/>
+        </attributes>
+        <consume>
+            <mana-init initial="8"/>
+            <mana initial="40"/>
+        </consume>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12"/>
+        <effects>
+            <magical-attack>
+                <power initial="68.0">
+                    <value level="2">78.0</value>
+                    <value level="4">79.0</value>
+                    <value level="5">80.0</value>
+                    <value level="6">81.0</value>
+                    <value level="8">82.0</value>
+                </power>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="875" name="Empower" action="A2" type="MAGIC">
+        <!-- Increases M. Atk. power by 75%% for 20 minutes. -->
+        <icon initial="icon.skill1059"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="70"/>
+            <cast-range initial="400"/>
+            <reuse initial="2000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="900"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="14"/>
+            <mana initial="70"/>
+        </consume>
+        <target type="TARGET"/>
+        <abnormal type="MA_UP">
+            <level initial="3"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="75.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="876" name="Centurion Enuma Elish" max-level="8" action="A1">
+        <!--
+            level 1: Attacks the enemy using the mighty Sword of Creation with 4878 Power added to P. Atk.
+            level 2: Attacks the enemy using the mighty Sword of Creation with 6335 Power added to P. Atk.
+            level 3: Attacks the enemy using the mighty Sword of Creation with 6468 Power added to P. Atk.
+            level 4: Attacks the enemy using the mighty Sword of Creation with 6598 Power added to P. Atk.
+            level 5: Attacks the enemy using the mighty Sword of Creation with 6723 Power added to P. Atk.
+            level 6: Attacks the enemy using the mighty Sword of Creation with 6844 Power added to P. Atk.
+            level 7: Attacks the enemy using the mighty Sword of Creation with 6960 Power added to P. Atk.
+            level 8: Attacks the enemy using the mighty Sword of Creation with 7072 Power added to P. Atk.
+         -->
+        <icon initial="icon.skill0526"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="70">
+                <value level="2">80</value>
+                <value level="3">81</value>
+                <value level="4">82</value>
+                <value level="5">83</value>
+                <value level="6">84</value>
+                <value level="7">85</value>
+                <value level="8">86</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="75000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-646">
+                <value level="2">-684</value>
+                <value level="3">-686</value>
+                <value level="4">-688</value>
+                <value level="5">-690</value>
+                <value level="6">-692</value>
+                <value level="7">-694</value>
+                <value level="8">-696</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume soul="5">
+            <mana initial="25"/>
+        </consume>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="400" angle="90"/>
+        </target>
+        <effects>
+            <physical-soul-attack>
+                <power initial="4878.0">
+                    <value level="2">6335.0</value>
+                    <value level="3">6468.0</value>
+                    <value level="4">6598.0</value>
+                    <value level="5">6723.0</value>
+                    <value level="6">6844.0</value>
+                    <value level="7">6960.0</value>
+                    <value level="8">7072.0</value>
+                </power>
+            </physical-soul-attack>
+        </effects>
+    </skill>
+    <skill id="877" name="Centurion Disarm" max-level="8" debuff="true" action="A2">
+        <!-- Disarms the enemy and prevents them from equipping a weapon for 5 seconds. -->
+        <icon initial="icon.skill0485"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DISARM" level-bonus-rate="20">
+            <magic-level initial="70">
+                <value level="2">80</value>
+                <value level="3">81</value>
+                <value level="4">82</value>
+                <value level="5">83</value>
+                <value level="6">84</value>
+                <value level="7">85</value>
+                <value level="8">86</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="8000"/>
+            <effect-point initial="-646">
+                <value level="2">-684</value>
+                <value level="3">-686</value>
+                <value level="4">-688</value>
+                <value level="5">-690</value>
+                <value level="6">-692</value>
+                <value level="7">-694</value>
+                <value level="8">-696</value>
+            </effect-point>
+            <effect-range initial="200"/>
+            <hit-time initial="1500"/>
+        </attributes>
+        <consume soul="1">
+            <mana initial="25"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="DISARM" visual="DOT_BLEEDING">
+            <level initial="1"/>
+            <time initial="5"/>
+            <chance initial="70"/>
+        </abnormal>
+        <effects>
+            <effect name="Disarm"/>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="-40.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="878" name="Knight Captain Power Strike" max-level="7" action="A1">
+        <!--
+            level 1: Inflicts a pounding attack on your enemy with 5068 Power added to P. Atk.
+            level 2: Inflicts a pounding attack on your enemy with 5175 Power added to P. Atk.
+            level 3: Inflicts a pounding attack on your enemy with 5278 Power added to P. Atk.
+            level 4: Inflicts a pounding attack on your enemy with 5379 Power added to P. Atk.
+            level 5: Inflicts a pounding attack on your enemy with 5475 Power added to P. Atk.
+            level 6: Inflicts a pounding attack on your enemy with 5568 Power added to P. Atk.
+            level 7: Inflicts a pounding attack on your enemy with 5658 Power added to P. Atk.
+         -->
+        <icon initial="icon.skill0003"/>
+        <attributes next-action="ATTACK" magic-critical-rate="5.0">
+            <magic-level initial="80">
+                <value level="2">81</value>
+                <value level="3">82</value>
+                <value level="4">83</value>
+                <value level="5">84</value>
+                <value level="6">85</value>
+                <value level="7">86</value>
+            </magic-level>
+            <cast-range initial="40"/>
+            <reuse initial="3000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-323">
+                <value level="2">-342</value>
+                <value level="3">-343</value>
+                <value level="4">-344</value>
+                <value level="5">-345</value>
+                <value level="6">-346</value>
+                <value level="7">-347</value>
+            </effect-point>
+            <effect-range initial="400"/>
+            <hit-time initial="1080"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="1"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="5068.0">
+                    <value level="2">5175.0</value>
+                    <value level="3">5278.0</value>
+                    <value level="4">5379.0</value>
+                    <value level="5">5475.0</value>
+                    <value level="6">5568.0</value>
+                    <value level="7">5658.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="879" name="Knight Captain Curse Fear" max-level="7" debuff="true" action="A2" type="MAGIC">
+        <!-- Causes your enemy to flee in fear. -->
+        <icon initial="icon.skill1169"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
+            <magic-level initial="80">
+                <value level="2">81</value>
+                <value level="3">82</value>
+                <value level="4">83</value>
+                <value level="5">84</value>
+                <value level="6">85</value>
+                <value level="7">86</value>
+            </magic-level>
+            <cast-range initial="600"/>
+            <reuse initial="3000"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1100"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="14"/>
+            <mana initial="70"/>
+        </consume>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <effect name="BlockControl"/>
+            <effect name="Fear"/>
+        </effects>
+    </skill>
+    <skill id="880" name="Knight Captain Ultimate Defense" action="A2">
+        <!-- For 30 sec., increases P. Def. by 3600, M. Def. by 2700 and Buff-canceling Attack Resistance by 80%%. The player cannot move while the effect lasts. -->
+        <icon initial="icon.skill0110"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+            <magic-level initial="80"/>
+            <cast-range initial="-1"/>
+            <reuse initial="900000"/>
+            <effect-point initial="438"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <consume>
+            <mana initial="21"/>
+        </consume>
+        <target/>
+        <abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE">
+            <level initial="2"/>
+            <time initial="30"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <effect name="BlockMove"/>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="2700.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="3600.0"/>
+            </stat-modify>
+            <resist-dispel-by-category category="BUFF">
+                <power initial="-80.0"/>
+            </resist-dispel-by-category>
+        </effects>
+    </skill>
+    <skill id="881" name="Commander Twister" max-level="7" action="A1" type="MAGIC">
+        <!--
+            level 1: Creates a powerful cyclone that inflicts Wind damage on the enemy. 116. Power.
+            level 2: Creates a powerful cyclone that inflicts Wind damage on the enemy. 117. Power.
+            level 3: Creates a powerful cyclone that inflicts Wind damage on the enemy. 119. Power.
+            level 4: Creates a powerful cyclone that inflicts Wind damage on the enemy. 120. Power.
+            level 5: Creates a powerful cyclone that inflicts Wind damage on the enemy. 121. Power.
+            level 6: Creates a powerful cyclone that inflicts Wind damage on the enemy. 122. Power.
+            level 7: Creates a powerful cyclone that inflicts Wind damage on the enemy. 123. Power.
+         -->
+        <icon initial="icon.skill1178"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="80">
+                <value level="2">81</value>
+                <value level="3">82</value>
+                <value level="4">83</value>
+                <value level="5">84</value>
+                <value level="6">85</value>
+                <value level="7">86</value>
+            </magic-level>
+            <cast-range initial="750"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1250"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="WIND" value="25"/>
-		</attributes>
-		<consume>
-			<mana-init initial="14"/>
-			<mana initial="70"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<magical-attack-range shield-defense="40">
-				<power initial="116.0">
-					<value level="2">117.0</value>
-					<value level="3">119.0</value>
-					<value level="4">120.0</value>
-					<value level="5">121.0</value>
-					<value level="6">122.0</value>
-					<value level="7">123.0</value>
-				</power>
-			</magical-attack-range>
-		</effects>
-	</skill>
-	<skill id="882" name="Commander Blaze" max-level="7" action="A1" type="MAGIC">
-	<!-- 
-		level 1: Ignites your body. Power 116.
-		level 2: Ignites your body. Power 117.
-		level 3: Ignites your body. Power 119.
-		level 4: Ignites your body. Power 120.
-		level 5: Ignites your body. Power 121.
-		level 6: Ignites your body. Power 122.
-		level 7: Ignites your body. Power 123.
-	 -->
-		<icon initial="icon.skill1220"/>
-		<attributes magic-critical-rate="5.0">
-			<magic-level initial="80">
-				<value level="2">81</value>
-				<value level="3">82</value>
-				<value level="4">83</value>
-				<value level="5">84</value>
-				<value level="6">85</value>
-				<value level="7">86</value>
-			</magic-level>
-			<cast-range initial="750"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="1250"/>
-			<hit-time initial="4000"/>
-			<activate-rate initial="-1"/>
+            <element type="WIND" value="25"/>
+        </attributes>
+        <consume>
+            <mana-init initial="14"/>
+            <mana initial="70"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <magical-attack-range shield-defense="40">
+                <power initial="116.0">
+                    <value level="2">117.0</value>
+                    <value level="3">119.0</value>
+                    <value level="4">120.0</value>
+                    <value level="5">121.0</value>
+                    <value level="6">122.0</value>
+                    <value level="7">123.0</value>
+                </power>
+            </magical-attack-range>
+        </effects>
+    </skill>
+    <skill id="882" name="Commander Blaze" max-level="7" action="A1" type="MAGIC">
+        <!--
+            level 1: Ignites your body. Power 116.
+            level 2: Ignites your body. Power 117.
+            level 3: Ignites your body. Power 119.
+            level 4: Ignites your body. Power 120.
+            level 5: Ignites your body. Power 121.
+            level 6: Ignites your body. Power 122.
+            level 7: Ignites your body. Power 123.
+         -->
+        <icon initial="icon.skill1220"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="80">
+                <value level="2">81</value>
+                <value level="3">82</value>
+                <value level="4">83</value>
+                <value level="5">84</value>
+                <value level="6">85</value>
+                <value level="7">86</value>
+            </magic-level>
+            <cast-range initial="750"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="1250"/>
+            <hit-time initial="4000"/>
+            <activate-rate initial="-1"/>
 
-			<element type="FIRE" value="25"/>
-		</attributes>
-		<consume>
-			<mana-init initial="14"/>
-			<mana initial="70"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<magical-attack>
-				<power initial="116.0">
-					<value level="2">117.0</value>
-					<value level="3">119.0</value>
-					<value level="4">120.0</value>
-					<value level="5">121.0</value>
-					<value level="6">122.0</value>
-					<value level="7">123.0</value>
-				</power>
-			</magical-attack>
-		</effects>
-	</skill>
-	<skill id="883" name="Commander Seal of Binding" max-level="7" debuff="true" action="A2" type="MAGIC">
-	<!-- Holds nearby enemies for 30 seconds. -->
-		<icon initial="icon.skill1208"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30">
-			<magic-level initial="80">
-				<value level="2">81</value>
-				<value level="3">82</value>
-				<value level="4">83</value>
-				<value level="5">84</value>
-				<value level="6">85</value>
-				<value level="7">86</value>
-			</magic-level>
-			<cast-range initial="-1"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="4000"/>
-		</attributes>
-		<consume>
-			<mana-init initial="14"/>
-			<mana initial="70"/>
-		</consume>
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10" />
-		<abnormal type="ROOT_MAGICALLY" visual="ROOT" >
-			<level initial="1"/>
-			<time initial="30"/>
-			<chance initial="40"/>
-		</abnormal>
-		<effects>
-			<effect name="Root"/>
-			<defence-trait>
-				<trait type="HOLD">
-					<power initial="100.0"/>
-				</trait>
-			</defence-trait>
-		</effects>
-	</skill>
+            <element type="FIRE" value="25"/>
+        </attributes>
+        <consume>
+            <mana-init initial="14"/>
+            <mana initial="70"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <magical-attack>
+                <power initial="116.0">
+                    <value level="2">117.0</value>
+                    <value level="3">119.0</value>
+                    <value level="4">120.0</value>
+                    <value level="5">121.0</value>
+                    <value level="6">122.0</value>
+                    <value level="7">123.0</value>
+                </power>
+            </magical-attack>
+        </effects>
+    </skill>
+    <skill id="883" name="Commander Seal of Binding" max-level="7" debuff="true" action="A2" type="MAGIC">
+        <!-- Holds nearby enemies for 30 seconds. -->
+        <icon initial="icon.skill1208"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30">
+            <magic-level initial="80">
+                <value level="2">81</value>
+                <value level="3">82</value>
+                <value level="4">83</value>
+                <value level="5">84</value>
+                <value level="6">85</value>
+                <value level="7">86</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <consume>
+            <mana-init initial="14"/>
+            <mana initial="70"/>
+        </consume>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
+        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+            <level initial="1"/>
+            <time initial="30"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <effect name="Root"/>
+            <defence-trait>
+                <trait type="HOLD">
+                    <power initial="100.0"/>
+                </trait>
+            </defence-trait>
+        </effects>
+    </skill>
 </list>

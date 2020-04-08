@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="3498" name="Special Ability: Light">
-	<!-- Increases weight limit. -->
-		<icon initial="icon.skill0150"/>
-		<attributes property="MAGIC" magic-critical-rate="5.0">
-			<magic-level initial="46"/>
-			<cast-range initial="-1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-		<effects>
-			<stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT" mode="PER">
-				<power initial="20.0"/>
-			</stat-modify>
-		</effects>
-	</skill>
+    <skill id="3498" name="Special Ability: Light">
+        <!-- Increases weight limit. -->
+        <icon initial="icon.skill0150"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
+        </attributes>
+        <target/>
+        <effects>
+            <stat-modify mode="PER" stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
+                <power initial="20.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
 </list>

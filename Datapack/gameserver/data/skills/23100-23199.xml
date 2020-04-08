@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="23174" name="Soul Stealth" action="A1">
-	<!-- Resurrects and fully restores your Stats. Buff and debuff effects remain after death. However, Noblesse Blessing and Lucky Charm disappear. Cooldown is 12 hours. -->
-		<icon initial="icon.skill_agathion_special"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="600"/>
-			<reuse initial="43200000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
+    <skill id="23174" name="Soul Stealth" action="A1">
+        <!-- Resurrects and fully restores your Stats. Buff and debuff effects remain after death. However, Noblesse Blessing and Lucky Charm disappear. Cooldown is 12 hours. -->
+        <icon initial="icon.skill_agathion_special"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="600"/>
+            <reuse initial="43200000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
 </list>

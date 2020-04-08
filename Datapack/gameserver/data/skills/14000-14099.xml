@@ -1,105 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="14000" name="Berserk" action="A1">
-	<!-- Increases Atk. Spd. And P. Atk. -->
-		<icon initial="icon.skill1062"/>
-		<attributes property="PHYSIC">
-			<cast-range initial="-1"/>
-			<reuse initial="6000"/>
-			<effect-point initial="100"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target />
-	</skill>
-	<skill id="14001" name="Cross Slash" max-level="3" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0003"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95">
-				<value level="2">96</value>
-				<value level="3">97</value>
-			</magic-level>
-			<cast-range initial="150"/>
-			<reuse initial="2500"/>
-			<effect-point initial="-354"/>
-			<effect-range initial="400"/>
-			<hit-time initial="1500"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="85">
-				<value level="2">86</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="132687.0">
-					<value level="2">138779.0</value>
-					<value level="3">64068.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="14002" name="Transfixion Attack" max-level="3" action="DA1">
-	<!-- none -->
-		<icon initial="icon.skill0484"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="95">
-				<value level="2">96</value>
-				<value level="3">97</value>
-			</magic-level>
-			<cast-range initial="400"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-352">
-				<value level="2">-353</value>
-			</effect-point>
-			<effect-range initial="600"/>
-			<hit-time initial="100"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="20"/>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="132687.0">
-					<value level="2">138779.0</value>
-					<value level="3">168092.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
-	<skill id="14055" name="Power Shot" max-level="2" action="A1">
-	<!-- none -->
-		<icon initial="icon.skill0056"/>
-		<attributes magic-critical-rate="-5.0">
-			<magic-level initial="92">
-				<value level="2">93</value>
-			</magic-level>
-			<cast-range initial="700"/>
-			<reuse initial="5000"/>
-			<effect-point initial="-150">
-				<value level="2">-200</value>
-			</effect-point>
-			<effect-range initial="1000"/>
-			<hit-time initial="3000"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<consume>
-			<mana initial="83">
-				<value level="2">84</value>
-			</mana>
-		</consume>
-		<target type="ENEMY" />
-		<effects>
-			<physical-attack critical-chance="0.0">
-				<power initial="12411.0">
-					<value level="2">12977.0</value>
-				</power>
-			</physical-attack>
-		</effects>
-	</skill>
+    <skill id="14000" name="Berserk" action="A1">
+        <!-- Increases Atk. Spd. And P. Atk. -->
+        <icon initial="icon.skill1062"/>
+        <attributes property="PHYSIC">
+            <cast-range initial="-1"/>
+            <reuse initial="6000"/>
+            <effect-point initial="100"/>
+            <effect-range initial="-1"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="14001" name="Cross Slash" max-level="3" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0003"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95">
+                <value level="2">96</value>
+                <value level="3">97</value>
+            </magic-level>
+            <cast-range initial="150"/>
+            <reuse initial="2500"/>
+            <effect-point initial="-354"/>
+            <effect-range initial="400"/>
+            <hit-time initial="1500"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="85">
+                <value level="2">86</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="132687.0">
+                    <value level="2">138779.0</value>
+                    <value level="3">64068.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="14002" name="Transfixion Attack" max-level="3" action="DA1">
+        <!-- none -->
+        <icon initial="icon.skill0484"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="95">
+                <value level="2">96</value>
+                <value level="3">97</value>
+            </magic-level>
+            <cast-range initial="400"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-352">
+                <value level="2">-353</value>
+            </effect-point>
+            <effect-range initial="600"/>
+            <hit-time initial="100"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="20"/>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="132687.0">
+                    <value level="2">138779.0</value>
+                    <value level="3">168092.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
+    <skill id="14055" name="Power Shot" max-level="2" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0056"/>
+        <attributes magic-critical-rate="-5.0">
+            <magic-level initial="92">
+                <value level="2">93</value>
+            </magic-level>
+            <cast-range initial="700"/>
+            <reuse initial="5000"/>
+            <effect-point initial="-150">
+                <value level="2">-200</value>
+            </effect-point>
+            <effect-range initial="1000"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <consume>
+            <mana initial="83">
+                <value level="2">84</value>
+            </mana>
+        </consume>
+        <target type="ENEMY"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="12411.0">
+                    <value level="2">12977.0</value>
+                </power>
+            </physical-attack>
+        </effects>
+    </skill>
 </list>
