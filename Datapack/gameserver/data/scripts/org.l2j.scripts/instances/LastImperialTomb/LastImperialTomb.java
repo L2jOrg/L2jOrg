@@ -35,7 +35,7 @@ import org.l2j.gameserver.network.serverpackets.*;
  * Last Imperial Tomb AI
  * @author Mobius (reworked from L2J version)
  * @author RobikBobik (Updated to Classic: The Kamael)
- * @TODO: When halisha uses second transform, Halisha Breath need to stop attack.
+ * TODO: When halisha uses second transform, Halisha Breath need to stop attack.
  */
 public class LastImperialTomb extends AbstractInstance
 {
