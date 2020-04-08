@@ -10,9 +10,8 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
  * @author RobikBobik
- * @NOTE: Party instance retail like work.
- * @TODO: Find what all drops from GOLBERG_TREASURE_CHEST
- * @TODO: Golberg skills
+ * TODO: Find what all drops from GOLBERG_TREASURE_CHEST
+ * TODO: Golberg skills
  */
 public class GolbergRoom extends AbstractInstance
 {
