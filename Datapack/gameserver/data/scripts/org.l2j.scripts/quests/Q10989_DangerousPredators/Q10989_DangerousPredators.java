@@ -31,7 +31,6 @@ import java.util.Set;
 
 
 /**
- * Dangerous Predators (10989)
  * @author RobikBobik
  * @Notee: Based on NA server September 2019
  */
