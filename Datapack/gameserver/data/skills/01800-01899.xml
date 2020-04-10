@@ -195,7 +195,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power/>
+                <power initial="15.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -220,7 +220,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-                <power/>
+                <power initial="15.0"/>
             </stat-modify>
         </effects>
     </skill>

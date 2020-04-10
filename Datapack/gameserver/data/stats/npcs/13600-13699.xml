@@ -404,18 +404,23 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2823.47946968528" hpRegen="10.5" mp="1507.8" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+            <skill id="4441" level="5"/> <!-- Greater Mental Attack Resistance -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="32" />
+			<height normal="29" />
 		</collision>
 	</npc>
 </list>

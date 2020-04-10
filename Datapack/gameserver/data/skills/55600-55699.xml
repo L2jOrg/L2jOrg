@@ -1134,7 +1134,7 @@
     <skill id="55690" name="Transformation Scroll: Pirate" action="A1">
         <!-- Transformation into a Pirate. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
             <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1145,7 +1145,7 @@
     <skill id="55691" name="Transformation Scroll: Dark Assassin" action="A1">
         <!-- Transformation into a Dark Assassin. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
             <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1156,18 +1156,58 @@
     <skill id="55692" name="Transformation Scroll: White Assassin" action="A1">
         <!-- Transformation into a White Assassin. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
             <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
-        </attributes>
+        </attributes>      
         <target/>
+        <abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="5.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55693" name="Blue Dynasty Transformation Scroll" action="A1">
         <!-- Makes you armor look like Blue Dynasty one. Fighting characteristics are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i01"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
             <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
@@ -1178,7 +1218,7 @@
     <skill id="55694" name="Red Zubei Transformation Scroll" action="A1">
         <!-- Makes you armor look like Red Zubei one. Fighting characteristics are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i04"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
             <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>

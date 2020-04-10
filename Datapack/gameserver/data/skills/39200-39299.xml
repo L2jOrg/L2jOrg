@@ -200,14 +200,54 @@
     <skill id="39210" name="White Assassin Transformation" action="A1">
         <!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
         <icon initial="icon.scroll_of_verification_i06"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
             <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
-        </attributes>
+        </attributes>      
         <target/>
+        <abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="5.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39211" name="Saviour's Scroll of Growth" action="A1">
         <!-- For 2 hours, XP/SP Gain +50%% due to the energy of the savior. Cooldown is 2 hours. The Savior's Scroll of Growth remains after death. -->
