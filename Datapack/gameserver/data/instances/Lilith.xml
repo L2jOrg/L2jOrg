@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instance id="199" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
-    <time duration="120" empty="10" />
-    <removeBuffs type="ALL" />
+    <time duration="120" empty="0" />
     <locations>
         <enter type="FIXED">
             <location x="185657" y="-10112" z="-5496" />
@@ -13,7 +12,7 @@
         <condition type="CommandChannel" />
         <condition type="CommandChannelLeader" />
         <condition type="GroupMin">
-            <param name="limit" value="90" />
+            <param name="limit" value="18" />
         </condition>
         <condition type="Level">
             <param name="min" value="76" />
@@ -21,10 +20,10 @@
         <condition type="Distance" />
         <condition type="Reenter" />
     </conditions>
-       <reenter apply="ON_ENTER">
-            <reset day="TUESDAY" hour="9" minute="30" />
-            <reset day="FRIDAY" hour="9" minute="30" />
-        </reenter>
+    <reenter apply="ON_ENTER">
+        <reset day="TUESDAY" hour="9" minute="30" />
+        <reset day="FRIDAY" hour="9" minute="30" />
+    </reenter>
     <spawnlist>
         <group>
             <npc id="25283" x="185067" y="-9616" z="-5493" heading="48103" /> <!-- Lilith -->
