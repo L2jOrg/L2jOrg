@@ -12,7 +12,7 @@
         <condition type="CommandChannel" />
         <condition type="CommandChannelLeader" />
         <condition type="GroupMin">
-            <param name="limit" value="300" />
+            <param name="limit" value="18" />
         </condition>
         <condition type="Level">
             <param name="min" value="76" />
