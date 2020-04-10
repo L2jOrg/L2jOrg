@@ -219,7 +219,6 @@ public class EnterWorld extends ClientPacket {
             }
         });
         client.sendPacket(new ExDressRoomUiOpen());
-        client.sendPacket(new ExSendCostumeList());
 
         if (MailManager.getInstance().hasUnreadPost(player)) {
             player.sendPacket(new ExUnReadMailCount(player));

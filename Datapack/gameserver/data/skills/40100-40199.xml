@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="40100" name="Purple Arc - 2nd Place">
-        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
         <icon initial="icon.etc_holy_grail_i01"/>
         <attributes>
         </attributes>
         <target/>
     </skill>
     <skill id="40101" name="Blue Arc - 3rd Place">
-        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
         <icon initial="icon.etc_holy_grail_i02"/>
         <attributes>
         </attributes>
         <target/>
     </skill>
     <skill id="40102" name="Green Arc - 4th Place">
-        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
         <icon initial="icon.etc_holy_grail_i03"/>
         <attributes>
         </attributes>
         <target/>
     </skill>
     <skill id="40103" name="Blessing Star Candy">
-        <!-- For $s1, Sayha's Grace Consumption -$s2. -->
         <icon initial="icon.skill0000"/>
         <attributes>
         </attributes>
@@ -36,7 +32,6 @@
         <target/>
     </skill>
     <skill id="40105" name="Blue Arc - 3rd Place">
-        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute. -->
         <icon initial="icon.etc_holy_grail_i02"/>
         <attributes>
         </attributes>

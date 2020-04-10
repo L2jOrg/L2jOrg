@@ -885,7 +885,6 @@
         <target/>
     </skill>
     <skill id="56070" name="Power of Twin Bow Herritt" action="A1">
-        <!-- Received P. Critical Damage -$s1. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1103,7 +1102,6 @@
         <target/>
     </skill>
     <skill id="56090" name="Snake's Blessing" action="A1">
-        <!-- Buff celebrating the collaboration with Seven Deadly Sins. For $s1, HP / MP Recovery Bonus + $s2, Accuracy / Evasion +$s3, P./M. Atk. +$s4, P./M. Atk. Spd. +$s5, P./M. Critical Rate +$s6, P./M. Critical Damage +$s7. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1155,7 +1153,6 @@
         <target/>
     </skill>
     <skill id="56095" name="+5 Hawk Agathion - Stage 3 (7-day) Box" action="A1">
-        <!-- For $s1, Bonus XP /SP +$s2, P. Atk. /M. Atk. /P. Def. /M. Def. +$s3. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>

@@ -1,1102 +1,1039 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="59400" name="Metal Suit Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_sf_u"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="52"/>
+        </effects>
     </skill>
     <skill id="59401" name="Metal Suit Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_sf_u"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="53"/>
+        </effects>
     </skill>
     <skill id="59402" name="Metal Suit Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_sf_u"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="54"/>
+        </effects>
     </skill>
     <skill id="59403" name="Metal Suit Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_sf_u"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="55"/>
+        </effects>
     </skill>
     <skill id="59404" name="Samurai Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_japan_general_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="56"/>
+        </effects>
     </skill>
     <skill id="59405" name="Samurai Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_japan_general_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="57"/>
+        </effects>
     </skill>
     <skill id="59406" name="Samurai Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_japan_general_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="58"/>
+        </effects>
     </skill>
     <skill id="59407" name="Samurai Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_japan_general_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="59"/>
+        </effects>
     </skill>
     <skill id="59408" name="Samurai Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_japan_general_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="60"/>
+        </effects>
     </skill>
     <skill id="59409" name="Archer - Green Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_green"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="61"/>
+        </effects>
     </skill>
     <skill id="59410" name="Archer - Green Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_green"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="62"/>
+        </effects>
     </skill>
     <skill id="59411" name="Archer - Green Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_green"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="63"/>
+        </effects>
     </skill>
     <skill id="59412" name="Archer - Green Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_green"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="64"/>
+        </effects>
     </skill>
     <skill id="59413" name="Archer - Green Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_green"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="65"/>
+        </effects>
     </skill>
     <skill id="59414" name="Formal Wear Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wedding"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="66"/>
+        </effects>
     </skill>
     <skill id="59415" name="Formal Wear Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wedding"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="67"/>
+        </effects>
     </skill>
     <skill id="59416" name="Formal Wear Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wedding"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="68"/>
+        </effects>
     </skill>
     <skill id="59417" name="Formal Wear Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wedding"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="69"/>
+        </effects>
     </skill>
     <skill id="59418" name="Formal Wear Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wedding"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="70"/>
+        </effects>
     </skill>
     <skill id="59419" name="Kat the Cat Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.cat_the_cat_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="71"/>
+        </effects>
     </skill>
     <skill id="59420" name="Kat the Cat Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.cat_the_cat_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="72"/>
+        </effects>
     </skill>
     <skill id="59421" name="Kat the Cat Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.cat_the_cat_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="73"/>
+        </effects>
     </skill>
     <skill id="59422" name="Kat the Cat Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.cat_the_cat_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="74"/>
+        </effects>
     </skill>
     <skill id="59423" name="Kat the Cat Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.cat_the_cat_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="75"/>
+        </effects>
     </skill>
     <skill id="59424" name="Halloween Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_holloween"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="76"/>
+        </effects>
     </skill>
     <skill id="59425" name="Halloween Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_holloween"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="77"/>
+        </effects>
     </skill>
     <skill id="59426" name="Halloween Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_holloween"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="78"/>
+        </effects>
     </skill>
     <skill id="59427" name="Halloween Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_holloween"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="79"/>
+        </effects>
     </skill>
     <skill id="59428" name="Halloween Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_holloween"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="80"/>
+        </effects>
     </skill>
     <skill id="59429" name="Alluring Swimsuit Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_swimsuit_event_02"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59430" name="Alluring Swimsuit Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_swimsuit_event_02"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="81"/>
+        </effects>
     </skill>
     <skill id="59431" name="Alluring Swimsuit Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_swimsuit_event_02"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="82"/>
+        </effects>
     </skill>
     <skill id="59432" name="Alluring Swimsuit Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_swimsuit_event_02"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="83"/>
+        </effects>
     </skill>
     <skill id="59433" name="Alluring Swimsuit Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.icon1.g_co_swimsuit_event_02"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="84"/>
+        </effects>
     </skill>
     <skill id="59434" name="Vampiric Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_vampiric_u_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59435" name="Vampiric Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_vampiric_u_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="85"/>
+        </effects>
     </skill>
     <skill id="59436" name="Vampiric Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_vampiric_u_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="86"/>
+        </effects>
     </skill>
     <skill id="59437" name="Vampiric Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_vampiric_u_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="87"/>
+        </effects>
     </skill>
     <skill id="59438" name="Vampiric Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchSys3.iconArmar.g_co_vampiric_u_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="88"/>
+        </effects>
     </skill>
     <skill id="59439" name="Dark Knight Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.dark_kninght"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59440" name="Dark Knight Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.dark_kninght"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="89"/>
+        </effects>
     </skill>
     <skill id="59441" name="Dark Knight Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.dark_kninght"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="90"/>
+        </effects>
     </skill>
     <skill id="59442" name="Dark Knight Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.dark_kninght"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="91"/>
+        </effects>
     </skill>
     <skill id="59443" name="Dark Knight Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.dark_kninght"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="92"/>
+        </effects>
     </skill>
     <skill id="59444" name="Chevalier Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.chevalier_chest_change"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59445" name="Chevalier Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.chevalier_chest_change"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="93"/>
+        </effects>
     </skill>
     <skill id="59446" name="Chevalier Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.chevalier_chest_change"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="94"/>
+        </effects>
     </skill>
     <skill id="59447" name="Chevalier Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.chevalier_chest_change"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="95"/>
+        </effects>
     </skill>
     <skill id="59448" name="Chevalier Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.chevalier_chest_change"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="96"/>
+        </effects>
     </skill>
     <skill id="59449" name="Archer - Red Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_red"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59450" name="Archer - Red Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_red"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="97"/>
+        </effects>
     </skill>
     <skill id="59451" name="Archer - Red Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_red"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="98"/>
+        </effects>
     </skill>
     <skill id="59452" name="Archer - Red Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_red"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="99"/>
+        </effects>
     </skill>
     <skill id="59453" name="Archer - Red Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_archer_red"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="100"/>
+        </effects>
     </skill>
     <skill id="59454" name="Pirate - Blue Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_pirate_blue"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59455" name="Pirate - Blue Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_pirate_blue"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="101"/>
+        </effects>
     </skill>
     <skill id="59456" name="Pirate - Blue Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_pirate_blue"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="102"/>
+        </effects>
     </skill>
     <skill id="59457" name="Pirate - Blue Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_pirate_blue"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="103"/>
+        </effects>
     </skill>
     <skill id="59458" name="Pirate - Blue Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_pirate_blue"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="104"/>
+        </effects>
     </skill>
     <skill id="59459" name="Wizard - Wine Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wizard_wine"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59460" name="Wizard - Wine Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wizard_wine"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="105"/>
+        </effects>
     </skill>
     <skill id="59461" name="Wizard - Wine Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wizard_wine"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="106"/>
+        </effects>
     </skill>
     <skill id="59462" name="Wizard - Wine Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wizard_wine"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="107"/>
+        </effects>
     </skill>
     <skill id="59463" name="Wizard - Wine Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_wizard_wine"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="108"/>
+        </effects>
     </skill>
     <skill id="59464" name="Magician Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_magician"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59465" name="Magician Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_magician"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="109"/>
+        </effects>
     </skill>
     <skill id="59466" name="Magician Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_magician"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="110"/>
+        </effects>
     </skill>
     <skill id="59467" name="Magician Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_magician"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="111"/>
+        </effects>
     </skill>
     <skill id="59468" name="Magician Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_magician"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="112"/>
+        </effects>
     </skill>
     <skill id="59469" name="Sailor Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59470" name="Sailor Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59471" name="Sailor Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="113"/>
+        </effects>
     </skill>
     <skill id="59472" name="Sailor Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="114"/>
+        </effects>
     </skill>
     <skill id="59473" name="Sailor Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_pirate_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="115"/>
+        </effects>
     </skill>
     <skill id="59474" name="Noblesse - Red Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59475" name="Noblesse - Red Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59476" name="Noblesse - Red Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="116"/>
+        </effects>
     </skill>
     <skill id="59477" name="Noblesse - Red Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="117"/>
+        </effects>
     </skill>
     <skill id="59478" name="Noblesse - Red Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="118"/>
+        </effects>
     </skill>
     <skill id="59479" name="Barbarian Wolf Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.barbarian_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59480" name="Barbarian Wolf Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.barbarian_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59481" name="Barbarian Wolf Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.barbarian_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="119"/>
+        </effects>
     </skill>
     <skill id="59482" name="Barbarian Wolf Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.barbarian_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="120"/>
+        </effects>
     </skill>
     <skill id="59483" name="Barbarian Wolf Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.barbarian_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="121"/>
+        </effects>
     </skill>
     <skill id="59484" name="Valkyrie Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.valkyrie_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59485" name="Valkyrie Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.valkyrie_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59486" name="Valkyrie Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.valkyrie_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="122"/>
+        </effects>
     </skill>
     <skill id="59487" name="Valkyrie Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.valkyrie_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="123"/>
+        </effects>
     </skill>
     <skill id="59488" name="Valkyrie Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.valkyrie_chest_change_0"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="124"/>
+        </effects>
     </skill>
     <skill id="59489" name="Kelbim Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59490" name="Kelbim Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59491" name="Kelbim Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="125"/>
+        </effects>
     </skill>
     <skill id="59492" name="Kelbim Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="126"/>
+        </effects>
     </skill>
     <skill id="59493" name="Kelbim Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="127"/>
+        </effects>
     </skill>
     <skill id="59494" name="Ninja Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_ninja_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59495" name="Ninja Sealbook - High-grade" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_ninja_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59496" name="Ninja Sealbook - Rare" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_ninja_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="128"/>
+        </effects>
     </skill>
     <skill id="59497" name="Ninja Sealbook - Legendary" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_ninja_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="129"/>
+        </effects>
     </skill>
     <skill id="59498" name="Ninja Sealbook - Mythic" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_ninja_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="130"/>
+        </effects>
     </skill>
     <skill id="59499" name="High Priest Sealbook - Standard" action="A1">
-        <!-- Attribute Damage +$s1. -->
         <icon initial="icon.bm2018_healer_i01"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>

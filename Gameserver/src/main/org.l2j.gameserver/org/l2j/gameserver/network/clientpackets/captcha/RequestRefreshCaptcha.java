@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.captcha;
 
 import org.l2j.gameserver.engine.captcha.CaptchaEngine;
-import org.l2j.gameserver.engine.captcha.CaptchaEngine.Captcha;
+import org.l2j.gameserver.engine.captcha.Captcha;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaImage;

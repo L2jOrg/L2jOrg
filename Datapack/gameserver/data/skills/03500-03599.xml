@@ -132,9 +132,9 @@
             <speed>
                 <power initial="7.0"/>
             </speed>
-            <stat start-level="2" type="WIT">
+            <base-stat start-level="2" type="WIT">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3508" name="Set Effect - Reinforced Mithril Light Armor, 2-piece" max-level="2">
@@ -230,9 +230,9 @@
                     <power initial="20"/>
                 </trait>
             </defence-trait>
-            <stat start-level="2" type="STR">
+            <base-stat start-level="2" type="STR">
                 <power initial="4.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3512" name="Set Effect - Compound Heavy Armor, 2-piece">
@@ -273,9 +273,9 @@
                     <power initial="10.0"/>
                 </trait>
             </defence-trait>
-            <stat start-level="2" type="INT">
+            <base-stat start-level="2" type="INT">
                 <power initial="4.0"/>
-            </stat>
+            </base-stat>
             <vital-stat-modify start-level="2" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="-270.0"/>
             </vital-stat-modify>
@@ -353,9 +353,9 @@
                     <power initial="10.0"/>
                 </trait>
             </defence-trait>
-            <stat start-level="2" type="WIT">
+            <base-stat start-level="2" type="WIT">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
             <vital-stat-modify start-level="2" stat="MAX_MP" stat-add="MAX_MP">
                 <power initial="171.0"/>
             </vital-stat-modify>
@@ -418,9 +418,9 @@
                     <power initial="60"/>
                 </trait>
             </defence-trait>
-            <stat start-level="4" type="CON">
+            <base-stat start-level="4" type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3520" name="Set Effect - Zubei Light Armor, 2-piece" max-level="4">
@@ -446,9 +446,9 @@
                     <power initial="30"/>
                 </trait>
             </defence-trait>
-            <stat start-level="4" type="DEX">
+            <base-stat start-level="4" type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3521" name="Set Effect - Avadon Light Armor, 2-piece" max-level="3">
@@ -559,9 +559,9 @@
                     <power initial="30"/>
                 </trait>
             </defence-trait>
-            <stat start-level="4" type="STR">
+            <base-stat start-level="4" type="STR">
                 <power initial="3.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3525" name="Set Effect - Doom Heavy Armor, 2-piece" max-level="3">
@@ -586,9 +586,9 @@
                     <power initial="50"/>
                 </trait>
             </defence-trait>
-            <stat start-level="3" type="STR">
+            <base-stat start-level="3" type="STR">
                 <power initial="-3.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3526" name="Set Effect - Blue Wolf Light Armor, 2-piece" max-level="3">
@@ -605,12 +605,12 @@
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
                 <power initial="5.26"/>
             </stat-modify>
-            <stat start-level="2" type="MEN">
+            <base-stat start-level="2" type="MEN">
                 <power initial="3.0">
                     <value level="3">-1.0</value>
                     <value level="3">-2.0</value>
                 </power>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" start-level="2" stat="PHYSICAL_DEFENCE">
                 <power initial="5.26"/>
             </stat-modify>
@@ -649,9 +649,9 @@
                     <power initial="50"/>
                 </trait>
             </defence-trait>
-            <stat start-level="3" type="DEX">
+            <base-stat start-level="3" type="DEX">
                 <power initial="3.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3528" name="Set Effect - Blue Wolf Robe Armor, 2-piece" max-level="4">
@@ -677,9 +677,9 @@
                     <power initial="30"/>
                 </trait>
             </defence-trait>
-            <stat start-level="4" type="INT">
+            <base-stat start-level="4" type="INT">
                 <power initial="-2.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3529" name="Set Effect - Doom Robe, 2-piece" max-level="4">
@@ -711,9 +711,9 @@
             <stat-modify start-level="3" stat="BREATH">
                 <power initial="200.0"/>
             </stat-modify>
-            <stat start-level="4" type="INT">
+            <base-stat start-level="4" type="INT">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <stat-modify start-level="4" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="30.0"/>
             </stat-modify>
@@ -742,9 +742,9 @@
                     <power initial="50"/>
                 </trait>
             </defence-trait>
-            <stat start-level="4" type="STR">
+            <base-stat start-level="4" type="STR">
                 <power initial="-2.0"/>
-            </stat>
+            </base-stat>
             <vital-stat-modify start-level="4" stat="MAX_HP">
                 <power initial="238.0"/>
             </vital-stat-modify>
@@ -775,9 +775,9 @@
             <speed start-level="2">
                 <power initial="4.0"/>
             </speed>
-            <stat start-level="3" type="STR">
+            <base-stat start-level="3" type="STR">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" start-level="3" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0"/>
             </stat-modify>
@@ -798,12 +798,12 @@
             <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="4.0"/>
             </stat-hp-based>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="-1.0">
                     <value level="4">1.0</value>
                     <value level="4">-1.0</value>
                 </power>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="4.0"/>
             </stat-modify>
@@ -837,9 +837,9 @@
             <vital-stat-modify start-level="2" stat="MAX_MP" stat-add="MAX_MP">
                 <power initial="222.0"/>
             </vital-stat-modify>
-            <stat start-level="3" type="MEN">
+            <base-stat start-level="3" type="MEN">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <defence-trait start-level="3">
                 <trait type="BLEED">
                     <power initial="80"/>
@@ -876,9 +876,9 @@
             <stat-modify mode="PER" start-level="3" stat="MAGICAL_DEFENCE">
                 <power initial="8.0"/>
             </stat-modify>
-            <stat start-level="4" type="INT">
+            <base-stat start-level="4" type="INT">
                 <power initial="-2.0"/>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" start-level="4" stat="MAGIC_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
@@ -909,9 +909,9 @@
             <stat-modify mode="PER" start-level="2" stat="PHYSICAL_DEFENCE">
                 <power initial="8.0"/>
             </stat-modify>
-            <stat start-level="3" type="WIT">
+            <base-stat start-level="3" type="WIT">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" start-level="3" stat="MAGIC_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
@@ -940,9 +940,9 @@
             <stat-modify start-level="2" stat="REFLECT_DAMAGE_PERCENT">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat start-level="3" type="CON">
+            <base-stat start-level="3" type="CON">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <defence-trait start-level="3">
                 <trait type="HOLD">
                     <power initial="70"/>
@@ -976,9 +976,9 @@
             <speed start-level="2">
                 <power initial="7.0"/>
             </speed>
-            <stat start-level="3" type="STR">
+            <base-stat start-level="3" type="STR">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <defence-trait start-level="3">
                 <trait type="SHOCK">
                     <power initial="50"/>
@@ -1006,9 +1006,9 @@
             <stat-modify mode="PER" start-level="2" stat="MAGICAL_DEFENCE">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat start-level="3" type="DEX">
+            <base-stat start-level="3" type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
             <defence-trait start-level="3">
                 <trait type="HOLD">
                     <power initial="70"/>
@@ -1043,9 +1043,9 @@
             <vital-stat-modify start-level="2" stat="MAX_MP">
                 <power initial="240.0"/>
             </vital-stat-modify>
-            <stat start-level="3" type="DEX">
+            <base-stat start-level="3" type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
             <defence-trait start-level="3">
                 <trait type="SHOCK">
                     <power initial="50"/>
@@ -1078,9 +1078,9 @@
             <stat-modify start-level="2" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="30.0"/>
             </stat-modify>
-            <stat start-level="3" type="INT">
+            <base-stat start-level="3" type="INT">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" start-level="3" stat="MAGIC_ATTACK">
                 <power initial="8.0"/>
             </stat-modify>
@@ -1100,11 +1100,11 @@
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
                 <power initial="8.0"/>
             </stat-modify>
-            <stat start-level="2" type="MEN">
+            <base-stat start-level="2" type="MEN">
                 <power initial="1.0">
                     <value level="3">-1.0</value>
                 </power>
-            </stat>
+            </base-stat>
             <vital-stat-modify start-level="2" stat="MAX_MP" stat-add="MAX_MP">
                 <power initial="240.0"/>
             </vital-stat-modify>
@@ -1270,9 +1270,9 @@
                     <power initial="70"/>
                 </trait>
             </defence-trait>
-            <stat start-level="4" type="STR">
+            <base-stat start-level="4" type="STR">
                 <power initial="4.0"/>
-            </stat>
+            </base-stat>
             <vital-stat-modify start-level="4" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="445.0"/>
             </vital-stat-modify>
@@ -1313,9 +1313,9 @@
             <stat-modify mode="PER" start-level="2" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="4.0"/>
             </stat-modify>
-            <stat start-level="3" type="STR">
+            <base-stat start-level="3" type="STR">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3556" name="Set Effect - Major Arcana Robe, 2-piece" max-level="3">
@@ -1343,9 +1343,9 @@
                     <power initial="50"/>
                 </trait>
             </defence-trait>
-            <stat start-level="3" type="WIT">
+            <base-stat start-level="3" type="WIT">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3557" name="Valakas' Necklace">
@@ -1466,11 +1466,11 @@
                     <value level="14">15.0</value>
                 </power>
             </stat-modify>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power>
                     <value level="14">1.0</value>
                 </power>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3559" name="Damaged Zaken's Earring" max-level="15">

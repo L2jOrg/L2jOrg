@@ -7,6 +7,7 @@ import handlers.conditions.NpcLevelCondition;
 import handlers.conditions.PlayerLevelCondition;
 import handlers.effecthandlers.*;
 import handlers.effecthandlers.stat.*;
+import handlers.itemhandlers.TransformationBook;
 import handlers.skillconditionhandlers.*;
 import quests.tutorial.Q10960_Tutorial.Q10960_Tutorial;
 import quests.tutorial.Q201_Tutorial.Q201_Tutorial;
@@ -56,11 +57,14 @@ open module org.l2j.scripts {
 
     provides org.l2j.gameserver.engine.skill.api.SkillEffectFactory
             with AbnormalShield.Factory,
+                AcquireCostume.Factory,
+                AcquireRandomCostume.Factory,
                 AddHate.Factory,
                 AddTeleportBookmarkSlot.Factory,
                 StatModify.Factory,
                 AttackTrait.Factory,
                 Backstab.Factory,
+                BaseStatsModify.Factory,
                 Betray.Factory,
                 BlockAbnormalSlot.Factory,
                 BlockAction.Factory,
@@ -583,7 +587,8 @@ open module org.l2j.scripts {
             handlers.itemhandlers.SoulShots, // skills
             handlers.itemhandlers.SpecialXMas, // none | not used?
             handlers.itemhandlers.SpiritShot, // skills
-            handlers.itemhandlers.SummonItems; // not used ?
+            handlers.itemhandlers.SummonItems, // not used ?
+                TransformationBook;
 
     provides org.l2j.gameserver.handler.IPunishmentHandler
         with handlers.punishmenthandlers.BanHandler,

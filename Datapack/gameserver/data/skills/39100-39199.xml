@@ -62,7 +62,6 @@
         </effects>
     </skill>
     <skill id="39103" name="Hero HP Potion" action="A1">
-        <!-- Protected from preemptive attacks from monsters. -->
         <icon initial="icon.etc_reagent_white_i00"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -317,7 +316,6 @@
         <target/>
     </skill>
     <skill id="39123" name="Special HP Potion" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_bm_hero_red_potion"/>
         <attributes>
             <cast-range initial="-1"/>

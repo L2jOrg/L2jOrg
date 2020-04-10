@@ -14,7 +14,6 @@
         <target/>
     </skill>
     <skill id="48002" name="Little Pig's Luck - Reward" action="A1">
-        <!-- For $s1, appearances changes to Hanbok, Atk. Spd./Casting Spd. +$s2, Speed +$s3. Additionally, obtain items after 2, 5, 8 hours. Does not disappear after death / restarting.\n<Caution> If you are dead at the time the item is sent, or if you don't have enough space in the inventory, you cannot receive the gift. You also can't receive the next stage of the buff if you are dead. -->
         <icon initial="icon.skill_piggy_bless"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -443,7 +442,6 @@
         <target/>
     </skill>
     <skill id="48043" name="Fatal Strike" action="A1">
-        <!-- A buff given to those who explore the Tower of Insolence. For 5 min, P. Atk. +10%%, M. Atk. +10%%, and P. Critical/M. Critical Rate +10. -->
         <icon initial="icon.skill0190"/>
         <attributes>
             <cast-range initial="40"/>

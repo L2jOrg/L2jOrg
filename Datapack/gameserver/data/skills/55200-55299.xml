@@ -778,7 +778,6 @@
         </effects>
     </skill>
     <skill id="55245" name="Scroll of Escape: Town of Aden" max-level="8" action="A1">
-        <!-- For 10 minutes, M. Atk +20%%. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -795,9 +794,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55247" name="Refined Romantic Chapeau">
@@ -837,9 +836,9 @@
             <effect name="TalismanSlot">
                 <power initial="1.0"/>
             </effect>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55250" name="Bracelet of Duty - Lv. 3">
@@ -852,9 +851,9 @@
             <effect name="TalismanSlot">
                 <power initial="2.0"/>
             </effect>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55251" name="Bracelet of Duty - Lv. 4">
@@ -867,9 +866,9 @@
             <effect name="TalismanSlot">
                 <power initial="2.0"/>
             </effect>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55252" name="Bracelet of Duty - Lv. 5">
@@ -882,9 +881,9 @@
             <effect name="TalismanSlot">
                 <power initial="3.0"/>
             </effect>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55253" name="Sigel's Protection" max-level="20">
@@ -1664,7 +1663,6 @@
         <target/>
     </skill>
     <skill id="55284" name="Box of Tears Acquisition Effect" action="A1">
-        <!-- You can receive a Box of Tears when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1842,7 +1840,6 @@
         <target/>
     </skill>
     <skill id="55299" name="Decayed Box Acquisition Effect" action="A1">
-        <!-- You can receive a Decayed Box when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
         <attributes>
             <cast-range initial="-1"/>

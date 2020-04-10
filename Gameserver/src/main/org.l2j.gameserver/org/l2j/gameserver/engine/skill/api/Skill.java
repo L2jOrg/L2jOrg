@@ -7,7 +7,6 @@ import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;
-import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.AffectScopeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.PcCondOverride;

@@ -1043,7 +1043,6 @@
         <target/>
     </skill>
     <skill id="50063" name="Energy of Fire" action="A1" type="MAGIC">
-        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
         <icon initial="icon.skill1083"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1055,7 +1054,6 @@
         <target/>
     </skill>
     <skill id="50064" name="Energy of Water" action="A1" type="MAGIC">
-        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
         <icon initial="icon.skill1071"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1067,7 +1065,6 @@
         <target/>
     </skill>
     <skill id="50065" name="Energy of Wind" action="A1" type="MAGIC">
-        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
         <icon initial="icon.skill1074"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1079,7 +1076,6 @@
         <target/>
     </skill>
     <skill id="50066" name="Earth Energy" action="A1" type="MAGIC">
-        <!-- King Ignis' power. Decreases HP per tick, more HP decreases per stack. Effect can be cleared by speaking to Freya. -->
         <icon initial="icon.skill1223"/>
         <attributes>
             <cast-range initial="-1"/>

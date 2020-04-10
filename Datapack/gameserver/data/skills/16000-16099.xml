@@ -437,7 +437,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target type="OTHERS"/>
-		<channeling skill="0" initial-delay="1000000" interval="0"/>
+        <channeling skill="0" initial-delay="1000000" interval="0"/>
     </skill>
     <skill id="16036" name="Tauti Leap Attack" debuff="true" action="A2">
         <!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->

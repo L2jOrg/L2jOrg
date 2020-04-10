@@ -103,7 +103,6 @@
         <target/>
     </skill>
     <skill id="50205" name="Spinel - Steal Mana" max-level="10" action="A1">
-        <!-- $s1 bonus damage to Soulshot, Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot, and Beast Spiritshot. P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate +$s4, M. Critical Rate +$s5. -->
         <icon initial="icon.etc_bm_jewel_garnet_i00"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -526,7 +525,6 @@
     </skill>
     <skill id="50260" name="Enchantment Effect: A-grade Top and Lower Body" max-level="10">
         <!--
-            level 1: Effects of wearing A-grade equipment\n\nINT +1\nWeight Limit +1000\nM. Def. +10\nMax HP +50\nMax MP +120\nMovement Speed +4
             level 5: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +5\nMP Recovery Bonus +3
             level 6: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +10\nMP Recovery Bonus +6
             level 7: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +11\nMP Recovery Bonus +7
@@ -541,7 +539,6 @@
     </skill>
     <skill id="50261" name="Enchantment Effect: A-grade Top" max-level="10">
         <!--
-            level 1: Effects of enchanted A-grade full body outfit\n\nHP Recovery Bonus +$s1\nMP Recovery Bonus +$s2
             level 5: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +5
             level 6: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +10
             level 7: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +11
@@ -556,7 +553,6 @@
     </skill>
     <skill id="50262" name="Enchantment Effect: A-grade Lower Body" max-level="10">
         <!--
-            level 1: Effects of enchanted A-grade Upper Armor\n\nHP Recovery Bonus +$s1
             level 5: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +3
             level 6: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +6
             level 7: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +7
@@ -571,7 +567,6 @@
     </skill>
     <skill id="50263" name="Enchantment Effect: A-grade Gloves (Physical)" max-level="10">
         <!--
-            level 1: Effects of enchanted A-grade Pants\n\nMP Recovery Bonus +$s1
             level 5: Effects of enchanted A-grade gloves\n\nP. Skill Power +2%
             level 6: Effects of enchanted A-grade gloves\n\nP. Skill Power +3%
             level 7: Effects of enchanted A-grade gloves\n\nP. Skill Power +5%
@@ -586,7 +581,6 @@
     </skill>
     <skill id="50264" name="Enchantment Effect: A-grade Gloves (Magic)" max-level="10">
         <!--
-            level 1: Effects of enchanted A-grade gloves\n\nP. Skill Power +$s1
             level 5: Effects of enchanted A-grade gloves\n\nM. Skill Power +2%
             level 6: Effects of enchanted A-grade gloves\n\nM. Skill Power +3%
             level 7: Effects of enchanted A-grade gloves\n\nM. Skill Power +5%
@@ -601,7 +595,6 @@
     </skill>
     <skill id="50265" name="Enchantment Effect: A-grade Shoes (Physical)" max-level="10">
         <!--
-            level 1: Effects of enchanted A-grade gloves\n\nM. Skill Power +$s1
             level 5: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -1%
             level 6: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -2%
             level 7: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -3%
@@ -616,7 +609,6 @@
     </skill>
     <skill id="50266" name="Enchantment Effect: A-grade Shoes (Magic)" max-level="10">
         <!--
-            level 1: Effects of enchanted A-grade shoes\n\nPhysical skill cooldown MP -$s1
             level 5: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -1%
             level 6: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -2%
             level 7: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -3%
@@ -631,7 +623,6 @@
     </skill>
     <skill id="50267" name="Enchantment Effect: A-grade Helmet" max-level="10">
         <!--
-            level 1: Effects of enchanted A-grade shoes\n\nM. Skill cooldown MP -$s1
             level 5: Effects of enchanted A-grade Headgear\n\nMax HP +50
             level 6: Effects of enchanted A-grade Headgear\n\nMax HP +150
             level 7: Effects of enchanted A-grade Headgear\n\nMax HP +300
@@ -698,7 +689,6 @@
     </skill>
     <skill id="50271" name="Enhanced Baium’s Thunderbolt" max-level="20" type="MAGIC">
         <!--
-            level 1: Can use Baium’s power by equipping a weapon containing Baium’s soul.\n\n<Active>\nBaium’s Thunderbolt\nEnhanced Baium’s Thunderbolt\n\n<Ability Effect>\nSTR +$s1\nINT +$s2
             level 5: Attacks the enemy with bonus 191 Power added to M. Atk.
             level 6: Attacks the enemy with bonus 198 Power added to M. Atk.
             level 7: Attacks the enemy with bonus 204 Power added to M. Atk.
@@ -771,7 +761,6 @@
     </skill>
     <skill id="50276" name="Enhanced Queen Ant’s Stone Shower" max-level="20" type="MAGIC">
         <!--
-            level 1: Can use Queen Ant’s power by equipping a weapon containing Queen Ant’s soul.\n\n<Active>\nQueen Ant’s Stone Shower\nEnhanced Queen Ant’s Stone Shower\n\n<Ability Effect>\nCON +$s1
             level 5: Attacks the enemy with bonus 121 Power added to M. Atk.
             level 6: Attacks the enemy with bonus 126 Power added to M. Atk.
             level 7: Attacks the enemy with bonus 130 Power added to M. Atk.
@@ -845,7 +834,6 @@
     </skill>
     <skill id="50281" name="Enhanced Zaken’s Blood Prison" max-level="20" type="MAGIC">
         <!--
-            level 1: Can use Zaken’s power by equipping a weapon containing Zaken’s soul.\n\n<Active>\nZaken’s Blood Prison\nEnhanced Zaken’s Blood Prison\n\n<Ability Effect>\nDEX +$s1
             level 5: Attacks the enemy with bonus 174 Power added to M. Atk.
             level 6: Attacks the enemy with bonus 180 Power added to M. Atk.
             level 7: Attacks the enemy with bonus 186 Power added to M. Atk.
@@ -919,7 +907,6 @@
     </skill>
     <skill id="50286" name="Enhanced Orphen’s Poison Tempest" max-level="20" type="MAGIC">
         <!--
-            level 1: Can use Orfen’s power by equipping a weapon containing Orfen’s soul.\n\n<Active>\nOrfen’s Poison Tempest\nEnhanced Orfen’s Poison Tempest\n\n<Ability Effect>\nMEN +$s1
             level 5: Attacks the enemy with bonus 174 Power added to M. Atk.
             level 6: Attacks the enemy with bonus 180 Power added to M. Atk.
             level 7: Attacks the enemy with bonus 186 Power added to M. Atk.
@@ -992,7 +979,6 @@
     </skill>
     <skill id="50291" name="Enhanced Core's Plasma Shock" max-level="20" type="MAGIC">
         <!--
-            level 1: Can use Core’s power by equipping a weapon containing Core’s soul.\n\n<Active>\nCore’s Plasma Shock\nEnhanced Core’s Plasma Shock\n\n<Ability Effect>\nWIT +$s1
             level 5: Attacks the enemy with bonus 121 Power added to M. Atk.
             level 6: Attacks the enemy with bonus 126 Power added to M. Atk.
             level 7: Attacks the enemy with bonus 130 Power added to M. Atk.

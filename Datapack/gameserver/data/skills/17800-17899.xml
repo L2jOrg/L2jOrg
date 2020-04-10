@@ -118,7 +118,6 @@
         <target/>
     </skill>
     <skill id="17824" name="Aquamarine - Mana Drain" max-level="10" action="A1">
-        <!-- Has a $s1 chance to recover $s2 MP and Max MP +$s3 upon using a skill. Enables a special skill that recovers $s4 MP when equipped. -->
         <icon initial="icon.etc_bm_jewel_aquamarine_i00">
             <value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
         </icon>

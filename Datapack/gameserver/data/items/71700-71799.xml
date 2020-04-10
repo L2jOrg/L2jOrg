@@ -135,121 +135,141 @@
 	<item id="71718" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Normal Shadow Master Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59582"/>
 	</item>
 
 	<item id="71719" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain an Advanced Shadow Master Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59583"/>
 	</item>
 
 	<item id="71720" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Rare Shadow Master Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59584"/>
 	</item>
 
 	<item id="71721" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Legendary Shadow Master Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59585"/>
 	</item>
 
 	<item id="71722" name="Transformation Sealbook: Shadow Master" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_thief">
 	<!-- Use it to obtain a Mythic Shadow Master Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59586"/>
 	</item>
 
 	<item id="71723" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Normal Navy Admiral Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59587"/>
 	</item>
 
 	<item id="71724" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain an Advanced Navy Admiral Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59588"/>
 	</item>
 
 	<item id="71725" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Rare Navy Admiral Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59589"/>
 	</item>
 
 	<item id="71726" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Legendary Navy Admiral Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59590"/>
 	</item>
 
 	<item id="71727" name="Transformation Sealbook: Navy Admiral" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_navy">
 	<!-- Use it to obtain a Mythic Navy Admiral Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59591"/>
 	</item>
 
 	<item id="71728" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Normal Nymph Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59592"/>
 	</item>
 
 	<item id="71729" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain an Advanced Nymph Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59593"/>
 	</item>
 
 	<item id="71730" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Rare Nymph Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59594"/>
 	</item>
 
 	<item id="71731" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Legendary Nymph Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59595"/>
 	</item>
 
 	<item id="71732" name="Transformation Sealbook: Nymph" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_nymph">
 	<!-- Use it to obtain a Mythic Nymph Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59596"/>
 	</item>
 
 	<item id="71733" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Normal Devil Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59597"/>
 	</item>
 
 	<item id="71734" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain an Advanced Devil Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59598"/>
 	</item>
 
 	<item id="71735" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Rare Devil Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59599"/>
 	</item>
 
 	<item id="71736" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Legendary Devil Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59600"/>
 	</item>
 
 	<item id="71737" name="Transformation Sealbook: Devil" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_devil">
 	<!-- Use it to obtain a Mythic Devil Transformation. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59601"/>
 	</item>
 
 	<item id="71738" name="Fire Dragon Pendant Chest +6" type="NONE" icon="icon.bm_pendant_pve_box">

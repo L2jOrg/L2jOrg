@@ -823,9 +823,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45022" name="White Uniform Hat (DEX +1 WIT+1)">
@@ -835,9 +835,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45023" name="White Uniform Hat (CON +1 MEN +1)">
@@ -847,9 +847,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45024" name="Napoleon Hat (STR +1, INT +1)">
@@ -859,9 +859,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45025" name="Napoleon Hat (DEX +1 WIT+1)">
@@ -871,9 +871,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45026" name="Napoleon Hat (CON +1 MEN +1)">
@@ -883,9 +883,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45027" name="Ninja Hair Accessory (STR +1 INT +1)">
@@ -895,9 +895,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45028" name="Ninja Hair Accessory (DEX +1 WIT+1)">
@@ -907,9 +907,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45029" name="Ninja Hair Accessory (CON +1 MEN +1)">
@@ -919,9 +919,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45030" name="Warrior's Helmet (STR +1 INT +1)">
@@ -931,9 +931,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45031" name="Warrior's Helmet (DEX +1 WIT+1)">
@@ -943,9 +943,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45032" name="Warrior's Helmet (CON +1 MEN +1)">
@@ -955,9 +955,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45033" name="First Mate Hat (STR +1 INT +1)">
@@ -967,9 +967,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45034" name="First Mate Hat (DEX +1 WIT+1)">
@@ -979,9 +979,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45035" name="First Mate Hat (CON +1 MEN +1)">
@@ -991,9 +991,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45036" name="Artisan's Goggles (STR +1 INT +1)">
@@ -1003,9 +1003,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45037" name="Artisan's Goggles (DEX +1 WIT+1)">
@@ -1015,9 +1015,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45038" name="Artisan's Goggles (CON +1 MEN +1)">
@@ -1027,9 +1027,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45039" name="Fire Dragon Belt">

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="common.xsd"/>
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="costume" type="Costume" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="collection" type="Collection" maxOccurs="unbounded"/>
+                <xs:element name="stack-bonus" type="StackBonus" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Costume">
+        <xs:sequence>
+            <xs:element name="consume" type="ItemInfo"/>
+            <xs:element name="extract" type="Extract"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:short" use="required"/>
+        <xs:attribute name="grade" type="CostumeGrade" default="STANDARD"/>
+        <xs:attribute name="skill" type="xs:int" use="required"/>
+        <xs:attribute name="evolution-fee" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Extract">
+        <xs:sequence>
+            <xs:element name="cost" type="ItemInfo" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="item" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Collection">
+        <xs:sequence>
+            <xs:element name="costumes" type="intList"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:short" use="required"/>
+        <xs:attribute name="skill" type="xs:int" use="required"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="StackBonus">
+        <xs:sequence>
+            <xs:element name="skill" type="SkillInfo" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="count" type="xs:short" use="required"/>
+    </xs:complexType>
+</xs:schema>

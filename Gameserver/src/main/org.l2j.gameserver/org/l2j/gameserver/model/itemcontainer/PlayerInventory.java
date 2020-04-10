@@ -502,6 +502,8 @@ public class PlayerInventory extends Inventory {
     /**
      * Destroy item from inventory and checks _adena and _ancientAdena
      *
+     * TODO change the process String to Enum
+     *
      * @param process   : String Identifier of process triggering this action
      * @param item      : Item to be destroyed
      * @param actor     : Player Player requesting the item destroy

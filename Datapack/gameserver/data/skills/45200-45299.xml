@@ -29,35 +29,35 @@
          -->
         <icon initial="icon.skill0016"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-35">
-				<value level="2">-40</value>
-				<value level="3">-45</value>
-				<value level="4">-60</value>
-				<value level="5">-65</value>
-				<value level="6">-70</value>
-				<value level="7">-85</value>
-				<value level="8">-90</value>
-				<value level="9">-95</value>
-				<value level="10">-110</value>
-				<value level="11">-115</value>
-				<value level="12">-120</value>
-				<value level="13">-130</value>
-				<value level="14">-135</value>
-				<value level="15">-140</value>
-				<value level="16">-150</value>
-				<value level="17">-155</value>
-				<value level="18">-160</value>
-				<value level="19">-170</value>
-				<value level="20">-175</value>
-				<value level="21">-180</value>
-				<value level="22">-190</value>
-				<value level="23">-195</value>
-				<value level="24">-200</value>
-			</effect-point>
-			<hit-time initial="1080"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-35">
+                <value level="2">-40</value>
+                <value level="3">-45</value>
+                <value level="4">-60</value>
+                <value level="5">-65</value>
+                <value level="6">-70</value>
+                <value level="7">-85</value>
+                <value level="8">-90</value>
+                <value level="9">-95</value>
+                <value level="10">-110</value>
+                <value level="11">-115</value>
+                <value level="12">-120</value>
+                <value level="13">-130</value>
+                <value level="14">-135</value>
+                <value level="15">-140</value>
+                <value level="16">-150</value>
+                <value level="17">-155</value>
+                <value level="18">-160</value>
+                <value level="19">-170</value>
+                <value level="20">-175</value>
+                <value level="21">-180</value>
+                <value level="22">-190</value>
+                <value level="23">-195</value>
+                <value level="24">-200</value>
+            </effect-point>
+            <hit-time initial="1080"/>
         </attributes>
         <consume>
             <mana initial="5">
@@ -112,37 +112,37 @@
          -->
         <icon initial="icon.skill0056"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="700">
-				<value level="10">900</value>
-			</cast-range>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-35">
-				<value level="2">-40</value>
-				<value level="3">-45</value>
-				<value level="4">-60</value>
-				<value level="5">-65</value>
-				<value level="6">-70</value>
-				<value level="7">-85</value>
-				<value level="8">-90</value>
-				<value level="9">-95</value>
-				<value level="10">-110</value>
-				<value level="11">-115</value>
-				<value level="12">-120</value>
-				<value level="13">-130</value>
-				<value level="14">-135</value>
-				<value level="15">-140</value>
-				<value level="16">-150</value>
-				<value level="17">-155</value>
-				<value level="18">-160</value>
-				<value level="19">-170</value>
-				<value level="20">-175</value>
-				<value level="21">-180</value>
-				<value level="22">-190</value>
-				<value level="23">-195</value>
-				<value level="24">-200</value>
-			</effect-point>
-			<hit-time initial="2000"/>
+            <cast-range initial="700">
+                <value level="10">900</value>
+            </cast-range>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-35">
+                <value level="2">-40</value>
+                <value level="3">-45</value>
+                <value level="4">-60</value>
+                <value level="5">-65</value>
+                <value level="6">-70</value>
+                <value level="7">-85</value>
+                <value level="8">-90</value>
+                <value level="9">-95</value>
+                <value level="10">-110</value>
+                <value level="11">-115</value>
+                <value level="12">-120</value>
+                <value level="13">-130</value>
+                <value level="14">-135</value>
+                <value level="15">-140</value>
+                <value level="16">-150</value>
+                <value level="17">-155</value>
+                <value level="18">-160</value>
+                <value level="19">-170</value>
+                <value level="20">-175</value>
+                <value level="21">-180</value>
+                <value level="22">-190</value>
+                <value level="23">-195</value>
+                <value level="24">-200</value>
+            </effect-point>
+            <hit-time initial="2000"/>
         </attributes>
         <consume>
             <mana initial="6">
@@ -200,35 +200,35 @@
          -->
         <icon initial="icon.skill0029"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-35">
-				<value level="2">-40</value>
-				<value level="3">-45</value>
-				<value level="4">-60</value>
-				<value level="5">-65</value>
-				<value level="6">-70</value>
-				<value level="7">-85</value>
-				<value level="8">-90</value>
-				<value level="9">-95</value>
-				<value level="10">-110</value>
-				<value level="11">-115</value>
-				<value level="12">-120</value>
-				<value level="13">-130</value>
-				<value level="14">-135</value>
-				<value level="15">-140</value>
-				<value level="16">-150</value>
-				<value level="17">-155</value>
-				<value level="18">-160</value>
-				<value level="19">-170</value>
-				<value level="20">-175</value>
-				<value level="21">-180</value>
-				<value level="22">-190</value>
-				<value level="23">-195</value>
-				<value level="24">-200</value>
-			</effect-point>
-			<hit-time initial="1604"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-35">
+                <value level="2">-40</value>
+                <value level="3">-45</value>
+                <value level="4">-60</value>
+                <value level="5">-65</value>
+                <value level="6">-70</value>
+                <value level="7">-85</value>
+                <value level="8">-90</value>
+                <value level="9">-95</value>
+                <value level="10">-110</value>
+                <value level="11">-115</value>
+                <value level="12">-120</value>
+                <value level="13">-130</value>
+                <value level="14">-135</value>
+                <value level="15">-140</value>
+                <value level="16">-150</value>
+                <value level="17">-155</value>
+                <value level="18">-160</value>
+                <value level="19">-170</value>
+                <value level="20">-175</value>
+                <value level="21">-180</value>
+                <value level="22">-190</value>
+                <value level="23">-195</value>
+                <value level="24">-200</value>
+            </effect-point>
+            <hit-time initial="1604"/>
         </attributes>
         <consume>
             <mana initial="5">
@@ -299,51 +299,51 @@
          -->
         <icon initial="icon.skill0005"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-240">
-				<value level="2">-245</value>
-				<value level="3">-250</value>
-				<value level="4">-255</value>
-				<value level="5">-260</value>
-				<value level="6">-265</value>
-				<value level="7">-270</value>
-				<value level="8">-275</value>
-				<value level="9">-280</value>
-				<value level="10">-285</value>
-				<value level="11">-290</value>
-				<value level="12">-295</value>
-				<value level="13">-300</value>
-				<value level="14">-305</value>
-				<value level="15">-310</value>
-				<value level="16">-315</value>
-				<value level="17">-320</value>
-				<value level="18">-325</value>
-				<value level="19">-330</value>
-				<value level="20">-335</value>
-				<value level="21">-340</value>
-				<value level="22">-345</value>
-				<value level="23">-350</value>
-				<value level="24">-355</value>
-				<value level="25">-360</value>
-				<value level="26">-365</value>
-				<value level="27">-370</value>
-				<value level="28">-375</value>
-				<value level="29">-380</value>
-				<value level="30">-385</value>
-				<value level="31">-390</value>
-				<value level="32">-400</value>
-				<value level="33">-405</value>
-				<value level="34">-410</value>
-				<value level="35">-415</value>
-				<value level="36">-420</value>
-				<value level="37">-425</value>
-				<value level="38">-430</value>
-				<value level="39">-435</value>
-				<value level="40">-440</value>
-			</effect-point>
-			<hit-time initial="1733"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-240">
+                <value level="2">-245</value>
+                <value level="3">-250</value>
+                <value level="4">-255</value>
+                <value level="5">-260</value>
+                <value level="6">-265</value>
+                <value level="7">-270</value>
+                <value level="8">-275</value>
+                <value level="9">-280</value>
+                <value level="10">-285</value>
+                <value level="11">-290</value>
+                <value level="12">-295</value>
+                <value level="13">-300</value>
+                <value level="14">-305</value>
+                <value level="15">-310</value>
+                <value level="16">-315</value>
+                <value level="17">-320</value>
+                <value level="18">-325</value>
+                <value level="19">-330</value>
+                <value level="20">-335</value>
+                <value level="21">-340</value>
+                <value level="22">-345</value>
+                <value level="23">-350</value>
+                <value level="24">-355</value>
+                <value level="25">-360</value>
+                <value level="26">-365</value>
+                <value level="27">-370</value>
+                <value level="28">-375</value>
+                <value level="29">-380</value>
+                <value level="30">-385</value>
+                <value level="31">-390</value>
+                <value level="32">-400</value>
+                <value level="33">-405</value>
+                <value level="34">-410</value>
+                <value level="35">-415</value>
+                <value level="36">-420</value>
+                <value level="37">-425</value>
+                <value level="38">-430</value>
+                <value level="39">-435</value>
+                <value level="40">-440</value>
+            </effect-point>
+            <hit-time initial="1733"/>
         </attributes>
         <consume>
             <mana initial="33">
@@ -413,41 +413,41 @@
          -->
         <icon initial="icon.skill0261"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-285">
-				<value level="2">-290</value>
-				<value level="3">-295</value>
-				<value level="4">-300</value>
-				<value level="5">-305</value>
-				<value level="6">-310</value>
-				<value level="7">-315</value>
-				<value level="8">-320</value>
-				<value level="9">-325</value>
-				<value level="10">-330</value>
-				<value level="11">-335</value>
-				<value level="12">-340</value>
-				<value level="13">-345</value>
-				<value level="14">-350</value>
-				<value level="15">-355</value>
-				<value level="16">-360</value>
-				<value level="17">-365</value>
-				<value level="18">-370</value>
-				<value level="19">-375</value>
-				<value level="20">-380</value>
-				<value level="21">-385</value>
-				<value level="22">-390</value>
-				<value level="23">-400</value>
-				<value level="24">-405</value>
-				<value level="25">-410</value>
-				<value level="26">-420</value>
-				<value level="27">-425</value>
-				<value level="28">-430</value>
-				<value level="29">-435</value>
-				<value level="30">-440</value>
-			</effect-point>
-			<hit-time initial="1667"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-285">
+                <value level="2">-290</value>
+                <value level="3">-295</value>
+                <value level="4">-300</value>
+                <value level="5">-305</value>
+                <value level="6">-310</value>
+                <value level="7">-315</value>
+                <value level="8">-320</value>
+                <value level="9">-325</value>
+                <value level="10">-330</value>
+                <value level="11">-335</value>
+                <value level="12">-340</value>
+                <value level="13">-345</value>
+                <value level="14">-350</value>
+                <value level="15">-355</value>
+                <value level="16">-360</value>
+                <value level="17">-365</value>
+                <value level="18">-370</value>
+                <value level="19">-375</value>
+                <value level="20">-380</value>
+                <value level="21">-385</value>
+                <value level="22">-390</value>
+                <value level="23">-400</value>
+                <value level="24">-405</value>
+                <value level="25">-410</value>
+                <value level="26">-420</value>
+                <value level="27">-425</value>
+                <value level="28">-430</value>
+                <value level="29">-435</value>
+                <value level="30">-440</value>
+            </effect-point>
+            <hit-time initial="1667"/>
         </attributes>
         <consume>
             <mana initial="38">
@@ -526,56 +526,56 @@
          -->
         <icon initial="icon.skill0019"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-210">
-				<value level="2">-215</value>
-				<value level="3">-220</value>
-				<value level="4">-225</value>
-				<value level="5">-230</value>
-				<value level="6">-235</value>
-				<value level="7">-240</value>
-				<value level="8">-245</value>
-				<value level="9">-250</value>
-				<value level="10">-255</value>
-				<value level="11">-260</value>
-				<value level="12">-265</value>
-				<value level="13">-270</value>
-				<value level="14">-275</value>
-				<value level="15">-280</value>
-				<value level="16">-285</value>
-				<value level="17">-290</value>
-				<value level="18">-295</value>
-				<value level="19">-300</value>
-				<value level="20">-305</value>
-				<value level="21">-310</value>
-				<value level="22">-315</value>
-				<value level="23">-320</value>
-				<value level="24">-325</value>
-				<value level="25">-330</value>
-				<value level="26">-335</value>
-				<value level="27">-340</value>
-				<value level="28">-345</value>
-				<value level="29">-350</value>
-				<value level="30">-355</value>
-				<value level="31">-360</value>
-				<value level="32">-365</value>
-				<value level="33">-370</value>
-				<value level="34">-375</value>
-				<value level="35">-380</value>
-				<value level="36">-385</value>
-				<value level="37">-390</value>
-				<value level="38">-400</value>
-				<value level="39">-405</value>
-				<value level="40">-410</value>
-				<value level="41">-420</value>
-				<value level="42">-425</value>
-				<value level="43">-430</value>
-				<value level="44">-435</value>
-				<value level="45">-440</value>
-			</effect-point>
-			<hit-time initial="2000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-210">
+                <value level="2">-215</value>
+                <value level="3">-220</value>
+                <value level="4">-225</value>
+                <value level="5">-230</value>
+                <value level="6">-235</value>
+                <value level="7">-240</value>
+                <value level="8">-245</value>
+                <value level="9">-250</value>
+                <value level="10">-255</value>
+                <value level="11">-260</value>
+                <value level="12">-265</value>
+                <value level="13">-270</value>
+                <value level="14">-275</value>
+                <value level="15">-280</value>
+                <value level="16">-285</value>
+                <value level="17">-290</value>
+                <value level="18">-295</value>
+                <value level="19">-300</value>
+                <value level="20">-305</value>
+                <value level="21">-310</value>
+                <value level="22">-315</value>
+                <value level="23">-320</value>
+                <value level="24">-325</value>
+                <value level="25">-330</value>
+                <value level="26">-335</value>
+                <value level="27">-340</value>
+                <value level="28">-345</value>
+                <value level="29">-350</value>
+                <value level="30">-355</value>
+                <value level="31">-360</value>
+                <value level="32">-365</value>
+                <value level="33">-370</value>
+                <value level="34">-375</value>
+                <value level="35">-380</value>
+                <value level="36">-385</value>
+                <value level="37">-390</value>
+                <value level="38">-400</value>
+                <value level="39">-405</value>
+                <value level="40">-410</value>
+                <value level="41">-420</value>
+                <value level="42">-425</value>
+                <value level="43">-430</value>
+                <value level="44">-435</value>
+                <value level="45">-440</value>
+            </effect-point>
+            <hit-time initial="2000"/>
         </attributes>
         <consume>
             <mana initial="44">
@@ -673,56 +673,56 @@
          -->
         <icon initial="icon.skill0190"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-210">
-				<value level="2">-215</value>
-				<value level="3">-220</value>
-				<value level="4">-225</value>
-				<value level="5">-230</value>
-				<value level="6">-235</value>
-				<value level="7">-240</value>
-				<value level="8">-245</value>
-				<value level="9">-250</value>
-				<value level="10">-255</value>
-				<value level="11">-260</value>
-				<value level="12">-265</value>
-				<value level="13">-270</value>
-				<value level="14">-275</value>
-				<value level="15">-280</value>
-				<value level="16">-285</value>
-				<value level="17">-290</value>
-				<value level="18">-295</value>
-				<value level="19">-300</value>
-				<value level="20">-305</value>
-				<value level="21">-310</value>
-				<value level="22">-315</value>
-				<value level="23">-320</value>
-				<value level="24">-325</value>
-				<value level="25">-330</value>
-				<value level="26">-335</value>
-				<value level="27">-340</value>
-				<value level="28">-345</value>
-				<value level="29">-350</value>
-				<value level="30">-355</value>
-				<value level="31">-360</value>
-				<value level="32">-365</value>
-				<value level="33">-370</value>
-				<value level="34">-375</value>
-				<value level="35">-380</value>
-				<value level="36">-385</value>
-				<value level="37">-390</value>
-				<value level="38">-400</value>
-				<value level="39">-405</value>
-				<value level="40">-410</value>
-				<value level="41">-420</value>
-				<value level="42">-425</value>
-				<value level="43">-430</value>
-				<value level="44">-435</value>
-				<value level="45">-440</value>
-			</effect-point>
-			<hit-time initial="1080"/>
+            <cast-range initial="40"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-210">
+                <value level="2">-215</value>
+                <value level="3">-220</value>
+                <value level="4">-225</value>
+                <value level="5">-230</value>
+                <value level="6">-235</value>
+                <value level="7">-240</value>
+                <value level="8">-245</value>
+                <value level="9">-250</value>
+                <value level="10">-255</value>
+                <value level="11">-260</value>
+                <value level="12">-265</value>
+                <value level="13">-270</value>
+                <value level="14">-275</value>
+                <value level="15">-280</value>
+                <value level="16">-285</value>
+                <value level="17">-290</value>
+                <value level="18">-295</value>
+                <value level="19">-300</value>
+                <value level="20">-305</value>
+                <value level="21">-310</value>
+                <value level="22">-315</value>
+                <value level="23">-320</value>
+                <value level="24">-325</value>
+                <value level="25">-330</value>
+                <value level="26">-335</value>
+                <value level="27">-340</value>
+                <value level="28">-345</value>
+                <value level="29">-350</value>
+                <value level="30">-355</value>
+                <value level="31">-360</value>
+                <value level="32">-365</value>
+                <value level="33">-370</value>
+                <value level="34">-375</value>
+                <value level="35">-380</value>
+                <value level="36">-385</value>
+                <value level="37">-390</value>
+                <value level="38">-400</value>
+                <value level="39">-405</value>
+                <value level="40">-410</value>
+                <value level="41">-420</value>
+                <value level="42">-425</value>
+                <value level="43">-430</value>
+                <value level="44">-435</value>
+                <value level="45">-440</value>
+            </effect-point>
+            <hit-time initial="1080"/>
         </attributes>
         <consume>
             <mana initial="28">
@@ -811,56 +811,56 @@
          -->
         <icon initial="icon.skill0263"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-210">
-				<value level="2">-215</value>
-				<value level="3">-220</value>
-				<value level="4">-225</value>
-				<value level="5">-230</value>
-				<value level="6">-235</value>
-				<value level="7">-240</value>
-				<value level="8">-245</value>
-				<value level="9">-250</value>
-				<value level="10">-255</value>
-				<value level="11">-260</value>
-				<value level="12">-265</value>
-				<value level="13">-270</value>
-				<value level="14">-275</value>
-				<value level="15">-280</value>
-				<value level="16">-285</value>
-				<value level="17">-290</value>
-				<value level="18">-295</value>
-				<value level="19">-300</value>
-				<value level="20">-305</value>
-				<value level="21">-310</value>
-				<value level="22">-315</value>
-				<value level="23">-320</value>
-				<value level="24">-325</value>
-				<value level="25">-330</value>
-				<value level="26">-335</value>
-				<value level="27">-340</value>
-				<value level="28">-345</value>
-				<value level="29">-350</value>
-				<value level="30">-355</value>
-				<value level="31">-360</value>
-				<value level="32">-365</value>
-				<value level="33">-370</value>
-				<value level="34">-375</value>
-				<value level="35">-380</value>
-				<value level="36">-385</value>
-				<value level="37">-390</value>
-				<value level="38">-400</value>
-				<value level="39">-405</value>
-				<value level="40">-410</value>
-				<value level="41">-420</value>
-				<value level="42">-425</value>
-				<value level="43">-430</value>
-				<value level="44">-435</value>
-				<value level="45">-440</value>
-			</effect-point>
-			<hit-time initial="1080"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-210">
+                <value level="2">-215</value>
+                <value level="3">-220</value>
+                <value level="4">-225</value>
+                <value level="5">-230</value>
+                <value level="6">-235</value>
+                <value level="7">-240</value>
+                <value level="8">-245</value>
+                <value level="9">-250</value>
+                <value level="10">-255</value>
+                <value level="11">-260</value>
+                <value level="12">-265</value>
+                <value level="13">-270</value>
+                <value level="14">-275</value>
+                <value level="15">-280</value>
+                <value level="16">-285</value>
+                <value level="17">-290</value>
+                <value level="18">-295</value>
+                <value level="19">-300</value>
+                <value level="20">-305</value>
+                <value level="21">-310</value>
+                <value level="22">-315</value>
+                <value level="23">-320</value>
+                <value level="24">-325</value>
+                <value level="25">-330</value>
+                <value level="26">-335</value>
+                <value level="27">-340</value>
+                <value level="28">-345</value>
+                <value level="29">-350</value>
+                <value level="30">-355</value>
+                <value level="31">-360</value>
+                <value level="32">-365</value>
+                <value level="33">-370</value>
+                <value level="34">-375</value>
+                <value level="35">-380</value>
+                <value level="36">-385</value>
+                <value level="37">-390</value>
+                <value level="38">-400</value>
+                <value level="39">-405</value>
+                <value level="40">-410</value>
+                <value level="41">-420</value>
+                <value level="42">-425</value>
+                <value level="43">-430</value>
+                <value level="44">-435</value>
+                <value level="45">-440</value>
+            </effect-point>
+            <hit-time initial="1080"/>
         </attributes>
         <consume>
             <mana initial="28">
@@ -950,57 +950,57 @@
          -->
         <icon initial="icon.skill0280"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-210">
-				<value level="2">-215</value>
-				<value level="3">-220</value>
-				<value level="4">-225</value>
-				<value level="5">-230</value>
-				<value level="6">-235</value>
-				<value level="7">-240</value>
-				<value level="8">-245</value>
-				<value level="9">-250</value>
-				<value level="10">-255</value>
-				<value level="11">-260</value>
-				<value level="12">-265</value>
-				<value level="13">-270</value>
-				<value level="14">-275</value>
-				<value level="15">-280</value>
-				<value level="16">-285</value>
-				<value level="17">-290</value>
-				<value level="18">-295</value>
-				<value level="19">-300</value>
-				<value level="20">-305</value>
-				<value level="21">-310</value>
-				<value level="22">-315</value>
-				<value level="23">-320</value>
-				<value level="24">-325</value>
-				<value level="25">-330</value>
-				<value level="26">-335</value>
-				<value level="27">-340</value>
-				<value level="28">-345</value>
-				<value level="29">-350</value>
-				<value level="30">-355</value>
-				<value level="31">-360</value>
-				<value level="32">-365</value>
-				<value level="33">-370</value>
-				<value level="34">-375</value>
-				<value level="35">-380</value>
-				<value level="36">-385</value>
-				<value level="37">-390</value>
-				<value level="38">-400</value>
-				<value level="39">-405</value>
-				<value level="40">-410</value>
-				<value level="41">-415</value>
-				<value level="42">-420</value>
-				<value level="43">-425</value>
-				<value level="44">-430</value>
-				<value level="45">-435</value>
-				<value level="46">-440</value>
-			</effect-point>
-			<hit-time initial="1900"/>
+            <cast-range initial="40"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-210">
+                <value level="2">-215</value>
+                <value level="3">-220</value>
+                <value level="4">-225</value>
+                <value level="5">-230</value>
+                <value level="6">-235</value>
+                <value level="7">-240</value>
+                <value level="8">-245</value>
+                <value level="9">-250</value>
+                <value level="10">-255</value>
+                <value level="11">-260</value>
+                <value level="12">-265</value>
+                <value level="13">-270</value>
+                <value level="14">-275</value>
+                <value level="15">-280</value>
+                <value level="16">-285</value>
+                <value level="17">-290</value>
+                <value level="18">-295</value>
+                <value level="19">-300</value>
+                <value level="20">-305</value>
+                <value level="21">-310</value>
+                <value level="22">-315</value>
+                <value level="23">-320</value>
+                <value level="24">-325</value>
+                <value level="25">-330</value>
+                <value level="26">-335</value>
+                <value level="27">-340</value>
+                <value level="28">-345</value>
+                <value level="29">-350</value>
+                <value level="30">-355</value>
+                <value level="31">-360</value>
+                <value level="32">-365</value>
+                <value level="33">-370</value>
+                <value level="34">-375</value>
+                <value level="35">-380</value>
+                <value level="36">-385</value>
+                <value level="37">-390</value>
+                <value level="38">-400</value>
+                <value level="39">-405</value>
+                <value level="40">-410</value>
+                <value level="41">-415</value>
+                <value level="42">-420</value>
+                <value level="43">-425</value>
+                <value level="44">-430</value>
+                <value level="45">-435</value>
+                <value level="46">-440</value>
+            </effect-point>
+            <hit-time initial="1900"/>
         </attributes>
         <consume>
             <mana initial="28">
@@ -1093,59 +1093,59 @@
          -->
         <icon initial="icon.skill0284"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-190">
-				<value level="2">-195</value>
-				<value level="3">-200</value>
-				<value level="4">-210</value>
-				<value level="5">-215</value>
-				<value level="6">-220</value>
-				<value level="7">-225</value>
-				<value level="8">-230</value>
-				<value level="9">-235</value>
-				<value level="10">-240</value>
-				<value level="11">-245</value>
-				<value level="12">-250</value>
-				<value level="13">-255</value>
-				<value level="14">-260</value>
-				<value level="15">-265</value>
-				<value level="16">-270</value>
-				<value level="17">-275</value>
-				<value level="18">-280</value>
-				<value level="19">-285</value>
-				<value level="20">-290</value>
-				<value level="21">-295</value>
-				<value level="22">-300</value>
-				<value level="23">-305</value>
-				<value level="24">-310</value>
-				<value level="25">-315</value>
-				<value level="26">-320</value>
-				<value level="27">-325</value>
-				<value level="28">-330</value>
-				<value level="29">-335</value>
-				<value level="30">-340</value>
-				<value level="31">-345</value>
-				<value level="32">-350</value>
-				<value level="33">-355</value>
-				<value level="34">-360</value>
-				<value level="35">-365</value>
-				<value level="36">-370</value>
-				<value level="37">-375</value>
-				<value level="38">-380</value>
-				<value level="39">-385</value>
-				<value level="40">-390</value>
-				<value level="41">-400</value>
-				<value level="42">-405</value>
-				<value level="43">-410</value>
-				<value level="44">-420</value>
-				<value level="45">-425</value>
-				<value level="46">-430</value>
-				<value level="47">-435</value>
-				<value level="48">-440</value>
-			</effect-point>
-			<hit-time initial="1360"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-190">
+                <value level="2">-195</value>
+                <value level="3">-200</value>
+                <value level="4">-210</value>
+                <value level="5">-215</value>
+                <value level="6">-220</value>
+                <value level="7">-225</value>
+                <value level="8">-230</value>
+                <value level="9">-235</value>
+                <value level="10">-240</value>
+                <value level="11">-245</value>
+                <value level="12">-250</value>
+                <value level="13">-255</value>
+                <value level="14">-260</value>
+                <value level="15">-265</value>
+                <value level="16">-270</value>
+                <value level="17">-275</value>
+                <value level="18">-280</value>
+                <value level="19">-285</value>
+                <value level="20">-290</value>
+                <value level="21">-295</value>
+                <value level="22">-300</value>
+                <value level="23">-305</value>
+                <value level="24">-310</value>
+                <value level="25">-315</value>
+                <value level="26">-320</value>
+                <value level="27">-325</value>
+                <value level="28">-330</value>
+                <value level="29">-335</value>
+                <value level="30">-340</value>
+                <value level="31">-345</value>
+                <value level="32">-350</value>
+                <value level="33">-355</value>
+                <value level="34">-360</value>
+                <value level="35">-365</value>
+                <value level="36">-370</value>
+                <value level="37">-375</value>
+                <value level="38">-380</value>
+                <value level="39">-385</value>
+                <value level="40">-390</value>
+                <value level="41">-400</value>
+                <value level="42">-405</value>
+                <value level="43">-410</value>
+                <value level="44">-420</value>
+                <value level="45">-425</value>
+                <value level="46">-430</value>
+                <value level="47">-435</value>
+                <value level="48">-440</value>
+            </effect-point>
+            <hit-time initial="1360"/>
         </attributes>
         <consume>
             <mana initial="26">
@@ -1200,20 +1200,20 @@
          -->
         <icon initial="icon.skill0343"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-400">
-				<value level="2">-405</value>
-				<value level="3">-410</value>
-				<value level="4">-415</value>
-				<value level="5">-420</value>
-				<value level="6">-425</value>
-				<value level="7">-430</value>
-				<value level="8">-435</value>
-				<value level="9">-440</value>
-			</effect-point>
-			<hit-time initial="2000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-400">
+                <value level="2">-405</value>
+                <value level="3">-410</value>
+                <value level="4">-415</value>
+                <value level="5">-420</value>
+                <value level="6">-425</value>
+                <value level="7">-430</value>
+                <value level="8">-435</value>
+                <value level="9">-440</value>
+            </effect-point>
+            <hit-time initial="2000"/>
         </attributes>
         <consume>
             <mana initial="84">
@@ -1236,13 +1236,13 @@
          -->
         <icon initial="icon.skill0344"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-400">
-				<value level="2">-430</value>
-			</effect-point>
-			<hit-time initial="1800"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-400">
+                <value level="2">-430</value>
+            </effect-point>
+            <hit-time initial="1800"/>
         </attributes>
         <consume>
             <mana initial="54">
@@ -1276,31 +1276,31 @@
          -->
         <icon initial="icon.skill0400"/>
         <attributes property="PHYSIC" auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-2200">
-				<value level="2">-2350</value>
-				<value level="3">-2500</value>
-				<value level="4">-2650</value>
-				<value level="5">-2800</value>
-				<value level="6">-2950</value>
-				<value level="7">-3100</value>
-				<value level="8">-3200</value>
-				<value level="9">-3300</value>
-				<value level="10">-3400</value>
-				<value level="11">-3500</value>
-				<value level="12">-3600</value>
-				<value level="13">-3700</value>
-				<value level="14">-3800</value>
-				<value level="15">-3900</value>
-				<value level="16">-4000</value>
-				<value level="17">-4100</value>
-				<value level="18">-4200</value>
-				<value level="19">-4300</value>
-				<value level="20">-4400</value>
-			</effect-point>
-			<hit-time initial="1300"/>
+            <cast-range initial="40"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-2200">
+                <value level="2">-2350</value>
+                <value level="3">-2500</value>
+                <value level="4">-2650</value>
+                <value level="5">-2800</value>
+                <value level="6">-2950</value>
+                <value level="7">-3100</value>
+                <value level="8">-3200</value>
+                <value level="9">-3300</value>
+                <value level="10">-3400</value>
+                <value level="11">-3500</value>
+                <value level="12">-3600</value>
+                <value level="13">-3700</value>
+                <value level="14">-3800</value>
+                <value level="15">-3900</value>
+                <value level="16">-4000</value>
+                <value level="17">-4100</value>
+                <value level="18">-4200</value>
+                <value level="19">-4300</value>
+                <value level="20">-4400</value>
+            </effect-point>
+            <hit-time initial="1300"/>
         </attributes>
         <consume>
             <mana initial="30">
@@ -1352,31 +1352,31 @@
          -->
         <icon initial="icon.skill0401"/>
         <attributes property="PHYSIC" auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-2200">
-				<value level="2">-2350</value>
-				<value level="3">-2500</value>
-				<value level="4">-2650</value>
-				<value level="5">-2800</value>
-				<value level="6">-2950</value>
-				<value level="7">-3100</value>
-				<value level="8">-3200</value>
-				<value level="9">-3300</value>
-				<value level="10">-3400</value>
-				<value level="11">-3500</value>
-				<value level="12">-3600</value>
-				<value level="13">-3700</value>
-				<value level="14">-3800</value>
-				<value level="15">-3900</value>
-				<value level="16">-4000</value>
-				<value level="17">-4100</value>
-				<value level="18">-4200</value>
-				<value level="19">-4300</value>
-				<value level="20">-4400</value>
-			</effect-point>
-			<hit-time initial="1300"/>
+            <cast-range initial="40"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-2200">
+                <value level="2">-2350</value>
+                <value level="3">-2500</value>
+                <value level="4">-2650</value>
+                <value level="5">-2800</value>
+                <value level="6">-2950</value>
+                <value level="7">-3100</value>
+                <value level="8">-3200</value>
+                <value level="9">-3300</value>
+                <value level="10">-3400</value>
+                <value level="11">-3500</value>
+                <value level="12">-3600</value>
+                <value level="13">-3700</value>
+                <value level="14">-3800</value>
+                <value level="15">-3900</value>
+                <value level="16">-4000</value>
+                <value level="17">-4100</value>
+                <value level="18">-4200</value>
+                <value level="19">-4300</value>
+                <value level="20">-4400</value>
+            </effect-point>
+            <hit-time initial="1300"/>
         </attributes>
         <consume>
             <mana initial="30">
@@ -1413,16 +1413,16 @@
          -->
         <icon initial="icon.skill0921"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="80"/>
-			<reuse initial="2000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-400">
-				<value level="2">-410</value>
-				<value level="3">-420</value>
-				<value level="4">-430</value>
-				<value level="5">-440</value>
-			</effect-point>
-			<hit-time initial="1080"/>
+            <cast-range initial="80"/>
+            <reuse initial="2000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-400">
+                <value level="2">-410</value>
+                <value level="3">-420</value>
+                <value level="4">-430</value>
+                <value level="5">-440</value>
+            </effect-point>
+            <hit-time initial="1080"/>
         </attributes>
         <consume>
             <mana initial="54">
@@ -1434,7 +1434,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45215" name="Shield Strike - Transcendence" max-level="23">
+    <skill id="45215" name="Shield Strike - Transcendence" max-level="23" action="A1">
         <!--
             level 1: Attacks the enemy using a shield with bonus 901 Power, and provokes the enemy. Requires a shield. Over-hit.\n\nCan only be used in Transcendence dungeons.
             level 2: Attacks the enemy using a shield with bonus 1113 Power, and provokes the enemy. Requires a shield. Over-hit.\n\nCan only be used in Transcendence dungeons.
@@ -1530,19 +1530,19 @@
          -->
         <icon initial="icon.skill0986"/>
         <attributes property="PHYSIC" auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-400">
-				<value level="2">-405</value>
-				<value level="3">-410</value>
-				<value level="4">-420</value>
-				<value level="5">-425</value>
-				<value level="6">-430</value>
-				<value level="7">-435</value>
-				<value level="8">-440</value>
-			</effect-point>
-			<hit-time initial="1500"/>
+            <cast-range initial="40"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-400">
+                <value level="2">-405</value>
+                <value level="3">-410</value>
+                <value level="4">-420</value>
+                <value level="5">-425</value>
+                <value level="6">-430</value>
+                <value level="7">-435</value>
+                <value level="8">-440</value>
+            </effect-point>
+            <hit-time initial="1500"/>
         </attributes>
         <consume>
             <mana initial="54">
@@ -1565,16 +1565,16 @@
          -->
         <icon initial="icon.skill0496"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-220">
-				<value level="2">-270</value>
-				<value level="3">-320</value>
-				<value level="4">-370</value>
-				<value level="5">-395</value>
-			</effect-point>
-			<hit-time initial="1500"/>
+            <cast-range initial="40"/>
+            <reuse initial="1000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-220">
+                <value level="2">-270</value>
+                <value level="3">-320</value>
+                <value level="4">-370</value>
+                <value level="5">-395</value>
+            </effect-point>
+            <hit-time initial="1500"/>
         </attributes>
         <consume>
             <mana initial="30">
@@ -1586,7 +1586,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45218" name="Prominence - Transcendence" max-level="36" type="MAGIC" action="A1">
+    <skill id="45218" name="Prominence - Transcendence" max-level="36" action="A1" type="MAGIC">
         <!--
             level 1: Explodes fire, inflicting damage on the enemy with bonus 76 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
             level 2: Explodes fire, inflicting damage on the enemy with bonus 80 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
@@ -1627,46 +1627,46 @@
          -->
         <icon initial="icon.skill1230"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<effect-point initial="-180">
-				<value level="2">-190</value>
-				<value level="3">-200</value>
-				<value level="4">-209</value>
-				<value level="5">-219</value>
-				<value level="6">-229</value>
-				<value level="7">-239</value>
-				<value level="8">-248</value>
-				<value level="9">-257</value>
-				<value level="10">-266</value>
-				<value level="11">-271</value>
-				<value level="12">-275</value>
-				<value level="13">-279</value>
-				<value level="14">-283</value>
-				<value level="15">-287</value>
-				<value level="16">-291</value>
-				<value level="17">-295</value>
-				<value level="18">-299</value>
-				<value level="19">-302</value>
-				<value level="20">-306</value>
-				<value level="21">-309</value>
-				<value level="22">-312</value>
-				<value level="23">-315</value>
-				<value level="24">-318</value>
-				<value level="25">-321</value>
-				<value level="26">-323</value>
-				<value level="27">-325</value>
-				<value level="28">-328</value>
-				<value level="29">-330</value>
-				<value level="30">-332</value>
-				<value level="31">-334</value>
-				<value level="32">-338</value>
-				<value level="33">-340</value>
-				<value level="34">-342</value>
-				<value level="35">-344</value>
-				<value level="36">-346</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <effect-point initial="-180">
+                <value level="2">-190</value>
+                <value level="3">-200</value>
+                <value level="4">-209</value>
+                <value level="5">-219</value>
+                <value level="6">-229</value>
+                <value level="7">-239</value>
+                <value level="8">-248</value>
+                <value level="9">-257</value>
+                <value level="10">-266</value>
+                <value level="11">-271</value>
+                <value level="12">-275</value>
+                <value level="13">-279</value>
+                <value level="14">-283</value>
+                <value level="15">-287</value>
+                <value level="16">-291</value>
+                <value level="17">-295</value>
+                <value level="18">-299</value>
+                <value level="19">-302</value>
+                <value level="20">-306</value>
+                <value level="21">-309</value>
+                <value level="22">-312</value>
+                <value level="23">-315</value>
+                <value level="24">-318</value>
+                <value level="25">-321</value>
+                <value level="26">-323</value>
+                <value level="27">-325</value>
+                <value level="28">-328</value>
+                <value level="29">-330</value>
+                <value level="30">-332</value>
+                <value level="31">-334</value>
+                <value level="32">-338</value>
+                <value level="33">-340</value>
+                <value level="34">-342</value>
+                <value level="35">-344</value>
+                <value level="36">-346</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="28">
@@ -1703,7 +1703,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45219" name="Hydro Blast - Transcendence" max-level="36" type="MAGIC" action="A1">
+    <skill id="45219" name="Hydro Blast - Transcendence" max-level="36" action="A1" type="MAGIC">
         <!--
             level 1: Releases a high pressure current to inflict damage on the enemy with bonus 76 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
             level 2: Releases a high pressure current to inflict damage on the enemy with bonus 80 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
@@ -1744,46 +1744,46 @@
          -->
         <icon initial="icon.skill1235"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<effect-point initial="-180">
-				<value level="2">-190</value>
-				<value level="3">-200</value>
-				<value level="4">-209</value>
-				<value level="5">-219</value>
-				<value level="6">-229</value>
-				<value level="7">-239</value>
-				<value level="8">-248</value>
-				<value level="9">-257</value>
-				<value level="10">-266</value>
-				<value level="11">-271</value>
-				<value level="12">-275</value>
-				<value level="13">-279</value>
-				<value level="14">-283</value>
-				<value level="15">-287</value>
-				<value level="16">-291</value>
-				<value level="17">-295</value>
-				<value level="18">-299</value>
-				<value level="19">-302</value>
-				<value level="20">-306</value>
-				<value level="21">-309</value>
-				<value level="22">-312</value>
-				<value level="23">-315</value>
-				<value level="24">-318</value>
-				<value level="25">-321</value>
-				<value level="26">-323</value>
-				<value level="27">-325</value>
-				<value level="28">-328</value>
-				<value level="29">-330</value>
-				<value level="30">-332</value>
-				<value level="31">-334</value>
-				<value level="32">-338</value>
-				<value level="33">-340</value>
-				<value level="34">-342</value>
-				<value level="35">-344</value>
-				<value level="36">-346</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <effect-point initial="-180">
+                <value level="2">-190</value>
+                <value level="3">-200</value>
+                <value level="4">-209</value>
+                <value level="5">-219</value>
+                <value level="6">-229</value>
+                <value level="7">-239</value>
+                <value level="8">-248</value>
+                <value level="9">-257</value>
+                <value level="10">-266</value>
+                <value level="11">-271</value>
+                <value level="12">-275</value>
+                <value level="13">-279</value>
+                <value level="14">-283</value>
+                <value level="15">-287</value>
+                <value level="16">-291</value>
+                <value level="17">-295</value>
+                <value level="18">-299</value>
+                <value level="19">-302</value>
+                <value level="20">-306</value>
+                <value level="21">-309</value>
+                <value level="22">-312</value>
+                <value level="23">-315</value>
+                <value level="24">-318</value>
+                <value level="25">-321</value>
+                <value level="26">-323</value>
+                <value level="27">-325</value>
+                <value level="28">-328</value>
+                <value level="29">-330</value>
+                <value level="30">-332</value>
+                <value level="31">-334</value>
+                <value level="32">-338</value>
+                <value level="33">-340</value>
+                <value level="34">-342</value>
+                <value level="35">-344</value>
+                <value level="36">-346</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="28">
@@ -1820,7 +1820,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45220" name="Hurricane - Transcendence" max-level="36" type="MAGIC" action="A1">
+    <skill id="45220" name="Hurricane - Transcendence" max-level="36" action="A1" type="MAGIC">
         <!--
             level 1: Creates a cyclone, inflicting damage on the enemy with bonus 76 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
             level 2: Creates a cyclone, inflicting damage on the enemy with bonus 80 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
@@ -1861,46 +1861,46 @@
          -->
         <icon initial="icon.skill1239"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<effect-point initial="-180">
-				<value level="2">-190</value>
-				<value level="3">-200</value>
-				<value level="4">-209</value>
-				<value level="5">-219</value>
-				<value level="6">-229</value>
-				<value level="7">-239</value>
-				<value level="8">-248</value>
-				<value level="9">-257</value>
-				<value level="10">-266</value>
-				<value level="11">-271</value>
-				<value level="12">-275</value>
-				<value level="13">-279</value>
-				<value level="14">-283</value>
-				<value level="15">-287</value>
-				<value level="16">-291</value>
-				<value level="17">-295</value>
-				<value level="18">-299</value>
-				<value level="19">-302</value>
-				<value level="20">-306</value>
-				<value level="21">-309</value>
-				<value level="22">-312</value>
-				<value level="23">-315</value>
-				<value level="24">-318</value>
-				<value level="25">-321</value>
-				<value level="26">-323</value>
-				<value level="27">-325</value>
-				<value level="28">-328</value>
-				<value level="29">-330</value>
-				<value level="30">-332</value>
-				<value level="31">-334</value>
-				<value level="32">-338</value>
-				<value level="33">-340</value>
-				<value level="34">-342</value>
-				<value level="35">-344</value>
-				<value level="36">-346</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <effect-point initial="-180">
+                <value level="2">-190</value>
+                <value level="3">-200</value>
+                <value level="4">-209</value>
+                <value level="5">-219</value>
+                <value level="6">-229</value>
+                <value level="7">-239</value>
+                <value level="8">-248</value>
+                <value level="9">-257</value>
+                <value level="10">-266</value>
+                <value level="11">-271</value>
+                <value level="12">-275</value>
+                <value level="13">-279</value>
+                <value level="14">-283</value>
+                <value level="15">-287</value>
+                <value level="16">-291</value>
+                <value level="17">-295</value>
+                <value level="18">-299</value>
+                <value level="19">-302</value>
+                <value level="20">-306</value>
+                <value level="21">-309</value>
+                <value level="22">-312</value>
+                <value level="23">-315</value>
+                <value level="24">-318</value>
+                <value level="25">-321</value>
+                <value level="26">-323</value>
+                <value level="27">-325</value>
+                <value level="28">-328</value>
+                <value level="29">-330</value>
+                <value level="30">-332</value>
+                <value level="31">-334</value>
+                <value level="32">-338</value>
+                <value level="33">-340</value>
+                <value level="34">-342</value>
+                <value level="35">-344</value>
+                <value level="36">-346</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="28">
@@ -1937,7 +1937,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45221" name="Blaze - Transcendence" max-level="33" type="MAGIC" action="A1">
+    <skill id="45221" name="Blaze - Transcendence" max-level="33" action="A1" type="MAGIC">
         <!--
             level 1: Fire burns from the body, inflicting damage on the enemy with bonus 32 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
             level 2: Fire burns from the body, inflicting damage on the enemy with bonus 34 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
@@ -1975,45 +1975,45 @@
          -->
         <icon initial="icon.skill1220"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="750">
-				<value level="9">900</value>
-			</cast-range>
-			<reuse initial="1000"/>
-			<effect-point initial="-91">
-				<value level="2">-102</value>
-				<value level="3">-114</value>
-				<value level="4">-122</value>
-				<value level="5">-134</value>
-				<value level="6">-143</value>
-				<value level="7">-157</value>
-				<value level="8">-166</value>
-				<value level="9">-190</value>
-				<value level="10">-200</value>
-				<value level="11">-209</value>
-				<value level="12">-219</value>
-				<value level="13">-229</value>
-				<value level="14">-239</value>
-				<value level="15">-248</value>
-				<value level="16">-257</value>
-				<value level="17">-266</value>
-				<value level="18">-271</value>
-				<value level="19">-275</value>
-				<value level="20">-279</value>
-				<value level="21">-283</value>
-				<value level="22">-287</value>
-				<value level="23">-291</value>
-				<value level="24">-295</value>
-				<value level="25">-299</value>
-				<value level="26">-302</value>
-				<value level="27">-306</value>
-				<value level="28">-309</value>
-				<value level="29">-312</value>
-				<value level="30">-315</value>
-				<value level="31">-318</value>
-				<value level="32">-321</value>
-				<value level="33">-323</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="750">
+                <value level="9">900</value>
+            </cast-range>
+            <reuse initial="1000"/>
+            <effect-point initial="-91">
+                <value level="2">-102</value>
+                <value level="3">-114</value>
+                <value level="4">-122</value>
+                <value level="5">-134</value>
+                <value level="6">-143</value>
+                <value level="7">-157</value>
+                <value level="8">-166</value>
+                <value level="9">-190</value>
+                <value level="10">-200</value>
+                <value level="11">-209</value>
+                <value level="12">-219</value>
+                <value level="13">-229</value>
+                <value level="14">-239</value>
+                <value level="15">-248</value>
+                <value level="16">-257</value>
+                <value level="17">-266</value>
+                <value level="18">-271</value>
+                <value level="19">-275</value>
+                <value level="20">-279</value>
+                <value level="21">-283</value>
+                <value level="22">-287</value>
+                <value level="23">-291</value>
+                <value level="24">-295</value>
+                <value level="25">-299</value>
+                <value level="26">-302</value>
+                <value level="27">-306</value>
+                <value level="28">-309</value>
+                <value level="29">-312</value>
+                <value level="30">-315</value>
+                <value level="31">-318</value>
+                <value level="32">-321</value>
+                <value level="33">-323</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="18">
@@ -2053,7 +2053,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45222" name="Aqua Swirl - Transcendence" max-level="33" type="MAGIC" action="A1">
+    <skill id="45222" name="Aqua Swirl - Transcendence" max-level="33" action="A1" type="MAGIC">
         <!--
             level 1: Creates a cyclone, inflicting damage on the enemy with bonus 32 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
             level 2: Creates a cyclone, inflicting damage on the enemy with bonus 34 M. Atk. Power.\n\nCan only be used in Transcendence dungeons.
@@ -2091,45 +2091,45 @@
          -->
         <icon initial="icon.skill1175"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="750">
-				<value level="9">900</value>
-			</cast-range>
-			<reuse initial="1000"/>
-			<effect-point initial="-91">
-				<value level="2">-102</value>
-				<value level="3">-114</value>
-				<value level="4">-122</value>
-				<value level="5">-134</value>
-				<value level="6">-143</value>
-				<value level="7">-157</value>
-				<value level="8">-166</value>
-				<value level="9">-190</value>
-				<value level="10">-200</value>
-				<value level="11">-209</value>
-				<value level="12">-219</value>
-				<value level="13">-229</value>
-				<value level="14">-239</value>
-				<value level="15">-248</value>
-				<value level="16">-257</value>
-				<value level="17">-266</value>
-				<value level="18">-271</value>
-				<value level="19">-275</value>
-				<value level="20">-279</value>
-				<value level="21">-283</value>
-				<value level="22">-287</value>
-				<value level="23">-291</value>
-				<value level="24">-295</value>
-				<value level="25">-299</value>
-				<value level="26">-302</value>
-				<value level="27">-306</value>
-				<value level="28">-309</value>
-				<value level="29">-312</value>
-				<value level="30">-315</value>
-				<value level="31">-318</value>
-				<value level="32">-321</value>
-				<value level="33">-323</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="750">
+                <value level="9">900</value>
+            </cast-range>
+            <reuse initial="1000"/>
+            <effect-point initial="-91">
+                <value level="2">-102</value>
+                <value level="3">-114</value>
+                <value level="4">-122</value>
+                <value level="5">-134</value>
+                <value level="6">-143</value>
+                <value level="7">-157</value>
+                <value level="8">-166</value>
+                <value level="9">-190</value>
+                <value level="10">-200</value>
+                <value level="11">-209</value>
+                <value level="12">-219</value>
+                <value level="13">-229</value>
+                <value level="14">-239</value>
+                <value level="15">-248</value>
+                <value level="16">-257</value>
+                <value level="17">-266</value>
+                <value level="18">-271</value>
+                <value level="19">-275</value>
+                <value level="20">-279</value>
+                <value level="21">-283</value>
+                <value level="22">-287</value>
+                <value level="23">-291</value>
+                <value level="24">-295</value>
+                <value level="25">-299</value>
+                <value level="26">-302</value>
+                <value level="27">-306</value>
+                <value level="28">-309</value>
+                <value level="29">-312</value>
+                <value level="30">-315</value>
+                <value level="31">-318</value>
+                <value level="32">-321</value>
+                <value level="33">-323</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="18">
@@ -2169,7 +2169,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45223" name="Twister - Transcendence" max-level="33" type="MAGIC" action="A1">
+    <skill id="45223" name="Twister - Transcendence" max-level="33" action="A1" type="MAGIC">
         <!--
             level 1: Creates a powerful cyclone and inflicts damage on the enemy with 32Power added to M. Atk.\n\nCan only be used in Transcendence dungeons.
             level 2: Creates a powerful cyclone and inflicts damage on the enemy with 34Power added to M. Atk.\n\nCan only be used in Transcendence dungeons.
@@ -2207,45 +2207,45 @@
          -->
         <icon initial="icon.skill1178"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="750">
-				<value level="9">900</value>
-			</cast-range>
-			<reuse initial="1000"/>
-			<effect-point initial="-46">
-				<value level="2">-102</value>
-				<value level="3">-114</value>
-				<value level="4">-122</value>
-				<value level="5">-134</value>
-				<value level="6">-143</value>
-				<value level="7">-157</value>
-				<value level="8">-166</value>
-				<value level="9">-190</value>
-				<value level="10">-200</value>
-				<value level="11">-209</value>
-				<value level="12">-219</value>
-				<value level="13">-229</value>
-				<value level="14">-239</value>
-				<value level="15">-248</value>
-				<value level="16">-257</value>
-				<value level="17">-266</value>
-				<value level="18">-271</value>
-				<value level="19">-275</value>
-				<value level="20">-279</value>
-				<value level="21">-283</value>
-				<value level="22">-287</value>
-				<value level="23">-291</value>
-				<value level="24">-295</value>
-				<value level="25">-299</value>
-				<value level="26">-302</value>
-				<value level="27">-306</value>
-				<value level="28">-309</value>
-				<value level="29">-312</value>
-				<value level="30">-315</value>
-				<value level="31">-318</value>
-				<value level="32">-321</value>
-				<value level="33">-323</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="750">
+                <value level="9">900</value>
+            </cast-range>
+            <reuse initial="1000"/>
+            <effect-point initial="-46">
+                <value level="2">-102</value>
+                <value level="3">-114</value>
+                <value level="4">-122</value>
+                <value level="5">-134</value>
+                <value level="6">-143</value>
+                <value level="7">-157</value>
+                <value level="8">-166</value>
+                <value level="9">-190</value>
+                <value level="10">-200</value>
+                <value level="11">-209</value>
+                <value level="12">-219</value>
+                <value level="13">-229</value>
+                <value level="14">-239</value>
+                <value level="15">-248</value>
+                <value level="16">-257</value>
+                <value level="17">-266</value>
+                <value level="18">-271</value>
+                <value level="19">-275</value>
+                <value level="20">-279</value>
+                <value level="21">-283</value>
+                <value level="22">-287</value>
+                <value level="23">-291</value>
+                <value level="24">-295</value>
+                <value level="25">-299</value>
+                <value level="26">-302</value>
+                <value level="27">-306</value>
+                <value level="28">-309</value>
+                <value level="29">-312</value>
+                <value level="30">-315</value>
+                <value level="31">-318</value>
+                <value level="32">-321</value>
+                <value level="33">-323</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="18">
@@ -2285,7 +2285,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45224" name="Might of Heaven - Transcendence" max-level="26" type="MAGIC" action="A1">
+    <skill id="45224" name="Might of Heaven - Transcendence" max-level="26" action="A1" type="MAGIC">
         <!--
             level 1: Inflicts damage on the enemy with 61 Power added to M. Atk.\n\nCan only be used in Transcendence dungeons.
             level 2: Inflicts damage on the enemy with 64 Power added to M. Atk.\n\nCan only be used in Transcendence dungeons.
@@ -2316,36 +2316,36 @@
          -->
         <icon initial="icon.skill1028"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<effect-point initial="-180">
-				<value level="2">-190</value>
-				<value level="3">-200</value>
-				<value level="4">-209</value>
-				<value level="5">-219</value>
-				<value level="6">-229</value>
-				<value level="7">-239</value>
-				<value level="8">-248</value>
-				<value level="9">-257</value>
-				<value level="10">-266</value>
-				<value level="11">-275</value>
-				<value level="12">-283</value>
-				<value level="13">-291</value>
-				<value level="14">-299</value>
-				<value level="15">-306</value>
-				<value level="16">-312</value>
-				<value level="17">-318</value>
-				<value level="18">-323</value>
-				<value level="19">-328</value>
-				<value level="20">-330</value>
-				<value level="21">-332</value>
-				<value level="22">-336</value>
-				<value level="23">-338</value>
-				<value level="24">-340</value>
-				<value level="25">-342</value>
-				<value level="26">-344</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <effect-point initial="-180">
+                <value level="2">-190</value>
+                <value level="3">-200</value>
+                <value level="4">-209</value>
+                <value level="5">-219</value>
+                <value level="6">-229</value>
+                <value level="7">-239</value>
+                <value level="8">-248</value>
+                <value level="9">-257</value>
+                <value level="10">-266</value>
+                <value level="11">-275</value>
+                <value level="12">-283</value>
+                <value level="13">-291</value>
+                <value level="14">-299</value>
+                <value level="15">-306</value>
+                <value level="16">-312</value>
+                <value level="17">-318</value>
+                <value level="18">-323</value>
+                <value level="19">-328</value>
+                <value level="20">-330</value>
+                <value level="21">-332</value>
+                <value level="22">-336</value>
+                <value level="23">-338</value>
+                <value level="24">-340</value>
+                <value level="25">-342</value>
+                <value level="26">-344</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="28">
@@ -2377,7 +2377,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45225" name="Steal Essence - Transcendence" max-level="19" type="MAGIC" action="A1">
+    <skill id="45225" name="Steal Essence - Transcendence" max-level="19" action="A1" type="MAGIC">
         <!--
             level 1: Inflicts damage on the enemy with bonus 72 M. Atk. Power. Absorbs 80% of the damage as HP.\n\nCan only be used in Transcendence dungeons.
             level 2: Inflicts damage on the enemy with bonus 76 M. Atk. Power. Absorbs 80% of the damage as HP.\n\nCan only be used in Transcendence dungeons.
@@ -2401,29 +2401,29 @@
          -->
         <icon initial="icon.skill1245"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<effect-point initial="-190">
-				<value level="2">-209</value>
-				<value level="3">-229</value>
-				<value level="4">-248</value>
-				<value level="5">-266</value>
-				<value level="6">-275</value>
-				<value level="7">-283</value>
-				<value level="8">-291</value>
-				<value level="9">-299</value>
-				<value level="10">-306</value>
-				<value level="11">-312</value>
-				<value level="12">-318</value>
-				<value level="13">-323</value>
-				<value level="14">-328</value>
-				<value level="15">-330</value>
-				<value level="16">-332</value>
-				<value level="17">-334</value>
-				<value level="18">-336</value>
-				<value level="19">-338</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <effect-point initial="-190">
+                <value level="2">-209</value>
+                <value level="3">-229</value>
+                <value level="4">-248</value>
+                <value level="5">-266</value>
+                <value level="6">-275</value>
+                <value level="7">-283</value>
+                <value level="8">-291</value>
+                <value level="9">-299</value>
+                <value level="10">-306</value>
+                <value level="11">-312</value>
+                <value level="12">-318</value>
+                <value level="13">-323</value>
+                <value level="14">-328</value>
+                <value level="15">-330</value>
+                <value level="16">-332</value>
+                <value level="17">-334</value>
+                <value level="18">-336</value>
+                <value level="19">-338</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="35">
@@ -2464,21 +2464,21 @@
          -->
         <icon initial="icon.skill0495"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-120">
-				<value level="2">-170</value>
-				<value level="3">-220</value>
-				<value level="4">-270</value>
-				<value level="5">-320</value>
-				<value level="6">-370</value>
-				<value level="7">-395</value>
-				<value level="8">-420</value>
-				<value level="9">-445</value>
-				<value level="10">-470</value>
-			</effect-point>
-			<hit-time initial="1800"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-120">
+                <value level="2">-170</value>
+                <value level="3">-220</value>
+                <value level="4">-270</value>
+                <value level="5">-320</value>
+                <value level="6">-370</value>
+                <value level="7">-395</value>
+                <value level="8">-420</value>
+                <value level="9">-445</value>
+                <value level="10">-470</value>
+            </effect-point>
+            <hit-time initial="1800"/>
         </attributes>
         <consume>
             <mana initial="17">
@@ -2508,19 +2508,19 @@
          -->
         <icon initial="icon.skill0497"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="40"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-220">
-				<value level="2">-270</value>
-				<value level="3">-320</value>
-				<value level="4">-370</value>
-				<value level="5">-395</value>
-				<value level="6">-420</value>
-				<value level="7">-445</value>
-				<value level="8">-470</value>
-			</effect-point>
-			<hit-time initial="1500"/>
+            <cast-range initial="40"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-220">
+                <value level="2">-270</value>
+                <value level="3">-320</value>
+                <value level="4">-370</value>
+                <value level="5">-395</value>
+                <value level="6">-420</value>
+                <value level="7">-445</value>
+                <value level="8">-470</value>
+            </effect-point>
+            <hit-time initial="1500"/>
         </attributes>
         <consume>
             <mana initial="30">
@@ -2548,19 +2548,19 @@
          -->
         <icon initial="icon.skill0478"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="120"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-220">
-				<value level="2">-270</value>
-				<value level="3">-320</value>
-				<value level="4">-370</value>
-				<value level="5">-395</value>
-				<value level="6">-420</value>
-				<value level="7">-445</value>
-				<value level="8">-470</value>
-			</effect-point>
-			<hit-time initial="2000"/>
+            <cast-range initial="120"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-220">
+                <value level="2">-270</value>
+                <value level="3">-320</value>
+                <value level="4">-370</value>
+                <value level="5">-395</value>
+                <value level="6">-420</value>
+                <value level="7">-445</value>
+                <value level="8">-470</value>
+            </effect-point>
+            <hit-time initial="2000"/>
         </attributes>
         <consume>
             <mana initial="30">
@@ -2575,7 +2575,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45229" name="Soul Spark - Transcendence" max-level="8" type="MAGIC" action="A1">
+    <skill id="45229" name="Soul Spark - Transcendence" max-level="8" action="A1" type="MAGIC">
         <!--
             level 1: Attacks the enemy with bonus 80 Power added to M. Atk. Requires a Rapier.\n\nCan only be used in Transcendence dungeons.
             level 2: Attacks the enemy with bonus 90 Power added to M. Atk. Requires a Rapier.\n\nCan only be used in Transcendence dungeons.
@@ -2588,18 +2588,18 @@
          -->
         <icon initial="icon.skill11361"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="600"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-500">
-				<value level="2">-600</value>
-				<value level="3">-650</value>
-				<value level="4">-800</value>
-				<value level="5">-850</value>
-				<value level="6">-900</value>
-				<value level="7">-950</value>
-				<value level="8">-1000</value>
-			</effect-point>
-			<hit-time initial="1500"/>
+            <cast-range initial="600"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-500">
+                <value level="2">-600</value>
+                <value level="3">-650</value>
+                <value level="4">-800</value>
+                <value level="5">-850</value>
+                <value level="6">-900</value>
+                <value level="7">-950</value>
+                <value level="8">-1000</value>
+            </effect-point>
+            <hit-time initial="1500"/>
         </attributes>
         <consume>
             <mana initial="24">
@@ -2629,21 +2629,21 @@
          -->
         <icon initial="icon.skill0487"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1500"/>
-			<cool-time initial="500"/>
-			<effect-point initial="-120">
-				<value level="2">-170</value>
-				<value level="3">-220</value>
-				<value level="4">-270</value>
-				<value level="5">-320</value>
-				<value level="6">-370</value>
-				<value level="7">-395</value>
-				<value level="8">-420</value>
-				<value level="9">-445</value>
-				<value level="10">-470</value>
-			</effect-point>
-			<hit-time initial="3000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1500"/>
+            <cool-time initial="500"/>
+            <effect-point initial="-120">
+                <value level="2">-170</value>
+                <value level="3">-220</value>
+                <value level="4">-270</value>
+                <value level="5">-320</value>
+                <value level="6">-370</value>
+                <value level="7">-395</value>
+                <value level="8">-420</value>
+                <value level="9">-445</value>
+                <value level="10">-470</value>
+            </effect-point>
+            <hit-time initial="3000"/>
         </attributes>
         <consume>
             <mana initial="24">
@@ -2660,7 +2660,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45231" name="Death Spike - Transcendence" max-level="20" type="MAGIC" action="A1">
+    <skill id="45231" name="Death Spike - Transcendence" max-level="20" action="A1" type="MAGIC">
         <!--
             level 1: Throws a bone to inflict damage on the enemy with bonus 89 M. Atk. Power. Requires 1 Cursed Bones.\n\nCan only be used in Transcendence dungeons.
             level 2: Throws a bone to inflict damage on the enemy with bonus 93 M. Atk. Power. Requires 1 Cursed Bones.\n\nCan only be used in Transcendence dungeons.
@@ -2685,30 +2685,30 @@
          -->
         <icon initial="icon.skill1148"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="1000"/>
-			<effect-point initial="-209">
-				<value level="2">-229</value>
-				<value level="3">-248</value>
-				<value level="4">-266</value>
-				<value level="5">-275</value>
-				<value level="6">-283</value>
-				<value level="7">-291</value>
-				<value level="8">-299</value>
-				<value level="9">-306</value>
-				<value level="10">-312</value>
-				<value level="11">-318</value>
-				<value level="12">-323</value>
-				<value level="13">-328</value>
-				<value level="14">-330</value>
-				<value level="15">-332</value>
-				<value level="16">-336</value>
-				<value level="17">-338</value>
-				<value level="18">-340</value>
-				<value level="19">-342</value>
-				<value level="20">-344</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="900"/>
+            <reuse initial="1000"/>
+            <effect-point initial="-209">
+                <value level="2">-229</value>
+                <value level="3">-248</value>
+                <value level="4">-266</value>
+                <value level="5">-275</value>
+                <value level="6">-283</value>
+                <value level="7">-291</value>
+                <value level="8">-299</value>
+                <value level="9">-306</value>
+                <value level="10">-312</value>
+                <value level="11">-318</value>
+                <value level="12">-323</value>
+                <value level="13">-328</value>
+                <value level="14">-330</value>
+                <value level="15">-332</value>
+                <value level="16">-336</value>
+                <value level="17">-338</value>
+                <value level="18">-340</value>
+                <value level="19">-342</value>
+                <value level="20">-344</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="23">
@@ -2735,7 +2735,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45232" name="Vampiric Claw - Transcendence" max-level="36" type="MAGIC" action="A1">
+    <skill id="45232" name="Vampiric Claw - Transcendence" max-level="36" action="A1" type="MAGIC">
         <!--
             level 1: Inflicts damage on the enemy with bonus 69 M. Atk. Power. Absorbs 40% of the damage as HP.\n\nCan only be used in Transcendence dungeons.
             level 2: Inflicts damage on the enemy with bonus 72 M. Atk. Power. Absorbs 40% of the damage as HP.\n\nCan only be used in Transcendence dungeons.
@@ -2776,46 +2776,46 @@
          -->
         <icon initial="icon.skill1234"/>
         <attributes auto-use="ACTIVE">
-			<cast-range initial="900"/>
-			<reuse initial="2000"/>
-			<effect-point initial="-180">
-				<value level="2">-190</value>
-				<value level="3">-200</value>
-				<value level="4">-209</value>
-				<value level="5">-219</value>
-				<value level="6">-229</value>
-				<value level="7">-239</value>
-				<value level="8">-248</value>
-				<value level="9">-257</value>
-				<value level="10">-266</value>
-				<value level="11">-271</value>
-				<value level="12">-275</value>
-				<value level="13">-279</value>
-				<value level="14">-283</value>
-				<value level="15">-287</value>
-				<value level="16">-291</value>
-				<value level="17">-295</value>
-				<value level="18">-299</value>
-				<value level="19">-302</value>
-				<value level="20">-306</value>
-				<value level="21">-309</value>
-				<value level="22">-312</value>
-				<value level="23">-315</value>
-				<value level="24">-318</value>
-				<value level="25">-321</value>
-				<value level="26">-323</value>
-				<value level="27">-325</value>
-				<value level="28">-328</value>
-				<value level="29">-330</value>
-				<value level="30">-332</value>
-				<value level="31">-334</value>
-				<value level="32">-336</value>
-				<value level="33">-338</value>
-				<value level="34">-340</value>
-				<value level="35">-342</value>
-				<value level="36">-344</value>
-			</effect-point>
-			<hit-time initial="4000"/>
+            <cast-range initial="900"/>
+            <reuse initial="2000"/>
+            <effect-point initial="-180">
+                <value level="2">-190</value>
+                <value level="3">-200</value>
+                <value level="4">-209</value>
+                <value level="5">-219</value>
+                <value level="6">-229</value>
+                <value level="7">-239</value>
+                <value level="8">-248</value>
+                <value level="9">-257</value>
+                <value level="10">-266</value>
+                <value level="11">-271</value>
+                <value level="12">-275</value>
+                <value level="13">-279</value>
+                <value level="14">-283</value>
+                <value level="15">-287</value>
+                <value level="16">-291</value>
+                <value level="17">-295</value>
+                <value level="18">-299</value>
+                <value level="19">-302</value>
+                <value level="20">-306</value>
+                <value level="21">-309</value>
+                <value level="22">-312</value>
+                <value level="23">-315</value>
+                <value level="24">-318</value>
+                <value level="25">-321</value>
+                <value level="26">-323</value>
+                <value level="27">-325</value>
+                <value level="28">-328</value>
+                <value level="29">-330</value>
+                <value level="30">-332</value>
+                <value level="31">-334</value>
+                <value level="32">-336</value>
+                <value level="33">-338</value>
+                <value level="34">-340</value>
+                <value level="35">-342</value>
+                <value level="36">-344</value>
+            </effect-point>
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana initial="60">
@@ -2878,26 +2878,26 @@
          -->
         <icon initial="icon.skill1539"/>
         <attributes property="PHYSIC" auto-use="ACTIVE">
-			<cast-range initial="600"/>
-			<reuse initial="5000"/>
-			<cool-time initial="720"/>
-			<effect-point initial="-140">
-				<value level="2">-180</value>
-				<value level="3">-265</value>
-				<value level="4">-310</value>
-				<value level="5">-350</value>
-				<value level="6">-370</value>
-				<value level="7">-400</value>
-				<value level="8">-405</value>
-				<value level="9">-410</value>
-				<value level="10">-415</value>
-				<value level="11">-420</value>
-				<value level="12">-425</value>
-				<value level="13">-430</value>
-				<value level="14">-435</value>
-				<value level="15">-440</value>
-			</effect-point>
-			<hit-time initial="1080"/>
+            <cast-range initial="600"/>
+            <reuse initial="5000"/>
+            <cool-time initial="720"/>
+            <effect-point initial="-140">
+                <value level="2">-180</value>
+                <value level="3">-265</value>
+                <value level="4">-310</value>
+                <value level="5">-350</value>
+                <value level="6">-370</value>
+                <value level="7">-400</value>
+                <value level="8">-405</value>
+                <value level="9">-410</value>
+                <value level="10">-415</value>
+                <value level="11">-420</value>
+                <value level="12">-425</value>
+                <value level="13">-430</value>
+                <value level="14">-435</value>
+                <value level="15">-440</value>
+            </effect-point>
+            <hit-time initial="1080"/>
         </attributes>
         <consume>
             <mana initial="20">

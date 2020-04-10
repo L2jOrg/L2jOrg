@@ -1056,9 +1056,9 @@
             <effect name="TalismanSlot">
                 <power initial="4.0"/>
             </effect>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55885" name="Agathion Bracelet Stats Increase" max-level="2">
@@ -1071,9 +1071,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55886" name="Agathion Bracelet Resistance Increase" max-level="2">
@@ -1142,7 +1142,6 @@
         <target/>
     </skill>
     <skill id="55889" name="Halloween Blessing" action="A1">
-        <!-- Rico's Halloween buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1153,7 +1152,6 @@
         <target/>
     </skill>
     <skill id="55890" name="Halloween Gift" action="A1">
-        <!-- Rico's Halloween buff. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1236,7 +1234,6 @@
         <target/>
     </skill>
     <skill id="55897" name="Bonfire" action="A1">
-        <!-- Transforms into cat. During transformation HP/ MP +20%%, P./ M. Def. +3%%, acquired XP/ SP during hunt +5%%. Effect remains after death. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1261,7 +1258,6 @@
         <target/>
     </skill>
     <skill id="55899" name="Match Girls' Gift" action="A1">
-        <!-- For 30 minutes, STR/DEX/CON/INT/WIT/MEN +1. Additionally, XP/SP Gain +5%%. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>

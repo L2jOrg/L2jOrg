@@ -68,7 +68,7 @@
     <xs:element name="soul-eating" type="SoulEatingEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="speed" type="SpeedEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="stat-by-move-type" type="StatByMoveType" substitutionGroup="abstractEffect"/>
-    <xs:element name="stat" type="StatEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="base-stat" type="StatEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="steal-abnormal" type="StealAbnormalEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="summon" type="SummonEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="summon-agathion" type="SummonAgathionEffect" substitutionGroup="abstractEffect"/>
@@ -90,6 +90,42 @@
     <xs:element name="vampiric-attack" type="VampiricAttackEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="obtain-soul" type="ObtainSoulEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="stats-linked" type="StatsLinkedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="base-stats" type="BaseStatsEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="acquire-costume" type="AcquireCostumeEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="acquire-random-costume" type="AcquireRandomCostumeEffect" substitutionGroup="abstractEffect"/>
+
+
+    <xs:complexType name="AcquireRandomCostumeEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="grades" type="CostumeGradeList"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="CostumeGradeList">
+        <xs:list itemType="CostumeGrade"/>
+    </xs:simpleType>
+
+    <xs:complexType name="AcquireCostumeEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="id" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BaseStatsEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="types" type="BaseStatList" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="BaseStatList">
+        <xs:list itemType="BaseStat"/>
+    </xs:simpleType>
 
     <xs:complexType name="StatsLinkedEffect">
         <xs:complexContent>

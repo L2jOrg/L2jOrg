@@ -5,6 +5,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -278,6 +279,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "action" -> parseItemAction(item, node);
                 case "skill-reducer" -> parseSkillReducer(item, node);
                 case "extract" -> parseItemExtract(item, node);
+                case "transformation-book" -> parseTransformationBook(item, node);
                 case "conditions" -> parseItemCondition(item, node);
             }
         } );
@@ -287,6 +289,11 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseItemCrystal(EtcItem item, Node node) {
         item.setCrystalType(parseEnum(node.getAttributes(), CrystalType.class, "type", CrystalType.NONE));
+    }
+
+    private void parseTransformationBook(EtcItem item, Node node) {
+        item.setHandler("TransformationBook");
+        item.addSkill(new ItemSkillHolder(parseInt(node.getAttributes(), "skill"), 1, ItemSkillType.NORMAL, 100, 0));
     }
 
     private void parseItemExtract(EtcItem item, Node node) {

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.model;
 
+import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.TimeUtil;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.holders.MinionHolder;
@@ -15,7 +16,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import static org.l2j.commons.util.Util.isFloat;
 import static org.l2j.commons.util.Util.isInteger;
 
 /**
@@ -656,6 +656,22 @@ public class StatsSet implements IParserAdvUtils {
     public <T> List<T> getList(String key, Class<T> clazz, List<T> defaultValue) {
         final List<T> list = getList(key, clazz);
         return list == null ? defaultValue : list;
+    }
+
+    public <T extends Enum<T>> EnumSet<T> getStringAsEnumSet(String key, Class<T> enumClass) {
+        return getStringAsEnumSet(key, enumClass, Util.SPACE);
+    }
+
+    public <T extends Enum<T>> EnumSet<T> getStringAsEnumSet(String key, Class<T> enumClass, String delimiter) {
+        var values = getString(key);
+        if(Util.isNotEmpty(values)) {
+            try {
+              return StreamUtil.collectToEnumSet(enumClass, Arrays.stream(values.split(delimiter)).map(e -> Enum.valueOf(enumClass, e)));
+            } catch (Exception e) {
+                LOGGER.error(e.getMessage(), e);
+            }
+        }
+        return EnumSet.noneOf(enumClass);
     }
 
     @SuppressWarnings("unchecked")

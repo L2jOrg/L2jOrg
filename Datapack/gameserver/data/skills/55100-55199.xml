@@ -2142,9 +2142,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
                 <power initial="30.0"/>
             </stat-modify>
@@ -2182,9 +2182,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="2.0"/>
-            </stat>
+            </base-stat>
             <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
                 <power initial="30.0"/>
             </stat-modify>
@@ -2731,9 +2731,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55188" name="Roast Blue Mackerel - INT" action="A2">
@@ -2753,9 +2753,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55189" name="Roast Blue Mackerel - CON" action="A2">
@@ -2775,9 +2775,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55190" name="Roast Blue Mackerel - DEX" action="A2">
@@ -2797,9 +2797,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55191" name="Roast Blue Mackerel - MEN" action="A2">
@@ -2819,9 +2819,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55192" name="Roast Blue Mackerel - WIT" action="A2">
@@ -2841,9 +2841,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55193" name="Sealed Rune Lvl 1" action="A1">

@@ -319,7 +319,6 @@
         <target/>
     </skill>
     <skill id="7129" name="Triple Sonic Slash" max-level="4" action="A1">
-        <!-- The GM is always by your side. Stun Resistance +40%% for $s1. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="40"/>
@@ -339,7 +338,6 @@
         <target/>
     </skill>
     <skill id="7130" name="Sonic Blaster" max-level="4" action="A1">
-        <!-- The GM is always by your side. Stun Resistance +40%% for $s1. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="600"/>

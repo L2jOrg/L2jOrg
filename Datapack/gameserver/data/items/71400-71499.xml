@@ -548,133 +548,155 @@
 	<item id="71478" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Standard Santa Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59349"/>
 	</item>
 
 	<item id="71479" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a High-grade Santa Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59350"/>
 	</item>
 
 	<item id="71480" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Rare Santa Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59351"/>
 	</item>
 
 	<item id="71481" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Legendary Santa Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59352"/>
 	</item>
 
 	<item id="71482" name="Transformation Sealbook: Santa" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_santa">
 	<!-- Use it to obtain a Mythic Santa Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59353"/>
 	</item>
 
 	<item id="71483" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Standard School Uniform A Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59354"/>
 	</item>
 
 	<item id="71484" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a High-grade School Uniform A Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59355"/>
 	</item>
 
 	<item id="71485" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Rare School Uniform A Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59356"/>
 	</item>
 
 	<item id="71486" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Legendary School Uniform A Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59357"/>
 	</item>
 
 	<item id="71487" name="Transformation Sealbook: School Uniform A" type="TRANSFORMATION_BOOK" icon="BranchSys3.icon1.Br_schoollook">
 	<!-- Use it to obtain a Mythic School Uniform A Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59358"/>
 	</item>
 
 	<item id="71488" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Standard Beach Swimsuit Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59359"/>
 	</item>
 
 	<item id="71489" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a High-grade Beach Swimsuit Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59360"/>
 	</item>
 
 	<item id="71490" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Rare Beach Swimsuit Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59361"/>
 	</item>
 
 	<item id="71491" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Legendary Beach Swimsuit Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59362"/>
 	</item>
 
 	<item id="71492" name="Transformation Sealbook: Beach Swimsuit" type="TRANSFORMATION_BOOK" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
 	<!-- Use it to obtain a Mythic Beach Swimsuit Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59363"/>
 	</item>
 
 	<item id="71493" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Standard Teddy Bear Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59364"/>
 	</item>
 
 	<item id="71494" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a High-grade Teddy Bear Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59365"/>
 	</item>
 
 	<item id="71495" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Rare Teddy Bear Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59366"/>
 	</item>
 
 	<item id="71496" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Legendary Teddy Bear Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59367"/>
 	</item>
 
 	<item id="71497" name="Transformation Sealbook: Teddy Bear" type="TRANSFORMATION_BOOK" icon="icon.gomdori_chest_change">
 	<!-- Use it to obtain a Mythic Teddy Bear Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59368"/>
 	</item>
 
 	<item id="71498" name="Transformation Sealbook: Kitty Plushy" type="TRANSFORMATION_BOOK" icon="icon.sayha2017_cat">
 	<!-- Use it to obtain a Standard Kitty Plushy Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59369"/>
 	</item>
 
 	<item id="71499" name="Transformation Sealbook: Kitty Plushy" type="TRANSFORMATION_BOOK" icon="icon.sayha2017_cat">
 	<!-- Use it to obtain a High-grade Kitty Plushy Transformation.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
+		<transformation-book skill="59370"/>
 	</item>
 
 </list>

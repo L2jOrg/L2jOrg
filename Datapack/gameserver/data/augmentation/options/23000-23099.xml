@@ -247,33 +247,33 @@
     <option id="23061" name="o_f_82_1u_92">
         <!-- STR +1 increase. -->
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1"/>
-            </stat>
+            </base-stat>
         </effects>
     </option>
     <option id="23062" name="o_f_82_1u_93">
         <!-- CON +1 -->
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1"/>
-            </stat>
+            </base-stat>
         </effects>
     </option>
     <option id="23063" name="o_f_82_1u_94">
         <!-- INT +1 increase. -->
         <effects>
-            <stat type="INT">
+            <base-stat type="INT">
                 <power initial="1"/>
-            </stat>
+            </base-stat>
         </effects>
     </option>
     <option id="23064" name="o_f_82_1u_95">
         <!-- MEN +1 increase. -->
         <effects>
-            <stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1"/>
-            </stat>
+            </base-stat>
         </effects>
     </option>
 </list>

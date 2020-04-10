@@ -181,7 +181,6 @@
         </effects>
     </skill>
     <skill id="4407" name="Ordinary Monster" max-level="2">
-        <!-- P. Evasion temporarily increased. -->
         <icon initial="icon.skill0000">
             <value level="2">icon.skill4407</value>
         </icon>
@@ -190,7 +189,6 @@
         <target/>
     </skill>
     <skill id="4408" name="HP Increase (1x)" max-level="20">
-        <!-- P. Evasion temporarily increased. -->
         <icon initial="icon.skill0000">
             <value level="8">icon.skill4381</value>
             <value level="9">icon.skill4311</value>
@@ -259,7 +257,6 @@
         </effects>
     </skill>
     <skill id="4409" name="MP Increase (1x)" max-level="20">
-        <!-- P. Evasion temporarily increased. -->
         <icon initial="icon.skill0000">
             <value level="8">icon.skill4381</value>
             <value level="9">icon.skill4311</value>
@@ -328,7 +325,6 @@
         </effects>
     </skill>
     <skill id="4410" name="Extremely Weak P. Atk." max-level="22">
-        <!-- P. Evasion temporarily increased. -->
         <icon initial="icon.skill0141">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill0141</value>
@@ -366,7 +362,6 @@
         </effects>
     </skill>
     <skill id="4411" name="Extremely Weak M. Atk." max-level="22">
-        <!-- P. Evasion temporarily increased. -->
         <icon initial="icon.skill4411_normal">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill4411_normal</value>
@@ -404,7 +399,6 @@
         </effects>
     </skill>
     <skill id="4412" name="Extremely Weak P. Def." max-level="22">
-        <!-- P. Evasion temporarily increased. -->
         <icon initial="icon.skill0142">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill0142</value>
@@ -442,7 +436,6 @@
         </effects>
     </skill>
     <skill id="4413" name="Extremely Weak M. Def." max-level="22">
-        <!-- P. Evasion temporarily increased. -->
         <icon initial="icon.skill4413_normal">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill4413_normal</value>
@@ -507,7 +500,6 @@
         </effects>
     </skill>
     <skill id="4415" name="Bare Hands" max-level="26">
-        <!-- Weak P. Def. and strong P. Evasion. -->
         <icon initial="icon.skill0000"/>
         <attributes property="MAGIC" magic-critical-rate="-5.0">
         </attributes>

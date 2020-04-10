@@ -83,6 +83,7 @@
                         <xs:element name="action" type="ItemAction"/>
                         <xs:element name="extract" type="ItemExtract"/>
                         <xs:element name="skill-reducer" type="SkillReducer"/>
+                        <xs:element name="transformation-book" type="TransformationBook"/>
                     </xs:choice>
                 </xs:sequence>
                 <xs:attribute name="type" type="EtcItemType" use="required"/>
@@ -151,6 +152,10 @@
     <xs:complexType name="ItemCrystal">
         <xs:attribute name="type" type="CrystalType" default="NONE"/>
         <xs:attribute name="count" type="xs:int" default="0"/>
+    </xs:complexType>
+
+    <xs:complexType name="TransformationBook">
+        <xs:attribute name="skill" type="xs:int" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="SkillReducer">

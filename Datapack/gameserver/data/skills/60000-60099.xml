@@ -34,24 +34,24 @@
             <time initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1"/>
-            </stat>
-            <stat type="DEX">
+            </base-stat>
+            <base-stat type="DEX">
                 <power initial="1"/>
-            </stat>
-            <stat type="INT">
+            </base-stat>
+            <base-stat type="INT">
                 <power initial="1"/>
-            </stat>
-            <stat type="MEN">
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1"/>
-            </stat>
-            <stat type="STR">
+            </base-stat>
+            <base-stat type="STR">
                 <power initial="1"/>
-            </stat>
-            <stat type="WIT">
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1"/>
-            </stat>
+            </base-stat>
             <stat-modify stat="ADDITIONAL_POTION_HP">
                 <power initial="50"/>
             </stat-modify>
@@ -75,18 +75,18 @@
             <time initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1"/>
-            </stat>
-            <stat type="MEN">
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1"/>
-            </stat>
-            <stat type="DEX">
+            </base-stat>
+            <base-stat type="DEX">
                 <power initial="1"/>
-            </stat>
-            <stat type="WIT">
+            </base-stat>
+            <base-stat type="WIT">
                 <power initial="1"/>
-            </stat>
+            </base-stat>
             <stat-modify stat="WEIGHT_LIMIT">
                 <power initial="10000"/>
             </stat-modify>
@@ -104,12 +104,12 @@
             <time initial="-1"/>
         </abnormal>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1"/>
-            </stat>
-            <stat type="MEN">
+            </base-stat>
+            <base-stat type="MEN">
                 <power initial="1"/>
-            </stat>
+            </base-stat>
             <stat-modify stat="WEIGHT_LIMIT">
                 <power initial="5000"/>
             </stat-modify>

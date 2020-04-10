@@ -15,6 +15,7 @@ import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
@@ -106,6 +107,8 @@ public class GameServer {
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();
         CombinationItemsManager.init();
+
+        CostumeEngine.init();
 
         printSection("Characters");
         ClassListData.getInstance();

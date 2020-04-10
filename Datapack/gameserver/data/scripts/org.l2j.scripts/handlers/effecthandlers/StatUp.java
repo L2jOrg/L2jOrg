@@ -34,7 +34,7 @@ public class StatUp extends AbstractEffect {
 
         @Override
         public String effectName() {
-            return "stat";
+            return "base-stat";
         }
     }
 }

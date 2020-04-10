@@ -31,7 +31,6 @@
         </effects>
     </skill>
     <skill id="9620" name="Yummy Gift Box" action="A1">
-        <!-- XP/ SP gain +15%%. Works in a pair with Yum Yum Candy. Only one Yum Yum Candy can work at a moment. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>

@@ -117,7 +117,6 @@
         <target/>
     </skill>
     <skill id="50109" name="Pirate's Curse" debuff="true" action="A1" type="MAGIC">
-        <!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
         <icon initial="icon.skill0046"/>
         <attributes property="PHYSIC">
             <cast-range initial="400"/>
@@ -394,7 +393,6 @@
         <target/>
     </skill>
     <skill id="50132" name="Intermediate HP Potion" action="A1">
-        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -404,7 +402,6 @@
         <target/>
     </skill>
     <skill id="50133" name="Advanced Scroll of Escape" action="A1">
-        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP Effect remains after death. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -438,7 +435,6 @@
         <target/>
     </skill>
     <skill id="50136" name="Warrior's HP Potion" action="A1">
-        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
         <icon initial="icon.etc_reagent_white_i00"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -448,7 +444,6 @@
         <target/>
     </skill>
     <skill id="50137" name="Warrior's MP Potion" action="A1">
-        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
         <icon initial="icon.etc_reagent_white_i00"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -600,7 +595,6 @@
         <target/>
     </skill>
     <skill id="50151" name="HP Potion" action="A1">
-        <!-- A mysterious scroll that triggers various buffs -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <magic-level initial="1"/>
@@ -892,7 +886,6 @@
         <target/>
     </skill>
     <skill id="50171" name="Healing Potion" action="A1">
-        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>

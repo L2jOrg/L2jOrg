@@ -22,7 +22,7 @@ public class ExOpenHtml extends ClientPacket {
         switch (dialogId) {
             // case 1 -> pc points
             case 4 -> client.sendPacket(new ExPurchaseLimitShopItemList());
-            case 5 -> client.sendPacket( new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm( client.getPlayer(), String.format(COMMON_HTML_PATH, dialogId))));
+            case 5 -> client.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm( client.getPlayer(), String.format(COMMON_HTML_PATH, dialogId))));
         }
     }
 }

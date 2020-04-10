@@ -533,9 +533,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="849" name="Dion Territory Benefaction">
@@ -545,9 +545,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="850" name="Giran Territory Benefaction">
@@ -557,9 +557,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="851" name="Oren Territory Benefaction">
@@ -569,9 +569,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="852" name="Aden Territory Benefaction">
@@ -581,9 +581,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="DEX">
+            <base-stat type="DEX">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="853" name="Innadril Territory Benefaction">
@@ -593,9 +593,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="854" name="Goddard Territory Benefaction">
@@ -605,9 +605,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="855" name="Rune Territory Benefaction">
@@ -617,9 +617,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="856" name="Schuttgart Territory Benefaction">
@@ -629,9 +629,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="869" name="Mercenary Power Strike" max-level="9" action="A1">

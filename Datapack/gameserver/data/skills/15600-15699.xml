@@ -834,7 +834,6 @@
         </conditions>
     </skill>
     <skill id="15677" name="Bloody Attack" action="A1">
-        <!-- Hits the enemy with user's shield. Stuns them for $s1. Shield required. -->
         <icon initial="icon.skill0000"/>
         <attributes auto-use="ACTIVE">
             <cast-range initial="-1"/>
@@ -1046,7 +1045,6 @@
         <target/>
     </skill>
     <skill id="15690" name="Fearsome Defensive Strike" max-level="2" action="A1">
-        <!-- Pulls nearby enemies to your character. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="40"/>

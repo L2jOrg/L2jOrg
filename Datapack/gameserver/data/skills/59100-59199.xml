@@ -525,7 +525,6 @@
         <target/>
     </skill>
     <skill id="59140" name="Halloween Gift" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -866,71 +865,197 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="59158" name="Santa" action="A1">
+    <skill id="59158" name="Santa" action="A2">
         <!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="CHANGEBODY" visual="COSTUME_SANTA">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="59159" name="Santa" action="A1">
+    <skill id="59159" name="Santa" action="A2">
         <!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
         <icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="CHANGEBODY" visual="COSTUME_SANTA">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="5"/>
+            </stat-modify>
+            <base-stats types="CON MEN">
+                <power initial="1"/>
+            </base-stats>
+        </effects>
     </skill>
-    <skill id="59160" name="Santa" action="A1">
+    <skill id="59160" name="Santa" action="A2">
         <!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1, DEX +1 -->
         <icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="CHANGEBODY" visual="COSTUME_SANTA">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="5"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="5"/>
+            </speed>
+            <base-stats types="CON MEN DEX">
+                <power initial="1"/>
+            </base-stats>
+        </effects>
     </skill>
-    <skill id="59161" name="Santa" action="A1">
+    <skill id="59161" name="Santa" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\n CON +2, MEN +2, DEX +2, WIT +1, STR +1, INT +1 -->
         <icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="CHANGEBODY" visual="COSTUME_SANTA_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <base-stats types="CON MEN DEX">
+                <power initial="2"/>
+            </base-stats>
+            <base-stats types="WIT STR INT">
+                <power initial="1"/>
+            </base-stats>
+        </effects>
     </skill>
-    <skill id="59162" name="Santa" action="A1">
+    <skill id="59162" name="Santa" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\n All stats +3 -->
         <icon initial="BranchIcon.Icon.g_bm_costume_santa"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="CHANGEBODY" visual="COSTUME_SANTA_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <base-stats types="CON MEN DEX WIT STR INT">
+                <power initial="3"/>
+            </base-stats>
+        </effects>
     </skill>
-    <skill id="59163" name="School Uniform A" action="A1">
+    <skill id="59163" name="School Uniform A" action="A2">
         <!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
         <icon initial="BranchSys3.icon1.Br_schoollook"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="CHANGEBODY" visual="COSTUME_SCHOOL">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59164" name="School Uniform A" action="A1">
         <!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->

@@ -29,7 +29,6 @@
         <target/>
     </skill>
     <skill id="18806" name="Magic Woodpile" action="A1">
-        <!-- Calls forth a powerful wind that makes you stagger. The wind makes you unable to control your body for 3 seconds. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -43,7 +42,6 @@
         <target/>
     </skill>
     <skill id="18807" name="Large Magic Woodpile" action="A1">
-        <!-- Calls forth a powerful wind that makes you stagger. The wind makes you unable to control your body for 3 seconds. Only applies damage to the Magic Woodpile and the Large Magic Woodpile. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>

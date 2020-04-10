@@ -963,9 +963,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55061" name="Castle Scroll: Regular XP/SP Boost" action="A2">

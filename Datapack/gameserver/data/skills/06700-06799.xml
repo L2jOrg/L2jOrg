@@ -752,7 +752,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target type="TARGET"/>
-		<channeling skill="0" initial-delay="1000000" interval="0"/>
+        <channeling skill="0" initial-delay="1000000" interval="0"/>
     </skill>
     <skill id="6743" name="Dark Wound" debuff="true" action="A2" type="MAGIC">
         <!-- Dark attribute is weakened; inflicted with bleed and 200 HP is decreased per second. -->

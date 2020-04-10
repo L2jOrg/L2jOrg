@@ -1707,7 +1707,7 @@
             <element type="FIRE" value="20"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
-		<channeling skill="0" initial-delay="1000" interval="0"/>
+        <channeling skill="0" initial-delay="1000" interval="0"/>
     </skill>
     <skill id="7085" name="Self-Destruct Explosion" action="A1" type="MAGIC">
         <!-- none -->

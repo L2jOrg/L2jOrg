@@ -1450,13 +1450,12 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
         </effects>
     </skill>
     <skill id="39083" name="Get Sheepish Gift" action="A1">
-        <!-- All stats rise as you wish. STR + 1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. -->
         <icon initial="icon.accessory_sheep_cap_white_i00"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1573,7 +1572,6 @@
         <target/>
     </skill>
     <skill id="39089" name="Pirate's HP Potion" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_bm_hero_red_potion"/>
         <attributes>
             <cast-range initial="-1"/>

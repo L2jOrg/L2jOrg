@@ -20,6 +20,7 @@ import java.util.*;
 
 import instances.AbstractInstance;
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.Location;
@@ -705,7 +706,7 @@ public class LastImperialTomb extends AbstractInstance
 		if (skill != null)
 		{
 			// When Dewdrop of Destruction is used on Portraits they suicide.
-			if (CommonUtil.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
+			if (Util.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
 			{
 				npc.doDie(attacker);
 			}
@@ -750,12 +751,12 @@ public class LastImperialTomb extends AbstractInstance
 			broadCastPacket(world, new MagicSkillCanceld(frintezza.getObjectId()));
 			startQuestTimer("FINISH_CAMERA_1", 500, npc, null, false);
 		}
-		else if (CommonUtil.contains(DEMONS, npc.getId()))
+		else if (Util.contains(DEMONS, npc.getId()))
 		{
 			final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
 			demons.remove(npc);
 		}
-		else if (CommonUtil.contains(PORTRAITS, npc.getId()))
+		else if (Util.contains(PORTRAITS, npc.getId()))
 		{
 			final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
 			portraits.remove(npc);

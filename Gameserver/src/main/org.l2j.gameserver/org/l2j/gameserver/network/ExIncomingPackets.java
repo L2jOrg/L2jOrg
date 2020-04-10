@@ -19,6 +19,8 @@ import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHo
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
 import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
+import org.l2j.gameserver.network.clientpackets.costume.ExRequestCostumeList;
+import org.l2j.gameserver.network.clientpackets.costume.ExRequestCostumeUseItem;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2j.gameserver.network.clientpackets.elementalspirits.*;
@@ -418,6 +420,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME), // 228
     EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
+    EX_COSTUME_USE_ITEM(0x168, ExRequestCostumeUseItem::new, ConnectionState.IN_GAME),
+    EX_COSTUME_LIST(0x169, ExRequestCostumeList::new, ConnectionState.IN_GAME),
     EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME),
     EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME),
     EX_PAYBACK_LIST(0x175, null, ConnectionState.IN_GAME),

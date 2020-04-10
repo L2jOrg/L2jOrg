@@ -1,8 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import io.github.joealisson.primitive.CHashIntMap;
-import io.github.joealisson.primitive.IntMap;
-import io.github.joealisson.primitive.IntSet;
+import io.github.joealisson.primitive.*;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
@@ -29,6 +27,7 @@ import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
+import org.l2j.gameserver.engine.costume.Costume;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -157,6 +156,7 @@ public final class Player extends Playable {
     private PlayerStatsData statsData;
     private byte shineSouls;
     private byte shadowSouls;
+    private IntMap<CostumeData> costumes = Containers.emptyIntMap();
 
     private Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -558,6 +558,17 @@ public final class Player extends Playable {
             return player;
         }
         return null;
+    }
+
+    public void addCostume(Costume costume) {
+        if(costumes.equals(Containers.emptyIntMap())) {
+            costumes = new HashIntMap<>();
+        }
+        costumes.computeIfAbsent(costume.getId(), id -> CostumeData.of(this, costume)).increaseAmount();
+    }
+
+    public Collection<CostumeData> getCostumes() {
+        return costumes.values();
     }
 
     // Unchecked

@@ -1,5 +1,8 @@
 package org.l2j.gameserver.engine.captcha;
 
+/**
+ * @author JoeAlisson
+ */
 class TextureBlock {
 
     private ARGB[] colors = new ARGB[16];

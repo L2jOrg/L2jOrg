@@ -417,7 +417,7 @@
         </attributes>
         <target type="TARGET"/>
         <resist-abnormals>TURN_FLEE STUN</resist-abnormals>
-		<channeling skill="15175" initial-delay="1200000" interval="2000000"/>
+        <channeling skill="15175" initial-delay="1200000" interval="2000000"/>
     </skill>
     <skill id="15175" name="Petra Injection - Enhance HP Recovery Bonus" action="A2">
         <!-- Zahak has used its Petra to increase Tauti's HP Recovery Bonus -->
@@ -448,7 +448,7 @@
         </attributes>
         <target type="TARGET"/>
         <resist-abnormals>TURN_FLEE STUN</resist-abnormals>
-        <channeling skill="15177" initial-delay="1200" interval="2000"/>
+        <channeling skill="15177" initial-delay="1200"/>
     </skill>
     <skill id="15177" name="Petra Injection - Enhance P. Def." action="A2">
         <!-- Zahak has used its Petra to increase Tauti's P. Def -->

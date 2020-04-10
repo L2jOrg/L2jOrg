@@ -7,6 +7,9 @@ import org.l2j.commons.util.Rnd;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+/**
+ * @author JoeAlisson
+ */
 public class CaptchaEngine {
 
     private static final IntMap<Captcha> captchas = new CHashIntMap<>();
@@ -46,10 +49,6 @@ public class CaptchaEngine {
         addNoise(graphics);
         graphics.dispose();
         return new Captcha(id, code, compressor.compress(image));
-    }
-
-    public static void main(String[] args) {
-        getInstance().next();
     }
 
     private Graphics2D createGraphics(int height, int width, BufferedImage image) {
@@ -101,30 +100,6 @@ public class CaptchaEngine {
 
     private static class Singleton {
         private static final CaptchaEngine INSTANCE = new CaptchaEngine();
-    }
-
-    public static class Captcha {
-        private final int code;
-        private final byte[] data;
-        private final int id;
-
-        private Captcha(int id, int code, byte[] data) {
-            this.id = id;
-            this.code = code;
-            this.data = data;
-        }
-
-        public int getCode() {
-            return code;
-        }
-
-        public byte[] getData() {
-            return data;
-        }
-
-        public int getId() {
-            return id;
-        }
     }
 
 }

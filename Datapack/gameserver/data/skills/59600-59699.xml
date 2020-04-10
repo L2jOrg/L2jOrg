@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="59600" name="Transformation Sealbook: Devil - Legendary" action="A1">
-        <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="59601" name="Transformation Sealbook: Devil - Mythic" action="A1">
-        <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
         <attributes>
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <acquire-costume id="159"/>
+        </effects>
     </skill>
     <skill id="59602" name="Shadow Master" action="A1">
         <!-- Legendary transformation. XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P./M. Critical Damage +10%%, Speed +10, PvP Received Damage -10%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you are attacked while transformed into Shadow Master, summons a clone that provokes every 120 seconds and hides into the shadows for 10 seconds. -->
@@ -45,7 +42,6 @@
         <target/>
     </skill>
     <skill id="59604" name="Shadow Master - Decoy" max-level="2" action="A2">
-        <!-- Mystic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you are attacked while transformed into Shadow Master, summons a clone that provokes every 60 seconds and hides into the shadows for 20 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -71,7 +67,6 @@
         <target/>
     </skill>
     <skill id="59606" name="Shadow Master - Decoy Provocation" action="A2">
-        <!-- Borrows the power of the Shadow Master and hides for $s1. Effect is canceled if you perform an action other than just moving. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -189,7 +184,6 @@
         <target/>
     </skill>
     <skill id="59616" name="Nymph - Temptation" action="A2">
-        <!-- Borrows the power of the Nymph and seduces the opponent for 5 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
         <attributes property="PHYSIC">
             <cast-range initial="1200"/>
@@ -234,7 +228,6 @@
         <target/>
     </skill>
     <skill id="59620" name="Devil - Inferno" action="A2">
-        <!-- Inflicts 1000 real damage to all targets that attack you. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
         <attributes>
             <cast-range initial="-1"/>

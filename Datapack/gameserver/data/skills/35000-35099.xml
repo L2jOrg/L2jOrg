@@ -412,11 +412,11 @@
                     </power>
                 </trait>
             </defence-trait>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power>
                     <value level="4">1.0</value>
                 </power>
-            </stat>
+            </base-stat>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power>
                     <value level="6">10.0</value>
@@ -1206,9 +1206,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="CON">
+            <base-stat type="CON">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="7000.0"/>
             </stat-modify>
@@ -1245,9 +1245,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat type="STR">
+            <base-stat type="STR">
                 <power initial="1.0"/>
-            </stat>
+            </base-stat>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="7000.0"/>
             </stat-modify>

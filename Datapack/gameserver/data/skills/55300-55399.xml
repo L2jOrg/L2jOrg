@@ -23,7 +23,6 @@
         <target/>
     </skill>
     <skill id="55302" name="Shabby Box Acquisition Effect" action="A1">
-        <!-- You can receive a Shabby Box when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i02"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -56,7 +55,6 @@
         <target/>
     </skill>
     <skill id="55305" name="Crude Box Acquisition Effect" action="A1">
-        <!-- You can receive a Crude Box when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i03"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -89,7 +87,6 @@
         <target/>
     </skill>
     <skill id="55308" name="Old Box Acquisition Effect" action="A1">
-        <!-- You can receive an Old Box when the Buff is no longer in effect. -->
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i04"/>
         <attributes>
             <cast-range initial="-1"/>
@@ -1542,7 +1539,6 @@
         <target/>
     </skill>
     <skill id="55398" name="Olympiad Warrior's SP Scroll" action="A1">
-        <!-- XP/SP +100%%, while hunting. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="-1"/>
