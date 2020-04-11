@@ -1756,7 +1756,7 @@
         <equipment rhand="6717"/> <!-- Monster Only (Einhasad Warrior) -->
         <acquire exp="190827" sp="5724" attribute_exp="1230"/>
         <stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-            <vitals hp="2940.744352" hpRegen="8.5" mp="3828.51" mpRegen="3"/>
+            <vitals hp="4000" hpRegen="8.5" mp="3828.51" mpRegen="3"/>
             <attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="314.65987" magical="209.50409325236"/>
             <speed>
@@ -1768,10 +1768,10 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4585" level="3"/> <!-- NPC Clan Buff - Berserk Might -->
+            <skill id="4585" level="3"/>  <!-- NPC Clan Buff - Berserk Might -->
             <skill id="4416" level="8"/> <!-- Angel -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="17"/> <!-- Very Strong P. Atk. -->
+            <skill id="4408" level="13"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="15"/> <!-- Very Strong P. Atk. -->
             <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
             <skill id="4412" level="14"/> <!-- Strong P. Def. -->
             <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->

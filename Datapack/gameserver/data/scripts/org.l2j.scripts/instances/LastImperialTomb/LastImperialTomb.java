@@ -438,21 +438,24 @@ public class LastImperialTomb extends AbstractInstance
 			case "SPAWN_DEMONS":
 			{
 				final Instance world = player.getInstanceWorld();
-				final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
-				if (!portraits.isEmpty())
+				if (world != null)
 				{
-					final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
-					for (int i : portraits.values())
+					final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
+					if ((portraits != null) && !portraits.isEmpty())
 					{
-						if (demons.size() > MAX_DEMONS)
+						final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
+						for (int i : portraits.values())
 						{
-							break;
+							if (demons.size() > MAX_DEMONS)
+							{
+								break;
+							}
+							final Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
+							demons.add(demon);
 						}
-						final Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
-						demons.add(demon);
+						world.setParameter("demons", demons);
+						startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player, false);
 					}
-					world.setParameter("demons", demons);
-					startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player, false);
 				}
 				break;
 			}
@@ -572,18 +575,16 @@ public class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_8":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				broadCastPacket(world, new SocialAction(activeScarlet.getObjectId(), 2));
+				broadCastPacket(world, new SocialAction(npc.getObjectId(), 2));
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_9", 9000, npc, null, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_9":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				activeScarlet.setIsInvul(false);
-				activeScarlet.setIsImmobilized(false);
-				activeScarlet.enableAllSkills();
+				npc.setIsInvul(false);
+				npc.setIsImmobilized(false);
+				npc.enableAllSkills();
 				enablePlayers(world);
 				break;
 			}
@@ -602,7 +603,8 @@ public class LastImperialTomb extends AbstractInstance
 			{
 				final Instance world = npc.getInstanceWorld();
 				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
-				frintezza.doDie(frintezza);
+				assert frintezza != null;
+				frintezza.doDie(player);
 				break;
 			}
 			case "FINISH_CAMERA_3":
@@ -754,12 +756,20 @@ public class LastImperialTomb extends AbstractInstance
 		else if (Util.contains(DEMONS, npc.getId()))
 		{
 			final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
-			demons.remove(npc);
+			if (demons != null)
+			{
+				demons.remove(npc);
+				world.setParameter("demons", demons);
+			}
 		}
 		else if (Util.contains(PORTRAITS, npc.getId()))
 		{
 			final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
-			portraits.remove(npc);
+			if (portraits != null)
+			{
+				portraits.remove(npc);
+				world.setParameter("portraits", portraits);
+			}
 		}
 		else
 		{
