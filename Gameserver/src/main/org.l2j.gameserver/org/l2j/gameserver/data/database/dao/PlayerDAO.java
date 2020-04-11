@@ -1,13 +1,16 @@
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.PlayerData;
+import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.data.database.data.KillerData;
+import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.PlayerStatsData;
 
 import java.sql.ResultSet;
+import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -120,6 +123,11 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     void save(PlayerStatsData statsData);
 
-    @Query("SELECT  * FROM player_stats_points WHERE player_id=:playerId:")
+    @Query("SELECT * FROM player_stats_points WHERE player_id=:playerId:")
     PlayerStatsData findPlayerStatsData(int playerId);
+
+    void save(Collection<CostumeData> costumes);
+
+    @Query("SELECT id, player_id, amount FROM player_costumes WHERE player_id = :playerId:")
+    IntMap<CostumeData> findCostumes(int playerId);
 }

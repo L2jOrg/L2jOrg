@@ -65,6 +65,7 @@ import java.util.function.Supplier;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public enum ExIncomingPackets implements PacketFactory {
     REQUEST_GOTO_LOBBY(0x33, RequestGotoLobby::new, ConnectionState.AUTHENTICATED),

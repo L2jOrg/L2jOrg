@@ -4,6 +4,7 @@ import org.l2j.gameserver.engine.costume.Costume;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.serverpackets.costume.ExCostumeUseItem;
 import org.l2j.gameserver.network.serverpackets.costume.ExSendCostumeList;
 
 import java.util.EnumSet;
@@ -30,7 +31,7 @@ public class CostumeAPI {
             var skill = SkillEngine.getInstance().getSkill(costume.skill(), 1);
             player.addSkill(skill, true);
         }
-
+        player.sendPacket(new ExCostumeUseItem(costume.id(), true));
         player.sendPacket(new ExSendCostumeList());
     }
 

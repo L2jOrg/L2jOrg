@@ -1034,6 +1034,7 @@ public final class Player extends Playable {
         Player player = new Player(character, template);
         player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
         player.statsData = playerDAO.findPlayerStatsData(objectId);
+        player.costumes = playerDAO.findCostumes(objectId);
 
         if(isNull(player.statsData)) { // TODO remove late, just temp fix to already created players
             player.statsData = PlayerStatsData.init(objectId);
@@ -5773,6 +5774,9 @@ public final class Player extends Playable {
         shortcuts.storeMe();
         getDAO(PlayerVariablesDAO.class).save(variables);
         getDAO(PlayerDAO.class).save(statsData);
+        if(!costumes.isEmpty()) {
+            getDAO(PlayerDAO.class).save(costumes.values());
+        }
     }
 
     @Override
