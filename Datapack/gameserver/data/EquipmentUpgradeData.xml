@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EquipmentUpgradeData.xsd">
-	<upgrade id="1" item="91244,5" materials="1459,200" adena="2000000" result="91245,0" />
-    <upgrade id="2" item="91245,5" materials="1460,1500" adena="10000000" result="91246,0" />
-    <upgrade id="3" item="91246,5" materials="1460,5000" adena="50000000" result="91247,0" />
-    <upgrade id="4" item="902,10" materials="91384,1" adena="10000000" result="91378,0" />	
-    <upgrade id="5" item="864,10" materials="91385,1" adena="10000000" result="91379,0" />	
-    <upgrade id="6" item="895,10" materials="91386,1" adena="10000000" result="91380,0" />	
-    <upgrade id="7" item="893,10" materials="91387,1" adena="10000000" result="91381,0" />	
-    <upgrade id="8" item="871,10" materials="91388,1" adena="10000000" result="91382,0" />	
-    <upgrade id="9" item="862,10" materials="91389,1" adena="10000000" result="91383,0" />	
-    <upgrade id="10" item="924,10" materials="91554,1" adena="10000000" result="91553,0" />
-    <upgrade id="11" item="902,11" materials="91384,1" adena="1000000" result="91378,0" />	
-    <upgrade id="12" item="864,11" materials="91385,1" adena="1000000" result="91379,0" />	
-    <upgrade id="13" item="895,11" materials="91386,1" adena="1000000" result="91380,0" />	
-    <upgrade id="14" item="893,11" materials="91387,1" adena="1000000" result="91381,0" />	
-    <upgrade id="15" item="871,11" materials="91388,1" adena="1000000" result="91382,0" />	
-    <upgrade id="16" item="862,11" materials="91389,1" adena="1000000" result="91383,0" />	
-    <upgrade id="17" item="924,11" materials="91554,1" adena="1000000" result="91553,0" />	
-    <upgrade id="18" item="902,12" materials="91384,1" adena="10000" result="91378,0" />	
-    <upgrade id="19" item="864,12" materials="91385,1" adena="10000" result="91379,0" />	
-    <upgrade id="20" item="895,12" materials="91386,1" adena="10000" result="91380,0" />	
-    <upgrade id="21" item="893,12" materials="91387,1" adena="10000" result="91381,0" />	
-    <upgrade id="22" item="871,12" materials="91388,1" adena="10000" result="91382,0" />	
-    <upgrade id="23" item="862,12" materials="91389,1" adena="10000" result="91383,0" />	
-    <upgrade id="24" item="924,12" materials="91554,1" adena="10000" result="91553,0" />	
-    <upgrade id="10000" item="71184,7" materials="71212,3" adena="7777" result="71193,0" />
-    <upgrade id="10001" item="71185,7" materials="71212,3" adena="7777" result="71194,0" />
-    <upgrade id="10002" item="71186,7" materials="71212,2" adena="7777" result="71195,0" />
-    <upgrade id="10003" item="71187,7" materials="71212,2" adena="7777" result="71196,0" />
-    <upgrade id="10004" item="71188,7" materials="71212,2" adena="7777" result="71197,0" />
-    <upgrade id="10005" item="71189,7" materials="71212,2" adena="7777" result="71198,0" />
-    <upgrade id="10006" item="71190,7" materials="71212,2" adena="7777" result="71199,0" />
-    <upgrade id="10007" item="71191,7" materials="71212,2" adena="7777" result="71200,0" />
-    <upgrade id="10008" item="71192,7" materials="71212,2" adena="7777" result="71201,0" />
-    <upgrade id="10009" item="71193,7" materials="71212,7" adena="7777" result="71202,0" />
-    <upgrade id="10010" item="71194,7" materials="71212,7" adena="7777" result="71203,0" />
-    <upgrade id="10011" item="71195,7" materials="71212,5" adena="7777" result="71204,0" />
-    <upgrade id="10012" item="71196,7" materials="71212,5" adena="7777" result="71205,0" />
-    <upgrade id="10013" item="71197,7" materials="71212,5" adena="7777" result="71206,0" />
-    <upgrade id="10014" item="71198,7" materials="71212,5" adena="7777" result="71207,0" />
-    <upgrade id="10015" item="71199,7" materials="71212,5" adena="7777" result="71208,0" />
-    <upgrade id="10016" item="71200,7" materials="71212,5" adena="7777" result="71209,0" />
-    <upgrade id="10017" item="71201,7" materials="71212,5" adena="7777" result="71210,0" />
-    <upgrade id="10018" item="71691,5" materials="" adena="12000000" result="71692,0" />
-    <upgrade id="10019" item="71692,5" materials="71699,3" adena="16000000" result="71693,0" />	
-    <upgrade id="10020" item="71693,5" materials="71699,20" adena="50000000" result="71694,0" />	
-    <upgrade id="10021" item="71695,5" materials="" adena="12000000" result="71696,0" />
-    <upgrade id="10022" item="71696,5" materials="71699,3" adena="16000000" result="71697,0" />	
-    <upgrade id="10023" item="71697,5" materials="71699,20" adena="50000000" result="71698,0" />	
-    <upgrade id="10024" item="29706,10" materials="71699,20" adena="1000" result="71693,0" />	
-    <upgrade id="10025" item="29707,10" materials="71699,7" adena="1000" result="71693,0" />	
-    <upgrade id="10026" item="29708,10" materials="71699,40" adena="1000" result="71694,0" />	
-    <upgrade id="10027" item="29711,10" materials="71699,20" adena="1000" result="71697,0" />	
-    <upgrade id="10028" item="29712,10" materials="71699,7" adena="1000" result="71697,0" />	
-    <upgrade id="10029" item="29713,10" materials="71699,40" adena="1000" result="71698,0" />	
-    <upgrade id="10030" item="70294,7" materials="71752,10" adena="10000" result="71743,0" />	
-    <upgrade id="10031" item="70295,7" materials="71752,30" adena="10000" result="71744,0" />	
-    <upgrade id="10032" item="70296,7" materials="71752,45" adena="10000" result="71745,0" />	
-    <upgrade id="10033" item="70297,7" materials="71752,50" adena="10000" result="71746,0" />	
-    <upgrade id="10034" item="70298,7" materials="71752,110" adena="10000" result="71747,0" />	
-    <upgrade id="10035" item="70294,8" materials="71752,20" adena="10000" result="71744,0" />	
-    <upgrade id="10036" item="70295,8" materials="71752,40" adena="10000" result="71745,0" />	
-    <upgrade id="10037" item="70296,8" materials="71752,75" adena="10000" result="71746,0" />	
-    <upgrade id="10038" item="70297,8" materials="71752,120" adena="10000" result="71747,0" />	
-    <upgrade id="10039" item="70298,8" materials="71752,140" adena="10000" result="71748,0" />	
-    <upgrade id="10040" item="70294,9" materials="71752,30" adena="10000" result="71745,0" />	
-    <upgrade id="10041" item="70295,9" materials="71752,70" adena="10000" result="71746,0" />	
-    <upgrade id="10042" item="70296,9" materials="71752,160" adena="10000" result="71747,0" />	
-    <upgrade id="10043" item="70297,9" materials="71752,170" adena="10000" result="71748,0" />	
-    <upgrade id="10044" item="70298,9" materials="71752,190" adena="10000" result="71749,0" />	
-    <upgrade id="10045" item="70294,10" materials="71752,30" adena="10000" result="71746,0" />	
-    <upgrade id="10046" item="70295,10" materials="71752,130" adena="10000" result="71747,0" />
-    <upgrade id="10047" item="70296,10" materials="71752,150" adena="10000" result="71748,0" />
-    <upgrade id="10048" item="70297,10" materials="71752,160" adena="10000" result="71749,0" />
-    <upgrade id="10049" item="70298,10" materials="71752,200" adena="10000" result="71750,0" />
+    <upgrade id="1" item="91244,5" materials="1459,200" adena="2000000" result="91245,0" /> <!-- Dragon Pendant Lv. 2 -->
+    <upgrade id="2" item="91245,5" materials="1460,1500" adena="10000000" result="91246,0" /> <!-- Dragon Pendant Lv. 3 -->
+    <upgrade id="3" item="91246,5" materials="1460,5000" adena="50000000" result="91247,0" /> <!-- Dragon Pendant Lv. 4 -->
+    <upgrade id="4" item="902,10" materials="91384,1" adena="10000000" result="91378,0" /> <!-- Queen Ant's Ring Lv. 4 -->
+    <upgrade id="5" item="864,10" materials="91385,1" adena="10000000" result="91379,0" /> <!-- Orfen's Earring Lv. 4 -->
+    <upgrade id="6" item="895,10" materials="91386,1" adena="10000000" result="91380,0" /> <!-- Ring of Core Lv. 4 -->
+    <upgrade id="7" item="893,10" materials="91387,1" adena="10000000" result="91381,0" /> <!-- Baium's Ring Lv. 4 -->
+    <upgrade id="8" item="871,10" materials="91388,1" adena="10000000" result="91382,0" /> <!-- Zaken's Earring Lv. 4 -->
+    <upgrade id="9" item="862,10" materials="91389,1" adena="10000000" result="91383,0" /> <!-- Antharas' Earring Lv. 4 -->
+    <upgrade id="10" item="924,10" materials="91554,1" adena="10000000" result="91553,0" /> <!-- Frintezza's Necklace Lv. 4 -->
+    <upgrade id="11" item="902,11" materials="91384,1" adena="1000000" result="91378,0" /> <!-- Queen Ant's Ring Lv. 4 -->
+    <upgrade id="12" item="864,11" materials="91385,1" adena="1000000" result="91379,0" /> <!-- Orfen's Earring Lv. 4 -->
+    <upgrade id="13" item="895,11" materials="91386,1" adena="1000000" result="91380,0" /> <!-- Ring of Core Lv. 4 -->
+    <upgrade id="14" item="893,11" materials="91387,1" adena="1000000" result="91381,0" /> <!-- Baium's Ring Lv. 4 -->
+    <upgrade id="15" item="871,11" materials="91388,1" adena="1000000" result="91382,0" /> <!-- Zaken's Earring Lv. 4 -->
+    <upgrade id="16" item="862,11" materials="91389,1" adena="1000000" result="91383,0" /> <!-- Antharas' Earring Lv. 4 -->
+    <upgrade id="17" item="924,11" materials="91554,1" adena="1000000" result="91553,0" /> <!-- Frintezza's Necklace Lv. 4 -->
+    <upgrade id="18" item="902,12" materials="91384,1" adena="10000" result="91378,0" /> <!-- Queen Ant's Ring Lv. 4 -->
+    <upgrade id="19" item="864,12" materials="91385,1" adena="10000" result="91379,0" /> <!-- Orfen's Earring Lv. 4 -->
+    <upgrade id="20" item="895,12" materials="91386,1" adena="10000" result="91380,0" /> <!-- Ring of Core Lv. 4 -->
+    <upgrade id="21" item="893,12" materials="91387,1" adena="10000" result="91381,0" /> <!-- Baium's Ring Lv. 4 -->
+    <upgrade id="22" item="871,12" materials="91388,1" adena="10000" result="91382,0" /> <!-- Zaken's Earring Lv. 4 -->
+    <upgrade id="23" item="862,12" materials="91389,1" adena="10000" result="91383,0" /> <!-- Antharas' Earring Lv. 4 -->
+    <upgrade id="24" item="924,12" materials="91554,1" adena="10000" result="91553,0" /> <!-- Frintezza's Necklace Lv. 4 -->
+    <upgrade id="10000" item="71184,7" materials="71212,3" adena="7777" result="71193,0" /> <!-- Agathion Meliodas Lv. 2 -->
+    <upgrade id="10001" item="71185,7" materials="71212,3" adena="7777" result="71194,0" /> <!-- Agathion Elizabeth Lv. 2 -->
+    <upgrade id="10002" item="71186,7" materials="71212,2" adena="7777" result="71195,0" /> <!-- Agathion Hawk Lv. 2 -->
+    <upgrade id="10003" item="71187,7" materials="71212,2" adena="7777" result="71196,0" /> <!-- Agathion Ban Lv. 2 -->
+    <upgrade id="10004" item="71188,7" materials="71212,2" adena="7777" result="71197,0" /> <!-- Agathion Diane Lv. 2 -->
+    <upgrade id="10005" item="71189,7" materials="71212,2" adena="7777" result="71198,0" /> <!-- Agathion King Lv. 2 -->
+    <upgrade id="10006" item="71190,7" materials="71212,2" adena="7777" result="71199,0" /> <!-- Agathion Merlin Lv. 2 -->
+    <upgrade id="10007" item="71191,7" materials="71212,2" adena="7777" result="71200,0" /> <!-- Agathion Gowther Lv. 2 -->
+    <upgrade id="10008" item="71192,7" materials="71212,2" adena="7777" result="71201,0" /> <!-- Agathion Escanor Lv. 2 -->
+    <upgrade id="10009" item="71193,7" materials="71212,7" adena="7777" result="71202,0" /> <!-- Agathion Meliodas Lv. 3 -->
+    <upgrade id="10010" item="71194,7" materials="71212,7" adena="7777" result="71203,0" /> <!-- Agathion Elizabeth Lv. 3 -->
+    <upgrade id="10011" item="71195,7" materials="71212,5" adena="7777" result="71204,0" /> <!-- Agathion Hawk Lv. 3 -->
+    <upgrade id="10012" item="71196,7" materials="71212,5" adena="7777" result="71205,0" /> <!-- Agathion Ban Lv. 3 -->
+    <upgrade id="10013" item="71197,7" materials="71212,5" adena="7777" result="71206,0" /> <!-- Agathion Diane Lv. 3 -->
+    <upgrade id="10014" item="71198,7" materials="71212,5" adena="7777" result="71207,0" /> <!-- Agathion King Lv. 3 -->
+    <upgrade id="10015" item="71199,7" materials="71212,5" adena="7777" result="71208,0" /> <!-- Agathion Merlin Lv. 3 -->
+    <upgrade id="10016" item="71200,7" materials="71212,5" adena="7777" result="71209,0" /> <!-- Agathion Gowther Lv. 3 -->
+    <upgrade id="10017" item="71201,7" materials="71212,5" adena="7777" result="71210,0" /> <!-- Agathion Escanor Lv. 3 -->
+    <upgrade id="10018" item="71691,5" adena="12000000" result="71692,0" /> <!-- Dragon Pendant - Attack Lv. 2 -->
+    <upgrade id="10019" item="71692,5" materials="71699,3" adena="16000000" result="71693,0" /> <!-- Dragon Pendant - Attack Lv. 3 -->
+    <upgrade id="10020" item="71693,5" materials="71699,20" adena="50000000" result="71694,0" /> <!-- Dragon Pendant - Attack Lv. 4 -->
+    <upgrade id="10021" item="71695,5" adena="12000000" result="71696,0" /> <!-- Dragon Pendant - Magic Power Lv. 2 -->
+    <upgrade id="10022" item="71696,5" materials="71699,3" adena="16000000" result="71697,0" /> <!-- Dragon Pendant - Magic Power Lv. 3 -->
+    <upgrade id="10023" item="71697,5" materials="71699,20" adena="50000000" result="71698,0" /> <!-- Dragon Pendant - Magic Power Lv. 4 -->
+    <upgrade id="10024" item="29706,10" materials="71699,20" adena="1000" result="71693,0" /> <!-- Dragon Pendant - Attack Lv. 3 -->
+    <upgrade id="10025" item="29707,10" materials="71699,7" adena="1000" result="71693,0" /> <!-- Dragon Pendant - Attack Lv. 3 -->
+    <upgrade id="10026" item="29708,10" materials="71699,40" adena="1000" result="71694,0" /> <!-- Dragon Pendant - Attack Lv. 4 -->
+    <upgrade id="10027" item="29711,10" materials="71699,20" adena="1000" result="71697,0" /> <!-- Dragon Pendant - Magic Power Lv. 3 -->
+    <upgrade id="10028" item="29712,10" materials="71699,7" adena="1000" result="71697,0" /> <!-- Dragon Pendant - Magic Power Lv. 3 -->
+    <upgrade id="10029" item="29713,10" materials="71699,40" adena="1000" result="71698,0" /> <!-- Dragon Pendant - Magic Power Lv. 4 -->
+    <upgrade id="10030" item="70294,7" materials="71752,10" adena="10000" result="71743,0" /> <!-- Dimensional Talisman Lv. 2 -->
+    <upgrade id="10031" item="70295,7" materials="71752,30" adena="10000" result="71744,0" /> <!-- Dimensional Talisman Lv. 3 -->
+    <upgrade id="10032" item="70296,7" materials="71752,45" adena="10000" result="71745,0" /> <!-- Dimensional Talisman Lv. 4 -->
+    <upgrade id="10033" item="70297,7" materials="71752,50" adena="10000" result="71746,0" /> <!-- Dimensional Talisman Lv. 5 -->
+    <upgrade id="10034" item="70298,7" materials="71752,110" adena="10000" result="71747,0" /> <!-- Dimensional Talisman Lv. 6 -->
+    <upgrade id="10035" item="70294,8" materials="71752,20" adena="10000" result="71744,0" /> <!-- Dimensional Talisman Lv. 3 -->
+    <upgrade id="10036" item="70295,8" materials="71752,40" adena="10000" result="71745,0" /> <!-- Dimensional Talisman Lv. 4 -->
+    <upgrade id="10037" item="70296,8" materials="71752,75" adena="10000" result="71746,0" /> <!-- Dimensional Talisman Lv. 5 -->
+    <upgrade id="10038" item="70297,8" materials="71752,120" adena="10000" result="71747,0" /> <!-- Dimensional Talisman Lv. 6 -->
+    <upgrade id="10039" item="70298,8" materials="71752,140" adena="10000" result="71748,0" /> <!-- Dimensional Talisman Lv. 7 -->
+    <upgrade id="10040" item="70294,9" materials="71752,30" adena="10000" result="71745,0" /> <!-- Dimensional Talisman Lv. 4 -->
+    <upgrade id="10041" item="70295,9" materials="71752,70" adena="10000" result="71746,0" /> <!-- Dimensional Talisman Lv. 5 -->
+    <upgrade id="10042" item="70296,9" materials="71752,160" adena="10000" result="71747,0" /> <!-- Dimensional Talisman Lv. 6 -->
+    <upgrade id="10043" item="70297,9" materials="71752,170" adena="10000" result="71748,0" /> <!-- Dimensional Talisman Lv. 7 -->
+    <upgrade id="10044" item="70298,9" materials="71752,190" adena="10000" result="71749,0" /> <!-- Dimensional Talisman Lv. 8 -->
+    <upgrade id="10045" item="70294,10" materials="71752,30" adena="10000" result="71746,0" /> <!-- Dimensional Talisman Lv. 5 -->
+    <upgrade id="10046" item="70295,10" materials="71752,130" adena="10000" result="71747,0" /> <!-- Dimensional Talisman Lv. 6 -->
+    <upgrade id="10047" item="70296,10" materials="71752,150" adena="10000" result="71748,0" /> <!-- Dimensional Talisman Lv. 7 -->
+    <upgrade id="10048" item="70297,10" materials="71752,160" adena="10000" result="71749,0" /> <!-- Dimensional Talisman Lv. 8 -->
+    <upgrade id="10049" item="70298,10" materials="71752,200" adena="10000" result="71750,0" /> <!-- Dimensional Talisman Lv. 9 -->
 </list>
