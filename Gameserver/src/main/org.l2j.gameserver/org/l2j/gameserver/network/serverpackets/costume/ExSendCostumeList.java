@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.serverpackets.costume;
 
-import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;

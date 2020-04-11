@@ -17,7 +17,10 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.EnumMap;
+import java.util.EnumSet;
+import java.util.HashSet;
+import java.util.Set;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -75,11 +78,9 @@ public class CostumeEngine extends GameXmlReader {
         var attrs = node.getAttributes();
         var id = parseInt(attrs, "id");
         var skill = parseInt(attrs, "skill");
+        var costumes = parseIntSet(node.getFirstChild());
 
-        var collection = new CostumeCollection(id, skill);
-        collections.put(id, collection);
-
-        collection.setCostumes(parseIntSet(node.getFirstChild()));
+        collections.put(id, new CostumeCollection(id, skill, costumes));
     }
 
     private void parseCostume(Node node) {
@@ -88,33 +89,23 @@ public class CostumeEngine extends GameXmlReader {
         var skill = parseInt(attrs, "skill");
         var evolutionFee = parseInt(attrs, "evolution-fee");
 
-        final var costume = new Costume(id, skill, evolutionFee);
+        var extractNode = node.getFirstChild();
+        var extractItem = parseInt(extractNode.getAttributes(), "item");
+        var extractCost = parseExtractCost(extractNode);
 
-        costumes.put(id, costume);
+        costumes.put(id, new Costume(id, skill, evolutionFee, extractItem, extractCost));
 
         var grade = parseEnum(attrs, CostumeGrade.class, "grade");
         costumesGrade.computeIfAbsent(grade, g -> new HashIntSet()).add(id);
-
-        for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-            switch (child.getNodeName()) {
-                case "consume" -> parseCostumeConsume(costume, child);
-                case "extract" -> parseCostumeExtract(costume, child);
-            }
-        }
     }
 
-    private void parseCostumeExtract(Costume costume, Node node) {
-        var extractItem = new ItemHolder(parseInt(node.getAttributes(), "item"), 1);
-        costume.setExtractItem(extractItem);
-        forEach(node, "cost", cost -> {
-            var attrs = cost.getAttributes();
-            costume.addExtractCost(new ItemHolder( parseInt(attrs, "id"), parselong(attrs, "count")));
+    private Set<ItemHolder> parseExtractCost(Node extractNode) {
+        Set<ItemHolder> extractCost = new HashSet<>(extractNode.getChildNodes().getLength());
+        forEach(extractNode, "cost", costNode -> {
+            var costAttrs = costNode.getAttributes();
+            extractCost.add(new ItemHolder(parseInt(costAttrs, "id"), parseLong(costAttrs, "count")));
         });
-    }
-
-    private void parseCostumeConsume(Costume costume, Node node) {
-        var attrs = node.getAttributes();
-        costume.setConsumeItem(new ItemHolder(parseInt(attrs, "id"), parselong(attrs, "count")));
+        return extractCost;
     }
 
     public Costume getCostume(int id) {
@@ -126,12 +117,12 @@ public class CostumeEngine extends GameXmlReader {
             return null;
         }
 
-        var availables = costumesGrade.entrySet().stream()
+        var available = costumesGrade.entrySet().stream()
                 .filter(entry -> grades.contains(entry.getKey()))
                 .flatMapToInt(entry -> entry.getValue().stream())
                 .toArray();
 
-        var costumeId = Rnd.get(availables);
+        var costumeId = Rnd.get(available);
         return costumes.get(costumeId);
     }
 

@@ -19,7 +19,6 @@
 
     <xs:complexType name="Costume">
         <xs:sequence>
-            <xs:element name="consume" type="ItemInfo"/>
             <xs:element name="extract" type="Extract"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:short" use="required"/>

@@ -26,8 +26,8 @@ public class CostumeAPI {
 
         player.addCostume(costume);
 
-        if(isNull(player.getKnownSkill(costume.getSkill()))) {
-            var skill = SkillEngine.getInstance().getSkill(costume.getSkill(), 1);
+        if(isNull(player.getKnownSkill(costume.skill()))) {
+            var skill = SkillEngine.getInstance().getSkill(costume.skill(), 1);
             player.addSkill(skill, true);
         }
 

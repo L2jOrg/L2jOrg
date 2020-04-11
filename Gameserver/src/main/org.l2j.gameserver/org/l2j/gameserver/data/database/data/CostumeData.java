@@ -28,7 +28,7 @@ public class CostumeData {
         var data = new CostumeData();
         data.playerId = player.getObjectId();
         data.costume = costume;
-        data.id = costume.getId();
+        data.id = costume.id();
         return data;
     }
 

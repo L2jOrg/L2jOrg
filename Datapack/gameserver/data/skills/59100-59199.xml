@@ -872,6 +872,10 @@
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="15"/>
+        </consume>
         <target/>
         <abnormal type="CHANGEBODY" visual="COSTUME_SANTA">
             <time initial="900"/>
@@ -889,6 +893,10 @@
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="15"/>
+        </consume>
         <target/>
         <abnormal type="CHANGEBODY" visual="COSTUME_SANTA">
             <time initial="900"/>
@@ -915,6 +923,10 @@
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
         <abnormal type="CHANGEBODY" visual="COSTUME_SANTA">
             <time initial="900"/>
@@ -953,6 +965,10 @@
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
         <abnormal type="CHANGEBODY" visual="COSTUME_SANTA_LV2">
             <time initial="900"/>
@@ -997,6 +1013,10 @@
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
         <abnormal type="CHANGEBODY" visual="COSTUME_SANTA_LV3">
             <time initial="900"/>
@@ -1047,6 +1067,10 @@
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="15"/>
+        </consume>
         <target/>
         <abnormal type="CHANGEBODY" visual="COSTUME_SCHOOL">
             <time initial="900"/>
@@ -1061,11 +1085,13 @@
         <!-- Transformed into a high-grade transformation. XP gain +10%%, P. Atk. +5%%, M. Atk. +5%%. Transformation remains after death. \n\n<Special Ability>\n CON +1, MEN +1 -->
         <icon initial="BranchSys3.icon1.Br_schoollook"/>
         <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="15"/>
+        </consume>
         <target/>
     </skill>
     <skill id="59165" name="School Uniform A" action="A1">
