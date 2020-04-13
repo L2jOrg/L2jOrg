@@ -15,7 +15,7 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
     @Override
     protected void readImpl()  {
         room = readShort();
-        activate = readByteAsBoolean();
+        activate = readBoolean();
     }
 
     @Override

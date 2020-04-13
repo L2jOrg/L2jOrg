@@ -1,7 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.olympiad;
 
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMyRankInfo;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRankingInfo;
 
 /**
@@ -19,7 +18,7 @@ public class ExRequestOlympiadRanking extends ClientPacket {
     protected void readImpl() throws Exception {
         type = readByte(); // 0 - Server; 1 -> Class
         scope = readByte(); // 0 - top;  1 - My Rank
-        currentSeason = readByteAsBoolean();
+        currentSeason = readBoolean();
         classId = readInt();
         worldId = readInt(); // 0 - all
     }

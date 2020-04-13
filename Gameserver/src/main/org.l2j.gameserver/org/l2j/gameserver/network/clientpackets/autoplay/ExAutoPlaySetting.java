@@ -23,12 +23,12 @@ public class ExAutoPlaySetting extends ClientPacket {
     @Override
     protected void readImpl() throws Exception {
         options = readShort();
-        active = readByteAsBoolean();
-        pickUp = readByteAsBoolean();
+        active = readBoolean();
+        pickUp = readBoolean();
         nextTargetMode = readShort();
-        isNearTarget = readByteAsBoolean();
+        isNearTarget = readBoolean();
         usableHpPotionPercent = readInt();
-        respectfulHunt = readByteAsBoolean();
+        respectfulHunt = readBoolean();
     }
 
     @Override
