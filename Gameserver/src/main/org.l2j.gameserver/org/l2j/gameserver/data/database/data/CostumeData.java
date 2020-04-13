@@ -15,7 +15,7 @@ public class CostumeData {
     @Column("player_id")
     private int playerId;
     private int id;
-    private int amount;
+    private long amount;
 
     @Transient
     private Costume costume;
@@ -36,7 +36,7 @@ public class CostumeData {
         return id;
     }
 
-    public int getAmount() {
+    public long getAmount() {
         return amount;
     }
 }

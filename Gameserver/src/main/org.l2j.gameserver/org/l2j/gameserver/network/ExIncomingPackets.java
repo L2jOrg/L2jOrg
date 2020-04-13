@@ -65,6 +65,7 @@ import java.util.function.Supplier;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public enum ExIncomingPackets implements PacketFactory {
     REQUEST_GOTO_LOBBY(0x33, RequestGotoLobby::new, ConnectionState.AUTHENTICATED),
@@ -422,7 +423,11 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
     EX_COSTUME_USE_ITEM(0x168, ExRequestCostumeUseItem::new, ConnectionState.IN_GAME),
     EX_COSTUME_LIST(0x169, ExRequestCostumeList::new, ConnectionState.IN_GAME),
-    EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME),
+    EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16A, null, ConnectionState.IN_GAME),
+    EX_COSTUME_EVOLUTION(0x16B, null, ConnectionState.IN_GAME),
+    EX_COSTUME_EXTRACT(0x16C, null, ConnectionState.IN_GAME),
+    EX_COSTUME_LOCK(0x16D, null, ConnectionState.IN_GAME),
+    EX_COSTUME_CHANGE_SHORTCUT(0x16E, null, ConnectionState.IN_GAME),
     EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME),
     EX_PAYBACK_LIST(0x175, null, ConnectionState.IN_GAME),
     EX_PAYBACK_GIVE_REWARD(0x176, null, ConnectionState.IN_GAME),
