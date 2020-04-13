@@ -46,13 +46,14 @@ import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerIn
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
 import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
+import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneEnter;
+import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
 import org.l2j.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2j.gameserver.network.clientpackets.stats.ExResetStatusBonus;
 import org.l2j.gameserver.network.clientpackets.stats.ExSetStatusBonus;
-import org.l2j.gameserver.network.clientpackets.timedhunter.ExTimedHuntingZoneList;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 import org.l2j.gameserver.network.clientpackets.vip.ExRequestVipInfo;
 import org.l2j.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
@@ -433,7 +434,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PAYBACK_GIVE_REWARD(0x176, null, ConnectionState.IN_GAME),
     EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME),
     EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME),
-    EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME),
+    EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, ExTimedHuntingZoneEnter::new, ConnectionState.IN_GAME),
     EX_RANKING_CHAR_INFO(0x181, ExRankCharInfo::new, ConnectionState.IN_GAME),
     EX_RANKING_CHAR_HISTORY(0x182, ExRequestRankingCharHistory::new, ConnectionState.IN_GAME),
     EX_RANKING_CHAR_RANKERS(0x183, ExRankingCharRankers::new, ConnectionState.IN_GAME),

@@ -60,6 +60,7 @@ open module org.l2j.scripts {
                 AcquireCostume.Factory,
                 AcquireRandomCostume.Factory,
                 AddHate.Factory,
+                AddHuntingTime.Factory,
                 AddTeleportBookmarkSlot.Factory,
                 StatModify.Factory,
                 AttackTrait.Factory,

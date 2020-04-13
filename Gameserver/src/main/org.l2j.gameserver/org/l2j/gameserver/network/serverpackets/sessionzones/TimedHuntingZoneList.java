@@ -5,12 +5,16 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
  */
 public class TimedHuntingZoneList extends ServerPacket {
+	private static Logger LOGGER = LoggerFactory.getLogger(TimedHuntingZoneList.class);
 	private final Player _player;
 	private final boolean _isInTimedHuntingZone;
 
@@ -46,6 +50,7 @@ public class TimedHuntingZoneList extends ServerPacket {
 			writeInt(3600); // remain refill time
 			writeInt(3600); // refill time max
 			writeByte(_isInTimedHuntingZone ? 0 : 1); // field activated
+			LOGGER.info("Sending packet to " + _player.getName() + " (_isInTimedHuntingZone:" + _isInTimedHuntingZone + ")");
 		}
 	}
 }

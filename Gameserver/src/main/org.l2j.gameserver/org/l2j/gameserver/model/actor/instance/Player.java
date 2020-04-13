@@ -8303,6 +8303,12 @@ public final class Player extends Playable {
             s.updateAndBroadcastStatus(0);
         });
 
+        // Close time limited zone window.
+        if (!isInTimedHuntingZone())
+        {
+            stopTimedHuntingZoneTask();
+        }
+
         // show movie if available
         if (_movieHolder != null) {
             sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
