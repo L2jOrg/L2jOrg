@@ -16,6 +16,7 @@ public class CostumeData {
     private int playerId;
     private int id;
     private long amount;
+    private boolean locked;
 
     @Transient
     private Costume costume;
@@ -38,5 +39,13 @@ public class CostumeData {
 
     public long getAmount() {
         return amount;
+    }
+
+    public void setLocked(boolean lock) {
+        this.locked = lock;
+    }
+
+    public boolean isLocked() {
+        return locked;
     }
 }

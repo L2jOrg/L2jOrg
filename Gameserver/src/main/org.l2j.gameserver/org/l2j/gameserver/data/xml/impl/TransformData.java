@@ -23,7 +23,6 @@ import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-
 /**
  * Transformation data.
  *

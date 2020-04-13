@@ -20,6 +20,7 @@ import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCurio
 import org.l2j.gameserver.network.clientpackets.commission.*;
 import org.l2j.gameserver.network.clientpackets.compound.*;
 import org.l2j.gameserver.network.clientpackets.costume.ExRequestCostumeList;
+import org.l2j.gameserver.network.clientpackets.costume.ExRequestCostumeLock;
 import org.l2j.gameserver.network.clientpackets.costume.ExRequestCostumeUseItem;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
@@ -426,7 +427,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16A, null, ConnectionState.IN_GAME),
     EX_COSTUME_EVOLUTION(0x16B, null, ConnectionState.IN_GAME),
     EX_COSTUME_EXTRACT(0x16C, null, ConnectionState.IN_GAME),
-    EX_COSTUME_LOCK(0x16D, null, ConnectionState.IN_GAME),
+    EX_COSTUME_LOCK(0x16D, ExRequestCostumeLock::new, ConnectionState.IN_GAME),
     EX_COSTUME_CHANGE_SHORTCUT(0x16E, null, ConnectionState.IN_GAME),
     EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME),
     EX_PAYBACK_LIST(0x175, null, ConnectionState.IN_GAME),

@@ -571,6 +571,15 @@ public final class Player extends Playable {
         return costumes.values();
     }
 
+    public boolean lockCostume(int id, boolean lock) {
+        var costume = costumes.get(id);
+        if(isNull(costume)) {
+            return false;
+        }
+        costume.setLocked(lock);
+        return true;
+    }
+
     // Unchecked
 
     // TODO: This needs to be better integrated and saved/loaded

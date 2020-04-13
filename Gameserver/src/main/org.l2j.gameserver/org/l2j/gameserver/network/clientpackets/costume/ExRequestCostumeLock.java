@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.costume;
 
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.costume.ExSendCostumeListFull;
+import org.l2j.gameserver.network.serverpackets.costume.ExCostumeLock;
 
 /**
  * @author JoeAlisson
@@ -19,6 +19,9 @@ public class ExRequestCostumeLock extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new ExSendCostumeListFull());
+        var player = client.getPlayer();
+        if(player.lockCostume(id, lock)) {
+            client.sendPacket(new ExCostumeLock(id, lock, true));
+        }
     }
 }
