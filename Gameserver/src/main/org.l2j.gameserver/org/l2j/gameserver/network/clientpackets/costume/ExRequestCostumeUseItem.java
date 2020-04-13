@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.costume;
 
+import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -22,7 +23,7 @@ public class ExRequestCostumeUseItem extends ClientPacket {
     protected void runImpl() {
         var player = client.getPlayer();
         var item = player.getInventory().getItemByObjectId(itemObjectId);
-        if(nonNull(item)) {
+        if(nonNull(item) && CostumeEngine.getInstance().checkCostumeAction(player)) {
             item.forEachSkill(ItemSkillType.NORMAL, skill -> SkillCaster.triggerCast(player, player, skill.getSkill(), item, true));
         }
     }

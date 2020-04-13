@@ -6,9 +6,13 @@ import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.api.costume.CostumeGrade;
+import org.l2j.gameserver.enums.PrivateStoreType;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +28,8 @@ import java.util.Set;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.model.skills.AbnormalType.TURN_STONE;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 
 /**
  * @author JoeAlisson
@@ -124,6 +130,32 @@ public class CostumeEngine extends GameXmlReader {
 
         var costumeId = Rnd.get(available);
         return costumes.get(costumeId);
+    }
+    public boolean checkCostumeAction(Player player) {
+        SystemMessageId errMsg = null;
+        if(player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_USING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP;
+        } else if(player.isDead()){
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHEN_DEAD;
+        } else if(player.hasAbnormalType(TURN_STONE)) {
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_PETRIFIED;
+        } else if(player.isFishing()) {
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_FISHING;
+        } else if(player.isSitting()) {
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_SITTING;
+        } else if(player.isMovementDisabled()) {
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_FROZEN;
+        } else if(player.isProcessingTransaction()) {
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_EXCHANGE;
+        } else if(AttackStanceTaskManager.getInstance().hasAttackStanceTask(player)) {
+            errMsg = CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_A_BATTLE;
+        }
+
+        if(nonNull(errMsg)) {
+            player.sendPacket(errMsg);
+            return false;
+        }
+        return true;
     }
 
     public static void init() {
