@@ -1223,10 +1223,10 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="156"/> <!-- Hand Axe -->
-        <acquire exp="264" sp="7"/>
+		<acquire exp="265" sp="8" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="38.17805" hpRegen="2" mp="84.075" mpRegen="0.9"/>
-            <attack physical="13.52471" magical="9.23562" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<vitals hp="98.115" hpRegen="2" mp="85.785" mpRegen="0.9" />
+			<attack physical="13.52471" magical="9.23562" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
             <defence physical="53.53373" magical="39.17366"/>
             <speed>
                 <walk ground="45"/>
@@ -1277,8 +1277,8 @@
         <equipment rhand="4"/> <!-- rhand: Club -->
         <acquire exp="309" sp="10"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="44.3358" hpRegen="2" mp="92.04" mpRegen="0.9"/>
-            <attack physical="14.80956" magical="10.11301" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<vitals hp="113.94" hpRegen="2" mp="93.912" mpRegen="0.9" />
+			<attack physical="14.80956" magical="10.11301" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
             <defence physical="55.51894" magical="40.62635"/>
             <speed>
                 <walk ground="45"/>
@@ -1429,12 +1429,16 @@
         </parameters>
         <race>BEAST</race>
         <sex>FEMALE</sex>
-        <equipment rhand="68"/> <!-- Falchion -->
-        <acquire exp="30013" sp="900"/>
+		<equipment rhand="68" />
+		<acquire exp="35016" sp="1051" attribute_exp="14" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="926.519696" hpRegen="6.5" mp="1098.285" mpRegen="2.4"/>
-            <attack physical="508.138257" magical="315.44778" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="220.7417545" magical="177.68216"/>
+			<vitals hp="11905.464" hpRegen="6.5" mp="1120.623" mpRegen="2.4" />
+			<attack physical="461.94387" magical="315.44778" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="242.81593" magical="177.68216" />
+			<attribute>
+				<attack type="earth" value="20" />
+				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
+			</attribute>
             <speed>
                 <walk ground="70"/>
                 <run ground="174"/>
@@ -1442,15 +1446,10 @@
             <hitTime>430</hitTime>
             <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
         <skillList>
             <skill id="4047" level="5"/> <!-- Hold -->
             <skill id="4416" level="3"/> <!-- Beasts -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="16"/> <!-- Very Strong P. Atk. -->
-            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1465,17 +1464,17 @@
                 <item id="383" min="1" max="1" chance="0.03"/> <!-- Zubei's Gaiters -->
                 <item id="2376" min="1" max="1" chance="0.03"/> <!-- Avadon Breastplate -->
                 <item id="2379" min="1" max="1" chance="0.03"/> <!-- Avadon Gaiters -->
-                <item id="57" min="2014" max="4701" chance="70"/> <!-- Adena -->
-                <item id="1864" min="4" max="12" chance="23.01"/> <!-- Stem -->
-                <item id="1867" min="7" max="21" chance="7.871"/> <!-- Animal Skin -->
-                <item id="4057" min="1" max="1" chance="4.343"/> <!-- Zubei's Gaiter Material -->
-                <item id="4065" min="1" max="1" chance="4.342"/> <!-- Avadon Gaiter Material -->
-                <item id="4064" min="1" max="1" chance="2.785"/> <!-- Avadon Breastplate Part -->
-                <item id="4056" min="1" max="1" chance="2.74"/> <!-- Zubei's Breastplate Part -->
+				<item id="57" min="1645" max="3840" chance="70" /> <!-- Adena -->
+				<item id="1864" min="4" max="12" chance="36.27" /> <!-- Stem -->
+				<item id="1867" min="7" max="21" chance="13.21" /> <!-- Animal Skin -->
+				<item id="4057" min="1" max="1" chance="3.576" /> <!-- Zubei's Gaiter Material -->
+				<item id="4065" min="1" max="1" chance="3.471" /> <!-- Avadon Gaiter Material -->
+				<item id="4064" min="1" max="1" chance="2.317" /> <!-- Avadon Breastplate Part -->
+				<item id="4056" min="1" max="1" chance="2.285" /> <!-- Zubei's Breastplate Part -->
             </drop>
             <spoil>
-                <item id="1871" min="1" max="1" chance="84.69"/> <!-- Charcoal -->
-                <item id="5475" min="1" max="1" chance="25.94"/> <!-- Recipe: Warsmith' Mold -->
+				<item id="1871" min="1" max="1" chance="83.98" /> <!-- Charcoal -->
+				<item id="5475" min="1" max="1" chance="20.4" /> <!-- Recipe: Warsmith' Mold -->
                 <item id="356" min="1" max="1" chance="0.075"/> <!-- Full Plate Armor -->
             </spoil>
         </dropLists>
@@ -1627,11 +1626,15 @@
         </parameters>
         <race>DRAGON</race>
         <sex>MALE</sex>
-        <acquire exp="26461" sp="793"/>
+		<acquire exp="60210" sp="1807" attribute_exp="13" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="911.6548875" hpRegen="6.5" mp="1033.68" mpRegen="2.4"/>
-            <attack physical="466.656245" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="211.9894455" magical="170.63714"/>
+			<vitals hp="9371.565" hpRegen="6.5" mp="1054.704" mpRegen="2.4" />
+			<attack physical="424.23295" magical="289.69611" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="233.18839" magical="170.63714" />
+			<attribute>
+				<attack type="earth" value="20" />
+				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
+			</attribute>
             <speed>
                 <walk ground="70"/>
                 <run ground="174"/>
@@ -1639,16 +1642,10 @@
             <hitTime>840</hitTime>
             <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
         <skillList>
             <skill id="4078" level="5"/> <!-- NPC Flamestrike -->
             <skill id="4416" level="10"/> <!-- Dragons -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
-            <skill id="4071" level="5"/> <!-- Bow Resistance -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -2102,12 +2099,16 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <equipment rhand="124"/> <!-- Two-handed Sword -->
-        <acquire exp="16524" sp="495"/>
+		<equipment rhand="124" />
+		<acquire exp="19278" sp="579" attribute_exp="8" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="582.9541925" hpRegen="5.5" mp="814.2" mpRegen="2.1"/>
-            <attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="220.262284" magical="146.5258"/>
+			<vitals hp="5992.611" hpRegen="5.5" mp="830.76" mpRegen="2.1" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.23844" magical="146.5258" />
+			<attribute>
+				<attack type="earth" value="20" />
+				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
+			</attribute>
             <speed>
                 <walk ground="70"/>
                 <run ground="174"/>
@@ -2115,17 +2116,10 @@
             <hitTime>520</hitTime>
             <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
         <skillList>
             <skill id="4078" level="5"/> <!-- NPC Flamestrike -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="10"/> <!-- Slightly Weak M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
-            <skill id="4278" level="1"/> <!-- Dark Attack -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -2140,28 +2134,28 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="103" min="1" max="1" chance="0.075"/> <!-- Tower Shield -->
-                <item id="107" min="1" max="1" chance="0.075"/> <!-- Compound Shield -->
-                <item id="60" min="1" max="1" chance="0.03"/> <!-- Compound Armor -->
+				<item id="103" min="1" max="1" chance="0.03" /> <!-- Tower Shield -->
+				<item id="107" min="1" max="1" chance="0.03" /> <!-- Compound Shield -->
                 <item id="517" min="1" max="1" chance="0.03"/> <!-- Compound Helmet -->
-                <item id="57" min="1103" max="2582" chance="70"/> <!-- Adena -->
-                <item id="1872" min="1" max="1" chance="31.1"/> <!-- Animal Bone -->
-                <item id="4055" min="1" max="1" chance="4.684"/> <!-- Compound Shield Fragment -->
-                <item id="1978" min="1" max="1" chance="4.666"/> <!-- Tower Shield Fragment -->
-                <item id="2957" min="1" max="1" chance="3.227"/> <!-- Compound Helmet Design -->
-                <item id="1977" min="1" max="1" chance="1.008"/> <!-- Compound Armor Temper -->
+				<item id="60" min="1" max="1" chance="0.0075" /> <!-- Compound Armor -->
+				<item id="57" min="895" max="2095" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="1" chance="26.12" /> <!-- Animal Bone -->
+				<item id="1978" min="1" max="1" chance="3.842" /> <!-- Tower Shield Fragment -->
+				<item id="4055" min="1" max="1" chance="3.826" /> <!-- Compound Shield Fragment -->
+				<item id="2957" min="1" max="1" chance="2.529" /> <!-- Compound Helmet Design -->
+				<item id="1977" min="1" max="1" chance="0.75" /> <!-- Compound Armor Temper -->
                 <item id="1877" min="1" max="1" chance="0.75"/> <!-- Adamantite Nugget -->
                 <item id="3006" min="1" max="1" chance="0.75"/> <!-- Recipe: Demon's Gloves -->
                 <item id="3017" min="1" max="1" chance="0.75"/> <!-- Recipe: Divine Gloves -->
-                <item id="2170" min="1" max="1" chance="0.75"/> <!-- Recipe: Nassen's Earring -->
-                <item id="4601" min="1" max="1" chance="0.075"/> <!-- Greater Dye of STR <STR +3 CON -3> - 2nd Class Transfer -->
-                <item id="4603" min="1" max="1" chance="0.075"/> <!-- Greater Dye of CON <Con +3 Str -3> - 2nd Class Transfer -->
+				<item id="2170" min="1" max="1" chance="0.3" /> <!-- Recipe: Nassen's Earring -->
+				<item id="4601" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR 3 CON -3) -->
                 <item id="2356" min="1" max="1" chance="0.03"/> <!-- Recipe: Demon's Staff -->
+				<item id="4603" min="1" max="1" chance="0.03" /> <!-- Greater Dye of CON (Con 3 Str -3) -->
             </drop>
             <spoil>
-                <item id="1869" min="1" max="1" chance="85.01"/> <!-- Iron Ore -->
-                <item id="1915" min="1" max="1" chance="46.89"/> <!-- Ring of Ages Gemstone -->
-                <item id="3017" min="1" max="1" chance="14.51"/> <!-- Recipe: Divine Gloves -->
+				<item id="1869" min="1" max="1" chance="88.33" /> <!-- Iron Ore -->
+				<item id="1915" min="1" max="1" chance="37.31" /> <!-- Ring of Ages Gemstone -->
+				<item id="3017" min="1" max="1" chance="11.33" /> <!-- Recipe: Divine Gloves -->
             </spoil>
         </dropLists>
     </npc>
