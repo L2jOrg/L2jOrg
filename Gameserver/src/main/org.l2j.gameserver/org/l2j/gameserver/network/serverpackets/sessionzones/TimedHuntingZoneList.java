@@ -37,7 +37,7 @@ public class TimedHuntingZoneList extends ServerPacket {
 			writeInt(57); // item id
 			writeLong(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
 			writeInt(1); // reset cycle
-			writeInt(2); // zone id
+			writeInt(420); // zone id
 			writeInt(78); // min level
 			writeInt(999); // max level
 			writeInt(0); // remain time base?

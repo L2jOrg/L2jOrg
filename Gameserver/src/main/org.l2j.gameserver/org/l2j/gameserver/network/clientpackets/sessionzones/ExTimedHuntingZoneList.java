@@ -1,11 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.sessionzones;
-
-import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 /**
  * @author Mobius
