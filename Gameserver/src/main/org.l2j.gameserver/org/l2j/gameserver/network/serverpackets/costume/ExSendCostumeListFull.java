@@ -18,7 +18,7 @@ public class ExSendCostumeListFull extends ServerPacket {
         for (var costume : costumes) {
             writeInt(costume.getId());
             writeLong(costume.getAmount()); // amount
-            writeByte(true); // lock  state ?
+            writeByte(costume.isLocked()); // lock  state ?
             writeByte(true); // new
         }
 

@@ -128,6 +128,6 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     void save(Collection<CostumeData> costumes);
 
-    @Query("SELECT id, player_id, amount FROM player_costumes WHERE player_id = :playerId:")
+    @Query("SELECT id, player_id, amount, locked FROM player_costumes WHERE player_id = :playerId:")
     IntMap<CostumeData> findCostumes(int playerId);
 }

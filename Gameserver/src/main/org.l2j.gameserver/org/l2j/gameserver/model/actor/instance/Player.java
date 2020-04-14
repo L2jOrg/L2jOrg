@@ -567,11 +567,19 @@ public final class Player extends Playable {
         if(costumes.equals(Containers.emptyIntMap())) {
             costumes = new HashIntMap<>();
         }
-        costumes.computeIfAbsent(costume.id(), id -> CostumeData.of(this, costume)).increaseAmount();
+        costumes.computeIfAbsent(costume.id(), id -> CostumeData.of(id, this)).increaseAmount();
     }
 
     public Collection<CostumeData> getCostumes() {
         return costumes.values();
+    }
+
+    public CostumeData getCostume(int id) {
+        return costumes.get(id);
+    }
+
+    public void removeCostume(int id) {
+        costumes.remove(id);
     }
 
     // Unchecked

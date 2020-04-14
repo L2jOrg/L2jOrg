@@ -17,7 +17,7 @@ public class ExSendCostumeList extends ServerPacket {
         for (var costume : costumes) {
             writeInt(costume.getId());
             writeLong(costume.getAmount());
-            writeByte(0); // lock state
+            writeByte(costume.isLocked());
             writeByte(0); // changed type
         }
     }

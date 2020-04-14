@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.HashMap;
-import java.util.Map;
 
 
 public final class SystemMessageId {
@@ -12351,32 +12351,11 @@ public final class SystemMessageId {
     @ClientString(id = 6845, message = "Failed to load the Transformation List. Please try again later.")
     public static SystemMessageId FAILED_TO_LOAD_THE_TRANSFORMATION_LIST_PLEASE_TRY_AGAIN_LATER;
 
-    @ClientString(id = 6846, message = "Cannot use Sealbooks and evolve or extract Transformations while using a private store or private workshop.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_USING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP;
-
     @ClientString(id = 6847, message = "Invalid item.")
     public static SystemMessageId INVALID_ITEM;
 
     @ClientString(id = 6848, message = "You don’t have necessary items.")
     public static SystemMessageId YOU_DONT_HAVE_NECESSARY_ITEMS;
-
-    @ClientString(id = 6849, message = "Cannot use Sealbooks and evolve or extract Transformations while frozen.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_FROZEN;
-
-    @ClientString(id = 6850, message = "Cannot use Sealbooks and evolve or extract Transformations when dead.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHEN_DEAD;
-
-    @ClientString(id = 6851, message = "Cannot use Sealbooks and evolve or extract Transformations during exchange.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_EXCHANGE;
-
-    @ClientString(id = 6852, message = "Cannot use Sealbooks and evolve or extract Transformations while petrified.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_PETRIFIED;
-
-    @ClientString(id = 6853, message = "Cannot use Sealbooks and evolve or extract Transformations while fishing.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_FISHING;
-
-    @ClientString(id = 6854, message = "Cannot use Sealbooks and evolve or extract Transformations while sitting.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_SITTING;
 
     @ClientString(id = 6855, message = "Cannot evolve or extract Transformations during a battle.")
     public static SystemMessageId CANNOT_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_A_BATTLE;
@@ -12386,21 +12365,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 6857, message = "Not enough material for transformation.")
     public static SystemMessageId NOT_ENOUGH_MATERIAL_FOR_TRANSFORMATION;
-
-    @ClientString(id = 6858, message = "Cannot use Sealbooks and evolve or extract Transformations during a battle.")
-    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_A_BATTLE;
-
-    @ClientString(id = 6859, message = "This Transformation cannot be extracted.")
-    public static SystemMessageId THIS_TRANSFORMATION_CANNOT_BE_EXTRACTED;
-
-    @ClientString(id = 6860, message = "Not enough material to extract.")
-    public static SystemMessageId NOT_ENOUGH_MATERIAL_TO_EXTRACT;
-
-    @ClientString(id = 6861, message = "Not enough space in the inventory. Please make more room and try again.")
-    public static SystemMessageId NOT_ENOUGH_SPACE_IN_THE_INVENTORY_PLEASE_MAKE_MORE_ROOM_AND_TRY_AGAIN;
-
-    @ClientString(id = 6862, message = "Cannot edit the Lock Transformation setting during a battle.")
-    public static SystemMessageId CANNOT_EDIT_THE_LOCK_TRANSFORMATION_SETTING_DURING_A_BATTLE;
 
     @ClientString(id = 6863, message = "Cannot add Transformations to or remove them from the Transformation Favorite during a battle.")
     public static SystemMessageId CANNOT_ADD_TRANSFORMATIONS_TO_OR_REMOVE_THEM_FROM_THE_TRANSFORMATION_FAVORITE_DURING_A_BATTLE;
@@ -17713,9 +17677,44 @@ public final class SystemMessageId {
     @ClientString(id = 6827, message = "Your clan has achieved hunting bonus Lv. $s1.")
     public static SystemMessageId YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1;
 
+    @ClientString(id = 6846, message = "Cannot use Sealbooks and evolve or extract Transformations while using a private store or private workshop.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_USING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP;
+
+    @ClientString(id = 6849, message = "Cannot use Sealbooks and evolve or extract Transformations while frozen.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_FROZEN;
+
+    @ClientString(id = 6850, message = "Cannot use Sealbooks and evolve or extract Transformations when dead.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHEN_DEAD;
+
+    @ClientString(id = 6851, message = "Cannot use Sealbooks and evolve or extract Transformations during exchange.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_EXCHANGE;
+
+    @ClientString(id = 6852, message = "Cannot use Sealbooks and evolve or extract Transformations while petrified.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_PETRIFIED;
+
+    @ClientString(id = 6853, message = "Cannot use Sealbooks and evolve or extract Transformations while fishing.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_FISHING;
+
+    @ClientString(id = 6854, message = "Cannot use Sealbooks and evolve or extract Transformations while sitting.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_SITTING;
+
+    @ClientString(id = 6858, message = "Cannot use Sealbooks and evolve or extract Transformations during a battle.")
+    public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_A_BATTLE;
+
+    @ClientString(id = 6859, message = "This Transformation cannot be extracted.")
+    public static SystemMessageId THIS_TRANSFORMATION_CANNOT_BE_EXTRACTED;
+
+    @ClientString(id = 6860, message = "Not enough material to extract.")
+    public static SystemMessageId NOT_ENOUGH_MATERIAL_TO_EXTRACT;
+
+    @ClientString(id = 6861, message = "Not enough space in the inventory. Please make more room and try again.")
+    public static SystemMessageId NOT_ENOUGH_SPACE_IN_THE_INVENTORY_PLEASE_MAKE_MORE_ROOM_AND_TRY_AGAIN;
+
+    @ClientString(id = 6862, message = "Cannot edit the Lock Transformation setting during a battle.")
+    public static SystemMessageId CANNOT_EDIT_THE_LOCK_TRANSFORMATION_SETTING_DURING_A_BATTLE;
+
     @ClientString(id = 7090, message = "Cannot locate the selected foe. The foe is not online.")
     public static SystemMessageId CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE;
-
 
     @ClientString(id = 7238, message = "You are too far way to trade.")
     public static SystemMessageId YOU_ARE_TOO_FAR_WAY_TO_TRADE;
@@ -17726,7 +17725,7 @@ public final class SystemMessageId {
     @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
     public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
 
-    private static Map<Integer, SystemMessageId> VALUES = new HashMap<>();
+    private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 
     static {
         buildFastLookupTable();

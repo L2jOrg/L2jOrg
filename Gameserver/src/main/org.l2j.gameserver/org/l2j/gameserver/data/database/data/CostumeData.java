@@ -2,8 +2,6 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.annotation.Transient;
-import org.l2j.gameserver.engine.costume.Costume;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
@@ -16,19 +14,16 @@ public class CostumeData {
     private int playerId;
     private int id;
     private long amount;
-
-    @Transient
-    private Costume costume;
+    private boolean locked;
 
     public void increaseAmount() {
         amount++;
     }
 
-    public static CostumeData of(Player player, Costume costume) {
+    public static CostumeData of(int costumeId, Player player) {
         var data = new CostumeData();
         data.playerId = player.getObjectId();
-        data.costume = costume;
-        data.id = costume.id();
+        data.id = costumeId;
         return data;
     }
 
@@ -38,5 +33,17 @@ public class CostumeData {
 
     public long getAmount() {
         return amount;
+    }
+
+    public void setLocked(boolean lock) {
+        this.locked = lock;
+    }
+
+    public boolean isLocked() {
+        return locked;
+    }
+
+    public void reduceCount(long amount) {
+        this.amount -= amount;
     }
 }

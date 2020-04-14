@@ -5,7 +5,10 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
-import java.util.function.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -42,6 +45,10 @@ public class Util {
 
     public static <T> boolean falseIfNullOrElse(T obj, Predicate<T> predicate) {
         return nonNull(obj) && predicate.test(obj);
+    }
+
+    public static <T, R> Set<R> emptySetIfNullOrElse(T obj, Function<T, Set<R>> function) {
+        return isNull(obj) ? Collections.emptySet() : function.apply(obj);
     }
 
     public static <T, R> R computeIfNonNull(T obj, Function<T, R> function) {

@@ -255,8 +255,8 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         return player;
     }
 
-    public void setPlayer(Player activeChar) {
-        this.player = activeChar;
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
     public ReentrantLock getActivePlayerLock() {
