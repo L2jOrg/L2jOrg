@@ -213,7 +213,7 @@
         <equipment rhand="95"/> <!-- Poleaxe -->
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="37821" hpRegen="62.194388632129" mp="29752" mpRegen="2.4"/>
-			<attack physical="2312.08069139469" magical="1393.84679470785" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<attack physical="2312.08069139469" magical="1393.84679470785" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
             <defence physical="328.343835" magical="320.36" evasion="-18"/>
             <speed>
                 <walk ground="40"/>
