@@ -1092,6 +1092,11 @@
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <dropLists>
+            <drop>
+                <item id="91636" min="1" max="1" chance="100"/> <!-- Goldber key -->
+            </drop>
+        </dropLists>
     </npc>
     <npc id="18359" level="83" type="Monster" name="Goldberg" title="Ancient Pirate Captain">
         <race>UNDEAD</race>
