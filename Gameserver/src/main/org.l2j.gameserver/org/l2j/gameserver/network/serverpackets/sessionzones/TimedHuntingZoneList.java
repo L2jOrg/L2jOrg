@@ -52,7 +52,6 @@ public class TimedHuntingZoneList extends ServerPacket {
 			writeByte(_isInTimedHuntingZone ? 0 : 1); // field activated
 			writeByte(false); // bUserBound
 			writeByte(true); // bCanReEnter
-			LOGGER.info("Sending packet to " + _player.getName() + " (_isInTimedHuntingZone:" + _isInTimedHuntingZone + ")");
 		}
 	}
 }
