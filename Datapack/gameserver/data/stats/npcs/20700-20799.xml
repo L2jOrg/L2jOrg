@@ -1125,7 +1125,7 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
 		<equipment rhand="123" lhand="945" />
-		<acquire exp="29087" sp="873" attributeExp="7" />
+		<acquire exp="29087" sp="873" attribute_exp="7" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4341.747" hpRegen="5.5" mp="800.961" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3420,7 +3420,7 @@
         <race>BEAST</race>
         <sex>MALE</sex>
         <equipment rhand="192"/> <!-- Monster Only (Parhit Staff) -->
-		<acquire exp="80991" sp="2429" attributeExp="684"/>
+		<acquire exp="80991" sp="2429" attribute_exp="684"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1399.902885" hpRegen="8.5" mp="2683.32" mpRegen="3"/>
             <attack physical="182.671236" magical="113.4007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -3550,7 +3550,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="223"/> <!-- Kukuri -->
-		<acquire exp="46335" sp="1390" attributeExp="684" />
+		<acquire exp="46335" sp="1390" attribute_exp="684" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1380.32124" hpRegen="8.5" mp="2629.335" mpRegen="3"/>
             <attack physical="469.5384" magical="416.6452173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
@@ -3599,7 +3599,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="226"/> <!-- Cursed Dagger -->
-		<acquire exp="50337" sp="1510" attributeExp="770"/>
+		<acquire exp="50337" sp="1510" attribute_exp="770"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1418.99191" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
@@ -3647,7 +3647,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="232"/> <!-- Dark Elven Dagger -->
-		<acquire exp="88472" sp="2654" attributeExp="770" />
+		<acquire exp="88472" sp="2654" attribute_exp="770" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1418.99191" hpRegen="8.5" mp="2739.075" mpRegen="3"/>
             <attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
@@ -3701,7 +3701,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="74"/> <!-- Katana -->
-		<acquire exp="91880" sp="2756" attributeExp="858"/>
+		<acquire exp="91880" sp="2756" attribute_exp="858"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1436.72623" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="488.6718" magical="433.67086956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
@@ -3754,7 +3754,7 @@
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment rhand="5132"/> <!-- Monster Only (Giant Trident) -->
-		<acquire exp="93340" sp="2800" attributeExp="858"/>
+		<acquire exp="93340" sp="2800" attribute_exp="858"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1436.849385" hpRegen="8.5" mp="2794.83" mpRegen="3"/>
             <attack physical="488.7117" magical="433.70804347826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
@@ -3804,7 +3804,7 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>FEMALE</sex>
-		<acquire exp="96610" sp="2898" attributeExp="948"/>
+		<acquire exp="96610" sp="2898" attribute_exp="948"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3"/>
             <attack physical="494.5442" magical="438.8752173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
