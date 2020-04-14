@@ -37,7 +37,7 @@ public class TimedHuntingZoneList extends ServerPacket {
 			writeInt(57); // item id
 			writeLong(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
 			writeInt(1); // reset cycle
-			writeInt(420); // zone id
+			writeInt(2); // zone id
 			writeInt(78); // min level
 			writeInt(999); // max level
 			writeInt(0); // remain time base?
@@ -50,6 +50,8 @@ public class TimedHuntingZoneList extends ServerPacket {
 			writeInt(3600); // remain refill time
 			writeInt(3600); // refill time max
 			writeByte(_isInTimedHuntingZone ? 0 : 1); // field activated
+			writeByte(false); // bUserBound
+			writeByte(true); // bCanReEnter
 			LOGGER.info("Sending packet to " + _player.getName() + " (_isInTimedHuntingZone:" + _isInTimedHuntingZone + ")");
 		}
 	}
