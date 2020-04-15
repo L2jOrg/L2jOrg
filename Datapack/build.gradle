@@ -3,7 +3,7 @@ ext.moduleName = 'org.l2j.scripts'
 dependencies {
     implementation project(':Commons')
     implementation project(":Gameserver")
-    implementation 'io.github.joealisson:async-mmocore:3.0.0-SNAPSHOT'
+    implementation 'io.github.joealisson:async-mmocore:3.0.1'
 }
 
 sourceSets {
