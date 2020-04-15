@@ -58,7 +58,7 @@ public class MonsterArena extends AbstractInstance
 	private static final Collection<Player> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
 	private static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	private static final int TEMPLATE_ID = 192;
-	
+
 	private MonsterArena()
 	{
 		super(TEMPLATE_ID);
@@ -68,7 +68,7 @@ public class MonsterArena extends AbstractInstance
 		addKillId(BOSSES);
 		addInstanceLeaveId(TEMPLATE_ID);
 	}
-	
+
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
@@ -100,7 +100,7 @@ public class MonsterArena extends AbstractInstance
 						}
 					}
 				}
-				
+
 				// Clan checks.
 				if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()) || (player.getCommandChannel() == null))
 				{
@@ -119,28 +119,28 @@ public class MonsterArena extends AbstractInstance
 						return null;
 					}
 				}
-				
+
 				enterInstance(player, npc, TEMPLATE_ID);
-				
+
 				final Instance world = player.getInstanceWorld();
 				if (world != null)
 				{
 					final Npc machine = world.getNpc(MACHINE);
 					machine.setScriptValue(player.getClanId());
-					
+
 					// Initialize progress if it does not exist.
 					if (GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), -1) == -1)
 					{
 						GlobalVariablesManager.getInstance().set(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
 					}
-					
+
 					// On max progress, set last four bosses.
 					final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
 					if (progress > 17)
 					{
 						GlobalVariablesManager.getInstance().set(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 17);
 					}
-					
+
 					startQuestTimer("machine_talk", 10000, machine, null);
 					startQuestTimer("start_countdown", 60000, machine, null);
 					startQuestTimer("next_spawn", 60000, machine, null);
@@ -164,7 +164,7 @@ public class MonsterArena extends AbstractInstance
 					world.setStatus(1);
 					for (Player plr : world.getPlayers())
 					{
-						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1200, 0, NpcStringId.REMAINING_TIME));
+						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1800, 0, NpcStringId.REMAINING_TIME));
 					}
 				}
 				break;
@@ -189,7 +189,7 @@ public class MonsterArena extends AbstractInstance
 						npc.doDie(npc);
 						REWARDED_PLAYERS.add(player);
 						ThreadPool.schedule(() -> REWARDED_PLAYERS.remove(player), 60000);
-						
+
 						// Mandatory reward.
 						final Npc machine = world.getNpc(MACHINE);
 						final int progress = GlobalVariablesManager.getInstance().getInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue());
@@ -209,7 +209,7 @@ public class MonsterArena extends AbstractInstance
 						{
 							giveItems(player, BATTLE_BOX_1, 1);
 						}
-						
+
 						// Rare reward.
 						if (getRandom(100) < 1) // 1% chance.
 						{
@@ -245,13 +245,13 @@ public class MonsterArena extends AbstractInstance
 		}
 		return null;
 	}
-	
+
 	@Override
 	public void onInstanceLeave(Player player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.REMAINING_TIME));
 	}
-	
+
 	@Override
 	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
@@ -260,18 +260,18 @@ public class MonsterArena extends AbstractInstance
 		{
 			// Change world status.
 			world.incStatus();
-			
+
 			// Make machine talk.
 			final Npc machine = world.getNpc(MACHINE);
 			machine.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HA_NOT_BAD);
-			
+
 			// Save progress to global variables.
 			GlobalVariablesManager.getInstance().increaseInt(MONSTER_ARENA_VARIABLE + machine.getScriptValue(), 1);
-			
+
 			// Spawn reward chests.
 			world.spawnGroup("supplies");
 			startQuestTimer("remove_supplies", 60000, machine, null);
-			
+
 			// Next boss spawn.
 			if (world.getStatus() < 5)
 			{
@@ -288,13 +288,13 @@ public class MonsterArena extends AbstractInstance
 		}
 		return super.onKill(npc, player, isSummon);
 	}
-	
+
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + "-01.htm";
 	}
-	
+
 	public static AbstractInstance provider() {
 		return new MonsterArena();
 	}
