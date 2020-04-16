@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- Immortal: Update 270 Prot -->
+	<npcs>
+		<npc>30936</npc> <!-- Pona -->
+	</npcs>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="48046" /> <!-- Scroll: Enchant Agathion (48046) -->
+	</item>
+	<item>
+		<ingredient count="2" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="48046" /> <!-- Agathion Enchant Scroll Pack (91160) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71303" /> <!-- Agathion Virgo (71303) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71304" /> <!-- Agathion Capricorn (71304) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71305" /> <!-- Agathion Libra (71305) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71306" /> <!-- Agathion Taurus (71306) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71307" /> <!-- Agathion Leo (71307) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71308" /> <!-- Agathion Gemini (71308) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71309" /> <!-- Agathion Scorpio (71309) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71310" /> <!-- Agathion Aquarius (71310) -->
+	</item>
+	<item>
+		<ingredient count="1" id="91159" /> <!-- Agathion Exchange Coupon (91159) -->
+		<production count="1" id="71311" /> <!-- Agathion Sagittarius (71311) -->
+	</item>
+</list>

@@ -33,7 +33,8 @@ public class ExSetStatusBonus extends ClientPacket {
         var player = client.getPlayer();
         var statsData = player.getStatsData();
         if(statsData.update(str, dex, con, intt, wit, men)) {
-            client.sendPacket(new UserInfo(player, UserInfoType.STATS_POINTS, UserInfoType.BASE_STATS ));
+            client.sendPacket(new UserInfo(player, UserInfoType.STATS, UserInfoType.STATS_POINTS, UserInfoType.BASE_STATS ));
+            player.getStats().recalculateStats(true);
         }
     }
 }

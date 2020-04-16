@@ -25,14 +25,14 @@ public class CostumeAPI {
             return;
         }
 
-        player.addCostume(costume);
+        var playerCostume = player.addCostume(costume.id());
 
         if(isNull(player.getKnownSkill(costume.skill()))) {
             var skill = SkillEngine.getInstance().getSkill(costume.skill(), 1);
             player.addSkill(skill, true);
         }
         player.sendPacket(new ExCostumeUseItem(costume.id(), true));
-        player.sendPacket(new ExSendCostumeList());
+        player.sendPacket(new ExSendCostumeList(playerCostume));
     }
 
     public static void imprintRandomCostumeOnPlayer(Player player, EnumSet<CostumeGrade> grades) {

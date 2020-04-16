@@ -17,21 +17,12 @@ public class ExSendCostumeListFull extends ServerPacket {
         writeInt(costumes.size());
         for (var costume : costumes) {
             writeInt(costume.getId());
-            writeLong(costume.getAmount()); // amount
-            writeByte(costume.isLocked()); // lock  state ?
-            writeByte(true); // new
+            writeLong(costume.getAmount());
+            writeByte(costume.isLocked());
+            writeByte(costume.checkIsNewAndChange());
         }
 
-
-        var size = 0; // shortcut list size
-        writeInt(size);
-        for (int i = 0; i < size; i++) {
-            writeInt(1); // page
-            writeInt(i); // slot index
-            writeInt(i + 1); // costume id
-            writeByte(false); // auto use
-        }
-
+        writeInt(0); // shortcut disabled
         writeInt(0); // costume collection Id
         writeInt(0); // costume collection reuse cool time
 

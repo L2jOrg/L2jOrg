@@ -34,11 +34,11 @@ public class ExRequestCostumeExtract extends ClientPacket {
     protected void runImpl() {
         var player = client.getPlayer();
         var playerCostume = player.getCostume(id);
-        var costume = CostumeEngine.getInstance().getCostume(id);
+        Costume costume;
 
-        if(canExtract(player, playerCostume) && consumeItemsCost(player, costume)) {
+        if(canExtract(player, playerCostume) && consumeItemsCost(player, costume = CostumeEngine.getInstance().getCostume(id))) {
             playerCostume.reduceCount(amount);
-            client.sendPacket(new ExSendCostumeList());
+            client.sendPacket(new ExSendCostumeList(playerCostume));
             client.sendPacket(ExCostumeExtract.success(playerCostume, costume.extractItem(), amount));
             player.addItem("Extract", costume.extractItem(), amount, null, true);
 
@@ -55,13 +55,11 @@ public class ExRequestCostumeExtract extends ClientPacket {
         if(isNull(costume) || costume.getAmount() < amount) {
             player.sendPacket(THIS_TRANSFORMATION_CANNOT_BE_EXTRACTED);
             return false;
-        } else if(!CostumeEngine.getInstance().checkCostumeAction(player)) {
-            return false;
         } else if(!player.isInventoryUnder90(true)) {
             player.sendPacket(NOT_ENOUGH_SPACE_IN_THE_INVENTORY_PLEASE_MAKE_MORE_ROOM_AND_TRY_AGAIN);
             return false;
         }
-        return true;
+        return CostumeEngine.getInstance().checkCostumeAction(player);
     }
 
     private boolean consumeItemsCost(Player player, Costume costume) {

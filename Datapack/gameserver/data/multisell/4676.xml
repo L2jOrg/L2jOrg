@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- Immortal: Update 270 Prot -->
+	<npcs>
+		<npc>30020</npc> <!-- Baggins -->
+	</npcs>
+	<item>
+		<ingredient count="1" id="71078" /> <!-- Talisman of Authority Fragment -->
+		<production count="1" id="71080" /> <!-- Talisman of Authority Lv. 1 -->
+	</item>
+	<item>
+		<ingredient count="1" id="71084" /> <!-- Talisman of Authority Lv. 5 -->
+		<ingredient count="3" id="71078" /> <!-- Talisman of Authority Fragment -->	
+		<ingredient count="20000000" id="57" /> <!-- Adena -->
+		<production count="1" id="71085" /> <!-- Noble Talisman of Authority Lv. 1 -->
+	</item>
+	<item>
+		<ingredient count="1" id="71089" /> <!-- Noble Talisman of Authority Lv. 5 -->
+		<ingredient count="6" id="71078" /> <!-- Talisman of Authority Fragment -->		
+		<ingredient count="40000000" id="57" /> <!-- Adena -->
+		<production count="1" id="71090" /> <!-- Radiant Talisman of Authority Lv. 1 -->
+	</item>
+</list>

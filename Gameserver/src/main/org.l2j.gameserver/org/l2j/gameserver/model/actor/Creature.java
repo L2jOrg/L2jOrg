@@ -3,7 +3,6 @@ package org.l2j.gameserver.model.actor;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -2130,6 +2129,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                         case STAT_WIT:
                         case STAT_MEN: {
                             info.addComponentType(UserInfoType.BASE_STATS);
+                            info.addComponentType(UserInfoType.STATS_ABILITIES);
+                            info.addComponentType(UserInfoType.STATS_POINTS);
                             break;
                         }
                         case FIRE_RES:

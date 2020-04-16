@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- Immortal: This is information from NetPro from Ruoff! -->
+	<npcs>
+		<npc>30020</npc> <!-- Baggins -->
+	</npcs>
+	<item>
+		<ingredient id="1462" count="500"/> <!-- S-grade Crystal -->
+		<production id="91755" count="1" chance="5"/> <!-- Chest: 8000 L-Coins (91755) -->
+		<production id="93267" count="1" chance="15"/> <!-- 1000 L-Coin Pack (93267) -->
+		<production id="71924" count="1" chance="5"/> <!-- A-grade Weapon Pack (71924) -->
+		<production id="49786" count="1" chance="10"/> <!-- A-grade Armor Pack (49786) -->
+		<production id="91625" count="1" chance="2"/> <!-- S-grade Weapon Pack (91625) -->
+		<production id="91626" count="1" chance="4"/> <!-- S-grade Armor Pack (91626) -->
+		<production id="91547" count="1" chance="1"/> <!-- Special A-grade Weapon Varnish (91547) -->
+		<production id="91548" count="1" chance="2"/> <!-- Special A-grade Armor Varnish (91548) -->
+		<production id="91549" count="1" chance="2"/> <!-- Special A-grade Accessory Varnish (91549) -->
+		<production id="2133" count="200" chance="18"/> <!-- A-grade Gemstone (2133) -->
+		<production id="2134" count="50" chance="18"/> <!-- S-grade Gemstone (2134) -->
+		<production id="90016" count="1" chance="1"/> <!-- Shining Life Stone (90016) -->
+		<production id="90015" count="1" chance="4"/> <!-- Top-grade Life Stone (90015) -->
+		<production id="960" count="1" chance="8"/> <!-- Scroll: Enchant S-grade Armor (Exchangeable) (960) -->
+		<production id="959" count="1" chance="4"/> <!-- Scroll: Enchant S-grade Weapon (Exchangeable) (959) -->		
+	</item>
+</list>
