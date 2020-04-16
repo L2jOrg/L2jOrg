@@ -29,8 +29,8 @@ public final class EnchantScroll extends AbstractEnchantItem {
         this.group = group;
 
         final ItemType type = getItem().getItemType();
-        isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP)|| (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.BLESSED_ENCHANT_WEAPON) || (type == EtcItemType.ENCHANT_WEAPON) || (type == EtcItemType.GIANT_ENCHT_WP);
-        isBlessed = (type == EtcItemType.BLESS_ENCHT_AM) || (type == EtcItemType.BLESS_ENCHT_WP);
+        isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.ENCHANT_WEAPON) || (type == EtcItemType.BLESSED_ENCHANT_WEAPON) || (type == EtcItemType.GIANT_ENCHT_WP);
+        isBlessed = (type == EtcItemType.BLESSED_ENCHANT_ARMOR) || (type == EtcItemType.BLESSED_ENCHANT_WEAPON);
         isSafe = (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_WP);
         isGiant = (type == EtcItemType.GIANT_ENCHT_AM) || (type == EtcItemType.GIANT_ENCHT_WP);
     }
