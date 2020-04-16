@@ -27,7 +27,6 @@ import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
-import org.l2j.gameserver.engine.costume.Costume;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -560,11 +559,13 @@ public final class Player extends Playable {
         return null;
     }
 
-    public void addCostume(Costume costume) {
+    public CostumeData addCostume(int costumeId) {
         if(costumes.equals(Containers.emptyIntMap())) {
             costumes = new HashIntMap<>();
         }
-        costumes.computeIfAbsent(costume.id(), id -> CostumeData.of(id, this)).increaseAmount();
+        var costume = costumes.computeIfAbsent(costumeId, id -> CostumeData.of(id, this));
+        costume.increaseAmount();
+        return costume;
     }
 
     public Collection<CostumeData> getCostumes() {

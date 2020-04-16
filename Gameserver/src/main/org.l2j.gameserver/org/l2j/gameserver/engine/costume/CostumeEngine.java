@@ -6,6 +6,8 @@ import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.api.costume.CostumeGrade;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -28,6 +30,7 @@ import java.util.Set;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.gameserver.model.skills.AbnormalType.TURN_STONE;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 
@@ -164,6 +167,10 @@ public class CostumeEngine extends GameXmlReader {
 
     public static CostumeEngine getInstance() {
         return Singleton.INSTANCE;
+    }
+
+    public Skill getCostumeSkill(int costumeId) {
+        return computeIfNonNull(getCostume(costumeId), c -> SkillEngine.getInstance().getSkill(c.skill(), 1));
     }
 
     private static final class Singleton {

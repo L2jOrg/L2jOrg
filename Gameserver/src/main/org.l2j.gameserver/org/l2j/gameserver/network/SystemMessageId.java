@@ -12354,14 +12354,8 @@ public final class SystemMessageId {
     @ClientString(id = 6847, message = "Invalid item.")
     public static SystemMessageId INVALID_ITEM;
 
-    @ClientString(id = 6848, message = "You don’t have necessary items.")
-    public static SystemMessageId YOU_DONT_HAVE_NECESSARY_ITEMS;
-
     @ClientString(id = 6855, message = "Cannot evolve or extract Transformations during a battle.")
     public static SystemMessageId CANNOT_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_A_BATTLE;
-
-    @ClientString(id = 6856, message = "This Transformation cannot evolve.")
-    public static SystemMessageId THIS_TRANSFORMATION_CANNOT_EVOLVE;
 
     @ClientString(id = 6857, message = "Not enough material for transformation.")
     public static SystemMessageId NOT_ENOUGH_MATERIAL_FOR_TRANSFORMATION;
@@ -12374,9 +12368,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 6865, message = "Currently unable to use Sealbooks. Please try again later.")
     public static SystemMessageId CURRENTLY_UNABLE_TO_USE_SEALBOOKS_PLEASE_TRY_AGAIN_LATER;
-
-    @ClientString(id = 6866, message = "Currently unable to evolve Transformations. Please try again later.")
-    public static SystemMessageId CURRENTLY_UNABLE_TO_EVOLVE_TRANSFORMATIONS_PLEASE_TRY_AGAIN_LATER;
 
     @ClientString(id = 6867, message = "Currently unable to extract Transformations. Please try again later.")
     public static SystemMessageId CURRENTLY_UNABLE_TO_EXTRACT_TRANSFORMATIONS_PLEASE_TRY_AGAIN_LATER;
@@ -17680,6 +17671,9 @@ public final class SystemMessageId {
     @ClientString(id = 6846, message = "Cannot use Sealbooks and evolve or extract Transformations while using a private store or private workshop.")
     public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_USING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP;
 
+    @ClientString(id = 6848, message = "You don’t have necessary items.")
+    public static SystemMessageId YOU_DONT_HAVE_NECESSARY_ITEMS;
+
     @ClientString(id = 6849, message = "Cannot use Sealbooks and evolve or extract Transformations while frozen.")
     public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_FROZEN;
 
@@ -17698,6 +17692,9 @@ public final class SystemMessageId {
     @ClientString(id = 6854, message = "Cannot use Sealbooks and evolve or extract Transformations while sitting.")
     public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_SITTING;
 
+    @ClientString(id = 6856, message = "This Transformation cannot evolve.")
+    public static SystemMessageId THIS_TRANSFORMATION_CANNOT_EVOLVE;
+
     @ClientString(id = 6858, message = "Cannot use Sealbooks and evolve or extract Transformations during a battle.")
     public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_DURING_A_BATTLE;
 
@@ -17712,6 +17709,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 6862, message = "Cannot edit the Lock Transformation setting during a battle.")
     public static SystemMessageId CANNOT_EDIT_THE_LOCK_TRANSFORMATION_SETTING_DURING_A_BATTLE;
+
+    @ClientString(id = 6866, message = "Currently unable to evolve Transformations. Please try again later.")
+    public static SystemMessageId CURRENTLY_UNABLE_TO_EVOLVE_TRANSFORMATIONS_PLEASE_TRY_AGAIN_LATER;
 
     @ClientString(id = 7090, message = "Cannot locate the selected foe. The foe is not online.")
     public static SystemMessageId CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE;
