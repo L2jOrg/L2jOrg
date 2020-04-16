@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+    <!-- Update 270 Prot -->
+	<npcs>
+        <npc>34053</npc> <!-- Attribute Master Svein -->
+    </npcs>
+	<item>
+		<ingredient id="91117" count="1" /> <!-- Nebula Neckalnce -->
+        <ingredient id="91040" count="800" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91119" count="1" /> <!-- Ignis Necklance -->
+    </item>
+    <item>
+		<ingredient id="91121" count="1" /> <!-- Procela Necklance -->
+        <ingredient id="91040" count="800" /> <!-- Fire Attribute Fragment -->       
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91119" count="1" /> <!-- Ignis Necklance -->
+    </item>
+    <item>
+		<ingredient id="91123" count="1" /> <!-- Petram Necklance -->
+        <ingredient id="91040" count="800" /> <!-- Fire Attribute Fragment -->        
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91119" count="1" /> <!-- Ignis Necklance -->
+    </item>
+    <item>
+		<ingredient id="91119" count="1" /> <!-- Ignis Necklance -->
+        <ingredient id="91041" count="800" /> <!-- Wind Attribute Fragment -->
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91121" count="1" /> <!-- Procela Necklance -->
+    </item>
+    <item>
+		<ingredient id="91123" count="1" /> <!-- Petram Necklance -->
+        <ingredient id="91041" count="800" /> <!-- Wind Attribute Fragment -->
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91121" count="1" /> <!-- Procela Necklance -->
+    </item>
+    <item>
+		<ingredient id="91117" count="1" /> <!-- Nebula Neckalnce -->
+        <ingredient id="91041" count="800" /> <!-- Wind Attribute Fragment -->      
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91121" count="1" /> <!-- Procela Necklance -->
+    </item>
+    <item>
+		<ingredient id="91119" count="1" /> <!-- Ignis Necklance -->
+        <ingredient id="91042" count="800" /> <!-- Earth Attribute Fragment -->       
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91123" count="1" /> <!-- Petram Necklance -->
+    </item>
+    <item>
+		<ingredient id="91121" count="1" /> <!-- Procela Necklance -->
+        <ingredient id="91042" count="800" /> <!-- Earth Attribute Fragment -->       
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91123" count="1" /> <!-- Petram Necklance -->
+    </item>
+    <item>
+		<ingredient id="91117" count="1" /> <!-- Nebula Neckalnce -->
+        <ingredient id="91042" count="800" /> <!-- Earth Attribute Fragment -->      
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91123" count="1" /> <!-- Petram Necklance -->
+    </item>
+    <item>
+		<ingredient id="91119" count="1" /> <!-- Ignis Necklance -->
+        <ingredient id="91039" count="800" /> <!-- Water Attribute Fragment -->       
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91117" count="1" /> <!-- Nebula Necklance -->
+    </item>
+    <item>
+		<ingredient id="91121" count="1" /> <!-- Procela Necklance -->
+        <ingredient id="91039" count="800" /> <!-- Water Attribute Fragment -->        
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91117" count="1" /> <!-- Nebula Necklance -->
+    </item>
+    <item>
+		<ingredient id="91123" count="1" /> <!-- Petram Neckalnce -->
+        <ingredient id="91039" count="800" /> <!-- Water Attribute Fragment -->        
+		<ingredient id="57" count="70000000" /> <!-- Adena -->
+        <production id="91117" count="1" /> <!-- Nebula Necklance -->
+    </item>
+</list>
