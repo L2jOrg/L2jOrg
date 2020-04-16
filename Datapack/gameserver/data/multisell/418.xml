@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30020</npc> <!-- Baggins -->
+	</npcs>
+	<item>
+		<ingredient count="500000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="70929" /> <!-- Agathion Bracelet Lv. 1 -->		
+		<production count="1" id="70930" /> <!-- Agathion Bracelet Lv. 2 -->
+	</item>
+	<item>
+		<ingredient count="1500000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="70930" /> <!-- Agathion Bracelet Lv. 2 -->
+		<ingredient count="1" id="90898" /> <!-- Agathion's Soul -->
+		<production count="1" id="70931" /> <!-- Agathion Bracelet Lv. 3 -->
+	</item>
+	<item>
+		<ingredient count="5000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="70931" /> <!-- Agathion Bracelet Lv. 3 -->
+		<ingredient count="1" id="90899" /> <!-- Blessed Agathion's Soul -->
+		<production count="1" id="70932" /> <!-- Agathion Bracelet Lv. 4 -->
+	</item>
+	<item>
+		<ingredient count="10000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="70932" /> <!-- Agathion Bracelet Lv. 4 -->
+		<ingredient count="1" id="90900" /> <!-- Shining Agathion's Soul -->
+		<production count="1" id="71152" /> <!-- Agathion Bracelet Lv. 5 -->
+	</item>
+</list>

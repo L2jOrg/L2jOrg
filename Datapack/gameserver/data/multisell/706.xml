@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- Immortal: Update 270 Prot -->
+	<npcs>
+		<npc>30936</npc> <!-- Pona -->
+	</npcs>
+	<item>
+		<ingredient id="71303" count="1"/> <!-- Agathion Virgo (71303) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->
+	</item>
+	<item>
+		<ingredient id="71305" count="1"/> <!-- Agathion Libra (71305) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+	<item>
+		<ingredient id="71306" count="1"/> <!-- Agathion Taurus (71306) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+	<item>
+		<ingredient id="71307" count="1"/> <!-- Agathion Leo (71307) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+	<item>
+		<ingredient id="71308" count="1"/> <!-- Agathion Gemini (71308) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+	<item>
+		<ingredient id="71310" count="1"/> <!-- Agathion Aquarius (71310) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+	<item>
+		<ingredient id="71309" count="1"/> <!-- Agathion Scorpio (71309) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+	<item>
+		<ingredient id="71311" count="1"/> <!-- Agathion Sagittarius (71311) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+	<item>
+		<ingredient id="71304" count="1"/> <!-- Agathion Capricorn (71304) -->
+		<production id="48046" count="3" chance="80"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48046" count="5" chance="19"/> <!-- Scroll: Enchant Agathion (48046) -->
+		<production id="48047" count="1" chance="1"/> <!-- Quality Agathion Enchant Scroll (48047) -->	
+	</item>
+</list>

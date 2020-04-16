@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- Immortal: Update 270 Prot -->
+	<npcs>
+		<npc>30020</npc> <!-- Baggins -->
+	</npcs>
+	<item>
+		<ingredient count="1" id="71699" /> <!-- Dragon Essence -->
+		<production count="1" id="71691" /> <!-- Dragon Pendant - Attack Lv. 1 -->
+	</item>
+	<item>
+		<ingredient count="1" id="71699" /> <!-- Dragon Essence -->
+		<production count="1" id="71695" /> <!-- Dragon Pendant - Magic Power Lv. 1 -->
+	</item>
+	<item>
+		<ingredient count="1" id="71699" /> <!-- Dragon Essence -->
+		<production count="1" id="91249" /> <!-- Dragon Varnish -->
+	</item>
+</list>

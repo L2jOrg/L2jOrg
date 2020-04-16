@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+    <!-- Immortal: Update 270 Prot, Info whit NetPro Chance! -->
+	<npcs>
+        <npc>34053</npc> <!-- Svein -->
+    </npcs>
+    <item>
+        <ingredient id="91039" count="500" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91043" count="1" chance="100"/> <!-- Nebula's Old Necklace, Lv. 1 -->
+    </item>
+    <item>
+        <ingredient id="91043" count="1" /> <!-- Nebula's Old Necklace, Lv. 1 -->
+        <ingredient id="91039" count="600" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91044" count="1" chance="50"/> <!-- Nebula's Old Necklace, Lv. 2 -->
+        <production id="91043" count="1" chance="50"/> <!-- Nebula's Old Necklace, Lv. 1 -->
+    </item>
+    <item>
+        <ingredient id="91044" count="1" /> <!-- Nebula's Old Necklace, Lv. 3 -->
+        <ingredient id="91039" count="800" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91045" count="1" chance="15"/> <!-- Nebula's Old Necklace, Lv. 3 -->
+        <production id="91044" count="1" chance="85"/> <!-- Nebula's Old Necklace, Lv. 2 -->
+    </item>
+    <item>
+        <ingredient id="91045" count="1" /> <!-- Nebula's Old Necklace, Lv. 3-->
+        <ingredient id="91039" count="900" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91116" count="1" chance="5"/> <!-- Nebula's Old Necklace, Lv. 4 -->
+        <production id="91045" count="1" chance="95"/> <!-- Nebula's Old Necklace, Lv. 3 -->
+    </item>
+    <item>
+        <ingredient id="91116" count="1" /> <!-- Nebula's Old Necklace, Lv. 4 -->
+        <ingredient id="91039" count="1200" /> <!-- Water Attribute Fragment -->
+        <ingredient id="57" count="900000" /> <!-- Adena -->
+        <production id="91117" count="1" chance="1"/> <!-- Nebula's Necklace -->
+        <production id="91116" count="1" chance="99"/> <!-- Nebula's Old Necklace, Lv. 4 -->
+    </item>
+    <item>
+        <ingredient id="91040" count="500" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91046" count="1" chance="100"/> <!-- Ignis' Old Necklace, Lv. 1 High -->
+    </item>
+    <item>
+        <ingredient id="91046" count="1" /> <!-- Ignis' Old Necklace, Lv. 1 -->
+        <ingredient id="91040" count="600" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91047" count="1" chance="50"/> <!-- Ignis' Old Necklace, Lv. 2 -->
+        <production id="91046" count="1" chance="50"/> <!-- Ignis' Old Necklace, Lv. 1 -->
+    </item>
+    <item>
+        <ingredient id="91047" count="1" /> <!-- Ignis' Old Necklace, Lv. 2 -->
+        <ingredient id="91040" count="800" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91048" count="1" chance="15"/> <!-- Ignis' Old Necklace, Lv. 3 -->
+        <production id="91047" count="1" chance="85"/> <!-- Ignis' Old Necklace, Lv. 2 -->
+    </item>
+    <item>
+        <ingredient id="91048" count="1" /> <!-- Ignis' Old Necklace, Lv. 3 -->
+        <ingredient id="91040" count="900" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91118" count="1" chance="5"/> <!-- Ignis' Old Necklace, Lv. 4 -->
+        <production id="91048" count="1" chance="95"/> <!-- Ignis' Old Necklace, Lv. 3 -->
+    </item>
+    <item>
+        <ingredient id="91118" count="1" /> <!-- Ignis' Old Necklace, Lv. 4 -->
+        <ingredient id="91040" count="1200" /> <!-- Fire Attribute Fragment -->
+        <ingredient id="57" count="900000" /> <!-- Adena -->
+        <production id="91119" count="1" chance="1"/> <!-- Ignis' Necklace -->
+        <production id="91118" count="1" chance="99"/> <!-- Ignis' Old Necklace, Lv. 4 -->
+    </item>
+    <item>
+        <ingredient id="91041" count="500" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91049" count="1" chance="100"/> <!-- Procella Old Necklace, Lv. 1 -->
+    </item>
+    <item>
+        <ingredient id="91049" count="1" /> <!-- Procella Old Necklace, Lv. 1 -->
+        <ingredient id="91041" count="600" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91050" count="1" chance="50"/> <!-- Procella Old Necklace, Lv. 2 -->
+        <production id="91049" count="1" chance="50"/> <!-- Procella Old Necklace, Lv. 1 -->
+    </item>
+    <item>
+        <ingredient id="91050" count="1" /> <!-- Procella Old Necklace, Lv. 2 -->
+        <ingredient id="91041" count="800" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91051" count="1" chance="15"/> <!-- Procella Old Necklace, Lv. 3 -->
+        <production id="91050" count="1" chance="85"/> <!-- Procella Old Necklace, Lv. 2 -->
+    </item>
+    <item>
+        <ingredient id="91051" count="1" /> <!-- Procella Old Necklace, Lv. 3 -->
+        <ingredient id="91041" count="900" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91120" count="1" chance="5"/> <!-- Procella Old Necklace, Lv. 4 -->
+        <production id="91051" count="1" chance="95"/> <!-- Procella Old Necklace, Lv. 3 -->
+    </item>
+    <item>
+        <ingredient id="91120" count="1" /> <!-- Procella Old Necklace, Lv. 4 -->
+        <ingredient id="91041" count="1200" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="900000" /> <!-- Adena -->
+        <production id="91121" count="1" chance="1"/> <!-- Procella Necklace -->
+        <production id="91120" count="1" chance="99"/> <!-- Procella Old Necklace, Lv. 4 -->
+    </item>
+    <item>
+        <ingredient id="91042" count="500" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="100000" /> <!-- Adena -->
+        <production id="91052" count="1" chance="100"/> <!-- Petram Old Necklace, Lv. 1 -->
+    </item>
+    <item>
+        <ingredient id="91052" count="1" /> <!-- Petram Old Necklace, Lv. 1 -->
+        <ingredient id="91042" count="600" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="200000" /> <!-- Adena -->
+        <production id="91053" count="1" chance="50"/> <!-- Petram Old Necklace, Lv. 2 -->
+        <production id="91052" count="1" chance="50"/> <!-- Petram Old Necklace, Lv. 1 -->
+    </item>
+    <item>
+        <ingredient id="91053" count="1" /> <!-- Petram Old Necklace, Lv. 2 -->
+        <ingredient id="91042" count="800" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="300000" /> <!-- Adena -->
+        <production id="91054" count="1" chance="15"/> <!-- Petram Old Necklace, Lv. 3 -->
+        <production id="91053" count="1" chance="85"/> <!-- Petram Old Necklace, Lv. 2 -->
+    </item>
+    <item>
+        <ingredient id="91054" count="1" /> <!-- Petram Old Necklace, Lv. 3 -->
+        <ingredient id="91042" count="900" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="400000" /> <!-- Adena -->
+        <production id="91122" count="1" chance="5"/> <!-- Petram Old Necklace, Lv. 4 -->
+        <production id="91054" count="1" chance="95"/> <!-- Petram Old Necklace, Lv. 3 -->
+    </item>
+    <item>
+        <ingredient id="91122" count="1" /> <!-- Petram Old Necklace, Lv. 4 -->
+        <ingredient id="91042" count="1200" /> <!-- Wind Attribute Fragment -->
+        <ingredient id="57" count="900000" /> <!-- Adena -->
+        <production id="91123" count="1" chance="1"/> <!-- Petram Necklace -->
+        <production id="91122" count="1" chance="99"/> <!-- Petram Old Necklace, Lv. 4 -->
+    </item>
+</list>
