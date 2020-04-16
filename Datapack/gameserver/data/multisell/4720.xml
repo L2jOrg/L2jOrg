@@ -5,27 +5,31 @@
 		<npc>30020</npc> <!-- Baggins -->
 	</npcs>
 	<item>
-		<ingredient id="1462" count="100"/> <!-- A-grade Crystal (1461) -->
+		<ingredient id="1461" count="100"/> <!-- A-grade Crystal (1461) -->
+		<production id="1462" count="1" chance="0"/> <!-- S-grade Crystal (1462) -->
 		<production id="1462" count="30" chance="50"/> <!-- S-grade Crystal (1462) -->
 		<production id="71924" count="1" chance="50"/> <!-- A-grade Crystal (1461) -->		
 	</item>
 	<item>
 		<ingredient id="1460" count="100"/> <!-- B-grade Crystal (1460) -->
+		<production id="1462" count="1" chance="0"/> <!-- S-grade Crystal (1462) -->
 		<production id="1462" count="15" chance="5"/> <!-- S-grade Crystal (1462) -->
-		<production id="71924" count="20" chance="45"/> <!-- A-grade Crystal (1461) -->
+		<production id="1461" count="20" chance="45"/> <!-- A-grade Crystal (1461) -->
 		<production id="1460" count="25" chance="50"/> <!-- B-grade Crystal (1460) -->
 	</item>
 	<item>
 		<ingredient id="1459" count="100"/> <!-- C-grade Crystal (1459) -->
+		<production id="1462" count="1" chance="0"/> <!-- S-grade Crystal (1462) -->
 		<production id="1462" count="10" chance="2"/> <!-- S-grade Crystal (1462) -->
-		<production id="71924" count="20" chance="8"/> <!-- A-grade Crystal (1461) -->
+		<production id="1461" count="20" chance="8"/> <!-- A-grade Crystal (1461) -->
 		<production id="1460" count="50" chance="40"/> <!-- B-grade Crystal (1460) -->
 		<production id="1459" count="25" chance="50"/> <!-- C-grade Crystal (1459) -->
 	</item>
 	<item>
 		<ingredient id="1458" count="100"/> <!-- D-grade Crystal (1458) -->
+		<production id="1462" count="1" chance="0"/> <!-- S-grade Crystal (1462) -->
 		<production id="1462" count="3" chance="2"/> <!-- S-grade Crystal (1462) -->
-		<production id="71924" count="5" chance="3"/> <!-- A-grade Crystal (1461) -->
+		<production id="1461" count="5" chance="3"/> <!-- A-grade Crystal (1461) -->
 		<production id="1460" count="15" chance="5"/> <!-- B-grade Crystal (1460) -->
 		<production id="1459" count="25" chance="40"/> <!-- C-grade Crystal (1459) -->
 		<production id="1458" count="25" chance="50"/> <!-- D-grade Crystal (1458) -->
