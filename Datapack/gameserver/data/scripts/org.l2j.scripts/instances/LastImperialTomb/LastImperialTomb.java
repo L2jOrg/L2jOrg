@@ -725,7 +725,7 @@ public class LastImperialTomb extends AbstractInstance
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
-	
+
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
@@ -738,7 +738,7 @@ public class LastImperialTomb extends AbstractInstance
 			world.setParameter("monstersCount", monsters.size() - 1);
 			for (int doorId : FIRST_ROOM_DOORS)
 			{
-				world.openCloseDoor(doorId, true);
+				openDoor(doorId, TEMPLATE_ID);
 			}
 			for (Npc monster : monsters)
 			{
