@@ -1,19 +1,76 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		   targetNamespace="http://l2j.org"
-		   xmlns="http://l2j.org"
-		   elementFormDefault="qualified">
-
-	<xs:include schemaLocation="common.xsd"/>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="scroll" maxOccurs="unbounded" minOccurs="0">
+			<xs:sequence minOccurs="1" maxOccurs="1">
+				<xs:element name="enchant" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:attribute type="xs:long" name="id" use="required"/>
-						<xs:attribute type="CrystalType" name="grade" use="optional"/>
-						<xs:attribute type="xs:byte" name="group" default="0"/>
-						<xs:attribute type="xs:int" name="max-enchant" default="127"/> <!-- enchant limit -->
+						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="step" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:byte" name="level" use="required" />
+									<xs:attribute type="xs:double" name="successRate" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="minEnchant">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="127" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="maxEnchant">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="127" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="maxEnchantFighter">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="127" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="maxEnchantMagic">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="127" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="bonusRate">
+							<xs:simpleType>
+								<xs:restriction base="xs:decimal">
+									<xs:minInclusive value="1.0" />
+									<xs:maxInclusive value="100.0" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="targetGrade">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="D" />
+									<xs:enumeration value="C" />
+									<xs:enumeration value="B" />
+									<xs:enumeration value="A" />
+									<xs:enumeration value="S" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="scrollGroupId" type="xs:int" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
