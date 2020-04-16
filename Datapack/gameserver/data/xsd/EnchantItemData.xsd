@@ -10,8 +10,8 @@
 			<xs:sequence>
 				<xs:element name="scroll" maxOccurs="unbounded" minOccurs="0">
 					<xs:complexType>
-						<xs:attribute type="xs:short" name="id" use="required"/>
-						<xs:attribute type="CrystalType" name="grade" use="required"/>
+						<xs:attribute type="xs:long" name="id" use="required"/>
+						<xs:attribute type="CrystalType" name="grade" use="optional"/>
 						<xs:attribute type="xs:byte" name="group" default="0"/>
 						<xs:attribute type="xs:int" name="max-enchant" default="127"/> <!-- enchant limit -->
 					</xs:complexType>
