@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>30098</npc> <!-- Alexandria -->
+	</npcs>
+	<item>
+		<ingredient count="20" id="91463" /> <!-- Armor Enhancement Stone -->
+		<ingredient count="400000" id="57" /> <!-- Adena -->
+		<production count="1" id="91465" /> <!-- High Grade Stable Scroll: Enchant D-grade Armor (Exchangeable) -->
+	</item>
+	<item>
+		<ingredient count="28" id="91463" /> <!-- Armor Enhancement Stone -->
+		<ingredient count="1500000" id="57" /> <!-- Adena -->
+		<production count="1" id="91467" /> <!-- High Grade Stable Scroll: Enchant C-grade Armor (Exchangeable) -->
+	</item>
+	<item>
+		<ingredient count="36" id="91463" /> <!-- Armor Enhancement Stone -->
+		<ingredient count="6000000" id="57" /> <!-- Adena -->
+		<production count="1" id="91469" /> <!-- High Grade Stable Scroll: Enchant B-grade Armor (Exchangeable) -->
+	</item>
+	<item>
+		<ingredient count="48" id="91463" /> <!-- Armor Enhancement Stone -->
+		<ingredient count="22000000" id="57" /> <!-- Adena -->
+		<production count="1" id="91471" /> <!-- High Grade Stable Scroll: Enchant A-grade Armor (Exchangeable) -->
+	</item>
+</list>
