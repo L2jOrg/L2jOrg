@@ -19,8 +19,8 @@ package instances.LastImperialTomb;
 import java.util.*;
 
 import instances.AbstractInstance;
-import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Util;
+import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.Location;
@@ -31,6 +31,8 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Last Imperial Tomb AI
@@ -40,6 +42,7 @@ import org.l2j.gameserver.network.serverpackets.*;
  */
 public class LastImperialTomb extends AbstractInstance
 {
+	private static Logger LOGGER = LoggerFactory.getLogger(LastImperialTomb.class);
 	// NPCs
 	private static final int GUIDE = 32011;
 	private static final int CUBE = 29061;
@@ -138,7 +141,7 @@ public class LastImperialTomb extends AbstractInstance
 	// @formatter:on
 	// Misc
 	private static final int TEMPLATE_ID = 205;
-	private static final int FRINTEZZA_WAIT_TIME = 10; // minutes
+	private static final int FRINTEZZA_WAIT_TIME = 1; // 1 minutes
 	private static final int RANDOM_SONG_INTERVAL = 90; // seconds
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20; // seconds
 	private static final int MAX_DEMONS = 24;
@@ -736,9 +739,10 @@ public class LastImperialTomb extends AbstractInstance
 			world.spawnGroup("room1");
 			final Set<Npc> monsters = world.getAliveNpcs();
 			world.setParameter("monstersCount", monsters.size() - 1);
+
 			for (int doorId : FIRST_ROOM_DOORS)
 			{
-				openDoor(doorId, TEMPLATE_ID);
+				world.openCloseDoor(doorId, true);
 			}
 			for (Npc monster : monsters)
 			{
@@ -787,7 +791,7 @@ public class LastImperialTomb extends AbstractInstance
 						world.setParameter("monstersCount", monsters.size() - 1);
 						for (int doorId : FIRST_ROUTE_DOORS)
 						{
-							openDoor(doorId, 205);
+							world.openCloseDoor(doorId, true);
 						}
 						break;
 					}
@@ -908,9 +912,8 @@ public class LastImperialTomb extends AbstractInstance
 			}
 		}
 	}
-	
-	public static void main(String[] args)
+	public static LastImperialTomb provider()
 	{
-		new LastImperialTomb();
+		return new LastImperialTomb();
 	}
 }
