@@ -4,7 +4,6 @@ import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.engine.costume.Costume;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -36,7 +35,8 @@ public class ExRequestCostumeExtract extends ClientPacket {
         var playerCostume = player.getCostume(id);
         Costume costume;
 
-        if(canExtract(player, playerCostume) && consumeItemsCost(player, costume = CostumeEngine.getInstance().getCostume(id))) {
+        var costumeEngine = CostumeEngine.getInstance();
+        if(canExtract(player, playerCostume) && consumeItemsCost(player, costume = costumeEngine.getCostume(id))) {
             playerCostume.reduceCount(amount);
             client.sendPacket(new ExSendCostumeList(playerCostume));
             client.sendPacket(ExCostumeExtract.success(playerCostume, costume.extractItem(), amount));
@@ -44,7 +44,8 @@ public class ExRequestCostumeExtract extends ClientPacket {
 
             if(playerCostume.getAmount() <= 0) {
                 player.removeCostume(id);
-                player.removeSkill(SkillEngine.getInstance().getSkill(costume.skill(), 1));
+                player.removeSkill(costume.skill());
+                costumeEngine.checkCostumeCollection(player, id);
             }
         } else {
             client.sendPacket(ExCostumeExtract.failed(id));

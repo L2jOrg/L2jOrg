@@ -422,7 +422,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
     EX_COSTUME_USE_ITEM(0x168, ExRequestCostumeUseItem::new, ConnectionState.IN_GAME),
     EX_COSTUME_LIST(0x169, ExRequestCostumeList::new, ConnectionState.IN_GAME),
-    EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16A, null, ConnectionState.IN_GAME),
+    EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16A, ExRequestCostumeCollectSkillActive::new, ConnectionState.IN_GAME),
     EX_COSTUME_EVOLUTION(0x16B, ExRequestCostumeEvolution::new, ConnectionState.IN_GAME),
     EX_COSTUME_EXTRACT(0x16C, ExRequestCostumeExtract::new, ConnectionState.IN_GAME),
     EX_COSTUME_LOCK(0x16D, ExRequestCostumeLock::new, ConnectionState.IN_GAME),

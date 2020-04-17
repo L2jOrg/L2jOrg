@@ -13,7 +13,7 @@ import java.util.Set;
  */
 public class ExSendCostumeList extends ServerPacket {
 
-    private Collection<CostumeData> costumes;
+    private final Collection<CostumeData> costumes;
 
     public ExSendCostumeList(CostumeData playerCostume) {
         costumes = Set.of(playerCostume);

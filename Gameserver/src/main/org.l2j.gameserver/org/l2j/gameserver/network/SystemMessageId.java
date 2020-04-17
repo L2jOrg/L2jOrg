@@ -12333,15 +12333,6 @@ public final class SystemMessageId {
     @ClientString(id = 6839, message = "The current local time is $s1:$s2.")
     public static SystemMessageId THE_CURRENT_LOCAL_TIME_IS_S1S2;
 
-    @ClientString(id = 6840, message = "You can collect a collection effect again after $s1 minutes.")
-    public static SystemMessageId YOU_CAN_COLLECT_A_COLLECTION_EFFECT_AGAIN_AFTER_S1_MINUTES;
-
-    @ClientString(id = 6841, message = "This Collection effect is already active.")
-    public static SystemMessageId THIS_COLLECTION_EFFECT_IS_ALREADY_ACTIVE;
-
-    @ClientString(id = 6842, message = "Cannot activate the effect. The Collection is incomplete.")
-    public static SystemMessageId CANNOT_ACTIVATE_THE_EFFECT_THE_COLLECTION_IS_INCOMPLETE;
-
     @ClientString(id = 6843, message = "Cannot activate the effect due to a system error. Please try again later.")
     public static SystemMessageId CANNOT_ACTIVATE_THE_EFFECT_DUE_TO_A_SYSTEM_ERROR_PLEASE_TRY_AGAIN_LATER;
 
@@ -12363,11 +12354,11 @@ public final class SystemMessageId {
     @ClientString(id = 6863, message = "Cannot add Transformations to or remove them from the Transformation Favorite during a battle.")
     public static SystemMessageId CANNOT_ADD_TRANSFORMATIONS_TO_OR_REMOVE_THEM_FROM_THE_TRANSFORMATION_FAVORITE_DURING_A_BATTLE;
 
-    @ClientString(id = 6864, message = "You can select another Collection effect $s1 seconds later.")
-    public static SystemMessageId YOU_CAN_SELECT_ANOTHER_COLLECTION_EFFECT_S1_SECONDS_LATER;
-
     @ClientString(id = 6865, message = "Currently unable to use Sealbooks. Please try again later.")
     public static SystemMessageId CURRENTLY_UNABLE_TO_USE_SEALBOOKS_PLEASE_TRY_AGAIN_LATER;
+
+    @ClientString(id = 6866, message = "Currently unable to evolve Transformations. Please try again later.")
+    public static SystemMessageId CURRENTLY_UNABLE_TO_EVOLVE_TRANSFORMATIONS_PLEASE_TRY_AGAIN_LATER;
 
     @ClientString(id = 6867, message = "Currently unable to extract Transformations. Please try again later.")
     public static SystemMessageId CURRENTLY_UNABLE_TO_EXTRACT_TRANSFORMATIONS_PLEASE_TRY_AGAIN_LATER;
@@ -17668,6 +17659,15 @@ public final class SystemMessageId {
     @ClientString(id = 6827, message = "Your clan has achieved hunting bonus Lv. $s1.")
     public static SystemMessageId YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1;
 
+    @ClientString(id = 6840, message = "You can collect a collection effect again after $s1 minutes.")
+    public static SystemMessageId YOU_CAN_COLLECT_A_COLLECTION_EFFECT_AGAIN_AFTER_S1_MINUTES;
+
+    @ClientString(id = 6841, message = "This Collection effect is already active.")
+    public static SystemMessageId THIS_COLLECTION_EFFECT_IS_ALREADY_ACTIVE;
+
+    @ClientString(id = 6842, message = "Cannot activate the effect. The Collection is incomplete.")
+    public static SystemMessageId CANNOT_ACTIVATE_THE_EFFECT_THE_COLLECTION_IS_INCOMPLETE;
+
     @ClientString(id = 6846, message = "Cannot use Sealbooks and evolve or extract Transformations while using a private store or private workshop.")
     public static SystemMessageId CANNOT_USE_SEALBOOKS_AND_EVOLVE_OR_EXTRACT_TRANSFORMATIONS_WHILE_USING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP;
 
@@ -17710,8 +17710,8 @@ public final class SystemMessageId {
     @ClientString(id = 6862, message = "Cannot edit the Lock Transformation setting during a battle.")
     public static SystemMessageId CANNOT_EDIT_THE_LOCK_TRANSFORMATION_SETTING_DURING_A_BATTLE;
 
-    @ClientString(id = 6866, message = "Currently unable to evolve Transformations. Please try again later.")
-    public static SystemMessageId CURRENTLY_UNABLE_TO_EVOLVE_TRANSFORMATIONS_PLEASE_TRY_AGAIN_LATER;
+    @ClientString(id = 6864, message = "You can select another Collection effect $s1 seconds later.")
+    public static SystemMessageId YOU_CAN_SELECT_ANOTHER_COLLECTION_EFFECT_S1_SECONDS_LATER;
 
     @ClientString(id = 7090, message = "Cannot locate the selected foe. The foe is not online.")
     public static SystemMessageId CANNOT_LOCATE_THE_SELECTED_FOE_THE_FOE_IS_NOT_ONLINE;

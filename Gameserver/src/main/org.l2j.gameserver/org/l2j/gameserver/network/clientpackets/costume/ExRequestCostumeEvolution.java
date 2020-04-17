@@ -75,8 +75,10 @@ public class ExRequestCostumeEvolution extends ClientPacket {
 
     private void checkCostume(Player player, CostumeData costume) {
         if(nonNull(costume) && costume.getAmount() <= 0) {
+            var costumeEngine = CostumeEngine.getInstance();
             player.removeCostume(costume.getId());
-            player.removeSkill(CostumeEngine.getInstance().getCostumeSkill(costume.getId()));
+            player.removeSkill(costumeEngine.getCostumeSkill(costume.getId()));
+            costumeEngine.checkCostumeCollection(player, costume.getId());
         }
     }
 

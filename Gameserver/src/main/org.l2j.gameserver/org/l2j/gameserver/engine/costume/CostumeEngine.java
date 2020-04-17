@@ -6,13 +6,19 @@ import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.api.costume.CostumeGrade;
+import org.l2j.gameserver.data.database.data.CostumeCollectionData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.costume.ExSendCostumeListFull;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -23,16 +29,18 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.EnumMap;
-import java.util.EnumSet;
-import java.util.HashSet;
-import java.util.Set;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.*;
+import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.computeIfNonNull;
+import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.model.skills.AbnormalType.TURN_STONE;
 import static org.l2j.gameserver.network.SystemMessageId.*;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author JoeAlisson
@@ -44,9 +52,11 @@ public class CostumeEngine extends GameXmlReader {
     private final IntMap<Costume> costumes = new HashIntMap<>(159);
     private final EnumMap<CostumeGrade, IntSet> costumesGrade = new EnumMap<>(CostumeGrade.class);
     private final IntMap<CostumeCollection> collections = new HashIntMap<>(12);
-    private final IntMap<Set<SkillHolder>> stackedBonus = new HashIntMap<>(12);
+    private final IntMap<Set<Skill>> stackedBonus = new HashIntMap<>(12);
 
     private CostumeEngine() {
+        var listeners = Listeners.players();
+        listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) e -> onPlayLogin(e.getPlayer()), this));
     }
 
     @Override
@@ -75,10 +85,11 @@ public class CostumeEngine extends GameXmlReader {
 
     private void parseCollectionStackBonus(Node node) {
         var count = parseInt(node.getAttributes(), "count");
-        Set<SkillHolder> bonus = new HashSet<>(node.getChildNodes().getLength());
+        Set<Skill> bonus = new HashSet<>(node.getChildNodes().getLength());
         forEach(node, "skill", skillNode -> {
             var attr = skillNode.getAttributes();
-            bonus.add(new SkillHolder(parseInt(attr, "id"), parseInt(attr, "level") ));
+            var skill = SkillEngine.getInstance().getSkill(parseInt(attr, "id"), parseInt(attr, "level"));
+            bonus.add(skill);
         });
         stackedBonus.put(count, bonus);
     }
@@ -86,21 +97,22 @@ public class CostumeEngine extends GameXmlReader {
     private void parseCollection(Node node) {
         var attrs = node.getAttributes();
         var id = parseInt(attrs, "id");
-        var skill = parseInt(attrs, "skill");
+        var skillId = parseInt(attrs, "skill");
         var costumes = parseIntSet(node.getFirstChild());
-
+        var skill = SkillEngine.getInstance().getSkill(skillId, 1);
         collections.put(id, new CostumeCollection(id, skill, costumes));
     }
 
     private void parseCostume(Node node) {
         var attrs = node.getAttributes();
         var id = parseInt(attrs, "id");
-        var skill = parseInt(attrs, "skill");
+        var skillId = parseInt(attrs, "skill");
         var evolutionFee = parseInt(attrs, "evolution-fee");
 
         var extractNode = node.getFirstChild();
         var extractItem = parseInt(extractNode.getAttributes(), "item");
         var extractCost = parseExtractCost(extractNode);
+        var skill = SkillEngine.getInstance().getSkill(skillId, 1);
 
         costumes.put(id, new Costume(id, skill, evolutionFee, extractItem, extractCost));
 
@@ -134,6 +146,94 @@ public class CostumeEngine extends GameXmlReader {
         var costumeId = Rnd.get(available);
         return costumes.get(costumeId);
     }
+
+    private void onPlayLogin(Player player) {
+        processCollections(player);
+        player.sendPacket(new ExSendCostumeListFull());
+        checkStackedEffects(player, 0);
+
+        doIfNonNull(collections.get(player.getActiveCostumeCollection().getId()),
+                c -> player.addSkill(c.skill(), false));
+    }
+
+    private void checkStackedEffects(Player player, int previousStack) {
+        var currentBonus = player.getCostumeCollectionAmount();
+        if(currentBonus != previousStack) {
+            doIfNonNull(stackedBonus.get(previousStack),
+                bonus -> bonus.forEach(skill -> player.removeSkill(skill, false)));
+
+            doIfNonNull(stackedBonus.get(currentBonus),
+                bonus -> bonus.forEach(skill -> player.addSkill(skill, false)));
+        }
+    }
+
+    public void processCollections(Player player) {
+        collections.values().stream()
+            .filter(c -> hasAllCostumes(player, c))
+            .forEach(c -> player.addCostumeCollection(c.id()));
+    }
+
+    private boolean hasAllCostumes(Player player, CostumeCollection costumeCollection) {
+        return costumeCollection.costumes().stream().mapToObj(player::getCostume).allMatch(Objects::nonNull);
+    }
+
+    public Skill getCostumeSkill(int costumeId) {
+        return computeIfNonNull(getCostume(costumeId), Costume::skill);
+    }
+
+    public boolean activeCollection(Player player, int collectionId) {
+        var activeCollection = player.getActiveCostumeCollection();
+
+        if(activeCollection.getId() == collectionId) {
+            player.sendPacket(THIS_COLLECTION_EFFECT_IS_ALREADY_ACTIVE);
+            return false;
+        }
+
+        if (!checkReuseTime(player, activeCollection)) {
+            return false;
+        }
+
+        var collection = collections.get(collectionId);
+        if(nonNull(collection) && player.setActiveCostumesCollection(collectionId)) {
+            doIfNonNull(collections.get(activeCollection.getId()), c -> player.removeSkill(c.skill(), false));
+            player.addSkill(collection.skill(), false);
+            return true;
+        }
+        player.sendPacket(CANNOT_ACTIVATE_THE_EFFECT_THE_COLLECTION_IS_INCOMPLETE);
+        return false;
+    }
+
+    protected boolean checkReuseTime(Player player, CostumeCollectionData activeCollection) {
+        if(activeCollection.getReuseTime() > 0) {
+            var duration = Duration.between(Instant.now(), Instant.ofEpochSecond(activeCollection.getReuseTime()));
+            SystemMessage msg;
+            if(duration.toMinutes() >= 1) {
+                msg = getSystemMessage(YOU_CAN_COLLECT_A_COLLECTION_EFFECT_AGAIN_AFTER_S1_MINUTES).addInt((int) duration.toMinutes());
+            } else {
+                msg = getSystemMessage(YOU_CAN_SELECT_ANOTHER_COLLECTION_EFFECT_S1_SECONDS_LATER).addInt((int) duration.toSeconds());
+            }
+
+            player.sendPacket(msg);
+            return false;
+        }
+        return true;
+    }
+
+    public void checkCostumeCollection(Player player, int id) {
+        var stackBonus = player.getCostumeCollectionAmount();
+        collections.values().stream().filter(c -> c.costumes().contains(id)).forEach(c -> {
+            if(hasAllCostumes(player, c)) {
+                player.addCostumeCollection(c.id());
+            } else {
+                player.removeCostumeCollection(c.id());
+                if(player.getActiveCostumeCollection().getId() == c.id()) {
+                    player.removeSkill(c.skill(), false);
+                }
+            }
+        });
+        checkStackedEffects(player, stackBonus);
+    }
+
     public boolean checkCostumeAction(Player player) {
         SystemMessageId errMsg = null;
         if(player.getPrivateStoreType() != PrivateStoreType.NONE) {
@@ -167,10 +267,6 @@ public class CostumeEngine extends GameXmlReader {
 
     public static CostumeEngine getInstance() {
         return Singleton.INSTANCE;
-    }
-
-    public Skill getCostumeSkill(int costumeId) {
-        return computeIfNonNull(getCostume(costumeId), c -> SkillEngine.getInstance().getSkill(c.skill(), 1));
     }
 
     private static final class Singleton {

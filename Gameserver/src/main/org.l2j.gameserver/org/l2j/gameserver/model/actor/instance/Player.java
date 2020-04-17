@@ -156,6 +156,8 @@ public final class Player extends Playable {
     private byte shineSouls;
     private byte shadowSouls;
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
+    private IntMap<CostumeCollectionData> costumesCollections  = Containers.emptyIntMap();
+    private CostumeCollectionData activeCostumesCollection = CostumeCollectionData.DEFAULT;
 
     private Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -542,6 +544,66 @@ public final class Player extends Playable {
         return shadowSouls;
     }
 
+    public CostumeData addCostume(int costumeId) {
+        if(costumes.equals(Containers.emptyIntMap())) {
+            costumes = new HashIntMap<>();
+        }
+        var costume = costumes.computeIfAbsent(costumeId, id -> CostumeData.of(id, this));
+        costume.increaseAmount();
+        return costume;
+    }
+
+    public void forEachCostume(Consumer<CostumeData> action) {
+        costumes.values().forEach(action);
+    }
+
+    public int getCostumeAmount() {
+        return costumes.size();
+    }
+
+    public CostumeData getCostume(int id) {
+        return costumes.get(id);
+    }
+
+    public void removeCostume(int id) {
+        costumes.remove(id);
+    }
+
+    public boolean setActiveCostumesCollection(int collectionId) {
+        var collection = costumesCollections.get(collectionId);
+        if(nonNull(collection)) {
+            this.activeCostumesCollection = collection;
+            activeCostumesCollection.updateReuseTime();
+            return true;
+        }
+        return false;
+    }
+
+    public CostumeCollectionData getActiveCostumeCollection() {
+        return activeCostumesCollection;
+    }
+
+    public void addCostumeCollection(int collectionId) {
+        if(costumesCollections.equals(Containers.emptyIntMap())) {
+            costumesCollections = new HashIntMap<>();
+        }
+        costumesCollections.computeIfAbsent(collectionId, id -> CostumeCollectionData.of(this, id));
+    }
+
+    public void removeCostumeCollection(int collectionId) {
+        if(costumesCollections.isEmpty()) {
+            return;
+        }
+        var collection = costumesCollections.remove(collectionId);
+        if(activeCostumesCollection.equals(collection)) {
+            activeCostumesCollection = CostumeCollectionData.DEFAULT;
+        }
+    }
+    
+    public int getCostumeCollectionAmount() {
+        return costumesCollections.size();
+    }
+
     public static Player create(PlayerData playerData, PlayerTemplate template) {
         final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
@@ -557,27 +619,6 @@ public final class Player extends Playable {
             return player;
         }
         return null;
-    }
-
-    public CostumeData addCostume(int costumeId) {
-        if(costumes.equals(Containers.emptyIntMap())) {
-            costumes = new HashIntMap<>();
-        }
-        var costume = costumes.computeIfAbsent(costumeId, id -> CostumeData.of(id, this));
-        costume.increaseAmount();
-        return costume;
-    }
-
-    public Collection<CostumeData> getCostumes() {
-        return costumes.values();
-    }
-
-    public CostumeData getCostume(int id) {
-        return costumes.get(id);
-    }
-
-    public void removeCostume(int id) {
-        costumes.remove(id);
     }
 
     // Unchecked
@@ -1043,7 +1084,9 @@ public final class Player extends Playable {
         Player player = new Player(character, template);
         player.variables = getDAO(PlayerVariablesDAO.class).findById(objectId);
         player.statsData = playerDAO.findPlayerStatsData(objectId);
+
         player.costumes = playerDAO.findCostumes(objectId);
+        doIfNonNull(playerDAO.findPlayerCostumeCollection(objectId), c -> player.activeCostumesCollection = c);
 
         if(isNull(player.statsData)) { // TODO remove late, just temp fix to already created players
             player.statsData = PlayerStatsData.init(objectId);
@@ -5786,6 +5829,12 @@ public final class Player extends Playable {
         if(!costumes.isEmpty()) {
             getDAO(PlayerDAO.class).save(costumes.values());
         }
+        if(CostumeCollectionData.DEFAULT.equals(activeCostumesCollection)) {
+            getDAO(PlayerDAO.class).deleteCostumeCollection(objectId);
+        } else {
+            getDAO(PlayerDAO.class).save(activeCostumesCollection);
+        }
+
     }
 
     @Override
@@ -6042,6 +6091,9 @@ public final class Player extends Playable {
     @Override
     public Skill addSkill(Skill newSkill) {
         addCustomSkill(newSkill);
+        if(nonNull(newSkill)) {
+            sendSkillList();
+        }
         return super.addSkill(newSkill);
     }
 
@@ -7611,8 +7663,7 @@ public final class Player extends Playable {
 
     public void sendSkillList() {
         if (_skillListRefreshTask == null) {
-            _skillListRefreshTask = ThreadPool.schedule(() ->
-            {
+            _skillListRefreshTask = ThreadPool.schedule(() -> {
                 sendSkillList(0);
                 _skillListRefreshTask = null;
             }, 1000);

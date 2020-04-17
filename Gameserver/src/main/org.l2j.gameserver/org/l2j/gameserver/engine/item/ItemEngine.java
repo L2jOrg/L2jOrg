@@ -5,7 +5,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -102,7 +101,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "stats" -> parseItemStats(weapon, node);
                 case "skills"-> parseItemSkills(weapon, node);
             }
-        } );
+        });
 
         items.put(weapon.getId(), weapon);
     }
@@ -117,7 +116,7 @@ public final class ItemEngine extends GameXmlReader {
         forEach(node, "skill", skillNode -> {
             var attr = skillNode.getAttributes();
             var type = parseEnum(attr, ItemSkillType.class, "type");
-            item.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "type-value")));
+            item.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "value")));
         });
 
     }
