@@ -170,7 +170,7 @@ public class SummonAI extends PlayableAI implements Runnable {
         super.onEvtAttacked(attacker);
 
         if (_isDefending) {
-            defendAttack(attacker);
+            allServitorsDefend(attacker);
         } else {
             avoidAttack(attacker);
         }
@@ -181,7 +181,7 @@ public class SummonAI extends PlayableAI implements Runnable {
         super.onEvtEvaded(attacker);
 
         if (_isDefending) {
-            defendAttack(attacker);
+            allServitorsDefend(attacker);
         } else {
             avoidAttack(attacker);
         }
@@ -207,8 +207,9 @@ public class SummonAI extends PlayableAI implements Runnable {
         }
 
         final Summon summon = getActor();
-        if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && isInsideRadius3D(summon.getOwner(), actor, 2 * AVOID_RADIUS)) {
-            summon.doAutoAttack(attacker);
+        if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false))
+        {
+            summon.doAttack(attacker);
         }
     }
 
@@ -246,6 +247,19 @@ public class SummonAI extends PlayableAI implements Runnable {
 
     public void setStartFollowController(boolean val) {
         _startFollow = val;
+    }
+
+    private void allServitorsDefend(Creature attacker)
+    {
+        final Creature Owner = getActor().getOwner();
+        if ((Owner != null) && Owner.getActingPlayer().hasServitors())
+        {
+            Owner.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
+        }
+        else
+        {
+            defendAttack(attacker);
+        }
     }
 
     @Override

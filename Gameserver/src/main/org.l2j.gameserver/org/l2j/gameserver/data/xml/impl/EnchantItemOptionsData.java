@@ -46,7 +46,7 @@ public class EnchantItemOptionsData extends GameXmlReader {
                 var attr = optionsNode.getAttributes();
                 var option = new EnchantOptions(parseInt(attr, "level"));
                 for (byte i = 0; i < 3 ; i++) {
-                    option.setOption(i, parseInt(attr, "option" + i+1));
+                    option.setOption(i, parseInt(attr, "option" + (i+1)));
                 }
                 data.computeIfAbsent(parseInt(itemNode.getAttributes(), "id"), id -> new HashIntMap<>()).put(option.getLevel(), option);
             })

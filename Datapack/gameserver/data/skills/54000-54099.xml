@@ -956,7 +956,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="54047" name="Aden Talisman" max-level="10">
+    <skill id="54047" name="Aden Talisman"  max-level="10">
         <!--
             level 1: A talisman for Aden warriors. P. Def. +5, M. Def. +5, Atk. Spd. +10, Casting Spd. +10, Max HP +100, Max MP +30
             level 2: A talisman for Aden warriors. P. Def. +10, M. Def. +10, Atk. Spd. +12, Casting Spd. +12, Max HP +120, Max MP +50
@@ -970,7 +970,7 @@
             level 10: A talisman for Aden warriors. P. Atk. +270, M. Atk. +490, P. Def. +160, M. Def. +200, Atk. Spd. +100, Casting Spd. +125, Max HP +1120, Max MP +530, XP/SP Gain +50%
          -->
         <icon initial="icon.bm_aden_talisman"/>
-        <attributes property="PHYSIC">
+        <attributes property="MAGIC" check="false">
         </attributes>
         <target/>
         <effects>
