@@ -52,6 +52,11 @@ public class EnchantItemData extends GameXmlReader {
             var group = parseInt(attr, "group");
             try {
                 var scroll = new EnchantScroll(id, grade, maxEnchant, group);
+                forEach(enchant, "item", item -> {
+                    var _attr = item.getAttributes();
+                    var _id = parseInt(_attr, "id");
+                    scroll.addItem(_id);
+                });
                 scrolls.put(id, scroll);
             } catch (NullPointerException e) {
                 LOGGER.warn("Unexistent enchant scroll:{} defined in enchant data!", id);
