@@ -9,6 +9,7 @@
 		<ingredient id="49684" count="30"/> <!-- Talisman Crystal -->
 		<ingredient id="49543" count="40"/> <!-- Elemental Stone (49543) -->
 		<ingredient id="49685" count="2"/> <!-- Energy of Insolence (49685) -->
+		<production id="49677" count="1" chance="0"/> <!-- Talisman of Insolence II -->
 		<production id="49677" count="1" chance="80"/> <!-- Talisman of Insolence II -->
 		<production id="49676" count="1" chance="20"/> <!-- Talisman of Insolence I --> 		
 	</item>
@@ -17,14 +18,16 @@
 		<ingredient id="49684" count="45"/> <!-- Talisman Crystal -->
 		<ingredient id="49543" count="100"/> <!-- Elemental Stone (49543) -->
 		<ingredient id="49685" count="3"/> <!-- Energy of Insolence (49685) -->
+		<production id="49678" count="1" chance="0"/> <!-- Talisman of Insolence III --> 
 		<production id="49678" count="1" chance="60"/> <!-- Talisman of Insolence III --> 
-		<production id="49677" count="1" chance="50"/> <!-- Talisman of Insolence II --> 		
+		<production id="49677" count="1" chance="40"/> <!-- Talisman of Insolence II --> 		
 	</item>
 	<item>	
 		<ingredient id="49678" count="1"/> <!-- Talisman of Insolence III --> 
 		<ingredient id="49684" count="70"/> <!-- Talisman Crystal -->
 		<ingredient id="49543" count="100"/> <!-- Elemental Stone (49543) -->
 		<ingredient id="49685" count="4"/> <!-- Energy of Insolence (49685) -->
+		<production id="49679" count="1" chance="0"/> <!-- Talisman of Insolence IV --> 
 		<production id="49679" count="1" chance="40"/> <!-- Talisman of Insolence IV --> 
 		<production id="49678" count="1" chance="50"/> <!-- Talisman of Insolence III --> 
 		<production id="49677" count="1" chance="10"/> <!-- Talisman of Insolence II -->		
@@ -34,13 +37,14 @@
 		<ingredient id="49684" count="100"/> <!-- Talisman Crystal -->
 		<ingredient id="49543" count="200"/> <!-- Elemental Stone (49543) -->
 		<ingredient id="49685" count="5"/> <!-- Energy of Insolence (49685) -->
+		<production id="49680" count="1" chance="0"/> <!-- Talisman of Insolence V --> 
 		<production id="49680" count="1" chance="10"/> <!-- Talisman of Insolence V --> 
 		<production id="49679" count="1" chance="50"/> <!-- Talisman of Insolence IV --> 
 		<production id="49678" count="1" chance="40"/> <!-- Talisman of Insolence III -->		
 	</item>
 	<item>
 		<ingredient id="1460" count="5000"/> <!-- Crystal (B-grade) -->
-		<ingredient id="49680" count="1"/> <!-- Talisman of Insolence V -->
-		<production id="49681" count="1" chance="100"/> <!-- Talisman of Insolence VI -->
+		<ingredient id="49680" count="1"/> <!-- Talisman of Insolence V --> 
+		<production id="49681" count="1" chance="100"/> <!-- Talisman of Insolence VI -->		
 	</item>
 </list>

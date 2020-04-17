@@ -4,10 +4,7 @@ import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.CostumeData;
-import org.l2j.gameserver.data.database.data.KillerData;
-import org.l2j.gameserver.data.database.data.PlayerData;
-import org.l2j.gameserver.data.database.data.PlayerStatsData;
+import org.l2j.gameserver.data.database.data.*;
 
 import java.sql.ResultSet;
 import java.util.Collection;
@@ -130,4 +127,12 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("SELECT id, player_id, amount, locked FROM player_costumes WHERE player_id = :playerId:")
     IntMap<CostumeData> findCostumes(int playerId);
+
+    @Query("SELECT * FROM player_costume_collection WHERE player_id = :playerId:")
+    CostumeCollectionData findPlayerCostumeCollection(int playerId);
+
+    void save(CostumeCollectionData activeCostumesCollection);
+
+    @Query("DELETE FROM player_costume_collection WHERE player_id = :playerId:")
+    void deleteCostumeCollection(int playerId);
 }

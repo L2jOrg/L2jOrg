@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.costume;
 
+import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -12,19 +13,22 @@ public class ExSendCostumeListFull extends ServerPacket {
     @Override
     protected void writeImpl(GameClient client)  {
         writeId(ServerPacketId.EX_SEND_COSTUME_LIST_FULL);
-        var costumes = client.getPlayer().getCostumes();
+        var player = client.getPlayer();
 
-        writeInt(costumes.size());
-        for (var costume : costumes) {
-            writeInt(costume.getId());
-            writeLong(costume.getAmount());
-            writeByte(costume.isLocked());
-            writeByte(costume.checkIsNewAndChange());
-        }
+        writeInt(player.getCostumeAmount());
+        player.forEachCostume(this::writeCostume);
 
         writeInt(0); // shortcut disabled
-        writeInt(0); // costume collection Id
-        writeInt(0); // costume collection reuse cool time
 
+        var activeCollection  = player.getActiveCostumeCollection();
+        writeInt(activeCollection.getId());
+        writeInt(activeCollection.getReuseTime());
+    }
+
+    private void writeCostume(CostumeData costume) {
+        writeInt(costume.getId());
+        writeLong(costume.getAmount());
+        writeByte(costume.isLocked());
+        writeByte(costume.checkIsNewAndChange());
     }
 }

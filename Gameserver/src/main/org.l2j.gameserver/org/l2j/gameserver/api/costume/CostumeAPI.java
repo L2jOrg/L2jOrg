@@ -2,7 +2,6 @@ package org.l2j.gameserver.api.costume;
 
 import org.l2j.gameserver.engine.costume.Costume;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.costume.ExCostumeUseItem;
 import org.l2j.gameserver.network.serverpackets.costume.ExSendCostumeList;
@@ -26,11 +25,11 @@ public class CostumeAPI {
         }
 
         var playerCostume = player.addCostume(costume.id());
-
-        if(isNull(player.getKnownSkill(costume.skill()))) {
-            var skill = SkillEngine.getInstance().getSkill(costume.skill(), 1);
-            player.addSkill(skill, true);
+        if(playerCostume.getAmount() == 1) {
+            player.addSkill(costume.skill(), true);
+            CostumeEngine.getInstance().checkCostumeCollection(player, costume.id());
         }
+
         player.sendPacket(new ExCostumeUseItem(costume.id(), true));
         player.sendPacket(new ExSendCostumeList(playerCostume));
     }
