@@ -28,6 +28,7 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
@@ -469,6 +470,12 @@ public final class GameUtils {
 
     public static boolean isCreature(WorldObject object) {
         return object instanceof Creature;
+    }
+
+    public static void doIfIsCreature(WorldObject object, Consumer<Creature> action) {
+        if(object instanceof Creature creature) {
+            action.accept(creature);
+        }
     }
 
     public static boolean isMonster(WorldObject object) {
