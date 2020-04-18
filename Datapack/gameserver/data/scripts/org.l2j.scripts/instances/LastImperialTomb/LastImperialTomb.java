@@ -60,7 +60,7 @@ public class LastImperialTomb extends AbstractInstance
 		29050,
 		29051
 	};
-	private static final int FRINTEZZA = 29045;
+	private static final int FRINTEZZA = 9020;
 	private static final int SCARLET1 = 29046;
 	private static final int SCARLET2 = 29047;
 	private static final int[] ON_KILL_MONSTERS =

@@ -831,6 +831,7 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void openCloseDoor(int id, boolean open)
     {
+        LOGGER.info("trying moving door to " + open  + " id: "  + id);
         final Door door = _doors.get(id);
         if (door != null)
         {
@@ -838,11 +839,13 @@ public final class Instance implements IIdentifiable, INamable {
             {
                 if (!door.isOpen())
                 {
+                    LOGGER.info("Openning door id: "  + id);
                     door.openMe();
                 }
             }
             else if (door.isOpen())
             {
+                LOGGER.info("Closing door id: "  + id);
                 door.closeMe();
             }
         }

@@ -105,7 +105,7 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_EX_RQ_ITEM_LINK(0x1E, RequestExRqItemLink::new, ConnectionState.IN_GAME),
     CANNOT_MOVE_ANYMORE_AIR_SHIP(0x1F, null, ConnectionState.IN_GAME),
     MOVE_TO_LOCATION_IN_AIR_SHIP(0x20, null, ConnectionState.IN_GAME),
-    REQUEST_KEY_MAPPING(0x21, RequestKeyMapping::new, ConnectionState.JOINING_GAME),
+    REQUEST_KEY_MAPPING(0x21, RequestKeyMapping::new, ConnectionState.JOINING_GAME_AND_IN_GAME),
     REQUEST_SAVE_KEY_MAPPING(0x22, RequestSaveKeyMapping::new, ConnectionState.IN_GAME),
     REQUEST_EX_REMOVE_ITEM_ATTRIBUTE(0x23, RequestExRemoveItemAttribute::new, ConnectionState.IN_GAME),
     REQUEST_SAVE_INVENTORY_ORDER(0x24, RequestSaveInventoryOrder::new, ConnectionState.IN_GAME),
