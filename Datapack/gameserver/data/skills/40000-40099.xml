@@ -672,7 +672,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="40056" name="Enchant Scroll: Eva's Talisman" action="A1">
+    <skill id="40056" name="Enchant Scroll: Eva's Talisman" action="A2" type="MAGIC">
         <!-- none -->
         <icon initial="icon.bm_eva_talisman_scroll"/>
         <attributes>
@@ -680,7 +680,8 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ITEM" scope="SINGLE"/>
+
     </skill>
     <skill id="40057" name="Magic Flame - Event" action="A1">
         <!-- Magic Lamp recharge speed +100%% -->

@@ -93,12 +93,14 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
+import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2j.gameserver.settings.AttendanceSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.*;
+import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.Zone;
@@ -156,6 +158,7 @@ public final class Player extends Playable {
     private byte shineSouls;
     private byte shadowSouls;
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
+    private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
     private IntMap<CostumeCollectionData> costumesCollections  = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection = CostumeCollectionData.DEFAULT;
 
@@ -8360,6 +8363,12 @@ public final class Player extends Playable {
             s.updateAndBroadcastStatus(0);
         });
 
+        // Close time limited zone window.
+        if (!isInTimedHuntingZone())
+        {
+            stopTimedHuntingZoneTask();
+        }
+
         // show movie if available
         if (_movieHolder != null) {
             sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
@@ -11149,5 +11158,63 @@ public final class Player extends Playable {
 
         // Both are defenders, friends.
         return true;
+    }
+    public boolean isInTimedHuntingZone()
+    {
+        return isInTimedHuntingZone(2); // Storm Isle
+    }
+
+    public boolean isInTimedHuntingZone(int zoneId)
+    {
+        final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+        final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+
+        switch (zoneId)
+        {
+            case 2: // Ancient Pirates' Tomb.
+            {
+                return (x == 20) && (y == 15);
+            }
+        }
+        return false;
+    }
+
+    public void startTimedHuntingZone(int zoneId, long delay)
+    {
+        // Stop previous task.
+        stopTimedHuntingZoneTask();
+
+        // TODO: Delay window.
+        // sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
+        sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
+        _timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
+        {
+            if ((isOnlineInt() > 0) && isInTimedHuntingZone(zoneId))
+            {
+                sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+                abortCast();
+                stopMove(null);
+                teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
+            }
+        }, delay);
+    }
+
+    public void stopTimedHuntingZoneTask()
+    {
+        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
+        {
+            _timedHuntingZoneFinishTask.cancel(true);
+            _timedHuntingZoneFinishTask = null;
+        }
+        sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+    }
+
+    public long getTimedHuntingZoneRemainingTime()
+    {
+        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
+        {
+            return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
+        }
+        return 0;
     }
 }

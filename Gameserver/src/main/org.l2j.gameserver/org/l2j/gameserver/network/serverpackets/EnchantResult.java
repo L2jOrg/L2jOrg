@@ -41,10 +41,9 @@ public class EnchantResult extends ServerPacket {
         writeInt(crystal);
         writeLong(count);
 
-        for (int option : enchantOptions) {
+       for (int option : enchantOptions) {
             writeInt(option);
         }
-
         writeInt(enchantLevel);
     }
 

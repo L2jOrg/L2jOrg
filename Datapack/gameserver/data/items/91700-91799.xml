@@ -289,9 +289,10 @@
 
 	<armor id="91745" name="Aden Talisman" type="NONE" body-part="TALISMAN" icon="icon.bm_aden_talisman">
 	<!-- A talisman imbued with the energy of the royal family of Aden. Can be enchanted up to +10 with the Enchant Scroll: Aden Talisman. Combination adds various effects, and enchantment increases stats of these option effects. If +1 or higher level enchantment fails, the talisman will disappear. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" enchant-enabled="false" />
+		<restriction freightable="false" tradable="false"  dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" enchant-enabled="true" />
 		<crystal />
+
 	</armor>
 
 	<armor id="91746" name="Rudolph Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
@@ -355,11 +356,14 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91756" name="Aden Talisman Enchant Scroll" type="ENCHANT_ARMOR" icon="icon.aden_talisman_scroll">
+	<item id="91756" name="Aden Talisman Enchant Scroll" type="BLESS_ENCHT_AM" icon="icon.aden_talisman_scroll">
 	<!-- A scroll used to enchant Aden Talisman. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE" />
+		<action handler="EnchantScrolls"/>
 	</item>
+
+
 
 	<item id="91757" name="Magic Lamp Acceleration Potion" type="NONE" icon="icon.etc_recall_potion2">
 	<!-- 20% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->

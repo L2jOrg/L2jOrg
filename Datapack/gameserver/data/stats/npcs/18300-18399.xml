@@ -1051,7 +1051,7 @@
             <height normal="12" />
         </collision>
     </npc>
-    <npc id="18357" level="80" type="Folk" name="Goldberg's Treasure Chest">
+    <npc id="18357" level="80" type="Monster" name="Goldberg's Treasure Chest">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
@@ -1073,13 +1073,82 @@
         <skillList>
             <skill id="4416" level="2" /> <!-- Magical Creatures -->
         </skillList>
+        <dropLists>
+            <drop>
+                <item id="57" min="200000" max="500000" chance="5"/> <!-- Adena-->
+                <item id="1462" min="1" max="2" chance="2"/> <!-- Cry S -->
+                <item id="1808" min="1" max="1" chance="2"/> <!-- Recipe soulshot S -->
+                <item id="3957" min="1" max="1" chance="2"/> <!-- Recipe Blessed SpiritShot S -->
+                <item id="1888" min="1" max="1" chance="2"/> <!-- Synthetic cokes -->
+                <item id="1894" min="1" max="1" chance="2"/> <!-- Quality leather -->
+                <item id="5553" min="1" max="1" chance="2"/> <!-- Arcsmith Anvil -->
+                <item id="5550" min="1" max="1" chance="2"/> <!-- Reinforced metal plate -->
+                <item id="1889" min="1" max="1" chance="2"/> <!-- Synthetic braid -->
+                <item id="6688" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6689" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6690" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6691" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6693" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6694" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6695" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6696" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6697" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6698" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6699" min="1" max="1" chance="0.5"/> <!-- S grade blade -->
+                <item id="6847" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6849" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6851" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6853" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6855" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6857" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6859" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6861" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6863" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6865" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6867" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6869" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6871" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6873" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6875" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6877" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6879" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6881" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6883" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6885" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6887" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6891" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6893" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6895" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6897" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="6899" min="1" max="1" chance="0.5"/> <!-- Recipe S 30% -->
+                <item id="2134" min="1" max="1" chance="0.5"/> <!-- Gemstone S -->
+                <item id="6700" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6701" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6702" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6703" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6704" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6705" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6706" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6707" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6708" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6709" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6710" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6711" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6712" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6713" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="6714" min="1" max="1" chance="0.5"/> <!-- S armor and jewel fabric -->
+                <item id="91012" min="1" max="1" chance="0.5"/> <!-- Weapon Supply Box (Best A-grade) -->
+                <item id="71925" min="1" max="1" chance="0.5"/> <!-- Armor Supply Box (A-grade) -->
+            </drop>
+        </dropLists>
     </npc>
-    <npc id="18358" level="85" type="Folk" name="Goldberg's Steward">
+    <npc id="18358" level="85" type="Monster" name="Goldberg's Steward">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
+        <race>UNDEAD</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+        <acquire exp="134000" sp="3631" />
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="9839" hpRegen="10.5" mp="2355" mpRegen="3.6" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
@@ -1087,11 +1156,16 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
             <defence physical="405.85106382979" magical="297.0297029703" />
         </stats>
-        <status attackable="false" />
+        <status attackable="true" />
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <dropLists>
+            <drop>
+                <item id="91636" min="1" max="1" chance="100"/> <!-- Goldber key -->
+            </drop>
+        </dropLists>
     </npc>
     <npc id="18359" level="83" type="Monster" name="Goldberg" title="Ancient Pirate Captain">
         <race>UNDEAD</race>

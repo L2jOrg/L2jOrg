@@ -85,6 +85,7 @@ public final class Config {
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
+    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/TimeLimitedZones.ini";
 
     // --------------------------------------------------
     // Variable Definitions
@@ -850,6 +851,13 @@ public final class Config {
     public static int HOPZONE_DUALBOXES_ALLOWED;
     public static boolean ALLOW_HOPZONE_GAME_SERVER_REPORT;
 
+    // --------------------------------------------------
+    // HUNTING ZONE
+    // --------------------------------------------------
+    public static long TIME_LIMITED_ZONE_INITIAL_TIME;
+    public static long TIME_LIMITED_MAX_ADDED_TIME;
+    public static long TIME_LIMITED_ZONE_RESET_DELAY;
+    public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
     /**
      * This class initializes all global variables for configuration.<br>
      * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
@@ -911,6 +919,8 @@ public final class Config {
         final IPConfigData ipcd = new IPConfigData();
         GAME_SERVER_SUBNETS = ipcd.getSubnets();
         GAME_SERVER_HOSTS = ipcd.getHosts();
+
+
 
         // Load Feature config file (if exists)
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
@@ -1948,6 +1958,14 @@ public final class Config {
         }
         HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
         ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
+
+
+        // Load Time Limited Zone config file (if exists)
+        final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
+        TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
+        TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
+        TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
+        TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
     }
 
     /**

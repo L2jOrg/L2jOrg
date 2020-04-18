@@ -39,6 +39,7 @@ import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettab
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
@@ -392,6 +393,21 @@ public class EnterWorld extends ClientPacket {
                     Disconnection.of(client).defaultSequence(false);
                 }
             }, 5000);
+        }
+
+        // Check if in time limited hunting zone.
+        if (player.isInTimedHuntingZone())
+        {
+            final long currentTime = System.currentTimeMillis();
+            final long pirateTombExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 2, 0);
+            if ((pirateTombExitTime > currentTime) && player.isInTimedHuntingZone(2))
+            {
+                player.startTimedHuntingZone(1, pirateTombExitTime - currentTime);
+            }
+            else
+            {
+                player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
+            }
         }
 
         player.onEnter();

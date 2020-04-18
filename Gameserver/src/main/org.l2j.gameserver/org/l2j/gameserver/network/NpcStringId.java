@@ -24702,6 +24702,9 @@ public final class NpcStringId {
     @ClientString(id = 1000527, message = "Rondo of Solitude")
     public static NpcStringId RONDO_OF_SOLITUDE;
 
+    @ClientString(id = 104505, message = "Orven's Request")
+    public static NpcStringId ORVEN_S_REQUEST;
+
 
     private static IntMap<NpcStringId> VALUES = new HashIntMap<>();
 

@@ -213,7 +213,7 @@
         <equipment rhand="95"/> <!-- Poleaxe -->
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="37821" hpRegen="62.194388632129" mp="29752" mpRegen="2.4"/>
-            <attack physical="2312.08069139469" magical="1393.84679470785" random="10" critical="4" accuracy="0" attackSpeed="253" type="SPEAR" range="80" distance="80" width="120"/>
+			<attack physical="2312.08069139469" magical="1393.84679470785" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
             <defence physical="328.343835" magical="320.36" evasion="-18"/>
             <speed>
                 <walk ground="40"/>
@@ -465,11 +465,11 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
-        <acquire exp="238359334" sp="7150780" raidPoints="5"/>
+		<acquire exp="238359335" sp="7150781" raidPoints="5" />
         <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-            <vitals hp="1393889.96528" hpRegen="319.2293199" mp="5687.895" mpRegen="3"/>
-            <attack physical="4793.98037614546" magical="3407.58884407368" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="943.97961" magical="460.5" evasion="-18"/>
+			<vitals hp="3582202.704" hpRegen="319.2293199" mp="5803.581" mpRegen="3" />
+			<attack physical="3893.463882" magical="630.9983989" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3174.043583" magical="1548.445762" />
             <speed>
                 <walk ground="60"/>
                 <run ground="170"/>
@@ -477,71 +477,65 @@
             <hitTime>840</hitTime>
             <abnormalResist physical="230" magical="230"/>
         </stats>
-        <status undying="false"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="75" />
+		</collision>
         <skillList>
             <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
             <skill id="4197" level="7"/> <!-- Hold -->
-            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
-            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
-            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
-            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
-            <skill id="4412" level="11"/> <!-- Average P. Def. -->
-            <skill id="4413" level="11"/> <!-- Average M. Def. -->
-            <skill id="4414" level="3"/> <!-- Light Armor Type -->
-            <skill id="4415" level="3"/> <!-- One-handed Sword -->
-            <skill id="4416" level="9"/> <!-- Demons -->
             <skill id="4494" level="1"/> <!-- Raid Boss -->
             <skill id="4830" level="1"/> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
             <skill id="5479" level="1"/> <!-- Boss Petrification Resistance -->
         </skillList>
         <exCrtEffect>true</exCrtEffect>
         <ai type="BALANCED" clanHelpRange="300"/>
-        <collision>
-            <radius normal="20"/>
-            <height normal="75"/>
-        </collision>
         <dropLists>
             <drop>
-                <item id="5292" min="1" max="1" chance="5.612"/> <!-- Sealed Dark Crystal Shield -->
-                <item id="5315" min="1" max="1" chance="4.838"/> <!-- Sealed Shield of Nightmare -->
-                <item id="5290" min="1" max="1" chance="4.065"/> <!-- Sealed Dark Crystal Gloves -->
-                <item id="5291" min="1" max="1" chance="4.021"/> <!-- Sealed Dark Crystal Boots -->
-                <item id="5295" min="1" max="1" chance="3.987"/> <!-- Sealed Tallum Gloves -->
-                <item id="5294" min="1" max="1" chance="3.952"/> <!-- Sealed Tallum Helmet -->
-                <item id="5289" min="1" max="1" chance="3.939"/> <!-- Sealed Dark Crystal Helmet -->
-                <item id="5296" min="1" max="1" chance="3.932"/> <!-- Sealed Tallum Boots -->
-                <item id="5287" min="1" max="1" chance="2.444"/> <!-- Sealed Dark Crystal Breastplate -->
-                <item id="5304" min="1" max="1" chance="2.444"/> <!-- Sealed Tallum Tunic -->
-                <item id="5305" min="1" max="1" chance="2.429"/> <!-- Sealed Tallum Stockings -->
-                <item id="5308" min="1" max="1" chance="2.424"/> <!-- Sealed Dark Crystal Robe -->
-                <item id="5314" min="1" max="1" chance="2.421"/> <!-- Sealed Boots of Nightmare -->
-                <item id="5298" min="1" max="1" chance="2.411"/> <!-- Sealed Dark Crystal Leggings -->
-                <item id="5318" min="1" max="1" chance="2.399"/> <!-- Sealed Majestic Gauntlets -->
-                <item id="5288" min="1" max="1" chance="2.398"/> <!-- Sealed Dark Crystal Gaiters -->
-                <item id="5297" min="1" max="1" chance="2.395"/> <!-- Sealed Dark Crystal Leather Armor -->
-                <item id="5293" min="1" max="1" chance="2.382"/> <!-- Sealed Tallum Plate Armor -->
-                <item id="5313" min="1" max="1" chance="2.377"/> <!-- Sealed Gauntlets of Nightmare -->
-                <item id="5319" min="1" max="1" chance="2.374"/> <!-- Sealed Majestic Boots -->
-                <item id="5317" min="1" max="1" chance="2.344"/> <!-- Sealed Majestic Circlet -->
-                <item id="5301" min="1" max="1" chance="2.335"/> <!-- Sealed Tallum Leather Armor -->
-                <item id="5312" min="1" max="1" chance="2.334"/> <!-- Sealed Helm of Nightmare -->
-                <item id="5323" min="1" max="1" chance="1.614"/> <!-- Sealed Majestic Leather Armor -->
-                <item id="5326" min="1" max="1" chance="1.581"/> <!-- Sealed Robe of Nightmare -->
-                <item id="5316" min="1" max="1" chance="1.575"/> <!-- Sealed Majestic Plate Armor -->
-                <item id="5329" min="1" max="1" chance="1.574"/> <!-- Sealed Majestic Robe -->
-                <item id="5320" min="1" max="1" chance="1.567"/> <!-- Sealed Leather Armor of Nightmare -->
-                <item id="5311" min="1" max="1" chance="1.54"/> <!-- Sealed Armor of Nightmare -->
-                <item id="2504" min="1" max="1" chance="0.75"/> <!-- Meteor Shower -->
+				<item id="5292" min="1" max="1" chance="5.645" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="4.807" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5291" min="1" max="1" chance="4.066" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="4.049" /> <!-- Sealed Tallum Gloves -->
+				<item id="5289" min="1" max="1" chance="4.034" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5296" min="1" max="1" chance="4.02" /> <!-- Sealed Tallum Boots -->
+				<item id="5290" min="1" max="1" chance="3.988" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5294" min="1" max="1" chance="3.947" /> <!-- Sealed Tallum Helmet -->
+				<item id="5319" min="1" max="1" chance="2.462" /> <!-- Sealed Majestic Boots -->
+				<item id="5313" min="1" max="1" chance="2.462" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5288" min="1" max="1" chance="2.449" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5304" min="1" max="1" chance="2.445" /> <!-- Sealed Tallum Tunic -->
+				<item id="5308" min="1" max="1" chance="2.445" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5305" min="1" max="1" chance="2.434" /> <!-- Sealed Tallum Stockings -->
+				<item id="5317" min="1" max="1" chance="2.429" /> <!-- Sealed Majestic Circlet -->
+				<item id="5301" min="1" max="1" chance="2.403" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5293" min="1" max="1" chance="2.399" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5297" min="1" max="1" chance="2.369" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5312" min="1" max="1" chance="2.368" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5298" min="1" max="1" chance="2.346" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5318" min="1" max="1" chance="2.345" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5314" min="1" max="1" chance="2.341" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5287" min="1" max="1" chance="2.333" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5323" min="1" max="1" chance="1.653" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="1" chance="1.64" /> <!-- Sealed Majestic Robe -->
+				<item id="5316" min="1" max="1" chance="1.615" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5326" min="1" max="1" chance="1.594" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5311" min="1" max="1" chance="1.573" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="1" chance="1.534" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
                 <item id="98" min="1" max="1" chance="0.75"/> <!-- Halberd -->
                 <item id="81" min="1" max="1" chance="0.75"/> <!-- Dragon Slayer -->
-                <item id="80" min="1" max="1" chance="0.75"/> <!-- Tallum Blade -->
                 <item id="212" min="1" max="1" chance="0.75"/> <!-- Dasparion's Staff -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
                 <item id="7884" min="1" max="1" chance="0.75"/> <!-- Infernal Master -->
                 <item id="7894" min="1" max="1" chance="0.75"/> <!-- Spiritual Eye -->
                 <item id="7895" min="1" max="1" chance="0.75"/> <!-- Flaming Dragon Skull -->
                 <item id="7899" min="1" max="1" chance="0.75"/> <!-- Destroyer Hammer -->
-                <item id="150" min="1" max="1" chance="0.75"/> <!-- Elemental Sword -->
                 <item id="151" min="1" max="1" chance="0.75"/> <!-- Sword of Miracles -->
+				<item id="164" min="1" max="1" chance="0.75" /> <!-- Elysian -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
                 <item id="2500" min="1" max="1" chance="0.75"/> <!-- Dark Legion's Edge -->
                 <item id="305" min="1" max="1" chance="0.75"/> <!-- Tallum Glaive -->
                 <item id="289" min="1" max="1" chance="0.75"/> <!-- Soul Bow -->
@@ -551,13 +545,9 @@
                 <item id="236" min="1" max="1" chance="0.75"/> <!-- Soul Separator -->
                 <item id="235" min="1" max="1" chance="0.75"/> <!-- Bloody Orchid -->
                 <item id="213" min="1" max="1" chance="0.75"/> <!-- Branch of the Mother Tree -->
-                <item id="164" min="1" max="1" chance="0.75"/> <!-- Elysian -->
                 <item id="7902" min="1" max="1" chance="0.75"/> <!-- Doom Crusher -->
-                <item id="70000" min="19" max="57" chance="100"/> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune Lv. 1 -->
                 <item id="90045" min="2" max="6" chance="100"/> <!-- Magical Tablet -->
-                <item id="91539" min="1" max="1" chance="14.73"/> <!-- Armor Varnish (A-grade) -->
-                <item id="91532" min="1" max="1" chance="14.42"/> <!-- Weapon Varnish (A-grade) -->
-                <item id="91546" min="1" max="1" chance="14.3"/> <!-- Accessory Varnish (A-grade) -->
                 <item id="90898" min="1" max="1" chance="0.75"/> <!-- Agathion's Soul -->
             </drop>
         </dropLists>
@@ -1480,18 +1470,21 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="413" min="1" max="3" chance="8.053"/> <!-- Puma Skin Gaiters -->
-                <item id="40" min="2" max="6" chance="8.043"/> <!-- Leather Boots -->
-                <item id="465" min="1" max="3" chance="8.023"/> <!-- Cursed Stockings -->
-                <item id="391" min="1" max="3" chance="8.018"/> <!-- Puma Skin Shirt -->
-                <item id="45" min="2" max="6" chance="8.012"/> <!-- Bone Helmet -->
-                <item id="626" min="2" max="6" chance="7.992"/> <!-- Bronze Shield -->
+				<item id="40" min="2" max="6" chance="8.016" /> <!-- Leather Boots -->
+				<item id="347" min="1" max="3" chance="8.015" /> <!-- Ring Breastplate -->
+				<item id="465" min="1" max="3" chance="8.009" /> <!-- Cursed Stockings -->
+				<item id="626" min="2" max="6" chance="8" /> <!-- Bronze Shield -->
                 <item id="432" min="1" max="3" chance="7.987"/> <!-- Cursed Tunic -->
-                <item id="604" min="2" max="6" chance="7.985"/> <!-- Quality Leather Gloves -->
-                <item id="376" min="1" max="3" chance="7.953"/> <!-- Iron Plate Gaiters -->
-                <item id="347" min="1" max="3" chance="7.952"/> <!-- Ring Breastplate -->
+				<item id="413" min="1" max="3" chance="7.981" /> <!-- Puma Skin Gaiters -->
+				<item id="391" min="1" max="3" chance="7.974" /> <!-- Puma Skin Shirt -->
+				<item id="45" min="2" max="6" chance="7.949" /> <!-- Bone Helmet -->
+				<item id="376" min="1" max="3" chance="7.947" /> <!-- Iron Plate Gaiters -->
+				<item id="604" min="2" max="6" chance="7.936" /> <!-- Quality Leather Gloves -->
                 <item id="955" min="1" max="1" chance="100"/> <!-- Scroll: Enchant Weapon (D-grade) -->
                 <item id="956" min="5" max="15" chance="100"/> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="91526" min="1" max="1" chance="5.037" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.976" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="4.931" /> <!-- Armor Varnish (D-grade) -->
             </drop>
         </dropLists>
     </npc>
@@ -2531,28 +2524,31 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="39" min="1" max="1" chance="4.985"/> <!-- Boots -->
-                <item id="27" min="1" max="1" chance="4.97"/> <!-- Durable Leather Shirt -->
-                <item id="51" min="1" max="1" chance="4.9655"/> <!-- Bracer -->
-                <item id="26" min="1" max="1" chance="4.953"/> <!-- Bronze Breastplate -->
-                <item id="33" min="1" max="1" chance="4.9505"/> <!-- Durable Leather Gaiters -->
-                <item id="625" min="1" max="1" chance="4.9335"/> <!-- Bone Shield -->
-                <item id="1105" min="1" max="1" chance="4.928"/> <!-- Stockings of Magic -->
-                <item id="1148" min="1" max="1" chance="4.928"/> <!-- Durable Leather Helmet -->
-                <item id="34" min="1" max="1" chance="4.928"/> <!-- Bronze Gaiters -->
-                <item id="1102" min="1" max="1" chance="4.9255"/> <!-- Tunic of Magic -->
-                <item id="257" min="1" max="1" chance="2.527"/> <!-- Viper Fang -->
-                <item id="155" min="1" max="1" chance="2.519"/> <!-- Flanged Mace -->
-                <item id="219" min="1" max="1" chance="2.507"/> <!-- Sword Breaker -->
-                <item id="311" min="1" max="1" chance="2.498"/> <!-- Crucifix of Blessing -->
-                <item id="16" min="1" max="1" chance="2.4935"/> <!-- Great Spear -->
-                <item id="68" min="1" max="1" chance="2.49"/> <!-- Falchion -->
-                <item id="5284" min="1" max="1" chance="2.4885"/> <!-- Zweihander -->
-                <item id="273" min="1" max="1" chance="2.488"/> <!-- Compound Bow -->
-                <item id="100" min="1" max="1" chance="2.4865"/> <!-- Voodoo Doll -->
-                <item id="177" min="1" max="1" chance="2.4845"/> <!-- Mage Staff -->
-                <item id="87" min="1" max="1" chance="2.475"/> <!-- Iron Hammer -->
+				<item id="1148" min="1" max="1" chance="9.069" /> <!-- Durable Leather Helmet -->
+				<item id="1105" min="1" max="1" chance="9.065" /> <!-- Stockings of Magic -->
+				<item id="27" min="1" max="1" chance="9.041" /> <!-- Durable Leather Shirt -->
+				<item id="33" min="1" max="1" chance="9.038" /> <!-- Durable Leather Gaiters -->
+				<item id="51" min="1" max="1" chance="9.031" /> <!-- Bracer -->
+				<item id="26" min="1" max="1" chance="9.027" /> <!-- Bronze Breastplate -->
+				<item id="625" min="1" max="1" chance="8.996" /> <!-- Bone Shield -->
+				<item id="1102" min="1" max="1" chance="8.99" /> <!-- Tunic of Magic -->
+				<item id="34" min="1" max="1" chance="8.978" /> <!-- Bronze Gaiters -->
+				<item id="39" min="1" max="1" chance="8.932" /> <!-- Boots -->
+				<item id="87" min="1" max="1" chance="4.614" /> <!-- Iron Hammer -->
+				<item id="311" min="1" max="1" chance="4.585" /> <!-- Crucifix of Blessing -->
+				<item id="257" min="1" max="1" chance="4.577" /> <!-- Viper Fang -->
+				<item id="5284" min="1" max="1" chance="4.5515" /> <!-- Zweihander -->
+				<item id="68" min="1" max="1" chance="4.547" /> <!-- Falchion -->
+				<item id="100" min="1" max="1" chance="4.5415" /> <!-- Voodoo Doll -->
+				<item id="177" min="1" max="1" chance="4.535" /> <!-- Mage Staff -->
+				<item id="16" min="1" max="1" chance="4.521" /> <!-- Great Spear -->
+				<item id="219" min="1" max="1" chance="4.4885" /> <!-- Sword Breaker -->
+				<item id="273" min="1" max="1" chance="4.478" /> <!-- Compound Bow -->
+				<item id="155" min="1" max="1" chance="4.476" /> <!-- Flanged Mace -->
                 <item id="956" min="2" max="6" chance="100"/> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="91526" min="1" max="1" chance="5.053" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="4.995" /> <!-- Armor Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.93" /> <!-- Accessory Varnish (D-grade) -->
             </drop>
         </dropLists>
     </npc>
@@ -2679,16 +2675,19 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="258" min="1" max="1" chance="3.1475"/> <!-- Bagh-Nakh -->
-                <item id="168" min="1" max="1" chance="3.143"/> <!-- Work Hammer -->
-                <item id="314" min="1" max="1" chance="3.143"/> <!-- Proof of Revenge -->
-                <item id="313" min="1" max="1" chance="3.141"/> <!-- Temptation of Abyss -->
-                <item id="274" min="1" max="1" chance="3.1335"/> <!-- Reinforced Bow -->
-                <item id="178" min="1" max="1" chance="3.1255"/> <!-- Bone Staff -->
-                <item id="123" min="1" max="1" chance="3.1095"/> <!-- Saber -->
-                <item id="220" min="1" max="1" chance="3.09"/> <!-- Crafted Dagger -->
-                <item id="291" min="1" max="1" chance="3.0855"/> <!-- Trident -->
+				<item id="274" min="1" max="1" chance="5.725" /> <!-- Reinforced Bow -->
+				<item id="123" min="1" max="1" chance="5.716" /> <!-- Saber -->
+				<item id="313" min="1" max="1" chance="5.672" /> <!-- Temptation of Abyss -->
+				<item id="168" min="1" max="1" chance="5.664" /> <!-- Work Hammer -->
+				<item id="291" min="1" max="1" chance="5.655" /> <!-- Trident -->
+				<item id="314" min="1" max="1" chance="5.649" /> <!-- Proof of Revenge -->
+				<item id="178" min="1" max="1" chance="5.644" /> <!-- Bone Staff -->
+				<item id="258" min="1" max="1" chance="5.618" /> <!-- Bagh-Nakh -->
+				<item id="220" min="1" max="1" chance="5.614" /> <!-- Crafted Dagger -->
                 <item id="70000" min="3" max="8" chance="100"/> <!-- Sealed Rune - Stage 1 -->
+				<item id="91526" min="1" max="1" chance="5.066" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="5.063" /> <!-- Armor Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="5.038" /> <!-- Accessory Varnish (D-grade) -->
             </drop>
         </dropLists>
     </npc>
@@ -3538,14 +3537,17 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="166" min="1" max="1" chance="4.1625"/> <!-- Heavy Mace -->
-                <item id="101" min="1" max="1" chance="4.148"/> <!-- Scroll of Wisdom -->
-                <item id="221" min="1" max="1" chance="4.14"/> <!-- Assassin Knife -->
-                <item id="156" min="1" max="1" chance="4.117"/> <!-- Hand Axe -->
-                <item id="312" min="1" max="1" chance="4.114"/> <!-- Branch of Life -->
-                <item id="167" min="1" max="1" chance="4.0965"/> <!-- Scalpel -->
+				<item id="312" min="1" max="1" chance="7.559" /> <!-- Branch of Life -->
+				<item id="221" min="1" max="1" chance="7.529" /> <!-- Assassin Knife -->
+				<item id="156" min="1" max="1" chance="7.511" /> <!-- Hand Axe -->
+				<item id="167" min="1" max="1" chance="7.51" /> <!-- Scalpel -->
+				<item id="166" min="1" max="1" chance="7.5045" /> <!-- Heavy Mace -->
+				<item id="101" min="1" max="1" chance="7.491" /> <!-- Scroll of Wisdom -->
                 <item id="70000" min="3" max="8" chance="100"/> <!-- Sealed Rune - Stage 1 -->
-                <item id="955" min="1" max="1" chance="26.35"/> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="955" min="1" max="1" chance="50.82" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="91526" min="1" max="1" chance="4.993" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.97" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="4.942" /> <!-- Armor Varnish (D-grade) -->
             </drop>
         </dropLists>
     </npc>

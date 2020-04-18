@@ -27,6 +27,8 @@ public abstract class AbstractEnchantItem {
         EtcItemType.ENCHANT_WEAPON,
         EtcItemType.BLESSED_ENCHANT_ARMOR,
         EtcItemType.BLESSED_ENCHANT_WEAPON,
+        EtcItemType.IMPROVED_ENCHANT_ARMOR,
+        EtcItemType.IMPROVED_ENCHANT_WEAPON,
         EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_AM,
         EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP,
         EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM,

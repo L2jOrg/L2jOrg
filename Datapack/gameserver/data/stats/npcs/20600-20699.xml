@@ -120,7 +120,6 @@
                 <item id="1951" min="1" max="1" chance="1.423"/> <!-- Plate Gaiter Fragment -->
                 <item id="1879" min="1" max="1" chance="1.239"/> <!-- Cokes -->
                 <item id="1950" min="1" max="1" chance="0.75"/> <!-- Half Plate Temper -->
-
             </drop>
             <spoil>
                 <item id="1880" min="1" max="1" chance="15.78"/> <!-- Steel -->
@@ -180,7 +179,6 @@
                 <item id="1871" min="1" max="1" chance="8.313"/> <!-- Charcoal -->
                 <item id="1879" min="1" max="1" chance="1.417"/> <!-- Cokes -->
                 <item id="2054" min="1" max="1" chance="0.75"/> <!-- Light Crossbow Shaft -->
-
             </drop>
             <spoil>
                 <item id="1889" min="1" max="1" chance="10.83"/> <!-- Synthetic Braid -->
@@ -367,7 +365,6 @@
                 <item id="1954" min="1" max="1" chance="1.729"/> <!-- Karmian Stocking Design -->
                 <item id="2251" min="1" max="1" chance="1.412"/> <!-- Recipe: Steel Arrow -->
                 <item id="1962" min="1" max="1" chance="1.05"/> <!-- Karmian Tunic Pattern -->
-
             </drop>
             <spoil>
                 <item id="1867" min="1" max="1" chance="77.64"/> <!-- Animal Skin -->
@@ -1313,7 +1310,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20620" level="69" type="Monster" name="Cave Beast">
+	<npc id="20620" level="84" type="Monster" name="Cave Beast">
         <parameters>
             <param name="MoveAroundSocial" value="135"/>
             <param name="MoveAroundSocial1" value="135"/>
@@ -1327,38 +1324,37 @@
         </parameters>
         <race>GIANT</race>
         <sex>MALE</sex>
-        <acquire exp="130421" sp="3912"/>
+		<acquire exp="1984500" sp="59535" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1228.7790125" hpRegen="7.5" mp="1432.815" mpRegen="2.7"/>
-            <attack physical="551.188748" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="229.5395091" magical="184.76376"/>
+			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
             <speed>
                 <walk ground="55"/>
                 <run ground="174"/>
             </speed>
             <hitTime>610</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="21" />
+			<height normal="35" />
+		</collision>
         <skillList>
             <skill id="4028" level="3"/> <!-- NPC Might -->
             <skill id="4416" level="11"/> <!-- Giant -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
             <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>3</sNpcPropHpRate>
         <ai aggroRange="500" clanHelpRange="500"/>
-        <collision>
-            <radius normal="21" grown="25"/>
-            <height normal="35" grown="43"/>
-        </collision>
     </npc>
-    <npc id="20621" level="70" type="Monster" name="Death Wave">
+	<npc id="20621" level="84" type="Monster" name="Death Wave">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -1373,32 +1369,35 @@
             <skill name="DDMagic2" id="4039" level="6"/> <!-- NPC MP Drain -->
             <skill name="DeBuff" id="4117" level="6"/> <!-- Paralysis -->
         </parameters>
-        <race>CONSTRUCT</race>
+		<race>ETC</race>
         <sex>MALE</sex>
-        <acquire exp="133145" sp="3994"/>
+		<acquire exp="1986617" sp="59599" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1254.087365" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
-            <attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="233.9478818" magical="188.3122"/>
+			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
             <speed>
-                <walk ground="80"/>
+				<walk ground="25" />
                 <run ground="174"/>
             </speed>
             <hitTime>100</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="22" />
+		</collision>
         <skillList>
             <skill id="4039" level="6"/> <!-- NPC MP Drain -->
             <skill id="4100" level="6"/> <!-- NPC Prominence -->
             <skill id="4117" level="6"/> <!-- Paralysis -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
             <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
             <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="10"/> <!-- Slightly Weak P. Def. -->
-            <skill id="4413" level="8"/> <!-- Weak M. Def. -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1408,12 +1407,8 @@
                 <clan>ALL</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="13"/>
-            <height normal="22"/>
-        </collision>
     </npc>
-    <npc id="20622" level="71" type="Monster" name="Maluk Soldier">
+	<npc id="20622" level="84" type="Monster" name="Maluk Soldier">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -1427,33 +1422,35 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <equipment rhand="221"/> <!-- rhand: Assassin Knife -->
-        <acquire exp="70859" sp="2125"/>
+		<equipment rhand="221" />
+		<acquire exp="969283" sp="29079" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1278.9030975" hpRegen="8.5" mp="1501.845" mpRegen="3"/>
-            <attack physical="521.1434498" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
-            <defence physical="238.3584182" magical="191.86238"/>
+			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
             <speed>
                 <walk ground="80"/>
                 <run ground="174"/>
             </speed>
             <hitTime>520</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
         <skillList>
             <skill id="4067" level="6"/> <!-- NPC Mortal Blow -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="16"/> <!-- Very Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4413" level="9"/> <!-- Slightly Weak M. Def. -->
-            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
             <skill id="4438" level="2"/> <!-- Greater Sleep Resistance -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1463,36 +1460,20 @@
                 <clan>MALRUK</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="11"/>
-            <height normal="28.5"/>
-        </collision>
         <dropLists>
             <drop>
-                <item id="6325" min="1" max="1" chance="0.03"/> <!-- Sealed Phoenix Ring -->
-                <item id="57" min="2881" max="6722" chance="70"/> <!-- Adena -->
-                <item id="1873" min="1" max="1" chance="25.53"/> <!-- Silver Nugget -->
-                <item id="1869" min="3" max="9" chance="10.39"/> <!-- Iron Ore -->
-                <item id="1880" min="1" max="1" chance="6.322"/> <!-- Steel -->
-                <item id="6345" min="1" max="1" chance="5.635"/> <!-- Sealed Phoenix Ring Gemstone -->
-                <item id="6341" min="1" max="1" chance="4.122"/> <!-- Sealed Phoenix Earring Gemstone -->
-                <item id="6343" min="1" max="1" chance="3.133"/> <!-- Sealed Phoenix Necklace Beads -->
-                <item id="4936" min="1" max="1" chance="1.17"/> <!-- Recipe: Avadon Shield (60%) -->
-                <item id="4951" min="1" max="1" chance="0.3"/> <!-- Recipe: Avadon Robe (60%) -->
-                <item id="6331" min="1" max="1" chance="0.3"/> <!-- Recipe: Sealed Phoenix Earring (70%) -->
-                <item id="6333" min="1" max="1" chance="0.3"/> <!-- Recipe: Sealed Phoenix Ring (70%) -->
-                <item id="5006" min="1" max="1" chance="0.03"/> <!-- Recipe: Bellion Cestus (60%) -->
+				<item id="8679" min="1" max="1" chance="0.0009" /> <!-- Sword of Ipos -->
+				<item id="57" min="1688" max="3939" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="0.3" /> <!-- Gemstone (A-grade) -->
+				<item id="8713" min="1" max="1" chance="0.3" /> <!-- Sword of Ipos Blade -->
             </drop>
             <spoil>
-                <item id="4936" min="1" max="1" chance="15.61"/> <!-- Recipe: Avadon Shield (60%) -->
-                <item id="6333" min="1" max="1" chance="4.656"/> <!-- Recipe: Sealed Phoenix Ring (70%) -->
-                <item id="4951" min="1" max="1" chance="3.599"/> <!-- Recipe: Avadon Robe (60%) -->
-                <item id="6331" min="1" max="1" chance="3.189"/> <!-- Recipe: Sealed Phoenix Earring (70%) -->
-                <item id="5006" min="1" max="1" chance="0.75"/> <!-- Recipe: Bellion Cestus (60%) -->
+				<item id="8713" min="1" max="1" chance="0.75" /> <!-- Sword of Ipos Blade -->
+				<item id="8692" min="1" max="1" chance="0.3" /> <!-- Recipe: Sword of Ipos (60%) -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20623" level="72" type="Monster" name="Plando">
+	<npc id="20623" level="84" type="Monster" name="Plando">
         <parameters>
             <param name="MoveAroundSocial" value="139"/>
             <param name="MoveAroundSocial1" value="35"/>
@@ -1506,28 +1487,31 @@
         </parameters>
         <race>HUMANOID</race>
         <sex>MALE</sex>
-        <equipment rhand="2507"/> <!-- rhand: Lizardspear -->
-        <acquire exp="143870" sp="4316"/>
+		<equipment rhand="2507" />
+		<acquire exp="1955500" sp="58665" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1303.22621" hpRegen="8.5" mp="1537.245" mpRegen="3"/>
-            <attack physical="1135.285955" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
-            <defence physical="293.749148" magical="195.41171"/>
+			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
             <speed>
                 <walk ground="43"/>
                 <run ground="174"/>
             </speed>
             <hitTime>720</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="22" />
+		</collision>
         <skillList>
             <skill id="4124" level="6"/> <!-- NPC Spear Attack -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4412" level="12"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1537,12 +1521,8 @@
                 <clan>ALL</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="10" grown="12"/>
-            <height normal="22" grown="27"/>
-        </collision>
     </npc>
-    <npc id="20624" level="73" type="Monster" name="Cave Howler">
+	<npc id="20624" level="85" type="Monster" name="Cave Howler">
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
             <param name="MoveAroundSocial1" value="100"/>
@@ -1558,37 +1538,37 @@
         </parameters>
         <race>GIANT</race>
         <sex>MALE</sex>
-        <acquire exp="155126" sp="4653"/>
+		<acquire exp="2997653" sp="89930" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1273.964582" hpRegen="8.5" mp="1572.645" mpRegen="3"/>
-            <attack physical="529.8341727" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="299.079363" magical="198.95754"/>
+			<vitals hp="14785.403" hpRegen="8.5" mp="3081.939" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
             <speed>
                 <walk ground="45"/>
                 <run ground="174"/>
             </speed>
             <hitTime>460</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="17" />
+			<height normal="39" />
+		</collision>
         <skillList>
             <skill id="4074" level="2"/> <!-- NPC Haste -->
             <skill id="4416" level="11"/> <!-- Giant -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
             <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>4</sNpcPropHpRate>
         <ai aggroRange="500" clanHelpRange="500"/>
-        <collision>
-            <radius normal="17" grown="20"/>
-            <height normal="39" grown="48"/>
-        </collision>
     </npc>
-    <npc id="20625" level="74" type="Monster" name="Maluk Knight">
+	<npc id="20625" level="84" type="Monster" name="Maluk Knight">
         <parameters>
             <param name="MoveAroundSocial" value="215"/>
             <param name="MoveAroundSocial1" value="215"/>
@@ -1602,30 +1582,32 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <equipment rhand="78"/> <!-- rhand: Great Sword -->
-        <acquire exp="82846" sp="2485"/>
+		<equipment rhand="78" />
+		<acquire exp="1033634" sp="31010" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1296.378792" hpRegen="8.5" mp="1608.045" mpRegen="3"/>
-            <attack physical="548.9082091" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="304.400272" magical="202.49719"/>
+			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
             <speed>
                 <walk ground="40"/>
                 <run ground="174"/>
             </speed>
             <hitTime>170</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
         <skillList>
             <skill id="4073" level="6"/> <!-- Stun -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
             <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
-            <skill id="4412" level="15"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1635,40 +1617,20 @@
                 <clan>MALRUK</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="10"/>
-            <height normal="25"/>
-        </collision>
         <dropLists>
             <drop>
-                <item id="2399" min="1" max="1" chance="0.03"/> <!-- Tunic of Doom -->
-                <item id="2404" min="1" max="1" chance="0.03"/> <!-- Stockings of Doom -->
-                <item id="91" min="1" max="1" chance="0.0075"/> <!-- Heavy War Axe -->
-                <item id="92" min="1" max="1" chance="0.0075"/> <!-- Spirit's Staff -->
-                <item id="57" min="3311" max="7736" chance="70"/> <!-- Adena -->
-                <item id="1873" min="1" max="1" chance="25.53"/> <!-- Silver Nugget -->
-                <item id="1869" min="3" max="9" chance="11.1"/> <!-- Iron Ore -->
-                <item id="1880" min="1" max="1" chance="6.512"/> <!-- Steel -->
-                <item id="4087" min="1" max="1" chance="6.027"/> <!-- Stockings of Doom Pattern -->
-                <item id="4085" min="1" max="1" chance="4.365"/> <!-- Tunic of Doom Pattern -->
-                <item id="4106" min="1" max="1" chance="1.471"/> <!-- Spirit's Staff Head -->
-                <item id="4105" min="1" max="1" chance="1.46"/> <!-- Heavy War Axe Head -->
-                <item id="4958" min="1" max="1" chance="1.239"/> <!-- Recipe: Sealed Zubei's Boots (60%) -->
-                <item id="4974" min="1" max="1" chance="0.996"/> <!-- Recipe: Black Ore Ring (70%) -->
-                <item id="4940" min="1" max="1" chance="0.3"/> <!-- Recipe: Zubei's Breastplate (60%) -->
-                <item id="4614" min="1" max="1" chance="0.075"/> <!-- Greater Dye of STR <STR +4 DEX -4> - 2nd Class Transfer -->
-                <item id="4616" min="1" max="1" chance="0.075"/> <!-- Greater Dye of CON <Con +4 DEX -4> - 2nd Class Transfer -->
-                <item id="5001" min="1" max="1" chance="0.03"/> <!-- Recipe: Lance (60%) -->
+				<item id="8680" min="1" max="1" chance="0.003" /> <!-- Barakiel's Axe -->
+				<item id="57" min="1941" max="4528" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="0.75" /> <!-- Gemstone (A-grade) -->
+				<item id="8714" min="1" max="1" chance="0.3" /> <!-- Barakiel's Axe Piece -->
             </drop>
             <spoil>
-                <item id="4958" min="1" max="1" chance="23.29"/> <!-- Recipe: Sealed Zubei's Boots (60%) -->
-                <item id="4974" min="1" max="1" chance="18.91"/> <!-- Recipe: Black Ore Ring (70%) -->
-                <item id="4940" min="1" max="1" chance="5.719"/> <!-- Recipe: Zubei's Breastplate (60%) -->
-                <item id="5001" min="1" max="1" chance="0.75"/> <!-- Recipe: Lance (60%) -->
+				<item id="8714" min="1" max="1" chance="1.068" /> <!-- Barakiel's Axe Piece -->
+				<item id="8694" min="1" max="1" chance="0.3" /> <!-- Recipe: Barakiel's Axe (60%) -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20626" level="75" type="Monster" name="Maluk Berserker">
+	<npc id="20626" level="84" type="Monster" name="Maluk Berserker">
         <parameters>
             <param name="MoveAroundSocial" value="74"/>
             <param name="MoveAroundSocial1" value="74"/>
@@ -1684,31 +1646,33 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <equipment rhand="77"/> <!-- rhand: Tsurugi -->
-        <acquire exp="86952" sp="2608"/>
+		<equipment rhand="77" />
+		<acquire exp="1494461" sp="44834" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1318.349644" hpRegen="8.5" mp="1643.445" mpRegen="3"/>
-            <attack physical="756.1677079" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="232.6880248" magical="206.02791"/>
+			<vitals hp="14640.375666667" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
             <speed>
                 <walk ground="27"/>
                 <run ground="174"/>
             </speed>
             <hitTime>710</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
         <skillList>
             <skill id="4032" level="6"/> <!-- NPC Strike -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
             <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
             <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="17"/> <!-- Very Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1718,34 +1682,20 @@
                 <clan>MALRUK</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="12" grown="14.5"/>
-            <height normal="31" grown="36"/>
-        </collision>
         <dropLists>
             <drop>
-                <item id="2381" min="1" max="1" chance="0.03"/> <!-- Doom Plate Armor -->
-                <item id="78" min="1" max="1" chance="0.0075"/> <!-- Great Sword -->
-                <item id="142" min="1" max="1" chance="0.0075"/> <!-- Keshanberk -->
-                <item id="57" min="3492" max="8156" chance="70"/> <!-- Adena -->
-                <item id="1869" min="3" max="9" chance="16.93"/> <!-- Iron Ore -->
-                <item id="1873" min="2" max="6" chance="10.52"/> <!-- Silver Nugget -->
-                <item id="1880" min="1" max="1" chance="10.13"/> <!-- Steel -->
-                <item id="4081" min="1" max="1" chance="3.556"/> <!-- Doom Plate Armor Temper -->
-                <item id="4104" min="1" max="1" chance="2.012"/> <!-- Great Sword Blade -->
-                <item id="4107" min="1" max="1" chance="2"/> <!-- Keshanberk Blade -->
-                <item id="4999" min="1" max="1" chance="1.267"/> <!-- Recipe: Sealed Doom Boots (60%) -->
-                <item id="5002" min="1" max="1" chance="0.075"/> <!-- Recipe: Deadman's Glory (60%) -->
-                <item id="5005" min="1" max="1" chance="0.075"/> <!-- Recipe: Demon's Dagger (60%) -->
+				<item id="8681" min="1" max="1" chance="0.003" /> <!-- Behemoth' Tuning Fork -->
+				<item id="57" min="2767" max="6456" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="0.75" /> <!-- Gemstone (A-grade) -->
+				<item id="8715" min="1" max="1" chance="0.75" /> <!-- Behemoth' Tuning Fork Piece -->
             </drop>
             <spoil>
-                <item id="4999" min="1" max="1" chance="21.65"/> <!-- Recipe: Sealed Doom Boots (60%) -->
-                <item id="5002" min="1" max="1" chance="1.239"/> <!-- Recipe: Deadman's Glory (60%) -->
-                <item id="5005" min="1" max="1" chance="1.214"/> <!-- Recipe: Demon's Dagger (60%) -->
+				<item id="8715" min="1" max="1" chance="1.558" /> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="8696" min="1" max="1" chance="0.3" /> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20627" level="76" type="Monster" name="Maluk Lord">
+	<npc id="20627" level="85" type="Monster" name="Maluk Lord">
         <parameters>
             <param name="MoveAroundSocial" value="80"/>
             <param name="MoveAroundSocial1" value="80"/>
@@ -1763,33 +1713,35 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <equipment rhand="1472"/> <!-- rhand: Dreadbane -->
-        <acquire exp="90556" sp="2716"/>
+		<equipment rhand="1472" />
+		<acquire exp="1073563" sp="32207" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1302.610435" hpRegen="8.5" mp="1679.73" mpRegen="3"/>
-            <attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="286.3615" magical="209.54692"/>
+			<vitals hp="22178.1045" hpRegen="8.5" mp="3081.939" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
             <speed>
                 <walk ground="100"/>
                 <run ground="174"/>
             </speed>
             <hitTime>450</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="15" />
+			<height normal="45" />
+		</collision>
         <skillList>
             <skill id="4002" level="6"/> <!-- NPC HP Drain -->
             <skill id="4046" level="6"/> <!-- Sleep -->
             <skill id="4094" level="6"/> <!-- NPC Cancel Magic -->
             <skill id="4098" level="6"/> <!-- Silence -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="15"/> <!-- HP Increase (7x) -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
             <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
             <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1799,41 +1751,20 @@
                 <clan>MALRUK</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="15"/>
-            <height normal="45"/>
-        </collision>
         <dropLists>
             <drop>
-                <item id="2392" min="1" max="1" chance="0.03"/> <!-- Leather Armor of Doom -->
-                <item id="229" min="1" max="1" chance="0.0075"/> <!-- Kris -->
-                <item id="243" min="1" max="1" chance="0.0075"/> <!-- Twilight Knife -->
-                <item id="57" min="3739" max="8722" chance="70"/> <!-- Adena -->
-                <item id="1873" min="1" max="1" chance="19.43"/> <!-- Silver Nugget -->
-                <item id="1869" min="3" max="9" chance="7.761"/> <!-- Iron Ore -->
-                <item id="1880" min="1" max="1" chance="4.742"/> <!-- Steel -->
-                <item id="4083" min="1" max="1" chance="4.288"/> <!-- Leather Armor of Doom Design -->
-                <item id="1874" min="1" max="1" chance="3.08"/> <!-- Oriharukon Ore -->
-                <item id="4109" min="1" max="1" chance="2.143"/> <!-- Kris Edge -->
-                <item id="4110" min="1" max="1" chance="2.092"/> <!-- Twilight Knife Edge -->
-                <item id="4039" min="1" max="1" chance="1.514"/> <!-- Mold Glue -->
-                <item id="4042" min="1" max="1" chance="0.75"/> <!-- Enria -->
-                <item id="4960" min="1" max="1" chance="0.75"/> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
-                <item id="4993" min="1" max="1" chance="0.75"/> <!-- Recipe: Sealed Doom Gloves (60%) -->
-                <item id="4941" min="1" max="1" chance="0.3"/> <!-- Recipe: Zubei's Gaiters (60%) -->
-                <item id="4983" min="1" max="1" chance="0.075"/> <!-- Recipe: Doom Plate Armor (60%) -->
-                <item id="4964" min="1" max="1" chance="0.075"/> <!-- Recipe: Heavy War Axe (60%) -->
-                <item id="4963" min="1" max="1" chance="0.075"/> <!-- Recipe: Great Sword (60%) -->
-                <item id="5007" min="1" max="1" chance="0.03"/> <!-- Recipe: Bow of Peril (60%) -->
-                <item id="90012" min="1" max="1" chance="0.03"/> <!-- Common Life Stone -->
+				<item id="8683" min="1" max="1" chance="0.003" /> <!-- Tiphon's Spear -->
+				<item id="57" min="1999" max="4664" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="0.75" /> <!-- Gemstone (A-grade) -->
+				<item id="8717" min="1" max="1" chance="0.3" /> <!-- Tiphon's Spear Edge -->
             </drop>
             <spoil>
-                <item id="4993" min="1" max="1" chance="31.74"/> <!-- Recipe: Sealed Doom Gloves (60%) -->
-                <item id="4983" min="1" max="1" chance="5.663"/> <!-- Recipe: Doom Plate Armor (60%) -->
+				<item id="8717" min="1" max="1" chance="1.101" /> <!-- Tiphon's Spear Edge -->
+				<item id="8700" min="1" max="1" chance="0.3" /> <!-- Recipe: Tiphon's Spear (60%) -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20628" level="77" type="Monster" name="Limal Karinness">
+	<npc id="20628" level="85" type="Monster" name="Limal Karinness">
         <parameters>
             <param name="MoveAroundSocial" value="60"/>
             <param name="MoveAroundSocial1" value="60"/>
@@ -1849,30 +1780,35 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
-        <acquire exp="183796" sp="5513"/>
+		<acquire exp="3029949" sp="90899" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1322.6025966667" hpRegen="8.5" mp="1716.015" mpRegen="3"/>
-            <attack physical="734.253971" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="264.6823909" magical="213.05139"/>
+			<vitals hp="14785.403" hpRegen="8.5" mp="3081.939" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
             <speed>
-                <walk ground="80"/>
+				<walk ground="45" />
                 <run ground="174"/>
             </speed>
             <hitTime>500</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="18" />
+			<height normal="41" />
+		</collision>
         <skillList>
             <skill id="4002" level="6"/> <!-- NPC HP Drain -->
             <skill id="4047" level="6"/> <!-- Hold -->
             <skill id="4117" level="6"/> <!-- Paralysis -->
             <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="15"/> <!-- HP Increase (7x) -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
             <skill id="4410" level="16"/> <!-- Very Strong P. Atk. -->
             <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
             <skill id="4278" level="1"/> <!-- Dark Attack -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1882,12 +1818,8 @@
                 <clan>MALRUK</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="14"/>
-            <height normal="40"/>
-        </collision>
     </npc>
-    <npc id="20629" level="78" type="Monster" name="Karik">
+	<npc id="20629" level="85" type="Monster" name="Karik">
         <parameters>
             <param name="MoveAroundSocial" value="140"/>
             <param name="MoveAroundSocial1" value="140"/>
@@ -1903,32 +1835,37 @@
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
-        <acquire exp="191148" sp="5734"/>
+		<acquire exp="2971426" sp="89143" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1342.1021383333" hpRegen="8.5" mp="1752.3" mpRegen="3"/>
-            <attack physical="757.750103" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="269.0145182" magical="216.53847"/>
+			<vitals hp="14785.403" hpRegen="8.5" mp="3081.939" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
             <speed>
                 <walk ground="37"/>
                 <run ground="174"/>
             </speed>
             <hitTime>450</hitTime>
         </stats>
-        <status undying="false" canBeSown="true"/>
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="71.4" />
+		</collision>
         <skillList>
             <skill id="4032" level="7"/> <!-- NPC Strike -->
             <skill id="4072" level="7"/> <!-- Stun -->
             <skill id="4091" level="1"/> <!-- NPC Ogre Spirit Totem -->
             <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4408" level="15"/> <!-- HP Increase (7x) -->
-            <skill id="4410" level="16"/> <!-- Very Strong P. Atk. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
             <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="15"/> <!-- Strong P. Def. -->
-            <skill id="4278" level="1"/> <!-- Dark Attack -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
-            <skill id="4276" level="2"/> <!-- Bow Vulnerability -->
-            <skill id="4458" level="2"/> <!-- Spear Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1938,10 +1875,6 @@
                 <clan>ALL</clan>
             </clanList>
         </ai>
-        <collision>
-            <radius normal="25" grown="30"/>
-            <height normal="90" grown="109"/>
-        </collision>
     </npc>
     <npc id="20630" level="45" type="Monster" name="Taik Orc">
         <parameters>
@@ -4344,7 +4277,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20666" level="52" type="Monster" name="Taik Orc Watchman" element="FIRE">
+	<npc id="20666" level="52" type="Monster" name="Taik Orc Watchman">
         <!-- L2wiki: https://l2wiki.com/classic/Taik_Orc_Watchman -->
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
@@ -4360,7 +4293,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="72"/> <!-- rhand: Stormbringer -->
-        <acquire exp="4883" sp="146" attribute_exp="9"/>
+		<acquire exp="4883" sp="146" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="623.90323" hpRegen="6.5" mp="877.035" mpRegen="2.4"/>
             <speed>
@@ -4470,7 +4403,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20668" level="54" type="Monster" name="Grave Guard" element="FIRE">
+	<npc id="20668" level="54" type="Monster" name="Grave Guard">
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
@@ -4484,7 +4417,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="5224" sp="156" attribute_exp="10"/>
+		<acquire exp="5224" sp="156" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="665.52962" hpRegen="6.5" mp="938.985" mpRegen="2.4"/>
             <attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -4536,7 +4469,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20669" level="55" type="Monster" name="Taik Orc Supply Officer" element="FIRE">
+	<npc id="20669" level="55" type="Monster" name="Taik Orc Supply Officer">
         <!-- L2wiki: https://l2wiki.com/classic/Taik_Orc_Supply_Officer -->
         <parameters>
             <param name="MoveAroundSocial" value="90"/>
@@ -4552,7 +4485,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="75"/> <!-- rhand: Caliburs -->
-        <acquire exp="5463" sp="163" attribute_exp="11"/>
+		<acquire exp="5463" sp="163" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="686.46597" hpRegen="6.5" mp="969.075" mpRegen="2.4"/>
             <speed>
@@ -4947,7 +4880,7 @@
             <height normal="45"/>
         </collision>
     </npc>
-    <npc id="20675" level="50" type="Monster" name="Tairim" element="FIRE">
+		<npc id="20675" level="50" type="Monster" name="Tairim">
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
             <param name="MoveAroundSocial1" value="82"/>
@@ -4961,7 +4894,7 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="4479" sp="134" attribute_exp="8"/>
+		<acquire exp="4479" sp="134" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="583.01577" hpRegen="5.5" mp="814.2" mpRegen="2.1"/>
             <attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5026,7 +4959,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20676" level="65" type="Monster" name="Judge of Marsh" element="FIRE">
+		<npc id="20676" level="65" type="Monster" name="Judge of Marsh">
         <!-- Fix me -->
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
@@ -5041,7 +4974,7 @@
         </parameters>
         <race>PLANT</race>
         <sex>MALE</sex>
-        <acquire exp="14170" sp="425" attribute_exp="22"/>
+		<acquire exp="14170" sp="425" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="900.139895" hpRegen="7.5" mp="1295.64" mpRegen="2.7"/>
             <attack physical="641.099349" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5096,7 +5029,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20677" level="66" type="Monster" name="Tulben" element="FIRE">
+		<npc id="20677" level="66" type="Monster" name="Tulben">
         <!-- Todo: Fix me -->
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
@@ -5111,7 +5044,7 @@
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
-        <acquire exp="14583" sp="437" attribute_exp="23"/>
+		<acquire exp="14583" sp="437" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="921.1994" hpRegen="7.5" mp="1329.27" mpRegen="2.7"/>
             <attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
@@ -5166,7 +5099,7 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20678" level="53" type="Monster" name="Tortured Undead" element="FIRE">
+		<npc id="20678" level="53" type="Monster" name="Tortured Undead">
         <!-- Todo :Fix Me -->
         <parameters>
             <param name="MoveAroundSocial" value="82"/>
@@ -5181,7 +5114,7 @@
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <acquire exp="10129" sp="303" attribute_exp="10"/>
+		<acquire exp="10129" sp="303" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="644.83958" hpRegen="6.5" mp="907.125" mpRegen="2.4"/>
             <attack physical="389.082012" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>

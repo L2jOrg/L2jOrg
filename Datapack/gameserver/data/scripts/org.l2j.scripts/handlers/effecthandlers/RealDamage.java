@@ -30,7 +30,7 @@ public class RealDamage extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-        effected.reduceCurrentHp(power, effector, skill, false, false, false, false);
+        effected.reduceCurrentHp(power, effector, skill, false, true, false, false);
         if (isPlayer(effector)) {
             effector.sendDamageMessage(effected, skill, (int) power, 0, false, false);
         }

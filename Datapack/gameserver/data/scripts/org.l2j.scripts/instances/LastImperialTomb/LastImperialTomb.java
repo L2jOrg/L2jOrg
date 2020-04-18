@@ -19,8 +19,8 @@ package instances.LastImperialTomb;
 import java.util.*;
 
 import instances.AbstractInstance;
-import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Util;
+import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.Location;
@@ -31,6 +31,8 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Last Imperial Tomb AI
@@ -40,6 +42,7 @@ import org.l2j.gameserver.network.serverpackets.*;
  */
 public class LastImperialTomb extends AbstractInstance
 {
+	private static Logger LOGGER = LoggerFactory.getLogger(LastImperialTomb.class);
 	// NPCs
 	private static final int GUIDE = 32011;
 	private static final int CUBE = 29061;
@@ -138,7 +141,7 @@ public class LastImperialTomb extends AbstractInstance
 	// @formatter:on
 	// Misc
 	private static final int TEMPLATE_ID = 205;
-	private static final int FRINTEZZA_WAIT_TIME = 10; // minutes
+	private static final int FRINTEZZA_WAIT_TIME = 1; // 1 minutes
 	private static final int RANDOM_SONG_INTERVAL = 90; // seconds
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20; // seconds
 	private static final int MAX_DEMONS = 24;
@@ -438,21 +441,24 @@ public class LastImperialTomb extends AbstractInstance
 			case "SPAWN_DEMONS":
 			{
 				final Instance world = player.getInstanceWorld();
-				final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
-				if (!portraits.isEmpty())
+				if (world != null)
 				{
-					final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
-					for (int i : portraits.values())
+					final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
+					if ((portraits != null) && !portraits.isEmpty())
 					{
-						if (demons.size() > MAX_DEMONS)
+						final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
+						for (int i : portraits.values())
 						{
-							break;
+							if (demons.size() > MAX_DEMONS)
+							{
+								break;
+							}
+							final Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
+							demons.add(demon);
 						}
-						final Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
-						demons.add(demon);
+						world.setParameter("demons", demons);
+						startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player, false);
 					}
-					world.setParameter("demons", demons);
-					startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player, false);
 				}
 				break;
 			}
@@ -572,18 +578,16 @@ public class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_8":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				broadCastPacket(world, new SocialAction(activeScarlet.getObjectId(), 2));
+				broadCastPacket(world, new SocialAction(npc.getObjectId(), 2));
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_9", 9000, npc, null, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_9":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				activeScarlet.setIsInvul(false);
-				activeScarlet.setIsImmobilized(false);
-				activeScarlet.enableAllSkills();
+				npc.setIsInvul(false);
+				npc.setIsImmobilized(false);
+				npc.enableAllSkills();
 				enablePlayers(world);
 				break;
 			}
@@ -602,7 +606,8 @@ public class LastImperialTomb extends AbstractInstance
 			{
 				final Instance world = npc.getInstanceWorld();
 				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
-				frintezza.doDie(frintezza);
+				assert frintezza != null;
+				frintezza.doDie(player);
 				break;
 			}
 			case "FINISH_CAMERA_3":
@@ -723,7 +728,7 @@ public class LastImperialTomb extends AbstractInstance
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
-	
+
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
@@ -734,6 +739,7 @@ public class LastImperialTomb extends AbstractInstance
 			world.spawnGroup("room1");
 			final Set<Npc> monsters = world.getAliveNpcs();
 			world.setParameter("monstersCount", monsters.size() - 1);
+
 			for (int doorId : FIRST_ROOM_DOORS)
 			{
 				world.openCloseDoor(doorId, true);
@@ -754,12 +760,20 @@ public class LastImperialTomb extends AbstractInstance
 		else if (Util.contains(DEMONS, npc.getId()))
 		{
 			final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
-			demons.remove(npc);
+			if (demons != null)
+			{
+				demons.remove(npc);
+				world.setParameter("demons", demons);
+			}
 		}
 		else if (Util.contains(PORTRAITS, npc.getId()))
 		{
 			final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
-			portraits.remove(npc);
+			if (portraits != null)
+			{
+				portraits.remove(npc);
+				world.setParameter("portraits", portraits);
+			}
 		}
 		else
 		{
@@ -777,7 +791,7 @@ public class LastImperialTomb extends AbstractInstance
 						world.setParameter("monstersCount", monsters.size() - 1);
 						for (int doorId : FIRST_ROUTE_DOORS)
 						{
-							openDoor(doorId, 205);
+							world.openCloseDoor(doorId, true);
 						}
 						break;
 					}
@@ -898,9 +912,8 @@ public class LastImperialTomb extends AbstractInstance
 			}
 		}
 	}
-	
-	public static void main(String[] args)
+	public static LastImperialTomb provider()
 	{
-		new LastImperialTomb();
+		return new LastImperialTomb();
 	}
 }
