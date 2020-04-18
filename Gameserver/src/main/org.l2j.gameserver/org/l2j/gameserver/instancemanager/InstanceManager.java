@@ -1,5 +1,11 @@
 package org.l2j.gameserver.instancemanager;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntLongMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.Config;
@@ -33,30 +39,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.DayOfWeek;
-import java.util.*;
-import java.util.Map.Entry;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * Instance manager.
  *
  * @author evill33t, GodKratos, malyelfik
+ * @author JoeAlisson
  */
 public final class InstanceManager extends GameXmlReader {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(InstanceManager.class);
-    // Database query
     private static final String DELETE_INSTANCE_TIME = "DELETE FROM character_instance_time WHERE charId=? AND instanceId=?";
 
-    // Instance templates holder
-    private final Map<Integer, InstanceTemplate> _instanceTemplates = new HashMap<>();
-    private final Map<Integer, Instance> _instanceWorlds = new ConcurrentHashMap<>();
-    // Player reenter times
-    private final Map<Integer, Map<Integer, Long>> _playerInstanceTimes = new ConcurrentHashMap<>();
-    // Created instance worlds
-    private int _currentInstanceId = 0;
+    private final IntMap<InstanceTemplate> instanceTemplates = new HashIntMap<>();
+    private final IntMap<Instance> instanceWorlds = new CHashIntMap<>();
+    private final IntMap<IntLongMap> playerInstanceTimes = new CHashIntMap<>();
+    private int currentInstanceId = 0;
 
     private InstanceManager() {
         load();
@@ -69,27 +73,23 @@ public final class InstanceManager extends GameXmlReader {
 
     @Override
     public void load() {
-        // Load instance templates
-        _instanceTemplates.clear();
+        instanceTemplates.clear();
         parseDatapackDirectory("data/instances", true);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceTemplates.size() + " instance templates.");
-        // Load player's reenter data
-        _playerInstanceTimes.clear();
+        LOGGER.info("Loaded {} instance templates.", instanceTemplates.size());
+
+        playerInstanceTimes.clear();
         restoreInstanceTimes();
-        LOGGER.info(getClass().getSimpleName() + ": Loaded instance reenter times for " + _playerInstanceTimes.size() + " players.");
+        LOGGER.info("Loaded instance reenter times for {} players.", playerInstanceTimes.size());
     }
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc, XmlReader::isNode, listNode ->
-        {
+        forEach(doc, XmlReader::isNode, listNode -> {
             if ("instance".equals(listNode.getNodeName())) {
                 parseInstanceTemplate(listNode, f);
             }
         });
     }
-
-
 
     // --------------------------------------------------------------------
     // Instance data loader - END
@@ -103,7 +103,7 @@ public final class InstanceManager extends GameXmlReader {
     private void parseInstanceTemplate(Node instanceNode, File file) {
         // Parse "instance" node
         final int id = parseInteger(instanceNode.getAttributes(), "id");
-        if (_instanceTemplates.containsKey(id)) {
+        if (instanceTemplates.containsKey(id)) {
             LOGGER.warn(": Instance template with ID " + id + " already exists");
             return;
         }
@@ -271,7 +271,7 @@ public final class InstanceManager extends GameXmlReader {
         });
 
         // Save template
-        _instanceTemplates.put(id, template);
+        instanceTemplates.put(id, template);
 
     }
 
@@ -303,11 +303,11 @@ public final class InstanceManager extends GameXmlReader {
      * @return newly created instance if template was found, otherwise {@code null}
      */
     public Instance createInstance(int id, Player player) {
-        if (!_instanceTemplates.containsKey(id)) {
+        if (!instanceTemplates.containsKey(id)) {
             LOGGER.warn(": Missing template for instance with id " + id + "!");
             return null;
         }
-        return new Instance(getNewInstanceId(), _instanceTemplates.get(id), player);
+        return new Instance(getNewInstanceId(), instanceTemplates.get(id), player);
     }
 
     /**
@@ -317,7 +317,7 @@ public final class InstanceManager extends GameXmlReader {
      * @return instance itself if found, otherwise {@code null}
      */
     public Instance getInstance(int instanceId) {
-        return _instanceWorlds.get(instanceId);
+        return instanceWorlds.get(instanceId);
     }
 
     /**
@@ -326,7 +326,7 @@ public final class InstanceManager extends GameXmlReader {
      * @return Collection of all instances
      */
     public Collection<Instance> getInstances() {
-        return _instanceWorlds.values();
+        return instanceWorlds.values();
     }
 
     /**
@@ -337,7 +337,7 @@ public final class InstanceManager extends GameXmlReader {
      * @return instance if found, otherwise {@code null}
      */
     public Instance getPlayerInstance(Player player, boolean isInside) {
-        return _instanceWorlds.values().stream().filter(i -> (isInside) ? i.containsPlayer(player) : i.isAllowed(player)).findFirst().orElse(null);
+        return instanceWorlds.values().stream().filter(i -> (isInside) ? i.containsPlayer(player) : i.isAllowed(player)).findFirst().orElse(null);
     }
 
     /**
@@ -347,13 +347,13 @@ public final class InstanceManager extends GameXmlReader {
      */
     private synchronized int getNewInstanceId() {
         do {
-            if (_currentInstanceId == Integer.MAX_VALUE) {
-                _currentInstanceId = 0;
+            if (currentInstanceId == Integer.MAX_VALUE) {
+                currentInstanceId = 0;
             }
-            _currentInstanceId++;
+            currentInstanceId++;
         }
-        while (_instanceWorlds.containsKey(_currentInstanceId));
-        return _currentInstanceId;
+        while (instanceWorlds.containsKey(currentInstanceId));
+        return currentInstanceId;
     }
 
     /**
@@ -363,8 +363,8 @@ public final class InstanceManager extends GameXmlReader {
      */
     public void register(Instance instance) {
         final int instanceId = instance.getId();
-        if (!_instanceWorlds.containsKey(instanceId)) {
-            _instanceWorlds.put(instanceId, instance);
+        if (!instanceWorlds.containsKey(instanceId)) {
+            instanceWorlds.put(instanceId, instance);
         }
     }
 
@@ -375,8 +375,8 @@ public final class InstanceManager extends GameXmlReader {
      * @param instanceId ID of instance to unregister
      */
     public void unregister(int instanceId) {
-        if (_instanceWorlds.containsKey(instanceId)) {
-            _instanceWorlds.remove(instanceId);
+        if (instanceWorlds.containsKey(instanceId)) {
+            instanceWorlds.remove(instanceId);
         }
     }
 
@@ -387,7 +387,7 @@ public final class InstanceManager extends GameXmlReader {
      * @return name of instance if found, otherwise {@code null}
      */
     public String getInstanceName(int templateId) {
-        return  _instanceTemplates.get(templateId).getName();
+        return  instanceTemplates.get(templateId).getName();
     }
 
     /**
@@ -420,16 +420,16 @@ public final class InstanceManager extends GameXmlReader {
      * @param player instance of player who wants to get re-enter data
      * @return map in form templateId, penaltyEndTime
      */
-    public Map<Integer, Long> getAllInstanceTimes(Player player) {
+    public IntLongMap getAllInstanceTimes(Player player) {
         // When player don't have any instance penalty
-        final Map<Integer, Long> instanceTimes = _playerInstanceTimes.get(player.getObjectId());
+        final var instanceTimes = playerInstanceTimes.get(player.getObjectId());
         if ((instanceTimes == null) || instanceTimes.isEmpty()) {
-            return Collections.emptyMap();
+            return Containers.EMPTY_INT_LONG_MAP;
         }
 
         // Find passed penalty
         final List<Integer> invalidPenalty = new ArrayList<>(instanceTimes.size());
-        for (Entry<Integer, Long> entry : instanceTimes.entrySet()) {
+        for (var entry : instanceTimes.entrySet()) {
             if (entry.getValue() <= System.currentTimeMillis()) {
                 invalidPenalty.add(entry.getKey());
             }
@@ -462,7 +462,7 @@ public final class InstanceManager extends GameXmlReader {
      * @param time     penalty time
      */
     public void setReenterPenalty(int objectId, int id, long time) {
-        _playerInstanceTimes.computeIfAbsent(objectId, k -> new ConcurrentHashMap<>()).put(id, time);
+        playerInstanceTimes.computeIfAbsent(objectId, k -> new CHashIntLongMap()).put(id, time);
     }
 
     /**
@@ -475,7 +475,7 @@ public final class InstanceManager extends GameXmlReader {
      */
     public long getInstanceTime(Player player, int id) {
         // Check if exists reenter data for player
-        final Map<Integer, Long> playerData = _playerInstanceTimes.get(player.getObjectId());
+        final var playerData = playerInstanceTimes.get(player.getObjectId());
         if ((playerData == null) || !playerData.containsKey(id)) {
             return -1;
         }
@@ -501,8 +501,8 @@ public final class InstanceManager extends GameXmlReader {
             ps.setInt(1, player.getObjectId());
             ps.setInt(2, id);
             ps.execute();
-            if (_playerInstanceTimes.get(player.getObjectId()) != null) {
-                _playerInstanceTimes.get(player.getObjectId()).remove(id);
+            if (playerInstanceTimes.get(player.getObjectId()) != null) {
+                playerInstanceTimes.get(player.getObjectId()).remove(id);
             }
         } catch (Exception e) {
             LOGGER.warn(getClass().getSimpleName() + ": Could not delete character instance reenter data: ", e);
@@ -516,7 +516,7 @@ public final class InstanceManager extends GameXmlReader {
      * @return instance template if found, otherwise {@code null}
      */
     public InstanceTemplate getInstanceTemplate(int id) {
-        return _instanceTemplates.get(id);
+        return instanceTemplates.get(id);
     }
 
     /**
@@ -525,7 +525,7 @@ public final class InstanceManager extends GameXmlReader {
      * @return Collection of all instance templates
      */
     public Collection<InstanceTemplate> getInstanceTemplates() {
-        return _instanceTemplates.values();
+        return instanceTemplates.values();
     }
 
     /**
@@ -535,7 +535,11 @@ public final class InstanceManager extends GameXmlReader {
      * @return count of created instances
      */
     public long getWorldCount(int templateId) {
-        return _instanceWorlds.values().stream().filter(i -> i.getTemplateId() == templateId).count();
+        return instanceWorlds.values().stream().filter(i -> i.getTemplateId() == templateId).count();
+    }
+
+    public List<Instance> getInstances(int templateId) {
+        return instanceWorlds.values().stream().filter(i -> i.getTemplateId() == templateId).collect(Collectors.toList());
     }
 
     public static InstanceManager getInstance() {

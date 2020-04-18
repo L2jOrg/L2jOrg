@@ -9,6 +9,7 @@ import handlers.effecthandlers.*;
 import handlers.effecthandlers.stat.*;
 import handlers.itemhandlers.TransformationBook;
 import handlers.skillconditionhandlers.*;
+import instances.sevensigns.SevenSigns;
 import quests.tutorial.Q10960_Tutorial.Q10960_Tutorial;
 import quests.tutorial.Q201_Tutorial.Q201_Tutorial;
 import quests.tutorial.Q202_Tutorial.Q202_Tutorial;
@@ -300,7 +301,7 @@ open module org.l2j.scripts {
             instances.ResidenceOfKingIgnis.ResidenceOfKingIgnis,
             instances.GolbergRoom.GolbergRoom,
             instances.LastImperialTomb.LastImperialTomb,
-            instances.SevenSignsRBs.SevenSignsRBs;
+                SevenSigns;
 
 
 

@@ -2,14 +2,12 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.MatchingMemberType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.world.MapRegionManager;
 
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -37,9 +35,9 @@ public class ExPartyRoomMember extends ServerPacket {
             writeInt(member.getLevel());
             writeInt(MapRegionManager.getInstance().getBBs(member.getLocation()));
             writeInt(_room.getMemberType(member).ordinal());
-            final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(member);
+            final var _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(member);
             writeInt(_instanceTimes.size());
-            for (Entry<Integer, Long> entry : _instanceTimes.entrySet()) {
+            for (var entry : _instanceTimes.entrySet()) {
                 final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
                 writeInt(entry.getKey());
                 writeInt((int) instanceTime);

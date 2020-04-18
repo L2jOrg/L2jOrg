@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package instances;
 
 import ai.AbstractNpcAI;
@@ -65,8 +49,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param player player who wants get instance world
 	 * @return instance world if found, otherwise null
 	 */
-	public Instance getPlayerInstance(Player player)
-	{
+	public Instance getPlayerInstance(Player player) {
 		return InstanceManager.getInstance().getPlayerInstance(player, false);
 	}
 	
@@ -116,29 +99,22 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			}
 			onEnter(player, instance, false);
 		}
-		else
-		{
-			// Get instance template
+		else {
 			final InstanceManager manager = InstanceManager.getInstance();
 			final InstanceTemplate template = manager.getInstanceTemplate(templateId);
 			if (template == null)
 			{
-				LOGGER.warn("Player " + player.getName() + " (" + player.getObjectId() + ") wants to create instance with unknown template id " + templateId + "!");
+				LOGGER.warn("Player {} wants to create instance with unknown template id {} !", player, templateId);
 				return;
 			}
-			
-			// Get instance enter scope
+
 			final List<Player> enterGroup = template.getEnterGroup(player);
-			// When nobody can enter
-			if (enterGroup == null)
-			{
-				LOGGER.warn("Instance " + template.getName() + " (" + templateId + ") has invalid group size limits!");
+			if (enterGroup == null) {
+				LOGGER.warn("Instance {} has invalid group size limits!", template);
 				return;
 			}
-			
-			// Validate conditions for group
-			if (!player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS) && (!template.validateConditions(enterGroup, npc, this::showHtmlFile) || !validateConditions(enterGroup, npc, template)))
-			{
+
+			if (!player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS) && (!template.validateConditions(enterGroup, npc, this::showHtmlFile) || !validateConditions(enterGroup, npc, template))) {
 				return;
 			}
 			
@@ -148,25 +124,19 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				player.sendPacket(SystemMessageId.THE_NUMBER_OF_INSTANT_ZONES_THAT_CAN_BE_CREATED_HAS_BEEN_EXCEEDED_PLEASE_TRY_AGAIN_LATER);
 				return;
 			}
-			
-			// Check if any player from enter group has active instance
-			for (Player member : enterGroup)
-			{
-				if (getPlayerInstance(member) != null)
-				{
+
+			for (Player member : enterGroup) {
+				if (getPlayerInstance(member) != null) {
 					enterGroup.forEach(p -> p.sendPacket(SystemMessageId.THE_MAXIMUM_NUMBER_OF_INSTANT_ZONES_HAS_BEEN_EXCEEDED_YOU_CANNOT_ENTER));
 					return;
 				}
-				
-				// Check if any player from the group has already finished the instance
-				if (InstanceManager.getInstance().getInstanceTime(member, templateId) > 0)
-				{
+
+				if (InstanceManager.getInstance().getInstanceTime(member, templateId) > 0) {
 					enterGroup.forEach(p -> p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addString(member.getName())));
 					return;
 				}
 			}
-			
-			// Create new instance for enter player group
+
 			instance = manager.createInstance(template, player);
 			
 			// Move each player from enter group to instance

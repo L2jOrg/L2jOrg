@@ -126,8 +126,7 @@ public class Location implements IPositionable {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Location) {
-            final Location loc = (Location) obj;
+        if (obj instanceof Location loc) {
             return (getX() == loc.getX()) && (getY() == loc.getY()) && (getZ() == loc.getZ()) && (getHeading() == loc.getHeading());
         }
         return false;

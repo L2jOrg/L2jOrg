@@ -2,28 +2,31 @@ package org.l2j.gameserver.model.events;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.DoorDataManager;
-import org.l2j.gameserver.enums.InventorySlot;
-import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.stats.Stat;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.scripting.ManagedScript;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.AttributeType;
+import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
-import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.Spawn;
+import org.l2j.gameserver.instancemanager.CastleManager;
+import org.l2j.gameserver.instancemanager.FortDataManager;
+import org.l2j.gameserver.instancemanager.InstanceManager;
+import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Monster;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
@@ -51,6 +54,7 @@ import org.l2j.gameserver.model.holders.MovieHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.CommonItem;
@@ -59,15 +63,15 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.Olympiad;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
-import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.engine.scripting.ManagedScript;
 import org.l2j.gameserver.util.MinionList;
+import org.l2j.gameserver.world.WorldTimeController;
+import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -2794,13 +2798,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
         if ((includeParty || includeCommandChannel) && player.isInParty()) {
             if (includeCommandChannel && player.getParty().isInCommandChannel()) {
-                player.getParty().getCommandChannel().forEachMember(member ->
+                player.getParty().getCommandChannel().checkEachMember(member ->
                 {
                     actionForEachPlayer(member, npc, isSummon);
                     return true;
                 });
             } else if (includeParty) {
-                player.getParty().forEachMember(member ->
+                player.getParty().checkEachMember(member ->
                 {
                     actionForEachPlayer(member, npc, isSummon);
                     return true;
