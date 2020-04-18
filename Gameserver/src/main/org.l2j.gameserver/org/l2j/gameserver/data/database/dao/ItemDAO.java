@@ -16,4 +16,7 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("UPDATE items SET loc='INVENTORY' WHERE owner_id=:objectId:")
     void updateToInventory(int objectId);
+
+    @Query("DELETE FROM items WHERE item_id= :itemId:")
+    void deleteAllItemsById(int itemId);
 }

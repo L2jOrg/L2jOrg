@@ -1,22 +1,22 @@
 package org.l2j.gameserver.model.quest;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
-import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.datatables.EventDroplist;
-import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.instancemanager.EventShrineManager;
-import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.commons.util.DateRange;
 import org.l2j.gameserver.data.database.announce.EventAnnouncement;
+import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
+import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.datatables.drop.EventDropHolder;
+import org.l2j.gameserver.datatables.drop.EventDropList;
+import org.l2j.gameserver.instancemanager.EventShrineManager;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.events.AbstractScript;
-import org.l2j.gameserver.model.holders.DropHolder;
-import org.l2j.gameserver.script.DateRange;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -24,287 +24,155 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.isNotEmpty;
 
 /**
  * Parent class for long time events.<br>
  * Maintains config reading, spawn of NPCs, adding of event's drop.
  *
  * @author GKR
+ * @author JoeAlisson
  */
 public class LongTimeEvent extends Quest {
-    // NPCs to spawm and their spawn points
-    protected final List<NpcSpawn> _spawnList = new ArrayList<>();
-    // Drop data for event
-    protected final List<DropHolder> _dropList = new ArrayList<>();
-    // Items to destroy when event ends.
-    protected final List<Integer> _destoyItemsOnEnd = new ArrayList<>();
-    protected Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
-    protected String _eventName;
-    // Messages
-    protected String _onEnterMsg = "Event is in process";
-    protected String _endMsg = "Event ends!";
-    protected DateRange _eventPeriod = null;
-    protected DateRange _dropPeriod;
-    boolean _enableShrines = false;
 
-    public LongTimeEvent() {
+    private static final Logger LOGGER = LoggerFactory.getLogger(LongTimeEvent.class);
+
+    private final List<NpcSpawn> spawnList = new ArrayList<>();
+    private final List<EventDropHolder> dropList = new LinkedList<>();
+    private final IntSet itemsToDestroy = new HashIntSet();
+    private String name;
+    private String startMessage;
+    private String endMessage;
+    private int enterAnnounceId = -1;
+    private DateRange period = DateRange.STARTED_DAY;
+    private boolean enableShrines = false;
+
+    protected LongTimeEvent() {
         super(-1);
-        loadConfig();
+        var parser = new EventParser();
+        parser.load();
 
-        if (_eventPeriod != null) {
-            if (_eventPeriod.isWithinRange(new Date())) {
-                startEvent();
-                LOGGER.info("Event " + _eventName + " active till " + _eventPeriod.getEndDate());
-            } else if (_eventPeriod.getStartDate().after(new Date())) {
-                final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
-                ThreadPool.schedule(new ScheduleStart(), delay);
-                LOGGER.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
-            } else {
-                // Destroy items that must exist only on event period.
-                destoyItemsOnEnd();
-                LOGGER.info("Event " + _eventName + " has passed... Ignored ");
-            }
+        final var today = LocalDate.now();
+        if (period.isWithinRange(today)) {
+            startEvent();
+        } else if (period.isAfter(today)) {
+            ThreadPool.schedule(this::startEvent, period.secondsToStart(today), TimeUnit.SECONDS);
+            LOGGER.info("Event {} will be started at {}", name, period.getStartDate());
+        } else {
+            destroyItemsOnEnd();
+            LOGGER.info("Event {} has passed... Ignored ",  name);
         }
     }
 
-    /**
-     * Load event configuration file
-     */
-    private void loadConfig() {
-        new GameXmlReader() {
-            @Override
-            protected Path getSchemaFilePath() {
-                return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/eventConfig.xsd");
-            }
-
-            @Override
-            public void load() {
-                parseDatapackFile("data/scripts/org.l2j.scripts/events/" + getScriptName() + "/config.xml");
-            }
-
-            @Override
-            public void parseDocument(Document doc, File f) {
-                if (!doc.getDocumentElement().getNodeName().equalsIgnoreCase("event")) {
-                    throw new NullPointerException("WARNING!!! " + getScriptName() + " event: bad config file!");
-                }
-                _eventName = doc.getDocumentElement().getAttributes().getNamedItem("name").getNodeValue();
-                final String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
-                _eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
-
-                if ((doc.getDocumentElement().getAttributes().getNamedItem("enableShrines") != null) && doc.getDocumentElement().getAttributes().getNamedItem("enableShrines").getNodeValue().equalsIgnoreCase("true")) {
-                    _enableShrines = true;
-                }
-
-                if (doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod") != null) {
-                    final String dropPeriod = doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod").getNodeValue();
-                    _dropPeriod = DateRange.parse(dropPeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
-                    // Check if drop period is within range of event period
-                    if (!_eventPeriod.isWithinRange(_dropPeriod.getStartDate()) || !_eventPeriod.isWithinRange(_dropPeriod.getEndDate())) {
-                        _dropPeriod = _eventPeriod;
-                    }
-                } else {
-                    _dropPeriod = _eventPeriod; // Drop period, if not specified, assumes all event period.
-                }
-
-                if (_eventPeriod == null) {
-                    throw new NullPointerException("WARNING!!! " + getScriptName() + " event: illegal event period");
-                }
-
-                final Date today = new Date();
-
-                if (_eventPeriod.getStartDate().after(today) || _eventPeriod.isWithinRange(today)) {
-                    final Node first = doc.getDocumentElement().getFirstChild();
-                    for (Node n = first; n != null; n = n.getNextSibling()) {
-                        // Loading droplist
-                        if (n.getNodeName().equalsIgnoreCase("droplist")) {
-                            for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                                if (d.getNodeName().equalsIgnoreCase("add")) {
-                                    try {
-                                        final int itemId = Integer.parseInt(d.getAttributes().getNamedItem("item").getNodeValue());
-                                        final int minCount = Integer.parseInt(d.getAttributes().getNamedItem("min").getNodeValue());
-                                        final int maxCount = Integer.parseInt(d.getAttributes().getNamedItem("max").getNodeValue());
-                                        final String chance = d.getAttributes().getNamedItem("chance").getNodeValue();
-                                        int finalChance = 0;
-
-                                        if (!chance.isEmpty() && chance.endsWith("%")) {
-                                            finalChance = Integer.parseInt(chance.substring(0, chance.length() - 1)) * 10000;
-                                        }
-
-                                        if (ItemEngine.getInstance().getTemplate(itemId) == null) {
-                                            LOGGER.warn(getScriptName() + " event: " + itemId + " is wrong item id, item was not added in droplist");
-                                            continue;
-                                        }
-
-                                        if (minCount > maxCount) {
-                                            LOGGER.warn(getScriptName() + " event: item " + itemId + " - min greater than max, item was not added in droplist");
-                                            continue;
-                                        }
-
-                                        if ((finalChance < 10000) || (finalChance > 1000000)) {
-                                            LOGGER.warn(getScriptName() + " event: item " + itemId + " - incorrect drop chance, item was not added in droplist");
-                                            continue;
-                                        }
-
-                                        _dropList.add(new DropHolder(null, itemId, minCount, maxCount, finalChance));
-                                    } catch (NumberFormatException nfe) {
-                                        LOGGER.warn("Wrong number format in config.xml droplist block for " + getScriptName() + " event");
-                                    }
-                                }
-                            }
-                        } else if (n.getNodeName().equalsIgnoreCase("spawnlist")) {
-                            // Loading spawnlist
-                            for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                                if (d.getNodeName().equalsIgnoreCase("add")) {
-                                    try {
-                                        final int npcId = Integer.parseInt(d.getAttributes().getNamedItem("npc").getNodeValue());
-                                        final int xPos = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
-                                        final int yPos = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
-                                        final int zPos = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
-                                        final int heading = d.getAttributes().getNamedItem("heading").getNodeValue() != null ? Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue()) : 0;
-
-                                        if (NpcData.getInstance().getTemplate(npcId) == null) {
-                                            LOGGER.warn(getScriptName() + " event: " + npcId + " is wrong NPC id, NPC was not added in spawnlist");
-                                            continue;
-                                        }
-
-                                        _spawnList.add(new NpcSpawn(npcId, new Location(xPos, yPos, zPos, heading)));
-                                    } catch (NumberFormatException nfe) {
-                                        LOGGER.warn("Wrong number format in config.xml spawnlist block for " + getScriptName() + " event");
-                                    }
-                                }
-                            }
-                        } else if (n.getNodeName().equalsIgnoreCase("messages")) {
-                            // Loading Messages
-                            for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                                if (d.getNodeName().equalsIgnoreCase("add")) {
-                                    final String msgType = d.getAttributes().getNamedItem("type").getNodeValue();
-                                    final String msgText = d.getAttributes().getNamedItem("text").getNodeValue();
-                                    if ((msgType != null) && (msgText != null)) {
-                                        if (msgType.equalsIgnoreCase("onEnd")) {
-                                            _endMsg = msgText;
-                                        } else if (msgType.equalsIgnoreCase("onEnter")) {
-                                            _onEnterMsg = msgText;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                // Load destroy item list at all times.
-                final Node first = doc.getDocumentElement().getFirstChild();
-                for (Node n = first; n != null; n = n.getNextSibling()) {
-                    if (n.getNodeName().equalsIgnoreCase("destoyItemsOnEnd")) {
-                        for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                            if (d.getNodeName().equalsIgnoreCase("item")) {
-                                try {
-                                    final int itemId = Integer.parseInt(d.getAttributes().getNamedItem("id").getNodeValue());
-                                    if (ItemEngine.getInstance().getTemplate(itemId) == null) {
-                                        LOGGER.warn(getScriptName() + " event: Item " + itemId + " does not exist.");
-                                        continue;
-                                    }
-                                    _destoyItemsOnEnd.add(itemId);
-                                } catch (NumberFormatException nfe) {
-                                    LOGGER.warn("Wrong number format in config.xml destoyItemsOnEnd block for " + getScriptName() + " event");
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }.load();
-
-    }
-
-    /**
-     * Maintenance event start - adds global drop, spawns event NPCs, shows start announcement.
-     */
     protected void startEvent() {
-        // Add drop
-        if (_dropList != null) {
-            for (DropHolder drop : _dropList) {
-                EventDroplist.getInstance().addGlobalDrop(drop.getItemId(), drop.getMin(), drop.getMax(), (int) drop.getChance(), _dropPeriod);
-            }
-        }
+        LOGGER.info("Event {} active until {}", name, period.getEndDate());
+        dropList.forEach(drop -> EventDropList.getInstance().addGlobalDrop(drop, period));
 
-        // Add spawns
-        final Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - System.currentTimeMillis();
-        if (_spawnList != null) {
-            for (NpcSpawn spawn : _spawnList) {
-                AbstractScript.addSpawn(spawn.npcId, spawn.loc.getX(), spawn.loc.getY(), spawn.loc.getZ(), spawn.loc.getHeading(), false, millisToEventEnd, false);
-            }
-        }
+        final var eventEnd = period.millisToEnd();
 
-        // Enable town shrines
-        if (_enableShrines) {
+        spawnList.forEach(spawn -> AbstractScript.addSpawn(spawn.npcId, spawn.loc.getX(), spawn.loc.getY(), spawn.loc.getZ(), spawn.loc.getHeading(), false, eventEnd, false));
+
+        if (enableShrines) {
             EventShrineManager.getInstance().setEnabled(true);
         }
 
-        // Send message on begin
-        Broadcast.toAllOnlinePlayers(_onEnterMsg);
-
-        // Add announce for entering players
-        AnnouncementsManager.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
-
-        // Schedule event end (now only for message sending)
-        ThreadPool.schedule(new ScheduleEnd(), millisToEventEnd);
+        if(isNotEmpty(startMessage)) {
+            Broadcast.toAllOnlinePlayers(startMessage);
+            var announce = new EventAnnouncement(period, startMessage);
+            AnnouncementsManager.getInstance().addAnnouncement(announce);
+            enterAnnounceId = announce.getId();
+        }
+        ThreadPool.schedule(new ScheduleEnd(), eventEnd);
     }
 
-    /**
-     * @return event period
-     */
-    public DateRange getEventPeriod() {
-        return _eventPeriod;
+    private void destroyItemsOnEnd() {
+        itemsToDestroy.forEach(itemId -> {
+            World.getInstance().forEachPlayer(player -> player.destroyItemByItemId(name, itemId, -1, player, true));
+            getDAO(ItemDAO.class).deleteAllItemsById(itemId);
+        });
     }
 
-    /**
-     * @return {@code true} if now is event period
-     */
     public boolean isEventPeriod() {
-        return _eventPeriod.isWithinRange(new Date());
+        return period.isWithinRange(LocalDate.now());
     }
 
-    /**
-     * @return {@code true} if now is drop period
-     */
-    public boolean isDropPeriod() {
-        return _dropPeriod.isWithinRange(new Date());
-    }
+    private class EventParser extends GameXmlReader {
 
-    void destoyItemsOnEnd() {
-        if (!_destoyItemsOnEnd.isEmpty()) {
-            for (int itemId : _destoyItemsOnEnd) {
-                // Remove item from online players.
-                for (Player player : World.getInstance().getPlayers()) {
-                    if (player != null) {
-                        player.destroyItemByItemId(_eventName, itemId, -1, player, true);
+        @Override
+        protected Path getSchemaFilePath() {
+            return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/eventConfig.xsd");
+        }
+
+        @Override
+        public void load() {
+            parseDatapackFile("data/scripts/org.l2j.scripts/events/" + getScriptName() + "/config.xml");
+        }
+
+        @Override
+        public void parseDocument(Document doc, File f) {
+            forEach(doc, "event", eventNode -> {
+                var attrs = eventNode.getAttributes();
+                name = parseString(attrs, "name");
+                period = DateRange.parse(parseString(attrs, "start-date"), parseString(attrs, "end-date"));
+                enableShrines = parseBoolean(attrs, "enable-shrines");
+                startMessage = parseString(attrs, "start-message");
+                endMessage = parseString(attrs, "end-message");
+
+                final var today = LocalDate.now();
+
+                if(period.isWithinRange(today)) {
+                    for(var node = eventNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+                        switch (node.getNodeName()) {
+                            case "drop" -> parseDrop(node);
+                            case "spawns" -> parseSpawns(node);
+                        }
                     }
                 }
-                // Update database
-                try (Connection con = DatabaseFactory.getInstance().getConnection();
-                     PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE item_id=?")) {
-                    statement.setInt(1, itemId);
-                    statement.execute();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+
+                forEach(eventNode, "destroy-items-on-end",
+                        destroyNode -> itemsToDestroy.addAll(parseIntSet(destroyNode)));
+
+            });
+        }
+
+        private void parseSpawns(Node node) {
+            forEach(node, "spawn", spawnNode -> {
+               final var npcId = parseInt(spawnNode.getAttributes(), "npc");
+
+               if(!NpcData.getInstance().existsNpc(npcId)) {
+                   LOGGER.warn("{} event: Npc Id {} not found", getScriptName(), npcId);
+                   return;
+               }
+               spawnList.add(new NpcSpawn(npcId, parseLocation(spawnNode)));
+            });
+        }
+
+        private void parseDrop(Node node) {
+            forEach(node, "item", itemNode -> {
+                final var attrs  = itemNode.getAttributes();
+                final var id = parseInt(attrs, "id");
+                final var min = parseInt(attrs, "min");
+                final var max = parseInt(attrs, "max");
+                final var chance = parseDouble(attrs, "chance");
+                final var minLevel = parseInt(attrs, "min-level");
+                final var maxLevel = parseInt(attrs, "max-level");
+                final var monsters = parseIntSet(attrs, "monsters");
+
+                dropList.add(new EventDropHolder(id, min, max, chance, minLevel, maxLevel, monsters));
+            });
         }
     }
 
-    protected class NpcSpawn {
+    protected static class NpcSpawn {
         protected final Location loc;
         protected final int npcId;
 
@@ -314,24 +182,22 @@ public class LongTimeEvent extends Quest {
         }
     }
 
-    protected class ScheduleStart implements Runnable {
-        @Override
-        public void run() {
-            startEvent();
-        }
-    }
-
     protected class ScheduleEnd implements Runnable {
         @Override
         public void run() {
-            // Disable town shrines
-            if (_enableShrines) {
+            if (enableShrines) {
                 EventShrineManager.getInstance().setEnabled(false);
             }
-            // Destroy item that must exist only on event period.
-            destoyItemsOnEnd();
-            // Send message on end
-            Broadcast.toAllOnlinePlayers(_endMsg);
+
+            destroyItemsOnEnd();
+
+            if(isNotEmpty(endMessage)) {
+                Broadcast.toAllOnlinePlayers(endMessage);
+            }
+
+            if(enterAnnounceId != -1) {
+                AnnouncementsManager.getInstance().deleteAnnouncement(enterAnnounceId);
+            }
         }
     }
 }

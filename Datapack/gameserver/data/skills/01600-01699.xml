@@ -334,7 +334,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" defense-mod="0.2" ignore-shield="true" over-hit="true">
+            <physical-attack defense-mod="0.8" ignore-shield="true" over-hit="true">
                 <power initial="465.0">
                     <value level="2">494.0</value>
                     <value level="3">525.0</value>
