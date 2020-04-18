@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 
@@ -37,7 +21,7 @@ public class AddHuntingTime extends AbstractEffect
 	private final int _zoneId;
 	private final long _time;
 	
-	public AddHuntingTime(StatsSet params)
+	private AddHuntingTime(StatsSet params)
 	{
 		_zoneId = params.getInt("zoneId", 0);
 		_time = params.getLong("time", 3600000);

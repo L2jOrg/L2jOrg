@@ -1052,11 +1052,8 @@
                     <value level="10">530</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="EXPSP_RATE" stat-add="EXPSP_RATE">
-                <power initial="0.0">
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">10</value>
+            <stat-modify start-level="4" mode="PER" stat="EXPSP_RATE" stat-add="EXPSP_RATE">
+                <power initial="10">
                     <value level="5">15</value>
                     <value level="6">20</value>
                     <value level="7">50</value>

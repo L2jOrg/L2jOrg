@@ -13,8 +13,8 @@
 						<xs:sequence minOccurs="0" maxOccurs="1">
 							<xs:element name="item" type="ItemInfo" maxOccurs="unbounded"/>
 						</xs:sequence>
-						<xs:attribute type="xs:long" name="id" use="required"/>
-						<xs:attribute type="CrystalType" name="grade" use="optional"/>
+						<xs:attribute type="xs:int" name="id" use="required"/>
+						<xs:attribute type="CrystalType" name="grade" default="NONE"/>
 						<xs:attribute type="xs:byte" name="group" default="0"/>
 						<xs:attribute type="xs:int" name="max-enchant" default="127"/> <!-- enchant limit -->
 					</xs:complexType>

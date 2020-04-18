@@ -795,8 +795,8 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-			<skill name="SummonMagic" id="4161" level="1" />
-			<skill name="PhysicalSpecial" id="4073" level="4" />
+			<!-- <skill name="SummonMagic" id="4161" level="1" /> -->
+			<!-- <skill name="PhysicalSpecial" id="4073" level="4" /> -->
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
@@ -814,8 +814,8 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-			<skill id="4073" level="4" /> <!-- Stun -->
-			<skill id="4161" level="1" /> <!-- Summon -->
+			<!-- <skill id="4073" level="4" />  Stun --> 
+		       <!-- <skill id="4161" level="1" /> Summon -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->

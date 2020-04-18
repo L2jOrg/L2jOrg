@@ -7,11 +7,12 @@ import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.EventDroplist.DateDrop;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.enums.InstanceType;
@@ -36,7 +37,6 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -54,8 +54,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.util.GameUtils.doIfIsCreature;
 
 public class Attackable extends Npc {
     private final AtomicReference<ItemHolder> _harvestItem = new AtomicReference<>();
@@ -65,7 +67,7 @@ public class Attackable extends Npc {
     private boolean _isRaidMinion = false;
     //
     private boolean _champion = false;
-    private volatile Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
+    private final Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
     private boolean _isReturningToSpawnPoint = false;
     private boolean _canReturnToSpawnPoint = true;
     private boolean _seeThroughSilentMove = false;
@@ -570,7 +572,7 @@ public class Attackable extends Npc {
                 getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
 
                 // Calculate the amount of hate this attackable receives from this attack.
-                double hateValue = (damage * 100) / (getLevel() + 7);
+                double hateValue = (damage * 100d) / (getLevel() + 7);
 
                 if (skill == null) {
                     hateValue *= attacker.getStats().getValue(Stat.HATE_ATTACK, 1);
@@ -1452,21 +1454,16 @@ public class Attackable extends Npc {
 
     @Override
     public void setTarget(WorldObject object) {
-        if (isDead()) {
+        if (nonNull(object) && isDead()) {
             return;
         }
 
-        if (object == null) {
-            final WorldObject target = getTarget();
-            final Map<Creature, AggroInfo> aggroList = _aggroList;
-            if (target != null) {
-                if (aggroList != null) {
-                    aggroList.remove(target);
-                }
-            }
-            if ((aggroList != null) && aggroList.isEmpty()) {
-                if (getAI() instanceof AttackableAI) {
-                    ((AttackableAI) getAI()).setGlobalAggro(-25);
+        if (isNull(object)) {
+            doIfIsCreature(getTarget(), _aggroList::remove);
+
+            if (_aggroList.isEmpty()) {
+                if (getAI() instanceof AttackableAI ai) {
+                    ai.setGlobalAggro(-25);
                 }
                 setWalking();
                 clearAggroList();

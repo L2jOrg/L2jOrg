@@ -11,30 +11,25 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author Mobius
  */
-public class RespawnTaskManager
-{
+public class RespawnTaskManager {
+
 	private static final Map<Npc, Long> PENDING_RESPAWNS = new ConcurrentHashMap<>();
 
-	public RespawnTaskManager()
-	{
-		ThreadPool.scheduleAtFixedRate(() ->
-		{
+	public RespawnTaskManager() {
+		ThreadPool.scheduleAtFixedRate(() -> {
 			final long time = System.currentTimeMillis();
-			for (Entry<Npc, Long> entry : PENDING_RESPAWNS.entrySet())
-			{
-				if (time > entry.getValue())
-			{
+
+			for (Entry<Npc, Long> entry : PENDING_RESPAWNS.entrySet()) {
+				if (time > entry.getValue()) {
 				final Npc npc = entry.getKey();
-							PENDING_RESPAWNS.remove(npc);
-						final Spawn spawn = npc.getSpawn();
-						if (spawn != null)
-						{
-							spawn.respawnNpc(npc);
-							spawn._scheduledCount--;
-						}
-					}
+				PENDING_RESPAWNS.remove(npc);
+				final Spawn spawn = npc.getSpawn();
+				if (spawn != null) {
+					spawn.respawnNpc(npc);
+					spawn._scheduledCount--;
 				}
-		}, 0, 1000);
+			}
+		} }, 0, 1000);
 	}
 
 	public void add(Npc npc, long time)
