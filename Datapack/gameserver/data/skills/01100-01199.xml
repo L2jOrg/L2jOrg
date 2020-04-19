@@ -1633,32 +1633,32 @@
             <effect-range initial="1100"/>
             <hit-time initial="2000"/>
             <activate-rate initial="-1"/>
-
-            <element type="DARK" value="20"/>
         </attributes>
         <consume>
             <mana-init initial="5">
                 <value level="2">6</value>
                 <value level="3">7</value>
+                <value level="3">7</value>
                 <value level="5">8</value>
+                <value level="6">8</value>
             </mana-init>
-            <mana initial="25">
-                <value level="2">28</value>
-                <value level="3">32</value>
-                <value level="4">35</value>
-                <value level="5">38</value>
-                <value level="6">40</value>
+            <mana initial="20">
+                <value level="2">22</value>
+                <value level="3">25</value>
+                <value level="4">28</value>
+                <value level="5">30</value>
+                <value level="6">32</value>
             </mana>
         </consume>
         <target type="ENEMY"/>
         <effects>
             <hp-drain percentage="40">
-                <power initial="18.0">
-                    <value level="2">21.0</value>
-                    <value level="3">23.0</value>
+                <power initial="21.0">
+                    <value level="2">23.0</value>
+                    <value level="3">25.0</value>
                     <value level="4">26.0</value>
-                    <value level="5">29.0</value>
-                    <value level="6">32.0</value>
+                    <value level="5">30.0</value>
+                    <value level="6">33.0</value>
                 </power>
             </hp-drain>
         </effects>
@@ -2327,8 +2327,6 @@
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
             <activate-rate initial="-1"/>
-
-            <element type="DARK" value="20"/>
         </attributes>
         <consume>
             <mana-init initial="9">

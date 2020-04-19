@@ -2923,6 +2923,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <enlarge-slot type="INVENTORY_NORMAL">
+                <power initial="10.0"/>
+            </enlarge-slot>
+        </effects>
     </skill>
     <skill id="45235" name="Glory Expand Limit Weight">
         <!-- Weight Limit +10000. -->
@@ -2930,5 +2935,10 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
+                <power initial="10000.0"/>
+            </stat-modify>
+        </effects>
     </skill>
 </list>
