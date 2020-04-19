@@ -10,8 +10,6 @@ import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -48,9 +46,9 @@ public class ExListPartyMatchingWaitingRoom extends ServerPacket {
             writeInt(player.getLevel());
             final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
             writeInt((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
-            final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
+            final var _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
             writeInt(_instanceTimes.size());
-            for (Entry<Integer, Long> entry : _instanceTimes.entrySet()) {
+            for (var entry : _instanceTimes.entrySet()) {
                 final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
                 writeInt(entry.getKey());
                 writeInt((int) instanceTime);

@@ -270,6 +270,7 @@
         <xs:attribute name="x" type="xs:int" use="required"/>
         <xs:attribute name="y" type="xs:int" use="required"/>
         <xs:attribute name="z" type="xs:int"  default="0"/>
+        <xs:attribute name="heading" type="xs:int"  default="0"/>
     </xs:complexType>
 
     <xs:simpleType name="POSITION">

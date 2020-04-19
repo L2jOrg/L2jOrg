@@ -9,8 +9,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
-import org.l2j.gameserver.datatables.EventDroplist;
-import org.l2j.gameserver.datatables.EventDroplist.DateDrop;
+import org.l2j.gameserver.datatables.drop.EventDropList;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
@@ -904,10 +903,11 @@ public class Attackable extends Npc {
         }
 
         // Go through DateDrop of EventDroplist allNpcDateDrops within the date range
-        for (DateDrop drop : EventDroplist.getInstance().getAllDrops()) {
-            if (Rnd.get(1000000) < drop.getEventDrop().getDropChance()) {
-                final int itemId = drop.getEventDrop().getItemIdList()[Rnd.get(drop.getEventDrop().getItemIdList().length)];
-                final long itemCount = Rnd.get(drop.getEventDrop().getMinCount(), drop.getEventDrop().getMaxCount());
+        for (var drop : EventDropList.getInstance().getAllDrops()) {
+            if(drop.monsterCanDrop(getId(), getLevel()) && Rnd.chance(drop.getChance())) {
+                final var itemId = drop.getItemId();
+                final var itemCount = Rnd.get(drop.getMin(), drop.getMax());
+
                 var characterSettings = getSettings(CharacterSettings.class);
                 if (characterSettings.autoLoot() || isFlying() || characterSettings.isAutoLoot(itemId)) {
                     player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the Player that has killed the Attackable

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.database.announce;
 
-import org.l2j.gameserver.script.DateRange;
+import org.l2j.commons.util.DateRange;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -10,14 +10,14 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class EventAnnouncement implements Announce {
 
-    private volatile static AtomicInteger virtualId = new AtomicInteger(-1);
+    private static final AtomicInteger virtualId = new AtomicInteger(-1);
 
     private final int id;
     private final DateRange range;
     private String content;
 
     public EventAnnouncement(DateRange range, String content) {
-        id = virtualId.getAndDecrement();
+        id = virtualId.decrementAndGet();
         this.range = range;
         this.content = content;
     }
@@ -34,7 +34,7 @@ public class EventAnnouncement implements Announce {
 
     @Override
     public boolean isValid() {
-        return range.isWithinRange(new Date());
+        return range.isWithinRange(LocalDate.now());
     }
 
     @Override

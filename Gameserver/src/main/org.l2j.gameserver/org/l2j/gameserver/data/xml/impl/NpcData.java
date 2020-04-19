@@ -2,8 +2,9 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.enums.DropType;
@@ -13,7 +14,6 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.DropHolder;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -29,6 +29,7 @@ import java.util.Map.Entry;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.contains;
 
@@ -639,6 +640,10 @@ public class NpcData extends GameXmlReader {
      */
     public List<NpcTemplate> getAllNpcOfClassType(String... classTypes) {
         return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
+    }
+
+    public boolean existsNpc(int npcId) {
+        return nonNull(_npcs.get(npcId));
     }
 
     public static NpcData getInstance() {

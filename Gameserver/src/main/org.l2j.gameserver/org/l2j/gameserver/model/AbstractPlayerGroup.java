@@ -1,12 +1,15 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
@@ -65,7 +68,7 @@ public abstract class AbstractPlayerGroup {
      * @param packet the packet to broadcast
      */
     public void broadcastPacket(ServerPacket packet) {
-        forEachMember(m ->
+        checkEachMember(m ->
         {
             if (m != null) {
                 m.sendPacket(packet);
@@ -84,7 +87,7 @@ public abstract class AbstractPlayerGroup {
     }
 
     public void broadcastCreatureSay(CreatureSay msg, Player broadcaster) {
-        forEachMember(m ->
+        checkEachMember(m ->
         {
             if ((m != null) && !BlockList.isBlocked(m, broadcaster)) {
                 m.sendPacket(msg);
@@ -110,13 +113,17 @@ public abstract class AbstractPlayerGroup {
      *                  If executing the procedure on a member returns {@code true}, the loop continues to the next member, otherwise it breaks the loop
      * @return {@code true} if the procedure executed correctly, {@code false} if the loop was broken prematurely
      */
-    public boolean forEachMember(Function<Player, Boolean> procedure) {
+    public boolean checkEachMember(Function<Player, Boolean> procedure) {
         for (Player player : getMembers()) {
             if (!procedure.apply(player)) {
                 return false;
             }
         }
         return true;
+    }
+
+    public void forEachMemberInRange(ILocational loc, int range, Consumer<Player> action) {
+        getMembers().stream().filter(member -> MathUtil.isInsideRadius3D(loc, member, range)).forEach(action);
     }
 
     @Override

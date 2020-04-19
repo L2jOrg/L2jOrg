@@ -16,14 +16,13 @@
  */
 package org.l2j.gameserver.network.serverpackets;
 
+import io.github.joealisson.primitive.maps.IntLongMap;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -31,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ExInzoneWaiting extends ServerPacket {
     private final int _currentTemplateId;
-    private final Map<Integer, Long> _instanceTimes;
+    private final IntLongMap _instanceTimes;
     private final boolean _sendByClient;
 
     public ExInzoneWaiting(Player activeChar, boolean sendByClient) {
@@ -48,7 +47,7 @@ public class ExInzoneWaiting extends ServerPacket {
         writeByte((byte) (_sendByClient ? 0x00 : 0x01)); // Grand Crusade
         writeInt(_currentTemplateId);
         writeInt(_instanceTimes.size());
-        for (Entry<Integer, Long> entry : _instanceTimes.entrySet()) {
+        for (var entry : _instanceTimes.entrySet()) {
             final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
             writeInt(entry.getKey());
             writeInt((int) instanceTime);

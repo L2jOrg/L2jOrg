@@ -1,75 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
 	<xs:element name="event">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="droplist" minOccurs="0">
+				<xs:element name="drop" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="add" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:attribute name="item" type="xs:positiveInteger" use="required" />
-									<xs:attribute name="min" type="xs:positiveInteger" use="required" />
-									<xs:attribute name="max" type="xs:positiveInteger" use="required" />
-									<xs:attribute name="chance" type="xs:token" use="required" />
-								</xs:complexType>
-							</xs:element>
+							<xs:element name="item" type="DropItem" maxOccurs="unbounded"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="spawnlist">
+				<xs:element name="spawns" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="add" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:attribute name="npc" type="xs:positiveInteger" use="required" />
-									<xs:attribute name="x" type="xs:integer" use="required" />
-									<xs:attribute name="y" type="xs:integer" use="required" />
-									<xs:attribute name="z" type="xs:integer" use="required" />
-									<xs:attribute name="heading" type="xs:integer" use="required" />
-								</xs:complexType>
-							</xs:element>
+							<xs:element name="spawn" type="Spawn" maxOccurs="unbounded"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="destoyItemsOnEnd" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
-								<xs:complexType>
-									<xs:simpleContent>
-										<xs:extension base="xs:string">
-											<xs:attribute type="xs:int" name="id" use="required" />
-										</xs:extension>
-									</xs:simpleContent>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="messages">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="add" maxOccurs="2" minOccurs="2">
-								<xs:complexType>
-									<xs:attribute name="type" use="required">
-										<xs:simpleType>
-											<xs:restriction base="xs:token">
-												<xs:enumeration value="onEnd" />
-												<xs:enumeration value="onEnter" />
-											</xs:restriction>
-										</xs:simpleType>
-									</xs:attribute>
-									<xs:attribute name="text" type="xs:token" use="required" />
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="destroy-items-on-end" type="intList" minOccurs="0"/>
 			</xs:sequence>
 			<xs:attribute name="name" type="xs:token" use="required" />
-			<xs:attribute name="active" type="xs:token" use="required" />
-			<xs:attribute name="enableShrines" type="xs:token" />
+			<xs:attribute name="start-date" type="xs:date" use="required"/>
+			<xs:attribute name="end-date" type="xs:date" use="required"/>
+			<xs:attribute name="start-message" type="xs:string" default=""/>
+			<xs:attribute name="end-message" type="xs:string" default=""/>
+			<xs:attribute name="enable-shrines" type="xs:boolean" default="false" />
 		</xs:complexType>
 	</xs:element>
+
+	<xs:complexType name="DropItem">
+		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="min" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="max" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="chance" type="xs:float" use="required" />
+		<xs:attribute name="min-level" type="xs:positiveInteger"/>
+		<xs:attribute name="max-level" type="xs:positiveInteger"/>
+		<xs:attribute name="monsters" type="intList"/>
+	</xs:complexType>
+
+	<xs:complexType name="Spawn">
+		<xs:complexContent>
+			<xs:extension base="Location">
+				<xs:attribute name="npc" type="xs:positiveInteger" use="required" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
 </xs:schema>

@@ -93,8 +93,7 @@ public class Rnd
 	 * <li> If chance> = 100, returns true
 	 * Translated by Google.
 	 */
-	public static boolean chance(int chance)
-	{
+	public static boolean chance(int chance) {
 		return chance >= 1 && (chance > 99 || rnd().nextInt(99) + 1 <= chance);
 	}
 
@@ -108,7 +107,7 @@ public class Rnd
 	 * Translated by Google.
 	 */
 	public static boolean chance(double chance) {
-		return chance >= 100 || rnd().nextDouble() <= chance / 100.;
+		return chance > 0 && (chance >= 100 || rnd().nextDouble() * 100 <= chance);
 	}
 
 	public static <E> E get(E[] list)

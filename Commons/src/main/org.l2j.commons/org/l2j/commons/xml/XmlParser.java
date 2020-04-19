@@ -1,6 +1,9 @@
 package org.l2j.commons.xml;
 
-import io.github.joealisson.primitive.*;
+import io.github.joealisson.primitive.ArrayIntList;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.IntList;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
@@ -8,10 +11,11 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**
@@ -354,9 +358,8 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected Double parseDouble(Node node, Double defaultValue)
-    {
-        return node != null ? Double.valueOf(node.getNodeValue()) : defaultValue;
+    protected double parseDouble(Node node, double defaultValue) {
+        return nonNull(node) ? Double.parseDouble(node.getNodeValue()) : defaultValue;
     }
 
     /**
@@ -364,9 +367,8 @@ public class XmlParser {
      * @param node the node to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected Double parseDouble(Node node)
-    {
-        return parseDouble(node, null);
+    protected double parseDouble(Node node) {
+        return parseDouble(node, 0d);
     }
 
     /**
@@ -375,8 +377,7 @@ public class XmlParser {
      * @param name the name of the attribute to parse
      * @return if the node is not null, the value of the parsed node, otherwise null
      */
-    protected Double parseDouble(NamedNodeMap attrs, String name)
-    {
+    protected double parseDouble(NamedNodeMap attrs, String name) {
         return parseDouble(attrs.getNamedItem(name));
     }
 
@@ -525,6 +526,10 @@ public class XmlParser {
             map.put(att.getNodeName(), att.getNodeValue());
         }
         return map;
+    }
+
+    protected IntSet parseIntSet(NamedNodeMap attrs, String name) {
+        return parseIntSet(attrs.getNamedItem(name));
     }
 
     protected IntSet parseIntSet(Node node) {

@@ -1237,6 +1237,13 @@
             <time initial="300"/>
             <chance initial="-1"/>
         </abnormal>
+        <effects>
+            <damage-block block-hp="true"/>
+            <effect name="DebuffBlock"/>
+            <resist-dispel-by-category category="ALL">
+                <power initial="-100.0"/>
+            </resist-dispel-by-category>
+        </effects>
     </skill>
     <skill id="15395" name="Repair Broken Toad Cannon" action="A1">
         <!-- Presentation Skill used when the Repair Robot repairs the Toad Cannon. -->

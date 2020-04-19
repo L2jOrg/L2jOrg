@@ -194,13 +194,13 @@ public class CommandChannel extends AbstractPlayerGroup {
     /**
      * Iterates over all command channel members without the need to allocate a new list
      *
-     * @see AbstractPlayerGroup#forEachMember(Function)
+     * @see AbstractPlayerGroup#checkEachMember(Function)
      */
     @Override
-    public boolean forEachMember(Function<Player, Boolean> function) {
+    public boolean checkEachMember(Function<Player, Boolean> function) {
         if ((_parties != null) && !_parties.isEmpty()) {
             for (Party party : _parties) {
-                if (!party.forEachMember(function)) {
+                if (!party.checkEachMember(function)) {
                     return false;
                 }
             }

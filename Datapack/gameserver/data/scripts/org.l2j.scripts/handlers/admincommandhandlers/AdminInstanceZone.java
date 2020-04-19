@@ -2,13 +2,12 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.InstanceManager;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GMAudit;
+import org.l2j.gameserver.world.World;
 
-import java.util.Map;
 import java.util.StringTokenizer;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -102,13 +101,12 @@ public class AdminInstanceZone implements IAdminCommandHandler
 	
 	private void display(Player player, Player activeChar)
 	{
-		final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
+		final var instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
 		
 		final StringBuilder html = new StringBuilder(500 + (instanceTimes.size() * 200));
 		html.append("<html><center><table width=260><tr><td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Character Instances</center></td><td width=40><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><font color=\"LEVEL\">Instances for " + player.getName() + "</font><center><br><table><tr><td width=150>Name</td><td width=50>Time</td><td width=70>Action</td></tr>");
-		
-		for (int id : instanceTimes.keySet())
-		{
+
+		instanceTimes.keySet().forEach(id -> {
 			int hours = 0;
 			int minutes = 0;
 			final long remainingTime = (instanceTimes.get(id) - System.currentTimeMillis()) / 1000;
@@ -117,9 +115,9 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				hours = (int) (remainingTime / 3600);
 				minutes = (int) ((remainingTime % 3600) / 60);
 			}
-			
+
 			html.append("<tr><td>" + InstanceManager.getInstance().getInstanceName(id) + "</td><td>" + hours + ":" + minutes + "</td><td><button value=\"Clear\" action=\"bypass -h admin_instancezone_clear " + player.getName() + " " + id + "\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		}
+		});
 		
 		html.append("</table></html>");
 		
