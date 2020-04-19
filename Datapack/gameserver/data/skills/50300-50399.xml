@@ -13,6 +13,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<enlarge-slot type="INVENTORY_NORMAL">
+                <power initial="2.0"/>               
+            </enlarge-slot>
+            <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
+                <power initial="1000.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50302" name="Adventurer’s Cloak">
         <!-- Max HP/Max MP +1%. -->
@@ -20,6 +28,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="50303" name="Enchanted Adventurer’s Cloak">
         <!-- Max HP/Max MP +2%. -->
@@ -27,6 +43,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="2.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="2.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="50304" name="Chapeau of Glory">
         <!-- STR +1, INT +1, HP +300. -->
@@ -34,6 +58,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="300.0"/>
+            </vital-stat-modify>           
+        </effects>
     </skill>
     <skill id="50305" name="Gloves of Silence">
         <!-- Gloves containing the power of Silence. \n\nSTR +1, INT +1, Max HP +150, Atk. Spd. +8%%, Casting Spd. +15%%. -->
@@ -41,6 +76,23 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="150.0"/>
+            </vital-stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="8.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="15.0"/>
+            </stat-modify>			
+        </effects>
     </skill>
     <skill id="50306" name="Silence Gloves Enchantment Effect">
         <!-- Gloves containing the power of Silence. \n\nSilences all targets to prevent them from using any skills for 4 seconds. -->
@@ -48,6 +100,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+			<trigger-skill-by-attack skill="50308" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="1.0">                   
+                <min-damage initial="1.0"/>
+            </trigger-skill-by-attack>
+			<trigger-skill-by-magic chance="1" skill="50308" target="ENEMY">
+                <power initial="1"/>                   
+                <types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
     <skill id="50307" name="Silence Gloves Enchantment Effect" max-level="10">
         <!--
@@ -63,13 +126,79 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>			
+			<trigger-skill-by-magic skill="50308" target="ENEMY">
+                <power initial="1"/>                  
+                <chance initial="1.0">
+                    <value level="5">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="7">4.0</value>
+                    <value level="8">6.0</value>
+                    <value level="9">8.0</value>
+                    <value level="10">10.0</value>
+                </chance>
+				<types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>
+			<trigger-skill-by-magic skill="50309" target="ENEMY">
+                <power> 
+					<value level="5">1.0</value>
+                    <value level="6">2.0</value>
+                    <value level="7">3.0</value>
+                    <value level="8">4.0</value>
+                    <value level="9">5.0</value>
+                    <value level="10">6.0</value>
+                </power>
+                <chance initial="1.0">                   
+                    <value level="5">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="7">4.0</value>
+                    <value level="8">6.0</value>
+                    <value level="9">8.0</value>
+                    <value level="10">10.0</value>
+                </chance>
+				<types>MAGIC PHYSIC STATIC</types>
+            </trigger-skill-by-magic>
+			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+                <power>
+                    <value level="5">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="7">5.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                    <value level="10">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER" stat-add="SKILL_POWER_ADD">
+                <power>
+                    <value level="5">2.0</value>
+                    <value level="6">3.0</value>
+                    <value level="7">5.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                    <value level="10">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50308" name="Power of Silence" debuff="true" type="MAGIC">
         <!-- Can’t use any skills for 4 seconds. -->
         <icon initial="icon.armor_t94_g_i01"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
+            <magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>
+            <effect-range initial="1400"/>
         </attributes>
-        <target/>
+		<target type="ENEMY_ONLY"/>
+        <abnormal type="SILENCE_ALL" visual="SILENCE">
+            <level initial="2"/>
+            <time initial="4"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+            <effect name="PhysicalMute"/>
+        </effects>
     </skill>
     <skill id="50309" name="Active: Gloves of Silence." max-level="6" type="MAGIC">
         <!--
@@ -81,9 +210,34 @@
             level 6: Decreases the target’s MP with 165 Power added to M. Atk.
          -->
         <icon initial="icon.armor_t94_g_i01"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+			<magic-level initial="1"/>
+            <cast-range initial="900"/>
+            <effect-point initial="-300"/>               
+            <effect-range initial="1400"/>
+            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY_ONLY"/>
+		<effects>
+            <magical-attack>
+                <power initial="50.0">
+                    <value level="2">70.0</value>
+                    <value level="3">90.0</value>
+                    <value level="4">110.0</value>
+                    <value level="5">130.0</value>
+                    <value level="6">165.0</value>                
+                </power>
+            </magical-attack>
+			<magical-attack-mp critical="true" critical-limit="7000">
+                <power initial="50.0">
+                    <value level="2">70.0</value>
+                    <value level="3">90.0</value>
+                    <value level="4">110.0</value>
+                    <value level="5">130.0</value>
+                    <value level="6">165.0</value>                
+                </power>
+            </magical-attack-mp>
+        </effects>
     </skill>
     <skill id="50310" name="Shield Effect">
         <!-- Shield Def. +10, Shield Def. Rate +1%, Max HP +10. -->

@@ -691,7 +691,9 @@
         <effects>
             <block-all-actions/>
             <magical-attack>
-                <power initial="138.0"/>
+                <power initial="138.0">
+					<value level="2">276.0</value>
+                </power>
             </magical-attack>
         </effects>
     </skill>

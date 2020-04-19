@@ -716,6 +716,71 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <enlarge-slot type="INVENTORY_NORMAL">
+                <power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">15.0</value>
+					<value level="4">20.0</value>
+					<value level="5">25.0</value>
+					<value level="6">30.0</value>
+					<value level="7">35.0</value>
+					<value level="8">40.0</value>
+					<value level="9">45.0</value>
+					<value level="10">50.0</value>
+					<value level="11">55.0</value>
+					<value level="12">60.0</value>
+					<value level="13">65.0</value>
+					<value level="14">70.0</value>
+					<value level="15">75.0</value>
+					<value level="16">80.0</value>
+					<value level="17">85.0</value>
+					<value level="18">90.0</value>
+					<value level="19">95.0</value>
+					<value level="20">100.0</value>
+					<value level="21">105.0</value>
+					<value level="22">110.0</value>
+					<value level="23">115.0</value>
+					<value level="24">120.0</value>
+					<value level="25">125.0</value>
+					<value level="26">130.0</value>
+					<value level="27">135.0</value>
+					<value level="28">140.0</value>
+					<value level="29">145.0</value>
+					<value level="30">150.0</value>
+					<value level="31">155.0</value>
+					<value level="32">160.0</value>
+					<value level="33">165.0</value>
+					<value level="34">170.0</value>
+					<value level="35">175.0</value>
+					<value level="36">180.0</value>
+					<value level="37">185.0</value>
+					<value level="38">190.0</value>
+					<value level="39">195.0</value>
+					<value level="40">200.0</value>
+					<value level="41">205.0</value>
+					<value level="42">210.0</value>
+					<value level="43">215.0</value>
+					<value level="44">220.0</value>
+					<value level="45">225.0</value>
+					<value level="46">230.0</value>
+					<value level="47">235.0</value>
+					<value level="48">240.0</value>
+					<value level="49">245.0</value>
+					<value level="50">250.0</value>
+					<value level="51">255.0</value>
+					<value level="52">260.0</value>
+					<value level="53">265.0</value>
+					<value level="54">270.0</value>
+					<value level="55">275.0</value>
+					<value level="56">280.0</value>
+					<value level="57">285.0</value>
+					<value level="58">290.0</value>
+					<value level="59">295.0</value>
+					<value level="60">300.0</value>
+				</power>
+            </enlarge-slot>
+        </effects>
     </skill>
     <skill id="50157" name="Primeval Isle Time Recharge Stone" action="A1">
         <!-- none -->
