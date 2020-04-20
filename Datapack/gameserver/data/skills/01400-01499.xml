@@ -753,13 +753,14 @@
                 <chance initial="30"/>
                 <min-damage initial="1.0"/>
             </trigger-skill-by-attack>
-            <trigger-skill-by-magic chance="30" skill="45154" target="ENEMY">
+            <trigger-skill-by-magic skill="45154" target="ENEMY">
                 <power initial="1">
                     <value level="2">2</value>
                     <value level="3">3</value>
                     <value level="4">4</value>
                     <value level="5">5</value>
                 </power>
+				<chance initial="30.0"/> 
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
         </effects>
