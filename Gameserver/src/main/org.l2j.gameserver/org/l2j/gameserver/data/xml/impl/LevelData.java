@@ -11,6 +11,7 @@ import org.w3c.dom.Document;
 import java.io.File;
 import java.nio.file.Path;
 
+import static java.lang.Math.max;
 import static java.lang.Math.min;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -22,7 +23,6 @@ public final class LevelData extends GameXmlReader {
 
     private byte maxLevel = 86;
     private final IntMap<LevelInfo> levelInfos = new HashIntMap<>();
-
 
     private LevelData() {
     }
@@ -55,7 +55,7 @@ public final class LevelData extends GameXmlReader {
     }
 
     public long getExpForLevel(int level) {
-        return levelInfos.get(min(level, maxLevel)).experience;
+        return levelInfos.get(max(1, min(level, maxLevel))).experience;
     }
 
     public float getXpPercentLost(int level) {
@@ -79,9 +79,9 @@ public final class LevelData extends GameXmlReader {
     }
 
     private static class LevelInfo {
-        private short characteristicPoints;
-        private long experience;
-        private float expPercentLost;
+        private final short characteristicPoints;
+        private final long experience;
+        private final float expPercentLost;
 
         public LevelInfo(short characteristicPoints, long experience, float expPercentLost) {
             this.characteristicPoints = characteristicPoints;

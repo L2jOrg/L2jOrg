@@ -99,6 +99,7 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.util.*;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
@@ -1023,7 +1024,7 @@ public final class Player extends Playable {
     private Map<Integer, Skill> _customSkills = null;
     private volatile int _actionMask;
     private int _questZoneId = -1;
-    private Future<?> _autoSaveTask = null;
+
     // Save responder name for log it
     private String _lastPetitionGmName = null;
     private boolean hasCharmOfCourage = false;
@@ -1269,8 +1270,7 @@ public final class Player extends Playable {
             player.startOnlineTimeUpdateTask();
 
             player.setOnlineStatus(true, false);
-
-            player.startAutoSaveTask();
+            SaveTaskManager.getInstance().registerPlayer(player);
         } catch (Exception e) {
             LOGGER.error("Failed loading character.", e);
         }
@@ -5838,6 +5838,11 @@ public final class Player extends Playable {
             getDAO(PlayerDAO.class).save(activeCostumesCollection);
         }
 
+        storeRecommendations();
+        if (Config.UPDATE_ITEMS_ON_CHAR_STORE) {
+            inventory.updateDatabase();
+            getWarehouse().updateDatabase();
+        }
     }
 
     @Override
@@ -6663,29 +6668,6 @@ public final class Player extends Playable {
     @Override
     public boolean hasBasicPropertyResist() {
         return false;
-    }
-
-    private void startAutoSaveTask() {
-        if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null)) {
-            _autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
-        }
-    }
-
-    private void stopAutoSaveTask() {
-        if (_autoSaveTask != null) {
-            _autoSaveTask.cancel(false);
-            _autoSaveTask = null;
-        }
-    }
-
-    protected void autoSave() {
-        storeMe();
-        storeRecommendations();
-
-        if (Config.UPDATE_ITEMS_ON_CHAR_STORE) {
-            inventory.updateDatabase();
-            getWarehouse().updateDatabase();
-        }
     }
 
     public boolean canLogout() {
@@ -8918,7 +8900,7 @@ public final class Player extends Playable {
         getEffectList().stopAllPassives(false, false);
         getEffectList().stopAllOptions(false, false);
 
-        stopAutoSaveTask();
+        SaveTaskManager.getInstance().remove(this);
 
         return super.deleteMe();
     }

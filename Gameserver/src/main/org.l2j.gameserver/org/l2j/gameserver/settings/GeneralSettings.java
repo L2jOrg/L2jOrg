@@ -23,6 +23,7 @@ public class GeneralSettings implements Settings {
     private IllegalActionPunishmentType defaultPunishment;
     private boolean disableChatInJail;
     private int defaultAccessLevel;
+    private int autoSavePlayerTime;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -48,6 +49,8 @@ public class GeneralSettings implements Settings {
         disableChatInJail = settingsFile.getBoolean("JailDisableChat", true);
 
         defaultAccessLevel = settingsFile.getInteger("DefaultAccessLevel", 0);
+
+        autoSavePlayerTime = settingsFile.getInteger("PlayerDataStoreInterval", 20);
      }
 
     public int banChatAdenaAdsReportCount() {
@@ -108,5 +111,9 @@ public class GeneralSettings implements Settings {
 
     public void setDefaultAccessLevel(int accessLevel) {
         defaultAccessLevel = accessLevel;
+    }
+
+    public int autoSavePlayerTime() {
+        return autoSavePlayerTime;
     }
 }
