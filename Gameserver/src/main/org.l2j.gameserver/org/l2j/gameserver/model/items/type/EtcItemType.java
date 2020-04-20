@@ -25,7 +25,6 @@ public enum EtcItemType implements ItemType {
     MATURECROP,
     ENCHANT_WEAPON,
     ENCHANT_ARMOR,
-    ENCHT_WP,
     BLESSED_ENCHANT_WEAPON,
     BLESSED_ENCHANT_ARMOR,
     BLESS_ENCHT_WP,
