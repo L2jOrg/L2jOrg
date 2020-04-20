@@ -360,26 +360,22 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public static Npc addSpawn(Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance) {
         try {
             final Spawn spawn = new Spawn(npcId);
-
             if ((x == 0) && (y == 0)) {
                 LOGGER.error("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
                 return null;
             }
-
             if (randomOffset) {
                 int offset = Rnd.get(50, 100);
                 if (Rnd.nextBoolean()) {
                     offset *= -1;
                 }
                 x += offset;
-
                 offset = Rnd.get(50, 100);
                 if (Rnd.nextBoolean()) {
                     offset *= -1;
                 }
                 y += offset;
             }
-
             spawn.setInstanceId(instance);
             spawn.setHeading(heading);
             spawn.setXYZ(x, y, z);
@@ -389,7 +385,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             if (despawnDelay > 0) {
                 npc.scheduleDespawn(despawnDelay);
             }
-
             if (summoner != null) {
                 summoner.addSummonedNpc(npc);
             }
@@ -397,7 +392,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         } catch (Exception e) {
             LOGGER.warn("Could not spawn NPC #" + npcId + "; error: " + e.getMessage());
         }
-
         return null;
     }
 

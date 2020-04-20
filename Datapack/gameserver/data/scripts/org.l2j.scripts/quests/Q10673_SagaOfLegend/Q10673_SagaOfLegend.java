@@ -27,7 +27,8 @@ import java.util.Set;
  * Saga of Legend (10673)
  * @URL https://l2wiki.com/classic/Saga_of_Legend
  * @TODO: Retail htmls.
- * @author VicoChips
+ * @author Dmitri, Mobius
+ * @edited Vicochips
  */
 public class Q10673_SagaOfLegend extends Quest
 {

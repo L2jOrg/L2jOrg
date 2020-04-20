@@ -1646,7 +1646,7 @@
         <skillList>
             <skill id="4078" level="5"/> <!-- NPC Flamestrike -->
             <skill id="4416" level="10"/> <!-- Dragons -->
-              <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
             <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
             <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
             <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
@@ -2126,13 +2126,6 @@
         <skillList>
             <skill id="4078" level="5"/> <!-- NPC Flamestrike -->
             <skill id="4416" level="1"/> <!-- Undead -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="10"/> <!-- Slightly Weak M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
-            <skill id="4278" level="1"/> <!-- Dark Attack -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
