@@ -388,7 +388,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             if (summoner != null) {
                 summoner.addSummonedNpc(npc);
             }
-            LOGGER.info("1 - " + npcId);
             return npc;
         } catch (Exception e) {
             LOGGER.warn("Could not spawn NPC #" + npcId + "; error: " + e.getMessage());
