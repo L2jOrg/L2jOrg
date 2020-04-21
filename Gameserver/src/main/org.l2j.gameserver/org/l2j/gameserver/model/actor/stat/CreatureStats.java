@@ -243,9 +243,9 @@ public class CreatureStats {
     public double getMovementSpeedMultiplier() {
         double baseSpeed;
         if (_activeChar.isInsideZone(ZoneType.WATER)) {
-            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.SWIM_RUN_SPEED : Stat.SWIM_WALK_SPEED, 0);
+            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.SWIM_RUN_SPEED : Stat.SWIM_WALK_SPEED, 1);
         } else {
-            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.RUN_SPEED : Stat.WALK_SPEED, 0);
+            baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stat.RUN_SPEED : Stat.WALK_SPEED, 1);
         }
         return getMoveSpeed() * (1. / baseSpeed);
     }

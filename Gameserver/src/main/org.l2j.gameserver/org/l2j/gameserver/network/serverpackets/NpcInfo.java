@@ -8,10 +8,10 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Guard;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Set;
 
@@ -256,10 +256,10 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
             writeInt(_npc.getLeftHandItem());
         }
         if (containsMask(NpcInfoType.ALIVE)) {
-            writeByte((byte) (_npc.isDead() ? 0x00 : 0x01));
+            writeByte(!_npc.isDead());
         }
         if (containsMask(NpcInfoType.RUNNING)) {
-            writeByte((byte) (_npc.isRunning() ? 0x01 : 0x00));
+            writeByte(_npc.isRunning());
         }
         if (containsMask(NpcInfoType.SWIM_OR_FLY)) {
             writeByte((byte) (_npc.isInsideZone(ZoneType.WATER) ? 0x01 : _npc.isFlying() ? 0x02 : 0x00));

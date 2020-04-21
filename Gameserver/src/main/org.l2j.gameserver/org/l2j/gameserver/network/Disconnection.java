@@ -10,6 +10,8 @@ import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author NB4L1
  */
@@ -25,9 +27,9 @@ public final class Disconnection {
         this(activeChar.getClient(), activeChar);
     }
 
-    private Disconnection(GameClient client, Player activeChar) {
-        this.client = getClient(client, activeChar);
-        player = getPlayer(client, activeChar);
+    private Disconnection(GameClient client, Player player) {
+        this.client = getClient(client, player);
+        this.player = getPlayer(client, player);
 
         // Anti Feed
         AntiFeedManager.getInstance().onDisconnect(this.client);
@@ -36,32 +38,29 @@ public final class Disconnection {
             this.client.setPlayer(null);
         }
 
-        if (player != null) {
-            player.setClient(null);
+        if (this.player != null) {
+            this.player.setClient(null);
         }
     }
 
     public static GameClient getClient(GameClient client, Player player) {
-        if (client != null) {
+        if (nonNull(client)) {
             return client;
         }
-
-        if (player != null) {
+        if (nonNull(player)) {
             return player.getClient();
         }
-
         return null;
     }
 
-    public static Player getPlayer(GameClient client, Player activeChar) {
-        if (activeChar != null) {
-            return activeChar;
+    public static Player getPlayer(GameClient client, Player player) {
+        if (nonNull(player)) {
+            return player;
         }
 
-        if (client != null) {
+        if (nonNull(client)) {
             return client.getPlayer();
         }
-
         return null;
     }
 
@@ -69,27 +68,26 @@ public final class Disconnection {
         return new Disconnection(client);
     }
 
-    public static Disconnection of(Player activeChar) {
-        return new Disconnection(activeChar);
+    public static Disconnection of(Player player) {
+        return new Disconnection(player);
     }
 
-    public static Disconnection of(GameClient client, Player activeChar) {
-        return new Disconnection(client, activeChar);
+    public static Disconnection of(GameClient client, Player player) {
+        return new Disconnection(client, player);
     }
 
     public Disconnection storeMe() {
         try {
-            if ((player != null) && player.isOnline()) {
+            if(nonNull(player)) {
                 player.storeMe();
             }
 
-            if(client != null) {
+            if(nonNull(client)) {
                 client.storeAccountData();
             }
         } catch (RuntimeException e) {
-            LOGGER.warn(e.getMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
-
         return this;
     }
 
