@@ -360,27 +360,22 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public static Npc addSpawn(Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance) {
         try {
             final Spawn spawn = new Spawn(npcId);
-            LOGGER.info("1 - " + npcId);
             if ((x == 0) && (y == 0)) {
                 LOGGER.error("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
                 return null;
             }
-            LOGGER.info("1 - " + npcId);
             if (randomOffset) {
                 int offset = Rnd.get(50, 100);
                 if (Rnd.nextBoolean()) {
                     offset *= -1;
-                    LOGGER.info("1 - " + npcId);
                 }
                 x += offset;
-                LOGGER.info("1 - " + npcId);
                 offset = Rnd.get(50, 100);
                 if (Rnd.nextBoolean()) {
                     offset *= -1;
                 }
                 y += offset;
             }
-            LOGGER.info("1 - " + npcId);
             spawn.setInstanceId(instance);
             spawn.setHeading(heading);
             spawn.setXYZ(x, y, z);
@@ -388,20 +383,15 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
             final Npc npc = spawn.doSpawn(isSummonSpawn);
             if (despawnDelay > 0) {
-                LOGGER.info("1 - " + npcId);
                 npc.scheduleDespawn(despawnDelay);
             }
-            LOGGER.info("1 - " + npcId);
             if (summoner != null) {
-                LOGGER.info("1 - " + npcId);
                 summoner.addSummonedNpc(npc);
             }
-            LOGGER.info("1 - " + npcId);
             return npc;
         } catch (Exception e) {
             LOGGER.warn("Could not spawn NPC #" + npcId + "; error: " + e.getMessage());
         }
-        LOGGER.info("1 - " + npcId);
         return null;
     }
 
