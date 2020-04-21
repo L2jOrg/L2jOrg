@@ -231,15 +231,17 @@ public class NpcData extends GameXmlReader {
                                                     attrs = speedNode.getAttributes();
                                                     switch (speedNode.getNodeName().toLowerCase()) {
                                                         case "walk": {
-                                                            set.set("baseWalkSpd", parseDouble(attrs, "ground"));
-                                                            set.set("baseSwimWalkSpd", parseDouble(attrs, "swim"));
-                                                            set.set("baseFlyWalkSpd", parseDouble(attrs, "fly"));
+                                                            final var ground = parseDouble(attrs, "ground");
+                                                            set.set("baseWalkSpd", ground);
+                                                            set.set("baseSwimWalkSpd", parseDouble(attrs, "swim", ground));
+                                                            set.set("baseFlyWalkSpd", parseDouble(attrs, "fly", ground));
                                                             break;
                                                         }
                                                         case "run": {
-                                                            set.set("baseRunSpd", parseDouble(attrs, "ground"));
-                                                            set.set("baseSwimRunSpd", parseDouble(attrs, "swim"));
-                                                            set.set("baseFlyRunSpd", parseDouble(attrs, "fly"));
+                                                            final var ground = parseDouble(attrs, "ground");
+                                                            set.set("baseRunSpd", ground);
+                                                            set.set("baseSwimRunSpd", parseDouble(attrs, "swim", ground));
+                                                            set.set("baseFlyRunSpd", parseDouble(attrs, "fly", ground));
                                                             break;
                                                         }
                                                     }
