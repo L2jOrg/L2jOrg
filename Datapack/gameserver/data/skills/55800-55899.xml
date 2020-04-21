@@ -1119,9 +1119,91 @@
             level 5: HP / MP / CP Recovery + 30%, Damage Received in PvE - 10%, XP / SP /Attribute XP + 20%, Stun / Mental / Paralysis Attack Success Rate + 5% for all clan members.
          -->
         <icon initial="icon.skill19014"/>
-        <attributes property="MAGIC">
+        <attributes property="PHYSIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power>
+                    <value level="1">4</value>
+                    <value level="2">8</value>
+                    <value level="3">12</value>
+                    <value level="4">20</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="REGENERATE_MP_RATE" mode="PER">
+                <power>
+                    <value level="1">4</value>
+                    <value level="2">8</value>
+                    <value level="3">12</value>
+                    <value level="4">20</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="REGENERATE_CP_RATE" mode="PER">
+                <power>
+                    <value level="1">4</value>
+                    <value level="2">8</value>
+                    <value level="3">12</value>
+                    <value level="4">20</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PVE_MAGICAL_SKILL_DEFENCE" mode="PER">
+                <power>
+                    <value level="1">3</value>
+                    <value level="2">5</value>
+                    <value level="3">7</value>
+                    <value level="4">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PVE_PHYSICAL_ATTACK_DEFENCE" mode="PER">
+                <power>
+                    <value level="1">3</value>
+                    <value level="2">5</value>
+                    <value level="3">7</value>
+                    <value level="4">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PVE_PHYSICAL_SKILL_DEFENCE" mode="PER">
+                <power>
+                    <value level="1">3</value>
+                    <value level="2">5</value>
+                    <value level="3">7</value>
+                    <value level="4">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PVE_RAID_MAGICAL_SKILL_DEFENCE" mode="PER">
+                <power>
+                    <value level="1">3</value>
+                    <value level="2">5</value>
+                    <value level="3">7</value>
+                    <value level="4">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PVE_RAID_PHYSICAL_ATTACK_DEFENCE" mode="PER">
+                <power>
+                    <value level="1">3</value>
+                    <value level="2">5</value>
+                    <value level="3">7</value>
+                    <value level="4">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="PVE_RAID_PHYSICAL_SKILL_DEFENCE" mode="PER">
+                <power>
+                    <value level="1">3</value>
+                    <value level="2">5</value>
+                    <value level="3">7</value>
+                    <value level="4">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="EXPSP_RATE" mode="PER">
+                <power>
+                    <value level="1">5</value>
+                    <value level="2">8</value>
+                    <value level="3">11</value>
+                    <value level="4">15</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55888" name="Halloween Blessing" max-level="4" action="A1">
         <!--
