@@ -227,7 +227,7 @@ public class PlayerStats extends PlayableStats {
         if (getLevel() >= 40) {
             player.initElementalSpirits();
         }
-
+        player.updateCharacteristicPoints();
         player.broadcastStatusUpdate();
         // Update the overloaded status of the Player
         player.refreshOverloaded(true);
