@@ -1292,8 +1292,9 @@
         </abnormal>
         <effects>
             <effect name="SilentMove"/>
-            <trigger-skill-by-magic chance="100" skill="7097" target="MY_PARTY">
+            <trigger-skill-by-magic skill="7097" target="MY_PARTY">
                 <power initial="1.0"/>
+				<chance initial="100.0"/> 
                 <types>PHYSIC MAGIC STATIC DANCE</types>
             </trigger-skill-by-magic>
             <trigger-skill-by-attack skill="7097" target="MY_PARTY">

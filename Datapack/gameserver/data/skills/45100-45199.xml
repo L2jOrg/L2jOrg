@@ -1727,11 +1727,12 @@
                 <chance initial="30"/>
                 <min-damage initial="1.0"/>
             </trigger-skill-by-attack>
-            <trigger-skill-by-magic chance="30" skill="45173" target="ENEMY">
+            <trigger-skill-by-magic skill="45173" target="ENEMY">
                 <power initial="1">
                     <value level="3">2</value>
                     <value level="6">3</value>
                 </power>
+				<chance initial="30.0"/> 
                 <types>MAGIC PHYSIC STATIC</types>
             </trigger-skill-by-magic>
         </effects>
@@ -2226,8 +2227,9 @@
             <trigger-skill-by-attacking chance="30" skill="45180">
                 <power initial="1"/>
             </trigger-skill-by-attacking>
-            <trigger-skill-by-magic chance="30" skill="45180" target="ENEMY_ONLY">
+            <trigger-skill-by-magic skill="45180" target="ENEMY_ONLY">
                 <power initial="2"/>
+				<chance initial="30.0"/> 
                 <types>PHYSIC MAGIC STATIC</types>
             </trigger-skill-by-magic>
             <trigger-skill-by-attack skill="45180">
@@ -2253,8 +2255,9 @@
             <trigger-skill-by-attacking chance="30" skill="45181">
                 <power initial="1"/>
             </trigger-skill-by-attacking>
-            <trigger-skill-by-magic chance="30" skill="45181" target="ENEMY_ONLY">
+            <trigger-skill-by-magic skill="45181" target="ENEMY_ONLY">
                 <power initial="2"/>
+				<chance initial="30.0"/> 
                 <types>PHYSIC MAGIC STATIC</types>
             </trigger-skill-by-magic>
             <trigger-skill-by-attack skill="45181">

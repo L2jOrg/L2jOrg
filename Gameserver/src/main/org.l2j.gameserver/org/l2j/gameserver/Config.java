@@ -344,7 +344,6 @@ public final class Config {
     public static boolean ALLOW_DISCARDITEM;
 
     public static List<Integer> LIST_PROTECTED_ITEMS;
-    public static int CHAR_DATA_STORE_INTERVAL;
     public static int CLAN_VARIABLES_STORE_INTERVAL;
     public static boolean LAZY_ITEMS_UPDATE;
     public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
@@ -1262,7 +1261,7 @@ public final class Config {
         for (String id : split) {
             LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
         }
-        CHAR_DATA_STORE_INTERVAL = General.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;
+
         CLAN_VARIABLES_STORE_INTERVAL = General.getInt("ClanVariablesStoreInterval", 15) * 60 * 1000;
         LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
         UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);

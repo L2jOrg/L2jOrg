@@ -196,7 +196,6 @@
                     <xs:element name="types" type="SkillTypeList"/>
                 </xs:sequence>
                 <xs:attribute name="skill" type="xs:int" use="required"/>
-                <xs:attribute name="chance" type="xs:int" use="required"/>
                 <xs:attribute name="target" type="TargetType" default="TARGET"/>
             </xs:extension>
         </xs:complexContent>

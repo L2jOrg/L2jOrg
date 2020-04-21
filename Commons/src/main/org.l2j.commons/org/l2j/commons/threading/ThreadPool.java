@@ -1,7 +1,6 @@
 package org.l2j.commons.threading;
 
 import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 import java.util.concurrent.*;
 
 import static java.util.Objects.isNull;
