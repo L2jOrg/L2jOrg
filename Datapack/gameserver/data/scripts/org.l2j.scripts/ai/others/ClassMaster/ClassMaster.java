@@ -523,6 +523,16 @@ public final class ClassMaster extends AbstractNpcAI
 						htmltext = "test_server_helper020c.html";
 						break;
 					}
+					case SOUL_FINDER:
+					{
+						htmltext = "test_server_helper020d.html";
+						break;
+					}
+					case WARDER:
+					{
+						htmltext = "test_server_helper030c.html";
+						break;
+					}
 				}
 			}
 		}
