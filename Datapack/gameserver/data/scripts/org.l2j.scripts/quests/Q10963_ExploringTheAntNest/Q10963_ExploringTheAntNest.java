@@ -16,9 +16,6 @@
  */
 package quests.Q10963_ExploringTheAntNest;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -27,6 +24,11 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import static java.util.Objects.isNull;
 
 
 /**
@@ -159,6 +161,11 @@ public class Q10963_ExploringTheAntNest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+
+		if(isNull(qs)) {
+			return htmltext;
+		}
+
 		if (qs.isCreated())
 		{
 			htmltext = "30289.htm";

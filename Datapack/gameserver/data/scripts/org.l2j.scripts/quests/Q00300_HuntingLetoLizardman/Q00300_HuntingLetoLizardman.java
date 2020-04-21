@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.quest.State;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.util.Objects.isNull;
+
 /**
  * Hunting Leto Lizardman (300)
  * @author ivantotov
@@ -68,8 +70,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState st = getQuestState(player, false);
-		if (st == null)
-		{
+		if (isNull(st)) {
 			return null;
 		}
 		String htmltext = null;

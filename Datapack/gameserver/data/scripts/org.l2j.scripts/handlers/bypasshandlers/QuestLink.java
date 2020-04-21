@@ -1,12 +1,5 @@
 package handlers.bypasshandlers;
 
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.stream.Collectors;
-
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.Creature;
@@ -19,42 +12,74 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class QuestLink implements IBypassHandler
-{
-	private static final String[] COMMANDS =
-	{
+import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+
+/**
+ * @author JoeAlisson
+ */
+public class QuestLink implements IBypassHandler {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(QuestLink.class);
+
+	private static final String[] COMMANDS = {
 		"Quest"
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
-	{
+	public boolean useBypass(String command, Player player, Creature target) {
 		String quest = "";
-		try
-		{
+		try {
 			quest = command.substring(5).trim();
+		} catch (IndexOutOfBoundsException e) {
+			LOGGER.warn(e.getMessage(), e);
 		}
-		catch (IndexOutOfBoundsException ioobe)
-		{
+
+		if (isNullOrEmpty(quest)) {
+			showQuestsWindow(player, (Npc) target);
 		}
-		if (quest.isEmpty())
-		{
-			showQuestWindow(activeChar, (Npc) target);
-		}
-		else
-		{
+		else {
 			final int questNameEnd = quest.indexOf(" ");
-			if (questNameEnd == -1)
-			{
-				showQuestWindow(activeChar, (Npc) target, quest);
-			}
-			else
-			{
-				activeChar.processQuestEvent(quest.substring(0, questNameEnd), quest.substring(questNameEnd).trim());
+			if (questNameEnd == -1) {
+				showQuestWindow(player, (Npc) target, quest);
+			} else {
+				player.processQuestEvent(quest.substring(0, questNameEnd), quest.substring(questNameEnd).trim());
 			}
 		}
 		return true;
+	}
+
+	/**
+	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
+	 * @param player the Player that talk with the {@code npc}.
+	 * @param npc the Folk that chats with the {@code player}.
+	 */
+	private void showQuestsWindow(Player player, Npc npc) {
+		//@formatter:off
+		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()
+				.map(AbstractEventListener::getOwner)
+				.filter(Quest.class::isInstance)
+				.map(Quest.class::cast)
+				.filter(quest -> quest.getId() > 0)
+				.collect(Collectors.toSet());
+		//@formatter:on
+
+		if (quests.size() > 1) {
+			showQuestChooseWindow(player, npc, quests);
+		} else if (quests.size() == 1) {
+			showQuestWindow(player, npc, quests.iterator().next().getName());
+		} else {
+			showQuestWindow(player, npc, "");
+		}
 	}
 	
 	/**
@@ -63,101 +88,52 @@ public class QuestLink implements IBypassHandler
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player</li>
 	 * @param player The Player that talk with the Folk
 	 * @param npc The table containing quests of the Folk
-	 * @param quests
 	 */
-	private static void showQuestChooseWindow(Player player, Npc npc, Collection<Quest> quests)
-	{
-		final StringBuilder sbStarted = new StringBuilder(128);
-		final StringBuilder sbCanStart = new StringBuilder(128);
-		final StringBuilder sbCantStart = new StringBuilder(128);
-		final StringBuilder sbCompleted = new StringBuilder(128);
-		
-		//@formatter:off
-		final Set<Quest> startingQuests = npc.getListeners(EventType.ON_NPC_QUEST_START).stream()
-			.map(AbstractEventListener::getOwner)
-			.filter(Quest.class::isInstance)
-			.map(Quest.class::cast)
-			.distinct()
-			.collect(Collectors.toSet());
-		//@formatter:on
-		
-		if (Config.ORDER_QUEST_LIST_BY_QUESTID)
-		{
-			final Map<Integer, Quest> orderedQuests = new TreeMap<>(); // Use TreeMap to order quests
-			for (Quest q : quests)
-			{
-				orderedQuests.put(q.getId(), q);
-			}
-			quests = orderedQuests.values();
-		}
-		
-		for (Quest quest : quests)
-		{
-			final QuestState qs = player.getQuestState(quest.getScriptName());
-			if ((qs == null) || qs.isCreated() || (qs.isCompleted() && qs.isNowAvailable()))
-			{
-				final String startConditionHtml = quest.getStartConditionHtml(player, npc);
-				if (((startConditionHtml != null) && startConditionHtml.isEmpty()) || !startingQuests.contains(quest))
-				{
-					continue;
-				}
-				else if (startingQuests.contains(quest) && quest.canStartQuest(player))
-				{
+	private void showQuestChooseWindow(Player player, Npc npc, Collection<Quest> quests) {
+		final var sbStarted = new StringBuilder(128);
+		final var sbCanStart = new StringBuilder(128);
+		final var sbCompleted = new StringBuilder(128);
+
+		for (var quest : quests) {
+			final var questState =  quest.getQuestState(player, false);
+
+			if (isNull(questState) || questState.isCreated() || (questState.isCompleted() && questState.isNowAvailable())) {
+				if(quest.canStartQuest(player)) {
 					sbCanStart.append("<font color=\"bbaa88\">");
-					sbCanStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-					sbCanStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
-					sbCanStart.append("</button></font>");
+					createQuestButton(npc, quest, sbCanStart, STRING_EMPTY, "01</fstring>");
 				}
-				else
-				{
-					sbCantStart.append("<font color=\"a62f31\">");
-					sbCantStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-					sbCantStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
-					sbCantStart.append("</button></font>");
-				}
-			}
-			else if (Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
-			{
-				continue;
-			}
-			else if (qs.isStarted())
-			{
+			} else if (questState.isStarted()) {
 				sbStarted.append("<font color=\"ffdd66\">");
-				sbStarted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-				sbStarted.append(quest.isCustomQuest() ? quest.getPath() + " (In Progress)" : "<fstring>" + quest.getNpcStringId() + "02</fstring>");
-				sbStarted.append("</button></font>");
+				createQuestButton(npc, quest, sbStarted, " (In Progress)", "02</fstring>");
 			}
-			else if (qs.isCompleted())
-			{
+			else if (questState.isCompleted()) {
 				sbCompleted.append("<font color=\"787878\">");
-				sbCompleted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
-				sbCompleted.append(quest.isCustomQuest() ? quest.getPath() + " (Done) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>");
-				sbCompleted.append("</button></font>");
+				createQuestButton(npc, quest, sbCompleted," (Complete) ", "03</fstring>");
 			}
 		}
 		
 		String content;
-		if ((sbStarted.length() > 0) || (sbCanStart.length() > 0) || (sbCantStart.length() > 0) || (sbCompleted.length() > 0))
-		{
-			final StringBuilder sb = new StringBuilder(128);
-			sb.append("<html><body>");
-			sb.append(sbStarted.toString());
-			sb.append(sbCanStart.toString());
-			sb.append(sbCantStart.toString());
-			sb.append(sbCompleted.toString());
-			sb.append("</body></html>");
-			content = sb.toString();
+		if ((sbStarted.length() > 0) || (sbCanStart.length() > 0) || (sbCompleted.length() > 0)) {
+			content = "<html><body>" +
+					sbStarted.toString() +
+					sbCanStart.toString() +
+					sbCompleted.toString() +
+					"</body></html>";
 		}
-		else
-		{
+		else {
 			content = Quest.getNoQuestMsg(player);
 		}
-		
-		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Folk
+
 		content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 	}
-	
+
+	private void createQuestButton(Npc npc, Quest quest, StringBuilder stringBuilder, String customSuffix, String npcStringIdSuffix) {
+		stringBuilder.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_").append(npc.getObjectId()).append("_Quest ").append(quest.getName()).append("\">").
+				append(quest.isCustomQuest() ? quest.getPath() + customSuffix : "<fstring>" + quest.getNpcStringId() + npcStringIdSuffix).
+				append("</button></font>");
+	}
+
 	/**
 	 * Open a quest window on client with the text of the Folk.<br>
 	 * <b><u>Actions</u>:</b><br>
@@ -170,30 +146,23 @@ public class QuestLink implements IBypassHandler
 	 * @param npc the Folk that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	private static void showQuestWindow(Player player, Npc npc, String questId)
-	{
+	private static void showQuestWindow(Player player, Npc npc, String questId) {
 		String content = null;
 		
-		final Quest q = QuestManager.getInstance().getQuest(questId);
-		
-		// Get the state of the selected quest
-		final QuestState qs = player.getQuestState(questId);
-		
-		if (q != null)
-		{
-			if (((q.getId() >= 1) && (q.getId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))
-			{
+		final var quest = QuestManager.getInstance().getQuest(questId);
+
+		if (nonNull(quest)) {
+
+			if (player.getWeightPenalty() >= 3 || !player.isInventoryUnder80(true)) {
 				player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				return;
 			}
+
+			final QuestState qs =  player.getQuestState(questId);
 			
-			if (qs == null)
-			{
-				if ((q.getId() >= 1) && (q.getId() < 20000))
-				{
-					// Too many ongoing quests.
-					if (player.getAllActiveQuests().size() > 40)
-					{
+			if (isNull(qs)) {
+				if (quest.getId() >= 1) {
+					if (player.getAllActiveQuests().size() > 40) {
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 						html.setFile(player, "data/html/fullquest.html");
 						player.sendPacket(html);
@@ -201,55 +170,16 @@ public class QuestLink implements IBypassHandler
 					}
 				}
 			}
-			
-			q.notifyTalk(npc, player);
-		}
-		else
-		{
+			quest.notifyTalk(npc, player);
+		} else {
 			content = Quest.getNoQuestMsg(player); // no quests found
 		}
-		
-		// Send a Server->Client packet NpcHtmlMessage to the Player in order to display the message of the Folk
-		if (content != null)
-		{
+
+		if (nonNull(content)) {
 			content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 			player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 		}
-		
-		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
-	}
-	
-	/**
-	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
-	 * @param player the Player that talk with the {@code npc}.
-	 * @param npc the Folk that chats with the {@code player}.
-	 */
-	private static void showQuestWindow(Player player, Npc npc)
-	{
-		//@formatter:off
-		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()
-			.map(AbstractEventListener::getOwner)
-			.filter(Quest.class::isInstance)
-			.map(Quest.class::cast)
-			.filter(quest -> (quest.getId() > 0) && (quest.getId() < 20000) && (quest.getId() != 255))
-			.filter(quest -> !Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
-			.distinct()
-			.collect(Collectors.toSet());
-		//@formatter:on
-		
-		if (quests.size() > 1)
-		{
-			showQuestChooseWindow(player, npc, quests);
-		}
-		else if (quests.size() == 1)
-		{
-			showQuestWindow(player, npc, quests.stream().findFirst().get().getName());
-		}
-		else
-		{
-			showQuestWindow(player, npc, "");
-		}
 	}
 	
 	@Override

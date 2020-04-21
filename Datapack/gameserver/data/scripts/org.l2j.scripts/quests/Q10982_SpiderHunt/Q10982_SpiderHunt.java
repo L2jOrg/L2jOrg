@@ -29,6 +29,8 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * New Horizons (10982)
@@ -238,6 +240,10 @@ public class Q10982_SpiderHunt extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+
+		if(isNull(qs)) {
+			return htmltext;
+		}
 		if (qs.isCreated())
 		{
 			htmltext = "30002.htm";
