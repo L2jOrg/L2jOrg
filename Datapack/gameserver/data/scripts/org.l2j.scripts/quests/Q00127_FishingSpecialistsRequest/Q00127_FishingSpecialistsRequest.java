@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 
+import static java.util.Objects.isNull;
+
 /**
  * Fishing Specialist's Request (127)
  * @author Mobius
@@ -53,11 +55,9 @@ public class Q00127_FishingSpecialistsRequest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
 		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
-		{
+		if (isNull(qs)) {
 			return null;
 		}
 		
@@ -81,10 +81,12 @@ public class Q00127_FishingSpecialistsRequest extends Quest
 	}
 	
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
+	public String onTalk(Npc npc, Player player) {
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+		if(isNull(qs)) {
+			return htmltext;
+		}
 		
 		if (qs.isCreated())
 		{

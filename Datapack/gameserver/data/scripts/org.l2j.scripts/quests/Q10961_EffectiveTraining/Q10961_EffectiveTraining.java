@@ -29,6 +29,8 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * Effective Training (10961)
@@ -76,8 +78,7 @@ public final class Q10961_EffectiveTraining extends Quest
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
-		{
+		if (isNull(qs)) {
 			return null;
 		}
 		
@@ -156,6 +157,11 @@ public final class Q10961_EffectiveTraining extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+
+		if(isNull(qs)) {
+			return htmltext;
+		}
+
 		if (qs.isCreated())
 		{
 			htmltext = "34110-01.htm";

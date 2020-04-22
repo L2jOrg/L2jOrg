@@ -22,6 +22,8 @@ import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChange
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * Saga of Legend (10673)
@@ -105,8 +107,7 @@ public class Q10673_SagaOfLegend extends Quest
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
-		{
+		if (isNull(qs)) {
 			return htmltext;
 		}
 		
@@ -161,6 +162,11 @@ public class Q10673_SagaOfLegend extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+
+		if(isNull(qs)) {
+			return htmltext;
+		}
+
 		switch (qs.getState())
 		{
 			case State.CREATED:

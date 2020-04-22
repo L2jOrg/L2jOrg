@@ -29,6 +29,8 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * Swamp Monsters (10986)
@@ -239,6 +241,11 @@ public class Q10986_SwampMonster extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+
+		if(isNull(qs)) {
+			return htmltext;
+		}
+
 		if (qs.isCreated())
 		{
 			htmltext = "30137.htm";

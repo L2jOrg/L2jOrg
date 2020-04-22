@@ -31,6 +31,8 @@ import org.l2j.gameserver.network.serverpackets.NpcSay;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * A Trip Begins (10966)
@@ -174,6 +176,11 @@ public class Q10966_ATripBegins extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+
+		if(isNull(qs)) {
+			return htmltext;
+		}
+
 		if (qs.isCreated())
 		{
 			htmltext = "30332.htm";

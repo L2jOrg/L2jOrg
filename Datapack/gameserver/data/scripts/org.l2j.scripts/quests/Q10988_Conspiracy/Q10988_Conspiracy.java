@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package quests.Q10988_Conspiracy;
 
 import org.l2j.gameserver.enums.QuestSound;
@@ -29,10 +13,12 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 /**
  * Conspiracy (10988)
  * @author RobikBobik
- * @Notee: Based on NA server September 2019
+ * Notee: Based on NA server September 2019
  */
 public class Q10988_Conspiracy extends Quest
 {
@@ -238,6 +224,11 @@ public class Q10988_Conspiracy extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+
+		if(isNull(qs)) {
+			return htmltext;
+		}
+
 		if (qs.isCreated())
 		{
 			htmltext = "30560.htm";
