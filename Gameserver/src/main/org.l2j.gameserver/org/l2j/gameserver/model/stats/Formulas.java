@@ -1377,11 +1377,12 @@ public final class Formulas {
     }
 
     private static double calcSpiritElementalPvPDamage(double attack, double critDamage, boolean isCrit, double baseDamage) {
-        var base = Math.abs(attack * 1.3);
-        if(isCrit) {
-            base +=  Math.abs((attack * 1.223)  + ( (attack * 0.03 + 24) * critDamage) + Rnd.get(-5, 15));
+        double base = Math.abs(attack * 1.3);
+        if (isCrit)
+        {
+            base += Math.abs((attack * 1.223) + (((attack * 0.03) + 24) * critDamage) + Rnd.get(-5, 30));
         }
-        return Math.max(0, (base * attack  + baseDamage * 0.3) / Math.log(max(baseDamage, 20)));
+        return ((base * attack) + (baseDamage * 0.3)) / Math.log(baseDamage);
     }
 
     private static double calcSpiritElementalPvEDamage(ElementalType attackerType, ElementalType targetType, double attack, double critDamage, boolean isCrit, double baseDamage) {
