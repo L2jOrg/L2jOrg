@@ -4,6 +4,7 @@ package org.l2j.gameserver.model.skills;
  * Abnormal Visual Effect enumerated.
  *
  * @author NosBit
+ * @author JoeAlisson
  */
 public enum AbnormalVisualEffect {
     NONE(0),
@@ -378,9 +379,9 @@ public enum AbnormalVisualEffect {
     COSTUME_SEDUCTIVE(10042),
     COSTUME_SEDUCTIVE_LV2(10043),
     COSTUME_SEDUCTIVE_LV3(10044),
-    COSTUME_SCHOOL_2(10045),
-    COSTUME_SCHOOL_2_LV2(10046),
-    COSTUME_SCHOOL_2_LV3(10047),
+    COSTUME_SCHOOL_B(10045),
+    COSTUME_SCHOOL_B_LV2(10046),
+    COSTUME_SCHOOL_B_LV3(10047),
     COSTUME_HANBOK(10048),
     COSTUME_HANBOK_LV2(10049),
     COSTUME_HANBOK_LV3(10050),

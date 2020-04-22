@@ -1117,6 +1117,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="AGATHION_SLOTS">
+                <power initial="1"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50185" name="Release Agathion's Seal - Griffin" action="A1">
         <!-- Unseals the Agathion. -->

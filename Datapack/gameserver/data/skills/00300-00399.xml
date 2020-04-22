@@ -193,9 +193,9 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-modify stat="DAMAGE_ZONE_VULN" stat-add="DAMAGE_ZONE_VULN">
-                <power initial="-10.0">
-                    <value level="2">-20.0</value>
+            <stat-modify mode="PER" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="10.0">
+                    <value level="2">20.0</value>
                 </power>
             </stat-modify>
         </effects>

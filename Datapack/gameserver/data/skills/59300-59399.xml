@@ -1,28 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="59300" name="Noblesse - White" action="A1">
+    <skill id="59300" name="Noblesse - White" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Noblesse - White to reduce the enemy's M. Def by 30%% every 80 seconds. -->
         <icon initial="icon.bm2018_whitenoblesse_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_NOBLESSE_WHITE_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59302" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="30"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59302" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="30"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59301" name="Noblesse - White" action="A1">
+    <skill id="59301" name="Noblesse - White" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Noblesse - White to reduce the enemy's M. Def by 40%% every 30 seconds. -->
         <icon initial="icon.bm2018_whitenoblesse_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_NOBLESSE_WHITE_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59302" target="ENEMY">
+                <power initial="3"/>
+                <chance initial="30"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59302" target="ENEMY">
+                <power initial="3"/>
+                <chance initial="30"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59302" name="Noblesse White - Curse Gloom" max-level="3" debuff="true" action="A1">
+    <skill id="59302" name="Noblesse White - Curse Gloom" max-level="3" debuff="true" action="A2">
         <!-- M. Def -23%%. -->
         <icon initial="icon.bm2018_whitenoblesse_i01"/>
         <attributes property="PHYSIC">
@@ -33,42 +124,179 @@
             </reuse>
             <effect-point initial="-5"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+            <activate-rate initial="80"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="-23">
+                    <value level="2">-30</value>
+                    <value level="3">-40</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="59303" name="Cowboy - Purple" action="A1">
+    <skill id="59303" name="Cowboy - Purple" action="A2">
         <!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Cowboy - Purple to deal an additional 3939 P. Atk. every 180 seconds. -->
         <icon initial="icon.bm2018_cowboy_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_COWBOY_PURPLE_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="5"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="5"/>
+            </speed>
+            <trigger-skill-by-attack skill="59306" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59306" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59304" name="Cowboy - Purple" action="A1">
+    <skill id="59304" name="Cowboy - Purple" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Cowboy - Purple to deal an additional 6000 P. Atk. every 80 seconds. -->
         <icon initial="icon.bm2018_cowboy_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_COWBOY_PURPLE_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59306" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59306" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59305" name="Cowboy - Purple" action="A1">
+    <skill id="59305" name="Cowboy - Purple" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Cowboy - Purple to deal an additional 8000 P. Atk. every 30 seconds. -->
         <icon initial="icon.bm2018_cowboy_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_COWBOY_PURPLE_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59306" target="ENEMY">
+                <power initial="3"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59306" target="ENEMY">
+                <power initial="3"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
     <skill id="59306" name="Cowboy Purple - Physical Attack" max-level="3" action="A1">
         <!-- Inflicts a powerful P. Atk. on the target. -->
@@ -81,44 +309,181 @@
             </reuse>
             <effect-point initial="-5"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+            <activate-rate initial="75"/>
         </attributes>
         <target/>
+        <effects>
+            <physical-attack>
+                <power initial="3939">
+                    <value level="2">6000</value>
+                    <value level="3">8000</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
-    <skill id="59307" name="Musketeer - Blue" action="A1">
+    <skill id="59307" name="Musketeer - Blue" action="A2">
         <!-- Transformed into a rare transformation. XP gain +20%%, P. Atk. +10%% M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%, Movement Speed +5. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Musketeer - Blue to stun the enemy for 5 seconds every 180 seconds. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="10800000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_MUSKETEER_BLUE_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="5"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="5"/>
+            </speed>
+            <trigger-skill-by-attack skill="59310" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59310" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59308" name="Musketeer - Blue" action="A1">
+    <skill id="59308" name="Musketeer - Blue" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Musketeer - Blue to stun the enemy for 5 seconds every 80 seconds. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_MUSKETEER_BLUE_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59310" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59310" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59309" name="Musketeer - Blue" action="A1">
+    <skill id="59309" name="Musketeer - Blue" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as a Musketeer - Blue to stun the enemy for 5 seconds every 30 seconds. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_MUSKETEER_BLUE_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59310" target="ENEMY">
+                <power initial="3"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59310" target="ENEMY">
+                <power initial="3"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59310" name="Musketeer Blue - Stun" max-level="3" debuff="true" action="A1">
+    <skill id="59310" name="Musketeer Blue - Stun" max-level="3" debuff="true" action="A2">
         <!-- Stunned and temporarily unable to move. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
         <attributes property="PHYSIC">
@@ -129,72 +494,300 @@
             </reuse>
             <effect-point initial="-5"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="STUN" visual="STUN">
+            <time initial="5"/>
+            <chance initial="40"/>
+        </abnormal>
+        <effects>
+            <block-all-actions/>
+        </effects>
     </skill>
-    <skill id="59311" name="Dragon Berserker" action="A1">
+    <skill id="59311" name="Dragon Berserker" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nAttack or cast skills while transformed as a Dragon Berserker to trigger the Berserker Soul buff that increases P. Atk./M. Atk. by 50%% and Atk. Spd./Casting Spd. by 50%% and reflects 15%% of received damage to the enemy every 290 seconds. -->
         <icon initial="icon.bm2018_dragon_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_DRAGON_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59313">
+                <power initial="1"/>
+                <chance initial="60"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59313" target="SELF">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59312" name="Dragon Berserker" action="A1">
+    <skill id="59312" name="Dragon Berserker" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nAttack or cast skills while transformed as a Dragon Berserker to trigger the Berserker Soul buff that increases P. Atk./M. Atk. by 70%% and Atk. Spd./Casting Spd. by 70%% and reflects 20%% of received damage to the enemy every 190 seconds. -->
         <icon initial="icon.bm2018_dragon_i01"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_DRAGON_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59313">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59313" target="SELF">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59313" name="Berserker Soul" max-level="2" action="A1">
+    <skill id="59313" name="Berserker Soul" max-level="2" action="A2">
         <!--
             level 1: The armor's power makes the wearer go berserk. During Berserk state, the wearer's P. Atk. +50% M. Atk. +50% Atk. Spd. +50%, Casting Spd. +50%. Reflects 15% of received damage to the enemy.
             level 2: The armor's power makes the wearer go berserk. During Berserk state, the wearer's P. Atk. +70% M. Atk. +70% Atk. Spd. +70%, Casting Spd. +70%. Reflects 20% of received damage to the enemy.
          -->
         <icon initial="icon.bm2018_dragon_i01"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="290000">
                 <value level="2">190000</value>
             </reuse>
             <effect-point initial="20"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal>
+            <time initial="10"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="50">
+                    <value level="2">70</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="50">
+                    <value level="2">70</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="50">
+                    <value level="2">70</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="50">
+                    <value level="2">70</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="REFLECT_DAMAGE_PERCENT">
+                <power initial="15">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="59314" name="Zaken" action="A1">
+    <skill id="59314" name="Zaken" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nP. Def +25%%, M. Def +25%%.\nAttack or cast skills while transformed as Zaken to trigger the Zaken Soul buff on you and your party members that increases Atk. Spd./Casting Spd./Movement Speed by 30%% every 100 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_zaken"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_ZAKEN_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="25"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="25"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59316" target="MY_PARTY">
+                <power initial="1"/>
+                <chance initial="60"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59316" target="MY_PARTY">
+                <power initial="1"/>
+                <chance initial="60"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59315" name="Zaken" action="A1">
+    <skill id="59315" name="Zaken" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nP. Def +40%%, M. Def +40%%.\nAttack or cast skills while transformed as Zaken to trigger the Zaken Soul buff on you and your party members that increases Atk. Spd./Casting Spd./Movement Speed by 50%% every 60 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_zaken"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_ZAKEN_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="40"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="40"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59316" target="MY_PARTY">
+                <power initial="2"/>
+                <chance initial="60"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59316" target="MY_PARTY">
+                <power initial="2"/>
+                <chance initial="60"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59316" name="Zaken Soul" max-level="2" action="A1">
+    <skill id="59316" name="Zaken Soul" max-level="2" action="A2">
         <!--
             level 1: Zaken's power speeds up all stats. Atk. Spd. +30%, Casting Spd. +30%, Movement Speed +30%.
             level 2: Zaken's power speeds up all stats. Atk. Spd. +50%, Casting Spd. +50%, Movement Speed +50%.
@@ -206,70 +799,290 @@
                 <value level="2">60000</value>
             </reuse>
             <effect-point initial="20"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+            <effect-range initial="1000"/>
         </attributes>
-        <target/>
+        <target type="MY_PARTY" scope="PARTY" object="FRIEND"/>
+        <abnormal>
+            <time initial="5"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="30">
+                    <value level="2">50</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="30">
+                    <value level="2">50</value>
+                </power>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="30">
+                    <value level="2">50</value>
+                </power>
+            </speed>
+        </effects>
     </skill>
-    <skill id="59317" name="Anakim" action="A1">
+    <skill id="59317" name="Anakim" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nHas a chance to recover 15%% of the physical damage inflicted on the enemy as HP. \nAttack or cast skills while transformed as Anakim to trigger the Anakim Soul buff that silences the enemy for 3 seconds every 100 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_anakim"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_ANAKIM_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <vampiric-attack chance="30">
+                <power initial="15"/>
+            </vampiric-attack>
+            <trigger-skill-by-attack skill="59319" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59319" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59318" name="Anakim" action="A1">
+    <skill id="59318" name="Anakim" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nHas a chance to recover 25%% of the physical damage inflicted on the enemy as HP. \nAttack or cast skills while transformed as Anakim to trigger the Anakim Soul buff that silences the enemy for 5 seconds every 60 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_anakim"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_ANAKIM_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <vampiric-attack chance="40">
+                <power initial="25"/>
+            </vampiric-attack>
+            <trigger-skill-by-attack skill="59319" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59319" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59319" name="Anakim Soul" max-level="2" debuff="true" action="A1">
+    <skill id="59319" name="Anakim Soul" max-level="2" debuff="true" action="A2">
         <!-- Silenced and temporarily unable to use skills. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_anakim"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <reuse initial="100000">
                 <value level="2">60000</value>
             </reuse>
             <effect-point initial="-5"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal>
+            <time initial="3">
+                <value level="2">5</value>
+            </time>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+            <effect name="PhysicalMute"/>
+        </effects>
     </skill>
-    <skill id="59320" name="Lilith" action="A1">
+    <skill id="59320" name="Lilith" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability> MP Consumption -25%%.\nAttack or cast skills while transformed as Lilith to trigger the Lilith Soul buff on you and your party members that increases P. Critical Damage by 30%% and M. Critical Damage by 30%% for 5 seconds every 100 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_lilith"/>
         <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_LILITH_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <magic-cost any-type="true">
+                <power initial="-25"/>
+            </magic-cost>
+            <trigger-skill-by-attack skill="59322" target="MY_PARTY">
+                <power initial="1"/>
+                <chance initial="30"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59322" target="MY_PARTY">
+                <power initial="1"/>
+                <chance initial="30"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59321" name="Lilith" action="A1">
+    <skill id="59321" name="Lilith" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nMP Consumption -40%%\nAttack or cast skills while transformed as Lilith to trigger the Lilith Soul buff on you and your party members that increases P. Critical Damage by 50%% and M. Critical Damage by 50%% for 10 seconds every 60 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_lilith"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_LILITH_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <magic-cost any-type="true">
+                <power initial="-40"/>
+            </magic-cost>
+            <trigger-skill-by-attack skill="59322" target="MY_PARTY">
+                <power initial="2"/>
+                <chance initial="30"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59322" target="MY_PARTY">
+                <power initial="2"/>
+                <chance initial="30"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59322" name="Lilith Soul" max-level="2" action="A1">
+    <skill id="59322" name="Lilith Soul" max-level="2" action="A2">
         <!--
             level 1: Lilith's power increases a party member's P. Critical Damage by 30% and M. Critical Damage by 30%.
             level 2: Lilith's power increases a party member's P. Critical Damage by 50% and M. Critical Damage by 50%.
@@ -284,29 +1097,149 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="MY_PARTY" scope="PARTY" object="FRIEND"/>
+        <abnormal>
+            <time initial="5">
+                <value level="2">10</value>
+            </time>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="30">
+                    <value level="2">50</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="30">
+                    <value level="2">50</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="59323" name="Freya" action="A1">
+    <skill id="59323" name="Freya" action="A2">
         <!-- Transformed into a legendary transformation. XP gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +10%%, Movement Speed +10, PvP Damage Received -10%%. Transformation remains after death. \n<Special Ability>\nDrains damage delivered to enemy as HP 10%%/MP 5%%.\nAttack or cast skills while transformed as Freya to trigger the Freya Soul buff that removes 1 buff from the target every 100 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_freya"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_FREYA_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <stat-modify stat="ABSORB_DAMAGE_PERCENT">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
+                <power initial="5"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59325" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59325" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="59324" name="Freya" action="A1">
+    <skill id="59324" name="Freya" action="A2">
         <!-- Transformed into a mythic transformation. XP gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +15%%, Movement Speed +20, PvP Damage +10%%, PvP Damage Received -20%%. Transformation remains after death. \n<Special Ability>\nDrains damage delivered to enemy as HP 15%%/MP 10%%.\nAttack or cast skills while transformed as Freya to trigger the Freya Soul buff that removes 1 buff from the target every 60 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_freya"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_FREYA_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <stat-modify stat="ABSORB_DAMAGE_PERCENT">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
+                <power initial="10"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="59325" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59325" target="ENEMY">
+                <power initial="2"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
     <skill id="59325" name="Freya Soul" max-level="2" action="A1">
         <!-- Removes 1 buff -->
@@ -318,9 +1251,13 @@
             </reuse>
             <effect-point initial="-5"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>
+        <effects>
+            <dispel-by-category max="1" category="BUFF">
+                <power initial="60"/>
+            </dispel-by-category>
+        </effects>
     </skill>
     <skill id="59326" name="Brilliant Jewelry Box" action="A1">
         <!-- none -->
