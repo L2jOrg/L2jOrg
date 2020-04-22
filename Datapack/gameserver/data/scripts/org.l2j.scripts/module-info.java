@@ -1,4 +1,5 @@
 import handlers.actionhandlers.*;
+import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
@@ -329,6 +330,7 @@ open module org.l2j.scripts {
             ai.areas.DungeonOfAbyss.SoulTracker.Iris,
             ai.areas.DungeonOfAbyss.SoulTracker.Magrit,
             ai.areas.DungeonOfAbyss.SoulTracker.Rosammy,
+            ai.areas.DungeonOfAbyss.Tores.Tores,
             ai.areas.DwarvenVillage.Toma.Toma,
             ai.areas.LairOfAntharas.Pytan,
             ai.areas.TalkingIsland.Roxxy,
