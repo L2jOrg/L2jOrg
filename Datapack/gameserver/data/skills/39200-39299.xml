@@ -259,12 +259,12 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <target/>
-		<consume>
+        <consume>
             <item initial="90148"/>
             <item-count initial="1"/>
         </consume>
-		<abnormal type="EXP_SP_I">
+        <target/>
+		<abnormal> <!-- EXP_SP_I -->
             <level initial="2"/>
             <time initial="7200"/>
             <chance initial="-1"/>
@@ -704,7 +704,7 @@
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="-10.0"/>
             </resist-abnormal-by-category>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power initial="-3.0"/>
             </magic-cost>
         </effects>
@@ -1233,7 +1233,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_K">
+        <abnormal> <!-- EXP_SP_K -->
             <level initial="2">
 				<value level="2">3</value>
             </level>

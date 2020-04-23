@@ -282,7 +282,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<abnormal type="EXP_SP_W">
+		<abnormal> <!-- EXP_SP_W -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>

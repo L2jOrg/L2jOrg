@@ -199,7 +199,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_L">
+        <abnormal> <!-- EXP_SP_L -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -716,7 +716,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_K">
+        <abnormal> <!-- EXP_SP_K -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -968,7 +968,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_G">
+        <abnormal> <!-- EXP_SP_G -->
             <level initial="2"/>
             <time initial="3600"/>
             <chance initial="-1"/>
