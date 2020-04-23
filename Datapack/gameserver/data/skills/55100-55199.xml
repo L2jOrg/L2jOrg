@@ -1962,13 +1962,13 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="VOTE">
+        <abnormal type="EXP_SP_K">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="7.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
@@ -1995,15 +1995,15 @@
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="20.0"/>
             </stat-modify>
-            <hp-drain percentage="3">
-                <power initial="49.0"/>
-            </hp-drain>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0"/>
             </stat-modify>
+			<vampiric-attack chance="30">
+                <power initial="3.0"/>
+            </vampiric-attack>
         </effects>
     </skill>
     <skill id="55161" name="VIP Level 1">
@@ -2013,7 +2013,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
@@ -2031,7 +2031,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="7.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
@@ -2077,7 +2077,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="25.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
@@ -2145,7 +2145,7 @@
             <base-stat type="STR">
                 <power initial="2.0"/>
             </base-stat>
-            <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="30.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
@@ -2185,7 +2185,7 @@
             <base-stat type="STR">
                 <power initial="2.0"/>
             </base-stat>
-            <stat-modify mode="PER" stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="30.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
@@ -2227,13 +2227,13 @@
     <skill id="55168" name="Clan Unity - Lv. 1" action="A2">
         <!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +3%%. -->
         <icon initial="icon.skill19011"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="CLAN_TEAMWORK">
+        <abnormal type="EXP_SP_B">
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2250,22 +2250,22 @@
     <skill id="55169" name="Clan Unity - Lv. 2" action="A2">
         <!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +5%%, damage received in PvE -2%%. -->
         <icon initial="icon.skill19011"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="CLAN_TEAMWORK">
+        <abnormal type="EXP_SP_B">
             <level initial="2"/>
             <time initial="10800"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
@@ -2282,22 +2282,22 @@
     <skill id="55170" name="Clan Unity - Lv. 3" action="A2">
         <!-- Clan Alliance Buff. For 3 hours, XP/SP bonus +7%%, damage received in PvE -5%%. -->
         <icon initial="icon.skill19011"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="CLAN_TEAMWORK">
-            <level initial="2"/>
+        <abnormal type="EXP_SP_B">
+            <level initial="3"/>
             <time initial="10800"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="7.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="7.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
@@ -2314,25 +2314,25 @@
     <skill id="55171" name="Clan Unity - Lv. 4" action="A2">
         <!-- Clan Alliance Buff. XP/SP gain +10%%, PvE damage +7%%, damage received in PvE -8%% for 3 hours. -->
         <icon initial="icon.skill19011"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="CLAN_TEAMWORK">
-            <level initial="2"/>
+        <abnormal type="EXP_SP_B">
+            <level initial="4"/>
             <time initial="10800"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+            <stat-modify mode="PER" stat="PVE_DAMAGE_TAKEN">
                 <power initial="8.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">

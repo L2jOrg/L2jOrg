@@ -10,14 +10,16 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="BR_EVENT_BUF1">
-            <level initial="2"/>
+        <consume>
+            <item initial="35669"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <abnormal type="EXP_SP_G">
+            <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="5.0"/>
@@ -25,10 +27,10 @@
             <vital-stat-modify mode="PER" stat="MAX_MP">
                 <power initial="5.0"/>
             </vital-stat-modify>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="20.0"/>
             </stat-modify>
         </effects>

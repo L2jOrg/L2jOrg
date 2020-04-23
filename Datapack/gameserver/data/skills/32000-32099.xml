@@ -10,14 +10,15 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="VOTE">
+        <consume>
+            <item initial="49080"/>
+            <item-count initial="1"/>
+        </consume>
+        <abnormal type="EXP_SP_J">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="20.0"/>
@@ -37,14 +38,15 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="VOTE">
+        <consume>
+            <item initial="49086"/>
+            <item-count initial="1"/>
+        </consume>
+        <abnormal type="EXP_SP_J">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="20.0"/>
@@ -370,13 +372,30 @@
     <skill id="32030" name="Dandy's Homerun Ball" action="A1">
         <!-- XP/SP Gain +100%% for 1 hour. Armor appearance changes to that of an NC Dinos uniform. -->
         <icon initial="BranchIcon.icon.g_ev_homerunball"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="46254"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_F" visual="CHANGE_DINOS">
+            <level initial="2"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="32031" name="Scroll of Escape: Talking Island Village" action="A1">
         <!-- Teleport to Talking Island Village. Cooldown is 60 minutes. -->
@@ -735,13 +754,29 @@
     <skill id="32049" name="Storm's Energy" action="A1">
         <!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
         <icon initial="icon.power_of_storm"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<conditions>
+            <level max-level="60" min-level="1" scope="PASSIVE"/>
+        </conditions>
+		<abnormal type="EXP_SP_I">
+            <level initial="2"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="32050" name="Sayha's Treasure Chest" action="A1">
         <!-- none -->

@@ -282,6 +282,19 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="EXP_SP_W">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55925" name="Rudolph's Power" action="A1">
         <!-- Buff/ debuff effects remain after death, but Power of Rudolph is consumed. -->

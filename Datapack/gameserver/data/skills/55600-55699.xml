@@ -1242,6 +1242,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_T"> -->
+            <!-- <level initial="1"/> -->
+        <!-- </abnormal> -->
+		<level max-level="39" min-level="1"/>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>			
+        </effects>
     </skill>
     <skill id="55697" name="Kusto Lucky Enchant Pack" action="A1">
         <!-- none -->

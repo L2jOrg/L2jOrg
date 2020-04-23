@@ -740,6 +740,20 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_R"> -->
+            <!-- <level initial="1"/> -->
+        <!-- </abnormal> -->
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="20.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
+                <power initial="20.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="51158" name="New Year Herb" action="A1">
         <!-- For 5 minutes, P. Atk./M. Atk. +15%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP Recovery Bonus/MP Recovery Bonus +30%, and Movement Speed +10. The effects disappear upon restart. -->

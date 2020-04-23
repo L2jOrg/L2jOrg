@@ -136,7 +136,38 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="90835"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <abnormal type="EXP_SP_G">
+            <level initial="2"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+			<defence-trait>               
+                <trait type="PARALYZE">
+                    <power initial="15"/>
+                </trait>
+				<trait type="DERANGEMENT">
+                    <power initial="15"/>
+                </trait>
+            </defence-trait>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39309" name="Stabilized Eva's Scroll: Enchant Hair Accessory" action="A1">
         <!-- To Enchant Hair Accessory. -->

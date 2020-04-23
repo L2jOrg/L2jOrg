@@ -15,7 +15,7 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="VOTE">
+         <abnormal type="EXP_SP_H">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -24,18 +24,15 @@
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="30.0">
-                    <value level="2">40.0</value>
-                    <value level="3">50.0</value>
+                    <value level="2">30.0</value>
+                    <value level="3">40.0</value>
                     <value level="4">100.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="30.0">
                     <value level="2">40.0</value>
                     <value level="3">50.0</value>
@@ -520,20 +517,21 @@
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="29565"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
-        <abnormal type="VOTE">
+        <abnormal type="EXP_SP_I">
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="20.0"/>
             </stat-modify>
         </effects>
@@ -544,14 +542,15 @@
         <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
         </attributes>
         <target/>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
+        <!-- <abnormal type="EXP_SP_O"> -->
+            <!-- <level initial="1"/> -->
+            <!-- <time initial="3600"/> -->
+        <!-- </abnormal> -->
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="10.0"/>
             </stat-modify>
         </effects>
@@ -978,20 +977,21 @@
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="29669"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
-        <abnormal type="VOTE">
+        <abnormal type="EXP_SP_H">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="35.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="35.0"/>
             </stat-modify>
         </effects>
@@ -1006,20 +1006,21 @@
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="29670"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
-        <abnormal type="VOTE">
-            <level initial="3"/>
+        <abnormal type="EXP_SP_H">
+            <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="45.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="45.0"/>
             </stat-modify>
         </effects>

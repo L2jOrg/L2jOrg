@@ -252,7 +252,7 @@
     <skill id="39211" name="Saviour's Scroll of Growth" action="A1">
         <!-- For 2 hours, XP/SP Gain +50%% due to the energy of the savior. Cooldown is 2 hours. The Savior's Scroll of Growth remains after death. -->
         <icon initial="icon.etc_kalie_hero_scroll"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-point initial="1"/>
@@ -260,6 +260,23 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<consume>
+            <item initial="90148"/>
+            <item-count initial="1"/>
+        </consume>
+		<abnormal type="EXP_SP_I">
+            <level initial="2"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39212" name="XP/SP Hourglass (100%) - 1 Hour" action="A1">
         <!-- For 1 hour, XP/SP Gain +100%% due to Einhasad's Protection. Cooldown is 1 minute. Einhasad's Protection remains after death. -->
@@ -1216,51 +1233,94 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
-            <level initial="1"/>
+        <abnormal type="EXP_SP_K">
+            <level initial="2">
+				<value level="2">3</value>
+            </level>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP" stat-add="BONUS_EXP">
-                <power initial="10.0"/>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="10.0">
+					<value level="2">15.0</value>
+				</power>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power initial="10.0"/>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="10.0">
+					<value level="2">15.0</value>
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="12.0"/>
+                <power initial="12.0">
+					<value level="2">15.0</value>
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="12.0"/>
+                <power initial="12.0">
+					<value level="2">15.0</value>
+				</power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
-                <power initial="10.0"/>
-            </stat-hp-based>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="5.0"/>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="10.0">
+					<value level="2">20.0</value>
+				</power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-                <power initial="5.0"/>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0">
+					<value level="2">20.0</value>
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="5.0">
+					<value level="2">7.0</value>
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="5.0">
+					<value level="2">7.0</value>
+				</power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="15.0">
+					<value level="2">20.0</value>
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="15.0">
+					<value level="2">20.0</value>
+				</power>
             </stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_HP">
-                <power initial="25.0"/>
+                <power initial="25.0">
+					<value level="2">30.0</value>
+				</power>
             </vital-stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_MP">
-                <power initial="25.0"/>
+                <power initial="25.0">
+					<value level="2">30.0</value>
+				</power>
             </vital-stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_CP">
-                <power initial="25.0"/>
+                <power initial="25.0">
+					<value level="2">30.0</value>
+				</power>
             </vital-stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
-                <power initial="30.0"/>
+                <power initial="30.0">
+					<value level="2">40.0</value>
+				</power>
             </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
-                <power initial="30.0"/>
+                <power initial="30.0">
+					<value level="2">40.0</value>
+				</power>
             </stat-modify>
             <vampiric-attack chance="30">
-                <power initial="5.0"/>
-            </vampiric-attack>
+                <power initial="5.0">
+					<value level="2">7.0</value>
+				</power>
+            </vampiric-attack>			
         </effects>
     </skill>
     <skill id="39270" name="Dragon's Treasure Chest" action="A1">

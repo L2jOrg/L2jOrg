@@ -420,6 +420,23 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_W"> -->
+            <!-- <level initial="2"/> -->
+        <!-- </abnormal> -->
+        <effects>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="51037" name="Release Agathion" action="A1">
         <!-- Release summoned Agathion. -->
