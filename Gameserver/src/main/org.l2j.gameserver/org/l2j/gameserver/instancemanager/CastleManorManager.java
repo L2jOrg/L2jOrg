@@ -12,7 +12,10 @@ import org.l2j.gameserver.data.database.dao.ManorProductionDAO;
 import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.enums.ManorMode;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.model.Seed;
+import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.interfaces.IStorable;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
@@ -91,6 +94,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
     public final void load() {
         parseDatapackFile("data/Seeds.xml");
         LOGGER.info("Loaded {} seeds.", seeds.size());
+        releaseResources();
     }
 
     @Override

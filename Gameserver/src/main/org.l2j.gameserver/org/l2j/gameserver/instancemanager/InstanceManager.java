@@ -80,6 +80,7 @@ public final class InstanceManager extends GameXmlReader {
         playerInstanceTimes.clear();
         restoreInstanceTimes();
         LOGGER.info("Loaded instance reenter times for {} players.", playerInstanceTimes.size());
+        releaseResources();
     }
 
     @Override

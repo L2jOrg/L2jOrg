@@ -45,6 +45,7 @@ public final class FishingData extends GameXmlReader {
         _baitData.clear();
         parseDatapackFile("data/Fishing.xml");
         LOGGER.info("Loaded {} Fishing Data.", _baitData.size());
+        releaseResources();
     }
 
     @Override

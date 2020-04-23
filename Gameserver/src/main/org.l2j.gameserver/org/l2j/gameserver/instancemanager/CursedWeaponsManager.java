@@ -70,7 +70,8 @@ public final class CursedWeaponsManager extends GameXmlReader {
         parseDatapackFile("data/CursedWeapons.xml");
         restore();
         controlPlayers();
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _cursedWeapons.size() + " cursed weapon(s).");
+        LOGGER.info("Loaded: {} cursed weapon(s).", _cursedWeapons.size());
+        releaseResources();
     }
 
     @Override

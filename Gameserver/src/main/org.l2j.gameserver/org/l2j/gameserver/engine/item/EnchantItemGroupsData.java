@@ -50,6 +50,7 @@ public final class EnchantItemGroupsData extends GameXmlReader {
         parseDatapackFile("data/EnchantItemGroups.xml");
         LOGGER.info("Loaded {} item group templates.", itemGroups.size());
         LOGGER.info("Loaded {} scroll group templates.", scrollGroups.size());
+        releaseResources();
     }
 
     @Override

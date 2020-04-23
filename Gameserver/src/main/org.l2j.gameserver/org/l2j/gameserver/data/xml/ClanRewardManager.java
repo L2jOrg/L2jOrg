@@ -41,6 +41,7 @@ public class ClanRewardManager extends GameXmlReader {
         for (ClanRewardType type : ClanRewardType.values()) {
             LOGGER.info("Loaded {} rewards for {}", (clanRewards.containsKey(type) ? clanRewards.get(type).size() : 0), type);
         }
+        releaseResources();
     }
 
     @Override

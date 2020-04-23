@@ -1,10 +1,10 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -47,6 +47,7 @@ public final class HitConditionBonusData extends GameXmlReader {
     public void load() {
         parseDatapackFile("data/stats/hitConditionBonus.xml");
         LOGGER.info("Loaded Hit Condition bonuses.");
+        releaseResources();
     }
 
     @Override

@@ -90,7 +90,8 @@ public final class ItemAuctionManager extends GameXmlReader {
     public void load() {
         _managerInstances.clear();
         parseDatapackFile("data/ItemAuctions.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _managerInstances.size() + " instance(s).");
+        LOGGER.info("Loaded {} instance(s).", _managerInstances.size());
+        releaseResources();
     }
 
     @Override

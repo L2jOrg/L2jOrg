@@ -42,7 +42,8 @@ public class EquipmentUpgradeData extends GameXmlReader
     {
         _upgrades.clear();
         parseDatapackFile("data/EquipmentUpgradeData.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _upgrades.size() + " upgrade equipment data.");
+        LOGGER.info("Loaded {} upgrade equipment data.", _upgrades.size());
+        releaseResources();
     }
 
     @Override

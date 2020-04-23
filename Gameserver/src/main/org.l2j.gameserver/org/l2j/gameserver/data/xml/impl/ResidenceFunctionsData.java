@@ -39,7 +39,8 @@ public final class ResidenceFunctionsData extends GameXmlReader {
     public synchronized void load() {
         _functions.clear();
         parseDatapackFile("data/ResidenceFunctions.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _functions.size() + " functions.");
+        LOGGER.info("Loaded: {} functions.", _functions.size());
+        releaseResources();
     }
 
     @Override

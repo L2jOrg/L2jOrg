@@ -41,6 +41,7 @@ public final class CategoryManager extends GameXmlReader {
         categories.clear();
         parseDatapackFile("data/categories.xml");
         LOGGER.info("Loaded {} Categories", categories.size());
+        releaseResources();
     }
 
     @Override

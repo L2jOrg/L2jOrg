@@ -74,7 +74,8 @@ public final class WalkingManager extends GameXmlReader {
     @Override
     public final void load() {
         parseDatapackFile("data/Routes.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " walking routes.");
+        LOGGER.info("Loaded {} walking routes.", _routes.size());
+        releaseResources();
     }
 
     @Override

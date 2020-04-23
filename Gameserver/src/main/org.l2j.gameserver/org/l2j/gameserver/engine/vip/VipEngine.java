@@ -1,12 +1,12 @@
 package org.l2j.gameserver.engine.vip;
 
-import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.xml.impl.PrimeShopData;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
@@ -70,6 +70,7 @@ public final class VipEngine extends GameXmlReader {
     @Override
     public void load() {
         parseDatapackFile("data/vip.xml");
+        releaseResources();
     }
 
     @Override

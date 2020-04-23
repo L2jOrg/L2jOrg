@@ -46,7 +46,8 @@ public final class TransformData extends GameXmlReader {
     public synchronized void load() {
         _transformData.clear();
         parseDatapackDirectory("data/stats/transformations", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _transformData.size() + " transform templates.");
+        LOGGER.info("Loaded: {} transform templates.", _transformData.size());
+        releaseResources();
     }
 
     @Override

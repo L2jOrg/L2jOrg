@@ -60,6 +60,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
 
         // Generate remaining data.
         generateCrystallizationData();
+        releaseResources();
     }
 
     @Override

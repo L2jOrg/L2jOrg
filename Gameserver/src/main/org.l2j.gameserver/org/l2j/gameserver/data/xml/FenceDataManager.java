@@ -54,6 +54,7 @@ public final class FenceDataManager extends GameXmlReader {
 
         parseDatapackFile("data/FenceData.xml");
         LOGGER.info("Loaded {} Fences", fences.size());
+        releaseResources();
     }
 
     @Override

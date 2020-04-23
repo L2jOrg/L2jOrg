@@ -42,6 +42,7 @@ public class LuckyGameData extends GameXmlReader {
         _luckyGame.clear();
         parseDatapackFile("data/LuckyGameData.xml");
         LOGGER.info("Loaded {} lucky game data.", _luckyGame.size() );
+        releaseResources();
     }
 
     @Override

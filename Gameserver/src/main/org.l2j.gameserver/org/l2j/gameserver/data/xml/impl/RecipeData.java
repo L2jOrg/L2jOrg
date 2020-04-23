@@ -46,6 +46,7 @@ public class RecipeData extends GameXmlReader {
         _recipes.clear();
         parseDatapackFile("data/Recipes.xml");
         LOGGER.info("Loaded {} recipes.", _recipes.size());
+        releaseResources();
     }
 
     @Override

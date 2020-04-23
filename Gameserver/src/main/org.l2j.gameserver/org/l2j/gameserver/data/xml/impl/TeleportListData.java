@@ -44,6 +44,7 @@ public final class TeleportListData extends GameXmlReader {
     public void load() {
         parseDatapackFile("data/teleports.xml");
         LOGGER.info("Loaded {} Teleports", infos.size());
+        releaseResources();
     }
 
     @Override

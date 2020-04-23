@@ -50,6 +50,7 @@ public final class ClanHallManager extends GameXmlReader {
     public void load() {
         parseDatapackDirectory("data/residences/clanHalls", true);
         LOGGER.info("Loaded {} Clan Halls.", clanHalls.size());
+        releaseResources();
     }
 
     @Override

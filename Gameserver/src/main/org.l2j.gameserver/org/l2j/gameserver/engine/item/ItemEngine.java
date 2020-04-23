@@ -69,6 +69,7 @@ public final class ItemEngine extends GameXmlReader {
         items.clear();
         parseDatapackDirectory("data/items", true);
         LOGGER.info("Loaded {} Items", items.size());
+        releaseResources();
     }
 
     @Override

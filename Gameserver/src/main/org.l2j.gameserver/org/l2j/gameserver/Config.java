@@ -2092,6 +2092,7 @@ public final class Config {
                 LOGGER.info("Network Config: ipconfig.xml doesn't exists using automatic configuration...");
                 autoIpConfig();
             }
+            releaseResources();
         }
 
         @Override

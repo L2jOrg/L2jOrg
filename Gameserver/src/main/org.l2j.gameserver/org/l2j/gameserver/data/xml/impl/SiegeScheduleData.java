@@ -39,6 +39,7 @@ public class SiegeScheduleData extends GameXmlReader {
             scheduleData.add(new SiegeScheduleDate());
             LOGGER.info("Loaded: default siege schedulers.");
         }
+        releaseResources();
     }
 
     @Override

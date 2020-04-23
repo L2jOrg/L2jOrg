@@ -1,6 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import io.github.joealisson.primitive.*;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Clan;
@@ -15,7 +16,6 @@ import org.l2j.gameserver.model.holders.PlayerSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -113,6 +113,7 @@ public final class SkillTreesData extends GameXmlReader {
         report();
 
         isLoading.set(false);
+        releaseResources();
     }
 
     @Override

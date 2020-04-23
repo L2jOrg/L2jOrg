@@ -51,6 +51,7 @@ public class EnsoulData extends GameXmlReader {
         LOGGER.info("Loaded {} fees", ensoulFees.size());
         LOGGER.info("Loaded {} options", ensoulOptions.size());
         LOGGER.info("Loaded {} stones", ensoulStones.size());
+        releaseResources();
     }
 
     @Override

@@ -22,6 +22,7 @@ import java.nio.file.Path;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**
@@ -59,6 +60,10 @@ public abstract class XmlReader extends XmlParser {
         }
     }
 
+    protected void releaseResources(){
+        documentBuilder = null;
+    }
+
     private Schema loadSchema()  {
         try {
             var schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
@@ -87,6 +92,9 @@ public abstract class XmlReader extends XmlParser {
         }
 
         try {
+            if(isNull(documentBuilder)){
+                createDocumentBuilder();
+            }
             parseDocument(documentBuilder.parse(file), file);
         }
         catch (SAXParseException e) {

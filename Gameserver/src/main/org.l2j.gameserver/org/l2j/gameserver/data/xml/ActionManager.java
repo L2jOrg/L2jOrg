@@ -4,7 +4,6 @@ import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -31,7 +30,6 @@ public final class ActionManager extends GameXmlReader {
     private ActionManager() {
     }
 
-
     @Override
     protected Path getSchemaFilePath() {
         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/actions.xsd");
@@ -43,6 +41,7 @@ public final class ActionManager extends GameXmlReader {
         actionSkills.clear();
         parseDatapackFile("data/actions.xml");
         LOGGER.info("Loaded {} player actions.", actions.size());
+        releaseResources();
     }
 
     @Override

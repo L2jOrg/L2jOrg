@@ -53,7 +53,8 @@ public final class ShuttleData extends GameXmlReader {
         }
         parseDatapackFile("data/ShuttleData.xml");
         init();
-        LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _shuttles.size() + " Shuttles.");
+        LOGGER.info("Loaded: {} Shuttles.", _shuttles.size());
+        releaseResources();
     }
 
     @Override
