@@ -85,7 +85,7 @@ public final class Config {
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
-    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/TimeLimitedZones.ini";
+    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
 
     // --------------------------------------------------
     // Variable Definitions
