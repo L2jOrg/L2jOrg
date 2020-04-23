@@ -3686,7 +3686,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 value *= (100 + stats.getValue(Stat.PVE_DAMAGE_TAKEN)) / 100;
             }
 
-            elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
+            if(!reflect) {
+                elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
+            }
 
             value += elementalDamage;
         }
