@@ -336,6 +336,7 @@ open module org.l2j.scripts {
             ai.areas.TalkingIsland.Roxxy,
             ai.areas.TowerOfInsolence.Ateld.Ateld,
             ai.areas.PlainsOfDion,
+            ai.areas.ImperialTomb.FourSepulchers.FourSepulchers,
 
             ai.bosses.Antharas.Antharas,
             ai.bosses.Baium.Baium,
@@ -760,6 +761,7 @@ open module org.l2j.scripts {
              quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves,
              quests.Q10988_Conspiracy.Q10988_Conspiracy,
              quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
-             quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;
+             quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction,
+             quests.Q00620_FourGoblets.Q00620_FourGoblets;
 
 }

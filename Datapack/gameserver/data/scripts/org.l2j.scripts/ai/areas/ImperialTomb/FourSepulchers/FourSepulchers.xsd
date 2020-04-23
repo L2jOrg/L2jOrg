@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="spawn" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute type="xs:int" name="sepulcherId" use="optional"/>
+								<xs:attribute type="xs:int" name="wave" use="optional"/>
+								<xs:attribute type="xs:int" name="npcId" use="optional"/>
+								<xs:attribute type="xs:int" name="x" use="optional"/>
+								<xs:attribute type="xs:int" name="y" use="optional"/>
+								<xs:attribute type="xs:int" name="z" use="optional"/>
+								<xs:attribute type="xs:int" name="heading" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
