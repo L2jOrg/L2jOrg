@@ -843,6 +843,23 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_X"> -->
+            <!-- <level initial="2"/> -->
+        <!-- </abnormal> -->
+        <effects>			
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="3.0">
+                    <value level="3">5.0</value>
+                    <value level="5">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="3.0">
+                    <value level="3">5.0</value>
+                    <value level="5">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="35033" name="Item Skill: Boost Atk. Spd." max-level="3" action="A1">
         <!--

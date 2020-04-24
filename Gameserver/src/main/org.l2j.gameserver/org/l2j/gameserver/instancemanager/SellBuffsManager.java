@@ -2,21 +2,21 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.HtmlUtil;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -55,8 +55,9 @@ public final class SellBuffsManager extends GameXmlReader {
         if (Config.SELLBUFF_ENABLED) {
             ALLOWED_BUFFS.clear();
             parseDatapackFile("data/SellBuffData.xml");
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + ALLOWED_BUFFS.size() + " allowed buffs.");
+            LOGGER.info("Loaded {} allowed buffs.", ALLOWED_BUFFS.size());
         }
+        releaseResources();
     }
 
     @Override

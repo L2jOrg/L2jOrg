@@ -65,6 +65,7 @@ public class EnchantItemHPBonusData extends GameXmlReader {
         _armorHPBonuses.clear();
         parseDatapackFile("data/stats/enchantHPBonus.xml");
         LOGGER.info("Loaded {} Enchant HP Bonuses.", _armorHPBonuses.size());
+        releaseResources();
     }
 
     /**

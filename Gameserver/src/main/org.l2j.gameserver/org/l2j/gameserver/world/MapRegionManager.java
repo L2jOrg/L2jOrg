@@ -62,6 +62,7 @@ public final class MapRegionManager extends GameXmlReader {
         regions.clear();
         parseDatapackDirectory("data/mapregion", false);
         LOGGER.info("Loaded {} map regions.", regions.size());
+        releaseResources();
     }
 
     @Override

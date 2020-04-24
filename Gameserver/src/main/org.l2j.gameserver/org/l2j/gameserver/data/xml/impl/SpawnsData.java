@@ -11,11 +11,11 @@ import org.l2j.gameserver.model.interfaces.ITerritorized;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
 import org.l2j.gameserver.world.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
-import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -64,6 +64,7 @@ public class SpawnsData extends GameXmlReader {
     public void load() {
         parseDatapackDirectory("data/spawns", true);
         LOGGER.info("Loaded spawns");
+        releaseResources();
     }
 
     @Override

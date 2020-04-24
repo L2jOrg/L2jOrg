@@ -38,6 +38,7 @@ public class PetSkillData extends GameXmlReader {
         _skillTrees.clear();
         parseDatapackFile("data/PetSkillData.xml");
         LOGGER.info("Loaded {} skills.", _skillTrees.size());
+        releaseResources();
     }
 
     @Override

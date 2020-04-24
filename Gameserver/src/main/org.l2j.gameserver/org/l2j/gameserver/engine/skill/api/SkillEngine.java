@@ -93,6 +93,7 @@ public class SkillEngine extends EffectParser {
     public void load() {
         parseDatapackDirectory("data/skills/", true);
         LOGGER.info("Loaded {} skills", skills.size());
+        releaseResources();
     }
 
     @Override

@@ -17,7 +17,6 @@ import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-
 /**
  * Loads the the list of classes and it's info.
  *
@@ -42,6 +41,7 @@ public final class ClassListData extends GameXmlReader {
         _classData.clear();
         parseDatapackFile("data/stats/chars/classList.xml");
         LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classData.size() + " Class data.");
+        releaseResources();
     }
 
     @Override

@@ -15,7 +15,10 @@ import org.w3c.dom.Document;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -44,6 +47,7 @@ public class VariationData extends GameXmlReader {
         parseDatapackFile("data/augmentation/Variations.xml");
         LOGGER.info("Loaded {} Variations.", variations.size() );
         LOGGER.info("Loaded {} Fees.", fees.size());
+        releaseResources();
     }
 
     @Override

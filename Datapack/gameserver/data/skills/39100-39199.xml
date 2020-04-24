@@ -199,19 +199,16 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="VOTE">
+        <abnormal type="EXP_SP_L">
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="50.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="50.0"/>
             </stat-modify>
         </effects>
@@ -719,7 +716,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="VOTE">
+        <abnormal type="EXP_SP_K">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -752,15 +749,15 @@
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="20.0"/>
             </stat-modify>
-            <hp-drain percentage="3">
-                <power initial="49.0"/>
-            </hp-drain>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0"/>
             </stat-modify>
+			<vampiric-attack chance="30">
+                <power initial="3.0"/>
+            </vampiric-attack>
         </effects>
     </skill>
     <skill id="39145" name="Tower of Insolence Enchant Scroll Pack" action="A1">
@@ -966,7 +963,38 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="49765"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <abnormal type="EXP_SP_G">
+            <level initial="2"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+			<defence-trait>               
+                <trait type="PARALYZE">
+                    <power initial="15"/>
+                </trait>
+				<trait type="DERANGEMENT">
+                    <power initial="15"/>
+                </trait>
+            </defence-trait>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39156" name="Scroll of Heavenly Protection" action="A1">
         <!-- For 20 minutes, Paralysis Resistance +15 and MEN Resistance +10. -->

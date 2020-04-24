@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -50,6 +50,7 @@ public class PrimeShopData extends GameXmlReader {
         primeItems.clear();
         parseDatapackFile("data/primeShop.xml");
         LOGGER.info("Loaded {} items", primeItems.size());
+        releaseResources();
     }
 
     @Override

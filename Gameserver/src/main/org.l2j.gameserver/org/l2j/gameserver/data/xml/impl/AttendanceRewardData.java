@@ -42,6 +42,7 @@ public class AttendanceRewardData extends GameXmlReader {
             parseDatapackFile("data/AttendanceRewards.xml");
             _rewardsCount = _rewards.size();
             LOGGER.info("Loaded {}  rewards.", _rewardsCount );
+            releaseResources();
         } else {
             LOGGER.info("Disabled.");
         }

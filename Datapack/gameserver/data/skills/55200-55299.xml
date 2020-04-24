@@ -522,14 +522,14 @@
         <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
         </attributes>
         <target/>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
+        <!-- <abnormal type="EXP_SP_C"> -->
+			<!-- <level initial="1"/> -->                
+        <!-- </abnormal> -->
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="100.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="100.0"/>
             </stat-modify>
         </effects>
@@ -637,7 +637,7 @@
     <skill id="55240" name="Overwhelming Power of a Holiday Hat" action="A1">
         <!-- For 20 minutes, XP/SP Gain +5%%. Effect remains even after death. -->
         <icon initial="icon.skill19226"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
@@ -645,6 +645,19 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="EXP_SP_M">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55241" name="Scroll: Mana Regeneration" action="A2">
         <!-- MP Recovery Bonus has been increased. -->

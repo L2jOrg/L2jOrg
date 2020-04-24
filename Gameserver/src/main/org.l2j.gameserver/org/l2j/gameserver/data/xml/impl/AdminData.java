@@ -57,6 +57,7 @@ public final class AdminData extends GameXmlReader {
         parseFile(new File("config/AccessLevels.xml"));
         LOGGER.info("Loaded: {} Access Levels.", _accessLevels.size());
         LOGGER.info("Loaded: {} Access Commands.", _adminCommandAccessRights.size());
+        releaseResources();
     }
 
     @Override

@@ -1015,6 +1015,52 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_U"> -->
+			<!-- <level initial="1"> -->
+                <!-- <value level="2">2</value> -->
+                <!-- <value level="3">3</value> -->
+                <!-- <value level="4">4</value> -->
+                <!-- <value level="5">5</value> -->
+				<!-- <value level="6">6</value> -->
+                <!-- <value level="7">7</value> -->
+                <!-- <value level="8">8</value> -->
+                <!-- <value level="9">9</value> -->
+                <!-- <value level="10">10</value> -->
+            <!-- </level> -->
+        <!-- </abnormal> -->
+		<effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="3.0">
+					<value level="2">4.0</value>
+                    <value level="3">6.0</value>
+                    <value level="4">8.0</value>
+                    <value level="5">17.0</value>
+                    <value level="6">20.0</value>
+                    <value level="7">23.0</value>
+                    <value level="8">26.0</value>
+                    <value level="9">30.0</value>
+                    <value level="10">35.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="3.0">
+					<value level="2">4.0</value>
+                    <value level="3">6.0</value>
+                    <value level="4">8.0</value>
+                    <value level="5">17.0</value>
+                    <value level="6">20.0</value>
+                    <value level="7">23.0</value>
+                    <value level="8">26.0</value>
+                    <value level="9">30.0</value>
+                    <value level="10">35.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP">
+                <power>
+                    <value level="10">50.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55473" name="Vital Stone - Vital Wind" max-level="6" action="A1">
         <!--
@@ -1033,6 +1079,37 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="EXP_SP_V">
+            <level initial="1">
+				<value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+                <value level="6">6</value>                   
+            </level>
+            <time initial="15"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0">
+					<value level="2">70.0</value>
+                    <value level="3">100.0</value>
+                    <value level="4">110.0</value>
+                    <value level="5">120.0</value>
+                    <value level="6">150.0</value>                 
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0">
+					<value level="2">70.0</value>
+                    <value level="3">100.0</value>
+                    <value level="4">110.0</value>
+                    <value level="5">120.0</value>
+                    <value level="6">150.0</value>                 
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55474" name="Jade" max-level="10">
         <!--

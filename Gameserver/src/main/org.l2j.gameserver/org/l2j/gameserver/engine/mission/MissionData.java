@@ -1,8 +1,8 @@
 package org.l2j.gameserver.engine.mission;
 
+import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import io.github.joealisson.primitive.CHashIntMap;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -16,7 +16,10 @@ import org.w3c.dom.Document;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
@@ -49,6 +52,7 @@ public class MissionData extends GameXmlReader {
         parseDatapackFile("data/mission.xml");
         available = !missions.isEmpty();
         LOGGER.info("Loaded {} missions.",  missions.size());
+        releaseResources();
     }
 
     @Override

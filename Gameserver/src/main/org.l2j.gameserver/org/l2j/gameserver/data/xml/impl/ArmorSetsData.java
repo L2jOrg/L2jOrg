@@ -45,6 +45,7 @@ public final class ArmorSetsData extends GameXmlReader {
         _armorSets.clear();
         parseDatapackDirectory("data/stats/armorsets", false);
         LOGGER.info("Loaded {} Armor sets.", _armorSets.size());
+        releaseResources();
     }
 
     @Override

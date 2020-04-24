@@ -40,6 +40,7 @@ public class EnchantItemData extends GameXmlReader {
         scrolls.clear();
         parseDatapackFile("data/EnchantItemData.xml");
         LOGGER.info("Loaded {} Enchant Scrolls.", scrolls.size());
+        releaseResources();
     }
 
     @Override

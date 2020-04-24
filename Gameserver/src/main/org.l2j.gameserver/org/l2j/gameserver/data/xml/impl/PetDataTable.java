@@ -56,7 +56,8 @@ public final class PetDataTable extends GameXmlReader {
     public void load() {
         pets.clear();
         parseDatapackDirectory("data/stats/pets", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + pets.size() + " Pets.");
+        LOGGER.info("Loaded {} Pets.",  pets.size());
+        releaseResources();
     }
 
     @Override

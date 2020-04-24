@@ -1,10 +1,10 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.items.Henna;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -50,6 +50,7 @@ public final class HennaData extends GameXmlReader {
         _hennaList.clear();
         parseDatapackFile("data/stats/hennaList.xml");
         LOGGER.info("Loaded {} Henna data.", _hennaList.size());
+        releaseResources();
     }
 
     @Override

@@ -569,7 +569,8 @@
     <xs:complexType name="MagicCostEffect">
         <xs:complexContent>
             <xs:extension base="Effect">
-                <xs:attribute name="type" type="SkillType" use="required"/>
+                <xs:attribute name="type" type="SkillType" default="MAGIC"/>
+                <xs:attribute name="any-type" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

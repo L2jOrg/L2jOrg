@@ -68,6 +68,7 @@ public class CostumeEngine extends GameXmlReader {
     public void load() {
         parseDatapackFile("data/costumes.xml");
         LOGGER.info("Loaded {} costumes and {} collections", costumes.size(), collections.size());
+        releaseResources();
     }
 
     @Override

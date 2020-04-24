@@ -77,6 +77,7 @@ public final class ZoneManager extends GameXmlReader {
         LOGGER.info("Loaded {}  NPC spawn territories.", spawnTerritories.size());
         final OptionalInt maxId = classZones.values().stream().flatMapToInt(map -> map.keySet().stream()).filter(value -> value < 300000).max();
         maxId.ifPresent(id -> LOGGER.info("Last static id: {}", id));
+        releaseResources();
     }
 
     @Override

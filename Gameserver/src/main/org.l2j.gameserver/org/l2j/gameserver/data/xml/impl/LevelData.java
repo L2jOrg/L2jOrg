@@ -37,6 +37,7 @@ public final class LevelData extends GameXmlReader {
         parseDatapackFile("data/level-data.xml");
         LOGGER.info("Max Player Level is: {}", maxLevel);
         LOGGER.info("Loaded {} levels info", levelInfos.size());
+        releaseResources();
     }
 
     @Override

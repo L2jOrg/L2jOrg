@@ -47,6 +47,7 @@ public final class ElementalSpiritEngine extends GameXmlReader {
     public void load() {
         parseDatapackFile("data/elemental/elemental-spirits.xml");
         LOGGER.info("Loaded {} Elemental Spirits Templates.", spiritData.size());
+        releaseResources();
     }
 
     @Override

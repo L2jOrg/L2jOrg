@@ -39,6 +39,7 @@ public final class BeautyShopData extends GameXmlReader {
         _beautyList.clear();
         _beautyData.clear();
         parseDatapackFile("data/beautyShop.xml");
+        releaseResources();
     }
 
     @Override

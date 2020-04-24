@@ -47,6 +47,7 @@ public class LCoinShopData extends GameXmlReader {
     @Override
     public void load() {
         parseDatapackFile("data/LCoinShop.xml");
+        releaseResources();
     }
 
     @Override

@@ -33,7 +33,7 @@ import org.l2j.gameserver.util.MathUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.Math.max;
+import static java.lang.Math.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
@@ -444,7 +444,7 @@ public final class Formulas {
         }
 
         final int degreeside = target.isAffected(EffectFlag.PHYSICAL_SHIELD_ANGLE_ALL) ? 360 : 120;
-        if ((degreeside < 360) && (Math.abs(target.calculateDirectionTo(attacker) - convertHeadingToDegree(target.getHeading())) > (degreeside / 2.))) {
+        if ((degreeside < 360) && (abs(target.calculateDirectionTo(attacker) - convertHeadingToDegree(target.getHeading())) > (degreeside / 2.))) {
             return 0;
         }
 
@@ -1000,7 +1000,7 @@ public final class Formulas {
         {
             finalExp /= Config.RATE_KARMA_LOST;
         }
-        return (int) ((Math.abs(finalExp) / karmaLooseMul) / 30);
+        return (int) ((abs(finalExp) / karmaLooseMul) / 30);
     }
 
     /**
@@ -1377,16 +1377,15 @@ public final class Formulas {
     }
 
     private static double calcSpiritElementalPvPDamage(double attack, double critDamage, boolean isCrit, double baseDamage) {
-        double base = Math.abs(attack * 1.3);
-        if (isCrit)
-        {
-            base += Math.abs((attack * 1.223) + (((attack * 0.03) + 24) * critDamage) + Rnd.get(-5, 30));
+        var damage = min(max(0, (attack * 1.3 + baseDamage * 0.03 * attack ) / log(max(attack, 5))), 2295);
+        if(isCrit) {
+            damage *= 1 + (Rnd.get(13, 20) + critDamage) / 100;
         }
-        return ((base * attack) + (baseDamage * 0.3)) / Math.log(baseDamage);
+        return damage;
     }
 
     private static double calcSpiritElementalPvEDamage(ElementalType attackerType, ElementalType targetType, double attack, double critDamage, boolean isCrit, double baseDamage) {
-        double damage = Math.abs(attack * 0.8);
+        double damage = abs(attack * 0.8);
         double bonus;
 
        if(attackerType.isSuperior(targetType)) {
@@ -1400,10 +1399,10 @@ public final class Formulas {
         }
 
         if(isCrit) {
-           damage += Math.abs((40 + (9.2 + attack * 0.048 ) * critDamage) * bonus + Rnd.get(-10, 30)) ;
+           damage += abs((40 + (9.2 + attack * 0.048 ) * critDamage) * bonus + Rnd.get(-10, 30)) ;
         }
 
-        return ((damage + baseDamage) * bonus) / Math.log(20 + baseDamage + damage);
+        return ((damage + baseDamage) * bonus) / log(20 + baseDamage + damage);
     }
 
 }

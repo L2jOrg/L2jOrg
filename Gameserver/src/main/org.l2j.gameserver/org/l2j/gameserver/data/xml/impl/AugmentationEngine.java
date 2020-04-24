@@ -47,6 +47,7 @@ public class AugmentationEngine extends EffectParser {
         augmentations.clear();
         parseDatapackDirectory("data/augmentation/options", false);
         LOGGER.info("Loaded {} Augmentations Options.", augmentations.size());
+        releaseResources();
     }
 
     @Override

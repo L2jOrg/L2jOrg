@@ -687,7 +687,7 @@
     <skill id="39045" name="Chapeau's Authority" action="A2">
         <!-- For 20 minutes, XP/SP Gain +5%%. Effect remains even after death. -->
         <icon initial="icon.skill19226"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
@@ -695,15 +695,16 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_SP_M">
+            <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0"/>
             </stat-modify>
         </effects>
@@ -971,14 +972,15 @@
         <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
         </attributes>
         <target/>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
+        <!-- <abnormal type="EXP_SP_P"> -->
+            <!-- <level initial="1"/> -->
+            <!-- <time initial="1200"/> -->
+        <!-- </abnormal> -->
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="20.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="20.0"/>
             </stat-modify>
         </effects>
@@ -1281,15 +1283,16 @@
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="49499"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
-        <abnormal type="BR_EVENT_BUF1">
-            <level initial="2"/>
+        <abnormal type="EXP_SP_G">
+            <level initial="1"/>
             <time initial="1800"/>
             <chance initial="-1"/>
         </abnormal>
-        <conditions>
-            <level max-level="85" scope="PASSIVE"/>
-        </conditions>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="5.0"/>
@@ -1341,12 +1344,28 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <consume>
+            <item initial="49501">
+				<value level="2">91391</value>                    
+            </item>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+		<abnormal type="EXP_SP_F">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP">
-                <power initial="30.0"/>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="10.0">
+					<value level="2">30.0</value>                    
+                </power>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power initial="30.0"/>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="10.0">
+					<value level="2">30.0</value>                    
+                </power>
             </stat-modify>
         </effects>
     </skill>
@@ -1490,13 +1509,13 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="VOTE">
+        <abnormal type="EXP_SP_K">
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="7.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
@@ -1523,15 +1542,15 @@
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="20.0"/>
             </stat-modify>
-            <hp-drain percentage="3">
-                <power initial="49.0"/>
-            </hp-drain>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="5.0"/>
             </stat-modify>
+			<vampiric-attack chance="30">
+                <power initial="3.0"/>
+            </vampiric-attack>
         </effects>
     </skill>
     <skill id="39086" name="Pirate King's Treasure Chest" action="A1">

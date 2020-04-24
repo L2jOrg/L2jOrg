@@ -141,6 +141,8 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int fanAngle;
 
     private volatile long effectsMask = -1;
+    private boolean useCustomTime;
+    private boolean useCustomDelay;
 
     Skill(int id, String name, int maxLevel, boolean debuff, SkillOperateType action, SkillType type) {
         this.id = id;
@@ -160,15 +162,13 @@ public final class Skill implements IIdentifiable, Cloneable {
         }
 
         if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(id)) {
+            useCustomDelay = true;
             reuseDelay = Config.SKILL_REUSE_LIST.get(id);
         }
 
         if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(id)) {
-            if ((level < 100) || (level > 140)) {
-                abnormalTime = Config.SKILL_DURATION_LIST.get(id);
-            } else if (level < 140) {
-                abnormalTime += Config.SKILL_DURATION_LIST.get(id);
-            }
+            useCustomTime = true;
+            abnormalTime = Config.SKILL_DURATION_LIST.get(id);
         }
 
         reuseHashCode = SkillEngine.skillHashCode(reuseDelayGroup > 0 ? reuseDelayGroup : id, level);
@@ -537,7 +537,9 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     void setAbnormalTime(int time) {
-        abnormalTime = time;
+        if(!useCustomTime) {
+            abnormalTime = time;
+        }
     }
 
     /**
@@ -1128,7 +1130,9 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     void setReuse(int reuse) {
-        reuseDelay = reuse;
+        if(!useCustomDelay) {
+            reuseDelay = reuse;
+        }
     }
 
     void setManaInitConsume(int consume) {

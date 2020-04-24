@@ -39,6 +39,7 @@ public class CombinationItemsManager extends GameXmlReader {
         items.clear();
         parseDatapackFile("data/combination-items.xml");
         LOGGER.info("Loaded {} combinations", items.size());
+        releaseResources();
     }
 
     @Override

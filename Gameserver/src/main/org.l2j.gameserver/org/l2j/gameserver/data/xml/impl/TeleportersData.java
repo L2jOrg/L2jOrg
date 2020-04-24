@@ -45,6 +45,7 @@ public class TeleportersData extends GameXmlReader {
         teleporters.clear();
         parseDatapackDirectory("data/teleporters", true);
         LOGGER.info("Loaded: {} npc teleporters.", teleporters.size());
+        releaseResources();
     }
 
     @Override

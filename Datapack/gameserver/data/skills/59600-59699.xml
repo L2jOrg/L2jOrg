@@ -19,27 +19,100 @@
             <acquire-costume id="159"/>
         </effects>
     </skill>
-    <skill id="59602" name="Shadow Master" action="A1">
+    <skill id="59602" name="Shadow Master" action="A2">
         <!-- Legendary transformation. XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P./M. Critical Damage +10%%, Speed +10, PvP Received Damage -10%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you are attacked while transformed into Shadow Master, summons a clone that provokes every 120 seconds and hides into the shadows for 10 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_SHADOW_MASTER_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <!-- TODO special ability -->
+        </effects>
     </skill>
-    <skill id="59603" name="Shadow Master" action="A1">
+    <skill id="59603" name="Shadow Master" action="A2">
         <!-- Mystic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you are attacked while transformed into Shadow Master, summons a clone that provokes every 60 seconds and hides into the shadows for 20 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_SHADOW_MASTER_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <!-- TODO special ability -->
+        </effects>
     </skill>
     <skill id="59604" name="Shadow Master - Decoy" max-level="2" action="A2">
         <icon initial="BranchIcon.Icon.g_bm_costume_thief"/>
@@ -75,27 +148,128 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="59607" name="Navy Admiral" action="A1">
+    <skill id="59607" name="Navy Admiral" action="A2">
         <!-- Legendary transformation. XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P./M. Critical Damage +10%%, Speed +10, PvP Received Damage -10%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you attack or use a skill while transformed into Navy Admiral, an attack buff that increases P. Atk./M. Atk. +150%% is activated and when hit, a defense buff that increases P./M. Def. +150%% is activated. Cooldown is 100 seconds.\nOnly one of the Attack or Defense buffs is activated within the cooldown. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_NAVY_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <!-- TODO special ability -->
+            <trigger-skill-by-attack skill="59611">
+                <power initial="1"/>
+                <chance initial="100"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59611" target="SELF">
+                <power initial="1"/>
+                <chance initial="100"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+            <trigger-skill-by-damage skill="59612">
+                <power initial="1"/>
+                <chance initial="100"/>
+            </trigger-skill-by-damage>
+        </effects>
     </skill>
-    <skill id="59608" name="Navy Admiral" action="A1">
+    <skill id="59608" name="Navy Admiral" action="A2">
         <!-- Mythic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery time you attack or use a skill while transformed into Navy Admiral, an attack buff that increases P. Atk./M. Atk. +200%% is activated and when hit, a defense buff that increases P./M. Def. +200%% is activated. Cooldown is 600 seconds.\nOnly one of the Attack or Defense buffs is activated within the cooldown. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_NAVY_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <!-- TODO special ability -->
+            <trigger-skill-by-attack skill="59611">
+                <power initial="2"/>
+                <chance initial="100"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59611" target="SELF">
+                <power initial="2"/>
+                <chance initial="100"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+            <trigger-skill-by-damage skill="59612">
+                <power initial="2"/>
+                <chance initial="100"/>
+            </trigger-skill-by-damage>
+        </effects>
     </skill>
     <skill id="59609" name="Navy Admiral - Attack Release" max-level="2" action="A2">
         <!-- Recharging energy of the Navy Admiral. Attack/Defense buffs are not activated anymore. -->
@@ -129,12 +303,25 @@
             level 2: Borrows the power of the Navy Admiral and for 15 seconds, P./M. Atk. +200%.
          -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-        <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
-        </attributes>
+        <attributes property="PHYSIC"/>
         <target/>
+        <abnormal>
+            <time initial="10">
+                <value level="2">15</value>
+            </time>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="150">
+                    <value level="2">200</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="150">
+                    <value level="2">200</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59612" name="Navy Admiral - Defense" max-level="2" action="A2">
         <!--
@@ -142,34 +329,120 @@
             level 2: Borrows the power of the Navy Admiral and for 15 seconds, P./M. Def. +200%.
          -->
         <icon initial="BranchIcon.Icon.g_bm_costume_navy"/>
-        <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
-        </attributes>
+        <attributes property="PHYSIC"/>
         <target/>
+        <abnormal>
+            <time initial="10">
+                <value level="2">15</value>
+            </time>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="150">
+                    <value level="2">200</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="150">
+                    <value level="2">200</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="59613" name="Nymph" action="A1">
+    <skill id="59613" name="Nymph" action="A2">
         <!-- Legendary transformation. XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P./M. Critical Damage +10%%, Speed +10, PvP Received Damage -10%%. Transformation remains after death. \n\n<Special Ability>\nAdena Gain, Item Drop Rate, Spoil Item Amount +50%%.\nEvery time you attack or use a skill while transformed into Nymph, Temptation debuff that seduces the opponent is activated every 100 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="20"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_NYNPH_LV2">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="10"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-10"/>
+            </stat-modify>
+            <!-- TODO special ability -->
+        </effects>
     </skill>
-    <skill id="59614" name="Nymph" action="A1">
+    <skill id="59614" name="Nymph" action="A2">
         <!-- Mythic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nAdena Gain, Item Drop Rate, Spoil Item Amount +100%%.\nEvery time you attack or use a skill while transformed into Nymph, Temptation debuff that seduces the opponent is activated every 60 seconds. -->
         <icon initial="BranchIcon.Icon.g_bm_costume_nymph"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_NYNPH_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <!-- TODO special ability -->
+        </effects>
     </skill>
     <skill id="59615" name="Nymph - Temptation" action="A2">
         <!-- Borrows the power of the Nymph and seduces the opponent for 3 seconds. -->
@@ -194,16 +467,57 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="59617" name="Devil" action="A1">
+    <skill id="59617" name="Devil" action="A2">
         <!-- Mythic transformation. XP Gain +50%%, P. Atk. +20%%, M. Atk. +20%%, P./M. Critical Damage +15%%, Speed +20,PvP Damage +10%%, PvP Received Damage -20%%. Transformation remains after death. \n\n<Special Ability>\nEvery 60 seconds, a barrier is activated for 20 seconds, and after it disappears, activates an inferno that inflicts 1000 damage for 10 seconds to a target that attacks you -->
         <icon initial="BranchIcon.Icon.g_bm_costume_devil"/>
-        <attributes property="PHYSIC" auto-use="TRANSFORM">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="TRANSFORM">
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="71684"/>
+            <item-count initial="30"/>
+        </consume>
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_DEVIL_LV3">
+            <time initial="900"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="20"/>
+            </speed>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
+                <power initial="-20"/>
+            </stat-modify>
+            <!-- TODO special ability -->
+        </effects>
     </skill>
     <skill id="59618" name="Devil - Barrier" action="A2">
         <!-- Borrows the power of the Devil and all damage is set to 1. -->
@@ -1014,13 +1328,29 @@
     <skill id="59687" name="Storm's Energy" action="A1">
         <!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
         <icon initial="icon.power_of_storm"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<conditions>
+            <level max-level="60" min-level="1" scope="PASSIVE"/>
+        </conditions>
+		<abnormal type="EXP_SP_I">
+            <level initial="2"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59688" name="Dragon's Special Elixir" max-level="2">
         <!--

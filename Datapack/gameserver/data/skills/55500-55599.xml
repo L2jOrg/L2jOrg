@@ -775,7 +775,24 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="90835"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <abnormal type="EXP_SP_G">
+            <level initial="2"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>            
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55556" name="Mount an Elk" action="A1">
         <!-- Can mount an Elk. -->
@@ -1192,6 +1209,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_S"> -->
+            <!-- <level initial="1"/> -->
+        <!-- </abnormal> -->
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="40.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="40.0"/>
+            </stat-modify>			
+        </effects>
     </skill>
     <skill id="55592" name="Hero's Bracelet">
         <!-- Activates 4 Talisman slots.  HP/ MP/ CP +5%%. -->

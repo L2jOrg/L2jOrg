@@ -72,6 +72,7 @@ public class NpcData extends GameXmlReader {
             parseDatapackDirectory("data/stats/npcs/custom", true);
             LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_npcs.size() - npcCount) + " Custom NPCs.");
         }
+        releaseResources();
     }
 
     @Override

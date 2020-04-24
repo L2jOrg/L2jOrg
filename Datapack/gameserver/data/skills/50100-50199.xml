@@ -278,6 +278,19 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE">
+            <level initial="1"/>
+            <time initial="300"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="1800.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="1800.0"/>
+            </stat-modify>        
+        </effects>
     </skill>
     <skill id="50123" name="Blue Eagle's Grace" action="A2">
         <!-- Sayha's Grace Consumption Speed -50%%. -->
@@ -298,7 +311,26 @@
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="ISHKA_EFFECT">
+            <level initial="1"/>            
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="100.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="1.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="1.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50125" name="Pig Coin Bank" max-level="2" action="A1">
         <!-- none -->
@@ -414,13 +446,26 @@
     <skill id="50134" name="XP Boost Scroll - Event" action="A1">
         <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="EXP_SP_J">
+            <level initial="2"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50135" name="Einhasad's Protection" action="A1">
         <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
@@ -1117,6 +1162,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="AGATHION_SLOTS">
+                <power initial="1"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50185" name="Release Agathion's Seal - Griffin" action="A1">
         <!-- Unseals the Agathion. -->

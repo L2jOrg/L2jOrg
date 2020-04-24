@@ -48,6 +48,7 @@ public final class BuyListData extends GameXmlReader {
         if (getSettings(GeneralSettings.class).loadCustomBuyList()) {
             parseDatapackDirectory("data/buylists/custom", false);
         }
+        releaseResources();
 
         LOGGER.info("Loaded {} BuyLists.", _buyLists.size());
 

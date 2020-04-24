@@ -282,6 +282,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<!-- <abnormal type="EXP_SP_D"> -->
+			<!-- <level initial="1"/> -->                
+        <!-- </abnormal> --> 
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55719" name="Feather Rune">
         <!-- Increases weight limit by 20%%. -->
@@ -303,13 +314,29 @@
     <skill id="55721" name="Storm Power" action="A1">
         <!-- XP/SP Gain +50%% for 2 hours due to the storm's energy. Cooldown is 2 hours. Storm's energy remains after death. -->
         <icon initial="icon.power_of_storm"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<conditions>
+            <level min-level="1" max-level="60" scope="PASSIVE"/>
+        </conditions>
+		<abnormal type="EXP_SP_I">
+            <level initial="2"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55722" name="Facelifting Potion" action="A1">
         <!-- none -->

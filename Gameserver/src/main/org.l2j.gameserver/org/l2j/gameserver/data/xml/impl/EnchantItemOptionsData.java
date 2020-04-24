@@ -38,6 +38,7 @@ public class EnchantItemOptionsData extends GameXmlReader {
     public synchronized void load() {
         data.clear();
         parseDatapackFile("data/EnchantItemOptions.xml");
+        releaseResources();
     }
 
     @Override

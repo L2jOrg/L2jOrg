@@ -118,22 +118,22 @@
     <skill id="19036" name="Blessing of Light" action="A2">
         <!-- Acquires 3%% additional XP and SP through the blessing of the Guardian of Light. -->
         <icon initial="icon.etc_pi_gift_box_i04"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
-            <magic-level initial="85"/>
+        <attributes property="PHYSIC" static-reuse="true" stay-after-death="true" irreplacable="true">
+            <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="BRIGHTNESS_BLESS" visual="VP_KEEP">
+        <abnormal type="EXP_SP_N" visual="VP_KEEP">
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify stat="BONUS_EXP">
+            <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0"/>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="3.0"/>
             </stat-modify>
         </effects>

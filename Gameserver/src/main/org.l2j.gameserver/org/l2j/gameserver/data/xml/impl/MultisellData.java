@@ -56,6 +56,7 @@ public final class MultisellData extends GameXmlReader {
         }
 
         LOGGER.info("Loaded {} multisell lists.", _multisells.size());
+        releaseResources();
     }
 
     @Override

@@ -1122,85 +1122,83 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-        <effects>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
-                <power>
-                    <value level="1">4</value>
-                    <value level="2">8</value>
-                    <value level="3">12</value>
-                    <value level="4">20</value>
+		<!-- <abnormal type="EXP_SP_Q"> -->
+			<!-- <level initial="1"> -->
+                <!-- <value level="2">2</value> -->
+                <!-- <value level="3">3</value> -->
+                <!-- <value level="4">4</value> -->
+                <!-- <value level="5">5</value> -->
+            <!-- </level> -->
+        <!-- </abnormal> -->
+		<effects>
+			<stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="4.0">
+					<value level="2">8.0</value>
+                    <value level="3">12.0</value>
+                    <value level="4">20.0</value>
+                    <value level="5">30.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="REGENERATE_MP_RATE" mode="PER">
-                <power>
-                    <value level="1">4</value>
-                    <value level="2">8</value>
-                    <value level="3">12</value>
-                    <value level="4">20</value>
+			<stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="4.0">
+					<value level="2">8.0</value>
+                    <value level="3">12.0</value>
+                    <value level="4">20.0</value>
+                    <value level="5">30.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="REGENERATE_CP_RATE" mode="PER">
-                <power>
-                    <value level="1">4</value>
-                    <value level="2">8</value>
-                    <value level="3">12</value>
-                    <value level="4">20</value>
+			<stat-modify mode="PER" stat="REGENERATE_CP_RATE">
+                <power initial="4.0">
+					<value level="2">8.0</value>
+                    <value level="3">12.0</value>
+                    <value level="4">20.0</value>
+                    <value level="5">30.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PVE_MAGICAL_SKILL_DEFENCE" mode="PER">
-                <power>
-                    <value level="1">3</value>
-                    <value level="2">5</value>
-                    <value level="3">7</value>
-                    <value level="4">10</value>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+					<value level="2">5.0</value>
+                    <value level="3">7.0</value>
+                    <value level="4">10.0</value>
+                    <value level="5">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PVE_PHYSICAL_ATTACK_DEFENCE" mode="PER">
-                <power>
-                    <value level="1">3</value>
-                    <value level="2">5</value>
-                    <value level="3">7</value>
-                    <value level="4">10</value>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="3.0">
+					<value level="2">5.0</value>
+                    <value level="3">7.0</value>
+                    <value level="4">10.0</value>
+                    <value level="5">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PVE_PHYSICAL_SKILL_DEFENCE" mode="PER">
-                <power>
-                    <value level="1">3</value>
-                    <value level="2">5</value>
-                    <value level="3">7</value>
-                    <value level="4">10</value>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power initial="3.0">
+					<value level="2">5.0</value>
+                    <value level="3">7.0</value>
+                    <value level="4">10.0</value>
+                    <value level="5">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PVE_RAID_MAGICAL_SKILL_DEFENCE" mode="PER">
-                <power>
-                    <value level="1">3</value>
-                    <value level="2">5</value>
-                    <value level="3">7</value>
-                    <value level="4">10</value>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5.0">
+					<value level="2">8.0</value>
+                    <value level="3">11.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PVE_RAID_PHYSICAL_ATTACK_DEFENCE" mode="PER">
-                <power>
-                    <value level="1">3</value>
-                    <value level="2">5</value>
-                    <value level="3">7</value>
-                    <value level="4">10</value>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="5.0">
+					<value level="2">8.0</value>
+                    <value level="3">11.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PVE_RAID_PHYSICAL_SKILL_DEFENCE" mode="PER">
+			<stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP">
                 <power>
-                    <value level="1">3</value>
-                    <value level="2">5</value>
-                    <value level="3">7</value>
-                    <value level="4">10</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="EXPSP_RATE" mode="PER">
-                <power>
-                    <value level="1">5</value>
-                    <value level="2">8</value>
-                    <value level="3">11</value>
-                    <value level="4">15</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>
                 </power>
             </stat-modify>
         </effects>

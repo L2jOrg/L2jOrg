@@ -15,7 +15,6 @@ import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-
 /**
  * @author UnAfraid
  */
@@ -37,7 +36,8 @@ public class KarmaData extends GameXmlReader {
     public synchronized void load() {
         _karmaTable.clear();
         parseDatapackFile("data/stats/chars/pcKarmaIncrease.xml");
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _karmaTable.size() + " karma modifiers.");
+        LOGGER.info("Loaded {} karma modifiers.", _karmaTable.size());
+        releaseResources();
     }
 
     @Override

@@ -303,6 +303,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="50184"/> <!-- Expand Agathion Slots -->
+		</skills>
 	</armor>
 
 	<armor id="91934" name="Adventurer's Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.etc_rbracelet_c_i00">
@@ -317,6 +320,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="50186" /> <!-- Adventurer's Agathion Griffin -->
+		</skills>
 	</armor>
 
 	<armor id="91936" name="Adventurer's Gem Fragment" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_crystal_piece_i00">
@@ -324,6 +330,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="50187"/> <!-- Adventurer's Rough Jewel -->
+		</skills>
 	</armor>
 
 	<armor id="91937" name="Adventurer's Talisman" type="NONE" body-part="TALISMAN" icon="icon.etc_talisman_i07">

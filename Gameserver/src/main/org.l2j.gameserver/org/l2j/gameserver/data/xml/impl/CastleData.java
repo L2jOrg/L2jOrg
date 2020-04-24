@@ -38,6 +38,7 @@ public final class CastleData extends GameXmlReader {
         _spawns.clear();
         _siegeGuards.clear();
         parseDatapackDirectory("data/residences/castles", true);
+        releaseResources();
     }
 
     @Override

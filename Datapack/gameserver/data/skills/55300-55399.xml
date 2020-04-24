@@ -131,7 +131,7 @@
     <skill id="55311" name="Overwhelming Power of a Holiday Hat" action="A1">
         <!-- For 60 minutes, XP/SP gain +5%%. Will not be deleted upon death. -->
         <icon initial="icon.skill19226"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
@@ -139,6 +139,19 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="EXP_SP_M">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55312" name="Test Cube" action="A1">
         <!-- none -->
@@ -728,252 +741,627 @@
     <skill id="55335" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55336" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55337" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55338" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55339" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55340" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55341" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55342" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55343" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55344" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55345" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55346" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55347" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
         <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55348" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55349" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55350" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55351" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55352" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55353" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55354" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55355" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55356" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55357" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="7200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55358" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="10800"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55359" name="XP/SP Hourglass - 4 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70262"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+		<abnormal type="EXP_SP_E">
+            <level initial="1"/>
+            <time initial="14400"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55360" name="XP/SP Rune - 100%" max-level="8">
         <!--
@@ -986,6 +1374,18 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="100.0">
+                    <value level="5">200.0</value>                   
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="100.0">
+                    <value level="5">200.0</value>                   
+				</power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55361" name="Superspeed Potion" action="A2">
         <!-- Greatly increases Speed for a short period of time. -->
@@ -1522,14 +1922,84 @@
     <skill id="55396" name="Olympiad Warrior's Special Fruit" action="A1">
         <!-- For 20 minutes, obtained XP/ SP +10%%, P./ M. Atk. +10%%, P./ M. Def. +5%%, Max. HP/ MP/ CP +15%%, HP/ MP Recovery Bonus +20%%, PvE damage +10%%. With a certain chance, converts 3%% of damage dealt into HP. -->
         <icon initial="icon.etc_cobol_i04"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <cast-range initial="-1"/>
             <reuse initial="20000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+		<consume>
+            <item initial="70326"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <abnormal type="EXP_SP_K">
+            <level initial="2"/>			
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="10.0">
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="10.0">
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10.0">
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10.0">
+				</power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="5.0">
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="5.0">
+				</power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAX_HP">
+                <power initial="15.0">
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAX_MP">
+                <power initial="15.0">
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAX_CP">
+                <power initial="15.0">
+				</power>
+            </stat-modify>			
+			<stat-modify mode="PER" stat="REGENERATE_HP_RATE">
+                <power initial="20.0">
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="20.0">
+				</power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <vampiric-attack chance="30">
+                <power initial="3.0">
+				</power>
+            </vampiric-attack>
+        </effects>
     </skill>
     <skill id="55397" name="Olympiad Commemorative Amulet - 100%">
         <!-- XP/SP +100%%, while hunting. -->

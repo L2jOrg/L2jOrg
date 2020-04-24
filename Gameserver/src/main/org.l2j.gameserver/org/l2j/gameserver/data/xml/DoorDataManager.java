@@ -50,6 +50,7 @@ public final class DoorDataManager extends GameXmlReader {
         groups.clear();
         regions.clear();
         parseDatapackFile("data/doors.xml");
+        releaseResources();
     }
 
     @Override
