@@ -15,7 +15,7 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-         <abnormal type="EXP_SP_H">
+         <abnormal> <!-- EXP_SP_H -->
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -343,7 +343,7 @@
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="-30.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power initial="300.0"/>
             </magic-cost>
             <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
@@ -522,7 +522,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_I">
+        <abnormal> <!-- EXP_SP_I -->
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -982,7 +982,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_H">
+        <abnormal> <!-- EXP_SP_H -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -1011,7 +1011,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_H">
+        <abnormal> <!-- EXP_SP_H -->
             <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>

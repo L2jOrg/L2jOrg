@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.fishing;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -19,7 +19,7 @@ public class ExFishingEnd extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_FISHING_END);
+        writeId(ServerExPacketId.EX_FISHING_END);
         writeInt(_player.getObjectId());
         writeByte((byte) _reason.getReason());
     }

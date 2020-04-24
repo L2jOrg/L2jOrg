@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.instancemanager.GraciaSeedsManager;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 @StaticPacket
 public class ExShowSeedMapInfo extends ServerPacket {
@@ -14,7 +14,7 @@ public class ExShowSeedMapInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_SEED_MAP_INFO);
+        writeId(ServerExPacketId.EX_SHOW_SEED_MAP_INFO);
 
         writeInt(2); // seed count
 

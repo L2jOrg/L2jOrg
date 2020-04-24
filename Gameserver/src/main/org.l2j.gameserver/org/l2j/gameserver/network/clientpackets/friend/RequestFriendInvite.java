@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.model.BlockList;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.friend.FriendAddRequest;
+import org.l2j.gameserver.world.World;
 
 public final class RequestFriendInvite extends ClientPacket {
     private String _name;

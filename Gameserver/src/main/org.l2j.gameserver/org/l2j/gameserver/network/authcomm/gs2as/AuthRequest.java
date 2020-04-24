@@ -6,8 +6,6 @@ import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import java.nio.ByteBuffer;
-
 public class AuthRequest extends SendablePacket {
 
 	protected void writeImpl(AuthServerClient client) {

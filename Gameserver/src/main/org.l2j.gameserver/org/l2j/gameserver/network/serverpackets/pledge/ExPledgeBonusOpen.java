@@ -5,9 +5,9 @@ import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
-import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.InvalidDataPacketException;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,7 +51,7 @@ public class ExPledgeBonusOpen extends ServerPacket {
         }
 
         // General OP Code
-        writeId(ServerPacketId.EX_PLEDGE_BONUS_OPEN);
+        writeId(ServerExPacketId.EX_PLEDGE_BONUS_UI_OPEN);
 
         // Members online bonus
         writeInt(highestMembersOnlineBonus.getRequiredAmount());

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExRegenMax extends ServerPacket {
     private final int _time;
@@ -16,7 +16,7 @@ public class ExRegenMax extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_REGEN_MAX);
+        writeId(ServerExPacketId.EX_REGEN_MAX);
 
         writeInt(1);
         writeInt(_time);

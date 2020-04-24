@@ -7,8 +7,6 @@ import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.settings.ServerSettings;

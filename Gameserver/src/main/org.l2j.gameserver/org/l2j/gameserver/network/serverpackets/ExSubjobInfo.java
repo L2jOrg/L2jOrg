@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.SubclassType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SubClass;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ExSubjobInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SUBJOB_INFO);
+        writeId(ServerExPacketId.EX_SUBJOB_INFO);
 
         writeByte((byte) _type);
         writeInt(_currClassId);

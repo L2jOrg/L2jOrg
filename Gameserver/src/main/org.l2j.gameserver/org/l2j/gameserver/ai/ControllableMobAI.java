@@ -1,9 +1,9 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -11,8 +11,8 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.World;
 
 import java.util.ArrayList;
 import java.util.List;

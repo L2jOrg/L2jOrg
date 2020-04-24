@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
-import org.l2j.gameserver.engine.elemental.AbsorbItem;
 import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.elemental.AbsorbItem;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
-import static org.l2j.gameserver.network.ServerPacketId.EX_ELEMENTAL_SPIRIT_ABSORB_INFO;
+import static org.l2j.gameserver.network.ServerExPacketId.EX_ELEMENTAL_SPIRIT_ABSORB_INFO;
 
 public class ElementalSpiritAbsorbInfo extends ServerPacket {
 

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.payback;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.time.Instant;
@@ -20,7 +20,7 @@ public class ExPaybackList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) throws Exception {
-        writeId(ServerPacketId.EX_PAYBACK_LIST);
+        writeId(ServerExPacketId.EX_PAYBACK_LIST);
 
         writeInt(2); // payback size
         for (int i = 0; i < 2; i++) {

@@ -62,7 +62,7 @@ public class ExTimedHuntingZoneEnter extends ClientPacket {
 		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
 		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
-			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+			endTime = currentTime + 3600000;
 		}
 
 		if (endTime > currentTime)

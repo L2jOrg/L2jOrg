@@ -16,6 +16,7 @@
  */
 package org.l2j.gameserver.model.conditions;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.actor.Creature;
@@ -23,7 +24,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.engine.skill.api.Skill;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 

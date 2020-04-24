@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.mentoring;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.world.World;
 
@@ -28,7 +28,7 @@ public class ListMenteeWaiting extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.LIST_MENTEE_WAITING);
+        writeId(ServerExPacketId.EX_MENTEE_WAITING_LIST);
 
         writeInt(0x01); // always 1 in retail
         if (_possibleCandiates.isEmpty()) {

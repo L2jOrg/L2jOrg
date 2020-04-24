@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.equipmentupgrade;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
 
 /**
@@ -21,7 +21,7 @@ public class ExUpgradeSystemResult extends AbstractItemPacket
     @Override
     public void writeImpl(GameClient client)
     {
-        writeId(ServerPacketId.EX_UPGRADE_SYSTEM_RESULT);
+        writeId(ServerExPacketId.EX_UPGRADE_SYSTEM_RESULT);
         writeShort(_success);
         writeInt(_objectId);
     }

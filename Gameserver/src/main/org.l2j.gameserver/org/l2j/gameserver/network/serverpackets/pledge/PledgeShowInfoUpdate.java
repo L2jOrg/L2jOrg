@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.serverpackets.pledge;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.settings.ServerSettings;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;

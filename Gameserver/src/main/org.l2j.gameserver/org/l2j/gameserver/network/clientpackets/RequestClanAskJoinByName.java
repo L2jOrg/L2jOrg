@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.AskJoinPledge;
+import org.l2j.gameserver.world.World;
 
 /**
  * @author Mobius

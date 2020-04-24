@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.compound;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -16,7 +16,7 @@ public class ExEnchantSucess extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ENCHANT_SUCESS);
+        writeId(ServerExPacketId.EX_ENCHANT_SUCCESS);
 
         writeInt(_itemId);
     }

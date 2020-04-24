@@ -1335,14 +1335,14 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<conditions>
-            <level max-level="60" min-level="1" scope="PASSIVE"/>
-        </conditions>
-		<abnormal type="EXP_SP_I">
+		<abnormal> <!-- EXP_SP_I -->
             <level initial="2"/>
             <time initial="7200"/>
             <chance initial="-1"/>
         </abnormal>
+        <conditions>
+            <level max-level="60" scope="PASSIVE"/>
+        </conditions>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="50.0"/>

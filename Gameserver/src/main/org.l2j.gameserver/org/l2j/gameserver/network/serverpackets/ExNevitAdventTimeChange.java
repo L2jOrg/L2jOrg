@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author mochitto
@@ -17,7 +17,7 @@ public class ExNevitAdventTimeChange extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_GET_CRYSTALIZING_ESTIMATION);
+        writeId(ServerExPacketId.EX_RESPONSE_CRYSTALITEM_INFO);
 
         // state 0 - pause 1 - started
         writeByte((byte) (_paused ? 0x00 : 0x01));

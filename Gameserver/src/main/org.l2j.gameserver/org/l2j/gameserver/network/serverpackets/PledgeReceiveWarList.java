@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Collection;
 
@@ -23,7 +23,7 @@ public class PledgeReceiveWarList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_RECEIVE_WAR_LIST);
+        writeId(ServerExPacketId.EX_VIEW_PLEDGE_WARLIST);
 
         writeInt(_tab); // page
         writeInt(_clanList.size());

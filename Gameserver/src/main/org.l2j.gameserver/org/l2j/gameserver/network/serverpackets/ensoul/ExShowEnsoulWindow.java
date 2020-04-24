@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.ensoul;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -17,7 +17,7 @@ public class ExShowEnsoulWindow extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_ENSOUL_WINDOW);
+        writeId(ServerExPacketId.EX_SHOW_ENSOUL_WINDOW);
     }
 
 }

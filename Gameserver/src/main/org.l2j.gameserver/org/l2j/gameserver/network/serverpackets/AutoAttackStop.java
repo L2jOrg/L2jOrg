@@ -15,7 +15,7 @@ public class AutoAttackStop extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.AUTO_ATTACK_STOP);
+        writeId(ServerPacketId.COMBAT_MODE_FINISH);
 
         writeInt(_targetObjId);
     }

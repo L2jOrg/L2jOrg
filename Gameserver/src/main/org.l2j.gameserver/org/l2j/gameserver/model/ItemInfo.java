@@ -40,6 +40,7 @@ public class ItemInfo {
     private int _change;
     private boolean _available = true;
     private int _equipped;
+    private int reuse;
 
     /**
      * Get all information from Item to generate ItemInfo.
@@ -277,5 +278,13 @@ public class ItemInfo {
 
     public boolean isQuestItem() {
         return template.isQuestItem();
+    }
+
+    public void setReuse(int reuse) {
+        this.reuse = reuse;
+    }
+
+    public int getReuse() {
+        return reuse;
     }
 }

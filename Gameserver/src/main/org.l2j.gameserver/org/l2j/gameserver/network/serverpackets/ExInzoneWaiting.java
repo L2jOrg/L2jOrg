@@ -21,7 +21,7 @@ import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.concurrent.TimeUnit;
 
@@ -42,7 +42,7 @@ public class ExInzoneWaiting extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_INZONE_WAITING_INFO);
+        writeId(ServerExPacketId.EX_INZONE_WAITING_INFO);
 
         writeByte((byte) (_sendByClient ? 0x00 : 0x01)); // Grand Crusade
         writeInt(_currentTemplateId);

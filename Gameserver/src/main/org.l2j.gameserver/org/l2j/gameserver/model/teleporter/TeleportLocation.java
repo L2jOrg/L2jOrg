@@ -3,7 +3,6 @@ package org.l2j.gameserver.model.teleporter;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.network.NpcStringId;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -141,7 +141,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_G">
+        <abnormal> <!-- EXP_SP_G -->
             <level initial="2"/>
             <time initial="3600"/>
             <chance initial="-1"/>

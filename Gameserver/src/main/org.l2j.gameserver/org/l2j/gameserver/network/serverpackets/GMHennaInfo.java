@@ -29,7 +29,7 @@ public final class GMHennaInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GMHENNA_INFO);
+        writeId(ServerPacketId.GM_HENNA_INFO);
 
         writeShort((short) _activeChar.getHennaValue(BaseStats.INT)); // equip INT
         writeShort((short) _activeChar.getHennaValue(BaseStats.STR)); // equip STR

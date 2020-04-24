@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author KenM
@@ -140,7 +140,7 @@ public final class ExBasicActionList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BASIC_ACTION_LIST);
+        writeId(ServerExPacketId.EX_BASIC_ACTION_LIST);
 
         writeInt(_actionIds.length);
         for (int _actionId : _actionIds) {

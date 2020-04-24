@@ -1079,7 +1079,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<abnormal type="EXP_SP_V">
+		<abnormal> <!-- EXP_SP_V -->
             <level initial="1">
 				<value level="2">2</value>
                 <value level="3">3</value>

@@ -1962,7 +1962,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal type="EXP_SP_K">
+        <abnormal> <!-- EXP_SP_K -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -2233,7 +2233,7 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_B">
+        <abnormal> <!-- EXP_SP_B -->
             <level initial="1"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2256,7 +2256,7 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_B">
+        <abnormal> <!-- EXP_SP_B -->
             <level initial="2"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2288,7 +2288,7 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_B">
+        <abnormal> <!-- EXP_SP_B -->
             <level initial="3"/>
             <time initial="10800"/>
             <chance initial="-1"/>
@@ -2320,7 +2320,7 @@
             <effect-range initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_B">
+        <abnormal> <!-- EXP_SP_B -->
             <level initial="4"/>
             <time initial="10800"/>
             <chance initial="-1"/>

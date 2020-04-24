@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -11,7 +11,7 @@ public class ExOlympiadRecord extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_OLYMPIAD_RECORD);
+        writeId(ServerExPacketId.EX_OLYMPIAD_RECORD);
 
         writeInt(10); // points
         writeInt(3); // win count

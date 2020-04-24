@@ -1,15 +1,14 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
-import org.l2j.gameserver.settings.GeneralSettings;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.ExReplyReceivedPost;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;

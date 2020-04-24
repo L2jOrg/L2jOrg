@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.itemauction.ItemAuction;
 import org.l2j.gameserver.model.itemauction.ItemAuctionBid;
 import org.l2j.gameserver.model.itemauction.ItemAuctionState;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Forsaiken
@@ -33,7 +33,7 @@ public final class ExItemAuctionInfoPacket extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ITEM_AUCTION_INFO);
+        writeId(ServerExPacketId.EX_ITEM_AUCTION_INFO);
 
         writeByte((byte) (_refresh ? 0x00 : 0x01));
         writeInt(_currentAuction.getInstanceId());

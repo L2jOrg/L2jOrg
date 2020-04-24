@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.costume;
 
 import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Collection;
@@ -36,7 +36,7 @@ public class ExCostumeEvolution extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_COSTUME_EVOLUTION);
+        writeId(ServerExPacketId.EX_COSTUME_EVOLUTION);
         writeByte(success);
         writeInt(targetCostumes.size());
 

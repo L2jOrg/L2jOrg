@@ -22,7 +22,7 @@ public class VehicleStarted extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.VEHICLE_START);
+        writeId(ServerPacketId.VEHICLE_START_PACKET);
 
         writeInt(_objectId);
         writeInt(_state);

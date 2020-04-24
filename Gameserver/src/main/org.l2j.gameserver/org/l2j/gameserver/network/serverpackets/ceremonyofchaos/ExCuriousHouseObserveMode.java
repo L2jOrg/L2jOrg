@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.ceremonyofchaos;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -21,7 +21,7 @@ public class ExCuriousHouseObserveMode extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_CURIOUS_HOUSE_OBSERVE_MODE);
+        writeId(ServerExPacketId.EX_CURIOUS_HOUSE_OBSERVE_MODE);
         writeByte((byte) _spectating);
     }
 

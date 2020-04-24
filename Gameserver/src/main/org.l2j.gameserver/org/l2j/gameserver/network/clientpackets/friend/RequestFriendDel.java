@@ -2,12 +2,12 @@ package org.l2j.gameserver.network.clientpackets.friend;
 
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.friend.FriendRemove;
+import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;

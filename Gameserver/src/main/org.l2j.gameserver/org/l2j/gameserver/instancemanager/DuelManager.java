@@ -17,9 +17,9 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Duel;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Map;

@@ -22,7 +22,7 @@ public class ShopPreviewList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOP_PREVIEW_LIST);
+        writeId(ServerPacketId.BUY_PREVIEW_LIST);
 
         writeInt(5056);
         writeLong(_money); // current money

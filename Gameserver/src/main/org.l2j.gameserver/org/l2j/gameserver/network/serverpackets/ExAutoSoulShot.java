@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExAutoSoulShot extends ServerPacket {
     private final int _itemId;
@@ -16,7 +16,7 @@ public class ExAutoSoulShot extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_AUTO_SOUL_SHOT);
+        writeId(ServerExPacketId.EX_AUTO_SOULSHOT);
 
         writeInt(_itemId);
         writeInt(_enable);

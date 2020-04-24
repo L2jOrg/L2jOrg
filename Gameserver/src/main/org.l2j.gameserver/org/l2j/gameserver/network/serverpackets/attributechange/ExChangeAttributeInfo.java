@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.attributechange;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.HashMap;
@@ -39,7 +39,7 @@ public class ExChangeAttributeInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_CHANGE_ATTRIBUTE_INFO);
+        writeId(ServerExPacketId.EX_CHANGE_ATTRIBUTE_INFO);
         writeInt(_crystalItemId);
         writeInt(_attributes);
         writeInt(_itemObjId);

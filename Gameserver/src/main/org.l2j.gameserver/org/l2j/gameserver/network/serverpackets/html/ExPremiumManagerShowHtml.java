@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.html;
 
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author JoeAlisson
@@ -15,7 +15,7 @@ public class ExPremiumManagerShowHtml extends AbstractHtmlPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PREMIUM_MANAGER_SHOW_HTML);
+        writeId(ServerExPacketId.EX_PREMIUM_MANAGER_SHOW_HTML);
         writeInt(getNpcObjId());
         writeString(getHtml());
         writeInt(-1);

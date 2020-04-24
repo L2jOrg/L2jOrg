@@ -15,7 +15,7 @@ public class PetItemList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PET_ITEM_LIST);
+        writeId(ServerPacketId.PET_ITEMLIST);
 
         writeShort((short) _items.size());
         for (Item item : _items) {

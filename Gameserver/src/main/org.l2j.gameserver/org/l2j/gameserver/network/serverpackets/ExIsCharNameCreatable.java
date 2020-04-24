@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author UnAfraid
@@ -15,7 +15,7 @@ public class ExIsCharNameCreatable extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_IS_CHAR_NAME_CREATABLE);
+        writeId(ServerExPacketId.EX_CHECK_CHAR_NAME);
 
         writeInt(_allowed);
     }

@@ -51,7 +51,7 @@ public class StaticObject extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.STATIC_OBJECT);
+        writeId(ServerPacketId.STATIC_OBJECT_INFO);
 
         writeInt(_staticObjectId);
         writeInt(_objectId);

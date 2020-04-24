@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Collection;
 
@@ -23,7 +23,7 @@ public class ExReplyPostItemList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_REPLY_POST_ITEM_LIST);
+        writeId(ServerExPacketId.EX_REPLY_POST_ITEM_LIST);
         writeByte((byte) _sendType);
         writeInt(_itemList.size());
         if (_sendType == 2) {

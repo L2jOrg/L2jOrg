@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -11,7 +11,7 @@ public class ExOlympiadHeroesInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_OLYMPIAD_HERO_AND_LEGEND_INFO);
+        writeId(ServerExPacketId.EX_OLYMPIAD_HERO_AND_LEGEND_INFO);
 
         writeShort(1024); // size ??
         //Legend Info

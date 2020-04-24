@@ -2,8 +2,8 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
-import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerDelete;
 import org.l2j.gameserver.network.serverpackets.CharDeleteFail;
 import org.l2j.gameserver.network.serverpackets.CharDeleteSuccess;

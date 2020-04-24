@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -25,7 +25,7 @@ public class ExPVPMatchCCRecord extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PVP_MATCH_CCRECORD);
+        writeId(ServerExPacketId.EX_PVPMATCH_CC_RECORD);
         writeInt(_state); // 0 - initialize, 1 - update, 2 - finish
         writeInt(_players.size());
         for (Entry<Player, Integer> entry : _players.entrySet()) {

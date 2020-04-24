@@ -4,8 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
-import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +25,7 @@ public class TimedHuntingZoneList extends ServerPacket {
 	@Override
 	protected void writeImpl(GameClient client) {
 		{
-			writeId(ServerPacketId.EX_TIME_RESTRICT_FIELD_LIST);
+			writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_LIST);
 
 			final long currentTime = System.currentTimeMillis();
 			long endTime;
@@ -43,7 +42,7 @@ public class TimedHuntingZoneList extends ServerPacket {
 			writeInt(0); // remain time base?
 			endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 2, 0);
 			if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime) {
-				endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+				endTime = currentTime + 3600000;
 			}
 			writeInt((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
 			writeInt((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));

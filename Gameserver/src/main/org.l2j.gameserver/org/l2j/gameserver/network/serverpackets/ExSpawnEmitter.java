@@ -1,9 +1,8 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author KenM
@@ -31,7 +30,7 @@ public class ExSpawnEmitter extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SPAWN_EMITTER);
+        writeId(ServerExPacketId.EX_SPAWN_EMITTER);
 
         writeInt(targetId);
         writeInt(attackerId);

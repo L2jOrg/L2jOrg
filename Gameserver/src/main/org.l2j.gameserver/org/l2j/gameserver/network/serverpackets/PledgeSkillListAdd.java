@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author -Wooden-
@@ -17,7 +17,7 @@ public class PledgeSkillListAdd extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_SKILL_LIST_ADD);
+        writeId(ServerExPacketId.EX_PLEDGE_SKILL_ADD);
 
         writeInt(_id);
         writeInt(_lvl);

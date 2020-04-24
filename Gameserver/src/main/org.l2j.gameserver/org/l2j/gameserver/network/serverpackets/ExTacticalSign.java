@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Sdw
@@ -18,7 +18,7 @@ public class ExTacticalSign extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_TACTICAL_SIGN);
+        writeId(ServerExPacketId.EX_TACTICAL_SIGN);
 
         writeInt(_target.getObjectId());
         writeInt(_tokenId);

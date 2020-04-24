@@ -16,9 +16,8 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.GeneralSettings;

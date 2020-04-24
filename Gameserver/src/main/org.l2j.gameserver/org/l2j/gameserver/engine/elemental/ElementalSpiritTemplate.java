@@ -1,7 +1,7 @@
 package org.l2j.gameserver.engine.elemental;
 
-import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.holders.ItemHolder;
 
 import java.util.ArrayList;

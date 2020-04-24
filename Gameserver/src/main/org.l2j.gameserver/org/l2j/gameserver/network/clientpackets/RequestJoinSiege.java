@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;

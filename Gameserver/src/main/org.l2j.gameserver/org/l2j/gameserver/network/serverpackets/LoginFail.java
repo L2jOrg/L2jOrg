@@ -33,7 +33,7 @@ public class LoginFail extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.LOGIN_FAIL);
+        writeId(ServerPacketId.LOGIN_RESULT);
 
         writeInt(_success);
         writeInt(_reason);

@@ -28,7 +28,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
-import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.isInteger;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isNpc;

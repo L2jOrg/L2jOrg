@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.settings.ChatSettings;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -23,7 +23,7 @@ public class ExWorldChatCnt extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_WORLD_CHAT_CNT);
+        writeId(ServerExPacketId.EX_WORLDCHAT_CNT);
         writeInt(worldChatCount);
     }
 

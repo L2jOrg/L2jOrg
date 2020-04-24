@@ -8,7 +8,6 @@ import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.Disconnection;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -21,18 +21,18 @@ public final class ItemList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.ITEM_LIST);
+        writeId(ServerPacketId.ITEMLIST);
+        writeByte(_sendType);
+        if(_sendType == 1) {
+            writeInt(0x00); // special item count
+            writeInt(_items.size());
+        }
         if (_sendType == 2) {
-            writeByte(_sendType);
-            writeInt(_items.size());
-            writeInt(_items.size());
+            writeInt(_items.size()); // total items
+            writeInt(_items.size()); // items on page
             for (Item item : _items) {
-                writeItem(item);
+                writeItem(item, client.getPlayer());
             }
-        } else {
-            writeByte(0x01); // _showWindow ? 0x01 : 0x00
-            writeInt(0x00);
-            writeInt(_items.size());
         }
         writeInventoryBlock(_activeChar.getInventory());
     }

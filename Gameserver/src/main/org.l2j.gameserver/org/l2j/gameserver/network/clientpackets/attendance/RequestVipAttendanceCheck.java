@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets.attendance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;

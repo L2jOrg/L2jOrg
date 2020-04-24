@@ -13,7 +13,7 @@ public class RecipeShopMsg extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.RECIPE_SHOP_MSG);
+        writeId(ServerPacketId.RECIPE_STORE_MSG);
 
         writeInt(_activeChar.getObjectId());
         writeString(_activeChar.getStoreName());

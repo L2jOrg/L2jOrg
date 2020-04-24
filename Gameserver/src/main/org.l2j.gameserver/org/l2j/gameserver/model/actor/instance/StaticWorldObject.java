@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.ai.CreatureAI;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -9,7 +10,6 @@ import org.l2j.gameserver.model.actor.status.StaticObjStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.ShowTownMap;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 

@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.enums.*;
-import org.l2j.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.enums.IllegalActionPunishmentType;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Fisherman;
@@ -19,7 +21,6 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;

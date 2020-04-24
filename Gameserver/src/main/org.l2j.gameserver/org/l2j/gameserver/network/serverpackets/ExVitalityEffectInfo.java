@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Sdw
@@ -21,7 +21,7 @@ public class ExVitalityEffectInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_VITALITY_EFFECT_INFO);
+        writeId(ServerExPacketId.EX_VITALITY_EFFECT_INFO);
 
         writeInt(_points);
         writeInt(_vitalityBonus); // Vitality Bonus

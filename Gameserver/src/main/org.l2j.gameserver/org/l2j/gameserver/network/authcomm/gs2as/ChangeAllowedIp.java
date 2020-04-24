@@ -3,8 +3,6 @@ package org.l2j.gameserver.network.authcomm.gs2as;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
-import java.nio.ByteBuffer;
-
 public class ChangeAllowedIp extends SendablePacket
 {
 	private String account;

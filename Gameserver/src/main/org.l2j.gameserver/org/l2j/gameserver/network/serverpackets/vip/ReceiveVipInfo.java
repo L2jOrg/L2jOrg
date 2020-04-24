@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.vip;
 
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.time.Instant;
@@ -18,7 +18,7 @@ public class ReceiveVipInfo extends ServerPacket {
 
         var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(client.getVipTierExpiration()));
 
-        writeId(ServerPacketId.RECEIVE_VIP_INFO);
+        writeId(ServerExPacketId.EX_VIP_INFO);
         writeByte(vipTier); // VIP Current level ( MAX 7 )
         writeLong(client.getVipPoints()); // VIP Current Points
         writeInt(vipDuration); // VIP Benefit Duration Seconds

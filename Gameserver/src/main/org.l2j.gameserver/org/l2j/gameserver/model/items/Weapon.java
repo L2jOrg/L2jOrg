@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.items;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -8,14 +9,11 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
 
-import static java.util.Objects.isNull;
-import static org.l2j.gameserver.util.GameUtils.constrain;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**

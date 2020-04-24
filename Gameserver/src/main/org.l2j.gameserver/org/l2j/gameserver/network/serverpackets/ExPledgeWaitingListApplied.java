@@ -4,7 +4,7 @@ import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Sdw
@@ -20,7 +20,7 @@ public class ExPledgeWaitingListApplied extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PLEDGE_WAITING_LIST_APPLIED);
+        writeId(ServerExPacketId.EX_PLEDGE_WAITING_LIST_APPLIED);
 
         writeInt(_pledgeRecruitInfo.getClan().getId());
         writeString(_pledgeRecruitInfo.getClan().getName());

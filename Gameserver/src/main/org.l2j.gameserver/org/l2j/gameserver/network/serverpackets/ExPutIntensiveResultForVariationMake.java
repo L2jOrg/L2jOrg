@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExPutIntensiveResultForVariationMake extends ServerPacket {
     private final int _refinerItemObjId;
@@ -20,7 +20,7 @@ public class ExPutIntensiveResultForVariationMake extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PUT_INTENSIVE_RESULT_FOR_VARIATION_MAKE);
+        writeId(ServerExPacketId.EX_PUT_INTENSIVE_RESULT_FOR_VARIATION_MAKE);
 
         writeInt(_refinerItemObjId);
         writeInt(_lifestoneItemId);

@@ -11,7 +11,7 @@ public final class ShortCutInit extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHORT_CUT_INIT);
+        writeId(ServerPacketId.INIT_SHORTCUT);
 
         var player = client.getPlayer();
 

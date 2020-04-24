@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ExListPartyMatchingWaitingRoom extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_LIST_PARTY_MATCHING_WAITING_ROOM);
+        writeId(ServerExPacketId.EX_LIST_PARTY_MATCHING_WAITING_ROOM);
 
         writeInt(_size);
         writeInt(_players.size());

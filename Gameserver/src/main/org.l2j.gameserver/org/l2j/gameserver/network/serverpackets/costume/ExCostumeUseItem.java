@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.costume;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -19,7 +19,7 @@ public class ExCostumeUseItem extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_COSTUME_USE_ITEM);
+        writeId(ServerExPacketId.EX_COSTUME_USE_ITEM);
         writeByte(success);
         writeInt(costumeId);
     }

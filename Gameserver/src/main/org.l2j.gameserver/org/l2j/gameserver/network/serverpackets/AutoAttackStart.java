@@ -15,7 +15,7 @@ public final class AutoAttackStart extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.AUTO_ATTACK_START);
+        writeId(ServerPacketId.COMBAT_MODE_START);
 
         writeInt(_targetObjId);
     }

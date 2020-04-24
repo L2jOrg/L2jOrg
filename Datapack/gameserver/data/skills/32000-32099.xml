@@ -9,12 +9,12 @@
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
         </attributes>
-        <target/>
         <consume>
             <item initial="49080"/>
             <item-count initial="1"/>
         </consume>
-        <abnormal type="EXP_SP_J">
+        <target/>
+        <abnormal> <!-- EXP_SP_J -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -37,12 +37,12 @@
             <reuse initial="60000"/>
             <effect-range initial="-1"/>
         </attributes>
-        <target/>
         <consume>
             <item initial="49086"/>
             <item-count initial="1"/>
         </consume>
-        <abnormal type="EXP_SP_J">
+        <target/>
+        <abnormal> <!-- EXP_SP_J -->
             <level initial="1"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -383,7 +383,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-		<abnormal type="EXP_SP_F" visual="CHANGE_DINOS">
+		<abnormal visual="CHANGE_DINOS"> <!-- EXP_SP_F -->
             <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -761,14 +761,14 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<conditions>
-            <level max-level="60" min-level="1" scope="PASSIVE"/>
-        </conditions>
-		<abnormal type="EXP_SP_I">
+        <abnormal> <!-- EXP_SP_I -->
             <level initial="2"/>
             <time initial="7200"/>
             <chance initial="-1"/>
         </abnormal>
+		<conditions>
+            <level max-level="60" scope="PASSIVE"/>
+        </conditions>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="50.0"/>

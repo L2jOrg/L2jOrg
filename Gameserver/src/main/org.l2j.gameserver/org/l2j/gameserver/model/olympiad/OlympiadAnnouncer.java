@@ -6,8 +6,6 @@ import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.network.NpcStringId;
 
-import java.util.Set;
-
 /**
  * @author DS
  */

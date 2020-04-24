@@ -16,7 +16,7 @@ public class ServerClose extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SEVER_CLOSE);
+        writeId(ServerPacketId.SERVER_CLOSE);
     }
 
 }

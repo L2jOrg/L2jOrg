@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.autoplay;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -19,7 +19,7 @@ public class ExActivateAutoShortcut extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ACTIVATE_AUTO_SHORTCUT);
+        writeId(ServerExPacketId.EX_ACTIVATE_AUTO_SHORTCUT);
         writeShort(room);
         writeByte(activate);
     }

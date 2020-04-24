@@ -5,11 +5,10 @@ import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.EnumSet;
 
 import static org.l2j.gameserver.enums.InventorySlot.*;
 
@@ -21,7 +20,7 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServerPacket.class);
 
-    private InventorySlot[] PAPERDOLL_ORDER_AUGMENT = {
+    private final InventorySlot[] PAPERDOLL_ORDER_AUGMENT = {
         RIGHT_HAND,
         LEFT_HAND,
         TWO_HAND
@@ -72,9 +71,11 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
 
     protected void writeId(ServerPacketId packet) {
         writeByte(packet.getId());
-        if(packet.getExtId() > -1) {
-            writeShort(packet.getExtId());
-        }
+    }
+
+    protected void writeId(ServerExPacketId exPacket) {
+        writeByte(0xFE);
+        writeShort(exPacket.getId());
     }
 
     protected abstract void writeImpl(GameClient client) throws Exception;

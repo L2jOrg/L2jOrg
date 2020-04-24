@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.ensoul;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -20,7 +20,7 @@ public class ExEnSoulExtractionResult extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ENSOUL_EXTRACTION_RESULT);
+        writeId(ServerExPacketId.EX_ENSOUL_EXTRACTION_RESULT);
         writeByte((byte) (_success ? 1 : 0));
         if (_success) {
             writeByte((byte) _item.getSpecialAbilities().size());

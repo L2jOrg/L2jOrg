@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.pvpbook;
 
 import org.l2j.gameserver.data.database.data.KillerData;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public class PvpBookList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_PVPBOOK_LIST);
+        writeId(ServerExPacketId.EX_PVPBOOK_LIST);
         var player = client.getPlayer();
         player.getVariables();
 

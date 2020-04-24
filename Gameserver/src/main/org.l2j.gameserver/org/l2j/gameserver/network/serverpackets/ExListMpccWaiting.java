@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class ExListMpccWaiting extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_LIST_MPCC_WAITING);
+        writeId(ServerExPacketId.EX_LIST_MPCC_WAITING);
 
         writeInt(_size);
         writeInt(_rooms.size());

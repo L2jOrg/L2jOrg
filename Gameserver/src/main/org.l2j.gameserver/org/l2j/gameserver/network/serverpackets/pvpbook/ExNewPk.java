@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.pvpbook;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -18,7 +18,7 @@ public class ExNewPk extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PVPBOOK_NEW_PK);
+        writeId(ServerExPacketId.EX_PVPBOOK_NEW_PK);
         writeSizedString(killer.getName());
     }
 }

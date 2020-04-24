@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author -Wooden-
@@ -16,7 +16,7 @@ public class ExRestartClient extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_RESTART_CLIENT);
+        writeId(ServerExPacketId.EX_RESTART_CLIENT);
     }
 
 }

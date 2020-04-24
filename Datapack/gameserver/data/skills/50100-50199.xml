@@ -312,7 +312,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="ISHKA_EFFECT">
+        <abnormal> <!-- ISHKA_EFFECT -->
             <level initial="1"/>            
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -453,7 +453,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_J">
+        <abnormal> <!-- EXP_SP_J -->
             <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>

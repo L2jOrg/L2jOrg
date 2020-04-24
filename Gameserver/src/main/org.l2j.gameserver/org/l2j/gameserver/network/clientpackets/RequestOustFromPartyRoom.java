@@ -2,10 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.world.World;
 
 /**
  * format (ch) d

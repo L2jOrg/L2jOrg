@@ -17,7 +17,7 @@ public final class TutorialShowQuestionMark extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.TUTORIAL_SHOW_QUESTION_MARK);
+        writeId(ServerPacketId.SHOW_TUTORIAL_MARK);
 
         writeByte( _markType);
         writeInt(_markId);

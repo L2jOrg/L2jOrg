@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExTutorialShowId extends ServerPacket {
     private final int _id;
@@ -12,7 +12,7 @@ public class ExTutorialShowId extends ServerPacket {
     }
 
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_TUTORIAL_SHOW_ID);
+        writeId(ServerExPacketId.EX_TUTORIAL_SHOW_ID);
         writeInt(this._id);
     }
 }

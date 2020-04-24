@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.model.shuttle.ShuttleStop;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class ExShuttleInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHUTTLE_INFO);
+        writeId(ServerExPacketId.EX_SHUTTLE_INFO);
 
         writeInt(_shuttle.getObjectId());
         writeInt(_shuttle.getX());

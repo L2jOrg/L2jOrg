@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class ExAcquirableSkillListByClass extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS);
+        writeId(ServerExPacketId.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS);
 
         writeShort((short) _type.getId());
         writeShort((short) _learnable.size());

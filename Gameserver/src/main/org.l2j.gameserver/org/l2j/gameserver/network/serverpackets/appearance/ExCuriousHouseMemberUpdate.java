@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.appearance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -34,7 +34,7 @@ public class ExCuriousHouseMemberUpdate extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_CURIOUS_HOUSE_MEMBER_UPDATE);
+        writeId(ServerExPacketId.EX_CURIOUS_HOUSE_MEMBER_UPDATE);
 
         writeInt(_objId);
         writeInt(_maxHp);

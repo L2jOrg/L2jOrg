@@ -1,7 +1,6 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

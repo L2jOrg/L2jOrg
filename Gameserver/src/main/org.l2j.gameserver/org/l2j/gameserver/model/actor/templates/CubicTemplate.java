@@ -1,8 +1,7 @@
 package org.l2j.gameserver.model.actor.templates;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.cubic.CubicSkill;

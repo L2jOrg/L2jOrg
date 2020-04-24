@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * Special event info packet.
@@ -44,7 +44,7 @@ public class ExBrBroadcastEventState extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BR_BROADCAST_EVENT_STATE);
+        writeId(ServerExPacketId.EX_BR_BROADCAST_EVENT_STATE);
 
         writeInt(_eventId);
         writeInt(_eventState);

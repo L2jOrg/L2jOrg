@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.List;
 
@@ -32,7 +32,7 @@ public class ExCubeGameTeamList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BLOCK_UP_SET_LIST);
+        writeId(ServerExPacketId.EX_BLOCK_UPSET_LIST);
 
         writeInt(0x00);
 

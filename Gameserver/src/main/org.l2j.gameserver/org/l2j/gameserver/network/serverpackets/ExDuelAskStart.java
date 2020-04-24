@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author KenM
@@ -17,7 +17,7 @@ public class ExDuelAskStart extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_DUEL_ASK_START);
+        writeId(ServerExPacketId.EX_DUEL_ASK_START);
 
         writeString(_requestorName);
         writeInt(_partyDuel);

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Gnacik
@@ -15,7 +15,7 @@ public class ExRequestChangeNicknameColor extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_CHANGE_NICKNAME_NCOLOR);
+        writeId(ServerExPacketId.EX_CHANGE_NICKNAME_COLOR);
 
         writeInt(_itemObjectId);
     }

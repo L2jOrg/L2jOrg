@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Collection;
 
@@ -19,7 +19,7 @@ public class ExShowAgitInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_AGIT_INFO);
+        writeId(ServerExPacketId.EX_SHOW_AGIT_INFO);
 
         final Collection<ClanHall> clanHalls = ClanHallManager.getInstance().getClanHalls();
         writeInt(clanHalls.size());

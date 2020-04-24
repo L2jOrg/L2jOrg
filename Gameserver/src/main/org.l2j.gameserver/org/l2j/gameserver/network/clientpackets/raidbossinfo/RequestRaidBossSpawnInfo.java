@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.raidbossinfo;
 
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
-import org.l2j.gameserver.instancemanager.RaidBossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
+import org.l2j.gameserver.instancemanager.RaidBossStatus;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
 

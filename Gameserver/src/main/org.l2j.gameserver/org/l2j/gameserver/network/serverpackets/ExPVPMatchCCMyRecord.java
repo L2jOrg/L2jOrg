@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Mobius
@@ -15,7 +15,7 @@ public class ExPVPMatchCCMyRecord extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PVP_MATCH_CCMY_RECORD);
+        writeId(ServerExPacketId.EX_PVPMATCH_CC_MY_RECORD);
         writeInt(_points);
     }
 

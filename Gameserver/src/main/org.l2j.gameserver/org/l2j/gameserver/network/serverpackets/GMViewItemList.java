@@ -30,7 +30,7 @@ public class GMViewItemList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GM_VIEW_ITEM_LIST);
+        writeId(ServerPacketId.GM_VIEW_ITEMLIST);
         writeByte((byte) sendType);
         if (sendType == 2) {
             writeInt(items.size());

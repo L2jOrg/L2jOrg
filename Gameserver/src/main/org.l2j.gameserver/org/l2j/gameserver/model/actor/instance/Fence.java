@@ -3,11 +3,11 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.data.xml.FenceDataManager;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.l2j.gameserver.network.serverpackets.ExColosseumFenceInfo;
+import org.l2j.gameserver.world.World;
 
 /**
  * @author HoridoJoho / FBIagent

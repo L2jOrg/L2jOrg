@@ -2,7 +2,6 @@ package org.l2j.gameserver.model.events.impl.character.player;
 
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import org.l2j.gameserver.model.olympiad.*;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class ExOlympiadMatchList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_RECEIVE_OLYMPIAD);
+        writeId(ServerExPacketId.EX_GFX_OLYMPIAD);
 
         writeInt(0x00); // Type 0 = Match List, 1 = Match Result
 

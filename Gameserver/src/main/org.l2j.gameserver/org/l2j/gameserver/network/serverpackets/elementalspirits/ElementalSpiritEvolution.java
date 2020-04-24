@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
 import org.l2j.gameserver.network.GameClient;
 
-import static org.l2j.gameserver.network.ServerPacketId.EX_ELEMENTAL_SPIRIT_EVOLUTION;
+import static org.l2j.gameserver.network.ServerExPacketId.EX_ELEMENTAL_SPIRIT_EVOLUTION;
 
 public class ElementalSpiritEvolution extends UpdateElementalSpiritPacket {
 

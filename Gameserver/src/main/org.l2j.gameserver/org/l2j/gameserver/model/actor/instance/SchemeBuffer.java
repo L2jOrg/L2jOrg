@@ -2,13 +2,13 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 
 import java.text.NumberFormat;

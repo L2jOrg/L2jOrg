@@ -1,7 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.training;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -12,7 +12,7 @@ public class ExTrainingZone_Leaving extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_TRAINING_ZONE_LEAVING);
+        writeId(ServerExPacketId.EX_TRAINING_ZONE_LEAVING);
     }
 
 }

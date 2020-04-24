@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
@@ -46,7 +46,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_USER_INFO_EQUIP_SLOT);
+        writeId(ServerExPacketId.EX_USER_INFO_EQUIPSLOT);
 
         writeInt(player.getObjectId());
         writeShort(InventorySlot.values().length); // 152

@@ -7,7 +7,6 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.RestartResponse;
 import org.l2j.gameserver.util.OfflineTradeUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

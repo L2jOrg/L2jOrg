@@ -1,10 +1,10 @@
 package org.l2j.gameserver.model.actor.templates;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.Collections;

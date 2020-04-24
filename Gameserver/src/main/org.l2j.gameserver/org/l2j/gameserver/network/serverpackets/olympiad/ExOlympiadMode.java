@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -19,7 +19,7 @@ public class ExOlympiadMode extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_OLYMPIAD_MODE);
+        writeId(ServerExPacketId.EX_OLYMPIAD_MODE);
 
         writeByte((byte) _mode);
     }

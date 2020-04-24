@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.costume;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -21,7 +21,7 @@ public class ExCostumeLock extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_COSTUME_LOCK);
+        writeId(ServerExPacketId.EX_COSTUME_LOCK);
         writeByte(result);
         writeInt(costumeId);
         writeByte(lock);

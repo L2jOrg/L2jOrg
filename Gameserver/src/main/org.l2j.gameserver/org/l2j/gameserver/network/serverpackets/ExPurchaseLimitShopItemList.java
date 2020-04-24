@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.xml.impl.LCoinShopData;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.List;
 
@@ -46,7 +46,7 @@ public class ExPurchaseLimitShopItemList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) throws Exception {
-        writeId(ServerPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST);
+        writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST);
 
         var productInfos = LCoinShopData.getInstance().getProductInfos();
 

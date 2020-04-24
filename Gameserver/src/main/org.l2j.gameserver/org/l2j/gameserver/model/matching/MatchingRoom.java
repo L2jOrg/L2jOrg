@@ -19,10 +19,10 @@ package org.l2j.gameserver.model.matching;
 import org.l2j.gameserver.enums.MatchingMemberType;
 import org.l2j.gameserver.enums.MatchingRoomType;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
+import org.l2j.gameserver.world.MapRegionManager;
 
 import java.util.Iterator;
 import java.util.Set;

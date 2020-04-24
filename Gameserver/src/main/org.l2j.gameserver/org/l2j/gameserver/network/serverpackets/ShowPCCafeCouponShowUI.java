@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author -Wooden-
@@ -16,7 +16,7 @@ public class ShowPCCafeCouponShowUI extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_PCCAFE_COUPON_SHOW_UI);
+        writeId(ServerExPacketId.EX_PCCAFE_COUPON_SHOW_UI);
 
     }
 

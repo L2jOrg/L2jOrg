@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets.crystalization;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;

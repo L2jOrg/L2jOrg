@@ -5,8 +5,6 @@ import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 public class LoginServerFail extends ReceivablePacket {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginServerFail.class);

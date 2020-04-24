@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.world.World;
 
 /**
  * D0 0F 00 5A 00 77 00 65 00 72 00 67 00 00 00

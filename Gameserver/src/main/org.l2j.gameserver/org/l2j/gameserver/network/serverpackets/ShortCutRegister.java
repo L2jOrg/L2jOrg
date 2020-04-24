@@ -13,7 +13,7 @@ public final class ShortCutRegister extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHORT_CUT_REGISTER);
+        writeId(ServerPacketId.SHORTCUT_REG);
 
         writeInt(shortcut.getType().ordinal());
         writeInt(shortcut.getClientId()); // C4 Client

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -11,7 +11,7 @@ public class ExOlympiadMyRankInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_OLYMPIAD_MY_RANKING_INFO);
+        writeId(ServerExPacketId.EX_OLYMPIAD_MY_RANKING_INFO);
         writeInt(2020); // season year
         writeInt(3); // season month
         writeInt(1); // season

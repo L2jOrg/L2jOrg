@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author mrTJO
@@ -36,7 +36,7 @@ public class ExCubeGameExtendedChangePoints extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BLOCK_UP_SET_STATE);
+        writeId(ServerExPacketId.EX_BLOCK_UPSET_STATE);
 
         writeInt(0x00);
 

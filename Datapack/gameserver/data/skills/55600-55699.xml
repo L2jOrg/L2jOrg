@@ -1242,10 +1242,6 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<!-- <abnormal type="EXP_SP_T"> -->
-            <!-- <level initial="1"/> -->
-        <!-- </abnormal> -->
-		<level max-level="39" min-level="1"/>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="50.0"/>

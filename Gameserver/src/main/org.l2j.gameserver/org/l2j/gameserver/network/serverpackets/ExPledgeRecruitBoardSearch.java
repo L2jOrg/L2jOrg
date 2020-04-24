@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class ExPledgeRecruitBoardSearch extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PLEDGE_RECRUIT_BOARD_SEARCH);
+        writeId(ServerExPacketId.EX_PLEDGE_RECRUIT_BOARD_SEARCH);
 
         writeInt(_currentPage);
         writeInt(_totalNumberOfPage);

@@ -5,7 +5,7 @@ import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.world.MapRegionManager;
 
 import java.util.concurrent.TimeUnit;
@@ -24,7 +24,7 @@ public class ExPartyRoomMember extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PARTY_ROOM_MEMBER);
+        writeId(ServerExPacketId.EX_PARTY_ROOM_MEMBER);
 
         writeInt(_type.ordinal());
         writeInt(_room.getMembersCount());

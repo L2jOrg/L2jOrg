@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.world.WorldTimeController;
 
 public class CharSelected extends ServerPacket {
     private final Player _activeChar;

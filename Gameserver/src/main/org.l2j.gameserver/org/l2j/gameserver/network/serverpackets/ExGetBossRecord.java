@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -22,7 +22,7 @@ public class ExGetBossRecord extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_GET_BOSS_RECORD);
+        writeId(ServerExPacketId.EX_GET_BOSS_RECORD);
 
         writeInt(_ranking);
         writeInt(_totalPoints);

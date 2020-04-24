@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author chris_00
@@ -26,7 +26,7 @@ public class ExMPCCPartyInfoUpdate extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_MPCCPARTY_INFO_UPDATE);
+        writeId(ServerExPacketId.EX_MPCC_PARTY_INFO_UPDATE);
 
         writeString(_name);
         writeInt(_LeaderOID);

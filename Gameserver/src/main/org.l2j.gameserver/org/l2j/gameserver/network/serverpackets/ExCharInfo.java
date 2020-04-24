@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.nonNull;
@@ -39,7 +39,7 @@ public class ExCharInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_CHAR_INFO);
+        writeId(ServerExPacketId.EX_CHAR_INFO);
 
         writeShort(0x151 + dynamicSize);
 

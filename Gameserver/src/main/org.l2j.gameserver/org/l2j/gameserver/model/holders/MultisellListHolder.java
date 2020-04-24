@@ -1,7 +1,6 @@
 package org.l2j.gameserver.model.holders;
 
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 

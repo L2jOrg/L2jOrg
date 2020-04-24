@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExPrivateStoreSellingResult extends ServerPacket {
     private final int _objectId;
@@ -16,7 +16,7 @@ public class ExPrivateStoreSellingResult extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PRIVATE_STORE_SELLING_RESULT);
+        writeId(ServerExPacketId.EX_PRIVATE_STORE_SELLING_RESULT);
         writeInt(_objectId);
         writeLong(_count);
         writeString(_buyer);

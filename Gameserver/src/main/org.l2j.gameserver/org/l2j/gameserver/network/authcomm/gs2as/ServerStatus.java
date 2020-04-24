@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.authcomm.gs2as;
 
-import io.github.joealisson.primitive.IntIntMap;
 import io.github.joealisson.primitive.HashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 

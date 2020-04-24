@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.raidbossinfo;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.List;
@@ -18,13 +18,10 @@ public class ExRaidBossSpawnInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_RAID_BOSS_SPAWN_INFO);
+        writeId(ServerExPacketId.EX_RAID_BOSS_SPAWN_INFO);
 
         writeInt(_bossIds.size()); // alive count
-        for (int id : _bossIds) // alive ids
-        {
-            writeInt(id);
-        }
+        _bossIds.forEach(this::writeInt);  // alive ids
     }
 
 }
