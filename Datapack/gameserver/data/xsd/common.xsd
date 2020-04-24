@@ -1372,6 +1372,33 @@
             <xs:enumeration value="WARRIOR_BANE"/>
             <xs:enumeration value="MAGE_BANE"/>
             <xs:enumeration value="DRAGON_FRUIT"/>
+            <xs:enumeration value="EXP_SP_A"/>
+            <xs:enumeration value="EXP_SP_B"/>
+            <xs:enumeration value="EXP_SP_C"/>
+            <xs:enumeration value="EXP_SP_D"/>
+            <xs:enumeration value="EXP_SP_E"/>
+            <xs:enumeration value="EXP_SP_F"/>
+            <xs:enumeration value="EXP_SP_G"/>
+            <xs:enumeration value="EXP_SP_H"/>
+            <xs:enumeration value="EXP_SP_I"/>
+            <xs:enumeration value="EXP_SP_J"/>
+            <xs:enumeration value="EXP_SP_K"/>
+            <xs:enumeration value="EXP_SP_L"/>
+            <xs:enumeration value="EXP_SP_M"/>
+            <xs:enumeration value="EXP_SP_N"/>
+            <xs:enumeration value="EXP_SP_O"/>
+            <xs:enumeration value="EXP_SP_P"/>
+            <xs:enumeration value="EXP_SP_Q"/>
+            <xs:enumeration value="EXP_SP_R"/>
+            <xs:enumeration value="EXP_SP_S"/>
+            <xs:enumeration value="EXP_SP_T"/>
+            <xs:enumeration value="EXP_SP_U"/>
+            <xs:enumeration value="EXP_SP_V"/>
+            <xs:enumeration value="EXP_SP_W"/>
+            <xs:enumeration value="EXP_SP_X"/>
+            <xs:enumeration value="EXP_ELEMENTAL"/>
+            <xs:enumeration value="ISHKA_EFFECT"/>
+            <xs:enumeration value="TRANSFORM_EFFECT"/>
         </xs:restriction>
     </xs:simpleType>
 

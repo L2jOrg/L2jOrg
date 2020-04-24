@@ -53,7 +53,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-            <speed mode="PER">
+            <speed mode="DIFF">
                 <power initial="10"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
@@ -96,7 +96,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="PER">
+            <speed mode="DIFF">
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
@@ -182,7 +182,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-            <speed mode="PER">
+            <speed mode="DIFF">
                 <power initial="10"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
@@ -239,7 +239,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="PER">
+            <speed mode="DIFF">
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
@@ -383,7 +383,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10"/>
             </stat-modify>
-            <speed mode="PER">
+            <speed mode="DIFF">
                 <power initial="10"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
@@ -426,7 +426,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="PER">
+            <speed mode="DIFF">
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
@@ -501,7 +501,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15"/>
             </stat-modify>
-            <speed mode="PER">
+            <speed mode="DIFF">
                 <power initial="20"/>
             </speed>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
