@@ -87,6 +87,15 @@ public final class EffectZone extends Zone {
         return true;
     }
 
+    public int getSkillLevel(int skillId)
+    {
+        if ((skills == null) || skillId > skills.size() || skills.get(skillId) == null)
+        {
+            return 0;
+        }
+        return skills.get(skillId).getLevel();
+    }
+
     @Override
     protected void onEnter(Creature creature) {
         if (nonNull(skills) && isNull(getSettings().getTask())) {

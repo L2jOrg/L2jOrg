@@ -19,6 +19,7 @@ import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.TutorialCloseHtml;
 import org.l2j.gameserver.network.serverpackets.TutorialShowQuestionMark;
+import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -522,6 +523,16 @@ public final class ClassMaster extends AbstractNpcAI
 						htmltext = "test_server_helper020c.html";
 						break;
 					}
+					case SOUL_FINDER:
+					{
+						htmltext = "test_server_helper020d.html";
+						break;
+					}
+					case WARDER:
+					{
+						htmltext = "test_server_helper030c.html";
+						break;
+					}
 				}
 			}
 		}
@@ -705,6 +716,8 @@ public final class ClassMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		final Player player = event.getActiveChar();
+		player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 		showPopupWindow(event.getActiveChar());
 	}
 	
@@ -712,6 +725,8 @@ public final class ClassMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
+		final Player player = event.getPlayer();
+		player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 		showPopupWindow(event.getPlayer());
 	}
 	

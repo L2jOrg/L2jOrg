@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10967_MoreExperience;
+package quests.Q10967_CulturedAdventurer;
 
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
@@ -29,8 +29,6 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import java.util.HashSet;
 import java.util.Set;
 
-import static java.util.Objects.isNull;
-
 
 /**
  * Cultured Adventurer (10967)
@@ -38,7 +36,7 @@ import static java.util.Objects.isNull;
  * @Note: Based on NA server September 2019
   * @TODO: Maybe wrong NpcStringId when you killing monsters in Abandoned Camp
  */
-public class Q10967_MoreExperience extends Quest
+public class Q10967_CulturedAdventurer extends Quest
 {
 	// NPCs
 	private static final int CAPTAIN_BATHIS = 30332;
@@ -56,7 +54,7 @@ public class Q10967_MoreExperience extends Quest
 	private static final int MAX_LEVEL = 30;
 	private static final int MIN_LEVEL = 25;
 	
-	public Q10967_MoreExperience()
+	public Q10967_CulturedAdventurer()
 	{
 		super(10967);
 		addStartNpc(CAPTAIN_BATHIS);
@@ -121,7 +119,6 @@ public class Q10967_MoreExperience extends Quest
 		if(isNull(qs)) {
 			return htmltext;
 		}
-
 		if (qs.isCreated())
 		{
 			htmltext = "30332.htm";

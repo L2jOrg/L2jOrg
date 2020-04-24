@@ -24705,6 +24705,24 @@ public final class NpcStringId {
     @ClientString(id = 104505, message = "Orven's Request")
     public static NpcStringId ORVEN_S_REQUEST;
 
+    @ClientString(id = 1010480, message = "The P. Atk. reduction device has now been destroyed.")
+    public static NpcStringId THE_P_ATK_REDUCTION_DEVICE_HAS_NOW_BEEN_DESTROYED;
+
+    @ClientString(id = 1010479, message = "The poison device has now been destroyed.")
+    public static NpcStringId THE_POISON_DEVICE_HAS_NOW_BEEN_DESTROYED;
+
+    @ClientString(id = 8058, message = "Help me!")
+    public static NpcStringId HELP_ME;
+
+    @ClientString(id = 8059, message = "Don't miss!")
+    public static NpcStringId DON_T_MISS;
+
+    @ClientString(id = 8060, message = "Keep pushing!")
+    public static NpcStringId KEEP_PUSHING;
+
+    @ClientString(id = 1000502, message = "The monsters have spawned!")
+    public static NpcStringId THE_MONSTERS_HAVE_SPAWNED;
+
 
     private static IntMap<NpcStringId> VALUES = new HashIntMap<>();
 

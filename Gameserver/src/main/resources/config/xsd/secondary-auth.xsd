@@ -15,7 +15,7 @@
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
-			<xs:attribute name="enabled" type="xs:boolean" default="true"/>
+			<xs:attribute name="enabled" type="xs:boolean" default="false"/>
 			<xs:attribute name="max-attempts" type="xs:nonNegativeInteger" default="5"/>
 			<xs:attribute name="ban-time" type="xs:nonNegativeInteger" default="480"/>
 			<xs:attribute name="recovery-link" type="xs:string"/>

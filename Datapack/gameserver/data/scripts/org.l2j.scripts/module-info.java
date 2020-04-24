@@ -329,11 +329,13 @@ open module org.l2j.scripts {
             ai.areas.DungeonOfAbyss.SoulTracker.Iris,
             ai.areas.DungeonOfAbyss.SoulTracker.Magrit,
             ai.areas.DungeonOfAbyss.SoulTracker.Rosammy,
+            ai.areas.DungeonOfAbyss.Tores.Tores,
             ai.areas.DwarvenVillage.Toma.Toma,
             ai.areas.LairOfAntharas.Pytan,
             ai.areas.TalkingIsland.Roxxy,
             ai.areas.TowerOfInsolence.Ateld.Ateld,
             ai.areas.PlainsOfDion,
+            ai.areas.ImperialTomb.FourSepulchers.FourSepulchers,
 
             ai.bosses.Antharas.Antharas,
             ai.bosses.Baium.Baium,
@@ -748,7 +750,7 @@ open module org.l2j.scripts {
              quests.Q10964_SecretGarden.Q10964_SecretGarden,
              quests.Q10965_DeathMysteries.Q10965_DeathMysteries,
              quests.Q10966_ATripBegins.Q10966_ATripBegins,
-             quests.Q10967_MoreExperience.Q10967_MoreExperience,
+             quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer,
              quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling,
              quests.Q10982_SpiderHunt.Q10982_SpiderHunt,
              quests.Q10983_TroubledForest.Q10983_TroubledForest,
@@ -758,6 +760,7 @@ open module org.l2j.scripts {
              quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves,
              quests.Q10988_Conspiracy.Q10988_Conspiracy,
              quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
-             quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;
+             quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction,
+             quests.Q00620_FourGoblets.Q00620_FourGoblets;
 
 }

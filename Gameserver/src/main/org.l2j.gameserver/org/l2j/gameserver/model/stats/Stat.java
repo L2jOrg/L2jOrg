@@ -101,6 +101,7 @@ public enum Stat {
     BONUS_DROP_RATE,
     BONUS_SPOIL_RATE,
     ATTACK_CANCEL,
+    BONUS_L2COIN_DROP_RATE,
 
     // ACCURACY & RANGE
     ACCURACY(new PAccuracyFinalizer()),

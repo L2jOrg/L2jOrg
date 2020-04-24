@@ -19,6 +19,7 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -602,96 +603,117 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     }
 
     public List<DropHolder> getDropList(DropType dropType) {
-        return switch (dropType) {
-            case DROP, LUCKY -> _dropListDeath;
-            case SPOIL -> _dropListSpoil;
-        };
+return switch (dropType) {
+    case DROP, LUCKY -> _dropListDeath;
+    case SPOIL -> _dropListSpoil;
+};
     }
 
-    public Collection<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer) {
-        var list = getDropList(dropType);
-        if (isNull(list)) {
-            return null;
+    private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference) {
+        // check level gap that may prevent drop this item
+        final double levelGapChanceToDrop;
+        if (dropItem.getItemId() == CommonItem.ADENA) {
+            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
+        } else {
+            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
         }
 
-        final List<DropHolder> dropList = new ArrayList<>(list);
+        return levelGapChanceToDrop;
+    }
 
-
-        if(dropType == DropType.DROP && nonNull(killer.getActingPlayer())) {
-            var vipEngine = VipEngine.getInstance();
-            float silverCoinChance = vipEngine.getSilverCoinDropChance(killer.getActingPlayer());
-            float rustyCoinChance = vipEngine.getRustyCoinDropChance(killer.getActingPlayer());
-
-            if(silverCoinChance > 0 ) {
-                dropList.add(new DropHolder(dropType, CommonItem.SILVER_COIN, 2, 5, silverCoinChance));
-            }
-
-            if(rustyCoinChance > 0) {
-                dropList.add(new DropHolder(dropType, CommonItem.RUSTY_COIN, 2, 5, rustyCoinChance));
-            }
+    private void processDropList(Collection<ItemHolder> itemsToDrop, Creature victim, Creature killer) {
+        var list = getDropList(DropType.DROP);
+        if (isNull(list)) {
+            return;
         }
 
         // randomize drop order
-        Collections.shuffle(dropList);
+        Collections.shuffle(list);
 
-        final int levelDifference = victim.getLevel() - killer.getLevel();
         int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
-        Collection<ItemHolder> calculatedDrops = null;
-        for (DropHolder dropItem : dropList) {
+        for (DropHolder dropItem : list) {
             // check if maximum drop occurrences have been reached
             // items that have 100% drop chance without server rate multipliers drop normally
             if ((dropOccurrenceCounter == 0) && (dropItem.getChance() < 100)) {
                 continue;
             }
 
-            // check level gap that may prevent drop this item
-            final double levelGapChanceToDrop;
-            if (dropItem.getItemId() == CommonItem.ADENA) {
-                levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
-            } else {
-                levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
-            }
-            if ((Rnd.nextDouble() * 100) > levelGapChanceToDrop) {
-                continue;
-            }
-
             // calculate chances
-            final ItemHolder drop = calculateDrop(dropItem, victim, killer);
+            final ItemHolder drop = calculateDropWithLevelGap(dropItem, victim, killer);
             if (drop == null) {
                 continue;
-            }
-
-            // create list
-            if (calculatedDrops == null) {
-                calculatedDrops = new ArrayList<>();
             }
 
             // finally
             if (dropItem.getChance() < 100) {
                 dropOccurrenceCounter--;
             }
-            calculatedDrops.add(drop);
+
+            itemsToDrop.add(drop);
         }
 
         if (victim.isChampion())
         {
             if ((victim.getLevel() < killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
             {
-                return calculatedDrops;
+                return;
             }
             if ((victim.getLevel() > killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
             {
-                return calculatedDrops;
+                return;
             }
 
-            // create list
-            if (calculatedDrops == null)
-            {
-                calculatedDrops = new ArrayList<>();
-            }
-
-            calculatedDrops.add(new ItemHolder(Config.CHAMPION_REWARD_ID, Config.CHAMPION_REWARD_QTY));
+            itemsToDrop.add(new ItemHolder(Config.CHAMPION_REWARD_ID, Config.CHAMPION_REWARD_QTY));
         }
+    }
+
+    private void proccessEtcDrop(Collection<ItemHolder> items, Creature victim, Creature killer) {
+        final List<DropHolder> dropList = new ArrayList<>();
+        if (nonNull(killer.getActingPlayer())) {
+            float silverCoinChance = VipEngine.getInstance().getSilverCoinDropChance(killer.getActingPlayer());
+            float rustyCoinChance = VipEngine.getInstance().getRustyCoinDropChance(killer.getActingPlayer());
+            float l2CoinDropChance = (float)killer.getStats().getValue(Stat.BONUS_L2COIN_DROP_RATE) + Config.L2_COIN_DROP_RATE;
+
+            if(silverCoinChance > 0 ) {
+                dropList.add(new DropHolder(DropType.DROP, CommonItem.SILVER_COIN, 2, 5, silverCoinChance));
+            }
+
+            if(rustyCoinChance > 0) {
+                dropList.add(new DropHolder(DropType.DROP, CommonItem.RUSTY_COIN, 2, 5, rustyCoinChance));
+            }
+
+            if (l2CoinDropChance > 0) {
+                dropList.add(new DropHolder(DropType.DROP, CommonItem.L2_COIN, 1, 1, l2CoinDropChance));
+            }
+        }
+
+        for (DropHolder dropItem : dropList) {
+            final ItemHolder drop = calculateDropWithLevelGap(dropItem, victim, killer);
+            if (drop == null) {
+                continue;
+            }
+
+            items.add(drop);
+        }
+    }
+
+    private ItemHolder calculateDropWithLevelGap(DropHolder dropItem, Creature victim, Creature killer) {
+        final int levelDifference = victim.getLevel() - killer.getLevel();
+        double levelGapChanceToDrop = calculateLevelGapChanceToDrop(dropItem, levelDifference);
+        if ((Rnd.nextDouble() * 100) > levelGapChanceToDrop) {
+            return null;
+        }
+
+        return calculateDrop(dropItem, victim, killer);
+    }
+
+    public Collection<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer) {
+        Collection<ItemHolder> calculatedDrops = new ArrayList<>();
+        if (dropType == DropType.DROP) {
+            proccessEtcDrop(calculatedDrops, victim, killer);
+        }
+
+        processDropList(calculatedDrops, victim, killer);
 
         return calculatedDrops;
     }
