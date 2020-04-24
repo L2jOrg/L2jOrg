@@ -354,8 +354,8 @@ public final class Player extends Playable {
         getClient().setVipTierExpiration(expiration);
     }
 
-    public long getEssenceCoins() {
-         return inventory.getEssenceCoins();
+    public long getL2Coin() {
+         return inventory.getL2Coin();
      }
 
     public boolean isInBattle() {
