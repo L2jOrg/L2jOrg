@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Map;
 
@@ -20,7 +20,7 @@ public class ExHeroList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_HERO_LIST);
+        writeId(ServerExPacketId.EX_HERO_LIST);
 
         writeInt(_heroList.size());
         for (Integer heroId : _heroList.keySet()) {

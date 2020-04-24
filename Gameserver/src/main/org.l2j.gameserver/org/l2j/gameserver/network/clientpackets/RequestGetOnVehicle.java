@@ -4,9 +4,9 @@ import org.l2j.gameserver.instancemanager.BoatManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author JIV
@@ -17,7 +17,7 @@ public class ExRotation extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ROTATION);
+        writeId(ServerExPacketId.EX_ROTATION);
 
         writeInt(_charId);
         writeInt(_heading);

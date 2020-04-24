@@ -1,11 +1,11 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +42,7 @@ public class ExAcquireSkillInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ACQUIRE_SKILL_INFO);
+        writeId(ServerExPacketId.EX_ACQUIRE_SKILL_INFO);
 
         writeInt(_id);
         writeInt(_level);

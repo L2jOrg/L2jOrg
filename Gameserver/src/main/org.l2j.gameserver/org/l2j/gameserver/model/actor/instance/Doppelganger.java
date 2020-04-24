@@ -17,9 +17,10 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.DoppelgangerAI;
-import org.l2j.gameserver.ai.CreatureAI;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -27,7 +28,6 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;

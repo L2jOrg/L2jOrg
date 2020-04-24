@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 
 import static java.util.Objects.isNull;
 

@@ -2,13 +2,14 @@ package org.l2j.gameserver.ai;
 
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.WalkingManager;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -17,7 +18,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;

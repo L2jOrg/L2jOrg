@@ -13,7 +13,7 @@ public class SunSet extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SUN_SET);
+        writeId(ServerPacketId.SUNSET);
     }
 
 }

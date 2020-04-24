@@ -18,9 +18,9 @@ package org.l2j.gameserver.model.itemauction;
 
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.world.World;
 
 /**
  * @author Forsaiken

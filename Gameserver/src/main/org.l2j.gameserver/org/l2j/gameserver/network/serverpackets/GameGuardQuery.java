@@ -35,7 +35,7 @@ public class GameGuardQuery extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GAME_GUARD_QUERY);
+        writeId(ServerPacketId.GAMEGUARD_QUERY);
 
         writeInt(0x27533DD9);
         writeInt(0x2E72A51D);

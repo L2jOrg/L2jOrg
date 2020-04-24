@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.beautyshop.BeautyItem;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Map;
 
@@ -30,7 +30,7 @@ public class ExResponseBeautyList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_RESPONSE_BEAUTY_LIST);
+        writeId(ServerExPacketId.EX_RESPONSE_BEAUTY_LIST);
 
         writeLong(_activeChar.getAdena());
         writeLong(_activeChar.getBeautyTickets());

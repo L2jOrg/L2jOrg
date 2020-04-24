@@ -4,8 +4,6 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 
-import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
-
 /**
  * Used to Store data sent to Client for Character.<br>
  * Selection screen.

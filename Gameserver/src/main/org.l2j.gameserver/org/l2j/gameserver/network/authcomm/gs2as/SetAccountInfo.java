@@ -3,8 +3,6 @@ package org.l2j.gameserver.network.authcomm.gs2as;
 import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author VISTALL
  * @date 21:07/25.03.2011

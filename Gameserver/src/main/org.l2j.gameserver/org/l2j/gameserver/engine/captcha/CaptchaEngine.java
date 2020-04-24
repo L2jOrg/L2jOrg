@@ -1,7 +1,7 @@
 package org.l2j.gameserver.engine.captcha;
 
-import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Rnd;
 
 import java.awt.*;

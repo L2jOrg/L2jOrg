@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.time.OffsetDateTime;
 import java.time.ZoneId;
@@ -17,7 +17,7 @@ public class ExEnterWorld extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_ENTER_WORLD);
+        writeId(ServerExPacketId.EX_ENTER_WORLD);
         writeInt(epochInSeconds);
         writeInt(-zoneIdOffsetSeconds);
         writeInt(0);

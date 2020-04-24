@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author mrTJO
@@ -22,7 +22,7 @@ public class Ex2ndPasswordVerify extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_2ND_PASSWORD_VERIFY);
+        writeId(ServerExPacketId.EX_2ND_PASSWORD_VERIFY);
 
         writeInt(_mode);
         writeInt(_wrongTentatives);

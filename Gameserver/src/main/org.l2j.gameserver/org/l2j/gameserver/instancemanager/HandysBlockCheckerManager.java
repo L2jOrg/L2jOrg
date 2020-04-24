@@ -24,12 +24,12 @@ import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameAddPlayer;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangeTeam;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.*;
 

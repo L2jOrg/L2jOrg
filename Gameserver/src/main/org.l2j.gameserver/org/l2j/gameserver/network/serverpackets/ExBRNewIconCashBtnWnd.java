@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExBRNewIconCashBtnWnd extends ServerPacket {
 
@@ -16,7 +16,7 @@ public class ExBRNewIconCashBtnWnd extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BR_NEW_ICON_CASH_BTN_WND);
+        writeId(ServerExPacketId.EX_BR_EXIST_NEW_PRODUCT_ACK);
         writeShort(show); // Show icon
     }
 

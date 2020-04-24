@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +23,7 @@ public class PledgeReceiveSubPledgeCreated extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_RECEIVE_SUB_PLEDGE_CREATED);
+        writeId(ServerExPacketId.EX_SUBPLEDGE_UPDATED);
 
         writeInt(0x01);
         writeInt(_subPledge.getId());

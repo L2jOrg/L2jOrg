@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.world.World;
 
 import java.util.List;
 import java.util.stream.Collectors;

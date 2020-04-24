@@ -2,10 +2,10 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.enums.ClanWarState;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
-import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;

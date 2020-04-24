@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets.attributechange;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;

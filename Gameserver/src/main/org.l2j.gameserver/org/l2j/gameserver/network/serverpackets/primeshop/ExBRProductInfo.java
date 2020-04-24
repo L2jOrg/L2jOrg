@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
+import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -25,7 +25,7 @@ public class ExBRProductInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BR_PRODUCT_INFO);
+        writeId(ServerExPacketId.EX_BR_PRODUCT_INFO_ACK);
 
         writeInt(item.getId());
         writeInt(item.getPrice());

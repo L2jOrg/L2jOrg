@@ -15,7 +15,7 @@ public class ShowXMasSeal extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_XMAS_SEAL);
+        writeId(ServerPacketId.SHOW_XMASSEAL);
 
         writeInt(_item);
     }

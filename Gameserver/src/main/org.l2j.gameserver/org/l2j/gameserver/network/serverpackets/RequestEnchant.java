@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author nBd
@@ -15,7 +15,7 @@ public class RequestEnchant extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PRIVATE_STORE_WHOLE_MSG);
+        writeId(ServerExPacketId.EX_PRIVATE_STORE_WHOLE_MSG);
 
         writeInt(_result);
     }

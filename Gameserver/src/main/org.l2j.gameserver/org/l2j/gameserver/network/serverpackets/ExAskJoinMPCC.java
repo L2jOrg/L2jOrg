@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * Asks the player to join a CC
@@ -17,7 +17,7 @@ public class ExAskJoinMPCC extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ASK_JOIN_MPCC);
+        writeId(ServerExPacketId.EX_ASK_JOIN_MPCC);
 
         writeString(_requestorName); // name of CCLeader
         writeInt(0x00); // TODO: Find me

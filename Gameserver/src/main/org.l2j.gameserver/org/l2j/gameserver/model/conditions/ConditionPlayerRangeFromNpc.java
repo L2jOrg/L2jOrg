@@ -17,11 +17,11 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.world.World;
 
 /**
  * Exist NPC condition.

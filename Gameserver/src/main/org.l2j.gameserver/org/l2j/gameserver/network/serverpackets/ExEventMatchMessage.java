@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author janiii
@@ -23,7 +23,7 @@ public class ExEventMatchMessage extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_EVENT_MATCH_MESSAGE);
+        writeId(ServerExPacketId.EX_EVENT_MATCH_MESSAGE);
 
         writeByte((byte) _type);
         writeString(_message);

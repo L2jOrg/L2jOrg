@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.autoplay;
 
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -18,7 +18,7 @@ public class ExAutoPlaySettingResponse extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_AUTOPLAY_SETTING);
+        writeId(ServerExPacketId.EX_AUTOPLAY_SETTING);
         writeShort(setting.getOptions());
         writeByte(setting.isActive());
         writeByte(setting.isAutoPickUpOn());

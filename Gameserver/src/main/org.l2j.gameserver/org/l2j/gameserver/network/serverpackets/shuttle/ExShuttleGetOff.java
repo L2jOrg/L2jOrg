@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.shuttle;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -26,7 +26,7 @@ public class ExShuttleGetOff extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SUTTLE_GET_OFF);
+        writeId(ServerExPacketId.EX_GETOFF_SHUTTLE);
 
         writeInt(_playerObjectId);
         writeInt(_shuttleObjectId);

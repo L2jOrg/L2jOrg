@@ -22,12 +22,12 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.PlayerEventHolder;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

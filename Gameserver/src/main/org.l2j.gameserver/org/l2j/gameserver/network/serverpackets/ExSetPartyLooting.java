@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author JIV
@@ -18,7 +18,7 @@ public class ExSetPartyLooting extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SET_PARTY_LOOTING);
+        writeId(ServerExPacketId.EX_SET_PARTY_LOOTING);
 
         writeInt(_result);
         writeInt(_partyDistributionType.getId());

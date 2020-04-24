@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.elementalspirits;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-import static org.l2j.gameserver.network.ServerPacketId.EX_ELEMENTAL_SPIRIT_GET_EXP;
+import static org.l2j.gameserver.network.ServerExPacketId.EX_ELEMENTAL_SPIRIT_GET_EXP;
 
 public class ExElementalSpiritGetExp extends ServerPacket {
 

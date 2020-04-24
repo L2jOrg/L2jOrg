@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.world.World;
 
@@ -37,7 +37,7 @@ public class ExFriendDetailInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_FRIEND_DETAIL_INFO);
+        writeId(ServerExPacketId.EX_FRIEND_DETAIL_INFO);
 
         writeInt(_objectId);
 

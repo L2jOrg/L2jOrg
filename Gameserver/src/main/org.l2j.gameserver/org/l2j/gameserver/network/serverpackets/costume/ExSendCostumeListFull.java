@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.costume;
 
 import org.l2j.gameserver.data.database.data.CostumeData;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -12,7 +12,7 @@ public class ExSendCostumeListFull extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_SEND_COSTUME_LIST_FULL);
+        writeId(ServerExPacketId.EX_SEND_COSTUME_LIST_FULL);
         var player = client.getPlayer();
 
         writeInt(player.getCostumeAmount());

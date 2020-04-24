@@ -17,7 +17,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author mrTJO
@@ -36,7 +36,7 @@ public class Ex2ndPasswordAck extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_2ND_PASSWORD_ACK);
+        writeId(ServerExPacketId.EX_2ND_PASSWORD_ACK);
 
         writeByte((byte) _status);
         writeInt(_response == WRONG_PATTERN ? 0x01 : 0x00);

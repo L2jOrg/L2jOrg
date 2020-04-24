@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author -Wooden-
@@ -16,7 +16,7 @@ public class PledgeReceiveMemberInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PLEDGE_RECEIVE_MEMBER_INFO);
+        writeId(ServerExPacketId.EX_VIEW_PLEDGE_MEMBER_INFO);
 
         writeInt(_member.getPledgeType());
         writeString(_member.getName());

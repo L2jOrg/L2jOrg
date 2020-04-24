@@ -3,8 +3,6 @@ package org.l2j.gameserver.network;
 import io.github.joealisson.mmocore.PacketBuffer;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
-import java.util.Collections;
-import java.util.Set;
 import java.util.function.Supplier;
 
 interface PacketFactory {
@@ -20,8 +18,8 @@ interface PacketFactory {
 
     ClientPacket newIncomingPacket();
 
-    default Set<ConnectionState> getConnectionStates() {
-        return Collections.emptySet();
+    default ConnectionState[] getConnectionStates() {
+        return ConnectionState.EMPTY;
     }
 
     default boolean canHandleState(ConnectionState state) {

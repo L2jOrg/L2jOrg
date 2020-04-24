@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Collection;
 
@@ -25,7 +25,7 @@ public final class BuyList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BUY_SELL_LIST);
+        writeId(ServerExPacketId.EX_BUY_SELL_LIST);
 
         writeInt(0x00); // Type BUY
         writeLong(_money); // current money

@@ -21,11 +21,11 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.tasks.MessageDeletionTask;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2j.gameserver.network.serverpackets.ExUnReadMailCount;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

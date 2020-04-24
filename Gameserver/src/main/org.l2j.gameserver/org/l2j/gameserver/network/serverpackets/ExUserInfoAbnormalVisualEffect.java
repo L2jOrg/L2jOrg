@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Set;
 
@@ -19,7 +19,7 @@ public class ExUserInfoAbnormalVisualEffect extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
+        writeId(ServerExPacketId.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT);
 
         writeInt(_activeChar.getObjectId());
         writeInt(_activeChar.getTransformationId());

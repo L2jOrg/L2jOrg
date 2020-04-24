@@ -4,10 +4,11 @@ import org.l2j.gameserver.model.interfaces.IUpdateTypeComponent;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public enum UserInfoType implements IUpdateTypeComponent {
     RELATION(0x00, 4),
-    BASIC_INFO(0x01, 16),
+    BASIC_INFO(0x01, 19),
     BASE_STATS(0x02, 18),
     MAX_HPCPMP(0x03, 14),
     CURRENT_HPMPCP_EXP_SP(0x04, 38),
@@ -15,7 +16,7 @@ public enum UserInfoType implements IUpdateTypeComponent {
     APPAREANCE(0x06, 15),
     STATUS(0x07, 6),
 
-    STATS(0x08, 56),
+    STATS(0x08, 64),
     ELEMENTALS(0x09, 14),
     POSITION(0x0A, 18),
     SPEED(0x0B, 18),
@@ -37,28 +38,20 @@ public enum UserInfoType implements IUpdateTypeComponent {
     STATS_POINTS(0x19, 16),
     STATS_ABILITIES(0x1A, 18);
 
-    /**
-     * Int mask.
-     */
-    private final int _mask;
-    private final int _blockLength;
+    private final int mask;
+    private final int blockLength;
 
     UserInfoType(int mask, int blockLength) {
-        _mask = mask;
-        _blockLength = blockLength;
+        this.mask = mask;
+        this.blockLength = blockLength;
     }
 
-    /**
-     * Gets the int mask.
-     *
-     * @return the int mask
-     */
     @Override
     public final int getMask() {
-        return _mask;
+        return mask;
     }
 
     public int getBlockLength() {
-        return _blockLength;
+        return blockLength;
     }
 }

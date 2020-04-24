@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.database.RankManager;
 import org.l2j.gameserver.data.database.data.RankData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Collections;
@@ -29,7 +29,7 @@ public class ExRankList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_RANKING_CHAR_RANKERS);
+        writeId(ServerExPacketId.EX_RANKING_CHAR_RANKERS);
         writeByte(group);
         writeByte(scope);
         writeInt(race);

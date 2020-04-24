@@ -16,11 +16,11 @@
  */
 package org.l2j.gameserver.model.events.impl.character.npc;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * An instantly executed event when Attackable is attacked by Player.

@@ -30,7 +30,7 @@ public class QuestList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.QUEST_LIST);
+        writeId(ServerPacketId.QUESTLIST);
         writeShort(_activeQuests.size());
         for (QuestState qs : _activeQuests) {
             writeInt(qs.getQuest().getId());

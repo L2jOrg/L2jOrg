@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExAttributeEnchantResult extends ServerPacket {
     private final int _result;
@@ -25,7 +25,7 @@ public class ExAttributeEnchantResult extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ATTRIBUTE_ENCHANT_RESULT);
+        writeId(ServerExPacketId.EX_ATTRIBUTE_ENCHANT_RESULT);
 
         writeInt(_result);
         writeByte((byte) _isWeapon);

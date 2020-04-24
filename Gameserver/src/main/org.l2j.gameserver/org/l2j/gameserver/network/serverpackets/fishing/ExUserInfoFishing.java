@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.fishing;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -28,7 +28,7 @@ public class ExUserInfoFishing extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_USER_INFO_FISHING);
+        writeId(ServerExPacketId.EX_USER_INFO_FISHING);
 
         writeInt(_activeChar.getObjectId());
         writeByte((byte) (_isFishing ? 1 : 0));

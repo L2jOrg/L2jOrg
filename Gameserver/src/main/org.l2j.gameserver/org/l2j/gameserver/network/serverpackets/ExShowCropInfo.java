@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.data.database.data.CropProcure;
+import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class ExShowCropInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_CROP_INFO);
+        writeId(ServerExPacketId.EX_SHOW_CROP_INFO);
 
         writeByte((byte)(_hideButtons ? 0x01 : 0x00)); // Hide "Crop Sales" button
         writeInt(_manorId); // Manor ID

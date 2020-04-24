@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 @StaticPacket
 public class ExVariationCancelResult extends ServerPacket {
@@ -17,7 +17,7 @@ public class ExVariationCancelResult extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_VARIATION_CANCEL_RESULT);
+        writeId(ServerExPacketId.EX_VARIATION_CANCEL_RESULT);
 
         writeInt(_result);
     }

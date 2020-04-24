@@ -18,7 +18,7 @@ public class NicknameChanged extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.NICK_NAME_CHANGED);
+        writeId(ServerPacketId.NICKNAME_CHANGED);
 
         writeInt(_objectId);
         writeString(_title);

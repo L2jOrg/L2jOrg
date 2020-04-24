@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.FortSiegeSpawn;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Collection;
 
@@ -23,7 +23,7 @@ public class ExShowFortressMapInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_FORTRESS_MAP_INFO);
+        writeId(ServerExPacketId.EX_SHOW_FORTRESS_MAP_INFO);
 
         writeInt(_fortress.getId());
         writeInt(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status

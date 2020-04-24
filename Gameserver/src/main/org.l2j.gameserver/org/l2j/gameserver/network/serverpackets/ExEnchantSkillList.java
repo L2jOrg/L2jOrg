@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class ExEnchantSkillList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ENCHANT_SKILL_LIST);
+        writeId(ServerExPacketId.EX_ENCHANT_SKILL_LIST);
 
         writeInt(_type.ordinal());
         writeInt(_skills.size());

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author KenM
@@ -16,7 +16,7 @@ public class ExDuelUpdateUserInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_DUEL_UPDATE_USER_INFO);
+        writeId(ServerExPacketId.EX_DUEL_UPDATE_USER_INFO);
 
         writeString(_activeChar.getName());
         writeInt(_activeChar.getObjectId());

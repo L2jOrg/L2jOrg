@@ -30,7 +30,7 @@ public class GetOffVehicle extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.GET_OFF_VEHICLE);
+        writeId(ServerPacketId.GETOFF_VEHICLE);
 
         writeInt(_charObjId);
         writeInt(_boatObjId);

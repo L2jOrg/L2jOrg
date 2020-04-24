@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * Eva's Inferno event packet. info params: <br>
@@ -24,7 +24,7 @@ public class ExBrBuffEventState extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BR_BUFF_EVENT_STATE);
+        writeId(ServerExPacketId.EX_BR_BUFF_EVENT_STATE);
 
         writeInt(_type);
         writeInt(_value);

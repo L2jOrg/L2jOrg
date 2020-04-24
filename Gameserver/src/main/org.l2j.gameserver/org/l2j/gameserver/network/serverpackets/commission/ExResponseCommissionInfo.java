@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.commission;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -34,7 +34,7 @@ public class ExResponseCommissionInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_RESPONSE_COMMISSION_INFO);
+        writeId(ServerExPacketId.EX_RESPONSE_COMMISSION_INFO);
 
         writeInt(_result);
         writeInt(_itemId);

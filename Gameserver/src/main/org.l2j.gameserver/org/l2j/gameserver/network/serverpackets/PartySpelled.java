@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.util.GameUtils;
@@ -31,7 +31,7 @@ public class PartySpelled extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.PARTY_SPELLED);
+        writeId(ServerPacketId.PARTY_SPELLED_INFO);
 
         writeInt(GameUtils.isServitor(_activeChar) ? 2 : isPet(_activeChar) ? 1 : 0);
         writeInt(_activeChar.getObjectId());

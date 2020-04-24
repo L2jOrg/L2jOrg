@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * Halloween rank list server packet.
@@ -23,7 +23,7 @@ public class ExBrLoadEventTopRankers extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BR_LOAD_EVENT_TOP_RANKERS);
+        writeId(ServerExPacketId.EX_BR_LOAD_EVENT_TOP_RANKERS_ACK);
 
         writeInt(_eventId);
         writeInt(_day);

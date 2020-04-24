@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.instancezone;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.GroupType;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceRemoveBuffType;
@@ -23,7 +24,6 @@ import org.l2j.gameserver.model.instancezone.conditions.ConditionGroupMax;
 import org.l2j.gameserver.model.instancezone.conditions.ConditionGroupMin;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 

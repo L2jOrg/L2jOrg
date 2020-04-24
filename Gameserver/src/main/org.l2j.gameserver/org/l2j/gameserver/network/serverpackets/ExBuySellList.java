@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Collection;
 
@@ -35,7 +35,7 @@ public class ExBuySellList extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BUY_SELL_LIST);
+        writeId(ServerExPacketId.EX_BUY_SELL_LIST);
 
         writeInt(0x01); // Type SELL
         writeInt(_inventorySlots);

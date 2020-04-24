@@ -4,7 +4,7 @@ import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Collection;
@@ -32,7 +32,7 @@ public class ExMentorList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_MENTOR_LIST);
+        writeId(ServerExPacketId.EX_MENTOR_LIST);
 
         writeInt(_type);
         writeInt(0x00);

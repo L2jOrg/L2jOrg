@@ -1,11 +1,11 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinAlly;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.world.World;
 
 public final class RequestJoinAlly extends ClientPacket {
     private int _objectId;

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.adenadistribution;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -17,7 +17,7 @@ public class ExDivideAdenaCancel extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_DIVIDE_ADENA_CANCEL);
+        writeId(ServerExPacketId.EX_DIVIDE_ADENA_CANCEL);
 
         writeByte((byte) 0x00); // TODO: Find me
     }

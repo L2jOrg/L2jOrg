@@ -119,7 +119,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeByte(player.getAppearance().isFemale());
             writeInt(player.getBaseTemplate().getClassId().getRootClassId().getId());
             writeInt(player.getClassId().getId());
-            writeByte(player.getLevel());
+            writeInt(player.getLevel());
         }
 
         if (containsMask(UserInfoType.BASE_STATS)) {
@@ -189,6 +189,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeInt(player.getMDef());
             writeInt(player.getMagicAccuracy());
             writeInt(player.getMCriticalHit());
+            writeInt(0x00); // pAtkAdd
+            writeInt(0x00); // mAtkAdd
         }
 
         if (containsMask(UserInfoType.ELEMENTALS)) {
@@ -275,7 +277,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeInt(player.getFame());
             writeInt(player.getRaidbossPoints());
             writeByte(0x00); // unk
-            writeByte(0x40); // unk
+            writeByte(0x00); // unk
             writeShort(0x00); // unk 196
         }
 

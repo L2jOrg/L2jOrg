@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author VISTALL
@@ -19,7 +19,7 @@ public class ExSubPledgeSkillAdd extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SUB_PLEDGET_SKILL_ADD);
+        writeId(ServerExPacketId.EX_SUBPLEDGE_SKILL_ADD);
 
         writeInt(_type);
         writeInt(_skillId);

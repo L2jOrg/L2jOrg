@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Luca Baldi
@@ -17,7 +17,7 @@ public class ExShowQuestMark extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_QUEST_MARK);
+        writeId(ServerExPacketId.EX_SHOW_QUEST_MARK);
 
         writeInt(_questId);
         writeInt(_questState);

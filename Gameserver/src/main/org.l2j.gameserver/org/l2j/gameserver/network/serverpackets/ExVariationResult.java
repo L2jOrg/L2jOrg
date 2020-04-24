@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * Format: (ch)ddd
@@ -19,7 +19,7 @@ public class ExVariationResult extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_VARIATION_RESULT);
+        writeId(ServerExPacketId.EX_VARIATION_RESULT);
 
         writeInt(_option1);
         writeInt(_option2);

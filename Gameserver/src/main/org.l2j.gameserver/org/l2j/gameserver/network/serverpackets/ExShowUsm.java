@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Sdw
@@ -24,7 +24,7 @@ public class ExShowUsm extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_USM);
+        writeId(ServerExPacketId.EX_SEND_USM_EVENT);
 
         writeInt(_videoId);
     }

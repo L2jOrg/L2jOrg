@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.TeleportBookmark;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author ShanSoft
@@ -17,7 +17,7 @@ public class ExGetBookMarkInfoPacket extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_GET_BOOK_MARK_INFO);
+        writeId(ServerExPacketId.EX_USER_BOOKMARK);
 
         writeInt(0x00); // Dummy
         writeInt(player.getBookmarkslot());

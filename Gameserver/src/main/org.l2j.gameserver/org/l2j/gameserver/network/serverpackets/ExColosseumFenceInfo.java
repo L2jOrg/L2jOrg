@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author HoridoJoho / FBIagent
@@ -33,7 +33,7 @@ public class ExColosseumFenceInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_COLOSSEUM_FENCE_INFO);
+        writeId(ServerExPacketId.EX_COLOSSEUM_FENCE_INFO);
 
         writeInt(_objId);
         writeInt(_clientState);

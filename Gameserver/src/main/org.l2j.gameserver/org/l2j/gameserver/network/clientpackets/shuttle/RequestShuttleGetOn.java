@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.clientpackets.shuttle;
 
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
 

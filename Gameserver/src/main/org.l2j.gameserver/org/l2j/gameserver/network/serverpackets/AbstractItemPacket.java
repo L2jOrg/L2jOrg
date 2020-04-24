@@ -4,12 +4,11 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemListType;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.TradeItem;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2j.gameserver.model.items.instance.Item;
-
-import java.nio.ByteBuffer;
 
 /**
  * @author UnAfraid
@@ -36,8 +35,14 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
             }
         }
 
+        // TODO VisualId
+
         if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty())) {
             mask |= ItemListType.SOUL_CRYSTAL.getMask();
+        }
+
+        if(item.getReuse() > 0) {
+            mask |= ItemListType.REUSE_DELAY.getMask();
         }
 
         return mask;
@@ -56,6 +61,15 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeItem(new ItemInfo(item));
     }
 
+    protected void writeItem(Item item, Player owner) {
+        final var info = new ItemInfo(item);
+        final var reuse = (int) owner.getItemRemainingReuseTime(item.getOwnerId()) / 1000;
+        if (reuse > 0) {
+            info.setReuse(reuse);
+        }
+        writeItem(info);
+    }
+
     protected void writeItem(Item item) {
         writeItem(new ItemInfo(item));
     }
@@ -65,24 +79,28 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     protected void writeItem(ItemInfo item) {
+        writeItem(item, item.getCount());
+    }
+
+    protected void writeItem(ItemInfo item, long count) {
         final int mask = calculateMask(item);
-        // cddcQcchQccddc
         writeByte(mask);
         writeInt(item.getObjectId()); // ObjectId
         writeInt(item.getDisplayId()); // ItemId
         writeByte(item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocationSlot()); // T1
-        writeLong(item.getCount()); // Quantity
+        writeLong(count); // Quantity
         writeByte(item.getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
         writeByte(item.getCustomType1()); // Filler (always 0)
         writeShort(item.getEquipped()); // Equipped : 00-No, 01-yes
         writeLong(item.getBodyPart().getId()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
         writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-        writeByte(0x01); // TODO : Find me
+        writeByte(0x00); // TODO : Find me
+        writeByte(0x00);
         writeInt(-1); // mana
         writeInt(item.getTime());
         writeByte(item.isAvailable()); // GOD Item enabled = 1 disabled (red) = 0
-        writeByte(0x00); // 140 protocol
-        writeByte(0x00); // 140 protocol
+        writeShort(0x00); // locked
+
         if (containsMask(mask, ItemListType.AUGMENT_BONUS)) {
             writeItemAugment(item);
         }
@@ -91,50 +109,29 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         }
         if (containsMask(mask, ItemListType.ENCHANT_EFFECT)) {
             writeItemEnchantEffect(item);
+        }
+
+        if(containsMask(mask, ItemListType.VISUAL_ID)) {
+            writeInt(item.getDisplayId()); //TODO visual id
         }
 
         if (containsMask(mask, ItemListType.SOUL_CRYSTAL)) {
             writeItemEnsoulOptions(item);
         }
+
+        if(containsMask(mask, ItemListType.REUSE_DELAY)) {
+            writeInt(item.getReuse());
+        }
     }
 
-    protected void writeItem(ItemInfo item, long count) {
-        final int mask = calculateMask(item);
-        writeByte((byte) mask);
-        writeInt(item.getObjectId()); // ObjectId
-        writeInt(item.getDisplayId()); // ItemId
-        writeByte((item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocationSlot())); // T1
-        writeLong(count); // Quantity
-        writeByte(item.getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-        writeByte((byte) item.getCustomType1()); // Filler (always 0)
-        writeShort((short) item.getEquipped()); // Equipped : 00-No, 01-yes
-        writeLong(item.getBodyPart().getId()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-        writeByte((byte) item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-        writeByte((byte) 0x01); // TODO : Find me
-        writeInt(-1); // mana
-        writeInt(item.getTime());
-        writeByte((byte) (item.isAvailable() ? 1 : 0)); // GOD Item enabled = 1 disabled (red) = 0
-        writeByte((byte) 0x00); // 140 protocol
-        writeByte((byte) 0x00); // 140 protocol
-        if (containsMask(mask, ItemListType.AUGMENT_BONUS)) {
-            writeItemAugment(item);
+    private void writeSoulCrystalInfo(ItemInfo item) {
+        writeByte(item.getSoulCrystalOptions().size());
+        for (EnsoulOption option : item.getSoulCrystalOptions()) {
+            writeInt(option.getId());
         }
-        if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE)) {
-            writeItemElemental(item);
-        }
-        if (containsMask(mask, ItemListType.ENCHANT_EFFECT)) {
-            writeItemEnchantEffect(item);
-        }
-
-        if (containsMask(mask, ItemListType.SOUL_CRYSTAL)) {
-            writeByte((byte) item.getSoulCrystalOptions().size());
-            for (EnsoulOption option : item.getSoulCrystalOptions()) {
-                writeInt(option.getId());
-            }
-            writeByte((byte) item.getSoulCrystalSpecialOptions().size());
-            for (EnsoulOption option : item.getSoulCrystalSpecialOptions()) {
-                writeInt(option.getId());
-            }
+        writeByte(item.getSoulCrystalSpecialOptions().size());
+        for (EnsoulOption option : item.getSoulCrystalSpecialOptions()) {
+            writeInt(option.getId());
         }
     }
 
@@ -148,35 +145,29 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         }
     }
 
-    protected void writeItemElementalAndEnchant(ByteBuffer packet, ItemInfo item) {
-        writeItemElemental(item);
-        writeItemEnchantEffect(item);
-    }
-
     protected void writeItemElemental(ItemInfo item) {
         if (item != null) {
-            writeShort((short) item.getAttackElementType());
-            writeShort((short) item.getAttackElementPower());
-            writeShort((short) item.getAttributeDefence(AttributeType.FIRE));
-            writeShort((short) item.getAttributeDefence(AttributeType.WATER));
-            writeShort((short) item.getAttributeDefence(AttributeType.WIND));
-            writeShort((short) item.getAttributeDefence(AttributeType.EARTH));
-            writeShort((short) item.getAttributeDefence(AttributeType.HOLY));
-            writeShort((short) item.getAttributeDefence(AttributeType.DARK));
+            writeShort(item.getAttackElementType());
+            writeShort(item.getAttackElementPower());
+            writeShort(item.getAttributeDefence(AttributeType.FIRE));
+            writeShort(item.getAttributeDefence(AttributeType.WATER));
+            writeShort(item.getAttributeDefence(AttributeType.WIND));
+            writeShort(item.getAttributeDefence(AttributeType.EARTH));
+            writeShort(item.getAttributeDefence(AttributeType.HOLY));
+            writeShort(item.getAttributeDefence(AttributeType.DARK));
         } else {
-            writeShort((short) 0);
-            writeShort((short) 0);
-            writeShort((short) 0);
-            writeShort((short) 0);
-            writeShort((short) 0);
-            writeShort((short) 0);
-            writeShort((short) 0);
-            writeShort((short) 0);
+            writeShort(0);
+            writeShort(0);
+            writeShort(0);
+            writeShort(0);
+            writeShort(0);
+            writeShort(0);
+            writeShort(0);
+            writeShort(0);
         }
     }
 
     protected void writeItemEnchantEffect(ItemInfo item) {
-        // Enchant Effects
         for (int op : item.getEnchantOptions()) {
             writeInt(op);
         }
@@ -184,18 +175,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 
     protected void writeItemEnsoulOptions(ItemInfo item) {
         if (item != null) {
-            writeByte((byte) item.getSoulCrystalOptions().size()); // Size of regular soul crystal options.
-            for (EnsoulOption option : item.getSoulCrystalOptions()) {
-                writeInt(option.getId()); // Regular Soul Crystal Ability ID.
-            }
-
-            writeByte((byte) item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
-            for (EnsoulOption option : item.getSoulCrystalSpecialOptions()) {
-                writeInt(option.getId()); // Special Soul Crystal Ability ID.
-            }
+            writeSoulCrystalInfo(item);
         } else {
-            writeByte((byte) 0); // Size of regular soul crystal options.
-            writeByte((byte) 0); // Size of special soul crystal options.
+            writeByte(0); // Size of regular soul crystal options.
+            writeByte(0); // Size of special soul crystal options.
         }
     }
 

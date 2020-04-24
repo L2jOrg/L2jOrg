@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.compound;
 
 import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -17,7 +17,7 @@ public class ExEnchantOneRemoveOK extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ENCHANT_ONE_REMOVE_OK);
+        writeId(ServerExPacketId.EX_ENCHANT_ONE_REMOVE_OK);
     }
 
 }

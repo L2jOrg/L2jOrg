@@ -2,11 +2,11 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.ExManagePartyRoomMemberType;
 import org.l2j.gameserver.enums.MatchingMemberType;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.world.MapRegionManager;
 
 /**
  * @author Gnacik
@@ -24,7 +24,7 @@ public class ExManageMpccRoomMember extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_MANAGE_PARTY_ROOM_MEMBER);
+        writeId(ServerExPacketId.EX_MANAGE_PARTY_ROOM_MEMBER);
 
         writeInt(_type.ordinal());
         writeInt(_activeChar.getObjectId());

@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.serverpackets.olympiad;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class ExOlympiadSpelledInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_OLYMPIAD_SPELLED_INFO);
+        writeId(ServerExPacketId.EX_OLYMPIAD_SPELLED_INFO);
 
         writeInt(_playerId);
         writeInt(_effects.size() + _effects2.size());

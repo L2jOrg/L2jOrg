@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.PremiumItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -23,7 +23,7 @@ public class ExGetPremiumItemList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_GET_PREMIUM_ITEM_LIST);
+        writeId(ServerExPacketId.EX_PREMIUM_ITEM_LIST);
 
         writeInt(_map.size());
         for (Entry<Integer, PremiumItem> entry : _map.entrySet()) {

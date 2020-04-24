@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class ExShowTerritory extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_TERRITORY);
+        writeId(ServerExPacketId.EX_SHOW_TERRITORY);
 
         writeInt(_vertices.size());
         writeInt(_minZ);

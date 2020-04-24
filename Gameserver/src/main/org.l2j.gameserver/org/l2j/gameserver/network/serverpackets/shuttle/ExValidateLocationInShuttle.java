@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets.shuttle;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -24,7 +24,7 @@ public class ExValidateLocationInShuttle extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_VALIDATE_LOCATION_IN_SHUTTLE);
+        writeId(ServerExPacketId.EX_VALIDATE_LOCATION_IN_SHUTTLE);
 
         writeInt(_activeChar.getObjectId());
         writeInt(_shipId);

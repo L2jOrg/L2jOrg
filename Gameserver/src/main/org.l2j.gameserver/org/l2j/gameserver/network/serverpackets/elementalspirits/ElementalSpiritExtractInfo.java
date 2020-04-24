@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.isNull;
@@ -17,7 +17,7 @@ public class ElementalSpiritExtractInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO);
+        writeId(ServerExPacketId.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO);
 
         var spirit = client.getPlayer().getElementalSpirit(ElementalType.of(type));
         if(isNull(spirit)) {

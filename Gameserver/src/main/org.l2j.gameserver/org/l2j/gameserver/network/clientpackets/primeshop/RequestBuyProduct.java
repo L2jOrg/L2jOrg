@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets.primeshop;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.CommonItem;

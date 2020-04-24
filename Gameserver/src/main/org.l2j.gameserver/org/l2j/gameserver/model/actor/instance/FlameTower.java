@@ -17,11 +17,11 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Tower;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneManager;
 
 import java.util.List;
 

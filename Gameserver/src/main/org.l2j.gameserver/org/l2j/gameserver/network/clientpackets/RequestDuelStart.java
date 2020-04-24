@@ -1,11 +1,11 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExDuelAskStart;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.world.World;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 

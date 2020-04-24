@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,7 +50,7 @@ public class ExReplySentPost extends AbstractItemPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_REPLY_SENT_POST);
+        writeId(ServerExPacketId.EX_REPLY_SENT_POST);
 
         writeInt(0x00); // GOD
         writeInt(_msg.getId());

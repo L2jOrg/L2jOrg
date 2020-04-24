@@ -4,26 +4,15 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.AdminTeleportType;
-import org.l2j.gameserver.engine.geo.GeoEngine;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.world.zone.type.CastleZone;
-import org.l2j.gameserver.world.zone.type.FortZone;
-import org.l2j.gameserver.world.zone.type.HqZone;
-import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.util.MathUtil;
-
-import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 public class MoveBackwardToLocation extends ClientPacket {
     private int _targetX;

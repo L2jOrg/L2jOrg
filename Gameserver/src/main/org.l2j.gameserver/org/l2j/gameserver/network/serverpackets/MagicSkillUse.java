@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.IPositionable;

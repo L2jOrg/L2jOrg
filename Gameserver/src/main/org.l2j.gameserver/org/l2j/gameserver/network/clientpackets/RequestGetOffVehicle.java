@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOffVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 

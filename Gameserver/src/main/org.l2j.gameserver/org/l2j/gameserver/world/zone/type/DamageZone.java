@@ -12,7 +12,8 @@ import org.l2j.gameserver.world.zone.TaskZoneSettings;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 
-import static java.util.Objects.*;
+import static java.util.Objects.nonNull;
+import static java.util.Objects.requireNonNullElseGet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.adenadistribution;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -26,7 +26,7 @@ public class ExDivideAdenaDone extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_DIVIDE_ADENA_DONE);
+        writeId(ServerExPacketId.EX_DIVIDE_ADENA_DONE);
 
         writeByte((byte) (_isPartyLeader ? 0x01 : 0x00));
         writeByte((byte) (_isCCLeader ? 0x01 : 0x00));

@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.serverpackets.mission;
 
 import org.l2j.gameserver.engine.mission.MissionData;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.util.cron4j.Predictor;
 
@@ -38,7 +38,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
             return;
         }
 
-        writeId(ServerPacketId.EX_ONE_DAY_RECEIVE_REWARD_LIST);
+        writeId(ServerExPacketId.EX_ONE_DAY_REWARD_LIST);
 
         writeInt((int) dayRemainTime);
         writeInt((int) weekRemainTime);

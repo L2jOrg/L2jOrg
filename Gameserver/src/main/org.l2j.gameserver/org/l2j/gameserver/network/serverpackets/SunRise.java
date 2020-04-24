@@ -13,7 +13,7 @@ public class SunRise extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SUN_RISE);
+        writeId(ServerPacketId.SUNRISE);
     }
 
 }

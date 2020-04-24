@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.shuttle;
 
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
@@ -23,7 +23,7 @@ public class ExShuttleMove extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SUTTLE_MOVE);
+        writeId(ServerExPacketId.EX_SHUTTLE_MOVE);
 
         writeInt(_shuttle.getObjectId());
         writeInt((int) _shuttle.getStats().getMoveSpeed());

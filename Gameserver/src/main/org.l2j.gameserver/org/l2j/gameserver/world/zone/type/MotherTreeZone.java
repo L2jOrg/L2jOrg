@@ -2,9 +2,9 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 

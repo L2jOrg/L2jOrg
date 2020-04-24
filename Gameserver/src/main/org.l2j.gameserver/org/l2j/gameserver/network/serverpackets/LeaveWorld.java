@@ -13,7 +13,7 @@ public final class LeaveWorld extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.LOG_OUT_OK);
+        writeId(ServerPacketId.LOGOUT_OK);
     }
 
 }

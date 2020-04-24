@@ -2,9 +2,10 @@ package org.l2j.gameserver.model.actor.templates;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.api.elemental.ElementalType;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.StatsSet;
@@ -14,7 +15,6 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 

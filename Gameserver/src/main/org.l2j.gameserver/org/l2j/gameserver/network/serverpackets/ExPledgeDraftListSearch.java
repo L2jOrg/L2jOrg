@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.clan.entry.PledgeWaitingInfo;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class ExPledgeDraftListSearch extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PLEDGE_DRAFT_LIST_SEARCH);
+        writeId(ServerExPacketId.EX_PLEDGE_DRAFT_LIST_SEARCH);
 
         writeInt(_pledgeRecruitList.size());
         for (PledgeWaitingInfo prl : _pledgeRecruitList) {

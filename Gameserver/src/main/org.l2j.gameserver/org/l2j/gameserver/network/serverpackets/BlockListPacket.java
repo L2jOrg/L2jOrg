@@ -18,7 +18,7 @@ public class BlockListPacket extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.BLOCK_LIST);
+        writeId(ServerPacketId.BLOCK_PACKET_LIST);
 
         writeInt(blockedIds.size());
         var playerNameTable = PlayerNameTable.getInstance();

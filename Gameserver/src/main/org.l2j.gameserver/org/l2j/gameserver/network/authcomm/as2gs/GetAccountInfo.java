@@ -7,8 +7,6 @@ import org.l2j.gameserver.network.authcomm.gs2as.SetAccountInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.nio.ByteBuffer;
-
 /**
  * @author VISTALL
  * 21:05/25.03.2011

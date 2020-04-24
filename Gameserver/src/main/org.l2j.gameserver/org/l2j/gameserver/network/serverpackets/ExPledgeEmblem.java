@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -25,7 +25,7 @@ public class ExPledgeEmblem extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_PLEDGE_EMBLEM);
+        writeId(ServerExPacketId.EX_PLEDGE_EMBLEM);
 
         writeInt(getSettings(ServerSettings.class).serverId());
         writeInt(_clanId);

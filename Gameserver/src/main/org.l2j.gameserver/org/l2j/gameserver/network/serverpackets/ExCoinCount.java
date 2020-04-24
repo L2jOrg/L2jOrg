@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 public class ExCoinCount extends ServerPacket {
 
@@ -13,7 +13,7 @@ public class ExCoinCount extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) throws Exception {
-        writeId(ServerPacketId.EX_BLOOD_COIN_COUNT);
+        writeId(ServerExPacketId.EX_BLOODY_COIN_COUNT);
         writeLong(coins);
     }
 }

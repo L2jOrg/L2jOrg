@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.serverpackets.primeshop;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
+import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Collection;
@@ -25,7 +25,7 @@ public class ExBRProductList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_BR_PRODUCT_LIST);
+        writeId(ServerExPacketId.EX_BR_PRODUCT_LIST_ACK);
 
         writeLong(_activeChar.getAdena()); // Adena
         writeLong(0x00); // Hero coins

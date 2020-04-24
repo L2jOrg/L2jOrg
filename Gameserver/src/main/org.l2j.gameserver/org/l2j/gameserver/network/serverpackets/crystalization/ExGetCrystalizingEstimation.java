@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.crystalization;
 
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class ExGetCrystalizingEstimation extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_GET_CRYSTALIZING_ESTIMATION);
+        writeId(ServerExPacketId.EX_RESPONSE_CRYSTALITEM_INFO);
 
         writeInt(_items.size());
         for (ItemChanceHolder holder : _items) {

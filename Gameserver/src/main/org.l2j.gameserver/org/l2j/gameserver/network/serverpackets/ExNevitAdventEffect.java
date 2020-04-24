@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author mochitto
@@ -15,7 +15,7 @@ public class ExNevitAdventEffect extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_SHOW_CHANNELING_EFFECT);
+        writeId(ServerExPacketId.EX_SHOW_CHANNELING_EFFECT);
 
         writeInt(_timeLeft);
     }

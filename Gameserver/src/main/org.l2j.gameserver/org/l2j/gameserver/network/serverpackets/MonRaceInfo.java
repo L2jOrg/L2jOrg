@@ -22,7 +22,7 @@ public class MonRaceInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.MON_RACE_INFO);
+        writeId(ServerPacketId.MONRACE_INFO);
 
         writeInt(_unknown1);
         writeInt(_unknown2);

@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.actor.request.impl;
 
 import org.l2j.gameserver.datatables.ReportTable;
+import org.l2j.gameserver.engine.captcha.Captcha;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 
@@ -9,8 +10,6 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
 import static java.lang.System.currentTimeMillis;
-
-import org.l2j.gameserver.engine.captcha.Captcha;
 
 public class CaptchaRequest extends AbstractRequest {
 

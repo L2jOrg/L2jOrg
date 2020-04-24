@@ -19,7 +19,7 @@ public class ShopPreviewInfo extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOP_PREVIEW_INFO);
+        writeId(ServerPacketId.BUY_PREVIEW_INFO);
 
         writeInt(InventorySlot.TOTAL_SLOTS);
 

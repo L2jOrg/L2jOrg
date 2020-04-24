@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author -Wooden-, KenM
@@ -36,7 +36,7 @@ public class ExStorageMaxCount extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_STORAGE_MAX_COUNT);
+        writeId(ServerExPacketId.EX_STORAGE_MAX_COUNT);
 
         writeInt(_inventory);
         writeInt(_warehouse);

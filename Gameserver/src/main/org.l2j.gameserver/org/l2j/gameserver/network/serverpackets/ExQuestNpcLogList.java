@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class ExQuestNpcLogList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_QUEST_NPC_LOG_LIST);
+        writeId(ServerExPacketId.EX_QUEST_NPC_LOG_LIST);
 
         writeInt(_questId);
         writeByte((byte) _npcLogList.size());

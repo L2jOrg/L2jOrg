@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author JoeAlisson
@@ -18,7 +18,7 @@ public class ExUserBoostStat extends ServerPacket{
 
     @Override
     protected void writeImpl(GameClient client)  {
-        writeId(ServerPacketId.EX_USER_BOOST_STAT);
+        writeId(ServerExPacketId.EX_USER_BOOST_STAT);
         writeByte(type.ordinal() + 1); // type (Server bonus), 2 - (stats bonus) or 3 (Vitality) ?
         writeByte(1); // count
         writeShort(percent);

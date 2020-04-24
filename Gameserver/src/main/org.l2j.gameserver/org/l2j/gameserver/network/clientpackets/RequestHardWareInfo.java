@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.Disconnection;
+import org.l2j.gameserver.world.World;
 
 /**
  * @author Mobius

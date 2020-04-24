@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;

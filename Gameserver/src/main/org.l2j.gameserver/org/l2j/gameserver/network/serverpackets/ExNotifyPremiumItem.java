@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author Gnacik
@@ -11,7 +11,7 @@ public class ExNotifyPremiumItem extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.EX_NOTIFY_PREMIUM_ITEM);
+        writeId(ServerExPacketId.EX_NOTIFY_PREMIUM_ITEM);
     }
 
 }

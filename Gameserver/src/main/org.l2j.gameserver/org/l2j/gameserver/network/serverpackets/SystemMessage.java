@@ -49,7 +49,7 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SYSTEM_MESSAGE);
+        writeId(ServerPacketId.SYSTEM_MSG);
 
         writeShort((short) getId());
         writeMe();

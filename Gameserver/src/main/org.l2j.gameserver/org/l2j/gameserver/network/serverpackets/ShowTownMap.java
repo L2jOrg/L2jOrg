@@ -16,7 +16,7 @@ public class ShowTownMap extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerPacketId.SHOW_TOWN_MAP);
+        writeId(ServerPacketId.SHOW_TOWNMAP);
         writeString(_texture);
         writeInt(_x);
         writeInt(_y);

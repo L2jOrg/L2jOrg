@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
+import org.l2j.gameserver.world.World;
 
 /**
  * Format:(ch) d
