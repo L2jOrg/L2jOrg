@@ -1,14 +1,23 @@
 package quests.Q10990_PoisonExtraction;
 
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.CategoryManager;
+import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.ListenerRegisterType;
+import org.l2j.gameserver.model.events.annotations.RegisterEvent;
+import org.l2j.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -131,7 +140,11 @@ public class Q10990_PoisonExtraction extends Quest
 					giveItems(player, MOON_ARMOR);
 					giveItems(player, MOON_GAUNTLETS);
 					giveItems(player, MOON_BOOTS);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
+					if (CategoryManager.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -150,7 +163,11 @@ public class Q10990_PoisonExtraction extends Quest
 					giveItems(player, MOON_SHELL);
 					giveItems(player, MOON_LEATHER_GLOVES);
 					giveItems(player, MOON_SHOES);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
+					if (CategoryManager.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -169,7 +186,11 @@ public class Q10990_PoisonExtraction extends Quest
 					giveItems(player, MOON_CAPE);
 					giveItems(player, MOON_SILK);
 					giveItems(player, MOON_SANDALS);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
+					if (CategoryManager.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -187,12 +208,7 @@ public class Q10990_PoisonExtraction extends Quest
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
 			
-			if (killer.isGM())
-			{
-				qs.setCond(2, true);
-				qs.unset(KILL_COUNT_VAR);
-			}
-			else if (killCount < 30)
+		 if (killCount < 30)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -267,5 +283,31 @@ public class Q10990_PoisonExtraction extends Quest
 			}
 		}
 		return htmltext;
+	}
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLogin(OnPlayerLogin event)
+	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+
+		final Player player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+
+		if (!CategoryManager.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+		{
+			return;
+		}
+
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCompleted())
+		{
+			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+		}
 	}
 }
