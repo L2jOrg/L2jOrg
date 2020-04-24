@@ -80,7 +80,6 @@ open module org.l2j.scripts {
                 BlockSkill.Factory,
                 BlockTarget.Factory,
                 Bluff.Factory,
-                BonusL2CoinDropRate.Factory,
                 BuffBlock.Factory,
                 CallParty.Factory,
                 CallPc.Factory,

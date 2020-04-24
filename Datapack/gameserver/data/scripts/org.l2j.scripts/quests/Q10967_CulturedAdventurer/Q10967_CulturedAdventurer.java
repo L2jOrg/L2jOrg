@@ -116,10 +116,9 @@ public class Q10967_CulturedAdventurer extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 
-		/*if(isNull(qs)) {
+		if(isNull(qs)) {
 			return htmltext;
 		}
-*/
 		if (qs.isCreated())
 		{
 			htmltext = "30332.htm";

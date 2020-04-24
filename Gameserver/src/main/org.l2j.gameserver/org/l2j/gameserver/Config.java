@@ -856,7 +856,7 @@ public final class Config {
     public static long TIME_LIMITED_MAX_ADDED_TIME;
     public static long TIME_LIMITED_ZONE_RESET_DELAY;
     public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
-    public static float ESSENCE_L2_COIN_DROP_RATE;
+    public static float L2_COIN_DROP_RATE;
     /**
      * This class initializes all global variables for configuration.<br>
      * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
@@ -1407,7 +1407,7 @@ public final class Config {
         RATE_SP = RatesSettings.getFloat("RateSp", 1);
         RATE_PARTY_XP = RatesSettings.getFloat("RatePartyXp", 1);
         RATE_PARTY_SP = RatesSettings.getFloat("RatePartySp", 1);
-        ESSENCE_L2_COIN_DROP_RATE = RatesSettings.getFloat("L2CoinDropRate", 0.1f);
+        L2_COIN_DROP_RATE = RatesSettings.getFloat("L2CoinDropRate", 0.1f);
 
         RATE_INSTANCE_XP = RatesSettings.getFloat("RateInstanceXp", -1);
         if (RATE_INSTANCE_XP < 0) {

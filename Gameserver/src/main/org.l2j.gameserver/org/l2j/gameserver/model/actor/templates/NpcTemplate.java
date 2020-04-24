@@ -84,8 +84,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private Map<AISkillScope, List<Skill>> _aiSkillLists;
     private Set<Integer> _clans;
     private Set<Integer> _ignoreClanNpcIds;
-    private CopyOnWriteArrayList<DropHolder> _dropListDeath;
-    private CopyOnWriteArrayList<DropHolder> _dropListSpoil;
+    private final List<DropHolder> _dropListDeath = new ArrayList<>();
+    private final List<DropHolder> _dropListSpoil = new ArrayList<>();
     private double _collisionRadiusGrown;
     private double _collisionHeightGrown;
     private int _mpRewardValue;
@@ -595,31 +595,18 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     }
 
     public void addDrop(DropHolder dropHolder) {
-        if (_dropListDeath == null) {
-            _dropListDeath = new CopyOnWriteArrayList<>();
-        }
         _dropListDeath.add(dropHolder);
     }
 
     public void addSpoil(DropHolder dropHolder) {
-        if (_dropListSpoil == null) {
-            _dropListSpoil = new CopyOnWriteArrayList<>();
-        }
         _dropListSpoil.add(dropHolder);
     }
 
     public List<DropHolder> getDropList(DropType dropType) {
-        switch (dropType) {
-            case DROP:
-            case LUCKY: // never happens
-            {
-                return _dropListDeath;
-            }
-            case SPOIL: {
-                return _dropListSpoil;
-            }
-        }
-        return null;
+return switch (dropType) {
+    case DROP, LUCKY -> _dropListDeath;
+    case SPOIL -> _dropListSpoil;
+};
     }
 
     private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference) {
@@ -685,7 +672,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         if (nonNull(killer.getActingPlayer())) {
             float silverCoinChance = VipEngine.getInstance().getSilverCoinDropChance(killer.getActingPlayer());
             float rustyCoinChance = VipEngine.getInstance().getRustyCoinDropChance(killer.getActingPlayer());
-            float l2CoinDropChance = (float)killer.getStats().getValue(Stat.BONUS_L2COIN_DROP_RATE) + Config.ESSENCE_L2_COIN_DROP_RATE;
+            float l2CoinDropChance = (float)killer.getStats().getValue(Stat.BONUS_L2COIN_DROP_RATE) + Config.L2_COIN_DROP_RATE;
 
             if(silverCoinChance > 0 ) {
                 dropList.add(new DropHolder(DropType.DROP, CommonItem.SILVER_COIN, 2, 5, silverCoinChance));

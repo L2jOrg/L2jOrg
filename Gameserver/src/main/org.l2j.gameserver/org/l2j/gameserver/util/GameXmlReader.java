@@ -29,7 +29,7 @@ public abstract class GameXmlReader extends XmlReader {
      *
      * @param path the relative path to the datapack root of the XML file to parse.
      */
-    public void parseDatapackFile(String path) {
+    protected void parseDatapackFile(String path) {
         parseFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path).toFile());
     }
 

@@ -46,7 +46,7 @@ public class PlayerInventory extends Inventory {
     private Item _beautyTickets;
     private Item silverCoin;
     private Item rustyCoin;
-    private Item essenceCoins;
+    private Item l2Coin;
 
     private IntCollection blockItems = null;
 
@@ -373,8 +373,8 @@ public class PlayerInventory extends Inventory {
             } else if(item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
                 rustyCoin = item;
             }
-             else if(item.getId() == CommonItem.L2_COIN && !item.equals(essenceCoins)) {
-                essenceCoins = item;
+             else if(item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
+                l2Coin = item;
             }
             if (actor != null) {
                 // Send inventory update packet
@@ -438,9 +438,9 @@ public class PlayerInventory extends Inventory {
 
             rustyCoin = item;
 
-        } else if(item.getId() == CommonItem.L2_COIN && !item.equals(essenceCoins)) {
+        } else if(item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
 
-            essenceCoins = item;
+            l2Coin = item;
         }
 
         if ((item != null) && (actor != null)) {
@@ -684,7 +684,7 @@ public class PlayerInventory extends Inventory {
         _beautyTickets = getItemByItemId(BEAUTY_TICKET_ID);
         rustyCoin = getItemByItemId(CommonItem.RUSTY_COIN);
          silverCoin = getItemByItemId(CommonItem.SILVER_COIN);
-         essenceCoins = getItemByItemId(CommonItem.L2_COIN);
+         l2Coin = getItemByItemId(CommonItem.L2_COIN);
     }
 
     /**
@@ -952,7 +952,7 @@ public class PlayerInventory extends Inventory {
         return nonNull(silverCoin) ? silverCoin.getCount() : 0;
     }
 
-    public long getEssenceCoins() {
-        return nonNull(essenceCoins) ? essenceCoins.getCount() : 0;
+    public long getL2Coin() {
+        return nonNull(l2Coin) ? l2Coin.getCount() : 0;
     }
 }
