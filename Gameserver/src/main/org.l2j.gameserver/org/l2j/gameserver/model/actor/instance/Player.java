@@ -354,6 +354,10 @@ public final class Player extends Playable {
         getClient().setVipTierExpiration(expiration);
     }
 
+    public long getEssenceCoins() {
+         return inventory.getEssenceCoins();
+     }
+
     public boolean isInBattle() {
         return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
     }
@@ -10877,6 +10881,7 @@ public final class Player extends Playable {
     public void sendInventoryUpdate(InventoryUpdate iu) {
         sendPacket(iu);
         sendPacket(new ExAdenaInvenCount(this));
+        sendPacket(new ExBloodyCoinCount());
         sendPacket(new ExUserInfoInvenWeight(this));
     }
 
@@ -10887,6 +10892,7 @@ public final class Player extends Playable {
         sendPacket(new ExQuestItemList(2, this));
         sendPacket(new ExAdenaInvenCount(this));
         sendPacket(new ExUserInfoInvenWeight(this));
+        sendPacket(new ExBloodyCoinCount());
     }
 
     /**

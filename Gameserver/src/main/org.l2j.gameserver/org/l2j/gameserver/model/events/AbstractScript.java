@@ -617,6 +617,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         // send packets
         player.sendPacket(new ExUserInfoInvenWeight(player));
         player.sendPacket(new ExAdenaInvenCount(player));
+        player.sendPacket(new ExBloodyCoinCount());
     }
 
     /**

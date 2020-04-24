@@ -46,6 +46,7 @@ public class PlayerInventory extends Inventory {
     private Item _beautyTickets;
     private Item silverCoin;
     private Item rustyCoin;
+    private Item essenceCoins;
 
     private IntCollection blockItems = null;
 
@@ -372,7 +373,9 @@ public class PlayerInventory extends Inventory {
             } else if(item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
                 rustyCoin = item;
             }
-
+             else if(item.getId() == CommonItem.L2_COIN && !item.equals(essenceCoins)) {
+                essenceCoins = item;
+            }
             if (actor != null) {
                 // Send inventory update packet
                 if (!Config.FORCE_INVENTORY_UPDATE) {
@@ -427,6 +430,17 @@ public class PlayerInventory extends Inventory {
             } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
                 _beautyTickets = item;
             }
+        } else if( item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
+
+            silverCoin = item;
+
+        } else if(item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
+
+            rustyCoin = item;
+
+        } else if(item.getId() == CommonItem.L2_COIN && !item.equals(essenceCoins)) {
+
+            essenceCoins = item;
         }
 
         if ((item != null) && (actor != null)) {
@@ -668,6 +682,9 @@ public class PlayerInventory extends Inventory {
         _adena = getItemByItemId(CommonItem.ADENA);
         _ancientAdena = getItemByItemId(CommonItem.ANCIENT_ADENA);
         _beautyTickets = getItemByItemId(BEAUTY_TICKET_ID);
+        rustyCoin = getItemByItemId(CommonItem.RUSTY_COIN);
+         silverCoin = getItemByItemId(CommonItem.SILVER_COIN);
+         essenceCoins = getItemByItemId(CommonItem.L2_COIN);
     }
 
     /**
@@ -933,5 +950,9 @@ public class PlayerInventory extends Inventory {
 
     public long getSilverCoin() {
         return nonNull(silverCoin) ? silverCoin.getCount() : 0;
+    }
+
+    public long getEssenceCoins() {
+        return nonNull(essenceCoins) ? essenceCoins.getCount() : 0;
     }
 }
