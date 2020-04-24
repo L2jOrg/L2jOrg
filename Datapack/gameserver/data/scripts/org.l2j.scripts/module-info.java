@@ -1,5 +1,4 @@
 import handlers.actionhandlers.*;
-import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
@@ -751,7 +750,7 @@ open module org.l2j.scripts {
              quests.Q10964_SecretGarden.Q10964_SecretGarden,
              quests.Q10965_DeathMysteries.Q10965_DeathMysteries,
              quests.Q10966_ATripBegins.Q10966_ATripBegins,
-             quests.Q10967_MoreExperience.Q10967_MoreExperience,
+             quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer,
              quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling,
              quests.Q10982_SpiderHunt.Q10982_SpiderHunt,
              quests.Q10983_TroubledForest.Q10983_TroubledForest,
