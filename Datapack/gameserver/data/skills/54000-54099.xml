@@ -1087,7 +1087,7 @@
                 <power initial="15"/>
             </stat-modify>          
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
-               <power initial="15">
+               <power initial="15"/>
             </stat-modify>
 			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
                 <power initial="10"/>

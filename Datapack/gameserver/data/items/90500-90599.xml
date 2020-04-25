@@ -175,7 +175,7 @@
 	</item>
 
 	<armor id="90527" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.tallisman_baium">
-	<!-- A 30-day item. P. Atk. +284, M. Atk. +392, Magic Attack Resistance +10%, Skill Power +5%, all kinds of Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P./ M. Critical Rate +20. MP Consumption for skill use -5%. Skill Reuse Time -3%. Available only for Lv. 60 and higher. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Atk. +284\nM. Atk. +392\nM. Damage Resistance +10%\nSkill P. Atk. +5%\nAll Weapon Resistance +5\nP. Critical Rate +20\nM. Critical Rate +20\nMP Consumption -5%\nSkill Cooldown -3%\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\n\n30-day. The effect of the Talisman is applied starting at level 60. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />

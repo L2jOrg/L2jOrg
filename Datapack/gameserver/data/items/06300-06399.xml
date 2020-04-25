@@ -448,19 +448,19 @@
 	<item id="6350" name="Amulet: Pa'agrio's Honor" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Honor. Used by Overlords.\nRequired level: 56 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6351" name="Amulet: Ritual of Life" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Ritual of Life. Used by Overlords.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="50000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6352" name="Spellbook: Prayer" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Prayer. Used by Bishops.\nRequired level: 66 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="8700" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="8700" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6353" name="Blue Gemstone" type="NONE" icon="icon.etc_jewel_blue_i00">
@@ -873,25 +873,25 @@
 	<item id="6395" name="Amulet: Chant of Predator" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Predator spell. Used by Warcryers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6396" name="Amulet: Chant of Eagle" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet needed to learn the Chant of Eagle incantation. Used by Warcryers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6397" name="Amulet: Chant of Vampire" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6398" name="Spellbook: Body of Avatar" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Body of Avatar. Used by Bishops.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="6399" name="Rabbit Crest" type="NONE" icon="icon.etc_paper_black_i00">

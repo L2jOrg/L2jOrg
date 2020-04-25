@@ -255,7 +255,7 @@
 		</stats>
 	</armor>
 
-	<armor id="26271" name="Halloween Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.ev_wp_halloween">
+	<armor id="26271" name="Halloween Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween sigil. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />

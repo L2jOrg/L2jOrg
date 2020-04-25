@@ -91,19 +91,19 @@
 	</item>
 
 	<item id="91714" name="Sayha's Summoning Stick" type="NONE" icon="icon.etc_stick_i00">
-	<!-- Double-click to spawn one of the six types of Wind Monsters. If the monster is hunted, the summoner gains certain XP. No XP bonus effect is applied. Cooldown 10 seconds.  -->
+	<!-- Double-click to spawn one of the six types of Wind Monsters. If the monster is hunted, the summoner gains certain XP. No XP bonus effect is applied. Cooldown 10 seconds. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91715" name="Sayha's Treasure" type="NONE" icon="icon.sayha2017_box_i01">
-	<!-- Double-click to obtain one Rare Necklace, +10 Sayha's Cloak, or consumable at random.  -->
+	<!-- Double-click to obtain one Rare Necklace, +10 Sayha's Cloak, or consumable at random. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91716" name="Shining Sayha's Treasure" type="NONE" icon="icon.sayha2017_box_i03">
-	<!-- Double-click to obtain one S-grade Weapon/Armor Pack, Item Box enchanted to high level, Codex Box, or rare item at random.  -->
+	<!-- Double-click to obtain one S-grade Weapon/Armor Pack, Item Box enchanted to high level, Codex Box, or rare item at random. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -238,7 +238,7 @@
 		<attributes weight="10" duration="21600" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13656"/> <!-- Brooch Lv. 1 -->
+			<skill id="13656"/>  <!-- Brooch Lv. 1 -->
 		</skills>
 	</armor>
 
@@ -289,10 +289,9 @@
 
 	<armor id="91745" name="Aden Talisman" type="NONE" body-part="TALISMAN" icon="icon.bm_aden_talisman">
 	<!-- A talisman imbued with the energy of the royal family of Aden. Can be enchanted up to +10 with the Enchant Scroll: Aden Talisman. Combination adds various effects, and enchantment increases stats of these option effects. If +1 or higher level enchantment fails, the talisman will disappear. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false"  dropable="false" sellable="false" private-sellable="false"/>
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="true" />
 		<crystal />
-
 	</armor>
 
 	<armor id="91746" name="Rudolph Outfit" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
@@ -356,14 +355,12 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91756" name="Aden Talisman Enchant Scroll" type="BLESS_ENCHT_AM" icon="icon.aden_talisman_scroll">
+	<item id="91756" name="Aden Talisman Enchant Scroll" type="ENCHANT_ARMOR" icon="icon.aden_talisman_scroll">
 	<!-- A scroll used to enchant Aden Talisman. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" />
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
-
-
 
 	<item id="91757" name="Magic Lamp Acceleration Potion" type="NONE" icon="icon.etc_recall_potion2">
 	<!-- 20% Magic Lamp gauge recharge for 1 hour when used. Cooldown 1 minute. -->
@@ -380,7 +377,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="5"/>
+			<skill id="59150" level="5"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -390,7 +387,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="5"/>
+			<skill id="59151" level="5"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -400,8 +397,8 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13660"/> <!-- Brooch Lv. 5 -->
-			<skill id="13661" level="5"/> <!-- Brooch Additional Effect -->
+			<skill id="13660"/>  <!-- Brooch Lv. 5 -->
+			<skill id="13661" level="5"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
@@ -474,13 +471,13 @@
 	</armor>
 
 	<item id="91771" name="Doll of Border - Frintezza Doll" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- 7-day item. Boosts abilities with Frintezza Doll's Spell when stored in the inventory.\n\n<Frintezza Doll's Spell Lv. 1>\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/Paralysis Atk. Rate +10%. -->
+	<!-- <Frintezza Doll's Spell>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nStun Atk. Rate +10%\nParalysis Atk. Rate +10%\n\n7-day. Boosts abilities with Frintezza Doll's Spell stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91772" name="Scroll: PK" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
-	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Karma is 0. -->
+	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="10" action="SKILL_REDUCE"/>
 	</item>
@@ -528,7 +525,7 @@
 	</item>
 
 	<item id="91779" name="Aden Supply Box" type="NONE" icon="icon.etc_treasure_box_i00">
-	<!-- Double-click to obtain one of the following items with a certain chance: +16 B-grade Weapon Pack, Antharas' Earring, Talisman of Baium, Ancient Book: Divine Inspiration, XP Boost Scroll, Battle Scroll, and Sayha's Buff Scroll.  -->
+	<!-- Double-click to obtain one of the following items with a certain chance: +16 B-grade Weapon Pack, Antharas' Earring, Talisman of Baium, Buff Slot Expansion Ticket, XP Boost Scroll, Battle Scroll, and Sayha's Buff Scroll. Will be deleted when the event ends. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -639,7 +636,7 @@
 	</item>
 
 	<item id="91795" name="Greater Blessing Star Candy - Event" type="POTION" icon="icon.etc_whiteday_candy_i04">
-	<!-- Recharges 140,000 Sayha's Grace Points. -->
+	<!-- Recharges 560,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>

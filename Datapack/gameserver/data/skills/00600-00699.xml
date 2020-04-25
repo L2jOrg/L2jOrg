@@ -255,7 +255,7 @@
             <stat-modify stat="HEAL_POWER">
                 <power initial="20.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power>
                     <value level="3">-5.0</value>
                 </power>
@@ -347,12 +347,12 @@
                     <value level="2">35.0</value>
                 </power>
             </stat-modify>
-            <skill-evasion mode="PER" type="PHYSIC">
+            <skill-evasion type="PHYSIC">
                 <power initial="20.0">
                     <value level="2">20.0</value>
                 </power>
             </skill-evasion>
-            <skill-evasion mode="PER" type="MAGIC">
+            <skill-evasion type="MAGIC">
                 <power initial="20.0">
                     <value level="2">20.0</value>
                 </power>

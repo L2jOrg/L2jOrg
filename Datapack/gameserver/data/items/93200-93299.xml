@@ -333,25 +333,25 @@
 	<item id="93255" name="Blessed Scroll: Enchant Weapon (A-grade) - Exchangeable" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +7 for A-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +8 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +14 for bows. M. Atk. +5 for all weapons.\nStarting at +4, P. Atk. +21 for one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +26 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +42 for bows. M. Atk. +16 for all weapons.\nWeapons below +5 will be randomly enchanted +1 - +2, and weapons above +6 will be enchanted +1. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93256" name="Blessed Scroll: Enchant Armor (A-grade) - Exchangeable" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
 	<!-- Increases P. Def. by +4 for A-grade armor, and M. Def. by +3 for accessories. Starting from +4, increases P. Def. by 9 and M. Def. by 7. It can safely be enchanted up to +4, and for armor HP gradually increases with each enchant level starting from +4. Armor below +5 will be randomly enchanted +1 - +2, and armor above +6 will be enchanted +1. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93257" name="Cursed Scroll: Enchant Weapon (A-grade) - Exchangeable" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_cursed_scrl_of_ench_wp_a_i00">
 	<!-- When used, the enchant level of an A-grade Weapon is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93258" name="Cursed Scroll: Enchant Armor (A-grade) - Exchangeable" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_cursed_scrl_of_ench_am_a_i00">
 	<!-- When used, the enchant level of an A-grade Armor is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93259" name="Strong Jewelry Box" type="NONE" icon="icon.bm_2018_jewelbox_random">
@@ -408,32 +408,32 @@
 		<attributes/>
 	</item>
 
-	<item id="93268" name="Blessed Scroll: Enchant Weapon (A-grade)" type="NONE" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
+	<item id="93268" name="Blessed Scroll: Enchant Weapon (A-grade)" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +7 for A-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +8 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +14 for bows. M. Atk. +5 for all weapons.\nStarting at +4, P. Atk. +21 for one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +26 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +42 for bows. M. Atk. +16 for all weapons.\nWeapons below +5 will be randomly enchanted +1 - +2, and weapons above +6 will be enchanted +1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
-	<item id="93269" name="Blessed Scroll: Enchant Armor (A-grade)" type="NONE" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
+	<item id="93269" name="Blessed Scroll: Enchant Armor (A-grade)" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
 	<!-- Increases P. Def. by +4 for A-grade armor, and M. Def. by +3 for accessories. Starting from +4, increases P. Def. by 9 and M. Def. by 7. It can safely be enchanted up to +4, and for armor HP gradually increases with each enchant level starting from +4. Armor below +5 will be randomly enchanted +1 - +2, and armor above +6 will be enchanted +1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
-	<item id="93270" name="Cursed Scroll: Enchant Weapon (A-grade)" type="NONE" icon="icon.etc_cursed_scrl_of_ench_wp_a_i00">
+	<item id="93270" name="Cursed Scroll: Enchant Weapon (A-grade)" type="CURSED_ENCHANT_WEAPON" icon="icon.etc_cursed_scrl_of_ench_wp_a_i00">
 	<!-- When used, the enchant level of an A-grade Weapon is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
-	<item id="93271" name="Cursed Scroll: Enchant Armor (A-grade)" type="NONE" icon="icon.etc_cursed_scrl_of_ench_am_a_i00">
+	<item id="93271" name="Cursed Scroll: Enchant Armor (A-grade)" type="CURSED_ENCHANT_ARMOR" icon="icon.etc_cursed_scrl_of_ench_am_a_i00">
 	<!-- When used, the enchant level of an A-grade Armor is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93272" name="Ancient Tome Box" type="NONE" icon="icon.etc_treasure_box_i05">
-	<!-- Double-click to obtain 1 of the following: Ancient Book: Divine Inspiration (Modern Language Version), (Original Language Version), (Manuscript), (Original Version). -->
+	<!-- Double-click to obtain 1 of the following: Buff Slot Expansion Ticket Lv. 1, Buff Slot Expansion Ticket Lv. 2, Buff Slot Expansion Ticket Lv. 3, Buff Slot Expansion Ticket Lv. 4. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -444,8 +444,8 @@
 		<attributes/>
 	</item>
 
-	<item id="93274" name="Grace Cookie" type="POTION" icon="BranchSys.icon.br_valentine_cookie_i00">
-	<!-- Recharges 35,000 Sayha's Grace Points. -->
+	<item id="93274" name="Sweet Grace Cookie" type="POTION" icon="BranchSys.icon.br_valentine_cookie_i00">
+	<!-- Sayha's Grace Points +140,000. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>

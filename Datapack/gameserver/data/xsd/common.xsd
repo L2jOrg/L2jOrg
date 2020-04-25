@@ -765,6 +765,8 @@
             <xs:enumeration value="GIANT_ENCHANT"/>
             <xs:enumeration value="BLESSED_LUCKY_ENCHANT"/>
             <xs:enumeration value="QUALITY_AGATHION_ENCHANT"/>
+            <xs:enumeration value="CURSED_ENCHANT_WEAPON"/>
+            <xs:enumeration value="CURSED_ENCHANT_ARMOR"/>
         </xs:restriction>
     </xs:simpleType>
 

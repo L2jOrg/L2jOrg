@@ -29,12 +29,14 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * Cultured Adventurer (10967)
  * @author RobikBobik
- * @Note: Based on NA server September 2019
-  * @TODO: Maybe wrong NpcStringId when you killing monsters in Abandoned Camp
+ * Note: Based on NA server September 2019
+ * TODO: Maybe wrong NpcStringId when you killing monsters in Abandoned Camp
  */
 public class Q10967_CulturedAdventurer extends Quest
 {

@@ -93,19 +93,19 @@
 	<item id="5013" name="Spellbook: Elemental Assault" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Elemental Assault. Used by Sorcerers and Spellsingers.\nRequired level: 72 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="7200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="7200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5014" name="Spellbook: Elemental Symphony" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Elemental Symphony. Used by Spellsingers.\nRequired level: 72 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="7200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="7200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="5015" name="Spellbook: Elemental Storm" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Elemental Storm. Used by Spellhowlers.\nRequired level: 72 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="7200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="7200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 </list>

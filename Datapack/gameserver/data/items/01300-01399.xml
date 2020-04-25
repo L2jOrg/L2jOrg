@@ -646,19 +646,19 @@
 	<item id="1370" name="Spellbook: Aqua Swirl" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Aqua Swirl. Used by Elven Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1371" name="Spellbook: Twister" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Twister. Used by Dark Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1372" name="Spellbook: Blaze" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Blaze. Used by Human Wizards.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1373" name="Magic Gem" type="NONE" icon="icon.etc_crystal_ball_white_i00">
@@ -708,127 +708,127 @@
 	<item id="1377" name="Spellbook: Poison Recovery" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Poison Recovery. Used by Elven Knights and Elven Scouts.\nRequired level: Elven Knight - 20, Elven Scout - 24 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1378" name="Spellbook: Divine Heal" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Divine Heal. Used by Human Knights.\nRequired level: 26 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="16883" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="16883" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1379" name="Spellbook: Cure Bleeding" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Cure Bleeding. Used by Elven Knights and Elven Scouts.\nRequired level: 24 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1150" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1150" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1380" name="Spellbook: Entangle" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Entangle. Used by Elven Knights and Elven Scouts.\nRequired level: 36 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="47865" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="47865" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1381" name="Spellbook: Freezing Strike" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Freezing Strike. Used by Palus Knights and Assassins.\nRequired level: 34 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="39568" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="39568" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1382" name="Spellbook: Power Break" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Power Break. Used by Palus Knights and Assassins.\nRequired level: 32 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1383" name="Spellbook: Poison" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Poison. Used by Palus Knights and Assassins.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1384" name="Spellbook: Sprint" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Sprint. Used by Elven Knights and Elven Scouts.\nRequired level: 32 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="32612" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1385" name="Spellbook: Recharge" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Recharge. Used by Elven Oracles and Shillien Oracles.\nRequired level: 28 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="21437" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="21437" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1386" name="Spellbook: Disrupt Undead" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Disrupt Undead. Used by Clerics, Elven Oracles and Shillien Oracles.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1387" name="Spellbook: Poison Resistance" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Poison Resistance. Used by Oracles and Prophets.\nRequired level: Oracle - 35, Prophet - 60 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1388" name="Spellbook: Mental Shield" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Mental Shield. Used by Clerics, Elven Oracles and Shillien Oracles.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1389" name="Spellbook: Holy Weapon" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Holy Weapon. Used by Clerics and Elven Oracles.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1390" name="Spellbook: Regeneration" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Regeneration. Used by Clerics and Elven Oracles.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1391" name="Spellbook: Empower" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Empower. Used by Shillien Oracles.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1392" name="Spellbook: Berserker Spirit" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Berserker Spirit. Used by Clerics.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1393" name="Spellbook: Quickness" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Quickness. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1394" name="Spellbook: Sleep" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Sleep. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles.\nRequired level: 23 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="10603" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="10603" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1397" name="Spellbook: Peace" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Peace. Used by Clerics.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1398" name="Spellbook: Focus" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Focus. Used by Clerics and Shillien Oracles.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1399" name="Spellbook: Concentration" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Concentration. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 </list>

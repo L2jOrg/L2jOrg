@@ -379,7 +379,7 @@
 	</item>
 
 	<armor id="90763" name="Zaken's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i00">
-	<!-- MP +22, Bleed Attack and Resistance +10%, Stun/MEN Attack and Resistance +5%, Heal Received +4%, HP Recovery+10%, Skill MP Consumption -2%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -2%\nHeal Received +4%\nHP Recovery +10%\nMax MP +22\nBleed Attack and Resistance +10%\nStun Attack and Resistance +5%\nMental Attack and Resistance +5%\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -393,7 +393,7 @@
 	</armor>
 
 	<armor id="90764" name="Zaken's Earring Lv. 2" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i02">
-	<!-- MP +28, Bleed Attack and Resistance +15%, Stun/MEN Attack and Resistance +10%, Heal Received +6%, HP Recovery+15%, Skill MP Consumption -3%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -3%\nHeal Received +6%\nHP Recovery +15%\nMax MP +28\nBleed Attack and Resistance +15%\nStun Attack and Resistance +10%\nMental Attack and Resistance +10%\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -407,7 +407,7 @@
 	</armor>
 
 	<armor id="90765" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
-	<!-- MP +34, Bleed Attack and Resistance +20%, Stun/MEN Attack and Resistance +15%, Heal Received +10%, HP Recovery +20%, Vampiric Rage +8%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. Give Zaken's Earrings to Beggins to obtain Zaken Essence Lv. 3. -->
+	<!-- <Options>\nMP Consumption -4%\nHeal Received +10%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +34\nBleed Attack and Resistance +20%\nStun Attack and Resistance +15%\nMental Attack and Resistance +15%\n\nWhen two identical earrings are equipped, only one effect is applied. Cannot be enchanted. Give 2 Zaken's Earring Lv. 3 to Beggins to obtain the Zaken Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -427,7 +427,7 @@
 	</item>
 
 	<armor id="90767" name="Zaken's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i00">
-	<!-- A 7-day item. MP +22, Bleed Attack and Resistance +10%, Stun/MEN Attack and Resistance +5%, Heal Received +4%, HP Recovery +10%, Skill MP Consumption -2%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -2%\nHeal Received +4%\nHP Recovery +10%\nMax MP +22\nBleed Attack and Resistance +10%\nStun Attack and Resistance +5%\nMental Attack and Resistance +5%\n\n7-day. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="10080" enchant-enabled="false" />
 		<crystal />

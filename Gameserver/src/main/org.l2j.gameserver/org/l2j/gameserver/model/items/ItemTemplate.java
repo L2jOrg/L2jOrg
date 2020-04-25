@@ -71,13 +71,13 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected int equipReuseDelay;
     private long time;
     private int _autoDestroyTime = -1;
-    private int price;
+    private long price;
     protected int crystalCount;
     private boolean sellable;
     private boolean dropable;
     private boolean destroyable;
     private boolean tradable;
-    private boolean _depositable;
+    private boolean depositable;
     protected boolean enchantable;
     protected boolean questItem;
     private boolean freightable;
@@ -335,7 +335,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     /**
      * @return the price of reference of the item.
      */
-    public final int getReferencePrice() {
+    public final long getReferencePrice() {
         return price;
     }
 
@@ -371,7 +371,11 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code true} if the item can be put into warehouse, {@code false} otherwise.
      */
     public final boolean isDepositable() {
-        return _depositable;
+        return depositable;
+    }
+
+    public void setDepositable(boolean depositable) {
+        this.depositable = depositable;
     }
 
     /**
@@ -754,7 +758,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         this.weight = weight;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
@@ -785,5 +789,4 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     public void setCrystalCount(int count) {
         crystalCount = count;
     }
-
 }

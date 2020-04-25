@@ -61,7 +61,7 @@
 	</armor>
 
 	<armor id="71309" name="Agathion - Scorpio" type="NONE" body-part="AGATHION" icon="icon.agathion_sco_star_1">
-	<!-- An item which can be used to obtain the power of the Scorpio Scorpio.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nP. Critical Rate increased.\nStarting from +6, cooldown of P. Skills and songs/dances decreased.\n -->
+	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\n\nSummons Agathion from the main slot.\nActivates Special Abilities.\n\n<Special Abilities>\nP. Critical Rate increased.\nStarting from +6, cooldown of P. Skills and songs/dances decreased.\n -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -472,7 +472,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="6"/>
+			<skill id="59150" level="6"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -482,7 +482,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="7"/>
+			<skill id="59150" level="7"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -492,7 +492,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="8"/>
+			<skill id="59150" level="8"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -502,7 +502,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="9"/>
+			<skill id="59150" level="9"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -512,7 +512,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="10"/>
+			<skill id="59150" level="10"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -522,7 +522,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="6"/>
+			<skill id="59151" level="6"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -532,7 +532,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="7"/>
+			<skill id="59151" level="7"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -542,7 +542,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="8"/>
+			<skill id="59151" level="8"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -552,7 +552,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="9"/>
+			<skill id="59151" level="9"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -562,7 +562,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="10"/>
+			<skill id="59151" level="10"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 

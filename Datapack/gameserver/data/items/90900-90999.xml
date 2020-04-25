@@ -160,7 +160,7 @@
 	</item>
 
 	<item id="90923" name="Shining Ore" type="NONE" icon="icon.bm_piece_of_ensoul_stone">
-	<!-- Bring some amount of Shining Ore and a Lv. 3-5 Jewel to a Dimensional Merchant to receive a Lv. 3-5 Jewelry Box.  -->
+	<!-- Bring some amount of Shining Ore and a Lv. 3-5 Jewel to the Store to receive a Lv. 3-5 Jewelry Box. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -241,8 +241,8 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13658"/>
-			<skill id="13661" level="3"/>
+			<skill id="13658"/>  <!-- Brooch Lv. 3 -->
+			<skill id="13661" level="3"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
@@ -340,7 +340,7 @@
 	</item>
 
 	<armor id="90950" name="Baium's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i03">
-	<!-- A 30-day item. MP +27, Stun P. Atk. and Resistance +20%, Bleed P. Atk. and Resistance +15%, P./M. Accuracy +4, Atk. Spd./Casting Spd. +5%, P./M. Skill Power +10%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Skill Power +10%\nM. Skill Power +10%\nAtk. Spd. +5%\nCasting Spd. +5%\nP. Accuracy +4\nM. Accuracy +4\nP. Critical Damage +15%\nM. Critical Damage +10%\nMax MP +27\nStun Attack and Resistance +20%\nBleed Attack and Resistance +15%\n\n30-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="43200" enchant-enabled="false" />
 		<crystal />
@@ -453,7 +453,7 @@
 	<item id="90963" name="Solid Scroll: Enchant Agathion" type="SEVEN_SINS_AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
 	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3 and can be enchanted up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchant level is maintained. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="90964" name="Sealed Doll of Border Box" type="NONE" icon="icon.event_oriental_park_i00">
@@ -547,19 +547,19 @@
 	</item>
 
 	<item id="90977" name="Doll of Border - Baium" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- A 7-day item. Boosts abilities if stored in the inventory. \n<Baium Doll's Spell>\nMEN Atk. Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P./M. Def. +12%, Skill Cooldown -3%. -->
+	<!-- <Baium Doll's Spell>\nSkill Cooldown -3%\nP. Def. +12%\nM. Def +12%\nMental Attack Resistance +40%\nParalysis Attack Resistance +20%\nKnock Down Attack Resistance +20%\nPull Attack Resistance +20%\n\n7-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
-	<item id="90978" name="Doll of Border - Queen Ant" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- A 7-day item. Boosts abilities if stored in the inventory. \n\n<Queen Ant's Doll Spell>\nP. Atk. and Critical Damage +8%, Max HP +12%. -->
+	<item id="90978" name="Sealed Doll of Border - Queen Ant" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
+	<!-- <Queen Ant Doll's Spell>\nP. Atk. +8%\nP. Critical Damage +8%\nMax HP +12%\n\n7-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="90979" name="Doll of Border - Orfen" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- A 7-day item. Boosts abilities if stored in the inventory. \n\n<Orfen's Doll Spell>\nM. Atk./M. Critical Damage +8%, Max MP +12%. -->
+	<!-- <Orfen Doll's Spell>\nM. Atk. +8%\nM. Critical Damage +8%\nMax MP +12%\n\n7-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="10080"/>
 	</item>
@@ -644,7 +644,7 @@
 	<item id="90990" name="Scroll: Enchant Savior's Earring" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">
 	<!-- Only for Savior's Earring. Increases M. Def. Can be safely strengthened up to +3 and can be enhanced up to +7. If enchanting fails, the enchant level is maintained.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="90991" name="Lucky Hat" type="NONE" body-part="HAIR_ALL" icon="icon.Accessary_middle_ages_i00">

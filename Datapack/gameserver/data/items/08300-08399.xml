@@ -127,19 +127,19 @@
 	<item id="8388" name="Spellbook: Greater Might" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Great Might. Used by Prophets.\nRequired level: 58 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="8389" name="Spellbook: Greater Shield" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Greater Shield. Used by Prophets.\nRequired level: 58 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="8397" name="Spellbook: Clarity" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Clarity. Used by Elven Elders.\nRequired level: 58 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 </list>

@@ -114,18 +114,18 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13659"/> <!-- Brooch Lv. 4 -->
-			<skill id="13661" level="4"/> <!-- Brooch Additional Effect -->
+			<skill id="13659"/>  <!-- Brooch Lv. 4 -->
+			<skill id="13661" level="4"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
-	<armor id="91418" name="Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
+	<armor id="91418" name="Ruby Lv. 5 " type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
 	<!-- A 30-day item. When equipped, Soulshot/Blessed Soulshot/Beast Soulshot damage +16%. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="5"/>
+			<skill id="59150" level="5"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -135,7 +135,7 @@
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="5"/>
+			<skill id="59151" level="5"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -154,19 +154,19 @@
 	</armor>
 
 	<item id="91422" name="Queen Ant Doll Lv. 2" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. \n\n<Queen Ant Doll's Spell Lv. 2>\nP. Atk. +12%, P. Critical Damage +10%, MAX HP +15% -->
+	<!-- <Queen Ant Doll's Spell Lv. 2>\nP. Atk. +12%\nP. Critical Damage +10%\nMax HP +15%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91423" name="Baium Doll Lv. 2" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- Boosts abilities with the Baium Doll's Spell when stored in the inventory. \n\n<Baium Doll's Spell Lv. 2>\nMEN Atk. Resistance +45%, Paralysis/Knock Down/Pull Resistance +25%, P. Def./M. Def. +15%, Skill Cooldown -4%. -->
+	<!-- <Baium Doll's Spell Lv. 2\nSkill Cooldown -4%\nP. Def. +15%\nM. Def +15%\nMental Attack Resistance +45%\nParalysis Attack Resistance +25%\nKnock Down Attack Resistance +25%\nPull Attack Resistance +25%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91424" name="Orfen Doll Lv. 2" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- Boosts abilities with the Orfen Doll's Spell when stored in the inventory. \n\n<Orfen Doll's Spell Lv. 2>\nM. Atk. +15%, M. Critical Damage +10%, MAX MP +15% -->
+	<!-- <Orfen Doll's Spell Lv. 2\nM. Atk. +15%\nM. Critical Damage +10%\nMax MP +15%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -219,7 +219,7 @@
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="10"/>
+			<skill id="59150" level="10"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -229,7 +229,7 @@
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="10"/>
+			<skill id="59151" level="10"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -553,37 +553,37 @@
 	<item id="91482" name="Codex - Detect Darkness" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Detect Darkness. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91483" name="Codex - Bind" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Bind. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91484" name="Codex - Mass Chain Strike" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll needed to learn Mass Chain Strike. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91485" name="Codex - Reduce Crisis" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll needed to learn Reduce Crisis. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91486" name="Codex - Full Swing" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Full Swing.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91487" name="Codex - Seal of Blockade" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Scroll needed to learn Seal of Blockade. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91488" name="Blessed Soulshot (S-grade)" type="NONE" icon="icon.etc_bless_spirit_bullet_gold_i00">
@@ -626,19 +626,19 @@
 	<item id="91494" name="Codex - Create Critical" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Critical Lv. 3. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91495" name="Codex - Create Master" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Master Lv. 2. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91496" name="Codex - Create Master" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Master Lv. 3. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91497" name="Dual Weapon Crafting Stamp (S-grade)" type="NONE" icon="icon.etc_letter_white_i00">

@@ -205,21 +205,21 @@
 	<item id="729" name="Scroll: Enchant Weapon (A-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1800000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
+		<attributes price="1800000" commission-type="SCROLL_ENCHANT_WEAPON" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="730" name="Scroll: Enchant Armor (A-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i04">
 	<!-- Increases P. Def. by 1 for A-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="120" price="240000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
+		<attributes price="240000" commission-type="SCROLL_ENCHANT_ARMOR" immediate-effect="true" action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="734" name="Wind Walk Potion" type="POTION" icon="icon.etc_potion_green_i00">
 	<!-- Magical potion that increases movement Speed. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" depositable="false"/>
-		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
+		<attributes weight="20" price="1200" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="2011" value="-1"/>  <!-- Wind Walk Potion -->
 		</skill-reducer>

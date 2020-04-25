@@ -49,12 +49,12 @@ public class ExShowSeedSetting extends ServerPacket {
             writeInt(s.getLevel()); // level
             writeByte((byte) 1);
             writeInt(s.getReward(1)); // reward 1 id
-            writeByte((byte) 1);
+            writeByte(1);
             writeInt(s.getReward(2)); // reward 2 id
             writeInt(s.getSeedLimit()); // next sale limit
-            writeInt(s.getSeedReferencePrice()); // price for castle to produce 1
+            writeInt((int) s.getSeedReferencePrice()); // price for castle to produce 1
             writeInt(s.getSeedMinPrice()); // min seed price
-            writeInt(s.getSeedMaxPrice()); // max seed price
+            writeInt((int) s.getSeedMaxPrice()); // max seed price
             // Current period
             if (_current.containsKey(s.getSeedId())) {
                 final SeedProduction sp = _current.get(s.getSeedId());

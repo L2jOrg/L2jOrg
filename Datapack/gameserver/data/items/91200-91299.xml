@@ -9,31 +9,31 @@
 	<item id="91201" name="Secret Book - Fall Down" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Fall Down. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91202" name="Codex - Sublime Self-sacrifice" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Scroll needed to learn Sublime Self-sacrifice. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91203" name="Secret Book - Summon Feline Queen" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Summon Feline Queen. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91204" name="Secret Book - Summon Seraphim the Unicorn" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Summon Seraphim the Unicorn. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91205" name="Secret Book - Summon Nightshade" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Secret Book used to learn Summon Nightshade. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91206" name="Chronicle Token" type="RUNE" icon="icon.etc_scroll_of_memory_i00">
@@ -324,7 +324,7 @@
 	</armor>
 
 	<armor id="91248" name="Blessed Dragon Pendant" type="NONE" body-part="UNDERWEAR" icon="icon.bm_pendant_dragon_i01">
-	<!-- Pendant imbued with Dragon's power. When equipped M. Def. +50, EXP/SP +30%, P. Atk./M. Atk. Spd. 10%, P. Atk./M. Atk. Critical Damage +15%, P. Atk./M. Atk. +20%, Damage Reflect Resistance +20%, P. Atk./M. Atk. Damage -30%. Vitalizes Dragon Invocation, Dragon Barrier, Dragon Evasion Skill. Cannot be enhanced. -->
+	<!-- <Options>\nP. Atk. +20%\nM. Atk. +20%\nP. Critical Damage +15%\nM. Skill Critical Damage +15%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Critical Damage Received -30%\nM. Critical Damage Received -30%\nM. Def. +50\nXP/SP Gain +30%\nDamage Reflect Resistance +20%\n\n<Dragon Invocation>\nIncreases HP/MP Recovery and Speed for its duration when used.\n\n<Dragon Barrier>\nBecomes invincible to normal attacks, skills, and debuff attacks for its duration when used.\n\n<Dragon Evasion>\nNot targeted for its duration when used.\n\nPendant containing the power of dragons. Cannot be enchanted. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -382,19 +382,19 @@
 	</item>
 
 	<item id="91256" name="Baium Doll Lv. 1" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- Boosts abilities with the Baium Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \n\n<Baium Doll's Spell Lv. 1>\nMEN Attack Resistance +40%, Paralysis/Knock Down/Pull Attack Resistance +20%, P. Def/M. Def +12%, and Skill Cooldown -3% -->
+	<!-- <Baium Doll's Spell Lv. 1>\nSkill Cooldown -3%\nP. Def. +12%\nM. Def +12%\nMental Attack Resistance +40%\nParalysis Attack Resistance +20%\nKnock Down Attack Resistance +20%\nPull Attack Resistance +20%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91257" name="Queen Ant Doll Lv. 1" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \n\n<Queen Ant Doll's Spell Lv. 1>\nP. Atk./P. Critical Damage +8%, Max HP +12% -->
+	<!-- <Queen Ant Doll's Spell Lv. 1>\nP. Atk. +8%\nP. Critical Damage +8%\nMax HP +12%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91258" name="Orfen Doll Lv. 1" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- Boosts abilities with the Orfen Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \n\n<Orfen Doll's Spell Lv. 1>\nM. Atk./M. Critical Damage +8%, Max MP +12% -->
+	<!-- <Orfen Doll's Spell Lv. 1>\nM. Atk. +8%\nM. Critical Damage +8%\nMax MP +12%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -631,37 +631,37 @@
 	<item id="91290" name="Codex - Create Critical" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Critical Lv. 1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91291" name="Codex - Create Critical" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Critical Lv. 2. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91292" name="Codex - Create Master" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Create Master Lv. 1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91293" name="Codex - Mana Burn" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Scroll needed to learn Mana Burn. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91294" name="Codex - Bluff" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Bluff. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91295" name="Codex - Hawk Spirit Totem" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll needed to learn Hawk Spirit Totem. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91296" name="Inventory Expansion Ticket Lv. 4" type="NONE" icon="icon.etc_ticket_i00">

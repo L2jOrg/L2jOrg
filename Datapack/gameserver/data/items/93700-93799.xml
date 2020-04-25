@@ -12,15 +12,591 @@
 		<attributes price="2000000"/>
 	</item>
 
+	<item id="93702" name="Daily Consumables Package" type="NONE" icon="icon.bm_ensoulbox_soul_of_undead">
+	<!-- Double-click to obtain Sayha's Storm Lv. 3 x50, Sayha's Blessing x50, Soulshot Ticket x200, Battleground Scroll x50, Battle Scroll x50, Primeval Isle Time Recharge Stone x1. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93703" name="Strong Jewelry Box Lv. 2-3" type="NONE" icon="icon.bm_sayha_blessed_box">
+	<!-- Double-click to obtain one of the Amber, Opal, Coral, Onyx, Spinel, Zircon, and Moonstone Lv. 2-3 Gems. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93704" name="Alligator Island Time Recharge Stone" type="POTION" icon="icon.timezone_refill_lost_mine_60">
+	<!-- Adds 60 minutes to the duration of the Alligator Island PC hunting zone. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="5"/>
+	</item>
+
+	<item id="93705" name="Top-grade Material" type="MATERIAL" icon="icon.etc_artisans_frame_i00">
+	<!-- Fills 50,000 crafting points when recharged. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="2" price="100000"/>
+	</item>
+
+	<item id="93706" name="Random Crafting Recharge Box" type="NONE" icon="icon.etc_chaser_stone">
+	<!-- Double-click to obtain 1 Random Crafting 1-time Recharge Stone, 2-100 top-grade ingredients at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93707" name="Proof of Revenge - Event" type="NONE" icon="icon.ev_big_daebak_token1">
+	<!-- Double-click to obtain 1 of the following at random: Soulshot Ticket, HP Potion, Intermediate HP Potion, Shining Scroll of Mood Melody, XP Boost Scroll. Collect proof and take it to Peasant Representative Olf to exchange for various items.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93708" name="Intermediate HP Potion - Event" type="POTION" icon="icon.etc_super_potion_i02">
+	<!-- After instant 200 HP Recovery, CP Recovery with remaining points. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="1" auto-use="HEALING"/>
+	</item>
+
+	<item id="93709" name="Greater Spellbook Box - Event" type="NONE" icon="BranchSys3.icon1.g_auto_shape_shift">
+	<!-- Double-click to obtain 1 of the following at random: White Guardian Transformation Scroll, Scroll of Darkness, Scroll of Purity, Mana Tablet, 1 of the 3rd Class Transfer Spellbooks.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93710" name="A-grade Equipment Box" type="NONE" icon="icon.etc_treasure_box_i00">
+	<!-- Double-click to obtain 1 of the following at random: Top-grade A-grade Weapon or 1-3 A-grade Weapon Exchange Tickets.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93711" name="+16 S-grade Weapon Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain 1 of the +16 S-grade weapons at random. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93712" name="+10 S-grade Armor Pack" type="NONE" icon="icon.event_hero_treasure_box_i00">
+	<!-- Double-click to obtain one +10 S-grade armor or accessory. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93713" name="Giran's Treasure Chest" type="NONE" icon="icon.bm_circlet_upgrade_box">
+	<!-- Double-click to obtain 5 each of Sayha's Storm Lv. 3, Special Dragon's Fruit Lv. 2, and Dragon's Special Elixir Lv. 2, and 1 of the following rare items: +16 S-grade Weapon Pack, Venir's Talisman Lv. 24, Frintezza's Necklace Lv. 3. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93714" name="Shining Scroll of Mood Melody - Event" type="SCROLL" icon="icon.bm_magmeld">
+	<!-- Activates Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration effects for 20 min. The buff effect doesn't disappear upon death\n\n<Note>\n1. Shining Scroll of Mood Melody cannot be stacked with Scroll of Mood Melody.\n\n2. Its duration is equal to that of the last used item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="93715" name="Castle Siege Support Box" type="NONE" icon="icon.bm_gold_relic_box">
+	<!-- Double-click to obtain 5 Sayha's Blessings, and 1 of the following rare items at random: Boss Weapon Pack, Baium's Ring Lv. 1, Zaken's Earring Lv. 1, Queen Ant's Ring Lv. 1, Orfen's Earring Lv. 1, Spellbook: White Guardian. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93716" name="+3-+8 Talisman and Belt Ticket Box" type="NONE" icon="icon.bm_gold_lure_box">
+	<!-- Double-click to obtain 1 +3-+8 Talisman and Belt Exchange Ticket. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93717" name="+3 Talisman and Belt Exchange Ticket" type="MATERIAL" icon="BranchSys3.icon1.g_luckygame_card_trade_i00">
+	<!-- Can be exchanged for 1 of the following through the Store Manager: +3 Aden Talisman Box, Eva's Talisman Box, Speed Talisman Box, Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93718" name="+4 Talisman and Belt Exchange Ticket" type="MATERIAL" icon="BranchSys3.icon1.g_luckygame_card_trade_i00">
+	<!-- Can be exchanged for 1 of the following through the Store Manager: +4 Aden Talisman Box, Eva's Talisman Box, Speed Talisman Box, Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93719" name="+5 Talisman and Belt Exchange Ticket" type="MATERIAL" icon="BranchSys3.icon1.g_luckygame_card_trade_i00">
+	<!-- Can be exchanged for 1 of the following through the Store Manager: +5 Aden Talisman Box, Eva's Talisman Box, Speed Talisman Box, Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93720" name="+6 Talisman and Belt Exchange Ticket" type="MATERIAL" icon="BranchSys3.icon1.g_luckygame_card_trade_i00">
+	<!-- Can be exchanged for 1 of the following through the Store Manager: +6 Aden Talisman Box, Eva's Talisman Box, Speed Talisman Box, Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93721" name="+7 Talisman and Belt Exchange Ticket" type="MATERIAL" icon="BranchSys3.icon1.g_luckygame_card_trade_i00">
+	<!-- Can be exchanged for 1 of the following through the Store Manager: +7 Aden Talisman Box, Eva's Talisman Box, Speed Talisman Box, Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93722" name="+8 Talisman and Belt Exchange Ticket" type="MATERIAL" icon="BranchSys3.icon1.g_luckygame_card_trade_i00">
+	<!-- Can be exchanged for 1 of the following through the Store Manager: +8 Aden Talisman Box, Eva's Talisman Box, Speed Talisman Box, Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93723" name="+1 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +1 Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93724" name="+2 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +2 Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93725" name="+3 Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +3 Enchanted Dragon's Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93726" name="+4 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +4 Enchanted Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93727" name="+5 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +5 Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93728" name="+6 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +6 Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93729" name="+7 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +7 Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93730" name="+8 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +8 Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93731" name="+9 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +9 Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93732" name="+10 Dragon’s Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
+	<!-- Double-click to obtain +10 Enchanted Dragon’s Belt. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93733" name="Flaming Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t96_u_i03">
+		<restriction sellable="false"/>
+		<attributes weight="1750" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93734" name="Flaming Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t96_l_i03">
+		<restriction sellable="false"/>
+		<attributes weight="850" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93735" name="Flaming Tunic" type="MAGIC" body-part="CHEST" icon="icon.armor_t96_u_i03">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1750" />
+		<crystal type="A"/>
+	</armor>
+
+	<armor id="93736" name="Flaming Stockings" type="MAGIC" body-part="LEGS" icon="icon.armor_t96_l_i03">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="850" />
+		<crystal type="A"/>
+	</armor>
+
 	<item id="93737" name="Top-grade Stable Scroll: Enchant Weapon (S-grade) - Exchangeable" type="SOLID_ENCHANT_WEAPON" icon="icon.giant_scrl_of_ench_wp_s">
-	<!-- Upon enchantment, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. From +4, P. Atk./M. Atk. bonus effect quadruples. Starting from +17, P. Atk. +43 for one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +77 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +126 for bow weapons. M. Atk. +43 for all weapons. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. It can be used only on +16 to +19 enchanted items. -->
+	<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./M. Atk. bonus quadruples. Starting at +17, P. Atk. +43 for one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +77 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +126 for bows. M. Atk. +43 for all weapons. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. Cannot use on weapons enchanted between +16-+19. -->
 		<restriction stackable="true" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93738" name="Top-grade Stable Scroll: Enchant Armor (S-grade) - Exchangeable" type="SOLID_ENCHANT_ARMOR" icon="icon.giant_scrl_of_ench_am_s">
-	<!-- Upon enchantment, P. Def. +2 for S-grade armor or M. Def. +2 for accessory. From +4, P. Def. +8, and from +11, P. Def. +26, M. Def. +20. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. From +4, the enchanted armor's HP also increases according to the enchant level. It can be used only on +10 to +13 enchanted items. -->
+	<!-- Upon enchantment, P. Def. or M. Def. +2 for S-grade armor or accessory. From +4, P. Def. +8 and from +11, P. Def. +26, M. Def. +20. Even if enchantment fails, the item will not be crystallized and will retain its enchant level. From +4, the enchanted armor's HP also increases according to the enchant level. It can be used only on +10 to +13 enchanted items. -->
 		<restriction stackable="true" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93739" name="Seal of Giran 1000-unit Pack" type="NONE" icon="icon.bm_gold_lure_box">
+	<!-- Double-click to obtain Seal of Giran x1000. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93740" name="Seal of Giran Box" type="NONE" icon="icon.bm_circlet_upgrade_box">
+	<!-- Double-click to obtain 1 to 1000 Seal of Giran at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93741" name="Test - Super Strong Giant's Mask" type="NONE" body-part="HAIR_ALL" icon="BranchSys.icon.br_frankenstein_mask_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="93742" name="Test - Shriek Mask" type="NONE" body-part="HAIR_ALL" icon="icon.ev_scream_mask_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="93743" name="Test - Red Devil Mask" type="NONE" body-part="HAIR_ALL" icon="icon.ev_doccabi_mask_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="93744" name="Test - Mummy Mask" type="NONE" body-part="HAIR_ALL" icon="icon.ev_mummy_mask_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="93745" name="Test - Alien Mask" type="NONE" body-part="HAIR_ALL" icon="icon.ev_alien_mask_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="93746" name="Test - Golden Jack O'Lantern Mask" type="NONE" body-part="HAIR_ALL" icon="icon.ev_golden_jack0_mask_i00">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<item id="93747" name="Super Strong Giant's Mask" type="NONE" icon="BranchSys.icon.br_frankenstein_mask_i00">
+	<!-- Scroll that transform you into the Super Strong Giant's Mask. When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="93748" name="Shriek Mask" type="NONE" icon="icon.ev_scream_mask_i00">
+	<!-- Scroll that transform you into the Shriek Mask. When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="93749" name="Red Devil Mask" type="NONE" icon="icon.ev_doccabi_mask_i00">
+	<!-- Scroll that transform you into the Red Devil Mask. When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="93750" name="Mummy Mask" type="NONE" icon="icon.ev_mummy_mask_i00">
+	<!-- Scroll that transform you into the Mummy Mask. When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="93751" name="Alien Mask" type="NONE" icon="icon.ev_alien_mask_i00">
+	<!-- Scroll that transform you into the Alien Mask. When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="93752" name="Golden Jack O'Lantern Mask" type="NONE" icon="icon.ev_golden_jack0_mask_i00">
+	<!-- Scroll that transform you into the Golden Jack O'Lantern Mask. When used, XP/SP Gain when hunting +50% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="93753" name="Pumpkin Ghost’s Great Candy - Event" type="NONE" icon="icon.ev_jack_ghost_i00">
+	<!-- For 1 hour, STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. The buff is refreshed automatically every hour and it remains for a max of 24 hours. You’ll obtain a Halloween Candy Box each time it is refreshed.\n<Note>\nCannot obtain the item if you are dead. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93754" name="Halloween Mask Box - Event" type="NONE" icon="icon.bm_elmoaden_gold_box">
+	<!-- Obtain 1 of the Halloween masks. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93755" name="Halloween Candy Box - Event" type="NONE" icon="icon.etc_pi_box_joy_pack">
+	<!-- Double-click to obtain 3 Halloween Masks or 10 to 1000 Halloween Candy at random. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93756" name="Halloween Candy - Event" type="POTION" icon="icon.etc_whiteday_candy_i05">
+	<!-- Sweet Halloween Candy. After instant 50 HP Recovery, CP Recovery with remaining points. Take the candy to the Pumpkin Ghost to exchange for various items. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="1" price="30" auto-use="HEALING"/>
+	</item>
+
+	<item id="93757" name="Sirra's Blade Pack" type="NONE" icon="icon.weapon_sirr_blade_i00">
+	<!-- Double-click to obtain an exchangeable Sirra's Blade. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93758" name="Sword of Ipos Pack" type="NONE" icon="icon.weapon_sword_of_ipos_i00">
+	<!-- Double-click to obtain an exchangeable Sword of Ipos. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93759" name="Barakiel's Axe Pack" type="NONE" icon="icon.weapon_barakiel_axe_i00">
+	<!-- Double-click to obtain an exchangeable Barakiel's Axe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93760" name="Behemoth' Tuning Fork Pack" type="NONE" icon="icon.weapon_tuning_fork_of_behemoth_i00">
+	<!-- Double-click to obtain an exchangeable Behemoth' Tuning Fork. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93761" name="Naga Storm Pack" type="NONE" icon="icon.weapon_naga_storm_i00">
+	<!-- Double-click to obtain an exchangeable Naga Storm. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93762" name="Tiphon's Spear Pack" type="NONE" icon="icon.weapon_tiphon_spear_i00">
+	<!-- Double-click to obtain an exchangeable Tiphon's Spear. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93763" name="Shyeed's Bow Pack" type="NONE" icon="icon.weapon_shyid_bow_i00">
+	<!-- Double-click to obtain an exchangeable Shyeed's Bow. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93764" name="Sobekk's Hurricane Pack" type="NONE" icon="icon.weapon_sobekk_hurricane_i00">
+	<!-- Double-click to obtain an exchangeable Sobekk's Hurricane. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93765" name="Themis' Tongue Pack" type="NONE" icon="icon.weapon_tongue_of_themis_i00">
+	<!-- Double-click to obtain an exchangeable Themis' Tongue. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93766" name="Cabrio's Hand Pack" type="NONE" icon="icon.weapon_hand_of_cabrio_i00">
+	<!-- Double-click to obtain an exchangeable Cabrio's Hand. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93767" name="Daimon Crystal Pack" type="NONE" icon="icon.weapon_crystal_of_deamon_i00">
+	<!-- Double-click to obtain an exchangeable Daimon Crystal. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93768" name="Tallum Blade*Damascus Pack" type="NONE" icon="icon.weapon_dual_sword_i00">
+	<!-- Double-click to obtain an exchangeable Tallum Blade*Damascus. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93769" name="Éclair Bijou Pack" type="NONE" icon="icon.weapon_greed_stinger_i00">
+	<!-- Double-click to obtain an exchangeable Éclair Bijou. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93770" name="Durendal Pack" type="NONE" icon="icon.weapon_death_bringer_i00">
+	<!-- Double-click to obtain an exchangeable Durendal. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93771" name="Armor of Nightmare Pack" type="NONE" icon="icon.armor_t80_ul_i00">
+	<!-- Double-click to obtain an exchangeable Armor of Nightmare. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93772" name="Helm of Nightmare - Heavy Armor Pack" type="NONE" icon="icon.armor_leather_helmet_i00">
+	<!-- Double-click to obtain an exchangeable Helm of Nightmare - Heavy Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93773" name="Gauntlets of Nightmare - Heavy Armor Pack" type="NONE" icon="icon.armor_t80_g_i00">
+	<!-- Double-click to obtain an exchangeable Gauntlets of Nightmare - Heavy Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93774" name="Boots of Nightmare - Heavy Armor Pack" type="NONE" icon="icon.armor_t80_b_i00">
+	<!-- Double-click to obtain an exchangeable Boots of Nightmare - Heavy Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93775" name="Majestic Plate Armor Pack" type="NONE" icon="icon.armor_t83_ul_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Plate Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93776" name="Majestic Circlet - Heavy Armor Pack" type="NONE" icon="icon.armor_leather_helmet_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Circlet - Heavy Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93777" name="Majestic Gauntlets - Heavy Armor Pack" type="NONE" icon="icon.armor_t83_g_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Gauntlets - Heavy Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93778" name="Majestic Boots - Heavy Armor Pack" type="NONE" icon="icon.armor_t83_b_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Boots - Heavy Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93779" name="Leather Armor of Nightmare Pack" type="NONE" icon="icon.armor_t81_ul_i00">
+	<!-- Double-click to obtain an exchangeable Leather Armor of Nightmare. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93780" name="Helm of Nightmare - Light Armor Pack" type="NONE" icon="icon.armor_leather_helmet_i00">
+	<!-- Double-click to obtain an exchangeable Helm of Nightmare - Light Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93781" name="Gauntlets of Nightmare - Light Armor Pack" type="NONE" icon="icon.armor_t81_g_i00">
+	<!-- Double-click to obtain an exchangeable Gauntlets of Nightmare - Light Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93782" name="Boots of Nightmare - Light Armor Pack" type="NONE" icon="icon.armor_t81_b_i00">
+	<!-- Double-click to obtain an exchangeable Boots of Nightmare - Light Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93783" name="Majestic Leather Armor Pack" type="NONE" icon="icon.armor_t84_ul_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Leather Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93784" name="Majestic Circlet - Light Armor Pack" type="NONE" icon="icon.armor_leather_helmet_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Circlet - Light Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93785" name="Majestic Gauntlets - Light Armor Pack" type="NONE" icon="icon.armor_t84_g_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Gauntlets - Light Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93786" name="Majestic Boots - Light Armor Pack" type="NONE" icon="icon.armor_t84_b_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Boots - Light Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93787" name="Robe of Nightmare Pack" type="NONE" icon="icon.armor_t82_ul_i00">
+	<!-- Double-click to obtain an exchangeable Robe of Nightmare. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93788" name="Helm of Nightmare - Robe Pack" type="NONE" icon="icon.armor_leather_helmet_i00">
+	<!-- Double-click to obtain an exchangeable Helm of Nightmare - Robe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93789" name="Gauntlets of Nightmare - Robe Pack" type="NONE" icon="icon.armor_t82_g_i00">
+	<!-- Double-click to obtain an exchangeable Gauntlets of Nightmare. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93790" name="Boots of Nightmare - Robe Pack" type="NONE" icon="icon.armor_t82_b_i00">
+	<!-- Double-click to obtain an exchangeable Boots of Nightmare - Robe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93791" name="Majestic Robe Pack" type="NONE" icon="icon.armor_t85_ul_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Robe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93792" name="Majestic Circlet - Robe Pack" type="NONE" icon="icon.armor_leather_helmet_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Circlet - Robe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93793" name="Majestic Gauntlets - Robe Pack" type="NONE" icon="icon.armor_t85_g_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Gauntlets - Robe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93794" name="Majestic Boots - Robe Pack" type="NONE" icon="icon.armor_t85_b_i00">
+	<!-- Double-click to obtain an exchangeable Majestic Boots - Robe. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93795" name="Thunder Leather Armor Pack" type="NONE" icon="icon.armor_t101_u_i00">
+	<!-- Double-click to obtain an exchangeable Thunder Leather Armor. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93796" name="Thunder Leather Leggings Pack" type="NONE" icon="icon.armor_t101_l_i00">
+	<!-- Double-click to obtain an exchangeable Thunder Leather Leggings. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93797" name="Freeze Breastplate Pack" type="NONE" icon="icon.armor_t94_u_i01">
+	<!-- Double-click to obtain an exchangeable Freeze Breastplate. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93798" name="Freeze Gaiters Pack" type="NONE" icon="icon.armor_t94_l_i01">
+	<!-- Double-click to obtain an exchangeable Freeze Gaiters. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93799" name="Flaming Tunic Pack" type="NONE" icon="icon.armor_t96_u_i03">
+	<!-- Double-click to obtain an exchangeable Flaming Tunic. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 

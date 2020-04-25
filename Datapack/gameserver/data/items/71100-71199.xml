@@ -250,7 +250,7 @@
 	<item id="71135" name="Mermaid Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
 	<!-- An enchant scroll for mermaid Agathion. Increases the Agathion's magic resistance and also adds a special ability from +4 enchantment. Can enchant a mermaid Agathion safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="71136" name="Mermaid's Trace" type="NONE" icon="icon.etc_oren_fish_scale_i00">

@@ -511,7 +511,7 @@
 	</item>
 
 	<armor id="49676" name="Talisman of Insolence Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
-	<!-- P. Atk. +14, M. Atk. +22. Blacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
+	<!-- <Options>\nP. Atk. +14\nM. Atk. +22\n\nBlacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
@@ -521,7 +521,7 @@
 	</armor>
 
 	<armor id="49677" name="Talisman of Insolence Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
-	<!-- P. Atk. +27, M. Atk. +44, Magic Attack Resistance +2%. Blacksmith Beggins in the Town of Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
+	<!-- <Options>\nP. Atk. +27\nM. Atk. +44\nM. Damage Resistance +2%\n\nBlacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
@@ -531,7 +531,7 @@
 	</armor>
 
 	<armor id="49678" name="Talisman of Insolence Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
-	<!-- P. Atk. +41, M. Atk. +66, Magic Attack Resistance +4%, Skill Power +1%, all kinds of Weapon Resistance +1%. Blacksmith Beggins in the Town of Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
+	<!-- <Options>\nP. Atk. +41\nM. Atk. +66\nM. Damage Resistance +4%\nSkill P. Atk. +1%\nAll Weapon Resistance +1\n\nBlacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
@@ -541,7 +541,7 @@
 	</armor>
 
 	<armor id="49679" name="Talisman of Insolence Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
-	<!-- P. Atk. +68, M. Atk. +109, Magic Attack Resistance +6%, Skill Power +2%, all kinds of Weapon Resistance +2%, CON +1, MEN +1. Blacksmith Beggins in the Town of Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
+	<!-- <Options>\nP. Atk. +68\nM. Atk. +109\nM. Damage Resistance +6%\nSkill P. Atk. +2%\nAll Weapon Resistance +2\nCON, MEN +1\n\nBlacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
@@ -551,7 +551,7 @@
 	</armor>
 
 	<armor id="49680" name="Talisman of Insolence Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i02">
-	<!-- P. Atk. +170, M. Atk. +235, Magic Attack Resistance +7%, Skill Power +2%, all kinds of Weapon Resistance +2%, CON +1, MEN +1, STR +1, INT +1. MP Consumption for skill use -2%. Blacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
+	<!-- <Options>\nP. Atk. +170\nM. Atk. +235\nM. Damage Resistance +7%\nSkill P. Atk. +2%\nAll Weapon Resistance +2\nMP Consumption -2%\nSTR, INT +1\nCON, MEN +1\n\nBlacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
@@ -561,7 +561,7 @@
 	</armor>
 
 	<armor id="49681" name="Talisman of Insolence Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.oman_tallisman_new_i01">
-	<!-- P. Atk. +200, M. Atk. +275, Magic Attack Resistance +8%, Skill Power +3%, all kinds of Weapon Resistance +3%, CON +1, MEN +1, STR +1, INT +1. P./ M. Critical Rate +10. MP Consumption for skill use -4%. Available only for Lv. 60 and higher. Blacksmith Beggins in Giran can help exchange this Lv. 6 Talisman and Baium’s Soul for Talisman of Baium. Effects from two such Talismans do not stack. -->
+	<!-- <Options>\nP. Atk. +200\nM. Atk. +275\nM. Damage Resistance +8%\nSkill P. Atk. +3%\nAll Weapon Resistance +3\nP. Critical Rate +10\nM. Critical Rate +10\nMP Consumption -4%\nSTR, INT +1\nCON, MEN +1\n\nThe effect of the Talisman is applied starting at level 60. Bring a Lv. 6 Talisman and Baium’s Soul to Blacksmith Beggins in Giran to upgrade to a Talisman of Baium. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
@@ -579,7 +579,7 @@
 	</item>
 
 	<armor id="49683" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.baium_talisman_new">
-	<!-- P. Atk. +284, M. Atk. +392, Magic Attack Resistance +10%, Skill Power +5%, All Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P./M. Critical Rate +20. MP Consumption for skill use -5%. Skill Cooldown -3%. Available only for level 60 and higher. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied. -->
+	<!-- <Options>\nP. Atk. +284\nM. Atk. +392\nM. Damage Resistance +10%\nSkill P. Atk. +5%\nAll Weapon Resistance +5\nP. Critical Rate +20\nM. Critical Rate +20\nMP Consumption -5%\nSkill Cooldown -3%\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\n\nThe effect of the Talisman is applied starting at level 60. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />

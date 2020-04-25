@@ -500,7 +500,7 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29724" min-count="10" max-count="10" chance="100000000"/>  <!-- Fire Dragon's Pendant Box -->
+			<item id="29724" min-count="10" max-count="10" chance="2147483647"/>  <!-- Fire Dragon's Pendant Box -->
 		</extract>
 	</item>
 
@@ -527,8 +527,8 @@
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="29724" min-count="30" max-count="30" chance="100000000"/>  <!-- Fire Dragon's Pendant Box -->
-			<item id="90138" chance="100000000"/>  <!-- Pendant Glittering Varnish -->
+			<item id="29724" min-count="30" max-count="30" chance="2147483647"/>  <!-- Fire Dragon's Pendant Box -->
+			<item id="90138" chance="2147483647"/>  <!-- Pendant Glittering Varnish -->
 		</extract>
 	</item>
 
@@ -577,25 +577,25 @@
 	<item id="29740" name="Scroll: Enchant Weapon (B-grade) - Exchangeable" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29741" name="Scroll: Enchant Armor (B-grade) - Exchangeable" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00">
 	<!-- Increases P. Def. by 1 for B-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29742" name="Protection Scroll: Enchant Weapon (B-grade) - Exchangeable" type="BLESSED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. The item will not be crystallized even if enchantment fails, but the enchant value will be reset to 0. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29743" name="Protection Scroll: Enchant Armor (B-grade) - Exchangeable" type="BLESSED_ENCHANT_ARMOR" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
 	<!-- Increases P. Def. by 1 for B-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29744" name="Earth Dragon Antharas' Treasure Pouch" type="NONE" icon="BranchIcon.Icon.g_bm_antaras_pocket_i00">

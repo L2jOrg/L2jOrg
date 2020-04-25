@@ -77,7 +77,7 @@
 	</item>
 
 	<armor id="49509" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i00">
-	<!-- 15-day item. MP +9, Mental Resistance and Atk. Rate +10%, P./M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted.  -->
+	<!-- <Options>\nReceived P. Damage -2%\nReceived M. Damage -2%\nP. Evasion +1\nM. Evasion +1\nMax MP +9\nMental Attack and Resistance +10%\n\n15-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="21600" />
 		<crystal />
@@ -446,7 +446,7 @@
 	<item id="49562" name="Spellbook: Spirit Sharing" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Spirit Sharing. Used by Warlocks, Elemental Summoners, and Phantom Summoners.\nLevel: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49563" name="1,000,000,000 Adena" type="NONE" icon="icon.fairy_adena_joke">
@@ -482,25 +482,25 @@
 	<item id="49568" name="Spellbook: Sonic Move" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Sonic Move. Used by Gladiators.\nLevel: 56 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<item id="49569" name="Spellbook: Sand Bomb" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Sand Bomb. Used by Treasure Hunters, Plains Walkers, and Abyss Walkers.\nLevel: 55 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<item id="49570" name="Spellbook: Mass Curse Gloom" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers.\nLevel: 58 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<item id="49571" name="Spellbook: Clear Mind" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Clear Mind. Used by Sorcerers, Spellsingers, and Spellhowlers.\nLevel: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<weapon id="49573" name="Samurai Black Long Sword" type="DUAL" body-part="TWO_HAND" icon="icon.weapon_dual_sword_i00">
@@ -520,7 +520,7 @@
 	</weapon>
 
 	<armor id="49574" name="Queen Ant's Ring Lv. 2" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i02">
-	<!-- MP +15, Poison Atk. and Resistance +15%, P./M. Accuracy +2, P./M. Attack +6%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Atk. +6%\nM. Atk. +6%\nP. Accuracy +2\nM. Accuracy +2\nMax MP +15\nPoison Attack and Resistance +15%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
@@ -534,7 +534,7 @@
 	</armor>
 
 	<armor id="49575" name="Orfen's Earring Lv. 2" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i02">
-	<!-- MP +25, MEN Atk. and Resistance +10%, Hold Atk. and Resistance +15%, Heal Received +4%, Skill MP Consumption -3%. When two identical rings are equipped, the effect of only one ring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -3%\nHeal Received +4%\nMax MP +25\nMental Attack and Resistance +10%\nHold Attack and Resistance +15%\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
@@ -547,8 +547,8 @@
 		</skills>
 	</armor>
 
-	<armor id="49576" name="Reinforced Ring of Core Lv. 2" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i02">
-	<!-- MP +15, MEN Atk. and Resistance +15%, P./M. Evasion +2, received P./M. damage -4%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<armor id="49576" name="Ring of Core Lv. 2" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i02">
+	<!-- <Options>\nReceived P. Damage -4%\nReceived M. Damage -4%\nP. Evasion +2\nM. Evasion +2\nMax MP +15\nMental Attack and Resistance +15%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
@@ -562,7 +562,7 @@
 	</armor>
 
 	<armor id="49577" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i03">
-	<!-- MP +21, Poison Attack and Resistance +20%, P./M. Accuracy +3, P./M. Atk. +7%, P. Critical Damage +10%, P./M. Critical Damage +5%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Queen Ant's Rings to Beggins to obtain the Queen Ant Essence Lv. 3. -->
+	<!-- <Options>\nP. Atk. +7%\nM. Atk. +7%\nP. Critical Damage +10%\nM. Critical Damage +5%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nPoison Attack and Resistance +20%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Queen Ant’s Ring Lv. 3 to Beggins to obtain the Queen Ant Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
@@ -576,7 +576,7 @@
 	</armor>
 
 	<armor id="49578" name="Orfen's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i03">
-	<!-- MP +31, MEN Attack and Resistance +15%, Hold Attack and Resistance +20%, Heal Received +6%, Skill MP Consumption -5%. Activates MP Drain effect. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. Give 2 Orfen's Earrings to Beggins to obtain the Orfen Essence Lv. 3. -->
+	<!-- <Options>\nMP Consumption -5%\nHeal Received +6%\nChance to activate MP Drain\nMax MP +31\nMental Attack and Resistance +15%\nHold Attack and Resistance +20%\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. Give 2 Orfen’s Earring Lv. 3 to Beggins to obtain the Orfen Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="EARRING" />
 		<crystal />
@@ -590,7 +590,7 @@
 	</armor>
 
 	<armor id="49579" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i03">
-	<!-- MP +21, MEN Attack and Resistance +20%, P./M. Evasion +3, P./M. Damage Received -6%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Rings of Core to Beggins to obtain the Core Essence Lv. 3. -->
+	<!-- <Options>\nReceived P. Damage -6%\nReceived M. Damage -6%\nP. Evasion +3\nM. Evasion +3\nMax MP +21\nMental Attack and Resistance +20%\n\n<Ring of Core>\nAll debuffs are canceled when used.\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Ring of Core Lv. 3 to Beggins to obtain the Core Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
@@ -605,7 +605,7 @@
 	</armor>
 
 	<armor id="49580" name="Baium's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i00">
-	<!-- MP +15, Stun Atk. and Resistance +10%, Bleed Atk. and Bleed Resistance +5%, P./M. Accuracy +2, Atk. Spd./Casting Spd. +3%, P./M. Skill Power +3%. The effect does not stack even if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Skill Power +3%\nM. Skill Power +3%\nAtk. Spd. +3%\nCasting Spd. +3%\nP. Accuracy +2\nM. Accuracy +2\nMax MP +15\nStun Attack and Resistance +10%\nBleed Attack and Resistance +5%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
@@ -619,7 +619,7 @@
 	</armor>
 
 	<armor id="49581" name="Baium's Ring Lv. 2" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i02">
-	<!-- MP +21, Stun  Atk. and Resistance +15%, Bleed Atk. and Bleed Resistance +10%, P./M. Accuracy +3, Atk. Spd./Casting Spd. +4%, P./M. Skill Power +6%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Skill Power +6%\nM. Skill Power +6%\nAtk. Spd. +4%\nCasting Spd. +4%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nStun Attack and Resistance +15%\nBleed Attack and Resistance +10%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
@@ -633,7 +633,7 @@
 	</armor>
 
 	<armor id="49582" name="Baium's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i03">
-	<!-- MP +27, Stun Attack and Resistance +20%, Bleed Attack and Resistance +15%, P./M. Accuracy +4, Atk. Spd./Casting Spd. +5%, P./M. Skill Power +10%. P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Baium's Rings to Beggins to obtain the Baium Essence Lv. 3. -->
+	<!-- <Options>\nP. Skill Power +10%\nM. Skill Power +10%\nAtk. Spd. +5%\nCasting Spd. +5%\nP. Accuracy +4\nM. Accuracy +4\nP. Critical Damage +15%\nM. Critical Damage +10%\nMax MP +27\nStun Attack and Resistance +20%\nBleed Attack and Resistance +15%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Baium's Ring Lv. 3 to Beggins to obtain the Baium Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
 		<crystal />
@@ -727,7 +727,7 @@
 	</item>
 
 	<armor id="49591" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i03">
-	<!-- 30-day Item. MP +21, Poison Resistance and Atk. Rate +20%, P./M. Accuracy +3, P./M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +5%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Atk. +7%\nM. Atk. +7%\nP. Critical Damage +10%\nM. Critical Damage +5%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nPoison Attack and Resistance +20%\n\n30-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />
@@ -741,7 +741,7 @@
 	</armor>
 
 	<armor id="49592" name="Orfen's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i03">
-	<!-- A 30-day item. MP +31, MEN Attack and Resistance +15%, Hold Attack and Resistance +20%, Heal Received +6%, Skill MP Consumption -5%. Activates MP Drain effect. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -5%\nHeal Received +6%\nChance to activate MP Drain\nMax MP +31\nMental Attack and Resistance +15%\nHold Attack and Resistance +20%\n\n30-day. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
 		<crystal />
@@ -755,7 +755,7 @@
 	</armor>
 
 	<armor id="49593" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i03">
-	<!-- 30-day Item. MP +21, MEN Atk. and Resistance +20%, P./M. Evasion +3, Received Damage -6%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nReceived P. Damage -6%\nReceived M. Damage -6%\nP. Evasion +3\nM. Evasion +3\nMax MP +21\nMental Attack and Resistance +20%\n\n<Ring of Core>\nAll debuffs are canceled when used.\n\n30-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
 		<crystal />

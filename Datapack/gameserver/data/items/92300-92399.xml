@@ -131,7 +131,7 @@
 	</armor>
 
 	<item id="92313" name="Giran’s Treasure Chest" type="NONE" icon="icon.bm_circlet_upgrade_box">
-	<!-- Double-click to obtain one of the rare items at random: Ignis Necklace, Procella Necklace, Petram Necklace, or Brooch Lv. 3.  -->
+	<!-- Double-click to obtain one of the rare items at random: Ignis Necklace, Procella Necklace, Petram Necklace, or Brooch Lv. 3. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -196,27 +196,27 @@
 		<attributes weight="10" />
 		<crystal />
 		<skills>
-			<skill id="13659"/>
-			<skill id="13661" level="3"/>
+			<skill id="13659"/>  <!-- Brooch Lv. 4 -->
+			<skill id="13661" level="3"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
 	<armor id="92327" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i00">
-	<!-- MP + 9, Poison Atk. and Resistance +10%, P./M. Accuracy + 1, P./M Atk. +4%. The bonuses from this item do not stack. Cannot be enchanted. -->
+	<!-- <Options>\nP. Atk. +4%\nM. Atk. +4%\nP. Accuracy +1\nM. Accuracy +1\nMax MP +9\nPoison Attack and Resistance +10%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
 	</armor>
 
 	<armor id="92328" name="Orfen's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i00">
-	<!-- MP + 19, Mental/Hold Atk. and Resistance + 10%, received Heal + 2%, MP Consumption - 2%. The bonuses from this item do not stack. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -2%\nHeal Received +2%\nMax MP +19\nMental Attack and Resistance +5%\nHold Attack and Resistance +10%\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
 	</armor>
 
 	<armor id="92329" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i00">
-	<!-- MP + 9, Mental Atk. and Resistance + 10%, P./M. Evasion + 1, received P./M. damage - 2%. When two identical rings are equipped, the effect of only one ring will be applied. Cannot enchant. -->
+	<!-- <Options>\nReceived P. Damage -2%\nReceived M. Damage -2%\nP. Evasion +1\nM. Evasion +1\nMax MP +9\nMental Attack and Resistance +10%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" />
 		<crystal />
@@ -606,7 +606,7 @@
 		<attributes weight="5" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="4"/>
+			<skill id="59150" level="4"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -616,7 +616,7 @@
 		<attributes weight="5" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="4"/>
+			<skill id="59151" level="4"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -665,14 +665,14 @@
 		<attributes/>
 	</item>
 
-	<item id="92397" name="Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
-	<!-- Restricted to characters below level 75. Recharges 35,000 Sayha's Grace Points. -->
+	<item id="92397" name="Enhanced Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Restricted to characters below level 75. Recharges 140,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
-	<item id="92398" name="Sayha's Blessing - Event" type="POTION" icon="icon.etc_wind_potion_i00">
-	<!-- Recharges 35,000 Sayha's Grace Points. -->
+	<item id="92398" name="Enhanced Sayha's Blessing - Event" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Recharges 140,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>

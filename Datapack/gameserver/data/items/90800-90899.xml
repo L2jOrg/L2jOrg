@@ -109,7 +109,7 @@
 	</item>
 
 	<armor id="90818" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
-	<!-- A 7-day item. MP +34, Bleed Attack and Resistance +20%, Stun/MEN Attack and Resistance +15%, Heal Received +10%, HP Recovery +20%, Vampiric Rage +8%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -4%\nHeal Received +10%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +34\nBleed Attack and Resistance +20%\nStun Attack and Resistance +15%\nMental Attack and Resistance +15%\n\n7-day. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="10080" enchant-enabled="false" />
 		<crystal />
@@ -120,7 +120,7 @@
 	</armor>
 
 	<armor id="90819" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
-	<!-- A 15-day item. MP +34, Bleed Attack and Resistance +20%, Stun/MEN Attack and Resistance +15%, Heal Received +10%, HP Recovery +20%. Vampiric Rage Effect +8%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -4%\nHeal Received +10%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +34\nBleed Attack and Resistance +20%\nStun Attack and Resistance +15%\nMental Attack and Resistance +15%\n\n15-day. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" duration="21600" enchant-enabled="false" />
 		<crystal />
@@ -134,7 +134,7 @@
 	</armor>
 
 	<armor id="90820" name="Zaken's Earring Lv. 3" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i03">
-	<!-- A 30-day item. MP +34, Bleed Attack and Resistance +20%, Stun/MEN Attack and Resistance +15%, Heal Received +10%, HP Recovery +20%, Vampiric Rage +8%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -4%\nHeal Received +10%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +34\nBleed Attack and Resistance +20%\nStun Attack and Resistance +15%\nMental Attack and Resistance +15%\n\n30-day. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -151,37 +151,37 @@
 	</item>
 
 	<item id="90822" name="Sealed Doll of Border - Baium" type="NONE" icon="icon.bm_baium_doll_30d">
-	<!-- Double-click to obtain Doll of Border - Baium (30-day). Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran.  -->
+	<!-- Double-click to obtain Doll of Border - Baium (30-day). Can be upgraded to Lv. 1 through Veruti in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90823" name="Sealed Doll of Border - Queen Ant" type="NONE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- Double-click to obtain Doll of Border - Queen Ant (30-day). Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran.  -->
+	<!-- Double-click to obtain Doll of Border - Queen Ant (30-day). Can be upgraded to Lv. 1 through Veruti in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90824" name="Sealed Doll of Border - Orfen" type="NONE" icon="icon.bm_orfen_doll_30d">
-	<!-- Double-click to obtain Doll of Border - Orfen (30-day). Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran.  -->
+	<!-- Double-click to obtain Doll of Border - Orfen (30-day). Can be upgraded to Lv. 1 through Veruti in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="90825" name="Doll of Border - Baium" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- A 30-day item. Boosts abilities with the Baium Doll's Spell if stored in the inventory. \n\n<Baium Doll's Spell>\nMEN Resistance +40%, Paralysis/Knock Down/Pull Resistance +20%, P./M. Def. +12%, Skill Cooldown -3% -->
+	<!-- <Baium Doll's Spell>\nSkill Cooldown -3%\nP. Def. +12%\nM. Def +12%\nMental Attack Resistance +40%\nParalysis Attack Resistance +20%\nKnock Down Attack Resistance +20%\nPull Attack Resistance +20%\n\n30-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90826" name="Sealed Doll of Border - Queen Ant" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- A 30-day item. Boosts abilities with Queen Ant Doll's Spell if stored in the inventory. \n\n<Queen Ant Doll's Spell>\nP. Atk./P. Critical Damage +8%, Max HP +12%. -->
+	<!-- <Queen Ant Doll's Spell>\nP. Atk. +8%\nP. Critical Damage +8%\nMax HP +12%\n\n30-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="90827" name="Doll of Border - Orfen" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- A 30-day item. Boosts abilities with Orfen Doll's Spell if stored in the inventory. \n\n<Orfen Doll's Spell>\nM. Atk./M. Critical Damage +8%, Max MP +12%. -->
+	<!-- <Orfen Doll's Spell>\nM. Atk. +8%\nM. Critical Damage +8%\nMax MP +12%\n\n30-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -438,7 +438,7 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13657"/>
+			<skill id="13657"/>  <!-- Brooch Lv. 2 -->
 		</skills>
 	</armor>
 
@@ -652,7 +652,7 @@
 		<skills>
 			<skill id="51025" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="39016" value="-1"/>  <!-- Dance of Fury -->
 			<skill id="39017" value="-1"/>  <!-- Dance of Concentration -->
@@ -668,7 +668,7 @@
 		<skills>
 			<skill id="51025" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="39016" value="-1"/>  <!-- Dance of Fury -->
 			<skill id="39017" value="-1"/>  <!-- Dance of Concentration -->

@@ -415,13 +415,13 @@
 	<item id="8890" name="Spellbook - Summon Attractive Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Attractive Cubic. Used by Templars.\nRequired level: 62 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="200000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="8891" name="Spellbook: Aura Flash" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Aura Flash. Used by Sorcerers, Spellsingers, and Spellhowlers.\nRequired level: 58 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 </list>

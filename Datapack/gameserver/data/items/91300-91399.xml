@@ -27,8 +27,8 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13659"/> <!-- Brooch Lv. 4 -->
-			<skill id="13661" level="4"/> <!-- Brooch Additional Effect -->
+			<skill id="13659"/>  <!-- Brooch Lv. 4 -->
+			<skill id="13661" level="4"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
@@ -38,8 +38,8 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13660"/> <!-- Brooch Lv. 5 -->
-			<skill id="13661" level="5"/> <!-- Brooch Additional Effect -->
+			<skill id="13660"/>  <!-- Brooch Lv. 5 -->
+			<skill id="13661" level="5"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
@@ -154,7 +154,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="6"/>
+			<skill id="59150" level="6"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -164,7 +164,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="7"/>
+			<skill id="59150" level="7"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -174,7 +174,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="8"/>
+			<skill id="59150" level="8"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -184,7 +184,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="9"/>
+			<skill id="59150" level="9"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -194,7 +194,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="10"/>
+			<skill id="59150" level="10"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -204,7 +204,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="6"/>
+			<skill id="59151" level="6"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -214,7 +214,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="7"/>
+			<skill id="59151" level="7"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -224,7 +224,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="8"/>
+			<skill id="59151" level="8"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -234,7 +234,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="9"/>
+			<skill id="59151" level="9"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -244,7 +244,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="10"/>
+			<skill id="59151" level="10"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -572,7 +572,7 @@
 	</item>
 
 	<armor id="91378" name="Queen Ant's Ring Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i04">
-	<!-- MP +30, Poison Attack and Resistance +30%, P./M. Accuracy +5, P. Atk. +10%, M. Atk. +15%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Atk. +10%\nM. Atk. +15%\nP. Critical Damage +15%\nM. Critical Damage +10%\nP. Accuracy +5\nM. Accuracy +5\nMax MP +30\nPoison Attack and Resistance +30%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -583,7 +583,7 @@
 	</armor>
 
 	<armor id="91379" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i04">
-	<!-- MP +40, MEN Attack and Resistance +20%, Hold Attack and Resistance +30%, Heal Received +12%, Skill MP Consumption -10%. MP Drain effect. Enables a skill that decreases enemy MP by 10% during PvP. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -10%\nHeal Received +12%\nChance to activate MP Drain\nMax MP +40\nMental Attack and Resistance +20%\nHold Attack and Resistance +30%\n\n<Orfen's Earring>\nWhen used in PvP, Max MP -10%.\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -593,8 +593,8 @@
 		</stats>
 	</armor>
 
-	<armor id="91380" name="Ring of Core Lv 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i04">
-	<!-- MP +30, MEN Attack and Resistance +30%, P./M. Evasion +5, P./M. Damage Received -10%, Sleep Resistance +20%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<armor id="91380" name="Ring of Core Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i04">
+	<!-- <Options>\nReceived P. Damage -10%\nReceived M. Damage -10%\nP. Evasion +5\nM. Evasion +5\nMax MP +30\nMental Attack and Resistance +30%\nSleep Resistance +20%\n\n<Ring of Core>\nAll debuffs are canceled when used.\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -605,7 +605,7 @@
 	</armor>
 
 	<armor id="91381" name="Baium's Ring Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i04">
-	<!-- MP +35, Stun Attack and Resistance +30%, Bleed Attack and Resistance +20%, P./M. Accuracy +8, Atk. Spd./Casting Spd. +10%, P./M. Skill Power +20%. P. Critical Damage +20%, M. Critical Damage +20%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Skill Power +20%\nM. Skill Power +20%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Accuracy +8\nM. Accuracy +8\nP. Critical Damage 20%\nM. Critical Damage +20%\nMax MP +35\nStun Attack and Resistance +30%\nBleed Attack and Resistance +20%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -616,7 +616,7 @@
 	</armor>
 
 	<armor id="91382" name="Zaken's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i04">
-	<!-- MP +45, Bleed Attack and Resistance +30%, Stun/MEN Attack and Resistance +20%, Heal Received +15%, HP Recovery +20%, Vampiric Rage +8%, Skill MP Consumption -10%. Enables skills that limit HP/MP/CP recovery. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -10%\nHeal Received +15%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +45\nBleed Attack and Resistance +30%\nStun Attack and Resistance +20%\nMental Attack and Resistance +20%\n\n<Zaken’s Earring>\nLimits HP/MP/CP Recovery of enemies when used in PvP.\n\nWhen two identical earrings are equipped, only one effect is applied. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />

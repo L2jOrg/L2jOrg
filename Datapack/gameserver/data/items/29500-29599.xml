@@ -424,25 +424,25 @@
 	<item id="29547" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29548" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00">
 	<!-- Increases P. Def. by 1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29549" name="Scroll: Enchant Weapon (C-grade)" type="ENCHANT_WEAPON" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29550" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00">
 	<!-- Increases P. Def. by 1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="29551" name="Chronicles Heir's Ring Fragment" type="MATERIAL" icon="icon.event_classic_ring">
@@ -734,7 +734,7 @@
 		<crystal />
 		<skills>
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
 			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->

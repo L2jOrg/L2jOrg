@@ -15,25 +15,25 @@
 	</armor>
 
 	<item id="91602" name="Sealed Doll of Border - Frintezza" type="NONE" icon="icon.bm_doll_frintessa_30d">
-	<!-- Double-click to obtain 1 Doll of Border - Frintezza (30-day). Can be upgraded to Lv. 1 or Lv. 2 through Veruti in the Town of Giran.  -->
+	<!-- Double-click to obtain Doll of Border - Frintezza (30-day). Can be upgraded to Lv. 1 through Veruti in the Town of Giran. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91603" name="Doll of Border - Frintezza" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- A 30-day item. Boosts abilities with Frintezza Doll's Spell when stored in the inventory. \n\n<Frintezza Doll's Spell Lv. 1>\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
+	<!-- <Frintezza Doll's Spell>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nStun Atk. Rate +10%\nParalysis Atk. Rate +10%\n\n30-day. Boosts abilities with Frintezza Doll's Spell stored in the inventory. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
 	<item id="91604" name="Frintezza Doll Lv. 1" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- Boosts abilities with Frintezza Doll's Spell when stored in the inventory. Can be upgraded to Lv. 1 or 2 through Veruti in the Town of Giran. \n\n<Frintezza Doll's Spell Lv. 1>\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +10% -->
+	<!-- <Frintezza Doll's Spell Lv. 1>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nStun Atk. Rate +10%\nParalysis Atk. Rate +10%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91605" name="Frintezza Doll Lv 2" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- Boosts abilities with Frintezza Doll's Spell stored in the inventory. \n\n<Frintezza Doll's Spell Lv. 2>\nCON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun and Paralysis Atk. Rate +20%, Movement Speed +5 -->
+	<item id="91605" name="Frintezza Doll Lv. 2" type="RUNE" icon="icon.bm_doll_frintessa_30d">
+	<!-- <Frintezza Doll's Spell Lv. 2>\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\nSpeed +5\nStun Atk. Rate +20%\nParalysis Atk. Rate +20%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.\n\nCan be upgraded by combining. -->
 		<restriction freightable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -267,8 +267,8 @@
 		<crystal />
 	</armor>
 
-	<item id="91641" name="Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
-	<!-- Recharges 35,000 Sayha's Grace Points. -->
+	<item id="91641" name="Enhanced Sayha's Blessing" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Sayha's Grace Points +140,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>

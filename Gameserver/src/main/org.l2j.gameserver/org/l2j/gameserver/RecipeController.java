@@ -132,8 +132,8 @@ public class RecipeController {
         protected List<TempItem> _items = null;
         protected int _creationPasses = 1;
         protected int _itemGrab;
-        protected int _exp = -1;
-        protected int _sp = -1;
+        protected long _exp = -1;
+        protected long _sp = -1;
         protected long _price;
         protected int _totalItems;
         protected int _delay;

@@ -317,67 +317,67 @@
 	<item id="49423" name="Spellbook: Dual Weapon Defence" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Magic book that teaches the principles of defence from dual weapons. Used by Gladiators.\nRequired level: 41. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49424" name="Spellbook: Fell Swoop" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Magic book that teaches the Fell Swoop skill. Used by Dreadnoughts.\nRequired level: 51.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49425" name="Spellbook: Immortal Life" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Magic book that teaches the Immortal Life skill. Used by Crashers.\nRequired level: 52.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<item id="49426" name="Spellbook: Break Duress" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Magic book that teaches the Break Duress skill. Used by Hermits.\nRequired level: 52.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49427" name="Spellbook: Shield Deflect Magic" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Magic book that teaches the Shield Deflect Magic skill. Used by Knights.\nRequired level: 60. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49428" name="Spellbook: Aegis" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Aegis. Used by Templars and Shillien Knights.\nRequired level: 52. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<item id="49429" name="Spellbook: Hide" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Magic book that teaches the Hide skill. Used by Rogues.\nRequired level: 51.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<item id="49430" name="Spellbook: Mystic Immunity" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Magic book that teaches the Mystic Immunity skill. Used by Prophets.\nRequired level: 51.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49431" name="Spellbook: Divine Power" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Magic book that teaches the Divine Power skill. Used by Bishops.\nRequired level: 51.  -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49432" name="Spellbook: Stigma of Shilen" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Magic book that teaches the Stigma of Shilen skill. Used by Shillien Elders.\nRequired level: 40. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49433" name="Talisman: Chant of Movement" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Talisman needed to learn Chant of Movement. Used by Warcryers.\nRequired level: 44. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="50000"/>
+		<attributes price="50000"/>
 	</item>
 
 	<item id="49434" name="Sayha's Treasure Chest" type="NONE" icon="icon.etc_ev_kalie_treasure_box">
@@ -801,7 +801,7 @@
 	</item>
 
 	<armor id="49477" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i00">
-	<!-- 15-day item. MP +9, Poison Resistance/Poison Attack Rate +10%, P./M. Accuracy +1, P./M. Atk. +4%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Atk. +4%\nM. Atk. +4%\nP. Accuracy +1\nM. Accuracy +1\nMax MP +9\nPoison Attack and Resistance +10%\n\n15-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="21600" />
 		<crystal />
@@ -908,7 +908,7 @@
 	</item>
 
 	<armor id="49493" name="Orfen's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i00">
-	<!-- 15-day item. MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted.  -->
+	<!-- <Options>\nMP Consumption -2%\nHeal Received +2%\nMax MP +19\nMental Attack and Resistance +5%\nHold Attack and Resistance +10%\n\n15-day. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="EARRING" duration="21600" />
 		<crystal />

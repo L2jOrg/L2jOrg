@@ -270,7 +270,7 @@
 	<item id="1856" name="Amulet: Chant of Life" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Life spell. Used by Orc Shamans.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1857" name="Keltir Fang" type="NONE" icon="icon.etc_claw_i00">

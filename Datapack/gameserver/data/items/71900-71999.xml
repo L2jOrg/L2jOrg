@@ -292,13 +292,13 @@
 	</item>
 
 	<item id="71947" name="Heartthrob Box" type="SCROLL" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
-	<!-- Double-click to obtain one random item. -->
+	<!-- Use it to obtain one of various items. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71948" name="XP Boost Energy" type="NONE" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
-	<!-- For 20 min., XP/SP Gain +30%. The buff does not disappear at death. Cooldown 1 min. -->
+	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction stackable="true" depositable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
@@ -315,6 +315,105 @@
 		<attributes/>
 	</item>
 
+	<item id="71951" name="VIP Battle Scroll" type="NONE" icon="icon.ev_charge_scroll">
+	<!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. Cooldown 1 minute. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="71952" name="Scroll: VIP XP/SP Boost" type="POTION" icon="icon.bm_elmoaden_exp_scrl">
+	<!-- For 20 min., XP/SP gain +120%. Effect remains even after death. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="5" auto-use="SUPPLY"/>
+	</item>
+
+	<armor id="71953" name="VIP Agathion Bracelet - 30-day" type="NONE" body-part="LEFT_BRACELET" icon="icon.lbracelet_agathion_charm">
+	<!-- Opens 1 main Agathion slot and 4 subslots when equipped. STR/INT/CON/MEN/DEX/WIT +1, MEN/Stun/Sleep/Paralysis Resistance +10%. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="100" />
+		<crystal />
+	</armor>
+
+	<armor id="71954" name="VIP Talisman Bracelet - 30-day" type="NONE" body-part="RIGHT_BRACELET" icon="icon.dimension_bracelet_i05">
+	<!-- Can equip 6 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +20%, P. Accuracy +3, M. Accuracy +3, Weight Limit +10000. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
+		<crystal />
+	</armor>
+
+	<armor id="71955" name="VIP Brooch - 30-day" type="NONE" body-part="UNDERWEAR" icon="icon.etc_bm_brooch_lavianrose_i04">
+	<!-- Activates 6 jewel slots when equipped. Inventory Slot +15. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="10" />
+		<crystal />
+	</armor>
+
+	<armor id="71956" name="Greater Red Cat's Eye Lv. 5 - 7-day" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
+	<!-- P. Critical Damage +20%, P. Skill Power +7%, Buff Cancel Resistance +20% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="71957" name="Greater Blue Cat's Eye Lv. 5 - 7-day" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_blue_catseye_high_lv1_lavianrose">
+	<!-- M. Critical Damage +20%, M. Skill Power +7%, Buff Cancel Resistance +20%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="71958" name="Greater Jade Lv. 5 - 7-day" type="NONE" body-part="BROOCH_JEWEL" icon="icon.bm_jewel_speedup_lv1_high">
+	<!-- Atk. Spd./Casting Spd. +20%, Movement Speed +7%, Melee Weapon Attack Resistance +10% when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
+		<crystal />
+	</armor>
+
+	<armor id="71959" name="Venir's Talisman Lv. 24 - 7-day" type="NONE" body-part="TALISMAN" icon="icon.benir_talisman_i01">
+	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +4. Additionally, reduces cooldown of P. / M. skills by 7% and can absorb 16% of damage dealt to enemy as HP and 8% as MP at a certain rate. Effect does not stack with identical ones.  -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
+		<crystal />
+	</armor>
+
+	<armor id="71960" name="Chronicle Successor’s Necklace - 1-day" type="NONE" body-part="NECK" icon="BranchIcon.Icon.accessary_vip_necklace_i00">
+	<!-- <Options>\nP. Skill Power +4%\nM. Skill Power +4%\nSkill Cooldown -1%\nDamage Reflect Resistance +1%\nMax MP +25\n\nCannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal />
+	</armor>
+
+	<armor id="71961" name="Chronicle Successor’s Necklace - 30-day" type="NONE" body-part="NECK" icon="BranchIcon.Icon.accessary_vip_necklace_i00">
+	<!-- <Options>\nP. Skill Power +4%\nM. Skill Power +4%\nSkill Cooldown -1%\nDamage Reflect Resistance +1%\nMax MP +25\n\nCannot be enchanted. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
+		<crystal />
+	</armor>
+
+	<item id="71962" name="VIP XP Growth Amulet - 1-day" type="RUNE" icon="icon.skill19226">
+	<!-- 1-day item. When in inventory, your XP and SP gain is increased by 50%. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71963" name="Daily Gift - VIP 8" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i08">
+	<!-- Double-click to obtain the following: 3 Blessed Scroll of Escape, 3 Blessed Scroll of Resurrection, 10 Special HP Potions, 30 Soulshot Tickets, 6 VIP Battle Scrolls, 6 Scroll: VIP XP/SP Boost, and 300 VIP Coins. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="71964" name="Daily Gift - VIP 9" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i09">
+	<!-- Double-click to obtain the following: 5 Blessed Scroll of Escape, 5 Blessed Scroll of Resurrection, 30 Special HP Potions, 50 Soulshot Tickets, 9 VIP Battle Scrolls, 9 Scroll: VIP XP/SP Boost, and 500 VIP Coins. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
+	<item id="71965" name="Daily Gift - VIP 10" type="NONE" icon="BranchIcon.Icon.etc_vip_present_i10">
+	<!-- Double-click to obtain the following: 10 Blessed Scroll of Escape, 10 Blessed Scroll of Resurrection, 50 Special HP Potions, 100 Soulshot Tickets, 15 VIP Battle Scrolls, 15 Scroll: VIP XP/SP Boost, 1 Aden Talisman Enchant Package, and 700 VIP Coins. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes weight="10"/>
+	</item>
+
 	<item id="71966" name="XP Boosting Rune" type="RUNE" icon="br_cashtex.item.br_cash_rune_of_exp_i00">
 	<!-- Increases XP and SP acquired in hunt by 100%. -->
 		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false"/>
@@ -324,6 +423,121 @@
 	<item id="71967" name="XP Boosting Rune (7-day) Box" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain a XP Boosting Rune (7-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71968" name="Night Goblin Coin" type="NONE" icon="icon.bm_goblin_coin">
+	<!-- Special coins imbued with the Night Goblin's power. Can be used at the Store. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71969" name="Night Goblin Treasure Chest" type="NONE" icon="icon.etc_treasure_box_i10">
+	<!-- Double-click to obtain 1 item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71970" name="Mysterious Treasure Chest" type="NONE" icon="icon.bm_2018_special_box">
+	<!-- A mysterious looking treasure chest. Double-click to obtain 1 Treasure Crystal Box and 1 random item. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71971" name="Treasure Crystal Box" type="NONE" icon="icon.bm_gold_lure_special_box">
+	<!-- Box containing Treasure Crystals. Get 1-15000 Treasure Crystals at random. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71972" name="Treasure Crystal" type="NONE" icon="icon.star_agathion_cube_peice">
+	<!-- Treasure Crystal. Use it through the Store. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71973" name="+3-+8 Talisman &amp; Belt Ticket Box" type="NONE" icon="icon.bm_gold_lure_box">
+	<!-- Double-click to obtain a +3-+8 Talisman & Belt Ticket, and have priority login privileges until the last day of the month when the item is used. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71974" name="Mystery Box Lv. 1" type="NONE" icon="icon.etc_pi_box_joy_pack">
+	<!-- Double-click to obtain one of the following: Mystery Box Lv. 2, Battleground Scroll, Random Crafting Recharge Stone, Ring of Core, or other items. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71975" name="Mystery Box Lv. 2" type="NONE" icon="icon.npoint_earthworm_30day_box">
+	<!-- Double-click to obtain one of the following: Mystery Box Lv. 3, XP Boost Scroll, Random Crafting Recharge Stone, Queen Ant's Ring, or other items. Unused boxes can be exchanged for various items through the Store Manager. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71976" name="Mystery Box Lv. 3" type="NONE" icon="icon.etc_pi_box_belief_pack">
+	<!-- Double-click to obtain one of the following: Mystery Box Lv. 4, Sayha's Blessing, Random Crafting Recharge Stone, Zaken's Earring, or other items. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71977" name="Mystery Box Lv. 4" type="NONE" icon="icon.npoint_valakas_30day_box">
+	<!-- Double-click to obtain one of the following: Mystery Box Lv. 5, Einhasad's Blessing, Dragon's Belt, Baium's Ring, or other items. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71978" name="Mystery Box Lv. 5" type="NONE" icon="icon.npoint_tauti_30day_box">
+	<!-- Double-click to obtain Spirit Evolutionary Stone, Equipment Exchange Ticket (A-grade), Talisman of Baium, or other items. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71979" name="Suspicious Vault" type="SCROLL" icon="icon.bm_strongbox">
+	<!-- A suspicious vault secretly being traded in Mystic Tavern. Chance to win a rare item when used. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71980" name="Shining Gold Bar" type="NONE" icon="icon.bm_gold_bar">
+	<!-- A highly expensive gold bar secretly being traded in Mystic Tavern. Take it to a Dimensional Merchant to exchange it for a useful item. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71981" name="Advanced Stable Scroll: Enchant Cloak - Legendary" type="SOLID_ENCHANT_ARMOR" icon="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend">
+	<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +16-+18. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71982" name="Letter Pouch" type="NONE" icon="icon.etc_crystal_spice_blessed_i00">
+	<!-- Collect one of various letters. -->
+		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71983" name="NoItemName" type="NONE" icon="icon.etc_readybox_gold">
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71984" name="NoItemName" type="NONE" icon="icon.etc_bm_jewelbox_emerald_i00">
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71985" name="NoItemName" type="NONE" icon="icon.bm_special_jewelbox_lv4">
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71986" name="NoItemName" type="NONE" icon="icon.bm_special_jewelbox_lv4">
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="71987" name="NoItemName" type="NONE" icon="icon.bm_special_jewelbox_lv4">
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 

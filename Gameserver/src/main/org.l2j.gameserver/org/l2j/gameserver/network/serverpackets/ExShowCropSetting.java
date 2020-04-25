@@ -54,7 +54,7 @@ public class ExShowCropSetting extends ServerPacket {
             writeInt(s.getCropLimit()); // next sale limit
             writeInt(0); // ???
             writeInt(s.getCropMinPrice()); // min crop price
-            writeInt(s.getCropMaxPrice()); // max crop price
+            writeInt((int) s.getCropMaxPrice()); // max crop price
             // Current period
             if (_current.containsKey(s.getCropId())) {
                 final CropProcure cp = _current.get(s.getCropId());
