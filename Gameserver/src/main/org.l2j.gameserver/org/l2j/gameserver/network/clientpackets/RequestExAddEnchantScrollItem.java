@@ -3,8 +3,8 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.data.xml.impl.EnchantItemData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2j.gameserver.model.items.enchant.EnchantScroll;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.enchant.EnchantScroll;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutEnchantScrollItemResult;
 

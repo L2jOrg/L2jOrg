@@ -1,18 +1,18 @@
 package handlers.skillconditionhandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.Weapon;
-import org.l2j.gameserver.model.items.type.WeaponType;
-import org.l2j.gameserver.engine.skill.api.SkillCondition;
-import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.model.item.type.WeaponType;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.l2j.gameserver.model.items.BodyPart.RIGHT_HAND;
-import static org.l2j.gameserver.model.items.BodyPart.TWO_HAND;
+import static org.l2j.gameserver.model.item.BodyPart.RIGHT_HAND;
+import static org.l2j.gameserver.model.item.BodyPart.TWO_HAND;
 
 /**
  * @author UnAfraid

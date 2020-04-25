@@ -21,8 +21,8 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.MailManager;
-import org.l2j.gameserver.model.itemcontainer.Mail;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.container.Mail;
+import org.l2j.gameserver.model.item.instance.Item;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -4,7 +4,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.items.Henna;
+import org.l2j.gameserver.model.item.Henna;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;

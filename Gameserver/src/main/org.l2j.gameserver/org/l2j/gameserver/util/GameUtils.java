@@ -12,10 +12,10 @@ import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.items.Armor;
-import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.Weapon;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.Armor;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -533,6 +533,10 @@ public final class GameUtils {
 
     public static boolean isItem(WorldObject object) {
         return object instanceof Item;
+    }
+
+    public static boolean isWarehouseManager(WorldObject object) {
+        return object instanceof Warehouse;
     }
 
     public static boolean isWeapon(Item item) {

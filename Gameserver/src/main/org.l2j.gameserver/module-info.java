@@ -38,7 +38,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.util;
     exports org.l2j.gameserver.ai;
     exports org.l2j.gameserver.model.effects;
-    exports org.l2j.gameserver.model.items.instance;
+    exports org.l2j.gameserver.model.item.instance;
     exports org.l2j.gameserver.model.actor.stat;
     exports org.l2j.gameserver.model.stats;
     exports org.l2j.gameserver.model.events.impl.character.player;
@@ -47,7 +47,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.base;
     exports org.l2j.gameserver.datatables;
     exports org.l2j.gameserver.model.punishment;
-    exports org.l2j.gameserver.model.itemcontainer;
+    exports org.l2j.gameserver.model.item.container;
     exports org.l2j.gameserver.engine.geo;
     exports org.l2j.gameserver.model.events.impl.character.npc;
     exports org.l2j.gameserver.model.olympiad;
@@ -56,8 +56,8 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.html.formatters;
     exports org.l2j.gameserver.model.html.pagehandlers;
     exports org.l2j.gameserver.model.residences;
-    exports org.l2j.gameserver.model.items;
-    exports org.l2j.gameserver.model.items.enchant.attribute;
+    exports org.l2j.gameserver.model.item;
+    exports org.l2j.gameserver.model.item.enchant.attribute;
     exports org.l2j.gameserver.cache;
     exports org.l2j.gameserver.data.sql.impl;
     exports org.l2j.gameserver.model.events.listeners;
@@ -66,10 +66,10 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.world.zone;
     exports org.l2j.gameserver.world.zone.type;
     exports org.l2j.gameserver.network.serverpackets.ensoul;
-    exports org.l2j.gameserver.model.itemauction;
+    exports org.l2j.gameserver.model.item.auction;
     exports org.l2j.gameserver.model.events.impl.olympiad;
     exports org.l2j.gameserver.model.conditions;
-    exports org.l2j.gameserver.model.items.type;
+    exports org.l2j.gameserver.model.item.type;
     exports org.l2j.gameserver.model.events.returns;
     exports org.l2j.gameserver.network.authcomm;
     exports org.l2j.gameserver.model.teleporter;
@@ -114,6 +114,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.costume;
     exports org.l2j.gameserver.api.costume;
     exports org.l2j.gameserver.network.serverpackets.sessionzones;
+    exports org.l2j.gameserver.network.serverpackets.items;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

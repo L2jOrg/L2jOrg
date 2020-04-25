@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.stats.Stat;
  * An enum representing all attribute types.
  *
  * @author NosBit
+ * @author JoeAlisson
  */
 public enum AttributeType {
 
@@ -17,15 +18,14 @@ public enum AttributeType {
     HOLY(4),
     DARK(5);
 
-    public static final AttributeType[] ATTRIBUTE_TYPES =
-            {
-                    FIRE,
-                    WATER,
-                    WIND,
-                    EARTH,
-                    HOLY,
-                    DARK
-            };
+    public static final AttributeType[] ATTRIBUTE_TYPES = {
+        FIRE,
+        WATER,
+        WIND,
+        EARTH,
+        HOLY,
+        DARK
+    };
 
     private final byte _clientId;
 

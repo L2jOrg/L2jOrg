@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;

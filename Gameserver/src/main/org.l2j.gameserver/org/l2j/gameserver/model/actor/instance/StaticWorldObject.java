@@ -8,8 +8,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.StaticObjStats;
 import org.l2j.gameserver.model.actor.status.StaticObjStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2j.gameserver.model.items.Weapon;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ShowTownMap;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 

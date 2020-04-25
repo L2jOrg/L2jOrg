@@ -5,10 +5,10 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.BodyPart;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.container.Inventory;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.WeaponType;
 
 import java.util.Optional;
 

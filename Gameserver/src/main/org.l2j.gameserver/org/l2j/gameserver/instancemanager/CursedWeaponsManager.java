@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.CursedWeapon;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.*;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.ServerSettings;

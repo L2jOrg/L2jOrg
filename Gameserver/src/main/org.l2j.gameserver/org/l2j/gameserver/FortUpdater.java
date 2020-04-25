@@ -18,7 +18,7 @@ package org.l2j.gameserver;
 
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Fort;
-import org.l2j.gameserver.model.items.CommonItem;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.stat.PlayableStats;
 import org.l2j.gameserver.model.actor.status.PlayableStatus;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.quest.QuestState;
 
 /**

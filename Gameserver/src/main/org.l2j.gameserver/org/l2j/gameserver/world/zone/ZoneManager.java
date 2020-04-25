@@ -8,7 +8,7 @@ import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;

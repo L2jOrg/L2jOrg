@@ -9,7 +9,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SellBuffHolder;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.settings.ServerSettings;

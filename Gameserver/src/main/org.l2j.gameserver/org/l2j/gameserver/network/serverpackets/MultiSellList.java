@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 

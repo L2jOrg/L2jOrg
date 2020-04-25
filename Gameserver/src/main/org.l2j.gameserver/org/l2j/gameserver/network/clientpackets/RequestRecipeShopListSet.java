@@ -18,7 +18,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.l2j.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
+import static org.l2j.gameserver.model.item.container.Inventory.MAX_ADENA;
 
 /**
  * RequestRecipeShopListSet client packet class.

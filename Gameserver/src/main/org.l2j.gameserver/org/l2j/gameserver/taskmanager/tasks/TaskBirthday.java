@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.entity.Message;
-import org.l2j.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.model.item.container.Mail;
 import org.l2j.gameserver.taskmanager.Task;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;

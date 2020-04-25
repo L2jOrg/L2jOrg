@@ -7308,10 +7308,7 @@ public final class SystemMessageId {
     public static SystemMessageId YOU_HAVE_ACQUIRED_S1_FAME_3615;
 
     @ClientString(id = 3616, message = "You have maximum amount of Fame, so you may not acquire any more.")
-    public static SystemMessageId YOU_HAVE_MAXIMUM_AMOUNT_OF_FAME_SO_YOU_MAY_NOT_ACQUIRE_ANY_MORE;
-
-    @ClientString(id = 3617, message = "Item has been stored successfully.")
-    public static SystemMessageId ITEM_HAS_BEEN_STORED_SUCCESSFULLY;
+    public static SystemMessageId YOU_HAVE_MAXIMUM_AMOUNT_OF_FAME_SO_YOU_MAY_NOT_ACQUIRE_ANY_MORE
 
     @ClientString(id = 3618, message = "Item has been stored successfully to the clan warehouse.")
     public static SystemMessageId ITEM_HAS_BEEN_STORED_SUCCESSFULLY_TO_THE_CLAN_WAREHOUSE;
@@ -17178,6 +17175,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 3574, message = "You cannot change the class because of identity crisis.")
     public static SystemMessageId YOU_CANNOT_CHANGE_THE_CLASS_BECAUSE_OF_IDENTITY_CRISIS;
+
+    @ClientString(id = 3617, message = "Item has been stored successfully.")
+    public static SystemMessageId ITEM_HAS_BEEN_STORED_SUCCESSFULLY;
 
     @ClientString(id = 3639, message = "$s1 Clan Reputation has been consumed.")
     public static SystemMessageId S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED;

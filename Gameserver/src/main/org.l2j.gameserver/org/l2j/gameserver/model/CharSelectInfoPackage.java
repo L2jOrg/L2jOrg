@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.enums.InventorySlot;
-import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
+import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 
 /**

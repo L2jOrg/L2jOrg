@@ -3,10 +3,10 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.container.Inventory;
+import org.l2j.gameserver.model.item.container.PlayerInventory;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
@@ -166,7 +166,7 @@ public class TradeList {
             return null;
         }
 
-        if (!owner.getInventory().canManipulate(item)) {
+        if (owner.getInventory().isBlocked(item)) {
             LOGGER.warn("{} Attempt to add an item that can't manipulate!", owner);
             return null;
         }

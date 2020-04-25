@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 
 /**
  * Class explanation:<br>

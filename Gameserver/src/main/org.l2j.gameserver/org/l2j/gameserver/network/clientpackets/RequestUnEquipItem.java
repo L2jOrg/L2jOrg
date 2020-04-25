@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.BodyPart;
-import org.l2j.gameserver.model.items.EtcItem;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.EtcItem;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -59,7 +59,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        if (!player.getInventory().canManipulate(item)) {
+        if (player.getInventory().isBlocked(item)) {
             client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
             return;
         }

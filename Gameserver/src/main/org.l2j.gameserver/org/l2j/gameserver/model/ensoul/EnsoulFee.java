@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.ensoul;
 
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.model.item.type.CrystalType;
 
 import java.util.ArrayList;
 import java.util.List;

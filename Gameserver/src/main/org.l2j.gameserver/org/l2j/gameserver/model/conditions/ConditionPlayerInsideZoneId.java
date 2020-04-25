@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.conditions;
 import io.github.joealisson.primitive.IntList;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 

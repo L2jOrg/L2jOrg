@@ -59,14 +59,14 @@ public class Q00620_FourGoblets extends Quest
 	private static final int SEALED_BOX = 7255;
 	private static final int[] QI =
 	{
-		ANTIQUE_BROOCH,
-		SEALED_BOX,
+		//ANTIQUE_BROOCH,
+		//SEALED_BOX,
 		7256,
 		7257,
 		7258,
 		7259,
-		GRAVE_PASS,
-		ENTRANCE_PASS
+		//GRAVE_PASS,
+		//ENTRANCE_PASS
 	};
 	// Misc
 	private static final int MIN_LEVEL = 74;

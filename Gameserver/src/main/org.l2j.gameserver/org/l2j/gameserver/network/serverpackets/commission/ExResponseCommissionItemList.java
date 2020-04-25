@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.commission;
 
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;

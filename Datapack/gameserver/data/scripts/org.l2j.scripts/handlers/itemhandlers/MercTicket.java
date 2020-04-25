@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 

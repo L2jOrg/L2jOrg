@@ -18,9 +18,9 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.container.Inventory;
+import org.l2j.gameserver.model.item.enchant.attribute.AttributeHolder;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
 

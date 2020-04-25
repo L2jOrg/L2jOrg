@@ -4,8 +4,8 @@ import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -79,7 +79,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
             _count = activeChar.getInventory().getItemByObjectId(_objectId).getCount();
         }
 
-        if (!activeChar.getInventory().canManipulate(item)) {
+        if (activeChar.getInventory().isBlocked(item)) {
             activeChar.sendMessage("You cannot use this item.");
             return;
         }

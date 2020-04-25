@@ -13,13 +13,12 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;

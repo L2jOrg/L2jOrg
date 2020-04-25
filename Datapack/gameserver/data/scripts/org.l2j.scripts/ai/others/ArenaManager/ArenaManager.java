@@ -4,7 +4,7 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.items.CommonItem;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.world.zone.ZoneType;

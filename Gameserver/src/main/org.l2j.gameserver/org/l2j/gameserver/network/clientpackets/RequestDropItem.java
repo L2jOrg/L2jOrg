@@ -6,10 +6,10 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.GameUtils;
@@ -128,7 +128,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if (!player.getInventory().canManipulate(item)) {
+        if (player.getInventory().isBlocked(item)) {
             player.sendMessage("You cannot use this item.");
             return;
         }

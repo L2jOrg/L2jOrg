@@ -7,9 +7,9 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.model.item.container.PlayerInventory;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -89,7 +89,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
             return;
         }
 
-        if (!activeChar.getInventory().canManipulate(itemToRemove)) {
+        if (activeChar.getInventory().isBlocked(itemToRemove)) {
             client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_CRYSTALLIZED);
             return;
         }

@@ -3,7 +3,7 @@ package org.l2j.gameserver;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.settings.GeneralSettings;
 
 import java.util.Iterator;

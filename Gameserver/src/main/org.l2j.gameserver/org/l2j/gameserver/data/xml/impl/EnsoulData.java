@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.ensoul.EnsoulFee;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.ensoul.EnsoulStone;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;

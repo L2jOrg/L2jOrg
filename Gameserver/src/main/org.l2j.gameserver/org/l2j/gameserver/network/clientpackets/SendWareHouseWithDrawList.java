@@ -5,10 +5,10 @@ import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.itemcontainer.ClanWarehouse;
-import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.itemcontainer.PcWarehouse;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.container.ClanWarehouse;
+import org.l2j.gameserver.model.item.container.ItemContainer;
+import org.l2j.gameserver.model.item.container.PlayerWarehouse;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -72,7 +72,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        if (!(warehouse instanceof PcWarehouse) && !player.getAccessLevel().allowTransaction()) {
+        if (!(warehouse instanceof PlayerWarehouse) && !player.getAccessLevel().allowTransaction()) {
             player.sendMessage("Transactions are disabled for your Access Level.");
             return;
         }

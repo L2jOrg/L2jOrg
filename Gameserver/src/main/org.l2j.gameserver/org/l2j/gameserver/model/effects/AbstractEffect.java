@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.effects;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

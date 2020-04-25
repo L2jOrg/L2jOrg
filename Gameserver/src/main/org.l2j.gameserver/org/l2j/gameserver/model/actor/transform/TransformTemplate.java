@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.AdditionalItemHolder;
 import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 

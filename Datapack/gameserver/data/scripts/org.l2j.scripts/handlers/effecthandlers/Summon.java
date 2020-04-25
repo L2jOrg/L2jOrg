@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.BuffInfo;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;

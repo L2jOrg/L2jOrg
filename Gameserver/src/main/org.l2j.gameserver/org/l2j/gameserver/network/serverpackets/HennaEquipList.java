@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.HennaData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.Henna;
+import org.l2j.gameserver.model.item.Henna;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 

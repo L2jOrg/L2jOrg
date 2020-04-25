@@ -20,14 +20,14 @@ import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2j.gameserver.network.serverpackets.GMViewItemList;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.World;
 
 import java.util.StringTokenizer;
 

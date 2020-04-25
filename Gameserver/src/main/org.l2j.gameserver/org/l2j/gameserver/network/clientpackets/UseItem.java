@@ -14,9 +14,9 @@ import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.items.BodyPart;
-import org.l2j.gameserver.model.items.EtcItem;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.EtcItem;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
@@ -31,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isBetween;
-import static org.l2j.gameserver.model.items.CommonItem.FORMAL_WEAR;
+import static org.l2j.gameserver.model.item.CommonItem.FORMAL_WEAR;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isItem;
 
@@ -96,7 +96,7 @@ public final class UseItem extends ClientPacket {
         }
 
         // Char cannot use item when dead
-        if (player.isDead() || !player.getInventory().canManipulate(item)) {
+        if (player.isDead() || player.getInventory().isBlocked(item)) {
             var sm = getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addItemName(item);
             player.sendPacket(sm);

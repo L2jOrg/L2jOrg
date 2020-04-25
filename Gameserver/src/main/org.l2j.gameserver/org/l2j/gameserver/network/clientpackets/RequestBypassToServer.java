@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
