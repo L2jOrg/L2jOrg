@@ -172,7 +172,7 @@
 	</item>
 
 	<item id="91027" name="Dragon's Miracle Potion" type="SCROLL" icon="icon.bm_dragon_posion_brave">
-	<!-- For 20 minutes, recharges 5000 Sayha's Grace points, XP/SP +20%, P./M. Atk. +12%, P./M. Def. +15%, P./M. Critical Rate +20, P./M. Critical Damage +5%, HP/MP/CP +25%, HP/MP Recovery +30%, and Sayha's Grace Consumption Rate -10%. Has a chance to absorb 5% of physical damage dealt to enemies as HP. Can accumulate up to Stage 3. \nCannot be used if you have the Dragon's Special Elixir effect. -->
+	<!-- For 20 minutes, recharges 20000 Sayha's Grace points, XP/SP +20%, P./M. Atk. +12%, P./M. Def. +15%, P./M. Critical Rate +20, P./M. Critical Damage +5%, HP/MP/CP +25%, HP/MP Recovery Bonus +30%, and Sayha's Grace Consumption Rate -10%. Has a chance to absorb 5% of physical damage dealt to enemies as HP. Can accumulate up to Stage 3. \nCannot be used if you have the Dragon's Special Elixir effect. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -527,106 +527,106 @@
 		<crystal />
 	</armor>
 
-	<armor id="91061" name="Talisman of Power Lv1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv1">
-	<!-- P./M. Def. +13%, HP +6%, MP +2%, P./M. Atk. +2%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not disappear if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91061" name="Talisman of Power Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv1">
+	<!-- <Options>\nP. Atk. +2%\nM. Atk. +2%\nMax HP +6%\nMax MP +2%\nP. Def. +13\nM. Def. +13\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not disappear if failed. Effect does not stack with additional talismans of the same type. Cannot be dropped. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91062" name="Talisman of Power Lv2" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv2">
-	<!-- P./M. Def. +15%, HP +8%, MP +4%, P./M. Atk. +2%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91062" name="Talisman of Power Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv2">
+	<!-- <Options>\nP. Atk. +2%\nM. Atk. +2%\nMax HP +8%\nMax MP +4%\nP. Def. +15\nM. Def. +15\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91063" name="Talisman of Power Lv3" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv3">
-	<!-- P./M. Def. +18%, HP +10%, MP +6%, P./M. Atk. +3%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91063" name="Talisman of Power Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv3">
+	<!-- <Options>\nP. Atk. +3%\nM. Atk. +3%\nMax HP +10%\nMax MP +6%\nP. Def. +18\nM. Def. +18\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91064" name="Talisman of Power Lv4" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv4">
-	<!-- P./M. Def. +20%, HP +12%, MP +8%, P./M. Atk. +3%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91064" name="Talisman of Power Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_Lv4">
+	<!-- <Options>\nP. Atk. +3%\nM. Atk. +3%\nMax HP +12%\nMax MP +8%\nP. Def. +20\nM. Def. +20\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91065" name="Talisman of Power Lv5" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_lv5">
-	<!-- P./M. Def. +24%, HP +12%, MP +8%, P./M. Atk. +5%. Can be taken to Baggins in the Town of Giran to upgrade to Noble Talisman of Power. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91065" name="Talisman of Power Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_g_lv5">
+	<!-- <Options>\nP. Atk. +5%\nM. Atk. +5%\nMax HP +12%\nMax MP +8%\nP. Def. +24\nM. Def. +24\n\nCan be taken to Beggins in the Town of Giran to upgrade to Noble Talisman of Power. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91066" name="Noble Talisman of Power Lv1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv1">
-	<!-- P./M. Def. +26%, HP +12%, MP +8%, P./M. Atk. +5%, P. Atk. Spd. +3%, M. Atk. Spd. +2%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not lower level if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91066" name="Noble Talisman of Power Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv1">
+	<!-- <Options>\nP. Atk. +5%\nM. Atk. +5%\nAtk. Spd. +3%\nCasting Spd. +2%\nMax HP +12%\nMax MP +8%\nP. Def. +26\nM. Def. +26\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not lower level if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91067" name="Noble Talisman of Power Lv2" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv2">
-	<!-- P./M. Def. +31%, HP +14%, MP +10%, P./M. Atk. +6%, P. Atk. Spd. +3%, M. Atk. Spd. +2%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Noble Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91067" name="Noble Talisman of Power Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv2">
+	<!-- <Options>\nP. Atk. +6%\nM. Atk. +6%\nAtk. Spd. +3%\nCasting Spd. +2%\nMax HP +14%\nMax MP +10%\nP. Def. +31\nM. Def. +31\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Noble Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91068" name="Noble Talisman of Power Lv3" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv3">
-	<!-- P./M. Def. +36%, HP +16%, MP +12%, P./M. Atk. +7%, P. Atk. Spd. +4%, M. Atk. Spd. +3%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Noble Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91068" name="Noble Talisman of Power Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv3">
+	<!-- <Options>\nP. Atk. +7%\nM. Atk. +7%\nAtk. Spd. +4%\nCasting Spd. +3%\nMax HP +16%\nMax MP +12%\nP. Def. +36\nM. Def. +36\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Noble Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91069" name="Noble Talisman of Power Lv4" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv4">
-	<!-- P./M. Def. +41%, HP +18%, MP +14%, P./M. Atk. +8%, P. Atk. Spd. +4%, M. Atk. Spd. +3%. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Noble Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91069" name="Noble Talisman of Power Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_Lv4">
+	<!-- <Options>\nP. Atk. +8%\nM. Atk. +8%\nAtk. Spd. +4%\nCasting Spd. +3%\nMax HP +18%\nMax MP +14%\nP. Def. +41\nM. Def. +41\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Noble Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91070" name="Noble Talisman of Power Lv5" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_lv5">
-	<!-- P./M. Def. +46%, HP +18%, MP +14%, P./M. Atk. +10%, P. Atk. Spd. +5%, M. Atk. Spd. +3%. Can be taken to Baggins in the Town of Giran to upgrade to Brilliant Talisman of Power. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91070" name="Noble Talisman of Power Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pve_lv5">
+	<!-- <Options>\nP. Atk. +10%\nM. Atk. +10%\nAtk. Spd. +5%\nCasting Spd. +3%\nMax HP +18%\nMax MP +14%\nP. Def. +46\nM. Def. +46\n\nCan be taken to Beggins in the Town of Giran to upgrade to Brilliant Talisman of Power. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91071" name="Brilliant Talisman of Power Lv1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv1">
-	<!-- P./M. Def. +51%, HP +18%, MP +14%, P./M. Atk. +10%, P. Atk. Spd. +6%, M. Atk. Spd. +4%, Critical Rate +10, Magic Critical Rate +20, Physical Skill Power +5%, Magic Skill Power +10%. Can use Shunaiman's Power Lv1. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not lower level if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91071" name="Brilliant Talisman of Power Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv1">
+	<!-- <Options>\nP. Atk. +10%\nM. Atk. +10%\nAtk. Spd. +6%\nCasting Spd. +4%\nP. Critical Rate +10\nM. Critical Rate +20\nP. Skill Power +5%\nM. Skill Power +10%\nMax HP +18%\nMax MP +14%\nP. Def. +51\nM. Def. +51\n\n<Shunaiman’s Power Lv. 1>\nIncreases Stun/Silence/Fear Atk. Rate and Damage Reflect Resistance when used.\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Does not lower level if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91072" name="Brilliant Talisman of Power Lv2" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv2">
-	<!-- P./M. Def. +55%, HP +20%, MP +16%, P./M. Atk. +11%, P. Atk. Spd. +7%, M. Atk. Spd. +5%, Critical Rate +10, Magic Critical Rate +20, Physical Skill Power +6%, Magic Skill Power +11%. Can use Shunaiman's Power Lv1. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Brilliant Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91072" name="Brilliant Talisman of Power Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv2">
+	<!-- <Options>\nP. Atk. +11%\nM. Atk. +11%\nAtk. Spd. +7%\nCasting Spd. +5%\nP. Critical Rate +10\nM. Critical Rate +20\nP. Skill Power +6%\nM. Skill Power +11%\nMax HP +20%\nMax MP +16%\nP. Def. +55\nM. Def. +55\n\n<Shunaiman’s Power Lv. 1>\nIncreases Stun/Silence/Fear Atk. Rate and Damage Reflect Resistance when used.\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Brilliant Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91073" name="Brilliant Talisman of Power Lv3" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv3">
-	<!-- P./M. Def. +59%, HP +22%, MP +18%, P./M. Atk. +12%, P. Atk. Spd. +8%, M. Atk. Spd. +6%, Critical Rate +20, Magic Critical Rate +30, Physical Skill Power +7%, Magic Skill Power +12%. Can use Shunaiman's Power Lv1. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Brilliant Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91073" name="Brilliant Talisman of Power Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv3">
+	<!-- <Options>\nP. Atk. +12%\nM. Atk. +12%\nAtk. Spd. +8%\nCasting Spd. +6%\nP. Critical Rate +20\nM. Critical Rate +30\nP. Skill Power +7%\nM. Skill Power +12%\nMax HP +22%\nMax MP +18%\nP. Def. +59\nM. Def. +59\n\n<Shunaiman’s Power Lv. 1>\nIncreases Stun/Silence/Fear Atk. Rate and Damage Reflect Resistance when used.\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Brilliant Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91074" name="Brilliant Talisman of Power Lv4" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv4">
-	<!-- P./M. Def. +63%, HP +24%, MP +20%, P./M. Atk. +13%, P. Atk. Spd. +10%, M. Atk. Spd. +7%, Critical Rate +20, Magic Critical Rate +30, Physical Skill Power +8%, Magic Skill Power +13%. Can use Shunaiman's Power Lv1. Can upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Brilliant Talisman of Power Lv1 if failed. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91074" name="Brilliant Talisman of Power Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_Lv4">
+	<!-- <Options>\nP. Atk. +13%\nM. Atk. +13%\nAtk. Spd. +10%\nCasting Spd. +7%\nP. Critical Rate +20\nM. Critical Rate +30\nP. Skill Power +8%\nM. Skill Power +13%\nMax HP +24%\nMax MP +20%\nP. Def. +63\nM. Def. +63\n\n<Shunaiman’s Power Lv. 1>\nIncreases Stun/Silence/Fear Atk. Rate and Damage Reflect Resistance when used.\n\nCan upgrade to higher talisman when successfully synthesized with Talisman of Power Piece. Lowers to Brilliant Talisman of Power Lv. 1 if failed. Effect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91075" name="Brilliant Talisman of Power Lv5" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_lv5">
-	<!-- P./M. Def. +70%, HP +30%, MP +25%, P./M. Atk. +15%, P. Atk. Spd. +15%, M. Atk. Spd. +10%, Critical Rate +30, Magic Critical Rate +40, Physical Skill Power +15%, Magic Skill Power +22%. Can use Shunaiman's Power Lv2. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91075" name="Brilliant Talisman of Power Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.sayhas_talisman_pvp_lv5">
+	<!-- <Options>\nP. Atk. +15%\nM. Atk. +15%\nAtk. Spd. +15%\nCasting Spd. +10%\nP. Critical Rate +30\nM. Critical Rate +40\nP. Skill Power +15%\nM. Skill Power +22%\nMax HP +30%\nMax MP +25%\nP. Def. +70\nM. Def. +70\n\n<Shunaiman’s Power Lv. 2>\nIncreases Stun/Silence/Fear Atk. Rate and Damage Reflect Resistance when used.\n\nEffect does not stack with additional talismans of the same type. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />

@@ -8,7 +8,6 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Attackable;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -16,6 +15,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.MathUtil;
@@ -26,7 +26,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
-
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -34,7 +33,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Logger;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
+
 
 /**
  * Four Selpuchers AI
@@ -42,7 +43,6 @@ import java.util.logging.Logger;
  */
 public class FourSepulchers extends AbstractNpcAI
 {
-	Logger LOGGER = Logger.getLogger(FourSepulchers.class.getName());
 	
 	// NPCs
 	private static final int CONQUEROR_MANAGER = 31921;
@@ -667,13 +667,13 @@ public class FourSepulchers extends AbstractNpcAI
 		public void load()
 		{
 			ROOM_SPAWN_DATA.clear();
-			parseDatapackFile("data/scripts/org.l2j.scripts/ai/areas/ImperialTomb/FourSepulchers/FourSepulchers.xml");
-			LOGGER.info("[Four Sepulchers] Loaded " + ROOM_SPAWN_DATA.size() + " spawn zones data.");
+			parseDatapackFile("data/FourSepulchers.xml");
+			LOGGER.info("Loaded {} spawn zones data.", ROOM_SPAWN_DATA.size());
 		}
 
 		@Override
 		protected Path getSchemaFilePath() {
-			return Path.of("data/scripts/org.l2j.scripts/ai/areas/ImperialTomb/FourSepulchers/FourSepulchers.xsd");
+			return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/FourSepulchers.xsd");
 		}
 
 		@Override

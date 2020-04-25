@@ -15,8 +15,8 @@ public final class Seed {
     private final boolean _isAlternative;
     private final int _limitSeeds;
     private final int _limitCrops;
-    private final int _seedReferencePrice;
-    private final int _cropReferencePrice;
+    private final long _seedReferencePrice;
+    private final long _cropReferencePrice;
 
     public Seed(StatsSet set) {
         _cropId = set.getInt("id");
@@ -72,11 +72,11 @@ public final class Seed {
         return _limitCrops * Config.RATE_DROP_MANOR;
     }
 
-    public final int getSeedReferencePrice() {
+    public final long getSeedReferencePrice() {
         return _seedReferencePrice;
     }
 
-    public final int getSeedMaxPrice() {
+    public final long getSeedMaxPrice() {
         return _seedReferencePrice * 10;
     }
 
@@ -84,11 +84,11 @@ public final class Seed {
         return (int) (_seedReferencePrice * 0.6);
     }
 
-    public final int getCropReferencePrice() {
+    public final long getCropReferencePrice() {
         return _cropReferencePrice;
     }
 
-    public final int getCropMaxPrice() {
+    public final long getCropMaxPrice() {
         return _cropReferencePrice * 10;
     }
 

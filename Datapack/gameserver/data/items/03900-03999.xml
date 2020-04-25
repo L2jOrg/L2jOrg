@@ -159,31 +159,31 @@
 	<item id="3940" name="Blueprint: Summon Siege Golem" type="NONE" icon="icon.etc_plan_i00">
 	<!-- Blueprint needed to learn the Summon Siege Golem technique.\nRequired level: 49 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3941" name="Spellbook: Mass Resurrection" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3942" name="Spellbook: Party Return" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Party Return. Used by Elven Elders.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3943" name="Amulet: Pa'agrio's Heart" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3944" name="Spellbook: Decrease Weight" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3947" name="Blessed Spiritshot (No-grade)" type="NONE" icon="icon.etc_spell_shot_white_i01">

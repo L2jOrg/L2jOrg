@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="35741" name="Scroll: PK - Exchangeable" type="SCROLL" icon="icon.etc_ev_draco_pk_count_down">
-	<!-- Double-click to lower PK value by 3. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1.  -->
+	<!-- Double-click to lower PK value by 3. Must be in Floran Village to use. It can only be used when the PK value is greater than or equal to 1. -->
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="10" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>

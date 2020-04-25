@@ -143,7 +143,7 @@
 
     <xs:complexType name="Attributes" abstract="true">
         <xs:attribute name="weight" type="xs:int" default="0"/>
-        <xs:attribute name="price" type="xs:int" default="0"/>
+        <xs:attribute name="price" type="xs:long" default="0"/>
         <xs:attribute name="duration" type="xs:long" default="-1"/>
         <xs:attribute name="reuse-delay" type="xs:long" />
         <xs:attribute name="for-npc" type="xs:boolean" default="false"/>

@@ -300,8 +300,8 @@
 		<attributes/>
 	</item>
 
-	<armor id="91550" name="Frintezza's Necklace Lv 1" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i00">
-	<!-- MP +29, Sleep Attack and Resistance +10%, Paralysis Attack and Resistance +5%, Skill Cooldown -2%, Damage Reflect Resistance +2%, P./M. Skill Power +5%. Cannot be enchanted. -->
+	<armor id="91550" name="Frintezza's Necklace Lv. 1" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i00">
+	<!-- <Options>\nP. Skill Power +5%\nM. Skill Power +5%\nSkill Cooldown -2%\nDamage Reflect Resistance +2%\nMax MP +29\nSleep Attack and Resistance +10%\nParalysis Attack and Resistance +5%\n\nCannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -311,8 +311,8 @@
 		</stats>
 	</armor>
 
-	<armor id="91551" name="Frintezza's Necklace Lv 2" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i03">
-	<!-- MP +36, Sleep Attack and Resistance +15%, Paralysis Attack and Resistance +10%, Skill Cooldown -3%, Damage Reflect Resistance +3%, P./M. Skill Power +10%. Cannot be enchanted. -->
+	<armor id="91551" name="Frintezza's Necklace Lv. 2" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i03">
+	<!-- <Options>\nP. Skill Power +10%\nM. Skill Power +10%\nSkill Cooldown -3%\nDamage Reflect Resistance +3%\nMax MP +36\nSleep Attack and Resistance +15%\nParalysis Attack and Resistance +10%\n\nCannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -322,8 +322,8 @@
 		</stats>
 	</armor>
 
-	<armor id="91552" name="Frintezza's Necklace Lv 3" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i04">
-	<!-- MP +44, Sleep Attack and Resistance +20%, Paralysis Attack and Resistance +15%, Skill Cooldown -5%, Chance to be hit by P. Critical Attack -5%, Chance to be hit by M. Critical Attack -2%, Damage Reflect Resistance +4%, P. Skill Power/M. Skill Power +15%. Cannot be Enchanted. -->
+	<armor id="91552" name="Frintezza's Necklace Lv. 3" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i04">
+	<!-- <Options>\nP. Skill Power +15%\nM. Skill Power +15%\nSkill Cooldown -5%\nDamage Reflect Resistance +4%\nP. Critical Hit Rate -5%\nM. Critical Hit Rate -2%\nMax MP +44\nSleep Attack and Resistance +20%\nParalysis Attack and Resistance +15%\n\nCannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -333,8 +333,8 @@
 		</stats>
 	</armor>
 
-	<armor id="91553" name="Frintezza's Necklace Lv 4" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i05">
-	<!-- MP +65, Sleep Attack and Resistance +30%, Paralysis Attack and Resistance +20%, Skill Cooldown -10%, Chance to be hit by P. Critical Attack -10%, Chance to be hit by M. Critical Attack -5%, Damage Reflect Resistance +10%, P. Skill Power/M. Skill Power +20%. Allows using delay increase debuffs. Cannot be Enchanted. -->
+	<armor id="91553" name="Frintezza's Necklace Lv. 4" type="NONE" body-part="NECK" icon="icon.accessory_necklace_of_frintessa_i05">
+	<!-- <Options>\nP. Skill Power +20%\nM. Skill Power +20%\nSkill Cooldown -10%\nDamage Reflect Resistance +10%\nP. Critical Hit Rate -10%\nM. Critical Hit Rate -5%\nMax MP +65\nSleep Attack and Resistance +30%\nParalysis Attack and Resistance +20%\n\n<Frintezza's Necklace>\nIncreases Skill Cooldown of surrounding enemies when used. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />

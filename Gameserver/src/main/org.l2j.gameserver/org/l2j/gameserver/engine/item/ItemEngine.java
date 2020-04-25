@@ -212,6 +212,7 @@ public final class ItemEngine extends GameXmlReader {
         item.setTradable(parseBoolean(attr, "tradable"));
         item.setDropable(parseBoolean(attr, "dropable"));
         item.setSellable(parseBoolean(attr, "sellable"));
+        item.setDepositable(parseBoolean(attr, "depositable"));
     }
 
     private void parseWeaponConsume(Weapon weapon, Node node) {
@@ -332,7 +333,7 @@ public final class ItemEngine extends GameXmlReader {
     private void parseCommonAttributes(ItemTemplate item, Node node) {
         var attr = node.getAttributes();
         item.setWeight(parseInt(attr, "weight"));
-        item.setPrice(parseInt(attr, "price"));
+        item.setPrice(parseLong(attr, "price"));
         item.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_ITEM));
         item.setReuseDelay(parseInt(attr, "reuse-delay"));
         item.setReuseGroup(parseInt(attr, "reuse-group"));

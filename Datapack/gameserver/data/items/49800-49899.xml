@@ -279,7 +279,7 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="49845" name="Sayha's Blessing - Exchangeable" type="POTION" icon="icon.etc_wind_potion_i00">
+	<item id="49845" name="Enhanced Sayha's Blessing - Exchangeable" type="POTION" icon="icon.etc_wind_potion_i00">
 	<!-- Recharges 35,000 Sayha's Grace Points. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
@@ -288,8 +288,8 @@
 		</skill-reducer>
 	</item>
 
-	<item id="49846" name="Sayha's Silver Light Blessing" type="POTION" icon="icon.bm_sayha_silver_blessed">
-	<!-- Sayha Grace points +70,000 (2 slots). -->
+	<item id="49846" name="Enhanced Sayha's Silver Light Blessing" type="POTION" icon="icon.bm_sayha_silver_blessed">
+	<!-- Sayha’s Grace Points +70,000. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -297,8 +297,8 @@
 		</skill-reducer>
 	</item>
 
-	<item id="49847" name="Sayha's Golden Light Blessing" type="POTION" icon="icon.bm_sayha_gold_blessed">
-	<!-- Sayha Grace points +105,000 (3 slots). -->
+	<item id="49847" name="Enhanced Sayha's Golden Light Blessing" type="POTION" icon="icon.bm_sayha_gold_blessed">
+	<!-- Sayha’s Grace Points +105,000. -->
 		<restriction stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>

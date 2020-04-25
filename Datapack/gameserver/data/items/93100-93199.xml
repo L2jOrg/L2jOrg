@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="93100" name="Advanced Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_rare_i00">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 5 Gemstones (A-grade). -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 2 Gemstones (A-grade). -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="2" price="1500000"/>
 	</item>
@@ -21,106 +21,106 @@
 	<item id="93103" name="Spellbook: Holy Ray" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Spellbook needed to learn Holy Ray. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93104" name="Scroll: Ground Smash" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll to learn Ground Smash. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93105" name="Scroll: Prophecy of Light" type="NONE" icon="icon.etc_magic_book_white_i00">
 	<!-- Scroll to learn Prophecy of Light. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93106" name="Scroll: Mass Dryad Root" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll to learn Mass Dryad Root. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93107" name="Scroll: Mass Wind Shackle" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Scroll to learn Mass Wind Shackle. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93108" name="Blueprint: Mechanical Fist" type="NONE" icon="icon.etc_plan_i00">
 	<!-- Blueprint to learn Mechanical Fist. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="1000000"/>
+		<attributes price="1000000"/>
 	</item>
 
-	<armor id="93109" name="Tree Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.arcana_sigil_i00">
+	<armor id="93109" name="Tree Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.arcana_sigil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="920" price="19350" />
 		<crystal />
 	</armor>
 
-	<armor id="93110" name="Elven Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
+	<armor id="93110" name="Elven Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1350" price="35000" />
 		<crystal type="D"/>
 	</armor>
 
-	<armor id="93111" name="Chain Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.belleface_i00">
+	<armor id="93111" name="Chain Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.belleface_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1220" price="375000" />
 		<crystal type="C"/>
 	</armor>
 
-	<armor id="93112" name="Demon’s Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+	<armor id="93112" name="Demon’s Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1280" price="156000" />
 		<crystal type="C"/>
 	</armor>
 
-	<armor id="93113" name="Blue Wolf Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.airtoil_i00">
+	<armor id="93113" name="Blue Wolf Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.airtoil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93114" name="Avadon Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
+	<armor id="93114" name="Avadon Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93115" name="Doom Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.elos_i00">
+	<armor id="93115" name="Doom Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.elos_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1200" price="845000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93116" name="Zubei Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
+	<armor id="93116" name="Zubei Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93117" name="Dark Crystal Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
+	<armor id="93117" name="Dark Crystal Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
 	</armor>
 
-	<armor id="93118" name="Tallum Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
+	<armor id="93118" name="Tallum Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
 	</armor>
 
-	<armor id="93119" name="Nightmare Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+	<armor id="93119" name="Nightmare Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
 	</armor>
 
-	<armor id="93120" name="Majestic Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
+	<armor id="93120" name="Majestic Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
@@ -133,7 +133,7 @@
 	</item>
 
 	<item id="93122" name="Advanced Life Stone - Shield/Sigil" type="NONE" icon="icon.r_mineral_rare_i00">
-	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 5 Gemstones (A-grade). -->
+	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 2 Gemstones (A-grade). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" price="1500000"/>
 	</item>
@@ -207,7 +207,7 @@
 	<item id="93133" name="Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag">
 	<!-- An enchant scroll for Agathion. Increases the Agathion’s M. Def. Can enchant safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93134" name="Ignis Agathion Pack" type="NONE" icon="icon.agathion_fire_1">

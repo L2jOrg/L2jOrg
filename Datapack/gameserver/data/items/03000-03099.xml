@@ -307,374 +307,374 @@
 	<item id="3038" name="Blueprint: Summon Mechanic Golem" type="NONE" icon="icon.etc_plan_i00">
 	<!-- Blueprint needed to learn the Summon Mechanic Golem technique. Used by Artisans.\nRequired level: 28 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="21437" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="21437" commission-type="SPELLBOOK" immediate-effect="true"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="3039" name="Spellbook: Summon Storm Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Storm Cubic. Used by Temple Knights and Warlocks.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3040" name="Spellbook: Summon Vampiric Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Vampiric Cubic. Used by Shillien Knights.\nRequired level: 43 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3700" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3700" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3041" name="Spellbook: Summon Phantom Cubic" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Phantom Cubic. Used by Shillien Knights.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3042" name="Spellbook: Life Scavenge" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Life Scavenge. Used by Dark Avengers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3043" name="Spellbook: Divine Strike" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Divine Strike. Used by Paladins.\nRequired level: 46 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4250" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3044" name="Spellbook: Horror" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Horror. Used by Dark Avengers.\nRequired level: 46 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3045" name="Spellbook: Summon Life Cubic" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Summon Life Cubic. Used by Templars.\nRequired level: 42 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3046" name="Spellbook: Sacrifice" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Sacrifice. Used by Paladins.\nRequired level: 50 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3047" name="Spellbook: Iron Will" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Iron Will. Used by Paladins and Dark Avengers.\nRequired level: 43 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3048" name="Spellbook: Reflect Damage" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Reflect Damage. Used by Dark Avengers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3049" name="Spellbook: Corpse Plague" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Corpse Plague. Used by Dark Avengers and Shillien Knights.\nRequired level: 46 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3050" name="Spellbook: Hex" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Hex. Used by Shillien Knights, Bladedancers, Abyss Walkers, and Phantom Rangers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3051" name="Spellbook: Spirit Barrier" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Spirit Barrier. Used by Templars, Swordsingers, Plains Walkers, and Silver Rangers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3052" name="Spellbook: Hamstring" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Hamstring. Used by Dark Avengers.\nRequired level: 43 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3053" name="Spellbook: Blessing of Holy" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Blessing of Holy. Used by Paladins.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3054" name="Spellbook: Summon Viper Cubic" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Summon Viper Cubic. Used by Shillien Knights.\nRequired level: 49 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3055" name="Spellbook: Lightning Strike" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Lightning Strike. Used by Shillien Knights.\nRequired level: 58 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3056" name="Spellbook: Summon Dark Panther" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Spellbook needed to learn Summon Dark Panther. Used by Dark Avengers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3057" name="Spellbook: Summon Reanimated Man" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Reanimated Man. Used by Necromancers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3058" name="Spellbook: Summon Corrupted Man" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Summon Corrupted Man. Used by Necromancers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3059" name="Spellbook: Corpse Burst" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Corpse Burst. Used by Necromancers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3060" name="Spellbook: Forget" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Forget. Used by Necromancers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3061" name="Spellbook: Curse Discord" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Curse Discord. Used by Necromancers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3062" name="Spellbook: Curse Fear" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn the spell Curse Fear. Used by Necromancers, Spellsingers, Spellhowlers and Sorcerers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3063" name="Spellbook: Anchor" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Anchor. Used by Necromancers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3064" name="Spellbook: Silence" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Silence. Used by Necromancers and Spellhowlers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3065" name="Spellbook: Death Spike" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Death Spike. Used by Necromancers, Spellhowlers, and Phantom Summoners.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3066" name="Spellbook: Curse Death Link" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Curse Death Link. Used by Necromancers and Spellhowlers.\nRequired level: 50 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3067" name="Spellbook: Vampiric Claw" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Vampiric Claw. Used by Necromancers and Spellhowlers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3068" name="Spellbook: Vitalize" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Vitalize. Used by Bishops and Elven Elders.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3069" name="Spellbook: Repose" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Repose. Used by Bishops.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3070" name="Spellbook: Hold Undead" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Hold Undead. Used by Bishops.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3071" name="Spellbook: Requiem" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Requiem. Used by Bishops.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3072" name="Spellbook: Purify" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Purify. Used by Bishops and Shillien Elders.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3073" name="Spellbook: Might of Heaven" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Might of Heaven. Used by Bishops and Elven Elders.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3074" name="Spellbook: Surrender to Wind" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Surrender to Wind. Used by Sorcerers and Spellhowlers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3075" name="Spellbook: Blazing Circle" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Blazing Circle. Used by Sorcerers and Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3076" name="Spellbook: Prominence" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Prominence. Used by Sorcerers and Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3077" name="Spellbook: Blazing Skin" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Blazing Skin. Used by Sorcerers and Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3078" name="Spellbook: Decay" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Decay. Used by Sorcerers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="4600" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3079" name="Spellbook: Cancel" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Cancel. Used by Sorcerers and Spellsingers.\nRequired level: 48 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3080" name="Spellbook: Sleeping Cloud" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Sleeping Cloud. Used by Sorcerers and Spellsingers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3081" name="Spellbook: Aura Flare" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Aura Flare. Used by Sorcerers and Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3082" name="Spellbook: Surrender to Water" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Surrender to Water. Used by Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3083" name="Spellbook: Frost Wall" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Frost Wall. Used by Spellsingers.\nRequired level: 52 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="5400" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="5400" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3084" name="Spellbook: Freezing Shackle" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Freezing Shackle. Used by Spellsingers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3085" name="Spellbook: Hydro Blast" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Hydro Blast. Used by Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3086" name="Spellbook: Frost Bolt" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Frost Bolt. Used by Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3087" name="Spellbook: Ice Dagger" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Ice Dagger. Used by Spellsingers.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3088" name="Spellbook: Freezing Skin" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Freezing Skin. Used by Spellsingers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3089" name="Spellbook: Tempest" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Tempest. Used by Spellhowlers.\nRequired level: 46 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3090" name="Spellbook: Hurricane" type="NONE" icon="icon.etc_spell_books_element_i00">
 	<!-- Spellbook needed to learn Hurricane. Used by Spellhowlers.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3091" name="Spellbook: Servitor Magic Shield" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Servitor Magic Shield. Used by Warlocks, Elemental Summoners and Phantom Summoners.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3092" name="Spellbook: Servitor Physical Shield" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Servitor Physical Shield. Used by Warlocks, Elemental Summoners and Phantom Summoners.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3093" name="Spellbook: Servitor Haste" type="NONE" icon="icon.etc_spell_books_summon_i00">
 	<!-- Spellbook needed to learn Servitor Haste. Used by Warlocks, Elemental Summoners and Phantom Summoners.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3094" name="Spellbook: Invigor" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Invigor. Used by Prophets.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3095" name="Spellbook: Magic Barrier" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Magic Barrier. Used by Prophets.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3096" name="Spellbook: Blessed Body" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Blessed Body. Used by Prophets.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3097" name="Spellbook: Blessed Soul" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Blessed Soul. Used by Prophets.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3850" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3098" name="Spellbook: Return" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Return. Used by Prophets and Elders.\nRequired level: Prophet- 40, Elder: 44 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3099" name="Spellbook: Haste" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Haste. Used by Prophets.\nRequired level: 44 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100000" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 </list>

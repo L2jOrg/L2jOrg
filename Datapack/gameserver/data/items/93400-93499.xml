@@ -39,37 +39,37 @@
 	<item id="93406" name="Scroll: Enchant Weapon (B-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i03">
 	<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" price="1500000"/>
+		<attributes price="1500000"/>
 	</item>
 
 	<item id="93407" name="Scroll: Enchant Armor (B-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i03">
 	<!-- Increases P. Def. by 1 for B-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" price="240000"/>
+		<attributes price="240000"/>
 	</item>
 
 	<item id="93408" name="Scroll: Enchant Weapon (C-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i02">
 	<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" price="330000"/>
+		<attributes price="330000"/>
 	</item>
 
 	<item id="93409" name="Scroll: Enchant Armor (C-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i02">
 	<!-- Increases P. Def. by 1 for C-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" price="45000"/>
+		<attributes price="45000"/>
 	</item>
 
 	<item id="93410" name="Scroll: Enchant Weapon (D-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
 	<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" price="150000"/>
+		<attributes price="150000"/>
 	</item>
 
 	<item id="93411" name="Scroll: Enchant Armor (D-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i01">
 	<!-- Increases P. Def. by 1 for D-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" price="18000"/>
+		<attributes price="18000"/>
 	</item>
 
 	<item id="93412" name="Letter - K" type="NONE" icon="icon.etc_alphabet_k_i00">
@@ -116,7 +116,6 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
-
 	</weapon>
 
 	<weapon id="93419" name="Chrono Darbuka" type="HAMMER" body-part="TWO_HAND" icon="icon.weapon_chrono_darbuka_i00">
@@ -522,7 +521,7 @@
 	<item id="93485" name="Spellbook: Mount Wyvern" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Double-click to learn Summon Mount Wyvern. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93486" name="Battleground Scroll" type="NONE" icon="icon.etc_ssq_i00">

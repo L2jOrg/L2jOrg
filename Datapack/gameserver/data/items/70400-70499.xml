@@ -334,7 +334,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract >
-			<item id="70114" chance="100000000"/>  <!-- Agathion - Singer &amp; Dancer  -->
+			<item id="70114" chance="2147483647"/>  <!-- Agathion - Singer &amp; Dancer  -->
 		</extract>
 	</item>
 
@@ -350,7 +350,7 @@
 		<attributes weight="10" duration="43200" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55468"/> <!-- Lv. 1 Brooch -->
+			<skill id="55468"/>  <!-- Lv. 1 Brooch -->
 		</skills>
 	</armor>
 
@@ -374,8 +374,8 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13656"/> <!-- Brooch Lv. 1 -->
-			<skill id="13661"/> <!-- Brooch Additional Effect -->
+			<skill id="13656"/>  <!-- Brooch Lv. 1 -->
+			<skill id="13661"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
@@ -386,7 +386,7 @@
 		<crystal />
 		<skills>
 			<skill id="13657"/>  <!-- Brooch Lv. 2 -->
-			<skill id="13661" level="2"/> <!-- Brooch Additional Effect -->
+			<skill id="13661" level="2"/>  <!-- Additional Brooch Effect -->
 		</skills>
 	</armor>
 
@@ -501,7 +501,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150"/>
+			<skill id="59150"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -511,7 +511,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="2"/>
+			<skill id="59150" level="2"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -521,7 +521,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="3"/>
+			<skill id="59150" level="3"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -531,7 +531,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="4"/>
+			<skill id="59150" level="4"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -541,7 +541,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="5"/>
+			<skill id="59150" level="5"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -551,7 +551,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151"/>
+			<skill id="59151"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -561,7 +561,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="2"/>
+			<skill id="59151" level="2"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -571,7 +571,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="3"/>
+			<skill id="59151" level="3"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -581,7 +581,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="4"/>
+			<skill id="59151" level="4"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 
@@ -591,7 +591,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="5"/>
+			<skill id="59151" level="5"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 

@@ -98,7 +98,9 @@ public enum EtcItemType implements ItemType {
     LUCKY_ENCHANT,
     GIANT_ENCHANT,
     BLESSED_LUCKY_ENCHANT,
-    QUALITY_AGATHION_ENCHANT;
+    QUALITY_AGATHION_ENCHANT,
+    CURSED_ENCHANT_WEAPON,
+    CURSED_ENCHANT_ARMOR;
 
     /**
      * @return the ID of the item after applying the mask.

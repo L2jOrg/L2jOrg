@@ -46,7 +46,7 @@
 		</stats>
 	</armor>
 
-	<armor id="37703" name="Valentine Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.ev_hallowinday_candy_i00">
+	<armor id="37703" name="Valentine Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.ev_hallowinday_candy_i00">
 	<!-- Modifies the appearance of a sigil to that of a Valentine Sigil. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />

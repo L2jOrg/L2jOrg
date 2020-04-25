@@ -1,26 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<armor id="99001" name="Talisman of Baium" type="NONE" body-part="TALISMAN" icon="icon.baium_talisman_new">
+	<!-- <Options>\nP. Atk. +284\nM. Atk. +392\nM. Damage Resistance +10%\nSkill P. Atk. +5%\nAll Weapon Resistance +5\nP. Critical Rate +20\nM. Critical Rate +20\nMP Consumption -5%\nSkill Cooldown -3%\nSTR, INT +1\nDEX, WIT +1\nCON, MEN +1\n\nThe effect of the Talisman is applied starting at level 60. Effects from two such Talismans do not stack. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
+		<crystal />
+	</armor>
+
+	<item id="99002" name="Enchant Scroll: Talisman of Baium" type="ENCHANT_ARMOR" icon="icon.baium_talisman_new_scroll">
+	<!-- Enchant scroll for Talisman of Baium. Can enchant up to +5. Item disappears if enchantment fails. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99003" name="Talisman of Baium Enchant Package" type="NONE" icon="icon.bm_freya_gift_box">
+	<!-- Double-click to obtain Talisman of Baium, Sealed Enchant Scroll: Talisman of Baium x2. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99004" name="Tomb of Ancient Pirates Time Recharge Stone" type="NONE" icon="icon.new_user_box">
+	<!-- Double-click to obtain 16 Tomb of Ancient Pirates Time Recharge Stones. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99005" name="Aden's Regular Treasure Chest" type="NONE" icon="icon.event_mahum_coinbox">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99006" name="Aden's Greater Treasure Chest" type="NONE" icon="icon.event_orc_coinbox">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99007" name="Aden Tour Completion Reward Package - Regular" type="NONE" icon="icon.etc_pi_box_belief_pack">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99008" name="Regular Mini-Game Treasure Chest - Defeat" type="NONE" icon="icon.bm_elmoaden_box">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99009" name="Regular Mini-Game Treasure Chest - Draw" type="NONE" icon="icon.bm_elmoaden_silver_box">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99010" name="Regular Mini-Game Treasure Chest - Victory" type="NONE" icon="icon.bm_elmoaden_gold_box">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99011" name="Advanced Mini-Game Treasure Chest - Defeat" type="NONE" icon="icon.bm_dragon_present">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99012" name="Advanced Mini-Game Treasure Chest - Draw" type="NONE" icon="icon.bm_dragon_present_5">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99013" name="Advanced Mini-Game Treasure Chest - Victory" type="NONE" icon="icon.bm_dragon_present_4">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99014" name="Maliss's High-grade HP Potion - Event" type="POTION" icon="BranchSys.icon.br_vitality_potion_i01">
+	<!-- After instant 1000 HP Recovery, CP Recovery with remaining points. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="HEALING"/>
+	</item>
+
+	<item id="99015" name="Chapa Transformation Scroll - Song Dance - Event" type="POTION" icon="icon.etc_roll_of_paper_black_i00">
+	<!-- Transforms you into Song Dance for 30 min. Effect remains after death. Cannot be used during Transformation. Cooldown 10 min.\nChapa - Song Dance: Can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality, Dance of the Warrior, Dance of Fire, Dance of Fury, Dance of Concentration, Dance of Shadows. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99016" name="Special Dragon's Fruit Lv. 2 - Event" type="SCROLL" icon="icon.bm_dragon_fruit">
+	<!-- For 20 minutes, P./M. Atk. +15%, P./M. Def. +20%, Max. HP/CP/MP +30%, P./M. Critical Rate +20, P./M. Critical Damage +7%, HP/MP Recovery Bonus +40%. At a certain chance absorbs 7% of the damage inflicted on target as HP. XP and SP gained through hunting +15%. Cooldown is 1 minute. Buff remains after death. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="99017" name="Dragon's Special Elixir Lv. 2 - Event" type="SCROLL" icon="icon.bm_dragon_posion">
+	<!-- When used, XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12, Sayha's Grace Consumption Speed -25% for 20 minutes. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="99018" name="Feather of Blessing - Event" type="NONE" icon="icon.blessed_feather_i00">
+	<!-- If you have a Feather of Blessing, you can resurrect on the spot. -->
+		<restriction stackable="true" tradable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99019" name="Scroll: Fire Dragon's Blessing - Event" type="SCROLL" icon="icon.bm_blessing_dragon">
+	<!-- \n\nFor 20 min., you feel the Fire Dragon's Blessing.\n\nFire Dragon's Blessing: The targets buff/debuff remains after death. The Fire Dragon's Blessing disappears. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="99020" name="Aden Tour Completion Reward Package - Advanced" type="NONE" icon="icon.etc_pi_box_wish_pack">
+	<!-- Double-click to obtain 1 random item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99021" name="Sealed Relic of Border" type="NONE" icon="icon.sayha2017_box_i02">
+	<!-- Double-click to obtain 1 of the following rare items at random: Venir's Talisman Lv. 24, Lilith Rune - Stage 10, Anakim Rune - Stage 10, +16 S-grade Weapon Pack, +10 S-grade Armor Pack. -->
+		<restriction stackable="true" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
 	<item id="99022" name="Orfen Doll Lv. 3" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- <Orfen Doll's Spell Lv. 3>\nM. Atk. +20%\nM. Critical Damage +15%\nMAX MP +15%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
+	<!-- <Orfen Doll's Spell Lv. 3>\nM. Atk. +20%\nM. Critical Damage +15%\nMax MP +20%\n\nBoosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
 		<restriction dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="99023" name="Queen Ant Doll Lv. 3" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- <Queen Ant Doll's Spell Lv. 3>\nP. Atk. +15%\nP. Critical Damage +13%\nMAX HP +20%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
+	<!-- <Queen Ant Doll's Spell Lv. 3>\nP. Atk. +15%\nP. Critical Damage +13%\nMax HP +20%\n\nBoosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
 		<restriction dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="99024" name="Baium Doll Lv. 3" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- <Baium Doll's Spell Lv. 3>\nSkill Cooldown -5%\nP. Def. +20%\nM. Def. +20%\nMental Attack Resistance +50%\nParalysis Resistance +30%\nKnock Down Resistance +30%\nPull Resistance +30%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory. -->
+	<!-- <Baium Doll's Spell Lv. 3>\nSkill Cooldown -5%\nP. Def. +20%\nM. Def +20%\nMental Attack Resistance +50%\nParalysis Attack Resistance +30%\nKnock Down Attack Resistance +30%\nPull Attack Resistance +30%\n\nBoosts abilities with the Baium Doll's Spell when stored in the inventory. -->
 		<restriction dropable="false" sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="99025" name="Frintezza Doll Lv. 3" type="RUNE" icon="icon.bm_doll_frintessa_30d">
-	<!-- <Frintezza Doll's Spell Lv. 3>\nSTR, INT +2\nDEX, WIT +2\nCON, MEN +2\nMovement Speed +7\nStun Attack +30%\nParalysis Attack +30%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory.  -->
+	<!-- <Frintezza Doll's Spell Lv. 3>\nSTR, INT +2\nDEX, WIT +2\nCON, MEN +2\nSpeed +7\nStun Atk. Rate +30%\nParalysis Atk. Rate +30%\n\nBoosts abilities with Frintezza Doll's Spell stored in the inventory. -->
 		<restriction dropable="false" sellable="false" depositable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="99026" name="New Year Thank You Cube" type="COUPON" icon="icon.etc_11th_event_group">
+	<!-- Use to obtain the New Year Thank You Bundle. On the 7th day, you can obtain the New Year Thank You Hanbok Bundle that includes a permanent Hanbok. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 

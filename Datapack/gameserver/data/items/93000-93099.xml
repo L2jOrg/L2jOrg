@@ -70,37 +70,37 @@
 	</item>
 
 	<item id="93013" name="Queen Ant Doll Lv. 1" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- 7-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. \n\n<Queen Ant Doll's Spell Lv. 1>\nP. Atk./P. Critical Damage +8%, Max HP +12% -->
+	<!-- <Queen Ant Doll's Spell Lv. 1>\nP. Atk. +8%\nP. Critical Damage +8%\nMax HP +12%\n\n7-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93014" name="Baium Doll Lv. 1" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- 7-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. \n\n<Baium Doll's Spell Lv. 1>\nMEN Attack Resistance +40%, Paralysis/Knock Down/Pull Attack Resistance +20%, P. Def/M. Def +12%, and Skill Cooldown -3% -->
+	<!-- <Baium Doll's Spell Lv. 1>\nSkill Cooldown -3%\nP. Def. +12%\nM. Def +12%\nMental Attack Resistance +40%\nParalysis Attack Resistance +20%\nKnock Down Attack Resistance +20%\nPull Attack Resistance +20%\n\n7-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93015" name="Orfen Doll Lv. 1" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- 7-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory.\n\n<Orfen Doll's Spell Lv. 1>\nM. Atk./M. Critical Damage +8%, Max MP +12% -->
+	<!-- <Orfen Doll's Spell Lv. 1>\nM. Atk. +8%\nM. Critical Damage +8%\nMax MP +12%\n\n7-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93016" name="Queen Ant Doll Lv. 2" type="RUNE" icon="icon.bm_queen_ant_doll_30d">
-	<!-- 7-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. \n\n<Queen Ant Doll's Spell Lv. 2>\nP. Atk. +12%, P. Critical Damage +10%, MAX HP +15% -->
+	<!-- <Queen Ant Doll's Spell Lv. 2\nP. Atk. +12%\nP. Critical Damage +10%\nMax HP +15%\n\n7-day. Boosts abilities with the Queen Ant Doll's Spell when stored in the inventory. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93017" name="Baium Doll Lv. 2" type="RUNE" icon="icon.bm_baium_doll_30d">
-	<!-- 7-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. \n\n<Baium Doll's Spell Lv. 2>\nMEN Atk. Resistance +45%, Paralysis/Knock Down/Pull Resistance +25%, P. Def./M. Def. +15%, Skill Cooldown -4%. -->
+	<!-- <Baium Doll's Spell Lv. 2\nSkill Cooldown -4%\nP. Def. +15%\nM. Def +15%\nMental Attack Resistance +45%\nParalysis Attack Resistance +25%\nKnock Down Attack Resistance +25%\nPull Attack Resistance +25%\n\n7-day. Boosts abilities with the Baium Doll's Spell when stored in the inventory. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93018" name="Orfen Doll Lv. 2" type="RUNE" icon="icon.bm_orfen_doll_30d">
-	<!-- 7-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory. \n\n<Orfen Doll's Spell Lv. 2>\nM. Atk. +15%, M. Critical Damage +10%, MAX MP +15% -->
+	<!-- <Orfen Doll's Spell Lv. 2\nM. Atk. +15%\nM. Critical Damage +10%\nMax MP +15%\n\n7-day. Boosts abilities with the Orfen Doll's Spell when stored in the inventory. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes/>
 	</item>
@@ -159,70 +159,70 @@
 		<attributes/>
 	</item>
 
-	<weapon id="93028" name="Moonshadow Sword" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_sword_of_revolution_i00">
+	<weapon id="93028" name="Sword of Aden" type="SWORD" body-part="RIGHT_HAND" icon="icon.weapon_spinebone_sword_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1450"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93029" name="Moonshadow Dagger" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_maingauche_i00">
+	<weapon id="93029" name="Dagger of Aden" type="DAGGER" body-part="RIGHT_HAND" icon="icon.weapon_knife_o'_silenus_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1070"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93030" name="Moonshadow Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00" mana-consume="2">
+	<weapon id="93030" name="Bow of Aden" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1820"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93031" name="Moonshadow Blunt Weapon" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_tarbar_i00">
+	<weapon id="93031" name="Blunt Weapon of Aden" type="BLUNT" body-part="RIGHT_HAND" icon="icon.weapon_war_pick_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1730"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93032" name="Moonshadow Two-handed Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_giants_sword_i00">
+	<weapon id="93032" name="Two-handed Sword of Aden" type="TWO_HAND_SWORD" body-part="TWO_HAND" icon="icon.weapon_flamberge_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2020"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93033" name="Moonshadow Two-Handed Blunt Weapon" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_goathead_staff_i00" magic="true">
+	<weapon id="93033" name="Two-Handed Blunt Weapon of Aden" type="STAFF" body-part="TWO_HAND" icon="icon.weapon_ghost_staff_i00" magic="true">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93034" name="Moonshadow Spear" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_winged_spear_i00">
+	<weapon id="93034" name="Spear of Aden" type="SPEAR" body-part="TWO_HAND" icon="icon.weapon_dwarven_trident_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="2060"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93035" name="Moonshadow Fist" type="FIST" body-part="TWO_HAND" icon="icon.weapon_bichhwa_i00">
+	<weapon id="93035" name="Fist of Aden" type="FIST" body-part="TWO_HAND" icon="icon.weapon_baghnakh_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1510"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93036" name="Moonshadow Rapier" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_rapier_i00">
+	<weapon id="93036" name="Rapier of Aden" type="RAPIER" body-part="RIGHT_HAND" icon="icon.weapon_soldat_estoc_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1300"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<weapon id="93037" name="Moonshadow Ancient Sword" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_tulwar_i00">
+	<weapon id="93037" name="Ancient Sword of Aden" type="ANCIENT_SWORD" body-part="TWO_HAND" icon="icon.weapon_schlaeger_i00">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1530"/>
 		<crystal type="D"/>
 	</weapon>
 
-	<item id="93038" name="Enchant Scroll: Moonshadow Weapon" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
-	<!-- When enchanted, P. Atk. +4 for Moonshadow Sword (one-handed), Blunt Weapon (one-handed), Dagger, Spear, other weapons. P. Atk. +5 for Sword (two-handed), Blunt Weapon (two-handed), Dualsword, Fist (two-handed). P. Atk. +8 for Bows. M. Atk. +3 for all weapons. Starting from +4, P./M. Atk. double.\n<Warning>\nCan only be used on Moonshadow weapons, and cannot be enchanted above +4. -->
+	<item id="93038" name="Enchant Scroll: Weapon of Aden" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i01">
+	<!-- When enchanted, P. Atk. +4 for Sword (one-handed), Blunt Weapon (one-handed), Dagger, Spear, other weapons of Aden. P. Atk. +5 for Sword (two-handed), Blunt Weapon (two-handed), Dualsword, Fist (two-handed). P. Atk. +8 for Bows. M. Atk. +3 for all weapons. Starting from +4, P./M. Atk. double.\n<Warning>\nCan only be used on weapons of Aden, and cannot be enchanted above +4. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<armor id="93039" name="Race Ranker Appearance" type="HEAVY" body-part="ALL_DRESS" icon="icon.gomdori_chest_change">
@@ -235,7 +235,7 @@
 	<item id="93040" name="Adventurer’s Griffin Agathion Enchant Scroll" type="AGATHION_ENCHANT" icon="icon.star_scrl_of_ench_ag_2">
 	<!-- Adventurer’s Griffin Agathion Enchant Scroll. M. Def. increases when enchanting Agathion.\n<Warning>\nCan only be used on Adventurer’s Griffin Agathion. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<armor id="93041" name="Adventurer’s Cloak" type="NONE" body-part="BACK" icon="icon.amor_goodness_cloak">
@@ -393,7 +393,7 @@
 		<crystal />
 	</armor>
 
-	<item id="93066" name="Top-grade Material" type="MATERIAL" icon="icon.etc_artisans_frame_i00">
+	<item id="93066" name="Top-grade Candy Material" type="MATERIAL" icon="icon.etc_lucky_pocket_i00">
 	<!-- Recharges 50,000 points in the crafting points gauge. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="2" price="100000"/>
@@ -429,8 +429,8 @@
 		<attributes/>
 	</item>
 
-	<item id="93072" name="Blessing Star Candy - Event" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
-	<!-- Recharges 10,000 Sayha's Grace Points. -->
+	<item id="93072" name="Sweet Blessing Star Candy - Event" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
+	<!-- Recharges 40,000 Sayha's Grace Points. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
@@ -497,73 +497,73 @@
 		<attributes weight="2" price="2000000"/>
 	</item>
 
-	<armor id="93083" name="Tree Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.arcana_sigil_i00">
+	<armor id="93083" name="Tree Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.arcana_sigil_i00">
 		<restriction/>
 		<attributes weight="920" price="19350" />
 		<crystal />
 	</armor>
 
-	<armor id="93084" name="Elven Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
+	<armor id="93084" name="Elven Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_pricklelotus_i01">
 		<restriction/>
 		<attributes weight="1350" price="35000" />
 		<crystal type="D"/>
 	</armor>
 
-	<armor id="93085" name="Chain Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.belleface_i00">
+	<armor id="93085" name="Chain Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.belleface_i00">
 		<restriction/>
 		<attributes weight="1220" price="375000" />
 		<crystal type="C"/>
 	</armor>
 
-	<armor id="93086" name="Demon’s Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+	<armor id="93086" name="Demon’s Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction/>
 		<attributes weight="1280" price="156000" />
 		<crystal type="C"/>
 	</armor>
 
-	<armor id="93087" name="Blue Wolf Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.airtoil_i00">
+	<armor id="93087" name="Blue Wolf Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.airtoil_i00">
 		<restriction/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93088" name="Avadon Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
+	<armor id="93088" name="Avadon Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.dynasty_sigil_i00">
 		<restriction/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93089" name="Doom Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.elos_i00">
+	<armor id="93089" name="Doom Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.elos_i00">
 		<restriction/>
 		<attributes weight="1200" price="845000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93090" name="Zubei Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
+	<armor id="93090" name="Zubei Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_dynaksus_i00">
 		<restriction/>
 		<attributes weight="1210" price="545000" />
 		<crystal type="B"/>
 	</armor>
 
-	<armor id="93091" name="Dark Crystal Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
+	<armor id="93091" name="Dark Crystal Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_r110_sigil">
 		<restriction/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
 	</armor>
 
-	<armor id="93092" name="Tallum Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
+	<armor id="93092" name="Tallum Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_tysandy_sigil_i01">
 		<restriction/>
 		<attributes weight="1190" price="935000" />
 		<crystal type="A"/>
 	</armor>
 
-	<armor id="93093" name="Nightmare Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
+	<armor id="93093" name="Nightmare Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.verper_sigil_i00">
 		<restriction/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
 	</armor>
 
-	<armor id="93094" name="Majestic Sigil" type="NONE" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
+	<armor id="93094" name="Majestic Sigil" type="SIGIL" body-part="LEFT_HAND" icon="icon.weapon_karyen_i00">
 		<restriction/>
 		<attributes weight="1180" price="1422000" />
 		<crystal type="A"/>
@@ -588,7 +588,7 @@
 	</item>
 
 	<item id="93098" name="Battle Scroll - Event" type="NONE" icon="icon.ev_charge_scroll">
-	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown is 1 minute. -->
+	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>

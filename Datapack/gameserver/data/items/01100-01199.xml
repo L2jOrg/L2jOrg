@@ -361,19 +361,19 @@
 	<item id="1150" name="Spellbook: Wind Strike" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Wind Strike. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="50" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="50" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1151" name="Spellbook: Self Heal" type="NONE" icon="icon.etc_spell_books_blue_i00">
 	<!-- Spellbook needed to learn Self Heal. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="50" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="50" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1152" name="Spellbook: Heal" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Heal. Used by Human Mystics, Elven Mystics and Dark Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1153" name="Jenna's Letter" type="NONE" icon="icon.etc_scroll_white_i00">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<armor id="91800" name="Queen Ant's Ring Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_queen_ant_i04">
-	<!-- 15-day item. MP +30, Poison Attack and Resistance +30%, P./M. Accuracy +5, P. Atk. +10%, M. Atk. +15%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Atk. +10%\nM. Atk. +15%\nP. Critical Damage +15%\nM. Critical Damage +10%\nP. Accuracy +5\nM. Accuracy +5\nMax MP +30\nPoison Attack and Resistance +30%\n\n15-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -12,7 +12,7 @@
 	</armor>
 
 	<armor id="91801" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_orfen_i04">
-	<!-- 15-day item. MP +40, MEN Attack and Resistance +20%, Hold Attack and Resistance +30%, Heal Received +12%, Skill MP Consumption -10%. MP Drain effect. Enables a skill that decreases enemy MP by 10% during PvP. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -10%\nHeal Received +12%\nChance to activate MP Drain\nMax MP +40\nMental Attack and Resistance +20%\nHold Attack and Resistance +30%\n\n<Orfen's Earring>\nWhen used in PvP, Max MP -10%.\n\n15-day. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -22,8 +22,8 @@
 		</stats>
 	</armor>
 
-	<armor id="91802" name="Ring of Core Lv 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i04">
-	<!-- MP +30, MEN Attack and Resistance +30%, P./M. Evasion +5, P./M. Damage Received -10%, Sleep Resistance +20%. Enables debuff removal skills. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<armor id="91802" name="Ring of Core Lv. 4" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_core_i04">
+	<!-- <Options>\nReceived P. Damage -10%\nReceived M. Damage -10%\nP. Evasion +5\nM. Evasion +5\nMax MP +30\nMental Attack and Resistance +30%\nSleep Resistance +20%\n\n<Ring of Core>\nAll debuffs are canceled when used.\n\n15-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -40,7 +40,7 @@
 	</item>
 
 	<armor id="91804" name="Baium's Ring Lv. 1" type="NONE" body-part="FINGER" icon="icon.accessory_ring_of_baium_i00">
-	<!-- 15-day item. MP +15, Stun Resistance and Stun Atk. Rate +10%, Bleed Atk. and Bleed Resistance +5%, P./M. Accuracy +2, Atk. Spd./Casting Spd. +3%, P./M. Skill Power +3%. The effect does not stack even if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Options>\nP. Skill Power +3%\nM. Skill Power +3%\nAtk. Spd. +3%\nCasting Spd. +3%\nP. Accuracy +2\nM. Accuracy +2\nMax MP +15\nStun Attack and Resistance +10%\nBleed Attack and Resistance +5%\n\n15-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -51,7 +51,7 @@
 	</armor>
 
 	<armor id="91805" name="Zaken's Earring Lv. 1" type="NONE" body-part="EAR" icon="icon.accessory_earring_of_zaken_i00">
-	<!-- 15-day item. MP +22, Bleed Attack and Resistance +10%, Stun/MEN Attack and Resistance +5%, Heal Received +4%, HP Recovery+10%, Skill MP Consumption -2%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- <Options>\nMP Consumption -2%\nHeal Received +4%\nHP Recovery +10%\nMax MP +22\nBleed Attack and Resistance +10%\nStun Attack and Resistance +5%\nMental Attack and Resistance +5%\n\n15-day. The effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -202,8 +202,8 @@
 		</skill-reducer>
 	</item>
 
-	<item id="91827" name="Adventurer's Dragon Berserker Transformation Scroll" type="POTION" icon="icon.bm2018_dragon_i01">
-	<!-- Transforms you into Dragon Berserker for 20 minutes. Effect remains even after death.\n\n<Dragon Berserker's Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./Casting Spd. +100, P./M. Critical Rate +50, Speed +15, Sayha's Grace Consumption Speed -10%. When attacking and using skills there's a chance for P. Atk. +300, M. Atk. +300, Atk. Spd +100, Casting Spd +100, P./M. Critical Damage +135, and returns 15% of received damage back to the enemy. Cooldown 1 minute. -->
+	<item id="91827" name="Adventurer’s Dragon Berserker Transformation Scroll" type="POTION" icon="icon.bm2018_dragon_i01">
+	<!-- Transforms you into Dragon Berserker for 20 minutes. Effect remains even after death.\n\n<Dragon Berserker’s Energy> P. Atk. +135, M. Atk. +150, Atk. Spd./Casting Spd. +100, P./M. Critical Rate +50, Speed +15, Sayha's Grace Consumption Speed -10%. When attacking and using skills there’s a chance for P. Atk. +300, M. Atk. +300, Atk. Spd +100, Casting Spd +100, P./M. Critical Damage +135, and returns 15% of received damage back to the enemy. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -280,7 +280,7 @@
 	<item id="91837" name="Amulet: Chant of Clarity" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Clarity spell. Used by Overlords. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="100000"/>
+		<attributes price="100000"/>
 	</item>
 
 	<item id="91838" name="My Teleport Scroll" type="TELEPORT_BOOKMARK" icon="icon.bookmark_scroll_i00">
@@ -296,7 +296,7 @@
 	</item>
 
 	<item id="91840" name="XP Boost Scroll - Event" type="NONE" icon="icon.etc_recall_exp_scroll">
-	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. \n -->
+	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -314,7 +314,7 @@
 	</item>
 
 	<item id="91842" name="Einhasad's Protection" type="SCROLL" icon="icon.etc_dragons_blood_i03">
-	<!-- When used, Hunting XP/SP Gain when hunting +100% for 1 hour. Cooldown 1 minute. The effect remains active even after death.\n -->
+	<!-- Increases XP/SP gain by 100% for 1 hour. Cooldown: 1 hour. The effect persists through death. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -380,7 +380,7 @@
 	</item>
 
 	<item id="91852" name="Little Pig Blessing Star Candy" type="POTION" icon="icon.etc_whiteday_candy_i03">
-	<!-- Recharges 30,000 Sayha's Grace Points. -->
+	<!-- Recharges 120,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>

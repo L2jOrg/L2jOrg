@@ -33,8 +33,8 @@ import java.util.Set;
 /**
  * Cultured Adventurer (10967)
  * @author RobikBobik
- * @Note: Based on NA server September 2019
-  * @TODO: Maybe wrong NpcStringId when you killing monsters in Abandoned Camp
+ * Note: Based on NA server September 2019
+ * TODO: Maybe wrong NpcStringId when you killing monsters in Abandoned Camp
  */
 public class Q10967_CulturedAdventurer extends Quest
 {

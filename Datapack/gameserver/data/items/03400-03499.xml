@@ -111,25 +111,25 @@
 	<item id="3429" name="Spellbook: Greater Heal" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Greater Heal. Used by Bishops, Elders, and Shillien Elders.\nRequired level: Bishop- 40, Elder, Shillien Elder 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3430" name="Spellbook: Greater Battle Heal" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Amulet required for the Greater Battle Heal spell. Used by Bishops.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3431" name="Spellbook: Greater Group Heal" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Greater Group Heal. Used by Bishops, Shillien Elders, and Elders.\nRequired level: Bishop: 40, Shillien Elder and Elder: 48 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3432" name="Spellbook: Remedy" type="NONE" icon="icon.etc_spell_books_hfighter_i00">
 	<!-- Amulet required for the Remedy spell. Used by Paladins.\nRequired level: 40 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="3200" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="3433" name="Elf Figure" type="NONE" icon="icon.etc_figure_FElf_i00">

@@ -28,8 +28,8 @@ public final class ExShowManorDefaultInfo extends ServerPacket {
         for (Seed crop : _crops) {
             writeInt(crop.getCropId()); // crop Id
             writeInt(crop.getLevel()); // level
-            writeInt(crop.getSeedReferencePrice()); // seed price
-            writeInt(crop.getCropReferencePrice()); // crop price
+            writeInt((int) crop.getSeedReferencePrice()); // seed price
+            writeInt((int) crop.getCropReferencePrice()); // crop price
             writeByte((byte) 1); // Reward 1 type
             writeInt(crop.getReward(1)); // Reward 1 itemId
             writeByte((byte) 1); // Reward 2 type

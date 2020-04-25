@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="70300" name="Enchant Scroll of Talisman of Fate" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
+	<item id="70300" name="Enchant Scroll of Forbidden Limit" type="SOLID_ENCHANT_ARMOR" icon="icon.etc_aidcharm_cancel_deathfire_i00">
 	<!-- An Enchant Scroll enhancing the properties of Talisman of Fate. Can be applied to Talisman enchanted up to +8. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
@@ -81,8 +81,8 @@
 		</skill-reducer>
 	</item>
 
-	<item id="70311" name="Talisman of Fate Scroll Box" type="NONE" icon="icon.bm_pirate_king_box">
-	<!-- Double-click to receive 300 Enchant Scrolls of Fate and 1 Scroll of Talisman of Fate. -->
+	<item id="70311" name="Forbidden Limit Scroll Box" type="NONE" icon="icon.bm_pirate_king_box">
+	<!-- Double-click to receive 300 Enchant Scrolls of Fate and 1 Scroll of Forbidden Limit. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
@@ -380,7 +380,7 @@
 	<item id="70356" name="Scroll: Enchant Armor (A-grade)" type="ENCHANT_ARMOR" icon="icon.etc_scroll_of_enchant_armor_i04">
 	<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Enchanting is safe up to +3, but full-body armor can be safely enchanted up to +4. From +4, the enchanted armor's HP also increases according to the enchant level. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<armor id="70357" name="Straw Hat" type="NONE" body-part="HAIR_ALL" icon="icon.accessory_straw_hat_i00">

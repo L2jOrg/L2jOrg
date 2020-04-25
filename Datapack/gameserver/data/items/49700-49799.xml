@@ -31,8 +31,8 @@
 		<attributes/>
 	</item>
 
-	<item id="49705" name="Talisman of Fate Box" type="NONE" icon="icon.bm_special_pendant_abradant_box">
-	<!-- A chest containing the Talisman of Fate. Double-click to receive Talisman of Fate’s Fragment and, at a low probability, Talisman of Darkness Box.  -->
+	<item id="49705" name="Forbidden Limit Chest" type="NONE" icon="icon.bm_special_pendant_abradant_box">
+	<!-- A chest containing the power of Forbidden Limit. Double-click to receive Talisman of Fate’s Fragment and, at a low probability, Talisman of Darkness Box.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -237,7 +237,7 @@
 	</item>
 
 	<armor id="49727" name="Limited Talisman of Fate - Lv. 1" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +12. Possesses limited power of Fate, cannot be enchanted. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +12\nM. Def. +12\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -247,7 +247,7 @@
 	</armor>
 
 	<armor id="49728" name="Talisman of Fate - Lv. 2" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +14, P./M. Skills Evasion +1. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +14\nM. Def. +14\nP. Evasion +1\nM. Evasion +1\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -257,7 +257,7 @@
 	</armor>
 
 	<armor id="49729" name="Talisman of Fate - Lv. 3" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +17, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, XP and SP gain +3%. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +17\nM. Def. +17\nP. Evasion +1\nM. Evasion +1\nMax HP +80\nMax MP +80\nMax CP +80\nSpeed +3\nXP/SP Gain +3%\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -267,7 +267,7 @@
 	</armor>
 
 	<armor id="49730" name="Talisman of Fate - Lv. 4" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +19, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, P./M. Atk. Spd. +7, XP and SP gain +3%. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +19\nM. Def. +19\nP. Evasion +1\nM. Evasion +1\nMax HP +80\nMax MP +80\nMax CP +80\nSpeed +3\nAtk. Spd. +7\nCasting Spd. +7\nXP/SP Gain +3%\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -277,7 +277,7 @@
 	</armor>
 
 	<armor id="49731" name="Talisman of Fate - Lv. 5" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +22, P./M. Skills Evasion +1, HP/MP/CP +120, Speed +5, P./M. Atk. Spd. +10, XP and SP gain +4%. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +22\nM. Def. +22\nP. Evasion +1\nM. Evasion +1\nMax HP +120\nMax MP +120\nMax CP +120\nSpeed +5\nAtk. Spd. +10\nCasting Spd. +10\nXP/SP Gain +4%\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -287,7 +287,7 @@
 	</armor>
 
 	<armor id="49732" name="Talisman of Fate - Lv. 6" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +24, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +5, P./M. Atk. Spd. +15, XP and SP gain +4%. Allows using Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +24\nM. Def. +24\nP. Evasion +2\nM. Evasion +2\nMax HP +160\nMax MP +160\nMax CP +160\nSpeed +5\nAtk. Spd. +15\nCasting Spd. +15\nXP/SP Gain +4%\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -298,7 +298,7 @@
 	</armor>
 
 	<armor id="49733" name="Talisman of Fate - Lv. 7" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +29, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Fate Power - Lv. 1 (at a certain probability, increases attack abilities) and Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +29\nM. Def. +29\nP. Evasion +2\nM. Evasion +2\nMax HP +160\nMax MP +160\nMax CP +160\nSpeed +7\nAtk. Spd. +15\nCasting Spd. +15\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 1>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -309,7 +309,7 @@
 	</armor>
 
 	<armor id="49734" name="Talisman of Fate - Lv. 8" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +34, P./M. Skills Evasion +2, HP/MP/CP +200, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Fate Power - Lv. 2 (at a certain probability, increases attack abilities) and Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +34\nM. Def. +34\nP. Evasion +2\nM. Evasion +2\nMax HP +200\nMax MP +200\nMax CP +200\nSpeed +7\nAtk. Spd. +15\nCasting Spd. +15\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 2>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -320,7 +320,7 @@
 	</armor>
 
 	<armor id="49735" name="Talisman of Fate - Lv. 9" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +38, P./M. Skills Evasion +2, HP/MP/CP +240, Speed +8, P./M. Atk. Spd. +15, XP and SP gain +5%, Reflect Damage +4%. Allows using Fate Power - Lv. 2 (at a certain probability, increases attack abilities) and Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +38\nM. Def. +38\nP. Evasion +2\nM. Evasion +2\nMax HP +240\nMax MP +240\nMax CP +240\nSpeed +8\nAtk. Spd. +15\nCasting Spd. +15\nDamage Reflect +4%\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 2>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -331,7 +331,7 @@
 	</armor>
 
 	<armor id="49736" name="Talisman of Fate - Lv. 10" type="NONE" body-part="TALISMAN" icon="icon.magic_square_talisman_new">
-	<!-- P./M. Def. +43, P./M. Skills Evasion +2, HP/MP/CP +280, Speed +8, P./M. Atk. Spd. +20, XP and SP gain +5%, Reflect Damage +6%. Allows using Fate Power - Lv. 3 (at a certain probability, increases attack abilities) and Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +43\nM. Def. +43\nP. Evasion +2\nM. Evasion +2\nMax HP +280\nMax MP +280\nMax CP +280\nSpeed +8\nAtk. Spd. +20\nCasting Spd. +20\nDamage Reflect +6%\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 3>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -342,7 +342,7 @@
 	</armor>
 
 	<armor id="49737" name="Blessed Talisman of Fate" type="NONE" body-part="TALISMAN" icon="icon.bm_blessed_magic_square_talisman">
-	<!-- P./M. Def. +48, P./M. Skills Evasion +2, HP/MP/CP +320, Speed +8, P./M. Atk. Spd. +30, XP and SP gain +5%, Reflect Damage +8%. Allows using Fate Power - Lv. 4 (at a certain probability, increases attack abilities) and Fate Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its grade. Effects from two such Talismans do not stack.  -->
+	<!-- <Options>\nP. Def. +48\nM. Def. +48\nP. Evasion +2\nM. Evasion +2\nMax HP +320\nMax MP +320\nMax CP +320\nSpeed +8\nAtk. Spd. +30\nCasting Spd. +30\nDamage Reflect +8%\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 4>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\n<Border Blessing>\nRecovers 50% of Max HP/MP.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -512,8 +512,8 @@
 		<attributes/>
 	</item>
 
-	<item id="49757" name="Sayha's Holy Water" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i09">
-	<!-- Sayha's Grace Points +20,000. -->
+	<item id="49757" name="Enhanced Sayha's Holy Water" type="POTION" icon="icon.etc_fruit_juice_glass_bottle_i09">
+	<!-- Sayha's Grace Points +80,000. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="30" price="110000" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -599,8 +599,8 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="49770" name="Sayha's Energy" type="POTION" icon="icon.etc_holy_water_i00">
-	<!-- Sayha's Grace Points +35,000. -->
+	<item id="49770" name="Enhanced Sayha's Energy" type="POTION" icon="icon.etc_holy_water_i00">
+	<!-- Sayha's Grace Points +140,000. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -818,8 +818,8 @@
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<weapon id="49798" name="Cheer Pom Poms" type="DUAL" body-part="TWO_HAND" icon="icon.ev_12th_weapon">
-	<!-- An item commemorating the Classic Server launch.  -->
+	<weapon id="49798" name="Pom Poms" type="DUAL" body-part="TWO_HAND" icon="icon.ev_12th_weapon">
+	<!-- Use the Firecracker skill and the Support Blow skill.\nWhen used while equipping a sigil, the character won’t perform the cheering action. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />

@@ -112,157 +112,157 @@
 	<item id="1512" name="Spellbook: Confusion" type="NONE" icon="icon.etc_spell_books_defighter_i00">
 	<!-- Spellbook needed to learn Confusion. Used by Palus Knights and Assassins.\nRequired level: 24 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1150" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1150" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1513" name="Spellbook: Charm" type="NONE" icon="icon.etc_spell_books_efighter_i00">
 	<!-- Spellbook needed to learn Charm. Used by Elven Knights and Elven Scouts.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1514" name="Spellbook: Resurrection" type="NONE" icon="icon.etc_spell_books_white_i00">
 	<!-- Spellbook needed to learn Resurrection. Used by Clerics, Elven Oracles, and Shillien Oracles.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1515" name="Spellbook: Eva's Kiss" type="NONE" icon="icon.etc_spell_books_assistance_i00">
 	<!-- Spellbook needed to learn Eva's Kiss. Used by Clerics, Elven Oracles and Shillien Oracles.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1516" name="Spellbook: Corpse Life Drain" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Corpse Life Drain. Used by Human Wizards and Dark Wizards.\nRequired level: 30 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1517" name="Spellbook: Body To Mind" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Body To Mind. Used by Human Wizards, Elven Wizards, and Dark Wizards.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1518" name="Amulet: Chant of Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Flame spell. Used by Orc Shamans.\nRequired level: 30 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="26593" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="26593" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1519" name="Amulet: Pa'agrio's Gift" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Gift spell. Used by Orc Shamans.\nRequired level: 30 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="26593" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="26593" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1520" name="Amulet: Pa'agrio's Blessing" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Pa'agrio's Blessing spell. Used by Orc Shamans.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="2450" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1521" name="Amulet: Chant of Fire" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Fire spell. Used by Orc Shamans.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1522" name="Amulet: Chant of Battle" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Battle spell. Used by Orc Mystics.\nRequired level: 14 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1523" name="Amulet: Chant of Shielding" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chant of Shielding spell. Used by Orc Shamans.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="7461" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1524" name="Amulet: Soul Shield" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Soul Shield spell. Used by Orc Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1525" name="Amulet: Life Drain" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Life Drain spell. Used by Orc Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1526" name="Amulet: Fear" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Fear spell. Used by Orc Mystics.\nRequired level: 14 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="500" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1527" name="Amulet: Venom" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Venom spell. Used by Orc Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1528" name="Amulet: Seal of Chaos" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Chaos spell. Used by Orc Shamans.\nRequired level: 30 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1529" name="Amulet: Dreaming Spirit" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Spirit Dream spell. Used by Orc Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1530" name="Amulet: Seal of Slow" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Slow spell. Used by Orc Shamans.\nRequired level: 35 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="43681" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1531" name="Amulet: Chill Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Chill Flame spell. Used by Orc Mystics.\nRequired level: 7 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="100" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1532" name="Amulet: Blaze Quake" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Blaze Quake spell. Used by Orc Shamans.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1533" name="Amulet: Aura Sink" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Aura Sink spell. Used by Orc Shamans.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="1250" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1534" name="Amulet: Madness" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Madness spell. Used by Orc Shamans.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1535" name="Amulet: Frost Flame" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Frost Flame spell. Used by Orc Shamans.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1536" name="Amulet: Seal of Binding" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Binding spell. Used by Orc Shamans.\nRequired level: 25 -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120" price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="15048" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1537" name="Amulet: Seal of Poison" type="NONE" icon="icon.etc_orcish_talisman_i00">
 	<!-- Amulet required for the Seal of Poison spell. Used by Orc Shamans.\nRequired level: 20 -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
-		<attributes weight="120" price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
+		<attributes price="800" commission-type="SPELLBOOK" immediate-effect="true"/>
 	</item>
 
 	<item id="1538" name="Blessed Scroll of Escape" type="SCROLL" icon="icon.etc_scroll_of_return_i01">

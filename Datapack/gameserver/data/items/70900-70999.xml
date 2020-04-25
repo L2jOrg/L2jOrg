@@ -49,7 +49,7 @@
 	</item>
 
 	<item id="70907" name="Ancient Cloak (Legendary) Scroll Pack" type="SCROLL" icon="icon.bm_freya_gift_box">
-	<!-- Double-click to obtain 1 Scroll: Enchant Cloak - Legendary or 1 Stable Cloak Enchantment Scroll - Legendary. -->
+	<!-- Double-click to obtain 1 Scroll: Enchant Cloak - Legendary or a small chance to obtain 1 Stable Cloak Enchantment Scroll - Legendary. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
@@ -299,7 +299,7 @@
 		<crystal />
 		<skills>
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
 			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->
@@ -314,7 +314,7 @@
 		<crystal />
 		<skills>
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
 			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->
@@ -329,7 +329,7 @@
 		<crystal />
 		<skills>
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
 			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->
@@ -344,7 +344,7 @@
 		<crystal />
 		<skills>
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
-			<skill id="23234" value="-1"/>  <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
 			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->

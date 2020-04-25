@@ -114,8 +114,8 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91910" name="Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
-	<!-- Restricted to characters below level 75. Recharges 35,000 Sayha's Grace Points. -->
+	<item id="91910" name="Enhanced Sayha's Blessing - Lv. 75 or lower" type="POTION" icon="icon.etc_wind_potion_i00">
+	<!-- Restricted to characters below level 75. Recharges 140,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
@@ -207,37 +207,37 @@
 	<item id="91920" name="Scroll: Magic Break" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Magic Break. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91921" name="Scroll: Disarm" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Disarm. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91922" name="Scroll: Lightning Barrier" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Lightning Barrier. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91923" name="Scroll: Lightning Shock" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Lightning Shock. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91924" name="Scroll: Soul Panic" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Soul Panic. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91925" name="Scroll: Soul Stigma" type="NONE" icon="icon.etc_magic_book_black_i00">
 	<!-- Scroll to learn Soul Stigma. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91926" name="+3 Dragon's Belt Box" type="NONE" icon="icon.etc_readybox_bronze">
@@ -294,7 +294,7 @@
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50183"/>
+			<skill id="50183"/>  <!-- Adventurer's Brooch -->
 		</skills>
 	</armor>
 
@@ -304,7 +304,7 @@
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50184"/> <!-- Expand Agathion Slots -->
+			<skill id="50184"/>  <!-- Adventurer's Agathion Bracelet -->
 		</skills>
 	</armor>
 
@@ -321,7 +321,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50186" /> <!-- Adventurer's Agathion Griffin -->
+			<skill id="50186"/>  <!-- Adventurer's Griffin Agathion -->
 		</skills>
 	</armor>
 
@@ -331,7 +331,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50187"/> <!-- Adventurer's Rough Jewel -->
+			<skill id="50187"/>  <!-- Adventurer's Gem Fragment -->
 		</skills>
 	</armor>
 
@@ -379,13 +379,13 @@
 	</item>
 
 	<item id="91944" name="Scroll of Purity" type="NONE" icon="icon.giant_book_i02">
-	<!-- Mysterious book containing the power of light. \nUse to learn Shine Side Lv. 2. -->
+	<!-- Mysterious crystal containing the power of light. \nUse to learn Shine Mastery Lv. 2. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
 
 	<item id="91945" name="Scroll of Darkness" type="NONE" icon="icon.giant_book_i00">
-	<!-- Mysterious book containing the power of darkness. \nUse to learn Shadow Side Lv. 2. -->
+	<!-- Mysterious book containing the power of darkness. \nUse to learn Shadow Mastery Lv. 2. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
 		<attributes weight="120"/>
 	</item>
@@ -393,7 +393,7 @@
 	<item id="91946" name="Spellbook: Mount Griffin" type="NONE" icon="icon.etc_spellbook_red_i00">
 	<!-- Allows you to learn Mount Griffin. Required item for level 76 characters who have completed the 3rd class transfer to learn the skill. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="91947" name="+7 Admiral's Estoc Pack" type="NONE" icon="icon.weapon_rapier_i00">
@@ -567,8 +567,8 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91971" name="Blessing Star Candy" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
-	<!-- Recharges 10,000 Sayha's Grace Points. -->
+	<item id="91971" name="Sweet Blessing Star Candy" type="POTION" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
+	<!-- Recharges 40,000 Sayha's Grace Points. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>

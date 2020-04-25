@@ -602,7 +602,7 @@
 	<item id="70764" name="Scroll: Enchant Weapon (A-grade)" type="ENCHANT_WEAPON" icon="icon.etc_scroll_of_enchant_weapon_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70765" name="Shining Pendant Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_varnish_premium">
@@ -614,7 +614,7 @@
 	<item id="70766" name="Improved Scroll: Enchant Weapon (A-grade)" type="IMPROVED_ENCHANT_WEAPON" icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
 	<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./M. Atk. bonus doubles. Randomly enchanted from +1 to +3. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="100" action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="70767" name="Golden Fruit Buff" type="SCROLL" icon="icon.bm_dragon_fruit">
@@ -639,7 +639,7 @@
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59150" level="4"/>
+			<skill id="59150" level="4"/>  <!-- Ruby -->
 		</skills>
 	</armor>
 
@@ -649,7 +649,7 @@
 		<attributes weight="5" duration="10080" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="59151" level="4"/>
+			<skill id="59151" level="4"/>  <!-- Sapphire -->
 		</skills>
 	</armor>
 

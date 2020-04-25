@@ -152,7 +152,7 @@
 
 	<item id="93625" name="Fish Stew - Berserker Spirit Lv. 2" type="SCROLL" icon="icon.fish_stew_buff">
 	<!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4; P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.  -->
-		<restriction stackable="true" destroyable="false" dropable="false" depositable="false"/>
+		<restriction stackable="true" destroyable="false" dropable="false" sellable="false" depositable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
 
@@ -189,19 +189,19 @@
 	<item id="93631" name="Spellbook: Hell Fire" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Spellbook needed to learn Hell Fire. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93632" name="Spellbook: Expand Death Throw" type="NONE" icon="icon.etc_magic_book_red_i00">
 	<!-- Spellbook needed to learn Expand Death Throw. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93633" name="Spellbook - Drain Magic Energy" type="NONE" icon="icon.etc_spell_books_black_i00">
 	<!-- Spellbook needed to learn Drain Magic. -->
 		<restriction stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="120"/>
+		<attributes/>
 	</item>
 
 	<item id="93634" name="Congratulatory Cube" type="NONE" icon="icon.cube_upgrade">
