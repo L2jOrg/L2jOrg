@@ -29,6 +29,8 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * Cultured Adventurer (10967)
