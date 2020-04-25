@@ -4,14 +4,20 @@ import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemListType;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.TradeItem;
+import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.container.PlayerInventory;
+import org.l2j.gameserver.model.item.instance.Item;
+
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+import static org.l2j.gameserver.enums.AttributeType.NONE;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType> {
     private static final byte[] MASKS = { 0x00 };
@@ -62,12 +68,111 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
     }
 
     protected void writeItem(Item item, Player owner) {
-        final var info = new ItemInfo(item);
-        final var reuse = (int) owner.getItemRemainingReuseTime(item.getOwnerId()) / 1000;
-        if (reuse > 0) {
-            info.setReuse(reuse);
+        final int mask = calculateMask(item);
+        writeByte(mask);
+        writeInt(item.getObjectId());
+        writeInt(item.getDisplayId());
+        writeByte(item.isQuestItem() || item.isEquipped() ? 0xFF : item.getLocationSlot());
+        writeLong(item.getCount());
+        writeByte(item.getCustomType2());
+        writeByte(item.getCustomType1()); // Filler (always 0)
+        writeShort(item.isEquipped());
+        writeLong(item.getBodyPart().getId());
+        writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
+        writeByte(0x00); // TODO : Find me
+        writeByte(0x00);
+        writeInt(-1); // mana
+        writeInt(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) :-9999);
+        writeByte(item.isAvailable());
+        writeShort(0x00); // locked
+
+        if (containsMask(mask, ItemListType.AUGMENT_BONUS)) {
+            writeItemAugment(item);
         }
-        writeItem(info);
+        if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE)) {
+            writeItemElemental(item);
+        }
+        if (containsMask(mask, ItemListType.ENCHANT_EFFECT)) {
+            writeItemEnchantEffect(item);
+        }
+
+        if(containsMask(mask, ItemListType.VISUAL_ID)) {
+            writeInt(item.getDisplayId()); //TODO visual id
+        }
+
+        if (containsMask(mask, ItemListType.SOUL_CRYSTAL)) {
+            writeSoulCrystalInfo(item);
+        }
+
+        if(containsMask(mask, ItemListType.REUSE_DELAY)) {
+            writeInt((int) owner.getItemRemainingReuseTime(item.getObjectId()) / 1000);
+        }
+    }
+
+    private void writeSoulCrystalInfo(Item item) {
+        writeByte(item.getSpecialAbilities().size());
+        item.getSpecialAbilities().stream()
+                .mapToInt(EnsoulOption::getId)
+                .forEach(this::writeInt);
+
+        writeByte(item.getAdditionalSpecialAbilities().size());
+        item.getAdditionalSpecialAbilities().stream()
+                .mapToInt(EnsoulOption::getId)
+                .forEach(this::writeInt);
+    }
+
+    private void writeItemEnchantEffect(Item item) {
+        for (var op : item.getEnchantOptions()) {
+            writeInt(op);
+        }
+    }
+
+    private void writeItemElemental(Item item) {
+        writeShort(item.getAttackAttributeType().getClientId());
+        writeShort(item.getAttackAttributePower());
+        for (var type : AttributeType.ATTRIBUTE_TYPES) {
+            writeShort(item.getDefenceAttribute(type));
+        }
+    }
+
+    private void writeItemAugment(Item item) {
+        writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption1Id));
+        writeInt(zeroIfNullOrElse(item.getAugmentation(), VariationInstance::getOption2Id));
+    }
+
+    private int calculateMask(Item item) {
+        int mask = 0;
+        if (nonNull(item.getAugmentation())) {
+            mask |= ItemListType.AUGMENT_BONUS.getMask();
+        }
+
+        if (hasAttribute(item)) {
+            mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
+        }
+
+        if (nonNull(item.getEnchantOptions())) {
+            for (int id : item.getEnchantOptions()) {
+                if (id > 0) {
+                    mask |= ItemListType.ENCHANT_EFFECT.getMask();
+                    break;
+                }
+            }
+        }
+
+        // TODO VisualId
+        if(!item.getSpecialAbilities().isEmpty() || !item.getAdditionalSpecialAbilities().isEmpty()) {
+            mask |= ItemListType.SOUL_CRYSTAL.getMask();
+        }
+
+        if(item.getReuseDelay() > 0) {
+            mask |= ItemListType.REUSE_DELAY.getMask();
+        }
+
+        return mask;
+    }
+
+    private boolean hasAttribute(Item item) {
+        return (item.getAttackAttributeType() != NONE) || (item.getDefenceAttribute(AttributeType.FIRE) > 0) || (item.getDefenceAttribute(AttributeType.WATER) > 0) || (item.getDefenceAttribute(AttributeType.WIND) > 0) || (item.getDefenceAttribute(AttributeType.EARTH) > 0) || (item.getDefenceAttribute(AttributeType.HOLY) > 0) || (item.getDefenceAttribute(AttributeType.DARK) > 0);
     }
 
     protected void writeItem(Item item) {

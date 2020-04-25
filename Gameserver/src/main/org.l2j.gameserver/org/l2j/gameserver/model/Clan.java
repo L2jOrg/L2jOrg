@@ -30,8 +30,8 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanLeft;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanLvlUp;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
-import org.l2j.gameserver.model.itemcontainer.ClanWarehouse;
-import org.l2j.gameserver.model.itemcontainer.ItemContainer;
+import org.l2j.gameserver.model.item.container.ClanWarehouse;
+import org.l2j.gameserver.model.item.container.Warehouse;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.variables.ClanVariables;
@@ -119,7 +119,7 @@ public class Clan implements IIdentifiable, INamable {
 
     private static final int MAX_NOTICE_LENGTH = 8192;
     private final IntMap<ClanMember> members = new CHashIntMap<>();
-    private final ItemContainer warehouse = new ClanWarehouse(this);
+    private final Warehouse warehouse = new ClanWarehouse(this);
     private final IntMap<ClanWar> _atWarWith = new CHashIntMap<>();
     private final IntMap<Skill> _skills = new CHashIntMap<>();
     private final IntMap<RankPrivs> privs = new CHashIntMap<>();
@@ -921,7 +921,7 @@ public class Clan implements IIdentifiable, INamable {
         return data.toString();
     }
 
-    public ItemContainer getWarehouse() {
+    public Warehouse getWarehouse() {
         return warehouse;
     }
 

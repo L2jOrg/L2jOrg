@@ -1,6 +1,6 @@
 package org.l2j.gameserver.enums;
 
-import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid

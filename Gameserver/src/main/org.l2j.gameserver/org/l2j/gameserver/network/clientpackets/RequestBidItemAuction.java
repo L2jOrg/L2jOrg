@@ -2,9 +2,9 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemauction.ItemAuction;
-import org.l2j.gameserver.model.itemauction.ItemAuctionInstance;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.item.auction.ItemAuction;
+import org.l2j.gameserver.model.item.auction.ItemAuctionInstance;
+import org.l2j.gameserver.model.item.container.Inventory;
 
 /**
  * @author Forsaiken

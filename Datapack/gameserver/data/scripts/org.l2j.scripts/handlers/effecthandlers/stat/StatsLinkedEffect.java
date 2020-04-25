@@ -2,21 +2,10 @@ package handlers.effecthandlers.stat;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
-import org.l2j.gameserver.enums.StatModifierType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.conditions.Condition;
-import org.l2j.gameserver.model.conditions.ConditionUsingItemType;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.items.type.ArmorType;
-import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.stats.Stat;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import static org.l2j.commons.util.Util.SPACE;
 
 /**
  * @author JoeAlisson

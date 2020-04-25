@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.entity.FortSiege;
 import org.l2j.gameserver.model.entity.Siegable;
-import org.l2j.gameserver.model.items.BodyPart;
+import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;

@@ -2,8 +2,8 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.Weapon;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;

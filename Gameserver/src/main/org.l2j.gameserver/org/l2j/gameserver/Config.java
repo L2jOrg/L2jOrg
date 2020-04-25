@@ -369,7 +369,6 @@ public final class Config {
     public static int GRID_NEIGHBOR_TURNOFF_TIME;
     public static int PEACE_ZONE_MODE;
 
-    public static boolean ALLOW_WAREHOUSE;
     public static boolean WAREHOUSE_CACHE;
     public static int WAREHOUSE_CACHE_TIME;
     public static boolean ALLOW_REFUND;
@@ -1285,7 +1284,6 @@ public final class Config {
         GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
         PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
 
-        ALLOW_WAREHOUSE = General.getBoolean("AllowWarehouse", true);
         WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
         WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
         ALLOW_REFUND = General.getBoolean("AllowRefund", true);

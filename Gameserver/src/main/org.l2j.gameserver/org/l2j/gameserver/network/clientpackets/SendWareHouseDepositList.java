@@ -1,167 +1,169 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.itemcontainer.PcWarehouse;
-import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.container.PlayerInventory;
+import org.l2j.gameserver.model.item.container.Warehouse;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.network.serverpackets.items.WarehouseDone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * SendWareHouseDepositList client packet class.
- */
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+import static org.l2j.gameserver.util.GameUtils.handleIllegalPlayerAction;
+import static org.l2j.gameserver.util.GameUtils.isWarehouseManager;
+
 public final class SendWareHouseDepositList extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(SendWareHouseDepositList.class);
     private static final int BATCH_LENGTH = 12;
 
-    private List<ItemHolder> _items = null;
+    private List<ItemHolder> items = null;
 
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int size = readInt();
-        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != available())) {
+        if (size <= 0 || size > Config.MAX_ITEM_IN_PACKET || size * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
-        _items = new ArrayList<>(size);
+        items = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
             final int objId = readInt();
             final long count = readLong();
-            if ((objId < 1) || (count < 0)) {
-                _items = null;
+            if (objId < 1 || count < 0) {
+                items = null;
                 throw new InvalidDataPacketException();
             }
-            _items.add(new ItemHolder(objId, count));
+            items.add(new ItemHolder(objId, count));
         }
     }
 
     @Override
     public void runImpl() {
-        if (_items == null) {
+        if (isNullOrEmpty(items)) {
             return;
         }
 
-        final Player player = client.getPlayer();
-        if (player == null) {
-            return;
+        final var player = client.getPlayer();
+        final var warehouse = player.getActiveWarehouse();
+        final var manager = player.getLastFolkNPC();
+
+        var inventory = player.getInventory();
+        try {
+
+            inventory.setInventoryBlock(StreamUtil.collectToSet(items.stream().mapToInt(ItemHolder::getId)), InventoryBlockType.BLACKLIST);
+
+            if (isNull(warehouse) || !checkWarehouseManager(manager, player) ||  !checkTransanction(warehouse, manager)) {
+                client.sendPacket(new WarehouseDone(false));
+                return;
+            }
+
+            deposit(player, warehouse, manager, inventory);
+
+            client.sendPacket(new WarehouseDone(true));
+            client.sendPacket(SystemMessageId.ITEM_HAS_BEEN_STORED_SUCCESSFULLY);
+        } finally {
+            inventory.unblock();
+        }
+    }
+
+    private void deposit(Player player, Warehouse warehouse, Npc manager, PlayerInventory inventory) {
+        final var inventoryUpdate = new InventoryUpdate();
+        for (ItemHolder i : items) {
+            var modifiedItem = inventory.getItemByObjectId(i.getId());
+            inventory.transferItem(warehouse.getName(), i.getId(), i.getCount(), warehouse, player, manager);
+
+            if(nonNull(inventory.getItemByObjectId(i.getId()))) {
+                inventoryUpdate.addModifiedItem(modifiedItem);
+            } else {
+                inventoryUpdate.addRemovedItem(modifiedItem);
+            }
+        }
+        player.sendInventoryUpdate(inventoryUpdate);
+    }
+
+    private boolean checkWarehouseManager(Npc manager, Player player) {
+        return player.isGM() || (isWarehouseManager(manager) && manager.canInteract(player));
+    }
+
+    private boolean checkTransanction(Warehouse warehouse, Npc manager) {
+        final var player = client.getPlayer();
+
+        if (nonNull(player.getActiveTradeList())) {
+            return false;
+        }
+
+        if (!warehouse.isPrivate() && !player.getAccessLevel().allowTransaction()) {
+            player.sendMessage("Transactions are disabled for your Access Level.");
+            return false;
+        }
+
+        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (player.getReputation() < 0)) {
+            return false;
+        }
+
+        if (player.hasItemRequest()) {
+            handleIllegalPlayerAction(player, "Player " + player + " tried to use enchant Exploit!");
+            return false;
         }
 
         if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit")) {
             player.sendMessage("You are depositing items too fast.");
-            return;
+            return false;
         }
+        return checkItemsAndCharge(warehouse, player, manager);
+    }
 
-        final ItemContainer warehouse = player.getActiveWarehouse();
-        if (warehouse == null) {
-            return;
-        }
-        final boolean isPrivate = warehouse instanceof PcWarehouse;
-
-        final Npc manager = player.getLastFolkNPC();
-        if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM()) {
-            return;
-        }
-
-        if (!isPrivate && !player.getAccessLevel().allowTransaction()) {
-            player.sendMessage("Transactions are disabled for your Access Level.");
-            return;
-        }
-
-        if (player.hasItemRequest()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!");
-            return;
-        }
-
-        // Alt game - Karma punishment
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (player.getReputation() < 0)) {
-            return;
-        }
-
-        // Freight price from config or normal price per item slot (30)
-        final long fee = _items.size() * 30;
-        long currentAdena = player.getAdena();
+    private boolean checkItemsAndCharge(Warehouse warehouse, Player player, Npc manager) {
+        final long fee = items.size() * 30;
+        final var inventory = player.getInventory();
+        long currentAdena = inventory.getAdena();
         int slots = 0;
 
-        for (ItemHolder i : _items) {
+        for (ItemHolder i : items) {
             final Item item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
-            if (item == null) {
-                LOGGER.warn("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
-                return;
+            if (isNull(item)) {
+                LOGGER.warn("Error depositing a warehouse object for player {} (validity check)", player);
+                return false;
             }
 
-            // Calculate needed adena and slots
+            if (!item.isDepositable(warehouse.getType()) || !inventory.isNotInUse(item)) {
+                return false;
+            }
+
             if (item.getId() == CommonItem.ADENA) {
                 currentAdena -= i.getCount();
             }
+
             if (!item.isStackable()) {
                 slots += i.getCount();
-            } else if (warehouse.getItemByItemId(item.getId()) == null) {
+            } else if (isNull(warehouse.getItemByItemId(item.getId()))) {
                 slots++;
             }
         }
 
-        // Item Max Limit Check
         if (!warehouse.validateCapacity(slots)) {
             client.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
-            return;
+            return false;
         }
 
-        // Check if enough adena and charge the fee
-        if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
+        if (currentAdena < fee || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
             client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
-            return;
+            return false;
         }
-
-        // get current tradelist if any
-        if (player.getActiveTradeList() != null) {
-            return;
-        }
-
-        // Proceed to the transfer
-        final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-        for (ItemHolder i : _items) {
-            // Check validity of requested item
-            final Item oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
-            if (oldItem == null) {
-                LOGGER.warn("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
-                return;
-            }
-
-            if (!oldItem.isDepositable(isPrivate) || !oldItem.isAvailable(player, true, isPrivate)) {
-                continue;
-            }
-
-            final Item newItem = player.getInventory().transferItem(warehouse.getName(), i.getId(), i.getCount(), warehouse, player, manager);
-            if (newItem == null) {
-                LOGGER.warn("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
-                continue;
-            }
-
-            if (playerIU != null) {
-                if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
-                    playerIU.addModifiedItem(oldItem);
-                } else {
-                    playerIU.addRemovedItem(oldItem);
-                }
-            }
-        }
-
-        // Send updated item list to the player
-        if (playerIU != null) {
-            player.sendInventoryUpdate(playerIU);
-        } else {
-            player.sendItemList();
-        }
+        return true;
     }
 }

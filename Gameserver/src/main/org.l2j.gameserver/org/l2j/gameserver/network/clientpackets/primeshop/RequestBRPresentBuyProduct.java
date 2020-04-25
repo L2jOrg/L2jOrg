@@ -8,7 +8,7 @@ import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2j.gameserver.model.entity.Message;
-import org.l2j.gameserver.model.itemcontainer.Mail;
+import org.l2j.gameserver.model.item.container.Mail;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
 import org.l2j.gameserver.model.primeshop.PrimeShopProduct;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;

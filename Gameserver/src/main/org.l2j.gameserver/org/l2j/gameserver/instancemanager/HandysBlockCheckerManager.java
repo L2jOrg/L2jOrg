@@ -22,7 +22,7 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.itemcontainer.PlayerInventory;
+import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameAddPlayer;

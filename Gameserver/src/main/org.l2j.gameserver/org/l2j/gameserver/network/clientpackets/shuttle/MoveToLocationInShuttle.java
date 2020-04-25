@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.shuttle;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.shuttle.ExMoveToLocationInShuttle;

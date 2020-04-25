@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.interfaces.IStorable;
-import org.l2j.gameserver.model.itemcontainer.ItemContainer;
+import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;

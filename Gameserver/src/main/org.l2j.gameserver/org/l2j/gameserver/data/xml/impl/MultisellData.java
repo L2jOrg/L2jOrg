@@ -9,8 +9,8 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.*;
-import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.enchant.EnchantItemGroup;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.enchant.EnchantItemGroup;
 import org.l2j.gameserver.network.serverpackets.MultiSellList;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -30,7 +30,7 @@ import java.util.Map;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.gameserver.model.items.BodyPart.FULL_ARMOR;
+import static org.l2j.gameserver.model.item.BodyPart.FULL_ARMOR;
 
 public final class MultisellData extends GameXmlReader {
     public static final int PAGE_SIZE = 40;

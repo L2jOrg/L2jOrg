@@ -22,18 +22,19 @@ public class Die extends ServerPacket {
     private final boolean isSweepable;
     private int flags = 0;
 
-    public Die(Creature activeChar) {
-        objectId = activeChar.getObjectId();
-        isSweepable = isAttackable(activeChar) && activeChar.isSweepActive();
+    public Die(Creature creature) {
+        objectId = creature.getObjectId();
+        isSweepable = isAttackable(creature) && creature.isSweepActive();
 
-        if (isPlayer(activeChar)) {
-            final Clan clan = activeChar.getActingPlayer().getClan();
+        if (isPlayer(creature)) {
+            final var player = creature.getActingPlayer();
+            final Clan clan = player.getClan();
             boolean isInCastleDefense = false;
             boolean isInFortDefense = false;
 
             SiegeClanData siegeClan = null;
-            final Castle castle = CastleManager.getInstance().getCastle(activeChar);
-            final Fort fort = FortDataManager.getInstance().getFort(activeChar);
+            final Castle castle = CastleManager.getInstance().getCastle(creature);
+            final Fort fort = FortDataManager.getInstance().getFort(creature);
             if ((castle != null) && castle.getSiege().isInProgress()) {
                 siegeClan = castle.getSiege().getAttackerClan(clan);
                 isInCastleDefense = (siegeClan == null) && castle.getSiege().checkIsDefender(clan);
@@ -45,8 +46,8 @@ public class Die extends ServerPacket {
             flags += nonNull(clan) && clan.getHideoutId() > 0 ? 2 : 0; // clan hall
             flags += (nonNull(clan) && (clan.getCastleId() > 0)) || isInCastleDefense ? 4 : 0; // castle
             flags += (nonNull(clan) && (clan.getFortId() > 0)) || isInFortDefense ? 8 : 0; // fortress
-            flags += nonNull(siegeClan) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlags().isEmpty() ? 16 : 0; // outpost
-            flags += activeChar.getAccessLevel().allowFixedRes() || activeChar.getInventory().haveItemForSelfResurrection() ? 32 : 0; // feather
+            flags += nonNull(siegeClan) && !isInFortDefense && !siegeClan.getFlags().isEmpty() ? 16 : 0; // outpost
+            flags += creature.getAccessLevel().allowFixedRes() || player.getInventory().haveItemForSelfResurrection() ? 32 : 0; // feather
         }
     }
 

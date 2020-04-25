@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.model.items.EtcItem;
+import org.l2j.gameserver.model.item.EtcItem;
 
 import java.util.HashMap;
 import java.util.Map;

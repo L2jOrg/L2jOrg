@@ -19,8 +19,8 @@ package org.l2j.gameserver.model.holders;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.items.CommonItem;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.container.ItemContainer;
 
 import java.util.ArrayList;
 import java.util.List;

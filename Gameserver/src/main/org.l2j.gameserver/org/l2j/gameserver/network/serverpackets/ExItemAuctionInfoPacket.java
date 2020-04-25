@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.model.itemauction.ItemAuction;
-import org.l2j.gameserver.model.itemauction.ItemAuctionBid;
-import org.l2j.gameserver.model.itemauction.ItemAuctionState;
+import org.l2j.gameserver.model.item.auction.ItemAuction;
+import org.l2j.gameserver.model.item.auction.ItemAuctionBid;
+import org.l2j.gameserver.model.item.auction.ItemAuctionState;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 

@@ -2,9 +2,9 @@ package org.l2j.gameserver.engine.item.container.listener;
 
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.enums.InventorySlot;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.item.container.Inventory;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.WeaponType;
 
 import static org.l2j.commons.util.Util.doIfNonNull;
 

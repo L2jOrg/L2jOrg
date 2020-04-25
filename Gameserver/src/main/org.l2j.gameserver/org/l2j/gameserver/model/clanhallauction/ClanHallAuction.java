@@ -22,7 +22,7 @@ import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.ClanHall;
-import org.l2j.gameserver.model.items.CommonItem;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.items.PcItemTemplate;
+import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;

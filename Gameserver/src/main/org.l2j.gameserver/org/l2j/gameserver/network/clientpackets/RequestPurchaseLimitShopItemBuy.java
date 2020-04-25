@@ -16,7 +16,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
     }
 
     @Override
-    protected void runImpl() throws Exception {
+    protected void runImpl() {
         final Player player = client.getPlayer();
         if (player == null) {
             return;

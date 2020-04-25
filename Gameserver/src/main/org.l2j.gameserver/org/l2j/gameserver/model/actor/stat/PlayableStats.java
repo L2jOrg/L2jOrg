@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.items.Weapon;
+import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;

@@ -3,11 +3,11 @@ package org.l2j.gameserver.model.buylist;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.items.BodyPart;
-import org.l2j.gameserver.model.items.EquipableItem;
-import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.type.CrystalType;
-import org.l2j.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.EquipableItem;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.type.CrystalType;
+import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

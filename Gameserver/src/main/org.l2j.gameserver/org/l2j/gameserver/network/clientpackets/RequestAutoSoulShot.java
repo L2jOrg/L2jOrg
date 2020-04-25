@@ -4,8 +4,8 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import java.util.function.ToIntFunction;
@@ -49,7 +49,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
         }
 
         if (enable) {
-            if (!player.getInventory().canManipulate(item)) {
+            if (player.getInventory().isBlocked(item)) {
                 player.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
                 return;
             }

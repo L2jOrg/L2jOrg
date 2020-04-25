@@ -5,7 +5,7 @@ import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.Weapon;
+import org.l2j.gameserver.model.item.Weapon;
 import org.w3c.dom.Node;
 
 /**

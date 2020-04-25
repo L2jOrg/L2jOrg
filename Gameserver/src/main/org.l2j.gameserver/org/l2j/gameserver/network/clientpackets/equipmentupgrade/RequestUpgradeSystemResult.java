@@ -4,7 +4,7 @@ import org.l2j.gameserver.data.xml.impl.EquipmentUpgradeData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.EquipmentUpgradeHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.equipmentupgrade.ExUpgradeSystemResult;
 

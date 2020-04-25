@@ -20,7 +20,7 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.CommonItem;
+import org.l2j.gameserver.model.item.CommonItem;
 
 import java.util.HashMap;
 import java.util.Map;

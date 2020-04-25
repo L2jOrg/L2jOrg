@@ -51,6 +51,10 @@ public class Util {
         return isNull(obj) ? Collections.emptySet() : function.apply(obj);
     }
 
+    public static <T, R> Collection<R> emptyIfNullOrElse(T obj, Function<T, Collection<R>> function) {
+        return isNull(obj) ?  Collections.emptyList() : function.apply(obj);
+    }
+
     public static <T, R> R computeIfNonNull(T obj, Function<T, R> function) {
         return isNull(obj) ? null : function.apply(obj);
     }

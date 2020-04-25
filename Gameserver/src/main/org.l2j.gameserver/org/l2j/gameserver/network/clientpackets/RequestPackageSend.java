@@ -4,10 +4,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.itemcontainer.ItemContainer;
-import org.l2j.gameserver.model.itemcontainer.PcFreight;
-import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.container.ItemContainer;
+import org.l2j.gameserver.model.item.container.PlayerFreight;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -88,7 +88,7 @@ public class RequestPackageSend extends ClientPacket {
         long currentAdena = player.getAdena();
         int slots = 0;
 
-        final ItemContainer warehouse = new PcFreight(_objectId);
+        final ItemContainer warehouse = new PlayerFreight(_objectId);
         for (ItemHolder i : _items) {
             // Check validity of requested item
             final Item item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");

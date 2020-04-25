@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
-import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 

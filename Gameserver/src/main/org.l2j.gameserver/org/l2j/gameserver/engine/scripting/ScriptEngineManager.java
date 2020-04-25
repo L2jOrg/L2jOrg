@@ -124,7 +124,7 @@ public final class ScriptEngineManager  {
             try {
                 final Map<Path, Throwable> invokationErrors = currentExecutionContext.executeScripts(entry.getValue());
                 for (Entry<Path, Throwable> entry2 : invokationErrors.entrySet()) {
-                    LOGGER.warn("{} failed execution! {}", entry2.getKey(), entry2.getValue());
+                    LOGGER.warn("{} failed execution!", entry2.getKey(), entry2.getValue());
                 }
             } finally {
                 currentExecutionContext = null;

@@ -1,24 +1,21 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.enums.InventorySlot;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.BodyPart;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.ArmorType;
-import org.l2j.gameserver.engine.skill.api.SkillCondition;
-import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.container.Inventory;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.ArmorType;
 import org.w3c.dom.Node;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**

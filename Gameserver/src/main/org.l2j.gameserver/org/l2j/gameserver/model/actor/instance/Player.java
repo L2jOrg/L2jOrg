@@ -59,12 +59,13 @@ import org.l2j.gameserver.model.events.impl.character.player.*;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.itemcontainer.*;
-import org.l2j.gameserver.model.items.*;
-import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.model.items.type.ArmorType;
-import org.l2j.gameserver.model.items.type.EtcItemType;
-import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.item.*;
+import org.l2j.gameserver.model.item.container.Warehouse;
+import org.l2j.gameserver.model.item.container.*;
+import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.item.type.ArmorType;
+import org.l2j.gameserver.model.item.type.EtcItemType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
@@ -131,7 +132,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
-import static org.l2j.gameserver.model.items.BodyPart.*;
+import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -612,6 +613,10 @@ public final class Player extends Playable {
         return costumesCollections.size();
     }
 
+    public Collection<Item> getDepositableItems(WarehouseType type) {
+        return inventory.getDepositableItems(type);
+    }
+
     public static Player create(PlayerData playerData, PlayerTemplate template) {
         final Player player = new Player(playerData, template);
         player.setRecomLeft(20);
@@ -706,7 +711,7 @@ public final class Player extends Playable {
      **/
     private final Location _lastServerPosition = new Location(0, 0, 0);
     private final PlayerInventory inventory = new PlayerInventory(this);
-    private final PcFreight _freight = new PcFreight(this);
+    private final PlayerFreight _freight = new PlayerFreight(this);
     /**
      * The table containing all Quests began by the Player
      */
@@ -872,11 +877,11 @@ public final class Player extends Playable {
      **/
     private ScheduledFuture<?> _recoGiveTask;
     private ScheduledFuture<?> _onlineTimeUpdateTask;
-    private PcWarehouse _warehouse;
-    private PcRefund _refund;
+    private PlayerWarehouse _warehouse;
+    private PlayerRefund _refund;
     private PrivateStoreType privateStoreType = PrivateStoreType.NONE;
     private TradeList activeTradeList;
-    private ItemContainer _activeWarehouse;
+    private Warehouse activeWarehouse;
     private volatile Map<Integer, ManufactureItem> _manufactureItems;
 
     // Clan related attributes
@@ -2716,9 +2721,9 @@ public final class Player extends Playable {
     /**
      * @return the PcWarehouse object of the Player.
      */
-    public PcWarehouse getWarehouse() {
+    public PlayerWarehouse getWarehouse() {
         if (_warehouse == null) {
-            _warehouse = new PcWarehouse(this);
+            _warehouse = new PlayerWarehouse(this);
             _warehouse.restore();
         }
         if (Config.WAREHOUSE_CACHE) {
@@ -2737,10 +2742,7 @@ public final class Player extends Playable {
         _warehouse = null;
     }
 
-    /**
-     * @return the PcFreight object of the Player.
-     */
-    public PcFreight getFreight() {
+    public PlayerFreight getFreight() {
         return _freight;
     }
 
@@ -2754,9 +2756,9 @@ public final class Player extends Playable {
     /**
      * @return refund object or create new if not exist
      */
-    public PcRefund getRefund() {
+    public PlayerRefund getRefund() {
         if (_refund == null) {
-            _refund = new PcRefund(this);
+            _refund = new PlayerRefund(this);
         }
         return _refund;
     }
@@ -3506,7 +3508,7 @@ public final class Player extends Playable {
     public Item checkItemManipulation(int objectId, long count, String action) {
         // TODO: if we remove objects that are not visible from the World, we'll have to remove this check
         if (World.getInstance().findObject(objectId) == null) {
-            LOGGER.debug(getObjectId() + ": player tried to " + action + " item not available in World");
+            LOGGER.debug("player {] tried to {} item not available in World", this, action);
             return null;
         }
 
@@ -4919,11 +4921,8 @@ public final class Player extends Playable {
         requestExpireTime = 0;
     }
 
-    /**
-     * @return active Warehouse.
-     */
-    public ItemContainer getActiveWarehouse() {
-        return _activeWarehouse;
+    public Warehouse getActiveWarehouse() {
+        return activeWarehouse;
     }
 
     /**
@@ -4931,8 +4930,8 @@ public final class Player extends Playable {
      *
      * @param warehouse
      */
-    public void setActiveWarehouse(ItemContainer warehouse) {
-        _activeWarehouse = warehouse;
+    public void setActiveWarehouse(Warehouse warehouse) {
+        activeWarehouse = warehouse;
     }
 
     /**
@@ -5108,7 +5107,7 @@ public final class Player extends Playable {
             setLvlJoinedAcademy(0);
             setApprentice(0);
             setSponsor(0);
-            _activeWarehouse = null;
+            activeWarehouse = null;
             return;
         }
 
@@ -10765,7 +10764,7 @@ public final class Player extends Playable {
     }
 
     public boolean hasItemRequest() {
-        return (requests != null) && requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+        return nonNull(requests) && requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
     }
 
     /**
@@ -10875,14 +10874,8 @@ public final class Player extends Playable {
         _questZoneId = id;
     }
 
-    /**
-     * @param iu
-     */
     public void sendInventoryUpdate(InventoryUpdate iu) {
-        sendPacket(iu);
-        sendPacket(new ExAdenaInvenCount(this));
-        sendPacket(new ExBloodyCoinCount());
-        sendPacket(new ExUserInfoInvenWeight(this));
+        sendPacket(iu, new ExAdenaInvenCount(this), new ExBloodyCoinCount(), new ExUserInfoInvenWeight(this));
     }
 
     public void sendItemList() {

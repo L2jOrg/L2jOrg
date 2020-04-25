@@ -5,6 +5,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import java.util.List;
 
 public class LCoinShopProductInfo {
+
     public enum Category {
         Equip,
         Special,
@@ -32,6 +33,18 @@ public class LCoinShopProductInfo {
 
     public int getId() {
         return id;
+    }
+
+    public int getRemainAmount() {
+        return limitPerDay; // TODO
+    }
+
+    public int getRemainTime() {
+        return -1; // TODO
+    }
+
+    public int getRemainServerItemAmount() {
+        return -1; // TODO
     }
 
     public Category getCategory() {

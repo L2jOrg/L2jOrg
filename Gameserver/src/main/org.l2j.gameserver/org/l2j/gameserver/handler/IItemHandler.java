@@ -1,7 +1,7 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.instance.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -2,8 +2,8 @@ package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
-import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.instance.Item;
 
 import java.util.Collection;
 import java.util.Collections;
