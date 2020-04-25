@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
     <spawn name="DarkElfTerritory">
+
         <group>
             <npc id="20105" x="-18324" y="52244" z="-3715" heading="17791" respawnTime="60sec"/> <!-- Dark Horror -->
             <npc id="20105" x="-18099" y="51224" z="-3705" heading="52967" respawnTime="60sec"/> <!-- Dark Horror -->
@@ -9,6 +10,20 @@
             <npc id="20105" x="-22554" y="50842" z="-3782" heading="29601" respawnTime="60sec"/> <!-- Dark Horror -->
             <npc id="20105" x="-21320" y="48790" z="-3771" heading="32739" respawnTime="60sec"/> <!-- Dark Horror -->
             <npc id="20105" x="-22759" y="52774" z="-3612" heading="26125" respawnTime="60sec"/> <!-- Dark Horror -->
+
         </group>
+
+    </spawn>
+    <spawn name="DarkElfRegion">
+        <territories>
+            <territory minZ="-3764" maxZ="-3314">
+                <node x="8052" y="24820"/>
+                <node x="11076" y="24872"/>
+                <node x="15976" y="29020"/>
+                <node x="10076" y="29568"/>
+                <node x="5496" y="26128" />
+            </territory>
+        </territories>
+        <npc id="20004" count="100" respawnTime="60"/>
     </spawn>
 </list>
