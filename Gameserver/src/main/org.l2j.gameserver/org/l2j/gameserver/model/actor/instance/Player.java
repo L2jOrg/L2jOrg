@@ -163,6 +163,7 @@ public final class Player extends Playable {
     private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
     private IntMap<CostumeCollectionData> costumesCollections  = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection = CostumeCollectionData.DEFAULT;
+    private IntSet teleportFavorites;
 
     private Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -576,6 +577,7 @@ public final class Player extends Playable {
 
     public void removeCostume(int id) {
         costumes.remove(id);
+        getDAO(PlayerDAO.class).removeCostume(objectId, id);
     }
 
     public boolean setActiveCostumesCollection(int collectionId) {
@@ -611,6 +613,18 @@ public final class Player extends Playable {
     
     public int getCostumeCollectionAmount() {
         return costumesCollections.size();
+    }
+
+    public void addTeleportFavorite(int teleportId) {
+        teleportFavorites.add(teleportId);
+    }
+
+    public void removeTeleportFavorite(int teleportId) {
+        teleportFavorites.remove(teleportId);
+    }
+
+    public IntSet getTeleportFavorites() {
+        return teleportFavorites;
     }
 
     public Collection<Item> getDepositableItems(WarehouseType type) {
@@ -1105,6 +1119,8 @@ public final class Player extends Playable {
             player.statsData = PlayerStatsData.init(objectId);
             player.updateCharacteristicPoints();
         }
+
+        player.teleportFavorites = playerDAO.findTeleportFavorites(objectId);
 
         player.setHeading(character.getHeading());
         player.getStats().setExp(character.getExp());
@@ -5831,14 +5847,23 @@ public final class Player extends Playable {
 
         shortcuts.storeMe();
         getDAO(PlayerVariablesDAO.class).save(variables);
-        getDAO(PlayerDAO.class).save(statsData);
+
+        final var playerDAO = getDAO(PlayerDAO.class);
+        playerDAO.save(statsData);
+
         if(!costumes.isEmpty()) {
-            getDAO(PlayerDAO.class).save(costumes.values());
+            playerDAO.save(costumes.values());
         }
+
         if(CostumeCollectionData.DEFAULT.equals(activeCostumesCollection)) {
-            getDAO(PlayerDAO.class).deleteCostumeCollection(objectId);
+            playerDAO.deleteCostumeCollection(objectId);
         } else {
-            getDAO(PlayerDAO.class).save(activeCostumesCollection);
+            playerDAO.save(activeCostumesCollection);
+        }
+
+        playerDAO.removeTeleportFavorites(objectId);
+        if(!teleportFavorites.isEmpty()) {
+            playerDAO.saveTeleportFavorites(objectId, teleportFavorites);
         }
 
         storeRecommendations();
@@ -11198,4 +11223,5 @@ public final class Player extends Playable {
         }
         return 0;
     }
+
 }

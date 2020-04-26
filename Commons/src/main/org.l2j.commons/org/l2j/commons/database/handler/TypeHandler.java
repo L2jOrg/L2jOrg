@@ -14,6 +14,7 @@ import java.util.Map;
  */
 public interface TypeHandler<T> {
 
+    @SuppressWarnings("rawTypes")
     Map<String, TypeHandler> MAP = new HashMap<>();
 
     T defaultValue();

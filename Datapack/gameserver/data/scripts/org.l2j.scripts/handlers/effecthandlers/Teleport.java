@@ -1,6 +1,6 @@
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.data.xml.impl.TeleportListData;
+import org.l2j.gameserver.data.xml.impl.TeleportEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.Location;
@@ -47,7 +47,7 @@ public final class Teleport extends AbstractEffect {
             var request = player.getRequest(TeleportRequest.class);
             if(nonNull(request)) {
                 player.removeRequest(TeleportRequest.class);
-                TeleportListData.getInstance().getInfo(request.getTeleportId()).ifPresent(loc -> effected.teleToLocation(loc.getLocation(), true, null));
+                TeleportEngine.getInstance().getInfo(request.getTeleportId()).ifPresent(loc -> effected.teleToLocation(loc.getLocation(), true, null));
             }
         } else {
             effected.teleToLocation(loc, true, null);

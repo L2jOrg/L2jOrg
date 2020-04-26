@@ -1,7 +1,7 @@
 package org.l2j.commons.database.handler;
 
-import io.github.joealisson.primitive.IntSet;
 import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.helpers.QueryDescriptor;
 
 import java.sql.PreparedStatement;
@@ -40,7 +40,7 @@ public class IntSetHandler implements TypeHandler<IntSet> {
 
     @Override
     public void setParameter(PreparedStatement statement, int parameterIndex, IntSet arg) {
-        throw new UnsupportedOperationException();
+
     }
 
     @Override

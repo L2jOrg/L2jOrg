@@ -2,276 +2,352 @@
 
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/teleports.xsd" >
 
-	<!-- Update 270 Prot -->
-	<!-- Many changes - not suitable for 245 Prot -->
-    <teleport id="419" price="50000">
-        <location x="111541" y="139977" z="-3480"/>
+    <teleport id="181" price="22500"> <!-- Town of Goddard -->
+        <location x="147961" y="-55309" z="-2728"/>
     </teleport>
-    <teleport id="420" price="50000">
-        <location x="107386" y="145807" z="-3296"/>
+
+    <teleport id="195" price="34200"> <!-- Varkas Silenos -->
+        <location x="125740" y="-40864" z="-3736"/>
     </teleport>
-    <teleport id="421" price="50000">
-        <location x="111003" y="148054" z="-3184"/>
+
+    <teleport id="184" price="34200"> <!-- Hot springs -->
+        <location x="144880" y="-113468" z="-2560"/>
     </teleport>
-    <teleport id="181" price="22500">
-        <location x="148024" y="-55281" z="-2728"/>
+
+    <teleport id="189" price="34200"> <!-- Ketra Orc -->
+        <location x="146990" y="-67128" z="-3460"/>
     </teleport>
-    <teleport id="37" price="12000">
-        <location x="-12787" y="122779" z="-3114"/>
+
+    <teleport id="190" price="15300"> <!-- Imperial Tomb  -->
+        <location x="186699" y="-75915" z="-2824"/>
     </teleport>
-    <teleport id="25" price="22500">
-        <location x="83378" y="148017" z="-3400"/>
+
+    <teleport id="186" price="15300"> <!-- Forge of Gods  -->
+        <location x="173494" y="-115521" z="-3760"/>
     </teleport>
-    <teleport id="7" price="12000">
-        <location x="18832" y="145284" z="-3128"/>
+
+    <teleport id="193" price="15300"> <!-- Wall of Argos -->
+        <location x="165054" y="-47861" z="-3560"/>
     </teleport>
-    <teleport id="321" price="22500">
-        <location x="147312" y="25816" z="-2008"/>
-    </teleport> 
-    <teleport id="82" price="12000">
-        <location x="82700" y="53564" z="-1488"/>
+
+    <teleport id="37" price="12000"> <!-- Gludio -->
+        <location x="-14424" y="123972" z="-3120"/>
     </teleport>
-    <teleport id="35" price="11200">
-        <location x="-80684" y="149770" z="-3043"/>
+
+    <teleport id="34" price="1650"> <!-- Ant Nest -->
+        <location x="-9970" y="175793" z="-4128"/>
     </teleport>
-    <teleport id="108" price="11200">
-        <location x="116852" y="76480" z="-2728"/>
+
+    <teleport id="62" price="1650"> <!-- Windwood -->
+        <location x="-23789" y="169683" z="-3424"/>
     </teleport>
-    <teleport id="75" price="7200">
-        <location x="9915" y="12836" z="-4500"/>
+
+    <teleport id="413" price="1650"> <!-- Southern Entrance wasteland -->
+        <location x="-16730" y="209417" z="-3664"/>
     </teleport>
-    <teleport id="140" price="7200">
-        <location x="115464" y="-178608" z="-928"/>
+
+    <teleport id="32" price="500"> <!-- Ruins of Agony    -->
+        <location x="-41137" y="122778" z="-2912"/>
     </teleport>
-    <teleport id="49" price="7200">
-        <location x="-84064" y="243324" z="-3728"/>
+
+    <teleport id="36" price="3000"> <!-- gludin harbor  -->
+        <location x="-91080" y="149860" z="-3624"/>
     </teleport>
-    <teleport id="70" price="7200">
-        <location x="45300" y="48340" z="-3056"/>
+
+    <teleport id="25" price="22500"> <!-- Giran -->
+        <location x="83386" y="148014" z="-3400"/>
     </teleport>
-    <teleport id="131" price="7200">
-        <location x="-45158" y="-112583" z="-236"/>
+
+    <teleport id="422" price="1650"> <!-- Giran Siege Barraks-->
+        <location x="107698" y="143854" z="-3440"/>
     </teleport>
-    <teleport id="422" price="1650">
-        <location x="107698" y="143854" z="-3464"/>
+
+    <teleport id="19" price="34200"> <!-- Antharas Lair    -->
+        <location x="132219" y="114392" z="-3720"/>
     </teleport>
-    <teleport id="53" price="500">
-        <location x="-113281" y="229862" z="-3688"/>
+
+    <teleport id="18" price="34200"> <!-- Dragon Valley -->
+        <location x="73024" y="118485" z="-3696"/>
     </teleport>
-    <teleport id="55" price="500">
-        <location x="-104344" y="224017" z="-3616"/>
+
+    <teleport id="404" price="15300"> <!-- wind plateau -->
+        <location x="177347" y="173049" z="-1920"/>
     </teleport>
-    <teleport id="56" price="500">
-        <location x="-95336" y="241278" z="-3264"/>
+
+    <teleport id="405" price="15300"> <!-- garden of eva -->
+        <location x="82098" y="252437" z="-10592"/>
     </teleport>
-    <teleport id="409" price="500">
-        <location x="-111728" y="244330" z="-3448"/>
+
+    <teleport id="23" price="15300"> <!-- devil isle    -->
+        <location x="43408" y="206881" z="-3752"/>
     </teleport>
-    <teleport id="316" price="500">
-        <location x="-99586" y="237637" z="-3568"/>
+
+    <teleport id="317" price="3900"> <!-- alligator island -->
+        <location x="115583" y="192261" z="-3488"/>
     </teleport>
-    <teleport id="403" price="15300">
-        <location x="-55346" y="76924" z="-3160"/>
+
+    <teleport id="21" price="1650"> <!-- death pass -->
+        <location x="70610" y="118363" z="-3664"/>
     </teleport>
-    <teleport id="402" price="6750">
-        <location x="-24976" y="76325" z="-3528"/>
+
+    <teleport id="29" price="1650"> <!-- Gorgon Flower  -->
+        <location x="102369" y="137818" z="-3328"/>
     </teleport>
-    <teleport id="320" price="500">
-        <location x="-60023" y="68791" z="-3383"/>
+
+    <teleport id="24" price="3000"> <!-- Giran Harbor  -->
+        <location x="47935" y="186810" z="-3480"/>
     </teleport>
-    <teleport id="410" price="500">
-        <location x="-21472" y="36244" z="-2794"/>
+
+    <teleport id="17" price="3000"> <!-- Hardins Academy   -->
+        <location x="105819" y="109759" z="-3192"/>
     </teleport>
-    <teleport id="77" price="500">
-        <location x="-18956" y="44011" z="-3688"/>
-    </teleport> 
-    <teleport id="318" price="500">
-        <location x="-17957" y="15032" z="-3720"/>
+
+    <teleport id="7" price="12000"> <!-- Dion  -->
+        <location x="15689" y="142953" z="-2696"/>
     </teleport>
-    <teleport id="66" price="500">
-        <location x="-9963" y="75186" z="-3592"/>
-    </teleport> 
-    <teleport id="71" price="500">
-        <location x="23210" y="70389" z="-3776"/>
-    </teleport> 
-    <teleport id="68" price="500">
-        <location x="27007" y="44611" z="-3688"/>
+
+    <teleport id="4" price="1650"> <!-- Cruma -->
+        <location x="15233" y="114153" z="-3576"/>
     </teleport>
-    <teleport id="34" price="1650">
-        <location x="-17158" y="170909" z="-4160"/>
+
+    <teleport id="14" price="1650"> <!-- Plains Of Dion  -->
+        <location x="630" y="179184" z="-3720"/>
     </teleport>
-    <teleport id="62" price="1650">
-        <location x="-25775" y="160444" z="-2536"/>
+
+    <teleport id="11" price="1650"> <!-- Bee hive -->
+        <location x="20505" y="189036" z="-3368"/>
     </teleport>
-    <teleport id="413" price="1650">
-        <location x="-16730" y="209417" z="-3691"/>
+
+    <teleport id="3" price="1650"> <!-- Partisan Hideaway    -->
+        <location x="46467" y="126885" z="-3720"/>
     </teleport>
-    <teleport id="32" price="500">
-        <location x="-45935" y="113955" z="-3528"/>
-    </teleport> 
-    <teleport id="36" price="3000">
-        <location x="-91101" y="150344" z="-3624"/>
+
+    <teleport id="321" price="22500"> <!-- Aden -->
+        <location x="146856" y="25803" z="-2008"/>
     </teleport>
-    <teleport id="38" price="1650">
-        <location x="-56726" y="136936" z="-2784"/>
+
+    <teleport id="218" price="15300"> <!-- Forgotten Island    -->
+        <location x="11560" y="-23942" z="-3640"/>
     </teleport>
-    <teleport id="57" price="1650">
-        <location x="-65419" y="99367" z="-3552"/>
+
+    <teleport id="102" price="15300"> <!-- Giants Cave    -->
+        <location x="177116" y="45786" z="-4168"/>
     </teleport>
-    <teleport id="46" price="1650">
-        <location x="-49332" y="207879" z="-3736"/>
+
+    <teleport id="115" price="15300"> <!-- Sillent valley  -->
+        <location x="184222" y="46666" z="-5864"/>
     </teleport>
-    <teleport id="58" price="1650">
-        <location x="-75311" y="169110" z="-3632"/>
+
+    <teleport id="119" price="6750"> <!-- War torn  -->
+        <location x="159795" y="21131" z="-3696"/>
     </teleport>
-    <teleport id="4" price="1650">
-        <location x="12019" y="119151" z="-3664"/>
-    </teleport> 
-    <teleport id="14" price="1650">
-        <location x="200" y="171030" z="-3464"/>
+
+    <teleport id="99" price="6750"> <!-- Blazing Swamp  -->
+        <location x="155310" y="-16339" z="-3320"/>
     </teleport>
-    <teleport id="11" price="1650">
-        <location x="28605" y="179103" z="-2976"/>
+
+    <teleport id="117" price="6750"> <!-- Plains of glory   -3592 -->
+        <location x="138989" y="19915" z="-3592"/>
     </teleport>
-    <teleport id="3" price="1650">
-        <location x="48789" y="118352" z="-2176"/>
-    </teleport> 
-    <teleport id="19" price="34200">
-        <location x="146911" y="116153" z="-720"/>
+
+    <teleport id="113" price="6750"> <!-- Ancient Battleground    -->
+        <location x="106517" y="-2871" z="-3416"/>
     </teleport>
-    <teleport id="18" price="34200">
-        <location x="97450" y="111357" z="-2440"/>
+
+    <teleport id="101" price="6750"> <!-- Seal of Shillen  -->
+        <location x="187383" y="20498" z="-3584"/>
     </teleport>
-    <teleport id="404" price="15300">
-        <location x="172231" y="173031" z="-3104"/>
+
+    <teleport id="98" price="6750"> <!-- Tower of Isolence  -->
+        <location x="114649" y="11115" z="-5120"/>
     </teleport>
-    <teleport id="405" price="15300">
-        <location x="83718" y="246559" z="-4104"/>
+
+    <teleport id="118" price="3900"> <!-- Fields of Massacre  -->
+        <location x="183543" y="-14974" z="-2768"/>
     </teleport>
-    <teleport id="23" price="15300">
-        <location x="48110" y="210873" z="-3592"/>
+
+    <teleport id="104" price="6750"> <!-- Cemetery  -->
+        <location x="183961" y="20303" z="-3168"/>
     </teleport>
-    <teleport id="317" price="3900">
-        <location x="119533" y="175106" z="-3488"/>
+
+    <teleport id="105" price="3900"> <!-- Forest of Mirrors -->
+        <location x="142065" y="81300" z="-3000"/>
     </teleport>
-    <teleport id="21" price="1650">
-        <location x="69572" y="116353" z="-3544"/>
+
+    <teleport id="324" price="3000"> <!--Coliseum  -->
+        <location x="146440" y="46723" z="-3432"/>
     </teleport>
-    <teleport id="29" price="1650">
-        <location x="107342" y="127544" z="-3540"/>
+
+    <teleport id="82" price="12000"> <!-- Oren  -->
+        <location x="82927" y="53255" z="-1488"/>
     </teleport>
-    <teleport id="24" price="3000">
-        <location x="47938" y="186864" z="-3420"/>
+
+    <teleport id="90" price="3900"> <!-- Ivory Tower Crater -->
+        <location x="92278" y="15469" z="-4384"/>
     </teleport>
-    <teleport id="17" price="3000">
-        <location x="105918" y="109759" z="-3170"/>
+
+    <teleport id="79" price="3900"> <!-- Sea of Spore -->
+        <location x="64328" y="26803" z="-3768"/>
     </teleport>
-    <teleport id="137" price="500">
-        <location x="-3269" y="-93279" z="-2368"/>
-    </teleport> 
-    <teleport id="133" price="500">
-        <location x="17714" y="-114263" z="-2536"/>
-    </teleport> 
-    <teleport id="136" price="500">
-        <location x="-22253" y="-133047" z="-2176"/>
-    </teleport> 
-    <teleport id="134" price="500">
-        <location x="10520" y="-138643" z="-1192"/>
-    </teleport> 
-    <teleport id="143" price="1650">
-        <location x="179484" y="-179810" z="3440"/>
+
+    <teleport id="84" price="3900"> <!--  Plains of lizardmen  -->
+        <location x="87252" y="85514" z="-3056"/>
     </teleport>
-    <teleport id="146" price="1650">
-        <location x="179684" y="-205789" z="-3384"/>
-    </teleport> 
-    <teleport id="142" price="500">
-        <location x="141715" y="-177212" z="-1536"/>
-    </teleport> 
-    <teleport id="145" price="500">
-        <location x="128725" y="-205789" z="-3408"/>
-    </teleport> 
-    <teleport id="90" price="3900">
-        <location x="85391" y="17028" z="-3640"/>
-    </teleport> 
-    <teleport id="79" price="3900">
-        <location x="53685" y="18631" z="-3104"/>
+
+    <teleport id="81" price="3000"> <!-- Ivory Tower -->
+        <location x="85391" y="16228" z="-3672"/>
     </teleport>
-    <teleport id="84" price="3900">
-        <location x="85959" y="75586" z="-3103"/>
-    </teleport> 
-    <teleport id="81" price="3000">
-        <location x="85760" y="-354" z="-3640"/>
-    </teleport> 
-    <teleport id="411" price="3900">
-        <location x="124904" y="61992" z="-3973"/>
+
+
+    <teleport id="35" price="11200"> <!-- Gludin  -->
+        <location x="-80684" y="149770" z="-3040"/>
     </teleport>
-    <teleport id="412" price="3900">
+
+    <teleport id="38" price="1650"> <!-- Abandoned Camp  -->
+        <location x="-46932" y="140883" z="-2936"/>
+    </teleport>
+
+    <teleport id="57" price="1650"> <!-- Fellmere Harvesting  -->
+        <location x="-70387" y="115501" z="-3472"/>
+    </teleport>
+
+    <teleport id="46" price="1650"> <!-- Langk Lizardmen  -->
+        <location x="-45210" y="202654" z="-3592"/>
+    </teleport>
+
+    <teleport id="58" price="1650"> <!-- Windmill Hill -->
+        <location x="-77643" y="166967" z="-3712"/>
+    </teleport>
+
+    <teleport id="108" price="11200"> <!-- Hunters Village -->
+        <location x="117051" y="76854" z="-2704"/>
+    </teleport>
+
+    <teleport id="411" price="3900"> <!-- South Enchanted Valley  -->
+        <location x="124904" y="61992" z="-3920"/>
+    </teleport>
+
+    <teleport id="412" price="3900"> <!-- North Enchanted valley -->
         <location x="116220" y="41380" z="-3880"/>
     </teleport>
-    <teleport id="218" price="15300">
-        <location x="14585" y="-19581" z="-3032"/>
+
+    <teleport id="75" price="7200"> <!-- Dark elf village -->
+        <location x="9800" y="15596" z="-4568"/>
     </teleport>
-    <teleport id="102" price="15300">
-        <location x="190076" y="50006" z="-4276"/>
+
+    <teleport id="403" price="15300"> <!-- Necropolis of Devotion  -->
+        <location x="-55701" y="78306" z="-3016"/>
     </teleport>
-    <teleport id="115" price="15300">
-        <location x="174688" y="48208" z="-5280"/>
+
+    <teleport id="402" price="6750"> <!-- The Patriots Necropolis  -->
+        <location x="-24653" y="78033" z="-3448"/>
     </teleport>
-    <teleport id="119" price="6750">
-        <location x="157702" y="10438" z="-4032"/>
+
+    <teleport id="320" price="500"> <!-- Spider nest  -->
+        <location x="-61095" y="75104" z="-3352"/>
     </teleport>
-    <teleport id="99" price="6750">
-        <location x="147510" y="-19139" z="-3320"/>
+
+    <teleport id="410" price="500"> <!-- Swampland north -->
+        <location x="-21472" y="36244" z="-2794"/>
     </teleport>
-    <teleport id="117" price="6750">
-        <location x="139317" y="10438" z="-3424"/>
+
+    <teleport id="77" price="500"> <!-- Swampland -->
+        <location x="-21966" y="40544" z="-3192"/>
     </teleport>
-    <teleport id="113" price="6750">
-        <location x="122530" y="-10945" z="-3454"/>
+
+    <teleport id="318" price="500"> <!-- Dark forest -->
+        <location x="-22224" y="14168" z="-3232"/>
     </teleport>
-    <teleport id="101" price="6750">
-        <location x="195072" y="16033" z="-3696"/>
+
+    <teleport id="140" price="7200"> <!-- Dwarven Village  -->
+        <location x="115190" y="-178176" z="-896"/>
     </teleport>
-    <teleport id="98" price="6750">
-        <location x="115336" y="13035" z="-5120"/>
+
+    <teleport id="143" price="1650"> <!-- Mithril mines  -->
+        <location x="171946" y="-173352" z="3440"/>
     </teleport>
-    <teleport id="118" price="3900">
-        <location x="174488" y="-12544" z="-2768"/>
+
+    <teleport id="146" price="1650"> <!-- Eastern mining -->
+        <location x="169008" y="-208272" z="-3496"/>
     </teleport>
-    <teleport id="104" price="6750">
-        <location x="176287" y="20629" z="-3328"/>
+
+    <teleport id="142" price="500"> <!-- Abandoned Coal Mine -->
+        <location x="139714" y="-177456" z="-1536"/>
     </teleport>
-    <teleport id="105" price="3900">
-        <location x="150108" y="81980" z="-3000"/>
+
+    <teleport id="145" price="500"> <!--Western mines   -->
+        <location x="124054" y="-200170" z="-3704"/>
     </teleport>
-    <teleport id="324" price="3000">
-        <location x="146440" y="46723" z="-3400"/>
+
+    <teleport id="49" price="7200"> <!-- Talking Island -->
+        <location x="-84191" y="244531" z="-3728"/>
     </teleport>
-    <teleport id="195" price="34200">
-        <location x="115746" y="-53873" z="-3344"/>
+
+    <teleport id="53" price="500"> <!--Elven Ruins  -->
+        <location x="-112367" y="234703" z="-3688"/>
     </teleport>
-    <teleport id="184" price="34200">
-        <location x="154042" y="-107990" z="-2728"/>
+
+    <teleport id="55" price="500"><!-- Talking Island Western -->
+        <location x="-106696" y="214691" z="-3424"/>
     </teleport>
-    <teleport id="189" price="34200">
-        <location x="149025" y="-84499" z="-4912"/>
+
+    <teleport id="56" price="500"> <!-- Talking Island eastern  -->
+        <location x="-95336" y="240478" z="-3264"/>
     </teleport>
-    <teleport id="190" price="15300">
-        <location x="186561" y="-75528" z="-2824"/>
+
+    <teleport id="409" price="500"> <!-- Singing waterfall  -->
+        <location x="-111728" y="244330" z="-3448"/>
     </teleport>
-    <teleport id="186" price="15300">
-        <location x="171324" y="-116522" z="-2096"/>
+
+    <teleport id="316" price="500"> <!-- Obelisk of victory -->
+        <location x="-99843" y="237583" z="-3568"/>
     </teleport>
-    <teleport id="193" price="15300">
-        <location x="172809" y="-53435" z="-2128"/>
+
+    <teleport id="70" price="7200"> <!-- Elven village -->
+        <location x="46916" y="51420" z="-2976"/>
     </teleport>
-    <teleport id="415" price="7200">
+
+    <teleport id="66" price="500"> <!-- Neutral zone  -->
+        <location x="-10612" y="75881" z="-3592"/>
+    </teleport>
+
+    <teleport id="68" price="500"> <!-- Elven Forest  -->
+        <location x="21362" y="51122" z="-3688"/>
+    </teleport>
+
+    <teleport id="71" price="500"> <!-- Elven fortress -->
+        <location x="29294" y="74968" z="-3776"/>
+    </teleport>
+
+    <teleport id="131" price="7200"> <!-- Orc Village -->
+        <location x="-45158" y="-112583" z="-240"/>
+    </teleport>
+
+    <teleport id="137" price="500"> <!-- Immortal plateau soulthern -->
+        <location x="-4190" y="-80040" z="-2696"/>
+    </teleport>
+
+    <teleport id="133" price="500"> <!-- Cave of Trials  -->
+        <location x="9340" y="-112509" z="-2536"/>
+    </teleport>
+
+    <teleport id="136" price="500"> <!-- immortal plateau northern  -->
+        <location x="-10983" y="-117484" z="-2464"/>
+    </teleport>
+
+    <teleport id="134" price="500"> <!-- Frozen Waterfall -->
+        <location x="8652" y="-139941" z="-1144"/>
+    </teleport>
+
+    <teleport id="415" price="7200"> <!-- Jin Kamael village -->
         <location x="-116686" y="46482" z="360"/>
     </teleport>
-    <teleport id="417" price="500">
+
+    <teleport id="417" price="500"> <!-- Hill of Hope -->
         <location x="-119618" y="51994" z="-832"/>
     </teleport>
-    <teleport id="418" price="500">
+
+    <teleport id="418" price="500"> <!-- Hills of Gold  -->
         <location x="-109670" y="45283" z="-1344"/>
     </teleport>
 </list>

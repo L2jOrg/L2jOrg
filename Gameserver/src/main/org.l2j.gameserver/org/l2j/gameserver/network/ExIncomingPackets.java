@@ -54,6 +54,10 @@ import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
 import org.l2j.gameserver.network.clientpackets.stats.ExResetStatusBonus;
 import org.l2j.gameserver.network.clientpackets.stats.ExSetStatusBonus;
+import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleport;
+import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoriteList;
+import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoritesAddDel;
+import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoritesUIToggle;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 import org.l2j.gameserver.network.clientpackets.vip.ExRequestVipInfo;
 import org.l2j.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
@@ -500,9 +504,9 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_EVOLVE_PET(null, ConnectionState.IN_GAME),
     EX_ENCHANT_HOMUNCULUS_SKILL(null, ConnectionState.IN_GAME),
     EX_HOMUNCULUS_ENCHANT_EXP(null, ConnectionState.IN_GAME),
-    EX_TELEPORT_FAVORITES_LIST(null, ConnectionState.IN_GAME),
-    EX_TELEPORT_FAVORITES_UI_TOGGLE(null, ConnectionState.IN_GAME),
-    EX_TELEPORT_FAVORITES_ADD_DEL(null, ConnectionState.IN_GAME),
+    EX_TELEPORT_FAVORITES_LIST(ExRequestTeleportFavoriteList::new, ConnectionState.IN_GAME),
+    EX_TELEPORT_FAVORITES_UI_TOGGLE(ExRequestTeleportFavoritesUIToggle::new, ConnectionState.IN_GAME),
+    EX_TELEPORT_FAVORITES_ADD_DEL(ExRequestTeleportFavoritesAddDel::new, ConnectionState.IN_GAME),
     EX_ANTIBOT(null, ConnectionState.IN_GAME),
     EX_DPSVR(null, ConnectionState.IN_GAME),
     EX_TENPROTECT_DECRYPT_ERROR(null, ConnectionState.IN_GAME),

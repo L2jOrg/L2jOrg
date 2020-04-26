@@ -86,7 +86,7 @@ public class GameServer {
         MissionEngine.init();
         VipEngine.init();
         ElementalSpiritEngine.init();
-        TeleportListData.init();
+        TeleportEngine.init();
 
         printSection("Skills");
         SkillEngine.init();

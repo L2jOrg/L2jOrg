@@ -17,18 +17,18 @@ import java.util.Optional;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public final class TeleportListData extends GameXmlReader {
+public final class TeleportEngine extends GameXmlReader {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(TeleportListData.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TeleportEngine.class);
 
-    private IntMap<TeleportData> infos = new HashIntMap<>();
+    private final IntMap<TeleportData> teleports = new HashIntMap<>();
 
-    private TeleportListData() {
+    private TeleportEngine() {
         // singleton
     }
 
     public Optional<TeleportData> getInfo(int id) {
-        var data = Optional.ofNullable(infos.get(id));
+        var data = Optional.ofNullable(teleports.get(id));
         if(data.isEmpty()) {
             LOGGER.warn("Can't find teleport list for id: {}", id);
         }
@@ -43,7 +43,7 @@ public final class TeleportListData extends GameXmlReader {
     @Override
     public void load() {
         parseDatapackFile("data/teleports.xml");
-        LOGGER.info("Loaded {} Teleports", infos.size());
+        LOGGER.info("Loaded {} Teleports", teleports.size());
         releaseResources();
     }
 
@@ -60,7 +60,7 @@ public final class TeleportListData extends GameXmlReader {
 
         var locationNode = teleportNode.getFirstChild();
         if(nonNull(locationNode)) {
-            infos.put(id, new TeleportData(price, parseLocation(locationNode), castle));
+            teleports.put(id, new TeleportData(price, parseLocation(locationNode), castle));
         }
         else {
             LOGGER.warn("Can't find location node in teleports.xml id {}", id);
@@ -72,11 +72,11 @@ public final class TeleportListData extends GameXmlReader {
         getInstance().load();
     }
 
-    public static TeleportListData getInstance() {
+    public static TeleportEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final TeleportListData INSTANCE = new TeleportListData();
+        private static final TeleportEngine INSTANCE = new TeleportEngine();
     }
 }

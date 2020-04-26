@@ -128,6 +128,9 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("SELECT id, player_id, amount, locked FROM player_costumes WHERE player_id = :playerId:")
     IntMap<CostumeData> findCostumes(int playerId);
 
+    @Query("DELETE FROM player_costumes WHERE player_id = :playerId: AND id = :costumeId:")
+    void removeCostume(int playerId, int costumeId);
+
     @Query("SELECT * FROM player_costume_collection WHERE player_id = :playerId:")
     CostumeCollectionData findPlayerCostumeCollection(int playerId);
 
@@ -135,4 +138,13 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("DELETE FROM player_costume_collection WHERE player_id = :playerId:")
     void deleteCostumeCollection(int playerId);
+
+    @Query("SELECT teleport_id FROM player_teleports WHERE player_id = :playerId:")
+    IntSet findTeleportFavorites(int playerId);
+
+    @Query(value = "REPLACE INTO player_teleports VALUES (:playerId:, :teleports: )", batchIndex = 1)
+    void saveTeleportFavorites(int playerId, IntSet teleports);
+
+    @Query("DELETE FROM player_teleports WHERE player_id = :playerId:")
+    void removeTeleportFavorites(int playerId);
 }

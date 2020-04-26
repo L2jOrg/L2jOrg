@@ -2,13 +2,12 @@ package org.l2j.commons.database.helpers;
 
 import io.github.joealisson.primitive.IntKeyValue;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.database.annotation.Query;
+import org.l2j.commons.database.helpers.BatchSupporters.BatchSupport;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Collection;
 import java.util.regex.Pattern;
 
@@ -45,6 +44,28 @@ public class QueryDescriptor implements AutoCloseable {
         return !SELECT_PATTERN.matcher(query).matches();
     }
 
+    public boolean isBatch(Object[] args) {
+        var batchIndex = getBatchIndex();
+
+        if(batchIndex < 0 || batchIndex >= args.length) {
+            return false;
+        }
+        return isBatchSupported(args[batchIndex]);
+    }
+
+    private int getBatchIndex() {
+        final var queryAnnotation = method.getAnnotation(Query.class);
+        return nonNull(queryAnnotation) ? queryAnnotation.batchIndex() : -1;
+    }
+
+    private boolean isBatchSupported(Object batchedArg) {
+        return nonNull(supporterHandler(batchedArg.getClass()));
+    }
+
+    private BatchSupport supporterHandler(Class<?> arg) {
+        return BatchSupporters.batchSupportHandler(arg);
+    }
+
     public Class<?> getReturnType() {
         return method.getReturnType();
     }
@@ -69,9 +90,37 @@ public class QueryDescriptor implements AutoCloseable {
 
     public void execute(Connection con, Object[] args) throws SQLException {
         var statement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        if(isBatch(args)) {
+            executeBatch(statement, args);
+        } else {
+            executeSingle(statement, args);
+        }
+        statementLocal.set(statement);
+    }
+
+    @SuppressWarnings("unchecked")
+    private void executeBatch(PreparedStatement statement, Object[] args) throws SQLException {
+        final var batchIndex = getBatchIndex();
+        final var batchArg = args[batchIndex];
+        final var supporter = supporterHandler(batchArg.getClass());
+        final var handler = supporter.getHandler();
+        final var iterator = supporter.getIterator(batchArg);
+        var hasElement = false;
+
+        while (iterator.hasNext()) {
+            strategy.setParameters(statement, args);
+            handler.setParameter(statement, batchIndex+1, iterator.next());
+            statement.addBatch();
+            hasElement = true;
+        }
+        if(hasElement){
+            statement.executeBatch();
+        }
+    }
+
+    private void executeSingle(PreparedStatement statement, Object[] args) throws SQLException {
         strategy.setParameters(statement, args);
         statement.execute();
-        statementLocal.set(statement);
     }
 
     public void executeBatch(Connection con, Collection<?> collection) throws SQLException {
