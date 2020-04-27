@@ -62,7 +62,8 @@ public class LCoinShopData extends GameXmlReader {
         var limitPerDay = parseInteger(attributes, "limitPerDay", 0);
         var minLevel = parseInteger(attributes, "minLevel", 1);
         var isEvent = parseBoolean(attributes, "isEvent", false);
-
+        var remainServerItemAmount = parseInteger(attributes, "remainServerItemAmount", -1);
+        LOGGER.info("product: " + id + remainServerItemAmount);
         List<ItemHolder> ingredients = new ArrayList<>();
         ItemHolder production = null;
         final NodeList list = productNode.getChildNodes();
@@ -87,7 +88,7 @@ public class LCoinShopData extends GameXmlReader {
             return;
         }
 
-        if (productInfos.put(id, new LCoinShopProductInfo(id, category, limitPerDay, minLevel, isEvent, ingredients, production)) != null) {
+        if (productInfos.put(id, new LCoinShopProductInfo(id, category, limitPerDay, minLevel, isEvent, ingredients, production, remainServerItemAmount)) != null) {
             LOGGER.warn("Duplicate product id {}", id);
         }
     }

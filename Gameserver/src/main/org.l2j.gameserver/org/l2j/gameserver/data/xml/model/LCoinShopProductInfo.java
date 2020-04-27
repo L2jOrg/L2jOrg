@@ -20,8 +20,9 @@ public class LCoinShopProductInfo {
     private boolean isEvent;
     private List<ItemHolder> ingredients;
     private ItemHolder production;
+    private int remainServerItemAmount;
 
-    public LCoinShopProductInfo(int id, Category category, int limitPerDay, int minLevel, boolean isEvent, List<ItemHolder> ingredients, ItemHolder production) {
+    public LCoinShopProductInfo(int id, Category category, int limitPerDay, int minLevel, boolean isEvent, List<ItemHolder> ingredients, ItemHolder production, int remainServerItemAmount) {
         this.id = id;
         this.category = category;
         this.limitPerDay = limitPerDay;
@@ -29,6 +30,7 @@ public class LCoinShopProductInfo {
         this.isEvent = isEvent;
         this.ingredients = ingredients;
         this.production = production;
+        this.remainServerItemAmount = remainServerItemAmount;
     }
 
     public int getId() {
@@ -44,7 +46,7 @@ public class LCoinShopProductInfo {
     }
 
     public int getRemainServerItemAmount() {
-        return -1; // TODO
+        return remainServerItemAmount; // TODO
     }
 
     public Category getCategory() {
