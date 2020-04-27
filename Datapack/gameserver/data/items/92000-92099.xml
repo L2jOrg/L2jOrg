@@ -105,13 +105,14 @@
 	<item id="92017" name="Enchant Scroll: Eva's Talisman" type="ENCHANT_ARMOR" icon="icon.bm_eva_talisman_scroll">
 	<!-- A scroll used to enchant Eva's Talisman -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="92018" name="Eva's Talisman" type="NONE" body-part="TALISMAN" icon="icon.bm_eva_talisman">
 	<!-- A talisman imbued with Eva’s energy. Can be enchanted up to +10 with the Enchant Scroll: Eva's Talisman. Enchantment adds various effects and increases stats of these option effects. If +1 or higher level enchantment fails, the talisman will disappear. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" enchant-enabled="false" />
+		<attributes weight="120" enchant-enabled="true" />
 		<crystal />
 	</armor>
 
@@ -125,6 +126,10 @@
 	<!-- A package used to upgrade Eva's Talisman. Double-click to obtain 1 Eva's Talisman and 10 Enchant Scroll: Eva's Talisman -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="92018" min-count="1" max-count="1"/>
+			<item id="92017" min-count="10" max-count="10"/>
+		</extract>
 	</item>
 
 	<item id="92021" name="Letter - D" type="NONE" icon="icon.etc_alphabet_d_i00">
