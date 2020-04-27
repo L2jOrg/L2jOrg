@@ -51,7 +51,7 @@ public class ClientPacketHandler implements PacketHandler<GameClient> {
     }
 
     private void unknownPacket(PacketBuffer buffer, int opcode, PacketFactory packetFactory) {
-        LOGGER.warn("Unknown Packet ({}) : {} - {}", packetFactory, toHexString(opcode), CommonUtil.printData(buffer.expose()));
+        LOGGER.debug("Unknown Packet ({}) : {} - {}", packetFactory, toHexString(opcode), CommonUtil.printData(buffer.expose()));
     }
 
     private PacketFactory getPacketFactory(int opcode, PacketBuffer buffer) {

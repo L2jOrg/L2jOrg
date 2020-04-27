@@ -1,11 +1,12 @@
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.clientpackets.teleport;
 
-import org.l2j.gameserver.data.xml.impl.TeleportListData;
+import org.l2j.gameserver.data.xml.impl.TeleportEngine;
 import org.l2j.gameserver.data.xml.model.TeleportData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.request.TeleportRequest;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.util.GameUtils;
 
 /**
@@ -21,7 +22,7 @@ public class ExRequestTeleport extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        TeleportListData.getInstance().getInfo(id).ifPresent(this::teleport);
+        TeleportEngine.getInstance().getInfo(id).ifPresent(this::teleport);
     }
 
     private void teleport(TeleportData info) {

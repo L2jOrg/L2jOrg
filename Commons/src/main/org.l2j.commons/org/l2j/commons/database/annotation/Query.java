@@ -12,4 +12,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface  Query {
     String value();
+
+    int batchIndex() default -1;
 }
