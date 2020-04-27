@@ -10,6 +10,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.teleport.ExShowTeleportUi;
+import org.l2j.gameserver.network.serverpackets.teleport.ExTeleportFavoritesList;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +44,7 @@ public final class Teleporter extends Npc {
         switch (st.nextToken()) {
             case "requestTeleport" -> {
                 player.sendPacket(ExShowTeleportUi.OPEN);
-                player.sendPacket();
+                player.sendPacket(new ExTeleportFavoritesList(true));
             }
             case "showTeleports" -> {
                 final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.NORMAL.name();
