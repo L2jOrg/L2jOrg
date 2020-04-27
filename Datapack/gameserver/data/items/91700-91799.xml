@@ -442,6 +442,10 @@
 	<!-- A package used to upgrade Aden Talismans. Double-click to obtain 1 Aden Talisman and 10 Enchant Scroll: Aden Talisman. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item  id="91745" min-count="1" max-count="1" chance="100"/>
+			<item id="91756" min-count="10" max-count="10" chance="100"/>
+		</extract>
 	</item>
 
 	<item id="91768" name="Escape - High Priest Orven" type="SCROLL" icon="icon.etc_scroll_of_return_i04">

@@ -211,6 +211,15 @@
 	<!-- Double-click to obtain one of the Amber, Opal, Coral, Onyx, Spinel, Zircon, and Moonstone Lv. 1 Jewelry Boxes. -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="92176" min-count="1" max-count="1" chance="50" />
+			<item id="92186" min-count="1" max-count="1" chance="50" />
+			<item id="92196" min-count="1" max-count="1" chance="50" />
+			<item id="92206" min-count="1" max-count="1" chance="50" />
+			<item id="92216" min-count="1" max-count="1" chance="50" />
+			<item id="92226" min-count="1" max-count="1" chance="50" />
+			<item id="92236" min-count="1" max-count="1" chance="50" />
+		</extract>
 	</item>
 
 	<item id="92035" name="Shiny Jewelry Box" type="NONE" icon="icon.etc_bm_jewelbox_main_i00">
