@@ -40,10 +40,7 @@
         <Logger name="org.l2j" level="debug">
             <AppenderRef ref="debug"/>
         </Logger>
-        <Logger name="org.l2j.gameserver.network" level="error">
-            <AppenderRef ref="debug"/>
-        </Logger>
-        <Logger name="org.l2j.gameserver.engine.scripting" level="error">
+        <Logger name="org.l2j.gameserver.network" level="info">
             <AppenderRef ref="debug"/>
         </Logger>
         <Logger name="com.zaxxer.hikari" level="info">
