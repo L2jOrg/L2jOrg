@@ -35,6 +35,7 @@
         <xs:attribute name="limitPerDay" type="xs:integer" default="0"/>
         <xs:attribute name="minLevel" type="xs:positiveInteger" default="1"/>
         <xs:attribute name="isEvent" type="xs:boolean" default="0"/>
+        <xs:attribute name="remainServerItemAmount" type="xs:integer" default="-1"/>
     </xs:complexType>
 
 </xs:schema>

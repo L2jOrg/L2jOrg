@@ -22,13 +22,10 @@ import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.type.EffectZone;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
-
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -39,13 +36,13 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
+
 /**
  * Four Selpuchers AI
  * @author Mobius
  */
 public class FourSepulchers extends AbstractNpcAI
 {
-	private static Logger LOGGER = LoggerFactory.getLogger(FourSepulchers.class);
 	
 	// NPCs
 	private static final int CONQUEROR_MANAGER = 31921;

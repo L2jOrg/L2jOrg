@@ -1074,6 +1074,15 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+            <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="55886" name="Agathion Bracelet Resistance Increase" max-level="2">
@@ -1087,24 +1096,20 @@
         <target/>
         <effects>
             <defence-trait>
-                <trait type="SHOCK">
+                <trait type="SHOCK" >
                     <power initial="5">
-                        <value level="2">7</value>
                     </power>
                 </trait>
                 <trait type="SLEEP">
                     <power initial="5">
-                        <value level="2">7</value>
                     </power>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="5">
-                        <value level="2">7</value>
                     </power>
                 </trait>
                 <trait type="PARALYZE">
                     <power initial="5">
-                        <value level="2">7</value>
                     </power>
                 </trait>
             </defence-trait>

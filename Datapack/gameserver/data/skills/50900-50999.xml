@@ -23,9 +23,9 @@
     <skill id="50913" name="Eva's Talisman" max-level="11">
         <!--
             level 1: A talisman imbued with Eva’s energy. M. Def. +20, Max MP +50.
-            level 2: A talisman imbued with Eva’s energy. M. Def. +30, Max MP +100, MP Recovery Bonus +2, All Critical Damage Received -1%.
-            level 3: A talisman imbued with Eva’s energy. M. Def. +50, Max MP +150, MP Recovery Bonus +3, All Critical Damage Received -2%, Skill MP Consumption -1%.
-            level 4: A talisman imbued with Eva’s energy. M. Def. +80, Max MP +200, MP Recovery Bonus +5, All Critical Damage Received -3%, Skill MP Consumption -2%.
+            level 2: A talisman imbued with Eva’s energy. M. Def. +30, Max MP +100, MP Recovery Bonus  +2, All Critical Damage Received -1%.
+            level 3: A talisman imbued with Eva’s energy. M. Def. +50, Max MP +150, MP Recovery Bonus  +3, All Critical Damage Received -2%, Skill MP Consumption -1%.
+            level 4: A talisman imbued with Eva’s energy. M. Def. +80, Max MP +200, MP Recovery Bonus  +5, All Critical Damage Received -3%, Skill MP Consumption -2%.
             level 5: A talisman imbued with Eva’s energy. M. Def. +120, Max MP +300, MP Recovery Bonus +7, All Critical Damage Received -4%, Skill MP Consumption -3%.
             level 6: A talisman imbued with Eva’s energy. M. Def. +170, Max MP +400, MP Recovery Bonus +10, All Critical Damage Received -5%, Skill MP Consumption -5%.
             level 7: A talisman imbued with Eva’s energy. M. Def. +230, Max MP +500, MP Recovery Bonus +15, All Critical Damage Received -7%, Skill MP Consumption -7%.
@@ -40,13 +40,46 @@
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-                <power/>
+                <power initial="20">
+                    <value level="2">30.0</value>
+                    <value level="3">50.0</value>
+                    <value level="4">80.0</value>
+                    <value level="5">120.0</value>
+                    <value level="6">170.0</value>
+                    <value level="7">230.0</value>
+                    <value level="8">300.0</value>
+                    <value level="9">380.0</value>
+                    <value level="10">470.0</value>
+                    <value level="11">600.0</value>
+                </power>
             </stat-modify>
-            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
-                <power/>
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="50">
+                    <value level="2">100.0</value>
+                    <value level="3">150.0</value>
+                    <value level="4">200.0</value>
+                    <value level="5">300.0</value>
+                    <value level="6">400.0</value>
+                    <value level="7">500.0</value>
+                    <value level="8">600.0</value>
+                    <value level="9">700.0</value>
+                    <value level="10">800.0</value>
+                    <value level="11">1000.0</value>
+                </power>
             </vital-stat-modify>
             <stat-modify stat="REGENERATE_MP_RATE">
-                <power/>
+                <power initial="0">
+                    <value level="2">2.0 </value>
+                    <value level="3">3.0 </value>
+                    <value level="4">5.0 </value>
+                    <value level="5">7.0</value>
+                    <value level="6">10.0</value>
+                    <value level="7">15.0</value>
+                    <value level="8">20.0</value>
+                    <value level="9">25.0</value>
+                    <value level="10">30.0</value>
+                    <value level="11">40.0</value>
+                </power>
             </stat-modify>
             <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
                 <power>
@@ -73,9 +106,23 @@
                     <value level="8">9.0</value>
                     <value level="9">11.0</value>
                     <value level="10">13.0</value>
-                    <value level="11">0.0</value>
+                    <value level="11">15.0</value>
                 </power>
             </stat-modify>
+            <magic-cost type="MAGIC">
+                <power>
+                    <value level="2">0</value>
+                    <value level="3">-1.0</value>
+                    <value level="4">-2.0</value>
+                    <value level="5">-3.0</value>
+                    <value level="6">-5.0</value>
+                    <value level="7">-7.0</value>
+                    <value level="8">-9.0</value>
+                    <value level="9">-11.0</value>
+                    <value level="10">-13.0</value>
+                    <value level="11">-15.0</value>
+                </power>
+            </magic-cost>
         </effects>
     </skill>
     <skill id="50914" name="Amber" max-level="10" action="A1">
@@ -102,5 +149,29 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+    </skill>
+    <skill id="50915" name="Dragon's Valley Earring" max-level="11">
+        <icon initial="icon.accessary_catseye_earing_i00"/>
+        <attributes property="MAGIC">
+        </attributes>
+        <target/>
+        <effects>
+            <defence-trait>
+                <trait type="SHOCK" >
+                    <power initial="1.0">
+                        <value level="2">2.0</value>
+                        <value level="3">3.0</value>
+                        <value level="4">4.0</value>
+                        <value level="5">5.0</value>
+                        <value level="6">10.0</value>
+                        <value level="7">12.0</value>
+                        <value level="8">14.0</value>
+                        <value level="9">18.0</value>
+                        <value level="10">22.0</value>
+                        <value level="11">30.0</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
     </skill>
 </list>

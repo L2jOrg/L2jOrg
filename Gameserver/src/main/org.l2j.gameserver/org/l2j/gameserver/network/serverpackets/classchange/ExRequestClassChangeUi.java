@@ -18,6 +18,6 @@ public class ExRequestClassChangeUi extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        writeId(ServerExPacketId.EX_REQUEST_CLASS_CHANGE);
+        writeId(ServerExPacketId.EX_CLASS_CHANGE_SET_ALARM);
     }
 }

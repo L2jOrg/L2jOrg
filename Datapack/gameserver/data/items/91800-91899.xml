@@ -468,6 +468,10 @@
 	<!-- Double-click to obtain 1 Dragon's Belt and 10 Enchant Scroll: Dragon's Belt.  -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91788" min-count="1" max-count="1" chance="100" />
+			<item id="91863" min-count="10" max-count="10" chance="100" />
+		</extract>
 	</item>
 
 	<item id="91865" name="PC Cafe Event Pa'agrio's Summoning Stick" type="NONE" icon="icon.etc_imperial_scepter_i00">

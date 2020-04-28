@@ -11,4 +11,51 @@
             <npc id="20105" x="-22759" y="52774" z="-3612" heading="26125" respawnTime="60sec"/> <!-- Dark Horror -->
         </group>
     </spawn>
+    <spawn name="DarkElfRegionNorth">
+        <territories>
+            <territory minZ="-3764" maxZ="-2518">
+                <node x="15336" y="7448"/>
+                <node x="9656" y="7832"/>
+                <node x="6968" y="5368"/>
+                <node x="6872" y="3384"/>
+                <node x="11000" y="3832" />
+            </territory>
+        </territories>
+        <npc id="20456" count="10" respawnTime="60sec"/>
+        <npc id="20004" count="10" respawnTime="60sec"/>
+        <npc id="20003" count="10" respawnTime="60sec"/>
+    </spawn>
+    <spawn name="DarkElfRegion">
+        <territories>
+            <territory minZ="-3764" maxZ="-3314">
+                <node x="8052" y="24820"/>
+                <node x="11076" y="24872"/>
+                <node x="15976" y="29020"/>
+                <node x="10076" y="29568"/>
+                <node x="5496" y="26128" />
+            </territory>
+        </territories>
+        <npc id="20003" count="10" respawnTime="60sec"/>
+        <npc id="20004" count="10" respawnTime="60sec"/>
+        <npc id="20005" count="10" respawnTime="60sec"/>
+    </spawn>
+    <spawn name="DarkForest">
+        <territories>
+            <territory minZ="-3768" maxZ="-3118">
+                <node x="112" y="21584"/>
+                <node x="4076" y="21172"/>
+                <node x="3344" y="23868"/>
+                <node x="1272" y="24096"/>
+                <node x="104" y="23532" />
+            </territory>
+        </territories>
+        <npc id="20385" count="8" respawnTime="60sec"/>
+        <npc id="20328" count="8" respawnTime="60sec"/>
+        <npc id="20007" count="8" respawnTime="60sec"/>
+        <npc id="20376" count="5" respawnTime="60sec"/>
+        <npc id="20386" count="5" respawnTime="60sec"/>
+        <npc id="20387" count="5" respawnTime="60sec"/>
+        <npc id="20388" count="5" respawnTime="60sec"/>
+        <npc id="20400" count="5" respawnTime="60sec"/>
+    </spawn>
 </list>

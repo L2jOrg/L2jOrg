@@ -24,7 +24,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.data.xml.model.LCoinShopProductInfo.Category;
 
 public class LCoinShopData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(TeleportersData.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(LCoinShopData.class);
     private IntMap<LCoinShopProductInfo> productInfos = new HashIntMap<>();
 
     public LCoinShopData() {
@@ -62,7 +62,7 @@ public class LCoinShopData extends GameXmlReader {
         var limitPerDay = parseInteger(attributes, "limitPerDay", 0);
         var minLevel = parseInteger(attributes, "minLevel", 1);
         var isEvent = parseBoolean(attributes, "isEvent", false);
-
+        var remainServerItemAmount = parseInteger(attributes, "remainServerItemAmount", -1);
         List<ItemHolder> ingredients = new ArrayList<>();
         ItemHolder production = null;
         final NodeList list = productNode.getChildNodes();
@@ -87,7 +87,7 @@ public class LCoinShopData extends GameXmlReader {
             return;
         }
 
-        if (productInfos.put(id, new LCoinShopProductInfo(id, category, limitPerDay, minLevel, isEvent, ingredients, production)) != null) {
+        if (productInfos.put(id, new LCoinShopProductInfo(id, category, limitPerDay, minLevel, isEvent, ingredients, production, remainServerItemAmount)) != null) {
             LOGGER.warn("Duplicate product id {}", id);
         }
     }
