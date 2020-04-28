@@ -135,11 +135,6 @@ public final class Item extends WorldObject {
     private VariationInstance _augmentation = null;
 
     //@formatter:on
-    /**
-     * Custom item types (used loto, race tickets)
-     */
-    private int _type1;
-    private int _type2;
     private long _dropTime;
     private boolean _published = false;
     private boolean _protected;
@@ -166,8 +161,6 @@ public final class Item extends WorldObject {
         }
         super.setName(template.getName());
         loc = ItemLocation.VOID;
-        _type1 = 0;
-        _type2 = 0;
         _dropTime = 0;
         _time = template.getTime() == -1 ? -1 : System.currentTimeMillis() + (template.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
@@ -193,10 +186,6 @@ public final class Item extends WorldObject {
         scheduleLifeTimeTask();
     }
 
-    /**
-     * @param rs
-     * @throws SQLException
-     */
     public Item(ResultSet rs) throws SQLException {
         this(rs.getInt("object_id"), ItemEngine.getInstance().getTemplate(rs.getInt("item_id")));
         _count = rs.getLong("count");
@@ -204,8 +193,6 @@ public final class Item extends WorldObject {
         loc = ItemLocation.valueOf(rs.getString("loc"));
         _locData = rs.getInt("loc_data");
         _enchantLevel = rs.getInt("enchant_level");
-        _type1 = rs.getInt("custom_type1");
-        _type2 = rs.getInt("custom_type2");
         _time = rs.getLong("time");
         _existsInDb = true;
         _storedInDb = true;
@@ -529,19 +516,11 @@ public final class Item extends WorldObject {
     }
 
     public int getCustomType1() {
-        return _type1;
-    }
-
-    public void setCustomType1(int newtype) {
-        _type1 = newtype;
+        return template.getType1();
     }
 
     public int getCustomType2() {
-        return _type2;
-    }
-
-    public void setCustomType2(int newtype) {
-        _type2 = newtype;
+        return template.getType2();
     }
 
     public long getDropTime() {
@@ -1139,16 +1118,14 @@ public final class Item extends WorldObject {
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,time=? WHERE object_id = ?")) {
+             PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,time=? WHERE object_id = ?")) {
             ps.setInt(1, _ownerId);
             ps.setLong(2, _count);
             ps.setString(3, loc.name());
             ps.setInt(4, _locData);
             ps.setInt(5, _enchantLevel);
-            ps.setInt(6, _type1);
-            ps.setInt(7, _type2);
-            ps.setLong(8, _time);
-            ps.setInt(9, getObjectId());
+            ps.setLong(6, _time);
+            ps.setInt(7, getObjectId());
             ps.executeUpdate();
             _existsInDb = true;
             _storedInDb = true;
@@ -1159,7 +1136,7 @@ public final class Item extends WorldObject {
             if (_elementals != null) {
                 updateItemElements(con);
             }
-            if ((_ensoulOptions != null) || (_ensoulSpecialOptions != null)) {
+            if (!_ensoulOptions.isEmpty() || !_ensoulSpecialOptions.isEmpty()) {
                 updateSpecialAbilities(con);
             }
         } catch (Exception e) {
@@ -1176,7 +1153,7 @@ public final class Item extends WorldObject {
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,time) VALUES (?,?,?,?,?,?,?,?,?,?)")) {
+             PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,time) VALUES (?,?,?,?,?,?,?,?)")) {
             ps.setInt(1, _ownerId);
             ps.setInt(2, itemId);
             ps.setLong(3, _count);
@@ -1184,9 +1161,7 @@ public final class Item extends WorldObject {
             ps.setInt(5, _locData);
             ps.setInt(6, _enchantLevel);
             ps.setInt(7, getObjectId());
-            ps.setInt(8, _type1);
-            ps.setInt(9, _type2);
-            ps.setLong(10, _time);
+            ps.setLong(8, _time);
 
             ps.executeUpdate();
             _existsInDb = true;

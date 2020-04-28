@@ -75,7 +75,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeByte(item.isQuestItem() || item.isEquipped() ? 0xFF : item.getLocationSlot());
         writeLong(item.getCount());
         writeByte(item.getCustomType2());
-        writeByte(item.getCustomType1()); // Filler (always 0)
+        writeByte(0); // Filler (always 0)
         writeShort(item.isEquipped());
         writeLong(item.getBodyPart().getId());
         writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
@@ -195,7 +195,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeByte(item.isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocationSlot()); // T1
         writeLong(count); // Quantity
         writeByte(item.getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-        writeByte(item.getCustomType1()); // Filler (always 0)
+        writeByte(0); // Filler (always 0)
         writeShort(item.getEquipped()); // Equipped : 00-No, 01-yes
         writeLong(item.getBodyPart().getId()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
         writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)

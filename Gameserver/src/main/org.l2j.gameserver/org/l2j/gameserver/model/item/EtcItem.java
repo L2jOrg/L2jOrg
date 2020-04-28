@@ -33,7 +33,7 @@ public final class EtcItem extends ItemTemplate {
             type2 = ItemTemplate.TYPE2_QUEST;
         } else {
             type2 = switch (getId()) {
-                case CommonItem.ADENA, CommonItem.ANCIENT_ADENA, CommonItem.RUSTY_COIN, CommonItem.SILVER_COIN -> ItemTemplate.TYPE2_MONEY;
+                case CommonItem.ADENA, CommonItem.ANCIENT_ADENA, CommonItem.RUSTY_COIN, CommonItem.SILVER_COIN, CommonItem.L2_COIN -> ItemTemplate.TYPE2_MONEY;
                 default -> ItemTemplate.TYPE2_OTHER;
             };
         }

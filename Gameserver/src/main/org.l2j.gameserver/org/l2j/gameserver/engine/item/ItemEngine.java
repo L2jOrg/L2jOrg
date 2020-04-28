@@ -52,8 +52,8 @@ import static org.l2j.gameserver.util.GameUtils.isGM;
  * @author JoeAlisson
  */
 public final class ItemEngine extends GameXmlReader {
-    private static Logger LOGGER = LoggerFactory.getLogger(ItemEngine.class);
-    private static Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemEngine.class);
+    private static final Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
 
     private final IntMap<ItemTemplate> items = new HashIntMap<>(13700);
 
