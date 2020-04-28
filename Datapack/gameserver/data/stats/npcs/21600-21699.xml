@@ -3430,12 +3430,13 @@
             <height normal="75"/>
         </collision>
     </npc>
-    <npc id="21654" level="81" type="Monster" name="Dreco" title="Earth Guardian">
+    <npc id="21654" level="35" type="Monster" name="Dreco" title="Earth Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>DEMONIC</race>
         <sex>MALE</sex>
+        <acquire exp="11000" sp="167"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="815" hpRegen="42.5" mp="402" mpRegen="3"/>
+            <vitals hp="1500" hpRegen="42.5" mp="402" mpRegen="3"/>
             <speed>
                 <walk ground="60"/>
                 <run ground="80"/>
@@ -3452,13 +3453,14 @@
             <height normal="33.5"/>
         </collision>
     </npc>
-    <npc id="21655" level="82" type="Monster" name="Raido" title="Earth Guardian">
+    <npc id="21655" level="40" type="Monster" name="Raido" title="Earth Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>DEMONIC</race>
         <sex>MALE</sex>
+        <acquire exp="12000" sp="205"/>
         <equipment rhand="159"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1019" hpRegen="42.5" mp="478" mpRegen="3"/>
+            <vitals hp="1800" hpRegen="42.5" mp="478" mpRegen="3"/>
             <speed>
                 <walk ground="43"/>
                 <run ground="174"/>
@@ -3475,12 +3477,13 @@
             <height normal="57.75" grown="69"/>
         </collision>
     </npc>
-    <npc id="21656" level="84" type="Monster" name="Golem" title="Earth Guardian">
+    <npc id="21656" level="33" type="Monster" name="Golem" title="Earth Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>DEMONIC</race>
+        <race>CONSTRUCT</race>
         <sex>MALE</sex>
+        <acquire exp="10000" sp="167"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="740" hpRegen="51" mp="372" mpRegen="3"/>
+            <vitals hp="1300" hpRegen="51" mp="372" mpRegen="3"/>
             <speed>
                 <walk ground="23"/>
                 <run ground="23"/>
@@ -3501,6 +3504,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>DRAGON</race>
         <sex>MALE</sex>
+        <acquire exp="6000" sp="167"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1248" hpRegen="51" mp="610" mpRegen="3"/>
             <speed>
@@ -3518,43 +3522,20 @@
             <radius normal="29"/>
             <height normal="72"/>
         </collision>
-        <dropLists>
-            <drop>
-                <item id="62" min="1" max="1" chance="0.03"/> <!-- Reinforced Mithril Boots -->
-                <item id="63" min="1" max="1" chance="0.03"/> <!-- Gauntlets -->
-                <item id="553" min="1" max="1" chance="0.03"/> <!-- Iron Boots -->
-                <item id="2422" min="1" max="1" chance="0.03"/> <!-- Reinforced Leather Boots -->
-                <item id="2423" min="1" max="1" chance="0.03"/> <!-- Boots of Knowledge -->
-                <item id="2446" min="1" max="1" chance="0.03"/> <!-- Reinforced Leather Gloves -->
-                <item id="2447" min="1" max="1" chance="0.03"/> <!-- Gloves of Knowledge -->
-                <item id="57" min="162" max="378" chance="70"/> <!-- Adena -->
-                <item id="1341" min="10" max="30" chance="16.52"/> <!-- Bone Arrow -->
-                <item id="1864" min="1" max="1" chance="9.511"/> <!-- Stem -->
-                <item id="1865" min="1" max="1" chance="4.742"/> <!-- Varnish -->
-                <item id="1866" min="1" max="1" chance="3.112"/> <!-- Suede -->
-                <item id="1878" min="1" max="1" chance="1.874"/> <!-- Durable Braid -->
-                <item id="1940" min="1" max="1" chance="1.473"/> <!-- Iron Boot Design -->
-                <item id="1958" min="1" max="1" chance="0.75"/> <!-- Reinforced Mithril Boot Design -->
-                <item id="2200" min="1" max="1" chance="0.3"/> <!-- Recipe: Chain Helmet -->
-            </drop>
-            <spoil>
-                <item id="1873" min="1" max="1" chance="39.52"/> <!-- Silver Nugget -->
-                <item id="2273" min="1" max="1" chance="0.75"/> <!-- Recipe: Tarbar -->
-            </spoil>
-        </dropLists>
     </npc>
-    <npc id="21658" level="64" type="Folk" name="Harit" title="Earth Guardian">
+    <npc id="21658" level="55" type="Folk" name="Harit" title="Earth Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>DIVINE</race>
         <sex>MALE</sex>
         <equipment rhand="9"/>
+        <acquire exp="12000" sp="710"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1764" hpRegen="7.5" mp="889" mpRegen="2.7"/>
+            <vitals hp="5574" hpRegen="7.5" mp="889" mpRegen="2.7"/>
             <speed>
                 <walk ground="53"/>
                 <run ground="174"/>
             </speed>
-            <attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <attack physical="900.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="267.04468" magical="195.41171"/>
         </stats>
         <status attackable="false"/>
@@ -3589,18 +3570,19 @@
             <height normal="28"/>
         </collision>
     </npc>
-    <npc id="21660" level="64" type="Monster" name="Palibati" title="Earth Guardian">
+    <npc id="21660" level="65" type="Monster" name="Palibati" title="Earth Guardian">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>BEAST</race>
         <sex>MALE</sex>
         <equipment rhand="73"/>
+        <acquire exp="17758" sp="260"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="2313" hpRegen="13.5" mp="1188" mpRegen="1.8"/>
+            <vitals hp="3655" hpRegen="13.5" mp="1188" mpRegen="1.8"/>
             <speed>
                 <walk ground="70"/>
                 <run ground="174"/>
             </speed>
-            <attack physical="85.0209166" magical="88.31491" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
+            <attack physical="1100.0209166" magical="88.31491" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
             <defence physical="154.6888972" magical="100.0527" evasion="10"/>
         </stats>
         <status attackable="false"/>
@@ -3611,31 +3593,6 @@
             <radius normal="25"/>
             <height normal="65"/>
         </collision>
-        <dropLists>
-            <drop>
-                <item id="78" min="1" max="1" chance="0.003"/> <!-- Great Sword -->
-                <item id="142" min="1" max="1" chance="0.003"/> <!-- Keshanberk -->
-                <item id="2381" min="1" max="1" chance="0.003"/> <!-- Doom Plate Armor -->
-                <item id="57" min="468" max="1092" chance="70"/> <!-- Adena -->
-                <item id="1867" min="1" max="1" chance="18.73"/> <!-- Animal Skin -->
-                <item id="1872" min="1" max="1" chance="18.39"/> <!-- Animal Bone -->
-                <item id="1882" min="1" max="1" chance="3.041"/> <!-- Leather -->
-                <item id="1881" min="1" max="1" chance="1.796"/> <!-- Coarse Bone Powder -->
-                <item id="4104" min="1" max="1" chance="0.3"/> <!-- Great Sword Blade -->
-                <item id="4081" min="1" max="1" chance="0.3"/> <!-- Doom Plate Armor Temper -->
-                <item id="4043" min="1" max="1" chance="0.3"/> <!-- Asofe -->
-                <item id="4040" min="1" max="1" chance="0.3"/> <!-- Mold Lubricant -->
-                <item id="4107" min="1" max="1" chance="0.3"/> <!-- Keshanberk Blade -->
-            </drop>
-            <spoil>
-                <item id="1872" min="1" max="3" chance="75.58"/> <!-- Animal Bone -->
-                <item id="1867" min="1" max="3" chance="74.86"/> <!-- Animal Skin -->
-                <item id="1882" min="1" max="1" chance="24.39"/> <!-- Leather -->
-                <item id="1881" min="1" max="1" chance="14.82"/> <!-- Coarse Bone Powder -->
-                <item id="4043" min="1" max="1" chance="3.75"/> <!-- Asofe -->
-                <item id="4040" min="1" max="1" chance="2.217"/> <!-- Mold Lubricant -->
-            </spoil>
-        </dropLists>
     </npc>
     <npc id="21661" level="79" type="Monster" name="Scarlet Worker" element="FIRE">
         <parameters>
