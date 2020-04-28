@@ -319,7 +319,7 @@
             <height normal="39"/>
         </collision>
     </npc>
-    <npc id="25407" level="60" type="RaidBoss" name="Lord Ishka" title="Raid Boss">
+    <npc id="25407" level="85" type="RaidBoss" name="Lord Ishka" title="Raid Boss" element="EARTH">
         <parameters>
             <minions name="Privates">
                 <npc id="25408" count="1" respawnTime="360" weightPoint="1"/>
@@ -331,10 +331,10 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="1472"/> <!-- Dreadbane -->
-        <acquire exp="83980800" sp="2519424" raidPoints="5"/>
+        <acquire exp="2768000" sp="83000" raidPoints="5" attribute_exp="1530"/>
         <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-            <vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4"/>
-            <attack physical="785.177450040489" magical="133.511957686818" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <vitals hp="280000.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4"/>
+            <attack physical="2000.00" magical="133.511957686818" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="742.95024" magical="362.44" evasion="-18"/>
             <speed>
                 <walk ground="100"/>
@@ -371,49 +371,14 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="888" min="1" max="1" chance="8.918"/> <!-- Blessed Ring -->
-                <item id="855" min="1" max="1" chance="8.916"/> <!-- Nassen's Earring -->
-                <item id="885" min="1" max="1" chance="8.901"/> <!-- Ring of Ages -->
-                <item id="917" min="1" max="1" chance="8.872"/> <!-- Necklace of Mermaid -->
-                <item id="854" min="1" max="1" chance="8.87"/> <!-- Earring of Seal -->
-                <item id="119" min="1" max="1" chance="8.867"/> <!-- Necklace of Seal -->
-                <item id="886" min="1" max="1" chance="8.85"/> <!-- Ring of Seal -->
-                <item id="857" min="1" max="1" chance="8.85"/> <!-- Holy Earring -->
-                <item id="919" min="1" max="1" chance="8.826"/> <!-- Blessed Necklace -->
-                <item id="2462" min="1" max="1" chance="6.389"/> <!-- Full Plate Gauntlets -->
-                <item id="603" min="1" max="1" chance="6.384"/> <!-- Divine Boots -->
-                <item id="2437" min="1" max="1" chance="6.375"/> <!-- Drake Leather Boots -->
-                <item id="2414" min="1" max="1" chance="6.373"/> <!-- Full Plate Helmet -->
-                <item id="2497" min="1" max="1" chance="6.381"/> <!-- Full Plate Shield -->
-                <item id="1128" min="1" max="1" chance="6.365"/> <!-- Adamantite Boots -->
-                <item id="2461" min="1" max="1" chance="6.365"/> <!-- Drake Leather Gloves -->
-                <item id="442" min="1" max="1" chance="6.353"/> <!-- Divine Tunic -->
-                <item id="473" min="1" max="1" chance="6.349"/> <!-- Divine Stockings -->
-                <item id="401" min="1" max="1" chance="6.335"/> <!-- Drake Leather Armor -->
-                <item id="356" min="1" max="1" chance="6.318"/> <!-- Full Plate Armor -->
-                <item id="2468" min="1" max="1" chance="6.317"/> <!-- Blessed Gloves -->
-                <item id="2438" min="1" max="1" chance="6.304"/> <!-- Full Plate Boots -->
-                <item id="2463" min="1" max="1" chance="6.271"/> <!-- Divine Gloves -->
-                <item id="499" min="1" max="1" chance="6.26"/> <!-- Mithril Helmet -->
-                <item id="228" min="1" max="1" chance="2.844"/> <!-- Crystal Dagger -->
-                <item id="2503" min="1" max="1" chance="2.84"/> <!-- Yaksa Mace -->
-                <item id="205" min="1" max="1" chance="2.831"/> <!-- Ghoul's Staff -->
-                <item id="206" min="1" max="1" chance="2.801"/> <!-- Demon's Staff -->
-                <item id="135" min="1" max="1" chance="2.796"/> <!-- Samurai Long Sword -->
-                <item id="204" min="1" max="1" chance="2.769"/> <!-- Deadman's Staff -->
-                <item id="266" min="1" max="1" chance="2.768"/> <!-- Great Pata -->
-                <item id="299" min="1" max="1" chance="2.718"/> <!-- Orcish Poleaxe -->
-                <item id="286" min="1" max="1" chance="2.709"/> <!-- Eminence Bow -->
-                <item id="951" min="1" max="1" chance="100"/> <!-- Scroll: Enchant Weapon (C-grade) -->
-                <item id="952" min="1" max="1" chance="100"/> <!-- Scroll: Enchant Armor (C-grade) -->
-                <item id="70000" min="11" max="32" chance="100"/> <!-- Sealed Rune - Stage 1 -->
-                <item id="91528" min="1" max="1" chance="10.043"/> <!-- Weapon Varnish (C-grade) -->
-                <item id="91542" min="1" max="1" chance="10.039"/> <!-- Accessory Varnish (C-grade) -->
-                <item id="91535" min="1" max="1" chance="9.954"/> <!-- Armor Varnish (C-grade) -->
+                <item id="57" min="4085" max="9532" chance="70" />
+                <item id="91034" min="1" max="1" chance="2" />
+                <item id="91953" min="1" max="2" chance="5" />
+                <item id="91967" min="1" max="5" chance="7" />
             </drop>
         </dropLists>
     </npc>
-    <npc id="25408" level="59" type="Monster" name="Ishka's Elite Officer" title="Raid Fighter">
+    <npc id="25408" level="85" type="Monster" name="Ishka's Elite Officer" title="Raid Fighter">
         <parameters>
             <skill name="PhysicalSpecial_a" id="4733" level="5"/>
         </parameters>
@@ -456,7 +421,7 @@
             <height normal="28.5"/>
         </collision>
     </npc>
-    <npc id="25409" level="59" type="Monster" name="Ishka's Elite Soldier" title="Raid Fighter">
+    <npc id="25409" level="85" type="Monster" name="Ishka's Elite Soldier" title="Raid Fighter">
         <parameters>
             <skill name="PhysicalSpecial_a" id="4743" level="5"/>
         </parameters>

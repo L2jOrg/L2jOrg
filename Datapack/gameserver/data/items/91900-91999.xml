@@ -458,7 +458,7 @@
 	<armor id="91953" name="Dragon Valley Earring" type="NONE" body-part="EAR" icon="icon.accessary_catseye_earing_i00">
 	<!-- Has increased Stun Resistance. When two identical rings are equipped, only one effect is applied. -->
 		<restriction freightable="false" sellable="false"/>
-		<attributes weight="150" price="924000" enchant-enabled="false" />
+		<attributes weight="150" price="924000" enchant-enabled="true" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="60.0"/>
@@ -545,8 +545,9 @@
 
 	<item id="91967" name="Enchant Scroll: Dragon Valley Earring" type="ENCHANT_ARMOR" icon="icon.etc_penalty_recovery_i00">
 	<!-- Enchant scroll for Dragon Valley Earring. Can enchant up to +10. -->
-		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91968" name="Enchanted Fighter's Rapier Box" type="NONE" icon="icon.weapon_sealed_rapier_i00">
