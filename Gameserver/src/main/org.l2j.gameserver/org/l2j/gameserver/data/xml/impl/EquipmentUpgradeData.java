@@ -24,7 +24,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public class EquipmentUpgradeData extends GameXmlReader
 {
-    private static Logger LOGGER = LoggerFactory.getLogger(EquipmentUpgradeData.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(EquipmentUpgradeData.class.getName());
     private static final Map<Integer, EquipmentUpgradeHolder> _upgrades = new HashMap<>();
 
     protected EquipmentUpgradeData()

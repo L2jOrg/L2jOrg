@@ -76,10 +76,10 @@ public final class Summon extends AbstractEffect {
         var maxLevel = LevelData.getInstance().getMaxLevel();
 
         if (summon.getLevel() >= maxLevel) {
-            summon.getStats().setExp(LevelData.getInstance().getExpForLevel(maxLevel - 1));
+            summon.getStats().setExp(LevelData.getInstance().getExpForLevel(maxLevel));
             LOGGER.warn("({}) NpcID: {} has a level above {}. Please rectify.", summon.getName(), summon.getId(), maxLevel);
         } else {
-            summon.getStats().setExp(LevelData.getInstance().getExpForLevel(summon.getLevel() % LevelData.getInstance().getMaxLevel()));
+            summon.getStats().setExp(LevelData.getInstance().getExpForLevel(summon.getLevel() % (LevelData.getInstance().getMaxLevel() + 1)));
         }
 
         // Summons must have their master buffs upon spawn.

@@ -922,7 +922,7 @@ public class Pet extends Summon {
 
     @Override
     public long getExpForNextLevel() {
-        if (getLevel() >= (LevelData.getInstance().getMaxLevel() - 1)) {
+        if (getLevel() >= LevelData.getInstance().getMaxLevel()) {
             return 0;
         }
         return getStats().getExpForLevel(getLevel() + 1);
@@ -1066,8 +1066,6 @@ public class Pet extends Summon {
         final Item controlItem = getControlItem();
         if (controlItem != null) {
             if (controlItem.getCustomType2() == (name == null ? 1 : 0)) {
-                // name not set yet
-                controlItem.setCustomType2(name != null ? 1 : 0);
                 controlItem.updateDatabase();
                 final InventoryUpdate iu = new InventoryUpdate();
                 iu.addModifiedItem(controlItem);

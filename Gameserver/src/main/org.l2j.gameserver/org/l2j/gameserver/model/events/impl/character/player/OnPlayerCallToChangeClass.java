@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.events.impl.IBaseEvent;
  */
 public class OnPlayerCallToChangeClass implements IBaseEvent {
     private final Player _activeChar;
-
+    
     public OnPlayerCallToChangeClass(Player activeChar) {
         _activeChar = activeChar;
     }
