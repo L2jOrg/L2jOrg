@@ -41,7 +41,7 @@ public class AdminLevel implements IAdminCommandHandler {
 		}
 
 		final var playableTarget = (Playable) target;
-		final var maxAddLevel = LevelData.getInstance().getMaxLevel() - playableTarget.getLevel() -1;
+		final var maxAddLevel = LevelData.getInstance().getMaxLevel() - playableTarget.getLevel();
 
 		if (actualCommand.equalsIgnoreCase("admin_set_level")) {
 			level = level - playableTarget.getLevel();

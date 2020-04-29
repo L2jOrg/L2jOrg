@@ -170,14 +170,14 @@ public abstract class Summon extends Playable {
     }
 
     public long getExpForThisLevel() {
-        if (getLevel() >= LevelData.getInstance().getMaxLevel()) {
+        if (getLevel() > LevelData.getInstance().getMaxLevel()) {
             return 0;
         }
         return LevelData.getInstance().getExpForLevel(getLevel());
     }
 
     public long getExpForNextLevel() {
-        if (getLevel() >= (LevelData.getInstance().getMaxLevel() - 1)) {
+        if (getLevel() >= LevelData.getInstance().getMaxLevel()) {
             return 0;
         }
         return LevelData.getInstance().getExpForLevel(getLevel() + 1);

@@ -21,7 +21,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class LevelData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(LevelData.class);
 
-    private byte maxLevel = 86;
+    private byte maxLevel = 90;
     private final IntMap<LevelInfo> levelInfos = new HashIntMap<>();
 
     private LevelData() {
@@ -43,12 +43,17 @@ public final class LevelData extends GameXmlReader {
     @Override
     public void parseDocument(Document doc, File f) {
         var list = doc.getFirstChild();
-        maxLevel = (byte) (parseByte(list.getAttributes(),"max-level") + 1);
+        maxLevel = parseByte(list.getAttributes(),"max-level");
         forEach(list, "level-data", node -> {
             var attr = node.getAttributes();
             var level = parseInt(attr, "level");
             levelInfos.put(level, new LevelInfo(parseShort(attr,"characteristic-points"), parseLong(attr, "experience"), parseFloat(attr,"xp-percent-lost")));
         });
+        var maxInfo = levelInfos.keySet().stream().max().orElse(1);
+        if(maxInfo < maxLevel) {
+            maxLevel = (byte) maxInfo;
+            LOGGER.warn("Adjusting maxLevel to max level info {}", maxLevel);
+        }
     }
 
     public short getCharacteristicPoints(int level) {
@@ -56,7 +61,7 @@ public final class LevelData extends GameXmlReader {
     }
 
     public long getExpForLevel(int level) {
-        return levelInfos.get(max(1, min(level, maxLevel))).experience;
+        return levelInfos.get(max(1, min(level, maxLevel + 1))).experience;
     }
 
     public float getXpPercentLost(int level) {
