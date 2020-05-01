@@ -1007,7 +1007,6 @@ public final class Player extends Playable {
      * Skills queued because a skill is already in progress
      */
     private SkillUseHolder _queuedSkill;
-    private int cursedWeaponEquippedId = 0;
     private boolean combatFlagEquipped = false;
     private boolean _canRevive = true;
     private int _reviveRequested = 0;
@@ -1198,7 +1197,6 @@ public final class Player extends Playable {
             player._activeClass = character.getClassId();
         }
 
-        CursedWeaponsManager.getInstance().checkPlayer(player);
         player.setXYZInvisible(character.getX(), character.getY(), character.getZ());
         player.setLastServerPosition(character.getX(), character.getY(), character.getZ());
 
@@ -3034,8 +3032,6 @@ public final class Player extends Playable {
             // If over capacity, drop the item
             if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != Item.MODIFIED))) {
                 dropItem("InvDrop", newitem, null, true, true);
-            } else if (CursedWeaponsManager.getInstance().isCursed(newitem.getId())) {
-                CursedWeaponsManager.getInstance().activate(this, newitem);
             }
 
             // Combat Flag
@@ -3093,8 +3089,6 @@ public final class Player extends Playable {
                         && (!item.isStackable() || (item.getLastChange() != Item.MODIFIED))) {
 
                     dropItem("InvDrop", item, null, true);
-                } else if (CursedWeaponsManager.getInstance().isCursed(item.getId())) {
-                    CursedWeaponsManager.getInstance().activate(this, item);
                 }
             }
 
@@ -4036,10 +4030,7 @@ public final class Player extends Playable {
             }
             ItemEngine.getInstance().destroyItem("Consume", target, this, null);
         }
-        // Cursed Weapons are not distributed
-        else if (CursedWeaponsManager.getInstance().isCursed(target.getId())) {
-            addItem("Pickup", target, null, true);
-        } else if (FortSiegeManager.getInstance().isCombat(target.getId())) {
+        else if (FortSiegeManager.getInstance().isCombat(target.getId())) {
             addItem("Pickup", target, null, true);
         } else {
             // if item is instance of L2ArmorType or L2WeaponType broadcast an "Attention" system message
@@ -4358,10 +4349,7 @@ public final class Player extends Playable {
             // Clear resurrect xp calculation
             model.setExpBeforeDeath(0);
 
-            // Issues drop of Cursed Weapon.
-            if (isCursedWeaponEquipped()) {
-                CursedWeaponsManager.getInstance().drop(cursedWeaponEquippedId, killer);
-            } else if (combatFlagEquipped) {
+            if (combatFlagEquipped) {
                 final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getId());
@@ -4372,7 +4360,7 @@ public final class Player extends Playable {
                 }
             } else {
                 final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
-                if ((pk == null) || !pk.isCursedWeaponEquipped()) {
+                if ((pk == null)) {
                     onDieDropItem(killer); // Check if any item should be dropped
 
                     if (!insidePvpZone && (pk != null)) {
@@ -4562,12 +4550,6 @@ public final class Player extends Playable {
 
         // Avoid nulls && check if player != killedPlayer
         if ((killedPlayer == null) || (this == killedPlayer)) {
-            return;
-        }
-
-        // Cursed weapons progress
-        if (isCursedWeaponEquipped()) {
-            CursedWeaponsManager.getInstance().increaseKills(getCursedWeaponEquippedId());
             return;
         }
 
@@ -5174,11 +5156,6 @@ public final class Player extends Playable {
             return true;
         }
 
-        // Don't allow disarming a cursed weapon
-        if (isCursedWeaponEquipped()) {
-            return false;
-        }
-
         // Don't allow disarming a Combat Flag or Territory Ward.
         if (combatFlagEquipped) {
             return false;
@@ -5317,7 +5294,7 @@ public final class Player extends Playable {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
                 return false;
-            } else if (isTransformed() || isCursedWeaponEquipped()) {
+            } else if (isTransformed()) {
                 // no message needed, player while transformed doesn't have mount action
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return false;
@@ -6180,7 +6157,7 @@ public final class Player extends Playable {
             }
         }
 
-        if ((getTransformationId() > 0) || isCursedWeaponEquipped()) {
+        if (getTransformationId() > 0) {
             return oldSkill;
         }
 
@@ -7597,10 +7574,7 @@ public final class Player extends Playable {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
             return false;
         }
-        if (isCursedWeaponEquipped()) {
-            _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE;
-            return false;
-        }
+
         if (privateStoreType != PrivateStoreType.NONE) {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
             return false;
@@ -8525,7 +8499,6 @@ public final class Player extends Playable {
      * <li>Item owner id == owner id</li>
      * <li>It isnt pet control item while mounting pet or pet summoned</li>
      * <li>It isnt active enchant item</li>
-     * <li>It isnt cursed weapon/item</li>
      * <li>It isnt wear item</li>
      * </ul>
      *
@@ -8546,12 +8519,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isProcessingItem(objectId)) {
-            return false;
-        }
-
-        // can not trade a cursed weapon
-        return !CursedWeaponsManager.getInstance().isCursed(item.getId());
+        return !isProcessingItem(objectId);
     }
 
     /**
@@ -8871,14 +8839,6 @@ public final class Player extends Playable {
             LOGGER.error("deleteMe()", e);
         }
 
-        if (isCursedWeaponEquipped()) {
-            try {
-                CursedWeaponsManager.getInstance().getCursedWeapon(cursedWeaponEquippedId).setPlayer(null);
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
-        }
-
         if (clanId > 0) {
             _clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
             _clan.broadcastToOnlineMembers(new ExPledgeCount(_clan));
@@ -9064,18 +9024,6 @@ public final class Player extends Playable {
         model.setPowerGrade(power);
     }
 
-    public boolean isCursedWeaponEquipped() {
-        return cursedWeaponEquippedId != 0;
-    }
-
-    public int getCursedWeaponEquippedId() {
-        return cursedWeaponEquippedId;
-    }
-
-    public void setCursedWeaponEquippedId(int value) {
-        cursedWeaponEquippedId = value;
-    }
-
     public boolean isCombatFlagEquipped() {
         return combatFlagEquipped;
     }
@@ -9084,11 +9032,6 @@ public final class Player extends Playable {
         combatFlagEquipped = value;
     }
 
-    /**
-     * Returns the Number of Souls this Player got.
-     *
-     * @return
-     */
     public int getChargedSouls() {
         return _souls;
     }

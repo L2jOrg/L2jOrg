@@ -82,7 +82,7 @@ public class SupportMagic implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player player, Creature target)
 	{
-		if (!isNpc(target) || player.isCursedWeaponEquipped())
+		if (!isNpc(target))
 		{
 			return false;
 		}

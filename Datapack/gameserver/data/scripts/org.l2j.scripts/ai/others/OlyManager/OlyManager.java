@@ -253,19 +253,8 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, Player player)
-	{
-		String htmltext = null;
-		
-		if (!player.isCursedWeaponEquipped())
-		{
-			htmltext = (!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55) ? "OlyManager-noNoble.html" : "OlyManager-noble.html";
-		}
-		else
-		{
-			htmltext = "OlyManager-noCursed.html";
-		}
-		return htmltext;
+	public String onFirstTalk(Npc npc, Player player) {
+		return (!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55) ? "OlyManager-noNoble.html" : "OlyManager-noble.html";
 	}
 	
 	@Override

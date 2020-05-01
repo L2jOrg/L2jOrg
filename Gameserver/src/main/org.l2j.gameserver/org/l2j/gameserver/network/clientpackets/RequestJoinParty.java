@@ -75,11 +75,6 @@ public final class RequestJoinParty extends ClientPacket {
             return;
         }
 
-        if (target.isCursedWeaponEquipped() || requestor.isCursedWeaponEquipped()) {
-            requestor.sendPacket(SystemMessageId.INVALID_TARGET);
-            return;
-        }
-
         if (target.isJailed() || requestor.isJailed()) {
             requestor.sendMessage("You cannot invite a player while is in Jail.");
             return;

@@ -157,7 +157,6 @@ public class GameServer {
         HtmCache.getInstance();
         CrestTable.getInstance();
         TeleportersData.getInstance();
-        CursedWeaponsManager.getInstance();
         TransformData.getInstance();
         ReportTable.getInstance();
         if (Config.SELLBUFF_ENABLED) {

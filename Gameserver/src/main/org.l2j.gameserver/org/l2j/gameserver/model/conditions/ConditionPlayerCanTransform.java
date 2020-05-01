@@ -38,7 +38,7 @@ public class ConditionPlayerCanTransform extends Condition {
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
         boolean canTransform = true;
         final Player player = effector.getActingPlayer();
-        if ((player == null) || player.isAlikeDead() || player.isCursedWeaponEquipped()) {
+        if ((player == null) || player.isAlikeDead()) {
             canTransform = false;
         } else if (player.isSitting()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_SITTING);

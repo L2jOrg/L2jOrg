@@ -95,7 +95,7 @@ public final class RequestPrivateStoreSell extends ClientPacket {
             return;
         }
 
-        if ((storePlayer.getPrivateStoreType() != PrivateStoreType.BUY) || player.isCursedWeaponEquipped()) {
+        if (storePlayer.getPrivateStoreType() != PrivateStoreType.BUY) {
             return;
         }
 

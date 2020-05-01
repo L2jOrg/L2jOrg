@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InventorySlot;
-import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
@@ -147,7 +146,7 @@ public class ExCharInfo extends ServerPacket {
         writeShort(player.getPledgeType());
 
         writeInt(appearence.getTitleColor());
-        writeByte((player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId()) : 0));
+        writeByte(0x00); // cursed weapon level
         writeInt(zeroIfNullOrElse(player.getClan(), Clan::getReputationScore));
         writeInt(player.getTransformationDisplayId());
         writeInt(player.getAgathionId());
@@ -169,7 +168,7 @@ public class ExCharInfo extends ServerPacket {
         writeByte(nonNull(member) ? member.getPosition() : player.isTrueHero() ? 100 : 0);
         writeByte(player.isHairAccessoryEnabled());
         writeByte(player.getAbilityPointsUsed());
-        writeInt(player.getCursedWeaponEquippedId());
+        writeInt(0x00); // cursed weapon equipped id
         writeInt(0x00); // wait action id
         writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
         writeShort(0x00); // notoriety

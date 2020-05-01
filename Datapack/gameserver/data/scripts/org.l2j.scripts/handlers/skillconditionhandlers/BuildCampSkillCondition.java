@@ -37,7 +37,7 @@ public class BuildCampSkillCondition implements SkillCondition {
 		
 		final Player player = caster.getActingPlayer();
 		boolean canCreateBase = true;
-		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null))
+		if (player.isAlikeDead() || (player.getClan() == null))
 		{
 			canCreateBase = false;
 		}

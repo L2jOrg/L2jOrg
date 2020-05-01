@@ -78,11 +78,6 @@ public final class Say2 extends ClientPacket {
             return;
         }
 
-        if (player.isCursedWeaponEquipped() && ( chatType == ChatType.TRADE || chatType == ChatType.SHOUT)) {
-            player.sendPacket(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON);
-            return;
-        }
-
         if (player.isChatBanned() && text.charAt(0) != '.') {
             if (player.isAffected(EffectFlag.CHAT_BLOCK)) {
                 player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_CHATTING_IS_NOT_ALLOWED);

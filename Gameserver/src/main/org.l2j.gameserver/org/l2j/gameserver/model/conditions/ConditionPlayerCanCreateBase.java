@@ -52,7 +52,7 @@ public class ConditionPlayerCanCreateBase extends Condition {
 
         final Player player = effector.getActingPlayer();
         boolean canCreateBase = true;
-        if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null)) {
+        if (player.isAlikeDead() || (player.getClan() == null)) {
             canCreateBase = false;
         }
 

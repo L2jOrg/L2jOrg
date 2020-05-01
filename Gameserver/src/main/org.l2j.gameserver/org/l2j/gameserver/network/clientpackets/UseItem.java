@@ -31,7 +31,6 @@ import java.util.concurrent.TimeUnit;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isBetween;
-import static org.l2j.gameserver.model.item.CommonItem.FORMAL_WEAR;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isItem;
 
@@ -186,7 +185,7 @@ public final class UseItem extends ClientPacket {
 
     private boolean checkCanUse(Player player, Item item) {
         // TODO Remove FortSiege check
-        if ((player.isCursedWeaponEquipped() && itemId == FORMAL_WEAR) || player.isCombatFlagEquipped() || FortSiegeManager.getInstance().isCombat(itemId)) {
+        if (player.isCombatFlagEquipped() || FortSiegeManager.getInstance().isCombat(itemId)) {
             return false;
         }
 
@@ -205,10 +204,6 @@ public final class UseItem extends ClientPacket {
             case TWO_HAND, LEFT_HAND, RIGHT_HAND -> {
                 if (player.isMounted() || player.isDisarmed() ||  (nonNull(player.getActiveWeaponItem()) && player.getActiveWeaponItem().getId() == 9819)) {
                     player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-                    return false;
-                }
-
-                if (player.isCursedWeaponEquipped()) {
                     return false;
                 }
             }

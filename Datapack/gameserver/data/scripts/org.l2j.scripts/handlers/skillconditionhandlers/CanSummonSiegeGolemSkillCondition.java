@@ -32,7 +32,7 @@ public class CanSummonSiegeGolemSkillCondition implements SkillCondition {
 		
 		final Player player = caster.getActingPlayer();
 		boolean canSummonSiegeGolem = true;
-		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null))
+		if (player.isAlikeDead() || (player.getClan() == null))
 		{
 			canSummonSiegeGolem = false;
 		}

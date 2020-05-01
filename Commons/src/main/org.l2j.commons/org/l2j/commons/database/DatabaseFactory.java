@@ -14,19 +14,19 @@ import static java.util.Objects.isNull;
  * @author JoeAlisson
  */
 public class DatabaseFactory {
-    private static Logger LOGGER = LoggerFactory.getLogger(DatabaseFactory.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseFactory.class);
 
     private static DatabaseFactory instance;
-    private final HikariDataSource _dataSource;
+    private final HikariDataSource dataSource;
 
     public DatabaseFactory() throws SQLException {
-        _dataSource = new HikariDataSource(new HikariConfig());
-        _dataSource.getConnection().close();
+        dataSource = new HikariDataSource(new HikariConfig());
+        dataSource.getConnection().close();
     }
 
     public void shutdown() {
         try {
-            _dataSource.close();
+            dataSource.close();
         } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
         }
@@ -42,7 +42,7 @@ public class DatabaseFactory {
 
     public Connection getConnection() {
         try {
-            return _dataSource.getConnection();
+            return dataSource.getConnection();
         } catch (SQLException e) {
             LOGGER.error(e.getLocalizedMessage(), e);
         }

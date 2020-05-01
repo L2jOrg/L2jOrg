@@ -41,18 +41,6 @@ public abstract class PlayableAI extends CreatureAI {
                 clientActionFailed();
                 return;
             }
-
-            if (target.getActingPlayer().isCursedWeaponEquipped() && (actor.getActingPlayer().getLevel() <= 20)) {
-                actor.getActingPlayer().sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-                clientActionFailed();
-                return;
-            }
-
-            if (actor.getActingPlayer().isCursedWeaponEquipped() && (target.getActingPlayer().getLevel() <= 20)) {
-                actor.getActingPlayer().sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-                clientActionFailed();
-                return;
-            }
         }
         super.onIntentionAttack(target);
     }
@@ -71,12 +59,6 @@ public abstract class PlayableAI extends CreatureAI {
             if (actor.getActingPlayer().isProtectionBlessingAffected() && ((target.getActingPlayer().getLevel() - actor.getActingPlayer().getLevel()) >= 10) && (target.getActingPlayer().getReputation() < 0) && !target.isInsideZone(ZoneType.PVP)) {
                 // If target have karma and have level >= 10 than his target and actor have
                 // Newbie Protection Buff,
-                actor.getActingPlayer().sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-                clientActionFailed();
-                return;
-            }
-
-            if (target.getActingPlayer().isCursedWeaponEquipped() && ((actor.getActingPlayer().getLevel() <= 20) || (target.getActingPlayer().getLevel() <= 20))) {
                 actor.getActingPlayer().sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
                 clientActionFailed();
                 return;

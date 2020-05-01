@@ -88,7 +88,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
         }
 
         final WorldObject object = World.getInstance().findPlayer(_storePlayerId);
-        if ((object == null) || player.isCursedWeaponEquipped()) {
+        if (object == null) {
             return;
         }
 

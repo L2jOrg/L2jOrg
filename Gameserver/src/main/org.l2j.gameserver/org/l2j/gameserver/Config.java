@@ -382,7 +382,7 @@ public final class Config {
     public static boolean ALLOW_FISHING;
     public static boolean ALLOW_BOAT;
     public static int BOAT_BROADCAST_RADIUS;
-    public static boolean ALLOW_CURSED_WEAPONS;
+
     public static boolean ALLOW_MANOR;
     public static boolean SERVER_NEWS;
     public static boolean ENABLE_COMMUNITY_BOARD;
@@ -1298,7 +1298,6 @@ public final class Config {
         ALLOW_MANOR = General.getBoolean("AllowManor", true);
         ALLOW_BOAT = General.getBoolean("AllowBoat", true);
         BOAT_BROADCAST_RADIUS = General.getInt("BoatBroadcastRadius", 20000);
-        ALLOW_CURSED_WEAPONS = General.getBoolean("AllowCursedWeapons", true);
         SERVER_NEWS = General.getBoolean("ShowServerNews", false);
         ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
         BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");

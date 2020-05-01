@@ -255,7 +255,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         } else if (getRegisteredPlayers().size() >= (getVariables().getInt(MAX_ARENAS_KEY, 5) * getMaxPlayersInArena())) {
             sm = SystemMessageId.THERE_ARE_TOO_MANY_CHALLENGERS_YOU_CANNOT_PARTICIPATE_NOW;
             canRegister = false;
-        } else if (player.isCursedWeaponEquipped() || (player.getReputation() < 0)) {
+        } else if (player.getReputation() < 0) {
             sm = SystemMessageId.WAITING_LIST_REGISTRATION_IS_NOT_ALLOWED_WHILE_THE_CURSED_SWORD_IS_BEING_USED_OR_THE_STATUS_IS_IN_A_CHAOTIC_STATE;
             canRegister = false;
         } else if (player.isInDuel()) {

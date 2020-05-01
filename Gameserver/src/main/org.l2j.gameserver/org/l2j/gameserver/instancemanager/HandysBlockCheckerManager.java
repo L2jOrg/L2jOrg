@@ -149,11 +149,6 @@ public final class HandysBlockCheckerManager {
                 }
             }
 
-            if (player.isCursedWeaponEquipped()) {
-                player.sendPacket(SystemMessageId.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON);
-                return false;
-            }
-
             if (player.isOnEvent() || player.isInOlympiadMode()) {
                 player.sendMessage("Couldnt register you due other event participation");
                 return false;

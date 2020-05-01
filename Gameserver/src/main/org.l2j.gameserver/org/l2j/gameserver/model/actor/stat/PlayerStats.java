@@ -58,8 +58,7 @@ public class PlayerStats extends PlayableStats {
             return false;
         }
 
-        // Set new karma
-        if (!activeChar.isCursedWeaponEquipped() && (activeChar.getReputation() < 0) && (activeChar.isGM() || !activeChar.isInsideZone(ZoneType.PVP))) {
+        if (activeChar.getReputation() < 0 && (activeChar.isGM() || !activeChar.isInsideZone(ZoneType.PVP))) {
             final int karmaLost = Formulas.calculateKarmaLost(activeChar, value);
             if (karmaLost > 0) {
                 activeChar.setReputation(Math.min((activeChar.getReputation() + karmaLost), 0));

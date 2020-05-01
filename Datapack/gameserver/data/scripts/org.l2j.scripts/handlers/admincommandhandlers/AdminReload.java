@@ -9,7 +9,6 @@ import org.l2j.gameserver.engine.item.EnchantItemGroupsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
@@ -121,10 +120,6 @@ public class AdminReload implements IAdminCommandHandler {
                 case "zone" -> {
                     ZoneManager.getInstance().reload();
                     AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Zones.");
-                }
-                case "cw" -> {
-                    CursedWeaponsManager.getInstance().load();
-                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Cursed Weapons.");
                 }
                 case "crest" -> {
                     CrestTable.getInstance().load();
