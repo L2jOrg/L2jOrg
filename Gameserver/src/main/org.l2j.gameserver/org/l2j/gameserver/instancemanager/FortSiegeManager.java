@@ -44,8 +44,7 @@ public final class FortSiegeManager {
     private int _suspiciousMerchantRespawnDelay = 180; // Time in minute. Changeable in fortsiege.properties
     private Collection<FortSiege> _sieges;
 
-    protected FortSiegeManager() {
-        load();
+    private FortSiegeManager() {
     }
 
     public final void addSiegeSkills(Player character) {
@@ -270,6 +269,10 @@ public final class FortSiegeManager {
                 }
             }
         }
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static FortSiegeManager getInstance() {

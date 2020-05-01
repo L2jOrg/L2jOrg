@@ -37,7 +37,7 @@ public class Wear implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -59,7 +59,7 @@ public class Wear implements IBypassHandler
 				return false;
 			}
 			
-			showWearWindow(activeChar, Integer.parseInt(st.nextToken()));
+			showWearWindow(player, Integer.parseInt(st.nextToken()));
 			return true;
 		}
 		catch (Exception e)

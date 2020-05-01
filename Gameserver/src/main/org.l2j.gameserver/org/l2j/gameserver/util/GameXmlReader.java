@@ -3,6 +3,7 @@ package org.l2j.gameserver.util;
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -91,5 +92,10 @@ public abstract class GameXmlReader extends XmlReader {
         final int z = parseInteger(attrs, "z");
         final int heading = parseInteger(attrs, "heading", 0);
         return new Location(x, y, z, heading);
+    }
+
+    protected ItemHolder parseItemHolder(Node n) {
+        final var attrs = n.getAttributes();
+        return new ItemHolder(parseInt(attrs, "id"), parselong(attrs, "count"), parseInt(attrs, "enchant", 0));
     }
 }

@@ -96,7 +96,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.settings;
     exports org.l2j.gameserver.data.database.data;
     exports org.l2j.gameserver.data.database.dao;
-    exports org.l2j.gameserver.network.serverpackets.equipmentupgrade;
     exports org.l2j.gameserver.world;
     exports org.l2j.gameserver.network.serverpackets.html;
     exports org.l2j.gameserver.engine.geo.settings;
@@ -114,7 +113,8 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.costume;
     exports org.l2j.gameserver.api.costume;
     exports org.l2j.gameserver.network.serverpackets.sessionzones;
-    exports org.l2j.gameserver.network.serverpackets.items;
+    exports org.l2j.gameserver.network.serverpackets.item;
+    exports org.l2j.gameserver.api.item;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

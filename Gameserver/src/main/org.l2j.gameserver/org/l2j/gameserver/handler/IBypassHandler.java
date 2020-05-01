@@ -13,13 +13,8 @@ public interface IBypassHandler {
 
     /**
      * This is the worker method that is called when someone uses an bypass command.
-     *
-     * @param command
-     * @param activeChar
-     * @param bypassOrigin
-     * @return success
      */
-    boolean useBypass(String command, Player activeChar, Creature bypassOrigin);
+    boolean useBypass(String command, Player player, Creature bypassOrigin);
 
     /**
      * This method is called at initialization to register all bypasses automatically.

@@ -42,7 +42,7 @@ public class ItemAuctionLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -51,7 +51,7 @@ public class ItemAuctionLink implements IBypassHandler
 		
 		if (!Config.ALT_ITEM_AUCTION_ENABLED)
 		{
-			activeChar.sendPacket(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD);
+			player.sendPacket(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD);
 			return true;
 		}
 		
@@ -73,12 +73,12 @@ public class ItemAuctionLink implements IBypassHandler
 			final String cmd = st.nextToken();
 			if ("show".equalsIgnoreCase(cmd))
 			{
-				if (!activeChar.getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
+				if (!player.getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
 				{
 					return false;
 				}
 				
-				if (activeChar.isItemAuctionPolling())
+				if (player.isItemAuctionPolling())
 				{
 					return false;
 				}
@@ -88,31 +88,31 @@ public class ItemAuctionLink implements IBypassHandler
 				
 				if (currentAuction == null)
 				{
-					activeChar.sendPacket(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD);
+					player.sendPacket(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD);
 					
 					if (nextAuction != null)
 					{
-						activeChar.sendMessage("The next auction will begin on the " + fmt.format(new Date(nextAuction.getStartingTime())) + ".");
+						player.sendMessage("The next auction will begin on the " + fmt.format(new Date(nextAuction.getStartingTime())) + ".");
 					}
 					return true;
 				}
 				
-				activeChar.sendPacket(new ExItemAuctionInfoPacket(false, currentAuction, nextAuction));
+				player.sendPacket(new ExItemAuctionInfoPacket(false, currentAuction, nextAuction));
 			}
 			else if ("cancel".equalsIgnoreCase(cmd))
 			{
-				final ItemAuction[] auctions = au.getAuctionsByBidder(activeChar.getObjectId());
+				final ItemAuction[] auctions = au.getAuctionsByBidder(player.getObjectId());
 				boolean returned = false;
 				for (ItemAuction auction : auctions)
 				{
-					if (auction.cancelBid(activeChar))
+					if (auction.cancelBid(player))
 					{
 						returned = true;
 					}
 				}
 				if (!returned)
 				{
-					activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR);
+					player.sendPacket(SystemMessageId.THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR);
 				}
 			}
 			else

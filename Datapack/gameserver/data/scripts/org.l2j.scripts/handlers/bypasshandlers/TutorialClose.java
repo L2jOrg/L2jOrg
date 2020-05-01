@@ -33,10 +33,10 @@ public class TutorialClose implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
-		activeChar.sendPacket(TutorialCloseHtml.STATIC_PACKET);
-		activeChar.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
+		player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+		player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 		return false;
 	}
 	

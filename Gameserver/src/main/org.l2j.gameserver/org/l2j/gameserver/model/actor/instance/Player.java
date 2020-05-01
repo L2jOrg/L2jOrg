@@ -133,8 +133,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.item.BodyPart.*;
-import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
-import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -3018,22 +3017,14 @@ public final class Player extends Playable {
      */
     public void addItem(String process, Item item, WorldObject reference, boolean sendMessage) {
         if (item.getCount() > 0) {
-            // Sends message to client if requested
+
             if (sendMessage) {
                 if (item.getCount() > 1) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
-                    sm.addItemName(item);
-                    sm.addLong(item.getCount());
-                    sendPacket(sm);
+                    sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_S2_S1).addItemName(item).addLong(item.getCount()));
                 } else if (item.getEnchantLevel() > 0) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
-                    sm.addInt(item.getEnchantLevel());
-                    sm.addItemName(item);
-                    sendPacket(sm);
+                    sendPacket(getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addInt(item.getEnchantLevel()).addItemName(item));
                 } else {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
-                    sm.addItemName(item);
-                    sendPacket(sm);
+                    sendPacket(getSystemMessage(YOU_HAVE_OBTAINED_S1).addItemName(item));
                 }
             }
 
@@ -3070,60 +3061,63 @@ public final class Player extends Playable {
      * TODO make process an enum.
      */
     public Item addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
+        return addItem(process, itemId, count, 0, reference, sendMessage);
+    }
+
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+        Item item = null;
         if (count > 0) {
-            final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
-            if (item == null) {
-                LOGGER.error("Item doesn't exist so cannot be added. Item ID: " + itemId);
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
+
+            if (isNull(template)) {
+                LOGGER.error("Item doesn't exist so cannot be added. Item ID: {}", itemId);
                 return null;
             }
-            // Sends message to client if requested
-            if (sendMessage && ((!isCastingNow() && item.hasExImmediateEffect()) || !item.hasExImmediateEffect())) {
-                if (count > 1) {
-                    if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-                        sm.addItemName(itemId);
-                        sm.addLong(count);
-                        sendPacket(sm);
-                    } else {
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
-                        sm.addItemName(itemId);
-                        sm.addLong(count);
-                        sendPacket(sm);
-                    }
-                } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-                    sm.addItemName(itemId);
-                    sendPacket(sm);
-                } else {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
-                    sm.addItemName(itemId);
-                    sendPacket(sm);
-                }
-            }
 
-            // Auto-use herbs.
-            if (item.hasExImmediateEffect()) {
-                final IItemHandler handler = ItemHandler.getInstance().getHandler(item instanceof EtcItem ? (EtcItem) item : null);
+            if(template.hasExImmediateEffect()) {
+                final var handler = ItemHandler.getInstance().getHandler(template instanceof EtcItem etcItem ? etcItem : null);
+
                 if (handler == null) {
-                    LOGGER.warn("No item handler registered for Herb ID " + item.getId() + "!");
+                    LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
                 } else {
                     handler.useItem(this, new Item(itemId), false);
                 }
             } else {
-                // Add the item to inventory
-                final Item createdItem = inventory.addItem(process, itemId, count, this, reference);
+                item = inventory.addItem(process, itemId, count, this, reference);
+                if(enchant > 0) {
+                    item.setEnchantLevel(enchant);
+                }
 
                 // If over capacity, drop the item
-                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && createdItem.isDropable() && (!createdItem.isStackable() || (createdItem.getLastChange() != Item.MODIFIED))) {
-                    dropItem("InvDrop", createdItem, null, true);
-                } else if (CursedWeaponsManager.getInstance().isCursed(createdItem.getId())) {
-                    CursedWeaponsManager.getInstance().activate(this, createdItem);
+                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
+                        && (!item.isStackable() || (item.getLastChange() != Item.MODIFIED))) {
+
+                    dropItem("InvDrop", item, null, true);
+                } else if (CursedWeaponsManager.getInstance().isCursed(item.getId())) {
+                    CursedWeaponsManager.getInstance().activate(this, item);
                 }
-                return createdItem;
+            }
+
+            if (sendMessage) {
+                if (count > 1) {
+                    if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+                        sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(template).addLong(count) );
+                    } else {
+                        sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_S2_S1).addItemName(template).addLong(count) );
+                    }
+                } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(template) );
+                } else if(enchant > 0) {
+                    sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addItemName(template).addInt(enchant));
+                } else {
+                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(template) );
+                }
             }
         }
-        return null;
+        return item;
     }
+
+
 
     /**
      * @param process     the process name
@@ -3131,8 +3125,8 @@ public final class Player extends Playable {
      * @param reference   the reference object
      * @param sendMessage if {@code true} a system message will be sent
      */
-    public void addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
-        addItem(process, item.getId(), item.getCount(), reference, sendMessage);
+    public Item addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
+        return addItem(process, item.getId(), item.getCount(), item.getEnchantment(), reference, sendMessage);
     }
 
     /**
@@ -3168,14 +3162,9 @@ public final class Player extends Playable {
             return false;
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
-            playerIU.addItem(item);
-            sendInventoryUpdate(playerIU);
-        } else {
-            sendItemList();
-        }
+        final InventoryUpdate playerIU = new InventoryUpdate();
+        playerIU.addItem(item);
+        sendInventoryUpdate(playerIU);
 
         // Sends message to client if requested
         if (sendMessage) {

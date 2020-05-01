@@ -16,13 +16,13 @@ public class SkillList implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
 			return false;
 		}
-		Folk.showSkillList(activeChar, (Npc) target, activeChar.getClassId());
+		Folk.showSkillList(player, (Npc) target, player.getClassId());
 		return true;
 	}
 	

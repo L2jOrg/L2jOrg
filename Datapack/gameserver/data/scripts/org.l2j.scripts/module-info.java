@@ -1,7 +1,6 @@
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
-import handlers.bypasshandlers.EquipmentUpgrade;
 import handlers.conditions.CategoryTypeCondition;
 import handlers.conditions.NpcLevelCondition;
 import handlers.conditions.PlayerLevelCondition;
@@ -529,9 +528,9 @@ open module org.l2j.scripts {
             handlers.bypasshandlers.TerritoryStatus,
             handlers.bypasshandlers.SupportMagic,
             handlers.bypasshandlers.TutorialClose,
+            handlers.bypasshandlers.UpgradeHandler,
             handlers.bypasshandlers.VoiceCommand,
             handlers.bypasshandlers.Wear,
-                EquipmentUpgrade,
 
             //custom
             custom.SellBuff.SellBuff;

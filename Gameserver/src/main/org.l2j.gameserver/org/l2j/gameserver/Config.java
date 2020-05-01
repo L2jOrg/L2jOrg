@@ -122,7 +122,6 @@ public final class Config {
     public static boolean ALT_GAME_SUBCLASS_EVERYWHERE;
     public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
 
-    public static boolean RESTORE_SUMMON_ON_RECONNECT;
     public static double MAX_BONUS_EXP;
     public static double MAX_BONUS_SP;
     public static int MAX_RUN_SPEED;
@@ -1067,7 +1066,7 @@ public final class Config {
         DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
         ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
         ALT_GAME_SUBCLASS_EVERYWHERE = Character.getBoolean("AltSubclassEverywhere", false);
-        RESTORE_SUMMON_ON_RECONNECT = Character.getBoolean("RestoreSummonOnReconnect", true);
+
         ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
         ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
         STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);

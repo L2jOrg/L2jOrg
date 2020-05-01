@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.network.serverpackets.items.WarehouseDone;
+import org.l2j.gameserver.network.serverpackets.item.WarehouseDone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

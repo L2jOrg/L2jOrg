@@ -33,7 +33,7 @@ public class SupportBlessing implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -43,13 +43,13 @@ public class SupportBlessing implements IBypassHandler
 		final Npc npc = (Npc) target;
 		
 		// If the player is too high level, display a message and return
-		if ((activeChar.getLevel() > 39) || (activeChar.getClassId().level() >= 2))
+		if ((player.getLevel() > 39) || (player.getClassId().level() >= 2))
 		{
-			npc.showChatWindow(activeChar, "data/html/default/SupportBlessingHighLevel.htm");
+			npc.showChatWindow(player, "data/html/default/SupportBlessingHighLevel.htm");
 			return true;
 		}
-		npc.setTarget(activeChar);
-		SkillCaster.triggerCast(npc, activeChar, CommonSkill.BLESSING_OF_PROTECTION.getSkill());
+		npc.setTarget(player);
+		SkillCaster.triggerCast(npc, player, CommonSkill.BLESSING_OF_PROTECTION.getSkill());
 		return false;
 	}
 	

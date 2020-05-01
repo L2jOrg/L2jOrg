@@ -62,6 +62,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
@@ -154,11 +155,12 @@ public final class Item extends WorldObject {
     public Item(int objectId, int itemId) {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
-        this.itemId = itemId;
+
         template = ItemEngine.getInstance().getTemplate(itemId);
-        if ((this.itemId == 0) || (template == null)) {
+        if (itemId == 0 || isNull(template)) {
             throw new IllegalArgumentException();
         }
+        this.itemId = itemId;
         super.setName(template.getName());
         loc = ItemLocation.VOID;
         _dropTime = 0;

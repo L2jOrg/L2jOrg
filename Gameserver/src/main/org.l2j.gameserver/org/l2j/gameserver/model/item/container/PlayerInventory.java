@@ -407,30 +407,21 @@ public class PlayerInventory extends Inventory {
                 _ancientAdena = item;
             } else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets)) {
                 _beautyTickets = item;
+            } else if (item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
+                silverCoin = item;
+            } else if (item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
+                rustyCoin = item;
+            } else if (item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
+                l2Coin = item;
             }
-        } else if( item.getId() == CommonItem.SILVER_COIN && !item.equals(silverCoin)) {
-
-            silverCoin = item;
-
-        } else if(item.getId() == CommonItem.RUSTY_COIN && !item.equals(rustyCoin)) {
-
-            rustyCoin = item;
-
-        } else if(item.getId() == CommonItem.L2_COIN && !item.equals(l2Coin)) {
-
-            l2Coin = item;
         }
 
         if ((item != null) && (actor != null)) {
             // Send inventory update packet
             if (update) {
-                if (!Config.FORCE_INVENTORY_UPDATE) {
-                    final InventoryUpdate playerIU = new InventoryUpdate();
-                    playerIU.addItem(item);
-                    actor.sendInventoryUpdate(playerIU);
-                } else {
-                    actor.sendItemList();
-                }
+                final InventoryUpdate playerIU = new InventoryUpdate();
+                playerIU.addItem(item);
+                actor.sendInventoryUpdate(playerIU);
             }
 
             // Notify to scripts
@@ -751,8 +742,6 @@ public class PlayerInventory extends Inventory {
     public void setInventoryBlock(IntCollection items, InventoryBlockType mode) {
         blockMode = mode;
         blockItems = items;
-
-        owner.sendItemList();
     }
 
     /**
@@ -761,8 +750,6 @@ public class PlayerInventory extends Inventory {
     public void unblock() {
         blockMode = InventoryBlockType.NONE;
         blockItems = null;
-
-        owner.sendItemList();
     }
 
     /**

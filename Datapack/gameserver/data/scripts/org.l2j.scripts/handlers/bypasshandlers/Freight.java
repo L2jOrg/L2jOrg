@@ -39,7 +39,7 @@ public class Freight implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -48,37 +48,37 @@ public class Freight implements IBypassHandler
 		
 		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			final PlayerFreight freight = activeChar.getFreight();
+			final PlayerFreight freight = player.getFreight();
 			if (freight != null)
 			{
 				if (freight.getSize() > 0)
 				{
-					activeChar.setActiveWarehouse(freight);
-					for (Item i : activeChar.getActiveWarehouse().getItems())
+					player.setActiveWarehouse(freight);
+					for (Item i : player.getActiveWarehouse().getItems())
 					{
 						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{
-							activeChar.getActiveWarehouse().destroyItem("Item", i, activeChar, null);
+							player.getActiveWarehouse().destroyItem("Item", i, player, null);
 						}
 					}
-					activeChar.sendPacket(new WareHouseWithdrawalList(1, activeChar, WareHouseWithdrawalList.FREIGHT));
-					activeChar.sendPacket(new WareHouseWithdrawalList(2, activeChar, WareHouseWithdrawalList.FREIGHT));
+					player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.FREIGHT));
+					player.sendPacket(new WareHouseWithdrawalList(2, player, WareHouseWithdrawalList.FREIGHT));
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
+					player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 				}
 			}
 		}
 		else if (command.equalsIgnoreCase(COMMANDS[1]))
 		{
-			if (activeChar.getAccountChars().size() < 1)
+			if (player.getAccountChars().size() < 1)
 			{
-				activeChar.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
+				player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 			}
 			else
 			{
-				activeChar.sendPacket(new PackageToList(activeChar.getAccountChars()));
+				player.sendPacket(new PackageToList(player.getAccountChars()));
 			}
 		}
 		return false;

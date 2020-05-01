@@ -1,0 +1,769 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org upgrade.xsd">
+
+    <upgrade id="12300" type="SPECIAL" item="862" enchantment="17" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="4"/>
+    	<result id="6724"/>
+	</upgrade>
+
+    <upgrade id="12301" type="SPECIAL" item="862" enchantment="18" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="5"/>
+    	<result id="6724"/>
+	</upgrade>
+
+    <upgrade id="12302" type="SPECIAL" item="862" enchantment="19" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="6"/>
+    	<result id="6724"/>
+	</upgrade>
+
+    <upgrade id="12303" type="SPECIAL" item="862" enchantment="20" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="7"/>
+    	<result id="6724"/>
+	</upgrade>
+
+    <upgrade id="12304" type="SPECIAL" item="902" enchantment="8" commission="5000000"  chance="50">
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <item-on-fail id="91524"/>
+        <item-on-fail id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12305" type="SPECIAL" item="902" enchantment="9" commission="5000000"  chance="70">
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <item-on-fail id="91524"/>
+        <item-on-fail id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12306" type="SPECIAL" item="902" enchantment="10" commission="5000000"  chance="90">
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <item-on-fail id="91524"/>
+        <item-on-fail id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12307" type="SPECIAL" item="902" enchantment="11" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12308" type="SPECIAL" item="902" enchantment="12" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12309" type="SPECIAL" item="902" enchantment="13" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12310" type="SPECIAL" item="902" enchantment="14" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12311" type="SPECIAL" item="902" enchantment="15" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12312" type="SPECIAL" item="902" enchantment="16" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960" count="2"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12313" type="SPECIAL" item="902" enchantment="17" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960" count="3"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12314" type="SPECIAL" item="902" enchantment="18" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960" count="4"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12315" type="SPECIAL" item="902" enchantment="19" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960" count="5"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12316" type="SPECIAL" item="902" enchantment="20" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="3"/>
+        <bonus-item id="960" count="6"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12317" type="SPECIAL" item="893" enchantment="8" commission="5000000"  chance="70">
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <item-on-fail id="91524"/>
+        <item-on-fail id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12318" type="SPECIAL" item="893" enchantment="9" commission="5000000"  chance="90">
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <item-on-fail id="91524"/>
+        <item-on-fail id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12319" type="SPECIAL" item="893" enchantment="10" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12320" type="SPECIAL" item="893" enchantment="11" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12321" type="SPECIAL" item="893" enchantment="12" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12322" type="SPECIAL" item="893" enchantment="13" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12323" type="SPECIAL" item="893" enchantment="14" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12324" type="SPECIAL" item="893" enchantment="15" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="2"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12325" type="SPECIAL" item="893" enchantment="16" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="3"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12326" type="SPECIAL" item="893" enchantment="17" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="4"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12327" type="SPECIAL" item="893" enchantment="18" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="5"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12328" type="SPECIAL" item="893" enchantment="19" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="6"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12329" type="SPECIAL" item="893" enchantment="20" commission="5000000" >
+        <material id="1461" count="200"/>
+        <material id="91549" count="2"/>
+        <bonus-item id="960" count="7"/>
+    	<result id="6725"/>
+	</upgrade>
+
+    <upgrade id="12330" type="SPECIAL" item="365" enchantment="10" commission="7500000"  chance="50">
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="33816"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12331" type="SPECIAL" item="365" enchantment="11" commission="7500000"  chance="70">
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="33816"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12332" type="SPECIAL" item="365" enchantment="12" commission="7500000"  chance="90">
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="33816"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12333" type="SPECIAL" item="365" enchantment="13" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12334" type="SPECIAL" item="365" enchantment="14" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12335" type="SPECIAL" item="365" enchantment="15" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12336" type="SPECIAL" item="365" enchantment="16" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12337" type="SPECIAL" item="365" enchantment="17" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12338" type="SPECIAL" item="365" enchantment="18" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="2"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12339" type="SPECIAL" item="365" enchantment="19" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="3"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12340" type="SPECIAL" item="365" enchantment="20" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="4"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12341" type="SPECIAL" item="365" enchantment="21" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="5"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12342" type="SPECIAL" item="365" enchantment="22" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="6"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12343" type="SPECIAL" item="365" enchantment="23" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="7"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12344" type="SPECIAL" item="365" enchantment="24" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="8"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12345" type="SPECIAL" item="365" enchantment="25" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548" count="2"/>
+        <bonus-item id="960" count="9"/>
+    	<result id="6674"/>
+	</upgrade>
+
+    <upgrade id="12346" type="SPECIAL" item="2382" enchantment="10" commission="5000000" chance="50">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="91510" />
+		<item-on-fail id="33816"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12347" type="SPECIAL" item="2382" enchantment="11" commission="5000000" chance="70">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="91510" />
+		<item-on-fail id="33816"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12348" type="SPECIAL" item="2382" enchantment="12" commission="5000000" chance="90">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="91510" />
+		<item-on-fail id="33816"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12349" type="SPECIAL" item="2382" enchantment="13" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12350" type="SPECIAL" item="2382" enchantment="14" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12351" type="SPECIAL" item="2382" enchantment="15" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12352" type="SPECIAL" item="2382" enchantment="16" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12353" type="SPECIAL" item="2382" enchantment="17" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12354" type="SPECIAL" item="2382" enchantment="18" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="2"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12355" type="SPECIAL" item="2382" enchantment="19" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="3"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12356" type="SPECIAL" item="2382" enchantment="20" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="4"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12357" type="SPECIAL" item="2382" enchantment="21" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="5"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12358" type="SPECIAL" item="2382" enchantment="22" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="6"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12359" type="SPECIAL" item="2382" enchantment="23" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="7"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12360" type="SPECIAL" item="2382" enchantment="24" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="8"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12361" type="SPECIAL" item="2382" enchantment="25" commission="5000000">
+        <material id="1461" count="200"/>
+        <material id="91548" count="3"/>
+        <bonus-item id="960" count="9"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12362" type="SPECIAL" item="2383" enchantment="10" commission="2000000" chance="70">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="91510" />
+		<item-on-fail id="33816"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12363" type="SPECIAL" item="2383" enchantment="11" commission="2000000" chance="80">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="91510" />
+		<item-on-fail id="33816"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12364" type="SPECIAL" item="2383" enchantment="12" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12365" type="SPECIAL" item="2383" enchantment="13" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12366" type="SPECIAL" item="2383" enchantment="14" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12367" type="SPECIAL" item="2383" enchantment="15" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12368" type="SPECIAL" item="2383" enchantment="16" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="2"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12369" type="SPECIAL" item="2383" enchantment="17" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="3"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12370" type="SPECIAL" item="2383" enchantment="18" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="4"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12371" type="SPECIAL" item="2383" enchantment="19" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="5"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12372" type="SPECIAL" item="2383" enchantment="20" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="6"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12373" type="SPECIAL" item="2383" enchantment="21" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="7"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12374" type="SPECIAL" item="2383" enchantment="22" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="8"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12375" type="SPECIAL" item="2383" enchantment="23" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="9"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12376" type="SPECIAL" item="2383" enchantment="24" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="10"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12377" type="SPECIAL" item="2383" enchantment="25" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="11"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12378" type="SPECIAL" item="374" enchantment="10" commission="2000000" chance="70">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="91510" />
+		<item-on-fail id="33816"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12379" type="SPECIAL" item="374" enchantment="11" commission="2000000" chance="80">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <item-on-fail id="91509"/>
+        <item-on-fail id="91510" />
+		<item-on-fail id="33816"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12380" type="SPECIAL" item="374" enchantment="12" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12381" type="SPECIAL" item="374" enchantment="13" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12382" type="SPECIAL" item="374" enchantment="14" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12383" type="SPECIAL" item="374" enchantment="15" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12384" type="SPECIAL" item="374" enchantment="16" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="2"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12385" type="SPECIAL" item="374" enchantment="17" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="3"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12386" type="SPECIAL" item="374" enchantment="18" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="4"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12387" type="SPECIAL" item="374" enchantment="19" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="5"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12388" type="SPECIAL" item="374" enchantment="20" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="6"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12389" type="SPECIAL" item="374" enchantment="21" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="7"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12390" type="SPECIAL" item="374" enchantment="22" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="8"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12391" type="SPECIAL" item="374" enchantment="23" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="9"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12392" type="SPECIAL" item="374" enchantment="24" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="10"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12393" type="SPECIAL" item="374" enchantment="25" commission="2000000">
+        <material id="1461" count="100"/>
+        <material id="91548"/>
+        <bonus-item id="960" count="11"/>
+        <result id="6674" enchant="0"/>
+        <result id="6675" enchant="0"/>
+    </upgrade>
+
+    <upgrade id="12394" type="SPECIAL" item="388" enchantment="10" commission="7500000"  chance="50">
+        <material id="1461" count="200"/>
+        <material id="91548"/>
+        <item-on-fail id="91510"/>
+        <item-on-fail id="33816"/>
+    	<result id="6675"/>
+	</upgrade>
+
+    <upgrade id="12395" type="SPECIAL" item="388" enchantment="11" commission="7500000"  chance="70">
+        <material id="1461" count="200"/>
+        <material id="91548"/>
+        <item-on-fail id="91510"/>
+        <item-on-fail id="33816"/>
+    	<result id="6675"/>
+	</upgrade>
+
+    <upgrade id="12396" type="SPECIAL" item="388" enchantment="12" commission="7500000"  chance="90">
+        <material id="1461" count="200"/>
+        <material id="91548"/>
+        <item-on-fail id="91510"/>
+        <item-on-fail id="33816"/>
+    	<result id="6675"/>
+	</upgrade>
+
+    <upgrade id="12397" type="SPECIAL" item="388" enchantment="13" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548"/>
+    	<result id="6675"/>
+	</upgrade>
+
+    <upgrade id="12398" type="SPECIAL" item="388" enchantment="14" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+    	<result id="6675"/>
+	</upgrade>
+
+    <upgrade id="12399" type="SPECIAL" item="388" enchantment="15" commission="7500000" >
+        <material id="1461" count="200"/>
+        <material id="91548"/>
+        <bonus-item id="960"/>
+    	<result id="6675"/>
+	</upgrade>
+</list>
