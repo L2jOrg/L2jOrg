@@ -1,5 +1,9 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import io.github.joealisson.primitive.ArrayIntList;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntList;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
@@ -37,15 +41,17 @@ import static org.l2j.commons.util.Util.contains;
  * NPC data parser.
  *
  * @author NosBit
+ * @author JoeAlisson
  */
 public class NpcData extends GameXmlReader {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(NpcData.class);
-    private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
-    private final Map<Integer, NpcTemplate> _npcs = new HashMap<>();
-    private final Map<String, Integer> _clans = new HashMap<>();
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(NpcData.class);
+
+    private final IntList masterIDs = new ArrayIntList();
+    private final IntMap<NpcTemplate> npcs = new HashIntMap<>();
+    private final Map<String, Integer> clans = new HashMap<>();
 
     private NpcData() {
-        load();
     }
 
     @Override
@@ -53,24 +59,21 @@ public class NpcData extends GameXmlReader {
         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/stats/npcs/npcs.xsd");
     }
 
-    /**
-     * @return the IDs of monsters that have minions.
-     */
-    public static List<Integer> getMasterMonsterIDs() {
-        return _masterMonsterIDs;
+    public boolean isMaster(int id) {
+        return masterIDs.contains(id);
     }
 
     @Override
     public synchronized void load() {
-        _masterMonsterIDs.clear();
+        masterIDs.clear();
 
         parseDatapackDirectory("data/stats/npcs", false);
-        LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " NPCs.");
+        LOGGER.info("Loaded {} NPCs.", npcs.size());
 
         if (Config.CUSTOM_NPC_DATA) {
-            final int npcCount = _npcs.size();
+            final int npcCount = npcs.size();
             parseDatapackDirectory("data/stats/npcs/custom", true);
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_npcs.size() - npcCount) + " Custom NPCs.");
+            LOGGER.info("Loaded {} Custom NPCs", npcs.size() - npcCount);
         }
         releaseResources();
     }
@@ -417,10 +420,10 @@ public class NpcData extends GameXmlReader {
                             }
                         }
 
-                        NpcTemplate template = _npcs.get(npcId);
+                        NpcTemplate template = npcs.get(npcId);
                         if (template == null) {
                             template = new NpcTemplate(set);
-                            _npcs.put(template.getId(), template);
+                            npcs.put(template.getId(), template);
                         } else {
                             template.set(set);
                         }
@@ -516,7 +519,7 @@ public class NpcData extends GameXmlReader {
 
                         if (!template.getParameters().getMinionList("Privates").isEmpty()) {
                             if (template.getParameters().getSet().get("SummonPrivateRate") == null) {
-                                _masterMonsterIDs.add(template.getId());
+                                masterIDs.add(template.getId());
                             }
                         }
                     }
@@ -532,10 +535,10 @@ public class NpcData extends GameXmlReader {
      * @return the clan id for the given clan name
      */
     private int getOrCreateClanId(String clanName) {
-        Integer id = _clans.get(clanName);
+        Integer id = clans.get(clanName);
         if (id == null) {
-            id = _clans.size();
-            _clans.put(clanName, id);
+            id = clans.size();
+            clans.put(clanName, id);
         }
         return id;
     }
@@ -547,7 +550,7 @@ public class NpcData extends GameXmlReader {
      * @return the clan id for the given clan name if it exists, -1 otherwise
      */
     public int getClanId(String clanName) {
-        final Integer id = _clans.get(clanName);
+        final Integer id = clans.get(clanName);
         return id != null ? id : -1;
     }
 
@@ -556,7 +559,7 @@ public class NpcData extends GameXmlReader {
         if (clanIds == null) {
             return result;
         }
-        for (Entry<String, Integer> record : _clans.entrySet()) {
+        for (Entry<String, Integer> record : clans.entrySet()) {
             for (int id : clanIds) {
                 if (record.getValue() == id) {
                     result.add(record.getKey());
@@ -573,7 +576,7 @@ public class NpcData extends GameXmlReader {
      * @return the template for the given id.
      */
     public NpcTemplate getTemplate(int id) {
-        return _npcs.get(id);
+        return npcs.get(id);
     }
 
     /**
@@ -583,7 +586,7 @@ public class NpcData extends GameXmlReader {
      * @return the template for the given name.
      */
     public NpcTemplate getTemplateByName(String name) {
-        for (NpcTemplate npcTemplate : _npcs.values()) {
+        for (NpcTemplate npcTemplate : npcs.values()) {
             if (npcTemplate.getName().equalsIgnoreCase(name)) {
                 return npcTemplate;
             }
@@ -599,7 +602,7 @@ public class NpcData extends GameXmlReader {
      */
     public List<NpcTemplate> getTemplates(Predicate<NpcTemplate> filter) {
         //@formatter:off
-        return _npcs.values().stream()
+        return npcs.values().stream()
                 .filter(filter)
                 .collect(Collectors.toList());
         //@formatter:on
@@ -646,7 +649,11 @@ public class NpcData extends GameXmlReader {
     }
 
     public boolean existsNpc(int npcId) {
-        return nonNull(_npcs.get(npcId));
+        return nonNull(npcs.get(npcId));
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static NpcData getInstance() {

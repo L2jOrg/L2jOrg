@@ -77,23 +77,32 @@ public class GameServer {
         printSection("Lineage II World");
         World.init();
 
-        printSection("Server Data");
-        AnnouncementsManager.init();
-        GlobalVariablesManager.init();
-        ActionManager.init();
-        CategoryManager.init();
-        SecondaryAuthManager.init();
-        ClanRewardManager.init();
-        MissionEngine.init();
-        VipEngine.init();
-        ElementalSpiritEngine.init();
-        TeleportEngine.init();
-
         printSection("Skills");
         SkillEngine.init();
 
         printSection("Items");
         ItemEngine.init();
+
+        printSection("NPCs");
+        NpcData.init();
+
+        printSection("Castle Data");
+        CastleManager.init();
+
+        printSection("Class Categories");
+        CategoryManager.init();
+
+        printSection("Scripts");
+        ScriptEngineManager.getInstance().executeScriptLoader();
+
+        printSection("Spawns");
+        SpawnsData.init();
+        DBSpawnManager.init();
+        ThreadPool.executeForked(SpawnsData.getInstance()::spawnAll);
+
+        printSection("Server Data");
+        GlobalVariablesManager.init();
+        ActionManager.init();
         EnchantItemHPBonusData.getInstance();
         BuyListData.getInstance();
         MultisellData.getInstance();
@@ -101,14 +110,31 @@ public class GameServer {
         ArmorSetsData.getInstance();
         FishingData.getInstance();
         HennaData.getInstance();
+        ShuttleData.getInstance();
+        GraciaSeedsManager.getInstance();
+
+        printSection("Features");
+        AnnouncementsManager.init();
+        SecondaryAuthManager.init();
+        ClanRewardManager.init();
+        MissionEngine.init();
+        VipEngine.init();
+        ElementalSpiritEngine.init();
+        TeleportEngine.init();
         PrimeShopData.getInstance();
         LCoinShopData.getInstance();
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();
-        CombinationItemsManager.init();
         CostumeEngine.init();
         UpgradeItemEngine.init();
+        CombinationItemsManager.init();
+        RankManager.init();
+        BeautyShopData.getInstance();
+        ExtendDropData.getInstance();
+        ItemAuctionManager.getInstance();
+        SchemeBufferTable.getInstance();
+        GrandBossManager.getInstance();
 
         printSection("Characters");
         ClassListData.getInstance();
@@ -123,9 +149,7 @@ public class GameServer {
         PetDataTable.getInstance();
         CubicData.getInstance();
         PlayerSummonTable.getInstance().init();
-        BeautyShopData.getInstance();
         MentorManager.getInstance();
-        RankManager.init();
 
         printSection("Clans");
         ClanTable.init();
@@ -133,17 +157,8 @@ public class GameServer {
         ClanHallManager.init();
         ClanHallAuctionManager.getInstance();
         ClanEntryManager.getInstance();
-
-        printSection("NPCs");
-        NpcData.getInstance();
-        ExtendDropData.getInstance();
-        SpawnsData.getInstance();
         WalkingManager.getInstance();
         StaticObjectData.getInstance();
-        ItemAuctionManager.getInstance();
-        CastleManager.getInstance().loadInstances();
-        SchemeBufferTable.getInstance();
-        GrandBossManager.getInstance();
 
         printSection("Instance");
         InstanceManager.getInstance();
@@ -163,20 +178,6 @@ public class GameServer {
             SellBuffsManager.getInstance();
         }
 
-        printSection("Scripts");
-        ShuttleData.getInstance();
-        GraciaSeedsManager.getInstance();
-
-        try {
-            LOGGER.info("Loading server scripts:");
-            ScriptEngineManager.getInstance().executeScriptLoader();
-        } catch (Exception e) {
-            LOGGER.warn("Failed to execute script list!", e);
-        }
-
-        DBSpawnManager.getInstance();
-        SpawnsData.getInstance().init();
-
         printSection("Event Engine");
         EventEngineData.getInstance();
         VoteSystem.initialize();
@@ -184,15 +185,15 @@ public class GameServer {
         printSection("Siege");
         SiegeManager.getInstance().getSieges();
         CastleManager.getInstance().activateInstances();
+        SiegeScheduleData.getInstance();
+        CastleManorManager.getInstance();
+        SiegeGuardManager.getInstance();
+        QuestManager.getInstance().report();
+
         // No fortresses TODO remove: at some point these instances will be loaded
         // FortDataManager.getInstance().loadInstances();
         // FortDataManager.getInstance().activateInstances();
         // FortSiegeManager.getInstance();
-        SiegeScheduleData.getInstance();
-
-        CastleManorManager.getInstance();
-        SiegeGuardManager.getInstance();
-        QuestManager.getInstance().report();
 
         var generalSettings = getSettings(GeneralSettings.class);
         if (generalSettings.saveDroppedItems()) {

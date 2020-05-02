@@ -24,20 +24,20 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -283,7 +283,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			// Reload.
 			SpawnsData.getInstance().init();
-			DBSpawnManager.getInstance().load();
+			DBSpawnManager.init();
 			ZoneManager.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC respawn completed!");

@@ -150,7 +150,7 @@ public class Expression {
     }
 
     public Future<Double> evaluateAsync(ExecutorService executor) {
-        return executor.submit(() -> evaluate());
+        return executor.submit(this::evaluate);
     }
 
     public double evaluate() {

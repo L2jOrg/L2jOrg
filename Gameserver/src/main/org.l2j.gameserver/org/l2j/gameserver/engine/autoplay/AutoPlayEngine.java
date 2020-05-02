@@ -147,6 +147,10 @@ public final class AutoPlayEngine {
         return Singleton.INSTANCE;
     }
 
+    public void shutdown() {
+        autoPlayPool.shutdown();
+    }
+
     private static final class Singleton {
         private static final AutoPlayEngine INSTANCE = new AutoPlayEngine();
     }

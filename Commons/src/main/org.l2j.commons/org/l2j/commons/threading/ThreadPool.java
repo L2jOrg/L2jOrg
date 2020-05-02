@@ -10,6 +10,7 @@ public class ThreadPool {
 
     private ScheduledThreadPoolExecutor scheduledExecutor;
     private ThreadPoolExecutor executor;
+    private ForkJoinPool forkPool;
 
     private boolean shutdown;
 
@@ -17,22 +18,13 @@ public class ThreadPool {
 
     }
 
-    public static void init(int threadPoolSize, int scheduledPoolSize) {
-        synchronized (ThreadPool.class) {
-
-            var instance = getInstance();
-            if(isNull(instance.scheduledExecutor)) {
-                instance.initThreadPools(threadPoolSize, scheduledPoolSize);
-            }
-        }
-    }
-
     private void initThreadPools(int threadPoolSize, int scheduledPoolSize) {
-        RejectedExecutionHandler rejectedHandler = new RejectedExecutionHandlerImpl();
+        final var rejectedHandler = new RejectedExecutionHandlerImpl();
 
         executor = new ThreadPoolExecutor(threadPoolSize, Integer.MAX_VALUE, 5, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), rejectedHandler);
         scheduledExecutor = new ScheduledThreadPoolExecutor(scheduledPoolSize, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), rejectedHandler);
         scheduledExecutor.setRemoveOnCancelPolicy(true);
+        forkPool = new ForkJoinPool(threadPoolSize, ForkJoinPool.defaultForkJoinWorkerThreadFactory, rejectedHandler, false);
 
         schedulePurge();
     }
@@ -104,18 +96,23 @@ public class ThreadPool {
         getInstance().executor.execute(r);
     }
 
-    public void shutdown() throws InterruptedException
-    {
+    public static void executeForked(Runnable action) {
+        getInstance().forkPool.execute(action);
+    }
+
+    public void shutdown() throws InterruptedException {
         shutdown = true;
-        try
-        {
+        try {
             scheduledExecutor.shutdown();
-            scheduledExecutor.awaitTermination(10, TimeUnit.SECONDS);
-        }
-        finally
-        {
-            executor.shutdown();
-            executor.awaitTermination(1, TimeUnit.MINUTES);
+            scheduledExecutor.awaitTermination(15, TimeUnit.SECONDS);
+        } finally {
+            try {
+                executor.shutdown();
+                executor.awaitTermination(15, TimeUnit.SECONDS);
+            } finally {
+                forkPool.shutdown();
+                forkPool.awaitTermination(15, TimeUnit.SECONDS);
+            }
         }
     }
 
@@ -141,6 +138,16 @@ public class ThreadPool {
         list.append("\tgetCompletedTaskCount: ").append(scheduledExecutor.getCompletedTaskCount()).append("\n");
         list.append("\tgetQueuedTaskCount: .. ").append(scheduledExecutor.getQueue().size()).append("\n");
         list.append("\tgetTaskCount: ........ ").append(scheduledExecutor.getTaskCount()).append("\n");
+    }
+
+    public static void init(int threadPoolSize, int scheduledPoolSize) {
+        synchronized (ThreadPool.class) {
+
+            var instance = getInstance();
+            if(isNull(instance.scheduledExecutor)) {
+                instance.initThreadPools(threadPoolSize, scheduledPoolSize);
+            }
+        }
     }
 
     public static ThreadPool getInstance() {

@@ -446,7 +446,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
         _currentCount++;
 
         // Minions
-        if (isMonster(npc) && NpcData.getMasterMonsterIDs().contains(npc.getId())) {
+        if (isMonster(npc) && NpcData.getInstance().isMaster(npc.getId())) {
             ((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
         }
 

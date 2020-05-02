@@ -1,6 +1,5 @@
 package org.l2j.gameserver.engine.scripting;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -133,10 +132,6 @@ public final class ScriptEngineManager  {
     }
 
     public void executeScriptLoader() throws Exception {
-        if (Config.ALT_DEV_NO_QUESTS) {
-            return;
-        }
-
         executeScripts("Loader");
     }
 

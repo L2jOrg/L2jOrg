@@ -1,5 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
@@ -22,100 +24,95 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 /**
  * Database spawn manager.
  *
  * @author godson, UnAfraid
+ * @author JoeAlisson
  */
 public class DBSpawnManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(DBSpawnManager.class);
 
-    protected final Map<Integer, Npc> _npcs = new ConcurrentHashMap<>();
-    protected final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
-    protected final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
-    protected final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
+    private final IntMap<Npc> npcs = new CHashIntMap<>();
+    private final IntMap<Spawn> spawns = new CHashIntMap<>();
+    private final IntMap<StatsSet> storedInfo = new CHashIntMap<>();
+    private final IntMap<ScheduledFuture<?>> schedules = new CHashIntMap<>();
 
     private DBSpawnManager() {
-        load();
     }
 
-    /**
-     * Load.
-     */
     public void load() {
         if (Config.ALT_DEV_NO_SPAWNS) {
             return;
         }
 
-        _npcs.clear();
-        _spawns.clear();
-        _storedInfo.clear();
-        _schedules.clear();
+        npcs.clear();
+        spawns.clear();
+        storedInfo.clear();
+        schedules.clear();
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("SELECT * FROM npc_respawns");
              ResultSet rset = statement.executeQuery()) {
+
             while (rset.next()) {
                 final NpcTemplate template = getValidTemplate(rset.getInt("id"));
-                if (template != null) {
+
+                if (nonNull(template)) {
                     final Spawn spawn = new Spawn(template);
                     spawn.setXYZ(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
                     spawn.setAmount(1);
                     spawn.setHeading(rset.getInt("heading"));
 
-                    final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npc -> (npc.getId() == template.getId()) && npc.hasDBSave());
+                    final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npc -> npc.getId() == template.getId() && npc.hasDBSave());
+
                     if (spawns.isEmpty()) {
-                        LOGGER.warn(": Couldn't find spawn declaration for npc: " + template.getId() + " - " + template.getName());
+                        LOGGER.warn("Couldn't find spawn declaration for npc: {} - {} ", template.getId(), template.getName());
                         deleteSpawn(spawn, true);
                         continue;
                     } else if (spawns.size() > 1) {
-                        LOGGER.warn(": Found multiple database spawns for npc: " + template.getId() + " - " + template.getName() + " " + spawns);
+                        LOGGER.warn("Found multiple database spawns for npc: {} - {} {}", template.getId(),  template.getName(), spawns);
                         continue;
                     }
 
                     final NpcSpawnTemplate spawnTemplate = spawns.get(0);
                     spawn.setSpawnTemplate(spawnTemplate);
 
-                    int respawn = 0;
-                    int respawnRandom = 0;
-                    if (spawnTemplate.getRespawnTime() != null) {
-                        respawn = (int) spawnTemplate.getRespawnTime().getSeconds();
-                    }
-                    if (spawnTemplate.getRespawnTimeRandom() != null) {
-                        respawnRandom = (int) spawnTemplate.getRespawnTimeRandom().getSeconds();
-                    }
+                    int respawn = zeroIfNullOrElse(spawnTemplate.getRespawnTime(), d -> (int) d.getSeconds());
+                    int respawnRandom = zeroIfNullOrElse(spawnTemplate.getRespawnTimeRandom(), d -> (int) d.getSeconds());
 
                     if (respawn > 0) {
                         spawn.setRespawnDelay(respawn, respawnRandom);
                         spawn.startRespawn();
                     } else {
                         spawn.stopRespawn();
-                        LOGGER.warn("Found database spawns without respawn for npc: " + template.getId() + " - " + template.getName() + " " + spawnTemplate);
+                        LOGGER.warn("Found database spawns without respawn for npc: {} - {} {}", template.getId(), template.getName(), spawnTemplate);
                         continue;
                     }
 
                     addNewSpawn(spawn, rset.getLong("respawnTime"), rset.getDouble("currentHp"), rset.getDouble("currentMp"), false);
                 } else {
-                    LOGGER.warn(": Could not load npc #" + rset.getInt("id") + " from DB");
+                    LOGGER.warn("Could not load npc id {} from DB from DB", rset.getInt("id"));
                 }
             }
 
-            LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " Instances");
-            LOGGER.info(getClass().getSimpleName() + ": Scheduled " + _schedules.size() + " Instances");
+            LOGGER.info("Loaded {} Instances", npcs.size());
+            LOGGER.info("Scheduled {} Instances", schedules.size());
         } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Couldnt load npc_respawns table", e);
+            LOGGER.warn("Couldn't load npc_respawns table", e);
         } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Error while initializing DBSpawnManager: ", e);
+            LOGGER.warn("Error while initializing DBSpawnManager: ", e);
         }
     }
 
     private void scheduleSpawn(int npcId) {
-        final Npc npc = _spawns.get(npcId).doSpawn();
+        final Npc npc = spawns.get(npcId).doSpawn();
         if (npc != null) {
             npc.setRaidBossStatus(RaidBossStatus.ALIVE);
 
@@ -124,12 +121,12 @@ public class DBSpawnManager {
             info.set("currentMP", npc.getCurrentMp());
             info.set("respawnTime", 0);
 
-            _storedInfo.put(npcId, info);
-            _npcs.put(npcId, npc);
-            LOGGER.info(getClass().getSimpleName() + ": Spawning NPC " + npc.getName());
+            storedInfo.put(npcId, info);
+            npcs.put(npcId, npc);
+            LOGGER.info("Spawning NPC {}", npc.getName());
         }
 
-        _schedules.remove(npcId);
+        schedules.remove(npcId);
     }
 
     /**
@@ -139,7 +136,7 @@ public class DBSpawnManager {
      * @param isNpcDead the is npc dead
      */
     public void updateStatus(Npc npc, boolean isNpcDead) {
-        final StatsSet info = _storedInfo.get(npc.getId());
+        final StatsSet info = storedInfo.get(npc.getId());
         if (info == null) {
             return;
         }
@@ -156,10 +153,10 @@ public class DBSpawnManager {
             info.set("currentMP", npc.getMaxMp());
             info.set("respawnTime", respawnTime);
 
-            if (!_schedules.containsKey(npc.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0))) {
+            if (!schedules.containsKey(npc.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0))) {
                 LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + GameUtils.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 
-                _schedules.put(npc.getId(), ThreadPool.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
+                schedules.put(npc.getId(), ThreadPool.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
                 updateDb();
             }
         } else {
@@ -169,7 +166,7 @@ public class DBSpawnManager {
             info.set("currentMP", npc.getCurrentMp());
             info.set("respawnTime", 0);
         }
-        _storedInfo.put(npc.getId(), info);
+        storedInfo.put(npc.getId(), info);
     }
 
     /**
@@ -182,10 +179,10 @@ public class DBSpawnManager {
      * @param storeInDb   the store in db
      */
     public void addNewSpawn(Spawn spawn, long respawnTime, double currentHP, double currentMP, boolean storeInDb) {
-        if (spawn == null) {
+        if (isNull(spawn)) {
             return;
         }
-        if (_spawns.containsKey(spawn.getId())) {
+        if (spawns.containsKey(spawn.getId())) {
             return;
         }
 
@@ -201,21 +198,21 @@ public class DBSpawnManager {
                 npc.setCurrentMp(currentMP);
                 npc.setRaidBossStatus(RaidBossStatus.ALIVE);
 
-                _npcs.put(npcId, npc);
+                npcs.put(npcId, npc);
 
                 final StatsSet info = new StatsSet();
                 info.set("currentHP", currentHP);
                 info.set("currentMP", currentMP);
                 info.set("respawnTime", 0);
 
-                _storedInfo.put(npcId, info);
+                storedInfo.put(npcId, info);
             }
         } else {
             final long spawnTime = respawnTime - System.currentTimeMillis();
-            _schedules.put(npcId, ThreadPool.schedule(() -> scheduleSpawn(npcId), spawnTime));
+            schedules.put(npcId, ThreadPool.schedule(() -> scheduleSpawn(npcId), spawnTime));
         }
 
-        _spawns.put(npcId, spawn);
+        spawns.put(npcId, spawn);
 
         if (storeInDb) {
             try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -242,7 +239,7 @@ public class DBSpawnManager {
         }
 
         final int npcId = spawn.getId();
-        final Spawn existingSpawn = _spawns.get(npcId);
+        final Spawn existingSpawn = spawns.get(npcId);
         if (existingSpawn != null) {
             return existingSpawn.getLastSpawn();
         }
@@ -260,10 +257,10 @@ public class DBSpawnManager {
         info.set("currentMP", npc.getMaxMp());
         info.set("respawnTime", 0);
 
-        _npcs.put(npcId, npc);
-        _storedInfo.put(npcId, info);
+        npcs.put(npcId, npc);
+        storedInfo.put(npcId, info);
 
-        _spawns.put(npcId, spawn);
+        spawns.put(npcId, spawn);
 
         if (storeInDb) {
             try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -299,11 +296,11 @@ public class DBSpawnManager {
 
         final int npcId = spawn.getId();
 
-        _spawns.remove(npcId);
-        _npcs.remove(npcId);
-        _storedInfo.remove(npcId);
+        spawns.remove(npcId);
+        npcs.remove(npcId);
+        storedInfo.remove(npcId);
 
-        final ScheduledFuture<?> task = _schedules.remove(npcId);
+        final ScheduledFuture<?> task = schedules.remove(npcId);
         if (task != null) {
             task.cancel(true);
         }
@@ -328,23 +325,20 @@ public class DBSpawnManager {
     private void updateDb() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("UPDATE npc_respawns SET respawnTime = ?, currentHP = ?, currentMP = ? WHERE id = ?")) {
-            for (Integer npcId : _storedInfo.keySet()) {
-                if (npcId == null) {
-                    continue;
-                }
 
-                final Npc npc = _npcs.get(npcId);
+            storedInfo.keySet().forEach(npcId -> {
+                final Npc npc = npcs.get(npcId);
                 if (npc == null) {
-                    continue;
+                    return;
                 }
 
                 if (npc.getRaidBossStatus() == RaidBossStatus.ALIVE) {
                     updateStatus(npc, false);
                 }
 
-                final StatsSet info = _storedInfo.get(npcId);
+                final StatsSet info = storedInfo.get(npcId);
                 if (info == null) {
-                    continue;
+                    return;
                 }
 
                 try {
@@ -355,58 +349,12 @@ public class DBSpawnManager {
                     statement.executeUpdate();
                     statement.clearParameters();
                 } catch (SQLException e) {
-                    LOGGER.warn(getClass().getSimpleName() + ": Couldnt update npc_respawns table ", e);
+                    LOGGER.warn("Couldnt update npc_respawns table ", e);
                 }
-            }
+            });
         } catch (SQLException e) {
-            LOGGER.warn(getClass().getSimpleName() + ": SQL error while updating database spawn to database: ", e);
+            LOGGER.warn("SQL error while updating database spawn to database: ", e);
         }
-    }
-
-    /**
-     * Gets the all npc status.
-     *
-     * @return the all npc status
-     */
-    public String[] getAllNpcsStatus() {
-        final String[] msg = new String[(_npcs == null) ? 0 : _npcs.size()];
-
-        if (_npcs == null) {
-            msg[0] = "None";
-            return msg;
-        }
-
-        int index = 0;
-
-        for (int i : _npcs.keySet()) {
-            final Npc npc = _npcs.get(i);
-            msg[index++] = npc.getName() + ": " + npc.getRaidBossStatus().name();
-        }
-
-        return msg;
-    }
-
-    /**
-     * Gets the npc status.
-     *
-     * @param npcId the npc id
-     * @return the raid npc status
-     */
-    public String getNpcsStatus(int npcId) {
-        String msg = "NPC Status..." + System.lineSeparator();
-
-        if (_npcs == null) {
-            msg += "None";
-            return msg;
-        }
-
-        if (_npcs.containsKey(npcId)) {
-            final Npc npc = _npcs.get(npcId);
-
-            msg += npc.getName() + ": " + npc.getRaidBossStatus().name();
-        }
-
-        return msg;
     }
 
     /**
@@ -416,9 +364,9 @@ public class DBSpawnManager {
      * @return the raid npc status id
      */
     public RaidBossStatus getNpcStatusId(int npcId) {
-        if (_npcs.containsKey(npcId)) {
-            return _npcs.get(npcId).getRaidBossStatus();
-        } else if (_schedules.containsKey(npcId)) {
+        if (npcs.containsKey(npcId)) {
+            return npcs.get(npcId).getRaidBossStatus();
+        } else if (schedules.containsKey(npcId)) {
             return RaidBossStatus.DEAD;
         } else {
             return RaidBossStatus.UNDEFINED;
@@ -448,8 +396,8 @@ public class DBSpawnManager {
 
         npc.setRaidBossStatus(RaidBossStatus.ALIVE);
 
-        _storedInfo.put(npc.getId(), info);
-        _npcs.put(npc.getId(), npc);
+        storedInfo.put(npc.getId(), info);
+        npcs.put(npc.getId(), npc);
     }
 
     /**
@@ -459,34 +407,15 @@ public class DBSpawnManager {
      * @return {@code true} if is defined
      */
     public boolean isDefined(int npcId) {
-        return _spawns.containsKey(npcId);
+        return spawns.containsKey(npcId);
     }
 
-    /**
-     * Gets the npcs.
-     *
-     * @return the npcs
-     */
-    public Map<Integer, Npc> getNpcs() {
-        return _npcs;
+    public IntMap<Npc> getNpcs() {
+        return npcs;
     }
 
-    /**
-     * Gets the spawns.
-     *
-     * @return the spawns
-     */
-    public Map<Integer, Spawn> getSpawns() {
-        return _spawns;
-    }
-
-    /**
-     * Gets the stored info.
-     *
-     * @return the stored info
-     */
-    public Map<Integer, StatsSet> getStoredInfo() {
-        return _storedInfo;
+    public IntMap<Spawn> getSpawns() {
+        return spawns;
     }
 
     /**
@@ -494,24 +423,21 @@ public class DBSpawnManager {
      */
     public void cleanUp() {
         updateDb();
+        npcs.clear();
+        schedules.values().forEach(s -> s.cancel(true));
+        schedules.clear();
+        storedInfo.clear();
+        spawns.clear();
+    }
 
-        _npcs.clear();
-
-        if (_schedules != null) {
-            for (Integer npcId : _schedules.keySet()) {
-                final ScheduledFuture<?> f = _schedules.get(npcId);
-                f.cancel(true);
-            }
-            _schedules.clear();
-        }
-
-        _storedInfo.clear();
-        _spawns.clear();
+    public static void init() {
+        getInstance().load();
     }
 
     public static DBSpawnManager getInstance() {
         return Singleton.INSTANCE;
     }
+
     private static class Singleton {
         private static final DBSpawnManager INSTANCE = new DBSpawnManager();
     }
