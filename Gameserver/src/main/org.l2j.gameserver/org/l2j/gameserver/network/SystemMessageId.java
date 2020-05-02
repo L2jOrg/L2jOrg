@@ -9244,25 +9244,7 @@ public final class SystemMessageId {
     public static SystemMessageId TASK_CANNOT_BE_COMPLETED_YOUR_SELLING_PRICE_EXCEEDS_THE_ADENA_LIMIT_4469;
 
     @ClientString(id = 4470, message = "Task cannot be completed: Your balance after the transaction exceeds the Adena limit.")
-    public static SystemMessageId TASK_CANNOT_BE_COMPLETED_YOUR_BALANCE_AFTER_THE_TRANSACTION_EXCEEDS_THE_ADENA_LIMIT;
-
-    @ClientString(id = 4471, message = "You obtained $s1 through Equipment Upgrade.")
-    public static SystemMessageId YOU_OBTAINED_S1_THROUGH_EQUIPMENT_UPGRADE;
-
-    @ClientString(id = 4472, message = "$c1, you obtained $s2 through Equipment Upgrade.")
-    public static SystemMessageId C1_YOU_OBTAINED_S2_THROUGH_EQUIPMENT_UPGRADE;
-
-    @ClientString(id = 4473, message = "Failed the operation.")
-    public static SystemMessageId FAILED_THE_OPERATION;
-
-    @ClientString(id = 4474, message = "Failed because the target item does not exist.")
-    public static SystemMessageId FAILED_BECAUSE_THE_TARGET_ITEM_DOES_NOT_EXIST;
-
-    @ClientString(id = 4475, message = "Failed because there are not enough ingredients.")
-    public static SystemMessageId FAILED_BECAUSE_THERE_ARE_NOT_ENOUGH_INGREDIENTS;
-
-    @ClientString(id = 4476, message = "Failed because there's not enough Adena.")
-    public static SystemMessageId FAILED_BECAUSE_THERE_S_NOT_ENOUGH_ADENA;
+    public static SystemMessageId TASK_CANNOT_BE_COMPLETED_YOUR_BALANCE_AFTER_THE_TRANSACTION_EXCEEDS_THE_ADENA_LIMIT
 
     @ClientString(id = 4477, message = "Kneel down! Frederick the Destroyer will appear!")
     public static SystemMessageId KNEEL_DOWN_FREDERICK_THE_DESTROYER_WILL_APPEAR;
@@ -17523,6 +17505,24 @@ public final class SystemMessageId {
 
     @ClientString(id = 4436, message = "$s1 Territory")
     public static SystemMessageId S1_TERRITORY;
+
+    @ClientString(id = 4471, message = "You obtained $s1 through Equipment Upgrade.")
+    public static SystemMessageId YOU_OBTAINED_S1_THROUGH_EQUIPMENT_UPGRADE;
+
+    @ClientString(id = 4472, message = "$c1, you obtained $s2 through Equipment Upgrade.")
+    public static SystemMessageId C1_YOU_OBTAINED_S2_THROUGH_EQUIPMENT_UPGRADE;
+
+    @ClientString(id = 4473, message = "Failed the operation.")
+    public static SystemMessageId FAILED_THE_OPERATION;
+
+    @ClientString(id = 4474, message = "Failed because the target item does not exist.")
+    public static SystemMessageId FAILED_BECAUSE_THE_TARGET_ITEM_DOES_NOT_EXIST;
+
+    @ClientString(id = 4475, message = "Failed because there are not enough ingredients.")
+    public static SystemMessageId FAILED_BECAUSE_THERE_ARE_NOT_ENOUGH_INGREDIENTS;
+
+    @ClientString(id = 4476, message = "Failed because there's not enough Adena.")
+    public static SystemMessageId FAILED_BECAUSE_THERE_S_NOT_ENOUGH_ADENA;
 
     @ClientString(id = 4535, message = "Current location: $s1/$s2/$s3 (Balthus Knight Barracks)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_BALTHUS_KNIGHT_BARRACKS;

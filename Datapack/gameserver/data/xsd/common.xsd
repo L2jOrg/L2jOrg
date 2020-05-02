@@ -41,6 +41,14 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="EnchantedItem">
+        <xs:complexContent>
+            <xs:extension base="ItemInfo">
+                <xs:attribute name="enchant" type="xs:int" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="ChancedSkillInfo">
         <xs:complexContent>
             <xs:extension base="SkillInfo">

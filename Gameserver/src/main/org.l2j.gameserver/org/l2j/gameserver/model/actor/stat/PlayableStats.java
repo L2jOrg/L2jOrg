@@ -120,7 +120,7 @@ public class PlayableStats extends CreatureStats {
     }
 
     public boolean addLevel(byte value) {
-        if ((getLevel() + value) > (getMaxLevel() - 1)) {
+        if ((getLevel() + value) > getMaxLevel()) {
             if (getLevel() < (getMaxLevel() - 1)) {
                 value = (byte) (getMaxLevel() - 1 - getLevel());
             } else {

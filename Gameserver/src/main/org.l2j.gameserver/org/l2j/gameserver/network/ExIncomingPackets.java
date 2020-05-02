@@ -25,7 +25,6 @@ import org.l2j.gameserver.network.clientpackets.crystalization.RequestCrystalliz
 import org.l2j.gameserver.network.clientpackets.elementalspirits.*;
 import org.l2j.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2j.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
-import org.l2j.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
 import org.l2j.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2j.gameserver.network.clientpackets.l2coin.RequestPurchaseLimitShopItemList;
 import org.l2j.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
@@ -59,6 +58,8 @@ import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavori
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoritesAddDel;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoritesUIToggle;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
+import org.l2j.gameserver.network.clientpackets.upgrade.ExUpgradeSystemNormalRequest;
+import org.l2j.gameserver.network.clientpackets.upgrade.ExUpgradeSystemRequest;
 import org.l2j.gameserver.network.clientpackets.vip.ExRequestVipInfo;
 import org.l2j.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
 import org.l2j.gameserver.network.clientpackets.vip.RequestVipProductList;
@@ -115,8 +116,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_TRY_TO_PUT_INTENSIVE_FOR_VARIATION_MAKE(RequestConfirmRefinerItem::new, ConnectionState.IN_GAME),
     EX_TRY_TO_PUT_COMMISSION_FOR_VARIATION_MAKE(RequestConfirmGemStone::new, ConnectionState.IN_GAME),
     EX_OLYMPIAD_OBSERVER_END(RequestOlympiadObserverEnd::new, ConnectionState.IN_GAME),
-    EX_CURSED_WEAPON_LIST(RequestCursedWeaponList::new, ConnectionState.IN_GAME),
-    EX_EXISTING_CURSED_WEAPON_LOCATION(RequestCursedWeaponLocation::new, ConnectionState.IN_GAME),
+    EX_CURSED_WEAPON_LIST(null, ConnectionState.IN_GAME),
+    EX_EXISTING_CURSED_WEAPON_LOCATION(null, ConnectionState.IN_GAME),
     EX_REORGANIZE_PLEDGE_MEMBER(RequestPledgeReorganizeMember::new, ConnectionState.IN_GAME),
     EX_MPCC_SHOW_PARTY_MEMBERS_INFO(RequestExMPCCShowPartyMembersInfo::new, ConnectionState.IN_GAME),
     EX_OLYMPIAD_MATCH_LIST(RequestOlympiadMatchList::new, ConnectionState.IN_GAME),
@@ -382,7 +383,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MATCHGROUP_WITHDRAW(null, ConnectionState.IN_GAME),
     EX_MATCHGROUP_OUST(null, ConnectionState.IN_GAME),
     EX_MATCHGROUP_CHANGE_MASTER(null, ConnectionState.IN_GAME),
-    EX_UPGRADE_SYSTEM_REQUEST(RequestUpgradeSystemResult::new, ConnectionState.IN_GAME),
+    EX_UPGRADE_SYSTEM_REQUEST(ExUpgradeSystemRequest::new, ConnectionState.IN_GAME),
     EX_CARD_UPDOWN_PICK_NUMB(null, ConnectionState.IN_GAME),
     EX_CARD_UPDOWN_GAME_REWARD_REQUEST(null, ConnectionState.IN_GAME),
     EX_CARD_UPDOWN_GAME_RETRY(null, ConnectionState.IN_GAME),
@@ -426,7 +427,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_USER_BAN_INFO(null, ConnectionState.IN_GAME),
     EX_INTERACT_MODIFY(null, ConnectionState.IN_GAME),
     EX_TRY_ENCHANT_ARTIFACT(null, ConnectionState.IN_GAME),
-    EX_UPGRADE_SYSTEM_NORMAL_REQUEST(null, ConnectionState.IN_GAME),
+    EX_UPGRADE_SYSTEM_NORMAL_REQUEST(ExUpgradeSystemNormalRequest::new, ConnectionState.IN_GAME),
     EX_PURCHASE_LIMIT_SHOP_ITEM_LIST(RequestPurchaseLimitShopItemList::new, ConnectionState.IN_GAME),
     EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(RequestPurchaseLimitShopItemBuy::new, ConnectionState.IN_GAME),
     EX_OPEN_HTML(ExOpenHtml::new, ConnectionState.IN_GAME),

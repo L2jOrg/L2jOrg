@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -10,47 +9,45 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
  * @author UnAfraid
  */
 public class ItemHolder implements IIdentifiable {
-    private final int _id;
-    private final long _count;
-
-    public ItemHolder(StatsSet set) {
-        _id = set.getInt("id");
-        _count = set.getLong("count");
-    }
+    private final int id;
+    private final long count;
+    private final int enchantment;
 
     public ItemHolder(int id, long count) {
-        _id = id;
-        _count = count;
+        this(id, count, 0);
     }
 
-    /**
-     * @return the ID of the item contained in this object
-     */
+    public ItemHolder(int id, long count, int enchantment) {
+        this.id = id;
+        this.count = count;
+        this.enchantment = enchantment;
+    }
+
     @Override
     public int getId() {
-        return _id;
+        return id;
     }
 
-    /**
-     * @return the count of items contained in this object
-     */
     public long getCount() {
-        return _count;
+        return count;
+    }
+
+    public int getEnchantment() {
+        return enchantment;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof ItemHolder)) {
+        if (!(obj instanceof ItemHolder objInstance)) {
             return false;
         } else if (obj == this) {
             return true;
         }
-        final ItemHolder objInstance = (ItemHolder) obj;
-        return (_id == objInstance.getId()) && (_count == objInstance.getCount());
+        return (id == objInstance.getId()) && (count == objInstance.getCount());
     }
 
     @Override
     public String toString() {
-        return "[" + getClass().getSimpleName() + "] ID: " + _id + ", count: " + _count;
+        return "[" + getClass().getSimpleName() + "] ID: " + id + ", count: " + count;
     }
 }

@@ -16,7 +16,6 @@ import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
@@ -838,8 +837,6 @@ public class Attackable extends Npc {
         if (player == null) {
             return;
         }
-
-        CursedWeaponsManager.getInstance().checkDrop(this, player);
 
         npcTemplate.getExtendDrop().stream().map(ExtendDropData.getInstance()::getExtendDropById).filter(Objects::nonNull).forEach(e -> e.reward(player, this));
 

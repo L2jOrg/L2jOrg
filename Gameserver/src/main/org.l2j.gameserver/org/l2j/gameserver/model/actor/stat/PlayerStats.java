@@ -58,8 +58,7 @@ public class PlayerStats extends PlayableStats {
             return false;
         }
 
-        // Set new karma
-        if (!activeChar.isCursedWeaponEquipped() && (activeChar.getReputation() < 0) && (activeChar.isGM() || !activeChar.isInsideZone(ZoneType.PVP))) {
+        if (activeChar.getReputation() < 0 && (activeChar.isGM() || !activeChar.isInsideZone(ZoneType.PVP))) {
             final int karmaLost = Formulas.calculateKarmaLost(activeChar, value);
             if (karmaLost > 0) {
                 activeChar.setReputation(Math.min((activeChar.getReputation() + karmaLost), 0));
@@ -178,7 +177,7 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final boolean addLevel(byte value) {
-        if ((getLevel() + value) > LevelData.getInstance().getMaxLevel() - 1) {
+        if ((getLevel() + value) > LevelData.getInstance().getMaxLevel()) {
             return false;
         }
 
@@ -325,8 +324,8 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final void setLevel(byte value) {
-        if (value > LevelData.getInstance().getMaxLevel() -1) {
-            value = (byte) (LevelData.getInstance().getMaxLevel() -1);
+        if (value > LevelData.getInstance().getMaxLevel()) {
+            value = LevelData.getInstance().getMaxLevel();
         }
 
         if (getCreature().isSubClassActive()) {

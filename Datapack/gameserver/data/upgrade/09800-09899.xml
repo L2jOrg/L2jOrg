@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org upgrade.xsd">
+
+    <upgrade id="9800" item="2400" enchantment="25" commission="900000000">
+        <material id="1461" count="72000"/>
+        <material id="91539" count="90"/>
+        <result id="2409" enchant="24"/>
+    </upgrade>
+
+    <upgrade id="9801" item="2407" enchantment="10" commission="30000000">
+        <material id="1461" count="2400"/>
+        <material id="91539" count="3"/>
+        <result id="2409" enchant="9"/>
+    </upgrade>
+
+    <upgrade id="9802" item="2407" enchantment="11" commission="35000000">
+        <material id="1461" count="2800"/>
+        <material id="91539" count="4"/>
+        <result id="2409" enchant="10"/>
+    </upgrade>
+
+    <upgrade id="9803" item="2407" enchantment="12" commission="40000000">
+        <material id="1461" count="3200"/>
+        <material id="91539" count="4"/>
+        <result id="2409" enchant="11"/>
+    </upgrade>
+
+    <upgrade id="9804" item="2407" enchantment="13" commission="50000000">
+        <material id="1461" count="4000"/>
+        <material id="91539" count="5"/>
+        <result id="2409" enchant="12"/>
+    </upgrade>
+
+    <upgrade id="9805" item="2407" enchantment="14" commission="60000000">
+        <material id="1461" count="4800"/>
+        <material id="91539" count="6"/>
+        <result id="2409" enchant="13"/>
+    </upgrade>
+
+    <upgrade id="9806" item="2407" enchantment="15" commission="70000000">
+        <material id="1461" count="5600"/>
+        <material id="91539" count="7"/>
+        <result id="2409" enchant="14"/>
+    </upgrade>
+
+    <upgrade id="9807" item="2407" enchantment="16" commission="90000000">
+        <material id="1461" count="7200"/>
+        <material id="91539" count="9"/>
+        <result id="2409" enchant="15"/>
+    </upgrade>
+
+    <upgrade id="9808" item="2407" enchantment="17" commission="110000000">
+        <material id="1461" count="8800"/>
+        <material id="91539" count="11"/>
+        <result id="2409" enchant="16"/>
+    </upgrade>
+
+    <upgrade id="9809" item="2407" enchantment="18" commission="130000000">
+        <material id="1461" count="10400"/>
+        <material id="91539" count="13"/>
+        <result id="2409" enchant="17"/>
+    </upgrade>
+
+    <upgrade id="9810" item="2407" enchantment="19" commission="150000000">
+        <material id="1461" count="12000"/>
+        <material id="91539" count="15"/>
+        <result id="2409" enchant="18"/>
+    </upgrade>
+
+    <upgrade id="9811" item="2407" enchantment="20" commission="200000000">
+        <material id="1461" count="16000"/>
+        <material id="91539" count="20"/>
+        <result id="2409" enchant="19"/>
+    </upgrade>
+
+    <upgrade id="9812" item="2407" enchantment="21" commission="250000000">
+        <material id="1461" count="20000"/>
+        <material id="91539" count="25"/>
+        <result id="2409" enchant="20"/>
+    </upgrade>
+
+    <upgrade id="9813" item="2407" enchantment="22" commission="300000000">
+        <material id="1461" count="24000"/>
+        <material id="91539" count="30"/>
+        <result id="2409" enchant="21"/>
+    </upgrade>
+
+    <upgrade id="9814" item="2407" enchantment="23" commission="350000000">
+        <material id="1461" count="28000"/>
+        <material id="91539" count="35"/>
+        <result id="2409" enchant="22"/>
+    </upgrade>
+
+    <upgrade id="9815" item="2407" enchantment="24" commission="400000000">
+        <material id="1461" count="32000"/>
+        <material id="91539" count="40"/>
+        <result id="2409" enchant="23"/>
+    </upgrade>
+
+    <upgrade id="9816" item="2407" enchantment="25" commission="500000000">
+        <material id="1461" count="40000"/>
+        <material id="91539" count="50"/>
+        <result id="2409" enchant="24"/>
+    </upgrade>
+
+    <upgrade id="9817" item="465" enchantment="10" commission="2339400">
+        <material id="1458" count="3599"/>
+        <material id="91533" count="17"/>
+        <result id="438" enchant="9"/>
+    </upgrade>
+
+    <upgrade id="9818" item="465" enchantment="11" commission="2729300">
+        <material id="1458" count="4199"/>
+        <material id="91533" count="19"/>
+        <result id="438" enchant="10"/>
+    </upgrade>
+
+    <upgrade id="9819" item="465" enchantment="12" commission="3119200">
+        <material id="1458" count="4799"/>
+        <material id="91533" count="22"/>
+        <result id="438" enchant="11"/>
+    </upgrade>
+
+    <upgrade id="9820" item="465" enchantment="13" commission="3899000">
+        <material id="1458" count="5999"/>
+        <material id="91533" count="28"/>
+        <result id="438" enchant="12"/>
+    </upgrade>
+
+    <upgrade id="9821" item="465" enchantment="14" commission="4678800">
+        <material id="1458" count="7198"/>
+        <material id="91533" count="33"/>
+        <result id="438" enchant="13"/>
+    </upgrade>
+
+    <upgrade id="9822" item="465" enchantment="15" commission="5458600">
+        <material id="1458" count="8398"/>
+        <material id="91533" count="39"/>
+        <result id="438" enchant="14"/>
+    </upgrade>
+
+    <upgrade id="9823" item="465" enchantment="16" commission="7018200">
+        <material id="1458" count="10797"/>
+        <material id="91533" count="50"/>
+        <result id="438" enchant="15"/>
+    </upgrade>
+
+    <upgrade id="9824" item="465" enchantment="17" commission="8577800">
+        <material id="1458" count="13197"/>
+        <material id="91533" count="61"/>
+        <result id="438" enchant="16"/>
+    </upgrade>
+
+    <upgrade id="9825" item="465" enchantment="18" commission="10137400">
+        <material id="1458" count="15596"/>
+        <material id="91533" count="72"/>
+        <result id="438" enchant="17"/>
+    </upgrade>
+
+    <upgrade id="9826" item="465" enchantment="19" commission="11697000">
+        <material id="1458" count="17996"/>
+        <material id="91533" count="84"/>
+        <result id="438" enchant="18"/>
+    </upgrade>
+
+    <upgrade id="9827" item="465" enchantment="20" commission="15596000">
+        <material id="1458" count="23994"/>
+        <material id="91533" count="111"/>
+        <result id="438" enchant="19"/>
+    </upgrade>
+
+    <upgrade id="9828" item="465" enchantment="21" commission="19495000">
+        <material id="1458" count="29993"/>
+        <material id="91533" count="139"/>
+        <result id="438" enchant="20"/>
+    </upgrade>
+
+    <upgrade id="9829" item="465" enchantment="22" commission="23394000">
+        <material id="1458" count="35991"/>
+        <material id="91533" count="167"/>
+        <result id="438" enchant="21"/>
+    </upgrade>
+
+    <upgrade id="9830" item="465" enchantment="23" commission="27293000">
+        <material id="1458" count="41989"/>
+        <material id="91533" count="195"/>
+        <result id="438" enchant="22"/>
+    </upgrade>
+
+    <upgrade id="9831" item="465" enchantment="24" commission="31192000">
+        <material id="1458" count="47988"/>
+        <material id="91533" count="223"/>
+        <result id="438" enchant="23"/>
+    </upgrade>
+
+    <upgrade id="9832" item="465" enchantment="25" commission="38990000">
+        <material id="1458" count="59985"/>
+        <material id="91533" count="279"/>
+        <result id="438" enchant="24"/>
+    </upgrade>
+
+    <upgrade id="9833" item="466" enchantment="10" commission="2199000">
+        <material id="1458" count="3383"/>
+        <material id="91533" count="16"/>
+        <result id="438" enchant="9"/>
+    </upgrade>
+
+    <upgrade id="9834" item="466" enchantment="11" commission="2565500">
+        <material id="1458" count="3947"/>
+        <material id="91533" count="18"/>
+        <result id="438" enchant="10"/>
+    </upgrade>
+
+    <upgrade id="9835" item="466" enchantment="12" commission="2932000">
+        <material id="1458" count="4511"/>
+        <material id="91533" count="21"/>
+        <result id="438" enchant="11"/>
+    </upgrade>
+
+    <upgrade id="9836" item="466" enchantment="13" commission="3665000">
+        <material id="1458" count="5639"/>
+        <material id="91533" count="26"/>
+        <result id="438" enchant="12"/>
+    </upgrade>
+
+    <upgrade id="9837" item="466" enchantment="14" commission="4398000">
+        <material id="1458" count="6766"/>
+        <material id="91533" count="31"/>
+        <result id="438" enchant="13"/>
+    </upgrade>
+
+    <upgrade id="9838" item="466" enchantment="15" commission="5131000">
+        <material id="1458" count="7894"/>
+        <material id="91533" count="37"/>
+        <result id="438" enchant="14"/>
+    </upgrade>
+
+    <upgrade id="9839" item="466" enchantment="16" commission="6597000">
+        <material id="1458" count="10149"/>
+        <material id="91533" count="47"/>
+        <result id="438" enchant="15"/>
+    </upgrade>
+
+    <upgrade id="9840" item="466" enchantment="17" commission="8063000">
+        <material id="1458" count="12405"/>
+        <material id="91533" count="58"/>
+        <result id="438" enchant="16"/>
+    </upgrade>
+
+    <upgrade id="9841" item="466" enchantment="18" commission="9529000">
+        <material id="1458" count="14660"/>
+        <material id="91533" count="68"/>
+        <result id="438" enchant="17"/>
+    </upgrade>
+
+    <upgrade id="9842" item="466" enchantment="19" commission="10995000">
+        <material id="1458" count="16916"/>
+        <material id="91533" count="79"/>
+        <result id="438" enchant="18"/>
+    </upgrade>
+
+    <upgrade id="9843" item="466" enchantment="20" commission="14660000">
+        <material id="1458" count="22554"/>
+        <material id="91533" count="105"/>
+        <result id="438" enchant="19"/>
+    </upgrade>
+
+    <upgrade id="9844" item="466" enchantment="21" commission="18325000">
+        <material id="1458" count="28193"/>
+        <material id="91533" count="131"/>
+        <result id="438" enchant="20"/>
+    </upgrade>
+
+    <upgrade id="9845" item="466" enchantment="22" commission="21990000">
+        <material id="1458" count="33831"/>
+        <material id="91533" count="157"/>
+        <result id="438" enchant="21"/>
+    </upgrade>
+
+    <upgrade id="9846" item="466" enchantment="23" commission="25655000">
+        <material id="1458" count="39469"/>
+        <material id="91533" count="183"/>
+        <result id="438" enchant="22"/>
+    </upgrade>
+
+    <upgrade id="9847" item="466" enchantment="24" commission="29320000">
+        <material id="1458" count="45108"/>
+        <material id="91533" count="209"/>
+        <result id="438" enchant="23"/>
+    </upgrade>
+
+    <upgrade id="9848" item="466" enchantment="25" commission="36650000">
+        <material id="1458" count="56385"/>
+        <material id="91533" count="262"/>
+        <result id="438" enchant="24"/>
+    </upgrade>
+
+    <upgrade id="9849" item="467" enchantment="10" commission="2199000">
+        <material id="1458" count="3383"/>
+        <material id="91533" count="16"/>
+        <result id="438" enchant="9"/>
+    </upgrade>
+
+    <upgrade id="9850" item="467" enchantment="11" commission="2565500">
+        <material id="1458" count="3947"/>
+        <material id="91533" count="18"/>
+        <result id="438" enchant="10"/>
+    </upgrade>
+
+    <upgrade id="9851" item="467" enchantment="12" commission="2932000">
+        <material id="1458" count="4511"/>
+        <material id="91533" count="21"/>
+        <result id="438" enchant="11"/>
+    </upgrade>
+
+    <upgrade id="9852" item="467" enchantment="13" commission="3665000">
+        <material id="1458" count="5639"/>
+        <material id="91533" count="26"/>
+        <result id="438" enchant="12"/>
+    </upgrade>
+
+    <upgrade id="9853" item="467" enchantment="14" commission="4398000">
+        <material id="1458" count="6766"/>
+        <material id="91533" count="31"/>
+        <result id="438" enchant="13"/>
+    </upgrade>
+
+    <upgrade id="9854" item="467" enchantment="15" commission="5131000">
+        <material id="1458" count="7894"/>
+        <material id="91533" count="37"/>
+        <result id="438" enchant="14"/>
+    </upgrade>
+
+    <upgrade id="9855" item="467" enchantment="16" commission="6597000">
+        <material id="1458" count="10149"/>
+        <material id="91533" count="47"/>
+        <result id="438" enchant="15"/>
+    </upgrade>
+
+    <upgrade id="9856" item="467" enchantment="17" commission="8063000">
+        <material id="1458" count="12405"/>
+        <material id="91533" count="58"/>
+        <result id="438" enchant="16"/>
+    </upgrade>
+
+    <upgrade id="9857" item="467" enchantment="18" commission="9529000">
+        <material id="1458" count="14660"/>
+        <material id="91533" count="68"/>
+        <result id="438" enchant="17"/>
+    </upgrade>
+
+    <upgrade id="9858" item="467" enchantment="19" commission="10995000">
+        <material id="1458" count="16916"/>
+        <material id="91533" count="79"/>
+        <result id="438" enchant="18"/>
+    </upgrade>
+
+    <upgrade id="9859" item="467" enchantment="20" commission="14660000">
+        <material id="1458" count="22554"/>
+        <material id="91533" count="105"/>
+        <result id="438" enchant="19"/>
+    </upgrade>
+
+    <upgrade id="9860" item="467" enchantment="21" commission="18325000">
+        <material id="1458" count="28193"/>
+        <material id="91533" count="131"/>
+        <result id="438" enchant="20"/>
+    </upgrade>
+
+    <upgrade id="9861" item="467" enchantment="22" commission="21990000">
+        <material id="1458" count="33831"/>
+        <material id="91533" count="157"/>
+        <result id="438" enchant="21"/>
+    </upgrade>
+
+    <upgrade id="9862" item="467" enchantment="23" commission="25655000">
+        <material id="1458" count="39469"/>
+        <material id="91533" count="183"/>
+        <result id="438" enchant="22"/>
+    </upgrade>
+
+    <upgrade id="9863" item="467" enchantment="24" commission="29320000">
+        <material id="1458" count="45108"/>
+        <material id="91533" count="209"/>
+        <result id="438" enchant="23"/>
+    </upgrade>
+
+    <upgrade id="9864" item="467" enchantment="25" commission="36650000">
+        <material id="1458" count="56385"/>
+        <material id="91533" count="262"/>
+        <result id="438" enchant="24"/>
+    </upgrade>
+
+    <upgrade id="9865" item="468" enchantment="10" commission="2199000">
+        <material id="1458" count="3383"/>
+        <material id="91533" count="16"/>
+        <result id="438" enchant="9"/>
+    </upgrade>
+
+    <upgrade id="9866" item="468" enchantment="11" commission="2565500">
+        <material id="1458" count="3947"/>
+        <material id="91533" count="18"/>
+        <result id="438" enchant="10"/>
+    </upgrade>
+
+    <upgrade id="9867" item="468" enchantment="12" commission="2932000">
+        <material id="1458" count="4511"/>
+        <material id="91533" count="21"/>
+        <result id="438" enchant="11"/>
+    </upgrade>
+
+    <upgrade id="9868" item="468" enchantment="13" commission="3665000">
+        <material id="1458" count="5639"/>
+        <material id="91533" count="26"/>
+        <result id="438" enchant="12"/>
+    </upgrade>
+
+    <upgrade id="9869" item="468" enchantment="14" commission="4398000">
+        <material id="1458" count="6766"/>
+        <material id="91533" count="31"/>
+        <result id="438" enchant="13"/>
+    </upgrade>
+
+    <upgrade id="9870" item="468" enchantment="15" commission="5131000">
+        <material id="1458" count="7894"/>
+        <material id="91533" count="37"/>
+        <result id="438" enchant="14"/>
+    </upgrade>
+
+    <upgrade id="9871" item="468" enchantment="16" commission="6597000">
+        <material id="1458" count="10149"/>
+        <material id="91533" count="47"/>
+        <result id="438" enchant="15"/>
+    </upgrade>
+
+    <upgrade id="9872" item="468" enchantment="17" commission="8063000">
+        <material id="1458" count="12405"/>
+        <material id="91533" count="58"/>
+        <result id="438" enchant="16"/>
+    </upgrade>
+
+    <upgrade id="9873" item="468" enchantment="18" commission="9529000">
+        <material id="1458" count="14660"/>
+        <material id="91533" count="68"/>
+        <result id="438" enchant="17"/>
+    </upgrade>
+
+    <upgrade id="9874" item="468" enchantment="19" commission="10995000">
+        <material id="1458" count="16916"/>
+        <material id="91533" count="79"/>
+        <result id="438" enchant="18"/>
+    </upgrade>
+
+    <upgrade id="9875" item="468" enchantment="20" commission="14660000">
+        <material id="1458" count="22554"/>
+        <material id="91533" count="105"/>
+        <result id="438" enchant="19"/>
+    </upgrade>
+
+    <upgrade id="9876" item="468" enchantment="21" commission="18325000">
+        <material id="1458" count="28193"/>
+        <material id="91533" count="131"/>
+        <result id="438" enchant="20"/>
+    </upgrade>
+
+    <upgrade id="9877" item="468" enchantment="22" commission="21990000">
+        <material id="1458" count="33831"/>
+        <material id="91533" count="157"/>
+        <result id="438" enchant="21"/>
+    </upgrade>
+
+    <upgrade id="9878" item="468" enchantment="23" commission="25655000">
+        <material id="1458" count="39469"/>
+        <material id="91533" count="183"/>
+        <result id="438" enchant="22"/>
+    </upgrade>
+
+    <upgrade id="9879" item="468" enchantment="24" commission="29320000">
+        <material id="1458" count="45108"/>
+        <material id="91533" count="209"/>
+        <result id="438" enchant="23"/>
+    </upgrade>
+
+    <upgrade id="9880" item="468" enchantment="25" commission="36650000">
+        <material id="1458" count="56385"/>
+        <material id="91533" count="262"/>
+        <result id="438" enchant="24"/>
+    </upgrade>
+
+    <upgrade id="9881" item="469" enchantment="10" commission="2002800">
+        <material id="1458" count="3081"/>
+        <material id="91533" count="14"/>
+        <result id="438" enchant="9"/>
+    </upgrade>
+
+    <upgrade id="9882" item="469" enchantment="11" commission="2336600">
+        <material id="1458" count="3595"/>
+        <material id="91533" count="17"/>
+        <result id="438" enchant="10"/>
+    </upgrade>
+
+    <upgrade id="9883" item="469" enchantment="12" commission="2670400">
+        <material id="1458" count="4109"/>
+        <material id="91533" count="19"/>
+        <result id="438" enchant="11"/>
+    </upgrade>
+
+    <upgrade id="9884" item="469" enchantment="13" commission="3338000">
+        <material id="1458" count="5136"/>
+        <material id="91533" count="24"/>
+        <result id="438" enchant="12"/>
+    </upgrade>
+
+    <upgrade id="9885" item="469" enchantment="14" commission="4005600">
+        <material id="1458" count="6163"/>
+        <material id="91533" count="29"/>
+        <result id="438" enchant="13"/>
+    </upgrade>
+
+    <upgrade id="9886" item="469" enchantment="15" commission="4673200">
+        <material id="1458" count="7190"/>
+        <material id="91533" count="33"/>
+        <result id="438" enchant="14"/>
+    </upgrade>
+
+    <upgrade id="9887" item="469" enchantment="16" commission="6008400">
+        <material id="1458" count="9244"/>
+        <material id="91533" count="43"/>
+        <result id="438" enchant="15"/>
+    </upgrade>
+
+    <upgrade id="9888" item="469" enchantment="17" commission="7343600">
+        <material id="1458" count="11298"/>
+        <material id="91533" count="52"/>
+        <result id="438" enchant="16"/>
+    </upgrade>
+
+    <upgrade id="9889" item="469" enchantment="18" commission="8678800">
+        <material id="1458" count="13352"/>
+        <material id="91533" count="62"/>
+        <result id="438" enchant="17"/>
+    </upgrade>
+
+    <upgrade id="9890" item="469" enchantment="19" commission="10014000">
+        <material id="1458" count="15406"/>
+        <material id="91533" count="72"/>
+        <result id="438" enchant="18"/>
+    </upgrade>
+
+    <upgrade id="9891" item="469" enchantment="20" commission="13352000">
+        <material id="1458" count="20542"/>
+        <material id="91533" count="95"/>
+        <result id="438" enchant="19"/>
+    </upgrade>
+
+    <upgrade id="9892" item="469" enchantment="21" commission="16690000">
+        <material id="1458" count="25677"/>
+        <material id="91533" count="119"/>
+        <result id="438" enchant="20"/>
+    </upgrade>
+
+    <upgrade id="9893" item="469" enchantment="22" commission="20028000">
+        <material id="1458" count="30813"/>
+        <material id="91533" count="143"/>
+        <result id="438" enchant="21"/>
+    </upgrade>
+
+    <upgrade id="9894" item="469" enchantment="23" commission="23366000">
+        <material id="1458" count="35948"/>
+        <material id="91533" count="167"/>
+        <result id="438" enchant="22"/>
+    </upgrade>
+
+    <upgrade id="9895" item="469" enchantment="24" commission="26704000">
+        <material id="1458" count="41083"/>
+        <material id="91533" count="191"/>
+        <result id="438" enchant="23"/>
+    </upgrade>
+
+    <upgrade id="9896" item="469" enchantment="25" commission="33380000">
+        <material id="1458" count="51354"/>
+        <material id="91533" count="238"/>
+        <result id="438" enchant="24"/>
+    </upgrade>
+
+    <upgrade id="9897" item="470" enchantment="10" commission="1734000">
+        <material id="1458" count="2668"/>
+        <material id="91533" count="12"/>
+        <result id="438" enchant="9"/>
+    </upgrade>
+
+    <upgrade id="9898" item="470" enchantment="11" commission="2023000">
+        <material id="1458" count="3113"/>
+        <material id="91533" count="14"/>
+        <result id="438" enchant="10"/>
+    </upgrade>
+
+    <upgrade id="9899" item="470" enchantment="12" commission="2312000">
+        <material id="1458" count="3557"/>
+        <material id="91533" count="17"/>
+        <result id="438" enchant="11"/>
+    </upgrade>
+</list>

@@ -35,7 +35,7 @@ public class TerritoryStatus implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -47,14 +47,14 @@ public class TerritoryStatus implements IBypassHandler
 		{
 			if (npc.getCastle().getOwnerId() > 0)
 			{
-				html.setFile(activeChar, "data/html/territorystatus.htm");
+				html.setFile(player, "data/html/territorystatus.htm");
 				final Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
 				html.replace("%clanname%", clan.getName());
 				html.replace("%clanleadername%", clan.getLeaderName());
 			}
 			else
 			{
-				html.setFile(activeChar, "data/html/territorynoclan.htm");
+				html.setFile(player, "data/html/territorynoclan.htm");
 			}
 		}
 		html.replace("%castlename%", npc.getCastle().getName());
@@ -70,7 +70,7 @@ public class TerritoryStatus implements IBypassHandler
 				html.replace("%territory%", "The Kingdom of Aden");
 			}
 		}
-		activeChar.sendPacket(html);
+		player.sendPacket(html);
 		return true;
 	}
 	

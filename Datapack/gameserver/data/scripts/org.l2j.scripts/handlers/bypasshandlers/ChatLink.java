@@ -34,7 +34,7 @@ public class ChatLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -54,11 +54,11 @@ public class ChatLink implements IBypassHandler
 		final Npc npc = (Npc) target;
 		if ((val == 0) && npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, activeChar), npc);
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
 		}
 		else
 		{
-			npc.showChatWindow(activeChar, val);
+			npc.showChatWindow(player, val);
 		}
 		return false;
 	}

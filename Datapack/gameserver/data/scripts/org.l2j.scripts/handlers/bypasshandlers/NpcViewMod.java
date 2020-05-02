@@ -41,7 +41,7 @@ public class NpcViewMod implements IBypassHandler
     private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
 
     @Override
-    public boolean useBypass(String command, Player activeChar, Creature bypassOrigin)
+    public boolean useBypass(String command, Player player, Creature bypassOrigin)
     {
         final StringTokenizer st = new StringTokenizer(command);
         st.nextToken();
@@ -71,7 +71,7 @@ public class NpcViewMod implements IBypassHandler
                 }
                 else
                 {
-                    target = activeChar.getTarget();
+                    target = player.getTarget();
                 }
 
                 final Npc npc = target instanceof Npc ? (Npc) target : null;
@@ -80,7 +80,7 @@ public class NpcViewMod implements IBypassHandler
                     return false;
                 }
 
-                sendNpcView(activeChar, npc);
+                sendNpcView(player, npc);
                 break;
             }
             case "droplist":
@@ -102,7 +102,7 @@ public class NpcViewMod implements IBypassHandler
                         return false;
                     }
                     final int page = st.hasMoreElements() ? Integer.parseInt(st.nextToken()) : 0;
-                    sendNpcDropList(activeChar, npc, dropListType, page);
+                    sendNpcDropList(player, npc, dropListType, page);
                 }
                 catch (NumberFormatException e)
                 {
@@ -131,7 +131,7 @@ public class NpcViewMod implements IBypassHandler
                 }
                 else
                 {
-                    target = activeChar.getTarget();
+                    target = player.getTarget();
                 }
 
                 final Npc npc = target instanceof Npc ? (Npc) target : null;
@@ -140,7 +140,7 @@ public class NpcViewMod implements IBypassHandler
                     return false;
                 }
 
-                sendNpcSkillView(activeChar, npc);
+                sendNpcSkillView(player, npc);
                 break;
             }
             case "aggrolist":
@@ -159,7 +159,7 @@ public class NpcViewMod implements IBypassHandler
                 }
                 else
                 {
-                    target = activeChar.getTarget();
+                    target = player.getTarget();
                 }
 
                 final Npc npc = target instanceof Npc ? (Npc) target : null;
@@ -168,7 +168,7 @@ public class NpcViewMod implements IBypassHandler
                     return false;
                 }
 
-                sendAggroListView(activeChar, npc);
+                sendAggroListView(player, npc);
                 break;
             }
         }

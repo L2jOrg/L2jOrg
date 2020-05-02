@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -314,7 +313,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             writeShort(UserInfoType.INVENTORY_LIMIT.getBlockLength());
             writeInt(0x00); // mount ??
             writeShort(player.getInventoryLimit());
-            writeByte((player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId()) : 0));
+            writeByte(0x00); // cursed weapon level
             writeInt(0x00); // unk 196
         }
 

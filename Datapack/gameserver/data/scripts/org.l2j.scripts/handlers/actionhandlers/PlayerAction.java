@@ -1,12 +1,11 @@
 package handlers.actionhandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -69,19 +68,10 @@ public class PlayerAction implements IActionHandler
 				// Check if this Player is autoAttackable
 				if (target.isAutoAttackable(activeChar))
 				{
-					// activeChar with lvl < 21 can't attack a cursed weapon holder
-					// And a cursed weapon holder can't attack activeChars with lvl < 21
-					if ((((Player) target).isCursedWeaponEquipped() && (activeChar.getLevel() < 21)) || (activeChar.isCursedWeaponEquipped() && (((Creature) target).getLevel() < 21)))
-					{
-						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					}
-					else
-					{
-						if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
-						{
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-							activeChar.onActionRequest();
-						}
+
+					if (GeoEngine.getInstance().canSeeTarget(activeChar, target)) {
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+						activeChar.onActionRequest();
 					}
 				}
 				else

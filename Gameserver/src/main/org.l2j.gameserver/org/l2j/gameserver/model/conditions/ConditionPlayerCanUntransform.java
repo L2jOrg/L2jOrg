@@ -41,7 +41,7 @@ public class ConditionPlayerCanUntransform extends Condition {
         final Player player = effector.getActingPlayer();
         if (player == null) {
             canUntransform = false;
-        } else if (player.isAlikeDead() || player.isCursedWeaponEquipped()) {
+        } else if (player.isAlikeDead()) {
             canUntransform = false;
         } else if (player.isFlyingMounted() && !player.isInsideZone(ZoneType.LANDING)) {
             player.sendPacket(SystemMessageId.YOU_ARE_TOO_HIGH_TO_PERFORM_THIS_ACTION_PLEASE_LOWER_YOUR_ALTITUDE_AND_TRY_AGAIN); // TODO: check if message is retail like.

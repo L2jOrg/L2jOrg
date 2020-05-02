@@ -32,7 +32,7 @@ public class Augment implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -45,12 +45,12 @@ public class Augment implements IBypassHandler
 			{
 				case 1:
 				{
-					activeChar.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
+					player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
 					return true;
 				}
 				case 2:
 				{
-					activeChar.sendPacket(ExShowVariationCancelWindow.STATIC_PACKET);
+					player.sendPacket(ExShowVariationCancelWindow.STATIC_PACKET);
 					return true;
 				}
 			}

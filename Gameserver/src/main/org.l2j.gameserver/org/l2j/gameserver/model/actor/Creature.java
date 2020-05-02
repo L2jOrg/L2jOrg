@@ -3089,16 +3089,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (hit.isCritical() && (weapon != null)) {
             weapon.applyConditionalSkills(this, target, null, ItemSkillType.ON_CRITICAL_SKILL);
         }
-
-        if (isPlayer(this) && !target.isHpBlocked()) {
-            if (((Player) this).isCursedWeaponEquipped()) {
-                // If hit by a cursed weapon, CP is reduced to 0
-                target.setCurrentCp(0);
-            } else if (((Player) this).isHero() && isPlayer(target) && target.getActingPlayer().isCursedWeaponEquipped()) {
-                // If a cursed weapon is hit by a Hero, CP is reduced to 0
-                target.setCurrentCp(0);
-            }
-        }
     }
 
     private void onAttackFinish(Attack attack) {

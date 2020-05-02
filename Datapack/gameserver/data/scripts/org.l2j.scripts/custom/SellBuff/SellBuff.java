@@ -73,7 +73,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		String cmd = "";
 		String params = "";
@@ -93,7 +93,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		{
 			return false;
 		}
-		return useBypass(cmd, activeChar, params);
+		return useBypass(cmd, player, params);
 	}
 	
 	@Override

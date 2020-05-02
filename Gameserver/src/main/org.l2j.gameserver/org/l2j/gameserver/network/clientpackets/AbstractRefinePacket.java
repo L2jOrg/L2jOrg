@@ -170,13 +170,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
             player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_SITTING_DOWN);
             return false;
         }
-        if (player.isCursedWeaponEquipped()) {
-            return false;
-        }
-        if (player.hasRequest(EnchantItemRequest.class, EnchantItemAttributeRequest.class) || player.isProcessingTransaction()) {
-            return false;
-        }
 
-        return true;
+        return !player.hasRequest(EnchantItemRequest.class, EnchantItemAttributeRequest.class) && !player.isProcessingTransaction();
     }
 }

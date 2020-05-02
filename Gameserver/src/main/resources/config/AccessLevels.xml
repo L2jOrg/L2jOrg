@@ -97,14 +97,6 @@
 	<admin command="admin_give_item_target" accessLevel="100" confirmDlg="true" />
 	<admin command="admin_give_item_to_all" accessLevel="100" confirmDlg="true" />
 
-	<!-- ADMIN CURSED WEAPONS -->
-	<admin command="admin_cw_info" accessLevel="100" />
-	<admin command="admin_cw_remove" accessLevel="100" />
-	<admin command="admin_cw_goto" accessLevel="100" />
-	<admin command="admin_cw_reload" accessLevel="100" />
-	<admin command="admin_cw_add" accessLevel="100" confirmDlg="true" />
-	<admin command="admin_cw_info_menu" accessLevel="100" />
-
 	<!-- ADMIN DELETE -->
 	<admin command="admin_delete" accessLevel="100" />
 

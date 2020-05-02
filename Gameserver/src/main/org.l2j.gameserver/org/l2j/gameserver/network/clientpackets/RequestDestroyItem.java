@@ -5,7 +5,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
-import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Summon;
@@ -99,7 +98,7 @@ public final class RequestDestroyItem extends ClientPacket {
 
         final int itemId = itemToRemove.getId();
 
-        if (!Config.DESTROY_ALL_ITEMS && ((!activeChar.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) || CursedWeaponsManager.getInstance().isCursed(itemId))) {
+        if (!Config.DESTROY_ALL_ITEMS && ((!activeChar.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()))) {
             if (itemToRemove.isHeroItem()) {
                 client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
             } else {

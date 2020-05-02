@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rare-upgrade" type="RareUpgrade" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="upgrade" type="CommonUpgrade" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="RareUpgrade">
+        <xs:complexContent>
+            <xs:extension base="Upgrade">
+                <xs:attribute name="result" type="xs:int" use="required"/>
+                <xs:attribute name="result-enchantment" type="xs:byte" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CommonUpgrade">
+        <xs:complexContent>
+            <xs:extension base="Upgrade">
+                <xs:sequence>
+                    <xs:element name="bonus-item" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="item-on-fail" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="result" type="EnchantedItem" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="UpgradeType" default="NORMAL"/>
+                <xs:attribute name="chance" type="xs:int" default="100"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Upgrade" abstract="true">
+        <xs:sequence>
+            <xs:element name="material" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="item" type="xs:int" use="required"/>
+        <xs:attribute name="enchantment" type="xs:byte" use="required"/>
+        <xs:attribute name="commission" type="xs:long" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="UpgradeType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NORMAL"/>
+            <xs:enumeration value="SPECIAL"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

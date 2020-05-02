@@ -238,10 +238,6 @@ public class EnterWorld extends ClientPacket {
             Event.restorePlayerEventStatus(player);
         }
 
-        if (player.isCursedWeaponEquipped()) {
-            CursedWeaponsManager.getInstance().getCursedWeapon(player.getCursedWeaponEquippedId()).cursedOnLogin();
-        }
-
         if (Config.PC_CAFE_ENABLED) {
             if (player.getPcCafePoints() > 0) {
                 player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), 0, 1));
@@ -324,14 +320,6 @@ public class EnterWorld extends ClientPacket {
         // Actually should be checked for inside castle only?
         if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && player.isInsideZone(ZoneType.SIEGE) && (!player.isInSiege() || (player.getSiegeState() < 2))) {
             player.teleToLocation(TeleportWhereType.TOWN);
-        }
-
-        // Remove demonic weapon if character is not cursed weapon equipped.
-        if ((player.getInventory().getItemByItemId(8190) != null) && !player.isCursedWeaponEquipped()) {
-            player.destroyItem("Zariche", player.getInventory().getItemByItemId(8190), null, true);
-        }
-        if ((player.getInventory().getItemByItemId(8689) != null) && !player.isCursedWeaponEquipped()) {
-            player.destroyItem("Akamanah", player.getInventory().getItemByItemId(8689), null, true);
         }
 
         if (getSettings(GeneralSettings.class).allowMail()) {

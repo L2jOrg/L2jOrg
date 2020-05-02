@@ -21,6 +21,7 @@ import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.upgrade.UpgradeItemEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
@@ -96,7 +97,6 @@ public class GameServer {
         EnchantItemHPBonusData.getInstance();
         BuyListData.getInstance();
         MultisellData.getInstance();
-        EquipmentUpgradeData.getInstance();
         RecipeData.getInstance();
         ArmorSetsData.getInstance();
         FishingData.getInstance();
@@ -107,8 +107,8 @@ public class GameServer {
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();
         CombinationItemsManager.init();
-
         CostumeEngine.init();
+        UpgradeItemEngine.init();
 
         printSection("Characters");
         ClassListData.getInstance();
@@ -157,7 +157,6 @@ public class GameServer {
         HtmCache.getInstance();
         CrestTable.getInstance();
         TeleportersData.getInstance();
-        CursedWeaponsManager.getInstance();
         TransformData.getInstance();
         ReportTable.getInstance();
         if (Config.SELLBUFF_ENABLED) {

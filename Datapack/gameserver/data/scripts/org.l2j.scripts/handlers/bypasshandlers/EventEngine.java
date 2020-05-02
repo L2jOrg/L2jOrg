@@ -32,7 +32,7 @@ public class EventEngine implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -43,12 +43,12 @@ public class EventEngine implements IBypassHandler
 		{
 			if (command.equalsIgnoreCase("event_participate"))
 			{
-				Event.registerPlayer(activeChar);
+				Event.registerPlayer(player);
 				return true;
 			}
 			else if (command.equalsIgnoreCase("event_unregister"))
 			{
-				Event.removeAndResetPlayer(activeChar);
+				Event.removeAndResetPlayer(player);
 				return true;
 			}
 		}

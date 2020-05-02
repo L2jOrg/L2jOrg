@@ -31,14 +31,14 @@ public class ReleaseAttribute implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
 			return false;
 		}
 		
-		activeChar.sendPacket(new ExShowBaseAttributeCancelWindow(activeChar));
+		player.sendPacket(new ExShowBaseAttributeCancelWindow(player));
 		return true;
 	}
 	

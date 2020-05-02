@@ -33,7 +33,7 @@ public class Multisell implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!isNpc(target))
 		{
@@ -46,13 +46,13 @@ public class Multisell implements IBypassHandler
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // multisell
 			{
 				listId = Integer.parseInt(command.substring(9).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, (Npc) target, false);
+				MultisellData.getInstance().separateAndSend(listId, player, (Npc) target, false);
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // exc_multisell
 			{
 				listId = Integer.parseInt(command.substring(13).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, (Npc) target, true);
+				MultisellData.getInstance().separateAndSend(listId, player, (Npc) target, true);
 				return true;
 			}
 			return false;

@@ -256,10 +256,6 @@ public class Shutdown extends Thread {
         ClanTable.getInstance().shutdown();
         LOGGER.info("Clan System: Data saved.");
 
-        // Save Cursed Weapons data before closing.
-        CursedWeaponsManager.getInstance().saveData();
-        LOGGER.info("Cursed Weapons Manager: Data saved.");
-
         // Save all manor data
         CastleManorManager.getInstance().storeMe();
         LOGGER.info("Castle Manor Manager: Data saved.");

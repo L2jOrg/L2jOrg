@@ -80,20 +80,20 @@ public class SupportMagic implements IBypassHandler
 	private static final int HASTE_LEVEL_2 = Config.MAX_NEWBIE_BUFF_LEVEL + 1; // disabled
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
-		if (!isNpc(target) || activeChar.isCursedWeaponEquipped())
+		if (!isNpc(target))
 		{
 			return false;
 		}
 		
 		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			makeSupportMagic(activeChar, (Npc) target, true);
+			makeSupportMagic(player, (Npc) target, true);
 		}
 		else if (command.equalsIgnoreCase(COMMANDS[1]))
 		{
-			makeSupportMagic(activeChar, (Npc) target, false);
+			makeSupportMagic(player, (Npc) target, false);
 		}
 		return true;
 	}

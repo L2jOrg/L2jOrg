@@ -1,6 +1,10 @@
 <html><body>Head Blacksmith Ferris:<br>
-Have you heard of the crystals that contain the desires of spirits? They've been appearing in various places throughout Aden, and the elders and blacksmiths found out that they can be used to increase the level of equipment.<br>
-I learned from the elders how to bring out the power from the crystals, and I'm able to upgrade equipment with that. Are you ready?<br>
-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_EquipmentUpgrade"><font color="LEVEL">"Upgrade equipment."</font></Button>
+<br>Have you heard of the crystals that contain the desires of spirits? They've been appearing in various places throughout Aden, and the sages and blacksmiths discovered that they can be used to increase the level and grade of equipment.
+<br>I learned from the sages how to bring out the power from the crystals, and I'm able to use it to upgrade equipment.
+<br>Various materials are required to upgrade, and it must already be enhanced.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_upgrade_item RARE"><font color="LEVEL">"I want to perform the rare upgrade." (paid and rare items)</font></Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_upgrade_item NORMAL"><font color="LEVEL">"I want to perform the normal upgrade." (D- to A-grade)</font></Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_upgrade_item SPECIAL"><font color="LEVEL">"I want to perform the special upgrade." (S-grade)</font></Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Chat 2">"What can you tell me about equipment upgrade?"</Button>
 <Button ALIGN=LEFT ICON="RETURN" action="bypass -h npc_%objectId%_Chat 0">Back</Button>
 </body></html>

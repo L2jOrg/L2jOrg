@@ -133,8 +133,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.item.BodyPart.*;
-import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
-import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -1008,7 +1007,6 @@ public final class Player extends Playable {
      * Skills queued because a skill is already in progress
      */
     private SkillUseHolder _queuedSkill;
-    private int cursedWeaponEquippedId = 0;
     private boolean combatFlagEquipped = false;
     private boolean _canRevive = true;
     private int _reviveRequested = 0;
@@ -1199,7 +1197,6 @@ public final class Player extends Playable {
             player._activeClass = character.getClassId();
         }
 
-        CursedWeaponsManager.getInstance().checkPlayer(player);
         player.setXYZInvisible(character.getX(), character.getY(), character.getZ());
         player.setLastServerPosition(character.getX(), character.getY(), character.getZ());
 
@@ -3018,22 +3015,14 @@ public final class Player extends Playable {
      */
     public void addItem(String process, Item item, WorldObject reference, boolean sendMessage) {
         if (item.getCount() > 0) {
-            // Sends message to client if requested
+
             if (sendMessage) {
                 if (item.getCount() > 1) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
-                    sm.addItemName(item);
-                    sm.addLong(item.getCount());
-                    sendPacket(sm);
+                    sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_S2_S1).addItemName(item).addLong(item.getCount()));
                 } else if (item.getEnchantLevel() > 0) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
-                    sm.addInt(item.getEnchantLevel());
-                    sm.addItemName(item);
-                    sendPacket(sm);
+                    sendPacket(getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addInt(item.getEnchantLevel()).addItemName(item));
                 } else {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
-                    sm.addItemName(item);
-                    sendPacket(sm);
+                    sendPacket(getSystemMessage(YOU_HAVE_OBTAINED_S1).addItemName(item));
                 }
             }
 
@@ -3043,8 +3032,6 @@ public final class Player extends Playable {
             // If over capacity, drop the item
             if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != Item.MODIFIED))) {
                 dropItem("InvDrop", newitem, null, true, true);
-            } else if (CursedWeaponsManager.getInstance().isCursed(newitem.getId())) {
-                CursedWeaponsManager.getInstance().activate(this, newitem);
             }
 
             // Combat Flag
@@ -3070,60 +3057,61 @@ public final class Player extends Playable {
      * TODO make process an enum.
      */
     public Item addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
+        return addItem(process, itemId, count, 0, reference, sendMessage);
+    }
+
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+        Item item = null;
         if (count > 0) {
-            final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
-            if (item == null) {
-                LOGGER.error("Item doesn't exist so cannot be added. Item ID: " + itemId);
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
+
+            if (isNull(template)) {
+                LOGGER.error("Item doesn't exist so cannot be added. Item ID: {}", itemId);
                 return null;
             }
-            // Sends message to client if requested
-            if (sendMessage && ((!isCastingNow() && item.hasExImmediateEffect()) || !item.hasExImmediateEffect())) {
-                if (count > 1) {
-                    if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-                        sm.addItemName(itemId);
-                        sm.addLong(count);
-                        sendPacket(sm);
-                    } else {
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
-                        sm.addItemName(itemId);
-                        sm.addLong(count);
-                        sendPacket(sm);
-                    }
-                } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-                    sm.addItemName(itemId);
-                    sendPacket(sm);
-                } else {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
-                    sm.addItemName(itemId);
-                    sendPacket(sm);
-                }
-            }
 
-            // Auto-use herbs.
-            if (item.hasExImmediateEffect()) {
-                final IItemHandler handler = ItemHandler.getInstance().getHandler(item instanceof EtcItem ? (EtcItem) item : null);
+            if(template.hasExImmediateEffect()) {
+                final var handler = ItemHandler.getInstance().getHandler(template instanceof EtcItem etcItem ? etcItem : null);
+
                 if (handler == null) {
-                    LOGGER.warn("No item handler registered for Herb ID " + item.getId() + "!");
+                    LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
                 } else {
                     handler.useItem(this, new Item(itemId), false);
                 }
             } else {
-                // Add the item to inventory
-                final Item createdItem = inventory.addItem(process, itemId, count, this, reference);
+                item = inventory.addItem(process, itemId, count, this, reference);
+                if(enchant > 0) {
+                    item.setEnchantLevel(enchant);
+                }
 
                 // If over capacity, drop the item
-                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && createdItem.isDropable() && (!createdItem.isStackable() || (createdItem.getLastChange() != Item.MODIFIED))) {
-                    dropItem("InvDrop", createdItem, null, true);
-                } else if (CursedWeaponsManager.getInstance().isCursed(createdItem.getId())) {
-                    CursedWeaponsManager.getInstance().activate(this, createdItem);
+                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
+                        && (!item.isStackable() || (item.getLastChange() != Item.MODIFIED))) {
+
+                    dropItem("InvDrop", item, null, true);
                 }
-                return createdItem;
+            }
+
+            if (sendMessage) {
+                if (count > 1) {
+                    if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+                        sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(template).addLong(count) );
+                    } else {
+                        sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_S2_S1).addItemName(template).addLong(count) );
+                    }
+                } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(template) );
+                } else if(enchant > 0) {
+                    sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addItemName(template).addInt(enchant));
+                } else {
+                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(template) );
+                }
             }
         }
-        return null;
+        return item;
     }
+
+
 
     /**
      * @param process     the process name
@@ -3131,8 +3119,8 @@ public final class Player extends Playable {
      * @param reference   the reference object
      * @param sendMessage if {@code true} a system message will be sent
      */
-    public void addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
-        addItem(process, item.getId(), item.getCount(), reference, sendMessage);
+    public Item addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
+        return addItem(process, item.getId(), item.getCount(), item.getEnchantment(), reference, sendMessage);
     }
 
     /**
@@ -3168,14 +3156,9 @@ public final class Player extends Playable {
             return false;
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
-            playerIU.addItem(item);
-            sendInventoryUpdate(playerIU);
-        } else {
-            sendItemList();
-        }
+        final InventoryUpdate playerIU = new InventoryUpdate();
+        playerIU.addItem(item);
+        sendInventoryUpdate(playerIU);
 
         // Sends message to client if requested
         if (sendMessage) {
@@ -4047,10 +4030,7 @@ public final class Player extends Playable {
             }
             ItemEngine.getInstance().destroyItem("Consume", target, this, null);
         }
-        // Cursed Weapons are not distributed
-        else if (CursedWeaponsManager.getInstance().isCursed(target.getId())) {
-            addItem("Pickup", target, null, true);
-        } else if (FortSiegeManager.getInstance().isCombat(target.getId())) {
+        else if (FortSiegeManager.getInstance().isCombat(target.getId())) {
             addItem("Pickup", target, null, true);
         } else {
             // if item is instance of L2ArmorType or L2WeaponType broadcast an "Attention" system message
@@ -4369,10 +4349,7 @@ public final class Player extends Playable {
             // Clear resurrect xp calculation
             model.setExpBeforeDeath(0);
 
-            // Issues drop of Cursed Weapon.
-            if (isCursedWeaponEquipped()) {
-                CursedWeaponsManager.getInstance().drop(cursedWeaponEquippedId, killer);
-            } else if (combatFlagEquipped) {
+            if (combatFlagEquipped) {
                 final Fort fort = FortDataManager.getInstance().getFort(this);
                 if (fort != null) {
                     FortSiegeManager.getInstance().dropCombatFlag(this, fort.getId());
@@ -4383,7 +4360,7 @@ public final class Player extends Playable {
                 }
             } else {
                 final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
-                if ((pk == null) || !pk.isCursedWeaponEquipped()) {
+                if ((pk == null)) {
                     onDieDropItem(killer); // Check if any item should be dropped
 
                     if (!insidePvpZone && (pk != null)) {
@@ -4573,12 +4550,6 @@ public final class Player extends Playable {
 
         // Avoid nulls && check if player != killedPlayer
         if ((killedPlayer == null) || (this == killedPlayer)) {
-            return;
-        }
-
-        // Cursed weapons progress
-        if (isCursedWeaponEquipped()) {
-            CursedWeaponsManager.getInstance().increaseKills(getCursedWeaponEquippedId());
             return;
         }
 
@@ -5185,11 +5156,6 @@ public final class Player extends Playable {
             return true;
         }
 
-        // Don't allow disarming a cursed weapon
-        if (isCursedWeaponEquipped()) {
-            return false;
-        }
-
         // Don't allow disarming a Combat Flag or Territory Ward.
         if (combatFlagEquipped) {
             return false;
@@ -5328,7 +5294,7 @@ public final class Player extends Playable {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
                 return false;
-            } else if (isTransformed() || isCursedWeaponEquipped()) {
+            } else if (isTransformed()) {
                 // no message needed, player while transformed doesn't have mount action
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return false;
@@ -6191,7 +6157,7 @@ public final class Player extends Playable {
             }
         }
 
-        if ((getTransformationId() > 0) || isCursedWeaponEquipped()) {
+        if (getTransformationId() > 0) {
             return oldSkill;
         }
 
@@ -7608,10 +7574,7 @@ public final class Player extends Playable {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
             return false;
         }
-        if (isCursedWeaponEquipped()) {
-            _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE;
-            return false;
-        }
+
         if (privateStoreType != PrivateStoreType.NONE) {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
             return false;
@@ -8536,7 +8499,6 @@ public final class Player extends Playable {
      * <li>Item owner id == owner id</li>
      * <li>It isnt pet control item while mounting pet or pet summoned</li>
      * <li>It isnt active enchant item</li>
-     * <li>It isnt cursed weapon/item</li>
      * <li>It isnt wear item</li>
      * </ul>
      *
@@ -8557,12 +8519,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isProcessingItem(objectId)) {
-            return false;
-        }
-
-        // can not trade a cursed weapon
-        return !CursedWeaponsManager.getInstance().isCursed(item.getId());
+        return !isProcessingItem(objectId);
     }
 
     /**
@@ -8882,14 +8839,6 @@ public final class Player extends Playable {
             LOGGER.error("deleteMe()", e);
         }
 
-        if (isCursedWeaponEquipped()) {
-            try {
-                CursedWeaponsManager.getInstance().getCursedWeapon(cursedWeaponEquippedId).setPlayer(null);
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
-        }
-
         if (clanId > 0) {
             _clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
             _clan.broadcastToOnlineMembers(new ExPledgeCount(_clan));
@@ -9075,18 +9024,6 @@ public final class Player extends Playable {
         model.setPowerGrade(power);
     }
 
-    public boolean isCursedWeaponEquipped() {
-        return cursedWeaponEquippedId != 0;
-    }
-
-    public int getCursedWeaponEquippedId() {
-        return cursedWeaponEquippedId;
-    }
-
-    public void setCursedWeaponEquippedId(int value) {
-        cursedWeaponEquippedId = value;
-    }
-
     public boolean isCombatFlagEquipped() {
         return combatFlagEquipped;
     }
@@ -9095,11 +9032,6 @@ public final class Player extends Playable {
         combatFlagEquipped = value;
     }
 
-    /**
-     * Returns the Number of Souls this Player got.
-     *
-     * @return
-     */
     public int getChargedSouls() {
         return _souls;
     }

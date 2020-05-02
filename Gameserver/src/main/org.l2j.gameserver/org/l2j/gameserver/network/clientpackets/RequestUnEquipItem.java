@@ -49,8 +49,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        // Prevent of unequipping a cursed weapon.
-        if ((bodyPart == BodyPart.TWO_HAND) && (player.isCursedWeaponEquipped() || player.isCombatFlagEquipped())) {
+        if (bodyPart == BodyPart.TWO_HAND && player.isCombatFlagEquipped()) {
             return;
         }
 

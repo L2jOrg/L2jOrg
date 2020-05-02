@@ -353,7 +353,7 @@ public final class SellBuffsManager extends GameXmlReader {
         {
             player.sendMessage("You can't sell buffs while registered in an event!");
             return false;
-        } else if (player.isCursedWeaponEquipped() || (player.getReputation() < 0)) {
+        } else if (player.getReputation() < 0) {
             player.sendMessage("You can't sell buffs in Chaotic state!");
             return false;
         } else if (player.isInDuel()) {

@@ -19,7 +19,6 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
-import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.model.PetData;
@@ -384,13 +383,7 @@ public class Pet extends Summon {
         final boolean follow = getFollowStatus();
         final Item target = (Item) object;
 
-        // Cursed weapons
-        if (CursedWeaponsManager.getInstance().isCursed(target.getId())) {
-            final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-            smsg.addItemName(target.getId());
-            sendPacket(smsg);
-            return;
-        } else if (FortSiegeManager.getInstance().isCombat(target.getId())) {
+        if (FortSiegeManager.getInstance().isCombat(target.getId())) {
             return;
         }
 

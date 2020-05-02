@@ -25,7 +25,7 @@ public class CanTransformSkillCondition implements SkillCondition {
 		boolean canTransform = true;
 		final Player player = caster.getActingPlayer();
 
-		if (isNull(player) || player.isAlikeDead() || player.isCursedWeaponEquipped()) {
+		if (isNull(player) || player.isAlikeDead()) {
 			canTransform = false;
 		} else if (player.isSitting()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_SITTING);

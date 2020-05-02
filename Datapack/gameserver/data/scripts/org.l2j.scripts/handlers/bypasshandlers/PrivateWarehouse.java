@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
-import org.l2j.gameserver.network.serverpackets.items.WarehouseDepositList;
+import org.l2j.gameserver.network.serverpackets.item.WarehouseDepositList;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 

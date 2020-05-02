@@ -27,7 +27,7 @@ public class CanUntransformSkillCondition implements SkillCondition {
         {
             canUntransform = false;
         }
-        else if (player.isAlikeDead() || player.isCursedWeaponEquipped())
+        else if (player.isAlikeDead())
         {
             canUntransform = false;
         }

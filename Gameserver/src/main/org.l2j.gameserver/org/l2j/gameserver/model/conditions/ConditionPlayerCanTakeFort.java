@@ -48,7 +48,7 @@ public class ConditionPlayerCanTakeFort extends Condition {
 
         final Player player = effector.getActingPlayer();
         boolean canTakeFort = true;
-        if (player.isAlikeDead() || player.isCursedWeaponEquipped() || !player.isClanLeader()) {
+        if (player.isAlikeDead() || !player.isClanLeader()) {
             canTakeFort = false;
         }
 

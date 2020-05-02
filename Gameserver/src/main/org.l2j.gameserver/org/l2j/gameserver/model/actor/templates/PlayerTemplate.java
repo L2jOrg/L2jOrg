@@ -39,7 +39,7 @@ public class PlayerTemplate extends CreatureTemplate {
         super(set);
         classId = ClassId.getClassId(set.getInt("classId"));
         setRace(classId.getRace());
-        var maxLevel = LevelData.getInstance().getMaxLevel();
+        var maxLevel = LevelData.getInstance().getMaxLevel() +1;
         baseHp = new float[maxLevel];
         baseMp = new float[maxLevel];
         baseCp = new float[maxLevel];

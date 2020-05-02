@@ -1,7 +1,6 @@
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
-import handlers.bypasshandlers.EquipmentUpgrade;
 import handlers.conditions.CategoryTypeCondition;
 import handlers.conditions.NpcLevelCondition;
 import handlers.conditions.PlayerLevelCondition;
@@ -278,7 +277,6 @@ open module org.l2j.scripts {
                 OpHomeSkillCondition.Factory,
                 OpMainjobSkillCondition.Factory,
                 OpNeedAgathionSkillCondition.Factory,
-                OpNotCursedSkillCondition.Factory,
                 KillerSkillCondition.Factory,
                 OpPledgeSkillCondition.Factory,
                 OpResurrectionSkillCondition.Factory,
@@ -454,7 +452,6 @@ open module org.l2j.scripts {
             handlers.admincommandhandlers.AdminClan,
             handlers.admincommandhandlers.AdminClanHall,
             handlers.admincommandhandlers.AdminCreateItem,
-            handlers.admincommandhandlers.AdminCursedWeapons,
             handlers.admincommandhandlers.AdminDelete,
             handlers.admincommandhandlers.AdminDestroyItems,
             handlers.admincommandhandlers.AdminDisconnect,
@@ -529,9 +526,9 @@ open module org.l2j.scripts {
             handlers.bypasshandlers.TerritoryStatus,
             handlers.bypasshandlers.SupportMagic,
             handlers.bypasshandlers.TutorialClose,
+            handlers.bypasshandlers.UpgradeHandler,
             handlers.bypasshandlers.VoiceCommand,
             handlers.bypasshandlers.Wear,
-                EquipmentUpgrade,
 
             //custom
             custom.SellBuff.SellBuff;

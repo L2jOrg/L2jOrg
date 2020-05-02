@@ -49,7 +49,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition {
 
         final Player player = effector.getActingPlayer();
         boolean canCreateOutpost = true;
-        if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null)) {
+        if (player.isAlikeDead() || (player.getClan() == null)) {
             canCreateOutpost = false;
         }
 

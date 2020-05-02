@@ -33,7 +33,7 @@ public class PossessHolythingSkillCondition implements SkillCondition {
 		
 		final Player player = caster.getActingPlayer();
 		boolean canTakeCastle = true;
-		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || !player.isClanLeader())
+		if (player.isAlikeDead() || !player.isClanLeader())
 		{
 			canTakeCastle = false;
 		}

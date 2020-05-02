@@ -4,7 +4,7 @@ import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
 import org.l2j.gameserver.network.authcomm.gs2as.AuthRequest;
 
-public class AuthServerClient extends Client<Connection<AuthServerClient>> {
+public class    AuthServerClient extends Client<Connection<AuthServerClient>> {
 
     AuthServerClient(Connection<AuthServerClient> connection) {
         super(connection);

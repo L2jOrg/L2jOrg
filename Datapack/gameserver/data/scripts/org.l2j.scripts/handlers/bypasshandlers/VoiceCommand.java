@@ -33,7 +33,7 @@ public class VoiceCommand implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		// only voice commands allowed
 		if ((command.length() > 7) && (command.charAt(6) == '.'))
@@ -57,7 +57,7 @@ public class VoiceCommand implements IBypassHandler
 				final IVoicedCommandHandler vch = VoicedCommandHandler.getInstance().getHandler(vc);
 				if (vch != null)
 				{
-					return vch.useVoicedCommand(vc, activeChar, vparams);
+					return vch.useVoicedCommand(vc, player, vparams);
 				}
 			}
 		}

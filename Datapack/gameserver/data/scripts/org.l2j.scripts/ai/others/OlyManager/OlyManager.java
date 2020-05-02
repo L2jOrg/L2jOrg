@@ -253,55 +253,44 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	}
 	
 	@Override
-	public String onFirstTalk(Npc npc, Player player)
-	{
-		String htmltext = null;
-		
-		if (!player.isCursedWeaponEquipped())
-		{
-			htmltext = (!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55) ? "OlyManager-noNoble.html" : "OlyManager-noble.html";
-		}
-		else
-		{
-			htmltext = "OlyManager-noCursed.html";
-		}
-		return htmltext;
+	public String onFirstTalk(Npc npc, Player player) {
+		return (!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55) ? "OlyManager-noNoble.html" : "OlyManager-noble.html";
 	}
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature bypassOrigin)
+	public boolean useBypass(String command, Player player, Creature bypassOrigin)
 	{
 		try
 		{
-			final Npc olymanager = activeChar.getLastFolkNPC();
+			final Npc olymanager = player.getLastFolkNPC();
 			
 			if (command.startsWith(BYPASSES[0])) // list
 			{
 				if (!Olympiad.getInstance().inCompPeriod())
 				{
-					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+					player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 					return false;
 				}
 				
-				activeChar.sendPacket(new ExOlympiadMatchList());
+				player.sendPacket(new ExOlympiadMatchList());
 			}
-			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!activeChar.inObserverMode() && !isInsideRadius2D(activeChar, olymanager, 300)))
+			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!player.inObserverMode() && !isInsideRadius2D(player, olymanager, 300)))
 			{
 				return false;
 			}
-			else if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
+			else if (OlympiadManager.getInstance().isRegisteredInComp(player))
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
+				player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 				return false;
 			}
 			else if (!Olympiad.getInstance().inCompPeriod())
 			{
-				activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+				player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 				return false;
 			}
-			else if (activeChar.isOnEvent())
+			else if (player.isOnEvent())
 			{
-				activeChar.sendMessage("You can not observe games while registered on an event");
+				player.sendMessage("You can not observe games while registered on an event");
 				return false;
 			}
 			else
@@ -317,7 +306,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 						return false;
 					}
 					final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
-					activeChar.enterOlympiadObserverMode(loc, arenaId);
+					player.enterOlympiadObserverMode(loc, arenaId);
 				}
 			}
 			return true;

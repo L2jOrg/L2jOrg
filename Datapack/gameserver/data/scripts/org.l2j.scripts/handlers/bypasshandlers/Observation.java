@@ -84,21 +84,21 @@ public class Observation implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		if (!(target instanceof org.l2j.gameserver.model.actor.instance.Observation))
 		{
 			return false;
 		}
 		
-		if (activeChar.hasSummon())
+		if (player.hasSummon())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_SERVITOR_SUMMONED);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_SERVITOR_SUMMONED);
 			return false;
 		}
-		if (activeChar.isOnEvent())
+		if (player.isOnEvent())
 		{
-			activeChar.sendMessage("Cannot use while current Event");
+			player.sendMessage("Cannot use while current Event");
 			return false;
 		}
 		
@@ -129,22 +129,22 @@ public class Observation implements IBypassHandler
 			{
 				if (SiegeManager.getInstance().getSiege(loc) != null)
 				{
-					doObserve(activeChar, (Npc) target, loc, cost);
+					doObserve(player, (Npc) target, loc, cost);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
+					player.sendPacket(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
 				}
 				return true;
 			}
 			case "observeoracle": // Oracle Dusk/Dawn
 			{
-				doObserve(activeChar, (Npc) target, loc, cost);
+				doObserve(player, (Npc) target, loc, cost);
 				return true;
 			}
 			case "observe": // Observe
 			{
-				doObserve(activeChar, (Npc) target, loc, cost);
+				doObserve(player, (Npc) target, loc, cost);
 				return true;
 			}
 		}

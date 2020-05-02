@@ -17,10 +17,10 @@
 package custom.events.TeamVsTeam;
 
 import events.ScriptEvent;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.InstanceManager;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Party;
@@ -42,15 +42,15 @@ import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.quest.QuestTimer;
 import org.l2j.gameserver.model.skills.CommonSkill;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ExPVPMatchCCRecord;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -657,7 +657,7 @@ public class TvT extends Event implements ScriptEvent
 			player.sendMessage("Try removing some items.");
 			return false;
 		}
-		if (player.isCursedWeaponEquipped() || (player.getReputation() < 0))
+		if (player.getReputation() < 0)
 		{
 			player.sendMessage("People with bad reputation can't register.");
 			return false;

@@ -40,6 +40,8 @@ public class ItemHandler implements IHandler<IItemHandler, EtcItem> {
      *
      * @param item
      * @return IItemHandler
+     *
+     * TODO change to Item
      */
     @Override
     public IItemHandler getHandler(EtcItem item) {

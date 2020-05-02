@@ -16,12 +16,12 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+
+import java.util.StringTokenizer;
 
 public class PlayerHelp implements IBypassHandler
 {
@@ -31,7 +31,7 @@ public class PlayerHelp implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, Player activeChar, Creature target)
+	public boolean useBypass(String command, Player player, Creature target)
 	{
 		try
 		{
@@ -60,8 +60,8 @@ public class PlayerHelp implements IBypassHandler
 				html = new NpcHtmlMessage();
 			}
 			
-			html.setFile(activeChar, "data/html/help/" + cmd[0]);
-			activeChar.sendPacket(html);
+			html.setFile(player, "data/html/help/" + cmd[0]);
+			player.sendPacket(html);
 		}
 		catch (Exception e)
 		{
