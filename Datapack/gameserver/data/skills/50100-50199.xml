@@ -657,12 +657,26 @@
     <skill id="50152" name="Escape: Adaptation Training" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91917"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="-116625" y="45072" z="378"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="50153" name="Escape - Captain Bathis" action="A1">
         <!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->

@@ -953,22 +953,50 @@
     <skill id="51381" name="Scroll of Escape: Loud Wolves" action="A1">
         <!-- A magic scroll that teleports you to Jackson in Talking Island Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91646"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="-86586" y="242899" z="-3722"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51382" name="Scroll of Escape: Troublemaker of Forest" action="A1">
         <!-- A magic scroll that teleports you to Herbiel in Elven Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91647"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="42805" y="50157" z="-2984"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51383" name="Scroll of Escape: Clean the Yard" action="A1">
         <!-- A magic scroll that teleports you to Vollodos in Dark Elf Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
@@ -997,12 +1025,26 @@
     <skill id="51384" name="Scroll of Escape: Suspicious Men" action="A1">
         <!-- A magic scroll that teleports you to Uska in Orc Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91649"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="-44033" y="-115608" z="-223"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51385" name="Scroll of Escape: Disruptors" action="A1">
         <!-- A magic scroll that teleports you to Gerald in Dwarven Village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
@@ -1014,7 +1056,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
-            <item initial="91648"/>
+            <item initial="91650"/>
             <item-count initial="1"/>
         </consume>
         <target/>
@@ -1031,12 +1073,26 @@
     <skill id="51386" name="Scroll of Escape: Captain Bathis" action="A1">
         <!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91651"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="-14490" y="121025" z="-3006"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51387" name="Mark of Journey" max-level="5">
         <!--
