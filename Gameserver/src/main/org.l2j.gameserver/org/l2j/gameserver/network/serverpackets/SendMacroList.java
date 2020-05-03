@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.MacroCmd;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+import static java.util.Objects.nonNull;
+
 public class SendMacroList extends ServerPacket {
     private final int _count;
     private final Macro _macro;
@@ -21,26 +23,26 @@ public class SendMacroList extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.MACRO_LIST);
 
-        writeByte((byte) _updateType.getId());
+        writeByte(_updateType.getId());
         writeInt(_updateType != MacroUpdateType.LIST ? _macro.getId() : 0x00); // modified, created or deleted macro's id
-        writeByte((byte) _count); // count of Macros
-        writeByte((byte) (_macro != null ? 1 : 0)); // unknown
+        writeByte(_count); // count of Macros
+        writeByte(nonNull(_macro)); // unknown
 
         if ((_macro != null) && (_updateType != MacroUpdateType.DELETE)) {
             writeInt(_macro.getId()); // Macro ID
-            writeString(_macro.getName()); // Macro Name
+            writeString(_macro.getName()); // Macmacros.comro Name
             writeString(_macro.getDescr()); // Desc
             writeString(_macro.getAcronym()); // acronym
             writeInt(_macro.getIcon()); // icon
 
-            writeByte((byte) _macro.getCommands().size()); // count
+            writeByte(_macro.getCommands().size()); // count
 
             int i = 1;
             for (MacroCmd cmd : _macro.getCommands()) {
-                writeByte((byte) i++); // command count
-                writeByte((byte) cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
+                writeByte( i++); // command count
+                writeByte(cmd.getType().ordinal()); // type 1 = skill, 3 = action, 4 = shortcut
                 writeInt(cmd.getD1()); // skill id
-                writeByte((byte) cmd.getD2()); // shortcut id
+                writeByte(cmd.getD2()); // shortcut id
                 writeString(cmd.getCmd()); // command name
             }
         }

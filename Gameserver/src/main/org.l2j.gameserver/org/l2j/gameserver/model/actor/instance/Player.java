@@ -92,6 +92,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
+import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
@@ -733,10 +734,8 @@ public final class Player extends Playable {
      * The list containing all shortCuts of this player.
      */
     private final Shortcuts shortcuts = new Shortcuts(this);
-    /**
-     * The list containing all macros of this player.
-     */
-    private final MacroList _macros = new MacroList(this);
+
+    private final MacroList macros = new MacroList(this);
     private final Set<Player> _snoopListener = ConcurrentHashMap.newKeySet();
     private final Set<Player> _snoopedPlayer = ConcurrentHashMap.newKeySet();
     /**
@@ -1834,25 +1833,22 @@ public final class Player extends Playable {
         shortcuts.deleteShortcut(room);
     }
 
-    /**
-     * @param macro the macro to add to this Player.
-     */
     public void registerMacro(Macro macro) {
-        _macros.registerMacro(macro);
+        macros.registerMacro(macro);
     }
 
     /**
      * @param id the macro Id to delete.
      */
     public void deleteMacro(int id) {
-        _macros.deleteMacro(id);
+        macros.deleteMacro(id);
     }
 
     /**
      * @return all L2Macro of the Player.
      */
     public MacroList getMacros() {
-        return _macros;
+        return macros;
     }
 
     /**
@@ -5656,7 +5652,7 @@ public final class Player extends Playable {
         restoreSkills();
 
         // Retrieve from the database all macroses of this Player and add them to _macros.
-        _macros.restoreMe();
+        macros.restoreMe();
 
         // Retrieve from the database all henna of this Player and add them to _henna.
         restoreHenna();
@@ -10836,8 +10832,7 @@ public final class Player extends Playable {
     }
 
     public void sendItemList() {
-        sendPacket(new ItemList(1, this));
-        sendPacket(new ItemList(2, this));
+        ItemList.sendList(this);
         sendPacket(new ExQuestItemList(1, this));
         sendPacket(new ExQuestItemList(2, this));
         sendPacket(new ExAdenaInvenCount(this));
