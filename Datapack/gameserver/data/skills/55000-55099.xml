@@ -1777,7 +1777,7 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="55092" name="Lv. 2 Fire Dragon's Pendant Basic Effect" max-level="6">
+    <skill id="55092" name="Dragon Pedant - Attack Type Lv. 2" max-level="6">
         <!-- P. Atk. +4, P. Critical Damage +26. -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
@@ -1828,7 +1828,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55093" name="Lv. 2 Fire Dragon's Pendant Enchant Effect" max-level="10">
+    <skill id="55093" name="Dragon Pedant - Attack Type Lv. 3" max-level="6">
         <!--
             level 1: P. Atk. +6, P. Critical Damage +38.
             level 2: P. Atk. +8, P. Critical Damage +56.
@@ -1874,7 +1874,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55094" name="Lv. 3 Fire Dragon's Pendant Basic Effect">
+    <skill id="55094" name="Dragon Pedant - Attack Type Lv. 4">
         <!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%%. -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
@@ -1892,7 +1892,7 @@
             </stat-hp-based>
         </effects>
     </skill>
-    <skill id="55095" name="Lv. 3 Fire Dragon's Pendant Enchant Effect" max-level="10">
+    <skill id="55095" name="Dragon Pedant - Magic Type Lv. 1" max-level="10">
         <!--
             level 1: P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%%.
             level 2: P. Atk. +8, P. Critical Damage +56, P. Critical Rate +3%%.
@@ -1951,9 +1951,9 @@
             </stat-hp-based>
         </effects>
     </skill>
-    <skill id="55096" name="Lv. 4 Fire Dragon's Pendant Basic Effect">
+    <skill id="55096" name="Dragon Pedant - Magic Type Lv. 2">
         <!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%%, P. Atk. +1%%. -->
-        <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
+        <icon initial="BranchIcon.icon.g_bm_pendant_dragon_m"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
@@ -1982,7 +1982,7 @@
             level 9: P. Atk. +63, P. Critical Damage +421, P. Critical Rate +12%%, P. Atk. +6%%.
             level 10: P. Atk. +75, P. Critical Damage +498, P. Critical Rate +15%%, P. Atk. +8%%.
          -->
-        <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
+        <icon initial="BranchIcon.icon.g_bm_pendant_dragon_m"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>

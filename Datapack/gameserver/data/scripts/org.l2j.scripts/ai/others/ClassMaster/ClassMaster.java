@@ -33,7 +33,7 @@ import java.util.*;
 
 
 /**
- * Class Master AI.
+ * 	Class Master AI.
  * @author Nik
  */
 public final class ClassMaster extends AbstractNpcAI
@@ -653,7 +653,7 @@ public final class ClassMaster extends AbstractNpcAI
 			(player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85))*/)
 		//@formatter:on
 		{
-			player.sendPacket(new TutorialShowQuestionMark(2, 0)); // mark id was 1001 - used 2 for quest text
+			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET); // mark id was 1001 - used 2 for quest text
 		}
 	}
 	
@@ -717,7 +717,6 @@ public final class ClassMaster extends AbstractNpcAI
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final Player player = event.getActiveChar();
-		player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 		showPopupWindow(event.getActiveChar());
 	}
 	
@@ -726,7 +725,6 @@ public final class ClassMaster extends AbstractNpcAI
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
 		final Player player = event.getPlayer();
-		player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 		showPopupWindow(event.getPlayer());
 	}
 	
