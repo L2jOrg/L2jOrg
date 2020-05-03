@@ -84,7 +84,7 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (item.isQuestItem()) {
+        if (item.isQuestItem())  {
             player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
             return;
         }

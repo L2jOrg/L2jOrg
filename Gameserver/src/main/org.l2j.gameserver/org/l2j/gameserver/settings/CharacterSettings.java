@@ -4,6 +4,9 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
+/**
+ * @author JoeAlisson
+ */
 public class CharacterSettings implements Settings {
 
     private int partyRange;
@@ -16,6 +19,8 @@ public class CharacterSettings implements Settings {
     private float weightLimitMultiplier;
     private boolean removeCastleCirclets;
     private boolean restoreSummonOnReconnect;
+    private int minimumEnchantAnnounceWeapon;
+    private int minimumEnchantAnnounceArmor;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -34,6 +39,9 @@ public class CharacterSettings implements Settings {
 
         removeCastleCirclets = settingsFile.getBoolean("RemoveCastleCirclets", true);
         restoreSummonOnReconnect = settingsFile.getBoolean("RestoreSummonOnReconnect", true);
+
+        minimumEnchantAnnounceWeapon = settingsFile.getInteger("MinimumEnchantAnnounceWeapon", 7);
+        minimumEnchantAnnounceArmor = settingsFile.getInteger("MinimumEnchantAnnounceArmor", 6);
     }
 
     public int partyRange() {
@@ -74,5 +82,13 @@ public class CharacterSettings implements Settings {
 
     public boolean restoreSummonOnReconnect() {
         return restoreSummonOnReconnect;
+    }
+
+    public int minimumEnchantAnnounceWeapon() {
+        return minimumEnchantAnnounceWeapon;
+    }
+
+    public int minimumEnchantAnnounceArmor() {
+        return minimumEnchantAnnounceArmor;
     }
 }

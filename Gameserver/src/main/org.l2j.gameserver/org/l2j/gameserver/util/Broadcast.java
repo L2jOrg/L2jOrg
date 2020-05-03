@@ -13,12 +13,6 @@ import java.util.function.Predicate;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
-
-/**
- * This class ...
- *
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
- */
 public final class Broadcast {
     private static final Logger LOGGER = LoggerFactory.getLogger(Broadcast.class);
 

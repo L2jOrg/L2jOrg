@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemData;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.UserInfoType;
@@ -11,7 +10,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.enchant.EnchantResultType;
-import org.l2j.gameserver.model.item.enchant.EnchantScroll;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -19,84 +17,89 @@ import org.l2j.gameserver.network.serverpackets.EnchantResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.item.ExItemAnnounce;
+import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.util.Util.doIfNonNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+import static org.l2j.gameserver.network.serverpackets.item.ItemAnnounceType.ENHANCEMENT;
+
 public final class RequestEnchantItem extends ClientPacket {
 
-    protected static final Logger LOGGER_ENCHANT = LoggerFactory.getLogger("enchant.items");
+    private static final Logger LOGGER_ENCHANT = LoggerFactory.getLogger("enchant.items");
 
-    private int _objectId;
-    private int _supportId;
+    private int objectId;
+    private int supportId;
 
     @Override
     public void readImpl() {
-        _objectId = readInt();
-        _supportId = readInt();
+        objectId = readInt();
+        supportId = readInt();
     }
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+
+        final var request = player.getRequest(EnchantItemRequest.class);
+        if (isNull(request) || request.isProcessing()) {
             return;
         }
 
-        final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
-        if ((request == null) || request.isProcessing()) {
-            return;
-        }
-
-        request.setEnchantingItem(_objectId);
+        request.setEnchantingItem(objectId);
         request.setProcessing(true);
 
-        if (!activeChar.isOnline() || client.isDetached()) {
-            activeChar.removeRequest(request.getClass());
+        if (!player.isOnline() || client.isDetached()) {
+            player.removeRequest(request.getClass());
             return;
         }
 
-        if (activeChar.isProcessingTransaction() || activeChar.isInStoreMode()) {
+        if (player.isProcessingTransaction() || player.isInStoreMode()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-            activeChar.removeRequest(request.getClass());
+            player.removeRequest(request.getClass());
             return;
         }
 
         final Item item = request.getEnchantingItem();
         final Item scroll = request.getEnchantingScroll();
-        if ((item == null) || (scroll == null)) {
-            activeChar.removeRequest(request.getClass());
+        if (isNull(item) || isNull(scroll)) {
+            player.removeRequest(request.getClass());
             return;
         }
 
-        // template for scroll
-        final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-        if (scrollTemplate == null) {
+        final var scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
+        if (isNull(scrollTemplate)) {
             return;
         }
 
         // first validation check - also over enchant check
         if (!scrollTemplate.isValid(item) || (Config.DISABLE_OVER_ENCHANTING && (item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()))) {
             client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-            activeChar.removeRequest(request.getClass());
+            player.removeRequest(request.getClass());
             client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
             return;
         }
 
         // fast auto-enchant cheat check
-        if ((request.getTimestamp() == 0) || ((System.currentTimeMillis() - request.getTimestamp()) < 2000)) {
-            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " use autoenchant program ");
-            activeChar.removeRequest(request.getClass());
+        if (request.getTimestamp() == 0 || (System.currentTimeMillis() - request.getTimestamp()) < 2000 ) {
+            GameUtils.handleIllegalPlayerAction(player, player + " use auto enchant program");
+            player.removeRequest(request.getClass());
             client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
             return;
         }
 
         // attempting to destroy scroll
-        if (activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item) == null) {
+        if (player.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, player, item) == null) {
             client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
-            GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have");
-            activeChar.removeRequest(request.getClass());
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to enchant with a scroll he doesn't have");
+            player.removeRequest(request.getClass());
             client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
             return;
         }
@@ -104,25 +107,25 @@ public final class RequestEnchantItem extends ClientPacket {
         final InventoryUpdate iu = new InventoryUpdate();
         synchronized (item) {
             // last validation check
-            if ((item.getOwnerId() != activeChar.getObjectId()) || (!item.isEnchantable())) {
+            if ((item.getOwnerId() != player.getObjectId()) || (!item.isEnchantable())) {
                 client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-                activeChar.removeRequest(request.getClass());
+                player.removeRequest(request.getClass());
                 client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
                 return;
             }
 
-            final EnchantResultType resultType = scrollTemplate.calculateSuccess(activeChar, item);
+            final EnchantResultType resultType = scrollTemplate.calculateSuccess(player, item);
             switch (resultType) {
                 case ERROR: {
                     client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-                    activeChar.removeRequest(request.getClass());
+                    player.removeRequest(request.getClass());
                     client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
                     break;
                 }
                 case SUCCESS: {
                     final ItemTemplate it = item.getTemplate();
                     // Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
-                    if (scrollTemplate.getChance(activeChar, item) > 0) {
+                    if (scrollTemplate.getChance(player, item) > 0) {
                         if (scrollTemplate.isGiant()) {
                             item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
                         } else {
@@ -133,27 +136,18 @@ public final class RequestEnchantItem extends ClientPacket {
                     client.sendPacket(new EnchantResult(EnchantResult.SUCCESS, item));
 
                     if (Config.LOG_ITEM_ENCHANTS) {
-                        if (item.getEnchantLevel() > 0) {
-                            LOGGER_ENCHANT.info("Success, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
-                        } else {
-                            LOGGER_ENCHANT.info("Success, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
-                        }
+                        LOGGER_ENCHANT.info("Success, {} Account {} IP: {}, Enchant {} {}, with scroll {}", player,  player.getAccountName(), player.getIPAddress(), item.getEnchantLevel(), item, scroll);
                     }
 
-                    // announce the success
-                    final int minEnchantAnnounce = item.isArmor() ? 6 : 7;
-                    final int maxEnchantAnnounce = item.isArmor() ? 0 : 15;
-                    if ((item.getEnchantLevel() == minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce)) {
-                        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
-                        sm.addString(activeChar.getName());
-                        sm.addInt(item.getEnchantLevel());
-                        sm.addItemName(item);
-                        activeChar.broadcastPacket(sm);
+                    final int minEnchantAnnounce = item.isArmor() ? getSettings(CharacterSettings.class).minimumEnchantAnnounceArmor() : getSettings(CharacterSettings.class).minimumEnchantAnnounceWeapon();
+                    if (minEnchantAnnounce > 0 && item.getEnchantLevel() >= minEnchantAnnounce) {
 
-                        final Skill skill = CommonSkill.FIREWORK.getSkill();
-                        if (skill != null) {
-                            activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
-                        }
+                        Broadcast.toAllOnlinePlayers(new ExItemAnnounce(ENHANCEMENT, player, item),
+                                        getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3).addPcName(player).addInt(item.getEnchantLevel()).addItemName(item));
+
+                        doIfNonNull(CommonSkill.FIREWORK.getSkill(), skill ->
+                                player.broadcastPacket(new MagicSkillUse(player, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay())));
+
                     }
 
                     if (item.isEquipped()) {
@@ -162,12 +156,12 @@ public final class RequestEnchantItem extends ClientPacket {
                             {
                                 // add skills bestowed from +4 armor
                                 if (item.getEnchantLevel() >= holder.getValue()) {
-                                    activeChar.addSkill(holder.getSkill(), false);
-                                    activeChar.sendSkillList();
+                                    player.addSkill(holder.getSkill(), false);
+                                    player.sendSkillList();
                                 }
                             });
                         }
-                        activeChar.broadcastUserInfo(); // update user info
+                        player.broadcastUserInfo(); // update user info
                     }
                     break;
                 }
@@ -179,32 +173,32 @@ public final class RequestEnchantItem extends ClientPacket {
 
                         if (Config.LOG_ITEM_ENCHANTS) {
                             if (item.getEnchantLevel() > 0) {
-                                LOGGER_ENCHANT.info("Safe Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                LOGGER_ENCHANT.info("Safe Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                             } else {
-                                LOGGER_ENCHANT.info("Safe Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                LOGGER_ENCHANT.info("Safe Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                             }
                         }
                     } else {
                         // unequip item on enchant failure to avoid item skills stack
                         if (item.isEquipped()) {
                             if (item.getEnchantLevel() > 0) {
-                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+                                final SystemMessage sm = getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
                                 sm.addInt(item.getEnchantLevel());
                                 sm.addItemName(item);
                                 client.sendPacket(sm);
                             } else {
-                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+                                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
                                 sm.addItemName(item);
                                 client.sendPacket(sm);
                             }
 
-                            var unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
+                            var unequiped = player.getInventory().unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
                             for (Item itm : unequiped) {
                                 iu.addModifiedItem(itm);
                             }
 
-                            activeChar.sendInventoryUpdate(iu);
-                            activeChar.broadcastUserInfo();
+                            player.sendInventoryUpdate(iu);
+                            player.broadcastUserInfo();
                         }
 
                         if (scrollTemplate.isBlessed()) {
@@ -217,9 +211,9 @@ public final class RequestEnchantItem extends ClientPacket {
 
                             if (Config.LOG_ITEM_ENCHANTS) {
                                 if (item.getEnchantLevel() > 0) {
-                                    LOGGER_ENCHANT.info("Blessed Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                    LOGGER_ENCHANT.info("Blessed Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                                 } else  {
-                                    LOGGER_ENCHANT.info("Blessed Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                    LOGGER_ENCHANT.info("Blessed Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                                 }
                             }
                         } else {
@@ -230,17 +224,17 @@ public final class RequestEnchantItem extends ClientPacket {
                                 count = 1;
                             }
 
-                            if (activeChar.getInventory().destroyItem("Enchant", item, activeChar, null) == null) {
+                            if (player.getInventory().destroyItem("Enchant", item, player, null) == null) {
                                 // unable to destroy item, cheater ?
-                                GameUtils.handleIllegalPlayerAction(activeChar, "Unable to delete item on enchant failure from player " + activeChar.getName() + ", possible cheater !");
-                                activeChar.removeRequest(request.getClass());
+                                GameUtils.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from player " + player.getName() + ", possible cheater !");
+                                player.removeRequest(request.getClass());
                                 client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 
                                 if (Config.LOG_ITEM_ENCHANTS) {
                                     if (item.getEnchantLevel() > 0) {
-                                        LOGGER_ENCHANT.info("Unable to destroy, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                        LOGGER_ENCHANT.info("Unable to destroy, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                                     } else  {
-                                        LOGGER_ENCHANT.info("Unable to destroy, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                        LOGGER_ENCHANT.info("Unable to destroy, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                                     }
                                 }
                                 return;
@@ -249,9 +243,9 @@ public final class RequestEnchantItem extends ClientPacket {
                             World.getInstance().removeObject(item);
                             Item crystals = null;
                             if (crystalId != 0) {
-                                crystals = activeChar.getInventory().addItem("Enchant", crystalId, count, activeChar, item);
+                                crystals = player.getInventory().addItem("Enchant", crystalId, count, player, item);
 
-                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+                                final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
                                 sm.addItemName(crystals);
                                 sm.addLong(count);
                                 client.sendPacket(sm);
@@ -271,9 +265,9 @@ public final class RequestEnchantItem extends ClientPacket {
 
                             if (Config.LOG_ITEM_ENCHANTS) {
                                 if (item.getEnchantLevel() > 0) {
-                                    LOGGER_ENCHANT.info("Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                    LOGGER_ENCHANT.info("Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                                 } else {
-                                    LOGGER_ENCHANT.info("Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+                                    LOGGER_ENCHANT.info("Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
                                 }
                             }
                         }
@@ -282,10 +276,10 @@ public final class RequestEnchantItem extends ClientPacket {
                 }
             }
 
-            activeChar.sendItemList();
+            player.sendItemList();
 
             request.setProcessing(false);
-            activeChar.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);
+            player.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);
         }
     }
 }
