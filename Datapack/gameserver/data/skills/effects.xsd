@@ -9,7 +9,6 @@
     <xs:element name="abstractEffect" type="Effect" abstract="true"/>
     <xs:element name="effect" type="NamedEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="physical-attack" type="PhysicalAttackEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="physic-defense" type="PhysicalDefenseEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="randomize-hate" type="RandomizeHateEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="stat-modify" type="StatModifyEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="stat-hp-based" type="StatHpBasedEffect" substitutionGroup="abstractEffect"/>
@@ -953,15 +952,6 @@
                 <xs:attribute name="over-hit" type="xs:boolean" default="false"/>
                 <xs:attribute name="attack-mod" type="xs:float" default="1.0"/>
                 <xs:attribute name="defense-mod" type="xs:float" default="1.0"/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="PhysicalDefenseEffect">
-        <xs:complexContent>
-            <xs:extension base="Effect">
-                <xs:attribute name="amount" type="xs:int" use="required"/>
-                <xs:attribute name="mode" type="ChangeMode" default="DIFF"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

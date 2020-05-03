@@ -430,6 +430,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="18566"/> <!-- Garnet -->
+		</skills>
 	</armor>
 
 	<armor id="70442" name="Garnet Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
@@ -437,6 +440,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="18566" level="2"/> <!-- Garnet -->
+		</skills>
 	</armor>
 
 	<armor id="70443" name="Garnet Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
@@ -444,6 +450,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="18566" level="3"/> <!-- Garnet -->
+		</skills>
 	</armor>
 
 	<armor id="70444" name="Garnet Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
@@ -451,6 +460,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="18566" level="4"/> <!-- Garnet -->
+		</skills>
 	</armor>
 
 	<armor id="70445" name="Garnet Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_garnet">
@@ -458,6 +470,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="18566" level="5"/> <!-- Garnet -->
+		</skills>
 	</armor>
 
 	<armor id="70446" name="Jade Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
@@ -465,6 +480,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17707"/> <!-- Jade -->
+		</skills>
 	</armor>
 
 	<armor id="70447" name="Jade Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
@@ -472,6 +490,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17707" level="2"/> <!-- Jade -->
+		</skills>
 	</armor>
 
 	<armor id="70448" name="Jade Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
@@ -479,6 +500,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17707" level="3"/> <!-- Jade -->
+		</skills>
 	</armor>
 
 	<armor id="70449" name="Jade Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
@@ -486,6 +510,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17707" level="4"/> <!-- Jade -->
+		</skills>
 	</armor>
 
 	<armor id="70450" name="Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_jade_i00">
@@ -493,6 +520,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17707" level="5"/> <!-- Jade -->
+		</skills>
 	</armor>
 
 	<armor id="70451" name="Ruby Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_ruby_i00">
@@ -600,6 +630,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17708"/> <!-- Diamond -->
+		</skills>
 	</armor>
 
 	<armor id="70462" name="Diamond Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
@@ -607,6 +640,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17708" level="2"/> <!-- Diamond -->
+		</skills>
 	</armor>
 
 	<armor id="70463" name="Diamond Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
@@ -614,6 +650,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17708" level="3"/> <!-- Diamond -->
+		</skills>
 	</armor>
 
 	<armor id="70464" name="Diamond Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
@@ -621,6 +660,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17708" level="4"/> <!-- Diamond -->
+		</skills>
 	</armor>
 
 	<armor id="70465" name="Diamond Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_diamond_i00">
@@ -628,6 +670,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17708" level="5"/> <!-- Diamond -->
+		</skills>
 	</armor>
 
 	<armor id="70466" name="Pearl Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
@@ -635,6 +680,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17709"/> <!-- Pearl -->
+		</skills>
 	</armor>
 
 	<armor id="70467" name="Pearl Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
@@ -642,6 +690,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17709" level="2"/> <!-- Pearl -->
+		</skills>
 	</armor>
 
 	<armor id="70468" name="Pearl Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
@@ -649,6 +700,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17709" level="3"/> <!-- Pearl -->
+		</skills>
 	</armor>
 
 	<armor id="70469" name="Pearl Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
@@ -656,6 +710,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17709" level="4"/> <!-- Pearl -->
+		</skills>
 	</armor>
 
 	<armor id="70470" name="Pearl Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_pearl_i00">
@@ -663,6 +720,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17709" level="5"/> <!-- Pearl -->
+		</skills>
 	</armor>
 
 	<armor id="70471" name="Vital Stone Lv. 1" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
@@ -670,6 +730,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17706"/> <!-- Vital Stone -->
+		</skills>
 	</armor>
 
 	<armor id="70472" name="Vital Stone Lv. 2" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
@@ -677,6 +740,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17706" level="2"/> <!-- Vital Stone -->
+		</skills>
 	</armor>
 
 	<armor id="70473" name="Vital Stone Lv. 3" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
@@ -684,6 +750,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17706" level="3"/> <!-- Vital Stone -->
+		</skills>
 	</armor>
 
 	<armor id="70474" name="Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
@@ -691,6 +760,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17706" level="4"/> <!-- Vital Stone -->
+		</skills>
 	</armor>
 
 	<armor id="70475" name="Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL" icon="icon.etc_bm_jewel_vital">
@@ -698,6 +770,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17706" level="5"/> <!-- Vital Stone -->
+		</skills>
 	</armor>
 
 	<item id="70476" name="Shiny Rough Jewel" type="NONE" icon="icon.etc_bm_jewel_piece">

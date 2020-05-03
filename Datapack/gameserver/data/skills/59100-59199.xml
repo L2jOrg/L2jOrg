@@ -825,6 +825,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="BROOCH_JEWELS">
+                <power initial="6"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59154" name="Level 5 Brooch Additional Effect">
         <!-- Expands inventory by 15 slots. -->
@@ -832,6 +837,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="INVENTORY_NORMAL">
+                <power initial="15"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59155" name="Greater Topaz - Special Ability" action="A1">
         <!-- Cancels up to 3 buffs from the enemy. -->
