@@ -32,6 +32,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class SpawnsData extends GameXmlReader {
     protected static final Logger LOGGER = LoggerFactory.getLogger(SpawnsData.class);
@@ -39,7 +40,6 @@ public class SpawnsData extends GameXmlReader {
     private final List<SpawnTemplate> spawns = new LinkedList<>();
 
     private SpawnsData() {
-        load();
     }
 
     @Override
@@ -47,7 +47,7 @@ public class SpawnsData extends GameXmlReader {
         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/spawns.xsd");
     }
 
-    public void init() {
+    public void spawnAll() {
         if (Config.ALT_DEV_NO_SPAWNS) {
             return;
         }
@@ -74,7 +74,7 @@ public class SpawnsData extends GameXmlReader {
             try {
                 parseSpawn(spawnNode, f, spawns);
             } catch (Exception e) {
-                LOGGER.warn("Error while processing spawn in file " + f.getAbsolutePath(), e);
+                LOGGER.warn("Error while processing spawn in file {}", f.getAbsolutePath(), e);
             }
         }));
     }
@@ -203,6 +203,10 @@ public class SpawnsData extends GameXmlReader {
         {
             npcTemplate.addMinion(new MinionHolder(new StatsSet(parseAttributes(minionNode))));
         });
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static SpawnsData getInstance() {

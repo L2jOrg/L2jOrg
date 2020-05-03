@@ -286,8 +286,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
 
         spawn.setInstanceId(zeroIfNullOrElse(instance, Instance::getId));
         spawn.setAmount(1);
-        spawn.setXYZ(loc);
-        spawn.setHeading(loc.getHeading());
         spawn.setLocation(loc);
         int respawn = zeroIfNullOrElse(respawnTime, r -> (int) r.getSeconds());
         int respawnRandom = zeroIfNullOrElse(respawnTimeRandom, r -> (int) r.getSeconds());

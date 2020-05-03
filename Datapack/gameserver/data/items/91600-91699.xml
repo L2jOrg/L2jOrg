@@ -302,14 +302,20 @@
 
 	<item id="91646" name="Escape - Loud Wolves" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Jackson in Talking Island Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51381" value="-1"/>  <!-- Scroll of Escape: Loud Wolves -->
+		</skill-reducer>
 	</item>
 
 	<item id="91647" name="Escape - Troublemaker of Forest" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Herbiel in Elven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51382" value="-1"/>  <!-- Scroll of Escape: Troublemaker of Forest -->
+		</skill-reducer>
 	</item>
 
 	<item id="91648" name="Escape - Clean the Yard" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
@@ -323,14 +329,20 @@
 
 	<item id="91649" name="Escape - Suspicious Men" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Uska in Orc Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51384" value="-1"/>  <!-- Scroll of Escape: Suspicious Men -->
+		</skill-reducer>
 	</item>
 
 	<item id="91650" name="Escape - Disruptors" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Gerald in Dwarven Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51385" value="-1"/>  <!-- Scroll of Escape: Disruptors -->
+		</skill-reducer>
 	</item>
 
 	<item id="91651" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
@@ -338,7 +350,7 @@
 		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
 		<skill-reducer>
-			<skill id="51385" value="-1"/>  <!-- Scroll of Escape: Disruptors -->
+			<skill id="51386" value="-1"/>  <!-- Scroll of Escape: Captain Bathis -->
 		</skill-reducer>
 	</item>
 

@@ -188,8 +188,11 @@
 
 	<item id="91917" name="Escape: Adaptation Training" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
 	<!-- A magic scroll that teleports you to Leahen in Jin Kamael Village. -->
-		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<restriction freightable="false" olympiad-restricted="true" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
+		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="50152" value="-1"/>  <!-- Scroll of Escape: Adaptation Training -->
+		</skill-reducer>
 	</item>
 
 	<item id="91918" name="Escape - Captain Bathis" type="SCROLL" icon="icon.etc_scroll_of_return_i04">
@@ -311,8 +314,11 @@
 	<armor id="91934" name="Adventurer's Bracelet" type="NONE" body-part="RIGHT_BRACELET" icon="icon.etc_rbracelet_c_i00">
 	<!-- When equipped, opens up 1 Talisman slot. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" price="1080000" enchant-enabled="false" />
+		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="50912" value="-1"/>
+		</skills>
 	</armor>
 
 	<armor id="91935" name="Adventurer's Griffin Agathion" type="NONE" body-part="AGATHION" icon="icon.griffin_vehicle">

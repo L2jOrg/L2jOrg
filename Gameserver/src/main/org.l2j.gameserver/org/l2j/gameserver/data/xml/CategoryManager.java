@@ -11,7 +11,7 @@ import org.w3c.dom.Document;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import static java.util.Objects.isNull;
@@ -26,7 +26,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class CategoryManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(CategoryManager.class);
 
-    private final Map<CategoryType, IntSet> categories = new HashMap<>();
+    private final Map<CategoryType, IntSet> categories = new EnumMap<>(CategoryType.class);
 
     private CategoryManager() {
     }

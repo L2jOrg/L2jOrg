@@ -7,6 +7,7 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
@@ -102,6 +103,9 @@ public class Shutdown extends Thread {
         try {
             GameServer.getInstance().getConnectionHandler().shutdown();
             LOGGER.info("Game Server: Networking has been shut down.");
+
+            AutoPlayEngine.getInstance().shutdown();
+            LOGGER.info("Auto Play Engine has been shut down.");
 
             WorldTimeController.getInstance().stopTimer();
             LOGGER.info("Game Time Controller: Timer stopped.");

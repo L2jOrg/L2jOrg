@@ -190,6 +190,10 @@ public final class CastleManager implements InstanceListManager {
         return (int) castleSiegesDate.values().stream().filter(date -> ChronoUnit.DAYS.between(siegeDate, date) == 0).count();
     }
 
+    public static void init() {
+        getInstance().loadInstances();
+    }
+
     public static CastleManager getInstance() {
         return Singleton.INSTANCE;
     }
