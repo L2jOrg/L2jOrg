@@ -337,6 +337,7 @@
 	<!-- Varnish that enhances Dragon Pendant's power. Enhance to max. +5. If failed Enchant level is reset.  -->
 		<restriction freightable="false" stackable="true" dropable="false" sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91250" name="Brilliant Dragon Varnish" type="SOLID_ENCHANT_ARMOR" icon="icon.bm_pendant_dragon_scrl">
