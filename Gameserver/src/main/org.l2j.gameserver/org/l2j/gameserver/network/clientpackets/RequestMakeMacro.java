@@ -50,7 +50,7 @@ public final class RequestMakeMacro extends ClientPacket {
             player.sendPacket(SystemMessageId.INVALID_MACRO_REFER_TO_THE_HELP_FILE_FOR_INSTRUCTIONS);
             return;
         }
-        if (player.getMacros().getAllMacroses().size() > 48) {
+        if (player.getMacros().size() > 48) {
             // You may create up to 48 macros.
             player.sendPacket(SystemMessageId.YOU_MAY_CREATE_UP_TO_48_MACROS);
             return;

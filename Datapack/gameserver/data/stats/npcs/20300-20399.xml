@@ -3876,6 +3876,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="113.94" hpRegen="2" mp="93.912" mpRegen="0.9" />
             <attack physical="17.9195676" magical="10.11301" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="45.88342149" magical="40.62635"/>
             <speed>

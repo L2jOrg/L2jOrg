@@ -1,21 +1,7 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.MacroType;
 import org.l2j.gameserver.enums.MacroUpdateType;
@@ -29,65 +15,66 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.StringTokenizer;
 
+import static org.l2j.commons.util.Util.doIfNonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class MacroList implements IRestorable {
     private static final Logger LOGGER = LoggerFactory.getLogger(MacroList.class);
 
-    private final Player _owner;
-    private final Map<Integer, Macro> _macroses = Collections.synchronizedMap(new LinkedHashMap<>());
-    private int _macroId;
+    private final Player owner;
+    private final IntMap<Macro> macros = new HashIntMap<>();
+    private int macroId;
 
     public MacroList(Player owner) {
-        _owner = owner;
-        _macroId = 1000;
+        this.owner = owner;
+        macroId = 1000;
     }
 
-    public Map<Integer, Macro> getAllMacroses() {
-        return _macroses;
+    public int size() {
+        return macros.size();
     }
 
     public void registerMacro(Macro macro) {
         MacroUpdateType updateType = MacroUpdateType.ADD;
         if (macro.getId() == 0) {
-            macro.setId(_macroId++);
-            while (_macroses.containsKey(macro.getId())) {
-                macro.setId(_macroId++);
+            macro.setId(macroId++);
+            while (macros.containsKey(macro.getId())) {
+                macro.setId(macroId++);
             }
-            _macroses.put(macro.getId(), macro);
-            registerMacroInDb(macro);
+            macros.put(macro.getId(), macro);
         } else {
             updateType = MacroUpdateType.MODIFY;
-            final Macro old = _macroses.put(macro.getId(), macro);
-            if (old != null) {
-                deleteMacroFromDb(old);
-            }
-            registerMacroInDb(macro);
+            doIfNonNull(macros.put(macro.getId(), macro), this::deleteMacroFromDb);
         }
-        _owner.sendPacket(new SendMacroList(1, macro, updateType));
+        registerMacroInDb(macro);
+        owner.sendPacket(new SendMacroList(1, macro, updateType));
     }
 
     public void deleteMacro(int id) {
-        final Macro removed = _macroses.remove(id);
-        if (removed != null) {
+        doIfNonNull(macros.remove(id), removed -> {
             deleteMacroFromDb(removed);
-        }
-
-        _owner.deleteShortcuts(s -> s.getShortcutId() == id && s.getType() == ShortcutType.MACRO);
-        _owner.sendPacket(new SendMacroList(0, removed, MacroUpdateType.DELETE));
+            owner.deleteShortcuts(s -> s.getShortcutId() == id && s.getType() == ShortcutType.MACRO);
+            owner.sendPacket(new SendMacroList(0, removed, MacroUpdateType.DELETE));
+        });
     }
 
     public void sendAllMacros() {
-        final Collection<Macro> allMacros = _macroses.values();
+        final Collection<Macro> allMacros = macros.values();
         final int count = allMacros.size();
 
-        synchronized (_macroses) {
+        synchronized (macros) {
             if (allMacros.isEmpty()) {
-                _owner.sendPacket(new SendMacroList(0, null, MacroUpdateType.LIST));
+                owner.sendPacket(new SendMacroList(0, null, MacroUpdateType.LIST));
             } else {
                 for (Macro m : allMacros) {
-                    _owner.sendPacket(new SendMacroList(count, m, MacroUpdateType.LIST));
+                    owner.sendPacket(new SendMacroList(count, m, MacroUpdateType.LIST));
                 }
             }
         }
@@ -96,7 +83,7 @@ public class MacroList implements IRestorable {
     private void registerMacroInDb(Macro macro) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("INSERT INTO character_macroses (charId,id,icon,name,descr,acronym,commands) values(?,?,?,?,?,?,?)")) {
-            ps.setInt(1, _owner.getObjectId());
+            ps.setInt(1, owner.getObjectId());
             ps.setInt(2, macro.getId());
             ps.setInt(3, macro.getIcon());
             ps.setString(4, macro.getName());
@@ -125,7 +112,7 @@ public class MacroList implements IRestorable {
     private void deleteMacroFromDb(Macro macro) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("DELETE FROM character_macroses WHERE charId=? AND id=?")) {
-            ps.setInt(1, _owner.getObjectId());
+            ps.setInt(1, owner.getObjectId());
             ps.setInt(2, macro.getId());
             ps.execute();
         } catch (Exception e) {
@@ -135,10 +122,10 @@ public class MacroList implements IRestorable {
 
     @Override
     public boolean restoreMe() {
-        _macroses.clear();
+        macros.clear();
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("SELECT charId, id, icon, name, descr, acronym, commands FROM character_macroses WHERE charId=?")) {
-            ps.setInt(1, _owner.getObjectId());
+            ps.setInt(1, owner.getObjectId());
             try (ResultSet rset = ps.executeQuery()) {
                 while (rset.next()) {
                     final int id = rset.getInt("id");
@@ -162,7 +149,7 @@ public class MacroList implements IRestorable {
                         }
                         commands.add(new MacroCmd(commands.size(), type, d1, d2, cmd));
                     }
-                    _macroses.put(id, new Macro(id, icon, name, descr, acronym, commands));
+                    macros.put(id, new Macro(id, icon, name, descr, acronym, commands));
                 }
             }
         } catch (Exception e) {

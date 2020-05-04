@@ -35,6 +35,7 @@ import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 import org.l2j.gameserver.settings.*;
@@ -133,8 +134,7 @@ public class EnterWorld extends ClientPacket {
         player.getMacros().sendAllMacros();
         client.sendPacket(new ExGetBookMarkInfoPacket(player));
 
-        client.sendPacket(new ItemList(1, player));
-        client.sendPacket(new ItemList(2, player));
+        ItemList.sendList(player);
         client.sendPacket(new ExQuestItemList(1, player));
         client.sendPacket(new ExQuestItemList(2, player));
         player.sendPacket(ExBasicActionList.STATIC_PACKET);
