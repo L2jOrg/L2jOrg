@@ -1,10 +1,9 @@
 package org.l2j.authserver.network.client;
 
-import org.l2j.authserver.data.database.Account;
-import org.l2j.commons.network.SessionKey;
+import io.github.joealisson.mmocore.Client;
+import io.github.joealisson.mmocore.Connection;
 import org.l2j.authserver.controller.AuthController;
-import org.l2j.authserver.network.crypt.AuthCrypt;
-import org.l2j.authserver.network.crypt.ScrambledKeyPair;
+import org.l2j.authserver.data.database.Account;
 import org.l2j.authserver.network.client.packet.AuthServerPacket;
 import org.l2j.authserver.network.client.packet.auth2client.AccountKicked;
 import org.l2j.authserver.network.client.packet.auth2client.Init;
@@ -12,8 +11,9 @@ import org.l2j.authserver.network.client.packet.auth2client.LoginFail;
 import org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason;
 import org.l2j.authserver.network.client.packet.auth2client.PlayFail;
 import org.l2j.authserver.network.client.packet.auth2client.PlayFail.PlayFailReason;
-import io.github.joealisson.mmocore.Client;
-import io.github.joealisson.mmocore.Connection;
+import org.l2j.authserver.network.crypt.AuthCrypt;
+import org.l2j.authserver.network.crypt.ScrambledKeyPair;
+import org.l2j.commons.network.SessionKey;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ import static org.l2j.authserver.network.client.AuthClientState.AUTHED_LOGIN;
  */
 public final class AuthClient extends Client<Connection<AuthClient>> {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(AuthClient.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthClient.class);
 
     private final long _connectionStartTime;
     private final Map<Integer,Integer> charactersOnServer = new HashMap<>();
@@ -63,14 +63,14 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
             decrypted = _authCrypt.decrypt(data, offset, size);
         }
         catch (IOException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
-            disconnect();
+            LOGGER.error(e.getMessage(), e);
+            close();
             return false;
         }
 
         if (!decrypted) {
             LOGGER.warn("Wrong checksum from client: {}", toString());
-            disconnect();
+            close();
         }
         return decrypted;
     }
@@ -85,7 +85,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 	    try {
 	       return _authCrypt.encrypt(data, offset, size);
         } catch (IOException e) {
-	        LOGGER.error(e.getLocalizedMessage(), e);
+	        LOGGER.error(e.getMessage(), e);
 	        return Util.BYTE_ARRAY_EMPTY;
         }
     }

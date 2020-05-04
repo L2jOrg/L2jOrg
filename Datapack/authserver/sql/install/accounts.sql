@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `accounts` (
-  `login` varchar(32) NOT NULL,
+  `login` varchar(64) NOT NULL,
   `password` varchar(255) NOT NULL,
   `last_access` BIGINT NOT NULL DEFAULT '0',
   `access_level` int(11) NOT NULL DEFAULT '0',

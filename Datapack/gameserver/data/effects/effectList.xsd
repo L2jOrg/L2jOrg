@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           xmlns:l2jorg="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../skills/effects.xsd"/>
+
+    <xs:element name="list" type="Effects">
+        <xs:unique name="unique-effect-id">
+            <xs:selector xpath="l2jorg:*"/>
+            <xs:field xpath="@ref-id"/>
+        </xs:unique>
+    </xs:element>
+
+</xs:schema>

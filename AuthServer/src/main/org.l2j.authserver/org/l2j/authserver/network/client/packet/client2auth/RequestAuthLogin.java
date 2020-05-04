@@ -58,7 +58,7 @@ public class RequestAuthLogin extends AuthClientPacket {
                 decAuthData =  rsaCipher.doFinal(authData, 0x00, 0x80);
             }
         } catch (Exception e) {
-            logger.warn(e.getLocalizedMessage(), e);
+            logger.warn(e.getMessage(), e);
             client.close(REASON_SYSTEM_ERROR);
             return;
         }
@@ -66,11 +66,11 @@ public class RequestAuthLogin extends AuthClientPacket {
         String user;
         String password;
         if(useNewAuth) {
-            user = new String(decUserData, 0x4E, 32).trim().toLowerCase();
-            password = new String(decAuthData, 0x5C, 16).trim();
+            user = new String(decUserData, 0x4E, 0x32).trim().toLowerCase() + new String(decAuthData, 0x4E, 0xE).trim().toLowerCase();
+            password = new String(decAuthData, 0x5C, 0x1F).trim();
         } else {
-            user = new String(decUserData, 0x5E, 14).trim().toLowerCase();
-            password = new String(decUserData, 0x6C, 16).trim();
+            user = new String(decUserData, 0x5E, 0xE).trim().toLowerCase();
+            password = new String(decUserData, 0x6C, 0x1F).trim();
         }
 
         AuthController.getInstance().authenticate(client, user, password);

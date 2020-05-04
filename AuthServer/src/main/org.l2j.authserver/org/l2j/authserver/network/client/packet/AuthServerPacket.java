@@ -18,7 +18,7 @@ public abstract class AuthServerPacket extends WritablePacket<AuthClient> {
             writeImpl(client);
             return true;
         } catch (Exception e) {
-           logger.error(e.getLocalizedMessage(),e);
+           logger.error(e.getMessage(),e);
         }
         return false;
     }

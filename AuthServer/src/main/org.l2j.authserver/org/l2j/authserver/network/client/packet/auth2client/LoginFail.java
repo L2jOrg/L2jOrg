@@ -18,12 +18,16 @@ public final class LoginFail extends AuthServerPacket {
 	
 	@Override
 	protected void writeImpl(AuthClient client) {
-		writeByte((byte)0x01);
+		writeByte(0x01);
 		writeInt(_reason.getCode());
 	}
 
+	@Override
+	public String toString() {
+		return "LoginFail {" + _reason + '}';
+	}
 
-    public enum LoginFailReason  {
+	public enum LoginFailReason  {
 		REASON_NO_MESSAGE(0),
 		REASON_SYSTEM_ERROR(1), //There is a system error. Please log in again later
 		REASON_PASS_WRONG(2), //The password you have entered is incorrect. Confirm your ...

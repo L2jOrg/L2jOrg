@@ -28,7 +28,7 @@ class BanManager {
             try {
                 Files.readAllLines(path).stream().filter(Util::isNotEmpty).forEach(this::addBannedAddress);
             } catch (IOException e) {
-                logger.warn("Error while reading the bans file ({}). Details: {}", path.getFileName(), e.getLocalizedMessage());
+                logger.warn("Error while reading the bans file ({}).", path.getFileName(), e);
             }
 
             logger.info("Loaded {} IP Bans.", bannedAdresses.size());
