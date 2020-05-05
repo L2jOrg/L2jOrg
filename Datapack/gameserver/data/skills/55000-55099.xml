@@ -882,13 +882,32 @@
         </consume>
         <target/>
         <abnormal type="MULTI_BUFF">
-            <level initial="1"/>
-            <time initial="-1"/>
-            <chance initial="-1"/>
+            <time initial="1200"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
-                <power initial="2.0"/>
+            <call-skill scope="SELF" skill="1040"> <!-- Shield -->
+                <power initial="2"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1068"> <!-- Might -->
+                <power initial="2"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1078"> <!-- Concentration -->
+                <power initial="2"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1085"> <!-- Acumen -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1204"> <!-- Wind Walk -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="4359"> <!-- Focus -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1087"> <!-- Agility -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1059"> <!-- Empower -->
+                <power initial="1"/>
             </call-skill>
         </effects>
     </skill>
@@ -907,13 +926,50 @@
         </consume>
         <target/>
         <abnormal type="MULTI_BUFF">
-            <level initial="1"/>
-            <time initial="-1"/>
-            <chance initial="-1"/>
+            <time initial="1200"/>
         </abnormal>
         <effects>
-            <call-skill scope="SELF" skill="1040">
-                <power initial="2.0"/>
+            <call-skill scope="SELF" skill="1040"> <!-- Shield -->
+                <power initial="3"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1068"> <!-- Might -->
+                <power initial="3"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1085"> <!-- Acumen -->
+                <power initial="2"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1204"> <!-- Wind Walk -->
+                <power initial="2"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="4359"> <!-- Focus -->
+                <power initial="2"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1044"> <!-- Regeneration -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1240"> <!-- Guidance -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1242"> <!-- Death Whisper -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1036"> <!-- Magic Barrier -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1045"> <!-- Blessed Body -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1048"> <!-- Blessed Soul -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1086"> <!-- Haste -->
+                <power initial="1"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1087"> <!-- Agility -->
+                <power initial="2"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="1059"> <!-- Empower -->
+                <power initial="2"/>
             </call-skill>
         </effects>
     </skill>

@@ -1015,19 +1015,20 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
-		<!-- <abnormal type="EXP_SP_U"> -->
-			<!-- <level initial="1"> -->
-                <!-- <value level="2">2</value> -->
-                <!-- <value level="3">3</value> -->
-                <!-- <value level="4">4</value> -->
-                <!-- <value level="5">5</value> -->
-				<!-- <value level="6">6</value> -->
-                <!-- <value level="7">7</value> -->
-                <!-- <value level="8">8</value> -->
-                <!-- <value level="9">9</value> -->
-                <!-- <value level="10">10</value> -->
-            <!-- </level> -->
-        <!-- </abnormal> -->
+		 <abnormal type="EXP_SP_U"> 
+			 <level initial="1"> 
+                 <value level="2">2</value> 
+                 <value level="3">3</value> 
+                 <value level="4">4</value> 
+                 <value level="5">5</value> 
+				 <value level="6">6</value> 
+                 <value level="7">7</value> 
+                 <value level="8">8</value> 
+                 <value level="9">9</value> 
+                 <value level="10">10</value> 
+             </level>
+             <time initial="-1"/>
+         </abnormal> 
 		<effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
@@ -1055,10 +1056,8 @@
                     <value level="10">35.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP">
-                <power>
-                    <value level="10">50.0</value>
-                </power>
+			<stat-modify mode="PER" stat="ELEMENTAL_SPIRIT_BONUS_XP" start-level="10">
+                <power initial="30"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1079,7 +1078,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<abnormal> <!-- EXP_SP_V -->
+		<abnormal type="EXP_SP_V">
             <level initial="1">
 				<value level="2">2</value>
                 <value level="3">3</value>
@@ -1130,6 +1129,42 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">4</value>
+                    <value level="4">7</value>
+                    <value level="5">14</value>
+                    <value level="6">15</value>
+                    <value level="7">16</value>
+                    <value level="8">17</value>
+                    <value level="9">18</value>
+                    <value level="10">20</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">4</value>
+                    <value level="4">7</value>
+                    <value level="5">14</value>
+                    <value level="6">15</value>
+                    <value level="7">16</value>
+                    <value level="8">17</value>
+                    <value level="9">18</value>
+                    <value level="10">20</value>
+                </power>
+            </stat-modify>
+            <speed mode="PER" start-level="6">
+                <power initial="1">
+                    <value level="7">2</value>
+                    <value level="8">3</value>
+                    <value level="9">5</value>
+                    <value level="10">7</value>
+                </power>
+            </speed>
+        </effects>
     </skill>
     <skill id="55475" name="Diamond" max-level="10">
         <!--
@@ -1150,6 +1185,34 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="11">
+                    <value level="2">25</value>
+                    <value level="3">50</value>
+                    <value level="4">81</value>
+                    <value level="5">130</value>
+                    <value level="6">150</value>
+                    <value level="7">180</value>
+                    <value level="8">220</value>
+                    <value level="9">280</value>
+                    <value level="10">400</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" start-level="4">
+                <power initial="4">
+                    <value level="5">10</value>
+                    <value level="6">11</value>
+                    <value level="7">12</value>
+                    <value level="8">14</value>
+                    <value level="9">16</value>
+                    <value level="10">20</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" start-level="10">
+                <power initial="10"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55476" name="Pearl" max-level="10">
         <!--
@@ -1170,6 +1233,34 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="7">
+                    <value level="2">14</value>
+                    <value level="3">14</value>
+                    <value level="4">14</value>
+                    <value level="5">14</value>
+                    <value level="6">14</value>
+                    <value level="7">14</value>
+                    <value level="8">14</value>
+                    <value level="9">14</value>
+                    <value level="10">14</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" start-level="4">
+                <power initial="4">
+                    <value level="5">10</value>
+                    <value level="6">11</value>
+                    <value level="7">12</value>
+                    <value level="8">14</value>
+                    <value level="9">16</value>
+                    <value level="10">20</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_RATE" start-level="10">
+                <power initial="10"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55477" name="Ruby" max-level="10" action="A1">
         <!--
@@ -1310,6 +1401,49 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">30</value>
+                        <value level="10">40</value>
+                    </power>
+                </trait>
+                <trait type="PULL">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">30</value>
+                        <value level="10">40</value>
+                    </power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">30</value>
+                        <value level="10">40</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="55486" name="Garnet - Special Ability" max-level="7" action="A1">
         <!--

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="17814" name="Ruby" max-level="4" action="A1">
+    <skill id="17814" name="Ruby" max-level="4">
         <!--
             level 1: Increases Soulshot Damage +2%.
             level 2: Soulshot damage +3%.
@@ -13,7 +13,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17815" name="Ruby" max-level="2" action="A1">
+    <skill id="17815" name="Ruby" max-level="2">
         <!--
             level 1: Soulshot damage +5%.
             level 2: Blessed Soulshot damage +5%.
@@ -24,7 +24,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17816" name="Ruby" max-level="2" action="A1">
+    <skill id="17816" name="Ruby" max-level="2">
         <!--
             level 1: Soulshot damage +8%.
             level 2: Blessed Soulshot damage +8%.
@@ -35,7 +35,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17817" name="Ruby" max-level="10" action="A1">
+    <skill id="17817" name="Ruby" max-level="10">
         <!--
             level 1: Soulshot damage +16%.
             level 2: Blessed Soulshot damage +16%.
@@ -56,7 +56,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17818" name="Sapphire" max-level="4" action="A1">
+    <skill id="17818" name="Sapphire" max-level="4">
         <!--
             level 1: Damage received from Spiritshots +2%.
             level 2: Spiritshot damage +3%.
@@ -69,7 +69,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17819" name="Sapphire" max-level="2" action="A1">
+    <skill id="17819" name="Sapphire" max-level="2">
         <!-- Spiritshot damage +5%. -->
         <icon initial="icon.etc_bm_jewel_sapphire_i00"/>
         <attributes>
@@ -77,7 +77,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17820" name="Sapphire" max-level="2" action="A1">
+    <skill id="17820" name="Sapphire" max-level="2">
         <!-- Spiritshot damage +8%. -->
         <icon initial="icon.etc_bm_jewel_sapphire_i00"/>
         <attributes>
@@ -85,7 +85,7 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17821" name="Sapphire" max-level="10" action="A1">
+    <skill id="17821" name="Sapphire" max-level="10">
         <!--
             level 1: Spiritshot damage +16%.
             level 3: Spiritshot damage +17%.

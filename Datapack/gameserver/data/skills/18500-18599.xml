@@ -32,6 +32,49 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">30</value>
+                        <value level="10">40</value>
+                    </power>
+                </trait>
+                <trait type="PULL">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">30</value>
+                        <value level="10">40</value>
+                    </power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">30</value>
+                        <value level="10">40</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="18567" name="Garnet - Special Ability" max-level="7" action="A1">
         <!--
