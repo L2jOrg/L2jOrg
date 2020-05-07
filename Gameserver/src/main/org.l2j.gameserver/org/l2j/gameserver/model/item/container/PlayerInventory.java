@@ -887,4 +887,8 @@ public class PlayerInventory extends Inventory {
     public long getL2Coin() {
         return nonNull(l2Coin) ? l2Coin.getCount() : 0;
     }
+
+    public void addL2Coin(long count) {
+        l2Coin.setCount(getL2Coin() + count);
+    }
 }

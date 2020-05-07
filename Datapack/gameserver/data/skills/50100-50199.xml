@@ -1274,21 +1274,60 @@
         <target/>
         <effects>
             <defence-trait>
-                <trait type="SHOCK">
-                    <power initial="1">
-                        <value level="2">2</value>
-                        <value level="3">3</value>
-                        <value level="4">4</value>
-                        <value level="5">5</value>
-                        <value level="6">10</value>
-                        <value level="7">12</value>
-                        <value level="8">14</value>
-                        <value level="9">18</value>
-                        <value level="10">22</value>
-                        <value level="11">30</value>
+                <trait type="SHOCK" >
+                    <power initial="1.0">
+                        <value level="2">2.0</value>
+                        <value level="3">3.0</value>
+                        <value level="4">4.0</value>
+                        <value level="5">5.0</value>
+                        <value level="6">10.0</value>
+                        <value level="7">12.0</value>
+                        <value level="8">14.0</value>
+                        <value level="9">18.0</value>
+                        <value level="10">22.0</value>
+                        <value level="11">30.0</value>
                     </power>
                 </trait>
             </defence-trait>
+            <vital-stat-modify stat="MAX_MP" start-level="6">
+                <power initial="100">
+                    <value level="7">150.0</value>
+                    <value level="8">200.0</value>
+                    <value level="9">250.0</value>
+                    <value level="10">250.0</value>
+                    <value level="11">1000.0</value>
+                </power>
+            </vital-stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED" start-level="6">
+                <power initial="5">
+                    <value level="7">7.0</value>
+                    <value level="8">10.0</value>
+                    <value level="9">15.0</value>
+                    <value level="10">40.0</value>
+                    <value level="11">150.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED" start-level="6">
+                <power initial="5">
+                    <value level="7">7.0</value>
+                    <value level="8">10.0</value>
+                    <value level="9">15.0</value>
+                    <value level="10">40.0</value>
+                    <value level="11">150.0</value>
+                </power>
+            </stat-modify>
+            <base-stat type="MEN" start-level="8">
+                <power initial="1">
+                    <value level="10">2.0</value>
+                    <value level="11">5.0</value>
+                </power>
+            </base-stat>
+            <base-stat start-level="11" type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat start-level="11" type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="50191" name="Talisman of Baium Enchant Effect" max-level="5">

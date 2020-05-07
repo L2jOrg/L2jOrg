@@ -52,7 +52,7 @@ public final class AdminCoins implements IAdminCommandHandler
 						break;
 					}
 					case "increase": {
-						if (target.getL2Coins() == Integer.MAX_VALUE) {
+						if (target.getNCCoins() == Integer.MAX_VALUE) {
 							showMenuHtml(activeChar);
 							activeChar.sendMessage(target.getName() + " already have max count of Coins!");
 							return false;
@@ -63,13 +63,13 @@ public final class AdminCoins implements IAdminCommandHandler
 						break;
 					}
 					case "decrease": {
-						if (target.getL2Coins() == 0) {
+						if (target.getNCCoins() == 0) {
 							showMenuHtml(activeChar);
 							activeChar.sendMessage(target.getName() + " already have min count of Coins!");
 							return false;
 						}
 
-						target.updateL2Coins(-value);
+						target.updateNCCoins(-value);
 						target.sendMessage("Admin decreased your Coins by " + value + "!");
 						BuilderUtil.sendSysMessage(activeChar, "You decreased Coins of " + target.getName() + " by " + value);
 						break;
@@ -101,11 +101,11 @@ public final class AdminCoins implements IAdminCommandHandler
 	}
 
 	private boolean canReceiveCoin(Player player) {
-		return player.isOnlineInt() == 1 && player.getL2Coins() < Integer.MAX_VALUE;
+		return player.isOnlineInt() == 1 && player.getNCCoins() < Integer.MAX_VALUE;
 	}
 
 	private void updateCoin(Player player, int coinCount) {
-		player.updateL2Coins(coinCount);
+		player.updateNCCoins(coinCount);
 		player.sendMessage("Admin increase your Coins by " + coinCount + "!");
 	}
 
@@ -117,7 +117,7 @@ public final class AdminCoins implements IAdminCommandHandler
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		final Player target = getTarget(activeChar);
 		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/coins.htm"));
-		html.replace("%coins%", GameUtils.formatAdena(target.getL2Coins()));
+		html.replace("%coins%", GameUtils.formatAdena(target.getNCCoins()));
 		html.replace("%targetName%", target.getName());
 		activeChar.sendPacket(html);
 	}

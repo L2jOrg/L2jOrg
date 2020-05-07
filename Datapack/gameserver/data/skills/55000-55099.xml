@@ -1804,7 +1804,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="6.0">
                     <value level="2">8.0</value>
                     <value level="3">12.0</value>
@@ -1826,11 +1826,11 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power initial="4.0"/>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="4"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="26.0"/>
+<stat-modify stat="CRITICAL_DAMAGE">
+     <power initial="26.0"/>
             </stat-modify>
         </effects>
     </skill>

@@ -1216,4 +1216,25 @@
 			<height normal="12" />
 		</collision>
 	</npc>
+	<npc element="EARTH" id="22093" level="82" name="Gargoyle Hunter" type="Monster">
+		<acquire attribute_exp="1230" exp="1396911" sp="41908"/>
+		<stats con="28" dex="28" int="28" men="28" str="28" wit="28">
+			<vitals hp="67893" hpRegen="10" mp="3221" mpRegen="5"/>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
+		<status attackable="true"/><!--Gargoyle Hunter-->
+		<dropLists>
+			<drop>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+				<!--Earth Spirit Ore (Руда Духа Земли)-->
+				<item chance="0.0075" id="91038" max="1" min="1"/>
+			</drop>
+		</dropLists>
+	</npc>
 </list>

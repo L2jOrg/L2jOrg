@@ -1326,7 +1326,7 @@
         <sex>MALE</sex>
 		<acquire exp="1984500" sp="59535" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<vitals hp="30000.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
 			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
             <speed>
@@ -1341,7 +1341,6 @@
 			<height normal="35" />
 		</collision>
         <skillList>
-            <skill id="4028" level="3"/> <!-- NPC Might -->
             <skill id="4416" level="11"/> <!-- Giant -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
