@@ -1786,7 +1786,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55091" name="Dragon Pedant - Attack Type Lv. 1" max-level="6">
+    <skill id="55091" name="Lv. 1 Fire Dragon's Pendant Enchant Effect" max-level="10">
         <!--
             level 1: Increases P. Atk. +6.
             level 2: Increases P. Atk. +8.
@@ -1799,92 +1799,42 @@
             level 9: Increases P. Atk. +63.
             level 10: Increases P. Atk. +75.
          -->
-        <icon initial="icon.bm_pendant_dragon_i00"/>
+        <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="6.0">
-                    <value level="2">7.0</value>
-                    <value level="3">8.0</value>
-                    <value level="4">9.0</value>
-                    <value level="5">10.0</value>
-                    <value level="6">12.0</value>
+                    <value level="2">8.0</value>
+                    <value level="3">12.0</value>
+                    <value level="4">19.0</value>
+                    <value level="5">28.0</value>
+                    <value level="6">35.0</value>
+                    <value level="7">46.0</value>
+                    <value level="8">59.0</value>
+                    <value level="9">63.0</value>
+                    <value level="10">75.0</value>
                 </power>
             </stat-modify>
-            <vital-stat-modify stat="EXPSP_RATE" mode="PER">
-                <power initial="0">
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">5.0</value>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                </power>
-            </vital-stat-modify>
-            <vital-stat-modify stat="ABSORB_DAMAGE_DEFENCE" mode="PER">
-                <power initial="0">
-                    <value level="2">0</value>
-                    <value level="3">0</value>
-                    <value level="4">0</value>
-                    <value level="5">2.0</value>
-                    <value level="6">2.0</value>
-                </power>
-            </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="55092" name="Dragon Pedant - Attack Type Lv. 2" max-level="6">
+    <skill id="55092" name="Lv. 2 Fire Dragon's Pendant Basic Effect">
         <!-- P. Atk. +4, P. Critical Damage +26. -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-                <power initial="15">
-                    <value level="2">16.0</value>
-                    <value level="3">17.0</value>
-                    <value level="4">18.0</value>
-                    <value level="5">19.0</value>
-                    <value level="6">21.0</value>
-                </power>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="4"/>
             </stat-modify>
-            <vital-stat-modify stat="EXPSP_RATE" mode="PER">
-                <power initial="10.0">
-                    <value level="2">11.0</value>
-                    <value level="3">11.0</value>
-                    <value level="4">13.0</value>
-                    <value level="5">15.0</value>
-                    <value level="6">20.0</value>
-                </power>
-            </vital-stat-modify>
-            <vital-stat-modify stat="ABSORB_DAMAGE_DEFENCE" mode="PER">
-                <power initial="2.0">
-                    <value level="2">3.0</value>
-                    <value level="3">3.0</value>
-                    <value level="4">4.0</value>
-                    <value level="5">4.0</value>
-                    <value level="6">5.0</value>
-                </power>
-            </vital-stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED" mode="PER">
-                <power initial="2.0">
-                    <value level="2">2.0</value>
-                    <value level="3">2.0</value>
-                    <value level="4">2.0</value>
-                    <value level="5">2.0</value>
-                    <value level="6">3.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK" start-level="6" stat-add="PHYSICAL_ATTACK" mode="PER">
-                <power initial="2.0"/>
-            </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" start-level="6" stat-add="CRITICAL_DAMAGE_ADD" mode="PER">
-                <power initial="5.0"/>
+<stat-modify stat="CRITICAL_DAMAGE">
+     <power initial="26.0"/>
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55093" name="Dragon Pedant - Attack Type Lv. 3" max-level="6">
+    <skill id="55093" name="Lv. 2 Fire Dragon's Pendant Enchant Effect" max-level="10">
         <!--
             level 1: P. Atk. +6, P. Critical Damage +38.
             level 2: P. Atk. +8, P. Critical Damage +56.
@@ -1930,7 +1880,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55094" name="Dragon Pedant - Attack Type Lv. 4">
+    <skill id="55094" name="Lv. 3 Fire Dragon's Pendant Basic Effect">
         <!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%%. -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
@@ -1948,7 +1898,7 @@
             </stat-hp-based>
         </effects>
     </skill>
-    <skill id="55095" name="Dragon Pedant - Magic Type Lv. 1" max-level="10">
+    <skill id="55095" name="Lv. 3 Fire Dragon's Pendant Enchant Effect" max-level="10">
         <!--
             level 1: P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%%.
             level 2: P. Atk. +8, P. Critical Damage +56, P. Critical Rate +3%%.
@@ -2007,9 +1957,9 @@
             </stat-hp-based>
         </effects>
     </skill>
-    <skill id="55096" name="Dragon Pedant - Magic Type Lv. 2">
+    <skill id="55096" name="Lv. 4 Fire Dragon's Pendant Basic Effect">
         <!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%%, P. Atk. +1%%. -->
-        <icon initial="BranchIcon.icon.g_bm_pendant_dragon_m"/>
+        <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
@@ -2038,7 +1988,7 @@
             level 9: P. Atk. +63, P. Critical Damage +421, P. Critical Rate +12%%, P. Atk. +6%%.
             level 10: P. Atk. +75, P. Critical Damage +498, P. Critical Rate +15%%, P. Atk. +8%%.
          -->
-        <icon initial="BranchIcon.icon.g_bm_pendant_dragon_m"/>
+        <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
