@@ -8,9 +8,9 @@
          -->
         <icon initial="icon.skill1605"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-            <magic-level initial="7">
-                <value level="2">25</value>
-                <value level="3">44</value>
+            <magic-level initial="47">
+                <value level="2">54</value>
+                <value level="3">67</value>
             </magic-level>
             <cast-range initial="-1"/>
             <reuse initial="180000"/>
@@ -29,7 +29,7 @@
             </mana>
         </consume>
         <target/>
-        <abnormal type="PD_UP">
+        <abnormal type="AVOID_SKILL">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -43,12 +43,12 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-hp-based hp-percent="0" mode="PER" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <skill-evasion type="PHYSIC">
                 <power initial="30.0">
                     <value level="2">35.0</value>
                     <value level="3">40.0</value>
                 </power>
-            </stat-hp-based>
+            </skill-evasion>
         </effects>
     </skill>
     <skill id="1606" name="Lightning Spear" max-level="10" debuff="true" action="A2">
@@ -65,7 +65,7 @@
             level 10: Throws a spear to attack the enemy's surroundings with bonus 3435 Power. Stuns for 5 seconds. Available when the distance is at least 300. Requires a spear. Ignores Shield Defense. Over-hit.
          -->
         <icon initial="icon.skill1606"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
             <magic-level initial="42">
                 <value level="2">46</value>
                 <value level="3">50</value>
@@ -118,7 +118,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="0.0" ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="20" ignore-shield="true" over-hit="true">
                 <power initial="801.0">
                     <value level="2">1002.0</value>
                     <value level="3">1234.0</value>
@@ -132,7 +132,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016</allowed-skills>
+                <allowed-skills>35016 35045</allowed-skills>
             </block-all-actions>
         </effects>
     </skill>
@@ -327,7 +327,7 @@
                 <value level="45">102</value>
             </mana>
         </consume>
-        <target type="ENEMY_ONLY"/>
+        <target type="ENEMY"/>
         <conditions>
             <weapon>
                 <type>SWORD TWO_HAND_SWORD BLUNT DUAL_BLUNT</type>
@@ -447,18 +447,20 @@
             </weapon>
         </conditions>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="40.0">
                     <value level="2">50.0</value>
                     <value level="3">60.0</value>
                     <value level="4">90.0</value>
                 </power>
+                <weapon-type>TWO_HAND_SWORD</weapon-type>
             </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
                 </power>
+                <weapon-type>TWO_HAND_SWORD</weapon-type>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="30.0">
@@ -466,7 +468,11 @@
                     <value level="3">50.0</value>
                     <value level="4">80.0</value>
                 </power>
+                <weapon-type>SWORD</weapon-type>
             </stat-modify>
+            <effect name="ManaDamOverTime" ticks="2">
+                <power initial="1"/>
+            </effect>
         </effects>
     </skill>
     <skill id="1610" name="Life Saver" max-level="29" action="A2" type="MAGIC">
@@ -696,19 +702,19 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="1612" name="Slow Force" debuff="true" action="A1">
+    <skill id="1612" name="Slow Force" debuff="true" action="A2">
         <!-- Movement Speed -20%% for 15 seconds. -->
         <icon initial="icon.skill0210"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" level-bonus-rate="20" triggered="true" magic-critical-rate="5">
             <cast-range initial="400"/>
             <effect-point initial="-204"/>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target/>
+        <target type="ENEMY_ONLY"/>
         <abnormal type="SPEED_DOWN">
             <time initial="15"/>
-            <chance initial="-1"/>
+            <chance initial="80"/>
         </abnormal>
         <effects>
             <speed mode="PER">
@@ -780,7 +786,7 @@
         <abnormal type="STUN" visual="STUN">
             <level initial="2"/>
             <time initial="5"/>
-            <chance initial="100"/>
+            <chance initial="50"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -803,9 +809,11 @@
                 </power>
             </physical-attack>
             <dispel-by-category category="BUFF" max="1">
-                <power initial="10.0"/>
+                <power initial="25"/>
             </dispel-by-category>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
         </effects>
     </skill>
     <skill id="1615" name="Weapon Reinforcement" max-level="4" action="A2">
@@ -850,10 +858,12 @@
                 </power>
                 <weapon-type>BLUNT SPEAR DUAL_BLUNT</weapon-type>
             </stat-modify>
-            <trigger-skill-by-damage min-damage="60" skill="1616" target="ENEMY">
+            <trigger-skill-by-attack skill="1616" target="ENEMY">
                 <power initial="1.0"/>
                 <chance initial="10.0"/>
-            </trigger-skill-by-damage>
+                <min-damage initial="1"/>
+                <weapons>BLUNT SPEAR</weapons>
+            </trigger-skill-by-attack>
         </effects>
     </skill>
     <skill id="1616" name="Physical Damage" debuff="true" action="A2">
@@ -864,7 +874,6 @@
             <reuse initial="15000"/>
             <effect-point initial="-190"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="100"/>
         </attributes>
         <target type="ENEMY"/>
         <abnormal>
@@ -926,9 +935,15 @@
                     </power>
                 </trait>
             </defence-trait>
-            <trigger-skill-by-damage min-damage="50" skill="1618">
-                <power initial="1.0"/>
-                <chance initial="10.0"/>
+            <trigger-skill-by-damage skill="1618">
+                <power initial="1.0">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                </power>
+                <chance initial="5">
+                    <value level="2">10</value>
+                    <value level="3">15</value>
+                </chance>
             </trigger-skill-by-damage>
         </effects>
     </skill>
@@ -1037,7 +1052,7 @@
                 <value level="5">66</value>
             </mana>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target scope="PARTY" object="FRIEND" range="900"/>
         <abnormal type="SHIELD_PROB_UP">
             <level initial="1">
                 <value level="2">2</value>
@@ -1079,7 +1094,7 @@
     <skill id="1622" name="Blood of Sacrifice" action="A2">
         <!-- Sacrificed. Max HP -20%%. -->
         <icon initial="icon.skill1621"/>
-        <attributes property="PHYSIC" triggered="true">
+        <attributes property="PHYSIC" dispellable="false">
             <magic-level initial="80"/>
             <cast-range initial="-1"/>
             <effect-point initial="1"/>
@@ -1090,7 +1105,6 @@
         <abnormal>
             <level initial="1"/>
             <time initial="180"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
@@ -1134,7 +1148,7 @@
                 <value level="5">122</value>
             </mana>
         </consume>
-        <target scope="PARTY" object="FRIEND"/>
+        <target scope="PARTY" object="FRIEND" range="900"/>
         <abnormal>
             <level initial="1"/>
             <time initial="180"/>
@@ -1178,7 +1192,7 @@
             level 4: Using Momentum, throws a powerful strike with a sword, blocking the target for 16 seconds. The target is engulfed by Momentum. Damage received -20%, and becomes unable to use skills or move. Requires a dual sword. Requires Momentum Stage 5 recharge.
          -->
         <icon initial="icon.skill1624"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="PHYSICAL_BLOCKADE" level-bonus-rate="30" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="PHYSICAL_BLOCKADE" level-bonus-rate="20" dispellable="false" auto-use="ACTIVE">
             <magic-level initial="78">
                 <value level="2">80</value>
                 <value level="3">82</value>
@@ -1203,7 +1217,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="NORMAL_ATTACK_BLOCK">
+        <abnormal type="SILENCE" visual="TORNADO_SLOW">
             <level initial="1"/>
             <time initial="10">
                 <value level="2">12</value>
@@ -1216,7 +1230,7 @@
             <weapon>
                 <type>DUAL</type>
             </weapon>
-            <energy-saved charges="5"/>
+            <energy-saved charges="7"/>
         </conditions>
         <effects>
             <effect name="Mute"/>
@@ -1235,7 +1249,7 @@
     <skill id="1625" name="Spear Shot" debuff="true" action="A2">
         <!-- Throws a spear to attack an enemy with bonus 801 Power added to P. Atk. Becomes immobilized for 10 seconds. Available when the distance is at least 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
         <icon initial="icon.skill1625"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="20" auto-use="ACTIVE">
             <magic-level initial="78"/>
             <cast-range initial="900"/>
             <reuse initial="10000"/>
@@ -1248,10 +1262,10 @@
             <mana initial="63"/>
         </consume>
         <target type="ENEMY" range="150" affect-min="5" affect-random="12"/>
-        <abnormal type="STUN">
+        <abnormal type="ROOT_PHYSICALLY" visual="ROOT">
             <level initial="1"/>
             <time initial="10"/>
-            <chance initial="100"/>
+            <chance initial="80"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1262,7 +1276,7 @@
             <physical-attack critical-chance="30.0" ignore-shield="true" over-hit="true">
                 <power initial="801.0"/>
             </physical-attack>
-            <block-all-actions/>
+            <effect name="Root"/>
         </effects>
     </skill>
     <skill id="1626" name="Howl Spear" debuff="true" action="A1">
@@ -1291,7 +1305,7 @@
             <physical-attack critical-chance="0.0">
                 <power initial="2911.0"/>
             </physical-attack>
-            <dispel-probability abnormals="SPEED_UP IMPROVE_SPEED_AVOID_UP">
+            <dispel-probability abnormals="SPEED_UP IMPROVE_SPEED_AVOID_UP SPEED_UP_SPECIAL SONG_OF_WIND">
                 <power initial="100.0"/>
             </dispel-probability>
         </effects>
@@ -1311,7 +1325,7 @@
         <consume>
             <mana initial="57"/>
         </consume>
-        <target type="ENEMY_ONLY"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" affect-min="10" range="200"/>
         <abnormal type="TURN_FLEE" visual="TURN_FLEE">
             <level initial="1"/>
             <time initial="7"/>
@@ -1405,7 +1419,7 @@
         <target type="ENEMY"/>
         <abnormal>
             <level initial="1"/>
-            <time initial="10"/>
+            <time initial="60"/>
             <chance initial="80"/>
         </abnormal>
         <conditions>
@@ -1417,8 +1431,7 @@
             <physical-attack critical-chance="0.0">
                 <power initial="396.0"/>
             </physical-attack>
-            <effect name="PhysicalMute"/>
-            <effect name="Mute"/>
+            <effect name="SkillTurning"/>
         </effects>
     </skill>
     <skill id="1630" name="Throwing Blood Dagger" debuff="true" action="A2">
@@ -1439,7 +1452,7 @@
         <target type="ENEMY"/>
         <abnormal type="CRITICAL_PROB_UP">
             <level initial="1"/>
-            <time initial="10"/>
+            <time initial="40"/>
             <chance initial="80"/>
         </abnormal>
         <conditions>
@@ -1451,6 +1464,10 @@
             <physical-attack critical-chance="0.0" over-hit="true">
                 <power initial="396.0"/>
             </physical-attack>
+            <trigger-skill-by-magic skill="5684">
+                <chance initial="50"/>
+                <types>PHYSIC</types>
+            </trigger-skill-by-magic>
         </effects>
     </skill>
     <skill id="1631" name="Reset Movement" max-level="2" action="A1">
@@ -1500,7 +1517,7 @@
             level 8: Attacks the enemy with 3194 Power added to P. Atk. and decreases P. Def. by 23% for 10 seconds. Requires a sword, blunt weapon, or dualsword. Over-hit.
          -->
         <icon initial="icon.skill0986"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" next-action="ATTACK" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1533,7 +1550,7 @@
                 <value level="7">107</value>
             </mana>
         </consume>
-        <target type="ENEMY_ONLY"/>
+        <target type="ENEMY"/>
         <abnormal type="PD_DOWN">
             <level initial="1">
                 <value level="2">2</value>

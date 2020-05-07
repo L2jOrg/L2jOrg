@@ -453,7 +453,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-        <abnormal> <!-- EXP_SP_J -->
+        <abnormal type="EXP_SP_J">
             <level initial="2"/>
             <time initial="1200"/>
             <chance initial="-1"/>
@@ -858,14 +858,18 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
-            <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91939"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <level min-level="78"/>
+        </conditions>
     </skill>
     <skill id="50159" name="Heavenly Rift Time Recharge Stone" action="A1">
         <!-- none -->
@@ -1097,14 +1101,18 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
-            <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91984"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <level min-level="78"/>
+        </conditions>
     </skill>
     <skill id="50179" name="Heavenly Rift Time Recharge Stone" action="A1">
         <!-- none -->

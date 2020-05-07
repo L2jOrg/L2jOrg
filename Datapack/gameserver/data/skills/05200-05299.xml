@@ -685,7 +685,7 @@
             <damage-block block-hp="true"/>
             <effect name="DebuffBlock"/>
             <resist-dispel-by-category category="ALL">
-                <power initial="-100.0"/>
+                <power initial="100.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>

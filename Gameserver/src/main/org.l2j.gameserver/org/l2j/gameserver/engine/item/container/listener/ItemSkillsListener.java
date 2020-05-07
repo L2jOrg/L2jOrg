@@ -182,6 +182,11 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
             if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
                 return;
             }
+
+            if (player.getSkillLevel(holder.getSkillId()) >= holder.getLevel()) {
+                return;
+            }
+
             // Add skills bestowed from +4 armor
             applyEnchantSkill(item, player, holder, update);
         });
@@ -196,6 +201,10 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
         {
 
             if(verifySkillActiveIfAddtionalAgathion(slot, holder)) {
+                return;
+            }
+
+            if (player.getSkillLevel(holder.getSkillId()) >= holder.getLevel()) {
                 return;
             }
 
@@ -233,6 +242,10 @@ public final class ItemSkillsListener implements PlayerInventoryListener {
     }
 
     private void applyEnchantSkill(Item item, Player player, ItemSkillHolder holder, AtomicBoolean update) {
+        if (player.getSkillLevel(holder.getSkillId()) >= holder.getLevel()) {
+            return;
+        }
+
         if (item.getEnchantLevel() >= holder.getValue()) {
             final Skill skill = holder.getSkill();
             // Check passive skill conditions.

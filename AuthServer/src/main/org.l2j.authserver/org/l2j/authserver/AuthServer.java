@@ -68,7 +68,7 @@ public class AuthServer {
             _instance = new AuthServer();
             getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown()));
         } catch (Exception e) {
-            logger.error(e.getLocalizedMessage(), e);
+            logger.error(e.getMessage(), e);
         }
     }
 

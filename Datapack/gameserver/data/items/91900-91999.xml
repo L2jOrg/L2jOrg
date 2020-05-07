@@ -317,7 +317,7 @@
 		<attributes weight="150" commission-type="BRACELET" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="50912" value="-1"/>
+			<skill id="50912"/>  <!-- Talisman Bracelet -->
 		</skills>
 	</armor>
 
@@ -357,7 +357,10 @@
 	<item id="91939" name="Tomb of Ancient Pirates Time Recharge Stone - Exchangeable" type="POTION" icon="icon.timezone_refill_2">
 	<!-- Adds 60 minutes to the duration of the Tomb of Ancient Pirates timed hunting zone. -->
 		<restriction freightable="false" stackable="true" sellable="false" depositable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer>
+			<skill id="50158"/> <!-- Tomb of Ancient Pirates Time Recharge Stone -->
+		</skill-reducer>
 	</item>
 
 	<item id="91940" name="Heavenly Rift Time Recharge Stone" type="POTION" icon="icon.etc_scroll_of_return_i03">
@@ -667,7 +670,10 @@
 	<item id="91984" name="Tomb of Ancient Pirates Time Recharge Stone" type="POTION" icon="icon.timezone_refill_2">
 	<!-- Adds 60 minutes to the duration of the Tomb of Ancient Pirates timed hunting zone. -->
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer>
+			<skill id="50178"/>
+		</skill-reducer>
 	</item>
 
 	<item id="91985" name="Heavenly Rift Time Recharge Stone" type="POTION" icon="icon.etc_scroll_of_return_i03">

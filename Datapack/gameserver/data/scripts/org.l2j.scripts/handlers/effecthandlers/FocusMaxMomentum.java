@@ -34,7 +34,7 @@ public final class FocusMaxMomentum extends AbstractEffect {
         if (isPlayer(effected)) {
             final Player player = effected.getActingPlayer();
 
-            final int count = (int) effected.getStats().getValue(Stat.MAX_MOMENTUM, 0);
+            final int count = (int) effected.getStats().getValue(Stat.MAX_MOMENTUM, 1);
             player.setCharges(count);
             player.sendPacket(getSystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_LEVEL_S1).addInt(count));
             player.sendPacket(new EtcStatusUpdate(player));

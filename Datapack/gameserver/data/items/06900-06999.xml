@@ -7,7 +7,7 @@
 		<action handler="Recipes"/>
 	</item>
 
-	<weapon id="6917" name="Monster Only (Poisonous Dart)" type="SHIELD" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">
+	<weapon id="6917" name="Monster Only (Poisonous Dart)" type="NONE" body-part="RIGHT_HAND" icon="icon.weapon_monster_i00">
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" private-sellable="false"/>
 		<attributes weight="6" price="2" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />

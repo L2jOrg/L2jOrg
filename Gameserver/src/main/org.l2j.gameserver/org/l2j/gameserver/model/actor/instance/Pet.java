@@ -1058,7 +1058,7 @@ public class Pet extends Summon {
     public void setName(String name) {
         final Item controlItem = getControlItem();
         if (controlItem != null) {
-            if (controlItem.getCustomType2() == (name == null ? 1 : 0)) {
+            if (controlItem.getType2() == (name == null ? 1 : 0)) {
                 controlItem.updateDatabase();
                 final InventoryUpdate iu = new InventoryUpdate();
                 iu.addModifiedItem(controlItem);

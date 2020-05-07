@@ -19,6 +19,10 @@ public class RequestTargetActionMenu extends ClientPacket {
     @Override
     public void runImpl() {
         var player = client.getPlayer();
-        doIfNonNull(World.getInstance().findVisibleObject(player, _objectId), player::setTarget);
+        doIfNonNull(World.getInstance().findVisibleObject(player, _objectId), target -> {
+            if(target.isTargetable()) {
+                player.setTarget(target);
+            }
+        });
     }
 }

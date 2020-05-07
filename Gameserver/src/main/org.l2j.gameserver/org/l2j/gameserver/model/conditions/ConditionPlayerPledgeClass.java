@@ -4,6 +4,8 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
+import static java.util.Objects.isNull;
+
 /**
  * The Class ConditionPlayerPledgeClass.
  *
@@ -29,9 +31,10 @@ public final class ConditionPlayerPledgeClass extends Condition {
      */
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if ((effector.getActingPlayer() == null) || (effector.getActingPlayer().getClan() == null)) {
+        final var player = effector.getActingPlayer();
+        if (isNull(player) || isNull(player.getClan())) {
             return false;
         }
-        return (_pledgeClass == -1) ? effector.getActingPlayer().isClanLeader() : (effector.getActingPlayer().getPledgeClass() >= _pledgeClass);
+        return player.isClanLeader() || (_pledgeClass != -1 && player.getPledgeClass() >= _pledgeClass);
     }
 }

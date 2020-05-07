@@ -43,7 +43,7 @@ public class GameServerManager {
         try {
             loadRSAKeys();
         }catch (Exception e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 

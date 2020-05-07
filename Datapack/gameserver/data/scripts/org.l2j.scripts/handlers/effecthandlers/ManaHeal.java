@@ -55,6 +55,7 @@ public final class ManaHeal extends AbstractEffect {
         // Prevents overheal and negative amount
         amount = Math.max(Math.min(amount, effected.getMaxRecoverableMp() - effected.getCurrentMp()), 0);
         if (amount != 0) {
+            effected.setCurrentMp(effected.getCurrentMp() + amount);
             effected.broadcastStatusUpdate(effector);
         }
 

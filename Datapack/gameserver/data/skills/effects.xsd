@@ -790,7 +790,8 @@
             <xs:enumeration value="PK"/>
             <xs:enumeration value="MOB"/>
             <xs:enumeration value="BOSS"/>
-            <xs:enumeration value="ENEMY_ALL"/>
+            <xs:enumeration value="MONSTER"/>
+            <xs:enumeration value="ANY"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -967,6 +968,7 @@
         <xs:sequence>
             <xs:element name="power" type="MappedLevelValue" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="ref-id" type="EffectID"/>
         <xs:attribute name="ticks" type="xs:int" default="0"/>
         <xs:attribute name="scope" type="EffectScope" default="GENERAL"/>
         <xs:attribute name="start-level" type="xs:int" default="1"/>
@@ -991,4 +993,22 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="EffectID">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="STAT_PDEF_PER_SUB_23"/>
+
+            <xs:enumeration value="PHYSICAL_ATTACK_517"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_549"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_583"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_619"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_656"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_694"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_735"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_777"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_820"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_865"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_912"/>
+            <xs:enumeration value="PHYSICAL_ATTACK_960"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

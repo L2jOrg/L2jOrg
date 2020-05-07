@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import java.io.PrintStream;
 import java.util.Arrays;
 
+import static java.util.Objects.isNull;
+
 /**
  * @param <T>
  * @author UnAfraid
@@ -279,20 +281,22 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
     }
 
     protected void writeParamsSize(int size) {
-        writeByte((byte) size);
+        writeByte(size);
     }
 
     protected void writeParamType(int type) {
-        writeByte((byte) type);
+        writeByte(type);
     }
 
     protected final void writeMe() {
         writeParamsSize(_params.length);
-        SMParam param;
-        for (int i = 0; i < _paramIndex; i++) {
-            param = _params[i];
-
+        for (SMParam param : _params) {
+            if(isNull(param)){
+                LOGGER.warn("Null param for system message {}", _smId);
+                continue;
+            }
             writeParamType(param.getType());
+
             switch (param.getType()) {
                 case TYPE_ELEMENT_NAME, TYPE_BYTE, TYPE_FACTION_NAME, TYPE_ELEMENTAL_SPIRIT -> writeByte((byte) param.getIntValue());
                 case TYPE_CASTLE_NAME, TYPE_SYSTEM_STRING, TYPE_INSTANCE_NAME, TYPE_CLASS_ID -> writeShort((short) param.getIntValue());
@@ -302,8 +306,8 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
                 case TYPE_SKILL_NAME -> {
                     final int[] array = param.getIntArrayValue();
                     writeInt(array[0]); // skill id
-                    writeShort((short) array[1]); // skill level
-                    writeShort((short) array[2]); // skill sub level
+                    writeShort( array[1]); // skill level
+                    writeShort(array[2]); // skill sub level
                 }
                 case TYPE_POPUP_ID, TYPE_ZONE_NAME -> {
                     final int[] array = param.getIntArrayValue();

@@ -74,12 +74,12 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeInt(item.getDisplayId());
         writeByte(item.isQuestItem() || item.isEquipped() ? 0xFF : item.getLocationSlot());
         writeLong(item.getCount());
-        writeByte(item.getCustomType2());
+        writeByte(item.getType2());
         writeByte(0); // Filler (always 0)
         writeShort(item.isEquipped());
         writeLong(item.getBodyPart().getId());
         writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-        writeByte(0x00); // TODO : Find me
+        writeByte(item.getType2());
         writeByte(0x00);
         writeInt(-1); // mana
         writeInt(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) :-9999);

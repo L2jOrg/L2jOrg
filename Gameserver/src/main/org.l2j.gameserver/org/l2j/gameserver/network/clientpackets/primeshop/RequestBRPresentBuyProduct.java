@@ -69,7 +69,7 @@ public final class RequestBRPresentBuyProduct extends RequestBuyProduct {
 
                 final Mail attachement = mail.createAttachments();
                 for (PrimeShopItem subItem : item.getItems()) {
-                    attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount(), activeChar, this);
+                    attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount() * count, activeChar, this);
                 }
                 MailManager.getInstance().sendMessage(mail);
                 getDAO(PrimeShopDAO.class).addHistory(productId, count, activeChar.getObjectId());

@@ -51,7 +51,7 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.SYSTEM_MSG);
 
-        writeShort((short) getId());
+        writeShort(getId());
         writeMe();
     }
 

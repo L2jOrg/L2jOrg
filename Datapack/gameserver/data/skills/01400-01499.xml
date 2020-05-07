@@ -228,7 +228,7 @@
             <mana-init initial="18"/>
             <mana initial="87"/>
             <item initial="3031"/>
-            <item-count initial="200"/>
+            <item-count initial="100"/>
         </consume>
         <target type="TARGET"/>
         <abnormal type="RESURRECTION_SPECIAL">
@@ -490,7 +490,7 @@
         <consume>
             <mana initial="72"/>
             <item initial="3031"/>
-            <item-count initial="200"/>
+            <item-count initial="100"/>
         </consume>
         <target scope="RANGE" object="CLAN" range="1000"/>
         <effects>
@@ -572,23 +572,23 @@
                 <value level="10">143</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="5">
-                <value level="6">7</value>
+            <item-count initial="2">
+                <value level="6">3</value>
             </item-count>
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <effects>
             <effect name="ManaHealByLevel">
-                <power initial="240.0">
-                    <value level="2">252.0</value>
-                    <value level="3">265.0</value>
-                    <value level="4">278.0</value>
-                    <value level="5">292.0</value>
-                    <value level="6">312.0</value>
-                    <value level="7">334.0</value>
-                    <value level="8">357.0</value>
-                    <value level="9">382.0</value>
-                    <value level="10">409.0</value>
+                <power initial="264">
+                    <value level="2">277</value>
+                    <value level="3">292</value>
+                    <value level="4">306</value>
+                    <value level="5">321</value>
+                    <value level="6">343</value>
+                    <value level="7">367</value>
+                    <value level="8">393</value>
+                    <value level="9">420</value>
+                    <value level="10">450</value>
                 </power>
             </effect>
         </effects>
@@ -683,15 +683,13 @@
          -->
         <icon initial="icon.skill1432"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-            <magic-level initial="10">
-                <value level="2">28</value>
-                <value level="3">36</value>
-                <value level="4">44</value>
-                <value level="5">56</value>
+            <magic-level initial="25">
+                <value level="2">50</value>
+                <value level="3">76</value>
+                <value level="4">78</value>
+                <value level="5">80</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="10000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="2000"/>
         </attributes>
         <consume>
@@ -720,8 +718,8 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power initial="8.0">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="10">
                     <value level="2">12.0</value>
                     <value level="3">15.0</value>
                     <value level="4">20.0</value>
@@ -739,8 +737,7 @@
             level 5: Has a chance to mark the enemy with a Death Mark for 10 seconds. Enemies marked with the Death Mark will receive more damage from Physical Critical Damage and Magic Critical Damage. \n\nDeath Mark Stage 5 activated
          -->
         <icon initial="icon.skill1435"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <trigger-skill-by-attack skill="45154" target="ENEMY">
@@ -813,11 +810,8 @@
                 <value level="2">55</value>
                 <value level="3">64</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="150000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana-init initial="8">
@@ -830,6 +824,23 @@
             </mana>
         </consume>
         <target/>
+        <abnormal>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <effect name="HealPercent">
+                <power initial="15">
+                    <value level="2">25</value>
+                    <value level="3">35</value>
+                </power>
+            </effect>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="15">
+                    <value level="2">25</value>
+                    <value level="2">40</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="1444" name="Art of Rapier" max-level="5">
         <!--
@@ -840,11 +851,10 @@
             level 5: Atk. Spd. +50 when equipping a Rapier.
          -->
         <icon initial="Icon.ev_invasion_gun_shoot"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="10.0">
                     <value level="2">20.0</value>
                     <value level="3">30.0</value>
@@ -918,7 +928,7 @@
                 <value level="4">-490</value>
                 <value level="5">-500</value>
             </effect-point>
-            <effect-range initial="600"/>
+            <effect-range initial="900"/>
             <hit-time initial="1500"/>
         </attributes>
         <consume>

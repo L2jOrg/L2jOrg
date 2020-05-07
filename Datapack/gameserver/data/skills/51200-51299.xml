@@ -563,10 +563,11 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="51247" name="Disarm" debuff="true" action="A1">
+    <skill id="51247" name="Disarm" debuff="true" action="A2">
         <!-- Removes weapons of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
         <icon initial="icon.skill0485"/>
-        <attributes property="PHYSIC" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5" trait="DISARM" level-bonus-rate="20" auto-use="ACTIVE">
+            <magic-level initial="79"/>
             <cast-range initial="900"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
@@ -578,12 +579,32 @@
         <consume>
             <mana initial="205"/>
         </consume>
-        <target/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" affect-min="6" affect-random="6" range="200"/>
+        <abnormal type="DISARM">
+            <time initial="5"/>
+            <chance initial="70"/>
+        </abnormal>
+        <effects>
+            <effect name="Disarm"/>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="-30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="-30"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="-30"/>
+            </speed>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="-1000"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
-    <skill id="51248" name="Armor Breaker" debuff="true" action="A1">
+    <skill id="51248" name="Armor Breaker" debuff="true" action="A2">
         <!-- Removes armor of the target and nearby enemies reducing their P. Atk/M. Atk. and Movement by 30% and decreases HP by 1000 for 5 seconds. -->
         <icon initial="icon.skill10703"/>
-        <attributes property="PHYSIC" auto-use="ACTIVE">
+        <attributes property="PHYSIC" level-bonus-rate="20" auto-use="ACTIVE">
+            <magic-level initial="79"/>
             <cast-range initial="900"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
@@ -595,7 +616,25 @@
         <consume>
             <mana initial="205"/>
         </consume>
-        <target/>
+        <target affect-min="6" affect-random="6" range="200"/>
+        <abnormal type="DISARM" visual="DOT_BLEEDING">
+            <time initial="5"/>
+            <chance initial="20"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="-30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="-30"/>
+            </stat-modify>
+            <speed mode="PER">
+                <power initial="-30"/>
+            </speed>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="-1000"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="51249" name="Spell Break" debuff="true" action="A1">
         <!-- Has a chance to cancel skills of the target and nearby enemies for 10 seconds. -->
@@ -648,10 +687,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="51252" name="Berserker Mode" action="A1">
+    <skill id="51252" name="Berserker Mode" action="A2">
         <!-- Increases P. Atk./M. Atk./Atk. Spd./Casting Spd. +50%% for 20 seconds and reflects damaged received by 15%%. The effect does not stack with Berserker Soul which is the transformed state of Dragon Berserker. -->
         <icon initial="icon.skill10274"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5"  auto-use="BUFF">
             <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="20"/>
@@ -663,6 +702,26 @@
             <mana initial="200"/>
         </consume>
         <target/>
+        <abnormal type="BERSERKER">
+            <time initial="20"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify stat="REFLECT_DAMAGE_PERCENT">
+                <power initial="15"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="51253" name="Elmoreden Scroll of Experience" action="A1">
         <!-- 500,000 XP. -->

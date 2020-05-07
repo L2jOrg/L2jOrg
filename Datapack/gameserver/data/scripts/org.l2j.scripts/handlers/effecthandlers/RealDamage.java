@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.item.instance.Item;
+import org.l2j.gameserver.model.stats.Stat;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -30,9 +31,11 @@ public class RealDamage extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-        effected.reduceCurrentHp(power, effector, skill, false, true, false, false);
+        final double damage = power - (power * (Math.min(effected.getStats().getValue(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
+
+        effected.reduceCurrentHp(damage, effector, skill, false, true, false, false);
         if (isPlayer(effector)) {
-            effector.sendDamageMessage(effected, skill, (int) power, 0, false, false);
+            effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
         }
     }
 

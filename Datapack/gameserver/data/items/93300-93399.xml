@@ -192,14 +192,14 @@
 		<attributes/>
 	</item>
 
-	<weapon id="93331" name="Combat flag" type="SHIELD" body-part="TWO_HAND" icon="icon.weapon_fort_flag_i00">
+	<weapon id="93331" name="Combat flag" type="NONE" body-part="TWO_HAND" icon="icon.weapon_fort_flag_i00">
 	<!-- Put this into a the flagpole to win Fortress War. You are forced to wear it once you acquire it, during which time use of Attack and Attack Skills is impossible, but Flag Display Skills can be used. -->
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500"/>
 		<crystal />
 	</weapon>
 
-	<weapon id="93332" name="Combat Flag - Monster" type="SHIELD" body-part="TWO_HAND" icon="icon.weapon_fort_flag_i00">
+	<weapon id="93332" name="Combat Flag - Monster" type="NONE" body-part="TWO_HAND" icon="icon.weapon_fort_flag_i00">
 	<!-- Put this into a the flagpole to win Fortress War. You are forced to wear it once you acquire it, during which time use of Attack and Attack Skills is impossible, but Flag Display Skills can be used. -->
 		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="500"/>

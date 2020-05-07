@@ -582,7 +582,7 @@
                 <power initial="5.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -629,7 +629,7 @@
                 <power initial="5.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -662,7 +662,7 @@
                 <power initial="5.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -698,7 +698,7 @@
                 <power initial="10.0"/>
             </speed>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>

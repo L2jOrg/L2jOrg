@@ -156,7 +156,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>
@@ -228,7 +228,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>
@@ -266,7 +266,7 @@
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="20.0"/>
             </vital-stat-modify>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="5.0"/>
             </vampiric-attack>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -291,7 +291,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
@@ -360,7 +360,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>
@@ -558,7 +558,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-20.0"/>
+                <power initial="20.0"/>
             </resist-abnormal-by-category>
             <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
@@ -814,7 +814,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="15.0"/>
             </vampiric-attack>
         </effects>
@@ -1318,7 +1318,7 @@
                 <power initial="1800.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -1819,7 +1819,7 @@
                 <power initial="1800.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -2002,8 +2002,8 @@
             <physical-attack critical-chance="50.0" ignore-shield="true" over-hit="true">
                 <power initial="8409.0"/>
             </physical-attack>
-            <dispel-by-category category="BUFF" max="1">
-                <power initial="10.0"/>
+            <dispel-by-category category="BUFF" max="3">
+                <power initial="25"/>
             </dispel-by-category>
             <vital-stat-modify heal="true" mode="PER" stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="-90.0"/>
@@ -2012,7 +2012,7 @@
                 <power initial="-30.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="30.0"/>
+                <power initial="-30.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -2084,7 +2084,7 @@
                 <power initial="15.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-90.0"/>
+                <power initial="90.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -2122,7 +2122,7 @@
                 <power initial="10.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -2160,7 +2160,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -2189,7 +2189,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0" defense-mod="0.9" over-hit="true">
                 <power initial="8049.0"/>
             </physical-attack>
             <call-skill skill="23298">
@@ -2220,7 +2220,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0" defense-mod="0.9" over-hit="true">
                 <power initial="7043.0"/>
             </physical-attack>
             <call-skill skill="23299">
@@ -2253,7 +2253,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0"  defense-mod="0.9" over-hit="true">
                 <power initial="8452.0"/>
             </physical-attack>
             <call-skill skill="23300">
@@ -2300,28 +2300,20 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="790" name="Critical Shot" max-level="3" action="A1">
+    <skill id="790" name="Critical Shot" max-level="3">
         <!--
             level 1: Has a chance to increase P. Critical Rate by 10 when attacking with a bow.
             level 2: Has a chance to increase P. Critical Rate by 20 when attacking with a bow.
             level 3: Has a chance to increase P. Critical Rate by 30 when attacking with a bow.
          -->
         <icon initial="icon.skill11874"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-            <magic-level initial="52">
-                <value level="2">66</value>
-                <value level="3">80</value>
-            </magic-level>
-            <cast-range initial="-1"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
-                <power initial="10.0">
-                    <value level="2">20.0</value>
-                    <value level="3">30.0</value>
+                <power initial="10">
+                    <value level="2">20</value>
+                    <value level="3">30</value>
                 </power>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
@@ -2377,7 +2369,12 @@
          -->
         <icon initial="icon.skill0792"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
-            <magic-level initial="78"/>
+            <magic-level initial="76">
+                <value level="2">78</value>
+                <value level="3">80</value>
+                <value level="4">82</value>
+                <value level="5">84</value>
+            </magic-level>
             <cast-range initial="900"/>
             <reuse initial="15000"/>
             <cool-time initial="300"/>

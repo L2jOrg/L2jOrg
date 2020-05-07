@@ -357,10 +357,11 @@
                     <value level="2">20.0</value>
                 </power>
             </skill-evasion>
-            <speed>
-                <power initial="30.0">
-                    <value level="2">40.0</value>
-                </power>
+            <speed stop-level="1">
+                <power initial="30"/>
+            </speed>
+            <speed mode="PER" start-level="2">
+                <power initial="30"/>
             </speed>
         </effects>
     </skill>
@@ -399,11 +400,11 @@
         <!-- Inflicts Fear on the enemy for 3 seconds. -->
         <icon initial="icon.skill10771"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" auto-use="ACTIVE">
-            <magic-level initial="34">
-                <value level="2">35</value>
-                <value level="3">36</value>
-                <value level="4">38</value>
-                <value level="5">39</value>
+            <magic-level initial="76">
+                <value level="2">78</value>
+                <value level="3">80</value>
+                <value level="4">82</value>
+                <value level="5">84</value>
             </magic-level>
             <cast-range initial="900"/>
             <reuse initial="20000"/>
@@ -693,7 +694,7 @@
                 <power initial="3600.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>

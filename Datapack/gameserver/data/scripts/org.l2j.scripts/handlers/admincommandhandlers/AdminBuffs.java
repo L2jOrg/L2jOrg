@@ -1,27 +1,10 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.settings.GeneralSettings;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -30,12 +13,13 @@ import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GMAudit;
+import org.l2j.gameserver.world.World;
 
 import java.util.*;
 
@@ -321,7 +305,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				sb.append(")");
 				sb.append(!info.isInUse() ? FONT_RED2 : "");
 				sb.append("</td><td>");
-				sb.append(info.getSkill().isToggle() ? "T (" + info.getTickCount(effect) + ")" : info.getSkill().isPassive() ? "P" : info.getTime() + "s");
+				sb.append(info.getSkill().isToggle() ? "T" : info.getSkill().isPassive() ? "P" : info.getTime() + "s");
 				sb.append("</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ");
 				sb.append(target.getObjectId());
 				sb.append(" ");

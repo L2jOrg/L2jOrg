@@ -90,7 +90,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="80.0"/>
             </vampiric-attack>
         </effects>
@@ -103,9 +103,7 @@
         <icon initial="icon.skill1514"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="58"/>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1000"/>
         </attributes>
         <consume>
@@ -124,22 +122,12 @@
             <defence-trait>
                 <trait type="BOW">
                     <power initial="10">
-                        <value level="2">15</value>
-                    </power>
-                </trait>
-                <trait type="TWO_HAND_CROSSBOW">
-                    <power initial="10">
-                        <value level="2">15</value>
-                    </power>
-                </trait>
-                <trait type="CROSSBOW">
-                    <power initial="10">
-                        <value level="2">15</value>
+                        <value level="2">30</value>
                     </power>
                 </trait>
             </defence-trait>
-            <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-                <power initial="100.0"/>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="100"/>
             </stat-modify>
         </effects>
     </skill>
@@ -174,7 +162,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <trigger-skill-by-damage min-damage="50" skill="5592" target="TARGET">
+            <trigger-skill-by-damage min-damage="1" skill="5592" target="TARGET">
                 <power initial="1.0"/>
                 <chance initial="40.0"/>
             </trigger-skill-by-damage>
@@ -241,13 +229,14 @@
             level 3: Casting Spd. +220 and Magic Cooldown -20%.
          -->
         <icon initial="icon.skill11841"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes/>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
-                <power initial="10.0"/>
-                <armor-type>LIGHT</armor-type>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="100">
+                    <value level="2">150</value>
+                    <value level="3">220</value>
+                </power>
             </stat-modify>
             <reuse skill-type="MAGIC">
                 <power initial="-10.0">
@@ -1008,7 +997,7 @@
             level 5: Increases Max MP by 200.
          -->
         <icon initial="icon.skill19168"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
+        <attributes>
         </attributes>
         <target/>
         <effects>

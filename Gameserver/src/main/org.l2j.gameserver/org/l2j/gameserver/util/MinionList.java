@@ -3,6 +3,7 @@ package org.l2j.gameserver.util;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -287,6 +288,11 @@ public class MinionList {
                 if (!_minion.isSpawned()) {
                     _minion.refreshID();
                     initializeNpcInstance(_master, _minion);
+                }
+
+                if (!_master.getAggroList().isEmpty()) {
+                    _minion.getAggroList().putAll(_master.getAggroList());
+                    _minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _minion.getAggroList().keySet().stream().findFirst().get());
                 }
             }
         }

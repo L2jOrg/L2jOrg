@@ -28,7 +28,7 @@
                 <power initial="200.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>

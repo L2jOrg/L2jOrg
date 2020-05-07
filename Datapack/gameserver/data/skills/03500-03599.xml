@@ -1434,7 +1434,7 @@
                     </power>
                 </trait>
             </defence-trait>
-            <vampiric-attack chance="0">
+            <vampiric-attack chance="80">
                 <power>
                     <value level="12">2.0</value>
                     <value level="13">3.0</value>
@@ -1452,7 +1452,7 @@
             <stat-modify stat="EARTH_RES">
                 <power initial="15.0"/>
             </stat-modify>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power>
                     <value level="10">-1.0</value>
                     <value level="12">-3.0</value>
@@ -1527,7 +1527,7 @@
                     </power>
                 </trait>
             </defence-trait>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="4.0"/>
             </vampiric-attack>
             <stat-modify mode="PER" stat="HEAL_RECEIVE">
@@ -2074,9 +2074,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <dispel-by-category category="DEBUFF" max="5">
-                <power initial="100.0"/>
-            </dispel-by-category>
+            <effect name="AbnormalShield">
+                <power initial="5"/>
+            </effect>
         </effects>
     </skill>
     <skill id="3585" name="Special Ability: Infinity Dualsword">
@@ -2086,7 +2086,7 @@
         </attributes>
         <target/>
         <effects>
-            <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+            <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="20.0"/>
             </vital-stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_MP">
@@ -2098,7 +2098,10 @@
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="CRITICAL_DAMAGE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
@@ -2133,9 +2136,15 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <magic-cost type="PHYSIC">
-                <power initial="-10.0"/>
-            </magic-cost>
+            <reuse skill-type="PHYSIC">
+                <power initial="-10"/>
+            </reuse>
+            <reuse skill-type="MAGIC">
+                <power initial="-10"/>
+            </reuse>
+            <reuse skill-type="DANCE">
+                <power initial="-10"/>
+            </reuse>
         </effects>
     </skill>
     <skill id="3587" name="Special Ability: Infinity Fighter">
@@ -2187,7 +2196,7 @@
             <vital-stat-modify mode="PER" stat="MAX_CP">
                 <power initial="30.0"/>
             </vital-stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="20.0"/>
             </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -2311,10 +2320,9 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-                <power initial="15.0"/>
-                <weapon-type>BOW</weapon-type>
-            </stat-modify>
+            <speed>
+                <power initial="15"/>
+            </speed>
             <stat-modify stat="PHYSICAL_ATTACK_RANGE">
                 <power initial="100.0"/>
                 <weapon-type>BOW</weapon-type>
@@ -2340,7 +2348,7 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
@@ -2428,7 +2436,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <magic-cost type="MAGIC">
+            <magic-cost>
                 <power initial="-100.0"/>
             </magic-cost>
         </effects>

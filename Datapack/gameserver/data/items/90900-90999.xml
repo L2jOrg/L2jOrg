@@ -21,6 +21,14 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" duration="21600" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="51028"/> <!-- Release Agathion's Seal - Pisces -->
+			<skill id="3267"/> <!-- Seal Agathion -->
+			<skill id="51030"/> <!-- Teleports to Gludio. -->
+			<skill id="51031"/> <!-- Teleports to Dion. -->
+			<skill id="51032"/> <!-- Teleports to Giran. -->
+			<skill id="51033"/> <!-- Teleports to Oren. -->
+		</skills>
 	</armor>
 
 	<armor id="90903" name="Agathion Cancer" type="NONE" body-part="AGATHION" icon="icon.can_agathion_i00">
@@ -28,9 +36,14 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" duration="21600" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="MAX_MP" value="34.0"/>
-		</stats>
+		<skills>
+			<skill id="51029"/> <!-- Release Agathion's Seal - Cancer -->
+			<skill id="3267"/> <!-- Seal Agathion -->
+			<skill id="51030"/> <!-- Teleports to Gludio. -->
+			<skill id="51031"/> <!-- Teleports to Dion. -->
+			<skill id="51032"/> <!-- Teleports to Giran. -->
+			<skill id="51033"/> <!-- Teleports to Oren. -->
+		</skills>
 	</armor>
 
 	<item id="90904" name="Agathion - Aries Pack" type="NONE" icon="icon.bm_sheep_agathion_30d_box">

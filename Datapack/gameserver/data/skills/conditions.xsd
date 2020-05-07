@@ -26,6 +26,7 @@
     <xs:element name="target" type="TargetCondition" substitutionGroup="cond"/>
     <xs:element name="remain-status" type="RemainStatusCondition" substitutionGroup="cond"/>
     <xs:element name="soul" type="SoulCondition" substitutionGroup="cond"/>
+    <xs:element name="check-range" type="CheckRangeCondition" substitutionGroup="cond"/>
 
     <xs:complexType name="Conditions">
         <xs:sequence>
@@ -37,6 +38,15 @@
         <xs:complexContent>
             <xs:extension base="Condition">
                 <xs:attribute name="name" type="xs:token" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CheckRangeCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="min" type="xs:int" use="required"/>
+                <xs:attribute name="max" type="xs:int" default="-1"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

@@ -64,6 +64,7 @@ public class Mail extends ItemContainer {
     protected void addItem(Item item) {
         super.addItem(item);
         item.setItemLocation(getBaseLocation(), _messageId);
+        item.updateDatabase(true);
     }
 
     /*

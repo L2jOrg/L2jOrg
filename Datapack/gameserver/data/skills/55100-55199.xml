@@ -30,7 +30,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="13.0">
                     <value level="2">20.0</value>
                     <value level="3">31.0</value>
@@ -41,26 +41,6 @@
                     <value level="8">149.0</value>
                     <value level="9">160.0</value>
                     <value level="10">202.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -98,7 +78,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="13.0">
                     <value level="2">20.0</value>
                     <value level="3">31.0</value>
@@ -111,7 +91,7 @@
                     <value level="10">202.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="89.0">
                     <value level="2">134.0</value>
                     <value level="3">210.0</value>
@@ -124,26 +104,6 @@
                     <value level="10">1344.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
         </effects>
     </skill>
     <skill id="55104" name="Lv. 3 Water Dragon's Pendant Basic Effect">
@@ -153,15 +113,15 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="9.0"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="62.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55105" name="Lv. 3 Water Dragon's Pendant Enchant Effect" max-level="10">
@@ -182,7 +142,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="13.0">
                     <value level="2">20.0</value>
                     <value level="3">31.0</value>
@@ -195,7 +155,7 @@
                     <value level="10">202.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="89.0">
                     <value level="2">134.0</value>
                     <value level="3">210.0</value>
@@ -208,7 +168,7 @@
                     <value level="10">1344.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -219,26 +179,6 @@
                     <value level="8">9.0</value>
                     <value level="9">10.0</value>
                     <value level="10">12.0</value>
-                </power>
-            </stat-hp-based>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -256,9 +196,9 @@
             <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="62.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55107" name="Lv. 4 Water Dragon's Pendant Enchant Effect" max-level="10">
@@ -279,7 +219,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="13.0">
                     <value level="2">2.0</value>
                     <value level="3">2.5</value>
@@ -292,7 +232,7 @@
                     <value level="10">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="89.0">
                     <value level="2">134.0</value>
                     <value level="3">210.0</value>
@@ -305,7 +245,7 @@
                     <value level="10">1344.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -317,26 +257,6 @@
                     <value level="9">10.0</value>
                     <value level="10">12.0</value>
                 </power>
-            </stat-hp-based>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
             </stat-modify>
         </effects>
     </skill>
@@ -347,15 +267,15 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="9.0"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="62.0"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="1.0"/>
-            </stat-hp-based>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55109" name="Lv. 5 Water Dragon's Pendant Enchant Effect" max-level="10">
@@ -376,7 +296,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power initial="13.0">
                     <value level="2">2.0</value>
                     <value level="3">2.5</value>
@@ -389,7 +309,7 @@
                     <value level="10">10.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="89.0">
                     <value level="2">134.0</value>
                     <value level="2">3.0</value>
@@ -411,7 +331,7 @@
                     <value level="10">15.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="2.0">
                     <value level="2">3.0</value>
                     <value level="3">4.0</value>
@@ -423,25 +343,31 @@
                     <value level="9">10.0</value>
                     <value level="10">12.0</value>
                 </power>
-            </stat-hp-based>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="1.5">
+                    <value level="2">2</value>
+                    <value level="3">2.5</value>
+                    <value level="4">3</value>
+                    <value level="5">3.5</value>
+                    <value level="6">4</value>
+                    <value level="7">5</value>
+                    <value level="8">6</value>
+                    <value level="9">8</value>
+                    <value level="10">10</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">4</value>
+                    <value level="4">5</value>
+                    <value level="5">6</value>
+                    <value level="6">7</value>
+                    <value level="7">9</value>
+                    <value level="8">11</value>
+                    <value level="9">13</value>
+                    <value level="10">15</value>
                 </power>
             </stat-modify>
         </effects>
@@ -489,26 +415,6 @@
                     <value level="10">156.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
         </effects>
     </skill>
     <skill id="55112" name="Lv. 2 Wind Dragon's Pendant Basic Effect">
@@ -570,26 +476,6 @@
                     <value level="10">316.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
         </effects>
     </skill>
     <skill id="55114" name="Lv. 3 Wind Dragon's Pendant Basic Effect">
@@ -683,26 +569,6 @@
                     <value level="10">2.8</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
         </effects>
     </skill>
     <skill id="55116" name="Lv. 4 Wind Dragon's Pendant Basic Effect">
@@ -724,6 +590,11 @@
             <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.5"/>
             </stat-modify>
+            <trigger-skill-by-magic skill="55153" target="SELF">
+                <power initial="1"/>
+                <chance initial="1"/>
+                <types>PHYSIC MAGIC</types>
+            </trigger-skill-by-magic>
         </effects>
     </skill>
     <skill id="55117" name="Lv. 4 Wind Dragon's Pendant Enchant Effect" max-level="10">
@@ -744,7 +615,7 @@
         </attributes>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP">
                 <power initial="33.0">
                     <value level="2">42.0</value>
                     <value level="3">52.0</value>
@@ -770,7 +641,7 @@
                     <value level="10">316.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="1.9">
                     <value level="2">2.1</value>
                     <value level="3">2.3</value>
@@ -796,26 +667,21 @@
                     <value level="10">2.8</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
+           <trigger-skill-by-magic skill="55153">
+               <power initial="1"/>
+               <chance initial="2">
+                   <value level="2">4</value>
+                   <value level="3">6</value>
+                   <value level="4">8</value>
+                   <value level="5">10</value>
+                   <value level="6">12</value>
+                   <value level="7">14</value>
+                   <value level="8">16</value>
+                   <value level="9">20</value>
+                   <value level="10">24</value>
+               </chance>
+               <types>PHYSIC MAGIC</types>
+           </trigger-skill-by-magic>
         </effects>
     </skill>
     <skill id="55118" name="Lv. 5 Wind Dragon's Pendant Basic Effect">
@@ -825,7 +691,7 @@
         </attributes>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP">
                 <power initial="21.0"/>
             </vital-stat-modify>
             <vital-stat-modify stat="MAX_HP">
@@ -837,9 +703,14 @@
             <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.5"/>
             </stat-modify>
-            <magic-cost type="PHYSIC">
-                <power initial="3.0"/>
+            <magic-cost>
+                <power initial="-3.0"/>
             </magic-cost>
+            <trigger-skill-by-magic skill="55153">
+                <power initial="1"/>
+                <chance initial="1"/>
+                <types>PHYSIC MAGIC</types>
+            </trigger-skill-by-magic>
         </effects>
     </skill>
     <skill id="55119" name="Lv. 5 Wind Dragon's Pendant Enchant Effect" max-level="10">
@@ -860,7 +731,7 @@
         </attributes>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP">
                 <power initial="33.0">
                     <value level="2">42.0</value>
                     <value level="3">52.0</value>
@@ -886,7 +757,7 @@
                     <value level="10">316.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
+            <stat-modify stat="REGENERATE_HP_RATE">
                 <power initial="1.9">
                     <value level="2">2.1</value>
                     <value level="3">2.3</value>
@@ -912,39 +783,34 @@
                     <value level="10">2.8</value>
                 </power>
             </stat-modify>
-            <magic-cost type="PHYSIC">
-                <power initial="5.0">
-                    <value level="2">7.0</value>
-                    <value level="3">9.0</value>
-                    <value level="4">11.0</value>
-                    <value level="5">13.0</value>
-                    <value level="6">15.0</value>
-                    <value level="7">17.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
+            <magic-cost>
+                <power initial="-5.0">
+                    <value level="2">-7.0</value>
+                    <value level="3">-9.0</value>
+                    <value level="4">-11.0</value>
+                    <value level="5">-13.0</value>
+                    <value level="6">-15.0</value>
+                    <value level="7">-17.0</value>
+                    <value level="8">-20.0</value>
+                    <value level="9">-30.0</value>
+                    <value level="10">-40.0</value>
                 </power>
             </magic-cost>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
+            <trigger-skill-by-magic skill="55153">
+                <power initial="1"/>
+                <chance initial="2">
+                    <value level="2">4</value>
+                    <value level="3">6</value>
+                    <value level="4">8</value>
+                    <value level="5">10</value>
+                    <value level="6">12</value>
+                    <value level="7">14</value>
+                    <value level="8">16</value>
+                    <value level="9">20</value>
+                    <value level="10">24</value>
+                </chance>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
         </effects>
     </skill>
     <skill id="55120" name="Wind Dragon's Pendant MP Increase" action="A1">
@@ -1000,26 +866,6 @@
                     <value level="10">28.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
         </effects>
     </skill>
     <skill id="55123" name="Lv. 2 Earth Dragon's Pendant Basic Effect">
@@ -1055,7 +901,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="8.0">
                     <value level="2">10.0</value>
                     <value level="3">12.0</value>
@@ -1079,26 +925,6 @@
                     <value level="8">61.0</value>
                     <value level="9">66.0</value>
                     <value level="10">71.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -1176,26 +1002,6 @@
                     <value level="8">80.0</value>
                     <value level="9">90.0</value>
                     <value level="10">100.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -1291,26 +1097,6 @@
                     <value level="10">50.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
         </effects>
     </skill>
     <skill id="55129" name="Lv. 5 Earth Dragon's Pendant Basic Effect">
@@ -1404,41 +1190,25 @@
                     <value level="10">50.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="BONUS_EXP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="BONUS_SP">
-                <power>
-                    <value level="5">5.0</value>
-                    <value level="6">10.0</value>
-                    <value level="7">15.0</value>
-                    <value level="8">20.0</value>
-                    <value level="9">30.0</value>
-                    <value level="10">40.0</value>
-                </power>
-            </stat-modify>
         </effects>
     </skill>
-    <skill id="55131" name="Lv. 5 Earth Dragon's Pendant Defense Effect" action="A1">
+    <skill id="55131" name="Lv. 5 Earth Dragon's Pendant Defense Effect" action="A2">
         <!-- For 5 seconds, creates a shield that absorbs 202 damage. Cooldown is 90 seconds. -->
         <icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
+            <magic-level initial="80"/>
             <reuse initial="90000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="BARRIER" visual="ABSORB_SHIELD">
+            <level initial="1"/>
+            <time initial="5"/>
+        </abnormal>
+        <!-- TODO absorb damage shield effect -->
     </skill>
-    <skill id="55132" name="Lv. 5 Earth Dragon's Pendant Defense Effect" max-level="10" action="A1">
+    <skill id="55132" name="Lv. 5 Earth Dragon's Pendant Defense Effect" max-level="10" action="A2">
         <!--
             level 1: For 6 seconds, creates a shield that absorbs 302 damage. Cooldown is 90 seconds.
             level 2: For 7 seconds, creates a shield that absorbs 406 damage. Cooldown is 90 seconds.
@@ -1453,7 +1223,7 @@
          -->
         <icon initial="BranchIcon.Icon.bm_pendant_pvp"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
+            <magic-level initial="80"/>
             <reuse initial="90000">
                 <value level="3">80000</value>
                 <value level="6">70000</value>
@@ -1461,10 +1231,23 @@
                 <value level="10">50000</value>
             </reuse>
             <cool-time initial="500"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="BARRIER" visual="ABSORB_SHIELD">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+                <value level="6">6</value>
+                <value level="7">7</value>
+                <value level="8">8</value>
+                <value level="9">9</value>
+                <value level="10">10</value>
+            </level>
+            <time initial="5"/>
+        </abnormal>
+        <!-- TODO absorb damage shield effect -->
     </skill>
     <skill id="55133" name="Pendant Enchant Effect" max-level="6">
         <!--

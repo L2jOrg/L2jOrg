@@ -561,7 +561,7 @@ public final class Formulas {
         final double elementMod = calcAttributeBonus(attacker, target, skill);
         final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTrait(), false);
         final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
-        final double buffDebuffMod = skill.isDebuff() ? target.getStats().getValue(Stat.RESIST_ABNORMAL_DEBUFF, 1) : 1;
+        final double buffDebuffMod = skill.isDebuff() ?  2d - target.getStats().getValue(Stat.RESIST_ABNORMAL_DEBUFF, 1) : 1;
         final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
         final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
 
@@ -930,7 +930,8 @@ public final class Formulas {
     }
 
     public static boolean calcCancelSuccess(BuffInfo info, int cancelMagicLvl, int rate, Skill skill, Creature target) {
-        final int chance = (int) (rate + ((cancelMagicLvl - info.getSkill().getMagicLevel()) * 2) + ((info.getAbnormalTime() / 120) * target.getStats().getValue(Stat.RESIST_DISPEL_BUFF, 1)));
+        final var resist =  2d - target.getStats().getValue(Stat.RESIST_DISPEL_BUFF, 1);
+        final int chance = (int) (rate + ((cancelMagicLvl - info.getSkill().getMagicLevel()) * 2) + ((info.getAbnormalTime() / 120) * resist));
         return Rnd.get(100) < CommonUtil.constrain(chance, 25, 75); // TODO: i_dispel_by_slot_probability min = 40, max = 95.
     }
 

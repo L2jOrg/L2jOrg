@@ -680,8 +680,7 @@
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <target type="ITEM" scope="SINGLE"/>
-
+        <target type="ITEM"/>
     </skill>
     <skill id="40057" name="Magic Flame - Event" action="A1">
         <!-- Magic Lamp recharge speed +100%% -->

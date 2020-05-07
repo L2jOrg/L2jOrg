@@ -15,12 +15,29 @@
          -->
         <icon initial="icon.karma"/>
         <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="-5">
+                    <value level="2">-10</value>
+                    <value level="3">-15</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="-5">
+                    <value level="2">-10</value>
+                    <value level="3">-15</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="-5">
+                    <value level="2">-10</value>
+                    <value level="2">-30</value>
+                </power>
+            </speed>
+        </effects>
     </skill>
     <skill id="60003" name="Server Level Ranking 1st Class" action="A2">
         <!-- Benefits applied to Server Level Ranking 1st.\nAll Stats +1, Warrior's HP Potion, Maliss's HP Potion Effect +50, Weight Limit +100000, P. Evasion +20. -->

@@ -40,7 +40,7 @@ public final class FocusMomentum extends AbstractEffect {
 
         final Player player = effected.getActingPlayer();
         final int currentCharges = player.getCharges();
-        final int maxCharges = Math.min(this.maxCharges, (int) effected.getStats().getValue(Stat.MAX_MOMENTUM, 0));
+        final int maxCharges = Math.min(this.maxCharges, (int) effected.getStats().getValue(Stat.MAX_MOMENTUM, 1));
 
         if (currentCharges >= maxCharges) {
             if (!skill.isTriggeredSkill()) {

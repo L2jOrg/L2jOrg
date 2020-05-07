@@ -98,6 +98,7 @@ CREATE OR REPLACE VIEW rankers_race AS
 
         from characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
         where c.level >= 76
+          AND c.accesslevel = 0
           AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
     )
     SELECT * FROM ranked_race WHERE `rank` <= 100;
@@ -127,6 +128,7 @@ SELECT c.charId as id,
 
 from characters c LEFT JOIN rankers_snapshot rs on c.charId = rs.id
 where c.level >= 76
+  AND c.accesslevel = 0
   AND (c.base_class BETWEEN 88 AND 118 OR c.base_class IN (131, 134, 195))
     WINDOW w as (ORDER BY c.exp desc );
 

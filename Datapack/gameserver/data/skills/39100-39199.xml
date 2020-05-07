@@ -593,16 +593,26 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="39134" name="XP Boost Scroll" action="A1">
+    <skill id="39134" name="XP Boost Scroll" action="A2">
         <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute. Effect remains even after death. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
-        <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
+        <attributes magic-critical-rate="5" property="PHYSIC" stay-after-death="true">
+            <magic-level initial="1"/>
             <reuse initial="60000"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="VOTE">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39135" name="Chic Silver Chapeau - 30-day">
         <!-- STR +1 and INT +1 -->

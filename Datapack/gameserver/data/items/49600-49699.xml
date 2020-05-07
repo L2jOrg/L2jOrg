@@ -500,7 +500,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="32002" value="-1"/>  <!-- XP Boost Scroll - Exchangeable -->
+			<skill id="39134"/>  <!-- XP Boost Scroll-->
 		</skill-reducer>
 	</item>
 

@@ -10988,8 +10988,7 @@ public final class Player extends Playable {
     }
 
     public boolean isInTraingCamp() {
-        final TrainingHolder trainingHolder = getTraingCampInfo();
-        return (trainingHolder != null) && (trainingHolder.getEndTime() > 0);
+        return falseIfNullOrElse(getTraingCampInfo(), t -> t.getEndTime() > System.currentTimeMillis());
     }
 
     public AttendanceInfoHolder getAttendanceInfo() {

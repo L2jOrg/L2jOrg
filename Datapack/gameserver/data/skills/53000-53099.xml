@@ -91,7 +91,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="53005" name="Detect Darkness" debuff="true" action="A1">
+    <skill id="53005" name="Detect Darkness" debuff="true" action="A2">
         <!-- Cancels all Hide around you. The target cannot Hide for 2 seconds and this debuff cannot be removed. Requires a bow. -->
         <icon initial="icon.skill53005"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
@@ -107,6 +107,9 @@
             <mana initial="70"/>
         </consume>
         <target scope="RANGE" object="INVISIBLE" range="300"/>
+        <abnormal type="BLOCK_ESCAPE">
+            <time initial="2"/>
+        </abnormal>
         <conditions>
             <weapon>
                 <type>BOW</type>
@@ -114,6 +117,9 @@
         </conditions>
         <effects>
             <effect name="Detection"/>
+            <block-abnormal>
+                <abnormals>HIDE</abnormals>
+            </block-abnormal>
         </effects>
     </skill>
     <skill id="53006" name="Bind" max-level="5" debuff="true" action="A2" type="MAGIC">

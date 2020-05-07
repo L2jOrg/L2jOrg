@@ -15,7 +15,7 @@ public abstract class GameserverReadablePacket extends ReadablePacket<ServerClie
             readImpl();
         } catch (Exception e) {
             LOGGER.error("Reading {} : {} ", getClass().getSimpleName(), e);
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
             return false;
         }
         return true;
@@ -27,7 +27,7 @@ public abstract class GameserverReadablePacket extends ReadablePacket<ServerClie
             runImpl();
         } catch (Exception e) {
             LOGGER.error("Running {} : {} ", getClass().getSimpleName(), e);
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 

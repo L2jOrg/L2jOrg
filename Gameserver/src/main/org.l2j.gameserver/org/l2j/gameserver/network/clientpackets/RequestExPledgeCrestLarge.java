@@ -23,15 +23,14 @@ public final class RequestExPledgeCrestLarge extends ClientPacket {
         final byte[] data = crest != null ? crest.getData() : null;
         if (data != null) {
             for (int i = 0; i <= 4; i++) {
-                if (i < 4) {
-                    final byte[] fullChunk = new byte[14336];
-                    System.arraycopy(data, (14336 * i), fullChunk, 0, 14336);
-                    client.sendPacket(new ExPledgeEmblem(_crestId, fullChunk, _clanId, i));
-                } else {
-                    final byte[] lastChunk = new byte[8320];
-                    System.arraycopy(data, (14336 * i), lastChunk, 0, 8320);
-                    client.sendPacket(new ExPledgeEmblem(_crestId, lastChunk, _clanId, i));
+                final int size = Math.max(Math.min(14336, data.length - (14336 * i)), 0);
+                if (size == 0)
+                {
+                    continue;
                 }
+                final byte[] chunk = new byte[size];
+                System.arraycopy(data, (14336 * i), chunk, 0, size);
+                client.sendPacket(new ExPledgeEmblem(_crestId, chunk, _clanId, i));
             }
         }
     }

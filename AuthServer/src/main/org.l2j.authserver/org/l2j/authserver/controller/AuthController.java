@@ -64,7 +64,7 @@ public class AuthController {
         try {
             load();
         } catch (GeneralSecurityException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -124,6 +124,7 @@ public class AuthController {
     public void authenticate(AuthClient client, String username, String password) {
         if(!isValidUserName(username)) {
             client.close(REASON_ACCOUNT_INFO_INCORR);
+            LOGIN_HISTORY.debug("Invalid Username");
             return;
         }
 
@@ -133,6 +134,7 @@ public class AuthController {
         } else if(isAutoCreateAccount()) {
             createNewAccount(client, username, password);
         } else {
+            LOGIN_HISTORY.debug("Username no found");
             client.close(REASON_ACCOUNT_INFO_INCORR);
         }
     }
@@ -155,7 +157,7 @@ public class AuthController {
                 LOGIN_HISTORY.info(ACCOUNT_LOGIN_FAILED, account.getLogin(), "Wrong Username or Password");
             }
         } catch (NoSuchAlgorithmException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
             client.close(REASON_SYSTEM_ERROR);
         }
     }
@@ -209,7 +211,7 @@ public class AuthController {
             var account = new Account(username, hash(password), currentTimeMillis(), client.getHostAddress());
             processAuth(client, account);
         } catch (NoSuchAlgorithmException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 

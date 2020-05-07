@@ -265,9 +265,10 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101" value="-1"/>  <!-- Summon Ignis Agathion -->
-			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="51093" value="-1"/>  <!-- Fire Attack Strength -->
+			<skill id="51101"/>  <!-- Summon Ignis Agathion -->
+			<skill id="3267" type="ON_UNEQUIP" />  <!-- Seal Agathion -->
+			<skill id="51093"/>  <!-- Fire Attack Strength -->
+			<skill id="51089"/> <!-- Teleport to Forge of the Gods. -->
 		</skills>
 	</armor>
 
@@ -277,9 +278,10 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51102" value="-1"/>  <!-- Summon Nebula Agathion -->
-			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
+			<skill id="51102"/>  <!-- Summon Nebula Agathion -->
+			<skill id="3267" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
 			<skill id="51094" value="-1"/>  <!-- Water Attack Strength -->
+			<skill id="51090"/> <!-- Teleport to Garden of Eva. -->
 		</skills>
 	</armor>
 
@@ -289,9 +291,10 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51103" value="-1"/>  <!-- Summon Procella Agathion -->
-			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="51095" value="-1"/>  <!-- Wind Attack Strength -->
+			<skill id="51103"/>  <!-- Summon Procella Agathion -->
+			<skill id="3267" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="51095"/>  <!-- Wind Attack Strength -->
+			<skill id="51091"/> <!-- Teleport to Wind Plateau. -->
 		</skills>
 	</armor>
 
@@ -301,9 +304,10 @@
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101" value="-1"/>  <!-- Summon Ignis Agathion -->
-			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="51096" value="-1"/>  <!-- Earth Attack Strength -->
+			<skill id="51101"/>  <!-- Summon Ignis Agathion -->
+			<skill id="3267" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
+			<skill id="51096"/>  <!-- Earth Attack Strength -->
+			<skill id="51092"/> <!-- Teleport to Wall of Argos. -->
 		</skills>
 	</armor>
 
@@ -550,120 +554,180 @@
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034"/> <!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91164" name="Anakim Rune - Stage 2" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="2"/> <!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91165" name="Anakim Rune - Stage 3" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="3"/> <!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91166" name="Anakim Rune - Stage 4" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="4"/><!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91167" name="Anakim Rune - Stage 5" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="5"/><!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91168" name="Anakim Rune - Stage 6" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="6"/><!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91169" name="Anakim Rune - Stage 7" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="7"/><!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91170" name="Anakim Rune - Stage 8" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="8"/><!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91171" name="Anakim Rune - Stage 9" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="9"/><!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91172" name="Anakim Rune - Stage 10" type="SIGEL_RUNE" icon="icon.etc_water_rune_i00">
 	<!-- Stone filled with Anakim's power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54034" level="10"/><!-- Anakim Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91173" name="Lilith Rune - Stage 1" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91174" name="Lilith Rune - Stage 2" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="2"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91175" name="Lilith Rune - Stage 3" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="3"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91176" name="Lilith Rune - Stage 4" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="4"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91177" name="Lilith Rune - Stage 5" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="5"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91178" name="Lilith Rune - Stage 6" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="6"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91179" name="Lilith Rune - Stage 7" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="7"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91180" name="Lilith Rune - Stage 8" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="8"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91181" name="Lilith Rune - Stage 9" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="9"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91182" name="Lilith Rune - Stage 10" type="SIGEL_RUNE" icon="icon.etc_fire_rune_i00">
 	<!-- Stone filled with Lilith's power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
 		<restriction freightable="false" stackable="true" depositable="false"/>
 		<attributes weight="20"/>
+		<skill-reducer>
+			<skill id="54035" level="10"/><!-- Lilith Power -->
+		</skill-reducer>
 	</item>
 
 	<item id="91183" name="Wind Treasure Chest" type="NONE" icon="icon.sayha2017_box_i01">

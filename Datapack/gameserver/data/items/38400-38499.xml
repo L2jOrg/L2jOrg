@@ -128,7 +128,7 @@
 		</stats>
 	</weapon>
 
-	<weapon id="38432" name="Monster Only: Tiger Jewel" type="SHIELD" body-part="LEFT_HAND" icon="icon.Summon_orc_1hs_wp_i00">
+	<weapon id="38432" name="Monster Only: Tiger Jewel" type="NONE" body-part="LEFT_HAND" icon="icon.Summon_orc_1hs_wp_i00">
 	<!-- Monster weapon. One-handed Sword -->
 		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="144" commission-type="OTHER_ITEM" enchant-enabled="false"/>
@@ -179,7 +179,7 @@
 		</skills>
 	</weapon>
 
-	<weapon id="38435" name="Monster Only: Tiger Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.Summon_orc_shield_i00">
+	<weapon id="38435" name="Monster Only: Tiger Shield" type="NONE" body-part="LEFT_HAND" icon="icon.Summon_orc_shield_i00">
 	<!-- Monster weapon. Shield  -->
 		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="200" commission-type="OTHER_ITEM" enchant-enabled="false"/>
@@ -237,7 +237,7 @@
 		</stats>
 	</weapon>
 
-	<weapon id="38444" name="Monster Only: Centaur Shield" type="SHIELD" body-part="LEFT_HAND" icon="icon.Summon_orc_shield_i00">
+	<weapon id="38444" name="Monster Only: Centaur Shield" type="NONE" body-part="LEFT_HAND" icon="icon.Summon_orc_shield_i00">
 	<!-- Monster weapon. Shield  -->
 		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="200" commission-type="OTHER_ITEM" enchant-enabled="false"/>

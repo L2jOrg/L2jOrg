@@ -290,7 +290,7 @@
 	<armor id="91745" name="Aden Talisman" type="NONE" body-part="TALISMAN" icon="icon.bm_aden_talisman">
 	<!-- A talisman imbued with the energy of the royal family of Aden. Can be enchanted up to +10 with the Enchant Scroll: Aden Talisman. Combination adds various effects, and enchantment increases stats of these option effects. If +1 or higher level enchantment fails, the talisman will disappear. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" enchant-enabled="true" />
+		<attributes weight="120"/>
 		<crystal />
 	</armor>
 
@@ -443,8 +443,8 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item  id="91745" min-count="1" max-count="1" chance="100"/>
-			<item id="91756" min-count="10" max-count="10" chance="100"/>
+			<item  id="91745"/>
+			<item id="91756" min-count="10" max-count="10"/>
 		</extract>
 	</item>
 

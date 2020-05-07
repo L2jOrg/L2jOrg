@@ -1,11 +1,11 @@
 package handlers.effecthandlers;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.DamageByAttackType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.stats.Stat;
 
 /**
@@ -33,7 +33,10 @@ public class DamageByAttack extends AbstractEffect {
     public void pump(Creature target, Skill skill) {
         switch (type) {
             case PK -> target.getStats().mergeAdd(Stat.PVP_DAMAGE_TAKEN, power);
-            case ENEMY_ALL -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN, power);
+            case MOB -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN_MONSTER, power);
+            case BOSS -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN_RAID, power);
+            case MONSTER -> target.getStats().mergeAdd(Stat.PVE_DAMAGE_TAKEN, power);
+            case ANY -> target.getStats().mergeAdd(Stat.DAMAGE_TAKEN, power);
         }
     }
 

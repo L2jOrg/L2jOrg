@@ -248,7 +248,7 @@ public class Attackable extends Npc {
             return false;
         }
 
-        if (GameUtils.isPlayable(killer)) {
+        if (nonNull(killer.getActingPlayer())) {
             // Delayed notification
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, GameUtils.isSummon(killer)), this);
         }

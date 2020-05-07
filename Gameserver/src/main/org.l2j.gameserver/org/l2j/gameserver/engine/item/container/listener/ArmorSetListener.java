@@ -15,7 +15,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.ToIntFunction;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -25,17 +24,21 @@ public final class ArmorSetListener implements PlayerInventoryListener {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArmorSetListener.class);
 
     private ArmorSetListener() {
-
     }
 
     private static boolean applySkills(Player player, Item item, ArmorSet armorSet, ToIntFunction<Item> idProvider) {
         final long piecesCount = armorSet.getPiecesCount(player, idProvider);
         if (piecesCount >= armorSet.getMinimumPieces()) {
             // Applying all skills that matching the conditions
-            final AtomicBoolean updateTimeStamp = new AtomicBoolean();
-            final AtomicBoolean update = new AtomicBoolean();
+            boolean updateTimeStamp = false;
+            boolean update = false;
             for (ArmorsetSkillHolder holder : armorSet.getSkills()) {
                 if (holder.validateConditions(player, armorSet, idProvider)) {
+
+                    if (player.getSkillLevel(holder.getSkillId()) >= holder.getLevel()) {
+                        continue;
+                    }
+
                     final Skill itemSkill = holder.getSkill();
 
                     if (itemSkill == null) {
@@ -57,15 +60,15 @@ public final class ArmorSetListener implements PlayerInventoryListener {
                                 player.disableSkill(itemSkill, equipDelay);
                             }
                         }
-                        updateTimeStamp.compareAndSet(false, true);
+                        updateTimeStamp = true;
                     }
-                    update.compareAndSet(false, true);
+                    update = true;
                 }
             }
-            if (updateTimeStamp.get()) {
+            if (updateTimeStamp) {
                 player.sendPacket(new SkillCoolTime(player));
             }
-            return update.get();
+            return update;
         }
         return false;
     }

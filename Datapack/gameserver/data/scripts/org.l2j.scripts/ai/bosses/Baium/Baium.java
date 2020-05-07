@@ -1,33 +1,16 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package ai.bosses.Baium;
 
 import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -35,15 +18,16 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.variables.NpcVariables;
-import org.l2j.gameserver.world.zone.type.NoRestartZone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.Earthquake;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.type.NoRestartZone;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -207,7 +191,7 @@ public final class Baium extends AbstractNpcAI
             {
                 if (getStatus() == ALIVE)
                 {
-                    npc.deleteMe();
+
                     setStatus(IN_FIGHT);
                     _baium = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
                     _baium.disableCoreAI(true);
@@ -216,6 +200,7 @@ public final class Baium extends AbstractNpcAI
                     startQuestTimer("WAKEUP_ACTION", 50, _baium, null);
                     startQuestTimer("MANAGE_EARTHQUAKE", 2000, _baium, player);
                     startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
+                    npc.deleteMe();
                 }
                 break;
             }
