@@ -9,8 +9,7 @@ import org.l2j.gameserver.model.stats.TraitType;
  * @author JoeAlisson
  */
 public enum WeaponType implements ItemType {
-    NONE(TraitType.NONE), // TODO should be Shield
-    SHIELD(TraitType.NONE),
+    NONE(TraitType.NONE), // TODO should be Shields
     SWORD(TraitType.SWORD),
     TWO_HAND_SWORD(TraitType.TWO_HAND_SWORD),
     MAGIC_SWORD(TraitType.MAGIC_SWORD),

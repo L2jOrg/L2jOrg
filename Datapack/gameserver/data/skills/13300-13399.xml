@@ -168,10 +168,8 @@
                     <value level="3">-4.0</value>
                 </power>
             </magic-cost>
-            <resist-abnormal-by-category category="DEBUFF">
-                <power>
-                    <value level="5">7.0</value>
-                </power>
+            <resist-abnormal-by-category category="DEBUFF" start-level="5">
+                <power initial="7"/>
             </resist-abnormal-by-category>
             <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
                 <power>

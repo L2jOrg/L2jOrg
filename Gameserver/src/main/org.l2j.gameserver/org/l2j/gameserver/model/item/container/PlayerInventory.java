@@ -22,7 +22,6 @@ import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -800,12 +799,11 @@ public class PlayerInventory extends Inventory {
 
     /**
      * Reduce the number of arrows/bolts owned by the Player and send it Server->Client Packet InventoryUpdate or ItemList (to unequip if the last arrow was consumed).
-     *
      */
     @Override
     public void reduceArrowCount(EtcItemType type) {
         if ((type != EtcItemType.ARROW) && (type != EtcItemType.BOLT)) {
-            LOGGER.warn(type.toString(), " which is not arrow type passed to PlayerInstance.reduceArrowCount()");
+            LOGGER.warn("{} which is not arrow type passed to PlayerInstance.reduceArrowCount()", type);
             return;
         }
 
@@ -820,11 +818,7 @@ public class PlayerInventory extends Inventory {
             return;
         }
 
-        if ((WorldTimeController.getInstance().getGameTicks() % 10) == 0) {
-            updateItemCount(null, arrows, -1, owner, null);
-        } else {
-            updateItemCountNoDbUpdate(null, arrows, -1, owner, null);
-        }
+        updateItemCountNoDbUpdate(null, arrows, -1, owner, null);
     }
 
     /**

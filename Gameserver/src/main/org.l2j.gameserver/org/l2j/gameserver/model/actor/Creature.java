@@ -78,6 +78,7 @@ import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.lang.Math.max;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -1089,7 +1090,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 if (ts.getSharedReuseGroup() == group) {
                     final long stamp = ts.getStamp();
                     if (currentTime < stamp) {
-                        return Math.max(stamp - currentTime, 0);
+                        return max(stamp - currentTime, 0);
                     }
                 }
             }
@@ -3576,6 +3577,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
+        if (target.isImmobilized()) {
+            damage *= stats.getValue(Stat.DAMAGE_IMMOBILIZED, 1);
+            damage *= target.stats.getValue(Stat.DAMAGE_TAKEN_IMMOBILIZED, 1);
+        }
+
         // Target receives the damage.
         target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect);
 
@@ -3670,11 +3676,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Calculate PvP/PvE damage received. It is a post-attack stat.
         if (attacker != null) {
-            if (GameUtils.isPlayable(attacker)) {
-                value *= (100 + stats.getValue(Stat.PVP_DAMAGE_TAKEN)) / 100;
-            } else {
-                value *= (100 + stats.getValue(Stat.PVE_DAMAGE_TAKEN)) / 100;
+
+            if (GameUtils.isPlayable(attacker) && GameUtils.isPlayable(this)) {
+                value *= (100 + max(stats.getValue(Stat.PVP_DAMAGE_TAKEN), -80)) / 100;
+
+            } else if (attacker.isRaid() || attacker.isRaidMinion()) {
+                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN_RAID), -80)) / 100;
+                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
+
+            } else if (isMonster(attacker)) {
+                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER), -80)) / 100;
+                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
             }
+
+            value *= (100 + max(stats.getValue(Stat.DAMAGE_TAKEN), -80)) / 100;
 
             if(!reflect) {
                 elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
@@ -3688,7 +3703,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             value = Math.min(value, damageCap);
         }
 
-        value = Math.max(0, value);
+        value = max(0, value);
 
         if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0)) {
             _status.reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);

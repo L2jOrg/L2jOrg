@@ -988,7 +988,7 @@
                 <power initial="4.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-3.0"/>
+                <power initial="3"/>
             </resist-abnormal-by-category>
             <defence-trait>
                 <trait type="PULL">
@@ -1056,7 +1056,7 @@
                 <power initial="4.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-3.0"/>
+                <power initial="3"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>

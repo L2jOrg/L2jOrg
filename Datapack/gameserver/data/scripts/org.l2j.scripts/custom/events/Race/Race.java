@@ -3,6 +3,7 @@ package custom.events.Race;
 import events.ScriptEvent;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Npc;
@@ -10,7 +11,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.Broadcast;
@@ -228,7 +228,7 @@ public final class Race extends Event implements ScriptEvent
 			}
 			else
 			{
-				final int _number = Integer.valueOf(bypass.substring(5));
+				final int _number = Integer.parseInt(bypass.substring(5));
 				final Skill _sk = SkillEngine.getInstance().getSkill(_number, 1);
 				if (_sk != null)
 				{
@@ -245,7 +245,7 @@ public final class Race extends Event implements ScriptEvent
 		}
 		else if (bypass.startsWith("tele"))
 		{
-			if ((Integer.valueOf(bypass.substring(4)) > 0) && (_randspawn != null))
+			if ((Integer.parseInt(bypass.substring(4)) > 0) && (_randspawn != null))
 			{
 				activeChar.teleToLocation(_randspawn[0], _randspawn[1], _randspawn[2]);
 			}

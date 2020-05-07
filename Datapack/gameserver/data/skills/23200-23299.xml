@@ -22,7 +22,6 @@
             <magic-level initial="80"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <target/>
@@ -33,7 +32,7 @@
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
-                <power initial="150.0"/>
+                <power initial="250.0"/>
             </damage-over-time>
         </effects>
     </skill>
@@ -55,7 +54,7 @@
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
-                <power initial="150.0"/>
+                <power initial="250.0"/>
             </damage-over-time>
         </effects>
     </skill>

@@ -10,6 +10,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55801" name="Empire Cloak Augmentation" max-level="3">
         <!--
@@ -21,6 +29,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55802" name="Empire Cloak Augmentation" max-level="3">
         <!--
@@ -32,6 +48,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vampiric-attack chance="80">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </vampiric-attack>
+        </effects>
     </skill>
     <skill id="55803" name="Empire Cloak Augmentation" max-level="3">
         <!--
@@ -43,6 +67,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-3">
+                    <value level="2">-4</value>
+                    <value level="3">-5</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="55804" name="Empire Cloak Augmentation" max-level="3">
         <!--
@@ -54,6 +86,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <magic-cost>
+                <power initial="-3">
+                    <value level="2">-4</value>
+                    <value level="3">-5</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="55805" name="Empire Cloak Augmentation" max-level="3">
         <!--
@@ -65,6 +105,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="REFLECT_DAMAGE_PERCENT">
+                <power initial="7">
+                    <value level="2">8</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55806" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -83,6 +131,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="3">
+                    <value level="2">4</value>
+                    <value level="3">5</value>
+                    <value level="4">6</value>
+                    <value level="5">7</value>
+                    <value level="6">9</value>
+                    <value level="7">11</value>
+                    <value level="8">12</value>
+                    <value level="9">15</value>
+                    <value level="10">31</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55807" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -101,6 +164,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="3">
+                    <value level="2">4</value>
+                    <value level="3">5</value>
+                    <value level="4">7</value>
+                    <value level="5">8</value>
+                    <value level="6">10</value>
+                    <value level="7">11</value>
+                    <value level="8">13</value>
+                    <value level="9">16</value>
+                    <value level="10">33</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55808" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -119,6 +197,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">6</value>
+                    <value level="3">7</value>
+                    <value level="4">9</value>
+                    <value level="5">11</value>
+                    <value level="6">13</value>
+                    <value level="7">16</value>
+                    <value level="8">18</value>
+                    <value level="9">22</value>
+                    <value level="10">45</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55809" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -137,6 +230,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">6</value>
+                    <value level="3">7</value>
+                    <value level="4">9</value>
+                    <value level="5">11</value>
+                    <value level="6">13</value>
+                    <value level="7">16</value>
+                    <value level="8">18</value>
+                    <value level="9">22</value>
+                    <value level="10">45</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55810" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -148,6 +256,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="ACCURACY">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55811" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -159,6 +275,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55812" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -177,6 +301,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="49">
+                    <value level="2">58</value>
+                    <value level="3">76</value>
+                    <value level="4">94</value>
+                    <value level="5">112</value>
+                    <value level="6">135</value>
+                    <value level="7">157</value>
+                    <value level="8">180</value>
+                    <value level="9">225</value>
+                    <value level="10">450</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55813" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -195,6 +334,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="49">
+                    <value level="2">58</value>
+                    <value level="3">76</value>
+                    <value level="4">94</value>
+                    <value level="5">112</value>
+                    <value level="6">135</value>
+                    <value level="7">157</value>
+                    <value level="8">180</value>
+                    <value level="9">225</value>
+                    <value level="10">450</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55814" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -213,6 +367,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vital-stat-modify stat="MAX_CP">
+                <power initial="49">
+                    <value level="2">58</value>
+                    <value level="3">76</value>
+                    <value level="4">94</value>
+                    <value level="5">112</value>
+                    <value level="6">135</value>
+                    <value level="7">157</value>
+                    <value level="8">180</value>
+                    <value level="9">225</value>
+                    <value level="10">450</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55815" name="Empire Legendary Cloak Augmentation" max-level="2">
         <!-- STR +1 -->
@@ -220,6 +389,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="STR">
+                <power initial="1"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="55816" name="Empire Legendary Cloak Augmentation" max-level="2">
         <!-- CON +1 -->
@@ -227,6 +401,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="CON">
+                <power initial="1"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="55817" name="Empire Legendary Cloak Augmentation" max-level="2">
         <!-- MEN +1 -->
@@ -234,6 +413,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="MEN">
+                <power initial="1"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="55818" name="Empire Legendary Cloak Augmentation" max-level="2">
         <!-- DEX +1 -->
@@ -241,6 +425,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="DEX">
+                <power initial="1"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="55819" name="Empire Legendary Cloak Augmentation" max-level="2">
         <!-- WIT +1 -->
@@ -248,6 +437,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="WIT">
+                <power initial="1"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="55820" name="Empire Legendary Cloak Augmentation" max-level="2">
         <!-- INT +1 -->
@@ -255,6 +449,11 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <base-stat type="INT">
+                <power initial="1"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="55821" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -273,6 +472,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="0.8">
+                    <value level="2">1</value>
+                    <value level="3">1.3</value>
+                    <value level="4">1.6</value>
+                    <value level="5">1.9</value>
+                    <value level="6">2.2</value>
+                    <value level="7">2.6</value>
+                    <value level="8">3</value>
+                    <value level="9">3.7</value>
+                    <value level="10">7.5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55822" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -291,6 +505,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE_SKILL">
+                <power initial="0.9">
+                    <value level="2">1</value>
+                    <value level="3">1.3</value>
+                    <value level="4">1.6</value>
+                    <value level="5">1.9</value>
+                    <value level="6">2.3</value>
+                    <value level="7">2.7</value>
+                    <value level="8">3</value>
+                    <value level="9">3.8</value>
+                    <value level="10">7.5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55823" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -309,6 +538,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                    <value level="4">4</value>
+                    <value level="5">5</value>
+                    <value level="6">6</value>
+                    <value level="7">7</value>
+                    <value level="8">8</value>
+                    <value level="9">9</value>
+                    <value level="10">15</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55824" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -327,6 +571,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="0.9">
+                    <value level="2">1</value>
+                    <value level="3">1.3</value>
+                    <value level="4">1.6</value>
+                    <value level="5">1.9</value>
+                    <value level="6">2.3</value>
+                    <value level="7">2.7</value>
+                    <value level="8">3</value>
+                    <value level="9">3.8</value>
+                    <value level="10">7.5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55825" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -345,6 +604,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
+                <power initial="0.9">
+                    <value level="2">1</value>
+                    <value level="3">1.3</value>
+                    <value level="4">1.6</value>
+                    <value level="5">1.9</value>
+                    <value level="6">2.3</value>
+                    <value level="7">2.7</value>
+                    <value level="8">3</value>
+                    <value level="9">3.8</value>
+                    <value level="10">7.5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55826" name="Empire Legendary Cloak Augmentation" max-level="10">
         <!--
@@ -360,6 +634,21 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="1">
+                    <value level="2">1</value>
+                    <value level="3">2</value>
+                    <value level="4">2</value>
+                    <value level="5">3</value>
+                    <value level="6">3</value>
+                    <value level="7">4</value>
+                    <value level="8">5</value>
+                    <value level="9">6</value>
+                    <value level="10">7</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55827" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -377,6 +666,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="SHOCK">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55828" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -394,6 +699,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="HOLD">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55829" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -411,6 +732,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="BLEED">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55830" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -428,6 +765,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="PARALYZE">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55831" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -445,6 +798,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="DERANGEMENT">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55832" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -462,6 +831,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="SLEEP">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55833" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -479,6 +864,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="POISON">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55835" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -496,6 +897,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="PULL">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55836" name="Empire Legendary Cloak Augmentation" max-level="9">
         <!--
@@ -513,6 +930,22 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <attack-trait>
+                <trait type="TURN_STONE">
+                    <power initial="1.5">
+                        <value level="2">2.5</value>
+                        <value level="3">3</value>
+                        <value level="4">3.5</value>
+                        <value level="5">4.5</value>
+                        <value level="6">5</value>
+                        <value level="7">6</value>
+                        <value level="8">7.5</value>
+                        <value level="9">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+        </effects>
     </skill>
     <skill id="55837" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -524,6 +957,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55838" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -535,6 +976,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55839" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -546,6 +995,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="55840" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -557,6 +1014,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55841" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -568,6 +1033,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55842" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -579,6 +1052,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55843" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -590,6 +1071,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <speed>
+                <power initial="10">
+                    <value level="2">13</value>
+                    <value level="3">15</value>
+                </power>
+            </speed>
+        </effects>
     </skill>
     <skill id="55844" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -601,6 +1090,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55845" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -612,6 +1109,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55846" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -623,6 +1128,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55847" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -634,6 +1147,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55848" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -645,6 +1178,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55849" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -656,6 +1209,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55850" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -667,6 +1240,26 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55851" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -678,6 +1271,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55852" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -689,6 +1290,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55853" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -700,6 +1309,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <vampiric-attack chance="80">
+                <power initial="4">
+                    <value level="2">4.5</value>
+                    <value level="3">5</value>
+                </power>
+            </vampiric-attack>
+        </effects>
     </skill>
     <skill id="55854" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -711,6 +1328,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-3">
+                    <value level="2">-4</value>
+                    <value level="3">-5</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="55855" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -722,6 +1347,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-3">
+                    <value level="2">-4</value>
+                    <value level="3">-5</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="55856" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -733,6 +1366,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="REAL_DAMAGE_RESIST">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55857" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -744,6 +1385,20 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="REFLECT_SKILL_PHYSIC">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REFLECT_SKILL_MAGIC">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55858" name="Empire Legendary Cloak Augmentation">
         <!-- When using a single attack skill, there's a chance for Silence to be activated. -->
@@ -751,18 +1406,33 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-magic skill="55859" target="ENEMY">
+                <power initial="1"/>
+                <chance initial="10"/>
+                <types>PHYSIC MAGIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
-    <skill id="55859" name="Legendary Cloak - Silence" action="A1">
+    <skill id="55859" name="Legendary Cloak - Silence" debuff="true" action="A2">
         <!-- Skills are sealed momentarily because of Silence. Ignores debuff immunity. -->
         <icon initial="icon.skill1064"/>
-        <attributes property="PHYSIC">
+        <attributes triggered="true"  magic-critical-rate="5" property="PHYSIC" level-bonus-rate="20">
+            <magic-level initial="81"/>
             <cast-range initial="1000"/>
             <reuse initial="300000"/>
             <effect-point initial="-100"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
+            <effect-range initial="1400"/>
         </attributes>
-        <target/>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="SILENCE" visual="SILENCE">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="80"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+        </effects>
     </skill>
     <skill id="55860" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -774,8 +1444,17 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-damage skill="55861">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                </power>
+                <chance initial="5"/>
+            </trigger-skill-by-damage>
+        </effects>
     </skill>
-    <skill id="55861" name="Legendary Cloak - Barrier" max-level="3" action="A1">
+    <skill id="55861" name="Legendary Cloak - Barrier" max-level="3" action="A2">
         <!--
             level 1: Activates a shield that has a chance to absorb 1000 damage when hit for 10 sec.
             level 2: Activates a shield that has a chance to absorb 1500 damage when hit for 10 sec.
@@ -785,16 +1464,21 @@
             <value level="2">icon.skill1515</value>
             <value level="3">icon.skill1516</value>
         </icon>
-        <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
+        <attributes property="PHYSIC" triggered="true">
+            <magic-level initial="80"/>
+            <cast-range initial="1200"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <effect-point initial="867"/>
-            <effect-range initial="-1"/>
+            <effect-range initial="1400"/>
             <hit-time initial="1000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="BARRIER" visual="ABSORB_SHIELD">
+            <level initial="1"/>
+            <time initial="10"/>
+        </abnormal>
+        <!-- TODO Absorb Damage Shield Effect -->
     </skill>
     <skill id="55862" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -806,19 +1490,43 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">5</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="55863" name="Empire Legendary Cloak Augmentation" action="A1" type="MAGIC">
+    <skill id="55863" name="Empire Legendary Cloak Augmentation" action="A2" type="MAGIC">
         <!-- Resurrects from death with full recovery. Buffs/ debuffs stay when dying. However, the Noblesse Blessing and Lucky Charms disappear. -->
         <icon initial="icon.skill11826"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5" static-reuse="true">
+            <magic-level initial="79"/>
             <cast-range initial="600"/>
             <reuse initial="3600000"/>
             <effect-point initial="867"/>
-            <effect-range initial="-1"/>
+            <effect-range initial="900"/>
             <hit-time initial="4000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="RESURRECTION_SPECIAL">
+            <level initial="2"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <effect name="ResurrectionSpecial">
+                <power initial="100"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="55864" name="Empire Legendary Cloak Augmentation">
         <!-- Invincibility activated for 5 seconds if damage received when HP is below 30%%. This effect is only activated once every 5 minutes. -->
@@ -826,18 +1534,34 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <trigger-skill-by-damage skill="55865">
+                <power initial="1"/>
+                <chance initial="100"/>
+            </trigger-skill-by-damage>
+        </effects>
     </skill>
-    <skill id="55865" name="Legendary Cloak - Invincibility" action="A1">
+    <skill id="55865" name="Legendary Cloak - Invincibility" action="A2">
         <!-- Become invincible. -->
         <icon initial="icon.skill1917"/>
-        <attributes property="PHYSIC">
-            <cast-range initial="-1"/>
+        <attributes triggered="true" property="PHYSIC">
+            <magic-level initial="80"/>
             <reuse initial="300000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="200"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="SUB_TRIGGER_DEFENCE" visual="INVINCIBILITY">
+            <level initial="1"/>
+            <time initial="5"/>
+        </abnormal>
+        <conditions>
+            <remain-status amount="30" stat="HP"/>
+        </conditions>
+        <effects>
+            <damage-block block-hp="true" block-mp="true"/>
+            <effect name="DebuffBlock"/>
+        </effects>
     </skill>
     <skill id="55866" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -849,6 +1573,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE">
+                <power initial="50">
+                    <value level="2">125</value>
+                    <value level="3">200</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55867" name="Empire Legendary Cloak Augmentation" max-level="3">
         <!--
@@ -860,6 +1592,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="1">
+                    <value level="2">3</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55868" name="Scroll: Enchant Cloak" action="A1">
         <!-- none -->
@@ -1071,18 +1811,12 @@
         </attributes>
         <target/>
         <effects>
-            <base-stat type="CON">
-                <power initial="1.0"/>
-            </base-stat>
-            <base-stat type="STR">
-                <power initial="1.0"/>
-            </base-stat>
-            <base-stat type="INT">
-                <power initial="1.0"/>
-            </base-stat>
-            <base-stat type="MEN">
-                <power initial="1.0"/>
-            </base-stat>
+            <base-stats types="CON STR INT MEN">
+                <power initial="1"/>
+            </base-stats>
+            <base-stats types="DEX WIT" start-level="2">
+                <power initial="1"/>
+            </base-stats>
         </effects>
     </skill>
     <skill id="55886" name="Agathion Bracelet Resistance Increase" max-level="2">
@@ -1098,18 +1832,22 @@
             <defence-trait>
                 <trait type="SHOCK" >
                     <power initial="5">
+                        <value level="2">8</value>
                     </power>
                 </trait>
                 <trait type="SLEEP">
                     <power initial="5">
+                        <value level="2">8</value>
                     </power>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="5">
+                        <value level="2">8</value>
                     </power>
                 </trait>
                 <trait type="PARALYZE">
                     <power initial="5">
+                        <value level="2">8</value>
                     </power>
                 </trait>
             </defence-trait>
@@ -1127,14 +1865,15 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-		<!-- <abnormal type="EXP_SP_Q"> -->
-			<!-- <level initial="1"> -->
-                <!-- <value level="2">2</value> -->
-                <!-- <value level="3">3</value> -->
-                <!-- <value level="4">4</value> -->
-                <!-- <value level="5">5</value> -->
-            <!-- </level> -->
-        <!-- </abnormal> -->
+		 <abnormal type="EXP_SP_Q">
+			 <level initial="1">
+                 <value level="2">2</value>
+                 <value level="3">3</value>
+                 <value level="4">4</value>
+                 <value level="5">5</value>
+             </level>
+             <time initial="-1"/>
+         </abnormal>
 		<effects>
 			<stat-modify mode="PER" stat="REGENERATE_HP_RATE">
                 <power initial="4.0">
@@ -1208,7 +1947,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55888" name="Halloween Blessing" max-level="4" action="A1">
+    <skill id="55888" name="Halloween Blessing" max-level="4" action="A2">
         <!--
             level 1: Rico's Halloween buff.  Acquired XP/ SP +10%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
             level 2: Rico's Halloween buff.  Acquired XP/ SP +20%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. You can receive a Halloween Gift once the Lv. 3 buff expires.
@@ -1216,15 +1955,49 @@
             level 4: Rico's Halloween buff.
          -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5" blocked-on-olympiad="true" irreplacable="true" block-action-skill="true">
             <cast-range initial="900">
                 <value level="2">-1</value>
             </cast-range>
+            <reuse initial="3600000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <abnormal type="BR_EVENT_BUF1">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP" stop-level="3">
+                <power initial="10">
+                    <value level="2">20</value>
+                    <value level="3">30</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP" stop-level="3">
+                <power initial="10">
+                    <value level="2">20</value>
+                    <value level="3">30</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stop-level="3">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK" stop-level="3">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stop-level="3">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stop-level="3">
+                <power initial="5"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55889" name="Halloween Blessing" action="A1">
         <icon initial="icon.event_halloween_pumpkin_i00"/>
@@ -1236,9 +2009,9 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="55890" name="Halloween Gift" action="A1">
+    <skill id="55890" name="Halloween Gift" action="A1" type="STATIC">
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5">
             <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
@@ -1246,6 +2019,12 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <encumbered weight="20" slots="10"/>
+        </conditions>
+        <effects>
+            <restoration item="90136"/>
+        </effects>
     </skill>
     <skill id="55891" name="Treasure Chest of Forgotten Island" action="A1">
         <!-- none -->

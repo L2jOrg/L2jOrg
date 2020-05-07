@@ -325,83 +325,118 @@
         <!-- Release Agathion's Seal - Pisces. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <summon-agathion id="13562"/> <!-- Agathion Pisces -->
+        </effects>
     </skill>
     <skill id="51029" name="Summon Cancer Agathion" action="A1">
         <!-- Release Agathion's Seal - Cancer. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
-            <cast-range initial="-1"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <summon-agathion id="13564"/> <!-- Agathion Cancer -->
+        </effects>
     </skill>
     <skill id="51030" name="Teleport: Gludio" action="A1">
         <!-- Teleports to Gludio. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="-14225" y="123540" z="-3121"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51031" name="Teleport: Dion" action="A1">
         <!-- Teleports to Dion. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="18748" y="145437" z="-3132"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51032" name="Teleport: Giran" action="A1">
         <!-- Teleports to Giran. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="82698" y="148638" z="-3473"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51033" name="Teleport: Oren" action="A1">
         <!-- Teleports to Oren. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="82321" y="55139" z="-1529"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51034" name="Teleport: Hunter's Village" action="A1">
         <!-- Teleports to Hunter's Village. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="116589" y="76268" z="-2734"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51035" name="Summon Rudolph Agathion" action="A1">
         <!-- Release Agathion's Seal - Rudolph. -->
@@ -1182,49 +1217,77 @@
         <!-- Teleport to Forge of the Gods. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="169091" y="-116162" z="-2456"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51090" name="Teleport - Garden of Eva" action="A1">
         <!-- Teleport to Garden of Eva. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="82103" y="252409" z="-10588"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51091" name="Teleport - Wind Plateau" action="A1">
         <!-- Teleport to Wind Plateau. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="177347" y="173049" z="-1915"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51092" name="Teleport - Wall of Argos" action="A1">
         <!-- Teleport to Wall of Argos. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <cast-range initial="-1"/>
             <reuse initial="600000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+            <condition name="OpNeedAgathion"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="165054" y="-47861" z="-3560"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="51093" name="Fire Attack Strength">
         <!-- Increases Fire Attack Strength +100. -->
@@ -1233,9 +1296,7 @@
         </attributes>
         <target/>
         <abnormal>
-            <level initial="1"/>
             <time initial="1200"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="ELEMENTAL_SPIRIT_FIRE_ATTACK" stat-add="ELEMENTAL_SPIRIT_FIRE_ATTACK">

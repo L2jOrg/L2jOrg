@@ -26,6 +26,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
 
 /**
@@ -199,32 +200,22 @@ public final class AutoPlayEngine {
         }
 
         private void tryUseAutoShortcut(Player player) {
-            var nextShortcut = player.nextAutoShortcut();
-            if(nonNull(nextShortcut)) {
-                var  shortcut = nextShortcut;
-                do {
-                    if(useShortcut(player, shortcut)) {
-                        break;
-                    }
-                    shortcut = player.nextAutoShortcut();
-                } while (!nextShortcut.equals(shortcut));
-            }
+            doIfNonNull(player.nextAutoShortcut(), shortcut -> useShortcut(player, shortcut));
         }
 
-        private boolean useShortcut(Player player, Shortcut shortcut) {
-            return switch (shortcut.getType()) {
+        private void useShortcut(Player player, Shortcut shortcut) {
+            switch (shortcut.getType()) {
                 case SKILL -> autoUseSkill(player, shortcut);
                 case ITEM -> autoUseItem(player, shortcut);
                 case ACTION -> autoUseAction(player, shortcut);
-                default -> false;
-            };
+            }
         }
 
-        private boolean autoUseAction(Player player, Shortcut shortcut) {
+        private void autoUseAction(Player player, Shortcut shortcut) {
             var actionId = shortcut.getShortcutId();
             final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
             if (Arrays.binarySearch(allowedActions, actionId)  < 0) {
-                return false;
+                return;
             }
 
             var action = ActionManager.getInstance().getActionData(actionId);
@@ -234,36 +225,32 @@ public final class AutoPlayEngine {
                     handler.useAction(player, action, false, false);
                     player.onActionRequest();
                 }
-                return true;
             }
-            return false;
         }
 
-        private boolean autoUseItem(Player player, Shortcut shortcut) {
+        private void autoUseItem(Player player, Shortcut shortcut) {
             var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
             if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> !(player.isAffectedBySkill(s) || player.hasAbnormalType(s.getSkill().getAbnormalType())))) {
                 useItem(player, item);
-                return true;
             }
-            return false;
         }
 
-        private boolean autoUseSkill(Player player, Shortcut shortcut) {
+        private void autoUseSkill(Player player, Shortcut shortcut) {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
 
             if (skill.isBlockActionUseSkill()) {
-                return false;
+                return;
             }
 
             if(skill.isAutoTransformation() && player.isTransformed()) {
-                return false;
+                return;
             }
             if(skill.isAutoBuff() && (player.hasAbnormalType(skill.getAbnormalType()) || player.isAffectedBySkill(skill.getId()))) {
-                return false;
+                return;
             }
 
             player.onActionRequest();
-            return player.useMagic(skill, null, false, false);
+            player.useMagic(skill, null, false, false);
         }
 
         private boolean canBeTargeted(Player player, AutoPlaySettings setting, Monster monster) {

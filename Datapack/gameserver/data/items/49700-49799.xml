@@ -23,6 +23,9 @@
 		<restriction dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="50912" level="4" /> <!-- Talisman Bracelet Lv. 4 -->
+		</skills>
 	</armor>
 
 	<item id="49704" name="Talisman of Fate’s Fragment" type="NONE" icon="icon.etc_armor_soul_i00">

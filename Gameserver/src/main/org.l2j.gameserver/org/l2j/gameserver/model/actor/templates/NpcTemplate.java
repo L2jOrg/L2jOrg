@@ -165,7 +165,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _raidPoints = set.getDouble("raidPoints", 0);
         attributeExp = set.getLong("attribute_exp", 0);
 
-        _unique = set.getBoolean("unique", false);
+        _unique = set.getBoolean("unique", !_type.equals("Monster") && !_type.equals("RaidBoss") && !_type.equals("GrandBoss"));
         _attackable = set.getBoolean("attackable", true);
         _targetable = set.getBoolean("targetable", true);
         _talkable = set.getBoolean("talkable", true);

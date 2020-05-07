@@ -738,7 +738,7 @@
             level 2: Obtain 100 Shine Souls. Consumes 30 Spirit Ores.
          -->
         <icon initial="icon.skill55474"/>
-        <attributes auto-use="ACTIVE">
+        <attributes static-reuse="true" auto-use="ACTIVE">
             <cast-range initial="-1"/>
             <reuse initial="900000"/>
             <effect-range initial="-1"/>
@@ -865,7 +865,16 @@
             level 8: Attacks the enemy with bonus 4900 Power added to P. Atk. by swinging the sword. Requires an Ancient Sword or Two-handed Sword. Ignores Shield Defense. Over-hit.
          -->
         <icon initial="icon.skill0497"/>
-        <attributes auto-use="ACTIVE">
+        <attributes next-action="ATTACK" magic-critical-rate="5" auto-use="ACTIVE">
+            <magic-level initial="40">
+                <value level="2">50</value>
+                <value level="3">60</value>
+                <value level="4">70</value>
+                <value level="5">75</value>
+                <value level="6">80</value>
+                <value level="7">85</value>
+                <value level="8">90</value>
+            </magic-level>
             <cast-range initial="40"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
@@ -893,7 +902,25 @@
                 <value level="8">70</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
+        <conditions>
+            <weapon>
+                <type>ANCIENT_SWORD TWO_HAND_SWORD</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physical-attack over-hit="true" ignore-shield="true">
+                <power initial="500">
+                    <value level="2">850</value>
+                    <value level="3">1360</value>
+                    <value level="4">2040</value>
+                    <value level="5">2856</value>
+                    <value level="6">3712</value>
+                    <value level="7">4455</value>
+                    <value level="8">4900</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45156" name="Jin - Soul Impact" max-level="8" action="A1">
         <!--
@@ -947,7 +974,14 @@
             level 6: Attacks enemies in front with 4016 Power. Requires Ancient Sword/Two-handed Sword. Ignores Shield Defense. Over-hit is possible.
          -->
         <icon initial="icon.skill0526"/>
-        <attributes auto-use="ACTIVE">
+        <attributes next-action="ATTACK" magic-critical-rate="5" auto-use="ACTIVE">
+            <magic-level initial="60">
+                <value level="2">70</value>
+                <value level="3">75</value>
+                <value level="4">80</value>
+                <value level="5">85</value>
+                <value level="6">90</value>
+            </magic-level>
             <cast-range initial="40"/>
             <reuse initial="15000"/>
             <cool-time initial="720"/>
@@ -958,9 +992,8 @@
                 <value level="5">-1295</value>
                 <value level="6">-1370</value>
             </effect-point>
-            <effect-range initial="-1"/>
+            <effect-range initial="400"/>
             <hit-time initial="1200"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="72">
@@ -971,7 +1004,25 @@
                 <value level="6">105</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="7" range="400">
+            <fan-range start-angle="0" radius="400" angle="90"/>
+        </target>
+        <conditions>
+            <weapon>
+                <type>ANCIENT_SWORD TWO_HAND_SWORD</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physical-attack over-hit="true" ignore-shield="true">
+                <power initial="1000">
+                    <value level="2">2520</value>
+                    <value level="3">3024</value>
+                    <value level="4">3477</value>
+                    <value level="5">3825</value>
+                    <value level="6">4016</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45158" name="Jin - Enuma Elish" max-level="6" action="A1">
         <!--
@@ -1009,14 +1060,14 @@
         </consume>
         <target/>
     </skill>
-    <skill id="45159" name="Rush Impact" max-level="3" action="A1">
+    <skill id="45159" name="Rush Impact" max-level="3" debuff="true" action="DA2">
         <!--
             level 1: Rushes forward to attack frontal enemies with bonus 1500 Power, and stuns for 3 seconds. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword.
             level 2: Rushes forward to attack frontal enemies with bonus 2100 Power, and stuns for 3 seconds. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword.
             level 3: Rushes forward to attack frontal enemies with bonus 2520 Power, and stuns for 3 seconds. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword.
          -->
         <icon initial="icon.skill0793"/>
-        <attributes auto-use="ACTIVE">
+        <attributes property="PHYSIC" level-bonus-rate="20" next-action="ATTACK" trait="SHOCK" auto-use="ACTIVE">
             <cast-range initial="500">
                 <value level="2">600</value>
                 <value level="3">750</value>
@@ -1027,7 +1078,7 @@
                 <value level="2">-700</value>
                 <value level="3">-800</value>
             </effect-point>
-            <effect-range initial="-1"/>
+            <effect-range initial="800"/>
             <hit-time initial="800"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1037,7 +1088,34 @@
                 <value level="3">200</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="7" range="600">
+            <fan-range start-angle="0" radius="600" angle="90"/>
+        </target>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="3"/>
+            <chance initial="60"/>
+        </abnormal>
+        <conditions>
+            <weapon>
+                <type>ANCIENT_SWORD SWORD BLUNT SPEAR FIST DUAL_BLUNT DUAL</type>
+            </weapon>
+            <check-range min="200"/>
+        </conditions>
+        <effects>
+            <physical-attack>
+                <power initial="1500">
+                    <value level="2">2100</value>
+                    <value level="3">2520</value>
+                </power>
+            </physical-attack>
+            <block-all-actions>
+                <allowed-skills>35016</allowed-skills>
+            </block-all-actions>
+        </effects>
     </skill>
     <skill id="45160" name="Soul Slash" max-level="10" action="A1">
         <!--
@@ -1053,7 +1131,18 @@
             level 10: Attacks the enemy with bonus 4190 Power added to P. Atk. Requires a Rapier. Critical. Ignores Shield Defense. Over-hit.
          -->
         <icon initial="icon.skill0505"/>
-        <attributes auto-use="ACTIVE">
+        <attributes next-action="ATTACK" auto-use="ACTIVE">
+            <magic-level initial="20">
+                <value level="2">30</value>
+                <value level="3">40</value>
+                <value level="4">50</value>
+                <value level="5">60</value>
+                <value level="6">70</value>
+                <value level="7">75</value>
+                <value level="8">80</value>
+                <value level="9">85</value>
+                <value level="10">90</value>
+            </magic-level>
             <cast-range initial="120"/>
             <reuse initial="2000"/>
             <effect-point initial="-120">
@@ -1067,7 +1156,7 @@
                 <value level="9">-445</value>
                 <value level="10">-470</value>
             </effect-point>
-            <effect-range initial="-1"/>
+            <effect-range initial="400"/>
             <hit-time initial="1800"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1084,9 +1173,30 @@
                 <value level="10">70</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
+        <conditions>
+            <weapon>
+                <type>RAPIER</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <fatal-blow over-hit="true" chance-boost="300">
+                <power initial="125">
+                    <value level="1">125</value>
+                    <value level="2">237</value>
+                    <value level="3">427</value>
+                    <value level="4">726</value>
+                    <value level="5">1162</value>
+                    <value level="6">1744</value>
+                    <value level="7">2441</value>
+                    <value level="8">3174</value>
+                    <value level="9">3809</value>
+                    <value level="10">4190</value>
+                </power>
+            </fatal-blow>
+        </effects>
     </skill>
-    <skill id="45161" name="Soul Thrust" max-level="8" action="A1">
+    <skill id="45161" name="Soul Thrust" max-level="8" debuff="true" action="A2">
         <!--
             level 1: Attacks the enemy two times with bonus 259 Power added to P. Atk. Requires a Rapier. Has a chance to inflict additional magic damage and decrease M. Def. by 10%%. Has a chance to push the enemy in PvE. Critical. Ignores Shield Defense. Over-hit.
             level 2: Attacks the enemy two times with bonus 440 Power added to P. Atk. Requires a Rapier. Has a chance to inflict additional magic damage and decrease M. Def. by 10%%. Has a chance to push the enemy in PvE. Critical. Ignores Shield Defense. Over-hit.
@@ -1098,7 +1208,16 @@
             level 8: Attacks the enemy two times with bonus 2536 Power added to P. Atk. Requires a Rapier. Has a chance to inflict additional magic damage and decrease M. Def. by 10%%. Has a chance to push the enemy in PvE. Critical. Ignores Shield Defense. Over-hit.
          -->
         <icon initial="icon.skill0478"/>
-        <attributes auto-use="ACTIVE">
+        <attributes level-bonus-rate="20" next-action="ATTACK" auto-use="ACTIVE">
+            <magic-level initial="40">
+                <value level="2">50</value>
+                <value level="3">60</value>
+                <value level="4">70</value>
+                <value level="5">75</value>
+                <value level="6">80</value>
+                <value level="7">85</value>
+                <value level="8">90</value>
+            </magic-level>
             <cast-range initial="120"/>
             <reuse initial="3000"/>
             <effect-point initial="-220">
@@ -1110,7 +1229,7 @@
                 <value level="7">-445</value>
                 <value level="8">-470</value>
             </effect-point>
-            <effect-range initial="-1"/>
+            <effect-range initial="400"/>
             <hit-time initial="2000"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1125,7 +1244,36 @@
                 <value level="8">70</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
+        <abnormal type="KNOCKDOWN">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="80"/>
+        </abnormal>
+        <conditions>
+            <weapon>
+                <type>RAPIER</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physical-attack ignore-shield="true" critical-chance="15" over-hit="true">
+                <power initial="259">
+                    <value level="2">440</value>
+                    <value level="3">704</value>
+                    <value level="4">1056</value>
+                    <value level="5">1478</value>
+                    <value level="6">1921</value>
+                    <value level="7">2305</value>
+                    <value level="8">2536</value>
+                </power>
+            </physical-attack>
+            <knockback speed="400">
+                <power initial="50"/>
+            </knockback>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="-10"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45162" name="Jin - Soul Thrust" max-level="8" action="A1">
         <!--
@@ -1180,7 +1328,17 @@
             level 8: Attacks the enemy with bonus 165 Power added to M. Atk. Requires a Rapier.
          -->
         <icon initial="icon.skill11361"/>
-        <attributes auto-use="ACTIVE">
+        <attributes magic-critical-rate="5" auto-use="ACTIVE">
+            <magic-level initial="40">
+                <value level="1">40</value>
+                <value level="2">50</value>
+                <value level="3">60</value>
+                <value level="4">70</value>
+                <value level="5">75</value>
+                <value level="6">80</value>
+                <value level="7">85</value>
+                <value level="8">90</value>
+            </magic-level>
             <cast-range initial="600"/>
             <reuse initial="2000"/>
             <effect-point initial="-500">
@@ -1192,7 +1350,7 @@
                 <value level="7">-950</value>
                 <value level="8">-1000</value>
             </effect-point>
-            <effect-range initial="-1"/>
+            <effect-range initial="1200"/>
             <hit-time initial="1500"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1207,12 +1365,25 @@
                 <value level="8">52</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
         <conditions>
             <weapon>
                 <type>RAPIER</type>
             </weapon>
         </conditions>
+        <effects>
+            <magical-attack>
+                <power initial="80">
+                    <value level="2">90</value>
+                    <value level="3">105</value>
+                    <value level="4">120</value>
+                    <value level="5">130</value>
+                    <value level="6">140</value>
+                    <value level="7">150</value>
+                    <value level="8">165</value>
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="45164" name="Jin Soul Spark" max-level="8" action="A1" type="MAGIC">
         <!--
@@ -1428,7 +1599,7 @@
             level 10: Fires two arrows with bonus 3802 Power. Requires a bow. Critical. Over-hit.
          -->
         <icon initial="icon.skill0487"/>
-        <attributes auto-use="ACTIVE">
+        <attributes magic-critical-rate="5" auto-use="ACTIVE">
             <cast-range initial="900"/>
             <reuse initial="3000"/>
             <cool-time initial="1000"/>
@@ -1443,7 +1614,7 @@
                 <value level="9">-445</value>
                 <value level="10">-470</value>
             </effect-point>
-            <effect-range initial="-1"/>
+            <effect-range initial="1400"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
         </attributes>
@@ -1460,12 +1631,27 @@
                 <value level="10">110</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
         <conditions>
             <weapon>
                 <type>BOW</type>
             </weapon>
         </conditions>
+        <effects>
+            <physical-attack over-hit="true" critical-chance="25">
+                <power initial="150">
+                    <value level="2">375</value>
+                    <value level="3">750</value>
+                    <value level="4">1275</value>
+                    <value level="5">2040</value>
+                    <value level="6">2856</value>
+                    <value level="7">3284</value>
+                    <value level="8">3448</value>
+                    <value level="9">3621</value>
+                    <value level="10">3802</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45169" name="Jin- Twin Shot" max-level="10" action="A1">
         <!--
@@ -1523,7 +1709,7 @@
     <skill id="45170" name="Multiple Shot" max-level="8" action="A1">
         <!-- Attacks multiple enemies in the front with bonus 11030 Power. Critical. Over-hit. Requires a bow. -->
         <icon initial="icon.skill10260"/>
-        <attributes auto-use="ACTIVE">
+        <attributes magic-critical-rate="5" auto-use="ACTIVE">
             <cast-range initial="900"/>
             <reuse initial="3000"/>
             <cool-time initial="1000"/>
@@ -1551,12 +1737,27 @@
                 <value level="8">165</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="8" affect-random="1" range="900">
+            <fan-range start-angle="0" radius="900" angle="60"/>
+        </target>
         <conditions>
             <weapon>
                 <type>BOW</type>
             </weapon>
         </conditions>
+        <effects>
+            <physical-attack over-hit="true" critical-chance="15">
+                <power initial="340">
+                    <value level="2">544</value>
+                    <value level="3">816</value>
+                    <value level="4">1142</value>
+                    <value level="5">1370</value>
+                    <value level="6">1507</value>
+                    <value level="7">1583</value>
+                    <value level="8">1662</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45171" name="Jin - Multiple Shot" max-level="8" action="A1">
         <!--
@@ -1618,7 +1819,7 @@
             level 9: For 20 minutes, P. Accuracy +10, P. Atk. +250, Atk. Spd. +50, P. Skill Power +15% when equipped with a bow, and activates a debuff that decreases the enemy’s Bow Resistance when attacking.
          -->
         <icon initial="icon.skill10763"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes magic-critical-rate="5" auto-use="BUFF">
             <magic-level initial="60">
                 <value level="2">62</value>
                 <value level="3">64</value>
@@ -1737,21 +1938,21 @@
             </trigger-skill-by-magic>
         </effects>
     </skill>
-    <skill id="45173" name="Aiming Target" max-level="3" debuff="true" action="A1">
+    <skill id="45173" name="Aiming Target" max-level="3" debuff="true" action="A2">
         <!--
             level 1: Bow Resistance -10%.
             level 2: Bow Resistance -20%.
             level 3: Bow Resistance -30%.
          -->
         <icon initial="icon.skill0506"/>
-        <attributes property="PHYSIC">
+        <attributes triggered="true" property="PHYSIC">
             <cast-range initial="900"/>
             <reuse initial="10000"/>
             <effect-point initial="-400">
                 <value level="2">-500</value>
                 <value level="3">-600</value>
             </effect-point>
-            <effect-range initial="-1"/>
+            <effect-range initial="1400"/>
             <hit-time initial="1000"/>
         </attributes>
         <target type="ENEMY"/>
@@ -2278,7 +2479,7 @@
             level 4: Triggered when gaining XP.
          -->
         <icon initial="icon.skill0000"/>
-        <attributes auto-use="ACTIVE">
+        <attributes triggered="true" auto-use="ACTIVE">
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2327,22 +2528,29 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="45183" name="Soul Chase" action="A1">
+    <skill id="45183" name="Soul Chase" action="DA1">
         <!-- Chases the enemy. Can be used when the distance from the enemy is greater than 100. -->
         <icon initial="icon.skill0479"/>
-        <attributes auto-use="ACTIVE">
+        <attributes next-action="ATTACK" magic-critical-rate="5" auto-use="ACTIVE">
+            <magic-level initial="40"/>
             <cast-range initial="300"/>
             <reuse initial="3000"/>
             <cool-time initial="200"/>
             <effect-point initial="-300"/>
-            <effect-range initial="-1"/>
+            <effect-range initial="600"/>
             <hit-time initial="800"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="35"/>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
+        <conditions>
+            <check-range min="100"/>
+        </conditions>
+        <effects>
+            <effect name="TeleportToTarget"/>
+        </effects>
     </skill>
     <skill id="45184" name="Potion Mastery" max-level="3">
         <!--
@@ -2354,6 +2562,14 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>
+            <stat-modify  mode="PER" stat="ADDITIONAL_POTION_HP">
+                <power initial="10">
+                    <value level="2">20</value>
+                    <value level="3">30</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45185" name="Fatal Slash">
         <!-- Has a chance to make an additional attack. -->

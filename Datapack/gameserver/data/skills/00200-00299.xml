@@ -668,7 +668,9 @@
             </stat-modify>
 			<trigger-skill-by-attack skill="1612" start-level="11">
                 <power initial="1.0"/>
-                <chance initial="30.0"/>
+                <chance initial="10">
+                    <value level="11">20</value>
+                </chance>
                 <min-damage initial="1.0"/>
                 <weapons>FIST</weapons>
             </trigger-skill-by-attack>
@@ -1094,10 +1096,10 @@
             <effect name="HealOverTime" ticks="2">
                 <power initial="-12.0"/>
             </effect>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="15.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power>
 					<value level="2">5.0</value>
                     <value level="3">10.0</value>
@@ -2060,7 +2062,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="1.3">
                     <value level="2">2.2</value>
                     <value level="3">3.2</value>
@@ -2125,7 +2127,7 @@
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="7.0">
                     <value level="11">9.0</value>
                     <value level="48">12.0</value>
@@ -2134,7 +2136,7 @@
                     <value level="61">15.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
                 <power initial="-15.0">
                     <value level="11">-25.0</value>
@@ -2838,7 +2840,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="1.5">
                     <value level="2">2.8</value>
                     <value level="3">4.5</value>
@@ -2890,6 +2892,11 @@
                     <value level="49">104.0</value>
                     <value level="50">107.0</value>
                     <value level="51">110.0</value>
+                    <value level="52">115.0</value>
+                    <value level="53">120.0</value>
+                    <value level="54">130.0</value>
+                    <value level="55">140.0</value>
+                    <value level="56">150.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_ATTACK">
@@ -2944,10 +2951,15 @@
                     <value level="49">126.0</value>
                     <value level="50">129.0</value>
                     <value level="51">132.0</value>
+                    <value level="52">140</value>
+                    <value level="53">155</value>
+                    <value level="54">170</value>
+                    <value level="55">185</value>
+                    <value level="56">200</value>
                 </power>
             </stat-modify>
 			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="-5"/>
+                <power initial="-30"/>
                 <weapon-type>BOW SPEAR</weapon-type>
             </stat-modify>
         </effects>
@@ -3016,7 +3028,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="1.5">
                     <value level="2">2.8</value>
                     <value level="3">4.5</value>
@@ -3133,12 +3145,12 @@
                     <value level="55">185.0</value>
                     <value level="56">200.0</value>
                 </power>
-            </stat-modify>          
+            </stat-modify>
 			<stat-modify start-level="43" stat="ABSORB_MANA_DAMAGE_PERCENT">
                 <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="-5"/>
+                <power initial="-30"/>
                 <weapon-type>BOW SPEAR</weapon-type>
             </stat-modify>
         </effects>
@@ -4342,7 +4354,9 @@
                     <value level="45">3005.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
         </effects>
     </skill>
     <skill id="261" name="Triple Sonic Slash" max-level="30" action="A1">
@@ -4488,7 +4502,7 @@
             </weapon>
         </conditions>
         <effects>
-            <energy-attack consume-charges="4" critical-chance="15" ignore-shield="true" over-hit="true" physical-defense-mod="1.0">
+            <energy-attack consume-charges="3" critical-chance="15" ignore-shield="true" over-hit="true" physical-defense-mod="1.0">
                 <power initial="1948.0">
                     <value level="2">2042.0</value>
                     <value level="3">2138.0</value>
@@ -4511,14 +4525,14 @@
                     <value level="20">4029.0</value>
                     <value level="21">4146.0</value>
                     <value level="22">4262.0</value>
-                    <value level="23">4299.0</value>
-                    <value level="24">4415.0</value>
-                    <value level="25">4645.0</value>
-                    <value level="26">4875.0</value>
-                    <value level="27">5106.0</value>
-                    <value level="28">22531.0</value>
-                    <value level="29">26017.0</value>
-                    <value level="30">29503.0</value>
+                    <value level="23">4377.0</value>
+                    <value level="24">4491.0</value>
+                    <value level="25">4604.0</value>
+                    <value level="26">4827.0</value>
+                    <value level="27">4937.0</value>
+                    <value level="28">5046.0</value>
+                    <value level="29">5154.0</value>
+                    <value level="30">5261.0</value>
                 </power>
             </energy-attack>
         </effects>
@@ -4977,10 +4991,6 @@
                     <value level="45">6593.0</value>
                 </power>
             </fatal-blow>
-            <lethal>
-                <power/>
-                <half-power initial="10.0"/>
-            </lethal>
         </effects>
     </skill>
     <skill id="264" name="Song of Earth" max-level="2" action="A2" type="DANCE">
@@ -5657,7 +5667,7 @@
         <abnormal type="PARALYZE" visual="PARALYZE">
             <level initial="2"/>
             <time initial="5"/>
-            <chance initial="50"/>
+            <chance initial="40"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -5673,7 +5683,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016</allowed-skills>
+                <allowed-skills>35016 35045</allowed-skills>
             </block-all-actions>
             <defence-trait>
                 <trait type="PARALYZE">
@@ -5889,7 +5899,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack ignore-shield="true" over-hit="true">
                 <power initial="517.0">
                     <value level="2">549.0</value>
                     <value level="3">583.0</value>
@@ -6199,7 +6209,9 @@
                     <value level="45">3005.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
         </effects>
     </skill>
     <skill id="282" name="Puma Spirit Totem" action="A2">
@@ -6296,11 +6308,12 @@
             </mana>
             <item initial="1459"/>
             <item-count initial="1">
-                <value level="2">3</value>
-                <value level="4">2</value>
-                <value level="5">4</value>
+                <value level="2">2</value>
+                <value level="4">3</value>
+                <value level="6">4</value>
                 <value level="8">7</value>
                 <value level="9">8</value>
+                <value level="10">9</value>
             </item-count>
         </consume>
         <target/>
@@ -6708,9 +6721,42 @@
             <time initial="20"/>
             <chance initial="-1"/>
         </abnormal>
+        <conditions>
+            <weapon>
+                <type>SWORD BLUNT SPEAR</type>
+            </weapon>
+        </conditions>
         <effects>
             <defence-trait>
                 <trait type="SPEAR">
+                    <power initial="-10">
+                        <value level="2">-11</value>
+                        <value level="3">-12</value>
+                        <value level="4">-13</value>
+                        <value level="5">-14</value>
+                        <value level="6">-15</value>
+                        <value level="7">-16</value>
+                        <value level="8">-17</value>
+                        <value level="9">-18</value>
+                        <value level="10">-19</value>
+                        <value level="11">-20</value>
+                    </power>
+                </trait>
+                <trait type="BLUNT">
+                    <power initial="-10">
+                        <value level="2">-11</value>
+                        <value level="3">-12</value>
+                        <value level="4">-13</value>
+                        <value level="5">-14</value>
+                        <value level="6">-15</value>
+                        <value level="7">-16</value>
+                        <value level="8">-17</value>
+                        <value level="9">-18</value>
+                        <value level="10">-19</value>
+                        <value level="11">-20</value>
+                    </power>
+                </trait>
+                <trait type="SWORD">
                     <power initial="-10">
                         <value level="2">-11</value>
                         <value level="3">-12</value>
@@ -6790,6 +6836,12 @@
                     </power>
                 </trait>
             </defence-trait>
+            <resist-dispel-by-category category="BUFF">
+                <power initial="40">
+                    <value level="2">60</value>
+                    <value level="3">80</value>
+                </power>
+            </resist-dispel-by-category>
         </effects>
     </skill>
     <skill id="288" name="Guard Stance" max-level="5" action="T">
@@ -7388,7 +7440,7 @@
     <skill id="299" name="Summon Wild Hog Cannon" action="A1">
         <!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it can inflict ranged attacks while immobile. Switching modes takes 30 seconds. Consumes 70 B-grade Crystals when summoned. -->
         <icon initial="icon.skill0299"/>
-        <attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="58"/>
             <cast-range initial="-1"/>
             <reuse initial="5000"/>
@@ -7408,7 +7460,7 @@
             <condition name="CanSummon"/>
         </conditions>
         <effects>
-            <summon consume-item="2132" life-time="-1">
+            <summon consume-item="2132" life-time="1200">
                 <npc initial="14768.0"/>
                 <consume-count initial="20.0"/>
             </summon>

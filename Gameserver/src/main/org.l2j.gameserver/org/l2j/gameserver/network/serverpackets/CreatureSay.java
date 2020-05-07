@@ -1,7 +1,9 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.MentorManager;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
@@ -26,6 +28,7 @@ public final class CreatureSay extends ServerPacket {
     private int charLevel = -1;
     private List<String> npcStringParameters;
     private int rank;
+    private int castleId;
 
     public CreatureSay(Player sender, Player receiver, String name, ChatType type, String text) {
         this(sender, type, text);
@@ -33,6 +36,7 @@ public final class CreatureSay extends ServerPacket {
         senderName = name;
         charLevel = sender.getLevel();
         rank = sender.getRank();
+        castleId = Util.zeroIfNullOrElse(sender.getClan(), Clan::getCastleId);
 
         if (nonNull(receiver)) {
             if (receiver.getFriendList().contains(sender.getObjectId())) {
@@ -106,7 +110,8 @@ public final class CreatureSay extends ServerPacket {
                 writeString(s);
             }
         }
-        writeShort(rank);
+        writeByte(rank);
+        writeByte(castleId);
     }
 
     @Override

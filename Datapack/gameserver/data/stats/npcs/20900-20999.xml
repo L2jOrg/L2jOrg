@@ -2032,6 +2032,10 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
+            <minions name="Privates">
+                <npc id="20945" count="2" respawnTime="0" weightPoint="1" /> <!-- Cadeine -->
+                <npc id="20946" count="2" respawnTime="0" weightPoint="1" /> <!-- Sanhidro -->
+            </minions>
             <skill name="PhysicalSpecial" id="4032" level="5"/> <!-- NPC Strike -->
         </parameters>
         <race>GIANT</race>
@@ -2168,7 +2172,7 @@
             <height normal="28"/>
         </collision>
     </npc>
-    <npc id="20949" level="58" type="Folk" name="Luminun">
+    <npc id="20949" level="58" type="Monster" name="Luminun">
         <!-- Confirmed CT2.5 -->
         <parameters>
             <param name="MoveAroundSocial" value="100"/>
@@ -2256,6 +2260,10 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
+            <minions name="Privates">
+                <npc id="20948" count="2" respawnTime="0" weightPoint="1" /> <!-- Bartal -->
+                <npc id="20949" count="2" respawnTime="0" weightPoint="1" /> <!-- Luminun -->
+            </minions>
             <skill name="PhysicalSpecial" id="4073" level="6"/> <!-- Stun -->
         </parameters>
         <race>GIANT</race>
@@ -2473,6 +2481,10 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
+            <minions name="Privates">
+                <npc id="20951" count="2" respawnTime="0" weightPoint="1" /> <!-- Pobby's Maid -->
+                <npc id="20952" count="2" respawnTime="0" weightPoint="1" /> <!-- Pobby's Escort -->
+            </minions>
             <skill name="PhysicalSpecial" id="4073" level="5"/> <!-- Stun -->
         </parameters>
         <race>PLANT</race>

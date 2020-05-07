@@ -518,6 +518,11 @@
             <xs:enumeration value="PVE_RAID_MAGICAL_SKILL_DEFENCE"/>
             <xs:enumeration value="PVP_DAMAGE_TAKEN"/>
             <xs:enumeration value="PVE_DAMAGE_TAKEN"/>
+            <xs:enumeration value="PVE_DAMAGE_TAKEN_MONSTER"/>
+            <xs:enumeration value="PVE_DAMAGE_TAKEN_RAID"/>
+            <xs:enumeration value="DAMAGE_TAKEN"/>
+            <xs:enumeration value="DAMAGE_IMMOBILIZED"/>
+            <xs:enumeration value="DAMAGE_TAKEN_IMMOBILIZED"/>
             <xs:enumeration value="MAGIC_CRITICAL_DAMAGE"/>
             <xs:enumeration value="PHYSICAL_SKILL_POWER"/>
             <xs:enumeration value="MAGICAL_SKILL_POWER"/>
@@ -582,6 +587,7 @@
             <xs:enumeration value="MAGIC_SUCCESS_RES"/>
             <xs:enumeration value="ABNORMAL_RESIST_PHYSICAL"/>
             <xs:enumeration value="ABNORMAL_RESIST_MAGICAL"/>
+            <xs:enumeration value="REAL_DAMAGE_RESIST"/>
             <xs:enumeration value="FIRE_POWER"/>
             <xs:enumeration value="WATER_POWER"/>
             <xs:enumeration value="WIND_POWER"/>
@@ -654,7 +660,6 @@
     <xs:simpleType name="WeaponType">
         <xs:restriction base="xs:token">
             <xs:enumeration value="NONE"/>
-            <xs:enumeration value="SHIELD"/>
             <xs:enumeration value="SWORD"/>
             <xs:enumeration value="TWO_HAND_SWORD"/>
             <xs:enumeration value="MAGIC_SWORD"/>

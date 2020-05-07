@@ -732,7 +732,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="32000" value="-1"/>  <!-- Rice Cake of Fighting Spirit -->
+			<skill id="32000"/>  <!-- Rice Cake of Fighting Spirit -->
 		</skill-reducer>
 	</item>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="50912" name="Talisman Bracelet" max-level="6">
-        <!-- Only talisman slots were implemented. TODO: implements effects after level 4? But it is used in l2 classic?
+        <!--
             level 1: 1 Talisman can be equipped.
             level 2: 2 Talisman can be equipped.
             level 3: 3 Talisman can be equipped.
@@ -29,6 +29,31 @@
                     <value level="6">6.0</value>
                 </power>
             </effect>
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE" start-level="4">
+                <power initial="7">
+                    <value level="5">15</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE" start-level="4">
+                <power initial="7">
+                    <value level="5">15</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="ACCURACY" start-level="4">
+                <power initial="1">
+                    <value level="5">2</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC" start-level="4">
+                <power initial="1">
+                    <value level="5">2</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="WEIGHT_LIMIT" start-level="4">
+                <power initial="7000">
+                    <value level="5">10000</value>
+                </power>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="50913" name="Eva's Talisman" max-level="11">

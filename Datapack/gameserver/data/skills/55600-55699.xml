@@ -1057,7 +1057,7 @@
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="30.0"/>
             </stat-modify>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="5.0"/>
             </vampiric-attack>
         </effects>

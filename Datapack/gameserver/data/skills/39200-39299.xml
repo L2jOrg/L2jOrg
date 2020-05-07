@@ -478,7 +478,7 @@
                 <power initial="5.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -511,7 +511,7 @@
                 <power initial="5.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -547,7 +547,7 @@
                 <power initial="10.0"/>
             </speed>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -664,7 +664,7 @@
                 <power initial="5.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -702,7 +702,7 @@
                 <power initial="5.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <magic-cost>
                 <power initial="-3.0"/>
@@ -746,7 +746,7 @@
                 <power initial="10.0"/>
             </speed>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -1316,7 +1316,7 @@
 					<value level="2">40.0</value>
 				</power>
             </stat-modify>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="5.0">
 					<value level="2">7.0</value>
 				</power>
@@ -1439,7 +1439,7 @@
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="30.0"/>
             </stat-modify>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="5.0"/>
             </vampiric-attack>
         </effects>

@@ -72,7 +72,6 @@
             </effect-point>
             <effect-range initial="400"/>
             <hit-time initial="1300"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -110,7 +109,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>SWORD BLUNT</type>
+                <type>BLUNT SWORD DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -137,14 +136,15 @@
                     <value level="20">2041.0</value>
                 </power>
             </physical-attack>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="-20.0">
                     <value level="6">-30.0</value>
                     <value level="11">-40.0</value>
                     <value level="15">-50.0</value>
                     <value level="18">-55.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
+            <effect name="GetAgro"/>
         </effects>
     </skill>
     <skill id="401" name="Judgment" max-level="20" debuff="true" action="A2">
@@ -469,11 +469,6 @@
         </abnormal>
         <effects>
             <effect name="Root"/>
-            <defence-trait>
-                <trait type="HOLD">
-                    <power initial="100.0"/>
-                </trait>
-            </defence-trait>
         </effects>
     </skill>
     <skill id="406" name="Angelic Archon" max-level="3" action="A2">
@@ -514,9 +509,9 @@
         </abnormal>
         <effects>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-20.0">
-                    <value level="2">-30.0</value>
-                    <value level="3">-40.0</value>
+                <power initial="20.0">
+                    <value level="2">30.0</value>
+                    <value level="3">40.0</value>
                 </power>
             </resist-dispel-by-category>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
@@ -524,14 +519,12 @@
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
                 </power>
-                <weapon-type>SWORD BLUNT</weapon-type>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="20.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
                 </power>
-                <weapon-type>SWORD BLUNT</weapon-type>
             </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="4.0">
@@ -553,13 +546,13 @@
                 </power>
                 <weapon-type>SWORD BLUNT</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="20.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
                 </power>
                 <weapon-type>SWORD</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10.0">
                     <value level="2">15.0</value>
@@ -568,9 +561,9 @@
                 <weapon-type>BLUNT</weapon-type>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-20.0">
-                    <value level="2">-30.0</value>
-                    <value level="3">-40.0</value>
+                <power initial="20.0">
+                    <value level="2">30.0</value>
+                    <value level="3">40.0</value>
                 </power>
             </resist-abnormal-by-category>
             <stat-modify stat="HEAL_RECEIVE">
@@ -860,14 +853,7 @@
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="-10.0">
-                    <value level="2">-10.0</value>
                     <value level="3">-5.0</value>
-                    <value level="4">-5.0</value>
-                    <value level="5">-5.0</value>
-                    <value level="6">-5.0</value>
-                    <value level="7">-5.0</value>
-                    <value level="8">-5.0</value>
-                    <value level="9">-5.0</value>
                 </power>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
@@ -909,7 +895,10 @@
         </abnormal>
         <effects>
             <magic-cost type="PHYSIC">
-                <power initial="-10.0"/>
+                <power initial="-10.0">
+                    <value level="2">-20</value>
+                    <value level="3">-30</value>
+                </power>
             </magic-cost>
         </effects>
     </skill>
@@ -1058,18 +1047,18 @@
                 <power initial="-50.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-40.0"/>
+                <power initial="40.0"/>
             </resist-dispel-by-category>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-abnormal-by-category>
-            <stat-hp-based hp-percent="0" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="33.0">
                     <value level="2">66.0</value>
                     <value level="3">100.0</value>
                 </power>
                 <weapon-type>SWORD SPEAR</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
             <magic-cost type="PHYSIC">
                 <power initial="-50.0"/>
             </magic-cost>
@@ -1335,7 +1324,7 @@
             <damage-block block-hp="true"/>
             <effect name="DebuffBlock"/>
             <resist-dispel-by-category category="ALL">
-                <power initial="-100.0"/>
+                <power initial="100.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -1369,7 +1358,7 @@
             <damage-block block-hp="true"/>
             <effect name="DebuffBlock"/>
             <resist-dispel-by-category category="ALL">
-                <power initial="-100.0"/>
+                <power initial="100.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -1437,12 +1426,12 @@
         <target/>
         <abnormal type="AVOID_SKILL">
             <level initial="1"/>
-            <time initial="15"/>
+            <time initial="60"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <skill-evasion type="PHYSIC">
-                <power initial="90.0"/>
+                <power initial="70"/>
             </skill-evasion>
         </effects>
     </skill>
@@ -1463,12 +1452,12 @@
         <target/>
         <abnormal type="COUNTER_SKILL">
             <level initial="1"/>
-            <time initial="15"/>
+            <time initial="40"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="VENGEANCE_SKILL_PHYSICAL_DAMAGE" stat-add="VENGEANCE_SKILL_PHYSICAL_DAMAGE">
-                <power initial="90.0"/>
+                <power initial="20"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1649,7 +1638,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="30.0">
                     <value level="2">50.0</value>
                     <value level="3">70.0</value>
@@ -1657,7 +1646,7 @@
                     <value level="5">200.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="20.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
@@ -1680,7 +1669,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="20.0">
                     <value level="2">40.0</value>
                     <value level="3">60.0</value>
@@ -1688,7 +1677,7 @@
                     <value level="5">200.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="10.0">
                     <value level="2">20.0</value>
                     <value level="3">40.0</value>
@@ -1716,7 +1705,7 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="10.0">
                     <value level="2">15.0</value>
                     <value level="3">25.0</value>
@@ -1730,45 +1719,28 @@
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="3.0">
-                    <value level="2">3.0</value>
-                    <value level="3">3.0</value>
-                    <value level="4">3.0</value>
-                    <value level="5">3.0</value>
-                    <value level="6">3.0</value>
-                    <value level="7">3.0</value>
-                    <value level="8">3.0</value>
                     <value level="9">4.0</value>
                     <value level="10">5.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
-                <power initial="-5.0">
-                    <value level="2">-5.0</value>
-                    <value level="3">-10.0</value>
-                    <value level="4">-10.0</value>
-                    <value level="5">-10.0</value>
-                    <value level="6">-15.0</value>
-                    <value level="7">-15.0</value>
-                    <value level="8">-15.0</value>
-                    <value level="9">-20.0</value>
-                    <value level="10">-25.0</value>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
+                <power initial="5.0">
+                    <value level="3">10.0</value>
+                    <value level="6">15.0</value>
+                    <value level="9">20.0</value>
+                    <value level="10">25.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
-            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
-                <power initial="-5.0">
-                    <value level="2">-5.0</value>
-                    <value level="3">-10.0</value>
-                    <value level="4">-10.0</value>
-                    <value level="5">-10.0</value>
-                    <value level="6">-15.0</value>
-                    <value level="7">-15.0</value>
-                    <value level="8">-15.0</value>
-                    <value level="9">-20.0</value>
-                    <value level="10">-25.0</value>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE">
+                <power initial="5.0">
+                    <value level="3">10.0</value>
+                    <value level="6">15.0</value>
+                    <value level="9">20.0</value>
+                    <value level="10">25.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
@@ -1781,11 +1753,10 @@
             level 3: Increases M. Def. by 300.
          -->
         <icon initial="icon.skill0466"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
-            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+            <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="120.0">
                     <value level="2">200.0</value>
                     <value level="3">300.0</value>
@@ -1807,11 +1778,10 @@
             level 10: Increases P. Atk. by 250 when using an ancient equipment.
          -->
         <icon initial="icon.skill0472"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="20.0">
                     <value level="2">40.0</value>
                     <value level="3">60.0</value>
@@ -1841,8 +1811,7 @@
             level 10: Increases P. Atk. by 220 when using a short sword.
          -->
         <icon initial="icon.skill0474"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -1905,7 +1874,7 @@
             <hit-time initial="1800"/>
             <activate-rate initial="-1"/>
         </attributes>
-        <consume soul="5">
+        <consume>
             <mana initial="18">
                 <value level="2">25</value>
                 <value level="3">33</value>
@@ -1973,9 +1942,14 @@
         <target type="ENEMY_ONLY"/>
         <abnormal type="DISARM" visual="DOT_BLEEDING">
             <level initial="1"/>
-            <time initial="5"/>
+            <time initial="3"/>
             <chance initial="70"/>
         </abnormal>
+        <conditions>
+            <weapon>
+                <type>ANCIENT_SWORD SWORD BLUNT SPEAR FIST DUAL_BLUNT DUAL</type>
+            </weapon>
+        </conditions>
         <effects>
             <effect name="Disarm"/>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -1995,9 +1969,7 @@
                 <value level="2">49</value>
                 <value level="3">62</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="150000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="2000"/>
         </attributes>
         <consume>
@@ -2016,14 +1988,12 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <defence-trait>
-                <trait type="DERANGEMENT">
-                    <power initial="40">
-                        <value level="2">60</value>
-                        <value level="3">100</value>
-                    </power>
-                </trait>
-            </defence-trait>
+            <resist-abnormal-by-category category="DEBUFF">
+                <power initial="20">
+                    <value level="2">40</value>
+                    <value level="2">50</value>
+                </power>
+            </resist-abnormal-by-category>
         </effects>
     </skill>
 </list>

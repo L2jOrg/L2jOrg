@@ -5,5 +5,6 @@ public enum DamageByAttackType {
     PK, // Players and summons.
     MOB, // Regular monsters.
     BOSS, // Boss monsters
-    ENEMY_ALL // All NPCs
+    MONSTER, // All NPCs
+    ANY // any enemy
 }

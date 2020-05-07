@@ -121,6 +121,7 @@ public class Npc extends Creature {
      * Contains information about local tax payments.
      */
     private TaxZone _taxZone = null;
+    private int scriptValue = 0;
 
     /**
      * Constructor of Folk (use Creature constructor).<br>
@@ -899,6 +900,8 @@ public class Npc extends Creature {
         if (instance != null) {
             instance.removeNpc(this);
         }
+
+        scriptValue = 0;
     }
 
     /**
@@ -1105,26 +1108,26 @@ public class Npc extends Creature {
      * @return stored script value
      */
     public int getScriptValue() {
-        return getVariables().getInt("SCRIPT_VAL");
+        return scriptValue;
     }
 
     /**
      * Short wrapper for backward compatibility. Stores script value
      *
-     * @param val value to store
+     * @param value value to store
      */
-    public void setScriptValue(int val) {
-        getVariables().set("SCRIPT_VAL", val);
+    public void setScriptValue(int value) {
+        scriptValue = value;
     }
 
     /**
      * Short wrapper for backward compatibility.
      *
-     * @param val value to store
+     * @param value value to store
      * @return {@code true} if stored script value equals given value, {@code false} otherwise
      */
-    public boolean isScriptValue(int val) {
-        return getVariables().getInt("SCRIPT_VAL") == val;
+    public boolean isScriptValue(int value) {
+        return scriptValue == value;
     }
 
     /**

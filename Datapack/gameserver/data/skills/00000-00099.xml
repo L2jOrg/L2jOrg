@@ -876,7 +876,9 @@
                     <value level="45">1972.0</value>
                 </power>
             </energy-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
         </effects>
     </skill>
     <skill id="7" name="Sonic Storm" max-level="31" action="A1">
@@ -1024,37 +1026,38 @@
         </conditions>
         <effects>
             <energy-attack consume-charges="0" critical-chance="15" over-hit="true" physical-defense-mod="1.0">
-                <power initial="141.0">
-                    <value level="2">148.0</value>
-                    <value level="3">156.0</value>
-                    <value level="4">165.0</value>
-                    <value level="5">172.0</value>
-                    <value level="6">180.0</value>
-                    <value level="7">189.0</value>
-                    <value level="8">198.0</value>
-                    <value level="9">208.0</value>
-                    <value level="10">218.0</value>
-                    <value level="11">228.0</value>
-                    <value level="12">237.0</value>
-                    <value level="13">248.0</value>
-                    <value level="14">258.0</value>
-                    <value level="15">269.0</value>
-                    <value level="16">280.0</value>
-                    <value level="17">291.0</value>
-                    <value level="18">301.0</value>
-                    <value level="19">313.0</value>
-                    <value level="20">325.0</value>
-                    <value level="21">335.0</value>
-                    <value level="22">347.0</value>
-                    <value level="23">358.0</value>
-                    <value level="24">370.0</value>
-                    <value level="25">382.0</value>
-                    <value level="26">392.0</value>
-                    <value level="27">405.0</value>
-                    <value level="28">416.0</value>
-                    <value level="29">427.0</value>
-                    <value level="30">451.0</value>
-                    <value level="31">473.0</value>
+                <power initial="155">
+                    <value level="1">155</value>
+                    <value level="2">163</value>
+                    <value level="3">172</value>
+                    <value level="4">181</value>
+                    <value level="5">190</value>
+                    <value level="6">199</value>
+                    <value level="7">209</value>
+                    <value level="8">219</value>
+                    <value level="9">229</value>
+                    <value level="10">240</value>
+                    <value level="11">251</value>
+                    <value level="12">262</value>
+                    <value level="13">273</value>
+                    <value level="14">284</value>
+                    <value level="15">296</value>
+                    <value level="16">308</value>
+                    <value level="17">320</value>
+                    <value level="18">332</value>
+                    <value level="19">344</value>
+                    <value level="20">357</value>
+                    <value level="21">369</value>
+                    <value level="22">382</value>
+                    <value level="23">394</value>
+                    <value level="24">407</value>
+                    <value level="25">420</value>
+                    <value level="26">432</value>
+                    <value level="27">445</value>
+                    <value level="28">457</value>
+                    <value level="29">470</value>
+                    <value level="30">482</value>
+                    <value level="31">495</value>
                 </power>
             </energy-attack>
         </effects>
@@ -1280,7 +1283,7 @@
                 <value level="37">101</value>
             </mana>
             <item initial="5589"/>
-            <item-count initial="3"/>
+            <item-count initial="2"/>
         </consume>
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12">
             <fan-range start-angle="0" radius="200" angle="180"/>
@@ -2639,7 +2642,7 @@
                 <value level="3">55</value>
             </mana>
         </consume>
-        <target/>
+        <target type="TARGET"/>
         <effects>
             <dispel>
                 <abnormal type="POISON">
@@ -3464,8 +3467,32 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="0.0" over-hit="true">
-                <power/>
+            <physical-attack over-hit="true">
+                <power initial="34">
+                    <value level="2">38</value>
+                    <value level="3">41</value>
+                    <value level="4">54</value>
+                    <value level="5">59</value>
+                    <value level="6">64</value>
+                    <value level="7">83</value>
+                    <value level="8">91</value>
+                    <value level="9">98</value>
+                    <value level="10">125</value>
+                    <value level="11">136</value>
+                    <value level="12">147</value>
+                    <value level="13">171</value>
+                    <value level="14">185</value>
+                    <value level="15">199</value>
+                    <value level="16">231</value>
+                    <value level="17">248</value>
+                    <value level="18">267</value>
+                    <value level="19">307</value>
+                    <value level="20">328</value>
+                    <value level="21">351</value>
+                    <value level="22">401</value>
+                    <value level="23">428</value>
+                    <value level="24">456</value>
+                </power>
             </physical-attack>
         </effects>
     </skill>
@@ -3722,13 +3749,6 @@
                     <value level="34">15</value>
                 </critical-chance>
             </backstab>
-            <lethal>
-                <power/>
-                <half-power initial="5.0">
-                    <value level="24">10.0</value>
-                    <value level="34">15.0</value>
-                </half-power>
-            </lethal>
         </effects>
     </skill>
     <skill id="33" name="Summon Phantom Cubic" max-level="13" action="A1" type="MAGIC">
@@ -3994,37 +4014,37 @@
         </conditions>
         <effects>
             <energy-attack consume-charges="0" critical-chance="15" over-hit="true" physical-defense-mod="1.0">
-                <power initial="141.0">
-                    <value level="2">148.0</value>
-                    <value level="3">156.0</value>
-                    <value level="4">165.0</value>
-                    <value level="5">172.0</value>
-                    <value level="6">180.0</value>
-                    <value level="7">189.0</value>
-                    <value level="8">198.0</value>
-                    <value level="9">208.0</value>
-                    <value level="10">218.0</value>
-                    <value level="11">228.0</value>
-                    <value level="12">237.0</value>
-                    <value level="13">248.0</value>
-                    <value level="14">258.0</value>
-                    <value level="15">269.0</value>
-                    <value level="16">280.0</value>
-                    <value level="17">291.0</value>
-                    <value level="18">301.0</value>
-                    <value level="19">313.0</value>
-                    <value level="20">325.0</value>
-                    <value level="21">335.0</value>
-                    <value level="22">347.0</value>
-                    <value level="23">358.0</value>
-                    <value level="24">370.0</value>
-                    <value level="25">382.0</value>
-                    <value level="26">392.0</value>
-                    <value level="27">405.0</value>
-                    <value level="28">416.0</value>
-                    <value level="29">427.0</value>
-                    <value level="30">451.0</value>
-                    <value level="31">473.0</value>
+                <power initial="181.0">
+                    <value level="2">190</value>
+                    <value level="3">200</value>
+                    <value level="4">211</value>
+                    <value level="5">222</value>
+                    <value level="6">233</value>
+                    <value level="7">244</value>
+                    <value level="8">256</value>
+                    <value level="9">268</value>
+                    <value level="10">280</value>
+                    <value level="11">293</value>
+                    <value level="12">305</value>
+                    <value level="13">318</value>
+                    <value level="14">332</value>
+                    <value level="15">345</value>
+                    <value level="16">359</value>
+                    <value level="17">373</value>
+                    <value level="18">387</value>
+                    <value level="19">402</value>
+                    <value level="20">416</value>
+                    <value level="21">431</value>
+                    <value level="22">445</value>
+                    <value level="23">460</value>
+                    <value level="24">475</value>
+                    <value level="25">489</value>
+                    <value level="26">504</value>
+                    <value level="27">519</value>
+                    <value level="28">533</value>
+                    <value level="29">548</value>
+                    <value level="30">563</value>
+                    <value level="31">578</value>
                 </power>
             </energy-attack>
         </effects>
@@ -4210,7 +4230,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack ignore-shield="true" over-hit="true">
                 <power initial="554.0">
                     <value level="2">588.0</value>
                     <value level="3">625.0</value>
@@ -4761,7 +4781,7 @@
                 </power>
             </physical-attack>
             <block-all-actions>
-                <allowed-skills>35016</allowed-skills>
+                <allowed-skills>35016 35045</allowed-skills>
             </block-all-actions>
         </effects>
     </skill>
@@ -6561,7 +6581,7 @@
         <effects>
             <attack-trait>
                 <trait type="BUG_WEAKNESS">
-                    <power initial="30"/>
+                    <power initial="5"/>
                 </trait>
             </attack-trait>
         </effects>
@@ -6690,16 +6710,15 @@
                 <value level="3">3</value>
                 <value level="4">4</value>
             </level>
-            <time initial="120">
-                <value level="3">150</value>
-                <value level="4">180</value>
-            </time>
+            <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power initial="20.0">
-                    <value level="2">25.0</value>
+                <power initial="20">
+                    <value level="2">25</value>
+                    <value level="2">27</value>
+                    <value level="2">30</value>
                 </power>
             </stat-modify>
         </effects>
@@ -6721,13 +6740,13 @@
         <target/>
         <abnormal type="DETECT_WEAKNESS">
             <level initial="1"/>
-            <time initial="600"/>
+            <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <attack-trait>
                 <trait type="BEAST_WEAKNESS">
-                    <power initial="30"/>
+                    <power initial="5"/>
                 </trait>
             </attack-trait>
         </effects>
@@ -6997,13 +7016,12 @@
         <target/>
         <abnormal type="DETECT_WEAKNESS">
             <level initial="1"/>
-            <time initial="600"/>
-            <chance initial="-1"/>
+            <time initial="1200"/>
         </abnormal>
         <effects>
             <attack-trait>
                 <trait type="ANIMAL_WEAKNESS">
-                    <power initial="30"/>
+                    <power initial="5"/>
                 </trait>
             </attack-trait>
         </effects>
@@ -7322,7 +7340,7 @@
         </conditions>
         <effects>
             <block-all-actions>
-                <allowed-skills>35016</allowed-skills>
+                <allowed-skills>35016 35045</allowed-skills>
             </block-all-actions>
         </effects>
     </skill>
@@ -7365,7 +7383,6 @@
                 <value level="5">5</value>
             </level>
             <time initial="1200"/>
-            <chance initial="-1"/>
         </abnormal>
         <conditions>
             <weapon>

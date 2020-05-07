@@ -152,7 +152,7 @@
                 <value level="9">127</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="100" affect-min="6" affect-random="12"/>
         <conditions>
             <weapon>
                 <type>TWO_HAND_SWORD DUAL_BLUNT</type>
@@ -176,7 +176,7 @@
     <skill id="821" name="Shadow Step" max-level="8" debuff="true" action="A2">
         <!-- Moves behind the target to stun them. -->
         <icon initial="icon.skill0821"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" auto-use="ACTIVE">
             <magic-level initial="50">
                 <value level="2">54</value>
                 <value level="3">58</value>
@@ -206,8 +206,8 @@
         </consume>
         <target type="ENEMY"/>
         <abnormal type="STUN" visual="STUN">
-            <level initial="2"/>
-            <time initial="5"/>
+            <level initial="1"/>
+            <time initial="2"/>
             <chance initial="70"/>
         </abnormal>
         <effects>
@@ -1147,7 +1147,7 @@
                 <power initial="3600.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>

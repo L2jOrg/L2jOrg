@@ -20,7 +20,10 @@
          -->
         <icon initial="icon.skill0100"/>
         <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="20" auto-use="ACTIVE">
-            <magic-level initial="20">
+            <magic-level initial="18">
+                <value level="2">19</value>
+                <value level="2">19</value>
+                <value level="3">20</value>
                 <value level="4">22</value>
                 <value level="5">23</value>
                 <value level="6">24</value>
@@ -102,7 +105,9 @@
                     <value level="15">131.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
         </effects>
     </skill>
     <skill id="101" name="Stun Shot" max-level="48" debuff="true" action="A2">
@@ -374,7 +379,9 @@
                     <value level="48">2732.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
             <effect name="TargetCancel">
                 <power initial="40.0"/>
             </effect>
@@ -549,13 +556,13 @@
         <target/>
         <abnormal type="DETECT_WEAKNESS">
             <level initial="1"/>
-            <time initial="600"/>
+            <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <attack-trait>
                 <trait type="PLANT_WEAKNESS">
-                    <power initial="30.000001907348633"/>
+                    <power initial="5"/>
                 </trait>
             </attack-trait>
         </effects>
@@ -925,7 +932,7 @@
                 </power>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -972,7 +979,7 @@
                 </power>
             </stat-hp-based>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -1024,13 +1031,6 @@
                         <value level="2">24</value>
                         <value level="3">32</value>
                         <value level="4">40</value>
-                    </power>
-                </trait>
-                <trait type="CROSSBOW">
-                    <power initial="7">
-                        <value level="2">12</value>
-                        <value level="3">16</value>
-                        <value level="4">20</value>
                     </power>
                 </trait>
             </defence-trait>
@@ -1339,7 +1339,9 @@
                     <value level="15">152.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
         </effects>
     </skill>
     <skill id="121" name="Battle Roar" max-level="6" action="A2">
@@ -1718,16 +1720,18 @@
             <level initial="1">
                 <value level="2">2</value>
             </level>
-            <time initial="300"/>
+            <time initial="1200"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <speed mode="PER">
-                <power initial="-20.0"/>
+                <power initial="-15">
+                    <value level="2">-10</value>
+                </power>
             </speed>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-                <power initial="5.0">
-                    <value level="2">10.0</value>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">10</value>
                 </power>
             </stat-modify>
         </effects>
@@ -1891,12 +1895,12 @@
                 </power>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-50.0">
-                    <value level="2">-55.0</value>
-                    <value level="3">-60.0</value>
-                    <value level="4">-65.0</value>
-                    <value level="5">-70.0</value>
-                    <value level="6">-75.0</value>
+                <power initial="50">
+                    <value level="2">55</value>
+                    <value level="3">60</value>
+                    <value level="4">65</value>
+                    <value level="5">70</value>
+                    <value level="6">75</value>
                 </power>
             </resist-abnormal-by-category>
         </effects>
@@ -2443,9 +2447,9 @@
         </attributes>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-                <power>
-                    <value level="3">10.0</value>
+            <stat-modify stat="PHYSICAL_DEFENCE" start-level="3">
+                <power initial="81">
+                    <value level="4">131</value>
                 </power>
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
@@ -2680,7 +2684,7 @@
                     <value level="6">22.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="10.0">
                     <value level="2">11.0</value>
                     <value level="3">12.0</value>
@@ -2698,7 +2702,7 @@
                     <value level="6">15.0</value>
                 </power>
             </stat-modify>
-            <speed mode="PER">
+            <speed>
                 <power initial="10.0">
                     <value level="2">11.0</value>
                     <value level="3">12.0</value>
@@ -3142,17 +3146,22 @@
             level 3: P. Evasion +5 and P. Skill/M. Skill Evasion +10%.
          -->
         <icon initial="icon.skill0198"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="3.0">
                     <value level="2">4.0</value>
                     <value level="3">5.0</value>
                 </power>
-            </stat-hp-based>
+            </stat-modify>
             <skill-evasion type="PHYSIC">
+                <power initial="3.0">
+                    <value level="2">6.0</value>
+                    <value level="3">10.0</value>
+                </power>
+            </skill-evasion>
+            <skill-evasion type="MAGIC">
                 <power initial="3.0">
                     <value level="2">6.0</value>
                     <value level="3">10.0</value>

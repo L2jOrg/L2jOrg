@@ -790,7 +790,8 @@
             <xs:enumeration value="PK"/>
             <xs:enumeration value="MOB"/>
             <xs:enumeration value="BOSS"/>
-            <xs:enumeration value="ENEMY_ALL"/>
+            <xs:enumeration value="MONSTER"/>
+            <xs:enumeration value="ANY"/>
         </xs:restriction>
     </xs:simpleType>
 

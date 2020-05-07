@@ -38,7 +38,7 @@ public class TradeItem {
         locationSlot = item.getLocationSlot();
         enchant = item.getEnchantLevel();
         type1 = item.getCustomType1();
-        type2 = item.getCustomType2();
+        type2 = item.getType2();
         this.count = count;
         _price = price;
         elemAtkType = item.getAttackAttributeType().getClientId();

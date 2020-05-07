@@ -108,7 +108,7 @@
             <condition name="TargetMyPledge"/>
         </conditions>
         <effects>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="9.0"/>
             </vampiric-attack>
         </effects>
@@ -1229,7 +1229,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>
@@ -1298,7 +1298,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>
@@ -1330,7 +1330,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="5.0"/>
             </vampiric-attack>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -1355,7 +1355,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
                 <power initial="20.0"/>
@@ -1424,7 +1424,7 @@
                 <power initial="20.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
                 <power initial="2.0"/>

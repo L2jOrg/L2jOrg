@@ -2471,34 +2471,34 @@
                 <value level="22">22</value>
                 <value level="23">23</value>
             </level>
-            <time initial="15"/>
+            <time initial="10"/>
             <chance initial="-1"/>
         </abnormal>
         <effects>
             <effect name="HealOverTime" ticks="1">
-                <power initial="12.0">
-                    <value level="2">15.0</value>
-                    <value level="3">18.0</value>
-                    <value level="4">23.0</value>
-                    <value level="5">27.0</value>
-                    <value level="6">31.0</value>
-                    <value level="7">35.0</value>
-                    <value level="8">39.0</value>
-                    <value level="9">43.0</value>
-                    <value level="10">45.0</value>
-                    <value level="11">46.0</value>
-                    <value level="12">58.0</value>
-                    <value level="13">50.0</value>
-                    <value level="14">52.0</value>
-                    <value level="15">53.0</value>
-                    <value level="16">55.0</value>
-                    <value level="17">56.0</value>
-                    <value level="18">58.0</value>
-                    <value level="19">60.0</value>
-                    <value level="20">62.0</value>
-                    <value level="21">64.0</value>
-                    <value level="22">66.0</value>
-                    <value level="23">68.0</value>
+                <power initial="19">
+                    <value level="2">24</value>
+                    <value level="3">28</value>
+                    <value level="4">33</value>
+                    <value level="5">36</value>
+                    <value level="6">41</value>
+                    <value level="7">46</value>
+                    <value level="8">49</value>
+                    <value level="9">54</value>
+                    <value level="10">59</value>
+                    <value level="11">62</value>
+                    <value level="12">67</value>
+                    <value level="13">72</value>
+                    <value level="14">75</value>
+                    <value level="15">80</value>
+                    <value level="16">84</value>
+                    <value level="17">89</value>
+                    <value level="18">94</value>
+                    <value level="19">95</value>
+                    <value level="20">99</value>
+                    <value level="21">102</value>
+                    <value level="22">103</value>
+                    <value level="23">105</value>
                 </power>
             </effect>
         </effects>
@@ -7316,7 +7316,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
-
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
@@ -7333,7 +7332,7 @@
         <abnormal type="SPEED_DOWN">
             <level initial="3"/>
             <time initial="30"/>
-            <chance initial="40"/>
+            <chance initial="80"/>
         </abnormal>
         <effects>
             <magical-attack>
@@ -7859,7 +7858,6 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <effect name="ImmobilePetBuff"/>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="1350.0">
                     <value level="2">2700.0</value>
@@ -7871,7 +7869,7 @@
                 </power>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>

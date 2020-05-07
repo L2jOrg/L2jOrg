@@ -153,7 +153,7 @@
             </weapon>
         </conditions>
         <effects>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="8.0"/>
             </vampiric-attack>
         </effects>
@@ -377,7 +377,7 @@
             </weapon>
         </conditions>
         <effects>
-            <effect name="BlockMove" stop-level="4"/>
+            <effect name="BlockMove" stop-level="2"/>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="124.0">
                     <value level="2">134.0</value>
@@ -407,16 +407,16 @@
                 </power>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="20.0"/>
                 <weapon-type>BOW</weapon-type>
-            </stat-hp-based>
+            </stat-modify>
             <speed>
                 <power>
-                    <value level="3">-100.0</value>
-                    <value level="5">-80.0</value>
-                    <value level="7">-60.0</value>
-                    <value level="9">-40.0</value>
+                    <value level="3">-50</value>
+                    <value level="5">-40</value>
+                    <value level="7">-30</value>
+                    <value level="9">-20</value>
                 </power>
             </speed>
         </effects>
@@ -689,8 +689,7 @@
     <skill id="328" name="Dignity of Kamael">
         <!-- With the original power of Kamael, Speed +20, Atk. Spd. +20, Casting Spd. +20. -->
         <icon initial="icon.skill1923"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK_SPEED">
@@ -707,8 +706,7 @@
     <skill id="329" name="Pride of Kamael">
         <!-- With the original power of Kamael, Poison/Bleed/Hold/Sleep/Stun/Mental Attack Resistance +20. -->
         <icon initial="icon.skill1925"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -820,7 +818,6 @@
             <effect-point initial="810"/>
             <effect-range initial="400"/>
             <hit-time initial="1800"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -843,10 +840,10 @@
                 <power initial="10.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-40.0"/>
+                <power initial="40.0"/>
             </resist-dispel-by-category>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -860,12 +857,13 @@
             <effect-point initial="-1338"/>
             <effect-range initial="400"/>
             <hit-time initial="1800"/>
+            <element value="20" type="DARK"/>
         </attributes>
         <consume>
             <hp initial="669"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="TOUCH_OF_DEATH">
+        <abnormal type="TOUCH_OF_DEATH" visual="REVENGE_AURA">
             <level initial="1"/>
             <time initial="120"/>
             <chance initial="80"/>
@@ -881,7 +879,7 @@
                 <power initial="-10.0"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="10.0"/>
+                <power initial="-10.0"/>
             </resist-abnormal-by-category>
             <cp mode="PER">
                 <power initial="-50.0"/>
@@ -948,7 +946,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0" defense-mod="0.8" over-hit="true">
                 <power initial="6503.0">
                     <value level="2">6698.0</value>
                     <value level="3">6898.0</value>
@@ -960,10 +958,6 @@
                     <value level="9">8233.0</value>
                 </power>
             </physical-attack>
-            <lethal>
-                <power/>
-                <half-power initial="10.0"/>
-            </lethal>
         </effects>
     </skill>
     <skill id="344" name="Lethal Blow" max-level="2" action="A1">
@@ -1003,10 +997,6 @@
                     <value level="2">8577.0</value>
                 </power>
             </fatal-blow>
-            <lethal>
-                <power/>
-                <half-power initial="15.0"/>
-            </lethal>
         </effects>
     </skill>
     <skill id="345" name="Sonic Rage" max-level="5" debuff="true" action="A2">
@@ -1081,7 +1071,7 @@
             level 5: Hurls a Wind Of Force to attack the target with 235 P. Atk damage. P. Def. -30%% and absorbs Momentum. Requires Fist Weapon.
          -->
         <icon initial="icon.skill0346"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
+        <attributes property="PHYSIC" level-bonus-rate="30" next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="76">
                 <value level="2">78</value>
                 <value level="3">80</value>
@@ -1109,6 +1099,10 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
+        <abnormal type="PD_DOWN">
+            <time initial="20"/>
+            <chance initial="80"/>
+        </abnormal>
         <conditions>
             <weapon>
                 <type>SWORD BLUNT SPEAR FIST DUAL</type>
@@ -1405,9 +1399,11 @@
                     <value level="10">4004.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
             <effect name="TargetCancel">
-                <power initial="50.0"/>
+                <power initial="80"/>
             </effect>
         </effects>
     </skill>
@@ -1541,6 +1537,15 @@
             <stat-position-based position="FRONT" stat="CRITICAL_RATE">
                 <power initial="-30.0"/>
             </stat-position-based>
+            <stat-position-based position="BACK" stat="CRITICAL_RATE">
+                <power initial="60"/>
+            </stat-position-based>
+            <stat-position-based position="SIDE" stat="CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-position-based>
+            <stat-modify mode="PER" stat="BLOW_RATE">
+                <power initial="20"/>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="357" name="Focus Power" action="A2">
@@ -1627,7 +1632,9 @@
             <effect name="DeleteHateOfMe">
                 <power initial="80.0"/>
             </effect>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
         </effects>
     </skill>
     <skill id="361" name="Stun Blast" max-level="3" debuff="true" action="A2">
@@ -1765,7 +1772,9 @@
                     <value level="8">3539.0</value>
                 </power>
             </physical-attack>
-            <block-all-actions/>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="-30.0"/>
             </stat-modify>
@@ -1948,7 +1957,7 @@
         </conditions>
         <effects>
             <block-all-actions>
-                <allowed-skills>35016</allowed-skills>
+                <allowed-skills>35016 35045</allowed-skills>
             </block-all-actions>
             <damage-block block-hp="true"/>
             <effect name="BuffBlock"/>
@@ -1956,11 +1965,6 @@
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
                 <power initial="-100.0"/>
             </stat-modify>
-            <defence-trait>
-                <trait type="TURN_STONE">
-                    <power initial="100.0"/>
-                </trait>
-            </defence-trait>
         </effects>
     </skill>
     <skill id="368" name="Vengeance" action="A3">
@@ -2000,7 +2004,7 @@
                 <power initial="5400.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF" scope="SELF">
-                <power initial="-80.0"/>
+                <power initial="50.0"/>
             </resist-dispel-by-category>
             <speed mode="PER" scope="SELF">
                 <power initial="-40.0"/>
@@ -2524,12 +2528,8 @@
         <!-- Obtain 2 Shine Souls. -->
         <icon initial="icon.skill55474"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
-            <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <hp initial="30"/>
@@ -2545,12 +2545,8 @@
         <!-- Obtain 2 Shadow Souls. -->
         <icon initial="icon.skill55475"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
-            <magic-level initial="1"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <hp initial="30"/>
@@ -2575,11 +2571,11 @@
         </attributes>
         <consume>
             <mana initial="72"/>
-            <item initial="3031"/>
+            <item initial="1785"/>
             <item-count initial="40"/>
         </consume>
         <target/>
-        <abnormal type="HERO_BUFF">
+        <abnormal type="HERO_BUFF" visual="ULTIMATE_DEFENCE">
             <level initial="3"/>
             <time initial="30"/>
             <chance initial="-1"/>
@@ -2592,7 +2588,7 @@
                 <power initial="4050.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
             <speed>
                 <power initial="5.0"/>
@@ -2612,11 +2608,11 @@
         </attributes>
         <consume>
             <mana initial="72"/>
-            <item initial="3031"/>
+            <item initial="1785"/>
             <item-count initial="40"/>
         </consume>
         <target/>
-        <abnormal type="HERO_BUFF">
+        <abnormal type="HERO_BUFF" visual="AURA_DEBUFF">
             <level initial="2"/>
             <time initial="120"/>
             <chance initial="-1"/>
@@ -2641,7 +2637,7 @@
                 <power initial="20.0"/>
             </speed>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
             <stat-modify mode="PER" stat="HEAL_RECEIVE">
                 <power initial="100.0"/>
@@ -2664,7 +2660,7 @@
             level 2: Enough Shine Souls have been gathered to be in the Shine Side state. \n\n<Acceleration Stage 2>\nP. Atk. +280, Atk. Spd. +80, Casting Spd. +120, Speed +15, P. Skill Critical Damage +200, M. Skill Critical Damage +200.\n\nP./M. Def. +10%%.\n\nHas a chance to recover MP when attacking.\n\nHP and MP are recovered continuously.
          -->
         <icon initial="icon.skill_kamael_shineside"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" triggered="true" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>
@@ -2730,7 +2726,7 @@
             level 2: Enough Shadow Souls have been gathered to be in the Shadow Side state. \n\n<Acceleration Stage 3>\nP. Atk. +500, Atk. Spd. +200, Casting Spd. +250, Speed +20, P. Skill Critical Damage +200, M. Skill Critical Damage +200.\n\nHas a chance to activate powerful attack skills.\n\nCan use Jin skills.
          -->
         <icon initial="icon.skill_kamael_shadowside"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" triggered="true" magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <cast-range initial="-1"/>
             <effect-range initial="-1"/>

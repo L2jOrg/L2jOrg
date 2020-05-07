@@ -521,7 +521,7 @@ public final class Item extends WorldObject {
         return template.getType1();
     }
 
-    public int getCustomType2() {
+    public int getType2() {
         return template.getType2();
     }
 

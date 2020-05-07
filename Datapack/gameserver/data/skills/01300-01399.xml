@@ -1057,10 +1057,10 @@
                 <power initial="24.0"/>
             </effect>
             <resist-dispel-by-category category="BUFF">
-                <power initial="30.0"/>
+                <power initial="-30.0"/>
             </resist-dispel-by-category>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="30.0"/>
+                <power initial="-30.0"/>
             </resist-abnormal-by-category>
             <magic-cost type="MAGIC">
                 <power initial="30.0"/>
@@ -1323,22 +1323,22 @@
         </abnormal>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
-                <power initial="10.0"/>
+                <power initial="30"/>
             </vital-stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
-                <power initial="10.0"/>
+                <power initial="20"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-                <power initial="10.0"/>
+                <power initial="25"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="10.0"/>
+                <power initial="24"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="5.0"/>
+                <power initial="20"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-20.0"/>
+                <power initial="20.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -1367,22 +1367,22 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
-                <power initial="10.0"/>
+                <power initial="30"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="10.0"/>
+                <power initial="25"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-                <power initial="10.0"/>
+                <power initial="30"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="5.0"/>
+                <power initial="20"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-20.0"/>
+                <power initial="20.0"/>
             </resist-abnormal-by-category>
-            <magic-cost type="MAGIC">
-                <power initial="-3.0"/>
+            <magic-cost>
+                <power initial="-5"/>
             </magic-cost>
         </effects>
     </skill>
@@ -1410,26 +1410,35 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <vampiric-attack chance="30">
-                <power initial="5.0"/>
-            </vampiric-attack>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE">
-                <power initial="3.0"/>
-            </stat-hp-based>
-            <stat-modify stat="ACCURACY">
-                <power initial="3.0"/>
+            <stat-modify  stat="EVASION_RATE">
+                <power initial="4"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
-                <power initial="10.0"/>
-            </stat-hp-based>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="15.0"/>
+            <stat-modify  stat="MAGIC_EVASION_RATE">
+                <power initial="4"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="4"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="4"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="25"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" >
+                <power initial="25"/>
             </stat-modify>
             <speed mode="PER">
-                <power initial="10.0"/>
+                <power initial="10"/>
             </speed>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-20.0"/>
+                <power initial="20.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -1448,7 +1457,7 @@
             <mana-init initial="15"/>
             <mana initial="72"/>
             <item initial="3031"/>
-            <item-count initial="40"/>
+            <item-count initial="20"/>
         </consume>
         <target type="SUMMON"/>
         <abnormal type="MULTI_BUFF">
@@ -1458,10 +1467,10 @@
         </abnormal>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
-                <power initial="10.0"/>
+                <power initial="20"/>
             </vital-stat-modify>
             <vital-stat-modify mode="PER" stat="MAX_MP">
-                <power initial="10.0"/>
+                <power initial="20"/>
             </vital-stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="4.0"/>
@@ -1476,31 +1485,37 @@
                 <power initial="4.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="10.0"/>
+                <power initial="20"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="10.0"/>
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="20"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="5.0"/>
+                <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="5.0"/>
+                <power initial="15"/>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
-                <power initial="10.0"/>
-            </stat-hp-based>
+            <stat-modify  mode="PER" stat="CRITICAL_RATE">
+                <power initial="15"/>
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
-                <power initial="10.0"/>
+                <power initial="15"/>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="10.0"/>
+            <stat-modify stat="CRITICAL_DAMAGE">
+                <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-                <power initial="10.0"/>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="15"/>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-20.0"/>
+                <power initial="20.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -1628,8 +1643,8 @@
                 <value level="2">94</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="20">
-                <value level="2">30</value>
+            <item-count initial="10">
+                <value level="2">20</value>
             </item-count>
         </consume>
         <target type="TARGET"/>
@@ -1665,7 +1680,7 @@
                 </power>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
             <magic-cost type="MAGIC">
                 <power initial="-3.0">
@@ -1698,8 +1713,8 @@
                 <value level="2">94</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="20">
-                <value level="2">30</value>
+            <item-count initial="10">
+                <value level="2">20</value>
             </item-count>
         </consume>
         <target type="TARGET"/>
@@ -1740,7 +1755,7 @@
                 </power>
             </stat-modify>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-10.0"/>
+                <power initial="10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -1768,8 +1783,8 @@
                 <value level="2">94</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="20">
-                <value level="2">30</value>
+            <item-count initial="10">
+                <value level="2">20</value>
             </item-count>
         </consume>
         <target type="TARGET"/>
@@ -1784,23 +1799,42 @@
             </target>
         </conditions>
         <effects>
-            <stat-hp-based hp-percent="0" stat="EVASION_RATE" stat-add="EVASION_RATE">
-                <power initial="3.0">
-                    <value level="2">4.0</value>
-                    <value level="2">15.0</value>
-                </power>
-            </stat-hp-based>
-            <stat-modify stat="ACCURACY" stat-add="ACCURACY">
+            <stat-modify stat="EVASION_RATE">
                 <power initial="3.0">
                     <value level="2">4.0</value>
                 </power>
             </stat-modify>
-            <stat-hp-based hp-percent="0" mode="PER" stat="CRITICAL_RATE">
+            <stat-modify stat="MAGIC_EVASION_RATE">
+                <power initial="3.0">
+                    <value level="2">4.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="3.0">
+                    <value level="2">4.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="3.0">
+                    <value level="2">4.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify  mode="PER" stat="CRITICAL_RATE">
                 <power initial="10.0">
                     <value level="2">15.0</value>
                 </power>
-            </stat-hp-based>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            </stat-modify>
+            <stat-modify  mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="10.0">
+                    <value level="2">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_DAMAGE">
+                <power initial="15.0">
+                    <value level="2">20.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="15.0">
                     <value level="2">20.0</value>
                 </power>
@@ -1811,7 +1845,7 @@
                 </power>
             </speed>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="10.0"/>
+                <power initial="-10.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -1904,10 +1938,10 @@
         </abnormal>
         <effects>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-30.0"/>
+                <power initial="30.0"/>
             </resist-dispel-by-category>
             <resist-abnormal-by-category category="DEBUFF">
-                <power initial="-20.0"/>
+                <power initial="20.0"/>
             </resist-abnormal-by-category>
         </effects>
     </skill>
@@ -1935,8 +1969,8 @@
                 <value level="2">313</value>
             </mana>
             <item initial="3031"/>
-            <item-count initial="60">
-                <value level="2">70</value>
+            <item-count initial="30">
+                <value level="2">40</value>
             </item-count>
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
@@ -2226,7 +2260,7 @@
                 <power initial="500.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-40.0"/>
+                <power initial="40.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -2398,8 +2432,6 @@
                 <value level="10">203</value>
                 <value level="11">205</value>
             </mana>
-            <item initial="2508"/>
-            <item-count initial="4"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
         <abnormal type="MD_DOWN">

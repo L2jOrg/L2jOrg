@@ -106,7 +106,7 @@
                 <power initial="80.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-80.0"/>
+                <power initial="80.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>
@@ -496,7 +496,7 @@
             <chance initial="-1"/>
         </abnormal>
         <effects>
-            <vampiric-attack chance="30">
+            <vampiric-attack chance="80">
                 <power initial="9.0"/>
             </vampiric-attack>
             <stat-modify stat="REFLECT_DAMAGE_PERCENT" stat-add="REFLECT_DAMAGE_PERCENT">
@@ -602,7 +602,7 @@
                 <power initial="30.0"/>
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
-                <power initial="-100.0"/>
+                <power initial="100.0"/>
             </resist-dispel-by-category>
         </effects>
     </skill>

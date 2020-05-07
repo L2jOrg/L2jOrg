@@ -1,10 +1,10 @@
 package handlers.actionhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -106,7 +106,7 @@ public class NpcAction implements IActionHandler
 					}
 
 					// Open a chat window on client with the text of the Npc
-					if (npc.getVariables().getBoolean("eventmob", false))
+					if (npc.hasVariables() && npc.getVariables().getBoolean("eventmob", false))
 					{
 						Event.showEventHtml(player, String.valueOf(target.getObjectId()));
 					}
