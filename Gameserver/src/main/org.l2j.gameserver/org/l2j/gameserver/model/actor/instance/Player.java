@@ -4,6 +4,7 @@ import io.github.joealisson.primitive.*;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
@@ -5824,7 +5825,7 @@ public final class Player extends Playable {
         }
 
         playerDAO.removeTeleportFavorites(objectId);
-        if(!teleportFavorites.isEmpty()) {
+        if(Util.isNotEmpty(teleportFavorites)) {
             playerDAO.saveTeleportFavorites(objectId, teleportFavorites);
         }
 
