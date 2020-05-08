@@ -45,11 +45,6 @@ public final class SiegeManager {
 
     }
 
-    /**
-     * @param clan     The Clan of the player
-     * @param castleid
-     * @return true if the clan is registered or owner of a castle
-     */
     public final boolean checkIsRegistered(Clan clan, int castleid) {
         if (clan == null) {
             return false;
@@ -195,7 +190,7 @@ public final class SiegeManager {
 
     private void loadTrapUpgrade(int castleId) {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_trapupgrade WHERE castleId=?")) {
+             PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_trap_upgrade WHERE castle_id=?")) {
             ps.setInt(1, castleId);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {

@@ -379,7 +379,7 @@ public final class Castle extends AbstractResidence {
 
     private void processDoorUpgrade(ResultSet resultSet) {
         try {
-            while(!resultSet.next()) {
+            while(resultSet.next()) {
                 setDoorUpgrade(resultSet.getInt(1), resultSet.getInt(2), false);
             }
         } catch (SQLException e) {
