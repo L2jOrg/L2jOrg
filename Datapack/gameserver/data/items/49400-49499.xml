@@ -498,7 +498,7 @@
 	<weapon id="49442" name="Giant Crab: Bow" type="BOW" body-part="TWO_HAND" icon="icon.wp_fishing7" mana-consume="2">
 	<!-- 7-day item.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1820" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false"/>
+		<attributes weight="1820" commission-type="OTHER_ITEM" duration="10080" enchant-enabled="false" reuse-delay="1500"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>

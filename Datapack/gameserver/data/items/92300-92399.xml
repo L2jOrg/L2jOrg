@@ -239,7 +239,7 @@
 	<weapon id="92332" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 	<!-- Eminence Bow imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1720"/>
+		<attributes weight="1720" reuse-delay="1500"/>
 		<crystal type="C"/>
 	</weapon>
 

@@ -180,7 +180,7 @@
 	<weapon id="5609" name="Carnage Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_carnium_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by about 7%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1670" price="14098000" commission-type="BOW" reuse-delay="1500" change-weapon="9338"/>
+		<attributes weight="1670" price="14098000" commission-type="BOW" reuse-delay="820" change-weapon="9338"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -220,7 +220,7 @@
 	<weapon id="5611" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Crit. Rate by 40. -->
 		<restriction freightable="false"/>
-		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="820" change-weapon="9349"/>
+		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="1500" change-weapon="9349"/>
 		<crystal type="A" count="1659"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -237,7 +237,7 @@
 	<weapon id="5612" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by about 7%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="697" change-weapon="9350"/>
+		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="820" change-weapon="9350"/>
 		<crystal type="A" count="1659"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -254,7 +254,7 @@
 	<weapon id="5613" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. +180 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="820" change-weapon="9351"/>
+		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="1500" change-weapon="9351"/>
 		<crystal type="A" count="1659"/>
 		<damage radius="10" angle="360"/>
 		<stats>

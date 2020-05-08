@@ -326,7 +326,7 @@
 	<weapon id="70647" name="Hero's Shining Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_akat_long_bow_i01" mana-consume="3">
 	<!-- P. Critical Rate +52.\n Duration: 30 days. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1740" commission-type="OTHER_ITEM"/>
+		<attributes weight="1740" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>

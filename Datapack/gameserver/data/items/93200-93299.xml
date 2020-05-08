@@ -554,7 +554,7 @@
 
 	<weapon id="93292" name="Core’s Plasma Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_karupis_i00" mana-consume="5">
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
-		<attributes weight="1640"/>
+		<attributes weight="1640" reuse-delay="1500"/>
 		<crystal type="A"/>
 	</weapon>
 

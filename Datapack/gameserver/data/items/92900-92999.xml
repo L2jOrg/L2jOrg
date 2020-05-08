@@ -254,13 +254,13 @@
 
 	<weapon id="92942" name="Carnage Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_carnium_bow_i00" mana-consume="5">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1670" price="14098000"/>
+		<attributes weight="1670" price="14098000" reuse-delay="1500"/>
 		<crystal type="A"/>
 	</weapon>
 
 	<weapon id="92943" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i00" mana-consume="5">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1660" price="20741000"/>
+		<attributes weight="1660" price="20741000" reuse-delay="1500"/>
 		<crystal type="A"/>
 	</weapon>
 
@@ -371,7 +371,7 @@
 
 	<weapon id="92961" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i00" mana-consume="5">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1640" price="26968400"/>
+		<attributes weight="1640" price="26968400" reuse-delay="1500"/>
 		<crystal type="A"/>
 	</weapon>
 

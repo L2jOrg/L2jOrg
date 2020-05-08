@@ -109,7 +109,7 @@
 	<weapon id="8806" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Crit. Rate by 40. -->
 		<restriction freightable="false"/>
-		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="820" change-weapon="9361"/>
+		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="1500" change-weapon="9361"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -143,7 +143,7 @@
 	<weapon id="8808" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i01" mana-consume="5">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. +198 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="639" change-weapon="9363"/>
+		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="1500" change-weapon="9363"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="10" angle="360"/>
 		<stats>

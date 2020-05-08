@@ -188,7 +188,7 @@
 
 	<weapon id="94031" name="Emerald Weapon: Bow" type="BOW" body-part="TWO_HAND" icon="BranchSys3.Icon.g_beam_bow" mana-consume="2">
 		<restriction sellable="false" private-sellable="false"/>
-		<attributes weight="181"/>
+		<attributes weight="181" reuse-delay="1500"/>
 		<crystal type="B"/>
 	</weapon>
 

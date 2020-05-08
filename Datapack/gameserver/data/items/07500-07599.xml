@@ -206,7 +206,7 @@
 
 	<weapon id="7575" name="Draconic Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_draconic_bow_i00" mana-consume="6">
 		<restriction freightable="false"/>
-		<attributes weight="1650" price="42759400" commission-type="OTHER_ITEM"/>
+		<attributes weight="1650" price="42759400" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="S"/>
 		<damage radius="40" angle="240"/>
 		<stats>

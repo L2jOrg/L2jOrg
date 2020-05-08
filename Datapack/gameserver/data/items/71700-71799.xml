@@ -457,7 +457,7 @@
 	<weapon id="71759" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 	<!-- A special weapon to support the new beginning in the Aden Server. Cannot be enchanted or bestowed special abilities. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1720" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="1720" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>

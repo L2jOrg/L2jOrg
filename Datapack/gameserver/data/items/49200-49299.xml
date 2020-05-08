@@ -513,7 +513,7 @@
 	<weapon id="49230" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 60. -->
 		<restriction freightable="false"/>
-		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -530,7 +530,7 @@
 	<weapon id="49231" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -547,7 +547,7 @@
 	<weapon id="49232" name="Reinforced Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. + 80 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1870" price="409000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -564,7 +564,7 @@
 	<weapon id="49233" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 60. -->
 		<restriction freightable="false"/>
-		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -581,7 +581,7 @@
 	<weapon id="49234" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -598,7 +598,7 @@
 	<weapon id="49235" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. + 80 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -615,7 +615,7 @@
 	<weapon id="49236" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 60. -->
 		<restriction freightable="false"/>
-		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -632,7 +632,7 @@
 	<weapon id="49237" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -649,7 +649,7 @@
 	<weapon id="49238" name="Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elven_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. + 80 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1850" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -666,7 +666,7 @@
 	<weapon id="49239" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 60. -->
 		<restriction freightable="false"/>
-		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -683,7 +683,7 @@
 	<weapon id="49240" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -700,7 +700,7 @@
 	<weapon id="49241" name="Dark Elven Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. + 80 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1830" price="644000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -717,7 +717,7 @@
 	<weapon id="49242" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 60. -->
 		<restriction freightable="false"/>
-		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -734,7 +734,7 @@
 	<weapon id="49243" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -751,7 +751,7 @@
 	<weapon id="49244" name="Gastraphetes" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. + 80 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1840" price="967000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -768,7 +768,7 @@
 	<weapon id="49245" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 60. -->
 		<restriction freightable="false"/>
-		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -785,7 +785,7 @@
 	<weapon id="49246" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -802,7 +802,7 @@
 	<weapon id="49247" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. + 80 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1820" price="1400000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -819,7 +819,7 @@
 	<weapon id="49248" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases P. Critical Rate by 60. -->
 		<restriction freightable="false"/>
-		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -836,7 +836,7 @@
 	<weapon id="49249" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nIncreases Atk. Spd. by 9%. -->
 		<restriction freightable="false"/>
-		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -853,7 +853,7 @@
 	<weapon id="49250" name="Light Crossbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_cyclone_bow_i01" mana-consume="2">
 	<!-- <Soul Crystal Enhancement>\nP. Atk. + 80 during a Critical Attack. -->
 		<restriction freightable="false"/>
-		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM"/>
+		<attributes weight="1810" price="1800000" commission-type="OTHER_ITEM" reuse-delay="1500"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
 		<stats>
