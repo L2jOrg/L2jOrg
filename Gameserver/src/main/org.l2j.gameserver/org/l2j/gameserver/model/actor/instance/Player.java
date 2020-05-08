@@ -165,6 +165,7 @@ public final class Player extends Playable {
     private IntMap<CostumeCollectionData> costumesCollections  = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection = CostumeCollectionData.DEFAULT;
     private IntSet teleportFavorites;
+    private int additionalSoulshot;
 
     private Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -537,6 +538,14 @@ public final class Player extends Playable {
             case BEAST_SPIRITSHOTS -> SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR;
         };
         sendPacket(message);
+    }
+
+    public void setAdditionalSoulshot(int jewel) {
+        this.additionalSoulshot = jewel;
+    }
+
+    public int getAdditionalSoulshot() {
+        return additionalSoulshot;
     }
 
     public void setShineSouls(byte souls) {
@@ -11150,5 +11159,4 @@ public final class Player extends Playable {
         }
         return 0;
     }
-
 }

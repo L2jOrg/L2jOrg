@@ -12,15 +12,17 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author JoeAlisson
  */
 public class Hit {
-    private final WeakReference<WorldObject> _target;
-    private final int _targetId;
-    private final int _damage;
-    private int _flags = 0;
+    private final WeakReference<WorldObject> target;
+    private final int targetId;
+    private final int damage;
+    private final int grade;
+    private int flags = 0;
 
-    public Hit(WorldObject target, int damage, boolean miss, boolean crit, byte shld, boolean soulshot) {
-        _target = new WeakReference<>(target);
-        _targetId = target.getObjectId();
-        _damage = damage;
+    public Hit(WorldObject target, int damage, boolean miss, boolean crit, byte shld, int soulshotGrade) {
+        this.target = new WeakReference<>(target);
+        targetId = target.getObjectId();
+        this.damage = damage;
+        grade = soulshotGrade;
 
         if (miss) {
             addMask(AttackType.MISSED);
@@ -31,7 +33,7 @@ public class Hit {
             addMask(AttackType.CRITICAL);
         }
 
-        if (soulshot) {
+        if (soulshotGrade >= 0) {
             addMask(AttackType.SHOT_USED);
         }
 
@@ -41,42 +43,42 @@ public class Hit {
     }
 
     private void addMask(AttackType type) {
-        _flags |= type.getMask();
+        flags |= type.getMask();
     }
 
     public WorldObject getTarget() {
-        return _target.get();
+        return target.get();
     }
 
     public int getTargetId() {
-        return _targetId;
+        return targetId;
     }
 
     public int getDamage() {
-        return _damage;
+        return damage;
     }
 
     public int getFlags() {
-        return _flags;
+        return flags;
     }
 
     public int getGrade() {
-        return isShotUsed() ? 5 : -1;
+        return !isMiss() ? grade : -1;
     }
 
     public boolean isMiss() {
-        return (AttackType.MISSED.getMask() & _flags) != 0;
+        return (AttackType.MISSED.getMask() & flags) != 0;
     }
 
     public boolean isCritical() {
-        return (AttackType.CRITICAL.getMask() & _flags) != 0;
+        return (AttackType.CRITICAL.getMask() & flags) != 0;
     }
 
     public boolean isShotUsed() {
-        return (AttackType.SHOT_USED.getMask() & _flags) != 0;
+        return (AttackType.SHOT_USED.getMask() & flags) != 0;
     }
 
     public boolean isBlocked() {
-        return (AttackType.BLOCKED.getMask() & _flags) != 0;
+        return (AttackType.BLOCKED.getMask() & flags) != 0;
     }
 }
