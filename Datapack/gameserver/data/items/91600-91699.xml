@@ -616,7 +616,7 @@
 	<weapon id="91680" name="Enchanted Compound Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_composition_bow_i00" mana-consume="1">
 	<!-- Enchanted Compound Bow. Cannot be enchanted, augmented, or equipped with a rune. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
-		<attributes weight="1880" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="1880" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>

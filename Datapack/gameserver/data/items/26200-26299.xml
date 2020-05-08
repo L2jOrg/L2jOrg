@@ -112,7 +112,7 @@
 	<weapon id="26262" name="Halloween Thrower" type="BOW" body-part="TWO_HAND" icon="icon.ev_wp_halloween">
 	<!-- Halloween weapon. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>

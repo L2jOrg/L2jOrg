@@ -183,7 +183,7 @@
 
 	<weapon id="93429" name="Bow of Peril" type="BOW" body-part="TWO_HAND" icon="icon.weapon_hazard_bow_i00" mana-consume="4">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1700" price="13100000"/>
+		<attributes weight="1700" price="13100000" reuse-delay="1500"/>
 		<crystal type="B"/>
 	</weapon>
 

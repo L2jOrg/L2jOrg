@@ -141,7 +141,7 @@
 
 	<weapon id="8684" name="Shyeed's Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_shyid_bow_i00" mana-consume="5">
 		<restriction freightable="false"/>
-		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="820" change-weapon="9360"/>
+		<attributes weight="1640" price="26968400" commission-type="BOW" reuse-delay="1500" change-weapon="9360"/>
 		<crystal type="A" count="2157"/>
 		<damage radius="10" angle="360"/>
 		<stats>

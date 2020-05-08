@@ -1151,7 +1151,7 @@
 
 	<weapon id="275" name="Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i00" mana-consume="2">
 		<restriction freightable="false"/>
-		<attributes weight="1830" price="644000" commission-type="BOW" reuse-delay="820" change-weapon="9217"/>
+		<attributes weight="1830" price="644000" commission-type="BOW" reuse-delay="1500" change-weapon="9217"/>
 		<crystal type="D" count="1170"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -1215,7 +1215,7 @@
 
 	<weapon id="279" name="Reinforced Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_strengthening_long_bow_i00" mana-consume="2">
 		<restriction freightable="false"/>
-		<attributes weight="1820" price="1400000" commission-type="BOW" reuse-delay="820" change-weapon="9224"/>
+		<attributes weight="1820" price="1400000" commission-type="BOW" reuse-delay="1500" change-weapon="9224"/>
 		<crystal type="D" count="2545"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -1263,7 +1263,7 @@
 
 	<weapon id="282" name="Elemental Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_elemental_bow_i00" mana-consume="3">
 		<restriction freightable="false"/>
-		<attributes weight="1770" price="2870000" commission-type="BOW" reuse-delay="820" change-weapon="9256"/>
+		<attributes weight="1770" price="2870000" commission-type="BOW" reuse-delay="1500" change-weapon="9256"/>
 		<crystal type="C" count="1148"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -1279,7 +1279,7 @@
 
 	<weapon id="283" name="Akat Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_akat_long_bow_i00" mana-consume="3">
 		<restriction freightable="false"/>
-		<attributes weight="1740" price="4300000" commission-type="BOW" reuse-delay="820" change-weapon="9288"/>
+		<attributes weight="1740" price="4300000" commission-type="BOW" reuse-delay="1500" change-weapon="9288"/>
 		<crystal type="C" count="1720"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -1295,7 +1295,7 @@
 
 	<weapon id="284" name="Dark Elven Longbow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_dark_elven_long_bow_i00" mana-consume="4">
 		<restriction freightable="false"/>
-		<attributes weight="1720" price="8680000" commission-type="BOW" reuse-delay="820" change-weapon="9312"/>
+		<attributes weight="1720" price="8680000" commission-type="BOW" reuse-delay="1500" change-weapon="9312"/>
 		<crystal type="B" count="1157"/>
 		<damage radius="10" angle="360"/>
 		<stats>
@@ -1375,7 +1375,7 @@
 
 	<weapon id="289" name="Soul Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_soul_bow_i00" mana-consume="5">
 		<restriction freightable="false"/>
-		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="820" change-weapon="9348"/>
+		<attributes weight="1660" price="20741000" commission-type="BOW" reuse-delay="1500" change-weapon="9348"/>
 		<crystal type="A" count="1659"/>
 		<damage radius="10" angle="360"/>
 		<stats>

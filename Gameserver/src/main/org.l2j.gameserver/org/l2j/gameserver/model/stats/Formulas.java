@@ -1273,11 +1273,6 @@ public final class Formulas {
         }
     }
 
-    /**
-     * @param activeChar
-     * @param weapon
-     * @return {@code (500_000 millis + 333 * WeaponItemReuseDelay) / PAttackSpeed}
-     */
     public static int calculateReuseTime(Creature activeChar, Weapon weapon) {
         if (weapon == null) {
             return 0;

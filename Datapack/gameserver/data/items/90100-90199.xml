@@ -356,7 +356,7 @@
 	<weapon id="90152" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_crystallized_ice_bow_i00" mana-consume="3">
 	<!-- A 30-day item.\n<Soul Crystal Enhancement>\nP. Crit. Rate. +52.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1740" commission-type="OTHER_ITEM" duration="43200"/>
+		<attributes weight="1740" commission-type="OTHER_ITEM" duration="43200" reuse-delay="1500"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
 		<stats>

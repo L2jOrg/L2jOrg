@@ -173,7 +173,7 @@
 
 	<weapon id="93030" name="Bow of Aden" type="BOW" body-part="TWO_HAND" icon="icon.weapon_gastraphetes_i00" mana-consume="2">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1820"/>
+		<attributes weight="1820" reuse-delay="1500"/>
 		<crystal type="D"/>
 	</weapon>
 
@@ -302,7 +302,7 @@
 
 	<weapon id="93051" name="Eminence Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_eminence_bow_i00" mana-consume="3">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1720" price="6130000"/>
+		<attributes weight="1720" price="6130000" reuse-delay="1500"/>
 		<crystal type="C"/>
 	</weapon>
 

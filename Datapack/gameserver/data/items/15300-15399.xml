@@ -36,7 +36,7 @@
 
 	<weapon id="15302" name="Transparent Bow (NPC)" type="BOW" body-part="TWO_HAND" icon="icon.weapon_long_bow_i00" mana-consume="4">
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1830" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="1830" commission-type="OTHER_ITEM" enchant-enabled="false" reuse-delay="1500"/>
 		<crystal type="A"/>
 		<damage radius="40" angle="240"/>
 		<stats>

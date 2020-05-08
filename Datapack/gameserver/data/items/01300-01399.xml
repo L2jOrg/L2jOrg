@@ -128,7 +128,7 @@
 	<weapon id="1307" name="Bow" type="BOW" body-part="TWO_HAND" icon="icon.weapon_bow_i00" mana-consume="1">
 	<!-- Temporary item for Kamex -->
 		<restriction freightable="false" tradable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" commission-type="OTHER_ITEM" reuse-delay="10" enchant-enabled="false"/>
+		<attributes weight="150" commission-type="OTHER_ITEM" reuse-delay="1500" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="5000" angle="360"/>
 		<stats>
