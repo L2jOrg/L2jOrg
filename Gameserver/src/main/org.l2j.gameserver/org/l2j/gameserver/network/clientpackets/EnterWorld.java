@@ -212,7 +212,7 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExUserInfoInvenWeight(player));
         client.sendPacket(new ExAdenaInvenCount(player));
-        client.sendPacket(new ExCoinCount(client.getCoin()));
+        client.sendPacket(new ExBloodyCoinCount());
         client.sendPacket(new ShortCutInit());
         player.forEachShortcut(s -> {
             if(s.isActive()) {
