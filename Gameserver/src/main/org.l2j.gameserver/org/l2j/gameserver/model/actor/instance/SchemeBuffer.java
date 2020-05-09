@@ -6,7 +6,6 @@ import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -16,7 +15,7 @@ import java.util.*;
 
 import static org.l2j.gameserver.network.SystemMessageId.YOU_DO_NOT_HAVE_A_PET;
 
-public class SchemeBuffer extends Npc {
+public class SchemeBuffer extends Folk {
     private static final int PAGE_LIMIT = 6;
 
     public SchemeBuffer(NpcTemplate template) {

@@ -32,10 +32,7 @@ import static org.l2j.gameserver.util.GameUtils.isSummon;
  * @author Zoey76
  */
 public final class BuffInfo {
-    // Data
-    /**
-     * Data.
-     */
+
     private final int _effectorObjectId;
     private final Creature _effector;
     private final Creature _effected;

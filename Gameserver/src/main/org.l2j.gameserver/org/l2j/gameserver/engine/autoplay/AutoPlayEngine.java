@@ -4,20 +4,16 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.data.xml.ActionManager;
-import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
-import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
-import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,8 +22,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.doIfNonNull;
-import static org.l2j.gameserver.util.GameUtils.isMonster;
 
 /**
  * @author JoeAlisson
@@ -35,6 +29,7 @@ import static org.l2j.gameserver.util.GameUtils.isMonster;
 public final class AutoPlayEngine {
 
     private static final int AUTO_PLAY_INTERVAL = 2000;
+    private static final int DEFAULT_ACTION = 2;
 
     private final ForkJoinPool autoPlayPool = new ForkJoinPool();
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
@@ -47,6 +42,11 @@ public final class AutoPlayEngine {
     private final DoAutoPotion doAutoPotion = new DoAutoPotion();
     private final Object autoPotionTaskLocker = new Object();
     private ScheduledFuture<?> autoPotionTask;
+    
+    private final AutoPlayTargetFinder tauntFinder = new TauntFinder();
+    private final AutoPlayTargetFinder monsterFinder = new MonsterFinder();
+    private final AutoPlayTargetFinder playerFinder = new PlayerFinder();
+    private final AutoPlayTargetFinder friendlyFinder = new FriendlyMobFinder();
 
     private AutoPlayEngine() {
     }
@@ -188,10 +188,10 @@ public final class AutoPlayEngine {
         }
 
         private void pickTargetAndAct(Player player, AutoPlaySettings setting, int range) {
-            var target = player.getTarget();
-            if ((isNull(target) || (isMonster(target) && ((Monster) target).isDead()) || target.equals(player)) && !player.isTargetingDisabled()) {
-                var monster = World.getInstance().findFirstVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m), Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
-                player.setTarget(monster);
+            var targetFinder = targetFinderBySettings(setting);
+
+            if(!targetFinder.canBeTarget(player, player.getTarget())) {
+                player.setTarget(targetFinder.findNextTarget(player, range));
             }
 
             if (nonNull(player.getTarget())) {
@@ -199,20 +199,33 @@ public final class AutoPlayEngine {
             }
         }
 
+        private AutoPlayTargetFinder targetFinderBySettings(AutoPlaySettings setting) {
+            return switch (setting.getNextTargetMode()) {
+                case 0 -> tauntFinder;
+                case 2 -> playerFinder;
+                case 3 -> friendlyFinder;
+                default -> monsterFinder;
+            };
+        }
+
         private void tryUseAutoShortcut(Player player) {
-            doIfNonNull(player.nextAutoShortcut(), shortcut -> useShortcut(player, shortcut));
+            final var shortcut = player.nextAutoShortcut();
+            if(nonNull(shortcut)) {
+                useShortcut(player, shortcut);
+            } else {
+                autoUseAction(player, DEFAULT_ACTION);
+            }
         }
 
         private void useShortcut(Player player, Shortcut shortcut) {
             switch (shortcut.getType()) {
                 case SKILL -> autoUseSkill(player, shortcut);
                 case ITEM -> autoUseItem(player, shortcut);
-                case ACTION -> autoUseAction(player, shortcut);
+                case ACTION -> autoUseAction(player, shortcut.getShortcutId());
             }
         }
 
-        private void autoUseAction(Player player, Shortcut shortcut) {
-            var actionId = shortcut.getShortcutId();
+        private void autoUseAction(Player player, int actionId) {
             final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
             if (Arrays.binarySearch(allowedActions, actionId)  < 0) {
                 return;
@@ -230,7 +243,7 @@ public final class AutoPlayEngine {
 
         private void autoUseItem(Player player, Shortcut shortcut) {
             var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-            if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> !(player.isAffectedBySkill(s) || player.hasAbnormalType(s.getSkill().getAbnormalType())))) {
+            if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> player.getBuffRemainTimeBySkillOrAbormalType(s.getSkill()) <= 3)) {
                 useItem(player, item);
             }
         }
@@ -245,32 +258,12 @@ public final class AutoPlayEngine {
             if(skill.isAutoTransformation() && player.isTransformed()) {
                 return;
             }
-            if(skill.isAutoBuff() && (player.hasAbnormalType(skill.getAbnormalType()) || player.isAffectedBySkill(skill.getId()))) {
+            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3) {
                 return;
             }
 
             player.onActionRequest();
             player.useMagic(skill, null, false, false);
-        }
-
-        private boolean canBeTargeted(Player player, AutoPlaySettings setting, Monster monster) {
-            return  monster.isTargetable() && !monster.isDead() && monster.isAutoAttackable(player) && (!setting.isRespectfulMode() || hasBeenAggresive(player, monster)) &&
-                    GeoEngine.getInstance().canSeeTarget(player, monster) && GeoEngine.getInstance().canMoveToTarget(player, monster);
-        }
-
-        private boolean hasBeenAggresive(Player player, Monster monster) {
-            return isNull(monster.getTarget()) || monster.getTarget().equals(player) || monster.getAggroList().isEmpty() || isInAggroList(monster, player);
-        }
-
-        private boolean isInAggroList(Monster monster, Player player) {
-            var aggroList = monster.getAggroList();
-            if(aggroList.containsKey(player)) {
-                return true;
-            }
-            if(player.hasPet() && (monster.getTarget().equals(player.getPet()) || aggroList.containsKey(player.getPet()))) {
-                return true;
-            }
-            return player.hasServitors() &&  player.getServitors().values().stream().anyMatch(s -> monster.getTarget().equals(s) || aggroList.containsKey(s));
         }
     }
 
@@ -310,9 +303,11 @@ public final class AutoPlayEngine {
             var etcItem = item.getEtcItem();
             var handler = ItemHandler.getInstance().getHandler(etcItem);
 
-            if (nonNull(handler) && handler.useItem(player, item, false) && reuseDelay > 0) {
+            if (nonNull(handler) && handler.useItem(player, item, false)) {
                 player.onActionRequest();
-                player.addTimeStampItem(item, reuseDelay);
+                if(reuseDelay > 0) {
+                    player.addTimeStampItem(item, reuseDelay);
+                }
             }
         }
     }

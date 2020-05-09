@@ -112,7 +112,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="55003" value="-1"/>  <!-- 1st Class Transfer Buff Scroll -->
+			<skill id="55003"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -121,7 +121,7 @@
 		<restriction freightable="false" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false"/>
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="55004" level="2" value="-1"/>  <!-- 2nd Class Transfer Buff Scroll -->
+			<skill id="55004" level="2"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</skill-reducer>
 	</item>
 
