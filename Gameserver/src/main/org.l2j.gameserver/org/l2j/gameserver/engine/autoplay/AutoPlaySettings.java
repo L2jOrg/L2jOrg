@@ -7,17 +7,18 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class AutoPlaySettings {
 
-    private short options;
+    private short size;
     private boolean active;
     private boolean pickUp;
     private short nextTargetMode;
     private boolean isNearTarget;
     private int usableHpPotionPercent;
     private boolean respectFulHunt;
-    private AtomicBoolean autoPlaying = new AtomicBoolean(false);
+    private final AtomicBoolean autoPlaying = new AtomicBoolean(false);
+    private int usableHpPetPotionPercent;
 
-    public AutoPlaySettings(short options, boolean active, boolean pickUp, short nextTargetMode, boolean isNearTarget, int usableHpPotionPercent, boolean respectFulHunt) {
-        this.options = options;
+    public AutoPlaySettings(short size, boolean active, boolean pickUp, short nextTargetMode, boolean isNearTarget, int hpPotionPercent, int usableHpPotionPercent, boolean respectFulHunt) {
+        this.size = size;
         this.active = active;
         this.pickUp = pickUp;
         this.nextTargetMode = nextTargetMode;
@@ -26,12 +27,12 @@ public class AutoPlaySettings {
         this.respectFulHunt = respectFulHunt;
     }
 
-    public short getOptions() {
-        return options;
+    public short getSize() {
+        return size;
     }
 
-    public void setOptions(short options) {
-        this.options = options;
+    public void setSize(short options) {
+        this.size = options;
     }
 
     public boolean isActive() {
@@ -88,5 +89,13 @@ public class AutoPlaySettings {
 
     public void setAutoPlaying(boolean autoPlaying) {
         this.autoPlaying.set(autoPlaying);
+    }
+
+    public void setUsableHpPetPotionPercent(int usableHpPetPotionPercent) {
+        this.usableHpPetPotionPercent = usableHpPetPotionPercent;
+    }
+
+    public int getUsableHpPetPotionPercent() {
+        return usableHpPetPotionPercent;
     }
 }

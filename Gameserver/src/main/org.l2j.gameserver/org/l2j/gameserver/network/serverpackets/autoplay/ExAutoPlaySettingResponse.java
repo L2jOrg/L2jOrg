@@ -19,12 +19,13 @@ public class ExAutoPlaySettingResponse extends ServerPacket {
     @Override
     protected void writeImpl(GameClient client) {
         writeId(ServerExPacketId.EX_AUTOPLAY_SETTING);
-        writeShort(setting.getOptions());
+        writeShort(setting.getSize());
         writeByte(setting.isActive());
         writeByte(setting.isAutoPickUpOn());
         writeShort(setting.getNextTargetMode());
         writeByte(setting.isNearTarget());
         writeInt(setting.getUsableHpPotionPercent());
+        writeInt(setting.getUsableHpPetPotionPercent());
         writeByte(setting.isRespectfulMode());
     }
 }

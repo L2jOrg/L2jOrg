@@ -47,7 +47,7 @@ public final class BroochListener implements PlayerInventoryListener {
 
     @Override
     public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
-        if(inventory instanceof PlayerInventory inv) {
+        if(item.getBodyPart() == BodyPart.BROOCH_JEWEL && inventory instanceof PlayerInventory inv) {
             updateAdditionalSoulshot(inv);
         }
     }
