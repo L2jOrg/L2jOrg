@@ -4,6 +4,7 @@ import io.github.joealisson.primitive.*;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
@@ -164,6 +165,7 @@ public final class Player extends Playable {
     private IntMap<CostumeCollectionData> costumesCollections  = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection = CostumeCollectionData.DEFAULT;
     private IntSet teleportFavorites;
+    private int additionalSoulshot;
 
     private Player(PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -536,6 +538,14 @@ public final class Player extends Playable {
             case BEAST_SPIRITSHOTS -> SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR;
         };
         sendPacket(message);
+    }
+
+    public void setAdditionalSoulshot(int jewel) {
+        this.additionalSoulshot = jewel;
+    }
+
+    public int getAdditionalSoulshot() {
+        return additionalSoulshot;
     }
 
     public void setShineSouls(byte souls) {
@@ -5824,7 +5834,7 @@ public final class Player extends Playable {
         }
 
         playerDAO.removeTeleportFavorites(objectId);
-        if(!teleportFavorites.isEmpty()) {
+        if(Util.isNotEmpty(teleportFavorites)) {
             playerDAO.saveTeleportFavorites(objectId, teleportFavorites);
         }
 
@@ -11149,5 +11159,4 @@ public final class Player extends Playable {
         }
         return 0;
     }
-
 }

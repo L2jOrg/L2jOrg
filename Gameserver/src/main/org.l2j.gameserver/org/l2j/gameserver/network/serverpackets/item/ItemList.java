@@ -52,6 +52,7 @@ public final class ItemList {
             writeId(ServerPacketId.ITEMLIST);
             writeByte(ItemPacketType.HEADER.clientId());
             writeShort(show);
+            writeShort(0x00); // special item count
             writeInt(itemsAmount);
         }
     }

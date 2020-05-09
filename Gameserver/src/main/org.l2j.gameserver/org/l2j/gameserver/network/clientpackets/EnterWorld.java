@@ -355,11 +355,6 @@ public class EnterWorld extends ClientPacket {
         if (getSettings(ChatSettings.class).worldChatEnabled()) {
             player.sendPacket(new ExWorldChatCnt(player));
         }
-        player.sendPacket(new ExConnectedTimeAndGettableReward(player));
-        player.sendPacket(new ExAutoSoulShot(0, true, 0));
-        player.sendPacket(new ExAutoSoulShot(0, true, 1));
-        player.sendPacket(new ExAutoSoulShot(0, true, 2));
-        player.sendPacket(new ExAutoSoulShot(0, true, 3));
 
         // Fix for equipped item skills
         if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
@@ -374,6 +369,12 @@ public class EnterWorld extends ClientPacket {
         if(rateXp > 1) {
             player.sendPacket(new ExUserBoostStat(BoostStatType.SERVER, (short) (rateXp * 100 - 100)));
         }
+
+        player.sendPacket(new ExConnectedTimeAndGettableReward(player));
+        player.sendPacket(new ExAutoSoulShot(0, true, 0));
+        player.sendPacket(new ExAutoSoulShot(0, true, 1));
+        player.sendPacket(new ExAutoSoulShot(0, true, 2));
+        player.sendPacket(new ExAutoSoulShot(0, true, 3));
 
         if (Config.HARDWARE_INFO_ENABLED) {
             ThreadPool.schedule(() -> {

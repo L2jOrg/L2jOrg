@@ -12,22 +12,24 @@ import static java.util.Objects.isNull;
  */
 public class ExAutoPlaySetting extends ClientPacket {
 
-    private short options;
+    private short size;
     private boolean active;
     private boolean pickUp;
     private short nextTargetMode;
     private boolean isNearTarget;
     private int usableHpPotionPercent;
     private boolean respectfulHunt;
+    private int usableHpPetPotionPercent;
 
     @Override
     protected void readImpl() throws Exception {
-        options = readShort();
+        size = readShort();
         active = readBoolean();
         pickUp = readBoolean();
         nextTargetMode = readShort();
         isNearTarget = readBoolean();
         usableHpPotionPercent = readInt();
+        usableHpPetPotionPercent = readInt();
         respectfulHunt = readBoolean();
     }
 
@@ -36,15 +38,16 @@ public class ExAutoPlaySetting extends ClientPacket {
         var player = client.getPlayer();
         var settings = player.getAutoPlaySettings();
         if(isNull(settings)) {
-            settings = new AutoPlaySettings(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, respectfulHunt);
+            settings = new AutoPlaySettings(size, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, usableHpPetPotionPercent, respectfulHunt);
             player.setAutoPlaySettings(settings);
         } else {
-            settings.setOptions(options);
+            settings.setSize(size);
             settings.setActive(active);
             settings.setAutoPickUpOn(pickUp);
             settings.setNextTargetMode(nextTargetMode);
             settings.setNearTarget(isNearTarget);
             settings.setUsableHpPotionPercent(usableHpPotionPercent);
+            settings.setUsableHpPetPotionPercent(usableHpPetPotionPercent);
             settings.setRespectfulHunt(respectfulHunt);
         }
         if(active) {

@@ -78,7 +78,8 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeByte(0); // Filler (always 0)
         writeShort(item.isEquipped());
         writeLong(item.getBodyPart().getId());
-        writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
+        writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
+        writeByte(0x00);
         writeByte(0x00);
         writeInt(-1); // mana
         writeInt(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) :-9999);
@@ -197,8 +198,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         writeByte(0); // Filler (always 0)
         writeShort(item.getEquipped()); // Equipped : 00-No, 01-yes
         writeLong(item.getBodyPart().getId()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-        writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-        writeByte(0x00); // TODO : Find me
+        writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
         writeByte(0x00);
         writeInt(-1); // mana
         writeInt(item.getTime());

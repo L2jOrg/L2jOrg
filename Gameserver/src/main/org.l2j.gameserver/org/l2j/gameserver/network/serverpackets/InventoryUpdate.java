@@ -30,7 +30,6 @@ public class InventoryUpdate extends AbstractInventoryUpdate {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.INVENTORY_UPDATE);
-
         writeItems();
     }
 }

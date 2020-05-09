@@ -1,5 +1,7 @@
 package org.l2j.commons.util;
 
+import io.github.joealisson.primitive.IntCollection;
+
 import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -219,5 +221,9 @@ public class Util {
 
     public static boolean isBetween(int number, int min, int max) {
         return  number >= min && number <= max;
+    }
+
+    public static boolean isNotEmpty(IntCollection collection) {
+        return nonNull(collection) && collection.size() > 0;
     }
 }
