@@ -28,7 +28,8 @@ public class CheckRangeSkillCondition implements SkillCondition {
         if(isNull(target)) {
             return false;
         }
-        final var distance = MathUtil.calculateDistanceSq3D(caster, target);
+        var radius = caster.getCollisionRadius() + ( target instanceof Creature creature ? creature.getCollisionRadius() : 0);
+        final var distance = MathUtil.calculateDistanceSq3D(caster, target) - radius;
         return distance >= min * min && (max <= 0 || distance <= max * max);
     }
 

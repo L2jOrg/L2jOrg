@@ -315,6 +315,7 @@ public final class AutoPlayEngine {
     private boolean canUseAutoPlay(Player player) {
         return !player.getAutoPlaySettings().isAutoPlaying() &&
                 player.getAI().getIntention() != CtrlIntention.AI_INTENTION_PICK_UP &&
+                player.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST &&
                 !player.hasBlockActions() &&
                 !player.isControlBlocked() &&
                 !player.isAlikeDead() &&
