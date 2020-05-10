@@ -10,7 +10,7 @@ public enum GeoFormat {
 
     private final String _filename;
 
-    private GeoFormat(String filename) {
+    GeoFormat(String filename) {
         _filename = filename;
     }
 

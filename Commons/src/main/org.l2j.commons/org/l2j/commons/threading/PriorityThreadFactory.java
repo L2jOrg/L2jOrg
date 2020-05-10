@@ -1,52 +1,46 @@
 package org.l2j.commons.threading;
 
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PriorityThreadFactory implements ThreadFactory
-{
-	private static final Logger _log = LoggerFactory.getLogger(PriorityThreadFactory.class);
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.atomic.AtomicInteger;
 
-	private int _prio;
-	private String _name;
-	private AtomicInteger _threadNumber = new AtomicInteger(1);
-	private ThreadGroup _group;
+public class PriorityThreadFactory implements ThreadFactory {
 
-	public PriorityThreadFactory(String name, int prio)
-	{
-		_prio = prio;
-		_name = name;
-		_group = new ThreadGroup(_name);
+	private static final Logger LOGGER = LoggerFactory.getLogger(PriorityThreadFactory.class);
+
+	private final int priority;
+	private final String name;
+	private final AtomicInteger threadNumber = new AtomicInteger(1);
+	private final ThreadGroup group;
+
+	public PriorityThreadFactory(String name, int prio) {
+		priority = prio;
+		this.name = name;
+		group = new ThreadGroup(this.name);
 	}
 
 	@Override
-	public Thread newThread(Runnable r)
-	{
-		Thread t = new Thread(_group, r)
-		{
+	public Thread newThread(Runnable r) {
+		Thread t = new Thread(group, r) {
 			@Override
-			public void run()
-			{
-				try
-				{
+			public void run() {
+				try {
 					super.run();
 				}
-				catch(Exception e)
-				{
-					_log.error("Exception: " + e, e);
+				catch(Exception e) {
+					LOGGER.error(e.getMessage(), e);
 				}
 			}
 		};
-		t.setName(_name + "-" + _threadNumber.getAndIncrement());
-		t.setPriority(_prio);
+		t.setName(name + "-" + threadNumber.getAndIncrement());
+		t.setPriority(priority);
 		return t;
 	}
 
 	public ThreadGroup getGroup()
 	{
-		return _group;
+		return group;
 	}
 }
