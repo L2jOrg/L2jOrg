@@ -1,8 +1,6 @@
-<html><head><body>Dimensional Merchant:<br> Nice to meet you. We are the <font color="LEVEL">Dimensional Merchants</font>. Get your Dimensional items from the Product Inventory. If your inventory is full, you won't be able to get the items.<br>
-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h menu_select?ask=1&reply=1"><font color="LEVEL">Obtain a premium item</font></Button>
-<Button ALIGN=LEFT ICON="NORMAL" action="link e_premium_manager_trade_ncw.htm"><font color="FF6666">Check the Dimensional Store</font></Button>
-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_package_deposit" msg="1040">"I want to transfer a Dimensional Item to another character on the same account."</Button>
-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_package_withdraw">"I want to withdraw a shared item."</Button>
-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h menu_select?ask=-181119&reply=1">"I want to use a Soulshot Ticket."</Button>
-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 3247801">"I want to exchange an Attendance Reward Item."</Button>
-</body></head></html>
+<html><title>Dimensional Merchant</title><body>Dimensional Merchant:<br>
+Hi! You can deal with <font color="LEVEL">Dimensional items</font> here. Dimensional items can be obtained in the item catalogue. However, if the inventory is full you can't put any Dimensional items in it.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h Quest DimensionalMerchant package_deposit" msg="1040"><font color="LEVEL">Move Dimentional items to another character on the account</font></Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h Quest DimensionalMerchant package_withdraw"><font color="LEVEL">Get items</font></Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h Quest DimensionalMerchant attendance_rewards">Get Attendance reward</Button>
+</body></html>

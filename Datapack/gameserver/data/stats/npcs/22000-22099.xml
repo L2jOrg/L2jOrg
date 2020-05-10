@@ -1216,25 +1216,49 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc element="EARTH" id="22093" level="82" name="Gargoyle Hunter" type="Monster">
-		<acquire attribute_exp="1230" exp="1396911" sp="41908"/>
-		<stats con="28" dex="28" int="28" men="28" str="28" wit="28">
-			<vitals hp="67893" hpRegen="10" mp="3221" mpRegen="5"/>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+	<npc element="EARTH" id="22064" level="84" name="Cave Maiden" type="Monster">
+		<acquire attribute_exp="1428" exp="1394760" sp="41843"/>
+		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+			<vitals hp="138771" hpRegen="10" mp="3349" mpRegen="5"/>
+			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="650.86723" magical="450.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
 		</stats>
-		<status attackable="true"/><!--Gargoyle Hunter-->
+		<status attackable="true"/>
+		<!--Cave Maiden-->
 		<dropLists>
 			<drop>
-				<!--Earth Spirit Ore (Руда Духа Земли)-->
-				<item chance="0.0075" id="91038" max="1" min="1"/>
-				<!--Earth Spirit Ore (Руда Духа Земли)-->
-				<item chance="0.0075" id="91038" max="1" min="1"/>
+				<!--Sealed Armor of Nightmare (Запечатанный Доспех Кошмаров)-->
+				<item chance="0.003" id="5311" max="1" min="1"/>
+				<!--Sealed Majestic Plate Armor (Запечатанный Латный Доспех Величия)-->
+				<item chance="0.003" id="5316" max="1" min="1"/>
+				<!--Adena (Адена)-->
+				<item chance="70.0" id="57" max="4770" min="2044"/>
+				<!--Gemstone (A-grade) (Самоцвет: Ранг A)-->
+				<item chance="0.75" id="2133" max="1" min="1"/>
+				<!--Sealed Armor of Nightmare Pattern (Выкройка Запечатанного Доспеха Кошмаров)-->
+				<item chance="0.3" id="5522" max="1" min="1"/>
+				<!--Sealed Majestic Plate Armor Pattern (Выкройка Запечатанного Латного Доспеха Величия)-->
+				<item chance="0.3" id="5523" max="1" min="1"/>
 			</drop>
+			<spoil>
+				<!--Sealed Majestic Leather Armor Fabric (Материя Запечатанного Кожаного Доспеха Величия)-->
+				<item chance="2.195" id="5481" max="1" min="1"/>
+				<!--Sealed Leather Armor of Nightmare Fabric (Материя Запечатанного Кожаного Доспеха Кошмаров)-->
+				<item chance="2.141" id="5480" max="1" min="1"/>
+			</spoil>
 		</dropLists>
+		<skillList><!--Чудовища: Это чудовища, питающиеся плотью гуманоидов. Также к ним относятся такие монстры, как химеры, обладающие более чем 2 видами клеток, и мифологические существа, жившие в этом мире еще до появления человечества.-->
+			<skill id="4416" level="3"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Усиленная Физ. Атк.:-->
+			<skill id="4410" level="12"/><!--Усиленная Маг. Атк.:-->
+			<skill id="4411" level="10"/><!--Сильная Физ. Защ.:-->
+			<skill id="4412" level="14"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/>
+		</skillList>
 	</npc>
+
 </list>
