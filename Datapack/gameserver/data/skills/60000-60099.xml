@@ -308,7 +308,7 @@
     <skill id="60018" name="Teleport" action="A1">
         <!-- Teleport -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="0">
             <cast-range initial="-1"/>
             <hit-time initial="2000"/>
         </attributes>

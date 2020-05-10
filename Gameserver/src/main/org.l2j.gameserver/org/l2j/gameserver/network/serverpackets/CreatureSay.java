@@ -112,6 +112,7 @@ public final class CreatureSay extends ServerPacket {
         }
         writeByte(rank);
         writeByte(castleId);
+        writeInt(0x00); // share location
     }
 
     @Override

@@ -2548,9 +2548,6 @@
         <conditions>
             <check-range min="100"/>
         </conditions>
-        <effects>
-            <effect name="TeleportToTarget"/>
-        </effects>
     </skill>
     <skill id="45184" name="Potion Mastery" max-level="3">
         <!--
