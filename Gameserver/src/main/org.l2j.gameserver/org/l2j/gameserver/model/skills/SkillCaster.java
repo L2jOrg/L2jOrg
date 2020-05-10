@@ -867,15 +867,10 @@ public class SkillCaster implements Runnable {
                     y = creature.getY() + (int) (Math.sin(Math.PI + radian + course) * _skill.getCastRange());
                     z = creature.getZ();
                 } else {
-                    final int dx = target.getX() - creature.getX();
-                    final int dy = target.getY() - creature.getY();
-                    final double distance = Math.sqrt((dx * dx) + (dy * dy));
-                    double nRadius = creature.getCollisionRadius();
-                    if (isCreature(target)) {
-                        nRadius += ((Creature) target).getCollisionRadius();
-                    }
-                    x = (int) (target.getX() - (nRadius * (dx / distance)));
-                    y = (int) (target.getY() - (nRadius * (dy / distance)));
+                    final var radius = creature.getCollisionRadius() + ( target instanceof Creature c ? c.getCollisionRadius() : 0);
+                    final var angle = MathUtil.calculateAngleFrom(creature, target);
+                    x = (int) (target.getX() + (radius * Math.cos(angle)));
+                    y = (int) (target.getY() + (radius * Math.sin(angle)));
                     z = target.getZ();
                 }
                 break;

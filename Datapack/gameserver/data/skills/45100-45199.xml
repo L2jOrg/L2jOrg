@@ -2453,20 +2453,20 @@
         </attributes>
         <target/>
         <effects>
-            <trigger-skill-by-attacking chance="30" skill="45181">
+            <trigger-skill-by-attacking chance="10" skill="45181">
                 <power initial="1"/>
             </trigger-skill-by-attacking>
             <trigger-skill-by-magic skill="45181" target="ENEMY_ONLY">
                 <power initial="2"/>
-				<chance initial="30.0"/> 
+				<chance initial="15"/>
                 <types>PHYSIC MAGIC STATIC</types>
             </trigger-skill-by-magic>
             <trigger-skill-by-attack skill="45181">
                 <power initial="3"/>
-                <chance initial="30"/>
+                <chance initial="10"/>
                 <min-damage initial="10"/>
             </trigger-skill-by-attack>
-            <trigger-skill-by-avoid chance="30" skill="45181">
+            <trigger-skill-by-avoid chance="20" skill="45181">
                 <power initial="4"/>
             </trigger-skill-by-avoid>
         </effects>
