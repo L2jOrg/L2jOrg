@@ -34,12 +34,14 @@ public class PlayableStats extends CreatureStats {
             return false;
         }
 
-        if (((getExp() + value) < 0) || ((value > 0) && (getExp() == (getExpForLevel(getMaxLevel()) - 1)))) {
+        final long maxExp = LevelData.getInstance().getMaxExp();
+
+        if ( getExp() + value < 0 || ( value > 0 && getExp() == maxExp) ) {
             return true;
         }
 
-        if ((getExp() + value) >= getExpForLevel(getMaxLevel())) {
-            value = getExpForLevel(getMaxLevel()) - 1 - getExp();
+        if ( getExp() + value >= maxExp) {
+            value = maxExp - 1 - getExp();
         }
 
         final int oldLevel = getLevel();
