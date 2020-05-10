@@ -4501,6 +4501,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
+    public int getBuffRemainTimeBySkillOrAbormalType(Skill skill) {
+        return _effectList.remainTimeBySkillIdOrAbnormalType(skill.getId(), skill.getAbnormalType());
+    }
+
     /**
      * This class group all movement data.<br>
      * <B><U> Data</U> :</B>

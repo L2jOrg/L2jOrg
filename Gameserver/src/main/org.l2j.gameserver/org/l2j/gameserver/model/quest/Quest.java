@@ -666,7 +666,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         try {
             onSpawn(npc);
         } catch (Exception e) {
-            LOGGER.warn("Exception on onSpawn() in notifySpawn(): " + e.getMessage(), e);
+            LOGGER.warn("Exception on onSpawn() in notifySpawn(): {}", e.getMessage(), e);
         }
     }
 

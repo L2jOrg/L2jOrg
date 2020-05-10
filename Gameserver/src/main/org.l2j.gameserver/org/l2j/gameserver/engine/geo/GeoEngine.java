@@ -53,9 +53,9 @@ public class GeoEngine {
     private void loadGeodataFiles() {
         int loaded = 0;
         var geodataPath = getSettings(ServerSettings.class).dataPackDirectory().resolve("geodata");
+
         for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++) {
             for (int ry = World.TILE_Y_MIN; ry <= World.TILE_Y_MAX; ry++) {
-
                 var filePath = geodataPath.resolve(String.format(GeoFormat.L2D.getFilename(), rx, ry));
                 if(Files.exists(filePath) && !Files.isDirectory(filePath)) {
                     if (loadGeoBlocks(filePath, rx, ry)) {
@@ -209,7 +209,7 @@ public class GeoEngine {
      * @param regionX : Geodata file region X coordinate.
      * @param regionY : Geodata file region Y coordinate.
      */
-    private final void loadNullBlocks(int regionX, int regionY) {
+    private void loadNullBlocks(int regionX, int regionY) {
         // get block indexes
         final int blockX = (regionX - World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
         final int blockY = (regionY - World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;

@@ -68,15 +68,15 @@ public final class EffectList {
     /**
      * Queue containing all effects from buffs for this effect list.
      */
-    private volatile Queue<BuffInfo> actives = new ConcurrentLinkedQueue<>();
+    private final Queue<BuffInfo> actives = new ConcurrentLinkedQueue<>();
     /**
      * List containing all passives for this effect list. They bypass most of the actions and they are not included in most operations.
      */
-    private volatile Set<BuffInfo> passives = ConcurrentHashMap.newKeySet();
+    private final Set<BuffInfo> passives = ConcurrentHashMap.newKeySet();
     /**
      * List containing all options for this effect list. They bypass most of the actions and they are not included in most operations.
      */
-    private volatile Set<BuffInfo> options = ConcurrentHashMap.newKeySet();
+    private final Set<BuffInfo> options = ConcurrentHashMap.newKeySet();
     /**
      * Map containing the all stacked effect in progress for each {@code AbnormalType}.
      */
@@ -84,7 +84,7 @@ public final class EffectList {
     /**
      * Set containing all {@code AbnormalType}s that shouldn't be added to this creature effect list.
      */
-    private volatile Set<AbnormalType> blockedAbnormalTypes = EnumSet.noneOf(AbnormalType.class);
+    private final Set<AbnormalType> blockedAbnormalTypes = EnumSet.noneOf(AbnormalType.class);
     /**
      * Set containing all abnormal visual effects this creature currently displays.
      */
@@ -178,6 +178,14 @@ public final class EffectList {
      */
     public BuffInfo getBuffInfoBySkillId(int skillId) {
         return Stream.concat(actives.stream(), passives.stream()).filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+    }
+
+    public int remainTimeBySkillIdOrAbnormalType(int skillId, AbnormalType type) {
+        return actives.stream().filter(b -> isSkillOrHasType(skillId, type, b)).mapToInt(BuffInfo::getTime).findFirst().orElse(0);
+    }
+
+    private boolean isSkillOrHasType(int skillId, AbnormalType type, BuffInfo buff) {
+        return buff.getSkill().getId() == skillId || (type != AbnormalType.NONE && buff.getSkill().getAbnormalType() == type);
     }
 
     /**
@@ -726,7 +734,7 @@ public final class EffectList {
             return;
         }
 
-        if ((blockedAbnormalTypes != null) && blockedAbnormalTypes.contains(skill.getAbnormalType())) {
+        if (blockedAbnormalTypes.contains(skill.getAbnormalType())) {
             return;
         }
 

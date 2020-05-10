@@ -60,13 +60,9 @@ public class Guard extends Attackable {
     public void onSpawn() {
         super.onSpawn();
         setRandomWalking(getTemplate().isRandomWalkEnabled());
-        getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-        // check the region where this mob is, do not activate the AI if region is inactive.
-        // final WorldRegion region = World.getInstance().getRegion(this);
-        // if ((region != null) && (!region.isActive()))
-        // {
-        // getAI().stopAITask();
-        // }
+        if(getWorldRegion().isActive()) {
+            getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+        }
     }
 
     /**

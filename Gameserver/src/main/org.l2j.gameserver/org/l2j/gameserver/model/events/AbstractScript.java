@@ -1643,7 +1643,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, int... npcIds) {
         for (int id : npcIds) {
             if (NpcData.getInstance().getTemplate(id) == null) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
+                LOGGER.error("Found addSpawnId for non existing NPC: {}!", id);
             }
         }
         return registerConsumer(callback, EventType.ON_NPC_SPAWN, ListenerRegisterType.NPC, npcIds);
