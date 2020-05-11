@@ -68,6 +68,10 @@ public final class LevelData extends GameXmlReader {
         return levelInfos.get(min(level, maxLevel)).expPercentLost;
     }
 
+    public long getMaxExp() {
+        return levelInfos.get(91).experience;
+    }
+
     public byte getMaxLevel() {
         return maxLevel;
     }

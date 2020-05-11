@@ -43,7 +43,7 @@ public final class SubClass {
     }
 
     public void setExp(long expValue) {
-        if (!_dualClass && (expValue > (LevelData.getInstance().getExpForLevel(_maxLevel + 1) - 1))) {
+        if (!_dualClass && (expValue > (LevelData.getInstance().getMaxExp() - 1))) {
             expValue = LevelData.getInstance().getExpForLevel(_maxLevel + 1) - 1;
         }
 
