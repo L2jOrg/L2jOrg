@@ -20,7 +20,7 @@ import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
 public class DimensionalMerchant extends AbstractNpcAI
 {
     // NPC
-    private static final int MERCHANT = -1; // Dimensional Merchant
+    private static final int MERCHANT = 32478; // Dimensional Merchant
     // Others
     private static final int ATTENDANCE_REWARD_MULTISELL = 3247801;
     private static final String COMMAND_BYPASS = "Quest DimensionalMerchant ";
